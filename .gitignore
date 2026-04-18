@@ -160,3 +160,7 @@ squaremap/*
 
 # simplebackups
 /simplebackups*
+
+# journeymap
+/journeymap*
+Waypointdata*
