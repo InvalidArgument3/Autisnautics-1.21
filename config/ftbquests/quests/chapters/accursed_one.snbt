@@ -1,0 +1,152 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "accursed_one"
+	group: "0BFB33D75F4EAD91"
+	id: "38327310ED73E177"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["22107772A91372B0"]
+			hide_until_deps_complete: true
+			id: "6CC8D9848625CC34"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2E47C39F8CD0FB94"
+				table_id: 7440289656817868530L
+				type: "choice"
+			}]
+			tasks: [{
+				advancement: "enigmaticlegacy:main/cursed_ring"
+				criterion: ""
+				id: "6CA3091C271D4FC1"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6CC8D9848625CC34"
+				"22107772A91372B0"
+			]
+			hide_until_deps_complete: true
+			hide_until_deps_visible: false
+			id: "35F18B3DFEFEC5C6"
+			rewards: [{
+				id: "5BB2FEE599D1290B"
+				item: {
+					count: 1
+					id: "minecraft:potion"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "429C4BFAA4818070"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["35F18B3DFEFEC5C6"]
+			hide_until_deps_visible: true
+			id: "21F77EA64E11A9AB"
+			rewards: [{
+				id: "1D9475DF0D3BCC8A"
+				item: {
+					count: 1
+					id: "minecraft:water_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C2BC85C3DE43B8D"
+				stat: "minecraft:mob_kills"
+				type: "stat"
+				value: 16
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["35F18B3DFEFEC5C6"]
+			hide_until_deps_visible: true
+			id: "3680C9F8751A9E5F"
+			rewards: [{
+				auto: "enabled"
+				command: "/tconstruct modifiers @p add tconstruct:flinging 1"
+				id: "21EB47415778B6C2"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				entity: "minecraft:enderman"
+				id: "04041B7DDE8154A4"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3680C9F8751A9E5F"]
+			hide_until_deps_visible: true
+			id: "14A12AAB5FD3F6C1"
+			rewards: [{
+				auto: "enabled"
+				id: "641BC00F8A12FC5B"
+				tags: ["rainbouncereward"]
+				type: "custom"
+			}]
+			tasks: [{
+				dimension: "minecraft:overworld"
+				id: "7C28B9702199ED35"
+				ignore_dimension: false
+				position: [I;
+					-500000
+					350
+					-500000
+				]
+				size: [I;
+					1000000
+					1
+					1000000
+				]
+				type: "location"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"6CC8D9848625CC34"
+				"22107772A91372B0"
+			]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			hide_until_deps_complete: true
+			hide_until_deps_visible: false
+			id: "4D7C2B2653C1982A"
+			rewards: [{
+				id: "0B5FCCEE342762FC"
+				item: {
+					count: 1
+					id: "supplementaries:rope"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "5673E521D5CC5CF2"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+}

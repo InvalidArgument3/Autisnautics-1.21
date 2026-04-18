@@ -1,0 +1,59 @@
+{
+	autofocus_id: "376F399A85832658"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "basic_info"
+	group: "79DBEF62FF5CD2D9"
+	id: "56284ADB6BDA71D8"
+	images: [{
+		height: 1.0d
+		image: "ftbteams:textures/add.png"
+		rotation: 0.0d
+		width: 1.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "376F399A85832658"
+			tasks: [{
+				id: "48E1E9E83F77109F"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17817EA324333BE9"]
+			id: "3EEF098FB1D343AD"
+			tasks: [{
+				id: "7614DC60ADE71DC3"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["376F399A85832658"]
+			id: "17817EA324333BE9"
+			tasks: [{
+				id: "44AC56E1CC5E8DE5"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			id: "6BC4C7084350D5D7"
+			tasks: [{
+				id: "3E8804BDBDD5EB5C"
+				item: { count: 1, id: "minecraft:wooden_sword" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+	]
+}

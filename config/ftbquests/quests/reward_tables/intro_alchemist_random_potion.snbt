@@ -1,0 +1,178 @@
+{
+	icon: {
+		components: {
+			"ftbquests:missing_item": "enigmaticlegacy:ultimate_potion"
+		}
+		id: "ftbquests:missing_item"
+	}
+	id: "0A7863B6DB890FCC"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{ id: "4CB8D3FF0EC69BE6", item: { count: 1, id: "minecraft:splash_potion" } }
+		{ id: "4A19FCB981FCBC5B", item: { count: 1, id: "minecraft:splash_potion" } }
+		{
+			id: "55F58CE5C3A0B4E1"
+			item: {
+				count: 1
+				id: "minecraft:splash_potion"
+			}
+			weight: 2.0f
+		}
+		{
+			id: "7EE840C175566ECE"
+			item: {
+				count: 1
+				id: "reliquary:lingering_potion"
+			}
+			weight: 0.5f
+		}
+		{
+			id: "0D57C6B19976D7B9"
+			item: {
+				count: 1
+				id: "reliquary:fertile_potion"
+			}
+			weight: 0.5f
+		}
+		{
+			id: "35FEC8D4F0C76408"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "083B2D19D3018493", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "17C9FBAC13E5B0B2"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "499859EB5557B0CC", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "2FC5F4631604681A", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "17A79E16FB4E3C96"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "09051D65A9926F02", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "70A2A3F38B5512D1", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "776F44DCBD3D810D", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "1117E6EF3B076004", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "719753589A79AAC0"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{
+			id: "227957F50AB3DA4F"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "717C459602E67902", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "7BF9478DD355BFA2", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "4D20654EFB0AC872"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "4D0C422A8162EA87", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "4D6258335F30247A"
+			item: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:potion_bucket"
+				}
+				count: 1
+				id: "ftbquests:missing_item"
+			}
+			weight: 0.5f
+		}
+		{
+			id: "4596E364A1C34364"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "12E70100B64CE57B", item: { count: 1, id: "minecraft:potion" } }
+		{
+			id: "754E9F8552783A93"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{
+			id: "43464C63F668D804"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{
+			id: "4DB3A94C9CDC5842"
+			item: {
+				count: 1
+				id: "minecraft:potion"
+			}
+			weight: 2.0f
+		}
+		{
+			id: "39F2678F0C7BDFAE"
+			item: {
+				count: 1
+				id: "minecraft:splash_potion"
+			}
+			weight: 2.0f
+		}
+		{ id: "74C69B29B8700284", item: { count: 1, id: "minecraft:splash_potion" } }
+		{ id: "5EB6DA9889C4BB15", item: { count: 1, id: "minecraft:splash_potion" } }
+		{
+			id: "56E1F2B4467E22CA"
+			item: {
+				count: 1
+				id: "reliquary:lingering_potion"
+			}
+			weight: 0.5f
+		}
+		{
+			id: "2E9FD5CBD2E32737"
+			item: {
+				count: 1
+				id: "reliquary:potion"
+			}
+			weight: 0.5f
+		}
+		{
+			id: "798D7A6C947A7A19"
+			item: {
+				components: {
+					"ftbquests:missing_item": "enigmaticlegacy:recall_potion"
+				}
+				count: 1
+				id: "ftbquests:missing_item"
+			}
+			weight: 0.05f
+		}
+	]
+}

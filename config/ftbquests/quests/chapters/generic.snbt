@@ -1,0 +1,629 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "generic"
+	group: "0BFB33D75F4EAD91"
+	id: "0F40BB44472F412C"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5866040E9BF5CB9F"]
+			hide_until_deps_complete: true
+			id: "6F56109274CDF42A"
+			rewards: [
+				{
+					id: "2A4D003D84F67E96"
+					item: {
+						count: 1
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					id: "5FD5C988BFF58610"
+					item: {
+						count: 1
+						id: "minecraft:egg"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				consume_items: false
+				count: 16L
+				id: "620B88139898C10E"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F56109274CDF42A"]
+			id: "37B8421D272A16D0"
+			rewards: [{
+				count: 2
+				id: "3D12BFE450257807"
+				item: {
+					count: 1
+					id: "minecraft:string"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 12L
+				id: "076CDD83F590BFAC"
+				item: { count: 1, id: "minecraft:paper" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6F56109274CDF42A"]
+			id: "7CD3B748BA478401"
+			optional: true
+			rewards: [{
+				count: 15
+				id: "70D657FBB8458D46"
+				item: {
+					count: 1
+					id: "minecraft:leather"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 5L
+				id: "24AB9E21404E337F"
+				item: { count: 1, id: "minecraft:rotten_flesh" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["37B8421D272A16D0"]
+			id: "5C5D315DFC50FAA3"
+			tasks: [{
+				id: "24DAA51849523CA4"
+				item: { count: 1, id: "vc_gliders:paraglider_wood" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5866040E9BF5CB9F"
+				"1373138538AB296A"
+			]
+			id: "60C9D11076C4A724"
+			rewards: [{
+				id: "2C007326D0D9A9A0"
+				item: {
+					components: {
+						"ftbquests:missing_item": "delightful:deluxe_cheeseburger"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "5E57E9DF862B49B1"
+				item: { count: 1, id: "immersive_aircraft:gyrodyne" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"5866040E9BF5CB9F"
+				"1373138538AB296A"
+			]
+			id: "3B86BE3E3211A392"
+			rewards: [{
+				count: 16
+				id: "72C04C46F078DA9B"
+				item: {
+					count: 1
+					id: "minecraft:coal"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "562C6AFEF41AA413"
+				item: { components: { "ftbquests:missing_item": "create_sa:andesite_jetpack_chestplate" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"5866040E9BF5CB9F"
+				"1373138538AB296A"
+			]
+			icon: {
+				id: "supplementaries:slingshot"
+			}
+			id: "252015A3FD4F1528"
+			rewards: [{
+				count: 3
+				id: "30CB8688C9B20FCA"
+				item: {
+					components: {
+						"ftbquests:missing_item": "tconstruct:modifier_crystal"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "45555A61BE676E6B"
+					item: { components: { "ftbquests:missing_item": "tconstruct:earth_slime_crystal" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "770F04105CD38857"
+					item: { components: { "ftbquests:missing_item": "2x tconstruct:earth_congealed_slime" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "71C1E659C7AC35CD"
+					item: { count: 1, id: "minecraft:string" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["5866040E9BF5CB9F"]
+			id: "5ED66681BF2A689D"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:moon"
+				id: "373616DA69A9A172"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"5866040E9BF5CB9F"
+				"1373138538AB296A"
+			]
+			icon: {
+				id: "psi:cad"
+			}
+			id: "155B2476219F8F57"
+			rewards: [{
+				count: 16
+				id: "610FBBE600ACB3FD"
+				item: {
+					count: 1
+					id: "psi:psidust"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "2131A0110803B11A"
+					item: { count: 1, id: "psi:cad" }
+					type: "item"
+				}
+				{
+					id: "4024980862C3648B"
+					item: { count: 1, id: "psi:programmer" }
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"5866040E9BF5CB9F"
+				"1373138538AB296A"
+			]
+			icon: {
+				id: "adhooks:spear_launcher"
+			}
+			id: "00565042E29AD1B1"
+			rewards: [{
+				id: "26F931AC4A4107AE"
+				item: {
+					count: 1
+					id: "minecraft:enchanted_book"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "20D8DDCC401AA0DD"
+				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["07A744D2AF509711"]
+			id: "6F4B1FC2E7182883"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1A76186A79D69FF4"
+				table_id: 797638143605971652L
+				type: "choice"
+			}]
+			tasks: [{
+				id: "4943249C86299A52"
+				item: { components: { "ftbquests:missing_item": "thermal:machine_press" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["07A744D2AF509711"]
+			id: "794DF747BF925C4B"
+			rewards: [{
+				count: 2
+				id: "50BE14FD88C2E7C3"
+				item: {
+					count: 1
+					id: "minecraft:sugar"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "5395BDAF022148E8"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0ED0EB18E3E3C99C"]
+			id: "0A295CF925D97618"
+			rewards: [{
+				id: "4801E16FD954063B"
+				item: {
+					components: {
+						"ftbquests:missing_item": "tconstruct:sledge_hammer"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					entity: "minecraft:skeleton"
+					id: "665D7876C081EDA7"
+					type: "kill"
+					value: 30L
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "0DCEBE1177C87257"
+					type: "kill"
+					value: 30L
+				}
+				{
+					entity: "scguns:redcoat"
+					id: "7976910DA3F29FAA"
+					type: "kill"
+					value: 5L
+				}
+				{
+					entity: "scguns:hive"
+					id: "4A63665717E1148D"
+					type: "kill"
+					value: 5L
+				}
+				{
+					entity: "mna:hulking_zombie"
+					id: "5252F3F01FE5E75E"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["0ED0EB18E3E3C99C"]
+			id: "3A24852885341D52"
+			rewards: [{
+				id: "4749B6825B859225"
+				item: {
+					count: 1
+					id: "minecraft:egg"
+				}
+				random_bonus: 11
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "4ABDB667D9C32513"
+				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3AD0072806C85E8A"]
+			id: "503719738ECF7E47"
+			rewards: [{
+				id: "23ED3A644AC1B763"
+				item: {
+					count: 1
+					id: "magistuarmory:crown_decoration"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				entity: "touhou_little_maid:fairy"
+				id: "523056C667A20E3D"
+				type: "kill"
+				value: 100L
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AD0072806C85E8A"]
+			id: "232166AEE943A162"
+			rewards: [{
+				count: 16
+				id: "2D07631B4DF8B7A0"
+				item: {
+					count: 1
+					id: "minecraft:clay_ball"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "0966545656AD93C1"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1E1BA732F69158CB"]
+			id: "14FA93A81C14879D"
+			rewards: [{
+				id: "0DC5CB439FBDCA95"
+				item: {
+					components: {
+						"relics:data": {
+							abilities: {
+								abilities: {
+									water_dash: {
+										lock: {
+											breaks: 5
+										}
+										points: 0
+										research: {
+											links: { }
+											researched: 0b
+										}
+										stats: {
+											jump_bonus: {
+												initialQuality: 6
+											}
+											recovery_time: {
+												initialQuality: 6
+											}
+											speed_penalty: {
+												initialQuality: 1
+											}
+										}
+									}
+								}
+								synergies: { }
+							}
+							leveling: { }
+							statistic: { }
+						}
+					}
+					count: 1
+					id: "artifacts:aqua_dashers"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "57581C0B4C15F11F"
+					item: { components: { "ftbquests:missing_item": "thermal:ruby" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "37D529AD9E7A26FE"
+					item: { components: { "ftbquests:missing_item": "thermal:sapphire" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6C0F0012F836A07C"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "16225BDE30981D9A"
+					item: { components: { "ftbquests:missing_item": "thermal:sulfur" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "7F334DC9B3E3137A"
+					item: { count: 1, id: "minecraft:emerald" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "187A6307E81BF5F8"
+					item: { count: 1, id: "minecraft:diamond" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "0344AB9960C6F188"
+					item: { count: 1, id: "ae2:certus_quartz_crystal" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["1E1BA732F69158CB"]
+			id: "1B4D4D92C05B9A16"
+			rewards: [{
+				id: "51B1881FAD8877AF"
+				item: {
+					count: 1
+					id: "minecraft:totem_of_undying"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				count: 100L
+				id: "638845FD9CAD46A4"
+				item: { components: { "ftbquests:missing_item": "100x tinkersjewelry:plain_ring" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5866040E9BF5CB9F"]
+			id: "1373138538AB296A"
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "1C7E4FFBCE0590D4"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			can_repeat: true
+			dependencies: ["4B8D31141A3D2965"]
+			id: "1CC536F2D05E8189"
+			rewards: [{
+				id: "62E5BF14CDF728C6"
+				item: {
+					count: 1
+					id: "minecraft:glass_bottle"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "41AF308A3E8B73DD"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4B8D31141A3D2965"]
+			icon: {
+				components: {
+					"ftbquests:missing_item": "enigmaticlegacy:ultimate_potion"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "40D663C4D421DBAA"
+			rewards: [{
+				id: "185DF38BD50FD5B3"
+				table_id: 754462574602948556L
+				type: "random"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "54F4AB1B3076A5F0"
+				item: { count: 1, id: "minecraft:clock" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["2FE4393E7DADB6B0"]
+			id: "1401C9EEAD31C31E"
+			rewards: [{
+				id: "141FDD2B834C3754"
+				item: {
+					components: {
+						"ftbquests:missing_item": "nuclearcraft:salt"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7D70234CCBBAA616"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["2FE4393E7DADB6B0"]
+			id: "58CD5739BCB8A790"
+			rewards: [{
+				command: "/kubejs custom_command ether_mutate"
+				id: "09132FD26A341866"
+				type: "command"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "472D195C9400446A"
+				item: { components: { "ftbquests:missing_item": "enigmaticlegacy:etherium_block" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
+		}
+	]
+}

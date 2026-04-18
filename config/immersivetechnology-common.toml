@@ -1,0 +1,19 @@
+
+#Options shared by all boiler types
+[boiler_shared]
+	#Target heat level for full operation when a recipe does not specify its own requirement (applies to all boilers).
+	#Range: 0.0 ~ 1.7976931348623157E308
+	default_working_heat = 100.0
+
+#Solar Tower settings
+[solar_tower]
+	#Default target heat for full-speed operation (when recipe unspecified).
+	#Range: 100.0 ~ 1.7976931348623157E308
+	working_heat_level = 400.0
+
+#Solar Melter settings
+[solar_melter]
+	#Default target heat for full-speed operation (when recipe unspecified).
+	#Range: 100.0 ~ 1.7976931348623157E308
+	working_heat_level = 1000.0
+

@@ -1,0 +1,23 @@
+{
+	id: "67413805C4A45EF2"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			count: 8
+			id: "0B809BC00D24A0BC"
+			item: {
+				count: 1
+				id: "minecraft:bone"
+			}
+		}
+		{
+			count: 8
+			id: "3165012D9018C25B"
+			item: {
+				count: 1
+				id: "minecraft:flint"
+			}
+		}
+	]
+}

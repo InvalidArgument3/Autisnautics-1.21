@@ -1,0 +1,717 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_4b"
+	group: "331B6409EF6A7840"
+	id: "102E012616516E5D"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5DF206B1738D08A0"]
+			hide_until_deps_complete: true
+			id: "05446225038D260A"
+			rewards: [{
+				id: "4AF4A93C5D5FB6DD"
+				item: {
+					count: 1
+					id: "farmersdelight:hot_cocoa"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "38B2DFD6233E49FD"
+				type: "checkmark"
+			}]
+			x: 1.75d
+			y: 2.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			id: "42B615F7BECA6E58"
+			shape: "circle"
+			tasks: [
+				{
+					id: "39000CC22827EE50"
+					item: { components: { "ftbquests:missing_item": "thermal:machine_bottler" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "6485567EC6630BF2"
+					item: { components: { "ftbquests:missing_item": "thermal:machine_sawmill" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "75F82E2858B93DBD"
+					item: { components: { "ftbquests:missing_item": "thermal:machine_centrifuge" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -0.25d
+			y: 2.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "36A2C5B3E20C28DF"
+			tasks: [{
+				id: "1E93F39E5F1F678E"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_andesite" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "60F7A50F984284F1"
+			tasks: [{
+				id: "5D98554C2EF24A62"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_diorite" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "35406FED565B7EFF"
+			tasks: [{
+				id: "090BAD8069B5962C"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_granite" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "6CBB7512CDFF4C2E"
+			tasks: [{
+				id: "739A22504FFAC363"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_cobblestone" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "0F688EAF792BAE96"
+			tasks: [{
+				id: "2F714B82CD1A3FDD"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_basalt" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "560F2995CE2862D7"
+			tasks: [{
+				id: "6F2432F797A27549"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_scoria" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "3978E4B39C9DB44D"
+			tasks: [{
+				id: "0A7F5C2865C6F5F5"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_red" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "122D3D6743D1DD04"
+			tasks: [{
+				id: "6FD70BEFECE67F2C"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_orange" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "1E856F69C03B1D75"
+			tasks: [{
+				id: "2A79E5D1D6C6787F"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_yellow" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "49957428564E8101"
+			tasks: [{
+				id: "183677E3CD7A38E0"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_green" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "678C5FC6A898E988"
+			tasks: [{
+				id: "7E01B9B59066FD90"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_blue" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "3377A2C391B6F03A"
+			tasks: [{
+				id: "217E5A578A83222B"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_magenta" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "616D07DC2CE17BA4"
+			tasks: [{
+				id: "119E7FC4D7BB242F"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_blaze" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "758B836F53187B8C"
+			tasks: [{
+				id: "6B17F1E13DF99E50"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_slime" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "4E3B9AA2062424F4"
+			tasks: [{
+				id: "0F0273B7441B6840"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_nether" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "20AA864C5201C638"
+			tasks: [{
+				id: "465B3645832D5B9A"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_obsidian" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "35A6E3BBD80FB00F"
+			tasks: [{
+				id: "3D85594FB65E7A91"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_gunpowder" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "03DB1FCC30B7321C"
+			tasks: [{
+				id: "6BE52A47FB071345"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_prismarine" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "421E285B7D642676"
+			tasks: [{
+				id: "10EF9D8072B539A4"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_fluix" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "6E154A8C81D8DD5F"
+			tasks: [{
+				id: "0E7911464600ABEC"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_apatite" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "58A0EA80BB3A3262"
+			tasks: [{
+				id: "3106C362414AB238"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_sulfur" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "2C6EE5BEB945F154"
+			tasks: [{
+				id: "665D6D91F09233AE"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_niter" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "7CA6AC3B07E07D81"
+			tasks: [{
+				id: "6C839FAE45EC2AB4"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_certus" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "40FDCF626F5EBB08"
+			tasks: [{
+				id: "55AA2EC101DB9047"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_quartz" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "5C0CE1EDF9BF49C9"
+			tasks: [{
+				id: "185775BFC6FE2D89"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_zinc" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "5A957C9B5D8DE1A1"
+			tasks: [{
+				id: "3FA02655BC1E99A6"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_copper" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "2995ADCCB6496A22"
+			tasks: [{
+				id: "4932CD6D8FE77BB7"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_iron" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "285F815678D5F32A"
+			tasks: [{
+				id: "0EFBC080DFC4F106"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_nickel" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "394A502BD8B5B1A0"
+			tasks: [{
+				id: "08F2F111C97B57CD"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_lead" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "22F0C935130ADCF4"
+			tasks: [{
+				id: "4A4C9D6E372A5466"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_gold" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "235264EC150EDB4B"
+			tasks: [{
+				id: "2D94A57470F15112"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_lapis" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "33B3AB3394DD012A"
+			tasks: [{
+				id: "01253AF4C04D6EE2"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_cinnabar" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "58A6D5414035EEA1"
+			tasks: [{
+				id: "09ADE0525C1D7379"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_sapphire" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "2EECFBC4E2BF1F37"
+			tasks: [{
+				id: "36A7406CD330E7AB"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_emerald" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "2FD7D312EE63EA53"
+			tasks: [{
+				id: "68CD031A5C815200"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_ruby" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "2644760FA76D5F30"
+			tasks: [{
+				id: "61BF1495FCB27EEB"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_diamond" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"36A2C5B3E20C28DF"
+				"60F7A50F984284F1"
+				"35406FED565B7EFF"
+				"0F688EAF792BAE96"
+				"6CBB7512CDFF4C2E"
+				"560F2995CE2862D7"
+			]
+			hide_dependency_lines: true
+			id: "3EB5CD9776DF0E63"
+			shape: "circle"
+			tasks: [{
+				id: "34B1FAA6107B2411"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_igneous" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"3377A2C391B6F03A"
+				"3978E4B39C9DB44D"
+				"678C5FC6A898E988"
+				"49957428564E8101"
+				"1E856F69C03B1D75"
+				"122D3D6743D1DD04"
+			]
+			hide_dependency_lines: true
+			id: "2B195E5B195246F5"
+			shape: "circle"
+			tasks: [{
+				id: "1F5A37CC8E10B3DB"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_herbal" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"4E3B9AA2062424F4"
+				"616D07DC2CE17BA4"
+				"758B836F53187B8C"
+				"03DB1FCC30B7321C"
+				"20AA864C5201C638"
+				"35A6E3BBD80FB00F"
+			]
+			hide_dependency_lines: true
+			id: "62EB94758A862091"
+			shape: "circle"
+			tasks: [{
+				id: "744E156650A1F4B3"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_volatile" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.25d
+		}
+		{
+			dependencies: [
+				"58A0EA80BB3A3262"
+				"2C6EE5BEB945F154"
+				"7CA6AC3B07E07D81"
+				"40FDCF626F5EBB08"
+				"421E285B7D642676"
+				"6E154A8C81D8DD5F"
+			]
+			hide_dependency_lines: true
+			id: "549D7F67A97CD2CE"
+			shape: "circle"
+			tasks: [{
+				id: "0881E44E3823D060"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_crystal" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.25d
+		}
+		{
+			dependencies: [
+				"2995ADCCB6496A22"
+				"5C0CE1EDF9BF49C9"
+				"5A957C9B5D8DE1A1"
+				"22F0C935130ADCF4"
+				"394A502BD8B5B1A0"
+				"285F815678D5F32A"
+			]
+			hide_dependency_lines: true
+			id: "0CC92E94D10E681D"
+			shape: "circle"
+			tasks: [{
+				id: "4E81FAFD3B80DFE9"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_metal" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"235264EC150EDB4B"
+				"2644760FA76D5F30"
+				"2FD7D312EE63EA53"
+				"58A6D5414035EEA1"
+				"2EECFBC4E2BF1F37"
+				"33B3AB3394DD012A"
+			]
+			hide_dependency_lines: true
+			id: "5200AD3B32D219C6"
+			shape: "circle"
+			tasks: [{
+				id: "10F212525DABED77"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_gem" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"3EB5CD9776DF0E63"
+				"549D7F67A97CD2CE"
+				"2B195E5B195246F5"
+				"62EB94758A862091"
+				"0CC92E94D10E681D"
+				"5200AD3B32D219C6"
+			]
+			id: "7A9AA27029185035"
+			shape: "circle"
+			tasks: [{
+				id: "3299FF447F8110CF"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_chaos" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.75d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7A9AA27029185035"]
+			id: "6FDC8DA2FDED5FDD"
+			shape: "circle"
+			tasks: [{
+				id: "68FBEFA1BC6479ED"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_silicon" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			id: "1D1D1FEAF49C5E11"
+			rewards: [{
+				command: "/ponder kubejs:alchemical_laser"
+				icon: {
+					components: {
+						"ftbquests:missing_item": "occultism:book_of_calling_djinni_manage_machine"
+					}
+					id: "ftbquests:missing_item"
+				}
+				id: "5F8758212BE89602"
+				type: "command"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "04CC23968DBD8CC9"
+				type: "checkmark"
+			}]
+			x: 3.75d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6FDC8DA2FDED5FDD"]
+			id: "630DA0C83959E9D8"
+			tasks: [{
+				id: "3E080B5561AD314E"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["630DA0C83959E9D8"]
+			id: "3B431AAADE8845FA"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "7201E3A86096F5CF"
+				type: "checkmark"
+			}]
+			x: 1.75d
+			y: 11.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "1BCFB709E97A74FA"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "6A30FCE70C7C7289"
+					item: { components: { "ftbquests:missing_item": "kubejs:accellerator_redstone" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "3D9F64E8128BB9A6"
+					item: { components: { "ftbquests:missing_item": "kubejs:accellerator_glowstone" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
+			id: "566E72AE7D580917"
+			shape: "circle"
+			tasks: [{
+				id: "7EA2895F0FB5A5D6"
+				item: { components: { "ftbquests:missing_item": "kubejs:substrate_silver" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.0d
+		}
+	]
+}

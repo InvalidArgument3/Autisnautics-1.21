@@ -1,0 +1,53 @@
+[decoders]
+  # Decoder fails when PNG chunk data doesn't match with the CRC
+  pngFailOnCorruptedData = true
+
+  # Disposal
+  pngUseBKGDChunk = false
+
+[network]
+  # Enables file storage server
+  # Used only on server-side
+  enableServer = false
+
+  # Force-Enable file storage server even on client-side
+  # NOTE: this doesn't mean that the server will be accessible from other devices, you need to open the port and set the remoteHost to your public IP or domain
+  forceEnableServer = false
+
+  # Maximum upload file size in megabytes, files larger than this will be rejected by the server
+  # Zero means unlimited, but be careful with that if your users aren't trustworthy enough
+  # NOTE: this doesn't affect manual file uploads to the server storage folder or existing files, but only uploads through the API
+  # Used only on server-side
+  # Allows math expressions
+  # Value must be greater than 0
+  maxUploadSizeMB = 8
+
+  # Sets file storage server port, ask to your provider if the port is open worldwide before start the server or blame the lib
+  # Used only on server-side
+  # Value must be less than '65535' and greater than '1'
+  serverPort = 25580
+
+  # Sets the remote file server to upload and download files, it must match your game server IP or domain with the given port
+  # Used only on client-side
+  # Value must match with ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)+([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$
+  # Allows (non-null) empty values
+  remoteHost = "http://localhost:25580/"
+
+  # The password to access the server, change this every time you have to update your server and the client to prevent external access and bandwidth abuse
+  # Used on server-side and client-side
+  # Value must contain 
+  # Allows (non-null) empty values
+  token = "watermedia_default_token_change_it"
+
+[media]
+  # Default quality for streaming media without a specified quality
+  # Accepted values are: [UNKNOWN, Q144P, LOWEST, LOW, MEDIUM, HIGH, HIGHER, HIGHEST, Q4K, Q8K]
+  defaultQuality = "HIGHEST"
+
+  # Disables FFMPEG engine (AT ALL)
+  disableFFMPEG = false
+
+  # Adds this path to the discovery path
+  # Path must not be the fat ffmpeg.exe file
+  # path must be a runtime path
+  customFFmpegPath = "U:\\Games-NVME\\Prism Launcher\\instances\\Autisnautics2\\minecraft"

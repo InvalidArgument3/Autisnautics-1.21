@@ -1,0 +1,15 @@
+{
+	id: "0B11C7AA60EF9AC4"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{ id: "1A0D2F5AA9E1CD91", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_farming" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "03D675D937D6F764", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_carpentry" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "1E44329F32840E86", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_mining" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "46198B1DADB58366", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_masonry" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "2F273CE0058D0235", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_hunting" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "0570CBF94D40088C", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_cooking" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "32383C1B1E461DB7", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_fishing" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "35058BC9E7B8340E", item: { components: { "ftbquests:missing_item": "kubejs:profession_card_smithing" }, count: 1, id: "ftbquests:missing_item" } }
+	]
+}

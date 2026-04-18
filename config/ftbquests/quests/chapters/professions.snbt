@@ -1,0 +1,992 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "professions"
+	group: "0810E42B2DD79973"
+	id: "1634333847CCE52A"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:pickaxe"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "1E26046FA8177616"
+			rewards: [{
+				id: "556BBA8B09E4BA0C"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_mining"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "121ECE09FBC2490A"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:kama"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "12B37E99B1D3837E"
+			rewards: [{
+				id: "4F0E97B8E88BF530"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_farming"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "40D5C78A3738FC5E"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:hand_axe"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "3A48FDC224D029BF"
+			rewards: [{
+				id: "570B46650865045E"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_carpentry"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "1D8BF49B36108A4D"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				id: "farmersdelight:golden_knife"
+			}
+			id: "66DA9BE9277FABF1"
+			rewards: [{
+				id: "382E25CBB362EB84"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_cooking"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "7DB85322979AEF65"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:sledge_hammer"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "683AA93BE7DEA512"
+			rewards: [{
+				id: "1617766BFFC620D2"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_masonry"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "30824E76C57A8679"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:sword"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "66DDDE912A191E57"
+			rewards: [{
+				id: "242009705F048500"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_hunting"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "3F3272C9BFC25003"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["36E02479368EAF04"]
+			id: "59B17CA4AA6D0DD4"
+			shape: "circle"
+			tasks: [{
+				id: "0423DFD47CB1DCE3"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -8.5d
+		}
+		{
+			id: "36E02479368EAF04"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3FE411FC2A966816"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -6.5d
+		}
+		{
+			id: "41BB50843EF5EF10"
+			rewards: [{
+				count: 25
+				id: "60DDCBCC377BA8B6"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "488C968F61E4B260"
+					item: { count: 1, id: "minecraft:oak_sapling" }
+					type: "item"
+				}
+				{
+					id: "42D3B8604E57BF0C"
+					item: { count: 1, id: "minecraft:spruce_sapling" }
+					type: "item"
+				}
+				{
+					id: "72143D74D89A814A"
+					item: { count: 1, id: "minecraft:birch_sapling" }
+					type: "item"
+				}
+				{
+					id: "67A6AAF07DECFBB6"
+					item: { count: 1, id: "minecraft:acacia_sapling" }
+					type: "item"
+				}
+				{
+					id: "1AFB1184CADE0663"
+					item: { count: 1, id: "minecraft:jungle_sapling" }
+					type: "item"
+				}
+				{
+					id: "1378A6451110CC4C"
+					item: { count: 1, id: "minecraft:dark_oak_sapling" }
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				id: "aquaculture:gold_fishing_rod"
+			}
+			id: "6C0EC278451434AC"
+			rewards: [{
+				id: "70312C750F6E2115"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_fishing"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "79BD40CF4A57DA36"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -8.0d
+		}
+		{
+			id: "736FC31210F334F2"
+			rewards: [{
+				count: 15
+				id: "6C5F42C1888F0C63"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7D2F867FD8A5A68A"
+				item: { count: 1, id: "minecraft:written_book" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["59B17CA4AA6D0DD4"]
+			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:golden_chestplate"
+			}
+			id: "32C46B11BDAD7632"
+			rewards: [{
+				id: "2E450774C09EF266"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:profession_card_smithing"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 30L
+				id: "042431BBCD1966C4"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["41BB50843EF5EF10"]
+			id: "08DB1CFAE4555525"
+			rewards: [{
+				count: 45
+				id: "5CEE44BA4F587BB2"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "57263F412DD5DF08"
+					item: { components: { "ftbquests:missing_item": "biomesoplenty:fir_sapling" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "657B38C214414E2B"
+					item: { components: { "ftbquests:missing_item": "biomesoplenty:redwood_sapling" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "3E7A122FD86E017F"
+					item: { components: { "ftbquests:missing_item": "biomesoplenty:flowering_oak_sapling" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "7CBBC7FB7C7F5D7E"
+					item: { components: { "ftbquests:missing_item": "biomesoplenty:palm_sapling" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			id: "128F1A9528CA4130"
+			rewards: [{
+				count: 25
+				id: "7FA1F28AC13E3742"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "05FA6BA978E2C59F"
+					item: { count: 1, id: "ae2:certus_quartz_crystal" }
+					type: "item"
+				}
+				{
+					id: "4DC845907E010B7E"
+					item: { components: { "ftbquests:missing_item": "thermal:sulfur" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "40D6184B28DD1B00"
+					item: { components: { "ftbquests:missing_item": "thermal:cinnabar" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "6EC680AD06AEAE3E"
+					item: { components: { "ftbquests:missing_item": "thermal:niter" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "394B5E7E3AD55394"
+					item: { components: { "ftbquests:missing_item": "thermal:apatite" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["128F1A9528CA4130"]
+			id: "669D57A1E1B09CD8"
+			rewards: [{
+				count: 45
+				id: "158BDC6AB3DED2C8"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "18D9327C3A3FC945"
+					item: { components: { "ftbquests:missing_item": "thermal:ruby" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "0129F312595D379D"
+					item: { components: { "ftbquests:missing_item": "thermal:sapphire" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "5AA9BAAE6336FE84"
+					item: { count: 1, id: "minecraft:diamond" }
+					type: "item"
+				}
+				{
+					id: "4B1BE14A56875A44"
+					item: { count: 1, id: "minecraft:emerald" }
+					type: "item"
+				}
+				{
+					id: "570BED1488497EDD"
+					item: { count: 1, id: "minecraft:lapis_lazuli" }
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -3.0d
+		}
+		{
+			can_repeat: true
+			id: "436DA1A1AB8C0734"
+			rewards: [{
+				count: 32
+				id: "76F8080C0E176A08"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "28EC11DE8335B74A"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.5d
+		}
+		{
+			id: "2A9AAED667A95C6E"
+			rewards: [{
+				count: 25
+				id: "3D573B952A099408"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 8L
+					id: "107EBA54BFA18FD9"
+					item: { count: 1, id: "minecraft:andesite" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "18A900D9A3914F00"
+					item: { count: 1, id: "minecraft:diorite" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "53041ECE4D386D55"
+					item: { count: 1, id: "minecraft:granite" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "63909F521730B80A"
+					item: { count: 1, id: "create:limestone" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2A9AAED667A95C6E"]
+			id: "7D92D05B4A67FD78"
+			rewards: [{
+				count: 45
+				id: "191FAA4E0A99AF43"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 8L
+					id: "202DC6687EAB3378"
+					item: { count: 1, id: "minecraft:basalt" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "5EC196FF10FD67EE"
+					item: { count: 1, id: "minecraft:blackstone" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "731A6B9678CE71D8"
+					item: { count: 1, id: "minecraft:deepslate" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: -2.5d
+		}
+		{
+			id: "1C5EA1173F4E592B"
+			rewards: [{
+				count: 15
+				id: "3125103507C80C78"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 256L
+				id: "0A99B239D9EA5B0B"
+				item: { count: 1, id: "minecraft:dirt" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.0d
+		}
+		{
+			id: "4D07666ECE75D9B5"
+			rewards: [{
+				count: 25
+				id: "001C0326E6B6F1FF"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 3L
+					id: "583272656AABAD03"
+					item: { count: 1, id: "minecraft:carrot" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "19A897A26BEE9DC3"
+					item: { count: 1, id: "minecraft:wheat" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "26D3EBEE2A65DC26"
+					item: { count: 1, id: "minecraft:potato" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "4BCA88E713BFF541"
+					item: { count: 1, id: "farmersdelight:onion" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "59E905250653DB9A"
+					item: { count: 1, id: "farmersdelight:tomato" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "0863A4006B84F0F6"
+					item: { count: 1, id: "farmersdelight:cabbage" }
+					type: "item"
+				}
+			]
+			x: -7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4D07666ECE75D9B5"]
+			id: "3F2FB159F1B8875F"
+			rewards: [{
+				count: 45
+				id: "2EE90E45D02D23F1"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 3L
+					id: "35195894FE238A3E"
+					item: { count: 1, id: "farmersdelight:rice_panicle" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5AE85D27C59EDB92"
+					item: { count: 1, id: "minecraft:beetroot" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "46748564E10CA41F"
+					item: { count: 1, id: "supplementaries:flax" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "3172958C368155FE"
+					item: { count: 1, id: "minecraft:melon_slice" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "19E6E248E2E1056F"
+					item: { count: 1, id: "farmersdelight:pumpkin_slice" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "35DBA0B40123BE4B"
+					item: { count: 1, id: "minecraft:sweet_berries" }
+					type: "item"
+				}
+			]
+			x: -7.5d
+			y: -2.5d
+		}
+		{
+			id: "7932D19BE114264A"
+			rewards: [{
+				count: 55
+				id: "652AE60D13691604"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 16L
+					id: "1B971FF02438A787"
+					item: { count: 1, id: "minecraft:bone_block" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "682A8719CE780D9A"
+					item: { count: 1, id: "minecraft:bone" }
+					type: "item"
+				}
+				{
+					id: "77DF03F6422FE09D"
+					item: { count: 1, id: "reliquary:rib_bone" }
+					type: "item"
+				}
+				{
+					id: "5B926A8BCD627407"
+					item: { count: 1, id: "minecraft:skeleton_skull" }
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: -3.0d
+		}
+		{
+			id: "7C270AB26CD9AAB8"
+			rewards: [{
+				count: 30
+				id: "15ACAE1E4D900E4C"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				entity: "minecraft:zombie"
+				id: "0C72441783664753"
+				type: "kill"
+				value: 50L
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			id: "29B58A9EDA478E7D"
+			rewards: [{
+				count: 50
+				id: "57CF6CE48FF1115D"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				entity: "minecraft:skeleton"
+				id: "6C65780CF2751821"
+				type: "kill"
+				value: 40L
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			id: "1AA2C3EECE1832EE"
+			rewards: [{
+				count: 50
+				id: "5D7DB09D0FA7B0A5"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				entity: "minecraft:spider"
+				id: "60B3526FA0D6A2AF"
+				type: "kill"
+				value: 30L
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			id: "3F00084D9474C381"
+			rewards: [{
+				count: 2
+				id: "0D8EB996DBC24C64"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:gold_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2CA6E7602A5FBCF5"
+				item: { count: 1, id: "supplementaries:globe" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			id: "562696C1D01B2685"
+			rewards: [{
+				count: 15
+				id: "76F2C38DE80E75F0"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "07132D69A1BA37B5"
+				stat: "minecraft:animals_bred"
+				type: "stat"
+				value: 10
+			}]
+			x: -9.5d
+			y: -1.5d
+		}
+		{
+			id: "39D56A2B01DBD865"
+			rewards: [{
+				count: 30
+				id: "1727FE45C409A64E"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 5L
+					id: "592A29507FE620D0"
+					item: { count: 1, id: "create:crushed_raw_iron" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "5CAA30D3A26DE48A"
+					item: { count: 1, id: "create:crushed_raw_copper" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "58D69FCA7C1035F5"
+					item: { count: 1, id: "create:crushed_raw_zinc" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "4C2DB8A65AD97FAB"
+					item: { count: 1, id: "create:crushed_raw_nickel" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "73726468F48CE993"
+					item: { count: 1, id: "create:crushed_raw_lead" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "176CF773DF3BBBD0"
+					item: { count: 1, id: "create:crushed_raw_gold" }
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: -3.0d
+		}
+		{
+			can_repeat: true
+			icon: {
+				id: "minecraft:crossbow"
+			}
+			id: "76E3B76D47A1F889"
+			rewards: [{
+				count: 10
+				id: "72ADE787CA674127"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "7CEFF147708B6647"
+					item: { count: 1, id: "minecraft:white_banner" }
+					type: "item"
+				}
+				{
+					entity: "minecraft:pillager"
+					icon: {
+						id: "minecraft:crossbow"
+					}
+					id: "2FDA048387F90ED7"
+					type: "kill"
+					value: 3L
+				}
+			]
+			x: -9.5d
+			y: -4.5d
+		}
+		{
+			id: "2F2BA8C2AC2E0B93"
+			rewards: [{
+				count: 60
+				id: "52C6094274D540AB"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				icon: {
+					id: "minecraft:golden_boots"
+				}
+				id: "374CDBF68F90BDC9"
+				stat: "minecraft:jump"
+				type: "stat"
+				value: 16000
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+	]
+}

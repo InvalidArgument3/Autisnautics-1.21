@@ -1,0 +1,11 @@
+{
+  "biomes": [
+    [
+      {
+        "type": "allows_surface_slime_spawns",
+        "negate": false,
+        "value": "minecraft:is_overworld"
+      }
+    ]
+  ]
+}

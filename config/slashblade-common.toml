@@ -1,0 +1,62 @@
+
+#General settings
+[general]
+	#Determining the count for proud soul when blade be broken.
+	#Range: 1 ~ 64
+	max_proudsoul_drop = 10
+	#Determining the count for enchanted proud soul when blade be broken.
+	#Range: 1 ~ 64
+	max_enchanted_proudsoul_drop = 10
+	#Determining the spawn chance of sabigatana.
+	#Range: 0.0 ~ 1.0
+	sabigatana_spawn_chance = 0.05
+	#Determining the spawn chance of a broken sabigatana.
+	#Range: 0.0 ~ 1.0
+	broken_sabigatana_spawn_chance = 0.15
+	#Determines whether to make hunger effect repair slashblade.
+	#If enable, if player has hunger effect, your slashblade in hotbar will be repaired, cost player's hunger.
+	hunger_can_repair = true
+	#Determines whether to enable slashblade's PVP.
+	#If enable, player can attack player with SlashBlade.
+	pvp_enable = false
+	#Determines whether to enable slashblade's friendly fire.
+	#If enable, player can attack friendly entity with SlashBlade.
+	friendly_enable = false
+	#Determining the level cost for refine a slashblade.
+	#Range: > 1
+	refine_level_cost = 1
+	#Determining the proud soul cost for single summon mirage blade.
+	#Range: > 1
+	summon_sword_cost = 2
+	#Determining the proud soul cost for summon blade arts.
+	#Range: > 1
+	summon_blade_art_cost = 20
+	#Determining the max proud soul count for single mobs kill.
+	#Range: > 1
+	max_proud_soul_got = 100
+	#Determines whether to enable slashblade's self-repair.
+	#If enable, bewitched slashblade will try repair itself, cost hunger & exp.
+	self_repair = true
+	#Determining the base exhaustion for slashblade's self-repair.
+	#Range: 1.0E-4 ~ 1.7976931348623157E308
+	bewitched_hunger_exhaustion = 0.05
+	#Determines whether slashblade's self-repair cost experiences.
+	#If enable, self repair will cost player's experiences.
+	self_repair_cost_exp = true
+	#Determining the base exp cost for slashblade's self-repair.
+	#Range: > 1
+	bewitched_exp_cost = 1
+	#Blade Damage: Base Damage × Multiplier.[Default: 1.0D]
+	#Range: 0.0 ~ 1024.0
+	slashblade_damage_multiplier = 1.0
+	#S-Rank Refine Bonus: Each Refine × Multiplier'value Damage.[Default: 1.D]
+	#Range: 0.0 ~ 1024.0
+	refine_damage_multiplier = 1.0
+	#The maximum number of refine of Trapezohedron.[Default: 2147483647(infinity)]
+	#Range: > 200
+	trapezohedron_max_refine = 2147483647
+	#Example: 'minecraft:sharpness', That will prevent the enchantment from dropping the corresponding proudsoul tiny.
+	non-droppable_enchantments = []
+	#Does crafting sum up the refine of all ingredients? If false, then it only takes the maximum refine.
+	do_crafting_sum_refine = true
+

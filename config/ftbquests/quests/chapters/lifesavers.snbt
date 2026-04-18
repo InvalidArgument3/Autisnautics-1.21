@@ -1,0 +1,497 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lifesavers"
+	group: "3BE4B4DE6A6F6C40"
+	id: "0D0BC5B3F6623669"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1127129CBA2B5E6F"
+			rewards: [{
+				id: "66E867F9537437F1"
+				item: {
+					components: {
+						"ftbquests:missing_item": "projectred_core:red_ingot"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "19CF5DA7A8547E17"
+					item: { components: { "ftbquests:missing_item": "projectred_core:platformed_plate" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "457F0290A225EEA9"
+					item: { components: { "ftbquests:missing_item": "projectred_transmission:red_alloy_wire" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "17B93B8634BC1C2D"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			id: "26C39961F2E2ABF2"
+			rewards: [{
+				id: "2AC846CB2DF485C8"
+				item: {
+					count: 1
+					id: "create:golden_sheet"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5E687A6CBD96D0EF"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.0d
+		}
+		{
+			id: "0B8816319F81C12A"
+			rewards: [{
+				id: "7488D3D81C7FAC51"
+				item: {
+					count: 1
+					id: "minecraft:enchanted_book"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "180D1CB1BB7EB0AA"
+				item: { count: 1, id: "supplementaries:bubble_blower" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			id: "382EBC32AC27C839"
+			rewards: [{
+				id: "7CA19E24D6A5BF46"
+				item: {
+					count: 1
+					id: "functionalstorage:copper_upgrade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "31FE3FAF6909CB19"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			id: "0E4476BA80B316F6"
+			rewards: [{
+				id: "02BA7C4E293DD955"
+				item: {
+					count: 1
+					id: "minecraft:salmon"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "72F2D3B586A81A2B"
+				item: { count: 1, id: "farmersdelight:stove" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			id: "6D7D504E9DC22590"
+			rewards: [{
+				id: "12B2F2F9A6A257FE"
+				item: {
+					count: 1
+					id: "minecraft:ender_pearl"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4BE0CCD6F383D961"
+				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "2F469F6F1511D9C4"
+			rewards: [{
+				count: 16
+				id: "5B7C253D05152423"
+				item: {
+					count: 1
+					id: "minecraft:scaffolding"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "039DD9EBD46B2C23"
+				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			id: "7061F42CF050ADCA"
+			rewards: [{
+				count: 8
+				id: "40E5D8DBF58086BB"
+				item: {
+					count: 1
+					id: "create:cogwheel"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "0710C744349D2090"
+				item: { count: 1, id: "create:extendo_grip" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			id: "45E7810E21F6F9AE"
+			rewards: [{
+				id: "482338485BF4B3B0"
+				item: {
+					components: {
+						"ftbquests:missing_item": "biomesoplenty:spanish_moss"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "7AD38BD1318A493B"
+				item: { count: 1, id: "naturescompass:naturescompass" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: -3.0d
+		}
+		{
+			id: "50E2D6459F3D68C0"
+			rewards: [{
+				id: "390AF1049C411219"
+				item: {
+					count: 1
+					id: "minecraft:barrel"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "33523F8FED81A922"
+				item: { count: 1, id: "sophisticatedstorage:basic_to_iron_tier_upgrade" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			id: "09EB29F838620371"
+			rewards: [{
+				id: "7AF62EF3656DD4E3"
+				item: {
+					count: 1
+					id: "create:empty_schematic"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "103E6982FCFE8B6C"
+				item: { count: 1, id: "create:schematicannon" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -1.0d
+		}
+		{
+			id: "6D900619B1967D72"
+			rewards: [{
+				id: "47ADAFAB537F63CE"
+				item: {
+					count: 1
+					id: "minecraft:painting"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "006D992D77A782EF"
+				item: { count: 1, id: "create:crafting_blueprint" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "334146C815B304DB"
+			rewards: [{
+				id: "35445550FFC9B565"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:pipe_module_tier_1"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "461F9FF1732B308F"
+				item: { components: { "ftbquests:missing_item": "prettypipes:pipe" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			id: "6BC864CC7CB2C316"
+			rewards: [{
+				id: "5EA5B33DA2E47592"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:signalum_ingot"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "4912723B6A264380"
+				item: { components: { "ftbquests:missing_item": "thermal:energy_duct" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			id: "1DBFD0B34659A8F9"
+			rewards: [{
+				id: "7BD14F5479FAB194"
+				item: {
+					count: 1
+					id: "minecraft:skeleton_skull"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "39E13E85803FA5DA"
+				item: { components: { "ftbquests:missing_item": "torchmaster:megatorch" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			id: "087659F192F41C6E"
+			rewards: [{
+				id: "4ECA141D5EE15954"
+				item: {
+					count: 1
+					id: "minecraft:chest"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "6CA7ADFA433D850D"
+				item: { components: { "ftbquests:missing_item": "tconstruct:crafting_station" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			id: "0F4B0608CBF966E6"
+			rewards: [{
+				count: 16
+				id: "28A2E7AC0A54F50B"
+				item: {
+					count: 1
+					id: "minecraft:chain"
+				}
+				random_bonus: 8
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "63664BFD05DDCABE"
+					item: { count: 1, id: "create:chain_conveyor" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "0149C713E94864F3"
+					item: { count: 1, id: "minecraft:chain" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			id: "661807F8ED723EEB"
+			rewards: [{
+				id: "1186F7D43411D62D"
+				item: {
+					count: 1
+					id: "sophisticatedbackpacks:jukebox_upgrade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "65A12D108D1E18AA"
+				item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			id: "1DD2802F5611D419"
+			rewards: [{
+				id: "3A35387B6A431842"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:attachment_base"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "09FD6301B7CF206E"
+				item: { components: { "ftbquests:missing_item": "thermal:fluid_duct" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			id: "4B1017D1C176412F"
+			rewards: [{
+				id: "07C632B31F279953"
+				item: {
+					count: 1
+					id: "minecraft:stone"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "58BCE29D7C42428F"
+				item: { count: 1, id: "sophisticatedbackpacks:stonecutter_upgrade" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -3.0d
+		}
+		{
+			id: "374933A06E016CE9"
+			rewards: [{
+				count: 16
+				id: "071BEECB37AFECB4"
+				item: {
+					components: {
+						"ftbquests:missing_item": "projectred_core:red_ingot"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "42002EEA26A72016"
+				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:missing_item": "rechiseled:chisel"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "78A8751AF86E0E32"
+			rewards: [{
+				count: 16
+				id: "65589D633E5A9F73"
+				item: {
+					components: {
+						"ftbquests:missing_item": "rechiseled:cobblestone_stripes_connecting"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "728C7440719BF00D"
+				item: { components: { "ftbquests:missing_item": "rechiseled:chisel" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			id: "3A428CA43D545DB9"
+			tasks: [{
+				id: "3B501EA544B81E73"
+				item: { count: 1, id: "minecraft:crafting_table" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			id: "522065CE0A5CE9D2"
+			rewards: [{
+				count: 4
+				id: "4462C2F952734045"
+				item: {
+					count: 1
+					id: "aquaculture:worm"
+				}
+				random_bonus: 4
+				type: "item"
+			}]
+			tasks: [{
+				id: "7BC3D3EBF0897C0F"
+				item: { count: 1, id: "aquaculture:tackle_box" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+	]
+}

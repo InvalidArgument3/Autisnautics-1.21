@@ -1,0 +1,21 @@
+- strut placement fixed, nice
+- jogging buttons need to be connected up 
+- camera zoom scroll bleeds through parts UI
+https://files.catbox.moe/483u5d.mp4
+- connecting drivetrains
+- a "pick part to hotbar" key would be useful, or pick part to hand
+- inconsistency: tab is called "designer" but column in controls is called "builder"
+- bug: moving editor orbit cam, before the designer transition animation finishes, rubberbands it back until you let it finish. same for returning from test drive
+https://litter.catbox.moe/3jqepv.mp4
+- pan controls are inverted from what's expected in blender (fixed). might be personal preference tho
+- with the new jogging, I think automatic snapping can be removed entirely tbh. even in FPS mode
+
+
+
+blender-like control preset suggestions:
+note: using mmb for everything is kinda shit actually but for familiarity maybe we can set up a second preset for just the designer category
+
+> move pan from shift + rclick to shift + mmb
+> move center viewpoint to alt + mmb
+> move orbit to mmb
+> move zoom from ctrl + shift + rmbdrag to ctrl + mmbdrag

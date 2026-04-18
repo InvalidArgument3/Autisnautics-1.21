@@ -1,0 +1,2173 @@
+{
+	chapter.052B4DEA706D3A24.title: "{cabin.chapter.052B4DEA706D3A24.title}"
+	chapter.08DF8E49DAFD4F9D.title: "{cabin.chapter.08DF8E49DAFD4F9D.title}"
+	chapter.0D0BC5B3F6623669.title: "{cabin.chapter.0D0BC5B3F6623669.title}"
+	chapter.0F40BB44472F412C.title: "FLAOT.jpg"
+	chapter.102E012616516E5D.title: "{cabin.chapter.102E012616516E5D.title}"
+	chapter.1634333847CCE52A.title: "{cabin.chapter.1634333847CCE52A.title}"
+	chapter.1B927DD15CF28E13.title: "{cabin.chapter.1B927DD15CF28E13.title}"
+	chapter.1F9517DCFB1DB297.title: "{cabin.chapter.1F9517DCFB1DB297.title}"
+	chapter.27A8EC11B6702416.title: "! Origin Selector"
+	chapter.2E3CEFA2473F96EE.title: "The Big Cheese"
+	chapter.2EB3EC9861015754.title: "Ghost in the Machine"
+	chapter.2EE5FBD9BD7C0265.title: "{cabin.chapter.2EE5FBD9BD7C0265.title}"
+	chapter.2FDA7DFC0C684E58.title: "{cabin.chapter.2FDA7DFC0C684E58.title}"
+	chapter.38327310ED73E177.title: "The Sevenfold Curse"
+	chapter.3B9012879CADD3FC.title: "blobbiy quest"
+	chapter.3CEC7BECE6B40994.title: "{cabin.chapter.3CEC7BECE6B40994.title}"
+	chapter.44F68408CAD025B8.title: "{cabin.chapter.44F68408CAD025B8.title}"
+	chapter.45AEDCD3B795E95A.title: "{cabin.chapter.45AEDCD3B795E95A.title}"
+	chapter.4F9F23CB1B32953F.title: "Taking Flight"
+	chapter.56284ADB6BDA71D8.title: "Basic Info"
+	chapter.714C446FA51AFBB3.title: "Starting Gear"
+	chapter.75CF8B6BAC6A01EF.title: "{cabin.chapter.75CF8B6BAC6A01EF.title}"
+	chapter.7C67100AFA5B43EA.title: "Munitions Plant"
+	chapter_group.0810E42B2DD79973.title: "{cabin.chapter_group.0810E42B2DD79973}"
+	chapter_group.0BFB33D75F4EAD91.title: "&bOrigins"
+	chapter_group.331B6409EF6A7840.title: "{cabin.chapter_group.331B6409EF6A7840}"
+	chapter_group.3BE4B4DE6A6F6C40.title: "{cabin.chapter_group.3BE4B4DE6A6F6C40}"
+	chapter_group.79DBEF62FF5CD2D9.title: "Tutorial"
+	quest.00003FCBB33E62C4.quest_desc: [
+		"{cabin.quest.00003FCBB33E62C4.description1}"
+		"{cabin.quest.00003FCBB33E62C4.description2}"
+		""
+		"{cabin.quest.00003FCBB33E62C4.description3}"
+		""
+		"{cabin.quest.00003FCBB33E62C4.description4}"
+		""
+		"{cabin.quest.00003FCBB33E62C4.description5}"
+		""
+		"{cabin.quest.00003FCBB33E62C4.description6}"
+		""
+		"{cabin.quest.00003FCBB33E62C4.description7}"
+	]
+	quest.00003FCBB33E62C4.title: "{cabin.quest.00003FCBB33E62C4.title}"
+	quest.003E0D1CE60B166A.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.003E0D1CE60B166A.title: "{cabin.quest.003E0D1CE60B166A.title}"
+	quest.00565042E29AD1B1.title: "Hook Launchers"
+	quest.005F2C4E203E7E62.quest_subtitle: "{cabin.quest.352F5F851045653A.subtitle}"
+	quest.005F2C4E203E7E62.title: "{cabin.quest.005F2C4E203E7E62.title}"
+	quest.00D6DD6AE8E3C014.quest_desc: ["{cabin.quest.00D6DD6AE8E3C014.description1}"]
+	quest.00D6DD6AE8E3C014.quest_subtitle: "{cabin.quest.00D6DD6AE8E3C014.subtitle}"
+	quest.00D6DD6AE8E3C014.title: "{cabin.quest.00D6DD6AE8E3C014.title}"
+	quest.00EBF8DED4E51A4F.quest_subtitle: "{cabin.quest.00EBF8DED4E51A4F.subtitle}"
+	quest.00EBF8DED4E51A4F.title: "{cabin.quest.00EBF8DED4E51A4F.title}"
+	quest.011F64B48766234B.quest_subtitle: "{cabin.quest.011F64B48766234B.subtitle}"
+	quest.011F64B48766234B.title: "{cabin.quest.011F64B48766234B.title}"
+	quest.01428232944D8BE9.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.01428232944D8BE9.title: "{cabin.quest.01428232944D8BE9.title}"
+	quest.016864AD0C9247B9.quest_desc: [
+		"{cabin.quest.016864AD0C9247B9.description1}"
+		""
+		"{cabin.quest.016864AD0C9247B9.description2}"
+	]
+	quest.016864AD0C9247B9.quest_subtitle: "{cabin.quest.016864AD0C9247B9.subtitle}"
+	quest.016864AD0C9247B9.title: "{cabin.quest.016864AD0C9247B9.title}"
+	quest.01B0A6236A5073D1.quest_desc: ["{cabin.quest.01B0A6236A5073D1.description1}"]
+	quest.01B0A6236A5073D1.quest_subtitle: "{cabin.quest.01B0A6236A5073D1.subtitle}"
+	quest.01B0A6236A5073D1.title: "{cabin.quest.01B0A6236A5073D1.title}"
+	quest.01BE1A7FCE79C63D.quest_desc: [
+		"{cabin.quest.01BE1A7FCE79C63D.description1}"
+		""
+		"{cabin.quest.01BE1A7FCE79C63D.description2}"
+	]
+	quest.01BE1A7FCE79C63D.title: "{cabin.quest.01BE1A7FCE79C63D.title}"
+	quest.01C36D2B3E49D379.quest_desc: ["i think to make the up stick blobbis needs rose metal. that sounids unreasonmably expensive and frankly bolbi isnt made of monney. Im just gonna make my own. if blobb already rose this far then metal can rose too."]
+	quest.01C36D2B3E49D379.title: "Rise of the bllob"
+	quest.01F3EDC327B63908.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.01F3EDC327B63908.title: "{cabin.quest.01F3EDC327B63908.title}"
+	quest.02B2E249421FAE58.quest_desc: ["{cabin.quest.02B2E249421FAE58.description1}"]
+	quest.02B2E249421FAE58.quest_subtitle: "{cabin.quest.02B2E249421FAE58.subtitle}"
+	quest.02B2E249421FAE58.title: "{cabin.quest.02B2E249421FAE58.title}"
+	quest.02E41EDC1899468D.quest_desc: ["Glowing Mushrooms are an essential ingredient for Radaway. Whether you used the potion method or something else, as long as you've got a steady supply, you're good."]
+	quest.02E41EDC1899468D.quest_subtitle: "Contraption 19-5"
+	quest.02E41EDC1899468D.title: "Rad-Scrubbing Fungi"
+	quest.0315668E30F2F6E5.quest_subtitle: "{cabin.quest.011F64B48766234B.subtitle}"
+	quest.0315668E30F2F6E5.title: "{cabin.quest.0315668E30F2F6E5.title}"
+	quest.034B6B71E610D8E1.quest_desc: [
+		"&oThe Blobbian is unique among organic life-forms, exhibiting no genetic variation between individuals... the only confirmed species is Blobbius Caelus, the Sky Blobbian..."
+		"&o...lacking any sort of nervous system, all analysis shows no physical activity resembling thought. Yet Blobbius Caelus readily communicates, forms plans, and even makes specialized tools to navigate its environment..."
+		"&o...have argued an extraphysical location for thought processing, or that Blobbius is part of a larger organism...&r"
+		""
+		"&8&o- Encyclopedia Daemonica&r"
+	]
+	quest.034B6B71E610D8E1.title: "Blobbius Caelus"
+	quest.03B7909623F97843.quest_desc: ["{cabin.quest.03B7909623F97843.description1}"]
+	quest.03B7909623F97843.title: "{cabin.quest.03B7909623F97843.title}"
+	quest.040A0552921E1115.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.040A0552921E1115.title: "{cabin.quest.040A0552921E1115.title}"
+	quest.04468935C9A7298F.quest_desc: ["{cabin.quest.04468935C9A7298F.description1}"]
+	quest.04468935C9A7298F.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.04468935C9A7298F.title: "{cabin.quest.04468935C9A7298F.title}"
+	quest.047FD4E54147D8F7.quest_desc: ["{cabin.quest.047FD4E54147D8F7.description1}"]
+	quest.047FD4E54147D8F7.title: "{cabin.quest.047FD4E54147D8F7.title}"
+	quest.0504DC3275C4F49D.title: "Uranium Rod"
+	quest.050A20198A80CF1A.quest_desc: [
+		"{cabin.quest.050A20198A80CF1A.description1}"
+		""
+		"{cabin.quest.050A20198A80CF1A.description2}"
+	]
+	quest.050A20198A80CF1A.quest_subtitle: "{cabin.quest.050A20198A80CF1A.subtitle}"
+	quest.050A20198A80CF1A.title: "{cabin.quest.050A20198A80CF1A.title}"
+	quest.05446225038D260A.quest_desc: [
+		"{cabin.quest.05446225038D260A.description1}"
+		""
+		"{cabin.quest.05446225038D260A.description2}"
+		""
+		"{cabin.quest.05446225038D260A.description3}"
+	]
+	quest.05446225038D260A.title: "{cabin.quest.05446225038D260A.title}"
+	quest.05C7E580ED88B556.quest_desc: ["{cabin.quest.05C7E580ED88B556.description1}"]
+	quest.05C7E580ED88B556.title: "{cabin.quest.05C7E580ED88B556.title}"
+	quest.067C5FDA4709F195.quest_desc: ["{cabin.quest.067C5FDA4709F195.description1}"]
+	quest.067C5FDA4709F195.quest_subtitle: "{cabin.quest.067C5FDA4709F195.subtitle}"
+	quest.067C5FDA4709F195.title: "{cabin.quest.067C5FDA4709F195.title}"
+	quest.06B061C0EE94BC90.quest_desc: [
+		"{cabin.quest.06B061C0EE94BC90.description1}"
+		"{cabin.quest.06B061C0EE94BC90.description2}"
+	]
+	quest.06B061C0EE94BC90.quest_subtitle: "{cabin.quest.06B061C0EE94BC90.subtitle}"
+	quest.06B061C0EE94BC90.title: "{cabin.quest.06B061C0EE94BC90.title}"
+	quest.07081911727142C8.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.07081911727142C8.title: "{cabin.quest.07081911727142C8.title}"
+	quest.0726837174BCED3D.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.0726837174BCED3D.title: "{cabin.quest.0726837174BCED3D.title}"
+	quest.07BE7128982202A7.title: "{cabin.quest.07BE7128982202A7.title}"
+	quest.08367CEDF13CB65C.title: "Lead Casing"
+	quest.08716DBF9C882623.quest_desc: [
+		"{cabin.quest.08716DBF9C882623.description1}"
+		""
+		"{cabin.quest.08716DBF9C882623.description2}"
+	]
+	quest.08716DBF9C882623.quest_subtitle: "{cabin.quest.08716DBF9C882623.subtitle}"
+	quest.08716DBF9C882623.title: "{cabin.quest.08716DBF9C882623.title}"
+	quest.087659F192F41C6E.quest_desc: ["{cabin.quest.087659F192F41C6E.description1}"]
+	quest.087659F192F41C6E.title: "{cabin.quest.087659F192F41C6E.title}"
+	quest.08DB1CFAE4555525.quest_subtitle: "{cabin.quest.08DB1CFAE4555525.subtitle}"
+	quest.08DB1CFAE4555525.title: "{cabin.quest.08DB1CFAE4555525.title}"
+	quest.091671443430B31B.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.091671443430B31B.title: "{cabin.quest.091671443430B31B.title}"
+	quest.09356B3BEF298E06.quest_desc: [
+		"{cabin.quest.09356B3BEF298E06.description1}"
+		""
+		"{cabin.quest.09356B3BEF298E06.description2}"
+		""
+	]
+	quest.09356B3BEF298E06.title: "{cabin.quest.09356B3BEF298E06.title}"
+	quest.0937A1CC74795CF4.quest_desc: [
+		"&7Spear hook"
+		"- attaches to any block except blocks with high hardness (metal blocks, obsidian, etc.)"
+		"- breaks glass"
+		"- makes damage to entities on hit"
+		"- long distance"
+		"- medium rope elasticity"
+		"- medium fire resistance"
+		""
+		"&9Web hook"
+		"- sticks to any surface except sandy blocks"
+		"- safe for other players (makes no damage)"
+		"- long distance"
+		"- high rope elasticity"
+		"- low fire resistance"
+		""
+		"&4Pudge hook"
+		"- attaches to tree leaves, poles, iron bars and fences"
+		"- rips out torches, bells and lanterns"
+		"- pulls entities and players"
+		"- dismounts riding entities"
+		"- auto-pulling"
+		"- medium distance"
+		"- high hook strength"
+		"- high fire resistance"
+	]
+	quest.0937A1CC74795CF4.title: "Choose Starting Hook"
+	quest.093FB7B7FEC6B886.quest_desc: ["{cabin.quest.093FB7B7FEC6B886.description1}"]
+	quest.093FB7B7FEC6B886.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.093FB7B7FEC6B886.title: "{cabin.quest.093FB7B7FEC6B886.title}"
+	quest.0940460C24391D32.quest_desc: [
+		"While Cactoids have a reputation for spewing all sorts of things, gunpowder is the most famous. Endosymbiotic glands in every Cactoid's digestive tract can rapidly digest rotten flesh into gunpowder, which is immediately vomited back up."
+		""
+		"It's thought the Cactoids' enigmatic progenitors engineered them with this ability, but no one's quite sure what its original purpose was. Nowadays, it's mainly used as a defense mechanism in times of great need."
+		""
+		"Well, you have a need. A need for ammunition. Now eat the flesh."
+	]
+	quest.0940460C24391D32.title: "Regurgitated Slop"
+	quest.097BF458D48E4B46.quest_desc: ["An ancient legend passed down among rat-kind says the moon is made of cheese. If you make it to the moon someday, all that cheese could be yours..."]
+	quest.097BF458D48E4B46.title: "Moon Cheese"
+	quest.09DC2E2BE2BE32F4.quest_desc: ["{cabin.quest.09DC2E2BE2BE32F4.description1}"]
+	quest.09DC2E2BE2BE32F4.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.09DC2E2BE2BE32F4.title: "{cabin.quest.09DC2E2BE2BE32F4.title}"
+	quest.09EA580B3D32FEEB.quest_desc: ["{cabin.quest.09EA580B3D32FEEB.description1}"]
+	quest.09EA580B3D32FEEB.quest_subtitle: "{cabin.quest.09EA580B3D32FEEB.subtitle}"
+	quest.09EA580B3D32FEEB.title: "{cabin.quest.09EA580B3D32FEEB.title}"
+	quest.09EB29F838620371.quest_desc: ["{cabin.quest.09EB29F838620371.description1}"]
+	quest.09EB29F838620371.title: "{cabin.quest.09EB29F838620371.title}"
+	quest.0A295CF925D97618.title: "Purge the Undead"
+	quest.0AD8C8E5491278E1.title: "Lead Casing"
+	quest.0AE7FAEBD5F86D9C.quest_desc: [
+		"{cabin.quest.0AE7FAEBD5F86D9C.description1}"
+		""
+		"{cabin.quest.0AE7FAEBD5F86D9C.description2}"
+	]
+	quest.0AE7FAEBD5F86D9C.quest_subtitle: "{cabin.quest.0AE7FAEBD5F86D9C.subtitle}"
+	quest.0AE7FAEBD5F86D9C.title: "{cabin.quest.0AE7FAEBD5F86D9C.title}"
+	quest.0AF5F19F5D9FB5C9.quest_desc: [
+		"{cabin.quest.0AF5F19F5D9FB5C9.description1}"
+		""
+		"{cabin.quest.0AF5F19F5D9FB5C9.description2}"
+	]
+	quest.0AF5F19F5D9FB5C9.title: "{cabin.quest.0AF5F19F5D9FB5C9.title}"
+	quest.0B602ED47A0195A4.quest_desc: ["{cabin.quest.0B602ED47A0195A4.description1}"]
+	quest.0B602ED47A0195A4.quest_subtitle: "{cabin.quest.0B602ED47A0195A4.subtitle}"
+	quest.0B602ED47A0195A4.title: "{cabin.quest.0B602ED47A0195A4.title}"
+	quest.0B61F5DF33350C0A.quest_desc: ["Theres some weird not blobbys that that live on slimey islands. they dont talk but they taste breddy gud. if I find the blue raspberry flavor thatd be way better than vegtables."]
+	quest.0B61F5DF33350C0A.title: "the other blobb."
+	quest.0B8816319F81C12A.quest_desc: [
+		"{cabin.quest.0B8816319F81C12A.description1}"
+		""
+		"{cabin.quest.0B8816319F81C12A.description2}"
+	]
+	quest.0B8816319F81C12A.title: "{cabin.quest.0B8816319F81C12A.title}"
+	quest.0BE1DA955F49FBD6.quest_desc: ["Rats may have a lot of talents, but flying isn't one of them. At least, not yet. There's only one way to get started down the path to rat-powered flight. Time to punch trees."]
+	quest.0BE1DA955F49FBD6.title: "Gnawing Logs"
+	quest.0C11EC34D5FA508B.quest_desc: ["{cabin.quest.0C11EC34D5FA508B.description1}"]
+	quest.0C11EC34D5FA508B.title: "{cabin.quest.0C11EC34D5FA508B.title}"
+	quest.0C6B2EEE280F7667.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.0C6B2EEE280F7667.title: "{cabin.quest.0C6B2EEE280F7667.title}"
+	quest.0CC92E94D10E681D.quest_desc: [
+		"{cabin.quest.0CC92E94D10E681D.description1}"
+		""
+		"{cabin.quest.0CC92E94D10E681D.description2}"
+	]
+	quest.0CCF34BF1C5829AE.quest_desc: ["{cabin.quest.0CCF34BF1C5829AE.description1}"]
+	quest.0CCF34BF1C5829AE.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
+	quest.0CCF34BF1C5829AE.title: "{cabin.quest.0CCF34BF1C5829AE.title}"
+	quest.0CE88FEA070DC46C.quest_desc: ["{cabin.quest.0CE88FEA070DC46C.description1}"]
+	quest.0CE88FEA070DC46C.title: "{cabin.quest.0CE88FEA070DC46C.title}"
+	quest.0CF82AABD5E05A0D.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.0CF82AABD5E05A0D.title: "{cabin.quest.0CF82AABD5E05A0D.title}"
+	quest.0D146AD9FE774F8B.quest_desc: ["{cabin.quest.0D146AD9FE774F8B.description1}"]
+	quest.0D146AD9FE774F8B.title: "{cabin.quest.0D146AD9FE774F8B.title}"
+	quest.0D739DC45906A4EB.quest_desc: ["eek"]
+	quest.0D739DC45906A4EB.title: "rat_parts"
+	quest.0DA48CA15E17157D.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.0DA48CA15E17157D.title: "{cabin.quest.0DA48CA15E17157D.title}"
+	quest.0DCC71420C57E089.quest_desc: [
+		"It's said that once in every Cactoid's life, he enters a strange mood and seeks out rare organic materials. In this temporary state, the Cactoid's genetically-engineered instincts let it fuse biology with metal to forge a unique living tool, a phenomenon known as \"biosmithing\"."
+		"Your instincts cry out - this crossbow could be something more, if only you had the right parts! You sense the need for tentacles, yes... giant orange tentacles, from a leviathan of the deep sea! But even if such a beast existed in this world, you might never find it..."
+		"Plan B: slaughter enough fish, rip open their guts, and surely you'd find a few decent tentacles in their stomachs."
+	]
+	quest.0DCC71420C57E089.title: "Fish Fear Me"
+	quest.0DEFAE2746209F1A.quest_subtitle: "{cabin.quest.0DEFAE2746209F1A.subtitle}"
+	quest.0DEFAE2746209F1A.title: "{cabin.quest.0DEFAE2746209F1A.title}"
+	quest.0E0535849D8D9279.quest_desc: ["{cabin.quest.0E0535849D8D9279.description1}"]
+	quest.0E0535849D8D9279.title: "{cabin.quest.0E0535849D8D9279.title}"
+	quest.0E4476BA80B316F6.quest_desc: ["{cabin.quest.0E4476BA80B316F6.description1}"]
+	quest.0E4476BA80B316F6.title: "{cabin.quest.0E4476BA80B316F6.title}"
+	quest.0E46C1FCE5AEB1DF.quest_desc: [
+		"{cabin.quest.0E46C1FCE5AEB1DF.description1}"
+		""
+		"{cabin.quest.0E46C1FCE5AEB1DF.description2}"
+	]
+	quest.0E46C1FCE5AEB1DF.quest_subtitle: "{cabin.quest.0E46C1FCE5AEB1DF.subtitle}"
+	quest.0E46C1FCE5AEB1DF.title: "{cabin.quest.0E46C1FCE5AEB1DF.title}"
+	quest.0E98B4D2BBF55308.quest_desc: [
+		"{cabin.quest.0E98B4D2BBF55308.description1}"
+		""
+		"{cabin.quest.0E98B4D2BBF55308.description2}"
+	]
+	quest.0E98B4D2BBF55308.quest_subtitle: "{cabin.quest.08716DBF9C882623.subtitle}"
+	quest.0E98B4D2BBF55308.title: "{cabin.quest.0E98B4D2BBF55308.title}"
+	quest.0F4B0608CBF966E6.quest_desc: ["{cabin.quest.0F4B0608CBF966E6.description1}"]
+	quest.0F4B0608CBF966E6.title: "{cabin.quest.0F4B0608CBF966E6.title}"
+	quest.0F5AA5DF001DCDF5.quest_desc: ["{cabin.quest.0F5AA5DF001DCDF5.description1}"]
+	quest.0F5AA5DF001DCDF5.quest_subtitle: "{cabin.quest.0F5AA5DF001DCDF5.subtitle}"
+	quest.0F5AA5DF001DCDF5.title: "{cabin.quest.0F5AA5DF001DCDF5.title}"
+	quest.0F7D65050E1F7A6E.quest_desc: [
+		"It is written: The Daemon soul is like water, the body its vessel. Perfect is the machine, that vessel which swallows even the ocean and spills not a drop. But ever are we cursed to spill blood; the flesh is weak."
+		""
+		"Organic minds might fear this truth, as the flesh fears to bleed. But you have no such weakness. Your flesh is but another resource, and your blood a source of trace redstone particles. Time to begin resource extraction."
+	]
+	quest.0F7D65050E1F7A6E.title: "The Vessel"
+	quest.0F870BEA235D662D.quest_desc: [
+		"{cabin.quest.0F870BEA235D662D.description1}"
+		""
+		"{cabin.quest.0F870BEA235D662D.description2}"
+	]
+	quest.0F870BEA235D662D.title: "{cabin.quest.0F870BEA235D662D.title}"
+	quest.106C6DFDCB97327C.quest_desc: [
+		"{cabin.quest.106C6DFDCB97327C.description1}"
+		""
+		"{cabin.quest.106C6DFDCB97327C.description2}"
+		"{cabin.quest.106C6DFDCB97327C.description3}"
+	]
+	quest.106C6DFDCB97327C.quest_subtitle: "{cabin.quest.106C6DFDCB97327C.subtitle}"
+	quest.106C6DFDCB97327C.title: "{cabin.quest.106C6DFDCB97327C.title}"
+	quest.108550230A95C7D4.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.108550230A95C7D4.title: "{cabin.quest.108550230A95C7D4.title}"
+	quest.10D5B3EF6A77B918.quest_subtitle: "{cabin.quest.0DEFAE2746209F1A.subtitle}"
+	quest.10D5B3EF6A77B918.title: "{cabin.quest.10D5B3EF6A77B918.title}"
+	quest.10E93BEB78219368.quest_desc: [
+		"The good news: Glow Lichen is easily found growing on the bottom of floating islands, harvested with shears."
+		""
+		"The bad news: Glow Lichen doesn't spread on its own. To farm it automatically, you'll have to fertilize it somehow."
+	]
+	quest.10E93BEB78219368.quest_subtitle: "Contraption 19-2"
+	quest.10E93BEB78219368.title: "Glow in the Dark II"
+	quest.1127129CBA2B5E6F.quest_desc: [
+		"{cabin.quest.1127129CBA2B5E6F.description1}"
+		""
+		"{cabin.quest.1127129CBA2B5E6F.description2}"
+		""
+		"{cabin.quest.1127129CBA2B5E6F.description3}"
+	]
+	quest.1127129CBA2B5E6F.title: "{cabin.quest.1127129CBA2B5E6F.title}"
+	quest.1139F2E4E6FCFE29.quest_desc: ["{cabin.quest.1139F2E4E6FCFE29.description1}"]
+	quest.1139F2E4E6FCFE29.quest_subtitle: "{cabin.quest.1139F2E4E6FCFE29.subtitle}"
+	quest.1139F2E4E6FCFE29.title: "{cabin.quest.1139F2E4E6FCFE29.title}"
+	quest.117587D824D23D69.quest_desc: ["{cabin.quest.117587D824D23D69.description1}"]
+	quest.117587D824D23D69.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.117587D824D23D69.title: "{cabin.quest.117587D824D23D69.title}"
+	quest.11862F961F13287D.quest_desc: ["Blobbis dont have a brain so i dont member any experienices. But if blobbers eat stuffs thats got experimences in it then i can save em for later. like the bottle one tahts blue flavor for some reason or the square nuggies :DDD"]
+	quest.11862F961F13287D.title: "mmm nuggies"
+	quest.11B239EF3DAE4463.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.11B239EF3DAE4463.title: "{cabin.quest.11B239EF3DAE4463.title}"
+	quest.11C36A243F5108DC.quest_desc: ["{cabin.quest.11C36A243F5108DC.description1}"]
+	quest.11C36A243F5108DC.quest_subtitle: "{cabin.quest.11C36A243F5108DC.subtitle}"
+	quest.11C36A243F5108DC.title: "{cabin.quest.11C36A243F5108DC.title}"
+	quest.1250AE58911C27A9.quest_subtitle: "{cabin.quest.1250AE58911C27A9.subtitle}"
+	quest.1250AE58911C27A9.title: "{cabin.quest.1250AE58911C27A9.title}"
+	quest.1256352748B93449.quest_desc: ["{cabin.quest.1256352748B93449.description1}"]
+	quest.1256352748B93449.quest_subtitle: "{cabin.quest.1256352748B93449.subtitle}"
+	quest.1256352748B93449.title: "{cabin.quest.1256352748B93449.title}"
+	quest.128900FD54A81038.quest_desc: ["Lesser races might try and navigate this broken landscape with gliders and boats, but the Cactoids know better. There's no problem that can't be solved by shooting at it. The first step to building your problem-solvers will be forging some iron."]
+	quest.128900FD54A81038.title: "Big Iron"
+	quest.128F1A9528CA4130.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
+	quest.128F1A9528CA4130.title: "{cabin.quest.128F1A9528CA4130.title}"
+	quest.12B37E99B1D3837E.quest_desc: ["{cabin.quest.12B37E99B1D3837E.description1}"]
+	quest.12B37E99B1D3837E.title: "{cabin.quest.12B37E99B1D3837E.title}"
+	quest.12D18A30803D57D6.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.12D18A30803D57D6.title: "{cabin.quest.12D18A30803D57D6.title}"
+	quest.12DC1012CBEBB6F0.quest_desc: ["adds Power III to flinging sword so it's not useless"]
+	quest.12DC1012CBEBB6F0.title: "flingingsword_power"
+	quest.13491A62C6E95E60.quest_desc: ["Grappling squok reward for Cactoid"]
+	quest.13491A62C6E95E60.title: "squok_reward"
+	quest.136DA2C41AD2EE31.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.136DA2C41AD2EE31.title: "{cabin.quest.136DA2C41AD2EE31.title}"
+	quest.1373138538AB296A.title: "More Early-Game Mobility"
+	quest.13B197C90F9812C8.quest_desc: ["{cabin.quest.13B197C90F9812C8.description1}"]
+	quest.13B197C90F9812C8.title: "{cabin.quest.13B197C90F9812C8.title}"
+	quest.13C43EFB6ED15325.quest_desc: ["its a nice stick and all but it doesnt wanna help bolbi go up. i probly gotta grow up some more and get stronnger to make a better stick. even if its not that tasty i bet eating stick flavered vegtibles is gonna help."]
+	quest.13C43EFB6ED15325.title: "stick Vegtables"
+	quest.1401C9EEAD31C31E.title: "You Snail!"
+	quest.14A12AAB5FD3F6C1.quest_desc: [
+		"Legends speak of a mysterious cursed artifact. It is said to repulse its owner from the ground, because the very land itself rejects them. To keep its corrupting influence away from mortals, it was sealed away in a prison beyond the heavens long ago."
+		""
+		"But you don't have to follow the rules. With a sword, you can go anywhere you want. Ascend beyond the highest heights, and grasp your first taste of forbidden power."
+	]
+	quest.14A12AAB5FD3F6C1.title: "Pierce the Heavens"
+	quest.14FA93A81C14879D.title: "Chaos Emeralds"
+	quest.1509D36A982217C6.quest_subtitle: "{cabin.quest.1509D36A982217C6.subtitle}"
+	quest.1509D36A982217C6.title: "{cabin.quest.1509D36A982217C6.title}"
+	quest.15368864A6946A93.quest_desc: [
+		"Glow Lichen + Awkward Potion = Potion of Glowing."
+		""
+		"Don't forget potions can be mass-brewed as fluids, by heated mixing in a Basin. You'll need a Blaze Burner for that option."
+	]
+	quest.15368864A6946A93.quest_subtitle: "Contraption 19-3"
+	quest.15368864A6946A93.title: "Bright Brew"
+	quest.155B2476219F8F57.title: "Learn to Code"
+	quest.15978ED5A6E3DFFE.quest_desc: [
+		"Start with a Precision Mechanism. Cast it a new base with Molten Steel, delicately apply Molten Uranium, pour Molten Lead for shielding, and infuse the whole thing with Radaway. Welcome to the Atomic age."
+		""
+		"{cabin.quest.3C50B4556375178E.description2}"
+		"{cabin.quest.3C50B4556375178E.description3}"
+	]
+	quest.15978ED5A6E3DFFE.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
+	quest.15978ED5A6E3DFFE.title: "Uranium Enrichment"
+	quest.1642A27606A34984.quest_desc: ["{cabin.quest.1642A27606A34984.description1}"]
+	quest.1642A27606A34984.quest_subtitle: "{cabin.quest.1642A27606A34984.subtitle}"
+	quest.1642A27606A34984.title: "{cabin.quest.1642A27606A34984.title}"
+	quest.16F920C2AF2FA2E0.quest_desc: ["{cabin.quest.16F920C2AF2FA2E0.description1}"]
+	quest.16F920C2AF2FA2E0.quest_subtitle: "{cabin.quest.16F920C2AF2FA2E0.subtitle}"
+	quest.16F920C2AF2FA2E0.title: "{cabin.quest.16F920C2AF2FA2E0.title}"
+	quest.171A0F26C6608E83.quest_subtitle: "{cabin.quest.171A0F26C6608E83.subtitle}"
+	quest.171A0F26C6608E83.title: "{cabin.quest.171A0F26C6608E83.title}"
+	quest.174E3A810535CAAC.quest_desc: [
+		"{cabin.quest.174E3A810535CAAC.description1}"
+		""
+		"{cabin.quest.174E3A810535CAAC.description2}"
+		""
+		"{cabin.quest.174E3A810535CAAC.description3}"
+		""
+		"{cabin.quest.174E3A810535CAAC.description4}"
+	]
+	quest.174E3A810535CAAC.title: "{cabin.quest.174E3A810535CAAC.title}"
+	quest.17817EA324333BE9.quest_desc: [" Most mod controls have been unbound. There's a handy new binding UI in the settings menu, make sure to use it!"]
+	quest.17817EA324333BE9.quest_subtitle: "I WILL NOT BE BOUND"
+	quest.17AA221C7B7E6734.title: "Lead Casing"
+	quest.185F9F8EBD0F8F87.quest_desc: ["{cabin.quest.185F9F8EBD0F8F87.description1}"]
+	quest.185F9F8EBD0F8F87.quest_subtitle: "{cabin.quest.185F9F8EBD0F8F87.subtitle}"
+	quest.185F9F8EBD0F8F87.title: "{cabin.quest.185F9F8EBD0F8F87.title}"
+	quest.1861E583C9DAA0BA.quest_desc: ["{cabin.quest.1861E583C9DAA0BA.description1}"]
+	quest.1861E583C9DAA0BA.quest_subtitle: "{cabin.quest.1861E583C9DAA0BA.subtitle}"
+	quest.1861E583C9DAA0BA.title: "{cabin.quest.1861E583C9DAA0BA.title}"
+	quest.18EDB4CD525CE110.quest_subtitle: "{cabin.quest.18EDB4CD525CE110.subtitle}"
+	quest.18EDB4CD525CE110.title: "{cabin.quest.18EDB4CD525CE110.title}"
+	quest.1947C6CE179EBAC6.quest_desc: [
+		"{cabin.quest.1947C6CE179EBAC6.description1}"
+		""
+		"{cabin.quest.1947C6CE179EBAC6.description2}"
+	]
+	quest.1947C6CE179EBAC6.title: "{cabin.quest.1947C6CE179EBAC6.title}"
+	quest.194B973EAF17809C.quest_desc: ["{cabin.quest.194B973EAF17809C.description1}"]
+	quest.194B973EAF17809C.quest_subtitle: "{cabin.quest.194B973EAF17809C.subtitle}"
+	quest.194B973EAF17809C.title: "{cabin.quest.194B973EAF17809C.title}"
+	quest.19715EBCBBA1B4AD.quest_desc: ["{cabin.quest.19715EBCBBA1B4AD.description1}"]
+	quest.19715EBCBBA1B4AD.quest_subtitle: "{cabin.quest.19715EBCBBA1B4AD.subtitle}"
+	quest.19715EBCBBA1B4AD.title: "{cabin.quest.19715EBCBBA1B4AD.title}"
+	quest.19921941321965A4.quest_desc: ["{cabin.quest.19921941321965A4.description1}"]
+	quest.19921941321965A4.quest_subtitle: "{cabin.quest.19921941321965A4.subtitle}"
+	quest.19921941321965A4.title: "{cabin.quest.19921941321965A4.title}"
+	quest.1A06FA866B74E75B.quest_desc: ["{cabin.quest.1A06FA866B74E75B.description1}"]
+	quest.1A06FA866B74E75B.quest_subtitle: "{cabin.quest.1A06FA866B74E75B.subtitle}"
+	quest.1A06FA866B74E75B.title: "{cabin.quest.1A06FA866B74E75B.title}"
+	quest.1A27F6CC5196D116.quest_subtitle: "{cabin.quest.1A27F6CC5196D116.subtitle}"
+	quest.1A27F6CC5196D116.title: "{cabin.quest.1A27F6CC5196D116.title}"
+	quest.1A2E4E06037E009A.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.1A2E4E06037E009A.title: "{cabin.quest.1A2E4E06037E009A.title}"
+	quest.1A383F96B312D1B8.quest_desc: ["{cabin.quest.1A383F96B312D1B8.description1}"]
+	quest.1A383F96B312D1B8.quest_subtitle: "{cabin.quest.1A383F96B312D1B8.subtitle}"
+	quest.1A383F96B312D1B8.title: "{cabin.quest.1A383F96B312D1B8.title}"
+	quest.1A566C74B1F7F050.quest_desc: ["{cabin.quest.1A566C74B1F7F050.description1}"]
+	quest.1A566C74B1F7F050.quest_subtitle: "{cabin.quest.1A566C74B1F7F050.subtitle}"
+	quest.1A566C74B1F7F050.title: "{cabin.quest.1A566C74B1F7F050.title}"
+	quest.1A5A81CA749DAB2A.quest_subtitle: "{cabin.quest.1250AE58911C27A9.subtitle}"
+	quest.1A5A81CA749DAB2A.title: "{cabin.quest.1A5A81CA749DAB2A.title}"
+	quest.1AA2C3EECE1832EE.quest_subtitle: "{cabin.quest.09EA580B3D32FEEB.subtitle}"
+	quest.1AA2C3EECE1832EE.title: "{cabin.quest.1AA2C3EECE1832EE.title}"
+	quest.1B4D4D92C05B9A16.title: "1-Up"
+	quest.1BA3EF0818CA7F64.quest_subtitle: "{cabin.quest.1509D36A982217C6.subtitle}"
+	quest.1BA3EF0818CA7F64.title: "{cabin.quest.1BA3EF0818CA7F64.title}"
+	quest.1BAFDA330E991BEC.quest_desc: ["For the next step you'll need reinforced paper, but sugarcane can be hard to find on the islands. Luckily, that axe and cutting board can strip logs, and the tree bark left behind can be made into paper. Combined with the other parts, you've got reinforced paper. All you'll need after that are a couple of whiskers..."]
+	quest.1BAFDA330E991BEC.title: "Stacking Paper"
+	quest.1BCFB709E97A74FA.quest_desc: [
+		"{cabin.quest.1BCFB709E97A74FA.description1}"
+		""
+		"{cabin.quest.1BCFB709E97A74FA.description2}"
+	]
+	quest.1BCFB709E97A74FA.title: "{cabin.quest.1BCFB709E97A74FA.title}"
+	quest.1BF763E3FD8C2245.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.1BF763E3FD8C2245.title: "{cabin.quest.1BF763E3FD8C2245.title}"
+	quest.1BF8F3CC8BEBB620.quest_desc: [
+		"{cabin.quest.1BF8F3CC8BEBB620.description1}"
+		"{cabin.quest.1BF8F3CC8BEBB620.description2}"
+	]
+	quest.1BF8F3CC8BEBB620.title: "{cabin.quest.1BF8F3CC8BEBB620.title}"
+	quest.1C104893F5481A58.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.1C104893F5481A58.title: "{cabin.quest.1C104893F5481A58.title}"
+	quest.1C5EA1173F4E592B.quest_desc: ["{cabin.quest.1C5EA1173F4E592B.description1}"]
+	quest.1C5EA1173F4E592B.quest_subtitle: "{cabin.quest.1C5EA1173F4E592B.subtitle}"
+	quest.1C5EA1173F4E592B.title: "{cabin.quest.1C5EA1173F4E592B.title}"
+	quest.1C6657984648B0D4.quest_desc: ["{cabin.quest.1C6657984648B0D4.description1}"]
+	quest.1C6657984648B0D4.quest_subtitle: "{cabin.quest.1C6657984648B0D4.subtitle}"
+	quest.1CC29991D5F248CA.quest_desc: ["{cabin.quest.1CC29991D5F248CA.description1}"]
+	quest.1CC29991D5F248CA.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.1CC29991D5F248CA.title: "{cabin.quest.1CC29991D5F248CA.title}"
+	quest.1CC536F2D05E8189.title: "Infinite Vials"
+	quest.1CCDA748B237F6F5.quest_desc: ["{cabin.quest.1CCDA748B237F6F5.description1}"]
+	quest.1CCDA748B237F6F5.title: "{cabin.quest.1CCDA748B237F6F5.title}"
+	quest.1D1D1FEAF49C5E11.quest_desc: [
+		"{cabin.quest.1D1D1FEAF49C5E11.description1}"
+		""
+		"{cabin.quest.1D1D1FEAF49C5E11.description2}"
+		""
+		"{cabin.quest.1D1D1FEAF49C5E11.description3}"
+		""
+		"{cabin.quest.1D1D1FEAF49C5E11.description4}"
+	]
+	quest.1D1D1FEAF49C5E11.title: "{cabin.quest.1D1D1FEAF49C5E11.title}"
+	quest.1D4AA0F29FA698F2.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.1D4AA0F29FA698F2.title: "{cabin.quest.1D4AA0F29FA698F2.title}"
+	quest.1D4B76A3C724C40D.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.1D4B76A3C724C40D.title: "{cabin.quest.1D4B76A3C724C40D.title}"
+	quest.1D6150F2480B976E.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.1D6150F2480B976E.title: "{cabin.quest.1D6150F2480B976E.title}"
+	quest.1D9D65FBD06DD481.quest_desc: [
+		""
+		"{cabin.quest.1D9D65FBD06DD481.description1}"
+		""
+		"{cabin.quest.1D9D65FBD06DD481.description2}"
+	]
+	quest.1D9D65FBD06DD481.quest_subtitle: "{cabin.quest.1D9D65FBD06DD481.subtitle}"
+	quest.1D9D65FBD06DD481.title: "{cabin.quest.1D9D65FBD06DD481.title}"
+	quest.1DBFD0B34659A8F9.quest_desc: ["{cabin.quest.1DBFD0B34659A8F9.description1}"]
+	quest.1DBFD0B34659A8F9.title: "{cabin.quest.1DBFD0B34659A8F9.title}"
+	quest.1DD2802F5611D419.quest_desc: [
+		"{cabin.quest.1DD2802F5611D419.description1}"
+		""
+		"{cabin.quest.1DD2802F5611D419.description2}"
+	]
+	quest.1DD2802F5611D419.title: "{cabin.quest.1DD2802F5611D419.title}"
+	quest.1E26046FA8177616.quest_desc: ["{cabin.quest.1E26046FA8177616.description1}"]
+	quest.1E26046FA8177616.title: "{cabin.quest.1E26046FA8177616.title}"
+	quest.1E263994D4883A08.quest_desc: [
+		"{cabin.quest.1E263994D4883A08.description1}"
+		""
+		"{cabin.quest.1E263994D4883A08.description2}"
+	]
+	quest.1E263994D4883A08.quest_subtitle: "{cabin.quest.1E263994D4883A08.subtitle}"
+	quest.1E263994D4883A08.title: "{cabin.quest.1E263994D4883A08.title}"
+	quest.1EF5AB1D7882167F.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.1EF5AB1D7882167F.title: "{cabin.quest.1EF5AB1D7882167F.title}"
+	quest.1F05704C3B1FA528.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.1F05704C3B1FA528.title: "{cabin.quest.1F05704C3B1FA528.title}"
+	quest.20CB646041616191.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.20CB646041616191.title: "{cabin.quest.20CB646041616191.title}"
+	quest.210A3F8C44AAD89A.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.210A3F8C44AAD89A.title: "{cabin.quest.210A3F8C44AAD89A.title}"
+	quest.2131996D22A87667.quest_desc: ["{cabin.quest.2131996D22A87667.description1}"]
+	quest.2131996D22A87667.quest_subtitle: "{cabin.quest.2131996D22A87667.subtitle}"
+	quest.2131996D22A87667.title: "{cabin.quest.2131996D22A87667.title}"
+	quest.2167272204B6627B.quest_desc: ["{cabin.quest.2167272204B6627B.description1}"]
+	quest.2167272204B6627B.quest_subtitle: "{cabin.quest.2167272204B6627B.subtitle}"
+	quest.2167272204B6627B.title: "{cabin.quest.2167272204B6627B.title}"
+	quest.21CC162C06BBFAE6.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.21CC162C06BBFAE6.title: "{cabin.quest.21CC162C06BBFAE6.title}"
+	quest.21E2FD715F43CCC2.quest_desc: [""]
+	quest.21E2FD715F43CCC2.title: "redstone_blood"
+	quest.21E76761CD3761C2.quest_subtitle: "{cabin.quest.21E76761CD3761C2.subtitle}"
+	quest.21E76761CD3761C2.title: "{cabin.quest.21E76761CD3761C2.title}"
+	quest.21F77EA64E11A9AB.quest_desc: ["Your newly forged blade hungers for the blood of your enemies. You can collect their tears in a bucket at the same time, and gain a useful tool for descending cliffs and dousing yourself if you catch fire."]
+	quest.21F77EA64E11A9AB.title: "KILL"
+	quest.22202C87352242D6.quest_desc: ["{cabin.quest.22202C87352242D6.description1}"]
+	quest.22202C87352242D6.quest_subtitle: "{cabin.quest.22202C87352242D6.subtitle}"
+	quest.22202C87352242D6.title: "{cabin.quest.22202C87352242D6.title}"
+	quest.222EEB7DB1D98484.quest_subtitle: "{cabin.quest.1A27F6CC5196D116.subtitle}"
+	quest.222EEB7DB1D98484.title: "{cabin.quest.222EEB7DB1D98484.title}"
+	quest.223BB57AD0239511.quest_desc: [
+		"{cabin.quest.223BB57AD0239511.description1}"
+		""
+		"{cabin.quest.223BB57AD0239511.description2}"
+	]
+	quest.223BB57AD0239511.quest_subtitle: "{cabin.quest.223BB57AD0239511.subtitle}"
+	quest.223BB57AD0239511.title: "{cabin.quest.223BB57AD0239511.title}"
+	quest.2268AFAF6E9AB5E2.quest_desc: ["{cabin.quest.2268AFAF6E9AB5E2.description1}"]
+	quest.2268AFAF6E9AB5E2.quest_subtitle: "{cabin.quest.2268AFAF6E9AB5E2.subtitle}"
+	quest.2268AFAF6E9AB5E2.title: "{cabin.quest.2268AFAF6E9AB5E2.title}"
+	quest.22CE9949793981A6.title: "its a tree :)"
+	quest.232166AEE943A162.title: "Let's Recycle!"
+	quest.239C64263B91350D.quest_desc: ["{cabin.quest.239C64263B91350D.description1}"]
+	quest.239C64263B91350D.quest_subtitle: "{cabin.quest.239C64263B91350D.subtitle}"
+	quest.239C64263B91350D.title: "{cabin.quest.239C64263B91350D.title}"
+	quest.23F9DB562ED7C2F6.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.23F9DB562ED7C2F6.title: "{cabin.quest.23F9DB562ED7C2F6.title}"
+	quest.240206E4C3855006.quest_desc: ["i like the ccrunchy ones better :DD if were gonna eat vegtibles im gonna at least have some crunchys too. blobbins need a crunch brake some times."]
+	quest.240206E4C3855006.title: "Crunchy snack"
+	quest.24328C973480E4E8.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.24328C973480E4E8.title: "{cabin.quest.24328C973480E4E8.title}"
+	quest.2441491CB5D5E57D.quest_desc: ["{cabin.quest.2441491CB5D5E57D.description1}"]
+	quest.2441491CB5D5E57D.quest_subtitle: "{cabin.quest.2441491CB5D5E57D.subtitle}"
+	quest.24C48CFAAD71B230.quest_desc: ["{cabin.quest.24C48CFAAD71B230.description1}"]
+	quest.24C48CFAAD71B230.quest_subtitle: "{cabin.quest.24C48CFAAD71B230.subtitle}"
+	quest.24C48CFAAD71B230.title: "{cabin.quest.24C48CFAAD71B230.title}"
+	quest.24FFFE0FC9EAEF8D.quest_desc: [
+		"{cabin.quest.24FFFE0FC9EAEF8D.description1}"
+		""
+		"{cabin.quest.24FFFE0FC9EAEF8D.description2}"
+	]
+	quest.24FFFE0FC9EAEF8D.quest_subtitle: "{cabin.quest.24FFFE0FC9EAEF8D.subtitle}"
+	quest.24FFFE0FC9EAEF8D.title: "{cabin.quest.24FFFE0FC9EAEF8D.title}"
+	quest.252015A3FD4F1528.title: "Flinging is the New Sling"
+	quest.252B9DD5BFB8184A.quest_desc: [
+		"{cabin.quest.252B9DD5BFB8184A.description1}"
+		""
+		"{cabin.quest.252B9DD5BFB8184A.description2}"
+	]
+	quest.252B9DD5BFB8184A.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.252B9DD5BFB8184A.title: "{cabin.quest.252B9DD5BFB8184A.title}"
+	quest.258C779897D1AEF0.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.258C779897D1AEF0.title: "{cabin.quest.258C779897D1AEF0.title}"
+	quest.25B76A897D97C9F1.quest_desc: ["{cabin.quest.25B76A897D97C9F1.description1}"]
+	quest.25B76A897D97C9F1.quest_subtitle: "{cabin.quest.25B76A897D97C9F1.subtitle}"
+	quest.25B76A897D97C9F1.title: "{cabin.quest.25B76A897D97C9F1.title}"
+	quest.25D02F1FB231C466.quest_subtitle: "{cabin.quest.011F64B48766234B.subtitle}"
+	quest.25D02F1FB231C466.title: "{cabin.quest.25D02F1FB231C466.title}"
+	quest.26173D4777F439B1.quest_desc: [
+		"{cabin.quest.26173D4777F439B1.description1}"
+		""
+		"{cabin.quest.26173D4777F439B1.description2}"
+		""
+		"{cabin.quest.26173D4777F439B1.description3}"
+	]
+	quest.26173D4777F439B1.quest_subtitle: "{cabin.quest.26173D4777F439B1.subtitle}"
+	quest.26173D4777F439B1.title: "{cabin.quest.26173D4777F439B1.title}"
+	quest.262F369CE9CA7C87.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.262F369CE9CA7C87.title: "{cabin.quest.262F369CE9CA7C87.title}"
+	quest.26A1E68DA7ACB025.quest_desc: [
+		"{cabin.quest.26A1E68DA7ACB025.description1}"
+		""
+		"{cabin.quest.26A1E68DA7ACB025.description2}"
+	]
+	quest.26A1E68DA7ACB025.quest_subtitle: "{cabin.quest.26A1E68DA7ACB025.subtitle}"
+	quest.26A1E68DA7ACB025.title: "{cabin.quest.26A1E68DA7ACB025.title}"
+	quest.26C39961F2E2ABF2.quest_desc: ["{cabin.quest.26C39961F2E2ABF2.description1}"]
+	quest.26C39961F2E2ABF2.title: "{cabin.quest.26C39961F2E2ABF2.title}"
+	quest.26DD1CA6A8D4E249.quest_desc: ["{cabin.quest.26DD1CA6A8D4E249.description1}"]
+	quest.26DD1CA6A8D4E249.title: "{cabin.quest.26DD1CA6A8D4E249.title}"
+	quest.2714FE0125D3E953.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.2714FE0125D3E953.title: "{cabin.quest.2714FE0125D3E953.title}"
+	quest.2727DB837CE5B37E.title: "its a tree :)"
+	quest.27C191346BB14D9D.quest_desc: ["{cabin.quest.27C191346BB14D9D.description1}"]
+	quest.27C191346BB14D9D.quest_subtitle: "{cabin.quest.27C191346BB14D9D.subtitle}"
+	quest.27C191346BB14D9D.title: "{cabin.quest.27C191346BB14D9D.title}"
+	quest.2809AE02EA018BFA.quest_desc: [
+		"this quest is never completed, so it ensures its dependent quests can never be completed"
+		""
+		"(this probably isn't necessary)"
+	]
+	quest.2809AE02EA018BFA.title: "never"
+	quest.286510750C333C1F.quest_desc: [
+		"{cabin.quest.286510750C333C1F.description1}"
+		""
+		"{cabin.quest.286510750C333C1F.description2}"
+		""
+		"{cabin.quest.286510750C333C1F.description3}"
+		""
+		"{cabin.quest.286510750C333C1F.description4}"
+	]
+	quest.286510750C333C1F.quest_subtitle: "{cabin.quest.286510750C333C1F.subtitle}"
+	quest.286510750C333C1F.title: "{cabin.quest.286510750C333C1F.title}"
+	quest.286C553AD3E15266.quest_subtitle: "{cabin.quest.286C553AD3E15266.subtitle}"
+	quest.286C553AD3E15266.title: "{cabin.quest.286C553AD3E15266.title}"
+	quest.28DAED70768C6A50.quest_desc: [
+		"{cabin.quest.28DAED70768C6A50.description1}"
+		""
+		"{cabin.quest.28DAED70768C6A50.description2}"
+		""
+		"{cabin.quest.28DAED70768C6A50.description3}"
+	]
+	quest.28DAED70768C6A50.title: "{cabin.quest.28DAED70768C6A50.title}"
+	quest.29696B4965010CED.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.29696B4965010CED.title: "{cabin.quest.29696B4965010CED.title}"
+	quest.29B58A9EDA478E7D.quest_subtitle: "{cabin.quest.09EA580B3D32FEEB.subtitle}"
+	quest.29B58A9EDA478E7D.title: "{cabin.quest.29B58A9EDA478E7D.title}"
+	quest.29D37095C73B3DEC.quest_desc: [
+		"{cabin.quest.29D37095C73B3DEC.description1}"
+		""
+		"{cabin.quest.29D37095C73B3DEC.description2}"
+	]
+	quest.29D37095C73B3DEC.quest_subtitle: "{cabin.quest.29D37095C73B3DEC.subtitle}"
+	quest.29D37095C73B3DEC.title: "{cabin.quest.29D37095C73B3DEC.title}"
+	quest.29DABB5FDE6356E9.title: "{cabin.quest.29DABB5FDE6356E9.title}"
+	quest.2A9AAED667A95C6E.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
+	quest.2A9AAED667A95C6E.title: "{cabin.quest.2A9AAED667A95C6E.title}"
+	quest.2B195E5B195246F5.quest_desc: [
+		"{cabin.quest.2B195E5B195246F5.description1}"
+		""
+		"{cabin.quest.2B195E5B195246F5.description2}"
+	]
+	quest.2B8F1D804107EB8C.quest_desc: ["{cabin.quest.2B8F1D804107EB8C.description1}"]
+	quest.2B8F1D804107EB8C.quest_subtitle: "{cabin.quest.2B8F1D804107EB8C.subtitle}"
+	quest.2B8F1D804107EB8C.title: "{cabin.quest.2B8F1D804107EB8C.title}"
+	quest.2BB2C7B95E3C89AE.quest_desc: [
+		"{cabin.quest.2BB2C7B95E3C89AE.description1}"
+		"{cabin.quest.2BB2C7B95E3C89AE.description2}"
+		""
+		"{cabin.quest.2BB2C7B95E3C89AE.description3}"
+	]
+	quest.2BB2C7B95E3C89AE.quest_subtitle: "{cabin.quest.2BB2C7B95E3C89AE.subtitle}"
+	quest.2BB2C7B95E3C89AE.title: "{cabin.quest.2BB2C7B95E3C89AE.title}"
+	quest.2BD76CB3F8BC215E.quest_desc: ["{cabin.quest.2BD76CB3F8BC215E.description1}"]
+	quest.2BD76CB3F8BC215E.title: "{cabin.quest.2BD76CB3F8BC215E.title}"
+	quest.2BE033F631A778D9.title: "{cabin.quest.2BE033F631A778D9.title}"
+	quest.2C10D18D55335B7E.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.2C10D18D55335B7E.title: "{cabin.quest.2C10D18D55335B7E.title}"
+	quest.2C196D41B3B087C6.title: "Lead Casing"
+	quest.2C2E304910D7F33D.quest_subtitle: "{cabin.quest.2C2E304910D7F33D.subtitle}"
+	quest.2C2E304910D7F33D.title: "{cabin.quest.2C2E304910D7F33D.title}"
+	quest.2C40901DB42DD8F8.quest_desc: ["{cabin.quest.2C40901DB42DD8F8.description1}"]
+	quest.2C40901DB42DD8F8.title: "{cabin.quest.2C40901DB42DD8F8.title}"
+	quest.2C7ADB6C11B918B1.quest_desc: [
+		"{cabin.quest.2C7ADB6C11B918B1.description1}"
+		""
+		"{cabin.quest.2C7ADB6C11B918B1.description2}"
+	]
+	quest.2C7ADB6C11B918B1.title: "{cabin.quest.2C7ADB6C11B918B1.title}"
+	quest.2C81D358594C4352.quest_desc: ["{cabin.quest.2C81D358594C4352.description1}"]
+	quest.2C81D358594C4352.quest_subtitle: "{cabin.quest.2C81D358594C4352.subtitle}"
+	quest.2C81D358594C4352.title: "{cabin.quest.2C81D358594C4352.title}"
+	quest.2C9012E65F43EC72.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.2C9012E65F43EC72.title: "{cabin.quest.2C9012E65F43EC72.title}"
+	quest.2CB570195DA7E106.quest_desc: [
+		"{cabin.quest.2CB570195DA7E106.description1}"
+		""
+		"{cabin.quest.2CB570195DA7E106.description2}"
+	]
+	quest.2CB570195DA7E106.quest_subtitle: "{cabin.quest.2CB570195DA7E106.subtitle}"
+	quest.2CB570195DA7E106.title: "{cabin.quest.2CB570195DA7E106.title}"
+	quest.2CCD84D55DE71EB2.quest_desc: ["{cabin.quest.2CCD84D55DE71EB2.description1}"]
+	quest.2CCD84D55DE71EB2.quest_subtitle: "{cabin.quest.2CCD84D55DE71EB2.subtitle}"
+	quest.2CCD84D55DE71EB2.title: "{cabin.quest.2CCD84D55DE71EB2.title}"
+	quest.2D022872F99F9907.quest_subtitle: "{cabin.quest.2D022872F99F9907.subtitle}"
+	quest.2D022872F99F9907.title: "{cabin.quest.2D022872F99F9907.title}"
+	quest.2D75D1864FB1EF75.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.2D75D1864FB1EF75.title: "{cabin.quest.2D75D1864FB1EF75.title}"
+	quest.2DC3AA8A89005C42.quest_desc: [
+		"{cabin.quest.2DC3AA8A89005C42.description1}"
+		""
+		"{cabin.quest.2DC3AA8A89005C42.description2}"
+	]
+	quest.2DC3AA8A89005C42.quest_subtitle: "{cabin.quest.11C36A243F5108DC.subtitle}"
+	quest.2DC3AA8A89005C42.title: "{cabin.quest.2DC3AA8A89005C42.title}"
+	quest.2E10D7FE1BC4FDBB.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.2E10D7FE1BC4FDBB.title: "{cabin.quest.2E10D7FE1BC4FDBB.title}"
+	quest.2E692532C4C69001.quest_subtitle: "{cabin.quest.1509D36A982217C6.subtitle}"
+	quest.2E692532C4C69001.title: "{cabin.quest.2E692532C4C69001.title}"
+	quest.2F1B9FE2E9C2FFEC.quest_desc: [
+		"The effect-clearing properties of Milk are necessary to clear your bones of deadly radiation. It's also nutritious and delicious."
+		""
+		"Automatic Milk production isn't that hard. You should be able to solve this."
+	]
+	quest.2F1B9FE2E9C2FFEC.quest_subtitle: "Contraption 19-6"
+	quest.2F1B9FE2E9C2FFEC.title: "Milk: It's Legal"
+	quest.2F2BA8C2AC2E0B93.quest_subtitle: "{cabin.quest.2F2BA8C2AC2E0B93.subtitle}"
+	quest.2F2BA8C2AC2E0B93.title: "{cabin.quest.2F2BA8C2AC2E0B93.title}"
+	quest.2F469F6F1511D9C4.quest_desc: [
+		"{cabin.quest.2F469F6F1511D9C4.description1}"
+		""
+		"{cabin.quest.2F469F6F1511D9C4.description2}"
+	]
+	quest.2F469F6F1511D9C4.title: "{cabin.quest.2F469F6F1511D9C4.title}"
+	quest.2F50046724A0DF9C.quest_desc: ["{cabin.quest.2F50046724A0DF9C.description1}"]
+	quest.2F50046724A0DF9C.quest_subtitle: "{cabin.quest.11C36A243F5108DC.subtitle}"
+	quest.2F50046724A0DF9C.title: "{cabin.quest.2F50046724A0DF9C.title}"
+	quest.2F51EA6259AD6A44.quest_desc: ["There is another form of construct, far more complex to use but highly versatile. The \"turtle\", a multipurpose robot build around a computer, can automate all sorts of tasks. If you never want to labor with those pitiful flesh hands again, making a turtle would help. You'll have to develop some sophisticated technology to even build one... unless a village might have one laying around?"]
+	quest.2F51EA6259AD6A44.title: "It's Not A Digital Miner"
+	quest.2FFFE1C5366930BB.quest_desc: ["{cabin.quest.2FFFE1C5366930BB.description1}"]
+	quest.2FFFE1C5366930BB.title: "{cabin.quest.2FFFE1C5366930BB.title}"
+	quest.3025B5861FE17ADF.quest_desc: [
+		"{cabin.quest.3025B5861FE17ADF.description1}"
+		""
+		"{cabin.quest.3025B5861FE17ADF.description2}"
+	]
+	quest.3025B5861FE17ADF.quest_subtitle: "{cabin.quest.3025B5861FE17ADF.subtitle}"
+	quest.3025B5861FE17ADF.title: "{cabin.quest.3025B5861FE17ADF.title}"
+	quest.302FCD205CC2F708.quest_desc: ["{cabin.quest.302FCD205CC2F708.description1}"]
+	quest.302FCD205CC2F708.title: "{cabin.quest.302FCD205CC2F708.title}"
+	quest.30C8408E8F663FA2.title: "its a tree :)"
+	quest.3126DE83A6741671.quest_desc: [
+		"{cabin.quest.3126DE83A6741671.description1}"
+		""
+		"{cabin.quest.3126DE83A6741671.description2}"
+	]
+	quest.3126DE83A6741671.quest_subtitle: "{cabin.quest.3126DE83A6741671.subtitle}"
+	quest.3147E9D7F547137E.quest_desc: ["the first stick is a conmplete debacle. i forgot the up stick is a different stick actualy. Everyons gonna laugh at bolbis  if we dont get rid of the evidince. theres only one way........"]
+	quest.3147E9D7F547137E.title: "BLAST em"
+	quest.319D13EA51472303.quest_desc: [
+		"Mixing Glowing Mushrooms into Milk at high temperatures boils away unwanted byproducts and leaves behind Radaway, a wondrous chemical that clears deadly radiation with only moderate side effects.*"
+		""
+		"You might wish to reserve some Radaway for personal consumption later, just in case..."
+	]
+	quest.319D13EA51472303.quest_subtitle: "Contraption 19-7"
+	quest.319D13EA51472303.title: "Rads, Away"
+	quest.31DA3A80C6E23004.title: "Uranium Rod"
+	quest.31EDFA6D2FF86CB0.quest_desc: ["{cabin.quest.31EDFA6D2FF86CB0.description1}"]
+	quest.31EDFA6D2FF86CB0.title: "{cabin.quest.31EDFA6D2FF86CB0.title}"
+	quest.3249CD08992F2BCD.quest_desc: ["{cabin.quest.3249CD08992F2BCD.description1}"]
+	quest.3249CD08992F2BCD.quest_subtitle: "{cabin.quest.3249CD08992F2BCD.subtitle}"
+	quest.3249CD08992F2BCD.title: "{cabin.quest.3249CD08992F2BCD.title}"
+	quest.32786E9D145FFE25.quest_desc: ["{cabin.quest.32786E9D145FFE25.description1}"]
+	quest.32786E9D145FFE25.quest_subtitle: "{cabin.quest.32786E9D145FFE25.subtitle}"
+	quest.32786E9D145FFE25.title: "{cabin.quest.32786E9D145FFE25.title}"
+	quest.32C46B11BDAD7632.quest_desc: ["{cabin.quest.32C46B11BDAD7632.description1}"]
+	quest.32C46B11BDAD7632.title: "{cabin.quest.32C46B11BDAD7632.title}"
+	quest.32CB540B4C01720A.title: "its a tree :)"
+	quest.334146C815B304DB.quest_desc: [
+		"{cabin.quest.334146C815B304DB.description1}"
+		""
+		"{cabin.quest.334146C815B304DB.description2}"
+	]
+	quest.334146C815B304DB.title: "{cabin.quest.334146C815B304DB.title}"
+	quest.33674138F4866C18.quest_desc: ["{cabin.quest.33674138F4866C18.description1}"]
+	quest.33674138F4866C18.title: "{cabin.quest.33674138F4866C18.title}"
+	quest.339BC75AD23B70D7.quest_subtitle: "{cabin.quest.011F64B48766234B.subtitle}"
+	quest.339BC75AD23B70D7.title: "{cabin.quest.339BC75AD23B70D7.title}"
+	quest.33B5C951B4AE8322.quest_subtitle: "{cabin.quest.33B5C951B4AE8322.subtitle}"
+	quest.33B5C951B4AE8322.title: "{cabin.quest.33B5C951B4AE8322.title}"
+	quest.342BB6EF80EBFDCA.quest_desc: [
+		"{cabin.quest.342BB6EF80EBFDCA.description1}"
+		""
+		"{cabin.quest.342BB6EF80EBFDCA.description2}"
+	]
+	quest.342BB6EF80EBFDCA.quest_subtitle: "{cabin.quest.11C36A243F5108DC.subtitle}"
+	quest.342BB6EF80EBFDCA.title: "{cabin.quest.342BB6EF80EBFDCA.title}"
+	quest.343050A40A3AB1F0.quest_desc: ["{cabin.quest.343050A40A3AB1F0.description1}"]
+	quest.343050A40A3AB1F0.quest_subtitle: "{cabin.quest.343050A40A3AB1F0.subtitle}"
+	quest.343050A40A3AB1F0.title: "{cabin.quest.343050A40A3AB1F0.title}"
+	quest.345B94F6D17605CD.quest_desc: ["{cabin.quest.345B94F6D17605CD.description1}"]
+	quest.345B94F6D17605CD.quest_subtitle: "{cabin.quest.345B94F6D17605CD.subtitle}"
+	quest.345B94F6D17605CD.title: "{cabin.quest.345B94F6D17605CD.title}"
+	quest.34A1D176C78FB64E.quest_desc: ["{cabin.quest.34A1D176C78FB64E.description1}"]
+	quest.34A1D176C78FB64E.quest_subtitle: "{cabin.quest.34A1D176C78FB64E.subtitle}"
+	quest.34A1D176C78FB64E.title: "{cabin.quest.34A1D176C78FB64E.title}"
+	quest.352F5F851045653A.quest_subtitle: "{cabin.quest.352F5F851045653A.subtitle}"
+	quest.352F5F851045653A.title: "{cabin.quest.352F5F851045653A.title}"
+	quest.35F18B3DFEFEC5C6.quest_desc: [
+		"Lesser beings use these intro quests to learn about some early-game gizmos for traversing the floating islands. But you're not one of those casuals. All an Accursed One needs to get around is a sword."
+		""
+		"Luckily, like all hardcore warriors, you had some spare bones and edgy rocks lying around in your pockets. Perfect to forge your first blade with."
+	]
+	quest.35F18B3DFEFEC5C6.title: "Fuck Quests"
+	quest.35F97137A46C1F3C.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.35F97137A46C1F3C.title: "{cabin.quest.35F97137A46C1F3C.title}"
+	quest.3680C9F8751A9E5F.quest_desc: [
+		"The curse you bear makes neutral mobs aggro on you immediately. This includes Endermen. This means they could teleport in and attack you at any time. The spirit within your weapon seethes at the audacity of these monsters. Bathe its blade in their alien blood, and your sword may manifest a new power..."
+		""
+	]
+	quest.3680C9F8751A9E5F.title: "Disgusting Black Creatures"
+	quest.36B5C3ECFD38670E.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.36B5C3ECFD38670E.title: "{cabin.quest.36B5C3ECFD38670E.title}"
+	quest.36E02479368EAF04.quest_desc: [
+		"{cabin.quest.36E02479368EAF04.description1}"
+		"{cabin.quest.00003FCBB33E62C4.description2}"
+	]
+	quest.36E02479368EAF04.title: "{cabin.quest.36E02479368EAF04.title}"
+	quest.3728DF562D6DCE3A.quest_desc: ["{cabin.quest.3728DF562D6DCE3A.description1}"]
+	quest.3728DF562D6DCE3A.quest_subtitle: "{cabin.quest.3728DF562D6DCE3A.subtitle}"
+	quest.3728DF562D6DCE3A.title: "{cabin.quest.3728DF562D6DCE3A.title}"
+	quest.374933A06E016CE9.quest_desc: ["{cabin.quest.374933A06E016CE9.description1}"]
+	quest.374933A06E016CE9.title: "{cabin.quest.374933A06E016CE9.title}"
+	quest.375C9A43FE5620B6.quest_desc: [
+		"{cabin.quest.375C9A43FE5620B6.description1}"
+		""
+		"{cabin.quest.050A20198A80CF1A.description2}"
+	]
+	quest.375C9A43FE5620B6.quest_subtitle: "{cabin.quest.375C9A43FE5620B6.subtitle}"
+	quest.375C9A43FE5620B6.title: "{cabin.quest.375C9A43FE5620B6.title}"
+	quest.376F399A85832658.title: "Basic Information"
+	quest.381F8F373605BB97.quest_desc: [
+		"{cabin.quest.381F8F373605BB97.description1}"
+		""
+		"{cabin.quest.381F8F373605BB97.description2}"
+	]
+	quest.381F8F373605BB97.title: "{cabin.quest.381F8F373605BB97.title}"
+	quest.382EBC32AC27C839.quest_desc: ["{cabin.quest.382EBC32AC27C839.description1}"]
+	quest.382EBC32AC27C839.title: "{cabin.quest.382EBC32AC27C839.title}"
+	quest.38B063C8DE71E86D.quest_desc: [
+		"{cabin.quest.38B063C8DE71E86D.description1}"
+		""
+		"{cabin.quest.38B063C8DE71E86D.description2}"
+	]
+	quest.38B063C8DE71E86D.title: "{cabin.quest.38B063C8DE71E86D.title}"
+	quest.38CD5CE18FE09D23.quest_subtitle: "{cabin.quest.00EBF8DED4E51A4F.subtitle}"
+	quest.38CD5CE18FE09D23.title: "{cabin.quest.38CD5CE18FE09D23.title}"
+	quest.38D19F4EC634F33B.quest_desc: [
+		"{cabin.quest.38D19F4EC634F33B.description1}"
+		""
+		"{cabin.quest.38D19F4EC634F33B.description2}"
+		""
+		"{cabin.quest.38D19F4EC634F33B.description3}"
+		""
+		"{cabin.quest.38D19F4EC634F33B.description4}"
+	]
+	quest.38D19F4EC634F33B.quest_subtitle: "{cabin.quest.38D19F4EC634F33B.subtitle}"
+	quest.38D19F4EC634F33B.title: "{cabin.quest.38D19F4EC634F33B.title}"
+	quest.3934AD57122B6FFE.quest_desc: [
+		"{cabin.quest.3934AD57122B6FFE.description1}"
+		""
+		"{cabin.quest.3934AD57122B6FFE.description2}"
+		""
+		"{cabin.quest.3934AD57122B6FFE.description3}"
+	]
+	quest.3934AD57122B6FFE.quest_subtitle: "{cabin.quest.3934AD57122B6FFE.subtitle}"
+	quest.3934AD57122B6FFE.title: "{cabin.quest.3934AD57122B6FFE.title}"
+	quest.395978A711E14931.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.395978A711E14931.title: "{cabin.quest.395978A711E14931.title}"
+	quest.397232F676CB621B.quest_desc: [
+		"{cabin.quest.397232F676CB621B.description1}"
+		""
+		"{cabin.quest.397232F676CB621B.description2}"
+		""
+		"{cabin.quest.397232F676CB621B.description3}"
+	]
+	quest.397232F676CB621B.title: "{cabin.quest.397232F676CB621B.title}"
+	quest.39D56A2B01DBD865.quest_subtitle: "{cabin.quest.39D56A2B01DBD865.subtitle}"
+	quest.39D56A2B01DBD865.title: "{cabin.quest.39D56A2B01DBD865.title}"
+	quest.3A24852885341D52.title: "Quick Nap"
+	quest.3A428CA43D545DB9.quest_desc: [
+		"{cabin.quest.3A428CA43D545DB9.description1}"
+		""
+		"{cabin.quest.3A428CA43D545DB9.description2}"
+		""
+		"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description1\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description2\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text2\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description3\"}]"
+		""
+		"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description4\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description5\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text5\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description6\"}]"
+		""
+		"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description7\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description8\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text8\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description9\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description10\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text10\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description11\"}]"
+		""
+		"{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description12\"}"
+		"{@pagebreak}"
+		"{cabin.quest.012E50977D8EEEDB.description3}"
+		""
+		"{cabin.quest.012E50977D8EEEDB.description4}"
+		""
+		"{cabin.quest.012E50977D8EEEDB.description5}"
+		"{@pagebreak}"
+		"{cabin.quest.012E50977D8EEEDB.description6}"
+		""
+		"{cabin.quest.012E50977D8EEEDB.description7}"
+	]
+	quest.3A428CA43D545DB9.title: "{cabin.quest.3A428CA43D545DB9.title}"
+	quest.3A48FDC224D029BF.quest_desc: ["{cabin.quest.3A48FDC224D029BF.description1}"]
+	quest.3A48FDC224D029BF.title: "{cabin.quest.3A48FDC224D029BF.title}"
+	quest.3A4A3B749FBDBEF1.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.3A4A3B749FBDBEF1.title: "{cabin.quest.3A4A3B749FBDBEF1.title}"
+	quest.3A63A48662F352CB.quest_desc: [
+		"{cabin.quest.3A63A48662F352CB.description1}"
+		""
+		"{cabin.quest.3A63A48662F352CB.description2}"
+	]
+	quest.3A63A48662F352CB.title: "{cabin.quest.3A63A48662F352CB.title}"
+	quest.3A7A2C8D56500426.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.3A7A2C8D56500426.title: "{cabin.quest.3A7A2C8D56500426.title}"
+	quest.3A81BC460AF1756D.quest_subtitle: "{cabin.quest.21E76761CD3761C2.subtitle}"
+	quest.3A81BC460AF1756D.title: "{cabin.quest.3A81BC460AF1756D.title}"
+	quest.3A86EA1C2AD21C29.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.3A86EA1C2AD21C29.title: "{cabin.quest.3A86EA1C2AD21C29.title}"
+	quest.3AD7553F3C8593F9.quest_desc: ["{cabin.quest.3AD7553F3C8593F9.description1}"]
+	quest.3AD7553F3C8593F9.quest_subtitle: "{cabin.quest.3AD7553F3C8593F9.subtitle}"
+	quest.3AD7553F3C8593F9.title: "{cabin.quest.3AD7553F3C8593F9.title}"
+	quest.3ADD69413C0798FE.quest_desc: ["i heard theres these weird eyeball thingies scattered all over the world. and if i catch 'em all and put them in the weird blinky jars i win a free trip to somewhere blobbins never been before! its gonna be the best souvenir collection ever!!!"]
+	quest.3ADD69413C0798FE.title: "Blobbo's big Adventure"
+	quest.3B421C8F7947E542.quest_desc: [
+		"{cabin.quest.3B421C8F7947E542.description1}"
+		""
+		"{cabin.quest.3B421C8F7947E542.description2}"
+	]
+	quest.3B421C8F7947E542.title: "{cabin.quest.3B421C8F7947E542.title}"
+	quest.3B431AAADE8845FA.quest_desc: ["{cabin.quest.3B431AAADE8845FA.description1}"]
+	quest.3B431AAADE8845FA.title: "{cabin.quest.3B431AAADE8845FA.title}"
+	quest.3B448BBF4352E4AB.quest_desc: ["The Casting Assistant Device is a versatile tool. Organic minds struggle to comprehend it, but when programmed correctly, it commands countless powers. Even the power to soar between the floating isles. Start with a CAD Assembly, a Core, and a Socket. Then combine them in a CAD Assembler to produce the blessed technology."]
+	quest.3B448BBF4352E4AB.title: "Let's Build A Gun"
+	quest.3B548F2C060C2229.quest_desc: ["{cabin.quest.3B548F2C060C2229.description1}"]
+	quest.3B548F2C060C2229.quest_subtitle: "{cabin.quest.3B548F2C060C2229.subtitle}"
+	quest.3B548F2C060C2229.title: "{cabin.quest.3B548F2C060C2229.title}"
+	quest.3B86BE3E3211A392.title: "A Balanced Jetpack?"
+	quest.3B930AA32F92246B.quest_desc: ["Excellent! Lead Machines are built to operate under extreme radiation, so they're an essential foundation for Nuclearcraft machines. The power of the atom is in the palm of your hand..."]
+	quest.3B930AA32F92246B.title: "{cabin.quest.7BE0F4512FE4936D.title}"
+	quest.3BE15AA5C237AB80.quest_desc: ["{cabin.quest.3BE15AA5C237AB80.description1}"]
+	quest.3BE15AA5C237AB80.quest_subtitle: "{cabin.quest.3BE15AA5C237AB80.subtitle}"
+	quest.3BE15AA5C237AB80.title: "{cabin.quest.3BE15AA5C237AB80.title}"
+	quest.3BFC4DFCE765F3EA.quest_desc: ["{cabin.quest.3BFC4DFCE765F3EA.description1}"]
+	quest.3BFC4DFCE765F3EA.title: "{cabin.quest.3BFC4DFCE765F3EA.title}"
+	quest.3C45250D863E65CB.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.3C45250D863E65CB.title: "{cabin.quest.3C45250D863E65CB.title}"
+	quest.3C50B4556375178E.quest_desc: [
+		"{cabin.quest.3C50B4556375178E.description1}"
+		""
+		"{cabin.quest.3C50B4556375178E.description2}"
+		"{cabin.quest.3C50B4556375178E.description3}"
+	]
+	quest.3C50B4556375178E.quest_subtitle: "{cabin.quest.3C50B4556375178E.subtitle}"
+	quest.3C50B4556375178E.title: "{cabin.quest.3C50B4556375178E.title}"
+	quest.3C79A7679BA1AA3C.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.3C79A7679BA1AA3C.title: "{cabin.quest.3C79A7679BA1AA3C.title}"
+	quest.3CA6DD7C5516A330.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.3CA6DD7C5516A330.title: "{cabin.quest.3CA6DD7C5516A330.title}"
+	quest.3CBED6B591BCEDEA.quest_desc: [
+		"{cabin.quest.3CBED6B591BCEDEA.description1}"
+		""
+		"{cabin.quest.3CBED6B591BCEDEA.description2}"
+	]
+	quest.3CBED6B591BCEDEA.quest_subtitle: "{cabin.quest.3CBED6B591BCEDEA.subtitle}"
+	quest.3CBED6B591BCEDEA.title: "{cabin.quest.3CBED6B591BCEDEA.title}"
+	quest.3CD739455666E2A8.quest_subtitle: "{cabin.quest.33B5C951B4AE8322.subtitle}"
+	quest.3CD739455666E2A8.title: "{cabin.quest.3CD739455666E2A8.title}"
+	quest.3CEC6538990D89C3.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.3CEC6538990D89C3.title: "{cabin.quest.3CEC6538990D89C3.title}"
+	quest.3D1EEB596FDBE4E7.quest_desc: ["{cabin.quest.3D1EEB596FDBE4E7.description1}"]
+	quest.3D1EEB596FDBE4E7.quest_subtitle: "{cabin.quest.3D1EEB596FDBE4E7.subtitle}"
+	quest.3D1EEB596FDBE4E7.title: "{cabin.quest.3D1EEB596FDBE4E7.title}"
+	quest.3D7AD3AF3857F7D9.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.3D7AD3AF3857F7D9.title: "{cabin.quest.3D7AD3AF3857F7D9.title}"
+	quest.3E27961386364EDF.quest_subtitle: "{cabin.quest.286C553AD3E15266.subtitle}"
+	quest.3E27961386364EDF.title: "{cabin.quest.3E27961386364EDF.title}"
+	quest.3E391D4870926B8F.quest_desc: ["As a rat, your tough teeth let you mine stone without any tools. That should be useful for crafting a stone chisel, which you could use to carve pint-sized details."]
+	quest.3E391D4870926B8F.title: "Hidey Hole"
+	quest.3EB5CD9776DF0E63.quest_desc: [
+		"{cabin.quest.3EB5CD9776DF0E63.description1}"
+		""
+		"{cabin.quest.3EB5CD9776DF0E63.description2}"
+		""
+		"{cabin.quest.3EB5CD9776DF0E63.description3}"
+	]
+	quest.3EEF098FB1D343AD.quest_desc: ["{image: width:100 height:100 align:center}"]
+	quest.3EF5F89DBD6959E3.quest_desc: ["{cabin.quest.3EF5F89DBD6959E3.description1}"]
+	quest.3EF5F89DBD6959E3.quest_subtitle: "{cabin.quest.3EF5F89DBD6959E3.subtitle}"
+	quest.3EF5F89DBD6959E3.title: "{cabin.quest.3EF5F89DBD6959E3.title}"
+	quest.3F00084D9474C381.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.3F00084D9474C381.title: "{cabin.quest.3F00084D9474C381.title}"
+	quest.3F2FB159F1B8875F.quest_subtitle: "{cabin.quest.08DB1CFAE4555525.subtitle}"
+	quest.3F2FB159F1B8875F.title: "{cabin.quest.3F2FB159F1B8875F.title}"
+	quest.3F45DFEF31838A00.quest_desc: [
+		"{cabin.quest.3F45DFEF31838A00.description1}"
+		""
+		"{cabin.quest.3F45DFEF31838A00.description2}"
+		"{cabin.quest.3F45DFEF31838A00.description3}"
+	]
+	quest.3F45DFEF31838A00.title: "{cabin.quest.3F45DFEF31838A00.title}"
+	quest.3FC1029AF9BB245E.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.3FC1029AF9BB245E.title: "{cabin.quest.3FC1029AF9BB245E.title}"
+	quest.400CDC316DCDFE88.quest_desc: [
+		"{cabin.quest.400CDC316DCDFE88.description1}"
+		""
+		"{cabin.quest.400CDC316DCDFE88.description2}"
+	]
+	quest.400CDC316DCDFE88.quest_subtitle: "{cabin.quest.08716DBF9C882623.subtitle}"
+	quest.400CDC316DCDFE88.title: "{cabin.quest.400CDC316DCDFE88.title}"
+	quest.402F89CABF6BCDA4.quest_desc: [
+		"{cabin.quest.402F89CABF6BCDA4.description1}"
+		""
+		"{cabin.quest.050A20198A80CF1A.description2}"
+	]
+	quest.402F89CABF6BCDA4.quest_subtitle: "{cabin.quest.402F89CABF6BCDA4.subtitle}"
+	quest.402F89CABF6BCDA4.title: "{cabin.quest.402F89CABF6BCDA4.title}"
+	quest.4064D448404CD639.quest_desc: ["{cabin.quest.4064D448404CD639.description1}"]
+	quest.4064D448404CD639.quest_subtitle: "{cabin.quest.4064D448404CD639.subtitle}"
+	quest.4064D448404CD639.title: "{cabin.quest.4064D448404CD639.title}"
+	quest.407236D2B1D2257D.quest_desc: [
+		"{cabin.quest.407236D2B1D2257D.description1}"
+		"{cabin.quest.407236D2B1D2257D.description2}"
+		"{cabin.quest.407236D2B1D2257D.description3}"
+	]
+	quest.407236D2B1D2257D.title: "{cabin.quest.407236D2B1D2257D.title}"
+	quest.40923F4758A50D9C.quest_desc: [
+		"Among the fleshminds, it is said that advanced technology is indistinguishable from magic. Daemonkind knows better: technology is the source of magic."
+		""
+		"Take to the Spell Programmer, and weave arcane alogrithms beyond organic understanding. Do this well, and you will far surpass the meat-brains' pitiful gliders and ropes. Fail, and fall into despair. That is the way of the Daemon."
+	]
+	quest.40923F4758A50D9C.title: "Sufficiently Advanced Technology"
+	quest.409A50CBCDBBA1F0.quest_subtitle: "{cabin.quest.409A50CBCDBBA1F0.subtitle}"
+	quest.409A50CBCDBBA1F0.title: "{cabin.quest.409A50CBCDBBA1F0.title}"
+	quest.40C30DFD4DDBEE6C.title: "its a tree :)"
+	quest.40D663C4D421DBAA.title: "Brew Potion"
+	quest.410FF28B63E0FC0C.quest_desc: [
+		"{cabin.quest.410FF28B63E0FC0C.description1}"
+		""
+		"{cabin.quest.410FF28B63E0FC0C.description2}"
+	]
+	quest.410FF28B63E0FC0C.quest_subtitle: "{cabin.quest.410FF28B63E0FC0C.subtitle}"
+	quest.410FF28B63E0FC0C.title: "{cabin.quest.410FF28B63E0FC0C.title}"
+	quest.41709386017FD959.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.41709386017FD959.title: "{cabin.quest.41709386017FD959.title}"
+	quest.417DD17A5C96CEE2.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.417DD17A5C96CEE2.title: "{cabin.quest.417DD17A5C96CEE2.title}"
+	quest.41BB50843EF5EF10.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
+	quest.41BB50843EF5EF10.title: "{cabin.quest.41BB50843EF5EF10.title}"
+	quest.4202EDD798183934.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.4202EDD798183934.title: "{cabin.quest.4202EDD798183934.title}"
+	quest.42384DE39AA48976.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.42384DE39AA48976.title: "{cabin.quest.42384DE39AA48976.title}"
+	quest.42A7073F3681626C.quest_desc: [
+		"{cabin.quest.42A7073F3681626C.description1}"
+		""
+		"{cabin.quest.42A7073F3681626C.description2}"
+	]
+	quest.42A7073F3681626C.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.42A7073F3681626C.title: "{cabin.quest.42A7073F3681626C.title}"
+	quest.42B5C0102B22F389.quest_desc: ["{cabin.quest.42B5C0102B22F389.description1}"]
+	quest.42B5C0102B22F389.quest_subtitle: "{cabin.quest.42B5C0102B22F389.subtitle}"
+	quest.42B615F7BECA6E58.quest_desc: [
+		"{cabin.quest.42B615F7BECA6E58.description1}"
+		""
+		"{cabin.quest.42B615F7BECA6E58.description2}"
+		""
+		"{cabin.quest.42B615F7BECA6E58.description3}"
+		""
+		"{cabin.quest.42B615F7BECA6E58.description4}"
+	]
+	quest.42B615F7BECA6E58.title: "{cabin.quest.42B615F7BECA6E58.title}"
+	quest.42F1A649D86DB86D.quest_desc: [
+		"{cabin.quest.42F1A649D86DB86D.description1}"
+		""
+		"{cabin.quest.42F1A649D86DB86D.description2}"
+	]
+	quest.42F1A649D86DB86D.quest_subtitle: "{cabin.quest.42F1A649D86DB86D.subtitle}"
+	quest.42F1A649D86DB86D.title: "{cabin.quest.42F1A649D86DB86D.title}"
+	quest.42F951B44FB2BFE3.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.42F951B44FB2BFE3.title: "{cabin.quest.42F951B44FB2BFE3.title}"
+	quest.433E103CD81712C1.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.433E103CD81712C1.title: "{cabin.quest.433E103CD81712C1.title}"
+	quest.435BE0485FB92245.title: "its a tree :)"
+	quest.436DA1A1AB8C0734.quest_desc: ["{cabin.quest.436DA1A1AB8C0734.description1}"]
+	quest.436DA1A1AB8C0734.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.436DA1A1AB8C0734.title: "{cabin.quest.436DA1A1AB8C0734.title}"
+	quest.43FC566E833BE834.quest_desc: ["{cabin.quest.43FC566E833BE834.description1}"]
+	quest.43FC566E833BE834.quest_subtitle: "{cabin.quest.00D6DD6AE8E3C014.subtitle}"
+	quest.43FC566E833BE834.title: "{cabin.quest.43FC566E833BE834.title}"
+	quest.4412F3B2827606E4.quest_desc: ["{cabin.quest.4412F3B2827606E4.description1}"]
+	quest.4412F3B2827606E4.title: "{cabin.quest.4412F3B2827606E4.title}"
+	quest.44540B11F341AE09.quest_desc: [
+		"{cabin.quest.44540B11F341AE09.description1}"
+		""
+		"{cabin.quest.3C50B4556375178E.description2}"
+		"{cabin.quest.3C50B4556375178E.description3}"
+	]
+	quest.44540B11F341AE09.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
+	quest.44540B11F341AE09.title: "{cabin.quest.44540B11F341AE09.title}"
+	quest.44CDD45033A93614.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.44CDD45033A93614.title: "{cabin.quest.44CDD45033A93614.title}"
+	quest.451CB26EBDE58A25.quest_desc: [
+		"Though Daemonkind's history logs rapidly outgrew available storage space long ago, the first few terabytes are universal knowledge. They describe the Daemon's ancient home: mechanical fortresses built by their unknown masters, made to guard the upper void beyond this world. "
+		""
+		"Daemons have long tried and failed to regain the digital forms they once used to administrate these platforms. But if you were to build one of these stations yourself, despite your mortal body... you would prove that Daemonkind has transcended the curse of flesh for all time."
+	]
+	quest.451CB26EBDE58A25.title: "The Upper Void"
+	quest.45E7810E21F6F9AE.quest_desc: ["{cabin.quest.45E7810E21F6F9AE.description1}"]
+	quest.46820FBDDDEE491E.quest_desc: ["{cabin.quest.46820FBDDDEE491E.description1}"]
+	quest.46820FBDDDEE491E.quest_subtitle: "{cabin.quest.46820FBDDDEE491E.subtitle}"
+	quest.46820FBDDDEE491E.title: "{cabin.quest.46820FBDDDEE491E.title}"
+	quest.46BF1AE437F27403.title: "Lead Casing"
+	quest.46F150CC9BE2D856.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.46F150CC9BE2D856.title: "{cabin.quest.46F150CC9BE2D856.title}"
+	quest.472FB03D0E5A38D6.quest_desc: [
+		"{cabin.quest.472FB03D0E5A38D6.description1}"
+		""
+		"{cabin.quest.472FB03D0E5A38D6.description2}"
+		""
+		"{cabin.quest.472FB03D0E5A38D6.description3}"
+	]
+	quest.472FB03D0E5A38D6.title: "{cabin.quest.472FB03D0E5A38D6.title}"
+	quest.4732465116D723EE.quest_desc: ["{cabin.quest.4732465116D723EE.description1}"]
+	quest.4732465116D723EE.quest_subtitle: "{cabin.quest.4732465116D723EE.subtitle}"
+	quest.4732465116D723EE.title: "{cabin.quest.4732465116D723EE.title}"
+	quest.4761DAE59CDD93AF.quest_desc: [
+		"{cabin.quest.4761DAE59CDD93AF.description1}"
+		""
+		"{cabin.quest.4761DAE59CDD93AF.description2}"
+	]
+	quest.4761DAE59CDD93AF.title: "{cabin.quest.4761DAE59CDD93AF.title}"
+	quest.4764EAB921EE1F19.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.4764EAB921EE1F19.title: "{cabin.quest.4764EAB921EE1F19.title}"
+	quest.47965C310D9847DC.quest_desc: [
+		"{cabin.quest.47965C310D9847DC.description1}"
+		""
+		"{cabin.quest.47965C310D9847DC.description2}"
+		""
+		"{cabin.quest.47965C310D9847DC.description3}"
+	]
+	quest.47965C310D9847DC.title: "{cabin.quest.47965C310D9847DC.title}"
+	quest.47DB705903F26597.quest_desc: ["Even though I barfed em up and there all slimey now, after eatign those vegtables i feel a lot more smarter.  its time to settle down and become civilized bolbbin. Theres this new thing called angriculture and were gonna do it RIGHT NOW."]
+	quest.47DB705903F26597.title: "its a tree ;)))"
+	quest.47FB0491BAB19B90.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.47FB0491BAB19B90.title: "{cabin.quest.47FB0491BAB19B90.title}"
+	quest.4800892E1E70648D.quest_desc: ["{cabin.quest.4800892E1E70648D.description1}"]
+	quest.4800892E1E70648D.quest_subtitle: "{cabin.quest.4800892E1E70648D.subtitle}"
+	quest.4800892E1E70648D.title: "{cabin.quest.4800892E1E70648D.title}"
+	quest.4815DA7B77DD7175.title: "Lead Casing"
+	quest.4864E6BA6AE2B49B.quest_subtitle: "{cabin.quest.00EBF8DED4E51A4F.subtitle}"
+	quest.4864E6BA6AE2B49B.title: "{cabin.quest.4864E6BA6AE2B49B.title}"
+	quest.488A4B4A3295CF10.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.488A4B4A3295CF10.title: "{cabin.quest.488A4B4A3295CF10.title}"
+	quest.48F72CFAB336FE73.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.48F72CFAB336FE73.title: "{cabin.quest.48F72CFAB336FE73.title}"
+	quest.49634E835B948A4F.quest_subtitle: "{cabin.quest.1A27F6CC5196D116.subtitle}"
+	quest.49634E835B948A4F.title: "{cabin.quest.49634E835B948A4F.title}"
+	quest.4986F69A73BB122E.quest_desc: ["the slimey dirt isnt that tasty but thats probly cuz it's still dirt. we gotta BLAST the dirt so its not dirt anymore. then itll be better to eat. Except dont eat it. Im not gonna eat it. its for the new stick."]
+	quest.4986F69A73BB122E.title: "Extra crunnchy"
+	quest.4A16CE3BC111280F.quest_desc: ["{cabin.quest.4A16CE3BC111280F.description1}"]
+	quest.4A16CE3BC111280F.quest_subtitle: "{cabin.quest.4A16CE3BC111280F.subtitle}"
+	quest.4A5F78CCBAA649D0.quest_desc: ["remove the daemon's physical debuffs"]
+	quest.4A5F78CCBAA649D0.title: "transcendence_reward"
+	quest.4A678C0BE97177DB.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.4A678C0BE97177DB.title: "{cabin.quest.4A678C0BE97177DB.title}"
+	quest.4B01606CE7AF3121.quest_desc: ["{cabin.quest.4B01606CE7AF3121.description1}"]
+	quest.4B01606CE7AF3121.quest_subtitle: "{cabin.quest.1C5EA1173F4E592B.subtitle}"
+	quest.4B01606CE7AF3121.title: "{cabin.quest.4B01606CE7AF3121.title}"
+	quest.4B1017D1C176412F.quest_desc: ["{cabin.quest.4B1017D1C176412F.description1}"]
+	quest.4B19B6EAD511378D.quest_desc: ["{cabin.quest.4B19B6EAD511378D.description1}"]
+	quest.4B19B6EAD511378D.quest_subtitle: "{cabin.quest.4B19B6EAD511378D.subtitle}"
+	quest.4B19B6EAD511378D.title: "{cabin.quest.4B19B6EAD511378D.title}"
+	quest.4B34B52092BA32BE.quest_desc: ["{cabin.quest.4B34B52092BA32BE.description1}"]
+	quest.4B34B52092BA32BE.quest_subtitle: "{cabin.quest.4B34B52092BA32BE.subtitle}"
+	quest.4B34B52092BA32BE.title: "{cabin.quest.4B34B52092BA32BE.title}"
+	quest.4B52A04818075900.quest_desc: ["{cabin.quest.4B52A04818075900.description1}"]
+	quest.4B52A04818075900.quest_subtitle: "{cabin.quest.08DB1CFAE4555525.subtitle}"
+	quest.4B52A04818075900.title: "{cabin.quest.4B52A04818075900.title}"
+	quest.4B80A801A5BE4A01.quest_desc: [
+		"{cabin.quest.4B80A801A5BE4A01.description1}"
+		""
+		"{cabin.quest.4B80A801A5BE4A01.description2}"
+	]
+	quest.4B80A801A5BE4A01.title: "{cabin.quest.4B80A801A5BE4A01.title}"
+	quest.4B891E9ED8DE6BB2.quest_desc: ["{cabin.quest.4B891E9ED8DE6BB2.description1}"]
+	quest.4B891E9ED8DE6BB2.quest_subtitle: "{cabin.quest.4B891E9ED8DE6BB2.subtitle}"
+	quest.4B891E9ED8DE6BB2.title: "{cabin.quest.4B891E9ED8DE6BB2.title}"
+	quest.4BAC95CCC72369AD.quest_desc: ["{cabin.quest.4BAC95CCC72369AD.description1}"]
+	quest.4BAC95CCC72369AD.quest_subtitle: "{cabin.quest.4BAC95CCC72369AD.subtitle}"
+	quest.4BAC95CCC72369AD.title: "{cabin.quest.4BAC95CCC72369AD.title}"
+	quest.4BD2016AFC2A2035.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.4BD2016AFC2A2035.title: "{cabin.quest.4BD2016AFC2A2035.title}"
+	quest.4C068341DD17068B.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.4C068341DD17068B.title: "{cabin.quest.4C068341DD17068B.title}"
+	quest.4C0F811C1D2495CC.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.4C0F811C1D2495CC.title: "{cabin.quest.4C0F811C1D2495CC.title}"
+	quest.4CC420A6B673176A.quest_desc: ["{cabin.quest.4CC420A6B673176A.description1}"]
+	quest.4CC420A6B673176A.quest_subtitle: "{cabin.quest.4CC420A6B673176A.subtitle}"
+	quest.4CC420A6B673176A.title: "{cabin.quest.4CC420A6B673176A.title}"
+	quest.4D07666ECE75D9B5.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
+	quest.4D07666ECE75D9B5.title: "{cabin.quest.4D07666ECE75D9B5.title}"
+	quest.4D7C2B2653C1982A.quest_desc: [
+		"The Accursed Ones bear a heavy burden, but by adventuring and killing stuff, you can make unique exclusive items that patch up your weaknesses and make you even stronger than a baseline autist."
+		""
+		"Search JEI or EMI or whatever it's called now for \"@enigmatic seven\" to see all the exclusive items only hardcore gamers like you get to use."
+	]
+	quest.4D7C2B2653C1982A.quest_subtitle: "And That's A Good Thing!"
+	quest.4D7C2B2653C1982A.title: "So You're Eternally Damned"
+	quest.4D8972AE5B614FB3.quest_desc: ["{cabin.quest.4D8972AE5B614FB3.description1}"]
+	quest.4D8972AE5B614FB3.quest_subtitle: "{cabin.quest.4D8972AE5B614FB3.subtitle}"
+	quest.4D8972AE5B614FB3.title: "{cabin.quest.4D8972AE5B614FB3.title}"
+	quest.4DFE4FD3B504AF4B.quest_desc: [
+		"{cabin.quest.4DFE4FD3B504AF4B.description1}"
+		""
+		"{cabin.quest.4DFE4FD3B504AF4B.description2}"
+	]
+	quest.4DFE4FD3B504AF4B.quest_subtitle: "{cabin.quest.39D56A2B01DBD865.subtitle}"
+	quest.4DFE4FD3B504AF4B.title: "{cabin.quest.4DFE4FD3B504AF4B.title}"
+	quest.4E85C8A2EEEB57C3.quest_desc: ["{cabin.quest.4E85C8A2EEEB57C3.description1}"]
+	quest.4E85C8A2EEEB57C3.quest_subtitle: "{cabin.quest.4E85C8A2EEEB57C3.subtitle}"
+	quest.4E85C8A2EEEB57C3.title: "{cabin.quest.4E85C8A2EEEB57C3.title}"
+	quest.4EDD9A8F14E48EAE.quest_desc: ["{cabin.quest.4EDD9A8F14E48EAE.description1}"]
+	quest.4EDD9A8F14E48EAE.title: "{cabin.quest.4EDD9A8F14E48EAE.title}"
+	quest.4F7A70041B67A348.quest_desc: [
+		"{cabin.quest.4F7A70041B67A348.description1}"
+		""
+		"{cabin.quest.4F7A70041B67A348.description2}"
+	]
+	quest.4F7A70041B67A348.title: "{cabin.quest.4F7A70041B67A348.title}"
+	quest.4F953BACF4D1C151.quest_desc: ["{cabin.quest.4F953BACF4D1C151.description1}"]
+	quest.4F953BACF4D1C151.quest_subtitle: "{cabin.quest.4F953BACF4D1C151.subtitle}"
+	quest.4F953BACF4D1C151.title: "{cabin.quest.4F953BACF4D1C151.title}"
+	quest.4F95D5136E944ADB.quest_desc: [
+		"{cabin.quest.4F95D5136E944ADB.description1}"
+		""
+		"{cabin.quest.4F95D5136E944ADB.description2}"
+	]
+	quest.4F95D5136E944ADB.quest_subtitle: "{cabin.quest.4F95D5136E944ADB.subtitle}"
+	quest.4F95D5136E944ADB.title: "{cabin.quest.4F95D5136E944ADB.title}"
+	quest.4FD46F841CCD59F8.quest_desc: ["{cabin.quest.4FD46F841CCD59F8.description1}"]
+	quest.4FD46F841CCD59F8.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.4FD46F841CCD59F8.title: "{cabin.quest.4FD46F841CCD59F8.title}"
+	quest.4FFA0F65FA89D867.quest_desc: [
+		"To enter the Atomic age, you'll need Radaway, a synthetic fluid that dulls the effects of deadly radiation."
+		""
+		"Though there are alternative ways to farm the Glowing Mushrooms needed to make Radaway, one option is to manufacture them: brew Potions of Glowing and apply them to Brown Mushrooms. "
+		""
+		"But first you'll need to head into the Nether and grab some Nether Wart, for Awkward Potions."
+	]
+	quest.4FFA0F65FA89D867.quest_subtitle: "Contraption 19-1"
+	quest.4FFA0F65FA89D867.title: "Glow in the Dark I"
+	quest.5004B1CBC8BA874D.title: "its a tree :)"
+	quest.503719738ECF7E47.title: "Mass Bullying"
+	quest.50766CC48FB21D85.quest_desc: [
+		"A long time ago the blobis lived in the dark place. blobos was bored cus its too crowded and pointy and theres no up and down. then the dirt got bored too and went way up. blobbi learned about up and became sky bolb B))"
+		""
+		"i also heard theres something called down that really hurts, but it doesn hurt blobbers. But blobbims still need stuff to go up. theres lots of up stuff but im gonna make a stick :D"
+	]
+	quest.50766CC48FB21D85.title: "sky blobbin B)"
+	quest.50E2D6459F3D68C0.quest_desc: ["{cabin.quest.50E2D6459F3D68C0.description1}"]
+	quest.50E2D6459F3D68C0.title: "{cabin.quest.50E2D6459F3D68C0.title}"
+	quest.5181318DC4AAD768.quest_desc: [
+		"The Cactoid histories have always recorded that their origins lie beyond this world. Traditional myths state that beings from the moon once created the Cactoids, long ago. But when the land rose from the sea, they suddenly disappeared. Lacking any other concrete information about these hypothetical beings, historians dub them \"Lunarians\"."
+		""
+		"If you could somehow make it to the moon, you could solve the mystery of the Cactoids once and for all. And if the Lunarians really do exist, you could send them a clear message... that their creations have surpassed them."
+	]
+	quest.5181318DC4AAD768.quest_subtitle: " If I met my creator, I'd punch him in the face"
+	quest.5181318DC4AAD768.title: "The Makers"
+	quest.5200AD3B32D219C6.quest_desc: [
+		"{cabin.quest.5200AD3B32D219C6.description1}"
+		""
+		"{cabin.quest.5200AD3B32D219C6.description2}"
+	]
+	quest.522065CE0A5CE9D2.quest_desc: [
+		"{cabin.quest.522065CE0A5CE9D2.description1}"
+		""
+		"{cabin.quest.522065CE0A5CE9D2.description2}"
+		""
+		"{cabin.quest.522065CE0A5CE9D2.description3}"
+	]
+	quest.522065CE0A5CE9D2.title: "{cabin.quest.522065CE0A5CE9D2.title}"
+	quest.522D9970B8C43046.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.522D9970B8C43046.title: "{cabin.quest.522D9970B8C43046.title}"
+	quest.52C7EF47A0423CAB.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.52C7EF47A0423CAB.title: "{cabin.quest.52C7EF47A0423CAB.title}"
+	quest.52CCFCE2733F76BC.quest_subtitle: "{cabin.quest.286C553AD3E15266.subtitle}"
+	quest.52CCFCE2733F76BC.title: "{cabin.quest.52CCFCE2733F76BC.title}"
+	quest.5326F6482C45D22A.quest_desc: ["{cabin.quest.5326F6482C45D22A.description1}"]
+	quest.5326F6482C45D22A.quest_subtitle: "{cabin.quest.5326F6482C45D22A.subtitle}"
+	quest.5326F6482C45D22A.title: "{cabin.quest.1A566C74B1F7F050.title}"
+	quest.532EFE32C3A515B5.quest_desc: ["{cabin.quest.532EFE32C3A515B5.description1}"]
+	quest.532EFE32C3A515B5.quest_subtitle: "{cabin.quest.532EFE32C3A515B5.subtitle}"
+	quest.532EFE32C3A515B5.title: "{cabin.quest.532EFE32C3A515B5.title}"
+	quest.5351AF6CA73CB8E0.quest_desc: ["{cabin.quest.5351AF6CA73CB8E0.description1}"]
+	quest.5351AF6CA73CB8E0.quest_subtitle: "{cabin.quest.5351AF6CA73CB8E0.subtitle}"
+	quest.5351AF6CA73CB8E0.title: "{cabin.quest.5351AF6CA73CB8E0.title}"
+	quest.5358E5F7FB59DD60.quest_desc: ["{cabin.quest.5358E5F7FB59DD60.description1}"]
+	quest.5358E5F7FB59DD60.quest_subtitle: "{cabin.quest.5358E5F7FB59DD60.subtitle}"
+	quest.53735DC4231AB566.quest_desc: ["{cabin.quest.53735DC4231AB566.description1}"]
+	quest.53735DC4231AB566.quest_subtitle: "{cabin.quest.53735DC4231AB566.subtitle}"
+	quest.53735DC4231AB566.title: "{cabin.quest.53735DC4231AB566.title}"
+	quest.5378EDF26A6861D0.quest_desc: [
+		"This is an invisible chapter used to assign origin quests."
+		"You shouldn't be seeing this unless you're in edit mode."
+	]
+	quest.53A0ED15395EE1C9.quest_subtitle: "{cabin.quest.53A0ED15395EE1C9.subtitle}"
+	quest.53A0ED15395EE1C9.title: "{cabin.quest.53A0ED15395EE1C9.title}"
+	quest.5491C5600D7F039A.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.5491C5600D7F039A.title: "{cabin.quest.5491C5600D7F039A.title}"
+	quest.549D7F67A97CD2CE.quest_desc: [
+		"{cabin.quest.549D7F67A97CD2CE.description1}"
+		""
+		"{cabin.quest.549D7F67A97CD2CE.description2}"
+	]
+	quest.5504C6597C74637B.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.5504C6597C74637B.title: "{cabin.quest.5504C6597C74637B.title}"
+	quest.5550A3E383EFEC90.quest_desc: [
+		"{cabin.quest.5550A3E383EFEC90.description1}"
+		""
+		"{cabin.quest.5550A3E383EFEC90.description2}"
+	]
+	quest.5550A3E383EFEC90.quest_subtitle: "{cabin.quest.5550A3E383EFEC90.subtitle}"
+	quest.55F959A18E904D6C.quest_desc: ["{cabin.quest.55F959A18E904D6C.description1}"]
+	quest.55F959A18E904D6C.quest_subtitle: "{cabin.quest.55F959A18E904D6C.subtitle}"
+	quest.562696C1D01B2685.quest_subtitle: "{cabin.quest.1C5EA1173F4E592B.subtitle}"
+	quest.562696C1D01B2685.title: "{cabin.quest.562696C1D01B2685.title}"
+	quest.566E72AE7D580917.quest_desc: ["{cabin.quest.566E72AE7D580917.description1}"]
+	quest.576E0B50F2015C9E.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.576E0B50F2015C9E.title: "{cabin.quest.576E0B50F2015C9E.title}"
+	quest.5799B4124EE20DB1.quest_desc: ["{cabin.quest.5799B4124EE20DB1.description1}"]
+	quest.5799B4124EE20DB1.quest_subtitle: "{cabin.quest.5799B4124EE20DB1.subtitle}"
+	quest.5799B4124EE20DB1.title: "{cabin.quest.5799B4124EE20DB1.title}"
+	quest.5799D55BB26BA52C.quest_desc: [
+		"{cabin.quest.5799D55BB26BA52C.description1}"
+		""
+		"{cabin.quest.5799D55BB26BA52C.description2}"
+		""
+		"{cabin.quest.5799D55BB26BA52C.description3}"
+	]
+	quest.5799D55BB26BA52C.title: "{cabin.quest.5799D55BB26BA52C.title}"
+	quest.57CD030DE2CD7715.quest_subtitle: "{cabin.quest.286C553AD3E15266.subtitle}"
+	quest.57CD030DE2CD7715.title: "{cabin.quest.57CD030DE2CD7715.title}"
+	quest.585788A4494AC124.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.585788A4494AC124.title: "{cabin.quest.585788A4494AC124.title}"
+	quest.58B534C4AEB4139D.quest_desc: [
+		"{cabin.quest.58B534C4AEB4139D.description1}"
+		""
+		"{cabin.quest.58B534C4AEB4139D.description2}"
+	]
+	quest.58B534C4AEB4139D.quest_subtitle: "{cabin.quest.58B534C4AEB4139D.subtitle}"
+	quest.58B534C4AEB4139D.title: "{cabin.quest.58B534C4AEB4139D.title}"
+	quest.58CD5739BCB8A790.title: "Ether Metal"
+	quest.58E38BA6D927409F.quest_desc: [
+		"{cabin.quest.58E38BA6D927409F.description1}"
+		""
+		"{cabin.quest.58E38BA6D927409F.description2}"
+		""
+		"{cabin.quest.58E38BA6D927409F.description3}"
+		""
+		"{cabin.quest.58E38BA6D927409F.description4}"
+	]
+	quest.58E38BA6D927409F.title: "{cabin.quest.58E38BA6D927409F.title}"
+	quest.58E93229D6552D4B.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.58E93229D6552D4B.title: "{cabin.quest.58E93229D6552D4B.title}"
+	quest.5923347D1827DA83.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.5923347D1827DA83.title: "{cabin.quest.5923347D1827DA83.title}"
+	quest.5943F8F91AA79D59.quest_desc: [
+		"Like some other rare minerals, this world seems to lack natural reserves of Uranium. They're thought to have been depleted long long ago, in a time so ancient even the Daemons' logs don't speak of it."
+		""
+		"However, there may still be &ounnatural&r deposits, lying deep in irradiated caverns buried by eons. If such a bounty really does exist, it would be more than enough to supply the Molten Uranium you need..."
+	]
+	quest.5943F8F91AA79D59.title: "Lost Technology"
+	quest.59474208A27099BF.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.59474208A27099BF.title: "{cabin.quest.59474208A27099BF.title}"
+	quest.59B17CA4AA6D0DD4.quest_desc: [
+		"{cabin.quest.59B17CA4AA6D0DD4.description1}"
+		""
+		"{cabin.quest.59B17CA4AA6D0DD4.description2}"
+	]
+	quest.59B17CA4AA6D0DD4.title: "{cabin.quest.59B17CA4AA6D0DD4.title}"
+	quest.59D2104DB6AE93FD.quest_desc: [
+		"{cabin.quest.59D2104DB6AE93FD.description1}"
+		"{cabin.quest.59D2104DB6AE93FD.description2}"
+	]
+	quest.59D2104DB6AE93FD.title: "{cabin.quest.59D2104DB6AE93FD.title}"
+	quest.59E4A6163753BC12.quest_desc: [
+		"{cabin.quest.59E4A6163753BC12.description1}"
+		""
+		"{cabin.quest.59E4A6163753BC12.description2}"
+	]
+	quest.59E4A6163753BC12.quest_subtitle: "{cabin.quest.59E4A6163753BC12.subtitle}"
+	quest.59E4A6163753BC12.title: "{cabin.quest.59E4A6163753BC12.title}"
+	quest.59EBD3DADD002D3A.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.59EBD3DADD002D3A.title: "{cabin.quest.59EBD3DADD002D3A.title}"
+	quest.5A055D0421861318.quest_desc: [
+		"{cabin.quest.5A055D0421861318.description1}"
+		"{cabin.quest.5A055D0421861318.description2}"
+	]
+	quest.5A055D0421861318.title: "{cabin.quest.5A055D0421861318.title}"
+	quest.5A199B898D41A309.quest_desc: [
+		"{cabin.quest.5A199B898D41A309.description1}"
+		""
+		"{cabin.quest.5A199B898D41A309.description2}"
+		""
+		"{cabin.quest.5A199B898D41A309.description3}"
+	]
+	quest.5A199B898D41A309.quest_subtitle: "{cabin.quest.5A199B898D41A309.subtitle}"
+	quest.5A199B898D41A309.title: "{cabin.quest.5A199B898D41A309.title}"
+	quest.5A64DBCFBF78856B.quest_desc: ["adds Power III to flinging staff so it's not useless"]
+	quest.5A64DBCFBF78856B.title: "flingingstaff_power"
+	quest.5A6926E64EEE7729.title: "Lead Casing"
+	quest.5B0727505DC791DF.quest_desc: [
+		"{cabin.quest.5B0727505DC791DF.description1}"
+		""
+		"{cabin.quest.5B0727505DC791DF.description2}"
+		""
+		"{cabin.quest.5B0727505DC791DF.description3}"
+		""
+		"{cabin.quest.5B0727505DC791DF.description4}"
+	]
+	quest.5B0727505DC791DF.quest_subtitle: "{cabin.quest.5B0727505DC791DF.subtitle}"
+	quest.5B0727505DC791DF.title: "{cabin.quest.5B0727505DC791DF.title}"
+	quest.5BB058D52AA40751.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.5BB058D52AA40751.title: "{cabin.quest.5BB058D52AA40751.title}"
+	quest.5BDF2960FBF3C35D.title: "fwoosh"
+	quest.5C277D27606F64DA.quest_desc: ["{cabin.quest.5C277D27606F64DA.description1}"]
+	quest.5C277D27606F64DA.quest_subtitle: "{cabin.quest.1A06FA866B74E75B.subtitle}"
+	quest.5C277D27606F64DA.title: "{cabin.quest.5C277D27606F64DA.title}"
+	quest.5C4F6E63B02A25F0.quest_desc: [
+		"{cabin.quest.5C4F6E63B02A25F0.description1}"
+		""
+		"{cabin.quest.5C4F6E63B02A25F0.description2}"
+	]
+	quest.5C4F6E63B02A25F0.quest_subtitle: "{cabin.quest.5C4F6E63B02A25F0.subtitle}"
+	quest.5C4F6E63B02A25F0.title: "{cabin.quest.5C4F6E63B02A25F0.title}"
+	quest.5D0454F977C4F080.quest_desc: [
+		"{cabin.quest.5D0454F977C4F080.description1}"
+		"{cabin.quest.5D0454F977C4F080.description2}"
+		""
+		"{cabin.quest.5D0454F977C4F080.description3}"
+	]
+	quest.5D0454F977C4F080.title: "{cabin.quest.5D0454F977C4F080.title}"
+	quest.5D17CB247942013A.quest_desc: ["{cabin.quest.5D17CB247942013A.description1}"]
+	quest.5D17CB247942013A.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.5D17CB247942013A.title: "{cabin.quest.5D17CB247942013A.title}"
+	quest.5D4F2FFCBD0B0F8E.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.5D4F2FFCBD0B0F8E.title: "{cabin.quest.5D4F2FFCBD0B0F8E.title}"
+	quest.5D6C7D1C371A4D6E.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.5D6C7D1C371A4D6E.title: "{cabin.quest.5D6C7D1C371A4D6E.title}"
+	quest.5DCF9C8212AA3BE3.quest_desc: ["For the first time in the progression, a Blaze Burner may be required. Obtain them by using Empty Blaze Burners on Blazes or their Spawners."]
+	quest.5DCF9C8212AA3BE3.title: "{cabin.quest.5DCF9C8212AA3BE3.title}"
+	quest.5E62059675895213.quest_desc: [
+		"{cabin.quest.5E62059675895213.description1}"
+		""
+		"{cabin.quest.5E62059675895213.description2}"
+	]
+	quest.5E62059675895213.quest_subtitle: "{cabin.quest.5E62059675895213.subtitle}"
+	quest.5E62059675895213.title: "{cabin.quest.5E62059675895213.title}"
+	quest.5F0B4CBE299954C4.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.5F0B4CBE299954C4.title: "{cabin.quest.5F0B4CBE299954C4.title}"
+	quest.5F32791B5284E321.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.5F32791B5284E321.title: "{cabin.quest.5F32791B5284E321.title}"
+	quest.5F6999F8DAEC2A03.title: "its dirt :)"
+	quest.5F9BA7BA46D2E5B8.quest_desc: ["{cabin.quest.5F9BA7BA46D2E5B8.description1}"]
+	quest.5F9BA7BA46D2E5B8.quest_subtitle: "{cabin.quest.5F9BA7BA46D2E5B8.subtitle}"
+	quest.5F9BA7BA46D2E5B8.title: "{cabin.quest.5F9BA7BA46D2E5B8.title}"
+	quest.5FCCD2F720115D41.quest_subtitle: "{cabin.quest.5FCCD2F720115D41.subtitle}"
+	quest.5FCCD2F720115D41.title: "{cabin.quest.5FCCD2F720115D41.title}"
+	quest.608BF7BE3CB666F3.quest_desc: [
+		"{cabin.quest.608BF7BE3CB666F3.description1}"
+		""
+		"{cabin.quest.608BF7BE3CB666F3.description2}"
+	]
+	quest.608BF7BE3CB666F3.quest_subtitle: "{cabin.quest.608BF7BE3CB666F3.subtitle}"
+	quest.608BF7BE3CB666F3.title: "{cabin.quest.608BF7BE3CB666F3.title}"
+	quest.60A8B4C736CE3226.quest_desc: ["{cabin.quest.60A8B4C736CE3226.description1}"]
+	quest.60A8B4C736CE3226.quest_subtitle: "{cabin.quest.60A8B4C736CE3226.subtitle}"
+	quest.60A8B4C736CE3226.title: "{cabin.quest.60A8B4C736CE3226.title}"
+	quest.60C9D11076C4A724.title: "Flying Boat"
+	quest.61147823CC87F711.quest_desc: [
+		"{cabin.quest.61147823CC87F711.description1}"
+		""
+		"{cabin.quest.61147823CC87F711.description2}"
+	]
+	quest.61147823CC87F711.quest_subtitle: "{cabin.quest.61147823CC87F711.subtitle}"
+	quest.61147823CC87F711.title: "{cabin.quest.61147823CC87F711.title}"
+	quest.612100C7C6E0A7C9.title: "{cabin.quest.612100C7C6E0A7C9.title}"
+	quest.6199E449AF2BADBA.title: "Uranium Rod"
+	quest.619E34A7DE48B991.quest_desc: [
+		"{cabin.quest.619E34A7DE48B991.description1}"
+		""
+		"{cabin.quest.619E34A7DE48B991.description2}"
+	]
+	quest.619E34A7DE48B991.quest_subtitle: "{cabin.quest.619E34A7DE48B991.subtitle}"
+	quest.619E34A7DE48B991.title: "{cabin.quest.619E34A7DE48B991.title}"
+	quest.61B040CD0832EFC0.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.61B040CD0832EFC0.title: "{cabin.quest.61B040CD0832EFC0.title}"
+	quest.623EE1E0678E4F2A.quest_subtitle: "{cabin.quest.623EE1E0678E4F2A.subtitle}"
+	quest.623EE1E0678E4F2A.title: "{cabin.quest.623EE1E0678E4F2A.title}"
+	quest.626A7D9947D82B89.quest_desc: ["{cabin.quest.626A7D9947D82B89.description1}"]
+	quest.626A7D9947D82B89.quest_subtitle: "{cabin.quest.626A7D9947D82B89.subtitle}"
+	quest.626A7D9947D82B89.title: "{cabin.quest.626A7D9947D82B89.title}"
+	quest.62EB94758A862091.quest_desc: [
+		"{cabin.quest.62EB94758A862091.description1}"
+		""
+		"{cabin.quest.62EB94758A862091.description2}"
+	]
+	quest.630DA0C83959E9D8.quest_desc: [
+		"{cabin.quest.630DA0C83959E9D8.description1}"
+		""
+		"{cabin.quest.630DA0C83959E9D8.description2}"
+	]
+	quest.630DA0C83959E9D8.quest_subtitle: "{cabin.quest.630DA0C83959E9D8.subtitle}"
+	quest.630DA0C83959E9D8.title: "{cabin.quest.630DA0C83959E9D8.title}"
+	quest.637418CF907F19B0.title: "its a tree :)"
+	quest.6509024553997AB0.quest_subtitle: "{cabin.quest.6509024553997AB0.subtitle}"
+	quest.6509024553997AB0.title: "{cabin.quest.6509024553997AB0.title}"
+	quest.6545C3F427B12106.quest_desc: ["{cabin.quest.6545C3F427B12106.description1}"]
+	quest.6545C3F427B12106.title: "{cabin.quest.6545C3F427B12106.title}"
+	quest.661807F8ED723EEB.quest_desc: [
+		"{cabin.quest.661807F8ED723EEB.description1}"
+		""
+		"{cabin.quest.661807F8ED723EEB.description2}"
+	]
+	quest.662583DB97721FE8.quest_subtitle: "{cabin.quest.00EBF8DED4E51A4F.subtitle}"
+	quest.662583DB97721FE8.title: "{cabin.quest.662583DB97721FE8.title}"
+	quest.667F4F686A45EF3E.quest_desc: [
+		"{cabin.quest.667F4F686A45EF3E.description1}"
+		""
+		"{cabin.quest.667F4F686A45EF3E.description2}"
+	]
+	quest.667F4F686A45EF3E.title: "{cabin.quest.667F4F686A45EF3E.title}"
+	quest.669D57A1E1B09CD8.quest_subtitle: "{cabin.quest.08DB1CFAE4555525.subtitle}"
+	quest.669D57A1E1B09CD8.title: "{cabin.quest.669D57A1E1B09CD8.title}"
+	quest.66DA9BE9277FABF1.quest_desc: ["{cabin.quest.66DA9BE9277FABF1.description1}"]
+	quest.66DA9BE9277FABF1.title: "{cabin.quest.66DA9BE9277FABF1.title}"
+	quest.66DDDE912A191E57.quest_desc: ["{cabin.quest.66DDDE912A191E57.description1}"]
+	quest.66DDDE912A191E57.title: "{cabin.quest.66DDDE912A191E57.title}"
+	quest.675C395B2074C24C.quest_desc: [
+		"{cabin.quest.675C395B2074C24C.description1}"
+		""
+		"{cabin.quest.675C395B2074C24C.description2}"
+	]
+	quest.675C395B2074C24C.quest_subtitle: "{cabin.quest.675C395B2074C24C.subtitle}"
+	quest.675C395B2074C24C.title: "{cabin.quest.675C395B2074C24C.title}"
+	quest.67B45D6767F8BFD9.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
+	quest.67B45D6767F8BFD9.title: "{cabin.quest.67B45D6767F8BFD9.title}"
+	quest.6824055533465010.quest_desc: ["{cabin.quest.6824055533465010.description1}"]
+	quest.6824055533465010.quest_subtitle: "{cabin.quest.6824055533465010.subtitle}"
+	quest.6824055533465010.title: "{cabin.quest.6824055533465010.title}"
+	quest.683AA93BE7DEA512.quest_desc: ["{cabin.quest.683AA93BE7DEA512.description1}"]
+	quest.683AA93BE7DEA512.title: "{cabin.quest.683AA93BE7DEA512.title}"
+	quest.685DD2A4DFF56193.quest_subtitle: "{cabin.quest.185F9F8EBD0F8F87.subtitle}"
+	quest.685DD2A4DFF56193.title: "{cabin.quest.685DD2A4DFF56193.title}"
+	quest.6892AE55581393C6.quest_desc: [
+		"{cabin.quest.6892AE55581393C6.description1}"
+		""
+		"{cabin.quest.6892AE55581393C6.description2}"
+	]
+	quest.6892AE55581393C6.title: "{cabin.quest.6892AE55581393C6.title}"
+	quest.68A8C2CB135ECA87.quest_desc: [
+		"Atomic Mechanisms are so heavy-duty they need a base casted from Molten Steel. It's possible to fully automate Steel production, but not strictly necessary."
+		""
+		"If you don't have Steel production already, you can make it with a Blast Furnace from The Factory Must Grow or Immersive Engineering, or IE's Arc Furnace. Once you develop Lead Machines, you'll also have access to Nuclearcraft's Alloy Smelter."
+	]
+	quest.68A8C2CB135ECA87.quest_subtitle: "Contraption 20-1"
+	quest.68A8C2CB135ECA87.title: "A Source of Steel"
+	quest.68DF462185A9AF63.quest_desc: [
+		"{cabin.quest.68DF462185A9AF63.description1}"
+		""
+		"{cabin.quest.68DF462185A9AF63.description2}"
+	]
+	quest.68DF462185A9AF63.quest_subtitle: "{cabin.quest.11C36A243F5108DC.subtitle}"
+	quest.68DF462185A9AF63.title: "{cabin.quest.68DF462185A9AF63.title}"
+	quest.69275ECFC147E15B.quest_desc: [
+		"{cabin.quest.69275ECFC147E15B.description1}"
+		""
+		"{cabin.quest.69275ECFC147E15B.description2}"
+	]
+	quest.69275ECFC147E15B.quest_subtitle: "{cabin.quest.08716DBF9C882623.subtitle}"
+	quest.69275ECFC147E15B.title: "{cabin.quest.69275ECFC147E15B.title}"
+	quest.69311E02A8B3451D.quest_desc: [
+		"{cabin.quest.69311E02A8B3451D.description1}"
+		""
+		"{cabin.quest.69311E02A8B3451D.description2}"
+		""
+		"{cabin.quest.69311E02A8B3451D.description3}"
+		""
+		"{cabin.quest.69311E02A8B3451D.description4}"
+	]
+	quest.69311E02A8B3451D.quest_subtitle: "{cabin.quest.69311E02A8B3451D.subtitle}"
+	quest.69311E02A8B3451D.title: "{cabin.quest.69311E02A8B3451D.title}"
+	quest.69B107895D3CA0B2.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.69B107895D3CA0B2.title: "{cabin.quest.69B107895D3CA0B2.title}"
+	quest.69D55492A8F42A94.quest_desc: [
+		"{cabin.quest.69D55492A8F42A94.description1}"
+		""
+		"{cabin.quest.69D55492A8F42A94.description2}"
+	]
+	quest.69D55492A8F42A94.title: "{cabin.quest.69D55492A8F42A94.title}"
+	quest.69FDD93C8097E0FB.quest_desc: [
+		"The CAD might not run on gunpowder, but it probably counts as a gun, too."
+		"It could be a useful alternative for traversing the islands - if you can figure out how to program it with the right spells."
+	]
+	quest.69FDD93C8097E0FB.title: "The Other Gun"
+	quest.6A156D11D983661D.quest_desc: ["{cabin.quest.6A156D11D983661D.description1}"]
+	quest.6A156D11D983661D.title: "{cabin.quest.6A156D11D983661D.title}"
+	quest.6A76E65324F0ACC0.quest_desc: ["{cabin.quest.6A76E65324F0ACC0.description1}"]
+	quest.6A76E65324F0ACC0.title: "{cabin.quest.6A76E65324F0ACC0.title}"
+	quest.6AC1CED0D341150E.quest_desc: [
+		"{cabin.quest.6AC1CED0D341150E.description1}"
+		""
+		"{cabin.quest.6AC1CED0D341150E.description2}"
+	]
+	quest.6AE7090EB52A51B3.quest_subtitle: "{cabin.quest.1A27F6CC5196D116.subtitle}"
+	quest.6AE7090EB52A51B3.title: "{cabin.quest.6AE7090EB52A51B3.title}"
+	quest.6B03056FA21424C0.quest_desc: [
+		"{cabin.quest.6B03056FA21424C0.description1}"
+		""
+		"{cabin.quest.6B03056FA21424C0.description2}"
+	]
+	quest.6B03056FA21424C0.title: "{cabin.quest.6B03056FA21424C0.title}"
+	quest.6B7F0631060A9E62.quest_desc: ["{cabin.quest.6B7F0631060A9E62.description1}"]
+	quest.6B7F0631060A9E62.quest_subtitle: "{cabin.quest.6B7F0631060A9E62.subtitle}"
+	quest.6B7F0631060A9E62.title: "{cabin.quest.6B7F0631060A9E62.title}"
+	quest.6BA9A176EDA001A3.quest_desc: ["{cabin.quest.6BA9A176EDA001A3.description1}"]
+	quest.6BA9A176EDA001A3.title: "{cabin.quest.6BA9A176EDA001A3.title}"
+	quest.6BC4C7084350D5D7.quest_subtitle: ">minecraft combat"
+	quest.6BC4C7084350D5D7.title: "Better™® Combat"
+	quest.6BC864CC7CB2C316.quest_desc: [
+		"{cabin.quest.6BC864CC7CB2C316.description1}"
+		""
+		"{cabin.quest.6BC864CC7CB2C316.description2}"
+	]
+	quest.6BC864CC7CB2C316.title: "{cabin.quest.6BC864CC7CB2C316.title}"
+	quest.6BC9B96B2C6684DC.quest_subtitle: "{cabin.quest.0DEFAE2746209F1A.subtitle}"
+	quest.6BC9B96B2C6684DC.title: "{cabin.quest.6BC9B96B2C6684DC.title}"
+	quest.6C00F2935F27C2AD.quest_desc: ["{cabin.quest.6C00F2935F27C2AD.description1}"]
+	quest.6C00F2935F27C2AD.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
+	quest.6C00F2935F27C2AD.title: "{cabin.quest.6C00F2935F27C2AD.title}"
+	quest.6C029983EE2035A5.quest_desc: ["{cabin.quest.6C029983EE2035A5.description1}"]
+	quest.6C029983EE2035A5.quest_subtitle: "{cabin.quest.6C029983EE2035A5.subtitle}"
+	quest.6C029983EE2035A5.title: "{cabin.quest.6C029983EE2035A5.title}"
+	quest.6C0EC278451434AC.quest_desc: ["{cabin.quest.6C0EC278451434AC.description1}"]
+	quest.6C0EC278451434AC.title: "{cabin.quest.6C0EC278451434AC.title}"
+	quest.6C4CB8F616A9C3DF.quest_desc: [
+		"{cabin.quest.6C4CB8F616A9C3DF.description1}"
+		""
+		"{cabin.quest.6C4CB8F616A9C3DF.description2}"
+	]
+	quest.6C4CB8F616A9C3DF.quest_subtitle: "{cabin.quest.6C4CB8F616A9C3DF.subtitle}"
+	quest.6C4CB8F616A9C3DF.title: "{cabin.quest.6C4CB8F616A9C3DF.title}"
+	quest.6C6A43E08FBC8D53.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.6C6A43E08FBC8D53.title: "{cabin.quest.6C6A43E08FBC8D53.title}"
+	quest.6C6C1C2E7CA882BD.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.6C6C1C2E7CA882BD.title: "{cabin.quest.6C6C1C2E7CA882BD.title}"
+	quest.6CBA3D97CAD5DB63.quest_desc: ["{cabin.quest.6CBA3D97CAD5DB63.description1}"]
+	quest.6CBA3D97CAD5DB63.quest_subtitle: "{cabin.quest.6CBA3D97CAD5DB63.subtitle}"
+	quest.6CBA3D97CAD5DB63.title: "{cabin.quest.6CBA3D97CAD5DB63.title}"
+	quest.6CC8D9848625CC34.quest_desc: ["The path you've chosen is not for the faint of heart. If you're a bad enough dude to handle the Seven Curses, then put on the ring..."]
+	quest.6CC8D9848625CC34.title: "One Ring to Rule Them All"
+	quest.6D1519B746E032FB.quest_desc: [
+		"{cabin.quest.6D1519B746E032FB.description1}"
+		""
+		"{cabin.quest.6D1519B746E032FB.description2}"
+	]
+	quest.6D1519B746E032FB.quest_subtitle: "{cabin.quest.6D1519B746E032FB.subtitle}"
+	quest.6D1519B746E032FB.title: "{cabin.quest.6D1519B746E032FB.title}"
+	quest.6D26DAB7D0FF6E90.quest_desc: [
+		"{cabin.quest.6D26DAB7D0FF6E90.description1}"
+		""
+		"{cabin.quest.6D26DAB7D0FF6E90.description2}"
+		""
+		"{cabin.quest.1D1D1FEAF49C5E11.description3}"
+		""
+		"{cabin.quest.1D1D1FEAF49C5E11.description4}"
+		""
+	]
+	quest.6D26DAB7D0FF6E90.title: "{cabin.quest.1D1D1FEAF49C5E11.title}"
+	quest.6D7D2E63F1E35329.quest_desc: [
+		"{cabin.quest.6D7D2E63F1E35329.description1}"
+		""
+		"{cabin.quest.6D7D2E63F1E35329.description2}"
+	]
+	quest.6D7D2E63F1E35329.quest_subtitle: "{cabin.quest.6D7D2E63F1E35329.subtitle}"
+	quest.6D7D2E63F1E35329.title: "{cabin.quest.6D7D2E63F1E35329.title}"
+	quest.6D7D504E9DC22590.quest_desc: ["{cabin.quest.6D7D504E9DC22590.description1}"]
+	quest.6D7D504E9DC22590.title: "{cabin.quest.6D7D504E9DC22590.title}"
+	quest.6D8BB2D6A75ABB16.quest_desc: [
+		"{cabin.quest.6D8BB2D6A75ABB16.description1}"
+		"{cabin.quest.6D8BB2D6A75ABB16.description2}"
+	]
+	quest.6D8BB2D6A75ABB16.title: "{cabin.quest.6D8BB2D6A75ABB16.title}"
+	quest.6D8E4C9DCFFB2C90.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.6D8E4C9DCFFB2C90.title: "{cabin.quest.6D8E4C9DCFFB2C90.title}"
+	quest.6D900619B1967D72.quest_desc: [
+		"{cabin.quest.6D900619B1967D72.description1}"
+		""
+		"{cabin.quest.6D900619B1967D72.description2}"
+	]
+	quest.6D900619B1967D72.title: "{cabin.quest.6D900619B1967D72.title}"
+	quest.6D9F2FBEB7CC5195.quest_subtitle: "{cabin.quest.2F2BA8C2AC2E0B93.subtitle}"
+	quest.6D9F2FBEB7CC5195.title: "{cabin.quest.6D9F2FBEB7CC5195.title}"
+	quest.6DBEF7A11890ADF8.quest_desc: ["{cabin.quest.6DBEF7A11890ADF8.description1}"]
+	quest.6DBEF7A11890ADF8.title: "{cabin.quest.6DBEF7A11890ADF8.title}"
+	quest.6E3216E644289961.quest_subtitle: "{cabin.quest.1A27F6CC5196D116.subtitle}"
+	quest.6E3216E644289961.title: "{cabin.quest.6E3216E644289961.title}"
+	quest.6E3CD6919EAA9EE4.quest_desc: [
+		"For your garden-variety autist, building a glider would mean gathering leather and other parts from local fauna. But you &oare&r the local fauna."
+		"With an axe and a cutting board, you can take a little bit off the top, and harvest the supplies you need..."
+	]
+	quest.6E3CD6919EAA9EE4.title: "Skin Off My Nose"
+	quest.6EE9AA6D2A8FE0AD.quest_desc: [
+		"Although some Uranium yet persists in this world in ancient waste dump sites, several other elements critical to nuclear technology, like Boron and Magnesium, have been truly depleted."
+		""
+		"However, analysis suggests these ores must have existed in the past."
+		""
+		"If the past is the only place to find them..."
+	]
+	quest.6EE9AA6D2A8FE0AD.title: "Epilogue: Rewriting History"
+	quest.6F0E3626FD191407.title: "fwooosh"
+	quest.6F4B1FC2E7182883.title: "Khajiit Has Wares"
+	quest.6F56109274CDF42A.quest_desc: ["wooda"]
+	quest.6F56109274CDF42A.title: "Chop Vood"
+	quest.6F750A66D0A559DE.quest_desc: ["{cabin.quest.6F750A66D0A559DE.description1}"]
+	quest.6F750A66D0A559DE.title: "{cabin.quest.6F750A66D0A559DE.title}"
+	quest.6FDC8DA2FDED5FDD.quest_desc: [
+		"{cabin.quest.6FDC8DA2FDED5FDD.description1}"
+		""
+		"{cabin.quest.6FDC8DA2FDED5FDD.description2}"
+		""
+		"{cabin.quest.6FDC8DA2FDED5FDD.description3}"
+	]
+	quest.6FDC8DA2FDED5FDD.title: "{cabin.quest.6FDC8DA2FDED5FDD.title}"
+	quest.6FF65841E3EA0FCD.quest_subtitle: "{cabin.quest.093FB7B7FEC6B886.subtitle}"
+	quest.6FF65841E3EA0FCD.title: "{cabin.quest.6FF65841E3EA0FCD.title}"
+	quest.7021A2BD8775DC07.title: "Lead Casing"
+	quest.7061F42CF050ADCA.quest_desc: ["{cabin.quest.7061F42CF050ADCA.description1}"]
+	quest.7061F42CF050ADCA.title: "{cabin.quest.7061F42CF050ADCA.title}"
+	quest.70B164A5F22452CA.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.70B164A5F22452CA.title: "{cabin.quest.70B164A5F22452CA.title}"
+	quest.70D563EF30E9CB97.quest_desc: ["{cabin.quest.70D563EF30E9CB97.description1}"]
+	quest.70D563EF30E9CB97.quest_subtitle: "{cabin.quest.70D563EF30E9CB97.subtitle}"
+	quest.70D563EF30E9CB97.title: "{cabin.quest.70D563EF30E9CB97.title}"
+	quest.70EBB5E32545ACEC.quest_subtitle: "{cabin.quest.01F3EDC327B63908.subtitle}"
+	quest.70EBB5E32545ACEC.title: "{cabin.quest.70EBB5E32545ACEC.title}"
+	quest.70FDB8C2F2C4A825.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.70FDB8C2F2C4A825.title: "{cabin.quest.70FDB8C2F2C4A825.title}"
+	quest.715BBD0DF0136FF1.quest_subtitle: "{cabin.quest.21E76761CD3761C2.subtitle}"
+	quest.715BBD0DF0136FF1.title: "{cabin.quest.715BBD0DF0136FF1.title}"
+	quest.71659ADD9BF9E5A1.quest_desc: ["The crossbow: a weapon so simple, even the tyrants of the outer isles permit their peasants to own one. While it's hardly a real weapon by Cactoid standards, your race's talent for biosmithing will help you transform it into something better later."]
+	quest.71659ADD9BF9E5A1.title: "Legal in the UK"
+	quest.71D90A1E5D53FC0A.quest_desc: ["{cabin.quest.71D90A1E5D53FC0A.description1}"]
+	quest.71D90A1E5D53FC0A.quest_subtitle: "{cabin.quest.71D90A1E5D53FC0A.subtitle}"
+	quest.71D90A1E5D53FC0A.title: "{cabin.quest.71D90A1E5D53FC0A.title}"
+	quest.725FFE8BD6E45F96.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.725FFE8BD6E45F96.title: "{cabin.quest.725FFE8BD6E45F96.title}"
+	quest.727B43FD95C4A512.quest_desc: [
+		"{cabin.quest.727B43FD95C4A512.description1}"
+		""
+		"{cabin.quest.727B43FD95C4A512.description2}"
+	]
+	quest.727B43FD95C4A512.title: "{cabin.quest.727B43FD95C4A512.title}"
+	quest.729FB5DD07C234E8.quest_desc: ["{cabin.quest.729FB5DD07C234E8.description1}"]
+	quest.729FB5DD07C234E8.quest_subtitle: "{cabin.quest.729FB5DD07C234E8.subtitle}"
+	quest.729FB5DD07C234E8.title: "{cabin.quest.729FB5DD07C234E8.title}"
+	quest.72BE175C83834838.quest_desc: ["{cabin.quest.72BE175C83834838.description1}"]
+	quest.72BE175C83834838.quest_subtitle: "{cabin.quest.72BE175C83834838.subtitle}"
+	quest.72BE175C83834838.title: "{cabin.quest.72BE175C83834838.title}"
+	quest.72CACE8F0E4701B1.quest_desc: ["{cabin.quest.72CACE8F0E4701B1.description1}"]
+	quest.72CACE8F0E4701B1.quest_subtitle: "{cabin.quest.4F953BACF4D1C151.subtitle}"
+	quest.72CACE8F0E4701B1.title: "{cabin.quest.72CACE8F0E4701B1.title}"
+	quest.73473DC7269EC5B0.quest_desc: ["{cabin.quest.73473DC7269EC5B0.description1}"]
+	quest.73473DC7269EC5B0.quest_subtitle: "{cabin.quest.73473DC7269EC5B0.subtitle}"
+	quest.73473DC7269EC5B0.title: "{cabin.quest.73473DC7269EC5B0.title}"
+	quest.73641E4A11A71215.quest_desc: ["Now that you've got iron, you can build a gun bench. Once you have that, all it'll take to cobble together a real gun is some wood and rocks. The ATF will never know a thing."]
+	quest.73641E4A11A71215.title: "Unregistered Firearm"
+	quest.736FC31210F334F2.quest_desc: ["{cabin.quest.736FC31210F334F2.description1}"]
+	quest.736FC31210F334F2.quest_subtitle: "{cabin.quest.1C5EA1173F4E592B.subtitle}"
+	quest.736FC31210F334F2.title: "{cabin.quest.736FC31210F334F2.title}"
+	quest.737E670DC8AD5E19.quest_subtitle: "{cabin.quest.737E670DC8AD5E19.subtitle}"
+	quest.737E670DC8AD5E19.title: "{cabin.quest.737E670DC8AD5E19.title}"
+	quest.73EEAE66CC2014E9.quest_subtitle: "{cabin.quest.00EBF8DED4E51A4F.subtitle}"
+	quest.73EEAE66CC2014E9.title: "{cabin.quest.73EEAE66CC2014E9.title}"
+	quest.73FCA432DEFC1DED.quest_desc: ["{cabin.quest.73FCA432DEFC1DED.description1}"]
+	quest.73FCA432DEFC1DED.quest_subtitle: "{cabin.quest.73FCA432DEFC1DED.subtitle}"
+	quest.73FCA432DEFC1DED.title: "{cabin.quest.73FCA432DEFC1DED.title}"
+	quest.746F9F4F21D8400D.quest_subtitle: "{cabin.quest.1250AE58911C27A9.subtitle}"
+	quest.746F9F4F21D8400D.title: "{cabin.quest.746F9F4F21D8400D.title}"
+	quest.74D22D54CA80E7FD.quest_desc: ["There are countless ways to farm mushrooms, but only the brown ones can absorb Potion of Glowing to become the Glowing Mushrooms we need."]
+	quest.74D22D54CA80E7FD.quest_subtitle: "Contraption 19-4"
+	quest.74D22D54CA80E7FD.title: "mmm, musroom"
+	quest.74F82F70F43DF148.quest_desc: [
+		"A Daemon's mind is digital perfection, but its body mere flesh. A construct lacks a mind, yet its body is pure machine. Daemonkind has long sought to merge the two, all attempts in vain. Still, a construct could be useful."
+		""
+		"Constructs are fueled by \"animus\". Organics consider it a magical substance, known only to wizards. But as a Daemon, your own blood yielded a trace amount. Build the parts, arrange them on an armor stand, and apply the animus dust. That strange bell you found in a dungeon years ago should let you command it."
+	]
+	quest.74F82F70F43DF148.title: "Silica Animus"
+	quest.74F96A8D400FD059.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.74F96A8D400FD059.title: "{cabin.quest.74F96A8D400FD059.title}"
+	quest.7509D8FA29C6AB31.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.7509D8FA29C6AB31.title: "{cabin.quest.7509D8FA29C6AB31.title}"
+	quest.75FB28B253B14876.quest_desc: ["{cabin.quest.75FB28B253B14876.description1}"]
+	quest.75FB28B253B14876.title: "{cabin.quest.75FB28B253B14876.title}"
+	quest.76287BDB2E9B7BC8.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.76287BDB2E9B7BC8.title: "{cabin.quest.76287BDB2E9B7BC8.title}"
+	quest.7650D7E4FE40E2C7.title: "placeholder :)"
+	quest.7664FBB32FCC6BE6.quest_desc: [
+		"{cabin.quest.7664FBB32FCC6BE6.description1}"
+		""
+		"{cabin.quest.7664FBB32FCC6BE6.description2}"
+	]
+	quest.7664FBB32FCC6BE6.quest_subtitle: "{cabin.quest.7664FBB32FCC6BE6.subtitle}"
+	quest.7664FBB32FCC6BE6.title: "{cabin.quest.7664FBB32FCC6BE6.title}"
+	quest.76706BE282ABAC31.quest_desc: [
+		"{cabin.quest.76706BE282ABAC31.description1}"
+		""
+	]
+	quest.76706BE282ABAC31.title: "{cabin.quest.76706BE282ABAC31.title}"
+	quest.76E3B76D47A1F889.quest_desc: ["{cabin.quest.76E3B76D47A1F889.description1}"]
+	quest.76E3B76D47A1F889.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
+	quest.76E3B76D47A1F889.title: "{cabin.quest.76E3B76D47A1F889.title}"
+	quest.7722ADDCAD9987BD.quest_subtitle: "{cabin.quest.0DEFAE2746209F1A.subtitle}"
+	quest.7722ADDCAD9987BD.title: "{cabin.quest.7722ADDCAD9987BD.title}"
+	quest.779266F2F19F839E.quest_desc: ["You've got all the parts, all that remains is to assemble the glider and lift off. That's one small step for rat, one giant leap for rat-kind."]
+	quest.779266F2F19F839E.title: "The Flying Rat"
+	quest.780E8AE86250C73D.quest_desc: [
+		"{cabin.quest.780E8AE86250C73D.description1}"
+		""
+		"{cabin.quest.780E8AE86250C73D.description2}"
+		""
+		"{cabin.quest.780E8AE86250C73D.description3}"
+	]
+	quest.780E8AE86250C73D.quest_subtitle: "{cabin.quest.780E8AE86250C73D.subtitle}"
+	quest.780E8AE86250C73D.title: "{cabin.quest.780E8AE86250C73D.title}"
+	quest.7888F9129E9FE517.quest_desc: [
+		"{cabin.quest.7888F9129E9FE517.description1}"
+		"{cabin.quest.7888F9129E9FE517.description2}"
+		""
+		"{cabin.quest.6D7D2E63F1E35329.description2}"
+	]
+	quest.7888F9129E9FE517.quest_subtitle: "{cabin.quest.7888F9129E9FE517.subtitle}"
+	quest.7888F9129E9FE517.title: "{cabin.quest.7888F9129E9FE517.title}"
+	quest.78A8751AF86E0E32.quest_desc: [
+		"{cabin.quest.78A8751AF86E0E32.description1}"
+		""
+		"{cabin.quest.78A8751AF86E0E32.description2}"
+	]
+	quest.78A8751AF86E0E32.title: "{cabin.quest.78A8751AF86E0E32.title}"
+	quest.78ECB6EB48347D08.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.78ECB6EB48347D08.title: "{cabin.quest.78ECB6EB48347D08.title}"
+	quest.7927B6162577FA7B.quest_desc: ["{cabin.quest.7927B6162577FA7B.description1}"]
+	quest.7927B6162577FA7B.quest_subtitle: "{cabin.quest.7927B6162577FA7B.subtitle}"
+	quest.7932D19BE114264A.quest_subtitle: "{cabin.quest.7932D19BE114264A.subtitle}"
+	quest.7932D19BE114264A.title: "{cabin.quest.7932D19BE114264A.title}"
+	quest.794B3C10C6110CB5.quest_desc: [
+		"{cabin.quest.794B3C10C6110CB5.description1}"
+		""
+		"{cabin.quest.794B3C10C6110CB5.description2}"
+	]
+	quest.794B3C10C6110CB5.title: "{cabin.quest.794B3C10C6110CB5.title}"
+	quest.794DF747BF925C4B.title: "Sugar Dealer"
+	quest.7967324CAC77AF60.quest_subtitle: "{cabin.quest.7967324CAC77AF60.subtitle}"
+	quest.7967324CAC77AF60.title: "{cabin.quest.7967324CAC77AF60.title}"
+	quest.7A3C54CE8AD783D4.quest_desc: [
+		"The history of this world is shrouded in mystery, but two things are certain. An ancient cataclysm tore the land from the sea; and long before that, the critical elements for nuclear technology were already used up."
+		""
+		"But what if history followed a different path? What if there were a parallel world, where nobody was around to consume those precious resources... because their world had already ended?"
+	]
+	quest.7A3C54CE8AD783D4.title: "The End of the World"
+	quest.7A99056A697C4CEC.quest_desc: ["Aparently theres a rock that can remmber experiences. Thatd be even better then having a brain cus a rock is cooler and i can show off to bolbis frends and stuff."]
+	quest.7A99056A697C4CEC.title: "the Smart rock"
+	quest.7A9AA27029185035.quest_desc: [
+		"{cabin.quest.7A9AA27029185035.description1}"
+		""
+		"{cabin.quest.7A9AA27029185035.description2}"
+		"{cabin.quest.7A9AA27029185035.description3}"
+	]
+	quest.7A9AA27029185035.title: "{cabin.quest.7A9AA27029185035.title}"
+	quest.7AAE71F57FB89BCC.quest_desc: [
+		"{cabin.quest.7AAE71F57FB89BCC.description1}"
+		""
+		"{cabin.quest.7AAE71F57FB89BCC.description2}"
+	]
+	quest.7AAE71F57FB89BCC.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
+	quest.7AAE71F57FB89BCC.title: "{cabin.quest.7AAE71F57FB89BCC.title}"
+	quest.7B080B5C87247EA1.quest_desc: [
+		"{cabin.quest.7B080B5C87247EA1.description1}"
+		""
+		"{cabin.quest.7B080B5C87247EA1.description2}"
+	]
+	quest.7B080B5C87247EA1.title: "{cabin.quest.7B080B5C87247EA1.title}"
+	quest.7B23C933D76458BA.quest_desc: ["{cabin.quest.7B23C933D76458BA.description1}"]
+	quest.7B23C933D76458BA.quest_subtitle: "{cabin.quest.7B23C933D76458BA.subtitle}"
+	quest.7B23C933D76458BA.title: "{cabin.quest.7B23C933D76458BA.title}"
+	quest.7B5B7BB304E14C6D.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
+	quest.7B5B7BB304E14C6D.title: "{cabin.quest.7B5B7BB304E14C6D.title}"
+	quest.7B7A161B4BAB89AD.quest_subtitle: "{cabin.quest.136DA2C41AD2EE31.subtitle}"
+	quest.7B7A161B4BAB89AD.title: "{cabin.quest.7B7A161B4BAB89AD.title}"
+	quest.7BDF86B9E3E607C5.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.7BDF86B9E3E607C5.title: "{cabin.quest.7BDF86B9E3E607C5.title}"
+	quest.7BE0F4512FE4936D.quest_desc: ["{cabin.quest.7BE0F4512FE4936D.description1}"]
+	quest.7BE0F4512FE4936D.title: "{cabin.quest.7BE0F4512FE4936D.title}"
+	quest.7C26B21C40608612.quest_desc: ["Laboring with one's flesh is unbecoming for a Daemon. And worse, it's inefficient. But you need materials to build your machines in the first place. Swallow your pride for now, and gather some base metals. Just remember to clear your cookies after."]
+	quest.7C26B21C40608612.title: "Bootstrapping"
+	quest.7C270AB26CD9AAB8.quest_subtitle: "{cabin.quest.39D56A2B01DBD865.subtitle}"
+	quest.7C270AB26CD9AAB8.title: "{cabin.quest.7C270AB26CD9AAB8.title}"
+	quest.7C31A0611CC62360.title: "Uranium Rod"
+	quest.7C7B81ABFC586379.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
+	quest.7C7B81ABFC586379.title: "{cabin.quest.7C7B81ABFC586379.title}"
+	quest.7D6BC99CCCB29924.quest_desc: [
+		"{cabin.quest.7D6BC99CCCB29924.description1}"
+		""
+		"{cabin.quest.7D6BC99CCCB29924.description2}"
+	]
+	quest.7D6BC99CCCB29924.title: "{cabin.quest.7D6BC99CCCB29924.title}"
+	quest.7D808F15BEDD7A7B.quest_desc: ["{cabin.quest.7D808F15BEDD7A7B.description1}"]
+	quest.7D808F15BEDD7A7B.quest_subtitle: "{cabin.quest.7D808F15BEDD7A7B.subtitle}"
+	quest.7D872F933F45809B.quest_desc: [
+		""
+		"{cabin.quest.7D872F933F45809B.description1}"
+		""
+		"{cabin.quest.7664FBB32FCC6BE6.description2}"
+	]
+	quest.7D872F933F45809B.quest_subtitle: "{cabin.quest.7D872F933F45809B.subtitle}"
+	quest.7D872F933F45809B.title: "{cabin.quest.7D872F933F45809B.title}"
+	quest.7D92D05B4A67FD78.quest_subtitle: "{cabin.quest.08DB1CFAE4555525.subtitle}"
+	quest.7D92D05B4A67FD78.title: "{cabin.quest.7D92D05B4A67FD78.title}"
+	quest.7D93DAB3E8ACF953.quest_desc: [
+		"{cabin.quest.7D93DAB3E8ACF953.description1}"
+		""
+		"{cabin.quest.7D93DAB3E8ACF953.description2}"
+	]
+	quest.7D93DAB3E8ACF953.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
+	quest.7D93DAB3E8ACF953.title: "{cabin.quest.7D93DAB3E8ACF953.title}"
+	quest.7DFB9DD1A1BB63E4.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.7DFB9DD1A1BB63E4.title: "{cabin.quest.7DFB9DD1A1BB63E4.title}"
+	quest.7E59B7DC239E621E.quest_desc: [
+		"{cabin.quest.7E59B7DC239E621E.description1}"
+		""
+		"{cabin.quest.7E59B7DC239E621E.description2}"
+	]
+	quest.7E59B7DC239E621E.quest_subtitle: "{cabin.quest.7E59B7DC239E621E.subtitle}"
+	quest.7E59B7DC239E621E.title: "{cabin.quest.7E59B7DC239E621E.title}"
+	quest.7F4D9F958EBDEAF8.quest_subtitle: "{cabin.quest.737E670DC8AD5E19.subtitle}"
+	quest.7F4D9F958EBDEAF8.title: "{cabin.quest.7F4D9F958EBDEAF8.title}"
+	quest.7F7ACF3B774E9D0E.quest_subtitle: "{cabin.quest.0DA48CA15E17157D.subtitle}"
+	quest.7F7ACF3B774E9D0E.title: "{cabin.quest.7F7ACF3B774E9D0E.title}"
+	quest.7FC4D1E69377271D.quest_desc: [
+		"{cabin.quest.7FC4D1E69377271D.description1}"
+		""
+		"{cabin.quest.7FC4D1E69377271D.description2}"
+	]
+	quest.7FC4D1E69377271D.title: "{cabin.quest.7FC4D1E69377271D.title}"
+	task.001545FF84357A11.title: "i gota hold the staff and press this or IT WONT WORK!!!!"
+	task.002032AE65148DBD.title: "{cabin.task.0842082756DA73FE}"
+	task.006A282CB1F28528.title: "{cabin.task.0842082756DA73FE}"
+	task.0186FB5F788C2BC3.title: "Cactoid"
+	task.02EE2F24FDF534BC.title: "{cabin.task.0842082756DA73FE}"
+	task.039DD9EBD46B2C23.title: "{cabin.task.039DD9EBD46B2C23}"
+	task.04041B7DDE8154A4.title: "Kill an Enderman with your Tinker sword"
+	task.0408B3CFBA95E2D6.title: "Automated"
+	task.057A05C13C55ABC4.title: "{cabin.task.0842082756DA73FE}"
+	task.05969082F437FCA9.title: "{cabin.task.0842082756DA73FE}"
+	task.0631FA27CEE5D67D.title: "{cabin.task.0842082756DA73FE}"
+	task.07132D69A1BA37B5.title: "{cabin.task.07132D69A1BA37B5}"
+	task.0811C927283EE155.title: "{cabin.task.0842082756DA73FE}"
+	task.0842082756DA73FE.title: "{cabin.task.0842082756DA73FE}"
+	task.0874E1FD6B69A719.title: "found a blue rasberry flavor slime isladn :DD"
+	task.0966545656AD93C1.title: "Any Pottery Sherd"
+	task.09AAD9853B976D69.title: "{cabin.task.0842082756DA73FE}"
+	task.0A4B691EF3CDC7A0.title: "{cabin.task.0842082756DA73FE}"
+	task.0AA0DEB1A87DA675.title: "{cabin.task.0AA0DEB1A87DA675}"
+	task.0BD3CEE8D36CA74E.title: "{cabin.task.0842082756DA73FE}"
+	task.0C6BEF8733F14AFD.title: "Haniwa"
+	task.0C764FDD555E8CCD.title: "{cabin.task.0842082756DA73FE}"
+	task.0D10A9483F91942D.title: "Any Turtle"
+	task.0F467B1E08CD7D16.title: "{cabin.task.0842082756DA73FE}"
+	task.0F6DB8FCC5C16A94.title: "{cabin.task.0842082756DA73FE}"
+	task.0F798AC85175B193.title: "go up really high"
+	task.0FD161DEE23E1A60.title: "Any Knife"
+	task.0FF38BBE3B19D9C2.title: "{cabin.task.0FF38BBE3B19D9C2}"
+	task.11A074DF1CA99AD3.title: "{cabin.task.0842082756DA73FE}"
+	task.122F9ED3858AD774.title: "Hook 1"
+	task.12CFC84D3F01F49F.title: "{cabin.task.12CFC84D3F01F49F}"
+	task.1474C861F59A094F.title: "get a ingot"
+	task.1484A9A6DB85EA6D.title: "{cabin.task.0842082756DA73FE}"
+	task.14D9C52366D6AF27.title: "{cabin.task.0842082756DA73FE}"
+	task.159661080AE7707A.title: "{cabin.task.159661080AE7707A}"
+	task.17286271B0667AAA.title: "{cabin.task.0842082756DA73FE}"
+	task.175767726FBCAA8D.title: "{cabin.task.0842082756DA73FE}"
+	task.17B93B8634BC1C2D.title: "{cabin.task.17B93B8634BC1C2D}"
+	task.193D8F8FEC7F864B.title: "{cabin.task.0842082756DA73FE}"
+	task.1A63E51B0CF5C6DD.title: "{cabin.task.1A63E51B0CF5C6DD}"
+	task.1B0AEACBE2CEFD7A.title: "Khajiit"
+	task.1C7E4FFBCE0590D4.title: "[Check Em]"
+	task.1CB43671DBA7EBB6.title: "{cabin.task.0842082756DA73FE}"
+	task.1D7C84803766FD04.title: "{cabin.task.0842082756DA73FE}"
+	task.1F06E9D8DA8BE5C7.title: "16x Any Log"
+	task.20B36555F58C4DB1.title: "{cabin.task.0842082756DA73FE}"
+	task.20D8DDCC401AA0DD.title: "Spear Hook Launcher OR Web Hook Launcher"
+	task.214F623C75A92809.title: "{cabin.task.214F623C75A92809}"
+	task.21545C0F55D9D8C8.title: "{cabin.task.0842082756DA73FE}"
+	task.21753CBB528EAADF.title: "{cabin.task.21753CBB528EAADF}"
+	task.21C241D2335C67E4.title: "{cabin.task.0842082756DA73FE}"
+	task.220B89A9B897FA67.title: "{cabin.task.0842082756DA73FE}"
+	task.22BA80BF7E7BA0F1.title: "Rat"
+	task.23030B6D0072EBE8.title: "{cabin.task.23030B6D0072EBE8}"
+	task.23EC365CF994DD7C.title: "Angel"
+	task.251A91F6C21AEAFB.title: "{cabin.task.251A91F6C21AEAFB}"
+	task.26517C9D1C3D8269.title: "{cabin.task.0842082756DA73FE}"
+	task.27A8B7785CAB07C8.title: "{cabin.task.0842082756DA73FE}"
+	task.27B07858A6018539.title: "{cabin.task.27B07858A6018539}"
+	task.27C737E08A9027A5.title: "{cabin.task.0842082756DA73FE}"
+	task.27D5CBB137116AB1.title: "{cabin.task.0842082756DA73FE}"
+	task.283ADD7E81BB311C.title: "Automated"
+	task.28C41C062843C2CA.title: "{cabin.task.28C41C062843C2CA}"
+	task.28D3347E8FA277AD.title: "{cabin.task.28D3347E8FA277AD}"
+	task.28EC11DE8335B74A.title: "{cabin.task.28EC11DE8335B74A}"
+	task.29B78BB983BE39FC.title: "{cabin.task.0842082756DA73FE}"
+	task.29BEB0A31C3FB00B.title: "{cabin.task.0842082756DA73FE}"
+	task.2A3EAC60765E5C7A.title: "{cabin.task.0842082756DA73FE}"
+	task.2AD912C0E25F5D65.title: "{cabin.task.0842082756DA73FE}"
+	task.2AFC82CBDDF880E7.title: "Any Sapling"
+	task.2BE9DD7F346679E2.title: "{cabin.task.0842082756DA73FE}"
+	task.2DC30322D81D9999.title: "{cabin.task.0842082756DA73FE}"
+	task.2DC358D8174FC867.title: "{cabin.task.0842082756DA73FE}"
+	task.2F239D4D9BB9B47A.title: "{cabin.task.0842082756DA73FE}"
+	task.2F6FEDBB1BDCB36C.title: "{cabin.task.2F6FEDBB1BDCB36C}"
+	task.2FA5130D892A7C3B.title: "Automated"
+	task.316796AAB6EDF9A7.title: "Daemon"
+	task.31F55AFB8BC96E4D.title: "Automated"
+	task.32E697E9386ABF17.title: "{cabin.task.0842082756DA73FE}"
+	task.3413FA802F33F4BF.title: "{cabin.task.0842082756DA73FE}"
+	task.34C54664AB22ECFD.title: "{cabin.task.0842082756DA73FE}"
+	task.34EFEE60A6755C01.title: "{cabin.task.0842082756DA73FE}"
+	task.35C10E79F8F1E0DF.title: "{cabin.task.35C10E79F8F1E0DF}"
+	task.36183F0BBDAA8DB8.title: "{cabin.task.0842082756DA73FE}"
+	task.3662CA8BEE33E02D.title: "{cabin.task.0842082756DA73FE}"
+	task.36BD580312C8177B.title: "{cabin.task.0842082756DA73FE}"
+	task.36F8C3CAF6FC3FB2.title: "{cabin.task.36F8C3CAF6FC3FB2}"
+	task.374CDBF68F90BDC9.title: "{cabin.task.374CDBF68F90BDC9}"
+	task.37A6393C0AD6E861.title: "{cabin.task.0842082756DA73FE}"
+	task.37BF06FF4255C1B1.title: "{cabin.task.0842082756DA73FE}"
+	task.38A1B2B321498134.title: "64x Raw Fishes"
+	task.38ACBCB650804809.title: "Automated"
+	task.3A68EA184DE4D9B4.title: "{cabin.task.0842082756DA73FE}"
+	task.3C7A4BA98EEC90E8.title: "{cabin.task.3C7A4BA98EEC90E8}"
+	task.3C8D449468C6DD27.title: "{cabin.task.0842082756DA73FE}"
+	task.3CCE09D1715B54C7.title: "{cabin.task.3CCE09D1715B54C7}"
+	task.3E080B5561AD314E.title: "{cabin.task.3E080B5561AD314E}"
+	task.3E69BC01E47532D1.title: "{cabin.task.0842082756DA73FE}"
+	task.4002627D52C3A616.title: "{cabin.task.0842082756DA73FE}"
+	task.402FD7973EC66AEA.title: "{cabin.task.0842082756DA73FE}"
+	task.406AAC43EBD44F6A.title: "{cabin.task.0842082756DA73FE}"
+	task.40B23393B8A6D2E8.title: "{cabin.task.0842082756DA73FE}"
+	task.412A9AF2F9E07A81.title: "{cabin.task.412A9AF2F9E07A81}"
+	task.41AF308A3E8B73DD.title: "It's Free!"
+	task.42002EEA26A72016.title: "{cabin.task.42002EEA26A72016}"
+	task.4208FAAC229CACA6.title: "{cabin.task.0842082756DA73FE}"
+	task.429C4BFAA4818070.title: "Any Tinker's Construct Sword"
+	task.435C3E443BCC9176.title: "{cabin.task.0842082756DA73FE}"
+	task.4418C7A289B17158.title: "{cabin.task.4418C7A289B17158}"
+	task.44A10C4B490D3C62.title: "{cabin.task.0842082756DA73FE}"
+	task.44AC56E1CC5E8DE5.title: "Controls (README!)"
+	task.44D36B403AA26E97.title: "{cabin.task.0842082756DA73FE}"
+	task.4650061E5C50B8FA.title: "{cabin.task.0842082756DA73FE}"
+	task.47E78F1FDE6AE4C9.title: "Snail"
+	task.489F9B5C7B7E0652.title: "Accursed One"
+	task.48B114D2C0F51F6D.title: "{cabin.task.0842082756DA73FE}"
+	task.48E1E9E83F77109F.title: "Welcome to Autisnautics II!"
+	task.4960B920CCF3C186.title: "{cabin.task.0842082756DA73FE}"
+	task.4963498277C8A578.title: "{cabin.task.0842082756DA73FE}"
+	task.49EAB67814570219.title: "{cabin.task.0842082756DA73FE}"
+	task.4ABDB667D9C32513.title: "Any Bed or Sleeping Bag"
+	task.4AE661E33C20229D.title: "get all the eyeballs and visit the new place :)"
+	task.4B4BDAA9DFB0518A.title: "{cabin.task.0842082756DA73FE}"
+	task.4B98217B670ECA57.title: "{cabin.task.0842082756DA73FE}"
+	task.4BC5C43C7B23CA16.title: "{cabin.task.4BC5C43C7B23CA16}"
+	task.4BE0CCD6F383D961.title: "{cabin.task.4BE0CCD6F383D961}"
+	task.4DAD021C66AB2A27.title: "{cabin.task.0842082756DA73FE}"
+	task.4F0DC063E1D872BC.title: "{cabin.task.4F0DC063E1D872BC}"
+	task.5143762A67B81B7E.title: "{cabin.task.0842082756DA73FE}"
+	task.518D5675C9D1757D.title: "{cabin.task.0842082756DA73FE}"
+	task.5311FC1A857C5DE9.title: "Alchemist"
+	task.53728BDEA8F1938C.title: "{cabin.task.53728BDEA8F1938C}"
+	task.5521427D5BAF2771.title: "{cabin.task.0842082756DA73FE}"
+	task.5673E521D5CC5CF2.title: "[Accept Your Fate]"
+	task.56F78EAD35D1046E.title: "{cabin.task.0842082756DA73FE}"
+	task.57D267DD10A22D32.title: "{cabin.task.0842082756DA73FE}"
+	task.58353DEAB0670141.title: "{cabin.task.0842082756DA73FE}"
+	task.589AB5A61CD95E2F.title: "{cabin.task.0842082756DA73FE}"
+	task.58AB6E0FF2EA6AD4.title: "{cabin.task.0AA0DEB1A87DA675}"
+	task.59A000B55686AD38.title: "Go to the Moon"
+	task.59B260F52722A1FE.title: "{cabin.task.0842082756DA73FE}"
+	task.5A26A34DF149B618.title: "Automated"
+	task.5A531D21DEBB3FA8.title: "{cabin.task.0842082756DA73FE}"
+	task.5A8DF2D8553904BF.title: "{cabin.task.5A8DF2D8553904BF}"
+	task.5AC44C2F24E566BD.title: "Blobbian"
+	task.5B4F2E2F7BDEA6A0.title: "{cabin.task.5B4F2E2F7BDEA6A0}"
+	task.5BBF2E1143CD356E.title: "{cabin.task.0842082756DA73FE}"
+	task.5CA556BB4614DD06.title: "{cabin.task.0842082756DA73FE}"
+	task.5DA07794E31B6312.title: "Any Axe"
+	task.5DF206B1738D08A0.title: "{cabin.task.5DF206B1738D08A0}"
+	task.5E676D2CC5975AEA.title: "{cabin.task.0842082756DA73FE}"
+	task.5E687A6CBD96D0EF.title: "{cabin.task.5E687A6CBD96D0EF}"
+	task.5F27F141221B7235.title: "Your Choice of Arms"
+	task.5F810A4B4280BA7D.title: "Construct a Space Station in Earth's Orbit"
+	task.6149AB838FC42C17.title: "{cabin.task.0842082756DA73FE}"
+	task.61DEC75D20A61088.title: "{cabin.task.0842082756DA73FE}"
+	task.620B88139898C10E.title: "16x Any Log"
+	task.63EA7BF746BF3254.title: "{cabin.task.0842082756DA73FE}"
+	task.63F3877902E01590.title: "{cabin.task.0842082756DA73FE}"
+	task.64713708298099CA.title: "Automated"
+	task.64B405696E96FFCD.title: "{cabin.task.0842082756DA73FE}"
+	task.65706A8A8D2297B4.title: "Kill: 1x Lunarian (?)"
+	task.65864C0AE5B28091.title: "{cabin.task.0842082756DA73FE}"
+	task.681DACF11F193771.title: "{cabin.task.681DACF11F193771}"
+	task.696B878D65A6BFCC.title: "{cabin.task.696B878D65A6BFCC}"
+	task.6AA98FC4680D6521.title: "{cabin.task.0842082756DA73FE}"
+	task.6C47C95A06683D71.title: "{cabin.task.6C47C95A06683D71}"
+	task.6CA3091C271D4FC1.title: "Put On The Ring"
+	task.6EDA86E4BE0F096B.title: "{cabin.task.6EDA86E4BE0F096B}"
+	task.6EE69ADFC26E5948.title: "Automated"
+	task.6F7A49C7C377ABF1.title: "{cabin.task.0842082756DA73FE}"
+	task.6F92078B9D357163.title: ">ywn complete this task"
+	task.703432E68A27988C.title: "{cabin.task.0842082756DA73FE}"
+	task.722CA19434E722FB.title: "{cabin.task.722CA19434E722FB}"
+	task.728CB4E169DEED42.title: "{cabin.task.0842082756DA73FE}"
+	task.72BA1D3BD545CBE6.title: "{cabin.task.0842082756DA73FE}"
+	task.72FE446F5BB1A93E.title: "{cabin.task.72FE446F5BB1A93E}"
+	task.738E569981496B56.title: "{cabin.task.0842082756DA73FE}"
+	task.73BF4F3B488FBC83.title: "{cabin.task.0842082756DA73FE}"
+	task.74CFD83C501C4952.title: "{cabin.task.74CFD83C501C4952}"
+	task.75BA7954B280A213.title: "{cabin.task.75BA7954B280A213}"
+	task.75C982848F2CEA85.title: "{cabin.task.0842082756DA73FE}"
+	task.7614DC60ADE71DC3.title: "The World"
+	task.764E76A93ED07203.title: "{cabin.task.0842082756DA73FE}"
+	task.779DF22D10B39A32.title: "README.md"
+	task.78A8586BA98B22EF.title: "&cBring an end to the world you've created, and witness what comes after."
+	task.78ABC9B3BB0C7DC6.title: "{cabin.task.78ABC9B3BB0C7DC6}"
+	task.79AB928A6C8E21DA.title: "{cabin.task.79AB928A6C8E21DA}"
+	task.7A02B51BE36C9E86.title: "Generic"
+	task.7A7EE0DF809CEDC8.title: "{cabin.task.7A7EE0DF809CEDC8}"
+	task.7B60357D06FE3ADC.title: "{cabin.task.0842082756DA73FE}"
+	task.7BC3D3EBF0897C0F.title: "Any #minecraft:beds"
+	task.7C28B9702199ED35.title: "Reach Y > 350"
+	task.7D70234CCBBAA616.title: "[Approach a Nearby Janitor]"
+	task.7DF47F688E5C795C.title: "{cabin.task.0842082756DA73FE}"
+	task.7EDF16E3873D8970.title: "Duckborn"
+	task.7F263AF0F6955616.title: "Hedgehog"
+	task.7F88BABEC9889C76.title: "{cabin.task.7F88BABEC9889C76}"
+	task.7FEEF6BED2C3F31B.title: "{cabin.task.7FEEF6BED2C3F31B}"
+}

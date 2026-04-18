@@ -1,0 +1,7 @@
+{
+    "name": "Autisnautics-1.21",
+    "version": "0.0.1",
+    "overrides": [
+        "config"
+    ]
+}

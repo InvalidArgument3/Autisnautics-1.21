@@ -1,0 +1,18 @@
+{
+  "rolesPermissions" : {
+    "default" : [ "Allow RopeMode", "Allow ScaleMode", "Allow StripMode", "Allow SchemMode", "Allow GravChangerMode", "Allow SyncRotation", "Allow ShipRemoverMode", "Allow ConnectionMode", "Allow HydraulicsMode", "Allow SliderMode", "Allow ThrusterMode", "Allow DisableCollisionsMode", "Allow PhysRopeMode" ]
+  },
+  "playersRoles" : {
+    "21b2ad98-54e0-4120-a077-cf6d4b418bc9" : {
+      "uuid" : "21b2ad98-54e0-4120-a077-cf6d4b418bc9",
+      "nickname" : "validpoint",
+      "role" : "default"
+    },
+    "e167fdb8-d620-33ce-87da-27b5a26e6150" : {
+      "uuid" : "e167fdb8-d620-33ce-87da-27b5a26e6150",
+      "nickname" : "MEME",
+      "role" : "default"
+    }
+  },
+  "allRoles" : [ "default" ]
+}

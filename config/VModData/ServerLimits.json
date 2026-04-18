@@ -1,0 +1,93 @@
+{
+  "massPerBlock" : {
+    "minValue" : 1.0,
+    "maxValue" : 1.7976931348623157E308
+  },
+  "scale" : {
+    "minValue" : 0.001,
+    "maxValue" : 1.7976931348623157E308
+  },
+  "massLimit" : {
+    "minValue" : 4.9E-324,
+    "maxValue" : 1.7976931348623157E308
+  },
+  "maxForce" : {
+    "minValue" : -3.4028235E38,
+    "maxValue" : 3.4028235E38
+  },
+  "fixedDistance" : {
+    "minValue" : -3.4028235E38,
+    "maxValue" : 3.4028235E38
+  },
+  "maxDistance" : {
+    "minValue" : 0.0,
+    "maxValue" : 100.0
+  },
+  "physRopeRadius" : {
+    "minValue" : 0.01,
+    "maxValue" : 10.0
+  },
+  "distanceFromBlock" : {
+    "minValue" : 0.0,
+    "maxValue" : 1.7976931348623157E308
+  },
+  "extensionDistance" : {
+    "minValue" : 0.001,
+    "maxValue" : 3.4028235E38
+  },
+  "gearRatio" : {
+    "minValue" : 0.001,
+    "maxValue" : 3.4028235E38
+  },
+  "totalMassOfPhysRope" : {
+    "minValue" : 0.01,
+    "maxValue" : 1.7976931348623157E308
+  },
+  "physRopeAngleLimit" : {
+    "minValue" : 0.0,
+    "maxValue" : 180.0
+  },
+  "physRopeSegments" : {
+    "minValue" : 1,
+    "maxValue" : 100
+  },
+  "stiffness" : {
+    "minValue" : -3.4028235E38,
+    "maxValue" : 3.4028235E38
+  },
+  "damping" : {
+    "minValue" : -3.4028235E38,
+    "maxValue" : 3.4028235E38
+  },
+  "physRopeSides" : {
+    "minValue" : 2,
+    "maxValue" : 10
+  },
+  "extensionSpeed" : {
+    "minValue" : 0.001,
+    "maxValue" : 3.4028235E38
+  },
+  "precisePlacementAssistSides" : {
+    "minValue" : 2,
+    "maxValue" : 11
+  },
+  "stripRadius" : {
+    "minValue" : 0.0,
+    "maxValue" : 10.0
+  },
+  "sensorScale" : {
+    "minValue" : 0.001,
+    "maxValue" : 10.0
+  },
+  "thrusterForce" : {
+    "minValue" : 1.0,
+    "maxValue" : 1.0E100
+  },
+  "thrusterScale" : {
+    "minValue" : 0.001,
+    "maxValue" : 10.0
+  },
+  "channelLength" : {
+    "sizeLimit" : 50
+  }
+}

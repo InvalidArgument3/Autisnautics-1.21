@@ -1,0 +1,20 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "angel"
+	group: "0BFB33D75F4EAD91"
+	id: "4F9F23CB1B32953F"
+	order_index: 7
+	quest_links: [ ]
+	quests: [{
+		dependencies: ["29DCAFA75FB1AB55"]
+		id: "7650D7E4FE40E2C7"
+		tasks: [{
+			id: "31FCD0DA0946A144"
+			item: { count: 1, id: "reliquary:angelic_feather" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}

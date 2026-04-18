@@ -1,0 +1,26 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "starting_gear"
+	group: "79DBEF62FF5CD2D9"
+	id: "714C446FA51AFBB3"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		id: "0937A1CC74795CF4"
+		rewards: [{
+			exclude_from_claim_all: true
+			id: "439C02A81A103EDE"
+			table_id: 560326316990004224L
+			type: "choice"
+		}]
+		shape: "gear"
+		size: 2.0d
+		tasks: [{
+			id: "122F9ED3858AD774"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}

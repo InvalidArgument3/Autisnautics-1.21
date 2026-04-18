@@ -1,0 +1,9 @@
+{
+	id: "32CDC1BB627EF8D6"
+	loot_size: 1
+	order_index: 2
+	rewards: [
+		{ id: "2F9DEA090000437E", item: { components: { "ftbquests:missing_item": "rats:farmer_hat" }, count: 1, id: "ftbquests:missing_item" } }
+		{ id: "558F99D48043F1D1", item: { components: { "ftbquests:missing_item": "youkaishomecoming:straw_hat" }, count: 1, id: "ftbquests:missing_item" } }
+	]
+}

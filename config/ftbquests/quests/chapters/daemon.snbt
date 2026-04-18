@@ -1,0 +1,196 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "daemon"
+	group: "0BFB33D75F4EAD91"
+	icon: {
+		id: "psi:psimetal_exosuit_helmet"
+	}
+	id: "2EB3EC9861015754"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1688D58F977334FB"]
+			id: "0F7D65050E1F7A6E"
+			rewards: [{
+				command: "/effect give @p tconstruct:bleeding 12 0"
+				id: "6835BCC4E1205FDD"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				consume_items: false
+				id: "0FD161DEE23E1A60"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				only_from_crafting: false
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F7D65050E1F7A6E"]
+			id: "7C26B21C40608612"
+			rewards: [{
+				id: "687490A6EC37992D"
+				item: {
+					count: 1
+					id: "minecraft:cookie"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: false
+				count: 24L
+				id: "51A6586CA1E383ED"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				only_from_crafting: false
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7C26B21C40608612"]
+			icon: {
+				id: "psi:cad"
+			}
+			id: "3B448BBF4352E4AB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "212EC9CD17523B76"
+				table_id: 5826926724057374740L
+				type: "choice"
+			}]
+			tasks: [
+				{
+					id: "1E67DE633C6B8F07"
+					item: { count: 1, id: "psi:cad_assembly_iron" }
+					type: "item"
+				}
+				{
+					id: "54A5B8C79F2C0B1C"
+					item: { count: 1, id: "psi:cad_core_basic" }
+					type: "item"
+				}
+				{
+					id: "48D6AAE0BF9B2133"
+					item: { count: 1, id: "psi:cad_socket_basic" }
+					type: "item"
+				}
+				{
+					id: "43287745C9FE59C7"
+					item: { count: 1, id: "psi:cad_assembler" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B448BBF4352E4AB"]
+			id: "40923F4758A50D9C"
+			rewards: [{
+				id: "56812C32D7AB3581"
+				item: {
+					count: 1
+					id: "youkaishomecoming:sparrow_sake"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "300AF1A3FB945D33"
+				item: { count: 1, id: "psi:programmer" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0F7D65050E1F7A6E"]
+			id: "74F82F70F43DF148"
+			rewards: [{
+				id: "20D30B1E037751CC"
+				item: {
+					components: {
+						"ftbquests:missing_item": "mna:bell_of_bidding"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "470E0CD7F74CD178"
+					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_head_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "3C6E096FEDFD469F"
+					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_torso_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "5B20672C0177AF55"
+					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_legs_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "5F27F141221B7235"
+					type: "checkmark"
+				}
+				{
+					id: "6B5C673626AB7C92"
+					item: { count: 1, id: "minecraft:armor_stand" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7C26B21C40608612"]
+			id: "2F51EA6259AD6A44"
+			rewards: [{
+				count: 2
+				id: "4D4A6F5A5116EAC8"
+				item: {
+					count: 1
+					id: "computercraft:wireless_modem_normal"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: false
+				id: "0D10A9483F91942D"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1688D58F977334FB"]
+			id: "451CB26EBDE58A25"
+			rewards: [{
+				command: "/power grant @p autisorigins:strong_flesh"
+				id: "7B279197C7396287"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:earth_orbit"
+				id: "5F810A4B4280BA7D"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+}

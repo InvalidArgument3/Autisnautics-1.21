@@ -1,0 +1,188 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "welcome"
+	group: ""
+	id: "2EE5FBD9BD7C0265"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			disable_toast: true
+			id: "09356B3BEF298E06"
+			rewards: [
+				{
+					id: "732AA66A91BA5C2B"
+					item: {
+						count: 1
+						id: "minecraft:orange_tulip"
+					}
+					type: "item"
+				}
+				{
+					id: "1EE277823ACFB886"
+					item: {
+						count: 1
+						id: "minecraft:flower_pot"
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "7670232EEE67FE29"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["09356B3BEF298E06"]
+			disable_toast: true
+			hide_dependency_lines: true
+			id: "69D55492A8F42A94"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "0680791525813778"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["69D55492A8F42A94"]
+			disable_toast: true
+			id: "407236D2B1D2257D"
+			rewards: [{
+				id: "3D4250D2B4800C1C"
+				item: {
+					count: 1
+					id: "create:builders_tea"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "71C8186F3C7861F2"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["407236D2B1D2257D"]
+			disable_toast: true
+			id: "2C7ADB6C11B918B1"
+			rewards: [{
+				id: "1BF6428DE53BC0FF"
+				item: {
+					count: 1
+					id: "minecraft:cookie"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "36AF6DA4FFED8DC2"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2C7ADB6C11B918B1"]
+			disable_toast: true
+			id: "1947C6CE179EBAC6"
+			rewards: [{
+				id: "4000DE1B90DA84CE"
+				item: {
+					count: 1
+					id: "minecraft:wheat_seeds"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "235CD0501F0E807C"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1947C6CE179EBAC6"]
+			disable_toast: true
+			id: "58E38BA6D927409F"
+			rewards: [{
+				count: 15
+				id: "583C35BA7A7B9004"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "3A69DCA5AB7A36F2"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["58E38BA6D927409F"]
+			disable_toast: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "occultism:book_of_calling_djinni_manage_machine"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "00003FCBB33E62C4"
+			rewards: [{
+				id: "67E25D801A479C56"
+				item: {
+					count: 1
+					id: "create:clipboard"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "181383A364ECB6F1"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["00003FCBB33E62C4"]
+			disable_toast: true
+			id: "31EDFA6D2FF86CB0"
+			rewards: [{
+				id: "27FC36C810ADB897"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "422CD0E2E5F2F158"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+	]
+}

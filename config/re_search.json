@@ -1,0 +1,14 @@
+{
+  "range": 12,
+  "recursionLimit": -1,
+  "isCaseSensitive": false,
+  "searchMode": 2,
+  "maxInventories": 10,
+  "maxSearchResults": -1,
+  "maxSearchResultsPerInventory": 81,
+  "searchBlocks": true,
+  "searchEntities": true,
+  "autoSelect": false,
+  "keepLast": true,
+  "autoHideTime": 20
+}

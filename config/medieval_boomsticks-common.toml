@@ -1,0 +1,70 @@
+#Round Ball ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+round_ball_damage = 10.0
+#Heavy Bolt ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+heavy_bolt_damage = 4.0
+#Javelin damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+javelin_damage = 8.0
+#Round Ball ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+small_rock_damage = 4.0
+#Round Ball ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+wardart_damage = 10.0
+#Round Ball ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+thrown_wardart_damage = 10.0
+#Heavy Bolt ammo damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+large_rock_damage = 18.0
+#Knife Projectile damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+thrown_knife_damage = 8.0
+#Axe Projectile damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+thrown_axe_damage = 8.0
+#Knife damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+knife_damage = 8.0
+#Axe damage value
+#Range: 0.0 ~ 1.7976931348623157E308
+axe_damage = 8.0
+#Small Rock Projectile Speed
+#Range: 0.0 ~ 1.7976931348623157E308
+small_rock_speed = 2.5
+#Large Rock Projectile Speed
+#Range: 0.0 ~ 1.7976931348623157E308
+large_rock_speed = 1.0
+#Javelin Projectile Speed Value
+#Range: 0.0 ~ 1.7976931348623157E308
+javelin_speed = 2.5
+#FireArm armor penetration percentage
+#Range: 0 ~ 100
+armor_penetration_percentage = 50
+#Mace armor penetration percentage
+#Range: 0 ~ 100
+maze_armor_penetration_percentage = 30
+#Arquebus & Handgonne chance to fail a shot
+#Range: > 0
+probability_fail_firegun = 5
+#Arquebus cooldown in seconds
+#Range: > 0
+cooldown_arquebus = 15
+#Handgonne cooldown in seconds
+#Range: > 0
+cooldown_handgonne = 15
+#Arquebus Recharge Speed
+#Range: 0.0 ~ 2.0
+recharge_speed_arquebus = 0.5
+#Arbalest Recharge Speed
+#Range: 0.0 ~ 2.0
+recharge_speed_arbalest = 1.0
+#Handgonne Recharge Speed
+#Range: 0.0 ~ 2.0
+recharge_speed_handgonne = 0.5
+#SpikedHandgonne Recharge Speed
+#Range: 0.0 ~ 2.0
+recharge_speed_spikedhandgonne = 1.0
+

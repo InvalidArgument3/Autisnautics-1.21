@@ -1,0 +1,13 @@
+
+#Mechanical system global settings
+[mechanical]
+	#Global maximum rotational speed in RPM for all mechanical devices (turbines, alternators, etc.). Default 7200 RPM. Changing this affects speed_factor calculations in turbines.
+	#Range: 1000 ~ 50000
+	max_rpm = 7200
+
+#Heat system global settings
+[heat]
+	#Global maximum heat level for all heat-related devices. Default 2000.0
+	#Range: 100.0 ~ 10000.0
+	max_heat = 2000.0
+

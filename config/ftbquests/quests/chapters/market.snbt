@@ -1,0 +1,1018 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "market"
+	group: "0810E42B2DD79973"
+	id: "44F68408CAD025B8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5D17CB247942013A"
+			rewards: [{
+				id: "55EF0FE847AE3353"
+				item: {
+					count: 1
+					id: "minecraft:cyan_bed"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 10L
+				id: "0783860FB502A201"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -9.5d
+			y: -1.5d
+		}
+		{
+			can_repeat: true
+			id: "252B9DD5BFB8184A"
+			rewards: [{
+				id: "0B037E2AAC9844B5"
+				item: {
+					components: {
+						"ftbquests:missing_item": "supplementaries:cartographers_quill"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "5345AA8760A95127"
+				item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: 0.5d
+		}
+		{
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "cb_microblock:diamond_saw"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "4F953BACF4D1C151"
+			rewards: [{
+				id: "56DB21D18FB1FF64"
+				item: {
+					components: {
+						"ftbquests:missing_item": "cb_microblock:diamond_saw"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4C77B71D0EC3B2EA"
+					item: { components: { "ftbquests:missing_item": "cb_microblock:diamond_saw" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "3EE8736C08EF80F4"
+					item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -8.5d
+			y: -6.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:missing_item": "projectred_core:screwdriver"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "72CACE8F0E4701B1"
+			rewards: [{
+				id: "743730BBE32A0875"
+				item: {
+					components: {
+						"ftbquests:missing_item": "projectred_core:screwdriver"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "1E25EB2883C9A960"
+					item: { components: { "ftbquests:missing_item": "projectred_core:screwdriver" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "74585BB7E80CF010"
+					item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: -6.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:missing_item": "kubejs:chromatic_resonator"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "43FC566E833BE834"
+			rewards: [{
+				id: "0F4C7BB4C0ECB4CC"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:chromatic_resonator"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "36CBD54BCB068EB1"
+					item: { components: { "ftbquests:missing_item": "kubejs:chromatic_resonator" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 7L
+					id: "5B31A98B9EFCCFAB"
+					item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: -6.5d
+		}
+		{
+			id: "0F870BEA235D662D"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3929233A89B34A71"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["0F870BEA235D662D"]
+			id: "5326F6482C45D22A"
+			rewards: [{
+				count: 64
+				id: "26512E93CE404069"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:silver_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "772821832EE93341"
+				item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["0F870BEA235D662D"]
+			id: "1A566C74B1F7F050"
+			rewards: [{
+				id: "66BE3DDEC92812C4"
+				item: {
+					components: {
+						"ftbquests:missing_item": "thermal:gold_coin"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 64L
+				id: "2387D852CA97AD1A"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -4.0d
+		}
+		{
+			id: "09DC2E2BE2BE32F4"
+			rewards: [
+				{
+					count: 4
+					id: "05B553B614119E4A"
+					item: {
+						count: 1
+						id: "farmersdelight:steak_and_potatoes"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "607D48921297C475"
+					item: {
+						count: 1
+						id: "create:builders_tea"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "37DB33F821AD0AFE"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "51A8014ACD2153F6"
+					item: {
+						count: 1
+						id: "farmersdelight:mixed_salad"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5CD27D9058DAFAAB"
+					item: {
+						count: 1
+						id: "farmersdelight:sweet_berry_cookie"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 10L
+				id: "6235F365D702DF2B"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -2.0d
+		}
+		{
+			id: "4B01606CE7AF3121"
+			rewards: [
+				{
+					count: 64
+					id: "65597F84B69546EF"
+					item: {
+						count: 1
+						id: "minecraft:dirt"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "5ED9F3AFC25DD60E"
+					item: {
+						count: 1
+						id: "minecraft:dirt"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "1A8CE751232C7235"
+					item: {
+						count: 1
+						id: "minecraft:dirt"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 15L
+				id: "188BEC2BA245DB13"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:barrel"
+			}
+			id: "09EA580B3D32FEEB"
+			rewards: [{
+				id: "1E10CE8D433DD70E"
+				item: {
+					count: 1
+					id: "minecraft:barrel"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 50L
+				id: "3EA558277444F605"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			id: "4FD46F841CCD59F8"
+			rewards: [{
+				id: "440DF47BEF341626"
+				item: {
+					count: 1
+					id: "sophisticatedbackpacks:backpack"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 10L
+				id: "709557A517B0143F"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: -0.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:missing_item": "tconstruct:creative_slot"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "0CCF34BF1C5829AE"
+			rewards: [{
+				id: "37DBD1EF724A42D9"
+				item: {
+					count: 1
+					id: "minecraft:chest"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 25L
+				id: "32ACF7B1C0BD9D97"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			id: "6D9F2FBEB7CC5195"
+			rewards: [{
+				id: "6BCBFB22A82A5698"
+				item: {
+					count: 1
+					id: "minecraft:totem_of_undying"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 60L
+				id: "165B9A886A26BCC8"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			id: "4B52A04818075900"
+			rewards: [
+				{
+					id: "0257303302DADA1B"
+					item: {
+						count: 1
+						id: "create:peculiar_bell"
+					}
+					type: "item"
+				}
+				{
+					id: "30D4605E06FF45B6"
+					item: {
+						count: 1
+						id: "minecraft:soul_campfire"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 45L
+				id: "4FB1B4787D648565"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:missing_item": "kubejs:flash_drive"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "00D6DD6AE8E3C014"
+			rewards: [{
+				id: "3EA7518063CBEA5B"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:flash_drive"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "561DF7A17B804B1F"
+					item: { components: { "ftbquests:missing_item": "kubejs:flash_drive" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 7L
+					id: "04FA9389D991556D"
+					item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: -6.5d
+		}
+		{
+			id: "4BAC95CCC72369AD"
+			rewards: [{
+				count: 4
+				id: "51ABA96DE3477D3B"
+				item: {
+					components: {
+						"ftbquests:missing_item": "kubejs:circuit_scrap"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 6L
+				id: "3D328A6D69E64EDA"
+				item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			id: "6C00F2935F27C2AD"
+			rewards: [{
+				id: "500098FD4762A38F"
+				item: {
+					count: 1
+					id: "minecraft:axolotl_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 5L
+					id: "491FF95EFE8DCB67"
+					item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "5F58BA2473FD6DDA"
+					item: { count: 1, id: "minecraft:water_bucket" }
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: -2.0d
+		}
+		{
+			id: "093FB7B7FEC6B886"
+			rewards: [{
+				id: "198DC310752F341F"
+				item: {
+					count: 1
+					id: "minecraft:netherite_upgrade_smithing_template"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "30B16CC21946FE8E"
+				item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			id: "1CC29991D5F248CA"
+			rewards: [
+				{
+					count: 8
+					id: "1C6218230C6D71A0"
+					item: {
+						components: {
+							"ftbquests:missing_item": "thermal:explosive_grenade"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2D1A3F35DF8894FF"
+					item: {
+						components: {
+							"ftbquests:missing_item": "thermal:glowstone_grenade"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "093F58649A1E0DD6"
+					item: {
+						components: {
+							"ftbquests:missing_item": "thermal:ice_grenade"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "71BB0C93A4A7BC04"
+					item: {
+						components: {
+							"ftbquests:missing_item": "thermal:earth_grenade"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 32L
+				id: "2BF8F9E5070C6122"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: -1.5d
+		}
+		{
+			id: "42384DE39AA48976"
+			rewards: [
+				{
+					count: 8
+					id: "26A16DC998FEF595"
+					item: {
+						count: 1
+						id: "farmersdelight:organic_compost"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5DEDD7BBA8A712AA"
+					item: {
+						count: 1
+						id: "minecraft:flower_pot"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "01196A417139EA21"
+					item: {
+						count: 1
+						id: "supplementaries:flower_box"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "648B819C1B484A3F"
+					item: {
+						count: 1
+						id: "minecraft:grass_block"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 24L
+				id: "05BB5DFA82280C0C"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			id: "61B040CD0832EFC0"
+			rewards: [
+				{
+					count: 16
+					id: "6375AD9CBA9276E0"
+					item: {
+						count: 1
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "72F57D408AD5C84A"
+					item: {
+						count: 1
+						id: "minecraft:white_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "3477DB4BB2003475"
+					item: {
+						count: 1
+						id: "minecraft:yellow_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "14FE738419E8578F"
+					item: {
+						count: 1
+						id: "minecraft:black_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4D37425F17A9D45F"
+					item: {
+						count: 1
+						id: "minecraft:blue_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4A3F1D820F9F1D26"
+					item: {
+						count: 1
+						id: "minecraft:green_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4FFD3D4728DFBB16"
+					item: {
+						count: 1
+						id: "minecraft:red_dye"
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "0F0A7101131FFC08"
+					item: {
+						count: 1
+						id: "minecraft:brown_dye"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 24L
+				id: "6404722100F1DEF7"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -9.5d
+			y: 1.5d
+		}
+		{
+			id: "117587D824D23D69"
+			rewards: [{
+				count: 128
+				id: "738387AED344C59B"
+				item: {
+					count: 1
+					id: "create:track"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "06C835DB602D6F9F"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			id: "2D75D1864FB1EF75"
+			rewards: [
+				{
+					count: 4
+					id: "4961B49D79004571"
+					item: {
+						count: 1
+						id: "minecraft:name_tag"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "054AEE030B3B81F6"
+					item: {
+						count: 1
+						id: "minecraft:bone"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "29F276B6CDE4D6B5"
+					item: {
+						count: 1
+						id: "minecraft:tropical_fish"
+					}
+					type: "item"
+				}
+				{
+					id: "53AA2AF7CA1EF02C"
+					item: {
+						count: 1
+						id: "minecraft:saddle"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "762BB57B2AFDB21F"
+					item: {
+						count: 1
+						id: "minecraft:lead"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 24L
+				id: "3AA788B63B6A73EF"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			id: "7D93DAB3E8ACF953"
+			rewards: [
+				{
+					count: 4
+					id: "17FCE9D6C12A7822"
+					item: {
+						count: 1
+						id: "quark:blue_blossom_sapling"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5B801D097C1C538F"
+					item: {
+						count: 1
+						id: "quark:lavender_blossom_sapling"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "15B0F60077A03C61"
+					item: {
+						components: {
+							"ftbquests:missing_item": "biomesoplenty:yellow_maple_sapling"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "745C64C48231B0CA"
+					item: {
+						components: {
+							"ftbquests:missing_item": "biomesoplenty:orange_maple_sapling"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3E7E4B570C7EDF5F"
+					item: {
+						count: 1
+						id: "minecraft:cherry_sapling"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6D61111C4CF926DE"
+					item: {
+						count: 1
+						id: "minecraft:mangrove_propagule"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "4BCFE98EB9FF9DB4"
+					item: {
+						count: 1
+						id: "minecraft:flowering_azalea"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "444BD72F5023FDF1"
+					item: {
+						count: 1
+						id: "minecraft:bamboo"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 16L
+				id: "06028A67C6DCCD00"
+				item: { components: { "ftbquests:missing_item": "16x thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			id: "003E0D1CE60B166A"
+			rewards: [
+				{
+					id: "773C4F5E97BD82B8"
+					item: {
+						count: 1
+						id: "minecraft:bee_nest"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0C8C369DEF6B0FD4"
+					item: {
+						count: 1
+						id: "minecraft:bee_spawn_egg"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 48L
+					id: "6837BEE1075CC785"
+					item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "3CCE09D1715B54C7"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			id: "04468935C9A7298F"
+			rewards: [{
+				count: 15
+				id: "4420617E22747710"
+				item: {
+					count: 1
+					id: "minecraft:kelp"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 5L
+				id: "1EB77DF31A04A04D"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: 1.5d
+		}
+		{
+			id: "185F9F8EBD0F8F87"
+			rewards: [
+				{
+					id: "67E1EFF44408867B"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:crafting_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "401831CDED2C1763"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:pickup_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "192D6973AB74C953"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:advanced_compacting_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 20L
+				id: "78ABC9B3BB0C7DC6"
+				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			id: "42A7073F3681626C"
+			rewards: [{
+				id: "4DEC158A5EA3208C"
+				item: {
+					components: {
+						"ftbquests:missing_item": "supplementaries:cartographers_quill"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "50824DA7246920CA"
+				item: { components: { "ftbquests:missing_item": "thermal:gold_coin" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.0d
+		}
+	]
+}

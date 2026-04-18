@@ -1,0 +1,31 @@
+{
+	id: "07C6ADD10A7DFC00"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{
+			command: "/give @p adhooks:spear_launcher{Enchantments:[{id:\"ensorcellation:soulbound\",lvl:1s},{id:\"minecraft:unbreaking\",lvl:10s}]}"
+			icon: {
+				id: "adhooks:spear_launcher"
+			}
+			id: "66832919880A7719"
+			type: "command"
+		}
+		{
+			command: "/give @p adhooks:web_launcher{Enchantments:[{id:\"ensorcellation:soulbound\",lvl:1s},{id:\"minecraft:unbreaking\",lvl:10s}]}"
+			icon: {
+				id: "adhooks:web_launcher"
+			}
+			id: "6F425FC8A9406A56"
+			type: "command"
+		}
+		{
+			command: "/give @p adhooks:pudge_launcher{Enchantments:[{id:\"ensorcellation:soulbound\",lvl:1s},{id:\"minecraft:unbreaking\",lvl:10s}]}"
+			icon: {
+				id: "adhooks:pudge_launcher"
+			}
+			id: "71617213C7F8E66D"
+			type: "command"
+		}
+	]
+}

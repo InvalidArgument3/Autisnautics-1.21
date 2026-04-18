@@ -1,0 +1,548 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_1"
+	group: "331B6409EF6A7840"
+	id: "45AEDCD3B795E95A"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5799D55BB26BA52C"]
+			hide_dependency_lines: true
+			id: "2CB570195DA7E106"
+			shape: "square"
+			tasks: [
+				{
+					disable_toast: true
+					id: "58AB6E0FF2EA6AD4"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "0842082756DA73FE"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5799D55BB26BA52C"]
+			hide_dependency_lines: true
+			id: "608BF7BE3CB666F3"
+			tasks: [
+				{
+					id: "247A58659E47A4D8"
+					item: { count: 1, id: "minecraft:kelp" }
+					type: "item"
+				}
+				{
+					id: "0631FA27CEE5D67D"
+					type: "checkmark"
+				}
+			]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5799D55BB26BA52C"]
+			hide_dependency_lines: true
+			id: "4CC420A6B673176A"
+			tasks: [
+				{
+					id: "72FE446F5BB1A93E"
+					item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "4208FAAC229CACA6"
+					type: "checkmark"
+				}
+			]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5799D55BB26BA52C"]
+			hide_dependency_lines: true
+			id: "106C6DFDCB97327C"
+			tasks: [
+				{
+					id: "5E14AA73F8E1AFE4"
+					item: { count: 1, id: "minecraft:andesite" }
+					type: "item"
+				}
+				{
+					id: "29B78BB983BE39FC"
+					type: "checkmark"
+				}
+			]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["106C6DFDCB97327C"]
+			id: "6B7F0631060A9E62"
+			shape: "circle"
+			tasks: [{
+				id: "0C764FDD555E8CCD"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4CC420A6B673176A"]
+			id: "729FB5DD07C234E8"
+			tasks: [
+				{
+					id: "714FE76FE8D62EBF"
+					item: { count: 1, id: "minecraft:clay_ball" }
+					type: "item"
+				}
+				{
+					id: "02EE2F24FDF534BC"
+					type: "checkmark"
+				}
+			]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"729FB5DD07C234E8"
+				"608BF7BE3CB666F3"
+			]
+			id: "72BE175C83834838"
+			tasks: [
+				{
+					id: "1CE8BFE460CB41E0"
+					item: { count: 1, id: "architects_palette:algal_blend" }
+					type: "item"
+				}
+				{
+					id: "63EA7BF746BF3254"
+					type: "checkmark"
+				}
+			]
+			x: 5.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2CB570195DA7E106"]
+			id: "532EFE32C3A515B5"
+			tasks: [
+				{
+					id: "3C7A4BA98EEC90E8"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "7B60357D06FE3ADC"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["532EFE32C3A515B5"]
+			id: "19921941321965A4"
+			tasks: [
+				{
+					id: "1A63E51B0CF5C6DD"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "175767726FBCAA8D"
+					type: "checkmark"
+				}
+			]
+			x: -0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["19921941321965A4"]
+			id: "59E4A6163753BC12"
+			tasks: [
+				{
+					id: "23030B6D0072EBE8"
+					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "59B260F52722A1FE"
+					type: "checkmark"
+				}
+			]
+			x: 0.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"106C6DFDCB97327C"
+				"32786E9D145FFE25"
+			]
+			id: "73FCA432DEFC1DED"
+			tasks: [
+				{
+					id: "4F50D847118D6E62"
+					item: { count: 1, id: "create:andesite_alloy" }
+					type: "item"
+				}
+				{
+					id: "6AA98FC4680D6521"
+					type: "checkmark"
+				}
+			]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["72BE175C83834838"]
+			id: "32786E9D145FFE25"
+			tasks: [
+				{
+					id: "706BA4E65686CA1B"
+					item: { count: 1, id: "architects_palette:algal_brick" }
+					type: "item"
+				}
+				{
+					id: "1484A9A6DB85EA6D"
+					type: "checkmark"
+				}
+			]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"59E4A6163753BC12"
+				"73FCA432DEFC1DED"
+				"5A055D0421861318"
+			]
+			id: "675C395B2074C24C"
+			tasks: [
+				{
+					id: "68B67FDC410885B3"
+					item: { components: { "ftbquests:missing_item": "kubejs:kinetic_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "34C54664AB22ECFD"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"59E4A6163753BC12"
+				"73FCA432DEFC1DED"
+			]
+			hide_dependency_lines: true
+			icon: {
+				components: {
+					"ftbquests:missing_item": "cb_microblock:stone_saw"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "5A055D0421861318"
+			shape: "circle"
+			tasks: [{
+				id: "52A4AF128B571664"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["5A8DF2D8553904BF"]
+			hide_until_deps_complete: true
+			id: "5799D55BB26BA52C"
+			rewards: [{
+				id: "49A9C8798141C302"
+				item: {
+					count: 1
+					id: "create:builders_tea"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "1B5F1E9F5EE6EB2C"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["675C395B2074C24C"]
+			id: "3F45DFEF31838A00"
+			rewards: [
+				{
+					count: 16
+					id: "30E03E42611E5613"
+					item: {
+						components: {
+							"ftbquests:missing_item": "kubejs:kinetic_mechanism"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					id: "006F556964FDC753"
+					item: {
+						count: 1
+						id: "minecraft:redstone"
+					}
+					random_bonus: 4
+					type: "item"
+				}
+				{
+					id: "641C2EF6193736A1"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					random_bonus: 4
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "2D4BB6A2E22A86E3"
+				item: { components: { "ftbquests:missing_item": "kubejs:andesite_machine" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"3F45DFEF31838A00"
+				"681DACF11F193771"
+			]
+			hide_until_deps_complete: true
+			id: "3728DF562D6DCE3A"
+			shape: "square"
+			tasks: [
+				{
+					count: 4L
+					id: "52B181D406A5AC67"
+					item: { components: { "ftbquests:missing_item": "thermal:device_tree_extractor" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "29BEB0A31C3FB00B"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["3728DF562D6DCE3A"]
+			id: "3EF5F89DBD6959E3"
+			tasks: [
+				{
+					id: "0F98BACE3B940BC9"
+					item: { components: { "ftbquests:missing_item": "thermal:rubber" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "5BBF2E1143CD356E"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["3EF5F89DBD6959E3"]
+			id: "29D37095C73B3DEC"
+			shape: "square"
+			tasks: [
+				{
+					id: "7D328EB34500FE28"
+					item: { components: { "ftbquests:missing_item": "thermal:cured_rubber" }, count: 1, id: "ftbquests:missing_item" }
+					type: "item"
+				}
+				{
+					id: "17286271B0667AAA"
+					type: "checkmark"
+				}
+			]
+			x: -1.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["29D37095C73B3DEC"]
+			id: "6545C3F427B12106"
+			shape: "circle"
+			tasks: [{
+				id: "2C94C22FBED69EE4"
+				item: { components: { "ftbquests:missing_item": "kubejs:sealed_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -0.20000000000003126d
+			y: 11.5d
+		}
+		{
+			dependencies: ["6545C3F427B12106"]
+			id: "0E0535849D8D9279"
+			rewards: [
+				{
+					count: 16
+					id: "0CDF1AD650CC3EA0"
+					item: {
+						components: {
+							"ftbquests:missing_item": "kubejs:sealed_mechanism"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					id: "200F3D1A04E713EF"
+					item: {
+						components: {
+							"ftbquests:missing_item": "thermal:cured_rubber"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					random_bonus: 4
+					type: "item"
+				}
+				{
+					id: "38E1B6571EDAA96B"
+					item: {
+						count: 1
+						id: "minecraft:copper_ingot"
+					}
+					random_bonus: 4
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "31511DA3C34905F1"
+				item: { components: { "ftbquests:missing_item": "kubejs:copper_machine" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["5799D55BB26BA52C"]
+			id: "6892AE55581393C6"
+			shape: "circle"
+			tasks: [{
+				id: "4DC18CB3A19686E5"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"3F45DFEF31838A00"
+				"28D3347E8FA277AD"
+			]
+			hide_until_deps_complete: true
+			id: "5C4F6E63B02A25F0"
+			tasks: [
+				{
+					id: "414AB7FC6D0F52BF"
+					item: { count: 1, id: "minecraft:deepslate" }
+					type: "item"
+				}
+				{
+					id: "5A531D21DEBB3FA8"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["5C4F6E63B02A25F0"]
+			id: "4D8972AE5B614FB3"
+			tasks: [
+				{
+					id: "2E9806386AA204A1"
+					item: { count: 1, id: "minecraft:magma_block" }
+					type: "item"
+				}
+				{
+					id: "728CB4E169DEED42"
+					type: "checkmark"
+				}
+			]
+			x: 5.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["4D8972AE5B614FB3"]
+			id: "4064D448404CD639"
+			tasks: [
+				{
+					id: "09D097DEABDD1E51"
+					item: { count: 1, id: "minecraft:obsidian" }
+					type: "item"
+				}
+				{
+					id: "4650061E5C50B8FA"
+					type: "checkmark"
+				}
+			]
+			x: 5.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["76706BE282ABAC31"]
+			id: "667F4F686A45EF3E"
+			rewards: [{
+				count: 128
+				id: "72B61CAAE9A75F6F"
+				item: {
+					count: 1
+					id: "create:track"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "5F986F8FC1D339AA"
+				item: { components: { "ftbquests:missing_item": "kubejs:gold_machine" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["4064D448404CD639"]
+			id: "76706BE282ABAC31"
+			shape: "circle"
+			tasks: [{
+				id: "232D11392F252A8E"
+				item: { components: { "ftbquests:missing_item": "kubejs:reinforced_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 11.5d
+		}
+	]
+}

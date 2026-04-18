@@ -1,0 +1,11 @@
+{
+  "maxSize": 10.0,
+  "minSize": 0.1,
+  "sizeChangeFactor": 2.0,
+  "growingPotion": true,
+  "shrinkingPotion": true,
+  "wideningPotion": true,
+  "thinningPotion": true,
+  "useNetherFungus": false,
+  "addReachModifier": true
+}

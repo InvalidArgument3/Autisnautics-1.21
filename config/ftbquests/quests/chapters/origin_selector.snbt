@@ -1,0 +1,342 @@
+{
+	always_invisible: true
+	default_hide_dependency_lines: true
+	default_quest_shape: ""
+	filename: "origin_selector"
+	group: "0BFB33D75F4EAD91"
+	id: "27A8EC11B6702416"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "22107772A91372B0"
+			tasks: [{
+				id: "489F9B5C7B7E0652"
+				type: "custom"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			id: "5378EDF26A6861D0"
+			tasks: [{
+				id: "779DF22D10B39A32"
+				type: "custom"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			id: "5866040E9BF5CB9F"
+			tasks: [{
+				id: "7A02B51BE36C9E86"
+				type: "custom"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			id: "085150E24AC92F5C"
+			tasks: [{
+				id: "0186FB5F788C2BC3"
+				type: "custom"
+			}]
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			id: "1688D58F977334FB"
+			tasks: [{
+				icon: {
+					id: "psi:psimetal_exosuit_helmet"
+				}
+				id: "316796AAB6EDF9A7"
+				type: "custom"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			id: "4EAB29CE8895395E"
+			tasks: [{
+				id: "5AC44C2F24E566BD"
+				type: "custom"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			id: "4FE493562DC11639"
+			tasks: [{
+				id: "22BA80BF7E7BA0F1"
+				type: "custom"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"6E3CD6919EAA9EE4"
+				"4FE493562DC11639"
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "0D739DC45906A4EB"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "2A9A59112ABA6AA8"
+					item: {
+						count: 1
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					count: 15
+					id: "7F4AA4E37EB0F46B"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6FB5133ABBE790E3"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0DCC71420C57E089"
+				"085150E24AC92F5C"
+			]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "13491A62C6E95E60"
+			invisible: true
+			rewards: [{
+				auto: "enabled"
+				id: "0DA787BBAE69EF9F"
+				item: {
+					components: {
+						"ftbquests:missing_item": "alexsmobs:squid_grapple"
+					}
+					count: 1
+					id: "ftbquests:missing_item"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "0E383BAD0CF45A91"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0F7D65050E1F7A6E"]
+			disable_toast: true
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "21E2FD715F43CCC2"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					count: 6
+					id: "7089A042CB607DCF"
+					item: {
+						count: 1
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "32ABCCA5473475A1"
+					item: {
+						components: {
+							"ftbquests:missing_item": "mna:animus_dust"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3D342E076001C058"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"1688D58F977334FB"
+				"451CB26EBDE58A25"
+			]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "4A5F78CCBAA649D0"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/attribute @p minecraft:generic.max_health base set 24"
+					id: "3F6A9204C1B3E633"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/attribute @p minecraft:generic.attack_damage base set 2"
+					id: "11C583D7201722F9"
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "0E7033896DD04519"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"04041B7DDE8154A4"
+				"22107772A91372B0"
+			]
+			id: "12DC1012CBEBB6F0"
+			rewards: [{
+				command: "/tconstruct modifiers @p add tconstruct:power 3"
+				id: "1E7184193EC1B06F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "2BF436E8D37096E5"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5378EDF26A6861D0"]
+			id: "2809AE02EA018BFA"
+			tasks: [{
+				id: "6F92078B9D357163"
+				type: "custom"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"4EAB29CE8895395E"
+				"001545FF84357A11"
+			]
+			id: "5A64DBCFBF78856B"
+			rewards: [{
+				command: "/tconstruct modifiers @p add tconstruct:power 3"
+				id: "7AE8838B28BE5BB1"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "35E30EEEB48204EA"
+				stat: "minecraft:play_time"
+				type: "stat"
+				value: 1
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "0ED0EB18E3E3C99C"
+			tasks: [{
+				id: "7EDF16E3873D8970"
+				type: "custom"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			id: "1E1BA732F69158CB"
+			tasks: [{
+				id: "7F263AF0F6955616"
+				type: "custom"
+			}]
+			x: -0.5d
+			y: -4.5d
+		}
+		{
+			id: "3AD0072806C85E8A"
+			tasks: [{
+				id: "0C6BEF8733F14AFD"
+				type: "custom"
+			}]
+			x: 0.5d
+			y: -4.5d
+		}
+		{
+			id: "4B8D31141A3D2965"
+			tasks: [{
+				icon: {
+					components: {
+						"ftbquests:missing_item": "rats:black_death_mask"
+					}
+					id: "ftbquests:missing_item"
+				}
+				id: "5311FC1A857C5DE9"
+				type: "custom"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			id: "29DCAFA75FB1AB55"
+			tasks: [{
+				id: "23EC365CF994DD7C"
+				type: "custom"
+			}]
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			id: "07A744D2AF509711"
+			tasks: [{
+				id: "1B0AEACBE2CEFD7A"
+				type: "custom"
+			}]
+			x: -2.5d
+			y: -4.5d
+		}
+		{
+			id: "2FE4393E7DADB6B0"
+			tasks: [{
+				id: "47E78F1FDE6AE4C9"
+				type: "custom"
+			}]
+			x: 2.5d
+			y: -4.5d
+		}
+	]
+}

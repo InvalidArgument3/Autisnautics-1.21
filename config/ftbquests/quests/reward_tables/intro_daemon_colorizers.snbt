@@ -1,0 +1,25 @@
+{
+	id: "50DD66FBAFABA014"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{ id: "6A35AF865598E7FD", item: { count: 1, id: "psi:cad_colorizer_white" } }
+		{ id: "4376BE3FD0E1CAF3", item: { count: 1, id: "psi:cad_colorizer_orange" } }
+		{ id: "56FB91C8067247F5", item: { count: 1, id: "psi:cad_colorizer_magenta" } }
+		{ id: "1C07D06BF979C776", item: { count: 1, id: "psi:cad_colorizer_light_blue" } }
+		{ id: "517AC25EDB8F7DD3", item: { count: 1, id: "psi:cad_colorizer_yellow" } }
+		{ id: "3A1D2C413236B362", item: { count: 1, id: "psi:cad_colorizer_lime" } }
+		{ id: "207589BFDE2F44B6", item: { count: 1, id: "psi:cad_colorizer_pink" } }
+		{ id: "7F029E1442D25FBD", item: { count: 1, id: "psi:cad_colorizer_gray" } }
+		{ id: "12F6DC3B681BC6C1", item: { count: 1, id: "psi:cad_colorizer_light_gray" } }
+		{ id: "2324C6A14473504C", item: { count: 1, id: "psi:cad_colorizer_cyan" } }
+		{ id: "57F279D4D9C5B6B7", item: { count: 1, id: "psi:cad_colorizer_purple" } }
+		{ id: "09C602530580BD14", item: { count: 1, id: "psi:cad_colorizer_blue" } }
+		{ id: "6738070297211602", item: { count: 1, id: "psi:cad_colorizer_brown" } }
+		{ id: "6BFF9F746EA09186", item: { count: 1, id: "psi:cad_colorizer_green" } }
+		{ id: "6F0E01CBDE994D9E", item: { count: 1, id: "psi:cad_colorizer_red" } }
+		{ id: "34BEE79FC0531F1B", item: { count: 1, id: "psi:cad_colorizer_black" } }
+		{ id: "0EB80D834CB5ACE4", item: { count: 1, id: "psi:cad_colorizer_rainbow" } }
+		{ id: "78959F79475363B7", item: { count: 1, id: "psi:cad_colorizer_psi" } }
+	]
+}
