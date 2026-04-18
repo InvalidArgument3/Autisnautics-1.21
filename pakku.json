@@ -1,7 +1,92 @@
 {
     "name": "Autisnautics-1.21",
     "version": "0.0.1",
+    "description": "an abstract kind of version control hell",
+    "author": "Invalid, Regaccio",
     "overrides": [
-        "config"
-    ]
+        "icon.png",
+        "config",
+        "defaultconfigs",
+        "kubejs",
+        "!kubejs/probe/**"
+    ],
+    "server_overrides": [
+        "!kubejs/assets",
+        "forge-auto-install.txt",
+        "generate_auto_installation_file.bat",
+        "minecraft_server.jar",
+        "server.properties",
+        "server_starter.conf",
+        "server-icon.png",
+        "start_server.bat",
+        "README.md",
+        "config/DistantHorizons.toml"
+    ],
+    "client_overrides": [
+        "resourcepacks"
+    ],
+    "projects": {
+        "legendary-tooltips": {
+            "side": "CLIENT"
+        },
+        "zume": {
+            "side": "CLIENT"
+        },
+        "oculus": {
+            "side": "CLIENT"
+        },
+        "watermedia": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
+        "probejs": {
+            "side": "CLIENT",
+            "export": false
+        },
+        "entityculling": {
+            "redistributable": true
+        },
+        "skin-layers-3d": {
+            "redistributable": true
+        },
+        "servercore": {
+            "redistributable": true
+        },
+        "not-enough-animations": {
+            "redistributable": true
+        },
+        "bad-wither-no-cookie-reloaded": {
+            "redistributable": true
+        },
+        "watermedia-yt-plugin": {
+            "side": "CLIENT"
+        },
+        "geckolib": {
+            "side": "BOTH"
+        },
+        "creativecore": {
+            "side": "BOTH"
+        },
+        "radiantgear": {
+            "side": "BOTH"
+        },
+        "inline": {
+            "side": "BOTH"
+        },
+        "squaremap": {
+            "side": "SERVER"
+        },
+        "particle-rain": {
+            "side": "CLIENT"
+        },
+        "crash-assistant": {
+            "side": "CLIENT"
+        },
+        "create-aeronautics": {
+            "update_strategy": "LATEST"
+        },
+        "sable": {
+            "update_strategy": "LATEST"
+        }        
+    }
 }

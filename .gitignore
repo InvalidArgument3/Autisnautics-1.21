@@ -164,3 +164,9 @@ squaremap/*
 # journeymap
 /journeymap*
 Waypointdata*
+
+# sodium
+sodium-fingerprint.json
+
+# HUH
+command_history.txt

@@ -1,0 +1,22 @@
+#The distance items will raycast for interactions
+# Default: 80
+# Range: 1 ~ 100
+item_range = 80
+
+[recording]
+	#The maximum allowed tick duration for a recording. -1 for no limit
+	# Default: -1
+	# Range: > -1
+	max_duration = -1
+	#The amount of ticks a recording will persist for an unloaded sub-level before being discarded. -1 for no limit
+	# Default: 2400
+	# Range: > -1
+	inactive_ticks = 2400
+
+[compatibility]
+	#How a Photo should treat locks when activated
+	#Allowed Values: DO_NOTHING, RESTORE_LOCK, STAY_UNLOCKED
+	photo_locking_behavior = "RESTORE_LOCK"
+	#How a Tape should treat locks when activated
+	#Allowed Values: DO_NOTHING, RESTORE_LOCK, STAY_UNLOCKED
+	tape_locking_behavior = "RESTORE_LOCK"

@@ -50,3 +50,9 @@ windChargeAirSupplyEnabled = true
 # Default: 100
 # Range: > 1
 windChargeAirAmount = 100
+#Enable No Raider module
+noRaiderEnabled = true
+#Enable to let mobs despawn despite them holding items
+despawnWhenHoldingItems = true
+#Enable Cursed Earth module
+cursedEarthEnabled = true
