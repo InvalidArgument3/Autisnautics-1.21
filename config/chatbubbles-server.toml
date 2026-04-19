@@ -1,0 +1,31 @@
+[Permissions]
+	#If true, only OPs can change the color
+	only_ops_can_change = false
+
+["General Settings"]
+	#Max number of bubbles above the players head
+	# Default: 5
+	# Range: 0 ~ 15
+	max_bubbles = 5
+
+["Visual Settings"]
+	#Default value for the hide nametag value, if true the nametag will be hidden when bubbles active (WARNING: Players can change this value in game)
+	hide_nametag = true
+	#Bubble's inner space
+	# Default: 6
+	# Range: 0 ~ 15
+	bubble_padding = 6
+	#Default value for the spacing between bubbles (WARNING: Players can change their spacing in game)
+	# Default: 4.0
+	# Range: 0.0 ~ 10.0
+	bubble_spacing = 4.0
+	#Default value for the offset between the bubbles and player's head (WARNING: Players can change their offset in game)
+	# Default: 2.0
+	# Range: 0.0 ~ 50.0
+	bubble_offset = 2.0
+
+["Time Settings"]
+	#How long will a single bubble last? (In ticks)
+	# Default: 100
+	# Range: 20 ~ 1200
+	bubble_lifetime = 100
