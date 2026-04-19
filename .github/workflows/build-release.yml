@@ -437,17 +437,22 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
-      # - name: Preparing the curseforge artifact
-      #   run: |
-      #     cd ./build/curseforge/
-      #     mv *.zip "$(basename -s .zip *.zip)-curseforge.zip"
-      #
-      # - name: Upload artifact CurseForge
-      #   uses: actions/upload-artifact@v4.6.2
-      #   with:
-      #     name: ${{ needs.info.outputs.project_file_name }}-curseforge
-      #     path: ./build/curseforge/${{ needs.info.outputs.project_file_name }}-curseforge.zip
-      #     if-no-files-found: error
+      - name: Preparing the curseforge artifact
+        run: |
+          for f in ./build/curseforge/*.zip; do
+            [ -e "$f" ] || continue
+            case "$f" in
+              *-curseforge.zip) ;;
+              *) mv "$f" "${f%.zip}-curseforge.zip" ;;
+            esac
+          done
+
+      - name: Upload artifact CurseForge
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: ${{ needs.info.outputs.project_file_name }}-curseforge
+          path: ./build/curseforge/*-curseforge.zip
+          if-no-files-found: error
 
       # - name: Preparing the modrinth artifact 
       #   run: |
@@ -485,14 +490,19 @@ jobs:
 
       - name: Preparing the server artifact
         run: |
-          cd ./build/serverpack/
-          mv *.zip "$(basename -s .zip *.zip)-serverpack.zip"
+          for f in ./build/serverpack/*.zip; do
+            [ -e "$f" ] || continue
+            case "$f" in
+              *-serverpack.zip) ;;
+              *) mv "$f" "${f%.zip}-serverpack.zip" ;;
+            esac
+          done
 
       - name: Upload server artifact
         uses: actions/upload-artifact@v4.6.2
         with:
           name: ${{ needs.info.outputs.project_file_name }}-serverpack
-          path: ./build/serverpack/${{ needs.info.outputs.project_file_name }}-serverpack.zip
+          path: ./build/serverpack/*-serverpack.zip
           if-no-files-found: error
 
   release-github:
@@ -516,10 +526,13 @@ jobs:
         id: check_artifact
         shell: bash
         run: |
+          if ! compgen -G "*-curseforge.zip" > /dev/null; then
+            echo '::error::No value found for artifact `curseforge.zip`.' && exit 1
+          fi
           # if [ ! -f ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack ]; then
           #   echo '::error::No value found for artifact `modrinth.mrpack`.' && exit 1
           # fi
-          if [ ! -f ${{ needs.info.outputs.project_file_name }}-serverpack.zip ]; then
+          if ! compgen -G "*-serverpack.zip" > /dev/null; then
             echo '::error::No value found for artifact `serverpack.zip`.' && exit 1
           fi
           echo "All artifacts found"
@@ -586,7 +599,8 @@ jobs:
             ${{ needs.info.outputs.changelog }}
             ${{ steps.format_diff.outputs.text }}
           files: |
-            ${{ needs.info.outputs.project_file_name }}-serverpack.zip
+            *-curseforge.zip
+            *-serverpack.zip
           prerelease: false
           make_latest: true
           generate_release_notes: true
