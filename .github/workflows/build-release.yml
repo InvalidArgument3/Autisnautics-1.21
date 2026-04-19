@@ -411,7 +411,7 @@ jobs:
           LOADER_TYPE=${{ needs.info.outputs.loader_type }}
           MINECRAFT_VERSION=${{ needs.info.outputs.mc_version }}
 
-          sed -i -e "s/DEV/${VERSION}/g" pakku.json
+          jq --arg version "$VERSION" '.version = $version' pakku.json > pakku.json.tmp && mv pakku.json.tmp pakku.json
           
           # sed -i -e "s/DEV/${VERSION}/g" config/mod-director/modpack.json
           # sed -i -e "s/DEV/${VERSION}/g" config/fancymenu/customization/gui_main_menu.txt
