@@ -1218,7 +1218,7 @@
         {
             "pakku_id": "HHaBk3zlntxU6gvf",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "curseforge": "athena",
                 "modrinth": "athena-ctm"
@@ -12350,67 +12350,6 @@
             ]
         },
         {
-            "pakku_id": "o0937ut9XYpqv7cw",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "curseforge": "mcef",
-                "modrinth": "mcef"
-            },
-            "name": {
-                "curseforge": "MCEF (Minecraft Chromium Embedded Framework)",
-                "modrinth": "MCEF (Minecraft Chromium Embedded Framework)"
-            },
-            "id": {
-                "curseforge": "636236",
-                "modrinth": "TObQ0HxZ"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "mcef-neoforge-2.1.6-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5828/243/mcef-neoforge-2.1.6-1.21.1.jar",
-                    "id": "5828243",
-                    "parent_id": "636236",
-                    "hashes": {
-                        "sha1": "efc74c3bf0784f2c75004440bb1ea4ed15e2385c",
-                        "md5": "a4f657a693ca4375e05f0997e2d28952"
-                    },
-                    "required_dependencies": [],
-                    "size": 215373,
-                    "date_published": "2024-10-20T16:53:10.200Z"
-                },
-                {
-                    "type": "modrinth",
-                    "file_name": "mcef-neoforge-2.1.6-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/TObQ0HxZ/versions/euXLgkSB/mcef-neoforge-2.1.6-1.21.1.jar",
-                    "id": "euXLgkSB",
-                    "parent_id": "TObQ0HxZ",
-                    "hashes": {
-                        "sha512": "8b45e271ca3b40dd714a2e6389ac460cff476b85b5cc7b57993f0cf0e0c0727d99768757c7ec0ab10600ccc75cb7e95f603c2b3fe77a9bb6c9492da4cb857ccb",
-                        "sha1": "efc74c3bf0784f2c75004440bb1ea4ed15e2385c"
-                    },
-                    "required_dependencies": [],
-                    "size": 215373,
-                    "date_published": "2024-10-20T17:17:10.359876Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "EViBDgmmNTAXgA1D",
             "type": "MOD",
             "side": "BOTH",
@@ -19305,47 +19244,6 @@
                     ],
                     "size": 876329,
                     "date_published": "2026-03-13T07:17:55.750Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "cm0TTS8N1IiQL4Ln",
-            "pakku_links": [
-                "o0937ut9XYpqv7cw"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "webdisplays-1-21-1-fork"
-            },
-            "name": {
-                "curseforge": "WebDisplays Fork"
-            },
-            "id": {
-                "curseforge": "1417309"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "webdisplays-2.5.0-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7445/113/webdisplays-2.5.0-1.21.1.jar",
-                    "id": "7445113",
-                    "parent_id": "1417309",
-                    "hashes": {
-                        "sha1": "0a0e35e60ca314b3d1901b28f7b1166fa68702b5",
-                        "md5": "fe34a201950d3774c3d48bacee8a8b82"
-                    },
-                    "required_dependencies": [
-                        "636236"
-                    ],
-                    "size": 844582,
-                    "date_published": "2026-01-11T05:38:58.680Z"
                 }
             ]
         },

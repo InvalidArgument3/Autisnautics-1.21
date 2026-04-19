@@ -1,6 +1,9 @@
 # Changelog
 
 ## [0.0.9]
+- rip webdisplays you were annoying
+
+## [0.0.9]
 - script tweak
 
 ## [0.0.8]
