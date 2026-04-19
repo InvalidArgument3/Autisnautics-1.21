@@ -2,6 +2,8 @@
 
 ## [0.0.7]
 - linux server starter
+- server startup scripts (`start_server.bat` and `start_server.sh`) now use a basic auto-restart loop
+- server updates no longer overwrite host-local Java path/runtime config (`server_starter.conf` removed from managed `server_overrides`)
 
 ## [0.0.6]
 - release test 6

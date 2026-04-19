@@ -19,6 +19,8 @@
         "server_starter.conf",
         "server-icon.png",
         "start_server.bat",
+        "start_server.sh",
+        "UPDATEFROMGITHUB.sh",
         "README.md",
         "config/DistantHorizons.toml"
     ],

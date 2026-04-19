@@ -6,7 +6,11 @@ To run the Server Pack:
     * Doing it manually or utilizing a third party website should work fine
 2. Start the Server Pack
     * You can start it by running the "start_server.bat" file
-    * You should be able to run it using the "BASH" command, assuming your server machine has BASH capabilities
-        * ``bash start_server.bat``
+    * On Linux/macOS, run `./start_server.sh`
     * Or just open the batch file if on a windows machine.
-3. The batch file will start the server, install forge on it and then boot up your world.
+3. The startup script will launch the server and auto-restart on crash/stop.
+
+## Update Behavior
+
+Server runtime preferences like Java path should be configured locally on the server host.
+They are intentionally not overwritten by pack updates.

@@ -432,6 +432,7 @@ jobs:
         shell: bash
         run: |
           chmod +x .pakku/server-overrides/start_server.sh
+          chmod +x .pakku/server-overrides/UPDATEFROMGITHUB.sh
 
       - name: Export modpack
         run: |
