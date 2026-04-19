@@ -99,6 +99,9 @@
         },
         "webdisplays-1-21-1-fork": {
             "side": "BOTH"
+        },
+        "teamsoffliner": {
+            "side": "CLIENT"
         }
     }
 }
