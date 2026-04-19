@@ -69,11 +69,15 @@ jobs:
         id: latest_tag
         shell: bash
         run: |
-          tag=$(git describe --tags --abbrev=0 origin/main)
+          git fetch --tags --force
+          tag=$(git tag --sort=-v:refname | head -n 1)
           if [ -z "$tag" ]; then
-            echo "Latest tag not found, likely the first time this script has been ran. " && exit 1
+            echo "Latest tag not found; likely first run."
+            echo "has_tag=false" >> $GITHUB_OUTPUT
+            echo "tag=" >> $GITHUB_OUTPUT
           else
             echo "Latest tag found: $tag"
+            echo "has_tag=true" >> $GITHUB_OUTPUT
             echo "tag=$tag" >> $GITHUB_OUTPUT
           fi
         
@@ -81,7 +85,10 @@ jobs:
         id: check_pakku_lock_prev
         shell: bash
         run: |
-          if git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
+          if [ "${{ steps.latest_tag.outputs.has_tag }}" != "true" ]; then
+            echo "No previous tag found, skipping previous pakku-lock.json check"
+            echo "file_found=false" >> $GITHUB_OUTPUT
+          elif git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
             echo "File pakku-lock.json found in previous tag"
             echo "file_found=true" >> $GITHUB_OUTPUT
           else
@@ -189,6 +196,15 @@ jobs:
         with:
           path: CHANGELOG.md
         continue-on-error: true
+
+      - name: Validate changelog version for release
+        if: ${{ env.DEV_ENVIRONMENT == 'false' }}
+        shell: bash
+        run: |
+          if [ -z "${{ steps.changelog.outputs.version }}" ]; then
+            echo "Changelog version is missing. Add a new release heading in CHANGELOG.md (e.g. [1.2.3]) to auto-tag this release." && exit 1
+          fi
+          echo "Release tag will be sourced from CHANGELOG.md: ${{ steps.changelog.outputs.version }}"
 
       - name: Check if tag exists
         uses: mukunku/tag-exists-action@v1.6.0
