@@ -437,17 +437,17 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
-      - name: Preparing the curseforge artifact
-        run: |
-          cd ./build/curseforge/
-          mv *.zip "$(basename -s .zip *.zip)-curseforge.zip"
-          
-      - name: Upload artifact CurseForge
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: ${{ needs.info.outputs.project_file_name }}-curseforge
-          path: ./build/curseforge/${{ needs.info.outputs.project_file_name }}-curseforge.zip
-          if-no-files-found: error
+      # - name: Preparing the curseforge artifact
+      #   run: |
+      #     cd ./build/curseforge/
+      #     mv *.zip "$(basename -s .zip *.zip)-curseforge.zip"
+      #
+      # - name: Upload artifact CurseForge
+      #   uses: actions/upload-artifact@v4.6.2
+      #   with:
+      #     name: ${{ needs.info.outputs.project_file_name }}-curseforge
+      #     path: ./build/curseforge/${{ needs.info.outputs.project_file_name }}-curseforge.zip
+      #     if-no-files-found: error
 
       # - name: Preparing the modrinth artifact 
       #   run: |
@@ -516,9 +516,6 @@ jobs:
         id: check_artifact
         shell: bash
         run: |
-          if [ ! -f ${{ needs.info.outputs.project_file_name }}-curseforge.zip ]; then
-            echo '::error::No value found for artifact `curseforge.zip`.' && exit 1
-          fi
           # if [ ! -f ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack ]; then
           #   echo '::error::No value found for artifact `modrinth.mrpack`.' && exit 1
           # fi
@@ -589,8 +586,6 @@ jobs:
             ${{ needs.info.outputs.changelog }}
             ${{ steps.format_diff.outputs.text }}
           files: |
-            ${{ needs.info.outputs.project_file_name }}-curseforge.zip
-            ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack
             ${{ needs.info.outputs.project_file_name }}-serverpack.zip
           prerelease: false
           make_latest: true
