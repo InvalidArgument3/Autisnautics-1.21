@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.9]
+## [0.0.10]
 - rip webdisplays you were annoying
 
 ## [0.0.9]
