@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.8]
+- webdisplays trouble
+
 ## [0.0.7]
 - linux server starter
 - server startup scripts (`start_server.bat` and `start_server.sh`) now use a basic auto-restart loop
