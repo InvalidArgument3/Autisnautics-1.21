@@ -335,6 +335,84 @@
             ]
         },
         {
+            "pakku_id": "2ZcdOfqTexyFKVBf",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "alexs-caves-(unofficial-port)"
+            },
+            "name": {
+                "modrinth": "Alex's Caves (Unofficial Port)"
+            },
+            "id": {
+                "modrinth": "kSsLSjEt"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "alexscaves-2.0.9.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/kSsLSjEt/versions/3jGIG4fF/alexscaves-2.0.9.jar",
+                    "id": "3jGIG4fF",
+                    "parent_id": "kSsLSjEt",
+                    "hashes": {
+                        "sha512": "2b26c57e0a674ac6e1a695908e79924e5e9dffe118b837495a55ba410472abfff4b2442253ad88bd65563dab45da282fe6a9e357ad1c518e371d96462859b6f8",
+                        "sha1": "a21b02ef825124b417a7ed8e44afd68342c00748"
+                    },
+                    "required_dependencies": [
+                        "XjY0RcQj"
+                    ],
+                    "size": 74901045,
+                    "date_published": "2026-01-24T16:06:48.945043Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "yue7LRX4QIvO53z2",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "alexs-mobs(1.21.1)"
+            },
+            "name": {
+                "modrinth": "Alex's Mobs (Unofficial Port)"
+            },
+            "id": {
+                "modrinth": "EmNhnNnt"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "alexsmobs-1.22.17.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/EmNhnNnt/versions/KSgki4uc/alexsmobs-1.22.17.jar",
+                    "id": "KSgki4uc",
+                    "parent_id": "EmNhnNnt",
+                    "hashes": {
+                        "sha512": "9f57f20693bb187c54f6d68dc34592b87d0e55a5a4628ad097b0aa39afe165f4a834b83b6590d803e64bac0b1230a8f46369bfe45851a3cc964cf3d88f235277",
+                        "sha1": "5070e8070f60650d773bfd9f1d031496f8f50259"
+                    },
+                    "required_dependencies": [
+                        "XjY0RcQj"
+                    ],
+                    "size": 26620546,
+                    "date_published": "2026-01-26T01:51:31.514034Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "PcsSjStRxzFVkmi5",
             "type": "MOD",
             "slug": {
