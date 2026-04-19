@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.6]
+- release test 6
+
 ## [0.0.5]
 - release test 4
 
