@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.7]
+- linux server starter
+
 ## [0.0.6]
 - release test 6
 
