@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.14]
+- rm sizechangepotions
+
 ## [0.0.13]
 - rm ksyxis
 

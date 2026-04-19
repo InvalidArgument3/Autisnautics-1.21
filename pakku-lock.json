@@ -8766,6 +8766,82 @@
             ]
         },
         {
+            "pakku_id": "GzXZVhyamlOKAnEE",
+            "pakku_links": [
+                "hzH55UG4HFCnT55F"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "global-narration-toggle",
+                "modrinth": "global-narration-toggle"
+            },
+            "name": {
+                "curseforge": "Global Narration Toggle",
+                "modrinth": "Global Narration Toggle"
+            },
+            "id": {
+                "curseforge": "948704",
+                "modrinth": "UxJVewrJ"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "globalnarrationtoggle-1.21.1-1.4.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5609/666/globalnarrationtoggle-1.21.1-1.4.jar",
+                    "id": "5609666",
+                    "parent_id": "948704",
+                    "hashes": {
+                        "sha1": "be73ea3b0b5afc4fecfa03c34fa8924251fda8c6",
+                        "md5": "6d9614007155213a320789b3a576e96b"
+                    },
+                    "required_dependencies": [
+                        "342584"
+                    ],
+                    "size": 39955,
+                    "date_published": "2024-08-08T23:54:19.073Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "globalnarrationtoggle-1.21.1-1.4.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/UxJVewrJ/versions/1kYuKyAt/globalnarrationtoggle-1.21.1-1.4.jar",
+                    "id": "1kYuKyAt",
+                    "parent_id": "UxJVewrJ",
+                    "hashes": {
+                        "sha512": "a11e05bcdf54242aa39e801971e765e18dedd569676daf7a9018ec65b3c0c2bead1b3db0a5c6f6568e959b2ce91e43bbdc55e3edc94896eca6f49c9624cb4be5",
+                        "sha1": "be73ea3b0b5afc4fecfa03c34fa8924251fda8c6"
+                    },
+                    "required_dependencies": [
+                        "e0M1UDsY"
+                    ],
+                    "size": 39955,
+                    "date_published": "2024-08-08T23:54:30.595888Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "gnU62aEshq0DHUiP",
             "type": "MOD",
             "side": "BOTH",
@@ -13739,7 +13815,7 @@
             ]
         },
         {
-            "pakku_id": "Mtsez1dVv9Xu1VMB",
+            "pakku_id": "N6NOgylFISpUEADL",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -13755,28 +13831,6 @@
                 "modrinth": "t5W7Jfwy"
             },
             "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "Pehkui-3.8.3+1.21-neoforge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/t5W7Jfwy/versions/nKHizsl6/Pehkui-3.8.3+1.21-neoforge.jar",
-                    "id": "nKHizsl6",
-                    "parent_id": "t5W7Jfwy",
-                    "hashes": {
-                        "sha512": "a4213c16ffc98113031b9f326266ae8098af8ccb409c119e84adffec0f4f47d15ba6ddc59e6fc10504d1482284f6c6c28c6a139bf28d2ccc08cfcb6d6ee749be",
-                        "sha1": "4ae35b04b0fca7b170417a12d6da6a693281574b"
-                    },
-                    "required_dependencies": [],
-                    "size": 507568,
-                    "date_published": "2024-06-19T18:12:21.239809Z"
-                },
                 {
                     "type": "curseforge",
                     "file_name": "Pehkui-3.8.3+1.21-neoforge.jar",
@@ -13798,6 +13852,28 @@
                     "required_dependencies": [],
                     "size": 507568,
                     "date_published": "2024-06-19T18:12:11.333Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "Pehkui-3.8.3+1.21-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/t5W7Jfwy/versions/nKHizsl6/Pehkui-3.8.3+1.21-neoforge.jar",
+                    "id": "nKHizsl6",
+                    "parent_id": "t5W7Jfwy",
+                    "hashes": {
+                        "sha512": "a4213c16ffc98113031b9f326266ae8098af8ccb409c119e84adffec0f4f47d15ba6ddc59e6fc10504d1482284f6c6c28c6a139bf28d2ccc08cfcb6d6ee749be",
+                        "sha1": "4ae35b04b0fca7b170417a12d6da6a693281574b"
+                    },
+                    "required_dependencies": [],
+                    "size": 507568,
+                    "date_published": "2024-06-19T18:12:21.239809Z"
                 }
             ]
         },
@@ -16178,73 +16254,6 @@
                     ],
                     "size": 5320037,
                     "date_published": "2026-03-06T10:34:06.020Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "nsQPUTpDXG0OxU6E",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "size-shifting-potions",
-                "modrinth": "sizeshiftingpotions"
-            },
-            "name": {
-                "curseforge": "Size Shifting Potions",
-                "modrinth": "Size Shifting Potions"
-            },
-            "id": {
-                "curseforge": "447440",
-                "modrinth": "rfj2v0X6"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "SizeShiftingPotions-neoforge-1.8.0+1.21.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/rfj2v0X6/versions/ooPlytH8/SizeShiftingPotions-neoforge-1.8.0+1.21.jar",
-                    "id": "ooPlytH8",
-                    "parent_id": "rfj2v0X6",
-                    "hashes": {
-                        "sha512": "976910baefbcfa8dd539c580ef708cd0e90b715a868b6d17ca43cd424ba52703eeb056a5fe957fefe35cb7bd19a13dcc566127561c59dd7265ded87f86da0388",
-                        "sha1": "48ea78c99e834a20399b50822cfefd528628df36"
-                    },
-                    "required_dependencies": [
-                        "t5W7Jfwy"
-                    ],
-                    "size": 91750,
-                    "date_published": "2024-08-16T23:10:11.712053Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "SizeShiftingPotions-neoforge-1.8.0+1.21.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5636/288/SizeShiftingPotions-neoforge-1.8.0+1.21.jar",
-                    "id": "5636288",
-                    "parent_id": "447440",
-                    "hashes": {
-                        "sha1": "48ea78c99e834a20399b50822cfefd528628df36",
-                        "md5": "ffe7a139ac04944ee089c890159c0b03"
-                    },
-                    "required_dependencies": [
-                        "319596"
-                    ],
-                    "size": 91750,
-                    "date_published": "2024-08-16T23:10:11.123Z"
                 }
             ]
         },
