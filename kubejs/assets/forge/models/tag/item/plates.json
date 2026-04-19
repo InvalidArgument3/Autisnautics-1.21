@@ -1,0 +1,7 @@
+{
+  "parent": "emi:item/half_item",
+  "textures": {
+    "first": "create:item/iron_sheet",
+    "second": "create:item/golden_sheet"
+  }
+}

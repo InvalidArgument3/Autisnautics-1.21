@@ -4,14 +4,11 @@ version = 3
 #        1,
 #        min(
 #            if( is_windows,
-#                (cpus / 1.6 - 2),
-#                (cpus / 1.2 - 2)
-#            ),
-#            if( is_j9vm,
-#                ( ( mem_gb - (if(is_client, 0.6, 0.2)) ) / 0.5 ),
-#                ( ( mem_gb - (if(is_client, 1.2, 0.6)) ) / 1.2 )
-#            )
-#        ) - if(is_client, 2, 0)
+#                (cpus / 1.6),
+#                (cpus / 1.3)
+#            )  - if(is_client, 1, 0),
+#            ( ( mem_gb - (if(is_client, 1.2, 0.6)) ) / 0.6 )
+#        )
 #    )
 # )  
 #  The expression for the default value of global executor parallelism. 
@@ -19,8 +16,14 @@ version = 3
 #  Available variables: is_windows, is_j9vm, is_client, cpus, mem_gb
 # 
 defaultGlobalExecutorParallelismExpression = "default"
-# (Default: 10) Configures the parallelism of global executor
+# (Default: 11) Configures the parallelism of global executor
 globalExecutorParallelism = "default"
+# (Default: 4) Sets the thread priority for worker threads
+# 
+# References:
+# - https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html#setPriority(int)
+# 
+threadPoolPriority = "default"
 
 [generalOptimizations]
 	# (Default: 100000) The task interval of mid-tick chunk tasks in nanoseconds (-1 to disable)  
@@ -35,9 +38,6 @@ globalExecutorParallelism = "default"
 	# Incompatible with Dimensional Threading (dimthread)
 	# 
 	midTickChunkTasksInterval = "default"
-	# (Default: true) Whether to let async chunk request no longer block server thread
-	# (may cause incompatibility with other mods)
-	optimizeAsyncChunkRequest = "default"
 
 	[generalOptimizations.autoSave]
 		# (Default: ENHANCED) Defines how auto save should be handled  
@@ -48,19 +48,8 @@ globalExecutorParallelism = "default"
 		# Please preserve quotes so this config don't break
 		# 
 		mode = "default"
-		# (Default: 20000) Defines the delay in milliseconds between performing auto-save for a chunk  
-		# This is only used when mode is set to ENHANCED
-		# 
-		delay = "default"
 
 [fixes]
-	# (Default: true)  
-	#  Whether to disable the shutdown hook of log4j2 on dedicated servers.
-	#  Enabling this also makes the JVM exit when the dedicated server is considered fully shut down.
-	#  This option have no effect on client-side.
-	#  We has historically been doing this, and this config option allows you to disable this behavior.
-	# 
-	disableLoggingShutdownHook = "default"
 	# (Default: true) Enforces safe world random access.  
 	# This feature detects unsafe off-thread world random access, helping to find the causes  
 	# of mysterious "Accessing LegacyRandomSource from multiple threads" crash.  
@@ -72,26 +61,9 @@ globalExecutorParallelism = "default"
 	# 
 	enforceSafeWorldRandomAccess = "default"
 
-[threadedWorldGen]
-	# (Default: true) Whether to enable this feature
-	enabled = "default"
-	# (Default: true) Whether to allow feature generation (world decorations like trees, ores and etc.) run in parallel
-	# (may cause incompatibility with other mods)
-	allowThreadedFeatures = "default"
-	# (Default: true) Whether to allow reducing lock radius 
-	# (may cause incompatibility with other mods)
-	reduceLockRadius = "default"
-	# (Default: true) Whether to enable async and parallel scheduling 
-	# This will reduce server thread load 
-	# (may cause incompatibility with other mods)
-	# 
-	asyncScheduling = "default"
-
 [ioSystem]
 	# (Default: true) Whether to use the optimized implementation of IO system
 	replaceImpl = "default"
-	# (Default: true) Whether to use async chunk loading & unloading
-	async = "default"
 	# (Default: false) EXPERIMENTAL FEATURE
 	# This replaces the way your chunks are saved.
 	# Please keep regular backups of your world if you are using this feature,
@@ -100,29 +72,16 @@ globalExecutorParallelism = "default"
 	# Whether to use the fast reduced allocation chunk serializer
 	# (may cause incompatibility with other mods)
 	# 
-	# Set to false for the following reasons: 
-	# Incompatible with architectury@9.2.14 (*) (defined in c2me) 
 	gcFreeChunkSerializer = "default"
 	# (Default: 8192) Soft limit for io worker nbt cache
 	chunkDataCacheSoftLimit = "default"
 	# (Default: 32678) Hard limit for io worker nbt cache
 	chunkDataCacheLimit = "default"
-	# (Default: -1) Defines which chunk compression should be used 
-	# -1 for Vanilla default  
-	# 1  for GZip (RFC1952) (Vanilla compatible) 
-	# 2  for Zlib (RFC1950) (Vanilla default) (Vanilla compatible) 
-	# 3  for Uncompressed (Fastest, but higher disk usage) (Vanilla compatible) 
-	#  
-	# Original chunk data will still readable after modifying this option  
-	# as this option only affects newly stored chunks 
-	# Invalid values will fall back to vanilla default
-	# 
-	chunkStreamVersion = "default"
 
 [noTickViewDistance]
 	# (Default: true) Whether to enable no-tick view distance
 	enabled = "default"
-	# (Default: 11) No-tick view distance max concurrent chunk loads 
+	# (Default: 12) No-tick view distance max concurrent chunk loads 
 	#  Lower this for a better latency and higher this for a faster loading
 	maxConcurrentChunkLoads = "default"
 	# (Default: true) Whether to use compatibility mode to send chunks 
@@ -131,14 +90,22 @@ globalExecutorParallelism = "default"
 	# (Default: false) Whether to ensure correct chunks within normal render distance 
 	#  This will send chunks twice increasing network load
 	ensureChunkCorrectness = "default"
-
-[clientSideConfig]
+	# (Default: true) Enable server-side support for extended render distance protocol (c2me:ext_render_distance_v1)
+	# This allows requesting render distances higher than 127 chunks from the server
+	# 
+	enableExtRenderDistanceProtocol = "default"
 
 	[clientSideConfig.modifyMaxVDConfig]
 		# (Default: true) Whether to modify maximum view distance
 		enabled = "default"
-		# (Default: 78) Max render distance allowed in game options
+		# (Default: 66) Max render distance allowed in game options
 		maxViewDistance = "default"
+		# (Default: true) Enable client-side support for extended render distance protocol (c2me:ext_render_distance_v1)
+		# This allows requesting render distances higher than 127 chunks from the server
+		# 
+		# Note: The server must advertise support this protocol for this to work
+		# 
+		enableExtRenderDistanceProtocol = "default"
 
 [vanillaWorldGenOptimizations]
 	# (Default: true) Whether to enable aquifer optimizations to accelerate overworld worldgen
@@ -148,5 +115,89 @@ globalExecutorParallelism = "default"
 	# This is no longer included in lithium-fabric 
 	# (may cause incompatibility with other mods)
 	# 
+	# Set to false for the following reasons: 
+	# Incompatible with biolith@3.0.10 (*) (defined in c2me) 
 	useEndBiomeCache = "default"
+	# (Default: false) Whether to use density function compiler to accelerate world generation
+	# 
+	# Density function: https://minecraft.wiki/w/Density_function
+	# 
+	# This functionality compiles density functions from world generation
+	# datapacks (including vanilla generation) to JVM bytecode to increase
+	# performance by allowing JVM JIT to better optimize the code
+	# 
+	# Currently, all functions provided by vanilla are implemented.
+	# Chunk upgrades from pre-1.18 versions are not implemented and will
+	# fall back to the unoptimized version of density functions.
+	# 
+	useDensityFunctionCompiler = "default"
+	# (Default: true) Whether to enable StructureWeightSampler optimizations to accelerate world generation
+	# 
+	optimizeStructureWeightSampler = "default"
 
+[chunkSystem]
+	# (Default: true) Whether to enable async serialization
+	# 
+	asyncSerialization = "default"
+	# (Default: false) Whether to recover from errors when loading chunks 
+	#  This will cause errored chunk to be regenerated entirely, which may cause data loss 
+	#  Only applies when async chunk loading is enabled
+	# 
+	recoverFromErrors = "default"
+	# (Default: true) Whether to allow POIs (Point of Interest) to be unloaded
+	# Unloaded POIs are reloaded on-demand or when the corresponding chunks are loaded again,
+	# which should not cause any behavior change
+	#  
+	# Note:
+	# Vanilla never unloads POIs when chunks unload, causing small memory leaks
+	# These leaks adds up and eventually cause issues after generating millions of chunks
+	# in a single world instance
+	# 
+	allowPOIUnloading = "default"
+	# (Default: false) This option workarounds MC-276863, a bug that makes mushrooms appear in non-postprocessed chunks
+	# This bug is amplified with notickvd as it exposes non-postprocessed chunks to players
+	# 
+	# This should not affect other worldgen behavior and game mechanics in general
+	# 
+	suppressGhostMushrooms = "default"
+	# (Default: true) Whether to synchronize the management of player tickets
+	# 
+	# In vanilla Minecraft, player tickets are not always removed immediately when players leave an area.
+	# The delay in removal increases with the chunk system’s throughput, but due to vanilla’s typically
+	# slow chunk loading, tickets are almost always removed immediately. However, some contraptions rely
+	# on this immediate removal behavior and tend to be broken with the increased chunk throughput.
+	# Enabling this option synchronizes player ticket handling, making it more predictable and
+	# thus improving compatibility with these contraptions.
+	# 
+	syncPlayerTickets = "default"
+	# (Default: true) Whether to turn fluid postprocessing into scheduled tick
+	# 
+	# Fluid post-processing is very expensive when loading in new chunks, and this can affect
+	# MSPT significantly. This option delays fluid post-processing to scheduled tick to hopefully
+	# mitigate this issue.
+	# 
+	fluidPostProcessingToScheduledTick = "default"
+	# (Default: true) Whether to filter fluid post-processing on worldgen threads
+	# 
+	# The worldgen processes creates a lot of unnecessary fluid post-processing tasks,
+	# which can overload the server thread and cause stutters.
+	# This applies a rough filter to filter out fluids that are definitely not going to flow
+	# 
+	filterFluidPostProcessing = "default"
+	# (Default: true) Whether to use legacy scheduling for neighbor chunks
+	# 
+	# Enabling this restores the behavior of always loading in neighbor chunks when a chunk is loaded.
+	# 
+	useLegacyScheduling = "default"
+	# (Default: false) Whether to enable low memory mode
+	# 
+	# This option will attempt to aggressively unload unused chunks.
+	# Only applies when useLegacyScheduling is disabled.
+	# 
+	lowMemoryMode = "default"
+	# (Default: true) Whether to delay full chunk events to after full chunk future have been completed
+	# This restores the buggy behavior in NeoForge that the ecosystem have been relying on
+	# 
+	# Do not change this unless you know what you are doing
+	# 
+	delayFullChunkEvents = "default"

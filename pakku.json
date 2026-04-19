@@ -59,7 +59,9 @@
             "redistributable": true
         },
         "watermedia-yt-plugin": {
-            "side": "CLIENT"
+            "side": "CLIENT",
+             "update_strategy": "NONE"
+           
         },
         "geckolib": {
             "side": "BOTH"

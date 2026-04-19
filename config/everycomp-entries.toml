@@ -156,6 +156,19 @@
 			4 = true
 			2 = true
 
+		[entries.wood_type.storagedelight]
+			small_drawers = true
+			single_door_cabinet = true
+			cabinet_with_glass_doors = true
+			cabinet_with_polished_tuff_countertop = true
+			drawer = true
+			cabinet_with_polished_andesite_countertop = true
+			cabinet_with_polished_deepslate_countertop = true
+			bookshelf_with_door = true
+			glass_cabinet = true
+			drawer_with_door = true
+			drawer_with_books = true
+
 		[entries.leaves_type.quark]
 			hedge = true
 			leaf_carpet = true

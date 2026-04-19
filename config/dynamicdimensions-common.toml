@@ -1,0 +1,6 @@
+#Set this to true to enable commands
+enable_commands = false
+#Set this to true to enable commands
+# Default: 2
+# Range: 0 ~ 99
+command_permission_level = 2

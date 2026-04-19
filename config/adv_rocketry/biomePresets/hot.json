@@ -1,0 +1,941 @@
+{
+  "biomes": [
+    {
+      "biome1": "minecraft:forest",
+      "biome2": "minecraft:forest",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:windswept_forest",
+      "peak2": "minecraft:windswept_forest",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "VERY_WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:plains",
+      "biome2": "minecraft:plains",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:windswept_hills",
+      "peak2": "minecraft:windswept_hills",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:meadow",
+      "biome2": "minecraft:meadow",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:stony_peaks",
+      "peak2": "minecraft:stony_peaks",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "MID"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:savanna",
+      "biome2": "minecraft:savanna",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:windswept_savanna",
+      "peak2": "minecraft:windswept_savanna",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:savanna",
+      "biome2": "minecraft:savanna",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:windswept_gravelly_hills",
+      "peak2": "minecraft:windswept_gravelly_hills",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:jungle",
+      "biome2": "minecraft:jungle",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:warped_forest",
+      "peak2": "minecraft:warped_forest",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "VERY_WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:jungle",
+      "biome2": "minecraft:jungle",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:cherry_grove",
+      "peak2": "minecraft:cherry_grove",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:sparse_jungle",
+      "biome2": "minecraft:sparse_jungle",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "MID"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:savanna",
+      "biome2": "minecraft:savanna",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:flower_forest",
+      "peak2": "minecraft:flower_forest",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:desert",
+      "biome2": "minecraft:desert",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:stony_peaks",
+      "peak2": "minecraft:stony_peaks",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:bamboo_jungle",
+      "biome2": "minecraft:bamboo_jungle",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:sunflower_plains",
+      "peak2": "minecraft:sunflower_plains",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "VERY_WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:jungle",
+      "biome2": "minecraft:jungle",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:sparse_jungle",
+      "biome2": "minecraft:sparse_jungle",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:savanna",
+      "peak2": "minecraft:savanna",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "MID"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:savanna_plateau",
+      "biome2": "minecraft:savanna_plateau",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:windswept_savanna",
+      "peak2": "minecraft:windswept_savanna",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:desert",
+      "biome2": "minecraft:desert",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:mangrove_swamp",
+      "biome2": "minecraft:mangrove_swamp",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "VERY_WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:wooded_badlands",
+      "biome2": "minecraft:wooded_badlands",
+      "river1": "minecraft:river",
+      "peak1": "minecraft:basalt_deltas",
+      "peak2": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:badlands",
+      "biome2": "minecraft:badlands",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "MID"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:desert",
+      "biome2": "minecraft:desert",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:desert",
+      "biome2": "minecraft:desert",
+      "river1": "minecraft:river",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:desert",
+      "biome2": "minecraft:desert",
+      "river1": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:badlands",
+      "biome2": "minecraft:badlands",
+      "river1": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "WET"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:badlands",
+      "biome2": "minecraft:badlands",
+      "river1": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "MID"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:badlands",
+      "biome2": "minecraft:badlands",
+      "river1": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:eroded_badlands",
+      "biome2": "minecraft:eroded_badlands",
+      "river1": "minecraft:basalt_deltas",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:stony_shore",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "COAST"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:lukewarm_ocean",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:deep_ocean",
+      "temperaturesList": [
+        "FROZEN"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:stony_shore",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "COAST"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:lukewarm_ocean",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:deep_ocean",
+      "temperaturesList": [
+        "LOW"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:beach",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "COAST"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:warm_ocean",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:deep_lukewarm_ocean",
+      "temperaturesList": [
+        "MID"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:warm_ocean",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:deep_lukewarm_ocean",
+      "temperaturesList": [
+        "WARM"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:warm_ocean",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "minecraft:warm_ocean",
+      "temperaturesList": [
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    }
+  ]
+}

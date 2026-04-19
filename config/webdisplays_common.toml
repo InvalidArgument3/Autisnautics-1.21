@@ -1,7 +1,7 @@
 #If true, breaking the minePad is required to craft upgrades.
 hard_recipes = true
 #Whether or not webdisplays should thank the user for using the mod
-join_message = true
+join_message = false
 #If true, the ownership thief item will be disabled
 disable_ownership_thief = false
 

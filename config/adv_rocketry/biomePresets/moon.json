@@ -1,0 +1,62 @@
+{
+  "biomes": [
+    {
+      "biome1": "adv_rocketry:moon",
+      "temperaturesList": [
+        "FROZEN",
+        "LOW",
+        "MID",
+        "WARM",
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "DEEP_OCEAN",
+        "OCEAN",
+        "COAST",
+        "NEAR_INLAND",
+        "MID_INLAND",
+        "FAR_INLAND"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    },
+    {
+      "biome1": "adv_rocketry:moon_dark",
+      "temperaturesList": [
+        "FROZEN",
+        "LOW",
+        "MID",
+        "WARM",
+        "HOT"
+      ],
+      "humidityList": [
+        "VERY_WET",
+        "WET",
+        "MID",
+        "DRY",
+        "VERY_DRY"
+      ],
+      "continentalnessList": [
+        "OCEAN",
+        "DEEP_OCEAN"
+      ],
+      "erosionList": [
+        "VERY_LOW",
+        "LOW",
+        "HIGH",
+        "VERY_HIGH"
+      ]
+    }
+  ]
+}
