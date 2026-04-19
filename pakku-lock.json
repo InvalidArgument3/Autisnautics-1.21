@@ -5080,44 +5080,6 @@
             ]
         },
         {
-            "pakku_id": "ljcUf5kqIXm01jK3",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "deployer"
-            },
-            "name": {
-                "curseforge": "Create: Deployer API"
-            },
-            "id": {
-                "curseforge": "1516421"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "deployer-0.0.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7941/4/deployer-0.0.5.jar",
-                    "id": "7941004",
-                    "parent_id": "1516421",
-                    "hashes": {
-                        "sha1": "352e5df3cdf73f04cc8ec986991a6903ffa9466e",
-                        "md5": "b1e0af4ae5efe347e1eee10d5748cf4c"
-                    },
-                    "required_dependencies": [
-                        "328085"
-                    ],
-                    "size": 1986835,
-                    "date_published": "2026-04-17T17:28:42.240Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "2XQ8vqW0HeclIc8K",
             "type": "MOD",
             "side": "BOTH",
@@ -5307,45 +5269,6 @@
                     ],
                     "size": 683005,
                     "date_published": "2026-02-21T02:51:30.077Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "chjsBIpauKwIx1MI",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "create-extra-gauges"
-            },
-            "name": {
-                "curseforge": "Create: Extra Gauges"
-            },
-            "id": {
-                "curseforge": "1263228"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "extra_gauges-2.1.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7940/286/extra_gauges-2.1.0.jar",
-                    "id": "7940286",
-                    "parent_id": "1263228",
-                    "hashes": {
-                        "sha1": "b12d85f86670a3bfa1adbd5fe4a73a0ded5c6b39",
-                        "md5": "babed9e4032760b5bd75c4476c4a3b12"
-                    },
-                    "required_dependencies": [
-                        "1516421",
-                        "328085"
-                    ],
-                    "size": 1068595,
-                    "date_published": "2026-04-17T14:54:31.393Z"
                 }
             ]
         },

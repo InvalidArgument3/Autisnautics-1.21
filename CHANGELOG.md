@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.11]
+- remove useless extraguages mod stopping me from launching
+
 ## [0.0.10]
 - rip webdisplays you were annoying
 
