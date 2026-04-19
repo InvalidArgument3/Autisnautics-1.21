@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.16]
+- really trying to avoid connector #2
+
 ## [0.0.15]
 - really trying to avoid connector
 
