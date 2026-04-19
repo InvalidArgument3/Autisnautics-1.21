@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.12]
+- rm teams offliner from server, client only mod
+
 ## [0.0.11]
 - remove useless extraguages mod stopping me from launching
 
