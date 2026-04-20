@@ -15106,69 +15106,6 @@
             ]
         },
         {
-            "pakku_id": "zxyaP8eL6aJqvBfS",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "curseforge": "rrls",
-                "modrinth": "rrls"
-            },
-            "name": {
-                "curseforge": "Remove Reloading Screen",
-                "modrinth": "Remove Reloading Screen"
-            },
-            "id": {
-                "curseforge": "833233",
-                "modrinth": "ZP7xHXtw"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "rrls-5.0.10+mc1.21.1-forge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/ZP7xHXtw/versions/CSHa8VOm/rrls-5.0.10+mc1.21.1-forge.jar",
-                    "id": "CSHa8VOm",
-                    "parent_id": "ZP7xHXtw",
-                    "hashes": {
-                        "sha512": "5a1d6776b2b8769f752a8c60b0f816b05385dfc7c0d27d0b8435bb11825531988e216f108ea7b38fb40ec38796036a6a6421572ec86e1ffd22d3963ba67f019b",
-                        "sha1": "4f02d745abde6d655d62ce2c3aafb2c8a14fcc27"
-                    },
-                    "required_dependencies": [],
-                    "size": 180241,
-                    "date_published": "2025-04-13T12:06:19.149614Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "rrls-5.0.10+mc1.21.1-forge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/6418/267/rrls-5.0.10+mc1.21.1-forge.jar",
-                    "id": "6418267",
-                    "parent_id": "833233",
-                    "hashes": {
-                        "sha1": "4f02d745abde6d655d62ce2c3aafb2c8a14fcc27",
-                        "md5": "4d7bcd6cb496085e9371a3a5d10ad4c6"
-                    },
-                    "required_dependencies": [],
-                    "size": 180241,
-                    "date_published": "2025-04-13T12:06:17.303Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "qlmMkID7hZIQ70gU",
             "pakku_links": [
                 "UUyV12mWWNN3Ybtu"
