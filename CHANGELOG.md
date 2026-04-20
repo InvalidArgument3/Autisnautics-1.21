@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.21]
+- what's left of ores should now gen again
+
 ## [0.0.20]
 - teach git to not ignore its responsibilities
 

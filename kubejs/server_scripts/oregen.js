@@ -1,4 +1,105 @@
-ServerEvents.lowPriorityData(event => {
+//functions temporarily ported in from _helper.js which no longer seems to work
+let removeFeature = function (event, featureName) {
+    featureName = featureName.split(":")
+    let namespace = featureName[0]
+    let identifier = featureName[1]
+    event.json(`${namespace}:worldgen/configured_feature/${identifier}`, {
+        "type": "minecraft:no_op",
+        "config": {}
+    })
+}
+
+let addOregenOverworld = function (event, featureName, blockName, heightType, heightMin, heightMax, veinCount, veinSize, discardChanceOnAirExposure, biomeTag) {
+    featureName = featureName.split(":")
+    let namespace = featureName[0]
+    let identifier = featureName[1]
+
+    blockName = blockName.split(":")
+    let blockNamespace = blockName[0]
+    let blockIdentifier = blockName[1]
+
+    // A2: shorthand for <1 vein per chunk
+    let rarityFilter = 1
+    if (veinCount < 1) {
+        rarityFilter = Math.max(1, Math.floor(1 / veinCount))
+    }
+
+    event.json(`${namespace}:worldgen/configured_feature/${identifier}`, {
+        "type": "minecraft:ore",
+        "config": {
+            "discard_chance_on_air_exposure": discardChanceOnAirExposure,
+            "size": veinSize,
+            "targets": [
+                {
+                    "state": { "Name": `${blockNamespace}:${blockIdentifier}` },
+                    "target": { "predicate_type": "minecraft:tag_match", "tag": "minecraft:stone_ore_replaceables" }
+                },
+                {
+                    "state": { "Name": `${blockNamespace}:deepslate_${blockIdentifier}` },
+                    "target": { "predicate_type": "minecraft:tag_match", "tag": "minecraft:deepslate_ore_replaceables" }
+                }
+            ]
+        }
+    })
+    let minInclusive = { "absolute": heightMin }
+    let maxInclusive = { "absolute": heightMax }
+    // EMI Oregen will display more useful information if we change to using Above Bottom where it makes sense to
+    if (heightMin < -64) {
+        minInclusive = { "above_bottom": heightMin + 64 }
+        maxInclusive = { "above_bottom": heightMax + 64 }
+    } else if (heightMax > 512) {
+        minInclusive = { "below_top": -(heightMin - 512) }
+        maxInclusive = { "below_top": -(heightMax - 512) }
+    }
+
+    if (rarityFilter == 1) {
+        event.json(`${namespace}:worldgen/placed_feature/${identifier}`, {
+            "feature": `${namespace}:${identifier}`,
+            "placement": [
+                { "type": "minecraft:count", "count": veinCount },
+                { "type": "minecraft:in_square" },
+                {
+                    "type": "minecraft:height_range",
+                    "height": {
+                        "type": heightType,
+                        "min_inclusive": minInclusive,
+                        "max_inclusive": maxInclusive
+                    }
+                },
+                { "type": "minecraft:biome" }
+            ]
+        })
+    }
+    else {
+        event.json(`${namespace}:worldgen/placed_feature/${identifier}`, {
+            "feature": `${namespace}:${identifier}`,
+            "placement": [
+                { "type": "minecraft:rarity_filter", "chance": rarityFilter },
+                { "type": "minecraft:in_square" },
+                {
+                    "type": "minecraft:height_range",
+                    "height": {
+                        "type": heightType,
+                        "min_inclusive": minInclusive,
+                        "max_inclusive": maxInclusive
+                    }
+                },
+                { "type": "minecraft:biome" }
+            ]
+        })
+    }
+
+
+    event.json(`${namespace}:neoforge/biome_modifier/${identifier}`, {
+        "type": "neoforge:add_features",
+        "biomes": biomeTag,
+        "features": `${namespace}:${identifier}`,
+        "step": "underground_ores"
+    })
+}
+
+
+ServerEvents.generateData("after_mods", event => {
     // removeFeature(event, "minecraft:ore_redstone")
     // removeFeature(event, "minecraft:ore_redstone_lower")
 
@@ -27,19 +128,22 @@ ServerEvents.lowPriorityData(event => {
         "create:zinc_ore",
         // "embers:ore_lead", "embers:ore_silver",
         "galosphere:ore_silver_large", "galosphere:ore_silver_small",
+        "immersiveengineering:bauxite", "immersiveengineering:nickel", "immersiveengineering:deep_nickel", "immersiveengineering:lead", "immersiveengineering:silver", "immersiveengineering:uranium",
         "minecraft:ore_coal", "minecraft:ore_coal_buried", "minecraft:ore_copper_large", "minecraft:ore_copper_small", "minecraft:ore_diamond_buried", "minecraft:ore_diamond_large", "minecraft:ore_diamond_medium", "minecraft:ore_diamond_small", "minecraft:ore_emerald", "minecraft:ore_gold", "minecraft:ore_gold_buried", "minecraft:ore_iron", "minecraft:ore_iron_small", "minecraft:ore_lapis", "minecraft:ore_lapis_buried", "minecraft:ore_redstone",
         // "mna:overworld_vinteum_ore",
         // "nuclearcraft:boron_ore", "nuclearcraft:cobalt_ore", "nuclearcraft:lead_ore", "nuclearcraft:lithium_ore", "nuclearcraft:magnesium_ore", "nuclearcraft:platinum_ore", "nuclearcraft:silver_ore", "nuclearcraft:thorium_ore", "nuclearcraft:tin_ore", "nuclearcraft:uranium_ore", "nuclearcraft:zinc_ore",
         // "projectred_exploration:electrotine_ore", "projectred_exploration:peridot_ore", "projectred_exploration:ruby_ore", "projectred_exploration:sapphire_ore", "projectred_exploration:silver_ore", "projectred_exploration:tin_ore",
         "regions_unexplored:ore_redstone_large",
-        // "scguns:anthralite_ore", "scguns:sulfur_ore",
+        // "scguns:anthralite_ore", "scguns:sulfur_ore", "scguns:phosphorite", 
         // "thermal:apatite_ore", "thermal:cinnabar_ore", "thermal:lead_ore", "thermal:nickel_ore", "thermal:niter_ore", "thermal:silver_ore", "thermal:sulfur_ore", "thermal:tin_ore",
-        "theurgy:sal_ammoniac_ore"
-        // "vs_clockwork:ore_wanderlite", "scguns:phosphorite", "immersiveengineering:bauxite",
+        "theurgy:sal_ammoniac_ore",
+        // "vs_clockwork:ore_wanderlite", 
         // unwanted wasteland ores
         // "nuclearcraft:lead_wasteland_ore", "nuclearcraft:silver_wasteland_ore", "nuclearcraft:tin_wasteland_ore", "nuclearcraft:zinc_wasteland_ore", "nuclearcraft:cobalt_wasteland_ore",
         // duplicate meme stone features
-        // "chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble"
+        "chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble",
+        //1.21
+        "oritech:ore_nickel", "oritech:ore_platinum", "oritech:uranium_patch"
     ]
 
     oreFeaturesArray.forEach(oreFeature => {
@@ -55,8 +159,8 @@ ServerEvents.lowPriorityData(event => {
     // anthralite
     // apatite
     // cinnabar
-    addOregenOverworld(event, "kubejs:ore_cinnabar_underground", "thermal:cinnabar_ore", "minecraft:uniform", -64, 15, 2, 8, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_cinnabar_underground_deep", "thermal:cinnabar_ore", "minecraft:trapezoid", -96, 32, 6, 8, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_cinnabar_underground", "thermal:cinnabar_ore", "minecraft:uniform", -64, 15, 2, 8, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_cinnabar_underground_deep", "thermal:cinnabar_ore", "minecraft:trapezoid", -96, 32, 6, 8, 0, "#minecraft:is_overworld")
     // coal
     addOregenOverworld(event, "kubejs:ore_coal_islands", "minecraft:coal_ore", "minecraft:uniform", 92, 400, 25, 18, 0, "#minecraft:is_overworld")
     addOregenOverworld(event, "kubejs:ore_coal_islands_big", "minecraft:coal_ore", "minecraft:uniform", 92, 400, 0.075, 64, 0, "#minecraft:is_overworld")
@@ -74,8 +178,8 @@ ServerEvents.lowPriorityData(event => {
     addOregenOverworld(event, "kubejs:ore_diamond_underground_buried", "minecraft:diamond_ore", "minecraft:trapezoid", -144, 16, 4, 8, 1, "#minecraft:is_overworld")
     addOregenOverworld(event, "kubejs:ore_diamond_underground_big", "minecraft:diamond_ore", "minecraft:trapezoid", -144, 16, 0.11, 12, 0.7, "#minecraft:is_overworld")
     // electrotine
-    addOregenOverworld(event, "kubejs:ore_electrotine_underground_magnetic", "projectred_exploration:electrotine_ore", "minecraft:trapezoid", -168, 40, 40, 32, 0, "alexscaves:magnetic_caves")
-    addOregenOverworld(event, "kubejs:ore_electrotine_islands_old", "projectred_exploration:electrotine_ore", "minecraft:uniform", 50, 400, 15, 18, 0, "regions_unexplored:alpha_grove")
+    //addOregenOverworld(event, "kubejs:ore_electrotine_underground_magnetic", "projectred_exploration:electrotine_ore", "minecraft:trapezoid", -168, 40, 40, 32, 0, "alexscaves:magnetic_caves")
+    //addOregenOverworld(event, "kubejs:ore_electrotine_islands_old", "projectred_exploration:electrotine_ore", "minecraft:uniform", 50, 400, 15, 18, 0, "regions_unexplored:alpha_grove")
     // emerald
     addOregenOverworld(event, "kubejs:ore_emerald_islands_5_mountains", "minecraft:emerald_ore", "minecraft:trapezoid", 272, 500, 10, 4, 0, "#forge:is_mountain")
     addOregenOverworld(event, "kubejs:ore_emerald_islands_peaks", "minecraft:emerald_ore", "minecraft:trapezoid", 100, 700, 30, 4, 0, "terralith:emerald_peaks")
@@ -98,53 +202,54 @@ ServerEvents.lowPriorityData(event => {
     addOregenOverworld(event, "kubejs:ore_lapis_islands_mauve", "minecraft:lapis_ore", "minecraft:uniform", 92, 400, 6, 10, 0, "regions_unexplored:mauve_hills")
     addOregenOverworld(event, "kubejs:ore_lapis_islands_mauve_big", "minecraft:lapis_ore", "minecraft:uniform", 92, 400, 0.05, 64, 0, "regions_unexplored:mauve_hills")
     // lead
-    addOregenOverworld(event, "kubejs:ore_lead_underground", "thermal:lead_ore", "minecraft:trapezoid", -60, 40, 6, 8, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_lead_underground_big", "thermal:lead_ore", "minecraft:trapezoid", -20, 0, 0.01, 64, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_lead_underground_bottom", "thermal:lead_ore", "minecraft:trapezoid", -104, -24, 6, 10, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_lead_underground", "immersiveengineering:ore_lead", "minecraft:trapezoid", -60, 40, 6, 8, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_lead_underground_big", "immersiveengineering:ore_lead", "minecraft:trapezoid", -20, 0, 0.01, 64, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_lead_underground_bottom", "immersiveengineering:ore_lead", "minecraft:trapezoid", -104, -24, 6, 10, 0, "#minecraft:is_overworld")
     // //tfmg:galena disabled, alexscaves:galena exists
     // lithium - using nuclearcraft instead of tfmg because it spawns in the wasteland (exception in unify.json)
     // addOregenOverworld(event, "kubejs:ore_lithium_islands_pale", "nuclearcraft:lithium_ore", "minecraft:uniform", 92, 400, 10, 9, 0, "vanillabackport:pale_garden")
     // nickel
-    addOregenOverworld(event, "kubejs:ore_nickel_underground", "thermal:nickel_ore", "minecraft:trapezoid", -40, 40, 4, 8, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_nickel_underground_big", "thermal:nickel_ore", "minecraft:trapezoid", -40, 40, 0.002, 64, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_nickel_underground_bottom", "thermal:nickel_ore", "minecraft:trapezoid", -84, -44, 6, 10, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_nickel_underground", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 4, 8, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_nickel_underground_big", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 0.002, 64, 0, "#minecraft:is_overworld")
+    addOregenOverworld(event, "kubejs:ore_nickel_underground_bottom", "oritech:nickel_ore", "minecraft:trapezoid", -84, -44, 6, 10, 0, "#minecraft:is_overworld")
     // niter: ore not necessary, there are several sources including tfmg geothermal vents and natural substitutes
     // peridot
-    addOregenOverworld(event, "kubejs:ore_peridot_underground_olivine", "projectred_exploration:peridot_ore", "minecraft:uniform", -64, -57, 1, 4, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_peridot_underground_olivine_mantle", "projectred_exploration:peridot_ore", "minecraft:trapezoid", -158, 30, 5, 4, 0, "terralith:cave/mantle_caves")
-    addOregenOverworld(event, "kubejs:ore_peridot_islands_olivine_volcanic", "projectred_exploration:peridot_ore", "minecraft:uniform", 92, 400, 5, 4, 0, "#terralith:volcanic")
+    //addOregenOverworld(event, "kubejs:ore_peridot_underground_olivine", "projectred_exploration:peridot_ore", "minecraft:uniform", -64, -57, 1, 4, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_peridot_underground_olivine_mantle", "projectred_exploration:peridot_ore", "minecraft:trapezoid", -158, 30, 5, 4, 0, "terralith:cave/mantle_caves")
+    //addOregenOverworld(event, "kubejs:ore_peridot_islands_olivine_volcanic", "projectred_exploration:peridot_ore", "minecraft:uniform", 92, 400, 5, 4, 0, "#terralith:volcanic")
     // phosphorite
-    addOregenOverworld(event, "kubejs:ore_phosphorite_underground_big", "scguns:phosphorite", "minecraft:uniform", 0, 36, 0.01, 64, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_phosphorite_underground_big", "scguns:phosphorite", "minecraft:uniform", 0, 36, 0.01, 64, 0, "#minecraft:is_overworld")
+    // platinum - todo?
     // rich_phosphorite - original feature not disabled because it only spawns inside phosphorite, which we want
-    addOregenOverworld(event, "kubejs:ore_rich_phosphorite_guano", "scguns:rich_phosphorite", "minecraft:uniform", 62, 85, 40, 12, 0, ["regions_unexplored:rocky_reef", "regions_unexplored:tropics"])
+    //addOregenOverworld(event, "kubejs:ore_rich_phosphorite_guano", "scguns:rich_phosphorite", "minecraft:uniform", 62, 85, 40, 12, 0, ["regions_unexplored:rocky_reef", "regions_unexplored:tropics"])
     // redstone - disabled: cinnabar crushes into redstone, redstone caves and alexscaves primordial caves can also be mined for redstone dust
     // ruby
-    addOregenOverworld(event, "kubejs:ore_ruby_islands_hot", "thermal:ruby_ore", "minecraft:trapezoid", 92, 680, 5, 4, 0, "#c:is_hot/overworld")
+    //addOregenOverworld(event, "kubejs:ore_ruby_islands_hot", "thermal:ruby_ore", "minecraft:trapezoid", 92, 680, 5, 4, 0, "#c:is_hot/overworld")
     // sal_ammoniac
     addOregenOverworld(event, "kubejs:ore_sal_ammoniac_islands_mystical", "theurgy:sal_ammoniac_ore", "minecraft:trapezoid", 92, 680, 7, 4, 0, "#terralith:mystical")
     addOregenOverworld(event, "kubejs:ore_sal_ammoniac_islands_mauve", "theurgy:sal_ammoniac_ore", "minecraft:trapezoid", 92, 680, 7, 4, 0, "regions_unexplored:mauve_hills")
     // sapphire
-    addOregenOverworld(event, "kubejs:ore_sapphire_islands_cold", "thermal:sapphire_ore", "minecraft:trapezoid", 92, 680, 5, 4, 0, "#c:is_snowy")
+    //addOregenOverworld(event, "kubejs:ore_sapphire_islands_cold", "thermal:sapphire_ore", "minecraft:trapezoid", 92, 680, 5, 4, 0, "#c:is_snowy")
     // silver: CABIN says the only source should be melting coins but a little bit is fine
-    addOregenOverworld(event, "kubejs:ore_silver_islands_alluvial", "thermal:silver_ore", "minecraft:uniform", 92, 400, 25, 3, 0, "#minecraft:is_river")
-    addOregenOverworld(event, "kubejs:ore_silver_islands_alluvial_cold", "thermal:silver_ore", "minecraft:uniform", 92, 400, 200, 3, 0, ["minecraft:frozen_river", "regions_unexplored:cold_river"])
-    addOregenOverworld(event, "kubejs:ore_silver_islands_ice", "thermal:silver_ore", "minecraft:trapezoid", 112, 912, 1, 6, 0, ["minecraft:ice_spikes", "terralith:glacial_chasm"])
-    addOregenOverworld(event, "kubejs:ore_silver_underground_frostfire", "thermal:silver_ore", "minecraft:trapezoid", -168, 40, 0.01, 20, 0.5, "terralith:cave/frostfire_caves")
+    addOregenOverworld(event, "kubejs:ore_silver_islands_alluvial", "immersiveengineering:ore_silver", "minecraft:uniform", 92, 400, 25, 3, 0, "#minecraft:is_river")
+    addOregenOverworld(event, "kubejs:ore_silver_islands_alluvial_cold", "immersiveengineering:ore_silver", "minecraft:uniform", 92, 400, 200, 3, 0, ["minecraft:frozen_river", "regions_unexplored:cold_river"])
+    addOregenOverworld(event, "kubejs:ore_silver_islands_ice", "immersiveengineering:ore_silver", "minecraft:trapezoid", 112, 912, 1, 6, 0, ["minecraft:ice_spikes", "terralith:glacial_chasm"])
+    addOregenOverworld(event, "kubejs:ore_silver_underground_frostfire", "immersiveengineering:ore_silver", "minecraft:trapezoid", -168, 40, 0.01, 20, 0.5, "terralith:cave/frostfire_caves")
     // striated "ores" (stones) from tfmg disabled
     // sulfur: spawns in the nether and toxic caves already
     // tin
-    addOregenOverworld(event, "kubejs:ore_tin_islands_mountain", "thermal:tin_ore", "minecraft:uniform", 92, 400, 6, 6, 0, "#minecraft:is_mountain")
-    addOregenOverworld(event, "kubejs:ore_tin_islands_alluvial", "thermal:tin_ore", "minecraft:uniform", 92, 400, 256, 3, 0, "#minecraft:is_river")
-    addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial", "thermal:tin_ore", "minecraft:trapezoid", 42, 50, 10, 6, 0.7, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_big", "thermal:tin_ore", "minecraft:trapezoid", 42, 50, 0.005, 64, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_deep", "thermal:tin_ore", "minecraft:trapezoid", 32, 42, 10, 6, 0.7, "#minecraft:is_deep_ocean")
-    addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_big_deep", "thermal:tin_ore", "minecraft:trapezoid", 32, 42, 0.005, 64, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_tin_islands_mountain", "thermal:tin_ore", "minecraft:uniform", 92, 400, 6, 6, 0, "#minecraft:is_mountain")
+    //addOregenOverworld(event, "kubejs:ore_tin_islands_alluvial", "thermal:tin_ore", "minecraft:uniform", 92, 400, 256, 3, 0, "#minecraft:is_river")
+    //addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial", "thermal:tin_ore", "minecraft:trapezoid", 42, 50, 10, 6, 0.7, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_big", "thermal:tin_ore", "minecraft:trapezoid", 42, 50, 0.005, 64, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_deep", "thermal:tin_ore", "minecraft:trapezoid", 32, 42, 10, 6, 0.7, "#minecraft:is_deep_ocean")
+    //addOregenOverworld(event, "kubejs:ore_tin_seabed_alluvial_big_deep", "thermal:tin_ore", "minecraft:trapezoid", 32, 42, 0.005, 64, 0, "#minecraft:is_overworld")
     // uranium: toxic caves and the wasteland
     // vinteum
-    addOregenOverworld(event, "kubejs:ore_vinteum_islands_mystical_bottom", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 8, 12, 0, "#terralith:mystical")
-    addOregenOverworld(event, "kubejs:ore_vinteum_islands_mystical_bottom_big", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 0.005, 48, 0, "#terralith:mystical")
-    addOregenOverworld(event, "kubejs:ore_vinteum_islands_mauve_bottom", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 8, 12, 0, "regions_unexplored:mauve_hills")
-    addOregenOverworld(event, "kubejs:ore_vinteum_islands_mauve_bottom_big", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 0.005, 48, 0, "regions_unexplored:mauve_hills")
+    //addOregenOverworld(event, "kubejs:ore_vinteum_islands_mystical_bottom", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 8, 12, 0, "#terralith:mystical")
+    //addOregenOverworld(event, "kubejs:ore_vinteum_islands_mystical_bottom_big", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 0.005, 48, 0, "#terralith:mystical")
+    //addOregenOverworld(event, "kubejs:ore_vinteum_islands_mauve_bottom", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 8, 12, 0, "regions_unexplored:mauve_hills")
+    //addOregenOverworld(event, "kubejs:ore_vinteum_islands_mauve_bottom_big", "mna:vinteum_ore", "minecraft:trapezoid", 80, 144, 0.005, 48, 0, "regions_unexplored:mauve_hills")
     // wanderlite
     // zinc
     addOregenOverworld(event, "kubejs:ore_zinc_islands_5", "create:zinc_ore", "minecraft:trapezoid", 272, 400, 8, 12, 0, "#minecraft:is_overworld")
