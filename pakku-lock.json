@@ -3011,6 +3011,43 @@
             ]
         },
         {
+            "pakku_id": "t9dUl4urqTqsRsz8",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "citadel"
+            },
+            "name": {
+                "modrinth": "Citadel"
+            },
+            "id": {
+                "modrinth": "jJfV67b1"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "citadel-2.7.0-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/jJfV67b1/versions/uzrkhBpn/citadel-2.7.0-1.21.1.jar",
+                    "id": "uzrkhBpn",
+                    "parent_id": "jJfV67b1",
+                    "hashes": {
+                        "sha512": "d77d8d25279d877ef94f1e48e770547ba2fbee2f01ed151aa932c6e36ed5dd7f846db096f7b1f9c13f49a3e2fd5de434d20a0924a3232e06d20c7ca5f46e47f6",
+                        "sha1": "01b18dfa37528aebd63b49874c9ac7795a4fc084"
+                    },
+                    "required_dependencies": [],
+                    "size": 3033192,
+                    "date_published": "2026-01-17T18:19:36.192622Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "35ZmKxA6xWutEXbx",
             "type": "MOD",
             "side": "BOTH",

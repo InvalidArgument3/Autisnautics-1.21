@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.19]
+- Actually add Terralith + SOTS this time
+- Add Citadel (Alex's dependency)
+
 ## [0.0.18]
 - Update Terralith to 2.5.8 and port custom changes from 1.20.1
 - Enable Skylands + Terralith
