@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.20]
+- teach git to not ignore its responsibilities
+
 ## [0.0.19]
 - Actually add Terralith + SOTS this time
 - Add Citadel (Alex's dependency)
