@@ -1,6 +1,6 @@
 
-global.cachedSeed = undefined
-global.cachedAlchemyData = {}
+let cachedSeed = undefined
+let cachedAlchemyData = {}
 
 function colourMap(c) {
     switch (c) {
@@ -52,23 +52,23 @@ function attackNearby(level, x, y, z) {
 
 function process(level, block, entity, face) {
 
-    if (global.cachedSeed != level.getSeed()) {
-        global.cachedSeed = level.getSeed()
+    if (cachedSeed != level.getSeed()) {
+        cachedSeed = level.getSeed()
         let random = new Random(level.getSeed())
         let next = () => random.nextInt(6)
         let generateCode = () => [next(), next(), next(), next()]
         for (let cat = 0; cat < 7; cat++) {
-            global.cachedAlchemyData[cat] = {
+            cachedAlchemyData[cat] = {
                 code: generateCode(),
                 result: cat == 6 ? "kubejs:substrate_chaos" : global.substrates[6][cat].id,
                 mappings: shuffle(Array(0, 1, 2, 3, 4, 5), random)
             }
         }
         let total = []
-        global.cachedAlchemyData["chaos_mapping"] = []
+        cachedAlchemyData["chaos_mapping"] = []
         for (let i = 0; i < 38; i++) {
             total.push(i)
-            global.cachedAlchemyData["chaos_mapping"].push(0)
+            cachedAlchemyData["chaos_mapping"].push(0)
         }
         shuffle(total, random)
         for (let i = 0; i < 38; i += 2) {
@@ -85,8 +85,8 @@ function process(level, block, entity, face) {
             }
         }
         for (let i = 0; i < 38; i += 2) {
-            global.cachedAlchemyData["chaos_mapping"][total[i]] = total[i + 1]
-            global.cachedAlchemyData["chaos_mapping"][total[i + 1]] = total[i]
+            cachedAlchemyData["chaos_mapping"][total[i]] = total[i + 1]
+            cachedAlchemyData["chaos_mapping"][total[i + 1]] = total[i]
         }
     }
 
@@ -237,8 +237,8 @@ function process(level, block, entity, face) {
             categoryMapping = { category: 5, index: 6 }
         if (toTransmute == "kubejs:substrate_silver")
             categoryMapping = { category: 5, index: 7 }
-        let data = global.cachedAlchemyData["chaos_mapping"]
-        // let dataReversed = global.cachedAlchemyData["reverse_chaos_mapping"]
+        let data = cachedAlchemyData["chaos_mapping"]
+        // let dataReversed = cachedAlchemyData["reverse_chaos_mapping"]
         let i1 = data[categoryMapping.category * 6 + categoryMapping.index]
         // let i2 = dataReversed[categoryMapping.category * 6 + categoryMapping.index]
         id1 = i1 == 36 ? "kubejs:substrate_silicon" : i1 == 37 ? "kubejs:substrate_silver" : global.substrates[Math.floor(i1 / 6)][i1 % 6].id
@@ -247,14 +247,14 @@ function process(level, block, entity, face) {
         // else {
         //     if (!categoryMapping || (categoryMapping.category + 1) % 6 != catalystId)
         //         return
-        //     let data = global.cachedAlchemyData[catalystId]
+        //     let data = cachedAlchemyData[catalystId]
         //     id1 = global.substrates[catalystId][data.mappings[categoryMapping.index]].id
         //     if (catalystId != 1) { // search for backwards connection
         //         let prevCat = catalystId - 1;
         //         if (catalystId == 0)
         //             prevCat += 6
         //         for (let i = 0; i < 6; i++)
-        //             if (global.cachedAlchemyData[prevCat].mappings[i] == categoryMapping.index)
+        //             if (cachedAlchemyData[prevCat].mappings[i] == categoryMapping.index)
         //                 id2 = global.substrates[prevCat - 1][i].id
         //     }
         //     if (id1 == "kubejs:substrate_cobblestone")
@@ -359,10 +359,10 @@ function process(level, block, entity, face) {
         return
     if (count != 4)
         return
-    if (!global.cachedAlchemyData[catCode])
+    if (!cachedAlchemyData[catCode])
         return
 
-    let data = global.cachedAlchemyData[catCode]
+    let data = cachedAlchemyData[catCode]
     let unmatchedCorrectSet = data.code.slice()
     let unmatchedGuessedSet = guessedSet.slice()
     let result = [0, 0, 0]

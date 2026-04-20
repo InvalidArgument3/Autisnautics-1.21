@@ -8,7 +8,10 @@ let native_metals = ["iron", "zinc", "lead", "copper", "nickel", "gold",
 let wood_types = ["minecraft:oak", "minecraft:spruce", "minecraft:birch", "minecraft:jungle", "minecraft:acacia", "minecraft:dark_oak", "minecraft:mangrove", "minecraft:cherry", "minecraft:crimson", "minecraft:warped"]
 
 let unregistered_axes = []
-global.hasThermal = Platform.isLoaded("thermal")
+
+/*ScriptFile.java#75: java.lang.UnsupportedOperationException
+//global.hasThermal = Platform.isLoaded("thermal")
+*/
 
 // helper for 3x3 shaped recipes with a center item
 let donutCraft = (event, output, outer, inner) => {
@@ -380,7 +383,7 @@ let removeFeature = function (event, featureName) {
     featureName = featureName.split(":")
     let namespace = featureName[0]
     let identifier = featureName[1]
-    event.addJson(`${namespace}:worldgen/configured_feature/${identifier}`, {
+    event.json(`${namespace}:worldgen/configured_feature/${identifier}`, {
         "type": "minecraft:no_op",
         "config": {}
     })
@@ -404,7 +407,7 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
         rarityFilter = Math.max(1, Math.floor(1 / veinCount))
     }
 
-    event.addJson(`${namespace}:worldgen/configured_feature/${identifier}`, {
+    event.json(`${namespace}:worldgen/configured_feature/${identifier}`, {
         "type": "minecraft:ore",
         "config": {
             "discard_chance_on_air_exposure": discardChanceOnAirExposure,
@@ -433,7 +436,7 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
     }
 
     if (rarityFilter == 1) {
-        event.addJson(`${namespace}:worldgen/placed_feature/${identifier}`, {
+        event.json(`${namespace}:worldgen/placed_feature/${identifier}`, {
             "feature": `${namespace}:${identifier}`,
             "placement": [
                 { "type": "minecraft:count", "count": veinCount },
@@ -451,7 +454,7 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
         })
     }
     else {
-        event.addJson(`${namespace}:worldgen/placed_feature/${identifier}`, {
+        event.json(`${namespace}:worldgen/placed_feature/${identifier}`, {
             "feature": `${namespace}:${identifier}`,
             "placement": [
                 { "type": "minecraft:rarity_filter", "chance": rarityFilter },
@@ -470,8 +473,8 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
     }
 
 
-    event.addJson(`${namespace}:forge/biome_modifier/${identifier}`, {
-        "type": "forge:add_features",
+    event.json(`${namespace}:neoforge/biome_modifier/${identifier}`, {
+        "type": "neoforge:add_features",
         "biomes": biomeTag,
         "features": `${namespace}:${identifier}`,
         "step": "underground_ores"
