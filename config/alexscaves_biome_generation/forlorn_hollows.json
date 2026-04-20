@@ -3,12 +3,12 @@
   "distance_from_spawn": 650,
   "alexscaves_rarity_offset": 4,
   "continentalness": [
-    0.6,
+    -1.0,
     1.0
   ],
   "depth": [
-    0.3,
-    1.5
+    0.05,
+    2.0
   ],
   "dimensions": [
     "minecraft:overworld"

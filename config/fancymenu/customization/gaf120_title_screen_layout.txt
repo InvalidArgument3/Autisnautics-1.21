@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = title_screen
   render_custom_elements_behind_vanilla = false
-  last_edited_time = 1776479019798
+  last_edited_time = 1776678531807
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:d9a1d218-8215-4067-829e-8568906775a2-1776478938827] = [groups:][instances:]
+  [loading_requirement_container_meta:0d5b94a9-99ad-4920-92e5-8603f008fadc-1776678509263] = [groups:][instances:]
 }
 
 menu_background {
@@ -265,55 +265,6 @@ element {
   stay_on_screen = true
   element_loading_requirement_container_identifier = 40cb6455-a733-4dd3-b11c-1b0d3f671a20-1735823356218
   [loading_requirement_container_meta:40cb6455-a733-4dd3-b11c-1b0d3f671a20-1735823356218] = [groups:][instances:]
-  enable_parallax = false
-  parallax_intensity_v2 = 0.5
-  invert_parallax = false
-  animated_offset_x = 0
-  animated_offset_y = 0
-  load_once_per_session = false
-  in_editor_color = #FFC800FF
-  layer_hidden_in_editor = false
-  rotation_degrees = 0.0
-  advanced_rotation_mode = false
-  vertical_tilt_degrees = 0.0
-  advanced_vertical_tilt_mode = false
-  horizontal_tilt_degrees = 0.0
-  advanced_horizontal_tilt_mode = false
-}
-
-element {
-  source = [source:local]/config/fancymenu/assets/gafsplashes.txt
-  source_mode = text_file
-  scale = 1.0
-  shadow = true
-  rotation = 0.0
-  base_color = #FFA500
-  refresh = true
-  bouncing = true
-  element_type = splash_text
-  instance_identifier = 619741be-ad9e-493c-8e01-648615b99a5c-1753053650280
-  appearance_delay = no_delay
-  appearance_delay_seconds = 1.0
-  fade_in_v2 = no_fading
-  fade_in_speed = 1.0
-  fade_out = no_fading
-  fade_out_speed = 1.0
-  base_opacity = 1.0
-  auto_sizing = false
-  auto_sizing_base_screen_width = 3440
-  auto_sizing_base_screen_height = 1380
-  sticky_anchor = false
-  anchor_point = element
-  anchor_point_element = 6b482b6f-9dbd-420f-9290-22b2ccacad13-1735826259783
-  x = 92
-  y = 40
-  width = 100
-  height = 20
-  stretch_x = false
-  stretch_y = false
-  stay_on_screen = true
-  element_loading_requirement_container_identifier = fac78dba-0890-459a-aaac-fc15b120ccba-1753053650280
-  [loading_requirement_container_meta:fac78dba-0890-459a-aaac-fc15b120ccba-1753053650280] = [groups:][instances:]
   enable_parallax = false
   parallax_intensity_v2 = 0.5
   invert_parallax = false
