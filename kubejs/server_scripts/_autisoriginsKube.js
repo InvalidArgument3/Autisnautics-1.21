@@ -11,7 +11,7 @@ const saveAllocatedPotion = function (event, potion) {
 }
 
 // run by autisorigins:alchemical_allocation/allocatestart
-ServerEvents.customCommand('allocate_get', event => {
+ServerEvents.basicCommand('allocate_get', event => {
     let jsMainItem = Item.of(event.player.getMainHandItem())
     let jsOffItem = Item.of(event.player.getOffhandItem())
 
@@ -25,7 +25,7 @@ ServerEvents.customCommand('allocate_get', event => {
 
 
 // run by autisorigins:alchemical_allocation/allocatefinish
-ServerEvents.customCommand('allocate_give', event => {
+ServerEvents.basicCommand('allocate_give', event => {
     function callback (e) {
         event.server.scheduleInTicks(1, callback => {// if we don't delay this it deletes the original potion instead of the bottle
             let oldVial = e.player.inventory.getSelected()
@@ -64,7 +64,7 @@ const getEtherMutation = function (event) {
 }
 
 // run by autisorigins:ether_disease
-ServerEvents.customCommand('ether_mutate', event => {
+ServerEvents.basicCommand('ether_mutate', event => {
     getEtherMutation(event)
     function callback (e) {
         event.server.scheduleInTicks(1, callback => {// just in case
@@ -85,7 +85,7 @@ ServerEvents.customCommand('ether_mutate', event => {
 })
 
 // debug command for now
-ServerEvents.customCommand('ether_cure', event => {
+ServerEvents.basicCommand('ether_cure', event => {
     let etherArray = event.player.getNbt().get("ForgeCaps").get("apoli:powers").toString().match(/autisorigins:ether__[a-z_]+(?=")/gi)// doesn't match subpowers
 
     for (let i = 0; i < etherArray.length; i++) {
@@ -100,7 +100,9 @@ ServerEvents.customCommand('ether_cure', event => {
 
 
 // //Angel Sugar Resource
+/* 1.21: no DietAPI
 const DietApi = Java.loadClass("com.illusivesoulworks.diet.api.DietApi")
+*/
 let nameGroupArray = []
 let sugarsValue = 0
 
@@ -112,18 +114,20 @@ function nameGroups(value, key, map) {
 }
 
 // run by autisorigins:sugar_replenishment_food
-ServerEvents.customCommand('add_sugar', event => {
+ServerEvents.basicCommand('add_sugar', event => {
     nameGroupArray = []
     sugarsValue = 0
-
+    /* 1.21: no DietAPI
     let handDietResult = DietApi.getInstance().get(event.player, Item.of(event.player.getMainHandItem())).get()// Map<IDietGroup, Float>
     handDietResult.forEach(nameGroups)
     if (nameGroupArray.includes("sugars") && sugarsValue != 0) {
         event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict ${sugarsValue.toString()}`)
     }
+    */
+    event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict 1`)// todo
 })
 
 // debug command
-ServerEvents.customCommand('lower_sugar', event => {
+ServerEvents.basicCommand('lower_sugar', event => {
     event.server.runCommand(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict -100`)
 })
