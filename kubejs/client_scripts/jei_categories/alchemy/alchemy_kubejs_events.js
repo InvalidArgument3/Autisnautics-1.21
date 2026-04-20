@@ -1,44 +1,44 @@
 if (typeof JEIAddedEvents !== "undefined") {
-JEIAddedEvents.registerCategories((event) => {
-    event.custom("kubejs:alchemy", (category) => {
+    JEIAddedEvents.registerCategories((event) => {
+        event.custom("kubejs:alchemy", (category) => {
             if (!global.__jeiCategories) global.__jeiCategories = {}
             if (!global.__jeiCategories.alchemy) return
-        let guiHelper = category.jeiHelpers.getGuiHelper();
+            let guiHelper = category.jeiHelpers.getGuiHelper();
             global.__jeiCategories.alchemy.recipeType = category.recipeType;
-        global.__jeiCategories.alchemy.loadResources(guiHelper);
+            global.__jeiCategories.alchemy.loadResources(guiHelper);
 
-        category.title("Alchemical Laser")
-            .background(guiHelper.createBlankDrawable(146, 70))
-            .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:alchemical_laser")))
-            .setIsRecipeHandledByCategory((recipe) => {
+            category.title("Alchemical Laser")
+                .background(guiHelper.createBlankDrawable(146, 70))
+                .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:alchemical_laser")))
+                .setIsRecipeHandledByCategory((recipe) => {
                     return global.__jeiCategories.alchemy.handlers["verifyRecipe"](category.jeiHelpers, recipe);
-            })
-            .setSetRecipeHandler((builder, recipe, focuses) => {
+                })
+                .setSetRecipeHandler((builder, recipe, focuses) => {
                     global.__jeiCategories.alchemy.handlers["setRecipe"](category.jeiHelpers, builder, recipe, focuses);
-            })
-            .setDrawHandler((recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
+                })
+                .setDrawHandler((recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
                     global.__jeiCategories.alchemy.handlers["draw"](category.jeiHelpers, recipe, recipeSlotsView, guiGraphics, mouseX, mouseY);
-            })
-            .setTooltipHandler((recipe, recipeSlotsView, mouseX, mouseY) => {
+                })
+                .setTooltipHandler((recipe, recipeSlotsView, mouseX, mouseY) => {
                     return global.__jeiCategories.alchemy.handlers["tooltips"](category.jeiHelpers, recipe, recipeSlotsView, mouseX, mouseY);
-            })
+                })
+        });
     });
-});
 
-JEIAddedEvents.registerRecipeCatalysts(event => {
-    let addRecipeCatalyst = function(ingredient, recipeTypes) {
-        return event.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](ingredient, recipeTypes);
-    }
+    JEIAddedEvents.registerRecipeCatalysts(event => {
+        let addRecipeCatalyst = function(ingredient, recipeTypes) {
+            return event.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](ingredient, recipeTypes);
+        }
         addRecipeCatalyst(Item.of("thermal:machine_frame"), [global.__jeiCategories.alchemy.recipeType]);
         addRecipeCatalyst(Item.of("kubejs:alchemical_laser"), [global.__jeiCategories.alchemy.recipeType]);
         addRecipeCatalyst(Item.of("minecraft:hopper_minecart"), [global.__jeiCategories.alchemy.recipeType]);
-})
+    })
 
-JEIAddedEvents.registerRecipes((event) => {
-    event.custom("kubejs:alchemy")
-        .add({input: ["thermal:flux_magnet", Item.of("minecraft:basalt", 2)], output: "thermal:basalz_rod", energy: 160})
-        .add({input: ["ae2:entropy_manipulator", Item.of("minecraft:snowball", 2)], output: "thermal:blizz_rod", energy: 160});
-});
+    JEIAddedEvents.registerRecipes((event) => {
+        event.custom("kubejs:alchemy")
+            .add({input: ["thermal:flux_magnet", Item.of("minecraft:basalt", 2)], output: "thermal:basalz_rod", energy: 160})
+            .add({input: ["ae2:entropy_manipulator", Item.of("minecraft:snowball", 2)], output: "thermal:blizz_rod", energy: 160});
+    });
 } else {
     console.warn("[KubeJS] Skipping alchemy JEI category registration: JEIAddedEvents is unavailable.")
 }

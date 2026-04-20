@@ -10,13 +10,13 @@ const JEIIDrawableAnimated = Java.loadClass("mezz.jei.api.gui.drawable.IDrawable
 // Used to make the FE energy tooltip when hovering over the energy bar
 let ThermalStringHelper = null;
 try {
-	ThermalStringHelper = Java.loadClass("cofh.lib.util.helpers.StringHelper");
+    ThermalStringHelper = Java.loadClass("cofh.lib.util.helpers.StringHelper");
 } catch (e) {
-	ThermalStringHelper = {
-		getTextComponent: (key) => Text.translatable(key),
-		format: (value) => String(value),
-		localize: (key) => key === "info.cofh.unit_rf" ? "RF" : key
-	};
+    ThermalStringHelper = {
+        getTextComponent: (key) => Text.translatable(key),
+        format: (value) => String(value),
+        localize: (key) => key === "info.cofh.unit_rf" ? "RF" : key
+    };
 }
 // Used for to draw block models in jei categories
 const JavaBoolean = Java.loadClass("java.lang.Boolean");
