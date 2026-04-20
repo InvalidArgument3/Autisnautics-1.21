@@ -1,0 +1,17 @@
+# Default: 12
+# Range: > -1
+range = 12
+# Default: -1
+# Range: > -1
+recursionLimit = -1
+# Default: 10
+# Range: > -1
+maxInventories = 10
+# Default: -1
+# Range: > -1
+maxSearchResults = -1
+# Default: 81
+# Range: > -1
+maxSearchResultsPerInventory = 81
+#Allowed Values: BLOCKS_AND_ENTITIES, BLOCKS, ENTITIES
+searchContext = "BLOCKS_AND_ENTITIES"
