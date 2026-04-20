@@ -17036,6 +17036,69 @@
             ]
         },
         {
+            "pakku_id": "b4UDQYrdG0IlflMQ",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "labels",
+                "modrinth": "labels"
+            },
+            "name": {
+                "curseforge": "Storage Labels",
+                "modrinth": "Storage Labels"
+            },
+            "id": {
+                "curseforge": "688223",
+                "modrinth": "x6r7yhfi"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "labels-1.21-2.0.3-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7196/713/labels-1.21-2.0.3-neoforge.jar",
+                    "id": "7196713",
+                    "parent_id": "688223",
+                    "hashes": {
+                        "sha1": "062d10c28ece3e14b2d25b4399bd5cddf780e24a",
+                        "md5": "aa988d650a1aedb05feaea00dcd65604"
+                    },
+                    "required_dependencies": [],
+                    "size": 93252,
+                    "date_published": "2025-11-07T21:29:57.960Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "labels-1.21-2.0.3-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/x6r7yhfi/versions/Wim4FW6j/labels-1.21-2.0.3-neoforge.jar",
+                    "id": "Wim4FW6j",
+                    "parent_id": "x6r7yhfi",
+                    "hashes": {
+                        "sha512": "ffa957441aa69ddf491aadad2ec0f2b23e484fa8a9351cd6b6ce68c111f0e442f53994efead911be02f45ef289ef9c749cf1eed10c215334a7cf25704f5c29c1",
+                        "sha1": "062d10c28ece3e14b2d25b4399bd5cddf780e24a"
+                    },
+                    "required_dependencies": [],
+                    "size": 93252,
+                    "date_published": "2025-11-07T21:30:01.974642Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "g2Hlnm4aRRhK466M",
             "type": "MOD",
             "side": "SERVER",
@@ -19507,6 +19570,34 @@
                     "required_dependencies": [],
                     "size": 203149,
                     "date_published": "2025-12-28T21:00:20.250Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "gUMUU1TlgRMQykhG",
+            "type": "MOD",
+            "slug": {
+                "github": "InvalidArgument3/regex_search"
+            },
+            "name": {
+                "github": "regex_search"
+            },
+            "id": {
+                "github": "1215603714"
+            },
+            "files": [
+                {
+                    "type": "github",
+                    "file_name": "regex_search-1.4.0+1.21.jar",
+                    "release_type": "release",
+                    "url": "https://github.com/InvalidArgument3/regex_search/releases/download/1.4.0-neoforge/regex_search-1.4.0+1.21.jar",
+                    "id": "400554646",
+                    "parent_id": "1215603714",
+                    "hashes": {
+                        "sha256": "fe539368933105ae7dbcaa4fcb9e2eb751bf1c159ee7c23ec45ff8872dfed8c0"
+                    },
+                    "size": 356267,
+                    "date_published": "2026-04-20T08:27:08Z"
                 }
             ]
         },
