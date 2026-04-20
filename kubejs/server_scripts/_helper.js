@@ -9,7 +9,7 @@ let wood_types = ["minecraft:oak", "minecraft:spruce", "minecraft:birch", "minec
 
 let unregistered_axes = []
 
-/*ScriptFile.java#75: java.lang.UnsupportedOperationException
+/* ScriptFile.java#75: java.lang.UnsupportedOperationException
 //global.hasThermal = Platform.isLoaded("thermal")
 */
 

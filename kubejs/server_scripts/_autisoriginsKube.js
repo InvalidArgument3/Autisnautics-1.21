@@ -100,7 +100,7 @@ ServerEvents.basicCommand('ether_cure', event => {
 
 
 // //Angel Sugar Resource
-/*1.21: no DietAPI
+/* 1.21: no DietAPI
 const DietApi = Java.loadClass("com.illusivesoulworks.diet.api.DietApi")
 */
 let nameGroupArray = []
@@ -117,14 +117,14 @@ function nameGroups(value, key, map) {
 ServerEvents.basicCommand('add_sugar', event => {
     nameGroupArray = []
     sugarsValue = 0
-    /*1.21: no DietAPI
+    /* 1.21: no DietAPI
     let handDietResult = DietApi.getInstance().get(event.player, Item.of(event.player.getMainHandItem())).get()// Map<IDietGroup, Float>
     handDietResult.forEach(nameGroups)
     if (nameGroupArray.includes("sugars") && sugarsValue != 0) {
         event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict ${sugarsValue.toString()}`)
     }
     */
-    event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict 1`)//todo
+    event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict 1`)// todo
 })
 
 // debug command
