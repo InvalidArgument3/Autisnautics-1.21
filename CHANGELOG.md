@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.18]
+- Update Terralith to 2.5.8 and port custom changes from 1.20.1
+- Enable Skylands + Terralith
+- A2_hide.js: comment/delete some dead mods
+- oregen.js: prepare for oregen update
+
 ## [0.0.17]
 - Add Alex's Caves and Alex's Mobs unofficial ports
 

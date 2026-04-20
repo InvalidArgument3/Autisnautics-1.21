@@ -5,15 +5,7 @@ const __hasRecipeViewerEvents = typeof RecipeViewerEvents !== "undefined"
 
 if (__hasRecipeViewerEvents) RecipeViewerEvents.removeEntries("item", event => {
     const hide = (entry) => event.remove(entry)
-    // redundant create_sa fueling tanks
-    // hide("create_sa:small_fueling_tank")
-    // hide("create_sa:large_fueling_tank")
-    // we've made this redundant
     hide("immersive_aircraft:boiler")
-    // these too
-    // hide("create_sa:heat_engine")
-    // hide("create_sa:steam_engine")
-    // hide("create_sa:hydraulic_engine")
     // replaced with polished equivalent
     hide("create:rose_quartz")
     // tfmg meme stones
@@ -21,19 +13,19 @@ if (__hasRecipeViewerEvents) RecipeViewerEvents.removeEntries("item", event => {
     // hide(/.*tfmg.*galena.*/)
     // hide(/.*tfmg.*bauxite.*/)
     // useless entry
-    hide("nuclearcraft:portal")
+    //hide("nuclearcraft:portal")
     // redundant
-    hide("nuclearcraft:ethanol_bucket")
-    hide("nuclearcraft:redstone_ethanol_bucket")
+    //hide("nuclearcraft:ethanol_bucket")
+    //hide("nuclearcraft:redstone_ethanol_bucket")
     // duplicate
     hide("jaopca:storage_blocks.sodium_chloride")
     // we redstone now
-    hide("thermal:cinnabar_dust")
+    //hide("thermal:cinnabar_dust")
     // no recipes
     hide("createdeco:netherite_sheet")
     // fluid unification (buckets)
-    hide(/embers:molten_(?!dawnstone).*/)
-    hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal + "_bucket") })
+    //hide(/embers:molten_(?!dawnstone).*/)
+    //hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal + "_bucket") })
     hide("createbigcannons:molten_steel_bucket")
     hide("createbigcannons:molten_bronze_bucket")
     // hide("tfmg:molten_steel_bucket")
@@ -47,13 +39,14 @@ if (__hasRecipeViewerEvents) RecipeViewerEvents.removeEntries("item", event => {
     hide("jaopca:dusts.netherite_scrap")
     hide("jaopca:molten.netherite_scrap")
     hide("jaopca:molten.coal")
+    /*
     // coal coke unification - thermal
     // hide("tfmg:coal_coke")
     hide("immersiveengineering:coal_coke")
     // creosote unification - IE
     hide("thermal:creosote_bucket")
     // hide("tfmg:creosote_bucket")
-
+    */
     // removed in favor of powergrid
     hide("createaddition:electric_motor")
     hide("createaddition:alternator")
@@ -78,10 +71,10 @@ else if (typeof JEIEvents !== "undefined") JEIEvents.hideItems(event => {
     // hide(/.*tfmg.*galena.*/)
     // hide(/.*tfmg.*bauxite.*/)
     // useless entry
-    hide("nuclearcraft:portal")
+    //hide("nuclearcraft:portal")
     // redundant
-    hide("nuclearcraft:ethanol_bucket")
-    hide("nuclearcraft:redstone_ethanol_bucket")
+    //hide("nuclearcraft:ethanol_bucket")
+    //hide("nuclearcraft:redstone_ethanol_bucket")
     // duplicate
     hide("jaopca:storage_blocks.sodium_chloride")
     // we redstone now
@@ -89,8 +82,8 @@ else if (typeof JEIEvents !== "undefined") JEIEvents.hideItems(event => {
     // no recipes
     hide("createdeco:netherite_sheet")
     // fluid unification (buckets)
-    hide(/embers:molten_(?!dawnstone).*/)
-    hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal + "_bucket") })
+    //hide(/embers:molten_(?!dawnstone).*/)
+    //hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal + "_bucket") })
     hide("createbigcannons:molten_steel_bucket")
     hide("createbigcannons:molten_bronze_bucket")
     // hide("tfmg:molten_steel_bucket")
@@ -104,13 +97,14 @@ else if (typeof JEIEvents !== "undefined") JEIEvents.hideItems(event => {
     hide("jaopca:dusts.netherite_scrap")
     hide("jaopca:molten.netherite_scrap")
     hide("jaopca:molten.coal")
+    /*
     // coal coke unification - thermal
     // hide("tfmg:coal_coke")
     hide("immersiveengineering:coal_coke")
     // creosote unification - IE
     hide("thermal:creosote_bucket")
     // hide("tfmg:creosote_bucket")
-
+    */
     // removed in favor of powergrid
     hide("createaddition:electric_motor")
     hide("createaddition:alternator")
@@ -122,35 +116,35 @@ else if (typeof JEIEvents !== "undefined") JEIEvents.hideItems(event => {
 if (__hasRecipeViewerEvents) RecipeViewerEvents.removeEntries("fluid", event => {
     const hide = (entry) => event.remove(entry)
     // redundant
-    hide("nuclearcraft:ethanol")
-    hide("nuclearcraft:redstone_ethanol")
+    //hide("nuclearcraft:ethanol")
+    //hide("nuclearcraft:redstone_ethanol")
     // metal fluid unification
-    hiddenEmbersMetals.forEach(metal => { hide("embers:molten_" + metal) })
-    hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal) })
+    //hiddenEmbersMetals.forEach(metal => { hide("embers:molten_" + metal) })
+    //hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal) })
     hide("createbigcannons:molten_steel")
     hide("createbigcannons:molten_bronze")
     // hide("tfmg:molten_steel")
     // coal dupe
     hide("jaopca:molten.coal")
     // creosote unification - IE
-    hide("thermal:creosote")
+    //hide("thermal:creosote")
     // hide("tfmg:creosote")
 })
 else if (typeof JEIEvents !== "undefined") JEIEvents.hideFluids(event => {
     const hide = (entry) => event.hide(entry)
     // redundant
-    hide("nuclearcraft:ethanol")
-    hide("nuclearcraft:redstone_ethanol")
+    //hide("nuclearcraft:ethanol")
+    //hide("nuclearcraft:redstone_ethanol")
     // metal fluid unification
-    hiddenEmbersMetals.forEach(metal => { hide("embers:molten_" + metal) })
-    hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal) })
+    //hiddenEmbersMetals.forEach(metal => { hide("embers:molten_" + metal) })
+    //hiddenNCMetals.forEach(metal => { hide("nuclearcraft:" + metal) })
     hide("createbigcannons:molten_steel")
     hide("createbigcannons:molten_bronze")
     // hide("tfmg:molten_steel")
     // coal dupe
     hide("jaopca:molten.coal")
     // creosote unification - IE
-    hide("thermal:creosote")
+    //hide("thermal:creosote")
     // hide("tfmg:creosote")
 })
 
