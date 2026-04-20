@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "minecraft:noise",
+    "noise": "skylands_over_the_sea:ridges",
+    "xz_scale": 1,
+    "y_scale": 0
+  }
+}

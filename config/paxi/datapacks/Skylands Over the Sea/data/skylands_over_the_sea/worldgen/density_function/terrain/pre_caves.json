@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:cache_once",
+  "argument": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "skylands_over_the_sea:y",
+      "points": [
+        {
+          "location": 80,
+          "derivative": 0,
+          "value": -0.1
+        },
+        {
+          "location": 96,
+          "derivative": 0,
+          "value": {
+            "coordinate": "skylands_over_the_sea:islands/final",
+            "points": [
+              {
+                "location": -1,
+                "derivative": 1,
+                "value": -1
+              },
+              {
+                "location": 1,
+                "derivative": 1,
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

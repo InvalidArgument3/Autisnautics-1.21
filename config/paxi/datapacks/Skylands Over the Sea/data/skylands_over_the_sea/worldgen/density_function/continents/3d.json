@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:range_choice",
+  "input": "minecraft:y",
+  "min_inclusive": -64,
+  "max_exclusive": 24,
+  "when_in_range": "skylands_over_the_sea:continents/vanilla",
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": 24,
+    "max_exclusive": 96,
+    "when_in_range": "skylands_over_the_sea:continents/no_land",
+    "when_out_of_range": "skylands_over_the_sea:continents/no_oceans"
+  }
+}

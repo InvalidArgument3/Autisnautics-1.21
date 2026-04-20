@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "minecraft:interpolated",
+    "argument": "skylands_over_the_sea:ridges/final"
+  },
+  "min_inclusive": -0.15,
+  "max_exclusive": 0.15,
+  "when_in_range": "skylands_over_the_sea:terrain/no_caves",
+  "when_out_of_range": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "minecraft:y",
+      "points": [
+        {
+          "location": 80,
+          "derivative": 0,
+          "value": {
+            "coordinate": "skylands_over_the_sea:terrain/with_caves",
+            "points": [
+              {
+                "location": -1,
+                "derivative": 1,
+                "value": -1
+              },
+              {
+                "location": 1,
+                "derivative": 1,
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "location": 224,
+          "derivative": 0,
+          "value": {
+            "coordinate": "skylands_over_the_sea:terrain/with_caves",
+            "points": [
+              {
+                "location": -1,
+                "derivative": 1,
+                "value": -1
+              },
+              {
+                "location": 1,
+                "derivative": 1,
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "location": 240,
+          "derivative": 0,
+          "value": {
+            "coordinate": "skylands_over_the_sea:terrain/no_caves",
+            "points": [
+              {
+                "location": -1,
+                "derivative": 1,
+                "value": -1
+              },
+              {
+                "location": 1,
+                "derivative": 1,
+                "value": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
