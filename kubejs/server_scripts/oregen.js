@@ -24,22 +24,22 @@ ServerEvents.lowPriorityData(event => {
 
     // //A2: remove all ore features
     let oreFeaturesArray = [
-        "create:zinc_ore", 
-        //"embers:ore_lead", "embers:ore_silver", 
+        "create:zinc_ore",
+        // "embers:ore_lead", "embers:ore_silver",
         "galosphere:ore_silver_large", "galosphere:ore_silver_small",
-        "minecraft:ore_coal", "minecraft:ore_coal_buried", "minecraft:ore_copper_large", "minecraft:ore_copper_small", "minecraft:ore_diamond_buried", "minecraft:ore_diamond_large", "minecraft:ore_diamond_medium", "minecraft:ore_diamond_small", "minecraft:ore_emerald", "minecraft:ore_gold", "minecraft:ore_gold_buried", "minecraft:ore_iron", "minecraft:ore_iron_small", "minecraft:ore_lapis", "minecraft:ore_lapis_buried", "minecraft:ore_redstone", 
-        //"mna:overworld_vinteum_ore", 
-        //"nuclearcraft:boron_ore", "nuclearcraft:cobalt_ore", "nuclearcraft:lead_ore", "nuclearcraft:lithium_ore", "nuclearcraft:magnesium_ore", "nuclearcraft:platinum_ore", "nuclearcraft:silver_ore", "nuclearcraft:thorium_ore", "nuclearcraft:tin_ore", "nuclearcraft:uranium_ore", "nuclearcraft:zinc_ore", 
-        //"projectred_exploration:electrotine_ore", "projectred_exploration:peridot_ore", "projectred_exploration:ruby_ore", "projectred_exploration:sapphire_ore", "projectred_exploration:silver_ore", "projectred_exploration:tin_ore", 
-        "regions_unexplored:ore_redstone_large", 
-        //"scguns:anthralite_ore", "scguns:sulfur_ore", 
-        //"thermal:apatite_ore", "thermal:cinnabar_ore", "thermal:lead_ore", "thermal:nickel_ore", "thermal:niter_ore", "thermal:silver_ore", "thermal:sulfur_ore", "thermal:tin_ore", 
-        "theurgy:sal_ammoniac_ore" 
-        //"vs_clockwork:ore_wanderlite", "scguns:phosphorite", "immersiveengineering:bauxite",
+        "minecraft:ore_coal", "minecraft:ore_coal_buried", "minecraft:ore_copper_large", "minecraft:ore_copper_small", "minecraft:ore_diamond_buried", "minecraft:ore_diamond_large", "minecraft:ore_diamond_medium", "minecraft:ore_diamond_small", "minecraft:ore_emerald", "minecraft:ore_gold", "minecraft:ore_gold_buried", "minecraft:ore_iron", "minecraft:ore_iron_small", "minecraft:ore_lapis", "minecraft:ore_lapis_buried", "minecraft:ore_redstone",
+        // "mna:overworld_vinteum_ore",
+        // "nuclearcraft:boron_ore", "nuclearcraft:cobalt_ore", "nuclearcraft:lead_ore", "nuclearcraft:lithium_ore", "nuclearcraft:magnesium_ore", "nuclearcraft:platinum_ore", "nuclearcraft:silver_ore", "nuclearcraft:thorium_ore", "nuclearcraft:tin_ore", "nuclearcraft:uranium_ore", "nuclearcraft:zinc_ore",
+        // "projectred_exploration:electrotine_ore", "projectred_exploration:peridot_ore", "projectred_exploration:ruby_ore", "projectred_exploration:sapphire_ore", "projectred_exploration:silver_ore", "projectred_exploration:tin_ore",
+        "regions_unexplored:ore_redstone_large",
+        // "scguns:anthralite_ore", "scguns:sulfur_ore",
+        // "thermal:apatite_ore", "thermal:cinnabar_ore", "thermal:lead_ore", "thermal:nickel_ore", "thermal:niter_ore", "thermal:silver_ore", "thermal:sulfur_ore", "thermal:tin_ore",
+        "theurgy:sal_ammoniac_ore"
+        // "vs_clockwork:ore_wanderlite", "scguns:phosphorite", "immersiveengineering:bauxite",
         // unwanted wasteland ores
-        //"nuclearcraft:lead_wasteland_ore", "nuclearcraft:silver_wasteland_ore", "nuclearcraft:tin_wasteland_ore", "nuclearcraft:zinc_wasteland_ore", "nuclearcraft:cobalt_wasteland_ore",
+        // "nuclearcraft:lead_wasteland_ore", "nuclearcraft:silver_wasteland_ore", "nuclearcraft:tin_wasteland_ore", "nuclearcraft:zinc_wasteland_ore", "nuclearcraft:cobalt_wasteland_ore",
         // duplicate meme stone features
-        //"chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble"
+        // "chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble"
     ]
 
     oreFeaturesArray.forEach(oreFeature => {
