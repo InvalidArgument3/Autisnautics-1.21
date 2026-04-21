@@ -9720,16 +9720,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "iris-neoforge-1.8.12-snapshot+mc1.21.1-build.1.jar",
+                    "file_name": "iris-neoforge-1.8.8-snapshot+mc1.21.1-build.2.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/Iris/releases/download/release1/iris-neoforge-1.8.12-snapshot+mc1.21.1-build.1.jar",
-                    "id": "401447965",
+                    "url": "https://github.com/InvalidArgument3/Iris/releases/download/1.18.12-blurfix2/iris-neoforge-1.8.8-snapshot+mc1.21.1-build.2.jar",
+                    "id": "401527534",
                     "parent_id": "1216561851",
                     "hashes": {
-                        "sha256": "160bf1a0a31c6e92a615fd235dd6e6aca59ec78004ef615a0088cda11e6725bd"
+                        "sha256": "a98490f346c197b32551787514b548fb9654902119aebde40b0b55138aee8c6d"
                     },
-                    "size": 2438300,
-                    "date_published": "2026-04-21T09:08:38Z"
+                    "size": 2453676,
+                    "date_published": "2026-04-21T11:27:26Z"
                 }
             ]
         },
