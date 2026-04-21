@@ -3382,9 +3382,6 @@
         },
         {
             "pakku_id": "2MrDwHitrPNqGyGz",
-            "pakku_links": [
-                "GHjREWDiULrH30k6"
-            ],
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -9709,70 +9706,30 @@
             ]
         },
         {
-            "pakku_id": "GHjREWDiULrH30k6",
-            "pakku_links": [
-                "za69f6G3EDzLL0QQ"
-            ],
+            "pakku_id": "jxvqKt013ex8IcGS",
             "type": "MOD",
-            "side": "CLIENT",
             "slug": {
-                "curseforge": "irisshaders",
-                "modrinth": "iris"
+                "github": "InvalidArgument3/Iris"
             },
             "name": {
-                "curseforge": "Iris Shaders",
-                "modrinth": "Iris Shaders"
+                "github": "Iris"
             },
             "id": {
-                "curseforge": "455508",
-                "modrinth": "YL57xq9U"
+                "github": "1216561851"
             },
             "files": [
                 {
-                    "type": "modrinth",
-                    "file_name": "iris-neoforge-1.8.12+mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
+                    "type": "github",
+                    "file_name": "iris-neoforge-1.8.12-snapshot+mc1.21.1-build.1.jar",
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/t3ruzodq/iris-neoforge-1.8.12+mc1.21.1.jar",
-                    "id": "t3ruzodq",
-                    "parent_id": "YL57xq9U",
+                    "url": "https://github.com/InvalidArgument3/Iris/releases/download/release1/iris-neoforge-1.8.12-snapshot+mc1.21.1-build.1.jar",
+                    "id": "401447965",
+                    "parent_id": "1216561851",
                     "hashes": {
-                        "sha512": "57b8026a3c3c433cf6123d63dc6ce7e11f6d480a72926370db1fc7f2b06059bc16a753ecd7e7af659c19e90b592103196b0e89585ce4f0744a4ca433f59bcf1a",
-                        "sha1": "a3e6355915c7d3b2bc392724795113e51d289378"
+                        "sha256": "160bf1a0a31c6e92a615fd235dd6e6aca59ec78004ef615a0088cda11e6725bd"
                     },
-                    "required_dependencies": [
-                        "AANobbMI"
-                    ],
-                    "size": 2438548,
-                    "date_published": "2025-06-17T15:51:56.477905Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "iris-neoforge-1.8.12+mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6661/598/iris-neoforge-1.8.12+mc1.21.1.jar",
-                    "id": "6661598",
-                    "parent_id": "455508",
-                    "hashes": {
-                        "sha1": "a3e6355915c7d3b2bc392724795113e51d289378",
-                        "md5": "6c1122aa7c2b1a4f24831e394c5b513f"
-                    },
-                    "required_dependencies": [
-                        "394468"
-                    ],
-                    "size": 2438548,
-                    "date_published": "2025-06-17T15:53:15.717Z"
+                    "size": 2438300,
+                    "date_published": "2026-04-21T09:08:38Z"
                 }
             ]
         },
