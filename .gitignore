@@ -170,3 +170,6 @@ sodium-fingerprint.json
 
 # HUH
 command_history.txt
+
+# drippyloadingscreen
+early_window_reference.properties
