@@ -274,6 +274,46 @@
             ]
         },
         {
+            "pakku_id": "kMvyFouMoWKDrq0H",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "advanced-rocketry-3"
+            },
+            "name": {
+                "modrinth": "Advanced Rocketry 3"
+            },
+            "id": {
+                "modrinth": "ADdFpoYl"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "adv_rocketry-1.21.1-3.0.beta.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/ADdFpoYl/versions/xnWPtaRN/adv_rocketry-1.21.1-3.0.beta.jar",
+                    "id": "xnWPtaRN",
+                    "parent_id": "ADdFpoYl",
+                    "hashes": {
+                        "sha512": "d7eb561e2b9e118d7a5328f08da5141af7fd3285136daa447ad9734f59ab507bd1a0f82bee7ef50a45d848ef676019920da0c1d4fde629dac5089484199fcf98",
+                        "sha1": "185b4175f9a373bcb68e164ae2e5525990191309"
+                    },
+                    "required_dependencies": [
+                        "IY6pSlUL",
+                        "qbUzidyB"
+                    ],
+                    "size": 106851412,
+                    "date_published": "2026-03-29T01:23:16.414184Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "bN6ijDzZmtYYkQAw",
             "type": "MOD",
             "side": "BOTH",
@@ -12346,6 +12386,43 @@
                     ],
                     "size": 36042925,
                     "date_published": "2026-03-15T06:51:14.980Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ICYyXgOHkgAPqjoL",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "mystcraft-reborn"
+            },
+            "name": {
+                "modrinth": "Mystcraft Reborn"
+            },
+            "id": {
+                "modrinth": "PxYGeIhV"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "mystcraft_reborn-1.4.1 Beta.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/PxYGeIhV/versions/DLNTP4tV/mystcraft_reborn-1.4.1 Beta.jar",
+                    "id": "DLNTP4tV",
+                    "parent_id": "PxYGeIhV",
+                    "hashes": {
+                        "sha512": "14299e836270812479cadf82ff279703bd92e4326b26988eb29c42ba64939db48750f2a423a7a7562294891e3f5ee4a0bd20aad1a85eaae139b63e01bc67dc43",
+                        "sha1": "b64859ff9c8505e94977038c74a45762ae8cc33a"
+                    },
+                    "required_dependencies": [],
+                    "size": 1013041,
+                    "date_published": "2026-03-01T23:05:53.723808Z"
                 }
             ]
         },
