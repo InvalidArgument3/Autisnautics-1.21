@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.23]
+- try to fix earlyload screen
+
 ## [0.0.22]
 - custom iris .jar to fix absurd shader screen issue (I even submitted a PR wow)
 - custom loading screen
