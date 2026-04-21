@@ -2676,42 +2676,6 @@
             ]
         },
         {
-            "pakku_id": "JWMi4662YVuSlvAT",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "catalogue"
-            },
-            "name": {
-                "curseforge": "Catalogue"
-            },
-            "id": {
-                "curseforge": "459701"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "catalogue-neoforge-1.21.1-1.11.2.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6926/815/catalogue-neoforge-1.21.1-1.11.2.jar",
-                    "id": "6926815",
-                    "parent_id": "459701",
-                    "hashes": {
-                        "sha1": "6d67f855c20bc6392763cfb22e1152da4e8015b4",
-                        "md5": "cc87e5716eb52398b2c46e4032126de4"
-                    },
-                    "required_dependencies": [],
-                    "size": 302750,
-                    "date_published": "2025-08-25T14:04:06.810Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "7awb59YlkPKhVq3Y",
             "pakku_links": [
                 "Bw3du7OPq0PcQKDa",
