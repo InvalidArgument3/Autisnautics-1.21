@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.24]
+- Add Advanced Rocketry 3 and Mystcraft Reborn for testing purposes
+
 ## [0.0.23]
 - try to fix earlyload screen
 
