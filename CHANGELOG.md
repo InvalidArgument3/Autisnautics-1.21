@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.22]
+- custom iris .jar to fix absurd shader screen issue (I even submitted a PR wow)
+- custom loading screen
+- PIP tv camera
+
 ## [0.0.21]
 - what's left of ores should now gen again
 
