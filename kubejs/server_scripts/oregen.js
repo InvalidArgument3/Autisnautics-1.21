@@ -42,7 +42,8 @@ ServerEvents.generateData("after_mods", event => {
         // duplicate meme stone features
         "chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble",
         // 1.21
-        "oritech:ore_nickel", "oritech:ore_platinum", "oritech:uranium_patch"
+        "oritech:ore_nickel", "oritech:ore_platinum", "oritech:uranium_patch", "oritech:resource_node_common", "oritech:resource_node_rare", "oritech:resource_node_other",
+        "stellaris:steel_ore_key", "stellaris:steel_ore_deepslate_key"
     ]
 
     oreFeaturesArray.forEach(oreFeature => {
@@ -118,7 +119,7 @@ ServerEvents.generateData("after_mods", event => {
     // addOregenOverworld(event, "kubejs:ore_peridot_islands_olivine_volcanic", "projectred_exploration:peridot_ore", "minecraft:uniform", 92, 400, 5, 4, 0, "#terralith:volcanic")
     // phosphorite
     // addOregenOverworld(event, "kubejs:ore_phosphorite_underground_big", "scguns:phosphorite", "minecraft:uniform", 0, 36, 0.01, 64, 0, "#minecraft:is_overworld")
-    // platinum - todo?
+    // platinum - gated like nuclearcraft ores once were, this will be a high level tech material
     // rich_phosphorite - original feature not disabled because it only spawns inside phosphorite, which we want
     // addOregenOverworld(event, "kubejs:ore_rich_phosphorite_guano", "scguns:rich_phosphorite", "minecraft:uniform", 62, 85, 40, 12, 0, ["regions_unexplored:rocky_reef", "regions_unexplored:tropics"])
     // redstone - disabled: cinnabar crushes into redstone, redstone caves and alexscaves primordial caves can also be mined for redstone dust
