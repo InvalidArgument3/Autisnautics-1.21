@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.25]
+- replace """""advanced"""" rocketry with stellaris (no relation)
+- add dependencies
+- include curseforge source for some mods
+
 ## [0.0.24]
 - Add Advanced Rocketry 3 and Mystcraft Reborn for testing purposes
 
