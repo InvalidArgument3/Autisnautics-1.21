@@ -34,3 +34,5 @@ sub_level_punch_downward_strength_multiplier = 0.175
 sub_level_punch_cooldown_ticks = 3
 #If Sable should attempt to authenticate with clients and send them sub-level data over UDP
 attempt_udp_networking = true
+#If the entire Sable UDP Networking pipeline should be disabled. This can improve compatibility with certain mods like Replay mod and certain networking setups, but will have worse performance and latency for networking sub-levels.
+disable_udp_pipeline = false
