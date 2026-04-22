@@ -12640,6 +12640,68 @@
             ]
         },
         {
+            "pakku_id": "MN8vudBALsUj1V4Z",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "neoorigins",
+                "modrinth": "neo-origins"
+            },
+            "name": {
+                "curseforge": "NeoOrigins",
+                "modrinth": "Neo Origins"
+            },
+            "id": {
+                "curseforge": "1495375",
+                "modrinth": "RUtQ9kfe"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "neoorigins-1.13.0+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/RUtQ9kfe/versions/8i66hemH/neoorigins-1.13.0+1.21.1.jar",
+                    "id": "8i66hemH",
+                    "parent_id": "RUtQ9kfe",
+                    "hashes": {
+                        "sha512": "2ab7445931b2ecf8b9efce9c5758be061caae0a3c3b4b013e5fc5c55d9659a75831ce43caa5b4ca2436b42cf5e1fcd4ad6f509c749073df475ecb2abffe95e0a",
+                        "sha1": "4fd8be2e9f4191ec1c6a7de110b53ba656dd7caa"
+                    },
+                    "required_dependencies": [],
+                    "size": 853043,
+                    "date_published": "2026-04-21T14:03:19.520600Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "neoorigins-1.13.0+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7960/990/neoorigins-1.13.0+1.21.1.jar",
+                    "id": "7960990",
+                    "parent_id": "1495375",
+                    "hashes": {
+                        "sha1": "4fd8be2e9f4191ec1c6a7de110b53ba656dd7caa",
+                        "md5": "714a150dce22ee253e64d0a825278855"
+                    },
+                    "required_dependencies": [],
+                    "size": 853043,
+                    "date_published": "2026-04-21T14:03:16.793Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "rtBxDL3FM4RdywGJ",
             "pakku_links": [
                 "bcLJbF9mW9kvmXFZ"

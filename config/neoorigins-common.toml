@@ -1,0 +1,1226 @@
+#Log per-namespace power counts after each data reload.
+#Useful for addon and datapack authors debugging load issues.
+debug_power_loading = false
+
+#Enable or disable built-in origins.
+#Set to false to remove an origin from the selection screen.
+#Datapack and originpack origins are not affected by these toggles.
+[origins]
+	dwarf = false
+	hiveling = false
+	feline = false
+	gorgon = false
+	umbral = false
+	kraken = false
+	avian = false
+	sylvan = false
+	air_mage = false
+	necromancer = false
+	gravity_mage = false
+	arachnid = false
+	verdant = false
+	strider = false
+	piglin = false
+	vampire = false
+	enderite = false
+	revenant = false
+	darkness_mage = false
+	elytrian = false
+	stoneguard = false
+	monster_tamer = false
+	warden = false
+	phantom = false
+	enderian = false
+	earth_mage = false
+	tiny = false
+	draconic = false
+	abyssal = false
+	human = false
+	cinderborn = false
+	breeze = false
+	merling = false
+	automaton = false
+	fire_mage = false
+	siren = false
+	blazeling = false
+	golem = false
+	caveborn = false
+	sculkborn = false
+	water_mage = false
+	inchling = false
+	shulk = false
+	frostborn = false
+	voidwalker = false
+	sporeling = false
+
+#Enable or disable built-in classes.
+#Set to false to remove a class from the selection screen.
+#If all classes are disabled, the class selection screen is skipped entirely.
+[classes]
+	class_rogue = false
+	class_merchant = false
+	class_cook = false
+	class_blacksmith = false
+	class_nitwit = false
+	class_lumberjack = false
+	class_warrior = false
+	class_beastmaster = false
+	class_scout = false
+	class_miner = false
+	class_explorer = false
+	class_herbalist = false
+	class_sentinel = false
+	class_titan = false
+	class_archer = false
+	class_cleric = false
+	class_berserker = false
+
+#Per-power dimension restrictions.
+#Powers listed here will be disabled when the player is in the specified dimension(s).
+#Format: "<power_id> = <dimension1>, <dimension2>, ..."
+#Example: "neoorigins:elytrian_flight = minecraft:the_nether, minecraft:the_end"
+[dimension_restrictions]
+	rules = []
+
+#Per-power parameter overrides.
+#Edit any value below to override it. Only values changed from their default are applied.
+#20 ticks = 1 second. Overrides take effect on /reload or restart.
+[power_overrides]
+
+	[power_overrides.abyssal_thorns_aura]
+		# Default: 0.3
+		# Range: 0.0 ~ 10.0
+		return_ratio = 0.3
+
+	[power_overrides.abyssal_regen_in_water]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 2.0
+
+	[power_overrides.abyssal_daylight_damage]
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.5
+		ignite = false
+
+	[power_overrides.abyssal_land_speed_penalty]
+		# Default: -0.1
+		# Range: -1.0 ~ 1.0
+		amount = -0.1
+
+	[power_overrides.abyssal_summon_guardian]
+		# Default: 2
+		# Range: 1 ~ 100
+		max_count = 2
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+		# Default: 5
+		# Range: 0 ~ 100
+		hunger_cost = 5
+		# Default: 18000
+		# Range: 0 ~ 1000000
+		despawn_ticks = 18000
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		death_damage = 1.0
+
+	[power_overrides.automaton_iron_frame]
+		# Default: 8.0
+		# Range: -100.0 ~ 100.0
+		amount = 8.0
+
+	[power_overrides.automaton_heavy_chassis]
+		# Default: -0.15
+		# Range: -1.0 ~ 1.0
+		amount = -0.15
+
+	[power_overrides.automaton_knockback_resist]
+		# Default: 0.4
+		# Range: -1.0 ~ 1.0
+		amount = 0.4
+
+	[power_overrides.automaton_no_hunger]
+		# Default: 0.0
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.0
+
+	[power_overrides.automaton_rigid_joints]
+		# Default: 0.25
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.25
+
+	[power_overrides.avian_slow_fall]
+		# Default: -0.9
+		# Range: -1.0 ~ 0.0
+		amount = -0.9
+
+	[power_overrides.avian_no_hunger_sprint]
+		# Default: 0.25
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.25
+
+	[power_overrides.blazeling_water_damage]
+		# Default: 2.5
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.5
+
+	[power_overrides.breeze_wind_charge]
+		# Default: 2.0
+		# Range: 0.0 ~ 10.0
+		speed = 2.0
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldown_ticks = 100
+
+	[power_overrides.breeze_wind_dash]
+		# Default: 2.5
+		# Range: 0.0 ~ 10.0
+		strength = 2.5
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.breeze_light_frame]
+		# Default: 0.9
+		# Range: 0.1 ~ 10.0
+		scale = 0.9
+
+	[power_overrides.breeze_reduced_health]
+		# Default: -8.0
+		# Range: -100.0 ~ 100.0
+		amount = -8.0
+
+	[power_overrides.breeze_speed_boost]
+		# Default: 0.15
+		# Range: -1.0 ~ 10.0
+		amount = 0.15
+
+	[power_overrides.caveborn_daylight_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+		ignite = false
+
+	[power_overrides.caveborn_mining_speed]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.caveborn_small_frame]
+		# Default: 0.85
+		# Range: 0.1 ~ 10.0
+		scale = 0.85
+
+	[power_overrides.cinderborn_fireball]
+		# Default: 1.2
+		# Range: 0.0 ~ 10.0
+		speed = 1.2
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldown_ticks = 100
+
+	[power_overrides.cinderborn_lava_regen]
+		# Default: 3.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 3.0
+
+	[power_overrides.cinderborn_natural_armor]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.cinderborn_water_weakness]
+		# Default: 3.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 3.0
+
+	[power_overrides.draconic_active_fireball]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		speed = 1.5
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.draconic_size]
+		# Default: 1.2
+		# Range: 0.1 ~ 10.0
+		scale = 1.2
+
+	[power_overrides.draconic_attack_bonus]
+		# Default: 2.0
+		# Range: -100.0 ~ 100.0
+		amount = 2.0
+
+	[power_overrides.draconic_hunger_drain]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.5
+
+	[power_overrides.draconic_water_weakness]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.dwarf_compact_frame]
+		# Default: 0.8
+		# Range: 0.1 ~ 10.0
+		scale = 0.8
+
+	[power_overrides.dwarf_stout_constitution]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.dwarf_sturdy_legs]
+		# Default: -0.15
+		# Range: -1.0 ~ 1.0
+		amount = -0.15
+
+	[power_overrides.dwarf_short_reach]
+		# Default: -0.5
+		# Range: -10.0 ~ 10.0
+		amount = -0.5
+
+	[power_overrides.dwarf_stonecunning]
+		# Default: 1.25
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.25
+
+	[power_overrides.dwarf_mining_hunger]
+		# Default: 0.75
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.75
+
+	[power_overrides.elytrian_elytra_boost]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		strength = 1.5
+		# Default: 40
+		# Range: 0 ~ 72000
+		cooldown_ticks = 40
+
+	[power_overrides.enderian_teleport]
+		# Default: 50.0
+		# Range: 1.0 ~ 256.0
+		range = 50.0
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+
+	[power_overrides.enderian_water_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+		include_rain = true
+
+	[power_overrides.enderite_teleport]
+		# Default: 32.0
+		# Range: 1.0 ~ 256.0
+		range = 32.0
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+
+	[power_overrides.enderite_phase]
+		# Default: 16
+		# Range: 1 ~ 256
+		max_depth = 16
+		# Default: 200
+		# Range: 0 ~ 72000
+		cooldown_ticks = 200
+		# Default: 0
+		# Range: 0 ~ 100
+		hunger_cost = 0
+
+	[power_overrides.enderite_attack_bonus]
+		# Default: 3.0
+		# Range: -100.0 ~ 100.0
+		amount = 3.0
+
+	[power_overrides.enderite_water_damage]
+		# Default: 3.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 3.0
+
+	[power_overrides.enderite_daylight_weakness]
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.5
+
+	[power_overrides.feline_active_launch]
+		# Default: 2.2
+		# Range: 0.0 ~ 10.0
+		power = 2.2
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.feline_speed_boost]
+		# Default: 0.1
+		# Range: -1.0 ~ 10.0
+		amount = 0.1
+
+	[power_overrides.feline_hunger_drain]
+		# Default: 1.3
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.3
+
+	[power_overrides.feline_water_weakness]
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.5
+
+	[power_overrides.frostborn_freeze_aura]
+		# Default: 3
+		# Range: 0 ~ 255
+		amplifier = 3
+		# Default: 100
+		# Range: 1 ~ 72000
+		duration_ticks = 100
+		# Default: 6.0
+		# Range: 0.0 ~ 64.0
+		radius = 6.0
+		# Default: 200
+		# Range: 0 ~ 72000
+		cooldown_ticks = 200
+
+	[power_overrides.frostborn_ice_walk]
+		# Default: 5.0
+		# Range: 1.0 ~ 64.0
+		max_distance = 5.0
+		# Default: 20
+		# Range: 0 ~ 72000
+		cooldown_ticks = 20
+
+	[power_overrides.frostborn_natural_armor]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.frostborn_fire_weakness]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.frostborn_nether_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+
+	[power_overrides.golem_natural_armor]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.golem_knockback_resist]
+		# Default: 0.8
+		# Range: -1.0 ~ 1.0
+		amount = 0.8
+
+	[power_overrides.golem_size]
+		# Default: 1.3
+		# Range: 0.1 ~ 10.0
+		scale = 1.3
+
+	[power_overrides.golem_slow_movement]
+		# Default: -0.25
+		# Range: -1.0 ~ 1.0
+		amount = -0.25
+
+	[power_overrides.golem_fire_weakness]
+		# Default: 1.8
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.8
+
+	[power_overrides.gorgon_petrifying_gaze]
+		# Default: 4
+		# Range: 0 ~ 255
+		amplifier = 4
+		# Default: 100
+		# Range: 1 ~ 72000
+		duration_ticks = 100
+		# Default: 6.0
+		# Range: 0.0 ~ 64.0
+		radius = 6.0
+		# Default: 300
+		# Range: 0 ~ 72000
+		cooldown_ticks = 300
+
+	[power_overrides.gorgon_stone_fists]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.gorgon_granite_hide]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.gorgon_knockback_resist]
+		# Default: 0.5
+		# Range: -1.0 ~ 1.0
+		amount = 0.5
+
+	[power_overrides.gorgon_size]
+		# Default: 1.15
+		# Range: 0.1 ~ 10.0
+		scale = 1.15
+
+	[power_overrides.gorgon_heavy_frame]
+		# Default: -0.2
+		# Range: -1.0 ~ 1.0
+		amount = -0.2
+
+	[power_overrides.gorgon_hunger_drain]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.5
+
+	[power_overrides.hiveling_sting]
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		speed = 1.0
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldown_ticks = 100
+
+	[power_overrides.hiveling_crop_growth]
+		# Default: 6
+		# Range: 1 ~ 64
+		radius = 6
+		# Default: 30
+		# Range: 1 ~ 72000
+		tick_interval = 30
+		# Default: 3
+		# Range: 1 ~ 100
+		growths_per_interval = 3
+
+	[power_overrides.hiveling_size]
+		# Default: 0.6
+		# Range: 0.1 ~ 10.0
+		scale = 0.6
+
+	[power_overrides.hiveling_reduced_health]
+		# Default: -6.0
+		# Range: -100.0 ~ 100.0
+		amount = -6.0
+
+	[power_overrides.hiveling_hunger_drain]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.5
+
+	[power_overrides.inchling_size]
+		# Default: 0.25
+		# Range: 0.1 ~ 10.0
+		scale = 0.25
+
+	[power_overrides.inchling_speed_boost]
+		# Default: 0.15
+		# Range: -1.0 ~ 10.0
+		amount = 0.15
+
+	[power_overrides.inchling_reduced_health]
+		# Default: -10.0
+		# Range: -100.0 ~ 100.0
+		amount = -10.0
+
+	[power_overrides.inchling_hunger_efficiency]
+		# Default: 0.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.5
+
+	[power_overrides.kraken_tentacle_lash]
+		# Default: 2
+		# Range: 0 ~ 255
+		amplifier = 2
+		# Default: 80
+		# Range: 1 ~ 72000
+		duration_ticks = 80
+		# Default: 5.0
+		# Range: 0.0 ~ 64.0
+		radius = 5.0
+		# Default: 160
+		# Range: 0 ~ 72000
+		cooldown_ticks = 160
+
+	[power_overrides.kraken_ink_shot]
+		# Default: 1.2
+		# Range: 0.0 ~ 10.0
+		speed = 1.2
+		# Default: 120
+		# Range: 0 ~ 72000
+		cooldown_ticks = 120
+
+	[power_overrides.kraken_massive]
+		# Default: 1.3
+		# Range: 0.1 ~ 10.0
+		scale = 1.3
+
+	[power_overrides.kraken_pressure_armor]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.kraken_deep_current]
+		# Default: 0.8
+		# Range: -1.0 ~ 10.0
+		amount = 0.8
+
+	[power_overrides.kraken_regen_in_water]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 2.0
+
+	[power_overrides.kraken_summon_guardian]
+		# Default: 2
+		# Range: 1 ~ 100
+		max_count = 2
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+		# Default: 5
+		# Range: 0 ~ 100
+		hunger_cost = 5
+		# Default: 18000
+		# Range: 0 ~ 1000000
+		despawn_ticks = 18000
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		death_damage = 1.0
+
+	[power_overrides.kraken_beached]
+		# Default: -0.3
+		# Range: -1.0 ~ 1.0
+		amount = -0.3
+
+	[power_overrides.kraken_daylight_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.merling_aquatic_speed]
+		# Default: 0.6
+		# Range: -1.0 ~ 10.0
+		amount = 0.6
+
+	[power_overrides.merling_land_slowdown]
+		# Default: -0.1
+		# Range: -1.0 ~ 1.0
+		amount = -0.1
+
+	[power_overrides.necromancer_summon_skeleton]
+		# Default: 3
+		# Range: 1 ~ 100
+		max_count = 3
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+		# Default: 4
+		# Range: 0 ~ 100
+		hunger_cost = 4
+		# Default: 18000
+		# Range: 0 ~ 1000000
+		despawn_ticks = 18000
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		death_damage = 1.0
+
+	[power_overrides.necromancer_summon_wither]
+		# Default: 2
+		# Range: 1 ~ 100
+		max_count = 2
+		# Default: 600
+		# Range: 0 ~ 72000
+		cooldown_ticks = 600
+		# Default: 6
+		# Range: 0 ~ 100
+		hunger_cost = 6
+		# Default: 18000
+		# Range: 0 ~ 1000000
+		despawn_ticks = 18000
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		death_damage = 1.0
+
+	[power_overrides.necromancer_reduced_health]
+		# Default: -6.0
+		# Range: -100.0 ~ 100.0
+		amount = -6.0
+
+	[power_overrides.necromancer_slow_regen]
+		# Default: 0.4
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.4
+
+	[power_overrides.necromancer_daylight_damage]
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.5
+
+	[power_overrides.phantom_form]
+		invisibility = true
+		no_gravity = true
+
+	[power_overrides.piglin_attack_bonus]
+		# Default: 2.0
+		# Range: -100.0 ~ 100.0
+		amount = 2.0
+
+	[power_overrides.piglin_soul_fire_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.revenant_active_bolt]
+		# Default: 1.2
+		# Range: 0.0 ~ 10.0
+		speed = 1.2
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.revenant_active_phase]
+		# Default: 8
+		# Range: 1 ~ 256
+		max_depth = 8
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+		# Default: 0
+		# Range: 0 ~ 100
+		hunger_cost = 0
+
+	[power_overrides.revenant_slow_regen]
+		# Default: 0.4
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.4
+
+	[power_overrides.revenant_daylight_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+
+	[power_overrides.sculkborn_sonic_bolt]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		speed = 1.5
+		# Default: 120
+		# Range: 0 ~ 72000
+		cooldown_ticks = 120
+
+	[power_overrides.sculkborn_darkness_aura]
+		# Default: 0
+		# Range: 0 ~ 255
+		amplifier = 0
+		# Default: 200
+		# Range: 1 ~ 72000
+		duration_ticks = 200
+		# Default: 8.0
+		# Range: 0.0 ~ 64.0
+		radius = 8.0
+		# Default: 300
+		# Range: 0 ~ 72000
+		cooldown_ticks = 300
+
+	[power_overrides.sculkborn_natural_armor]
+		# Default: 8.0
+		# Range: -100.0 ~ 100.0
+		amount = 8.0
+
+	[power_overrides.sculkborn_knockback_resist]
+		# Default: 0.5
+		# Range: -1.0 ~ 1.0
+		amount = 0.5
+
+	[power_overrides.sculkborn_reduced_health]
+		# Default: -4.0
+		# Range: -100.0 ~ 100.0
+		amount = -4.0
+
+	[power_overrides.sculkborn_slow_movement]
+		# Default: -0.15
+		# Range: -1.0 ~ 1.0
+		amount = -0.15
+
+	[power_overrides.sculkborn_daylight_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+
+	[power_overrides.shulk_natural_armor]
+		# Default: 8.0
+		# Range: -100.0 ~ 100.0
+		amount = 8.0
+
+	[power_overrides.shulk_slow_movement]
+		# Default: -0.25
+		# Range: -1.0 ~ 1.0
+		amount = -0.25
+
+	[power_overrides.siren_aquatic_speed]
+		# Default: 0.8
+		# Range: -1.0 ~ 10.0
+		amount = 0.8
+
+	[power_overrides.siren_regen_in_water]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 1.0
+
+	[power_overrides.siren_land_slowdown]
+		# Default: -0.15
+		# Range: -1.0 ~ 1.0
+		amount = -0.15
+
+	[power_overrides.siren_reduced_health]
+		# Default: -4.0
+		# Range: -100.0 ~ 100.0
+		amount = -4.0
+
+	[power_overrides.sporeling_spore_cloud]
+		# Default: 1
+		# Range: 0 ~ 255
+		amplifier = 1
+		# Default: 100
+		# Range: 1 ~ 72000
+		duration_ticks = 100
+		# Default: 5.0
+		# Range: 0.0 ~ 64.0
+		radius = 5.0
+		# Default: 240
+		# Range: 0 ~ 72000
+		cooldown_ticks = 240
+
+	[power_overrides.sporeling_natural_armor]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.sporeling_slow_movement]
+		# Default: -0.1
+		# Range: -1.0 ~ 1.0
+		amount = -0.1
+
+	[power_overrides.sporeling_daylight_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.stoneguard_thorns_aura]
+		# Default: 0.2
+		# Range: 0.0 ~ 10.0
+		return_ratio = 0.2
+
+	[power_overrides.stoneguard_natural_armor]
+		# Default: 3.0
+		# Range: -100.0 ~ 100.0
+		amount = 3.0
+
+	[power_overrides.stoneguard_knockback_resist]
+		# Default: 0.5
+		# Range: -1.0 ~ 1.0
+		amount = 0.5
+
+	[power_overrides.stoneguard_active_glowstone]
+		# Default: 5.0
+		# Range: 1.0 ~ 64.0
+		max_distance = 5.0
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldown_ticks = 100
+
+	[power_overrides.stoneguard_stone_mining]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.stoneguard_slow_movement]
+		# Default: -0.1
+		# Range: -1.0 ~ 1.0
+		amount = -0.1
+
+	[power_overrides.stoneguard_no_mob_spawns]
+		# Default: 24
+		# Range: 1 ~ 256
+		radius = 24
+
+	[power_overrides.strider_lava_regen]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 2.0
+
+	[power_overrides.strider_natural_armor]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.strider_water_weakness]
+		# Default: 3.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 3.0
+
+	[power_overrides.sylvan_active_root]
+		# Default: 5
+		# Range: 0 ~ 255
+		amplifier = 5
+		# Default: 80
+		# Range: 1 ~ 72000
+		duration_ticks = 80
+		# Default: 6.0
+		# Range: 0.0 ~ 64.0
+		radius = 6.0
+		# Default: 200
+		# Range: 0 ~ 72000
+		cooldown_ticks = 200
+
+	[power_overrides.sylvan_crop_growth]
+		# Default: 4
+		# Range: 1 ~ 64
+		radius = 4
+		# Default: 40
+		# Range: 1 ~ 72000
+		tick_interval = 40
+		# Default: 2
+		# Range: 1 ~ 100
+		growths_per_interval = 2
+
+	[power_overrides.sylvan_regen_in_water]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		amount_per_second = 1.0
+
+	[power_overrides.sylvan_nether_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.tiny_size]
+		# Default: 0.5
+		# Range: 0.1 ~ 10.0
+		scale = 0.5
+
+	[power_overrides.tiny_speed_boost]
+		# Default: 0.2
+		# Range: -1.0 ~ 10.0
+		amount = 0.2
+
+	[power_overrides.tiny_item_magnetism]
+		# Default: 4.0
+		# Range: 0.0 ~ 64.0
+		radius = 4.0
+
+	[power_overrides.tiny_attack_penalty]
+		# Default: -2.0
+		# Range: -100.0 ~ 100.0
+		amount = -2.0
+
+	[power_overrides.tiny_hunger_drain]
+		# Default: 1.8
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.8
+
+	[power_overrides.umbral_shadow_orb]
+		# Default: 4
+		# Range: 1 ~ 100
+		max_orbs = 4
+		# Default: 28.0
+		# Range: 1.0 ~ 128.0
+		radius = 28.0
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+		# Default: 20
+		# Range: 1 ~ 72000
+		tick_interval = 20
+
+	[power_overrides.umbral_active_dash]
+		# Default: 2.0
+		# Range: 0.0 ~ 10.0
+		power = 2.0
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+
+	[power_overrides.umbral_daylight_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.vampire_attack_bonus]
+		# Default: 2.0
+		# Range: -100.0 ~ 100.0
+		amount = 2.0
+
+	[power_overrides.vampire_speed_boost]
+		# Default: 0.15
+		# Range: -1.0 ~ 10.0
+		amount = 0.15
+
+	[power_overrides.vampire_daylight_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+
+	[power_overrides.vampire_slow_regen]
+		# Default: 0.4
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.4
+
+	[power_overrides.vampire_water_weakness]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.verdant_harvest_bonus]
+		# Default: 1
+		# Range: 0 ~ 100
+		extra_drops = 1
+
+	[power_overrides.verdant_nether_damage]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 2.0
+
+	[power_overrides.voidwalker_active_teleport]
+		# Default: 24.0
+		# Range: 1.0 ~ 256.0
+		range = 24.0
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.voidwalker_active_phase]
+		# Default: 10
+		# Range: 1 ~ 256
+		max_depth = 10
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+		# Default: 3
+		# Range: 0 ~ 100
+		hunger_cost = 3
+
+	[power_overrides.voidwalker_water_damage]
+		# Default: 1.75
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.75
+
+	[power_overrides.warden_sonic_boom]
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		speed = 1.0
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+
+	[power_overrides.warden_strength]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.warden_ancient_hide]
+		# Default: 10.0
+		# Range: -100.0 ~ 100.0
+		amount = 10.0
+
+	[power_overrides.warden_hulking_frame]
+		# Default: 1.15
+		# Range: 0.1 ~ 10.0
+		scale = 1.15
+
+	[power_overrides.warden_lumbering]
+		# Default: -0.3
+		# Range: -1.0 ~ 1.0
+		amount = -0.3
+
+	[power_overrides.warden_daylight_damage]
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		damage_per_second = 1.0
+
+	[power_overrides.class_warrior_damage]
+		# Default: 1.0
+		# Range: -100.0 ~ 100.0
+		amount = 1.0
+
+	[power_overrides.class_warrior_knockback_resist]
+		# Default: 0.3
+		# Range: -1.0 ~ 1.0
+		amount = 0.3
+
+	[power_overrides.class_archer_agility]
+		# Default: 0.15
+		# Range: -1.0 ~ 10.0
+		amount = 0.15
+
+	[power_overrides.class_miner_speed]
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.5
+
+	[power_overrides.class_miner_efficiency]
+		# Default: 0.7
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.7
+
+	[power_overrides.class_beastmaster_diffusal]
+		# Default: 16.0
+		# Range: 0.0 ~ 128.0
+		radius = 16.0
+
+	[power_overrides.class_beastmaster_potions]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.5
+
+	[power_overrides.class_explorer_stamina]
+		# Default: 0.6
+		# Range: 0.0 ~ 10.0
+		multiplier = 0.6
+
+	[power_overrides.class_sentinel_armor]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.class_sentinel_knockback_resist]
+		# Default: 0.2
+		# Range: -1.0 ~ 1.0
+		amount = 0.2
+
+	[power_overrides.class_sentinel_thorns]
+		# Default: 0.25
+		# Range: 0.0 ~ 10.0
+		return_ratio = 0.25
+
+	[power_overrides.class_herbalist_growth]
+		# Default: 5
+		# Range: 1 ~ 64
+		radius = 5
+		# Default: 40
+		# Range: 1 ~ 72000
+		tick_interval = 40
+		# Default: 2
+		# Range: 1 ~ 100
+		growths_per_interval = 2
+
+	[power_overrides.class_herbalist_harvest_bonus]
+		# Default: 1
+		# Range: 0 ~ 100
+		extra_drops = 1
+
+	[power_overrides.class_scout_speed]
+		# Default: 0.2
+		# Range: -1.0 ~ 10.0
+		amount = 0.2
+
+	[power_overrides.class_berserker_damage]
+		# Default: 3.0
+		# Range: -100.0 ~ 100.0
+		amount = 3.0
+
+	[power_overrides.class_berserker_hunger]
+		# Default: 1.5
+		# Range: 0.0 ~ 10.0
+		multiplier = 1.5
+
+	[power_overrides.class_titan_size]
+		# Default: 1.25
+		# Range: 0.1 ~ 10.0
+		scale = 1.25
+
+	[power_overrides.class_titan_health]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.class_titan_reach]
+		# Default: 0.5
+		# Range: -10.0 ~ 10.0
+		amount = 0.5
+
+	[power_overrides.class_rogue_sneaky]
+		# Default: 0.3
+		# Range: 0.0 ~ 10.0
+		detection_multiplier = 0.3
+
+	[power_overrides.class_rogue_stealth]
+		# Default: 200
+		# Range: 0 ~ 72000
+		activation_ticks = 200
+
+	[power_overrides.class_lumberjack_tree_felling]
+		# Default: 64
+		# Range: 1 ~ 1024
+		max_blocks = 64
+
+	[power_overrides.class_lumberjack_bonus_planks]
+		# Default: 2
+		# Range: 0 ~ 100
+		bonus_count = 2
+
+	[power_overrides.class_merchant_trades]
+		# Default: 40
+		# Range: 1 ~ 72000
+		scan_interval = 40
+		# Default: 8.0
+		# Range: 0.0 ~ 128.0
+		radius = 8.0
+
+	[power_overrides.class_cleric_enchanting]
+		# Default: 5
+		# Range: 0 ~ 100
+		bonus_levels = 5
+
+	[power_overrides.class_cleric_potions]
+		# Default: 2.0
+		# Range: 0.0 ~ 10.0
+		multiplier = 2.0
+
+	[power_overrides.class_cook_food]
+		# Default: 0.4
+		# Range: 0.0 ~ 10.0
+		saturation_bonus = 0.4
+
+	[power_overrides.class_cook_smoker_xp]
+		# Default: 2.0
+		# Range: 0.0 ~ 100.0
+		multiplier = 2.0
+
+	[power_overrides.class_blacksmith_quality]
+		# Default: 1
+		# Range: 0 ~ 10
+		unbreaking_level = 1
+
+	[power_overrides.class_blacksmith_repairs]
+		# Default: 0.5
+		# Range: 0.0 ~ 10.0
+		cost_multiplier = 0.5
+
+#Random origin assignment mode.
+#DISABLED: players choose their origin normally.
+#FIRST_JOIN: origins are randomly assigned on first join (no selection screen).
+#EVERY_DEATH: origins are randomly re-assigned on each respawn.
+[random_assignment]
+	#When to randomly assign origins.
+	#Allowed Values: DISABLED, FIRST_JOIN, EVERY_DEATH
+	mode = "DISABLED"
+	#Number of times a player may reroll after random assignment.
+	#0 = no rerolls (stuck with what you get).
+	#-1 = unlimited rerolls via Orb of Origin.
+	# Default: 0
+	# Range: -1 ~ 100
+	rerolls = 0
+
+#Compat origin filtering.
+#Origins from addon mods are hidden if fewer than this fraction of their
+#powers loaded successfully. Set to 0.0 to show all origins regardless.
+#Default 0.5 = origins with <50% of powers working are hidden.
+[compat_filtering]
+	#Minimum ratio of loaded powers (0.0-1.0) for an addon origin to appear.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	min_power_ratio = 0.5
