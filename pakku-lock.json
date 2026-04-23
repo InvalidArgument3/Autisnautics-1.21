@@ -5059,6 +5059,74 @@
             ]
         },
         {
+            "pakku_id": "66nk1Rc0prmMk6JO",
+            "pakku_links": [
+                "f4p7d0Bu0hclVY5B"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-blazing-hot",
+                "modrinth": "create-blazing-hot"
+            },
+            "name": {
+                "curseforge": "Create: Blazing Hot",
+                "modrinth": "Create: Blazing Hot"
+            },
+            "id": {
+                "curseforge": "1070455",
+                "modrinth": "LmT6oZrX"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7329/954/create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
+                    "id": "7329954",
+                    "parent_id": "1070455",
+                    "hashes": {
+                        "sha1": "136f85b9b8e737e3faa2e00fd2592b3a5c98b6a4",
+                        "md5": "9ed03cce18dda54bf5bfcea8f44f074f"
+                    },
+                    "required_dependencies": [
+                        "328085"
+                    ],
+                    "size": 3146320,
+                    "date_published": "2025-12-13T21:33:43.623Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/LmT6oZrX/versions/Ckfu9IzG/create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
+                    "id": "Ckfu9IzG",
+                    "parent_id": "LmT6oZrX",
+                    "hashes": {
+                        "sha512": "423687afe512109d67e6ca74ccbc552e0d2ba93288a99dd5c34ce0d6432d0f022d369d1fcfd78c9a3e4c8956da697da38d986b3a1a6ab857e2f57dbd7909cc00",
+                        "sha1": "136f85b9b8e737e3faa2e00fd2592b3a5c98b6a4"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc"
+                    ],
+                    "size": 3146320,
+                    "date_published": "2025-12-13T21:33:44.349470Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "FBVBXiWFo8RbSGYX",
             "type": "MOD",
             "slug": {

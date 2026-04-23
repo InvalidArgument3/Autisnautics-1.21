@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "name": "Autisnautics 2 Datapack",
+        "id": "autisnautics2datapack",
+        "pack_format": 15,
+        "version": "1.21",
+        "authors": [
+            "me"
+        ],
+        "description": "misc datapack fixes for the modpack"
+    }
+}

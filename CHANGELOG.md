@@ -1,4 +1,13 @@
 # Changelog
+## [0.0.26]
+- worldgen fixes, add origins mod, preparing for chapters
+- oregen: remove oritech resource nodes, stellaris:steel_ore
+- add neoorigins, disable base origins & classes in config, whitelist originpacks folder to build
+- mod updates and config inits
+- unzip a2 datapack and resourcepack; re-enable cave gen in skylands via datapack
+- register kubejs:rubber replacement for thermal:rubber
+- kubejs tree tapping for resin (thermal arboreal extractor replacement)
+- add create: blazing hot
 
 ## [0.0.25]
 - replace """""advanced"""" rocketry with stellaris (no relation)
