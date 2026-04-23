@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.30]
+- chapter 1: add cobblegen mod for andesite generation
+
 ## [0.0.29]
 - chapter 1: kubejs water straining for sand/clay with farmersdelight:basket
 

@@ -1,0 +1,30 @@
+{
+	// CobbleGen Format Version, you can leave this alone for now. v2.0 is scheduled to be released in CobbleGen v6.0
+	"formatVersion": "1.0",
+	"customGen": {
+		"cobbleGen": {
+            // A2: Cobble gen on top of bedrock makes andesite
+			"minecraft:bedrock": [
+				{
+					"id": "minecraft:andesite",
+					"weight": 100.0,
+				},
+			],
+            // 1.21: Can use a magma block instead, but may yield other useless igneous rocks
+            "minecraft:magma_block": [
+				{
+					"id": "minecraft:andesite",
+					"weight": 70.0,
+				},
+                {
+					"id": "minecraft:diorite",
+					"weight": 20.0,
+				},
+                {
+                    "id": "minecraft:granite",
+					"weight": 10.0,
+				}
+			]
+		}
+    }
+}
