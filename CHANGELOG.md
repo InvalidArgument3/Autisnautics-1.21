@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.29]
+- chapter 1: kubejs water straining for sand/clay with farmersdelight:basket
+
 ## [0.0.28]
 - updoot
 
