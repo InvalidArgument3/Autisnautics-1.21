@@ -11,3 +11,6 @@
 		#.
 		#If block interaction of air current through fluid should be enabled
 		"fluid/air_current_block_interaction" = true
+		#.
+		#If Fragile Fluid Tank should be enabled
+		"fluid/fragile_fluid_tank" = true
