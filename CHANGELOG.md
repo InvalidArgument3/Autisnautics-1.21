@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.31]
+- regexsearch patch
+
 ## [0.0.30]
 - chapter 1: add cobblegen mod for andesite generation
 
