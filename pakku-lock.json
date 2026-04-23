@@ -19999,14 +19999,14 @@
                     "type": "github",
                     "file_name": "regex_search-1.4.0+1.21.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/regex_search/releases/download/1.4.0-neoforge/regex_search-1.4.0+1.21.jar",
-                    "id": "400554646",
+                    "url": "https://github.com/InvalidArgument3/regex_search/releases/download/1.4.1-neoforge/regex_search-1.4.0+1.21.jar",
+                    "id": "403341790",
                     "parent_id": "1215603714",
                     "hashes": {
-                        "sha256": "fe539368933105ae7dbcaa4fcb9e2eb751bf1c159ee7c23ec45ff8872dfed8c0"
+                        "sha256": "6e4ec8b5296d61323198f305c870d75844149c2e107b3d11d97e701dd141d45a"
                     },
-                    "size": 356267,
-                    "date_published": "2026-04-20T08:27:08Z"
+                    "size": 356392,
+                    "date_published": "2026-04-23T10:39:20Z"
                 }
             ]
         },
