@@ -1,4 +1,8 @@
 # Changelog
+
+## [0.0.27]
+- version boomp
+
 ## [0.0.26]
 - worldgen fixes, add origins mod, preparing for chapters
 - oregen: remove oritech resource nodes, stellaris:steel_ore
