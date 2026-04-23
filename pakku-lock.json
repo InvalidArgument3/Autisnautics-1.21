@@ -5079,31 +5079,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/7329/954/create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
-                    "id": "7329954",
-                    "parent_id": "1070455",
-                    "hashes": {
-                        "sha1": "136f85b9b8e737e3faa2e00fd2592b3a5c98b6a4",
-                        "md5": "9ed03cce18dda54bf5bfcea8f44f074f"
-                    },
-                    "required_dependencies": [
-                        "328085"
-                    ],
-                    "size": 3146320,
-                    "date_published": "2025-12-13T21:33:43.623Z"
-                },
-                {
                     "type": "modrinth",
-                    "file_name": "create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
+                    "file_name": "create_blazing_hot-0.7.3+neoforge-mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5111,18 +5088,41 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/LmT6oZrX/versions/Ckfu9IzG/create_blazing_hot-0.7.2+neoforge-mc1.21.1.jar",
-                    "id": "Ckfu9IzG",
+                    "url": "https://cdn.modrinth.com/data/LmT6oZrX/versions/VPCEoGrO/create_blazing_hot-0.7.3+neoforge-mc1.21.1.jar",
+                    "id": "VPCEoGrO",
                     "parent_id": "LmT6oZrX",
                     "hashes": {
-                        "sha512": "423687afe512109d67e6ca74ccbc552e0d2ba93288a99dd5c34ce0d6432d0f022d369d1fcfd78c9a3e4c8956da697da38d986b3a1a6ab857e2f57dbd7909cc00",
-                        "sha1": "136f85b9b8e737e3faa2e00fd2592b3a5c98b6a4"
+                        "sha512": "910d477400964e91c91491ae2f580747e26826216a522970724ba37adf5b7dd54a90b3eda4ce78292f0e275239a0eaa0615dff74484877c73a186fd495d93a25",
+                        "sha1": "8372dc1a8518cd539980a774edbdbdd5d0ef0d9f"
                     },
                     "required_dependencies": [
                         "LNytGWDc"
                     ],
-                    "size": 3146320,
-                    "date_published": "2025-12-13T21:33:44.349470Z"
+                    "size": 3141780,
+                    "date_published": "2026-04-22T16:41:50.679446Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "create_blazing_hot-0.7.3+neoforge-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7967/777/create_blazing_hot-0.7.3+neoforge-mc1.21.1.jar",
+                    "id": "7967777",
+                    "parent_id": "1070455",
+                    "hashes": {
+                        "sha1": "8372dc1a8518cd539980a774edbdbdd5d0ef0d9f",
+                        "md5": "8fa76bac4df4ebe726d193fc3978881a"
+                    },
+                    "required_dependencies": [
+                        "328085"
+                    ],
+                    "size": 3141780,
+                    "date_published": "2026-04-22T16:41:46.977Z"
                 }
             ]
         },
@@ -5383,7 +5383,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreateDragonsPlus-1.10.0.jar",
+                    "file_name": "CreateDragonsPlus-1.10.0b.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5391,18 +5391,18 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/O2wYLrJh/CreateDragonsPlus-1.10.0.jar",
-                    "id": "O2wYLrJh",
+                    "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/ew6gKsnx/CreateDragonsPlus-1.10.0b.jar",
+                    "id": "ew6gKsnx",
                     "parent_id": "dzb1a5WV",
                     "hashes": {
-                        "sha512": "672efc2c7092ec83281bd0af432d8673c81e4849204d9108e33615791aa560aacd8fe204d6d1a2740906da8b8bde3c0da9f58ddaa75ba087fe968da6d3f3c8c2",
-                        "sha1": "6764a52fe5e700850aeffcba137af0768b5e3bf5"
+                        "sha512": "e54e40f1d0f005693a2a165f15a694482c44406ee34f1658d687ad0397f173227be42cc208bafd6706ad0be547b8ee85cbad5b52f17c7fa7216fb729d4e81684",
+                        "sha1": "e50ae4f50173b12232b8dbd6b85568b4b657c0cf"
                     },
                     "required_dependencies": [
                         "LNytGWDc"
                     ],
-                    "size": 756319,
-                    "date_published": "2026-04-22T13:05:16.015032Z"
+                    "size": 756460,
+                    "date_published": "2026-04-23T02:10:36.702219Z"
                 }
             ]
         },
@@ -12046,7 +12046,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "modernfix-neoforge-5.27.2+mc1.21.1.jar",
+                    "file_name": "modernfix-neoforge-5.27.3+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -12054,20 +12054,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/iYwIkyV5/modernfix-neoforge-5.27.2+mc1.21.1.jar",
-                    "id": "iYwIkyV5",
+                    "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/QbebWhuK/modernfix-neoforge-5.27.3+mc1.21.1.jar",
+                    "id": "QbebWhuK",
                     "parent_id": "nmDcB62a",
                     "hashes": {
-                        "sha512": "5c3430cea1b7e0662b10eb2238c53212a32587f4181270d90e40ad81b5672a4c8d4922e664c19a55888c6779bad7804d7fa7ce35c692baffbd26396598a8c532",
-                        "sha1": "6a164013d692c209157d06e178bc43deb3e1d946"
+                        "sha512": "e8f0fef727757a5cb658c5e3a8352f3438cee9c60c9e6c5c1190f5787365a113348f24e075219fcd91264397afe8cf8ae318b5b5d402bedd03a74d0fba062999",
+                        "sha1": "e72aa9c2f9244327697e118043a3c5004ab2802a"
                     },
                     "required_dependencies": [],
-                    "size": 562003,
-                    "date_published": "2026-04-12T20:40:30.549639Z"
+                    "size": 562031,
+                    "date_published": "2026-04-22T23:11:36.356677Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "modernfix-neoforge-5.27.2+mc1.21.1.jar",
+                    "file_name": "modernfix-neoforge-5.27.3+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -12075,16 +12075,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7917/721/modernfix-neoforge-5.27.2+mc1.21.1.jar",
-                    "id": "7917721",
+                    "url": "https://edge.forgecdn.net/files/7969/602/modernfix-neoforge-5.27.3+mc1.21.1.jar",
+                    "id": "7969602",
                     "parent_id": "790626",
                     "hashes": {
-                        "sha1": "6a164013d692c209157d06e178bc43deb3e1d946",
-                        "md5": "74610b0b92b81641c61444a4c1a79ed4"
+                        "sha1": "e72aa9c2f9244327697e118043a3c5004ab2802a",
+                        "md5": "01d41313ec3051e560c9f373edce3786"
                     },
                     "required_dependencies": [],
-                    "size": 562003,
-                    "date_published": "2026-04-12T20:40:29.417Z"
+                    "size": 562031,
+                    "date_published": "2026-04-22T23:11:35.527Z"
                 }
             ]
         },
