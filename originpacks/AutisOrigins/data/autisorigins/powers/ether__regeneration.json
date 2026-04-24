@@ -9,7 +9,7 @@
             "value": 4
         },
         {
-            "attribute": "attributeslib:healing_received",
+            "attribute": "apothic_attributes:healing_received",
             "operation": "multiply_base",
             "value": 1
         }

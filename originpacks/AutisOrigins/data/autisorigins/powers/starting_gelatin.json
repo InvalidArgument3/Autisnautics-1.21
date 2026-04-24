@@ -3,10 +3,11 @@
     "description": "Blobbians spawn with a generic gelatin dessert that is unaffiliated with Jell-O™.",
     "type": "origins:multiple",
     "equipment": {
-        "type": "origins:starting_equipment",
-        "stack": {
-            "item": "alexscaves:gelatin_green",
-            "amount": 1
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "/give @p alexscaves:gelatin_green"
         }
     },
     "quests": {

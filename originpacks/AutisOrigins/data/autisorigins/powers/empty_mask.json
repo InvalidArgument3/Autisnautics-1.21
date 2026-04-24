@@ -1,6 +1,6 @@
 {
     "name": "Empty Mask",
-    "description": "Much like a hermit crab and its shell, any Alchemist is in mortal peril without a mask to wear. The Alchemist suffers severe debuffs without one and is unable to wear any other form of headgear.",
+    "description": "Much like a hermit crab and its shell, any Alchemist is in mortal peril without a mask to wear. The Alchemist suffers severe debuffs without one and is unable to wear any form of open-faced headgear.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:restrict_armor",
@@ -13,9 +13,6 @@
                 },
                 {
                     "item": "rats:black_death_mask"
-                },
-                {
-                    "item": "scguns:brass_mask"
                 },
                 {
                     "item": "mowziesmobs:umvuthana_mask_fury"
@@ -42,10 +39,58 @@
                     "item": "createbigcannons:gas_mask"
                 },
                 {
-                    "item": "nuclearcraft:hazmat_mask"
+                    "item": "alexscaves:hazmat_mask"
                 },
                 {
-                    "item": "alexscaves:hazmat_mask"
+                    "item": "alexscaves:hood_of_darkness"
+                },
+                {
+                    "item": "psi:psimetal_exosuit_helmet"
+                },
+                {
+                    "item": "galosphere:sterling_helmet"
+                },
+                {
+                    "item": "magistuarmory:greathelm"
+                },
+                {
+                    "item": "magistuarmory:stechhelm"
+                },
+                {
+                    "item": "magistuarmory:rustedgreathelm"
+                },
+                {
+                    "item": "magistuarmory:armet"
+                },
+                {
+                    "item": "magistuarmory:ceremonialarmet"
+                },
+                {
+                    "item": "magistuarmory:bascinet"
+                },
+                {
+                    "item": "magistuarmory:grand_bascinet"
+                },
+                {
+                    "item": "magistuarmory:face_helmet"
+                },
+                {
+                    "item": "magistuarmory:rustedgreathelm"
+                },
+                {
+                    "item": "create:copper_diving_helmet"
+                },
+                {
+                    "item": "create:cardboard_helmet"
+                },
+                {
+                    "item": "immersiveengineering:armor_faraday_helmet"
+                },
+                {
+                    "item": "stellaris:space_suit_helmet"
+                },
+                {
+                    "item": "stellaris:jet_suit_helmet"
                 }
             ]
         }
@@ -75,7 +120,7 @@
                 "show_icon": false
             },
             {
-                "effect": "mna:frailty",
+                "effect": "mowziesmobs:fragility",
                 "duration": 30,
                 "amplifier": 4,
                 "is_ambient": true,
@@ -83,7 +128,7 @@
                 "show_icon": false
             },
             {
-                "effect": "attributeslib:grievous",
+                "effect": "apothic_attributes:grievous",
                 "duration": 30,
                 "amplifier": 0,
                 "is_ambient": true,

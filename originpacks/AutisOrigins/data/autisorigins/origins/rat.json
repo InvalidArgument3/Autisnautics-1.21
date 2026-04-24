@@ -4,14 +4,14 @@
     "powers": [
         "autisorigins:bite-sized",
         "autisorigins:nimble",
-        "origins:climbing",
+        "autisorigins:climbing",
         "autisorigins:jockey",
         "autisorigins:rat_teeth",
         "autisorigins:cheesed_to_meet_you",
         "autisorigins:starting_cheese"
     ],
     "icon": {
-        "item": "tconstruct:cheese_ingot"
+        "item": "brewinandchewin:flaxen_cheese_wedge"
     },
     "order": 1,
     "impact": 3

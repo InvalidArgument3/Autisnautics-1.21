@@ -1,6 +1,6 @@
 {
     "name": "Cactoid",
-    "description": "An artificial race born as a genetic experiment by unknown beings from the Moon. When the land rose from the sea, the lunar beings mysteriously vanished, leaving the Cactoids behind.\nTheir cactus DNA grants them thorns, but their plant-like tissues make good kindling. A cactoid's mutant digestive tract can process rotting flesh into gunpowder, but is less efficient at digesting food.",
+    "description": "An artificial race born as a genetic experiment by unknown beings from the Moon. When the land rose from the sea, the lunar beings mysteriously vanished, leaving the Cactoids behind.\n\nTheir cactus DNA grants them thorns, but their plant-like tissues make good kindling. A cactoid's mutant digestive tract can process rotting flesh into gunpowder, but is less efficient at digesting food.",
     "powers": [
         "autisorigins:thorns",
         "autisorigins:flammable",

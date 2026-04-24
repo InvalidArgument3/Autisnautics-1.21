@@ -4,7 +4,7 @@
     "type": "origins:attribute",
     "modifiers": [
         {
-            "attribute": "attributeslib:experience_gained",
+            "attribute": "apothic_attributes:experience_gained",
             "operation": "multiply_base",
             "value": 4
         },

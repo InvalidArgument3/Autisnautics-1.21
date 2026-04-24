@@ -1,6 +1,6 @@
 {
     "name": "Snail",
-    "description": "The Snails are a common infestation in these lands. They originally came to this world on vacation, but they move so slowly, they haven't made it back home yet after centuries.\nLuckily, Snails are too dumb and sluggish to escape when you throw salt on them, so they're easy to exterminate.\nEveryone knows Snails have no redeeming qualities. \"Snail\" is a common all-purpose slur nowadays.",
+    "description": "The Snails are a common infestation in these lands. They originally came to this world on vacation, but they move so slowly, they haven't made it back home yet after centuries.\n\nLuckily, Snails are too dumb and sluggish to escape when you throw salt on them, so they're easy to exterminate.\n\nEveryone knows Snails have no redeeming qualities. \"Snail\" is a common all-purpose slur nowadays.",
     "powers": [
         "autisorigins:snaily",
         "autisorigins:snails_pace",

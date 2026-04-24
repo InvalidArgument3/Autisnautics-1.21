@@ -9,7 +9,7 @@
             "value": -2
         },
         {
-            "attribute": "attributeslib:cold_damage",
+            "attribute": "apothic_attributes:cold_damage",
             "operation": "addition",
             "value": 2
         }

@@ -3,10 +3,11 @@
     "description": "Snails don't start with any food, only a fishing rod.",
     "type": "origins:multiple",
     "equipment": {
-        "type": "origins:starting_equipment",
-        "stack": {
-            "item": "minecraft:fishing_rod",
-            "amount": 1
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "/give @p minecraft:fishing_rod"
         }
     },
     "quests": {

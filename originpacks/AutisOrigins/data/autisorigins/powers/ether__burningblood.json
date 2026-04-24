@@ -9,7 +9,7 @@
             "value": -2
         },
         {
-            "attribute": "attributeslib:fire_damage",
+            "attribute": "apothic_attributes:fire_damage",
             "operation": "addition",
             "value": 2
         }

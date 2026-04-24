@@ -1,5 +1,4 @@
 {
-    "replace": true,
     "name": "origins.layer.origin",
     "origins": [
         "autisorigins:accursed_one",

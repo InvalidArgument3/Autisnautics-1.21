@@ -4,7 +4,7 @@
     "type": "origins:attribute",
     "modifiers": [
         {
-            "attribute": "attributeslib:life_steal",
+            "attribute": "apothic_attributes:life_steal",
             "operation": "addition",
             "value": 0.2
         },
