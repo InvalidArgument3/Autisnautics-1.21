@@ -25,6 +25,15 @@
 					"weight": 10.0,
 				}
 			]
-		}
+		},
+        "stoneGen": {
+            // A2: Stone gen on top of magma block makes deepslate
+            "minecraft:magma_block": [
+                {
+                    "id": "minecraft:deepslate",
+                    "weight": 100.0
+                }
+            ]
+        }
     }
 }
