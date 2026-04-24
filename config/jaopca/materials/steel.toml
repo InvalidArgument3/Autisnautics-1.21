@@ -11,6 +11,8 @@
 	hasEffect = false
 	#The model type of the material.
 	modelType = "metallic"
+	#The color of this material.
+	color = 7304559
 
 [theurgy]
 	#The alchemical sulfur tier of this material.

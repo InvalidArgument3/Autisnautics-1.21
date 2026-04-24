@@ -6379,6 +6379,47 @@
             ]
         },
         {
+            "pakku_id": "D5cnNK0DGMueml1p",
+            "pakku_links": [
+                "e8ppzsbyls6e6B6E"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "doespotatotick"
+            },
+            "name": {
+                "curseforge": "DoesPotatoTick?"
+            },
+            "id": {
+                "curseforge": "825355"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "doespotatotick-1.21.1-5.6.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7888/231/doespotatotick-1.21.1-5.6.3.jar",
+                    "id": "7888231",
+                    "parent_id": "825355",
+                    "hashes": {
+                        "sha1": "0edf7400ef27d51c3fb58119b99e04fb3e213377",
+                        "md5": "26911d13dc0197d3b2a40b8c1b81aec0"
+                    },
+                    "required_dependencies": [
+                        "1380105"
+                    ],
+                    "size": 46534,
+                    "date_published": "2026-04-07T03:11:49.730Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "2bSUmlv7dQWD7SFW",
             "pakku_links": [
                 "fLAlUm2k5HtUWnbt"
@@ -6580,6 +6621,42 @@
                     ],
                     "size": 6928435,
                     "date_published": "2026-04-14T05:58:43.797Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "e8ppzsbyls6e6B6E",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "duplicationless"
+            },
+            "name": {
+                "curseforge": "Duplicationless"
+            },
+            "id": {
+                "curseforge": "1380105"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "duplicationless-1.21.1-1.1.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7488/559/duplicationless-1.21.1-1.1.5.jar",
+                    "id": "7488559",
+                    "parent_id": "1380105",
+                    "hashes": {
+                        "sha1": "6a631b0210b8e647427b3b8159f3bb7bc06c566f",
+                        "md5": "112aa8107e21e4da2ddb0cbf063cff20"
+                    },
+                    "required_dependencies": [],
+                    "size": 55665,
+                    "date_published": "2026-01-19T13:59:24.233Z"
                 }
             ]
         },
@@ -6946,6 +7023,129 @@
                     ],
                     "size": 38160,
                     "date_published": "2025-09-27T11:26:57.907120Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "8yeRpLOouFokeQrP",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "ez-actions",
+                "modrinth": "ez-actions"
+            },
+            "name": {
+                "curseforge": "EZ Actions",
+                "modrinth": "EZ Actions"
+            },
+            "id": {
+                "curseforge": "1340029",
+                "modrinth": "gJiy6dk4"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "ezactions-neoforge-1.21.1-2.0.3.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/gJiy6dk4/versions/z7npcqAM/ezactions-neoforge-1.21.1-2.0.3.5.jar",
+                    "id": "z7npcqAM",
+                    "parent_id": "gJiy6dk4",
+                    "hashes": {
+                        "sha512": "669ba403fe827463b8507853acba2c2c17b044cde754a5565c03d088b561ed10ebc74b76a5987c6c1143d57c0a1b7d721e6b7394829cde18dcc5946fe425c6f3",
+                        "sha1": "df2234c19d6a0df369c8954c6282ecf71d60dc77"
+                    },
+                    "required_dependencies": [],
+                    "size": 498920,
+                    "date_published": "2026-04-22T16:07:29.841031Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "ezactions-neoforge-1.21.1-2.0.3.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7967/633/ezactions-neoforge-1.21.1-2.0.3.5.jar",
+                    "id": "7967633",
+                    "parent_id": "1340029",
+                    "hashes": {
+                        "sha1": "df2234c19d6a0df369c8954c6282ecf71d60dc77",
+                        "md5": "04dbebf829e2523a58624aa86d27a033"
+                    },
+                    "required_dependencies": [],
+                    "size": 498920,
+                    "date_published": "2026-04-22T16:06:58.720Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "GFKimFdcSj0tmtlL",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "eco-stack-manager",
+                "modrinth": "eco-stack-manager"
+            },
+            "name": {
+                "curseforge": "Eco Stack Manager",
+                "modrinth": "Eco Stack Manager"
+            },
+            "id": {
+                "curseforge": "1067929",
+                "modrinth": "YfTOSsIw"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "eco_stack_manager-neoforge-1.21.1-1.4.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/YfTOSsIw/versions/hiMa9pQd/eco_stack_manager-neoforge-1.21.1-1.4.1.jar",
+                    "id": "hiMa9pQd",
+                    "parent_id": "YfTOSsIw",
+                    "hashes": {
+                        "sha512": "183fe4fd9c8e2b37b16d64399e35d5c4d4bbe51d766706e097e139214b98425da149f780376493785051a4673aa30ab19322945e25e9bb70066527ff58b599c1",
+                        "sha1": "3a7abdd6198d09736a4722e6d9e0a5b7be906790"
+                    },
+                    "required_dependencies": [],
+                    "size": 102353,
+                    "date_published": "2025-08-12T15:49:29.610213Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "eco_stack_manager-neoforge-1.21.1-1.4.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6879/012/eco_stack_manager-neoforge-1.21.1-1.4.1.jar",
+                    "id": "6879012",
+                    "parent_id": "1067929",
+                    "hashes": {
+                        "sha1": "3a7abdd6198d09736a4722e6d9e0a5b7be906790",
+                        "md5": "f7ee2aa7167ff883390f97f0b7f58fb5"
+                    },
+                    "required_dependencies": [],
+                    "size": 102353,
+                    "date_published": "2025-08-12T15:49:45Z"
                 }
             ]
         },
@@ -7660,50 +7860,6 @@
             ]
         },
         {
-            "pakku_id": "6jYrkFT5aFer3Aqb",
-            "pakku_links": [
-                "utxrjNJdJTXmKalD",
-                "kKqQfK3rwC6omqTu"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "ftb-chunks-forge"
-            },
-            "name": {
-                "curseforge": "FTB Chunks (NeoForge)"
-            },
-            "id": {
-                "curseforge": "314906"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "ftb-chunks-neoforge-2101.1.14.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7608/681/ftb-chunks-neoforge-2101.1.14.jar",
-                    "id": "7608681",
-                    "parent_id": "314906",
-                    "hashes": {
-                        "sha1": "908b63b11d0e00ae6c9557d3fe6440bdbcf21bb7",
-                        "md5": "93140f01962b61786b5bcc3d41960b9f"
-                    },
-                    "required_dependencies": [
-                        "404468",
-                        "404465",
-                        "419699"
-                    ],
-                    "size": 642340,
-                    "date_published": "2026-02-11T11:24:37.643Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "W5YbX7n9Nsoj25rt",
             "pakku_links": [
                 "utxrjNJdJTXmKalD"
@@ -8414,6 +8570,67 @@
                     "required_dependencies": [],
                     "size": 121559,
                     "date_published": "2026-01-25T12:59:44.447Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "pOatsj5P1dO9jtUq",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "flerovium",
+                "modrinth": "flerovium"
+            },
+            "name": {
+                "curseforge": "Flerovium",
+                "modrinth": "Flerovium"
+            },
+            "id": {
+                "curseforge": "1142875",
+                "modrinth": "4Rh1Mobu"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "flerovium-neoforge-1.21.1-1.0.18-all.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/4Rh1Mobu/versions/ROADZx1W/flerovium-neoforge-1.21.1-1.0.18-all.jar",
+                    "id": "ROADZx1W",
+                    "parent_id": "4Rh1Mobu",
+                    "hashes": {
+                        "sha512": "ee04af8b67868d8a1f128eb1f2bcb533f06ed239f6d347aa2c73a8cd4af2194852188db1da8ae4322a85095401369b1835300cdf82500a6f4722d7db9dabaacf",
+                        "sha1": "3d7890fa10d71a2dff2a25b19a9bc259261989e0"
+                    },
+                    "required_dependencies": [],
+                    "size": 182390,
+                    "date_published": "2026-04-19T17:19:30.439927Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "flerovium-neoforge-1.21.1-1.0.18-all.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7951/633/flerovium-neoforge-1.21.1-1.0.18-all.jar",
+                    "id": "7951633",
+                    "parent_id": "1142875",
+                    "hashes": {
+                        "sha1": "3d7890fa10d71a2dff2a25b19a9bc259261989e0",
+                        "md5": "50b894e7bc41d8d4ccf11f2c8418b504"
+                    },
+                    "required_dependencies": [],
+                    "size": 182390,
+                    "date_published": "2026-04-19T17:20:03.580Z"
                 }
             ]
         },
@@ -13572,6 +13789,69 @@
             ]
         },
         {
+            "pakku_id": "wRKQxumbkHFwlEg9",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "open-parties-and-claims",
+                "modrinth": "open-parties-and-claims"
+            },
+            "name": {
+                "curseforge": "Open Parties and Claims",
+                "modrinth": "Open Parties and Claims"
+            },
+            "id": {
+                "curseforge": "636608",
+                "modrinth": "gF3BGWvG"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "open-parties-and-claims-neoforge-1.21.1-0.26.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/gF3BGWvG/versions/c2oTZgsF/open-parties-and-claims-neoforge-1.21.1-0.26.1.jar",
+                    "id": "c2oTZgsF",
+                    "parent_id": "gF3BGWvG",
+                    "hashes": {
+                        "sha512": "d6532e7dde6ca414b6468521779347b74a7b78bfb664ecbafecf1a3a9b1d8beadc8dcb32c50766742bb37fb1f81a481d3a338c7319cc86f18b2eb17278f8260a",
+                        "sha1": "2f6121ad9a041cb192133bb7c1ab75d7d34436e1"
+                    },
+                    "required_dependencies": [],
+                    "size": 1577014,
+                    "date_published": "2026-04-12T09:00:38.290988Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "open-parties-and-claims-neoforge-1.21.1-0.26.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7914/511/open-parties-and-claims-neoforge-1.21.1-0.26.1.jar",
+                    "id": "7914511",
+                    "parent_id": "636608",
+                    "hashes": {
+                        "sha1": "2f6121ad9a041cb192133bb7c1ab75d7d34436e1",
+                        "md5": "8ca7e3e4679054c133bdd3ee5ec9afd9"
+                    },
+                    "required_dependencies": [],
+                    "size": 1577014,
+                    "date_published": "2026-04-12T08:33:35.450Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Fr2vD59Es9rRCP58",
             "pakku_links": [
                 "vy3mfp3HWqXJk193",
@@ -18229,6 +18509,297 @@
             ]
         },
         {
+            "pakku_id": "2L4aD13HNC4IFJV7",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "modular-item-api",
+                "modrinth": "modular-item-api"
+            },
+            "name": {
+                "curseforge": "Truly Modular - Modular Item API",
+                "modrinth": "Truly Modular: Modular Item API"
+            },
+            "id": {
+                "curseforge": "904056",
+                "modrinth": "c4Uf1TKc"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Truly-Modular-miapi-neoforge-2.3.6-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/c4Uf1TKc/versions/kNnLN8Mm/Truly-Modular-miapi-neoforge-2.3.6-1.21.jar",
+                    "id": "kNnLN8Mm",
+                    "parent_id": "c4Uf1TKc",
+                    "hashes": {
+                        "sha512": "874b62e80a850276864354780a9eeee9c8c4d1115c98178d7736fc82428bf42765e8818854383d24edb3936e0117ef1cbb87f6356c45627b529c9b66ffbcd92a",
+                        "sha1": "e7bfb8a927945bb1f7b0ca9c35a06cfcb8f6791a"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ",
+                        "40FYwb4z"
+                    ],
+                    "size": 3766436,
+                    "date_published": "2026-04-23T10:59:45.492599Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "Truly-Modular-miapi-neoforge-2.3.6-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7971/627/Truly-Modular-miapi-neoforge-2.3.6-1.21.jar",
+                    "id": "7971627",
+                    "parent_id": "904056",
+                    "hashes": {
+                        "sha1": "e7bfb8a927945bb1f7b0ca9c35a06cfcb8f6791a",
+                        "md5": "234563f7c7830097c66abbdec7427a86"
+                    },
+                    "required_dependencies": [
+                        "419699",
+                        "308989"
+                    ],
+                    "size": 3766436,
+                    "date_published": "2026-04-23T10:59:29.823Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "IQnmCipjc1Ode6aY",
+            "pakku_links": [
+                "2L4aD13HNC4IFJV7"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "truly-modular-archery",
+                "modrinth": "truly-modular-archery"
+            },
+            "name": {
+                "curseforge": "Truly Modular: Archery",
+                "modrinth": "Truly Modular: Archery"
+            },
+            "id": {
+                "curseforge": "929835",
+                "modrinth": "RXklwn50"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Truly-Modular-archery-archery-forge-2.2-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/RXklwn50/versions/SUC6tCiv/Truly-Modular-archery-archery-forge-2.2-1.21.jar",
+                    "id": "SUC6tCiv",
+                    "parent_id": "RXklwn50",
+                    "hashes": {
+                        "sha512": "b6c86d8e22db759a4d5db327f8794b8916d8a505f1cc18705ce330343d5aa7b3fc204d6dc6da74acec2bdff279ced357ee343cb4b364882fdbeaf4184a3f366c",
+                        "sha1": "216b88854c9c1d9bb77811cf885d30476529aec7"
+                    },
+                    "required_dependencies": [
+                        "c4Uf1TKc",
+                        "lhGA9TYQ",
+                        "40FYwb4z"
+                    ],
+                    "size": 174145,
+                    "date_published": "2026-04-01T11:36:25.713165Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "Truly-Modular-archery-archery-forge-2.2-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7855/656/Truly-Modular-archery-archery-forge-2.2-1.21.jar",
+                    "id": "7855656",
+                    "parent_id": "929835",
+                    "hashes": {
+                        "sha1": "216b88854c9c1d9bb77811cf885d30476529aec7",
+                        "md5": "5064a728240cc334d2ab6a585f2c2e60"
+                    },
+                    "required_dependencies": [
+                        "308989",
+                        "904056",
+                        "419699"
+                    ],
+                    "size": 174145,
+                    "date_published": "2026-04-01T11:36:29.037Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Opo5yrrPQDcC8P4D",
+            "pakku_links": [
+                "2L4aD13HNC4IFJV7"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "truly-modular-armory",
+                "modrinth": "truly-modular-armory"
+            },
+            "name": {
+                "curseforge": "Truly Modular: Armory",
+                "modrinth": "Truly Modular: Armory"
+            },
+            "id": {
+                "curseforge": "929840",
+                "modrinth": "6mUV27DN"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Truly-Modular-armory-armory-forge-2.2-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/6mUV27DN/versions/hZbHexQd/Truly-Modular-armory-armory-forge-2.2-1.21.jar",
+                    "id": "hZbHexQd",
+                    "parent_id": "6mUV27DN",
+                    "hashes": {
+                        "sha512": "91c47bfd1df67a689a7de9da5a088d386c7c9e6f6159ce3062594004b0ac34dd634935c39363fc7e33651913c7711aaf359b1d3cf6afe960aef49620dd69aec2",
+                        "sha1": "186a150d82813fc0a2cac8c8ef798f0493eba956"
+                    },
+                    "required_dependencies": [
+                        "c4Uf1TKc",
+                        "40FYwb4z",
+                        "lhGA9TYQ"
+                    ],
+                    "size": 405385,
+                    "date_published": "2026-04-01T11:36:43.707723Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "Truly-Modular-armory-armory-forge-2.2-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7855/659/Truly-Modular-armory-armory-forge-2.2-1.21.jar",
+                    "id": "7855659",
+                    "parent_id": "929840",
+                    "hashes": {
+                        "sha1": "186a150d82813fc0a2cac8c8ef798f0493eba956",
+                        "md5": "deed0eff8bcb8cd7747a3d0f1e167540"
+                    },
+                    "required_dependencies": [
+                        "308989",
+                        "904056",
+                        "419699"
+                    ],
+                    "size": 405385,
+                    "date_published": "2026-04-01T11:36:44.837Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "cqlXQIJzqrSDWmcF",
+            "pakku_links": [
+                "2L4aD13HNC4IFJV7"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "truly-modular-arsenal",
+                "modrinth": "truly-modular-arsenal"
+            },
+            "name": {
+                "curseforge": "Truly Modular: Arsenal",
+                "modrinth": "Truly Modular: Arsenal"
+            },
+            "id": {
+                "curseforge": "929832",
+                "modrinth": "V4LaId7f"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Truly-Modular-arsenal-arsenal-forge-2.4-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/V4LaId7f/versions/dHLBaeMU/Truly-Modular-arsenal-arsenal-forge-2.4-1.21.jar",
+                    "id": "dHLBaeMU",
+                    "parent_id": "V4LaId7f",
+                    "hashes": {
+                        "sha512": "fe3c3c4339c5e6d9bb623d4bf635ede4e86156331bc77ceb5c53c1bd6c98f10375a088c8ddee8614dc26585f52dfbffeae8f4eeeb56ccedda1963befcaf00c19",
+                        "sha1": "b9f010e1e628d0d49bb558346a67d8813d725158"
+                    },
+                    "required_dependencies": [
+                        "c4Uf1TKc",
+                        "lhGA9TYQ",
+                        "40FYwb4z"
+                    ],
+                    "size": 676297,
+                    "date_published": "2026-04-01T11:36:47.755543Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "Truly-Modular-arsenal-arsenal-forge-2.4-1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7855/658/Truly-Modular-arsenal-arsenal-forge-2.4-1.21.jar",
+                    "id": "7855658",
+                    "parent_id": "929832",
+                    "hashes": {
+                        "sha1": "b9f010e1e628d0d49bb558346a67d8813d725158",
+                        "md5": "c96959f66ce59405f4637799885e85c3"
+                    },
+                    "required_dependencies": [
+                        "904056",
+                        "419699",
+                        "308989"
+                    ],
+                    "size": 676297,
+                    "date_published": "2026-04-01T11:36:41.853Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "edSjoS3lGdaUORVh",
             "type": "MOD",
             "slug": {
@@ -18734,6 +19305,132 @@
                     "required_dependencies": [],
                     "size": 364300,
                     "date_published": "2026-04-01T08:53:27.620733Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "6ns5jV2sZ4lYsfOe",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "xaeros-minimap",
+                "modrinth": "xaeros-minimap"
+            },
+            "name": {
+                "curseforge": "Xaero's Minimap",
+                "modrinth": "Xaero's Minimap"
+            },
+            "id": {
+                "curseforge": "263420",
+                "modrinth": "1bokaNcj"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "xaerominimap-neoforge-1.21.1-25.3.10.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/CatMvRfN/xaerominimap-neoforge-1.21.1-25.3.10.jar",
+                    "id": "CatMvRfN",
+                    "parent_id": "1bokaNcj",
+                    "hashes": {
+                        "sha512": "97dbc7ddc8b86edead71f60e3257175abe9e05e94387447aad2467cfcf0a5211ed848ee3df9bb3c308183405f997f8acd508ac01f8ee374f08d9af00729fc1d8",
+                        "sha1": "d4828332dd831455429156b6cfa24aa9bd99dd77"
+                    },
+                    "required_dependencies": [],
+                    "size": 2137784,
+                    "date_published": "2026-02-09T08:15:14.665044Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "xaerominimap-neoforge-1.21.1-25.3.10.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7598/595/xaerominimap-neoforge-1.21.1-25.3.10.jar",
+                    "id": "7598595",
+                    "parent_id": "263420",
+                    "hashes": {
+                        "sha1": "d4828332dd831455429156b6cfa24aa9bd99dd77",
+                        "md5": "bb44c90c8bc60cac6caa07f504f5cf9f"
+                    },
+                    "required_dependencies": [],
+                    "size": 2137784,
+                    "date_published": "2026-02-09T09:30:14.857Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "pL2ELHmv0oBW9Sie",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "xaeros-world-map",
+                "modrinth": "xaeros-world-map"
+            },
+            "name": {
+                "curseforge": "Xaero's World Map",
+                "modrinth": "Xaero's World Map"
+            },
+            "id": {
+                "curseforge": "317780",
+                "modrinth": "NcUtCpym"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "xaeroworldmap-neoforge-1.21.1-1.40.11.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/arbQPyvf/xaeroworldmap-neoforge-1.21.1-1.40.11.jar",
+                    "id": "arbQPyvf",
+                    "parent_id": "NcUtCpym",
+                    "hashes": {
+                        "sha512": "a4bb890dbac27937411f570432ebc5a4cc5df9562c22e7c3d6a6516ff303bfcb7f35fb39d2ce42a51591a4b2a5b5debfc933fda3f5a552560442fe69f8828b0b",
+                        "sha1": "c6f596bb6bc7d734100b7dbc8a57f69a5fb549a3"
+                    },
+                    "required_dependencies": [],
+                    "size": 1386001,
+                    "date_published": "2026-02-09T08:30:22.603386Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "xaeroworldmap-neoforge-1.21.1-1.40.11.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7598/481/xaeroworldmap-neoforge-1.21.1-1.40.11.jar",
+                    "id": "7598481",
+                    "parent_id": "317780",
+                    "hashes": {
+                        "sha1": "c6f596bb6bc7d734100b7dbc8a57f69a5fb549a3",
+                        "md5": "e99d61c568fd117c23bd919afab39791"
+                    },
+                    "required_dependencies": [],
+                    "size": 1386001,
+                    "date_published": "2026-02-09T08:45:58.763Z"
                 }
             ]
         },

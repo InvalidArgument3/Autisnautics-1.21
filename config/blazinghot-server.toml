@@ -1,0 +1,86 @@
+#.
+#Adjust mechanics related to recipes
+[recipes]
+	#.
+	#.
+	#Allow regular mixing recipes in the Blaze Mixer
+	allowMixingInBlazeMixer = true
+	#.
+	#[in milibuckets]
+	#
+	#The amount of fuel that Blaze Mixer uses per 100 processing ticks (default speed) of regular mixing recipes.
+	#Does not affect melting recipes.
+	# Default: 25
+	# Range: > 0
+	blazeMixingFuelUsage = 25
+	#.
+	#Fueled Blaze Mixer's speed multiplier when processing mixing recipes
+	# Default: 2.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	blazeMixingSpeedMultiplier = 2.0
+	#.
+	#Allow brewing recipes in the Blaze Mixer
+	allowBrewingInBlazeMixer = true
+	#.
+	#[in milibuckets]
+	#
+	#The amount of fuel that Blaze Mixer uses for each brewing recipe.
+	# Default: 25
+	# Range: > 0
+	blazeBrewingFuelUsage = 25
+	#.
+	#Fueled Blaze Mixer's speed multiplier when processing brewing recipes
+	# Default: 2.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	blazeBrewingSpeedMultiplier = 2.0
+	#.
+	#Allow shapeless crafting recipes in the Blaze Mixer
+	allowShapelessInBlazeMixer = true
+	#.
+	#[in milibuckets]
+	#
+	#The amount of fuel that Blaze Mixer uses for each shapeless crafting recipe.
+	# Default: 25
+	# Range: > 0
+	blazeShapelessFuelUsage = 25
+	#.
+	#Fueled Blaze Mixer's speed multiplier when processing shapeless crafting recipes
+	# Default: 2.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	blazeShapelessSpeedMultiplier = 2.0
+
+#.
+#Configure casting-related features
+[casting]
+	#.
+	#.
+	#Additional cooling speed when splashing a Casting Depot.
+	# Default: 0.5
+	# Range: 0.0 ~ 3.4028234663852886E38
+	splashingCoolingModifier = 0.5
+	#.
+	#Cooling speed reduction when blasting a Casting Depot.
+	# Default: -0.25
+	# Range: -100.0 ~ 3.4028234663852886E38
+	blastingCoolingModifier = -0.25
+	#.
+	#The minimum cooling speed of a Casting Depot.
+	# Default: -10.0
+	# Range: -200.0 ~ 3.4028234663852886E38
+	minimumCoolingSpeed = -10.0
+	#.
+	#The maximum cooling speed of a Casting Depot.
+	# Default: 10.0
+	# Range: -200.0 ~ 3.4028234663852886E38
+	maximumCoolingSpeed = 10.0
+
+	#.
+	#Fine-tune stress impact of Create: Blazing Hot's machinery
+	[stressValues.v1]
+
+		#.
+		#.
+		#[in Stress Units]
+		#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
+		[stressValues.v1.impact]
+			blaze_mixer = 4.0

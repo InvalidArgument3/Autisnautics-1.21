@@ -1,0 +1,46 @@
+[
+  {
+    "id": "inventory",
+    "title": "Inventory",
+    "icon": "minecraft:chest",
+    "action": {
+      "type": "KEY",
+      "name": "key.inventory",
+      "toggle": false,
+      "mode": "AUTO"
+    }
+  },
+  {
+    "id": "advancements",
+    "title": "Advancements",
+    "icon": "minecraft:book",
+    "action": {
+      "type": "KEY",
+      "name": "key.advancements",
+      "toggle": false,
+      "mode": "AUTO"
+    }
+  },
+  {
+    "id": "chat",
+    "title": "Open Chat",
+    "icon": "minecraft:paper",
+    "action": {
+      "type": "KEY",
+      "name": "key.chat",
+      "toggle": false,
+      "mode": "AUTO"
+    }
+  },
+  {
+    "id": "saytime",
+    "title": "Say /time query",
+    "icon": "minecraft:clock",
+    "action": {
+      "type": "COMMAND",
+      "command": "/time query daytime",
+      "delayTicks": 0,
+      "cycleCommands": false
+    }
+  }
+]
