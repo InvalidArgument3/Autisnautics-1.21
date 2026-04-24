@@ -19983,7 +19983,7 @@
             ]
         },
         {
-            "pakku_id": "gUMUU1TlgRMQykhG",
+            "pakku_id": "eo840I6eWDKL8eRr",
             "type": "MOD",
             "slug": {
                 "github": "InvalidArgument3/regex_search"
@@ -19997,16 +19997,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "regex_search-1.4.0+1.21.jar",
+                    "file_name": "regex_search-1.4.1+1.21.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/regex_search/releases/download/1.4.1-neoforge/regex_search-1.4.0+1.21.jar",
-                    "id": "403341790",
+                    "url": "https://github.com/InvalidArgument3/regex_search/releases/download/serversidefix/regex_search-1.4.1+1.21.jar",
+                    "id": "403364987",
                     "parent_id": "1215603714",
                     "hashes": {
-                        "sha256": "6e4ec8b5296d61323198f305c870d75844149c2e107b3d11d97e701dd141d45a"
+                        "sha256": "71b0923f0c62bf4e3874975c3beb2b414ef8fc9348aab0f58d5a247027ffec3c"
                     },
-                    "size": 356392,
-                    "date_published": "2026-04-23T10:39:20Z"
+                    "size": 356393,
+                    "date_published": "2026-04-23T11:21:43Z"
                 }
             ]
         },
