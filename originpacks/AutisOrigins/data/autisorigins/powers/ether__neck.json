@@ -1,0 +1,22 @@
+{
+    "name": "Thick Neck",
+    "description": "Your neck is extremely thick.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 3,
+            "name": "Thick Neck"
+        },
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:constant",
+            "value": true
+        }
+    }
+}

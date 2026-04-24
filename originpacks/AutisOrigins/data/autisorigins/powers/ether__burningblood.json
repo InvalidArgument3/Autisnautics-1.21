@@ -1,0 +1,18 @@
+{
+    "name": "Burning Blood",
+    "description": "Your blood starts to boil.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -2
+        },
+        {
+            "attribute": "attributeslib:fire_damage",
+            "operation": "addition",
+            "value": 2
+        }
+    ],
+    "update_health": true
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Third Eye",
+    "description": "You have 3 eyes.",
+    "type": "origins:multiple",
+    "watervision": {
+        "type": "origins:water_vision"
+    },
+    "key0": {
+        "type": "origins:lava_vision",
+        "s": 0,
+        "v": 15
+    },
+    "key1": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": 0.25
+        }
+    }
+}

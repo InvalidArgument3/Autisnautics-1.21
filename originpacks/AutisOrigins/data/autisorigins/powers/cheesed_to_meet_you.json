@@ -1,0 +1,61 @@
+{
+    "name": "Cheesed to Meet You",
+    "description": "You'd be pleased to eat some cheese.",
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "alexscaves:sugar_rush",
+                    "duration": 200,
+                    "amplifier": 2,
+                    "is_ambient": true,
+                    "show_particles": true,
+                    "show_icon": true
+                }
+            }
+        ]
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "tag": "brewinandchewin:cheese_wedges"
+            },
+            {
+                "tag": "forge:cheese"
+            },
+            {
+                "item": "tconstruct:cheese_ingot"
+            },
+            {
+                "item": "tconstruct:cheese_block"
+            },
+            {
+                "item": "brewinandchewin:cheesy_pasta"
+            },
+            {
+                "item": "brewinandchewin:ham_and_cheese_sandwich"
+            },
+            {
+                "item": "delightful:cheeseburger"
+            },
+            {
+                "item": "delightful:deluxe_cheeseburger"
+            },
+            {
+                "item": "rats:blue_cheese"
+            },
+            {
+                "item": "rats:nether_cheese"
+            },
+            {
+                "item": "rats:string_cheese"
+            }
+        ]
+    },
+    "trigger": "finish",
+    "priority": 0
+}

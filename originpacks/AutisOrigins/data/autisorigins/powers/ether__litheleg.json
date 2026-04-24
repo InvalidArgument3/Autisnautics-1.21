@@ -1,0 +1,11 @@
+{
+    "name": "Hooves",
+    "description": "Your feet transformed into hooves.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "forge:step_height_addition",
+        "operation": "addition",
+        "value": 1
+    },
+    "update_health": true
+}

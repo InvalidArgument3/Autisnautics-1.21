@@ -1,0 +1,15 @@
+{
+    "name": "Hedgehog",
+    "description": "The Hedgehogs once ran free across the world's green hills, but when the surface became a vast sea, only the strongest graduates of the Sonic Fighting Academy were able to survive.\nHedgehogs always gotta go fast, but die quickly if they fall in the water.",
+    "powers": [
+        "autisorigins:gotta_go_fast",
+        "autisorigins:spin_jump",
+        "autisorigins:water_damage",
+        "autisorigins:starting_pizza"
+    ],
+    "icon": {
+        "item": "enigmaticlegacy:golden_ring"
+    },
+    "order": 1,
+    "impact": 2
+}

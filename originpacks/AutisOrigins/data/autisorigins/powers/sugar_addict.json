@@ -1,0 +1,12 @@
+{
+    "name": "Sugar Addict",
+    "description": "Your angelic powers are fueled by eating sweets. Just don't let your blood sugar get too low, or you'll crash. Eating raw sugar works for this purpose, but higher-quality food is much more effective.",
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1000,
+    "start_value": 500,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 4
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Blobbian",
+    "description": "bolbians are slimey blobbers who ecscaped from the dark place way down under the water. blobbis not that smart cause we gott no brain. but all the bad stuff bounce off blobbor so its okay. blibbobs can throw little blobbs too :)",
+    "powers": [
+        "autisorigins:breathless",
+        "autisorigins:bouncy",
+        "autisorigins:brainless",
+        "autisorigins:slow",
+        "autisorigins:slimer",
+        "autisorigins:starting_gelatin"
+    ],
+    "icon": {
+        "item": "minecraft:slime_ball"
+    },
+    "order": 1,
+    "impact": 2
+}

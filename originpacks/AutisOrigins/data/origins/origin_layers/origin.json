@@ -1,0 +1,21 @@
+{
+    "replace": true,
+    "name": "origins.layer.origin",
+    "origins": [
+        "autisorigins:accursed_one",
+        "autisorigins:alchemist",
+        "autisorigins:angel",
+        "autisorigins:autist",
+        "autisorigins:blobbian",
+        "autisorigins:cactoid",
+        "autisorigins:daemon",
+        "autisorigins:duckborn",
+        "autisorigins:haniwa",
+        "autisorigins:hedgehog",
+        "autisorigins:khajiit",
+        "autisorigins:rat",
+        "autisorigins:snail"
+    ],
+    "enabled": true,
+    "allow_random": true
+}

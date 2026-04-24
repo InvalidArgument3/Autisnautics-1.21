@@ -1,0 +1,11 @@
+{
+    "name": "Snail's Pace",
+    "description": "You move at the speed of... a snail.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "multiply_base",
+        "value": -0.25
+    },
+    "update_health": true
+}

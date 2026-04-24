@@ -1,0 +1,18 @@
+{
+    "name": "Icy Veins",
+    "description": "Your blood runs cold.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -2
+        },
+        {
+            "attribute": "attributeslib:cold_damage",
+            "operation": "addition",
+            "value": 2
+        }
+    ],
+    "update_health": true
+}

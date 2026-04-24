@@ -1,0 +1,16 @@
+{
+    "name": "Second Mouth",
+    "description": "You have multiple mouths.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": 1
+        }
+    },
+    "key1": {
+        "type": "origins:modify_food",
+        "always_edible": true
+    }
+}

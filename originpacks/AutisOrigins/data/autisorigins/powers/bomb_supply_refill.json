@@ -1,0 +1,15 @@
+{
+    "name": "Bomb Supply Refill",
+    "description": "Refills the Bomb Supply every time an in-game day passes.",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 24000,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "autisorigins:bomb_supply",
+        "modifier": {
+            "operation": "set_total",
+            "value": 7
+        }
+    }
+}

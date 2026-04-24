@@ -1,0 +1,20 @@
+{
+    "name": "Secret Experience",
+    "description": "You gain knowledge of a secret experience. \"I shall reward you...\"",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_xp",
+                "levels": 30
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "autisorigins:ether__kumiromi",
+                "source": "apoli:command"
+            }
+        ]
+    }
+}

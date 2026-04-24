@@ -1,0 +1,6 @@
+{
+    "name": "Iron Stomach",
+    "description": "Your stomach can digest rotten things.",
+    "type": "origins:effect_immunity",
+    "effect": "minecraft:hunger"
+}

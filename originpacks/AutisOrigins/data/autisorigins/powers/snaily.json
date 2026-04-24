@@ -1,0 +1,216 @@
+{
+    "name": "Snaily",
+    "description": "You melt on contact with salt.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:block_collision",
+                "block_condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/salt"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_chloride"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_fluoride"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "galosphere:pink_salt_blocks"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "galosphere:pink_salt_straw"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "galosphere:pink_salt_cluster"
+                        }
+                    ]
+                },
+                "offset_x": 0.1,
+                "offset_y": 0.1,
+                "offset_z": 0.1
+            },
+            {
+                "type": "origins:block_collision",
+                "block_condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/salt"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_chloride"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_fluoride"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "galosphere:pink_salt_blocks"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "galosphere:pink_salt_straw"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "galosphere:pink_salt_cluster"
+                        }
+                    ]
+                },
+                "offset_x": -0.1,
+                "offset_y": -0.1,
+                "offset_z": -0.1
+            },
+            {
+                "type": "origins:inventory",
+                "process_mode": "stacks",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "tag": "forge:salt"
+                        },
+                        {
+                            "tag": "forge:storage_blocks/salt"
+                        },
+                        {
+                            "tag": "forge:storage_blocks/sodium"
+                        },
+                        {
+                            "tag": "forge:storage_blocks/sodium_chloride"
+                        },
+                        {
+                            "tag": "forge:storage_blocks/sodium_fluoride"
+                        },
+                        {
+                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                        },
+                        {
+                            "tag": "theurgy:alchemical_salts"
+                        },
+                        {
+                            "item": "galosphere:pink_salt"
+                        },
+                        {
+                            "item": "galosphere:rose_pink_salt"
+                        },
+                        {
+                            "item": "galosphere:pastel_pink_salt"
+                        },
+                        {
+                            "item": "nuclearcraft:salt"
+                        },
+                        {
+                            "item": "galosphere:pink_salt_shard"
+                        },
+                        {
+                            "item": "galosphere:salted_jerky"
+                        },
+                        {
+                            "item": "galosphere:pink_salt_straw"
+                        },
+                        {
+                            "item": "galosphere:pink_salt_cluster"
+                        },
+                        {
+                            "item": "galosphere:saltbound_tablet"
+                        },
+                        {
+                            "item": "nuclearcraft:sodium_ingot"
+                        },
+                        {
+                            "item": "nuclearcraft:sodium_hydroxide_dust"
+                        },
+                        {
+                            "item": "nuclearcraft:sodium_dust"
+                        },
+                        {
+                            "item": "nuclearcraft:sodium_fluoride_dust"
+                        },
+                        {
+                            "item": "nuclearcraft:sodium_22"
+                        }
+                    ]
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "nuclearcraft:sodium",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "nuclearcraft:sodium_22",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "nuclearcraft:sodium_fluoride_solution",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "nuclearcraft:sodium_hydroxide",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "nuclearcraft:sodium_hydroxide_solution",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:damage",
+        "amount": 4,
+        "damage_type": "wither"
+    },
+    "rising_action": {
+        "type": "origins:damage",
+        "amount": 4,
+        "damage_type": "wither"
+    }
+}

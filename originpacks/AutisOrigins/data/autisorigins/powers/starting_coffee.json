@@ -1,0 +1,24 @@
+{
+    "name": "Start Item: Coffee",
+    "description": "Daemons spawn with 250mB of organic fuel.",
+    "type": "origins:multiple",
+    "equipment": {
+        "type": "origins:starting_equipment",
+        "stack": {
+            "item": "farmersrespite:coffee",
+            "amount": 1
+        }
+    },
+    "quests": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "/ftbquests change_progress @p complete 1688D58F977334FB"
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "/ftbquests change_progress @p reset 1688D58F977334FB"
+        }
+    }
+}

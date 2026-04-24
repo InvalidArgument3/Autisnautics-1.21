@@ -1,0 +1,16 @@
+{
+    "name": "Suthay",
+    "description": "As one of the suthay breed of Khajiit, your body is more slender and frail, so you only have 8 hearts. Don't worry though, your kind can still wear boots.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": -4
+            }
+        ],
+        "update_health": true
+    }
+}

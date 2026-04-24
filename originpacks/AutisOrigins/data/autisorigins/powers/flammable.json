@@ -1,0 +1,13 @@
+{
+    "name": "Flammable",
+    "description": "You burn nicely, taking twice as much damage from fire.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1,
+        "name": "Origin modifier"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Gotta Go Fast",
+    "description": "You sprint much faster, and don't consume any hunger while sprinting. However, if you stop sprinting, your metabolism will quickly catch up with you.",
+    "type": "origins:multiple",
+    "faster_sprint": {
+        "condition": {
+            "type": "origins:sprinting"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.7
+        },
+        "tick_rate": 5,
+        "update_health": true
+    },
+    "no_exhaust_while_sprinting": {
+        "condition": {
+            "type": "origins:sprinting"
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "max_total",
+            "value": 0
+        }
+    },
+    "exhaust_if_not_sprinting": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:sprinting"
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1.6
+        }
+    }
+}

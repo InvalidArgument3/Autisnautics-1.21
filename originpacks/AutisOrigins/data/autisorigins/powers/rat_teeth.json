@@ -1,0 +1,10 @@
+{
+    "name": "Rat Teeth",
+    "description": "Your rodent incisors are hard enough to chew through concrete, letting you harvest stone blocks without any tools.",
+    "type": "origins:modify_harvest",
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "origins:natural_stone"
+    },
+    "allow": true
+}

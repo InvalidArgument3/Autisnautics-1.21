@@ -1,0 +1,15 @@
+{
+    "name": "Angel: Food Sugar Replenishment",
+    "description": "Replenishes Sugar resource when eating Sugars",
+    "hidden": true,
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "/kubejs custom_command add_sugar"
+    },
+    "item_condition": {
+        "type": "origins:food"
+    },
+    "trigger": "finish",
+    "priority": 0
+}

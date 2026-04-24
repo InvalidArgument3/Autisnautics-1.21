@@ -1,0 +1,37 @@
+{
+    "name": "Exploding Knees",
+    "description": "Your knees are explosive.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:explode",
+                    "power": 2,
+                    "destruction_type": "none",
+                    "damage_self": false
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.generic.explode",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:explosion_emitter",
+                    "count": 1
+                }
+            ]
+        }
+    },
+    "key1": {
+        "type": "origins:restrict_armor",
+        "legs": {
+            "type": "origins:constant",
+            "value": true
+        }
+    }
+}

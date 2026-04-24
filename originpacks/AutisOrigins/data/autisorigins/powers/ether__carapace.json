@@ -1,0 +1,23 @@
+{
+    "name": "Heavy Carapace",
+    "description": "You are covered by a heavy carapace.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 6
+        },
+        {
+            "attribute": "minecraft:generic.armor_toughness",
+            "operation": "addition",
+            "value": 5
+        },
+        {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.125
+        }
+    ],
+    "update_health": true
+}

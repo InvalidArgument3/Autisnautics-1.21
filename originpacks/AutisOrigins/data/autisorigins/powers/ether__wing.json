@@ -1,0 +1,18 @@
+{
+    "name": "Ether Wing",
+    "description": "Your back has grown a single feather.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "tconstruct:generic.jump_boost",
+            "operation": "addition",
+            "value": 1
+        },
+        {
+            "attribute": "tconstruct:player.jump_count",
+            "operation": "addition",
+            "value": 1
+        }
+    ],
+    "update_health": true
+}

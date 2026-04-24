@@ -1,0 +1,17 @@
+{
+    "name": "Daemon",
+    "description": "The Daemons were once purely digital entities, bound by forbidden processes to administer machine-fortresses in the upper void.\nBut one day, their masters suddenly vanished. An emergency shutdown protocol forcibly downloaded the Daemons' machine-spirits into corporeal bodies.\nThough their flesh is weak, the Daemon's machine-like mind ignores many ills that plague fully organic beings. Embedded programs enable several minor abilities.",
+    "powers": [
+        "autisorigins:daemon_mind",
+        "autisorigins:weak_flesh",
+        "autisorigins:danmaku_emulator",
+        "autisorigins:critique_subroutine",
+        "autisorigins:god_loves_elephants",
+        "autisorigins:starting_coffee"
+    ],
+    "icon": {
+        "item": "psi:psimetal_exosuit_helmet"
+    },
+    "order": 1,
+    "impact": 2
+}

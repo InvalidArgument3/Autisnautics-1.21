@@ -1,0 +1,18 @@
+{
+    "name": "Rat",
+    "description": "Literally a rat. Rats are tiny enough to fit in small spaces, and can use their claws to climb. A rat's teeth can even gnaw through stone.",
+    "powers": [
+        "autisorigins:bite-sized",
+        "autisorigins:nimble",
+        "origins:climbing",
+        "autisorigins:jockey",
+        "autisorigins:rat_teeth",
+        "autisorigins:cheesed_to_meet_you",
+        "autisorigins:starting_cheese"
+    ],
+    "icon": {
+        "item": "tconstruct:cheese_ingot"
+    },
+    "order": 1,
+    "impact": 3
+}

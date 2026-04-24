@@ -1,0 +1,16 @@
+{
+    "name": "Haniwa",
+    "description": "Haniwa are peculiar creatures made of living clay. They once ruled a glorious kingdom, but when the land rose from the sea they were cut off from vital clay deposits, leaving them as a race of nomadic raiders.\nTheir ceramic physiology has many powerful immunities, but can easily shatter like a vase from direct impacts. They can produce a sonic-boom attack from their hollow bodies.",
+    "powers": [
+        "autisorigins:ceramic_immunity",
+        "autisorigins:shatter_prone",
+        "autisorigins:clay_body",
+        "autisorigins:hanny_flash",
+        "autisorigins:starting_onigili"
+    ],
+    "icon": {
+        "item": "minecraft:decorated_pot"
+    },
+    "order": 1,
+    "impact": 2
+}

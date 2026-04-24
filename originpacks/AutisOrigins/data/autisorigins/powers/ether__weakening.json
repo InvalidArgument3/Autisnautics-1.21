@@ -1,0 +1,18 @@
+{
+    "name": "Weakening",
+    "description": "You suffer debilitation.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.attack_damage",
+            "operation": "addition",
+            "value": -2
+        },
+        {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -4
+        }
+    ],
+    "update_health": true
+}

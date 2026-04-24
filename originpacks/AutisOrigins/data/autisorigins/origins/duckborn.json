@@ -1,0 +1,17 @@
+{
+    "name": "Duckborn",
+    "description": "This race's Duck ancestors once lived in the swamps, in eons past before the land rose from the sea.\nThey have inherited their forefathers' waterfowl traits, and their ancient crusade against the undead.",
+    "powers": [
+        "origins:water_vision",
+        "autisorigins:webbed_feet",
+        "origins:slow_falling",
+        "origins:lay_eggs",
+        "autisorigins:undead_hatred",
+        "autisorigins:starting_breadcrumbs"
+    ],
+    "icon": {
+        "item": "magistuarmory:duck_decoration"
+    },
+    "order": 1,
+    "impact": 1
+}

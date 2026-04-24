@@ -1,0 +1,18 @@
+{
+    "name": "Khajiit",
+    "description": "The Khajiit are a feline race gifted with great agility. Their oral tradition claims they come from \"elsewhere\", but nobody seems to know where that is. \nTheir catlike reflexes make them natural acrobats, and it's said they always land on their feet. It's also said that they're all worthless moon sugar addicts.",
+    "powers": [
+        "autisorigins:fall_resistance",
+        "origins:sprint_jump",
+        "autisorigins:suthay",
+        "origins:scare_creepers",
+        "autisorigins:eye_of_night",
+        "autisorigins:moon_sugar",
+        "autisorigins:starting_sugar"
+    ],
+    "icon": {
+        "item": "minecraft:sugar"
+    },
+    "order": 0,
+    "impact": 1
+}

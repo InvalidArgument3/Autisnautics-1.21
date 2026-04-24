@@ -1,0 +1,66 @@
+{
+    "name": "Alchemical Allocation",
+    "description": "When drinking a potion, you can spit it back into its container as a free action, gaining its effects without consuming it. A potion can only be recycled this way once.",
+    "type": "origins:multiple",
+    "allocatefinish": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/kubejs custom_command allocate_give"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.llama.spit",
+                    "volume": 1,
+                    "pitch": 0.8
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:potion"
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:nbt",
+                    "nbt": "{alchemicalAllocated:1b}"
+                }
+            ]
+        },
+        "trigger": "finish",
+        "priority": 0
+    },
+    "allocatestart": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/kubejs custom_command allocate_get"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:potion"
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:nbt",
+                    "nbt": "{alchemicalAllocated:1b}"
+                }
+            ]
+        },
+        "trigger": "start",
+        "priority": 0
+    }
+}

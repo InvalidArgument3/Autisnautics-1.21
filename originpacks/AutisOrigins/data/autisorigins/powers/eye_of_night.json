@@ -1,0 +1,24 @@
+{
+    "name": "Eye of Night",
+    "description": "You can use a racial power to gain Night Vision for a short period, once per in-game day.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:night_vision",
+            "duration": 1200,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 24000,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 5
+    },
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    }
+}

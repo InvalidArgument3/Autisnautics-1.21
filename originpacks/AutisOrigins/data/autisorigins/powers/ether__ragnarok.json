@@ -1,0 +1,233 @@
+{
+    "name": "Ragnarok",
+    "description": "It brings an end.",
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_added": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:35,ignited:1b,Motion:[1d,0.5d,0.5d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:31,ignited:1b,Motion:[0.2d,0.5d,0.4d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:43,ignited:1b,Motion:[-0.2d,0.5d,-0.6d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:49,ignited:1b,Motion:[-0.2d,0.5d,-0.2d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:24,ignited:1b,Motion:[1d,0.5d,-2d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:51,ignited:1b,Motion:[-0.3d,0.5d,-0.8d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:36,ignited:1b,Motion:[0d,0.5d,1.1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:52,ignited:1b,Motion:[-0.3d,0.5d,0.1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:39,ignited:1b,Motion:[0.3d,0.5d,-0.9d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:47,ignited:1b,Motion:[1d,0.5d,-0.5d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:70,ignited:1b,Motion:[0d,2d,0d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:51,ignited:1b,Motion:[-0.75d,0.5d,0d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:creeper",
+                "tag": "{ExplosionRadius:0,Fuse:42,ignited:1b,Motion:[-0.2d,0.5d,1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:giant",
+                "tag": "{Motion:[-0.6d,0.5d,-0.6d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:giant",
+                "tag": "{Motion:[0.8d,0.5d,1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "nuclearcraft:feral_ghoul",
+                "tag": "{Motion:[2d,1d,-2d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:skeleton_horse",
+                "tag": "{Motion:[0.1d,0.5d,-0.3d],SkeletonTrap:1}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:chicken",
+                "tag": "{Motion:[-0.3d,0.5d,0.5d],Passengers:[{id:zombie,IsBaby:1}]}"
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:chicken",
+                "tag": "{Motion:[0.4d,0.5d,-1d],Passengers:[{id:zombie,IsBaby:1}]}"
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:chicken",
+                "tag": "{Motion:[0d,0.5d,0.8d],Passengers:[{id:zombie,IsBaby:1}]}"
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:chicken",
+                "tag": "{Motion:[0.6d,0.5d,1d],Passengers:[{id:zombie,IsBaby:1}]}"
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:cow",
+                "tag": "{Motion:[0.6d,0.5d,1d],Passengers:[{id:skeleton,IsBaby:1,HandItems:[{id:bow,Count:1b}]}]}"
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "thermal:blizz",
+                "tag": "{Motion:[-1d,1.2d,-1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "thermal:blitz",
+                "tag": "{Motion:[-1d,1.2d,1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "thermal:basalz",
+                "tag": "{Motion:[1d,1.2d,1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:slime",
+                "tag": "{Size:9,Motion:[1.2d,0.7d,-1d]}",
+                "entity_action": {
+                    "type": "origins:nothing"
+                }
+            },
+            {
+                "type": "origins:explode",
+                "power": 0,
+                "destruction_type": "none",
+                "damage_self": false,
+                "create_fire": true
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "alexscaves:nuclear_siren",
+                "volume": 1,
+                "pitch": 1
+            },
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "relics:confusion",
+                    "duration": 40,
+                    "amplifier": 0,
+                    "is_ambient": true,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "autisorigins:ether__ragnarok",
+                "source": "apoli:command"
+            }
+        ]
+    }
+}

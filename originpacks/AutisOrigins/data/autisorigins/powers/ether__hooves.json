@@ -1,0 +1,22 @@
+{
+    "name": "Hooves",
+    "description": "Your feet transformed into hooves.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.25,
+            "name": "Hooves"
+        },
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:restrict_armor",
+        "feet": {
+            "type": "origins:constant",
+            "value": true
+        }
+    }
+}

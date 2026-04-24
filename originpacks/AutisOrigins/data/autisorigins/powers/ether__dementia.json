@@ -1,0 +1,12 @@
+{
+    "name": "Dementia",
+    "description": "You have dementia.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "attributeslib:experience_gained",
+        "operation": "multiply_base",
+        "value": -0.25
+    },
+    "modifiers": [],
+    "update_health": true
+}

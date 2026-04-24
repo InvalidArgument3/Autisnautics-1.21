@@ -1,0 +1,20 @@
+{
+    "name": "Webbed Feet",
+    "description": "Your ducklike feet let you swim twice as fast, but you waddle slowly on land.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "additionalentityattributes:water_speed",
+            "operation": "multiply_base",
+            "value": 1,
+            "name": "Additional swim speed"
+        },
+        {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.1,
+            "name": "Reduced movement speed"
+        }
+    ],
+    "update_health": true
+}

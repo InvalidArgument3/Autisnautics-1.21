@@ -1,0 +1,52 @@
+{
+    "name": "Envy of Flight Effect",
+    "description": "The levitation and Sugar drain effects toggled by Envy of Flight.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "key0": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "autisorigins:envy_of_flight"
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 6,
+        "tick_rate": 5,
+        "effect": {
+            "effect": "minecraft:levitation",
+            "duration": 6,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "key1": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "autisorigins:envy_of_flight"
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "autisorigins:sugar_addict",
+                    "modifier": {
+                        "operation": "addition",
+                        "value": -10
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.ender_dragon.flap",
+                    "volume": 0.1,
+                    "pitch": 2.0
+                }
+            ]
+        }
+    }
+}

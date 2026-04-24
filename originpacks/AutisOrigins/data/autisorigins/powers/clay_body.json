@@ -1,0 +1,38 @@
+{
+    "name": "Clay Body",
+    "description": "Since you're made of clay, you can satisfy your hunger by eating clay balls, though they aren't very appetizing.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:clay_ball"
+            }
+        }
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "mainhand",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 0.01
+            }
+        ]
+    },
+    "cooldown": 1,
+    "key": {
+        "key": "key.use",
+        "continuous": false
+    }
+}

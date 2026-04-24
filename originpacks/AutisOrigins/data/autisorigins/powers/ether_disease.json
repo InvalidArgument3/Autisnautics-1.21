@@ -1,0 +1,47 @@
+{
+    "name": "Ether Disease",
+    "description": "Your kind is vulnerable to a terrifying disease carried on winds from across the sea. When caught outside in bad weather, you may mutate new symptoms...",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_rain"
+            },
+            {
+                "type": "origins:exposed_to_sky"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 1200,
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.05,
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/kubejs custom_command ether_mutate"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.shulker.shoot",
+                    "volume": 1,
+                    "pitch": 0.7
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:nausea",
+                        "duration": 140,
+                        "amplifier": 0,
+                        "is_ambient": true,
+                        "show_particles": true,
+                        "show_icon": false
+                    }
+                }
+            ]
+        }
+    }
+}

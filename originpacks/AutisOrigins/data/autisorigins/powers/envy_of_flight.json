@@ -1,0 +1,16 @@
+{
+    "name": "Envy of Flight",
+    "description": "Though you cannot truly fly like the angels of legend, you can flap your small wings extra hard to mimic levitation. The exertion lowers your blood sugar levels rapidly.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "autisorigins:sugar_addict",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:toggle",
+    "active_by_default": false,
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "retain_state": false
+}

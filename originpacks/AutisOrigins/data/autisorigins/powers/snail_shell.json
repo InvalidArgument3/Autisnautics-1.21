@@ -1,0 +1,20 @@
+{
+    "name": "Snail Shell",
+    "description": "The only armor type your snaily body can wear is a chestpiece, sort of like a shell. Other armor slots are disabled.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "legs": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "feet": {
+            "type": "origins:constant",
+            "value": true
+        }
+    }
+}

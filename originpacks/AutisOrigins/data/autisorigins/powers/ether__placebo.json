@@ -1,0 +1,11 @@
+{
+    "name": "Wish",
+    "description": "You feel as though a stroke of good fortune passes by.",
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_added": {
+        "type": "origins:revoke_power",
+        "power": "autisorigins:ether__placebo",
+        "source": "apoli:command"
+    }
+}

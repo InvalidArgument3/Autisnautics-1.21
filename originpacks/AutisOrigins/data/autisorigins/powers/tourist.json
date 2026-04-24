@@ -1,0 +1,11 @@
+{
+    "name": "Tourist",
+    "description": "You come from a race of naive wanderers. You pay twice as much experience to level up compared to the locals.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "attributeslib:experience_gained",
+        "operation": "multiply_base",
+        "value": -0.5
+    },
+    "update_health": true
+}

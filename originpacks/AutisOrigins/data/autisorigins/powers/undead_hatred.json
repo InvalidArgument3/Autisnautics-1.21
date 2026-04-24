@@ -1,0 +1,31 @@
+{
+    "name": "Undead Hatred",
+    "description": "Your ancestral hatred of undead boosts damage dealt to and received from such foes by one heart.",
+    "type": "origins:multiple",
+    "undead_boost_damage_dealt": {
+        "condition": {
+            "type": "origins:entity_group",
+            "group": "undead"
+        },
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:entity_group",
+            "group": "undead"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 2
+        }
+    },
+    "undead_boost_damage_taken": {
+        "condition": {
+            "type": "origins:entity_group",
+            "group": "undead"
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "addition",
+            "value": 2
+        }
+    }
+}

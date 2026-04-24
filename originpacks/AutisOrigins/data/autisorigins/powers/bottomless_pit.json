@@ -1,0 +1,16 @@
+{
+    "name": "Bottomless Pit",
+    "description": "You hunger for twice as much sustenance as mere mortals. But you can always eat, even when your hunger bar is full.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "key1": {
+        "type": "origins:modify_food",
+        "always_edible": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Fluorescent",
+    "description": "You glow in the dark.",
+    "condition": {
+        "type": "origins:brightness",
+        "comparison": "<=",
+        "compare_to": 0.18
+    },
+    "type": "origins:self_glow",
+    "use_teams": false,
+    "red": 0,
+    "green": 1,
+    "blue": 0
+}

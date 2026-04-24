@@ -1,0 +1,71 @@
+{
+    "name": "Miniature",
+    "description": "You are only half the size of an everyday Autist, and have 30% less health. Your reach is also reduced.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": -6,
+                "name": "Max Health Reduced"
+            },
+            {
+                "attribute": "forge:entity_reach",
+                "operation": "addition",
+                "value": -0.5,
+                "name": "Attack Range Reduced"
+            },
+            {
+                "attribute": "forge:block_reach",
+                "operation": "addition",
+                "value": -0.5,
+                "name": "Block Reach Reduced"
+            }
+        ],
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale persist set true @s"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "entity_action_respawned": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale persist set true @s"
+                }
+            ]
+        }
+    }
+}

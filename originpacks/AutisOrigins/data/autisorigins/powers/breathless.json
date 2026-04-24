@@ -1,0 +1,18 @@
+{
+    "name": "Breathless",
+    "description": "blobians dont have lungs and stuff",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:in_tag",
+                "tag": "is_drowning"
+            },
+            {
+                "type": "origins:name",
+                "name": "in_wall"
+            }
+        ]
+    }
+}

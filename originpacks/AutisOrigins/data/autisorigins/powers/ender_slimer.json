@@ -1,0 +1,36 @@
+{
+    "name": "Ender Slimer",
+    "description": "bolbbos learned to throw new blobbs after a big adventure :)",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:fire_projectile",
+        "entity_type": "origins:enderian_pearl",
+        "cooldown": 1,
+        "count": 1,
+        "interval": 5,
+        "start_delay": 10,
+        "speed": 1.5,
+        "divergence": 0,
+        "tag": "{Item:{id:\"tconstruct:ender_slime_ball\",Count:1b}}",
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        }
+    },
+    "key1": {
+        "type": "origins:fire_projectile",
+        "entity_type": "supplementaries:slimeball_projectile",
+        "cooldown": 1,
+        "count": 1,
+        "interval": 5,
+        "start_delay": 0,
+        "speed": 1.5,
+        "divergence": 0,
+        "sound": "minecraft:entity.slime.squish",
+        "tag": "{Item:{id:\"tconstruct:ender_slime_ball\",Count:1b}}",
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        }
+    }
+}

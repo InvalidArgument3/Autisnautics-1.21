@@ -1,0 +1,12 @@
+{
+    "name": "Danmaku Emulator",
+    "description": "By simulating countless bullet trajectories in your mind, you're able to automatically evade 50% of damage from projectiles like arrows, bullets, and mysterious glowing orbs.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

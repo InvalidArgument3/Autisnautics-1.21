@@ -1,0 +1,26 @@
+{
+    "name": "Hives",
+    "description": "You have sores on your face.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "rats:plague",
+                    "duration": 24000,
+                    "amplifier": 0,
+                    "show_particles": true,
+                    "show_icon": true
+                }
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "autisorigins:ether__hives",
+                "source": "apoli:command"
+            }
+        ]
+    }
+}

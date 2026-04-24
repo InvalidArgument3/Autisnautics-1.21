@@ -1,0 +1,29 @@
+{
+    "name": "Gravity",
+    "description": "You generate gravity.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "forge:entity_gravity",
+            "operation": "multiply_base",
+            "value": 0.25
+        },
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 30,
+        "tick_rate": 20,
+        "effect": {
+            "effect": "tconstruct:magnetic",
+            "duration": 30,
+            "amplifier": 0,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

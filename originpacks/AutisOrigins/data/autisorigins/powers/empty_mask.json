@@ -1,0 +1,95 @@
+{
+    "name": "Empty Mask",
+    "description": "Much like a hermit crab and its shell, any Alchemist is in mortal peril without a mask to wear. The Alchemist suffers severe debuffs without one and is unable to wear any other form of headgear.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "rats:plague_doctor_mask"
+                },
+                {
+                    "item": "rats:black_death_mask"
+                },
+                {
+                    "item": "scguns:brass_mask"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_fury"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_fear"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_rage"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_bliss"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_misery"
+                },
+                {
+                    "item": "mowziesmobs:umvuthana_mask_faith"
+                },
+                {
+                    "item": "mowziesmobs:sol_visage"
+                },
+                {
+                    "item": "createbigcannons:gas_mask"
+                },
+                {
+                    "item": "nuclearcraft:hazmat_mask"
+                },
+                {
+                    "item": "alexscaves:hazmat_mask"
+                }
+            ]
+        }
+    },
+    "key1": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "inverted": true,
+                "type": "origins:empty"
+            }
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 30,
+        "tick_rate": 20,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "duration": 30,
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "mna:frailty",
+                "duration": 30,
+                "amplifier": 4,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "attributeslib:grievous",
+                "duration": 30,
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

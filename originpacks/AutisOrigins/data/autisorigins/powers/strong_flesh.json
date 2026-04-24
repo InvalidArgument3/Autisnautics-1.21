@@ -1,0 +1,33 @@
+{
+    "name": "Strong Flesh",
+    "description": "You have transcended the limits of your flesh.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": 4
+            },
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "multiply_base",
+                "value": 0.5
+            },
+            {
+                "attribute": "minecraft:generic.attack_knockback",
+                "operation": "multiply_base",
+                "value": 0.5
+            }
+        ],
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:modify_healing",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

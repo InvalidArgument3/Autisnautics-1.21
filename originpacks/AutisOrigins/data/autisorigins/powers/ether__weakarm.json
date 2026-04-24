@@ -1,0 +1,25 @@
+{
+    "name": "Weak Arm",
+    "description": "Your arms become thin and long.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "forge:entity_reach",
+            "operation": "addition",
+            "value": 1,
+            "name": "Attack Range Increased"
+        },
+        {
+            "attribute": "forge:block_reach",
+            "operation": "addition",
+            "value": 1,
+            "name": "Block Reach Increased"
+        },
+        {
+            "attribute": "tconstruct:player.mining_speed_multiplier",
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    ],
+    "update_health": true
+}

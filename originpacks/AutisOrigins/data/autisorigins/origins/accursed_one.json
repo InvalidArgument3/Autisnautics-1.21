@@ -1,0 +1,12 @@
+{
+    "name": "Accursed One",
+    "description": "In time immemorial, the primordial forces of the netherworld made war upon the heavens, and bound mortals into eternal slavery using cursed rings.\nWhen the link between the netherworld and the overworld was suddenly severed, the souls of the damned were recalled to their masters, piled like dunes of wailing sand.\nBut a few cursed mortals bore such great rage in their hearts that not even hell could hold them. These Accursed Ones remained in the overworld, eternally damned and rejected by existence itself. \nTheir Seven Curses are punishing, but if an Accursed One could survive their burdens and claim the souls of his enemies, he might forge their suffering into Artifacts that defy his cursed fate.",
+    "powers": [
+        "autisorigins:starting_cursed_ring"
+    ],
+    "icon": {
+        "item": "enigmaticlegacy:cursed_ring"
+    },
+    "order": 2,
+    "impact": 3
+}

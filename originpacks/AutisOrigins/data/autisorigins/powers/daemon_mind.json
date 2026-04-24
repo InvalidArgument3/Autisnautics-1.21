@@ -1,0 +1,10 @@
+{
+    "name": "Daemon Mind",
+    "description": "The digital thought processes of a Daemon automatically terminate petty organic ailments like hunger and nausea. You can even operate in conditions of deadly radiation.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:hunger",
+        "minecraft:nausea",
+        "alexscaves:irradiated"
+    ]
+}

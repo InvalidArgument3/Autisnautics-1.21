@@ -1,0 +1,33 @@
+{
+    "name": "Weak Flesh",
+    "description": "This is the moment you realize the weakness of your flesh, and it disgusts you. Daemons have only 8 hearts, and their melee attacks are 50% weaker. Your flesh heals at only half the normal rate, even from natural regeneration.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": -4
+            },
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "multiply_base",
+                "value": -0.5
+            },
+            {
+                "attribute": "minecraft:generic.attack_knockback",
+                "operation": "multiply_base",
+                "value": -0.5
+            }
+        ],
+        "update_health": true
+    },
+    "key1": {
+        "type": "origins:modify_healing",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

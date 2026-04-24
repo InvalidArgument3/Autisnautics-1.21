@@ -1,0 +1,19 @@
+{
+    "name": "Water Damage",
+    "description": "You'll die quickly if you fall in the water and can't get out. Being in deep water inflicts damage over time.",
+    "type": "origins:multiple",
+    "key0": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.4
+        },
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "damage": 2,
+        "damage_type": "drown",
+        "protection_enchantment": "origins:water_protection",
+        "protection_effectiveness": 1
+    }
+}

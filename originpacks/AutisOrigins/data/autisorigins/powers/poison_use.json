@@ -1,0 +1,6 @@
+{
+    "name": "Poison Use",
+    "description": "Alchemists cannot accidentally poison themselves when applying poison to a weapon. Also, they're immune to poison.",
+    "type": "origins:effect_immunity",
+    "effect": "minecraft:poison"
+}

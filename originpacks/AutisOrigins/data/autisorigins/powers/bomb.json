@@ -1,0 +1,32 @@
+{
+    "name": "Bomb",
+    "description": "Alchemists can swiftly mix various volatile chemicals to create powerful bombs, which they can hurl at their enemies using a third vestigial arm. An alchemist can only use a certain number of bombs each in-game day.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "autisorigins:bomb_supply",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "type": "origins:fire_projectile",
+    "entity_type": "supplementaries:bomb",
+    "cooldown": 1,
+    "count": 1,
+    "interval": 5,
+    "start_delay": 0,
+    "speed": 1,
+    "divergence": 1,
+    "sound": "minecraft:entity.snowball.throw",
+    "tag": "{\"Timer\":200,\"Active\":1b}",
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    },
+    "shooter_action": {
+        "type": "origins:modify_resource",
+        "resource": "autisorigins:bomb_supply",
+        "modifier": {
+            "operation": "addition",
+            "value": -1
+        }
+    }
+}

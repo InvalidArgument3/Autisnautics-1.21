@@ -1,0 +1,24 @@
+{
+    "name": "Start Item: Pizza",
+    "description": "Hedgehogs spawn with one last slice of pizza.",
+    "type": "origins:multiple",
+    "equipment": {
+        "type": "origins:starting_equipment",
+        "stack": {
+            "item": "brewinandchewin:pizza_slice",
+            "amount": 1
+        }
+    },
+    "quests": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "/ftbquests change_progress @p complete 5866040E9BF5CB9F"
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "/ftbquests change_progress @p reset 5866040E9BF5CB9F"
+        }
+    }
+}

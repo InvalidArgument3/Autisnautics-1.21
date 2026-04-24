@@ -1,0 +1,53 @@
+{
+    "name": "Sugar Withdrawal",
+    "description": "Withdrawal symptoms of having 0 Sugar resource.",
+    "hidden": true,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "autisorigins:sugar_addict",
+        "comparison": "<=",
+        "compare_to": 0
+    },
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 30,
+    "tick_rate": 20,
+    "effects": [
+        {
+            "effect": "minecraft:weakness",
+            "duration": 30,
+            "amplifier": 4,
+            "show_particles": true,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:slowness",
+            "duration": 30,
+            "amplifier": 4,
+            "show_particles": true,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:mining_fatigue",
+            "duration": 30,
+            "amplifier": 4,
+            "show_particles": true,
+            "show_icon": true
+        },
+        {
+            "effect": "mna:frailty",
+            "duration": 30,
+            "amplifier": 4,
+            "show_particles": true,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:hunger",
+            "duration": 30,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    ]
+}

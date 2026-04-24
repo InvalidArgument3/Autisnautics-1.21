@@ -1,0 +1,48 @@
+{
+    "name": "Ether Hand",
+    "description": "Poison drips from your hands.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:poison",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        },
+        "cooldown": 1
+    },
+    "key1": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:poison"
+    },
+    "key2": {
+        "type": "origins:action_on_item_use",
+        "item_action": {
+            "type": "origins:merge_nbt",
+            "nbt": "{Potion:\"minecraft:poison\"}"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:potion"
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:nbt",
+                    "nbt": "{Potion:\"minecraft:poison\"}"
+                }
+            ]
+        },
+        "trigger": "start",
+        "priority": 0
+    }
+}

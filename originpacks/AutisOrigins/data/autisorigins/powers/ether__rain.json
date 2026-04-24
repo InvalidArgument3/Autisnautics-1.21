@@ -1,0 +1,17 @@
+{
+    "name": "Living Humidifier",
+    "description": "Clouds of rain follow you.",
+    "condition": {
+        "type": "origins:exposed_to_sky"
+    },
+    "type": "origins:action_over_time",
+    "interval": 2657,
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.05,
+        "action": {
+            "type": "origins:execute_command",
+            "command": "/weather thunder 70s"
+        }
+    }
+}

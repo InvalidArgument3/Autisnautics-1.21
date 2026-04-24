@@ -1,0 +1,12 @@
+{
+    "name": "Autist",
+    "description": "The Autists were once an obscure clan of humans, but their obsession with brown bricks and configuring modpacks twisted them into a different species altogether.\nThough normal humans haven't been sighted in this world for countless generations, the Autist is found everywhere, and well-adapted to build shitshacks in any environment.",
+    "powers": [
+        "autisorigins:starting_canned_food"
+    ],
+    "icon": {
+        "item": "minecraft:player_head"
+    },
+    "order": 0,
+    "impact": 0
+}

@@ -1,0 +1,69 @@
+{
+    "name": "Pregnant",
+    "description": "You swallow something bad.",
+    "type": "origins:action_over_time",
+    "interval": 6260,
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.1,
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_entity",
+                    "entity_type": "ad_astra:martian_raptor",
+                    "tag": "{PersistenceRequired:1,CustomName:\"\\\"Xenomorph\\\"\"}"
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:entity.chicken.death",
+                            "volume": 1,
+                            "pitch": 0.5
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:entity.chicken.death",
+                            "volume": 1,
+                            "pitch": 0.6
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "alexscaves:brainiac_attack",
+                            "volume": 1,
+                            "pitch": 1.4
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "alexscaves:brainiac_attack",
+                            "volume": 1,
+                            "pitch": 1.8
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "alexsmobs:earthquake",
+                        "duration": 40,
+                        "amplifier": 0,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/tellraw @s {\"text\":\"Something splits your body and breaks out!\",\"bold\":true,\"italic\":true,\"color\":\"#FF0000\"}"
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "autisorigins:ether__pregnant",
+                    "source": "apoli:command"
+                }
+            ]
+        }
+    }
+}

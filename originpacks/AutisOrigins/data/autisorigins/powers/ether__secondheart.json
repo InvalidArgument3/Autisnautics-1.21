@@ -1,0 +1,13 @@
+{
+    "name": "Second Heart",
+    "description": "You grow a second heart.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": 4
+        }
+    ],
+    "update_health": true
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Alchemist",
+    "description": "Often mistaken for a profession, the Alchemists are actually a distinct species from everyday Autists.\nThe Alchemist race has no juveniles, and its method of reproduction is unknown - instead they seem to appear spontaneously in dark alleys and run-down laboratories, gathering wherever densely packed bomb targets can be found.\nEver-mysterious, countless theories guess at where they come from, how they tell each other apart, and how they eat food with a mask on - even an Alchemist's real name is a closely guarded secret. Though they may seem inscrutable or even mad at times, it is said that an Alchemist may reveal their name to a true friend.",
+    "powers": [
+        "autisorigins:alchemical_allocation",
+        "autisorigins:bomb",
+        "autisorigins:bomb_supply",
+        "autisorigins:bomb_supply_refill",
+        "autisorigins:poison_use",
+        "autisorigins:empty_mask",
+        "autisorigins:starting_soda"
+    ],
+    "icon": {
+        "item": "rats:black_death_mask"
+    },
+    "order": 1,
+    "impact": 2
+}

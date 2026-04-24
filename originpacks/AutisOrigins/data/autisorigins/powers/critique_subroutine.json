@@ -1,0 +1,10 @@
+{
+    "name": "Critique Subroutine",
+    "description": "A highly critical monitoring program constantly runs as a background process, ensuring you gain precisely 12.634% more experience from everything you do.",
+    "type": "origins:modify_attribute",
+    "attribute": "attributeslib:experience_gained",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.12634
+    }
+}

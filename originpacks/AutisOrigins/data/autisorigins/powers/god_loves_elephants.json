@@ -1,0 +1,17 @@
+{
+    "name": "Realistic Elephant I/O",
+    "description": "God loves elephants, so elephants love you. You can tame elephants simply by interacting with them.",
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+        "type": "origins:tame"
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:entity_type",
+            "entity_type": "alexsmobs:elephant"
+        }
+    },
+    "action_result": "success",
+    "priority": 0
+}

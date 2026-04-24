@@ -1,0 +1,17 @@
+{
+    "name": "Slimer",
+    "description": "bolbians can throw blobbs but i forget what buton it is :D",
+    "type": "origins:fire_projectile",
+    "entity_type": "supplementaries:slimeball_projectile",
+    "cooldown": 1,
+    "count": 1,
+    "interval": 5,
+    "start_delay": 0,
+    "speed": 1.5,
+    "divergence": 1,
+    "sound": "minecraft:entity.slime.squish",
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    }
+}
