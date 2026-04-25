@@ -1,4 +1,15 @@
 # Changelog
+## [0.0.33]
+origins port part 1
+- unzip originpack
+- ported layer
+- starting items are callback commands (neoorigins:starting_equipment doesnt work lol)
+- replace lost icons, starting_equipment items
+- attributeslib -> apothic_attributes
+- rat: neoorigins substitute for origins:climbing
+- alchemist: Port alchemical allocation, half-finished bombs port
+
+- chapters: deepslate gen, register liquid soul
 
 ## [0.0.32]
 - regexsearch release id thing
