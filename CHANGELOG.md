@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.32]
+- regexsearch release id thing
+
 ## [0.0.31]
 - regexsearch patch
 

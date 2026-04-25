@@ -173,3 +173,14 @@ command_history.txt
 
 # drippyloadingscreen
 early_window_reference.properties
+
+# iris shaders
+config/iris.properties
+
+# Xaero
+xaero/*
+config/xaero*
+XaeroWaypoints*
+
+# visual keybinder
+visual_keybinder
