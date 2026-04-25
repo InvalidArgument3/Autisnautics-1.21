@@ -6,6 +6,6 @@ StartupEvents.registry("item", event => {
 
 StartupEvents.registry("fluid", event => {
     // 1.21: tconstruct liquid soul replacement
-    //placeholder texture
+    // placeholder texture
     event.create("liquid_soul").displayName("Liquid Soul").stillTexture("oritech:block/fluid/fluid_roiling_plasma").flowingTexture("oritech:block/fluid/fluid_roiling_plasma")
 })

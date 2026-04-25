@@ -6,12 +6,12 @@ const originId = function (event) {
 // Alchemist potion duping
 ItemEvents.rightClicked((event) => {
     if (originId(event) == "autisorigins:alchemist" && event.item.id == "minecraft:potion" && event.item.getCustomData().getBoolean("alchemicalAllocated") != true) {
-        //allocate_get
+        // allocate_get
         let potionCopy = event.item.copy()
         let data = potionCopy.getCustomData()
         data.putBoolean("alchemicalAllocated", true)
         potionCopy.setCustomData(data)
-        //cursed allocate_give
+        // cursed allocate_give
         event.server.scheduleInTicks(32, callback => {// surely this won't break if there's lag
             let oldVial = event.player.inventory.getSelected()
             if (oldVial.id == "minecraft:glass_bottle") {
