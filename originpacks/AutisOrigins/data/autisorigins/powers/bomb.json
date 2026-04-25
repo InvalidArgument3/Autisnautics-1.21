@@ -7,26 +7,25 @@
         "comparison": ">=",
         "compare_to": 1
     },
-    "type": "origins:fire_projectile",
-    "entity_type": "supplementaries:bomb",
-    "cooldown": 1,
-    "count": 1,
-    "interval": 5,
-    "start_delay": 0,
-    "speed": 1,
-    "divergence": 1,
-    "sound": "minecraft:entity.snowball.throw",
-    "tag": "{\"Timer\":200,\"Active\":1b}",
-    "key": {
-        "key": "key.origins.primary_active",
-        "continuous": true
-    },
-    "shooter_action": {
-        "type": "origins:modify_resource",
-        "resource": "autisorigins:bomb_supply",
-        "modifier": {
-            "operation": "addition",
-            "value": -1
-        }
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "/kubejs custom_command bomb"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.firework_rocket.launch",
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "autisorigins:bomb_supply",
+                "change": -1
+            }
+        ]
     }
 }

@@ -1,39 +1,34 @@
-// //Alchemist potion duping
-let allocatedPotion = Item.of("minecraft:potion", 1)// default value should never appear
 
-const saveAllocatedPotion = function (event, potion) {
-    let potionCopy = potion.copy()
-    let data = potionCopy.getNbt()
-    data.putBoolean("alchemicalAllocated", true)
-    potionCopy.setNbt(data)
-    allocatedPotion = potionCopy
-    // event.player.tell(Text.green(`allocatedPotion saved: ` + allocatedPotion.getId().toString() + `, nbt: ` + allocatedPotion.nbt.toString()))
+const originId = function (event) {
+    return event.player.getNbt().getCompound("neoforge:attachments").getCompound("neoorigins:origin_data").getCompound("origins").getString("origins:origin")
 }
 
-// run by autisorigins:alchemical_allocation/allocatestart
-ServerEvents.basicCommand('allocate_get', event => {
-    let jsMainItem = Item.of(event.player.getMainHandItem())
-    let jsOffItem = Item.of(event.player.getOffhandItem())
-
-    if (jsMainItem.getId() == "minecraft:potion") {
-        saveAllocatedPotion(event, jsMainItem)
-    }
-    else if (jsOffItem.getId() == "minecraft:potion") {
-        saveAllocatedPotion(event, jsOffItem)
+// Alchemist potion duping
+ItemEvents.rightClicked((event) => {
+    if (originId(event) == "autisorigins:alchemist" && event.item.id == "minecraft:potion" && event.item.getCustomData().getBoolean("alchemicalAllocated") != true) {
+        //allocate_get
+        let potionCopy = event.item.copy()
+        let data = potionCopy.getCustomData()
+        data.putBoolean("alchemicalAllocated", true)
+        potionCopy.setCustomData(data)
+        //cursed allocate_give
+        event.server.scheduleInTicks(32, callback => {// surely this won't break if there's lag
+            let oldVial = event.player.inventory.getSelected()
+            if (oldVial.id == "minecraft:glass_bottle") {
+                oldVial.shrink(1)
+                event.server.runCommandSilent(`/execute at ${event.player.getName().getString()} run playsound minecraft:entity.llama.spit player @a`)
+                event.player.give(potionCopy)
+            }
+        })
     }
 })
 
 
-// run by autisorigins:alchemical_allocation/allocatefinish
-ServerEvents.basicCommand('allocate_give', event => {
-    function callback (e) {
-        event.server.scheduleInTicks(1, callback => {// if we don't delay this it deletes the original potion instead of the bottle
-            let oldVial = e.player.inventory.getSelected()
-            oldVial.shrink(1)
-            e.player.give(allocatedPotion)
-        })
-    }
-    callback(event)
+// run by autisorigins:bomb/blastem
+// not working yet (resources are broken)
+ServerEvents.basicCommand('bomb', event => {
+    let look = event.player.getLookAngle()
+    event.server.runCommandSilent(`/execute at ${event.player.getName().getString()} run summon supplementaries:bomb ~ ~1.5 ~ {"Timer":200,"Active":1b,"Motion":[${look.x},${look.y},${look.z}]}`)
 })
 
 // //Ether Disease
