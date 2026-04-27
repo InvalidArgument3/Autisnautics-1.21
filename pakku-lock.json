@@ -233,6 +233,67 @@
             ]
         },
         {
+            "pakku_id": "C6HhC3Ynzjo8sB5f",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "advanced-loot-info",
+                "modrinth": "advanced-loot-info"
+            },
+            "name": {
+                "curseforge": "Advanced Loot Info",
+                "modrinth": "Advanced Loot Info"
+            },
+            "id": {
+                "curseforge": "1205426",
+                "modrinth": "PEPVViac"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "AdvancedLootInfo-neoforge-1.21.1-1.9.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7938/903/AdvancedLootInfo-neoforge-1.21.1-1.9.1.jar",
+                    "id": "7938903",
+                    "parent_id": "1205426",
+                    "hashes": {
+                        "sha1": "a56140fbafcaaee6e25297f1e5f8042a2b6e0758",
+                        "md5": "285c354aba561c3ed53f9aea3641b228"
+                    },
+                    "required_dependencies": [],
+                    "size": 788275,
+                    "date_published": "2026-04-17T08:11:34.493Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "AdvancedLootInfo-neoforge-1.21.1-1.9.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/PEPVViac/versions/dNyUPh4E/AdvancedLootInfo-neoforge-1.21.1-1.9.1.jar",
+                    "id": "dNyUPh4E",
+                    "parent_id": "PEPVViac",
+                    "hashes": {
+                        "sha512": "50bb452edf5f76ccf4b2e614e0983cd3f161f36f997bed6c087f78a2d6f96e051a429cc7f1cde00f15ba4a64d4523caaa90cdb1c9f57dcd68e236751f5ac2051",
+                        "sha1": "a56140fbafcaaee6e25297f1e5f8042a2b6e0758"
+                    },
+                    "required_dependencies": [],
+                    "size": 788275,
+                    "date_published": "2026-04-17T08:11:32.160307Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "XkNtmKaMS5zU3NMZ",
             "pakku_links": [
                 "xGzUHqz1Mp0e3REb"
@@ -6890,77 +6951,6 @@
                     ],
                     "size": 15680,
                     "date_published": "2024-09-18T02:23:07.753Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "RTqo3PSLqFmFV6gJ",
-            "pakku_links": [
-                "6ftw1qcS08CEI4N6"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "emi-loot",
-                "modrinth": "emi-loot"
-            },
-            "name": {
-                "curseforge": "EMI Loot",
-                "modrinth": "EMI Loot"
-            },
-            "id": {
-                "curseforge": "681783",
-                "modrinth": "qbbO7Jns"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "emi_loot-0.7.9+1.21+neoforge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/qbbO7Jns/versions/QXkODMCT/emi_loot-0.7.9+1.21+neoforge.jar",
-                    "id": "QXkODMCT",
-                    "parent_id": "qbbO7Jns",
-                    "hashes": {
-                        "sha512": "9c67ff502da7a94ef7707c144deb4ec6472f445e99cc8eab30b77f22d886a86b8793338452fe394296f3132ed4d37271d475af184e3a9519ddebdad1a82eecf7",
-                        "sha1": "bd0326eeda721c87a29efd78f9a52f46d572392c"
-                    },
-                    "required_dependencies": [
-                        "fRiHVvU7",
-                        "hYykXjDp"
-                    ],
-                    "size": 465870,
-                    "date_published": "2026-01-04T16:33:12.673648Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "emi_loot-0.7.9+1.21+neoforge.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7417/271/emi_loot-0.7.9+1.21+neoforge.jar",
-                    "id": "7417271",
-                    "parent_id": "681783",
-                    "hashes": {
-                        "sha1": "bd0326eeda721c87a29efd78f9a52f46d572392c",
-                        "md5": "f567c291c52f3e9625e3666e2fc4b1b8"
-                    },
-                    "required_dependencies": [
-                        "1005914",
-                        "580555"
-                    ],
-                    "size": 465870,
-                    "date_published": "2026-01-04T16:40:36.740Z"
                 }
             ]
         },

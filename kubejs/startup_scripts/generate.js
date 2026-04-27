@@ -84,7 +84,8 @@ StartupEvents.registry("item", event => {
     mechanism("Inductive", "uncommon")
     mechanism("Abstruse", "rare")
     mechanism("Calculation", "rare")
-
+    
+    /* 1.21: no more tconstruct slimy ferns
     let slime_types = ["Earth", "Sky", "Ender"]
     let slime_colours = [0x8FDB84, 0x00F9DE, 0xAC2EFC]
 
@@ -100,6 +101,7 @@ StartupEvents.registry("item", event => {
             .texture("cabin:item/ground_slimy_fern")
             .displayName("Slimy Fern Blend")
     }
+    */
 
     // Misc / Integration
     event.create("pipe_module_utility").texture("cabin:item/pipe_module_utility").displayName("Utility Pipe Module")
