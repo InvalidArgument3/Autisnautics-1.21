@@ -1,6 +1,6 @@
 	[DoesPotatoTickConfig."Misc Settings"]
 		#If enabled, Does Potato Tick will send a client message to notify the login players about their mob farm.
-		Notification = true
+		Notification = false
 		#If enabled, Does Potato Tick will auto-detect the mob farms in your worlds.
 		MobFarmDetection = true
 		#The least count of entities that enables the current chunk to be detected as a mob farm.
