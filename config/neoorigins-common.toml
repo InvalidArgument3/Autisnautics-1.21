@@ -1,6 +1,10 @@
 #Log per-namespace power counts after each data reload.
 #Useful for addon and datapack authors debugging load issues.
 debug_power_loading = false
+#Hide hunger / air HUD bars for origins that don't consume them
+#(e.g. Automaton hunger, Merling / Kraken / Automaton air).
+#Turn off to keep vanilla bars visible regardless of origin.
+hide_hud_bars = true
 
 #Enable or disable built-in origins.
 #Set to false to remove an origin from the selection screen.
@@ -74,6 +78,9 @@ debug_power_loading = false
 	class_archer = false
 	class_cleric = false
 	class_berserker = false
+	class_fisher = true
+	class_mason = true
+	class_paladin = true
 
 #Per-power dimension restrictions.
 #Powers listed here will be disabled when the player is in the specified dimension(s).
@@ -91,17 +98,6 @@ debug_power_loading = false
 		# Default: 0.3
 		# Range: 0.0 ~ 10.0
 		return_ratio = 0.3
-
-	[power_overrides.abyssal_regen_in_water]
-		# Default: 2.0
-		# Range: 0.0 ~ 100.0
-		amount_per_second = 2.0
-
-	[power_overrides.abyssal_daylight_damage]
-		# Default: 1.5
-		# Range: 0.0 ~ 100.0
-		damage_per_second = 1.5
-		ignite = false
 
 	[power_overrides.abyssal_land_speed_penalty]
 		# Default: -0.1
@@ -126,9 +122,9 @@ debug_power_loading = false
 		death_damage = 1.0
 
 	[power_overrides.automaton_iron_frame]
-		# Default: 8.0
-		# Range: -100.0 ~ 100.0
-		amount = 8.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.automaton_heavy_chassis]
 		# Default: -0.15
@@ -150,11 +146,6 @@ debug_power_loading = false
 		# Range: 0.0 ~ 10.0
 		multiplier = 0.25
 
-	[power_overrides.avian_slow_fall]
-		# Default: -0.9
-		# Range: -1.0 ~ 0.0
-		amount = -0.9
-
 	[power_overrides.avian_no_hunger_sprint]
 		# Default: 0.25
 		# Range: 0.0 ~ 10.0
@@ -174,12 +165,12 @@ debug_power_loading = false
 		cooldown_ticks = 100
 
 	[power_overrides.breeze_wind_dash]
-		# Default: 2.5
-		# Range: 0.0 ~ 10.0
-		strength = 2.5
 		# Default: 80
 		# Range: 0 ~ 72000
 		cooldown_ticks = 80
+		# Default: 2.5
+		# Range: 0.0 ~ 10.0
+		power = 2.5
 
 	[power_overrides.breeze_light_frame]
 		# Default: 0.9
@@ -220,15 +211,10 @@ debug_power_loading = false
 		# Range: 0 ~ 72000
 		cooldown_ticks = 100
 
-	[power_overrides.cinderborn_lava_regen]
-		# Default: 3.0
-		# Range: 0.0 ~ 100.0
-		amount_per_second = 3.0
-
 	[power_overrides.cinderborn_natural_armor]
-		# Default: 6.0
-		# Range: -100.0 ~ 100.0
-		amount = 6.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.cinderborn_water_weakness]
 		# Default: 3.0
@@ -269,9 +255,9 @@ debug_power_loading = false
 		scale = 0.8
 
 	[power_overrides.dwarf_stout_constitution]
-		# Default: 4.0
-		# Range: -100.0 ~ 100.0
-		amount = 4.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.dwarf_sturdy_legs]
 		# Default: -0.15
@@ -395,9 +381,9 @@ debug_power_loading = false
 		cooldown_ticks = 20
 
 	[power_overrides.frostborn_natural_armor]
-		# Default: 4.0
-		# Range: -100.0 ~ 100.0
-		amount = 4.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.frostborn_fire_weakness]
 		# Default: 2.0
@@ -410,9 +396,9 @@ debug_power_loading = false
 		damage_per_second = 2.0
 
 	[power_overrides.golem_natural_armor]
-		# Default: 6.0
-		# Range: -100.0 ~ 100.0
-		amount = 6.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.golem_knockback_resist]
 		# Default: 0.8
@@ -454,9 +440,9 @@ debug_power_loading = false
 		amount = 4.0
 
 	[power_overrides.gorgon_granite_hide]
-		# Default: 6.0
-		# Range: -100.0 ~ 100.0
-		amount = 6.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.gorgon_knockback_resist]
 		# Default: 0.5
@@ -560,19 +546,14 @@ debug_power_loading = false
 		scale = 1.3
 
 	[power_overrides.kraken_pressure_armor]
-		# Default: 6.0
-		# Range: -100.0 ~ 100.0
-		amount = 6.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.kraken_deep_current]
 		# Default: 0.8
 		# Range: -1.0 ~ 10.0
 		amount = 0.8
-
-	[power_overrides.kraken_regen_in_water]
-		# Default: 2.0
-		# Range: 0.0 ~ 100.0
-		amount_per_second = 2.0
 
 	[power_overrides.kraken_summon_guardian]
 		# Default: 2
@@ -726,9 +707,9 @@ debug_power_loading = false
 		cooldown_ticks = 300
 
 	[power_overrides.sculkborn_natural_armor]
-		# Default: 8.0
-		# Range: -100.0 ~ 100.0
-		amount = 8.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.sculkborn_knockback_resist]
 		# Default: 0.5
@@ -751,9 +732,9 @@ debug_power_loading = false
 		damage_per_second = 2.0
 
 	[power_overrides.shulk_natural_armor]
-		# Default: 8.0
-		# Range: -100.0 ~ 100.0
-		amount = 8.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.shulk_slow_movement]
 		# Default: -0.25
@@ -764,11 +745,6 @@ debug_power_loading = false
 		# Default: 0.8
 		# Range: -1.0 ~ 10.0
 		amount = 0.8
-
-	[power_overrides.siren_regen_in_water]
-		# Default: 1.0
-		# Range: 0.0 ~ 100.0
-		amount_per_second = 1.0
 
 	[power_overrides.siren_land_slowdown]
 		# Default: -0.15
@@ -795,9 +771,9 @@ debug_power_loading = false
 		cooldown_ticks = 240
 
 	[power_overrides.sporeling_natural_armor]
-		# Default: 4.0
-		# Range: -100.0 ~ 100.0
-		amount = 4.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.sporeling_slow_movement]
 		# Default: -0.1
@@ -815,7 +791,7 @@ debug_power_loading = false
 		return_ratio = 0.2
 
 	[power_overrides.stoneguard_natural_armor]
-		# Default: 3.0
+		# Default: 6.0
 		# Range: -100.0 ~ 100.0
 		amount = 3.0
 
@@ -847,15 +823,10 @@ debug_power_loading = false
 		# Range: 1 ~ 256
 		radius = 24
 
-	[power_overrides.strider_lava_regen]
-		# Default: 2.0
-		# Range: 0.0 ~ 100.0
-		amount_per_second = 2.0
-
 	[power_overrides.strider_natural_armor]
-		# Default: 6.0
-		# Range: -100.0 ~ 100.0
-		amount = 6.0
+		# Default: 0
+		# Range: 0 ~ 4
+		amplifier = 0
 
 	[power_overrides.strider_water_weakness]
 		# Default: 3.0
@@ -937,9 +908,6 @@ debug_power_loading = false
 		tick_interval = 20
 
 	[power_overrides.umbral_active_dash]
-		# Default: 2.0
-		# Range: 0.0 ~ 10.0
-		power = 2.0
 		# Default: 60
 		# Range: 0 ~ 72000
 		cooldown_ticks = 60
@@ -1022,9 +990,9 @@ debug_power_loading = false
 		amount = 4.0
 
 	[power_overrides.warden_ancient_hide]
-		# Default: 10.0
-		# Range: -100.0 ~ 100.0
-		amount = 10.0
+		# Default: 1
+		# Range: 0 ~ 4
+		amplifier = 1
 
 	[power_overrides.warden_hulking_frame]
 		# Default: 1.15
@@ -1200,6 +1168,11 @@ debug_power_loading = false
 		# Range: 0.0 ~ 10.0
 		cost_multiplier = 0.5
 
+	[power_overrides.abyssal_aquatic_speed]
+		# Default: 0.8
+		# Range: -1.0 ~ 10.0
+		amount = 0.8
+
 #Random origin assignment mode.
 #DISABLED: players choose their origin normally.
 #FIRST_JOIN: origins are randomly assigned on first join (no selection screen).
@@ -1224,3 +1197,110 @@ debug_power_loading = false
 	# Default: 0.5
 	# Range: 0.0 ~ 1.0
 	min_power_ratio = 0.5
+
+#Per-feature toggles for built-in ocean origins (abyssal, kraken, merling, siren).
+[ocean_origins]
+	#Teleport ocean origins to a random ocean biome on first origin pick.
+	#Turn off to let them spawn at the world's normal spawn point.
+	spawn_in_ocean = true
+	#Ocean origins slowly lose air while out of water (Minecraft-fish style).
+	#Turn off to disable the on-land suffocation entirely.
+	dries_out = true
+	#Ticks per single air point lost while out of water.
+	#Default 10 = 1 air per 0.5s, 300 air → ~2.5 minutes to deplete.
+	#Larger values mean a slower drain. Vanilla cod uses ~1 tick per air;
+	#for a fish-comparable feel set this near 16 (≈4 minutes).
+	#Replaces the per-power drain_rate field in built-in dries_out JSONs.
+	# Default: 10
+	# Range: 1 ~ 1200
+	drain_rate_ticks = 10
+	#Damage applied per second once a dried-out aquatic player's virtual air
+	#is exhausted. Mirrors WaterAnimal.handleAirSupply cadence (vanilla cod / salmon).
+	#Default 2.0 (= 1 heart per second). Set to 0 to make dry-out non-lethal.
+	# Default: 2.0
+	# Range: 0.0 ~ 100.0
+	drown_damage_per_second = 2.0
+	#Pescivore restriction — when true, ocean origins (Abyssal, Kraken, Merling,
+	#Siren) can only eat items in the neoorigins:fish_foods tag; non-fish food
+	#is silently cancelled. Set to false to let them eat anything (powered by
+	#the aquatic_fish_diet power's runtime check on this flag).
+	#Default true: matches the long-standing pescivore design.
+	fish_diet_required = true
+
+#Friendly-fire filter for origin area-of-effect actions (poison sting,
+#fire burst, ink shot, etc.). When a toggle is true, that category of
+#mob is excluded from the AOE target list and will not take effects
+#or damage from the player's own abilities.
+[friendly_fire]
+	#Protect TamableAnimals owned by the casting player (wolves, cats, etc.).
+	protect_owned_pets = true
+	#Protect mobs tracked as minions of the casting player
+	#(necromancer skeletons, beastmaster summons, etc.).
+	protect_minions = true
+	#Protect ALL passive animals (sheep, cow, pig, horse, fox, ...).
+	#Default false: an active combat AOE should hit livestock; otherwise
+	#abilities like Hiveling Sting silently no-op against passive mobs.
+	#Turn on if your pack treats farm animals as untouchable allies.
+	protect_animals = false
+	#Protect villagers and wandering traders from origin AOEs.
+	#Default true: avoids accidentally aggroing or killing your trade hub.
+	protect_villagers = true
+	#Protect iron golems from origin AOEs.
+	#Default true: village-built golems represent player investment and
+	#their protection is consistent with vanilla golem AI rules.
+	protect_iron_golems = true
+
+#Armor class definitions. Items listed here are ADDED to the
+#neoorigins:heavy_armor / neoorigins:light_armor item tags.
+#Use this to add modded armor to the correct class without a datapack.
+#Format: item IDs (e.g. "modid:my_helmet") or tags (e.g. "#modid:my_armor_tag").
+[armor_classes]
+	#Additional items/tags to treat as heavy armor.
+	#Default heavy armor (diamond + netherite) is defined in the
+	#neoorigins:heavy_armor item tag and does not need to be listed here.
+	heavy_armor = []
+	#Additional items/tags to treat as light armor.
+	#Default light armor (leather + chainmail) is defined in the
+	#neoorigins:light_armor item tag and does not need to be listed here.
+	light_armor = []
+
+#Essence Evolution system. Origins evolve through 3 tiers
+#(Evolved → Ascended → Apex) by accumulating mob kills.
+#An Orb of Origin resets the player to base tier.
+[evolution]
+	#Enable the evolution system. When false, kills are not tracked
+	#and evolution prompts never appear.
+	enabled = true
+	#Mob kills required to reach Evolved (tier 1).
+	# Default: 1000
+	# Range: 1 ~ 1000000
+	tier_1_kills = 1000
+	#Mob kills required to reach Ascended (tier 2).
+	# Default: 2500
+	# Range: 1 ~ 1000000
+	tier_2_kills = 2500
+	#Mob kills required to reach Apex (tier 3).
+	# Default: 5000
+	# Range: 1 ~ 1000000
+	tier_3_kills = 5000
+	#Chat milestone message interval (every N kills).
+	# Default: 100
+	# Range: 10 ~ 10000
+	message_interval = 100
+
+#Tuning for the helmet absorption rule on sun-damage origins
+#(Abyssal, Caveborn, Vampire, Phantom, Warden, etc.). When the
+#player is in direct sun and wearing a damageable helmet, the
+#helmet absorbs the burn at the cost of its own durability.
+[sun_damage]
+	#Per-evaluation chance (0.0 – 1.0) that a damageable helmet takes
+	#1 durability while the player is in direct sun. The condition is
+	#evaluated once per condition_passive interval (~1 second), so a
+	#value of 0.07 averages 1 durability per ~14 seconds — about 40
+	#minutes of continuous sun for a 165-durability iron helmet.
+	#Unbreaking still stacks via vanilla hurtAndBreak. Set to 0 to
+	#disable helmet protection (player always burns); set to 1 to
+	#match vanilla zombie/skeleton wear rate (very fast).
+	# Default: 0.07
+	# Range: 0.0 ~ 1.0
+	helmet_dura_damage_chance = 0.07
