@@ -1,4 +1,14 @@
 # Changelog
+
+## [0.0.34]
+- update pakku jar
+- add createslop resource packs to see how they look
+- add neat photography mod
+- orthinopter glider mod
+- starter structure mod
+- rm bettermodsbutton
+- rm youkais delight due to farmers delight 1.3 causing a crash
+
 ## [0.0.33]
 origins port part 1
 - unzip originpack
