@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.35]
+- beware of farmers delight 1.3, a bunch of tag shit changed so it was downgraded
+
+
 ## [0.0.34]
 - update pakku jar
 - add createslop resource packs to see how they look
