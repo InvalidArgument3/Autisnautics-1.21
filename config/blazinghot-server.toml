@@ -4,9 +4,10 @@
 	#.
 	#.
 	#Allow regular mixing recipes in the Blaze Mixer
+	#Make sure to run /reload command after changing this option
 	allowMixingInBlazeMixer = true
 	#.
-	#[in milibuckets]
+	#[in millibuckets]
 	#
 	#The amount of fuel that Blaze Mixer uses per 100 processing ticks (default speed) of regular mixing recipes.
 	#Does not affect melting recipes.
@@ -20,9 +21,10 @@
 	blazeMixingSpeedMultiplier = 2.0
 	#.
 	#Allow brewing recipes in the Blaze Mixer
+	#Make sure to run /reload command after changing this option
 	allowBrewingInBlazeMixer = true
 	#.
-	#[in milibuckets]
+	#[in millibuckets]
 	#
 	#The amount of fuel that Blaze Mixer uses for each brewing recipe.
 	# Default: 25
@@ -35,9 +37,10 @@
 	blazeBrewingSpeedMultiplier = 2.0
 	#.
 	#Allow shapeless crafting recipes in the Blaze Mixer
+	#Make sure to run /reload command after changing this option
 	allowShapelessInBlazeMixer = true
 	#.
-	#[in milibuckets]
+	#[in millibuckets]
 	#
 	#The amount of fuel that Blaze Mixer uses for each shapeless crafting recipe.
 	# Default: 25
