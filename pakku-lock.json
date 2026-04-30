@@ -9282,22 +9282,28 @@
             ]
         },
         {
-            "pakku_id": "JS4ffSQAuIZhcYYh",
+            "pakku_id": "bgVJjxpEBGomxXI1",
+            "pakku_links": [
+                "r2IXASeD2rmC0eo4"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
+                "curseforge": "gensokyo-delight-youkais-feasts",
                 "modrinth": "gensokyo-delight-youkais-feasts"
             },
             "name": {
+                "curseforge": "Gensokyo Delight ~ Youkais' Feasts",
                 "modrinth": "Gensokyo Delight ~ Youkais' Feasts"
             },
             "id": {
+                "curseforge": "1309991",
                 "modrinth": "Ohy0TgO2"
             },
             "files": [
                 {
-                    "type": "modrinth",
-                    "file_name": "youkaisfeasts-1.1.0.jar",
+                    "type": "curseforge",
+                    "file_name": "youkaisfeasts-1.0.6.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9305,18 +9311,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Ohy0TgO2/versions/psYvbkuW/youkaisfeasts-1.1.0.jar",
-                    "id": "psYvbkuW",
-                    "parent_id": "Ohy0TgO2",
+                    "url": "https://edge.forgecdn.net/files/7830/17/youkaisfeasts-1.0.6.jar",
+                    "id": "7830017",
+                    "parent_id": "1309991",
                     "hashes": {
-                        "sha512": "484f775e21ef7364fdbc4435491b0c14cb5c05a10994f5d0ca11b93ddfad030c3c8ddbf4efcda369b24ec4651538c5cef618236b6973509b649bb115f876548a",
-                        "sha1": "4cdea10f1856a25698907e77ea0a29d3e3e4fd3a"
+                        "sha1": "0c8c334f1ac4e6f16a7c38ddd749a6fb7d235d87",
+                        "md5": "ddfac766b647c032dd45f4fe9748ef59"
                     },
                     "required_dependencies": [
-                        "R2OftAxM"
+                        "398521"
                     ],
-                    "size": 3957881,
-                    "date_published": "2026-04-28T11:28:23.259466Z"
+                    "size": 3956871,
+                    "date_published": "2026-03-28T16:16:57.917Z"
                 }
             ]
         },
@@ -21028,5 +21034,5 @@
             ]
         }
     ],
-    "lockfile_version": 1
+    "lockfile_version": 2
 }
