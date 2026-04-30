@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.36]
+- worldgen: vanilla, terralith, regions_unexplored placed features now spawn on all island levels
+
 ## [0.0.35]
 - beware of farmers delight 1.3, a bunch of tag shit changed so it was downgraded
 
