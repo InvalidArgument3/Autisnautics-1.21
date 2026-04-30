@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.37]
+- downgrade youkai's homecoming to match downgraded farmers delight (fixes emi crash)
+
 ## [0.0.36]
 - worldgen: vanilla, terralith, regions_unexplored placed features now spawn on all island levels
 
