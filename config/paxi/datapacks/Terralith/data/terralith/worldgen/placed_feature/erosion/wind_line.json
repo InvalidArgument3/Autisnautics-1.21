@@ -87,8 +87,8 @@
             "y_spread": 0
         },
         {
-            "type": "minecraft:heightmap",
-            "heightmap": "WORLD_SURFACE"
+            "type": "minecraft:count_on_every_layer",
+            "count": 1
         },
         {
             "type": "minecraft:environment_scan",

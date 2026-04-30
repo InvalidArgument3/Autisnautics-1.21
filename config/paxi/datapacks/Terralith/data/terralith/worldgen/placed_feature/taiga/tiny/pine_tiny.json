@@ -2,8 +2,8 @@
   "feature": "terralith:taiga/tiny/pine_tiny",
   "placement": [
     {
-      "type": "minecraft:heightmap",
-      "heightmap": "OCEAN_FLOOR_WG"
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
     },
     {
       "type": "minecraft:surface_water_depth_filter",

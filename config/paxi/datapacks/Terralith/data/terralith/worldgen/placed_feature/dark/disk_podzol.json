@@ -15,10 +15,8 @@
       "noise_to_count_ratio": 1
     },
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "absolute": 62
-      }
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
     },
     {
       "type": "minecraft:block_predicate_filter",

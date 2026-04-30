@@ -27,12 +27,7 @@
         "chance": 0.34,
         "feature": {
           "feature": "terralith:dark/dark_oak",
-          "placement": [
-            {
-              "type": "minecraft:heightmap",
-              "heightmap": "WORLD_SURFACE"
-            }
-          ]
+          "placement": []
         }
       },
       {
