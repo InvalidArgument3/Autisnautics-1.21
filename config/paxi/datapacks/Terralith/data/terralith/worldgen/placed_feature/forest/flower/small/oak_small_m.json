@@ -2,8 +2,25 @@
   "feature": "terralith:forest/flower/small/oak_small_m",
   "placement": [
     {
-      "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE"
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:replaceable"
+          },
+          {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "minecraft:fern"
+            }
+          }
+        ]
+      }
     },
     {
       "type": "minecraft:surface_water_depth_filter",
