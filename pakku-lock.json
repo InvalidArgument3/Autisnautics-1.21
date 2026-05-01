@@ -18212,43 +18212,6 @@
             ]
         },
         {
-            "pakku_id": "eCtKVNvmkCNhQQWm",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "terrablender"
-            },
-            "name": {
-                "modrinth": "TerraBlender"
-            },
-            "id": {
-                "modrinth": "kkmrDlKT"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/kkmrDlKT/versions/6e8GCrLb/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
-                    "id": "6e8GCrLb",
-                    "parent_id": "kkmrDlKT",
-                    "hashes": {
-                        "sha512": "9d4b2a1be5139c0fb2fad92ed21805b17d9e83b6ea48e637e018bb14063c1823a206390755dbfe8d025c20fd62ac11cdd84db53ddb956dabaeda01bff57bac50",
-                        "sha1": "744394d979b422be560babf9df7a6800ede9ac5b"
-                    },
-                    "required_dependencies": [],
-                    "size": 120365,
-                    "date_published": "2025-01-05T04:27:50.603937Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "UrjrWwIUtwyBuKAx",
             "type": "MOD",
             "side": "BOTH",
