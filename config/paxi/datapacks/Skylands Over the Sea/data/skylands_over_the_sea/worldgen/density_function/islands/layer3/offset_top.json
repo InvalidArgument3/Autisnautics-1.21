@@ -89,7 +89,7 @@
             }
           },
           {
-            "location": -0.15,
+            "location": -0.1,
             "derivative": 0,
             "value": 0
           },
@@ -99,7 +99,7 @@
             "value": 0
           },
           {
-            "location": 0.15,
+            "location": 0.1,
             "derivative": 0,
             "value": 0
           },
