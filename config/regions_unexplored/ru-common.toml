@@ -32,7 +32,7 @@
 	toggle_clover_plains = true
 	toggle_cold_boreal_taiga = true
 	toggle_cold_deciduous_forest = true
-	toggle_cold_river = true
+	toggle_cold_river = false
 	toggle_deciduous_forest = true
 	toggle_dry_bushland = true
 	toggle_eucalyptus_forest = true
@@ -56,7 +56,7 @@
 	toggle_mauve_hills = true
 	toggle_meadow = true
 	toggle_mountains = true
-	toggle_muddy_river = true
+	toggle_muddy_river = false
 	toggle_old_growth_bayou = true
 	toggle_orchard = true
 	toggle_outback = true
@@ -77,7 +77,7 @@
 	toggle_steppe = true
 	toggle_temperate_grove = true
 	toggle_towering_cliffs = true
-	toggle_tropical_river = true
+	toggle_tropical_river = false
 	toggle_tropics = true
 	toggle_willow_forest = true
 	#cave_biomes

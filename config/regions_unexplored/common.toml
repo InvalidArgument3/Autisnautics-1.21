@@ -32,7 +32,7 @@
 	#Default: true
 	toggle_cold_deciduous_forest = true
 	#Default: true
-	toggle_cold_river = true
+	toggle_cold_river = false
 	#Default: true
 	toggle_deciduous_forest = true
 	#Default: true
@@ -78,7 +78,7 @@
 	#Default: true
 	toggle_mountains = true
 	#Default: true
-	toggle_muddy_river = true
+	toggle_muddy_river = false
 	#Default: true
 	toggle_old_growth_bayou = true
 	#Default: true
@@ -120,7 +120,7 @@
 	#Default: true
 	toggle_towering_cliffs = true
 	#Default: true
-	toggle_tropical_river = true
+	toggle_tropical_river = false
 	#Default: true
 	toggle_tropics = true
 	#Default: true
