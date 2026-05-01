@@ -311,3 +311,4 @@ key_key.screenshot_viewer.open_screenshots_screen:key.keyboard.unknown:NONE
 key_key.presencefootsteps.settings:key.keyboard.unknown:NONE
 key_key.pickup.item:key.keyboard.unknown:NONE
 key_key.observable.profile:key.keyboard.unknown:NONE
+key_key.yeetusnarratus.toggle_narrator:key.keyboard.unknown:NONE
