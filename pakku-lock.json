@@ -17244,43 +17244,6 @@
             ]
         },
         {
-            "pakku_id": "BljGV2LPmWOASJUs",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "sound-physics-remastered"
-            },
-            "name": {
-                "curseforge": "Sound Physics Remastered"
-            },
-            "id": {
-                "curseforge": "535489"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "alpha",
-                    "url": "https://edge.forgecdn.net/files/7032/247/sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
-                    "id": "7032247",
-                    "parent_id": "535489",
-                    "hashes": {
-                        "sha1": "31cf754f9e5f62d1ca257f297e5dce394024696c",
-                        "md5": "fe3cafa3f67c86272ee1d0cdf96fb2ac"
-                    },
-                    "required_dependencies": [],
-                    "size": 202454,
-                    "date_published": "2025-09-25T14:30:10.260Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "5bfkkA9sUb76Dyjv",
             "pakku_links": [
                 "eQSgtzHsPr4zUSuh"
