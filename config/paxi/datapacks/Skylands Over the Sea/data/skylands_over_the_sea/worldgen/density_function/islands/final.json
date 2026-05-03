@@ -84,7 +84,21 @@
                 "argument1": "skylands_over_the_sea:islands/layer4/depth_top",
                 "argument2": "skylands_over_the_sea:islands/layer5/depth_top"
               },
-              "when_out_of_range": -0.1
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "skylands_over_the_sea:y",
+                "min_inclusive": 432,
+                "max_exclusive": 464,
+                "when_in_range": "skylands_over_the_sea:islands/layer6/depth_bottom",
+                "when_out_of_range": {
+                  "type": "minecraft:range_choice",
+                  "input": "skylands_over_the_sea:y",
+                  "min_inclusive": 464,
+                  "max_exclusive": 495,
+                  "when_in_range": "skylands_over_the_sea:islands/layer6/depth_top",
+                  "when_out_of_range": -0.1
+                }
+              }
             }
           }
         }

@@ -292,6 +292,40 @@
         "location": 344,
         "derivative": 0,
         "value": 0
+      },
+      {
+        "location": 456,
+        "derivative": 0,
+        "value": 0
+      },
+      {
+        "location": 456,
+        "derivative": 0,
+        "value": {
+          "coordinate": "skylands_over_the_sea:islands/layer6/noise",
+          "points": [
+            {
+              "location": 0,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.125,
+              "derivative": 0,
+              "value": 0
+            },
+            {
+              "location": 0.125,
+              "derivative": 0,
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "location": 472,
+        "derivative": 0,
+        "value": 0
       }
     ]
   }

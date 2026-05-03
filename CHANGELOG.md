@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.38]
+- the secret sixth level of parkour civilization
+
 ## [0.0.37]
 - downgrade youkai's homecoming to match downgraded farmers delight (fixes emi crash)
 
