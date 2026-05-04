@@ -3,7 +3,7 @@
 
 # Prevents many different lagspikes caused by loading chunks synchronously.
 # This for example causes maps to only update loaded chunks, which depending on the viewdistance can be a smaller radius than vanilla.
-reduce-sync-loads: true
+reduce-sync-loads: false
 # Can significantly reduce the time spent on chunk iteration by only updating the ticking chunks list each second, rather than each tick.
 # This is especially useful for servers with a high playercount and / or viewdistance.
 # Note: This setting is incompatible with Moonrise.
