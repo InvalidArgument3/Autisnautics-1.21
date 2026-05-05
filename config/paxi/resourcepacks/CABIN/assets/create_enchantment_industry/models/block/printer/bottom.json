@@ -1,0 +1,115 @@
+{
+	"credit": "By LimonBlaze, made with Blockbench, ported to Create 6.0 by Eric Oswald",
+	"parent": "block/block",
+	"textures": {
+		"head": "create:block/mechanical_press_head",
+		"hose": "create:block/hose_pulley_coil",
+		"particle": "cabin:block/zinc_underside",
+		"tank": "create_enchantment_industry:block/printer"
+	},
+	"elements": [
+		{
+			"name": "drain 2",
+			"from": [4.5, -7, 4.5],
+			"to": [11.5, -6, 11.5],
+			"rotation": {"angle": 0, "axis": "z", "origin": [6.75, 16, 6]},
+			"faces": {
+				"north": {"uv": [11.5, 7, 15, 7.5], "texture": "#tank"},
+				"east": {"uv": [11.5, 7, 15, 7.5], "texture": "#tank"},
+				"south": {"uv": [11.5, 7, 15, 7.5], "texture": "#tank"},
+				"west": {"uv": [11.5, 7, 15, 7.5], "texture": "#tank"},
+				"up": {"uv": [11.5, 3.5, 15, 7], "rotation": 90, "texture": "#tank"}
+			}
+		},
+		{
+			"name": "drain 3",
+			"from": [5.5, -7, 5.5],
+			"to": [10.5, -4, 10.5],
+			"rotation": {"angle": 0, "axis": "z", "origin": [7.75, 16, 7]},
+			"faces": {
+				"north": {"uv": [11.5, 1, 13, 3.5], "rotation": 270, "texture": "#tank"},
+				"east": {"uv": [11.5, 1, 13, 3.5], "rotation": 270, "texture": "#tank"},
+				"south": {"uv": [11.5, 1, 13, 3.5], "rotation": 270, "texture": "#tank"},
+				"west": {"uv": [11.5, 1, 13, 3.5], "rotation": 270, "texture": "#tank"},
+				"up": {"uv": [15.5, 1, 13, 3.5], "rotation": 90, "texture": "#tank"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#tank"}
+			}
+		},
+		{
+			"name": "Head",
+			"from": [3, -11, 3],
+			"to": [13, -7, 13],
+			"faces": {
+				"north": {"uv": [1, 0, 11, 4], "texture": "#head"},
+				"east": {"uv": [1, 0, 11, 4], "texture": "#head"},
+				"south": {"uv": [1, 0, 11, 4], "texture": "#head"},
+				"west": {"uv": [1, 0, 11, 4], "texture": "#head"},
+				"up": {"uv": [1, 5, 11, 15], "rotation": 180, "texture": "#head"},
+				"down": {"uv": [1, 5, 11, 15], "rotation": 180, "texture": "#head"}
+			}
+		},
+		{
+			"name": "Rope_lower",
+			"from": [6, -4, 6],
+			"to": [10, 5, 10],
+			"faces": {
+				"north": {"uv": [6, 0, 10, 9], "texture": "#hose"},
+				"east": {"uv": [6, 0, 10, 9], "texture": "#hose"},
+				"south": {"uv": [6, 0, 10, 9], "texture": "#hose"},
+				"west": {"uv": [6, 0, 10, 9], "texture": "#hose"}
+			}
+		},
+		{
+			"name": "Rope_upper",
+			"from": [6, 5, 6],
+			"to": [10, 8, 10],
+			"faces": {
+				"north": {"uv": [6, 13, 10, 16], "texture": "#hose"},
+				"east": {"uv": [6, 13, 10, 16], "texture": "#hose"},
+				"south": {"uv": [6, 13, 10, 16], "texture": "#hose"},
+				"west": {"uv": [6, 13, 10, 16], "texture": "#hose"},
+				"up": {"uv": [6, 3, 10, 7], "texture": "#hose"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 2, 0],
+			"scale": [0.5, 0.5, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "piston",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		}
+	]
+}

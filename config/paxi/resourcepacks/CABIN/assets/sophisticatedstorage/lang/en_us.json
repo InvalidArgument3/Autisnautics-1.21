@@ -1,0 +1,31 @@
+{
+    "block.sophisticatedstorage.iron_barrel": "%s%sBronze Barrel",
+    "block.sophisticatedstorage.gold_barrel": "%s%sInvar Barrel",
+    "block.sophisticatedstorage.diamond_barrel": "%s%sSlimesteel Barrel",
+    "block.sophisticatedstorage.netherite_barrel": "%s%sManyullyn Barrel",
+  
+    "block.sophisticatedstorage.iron_chest": "%s%sBronze Chest",
+    "block.sophisticatedstorage.gold_chest": "%s%sInvar Chest",
+    "block.sophisticatedstorage.diamond_chest": "%s%sSlimesteel Chest",
+    "block.sophisticatedstorage.netherite_chest": "%s%sManyullyn Chest",
+  
+    "item.sophisticatedstorage.iron_shulker_box": "Bronze Shulker Box",
+    "block.sophisticatedstorage.iron_shulker_box": "Bronze Shulker Box",
+    "item.sophisticatedstorage.gold_shulker_box": "Invar Shulker Box",
+    "block.sophisticatedstorage.gold_shulker_box": "Invar Shulker Box",
+    "item.sophisticatedstorage.diamond_shulker_box": "Slimesteel Shulker Box",
+    "block.sophisticatedstorage.diamond_shulker_box": "Slimesteel Shulker Box",
+    "item.sophisticatedstorage.netherite_shulker_box": "Manyullyn Shulker Box",
+    "block.sophisticatedstorage.netherite_shulker_box": "Manyullyn Shulker Box",
+  
+    "item.sophisticatedstorage.basic_to_iron_tier_upgrade": "Basic to Bronze Tier Upgrade",
+    "item.sophisticatedstorage.basic_to_gold_tier_upgrade": "Basic to Invar Tier Upgrade",
+    "item.sophisticatedstorage.basic_to_diamond_tier_upgrade": "Basic to Slimesteel Tier Upgrade",
+    "item.sophisticatedstorage.basic_to_netherite_tier_upgrade": "Basic to Manyullyn Tier Upgrade",
+    "item.sophisticatedstorage.iron_to_gold_tier_upgrade": "Bronze to Invar Tier Upgrade",
+    "item.sophisticatedstorage.iron_to_diamond_tier_upgrade": "Bronze to Slimesteel Tier Upgrade",
+    "item.sophisticatedstorage.iron_to_netherite_tier_upgrade": "Bronze to Manyullyn Tier Upgrade",
+    "item.sophisticatedstorage.gold_to_diamond_tier_upgrade": "Invar to Slimesteel Tier Upgrade",
+    "item.sophisticatedstorage.gold_to_netherite_tier_upgrade": "Invar to Manyullyn Tier Upgrade",
+    "item.sophisticatedstorage.diamond_to_netherite_tier_upgrade": "Slimesteel to Manyullyn Tier Upgrade"
+  }

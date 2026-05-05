@@ -1,0 +1,16 @@
+{
+    "info.thermal.machine_press.2": "Obrigado por sua compra!",
+    "block.thermal.machine_frame": "Máquina de Invar",
+    "item.thermal.raw_nickel": "Níquel Bruto Concentrado",
+    "msg.fuelingStation.link": "Conectando a partir da Posição",
+    "item.thermal.turbo_servo_attachment": "Anexo: Servo",
+    "info.thermal.machine_sawmill.0": "Remove Reagentes dos seus recipientes automaticamente.",
+    "info.thermal.machine_sawmill.1": "Apesar da aparência, não é uma serraria.",
+    "info.thermal.machine_press.1": "É necessário um cartão de troca da Interface de Missões.",
+    "info.thermal.machine_press.0": "Troca itens por moedas automaticamente e vice-versa.",
+    "block.thermal.machine_press": "Estação de Troca",
+    "block.thermal.machine_sawmill": "Extrator de Reagente",
+    "info.thermal.machine_sawmill.2": "Cortando as Pontas!",
+    "item.thermal.raw_lead": "Chumbo Bruto Concentrado",
+    "item.thermal.raw_silver": "Prata Bruta Concentrada"
+}

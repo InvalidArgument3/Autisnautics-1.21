@@ -1,0 +1,16 @@
+{
+    "block.thermal.machine_press": "Торговая станция",
+    "block.thermal.machine_sawmill": "Экстрактор реагентов",
+    "block.thermal.machine_frame": "Инварное устройство",
+    "info.thermal.machine_press.0": "Автоматически обменивает предметы на монеты и наоборот.",
+    "info.thermal.machine_press.1": "Требуется торговая карта, которую можно получить в квестах.",
+    "info.thermal.machine_press.2": "Спасибо за покупку!",
+    "info.thermal.machine_sawmill.0": "Автоматически удаляет реагенты из сосудов.",
+    "info.thermal.machine_sawmill.1": "Несмотря на внешность, это не лесопилка.",
+    "info.thermal.machine_sawmill.2": "Остриё инноваций!",
+    "msg.fuelingStation.link": "Привязываем с позиции",
+    "item.thermal.turbo_servo_attachment": "Насадка: Турбо-сервомеханизм",
+    "item.thermal.raw_lead": "Насыщенный рудный свинец",
+    "item.thermal.raw_nickel": "Насыщенный рудный никель",
+    "item.thermal.raw_silver": "Насыщенное рудное серебро"
+}
