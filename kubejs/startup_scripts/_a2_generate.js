@@ -5,6 +5,8 @@ StartupEvents.registry("item", event => {
     // 1.21: snow golem spirit cycle
     event.create("haunted_rind").texture("alexsmobs:tarantula_hawk_wing_fragment").displayName("Haunted Rind")// placeholder texture
     event.create("haunted_dust").texture("cabin:item/ground_slimy_fern").color(0, 0xAC2EFC).displayName("Haunted Dust")
+    // 1.21: new alchemy oil item
+    event.create("crystallized_oil").texture("a2:item/crystallized_oil").displayName("Crystallized Oil")
 })
 
 StartupEvents.registry("fluid", event => {
