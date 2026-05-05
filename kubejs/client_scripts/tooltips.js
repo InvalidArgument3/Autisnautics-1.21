@@ -1,7 +1,4 @@
-// Disabled on this runtime due missing ItemEvents.tooltip
-console.warn("[KubeJS] Skipping tooltips.js: ItemEvents.tooltip is unavailable in this KubeJS build.")
-/*
-ItemEvents.tooltip(tooltip => {
+ItemEvents.modifyTooltips(tooltip => {
     let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", Text.translatable("item.metalbarrels.barrel.tooltip", slots));
     let main_assembly = (id, stage) => tooltip.add(id, Text.translatable("item.kubejs.main_assembly", stage == "4" ? "Finale" : "Chapter " + stage));
     let bonus_assembly = (id, stage) => tooltip.add(id, Text.translatable("item.kubejs.bonus_assembly", "Chapter " + stage));
@@ -13,6 +10,7 @@ ItemEvents.tooltip(tooltip => {
     tooltip.add("functionalstorage:storage_controller", Text.translatable("item.functionalstorage.controller.tooltip"));
     tooltip.add("functionalstorage:controller_extension", Text.translatable("item.functionalstorage.controller_extension.tooltip"));
 
+    /*
     let wastelandOres = ["uranium", "boron", "thorium", "magnesium", "platinum"]
     wastelandOres.forEach(e => tooltip.add("nuclearcraft:" + e + "_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
     wastelandOres.forEach(e => tooltip.add("nuclearcraft:" + e + "_deepslate_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
@@ -21,6 +19,7 @@ ItemEvents.tooltip(tooltip => {
     holds("iron", 6 * 9);
     holds("silver", 8 * 9);
     holds("gold", 9 * 9);
+    */
 
     main_assembly("kubejs:kinetic_mechanism", "1");
     bonus_assembly("kubejs:sealed_mechanism", "1A");
@@ -31,11 +30,12 @@ ItemEvents.tooltip(tooltip => {
     main_assembly("kubejs:inductive_mechanism", "3");
     bonus_assembly("kubejs:abstruse_mechanism", "3A");
     main_assembly("kubejs:calculation_mechanism", "4");
-
+    /*
     not_consumed("cb_microblock:stone_saw");
     not_consumed("cb_microblock:iron_saw");
     not_consumed("cb_microblock:diamond_saw");
     not_consumed("projectred-core:screwdriver");
+    */
     not_consumed("kubejs:chromatic_resonator");
     not_consumed("kubejs:flash_drive");
 
@@ -47,7 +47,7 @@ ItemEvents.tooltip(tooltip => {
     global.substrates[5].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.gemstone")));
     global.substrates[6].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.catalyst")));
 
-    tooltip.add("structurescompass:structures_compass", Text.translatable("item.structurescompass.structures_compass.tooltip"));
+    //tooltip.add("structurescompass:structures_compass", Text.translatable("item.structurescompass.structures_compass.tooltip"));
     tooltip.add("reliquary:alkahestry_tome", Text.translatable("item.reliquary.alkahestry_tome.tooltip"));
 
     tooltip.add("kubejs:accellerator_redstone", Text.translatable("item.kubejs.accellerator_redstone.tooltip"));
@@ -57,21 +57,25 @@ ItemEvents.tooltip(tooltip => {
         tooltip.add(`kubejs:failed_alchemy_${i}`, Text.translatable("item.kubejs.failed_alchemy.tooltip"));
     }
 
-    const pureore = ["minecraft:raw_iron", "minecraft:raw_copper", "minecraft:raw_gold", "thermal:raw_lead", "thermal:raw_nickel", "create:raw_zinc",
+    const pureore = ["minecraft:raw_iron", "minecraft:raw_copper", "minecraft:raw_gold", 
+        //1.21: no thermal
+        //"thermal:raw_lead", "thermal:raw_nickel", "create:raw_zinc",
         // A2: more pure ores
         "alexscaves:uranium",
-        "ad_astra:raw_desh", "ad_astra:raw_ostrum", "ad_astra:raw_calorite",
-        "nuclearcraft:boron_chunk", "nuclearcraft:magnesium_chunk", "nuclearcraft:thorium_chunk",
-        "tconstruct:raw_cobalt",
-        "immersiveengineering:raw_bauxite",
+        //"ad_astra:raw_desh", "ad_astra:raw_ostrum", "ad_astra:raw_calorite",
+        //"nuclearcraft:boron_chunk", "nuclearcraft:magnesium_chunk", "nuclearcraft:thorium_chunk",
+        //"tconstruct:raw_cobalt",
+        //"immersiveengineering:raw_bauxite",
         // "tfmg:raw_lithium",
-        "nuclearcraft:lithium_chunk",
-        "scguns:raw_anthralite",
-        "thermal:raw_silver", "thermal:raw_tin"];
+        //"nuclearcraft:lithium_chunk",
+        //"scguns:raw_anthralite",
+        //"thermal:raw_silver", "thermal:raw_tin"
+        ];
     pureore.forEach(pureore => {
         tooltip.add(pureore, Text.translatable("item.kubejs.pureore.tooltip"));
     });
 
+    /*
     tooltip.addAdvanced(["/^kubejs:.+machine$/", "thermal:machine_frame", "ae2:controller"], (item, adv, text) => {
         if (!tooltip.shift) {
             text.add(1, Text.translatable("item.kubejs.shift.summary"));
@@ -90,6 +94,7 @@ ItemEvents.tooltip(tooltip => {
             text.add(3, Text.translatable("item.kubejs.trial.special_info"));
         }
     });
+    */
 
     // tooltip.addAdvanced(["occultism:spirit_fire"], (item, adv, text) => {
     //     if (!tooltip.shift) {
@@ -101,6 +106,6 @@ ItemEvents.tooltip(tooltip => {
     //     }
     // });
 
-    tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
+    //tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
 });
-*/
+
