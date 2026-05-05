@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.39]
+- generate.js: fix all kubejs block models
+- autisnautics2textures: temporary replacement for thermal models used in machines
+- Unzip CABIN resourcepack & fix broken copper machine texture regression
+- port tooltips.js
+- create_hypertube.js: use kubejs rubber
+
 ## [0.0.38]
 - the secret sixth level of parkour civilization
 
