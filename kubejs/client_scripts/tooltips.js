@@ -47,7 +47,7 @@ ItemEvents.modifyTooltips(tooltip => {
     global.substrates[5].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.gemstone")));
     global.substrates[6].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.catalyst")));
 
-    //tooltip.add("structurescompass:structures_compass", Text.translatable("item.structurescompass.structures_compass.tooltip"));
+    // tooltip.add("structurescompass:structures_compass", Text.translatable("item.structurescompass.structures_compass.tooltip"));
     tooltip.add("reliquary:alkahestry_tome", Text.translatable("item.reliquary.alkahestry_tome.tooltip"));
 
     tooltip.add("kubejs:accellerator_redstone", Text.translatable("item.kubejs.accellerator_redstone.tooltip"));
@@ -57,20 +57,20 @@ ItemEvents.modifyTooltips(tooltip => {
         tooltip.add(`kubejs:failed_alchemy_${i}`, Text.translatable("item.kubejs.failed_alchemy.tooltip"));
     }
 
-    const pureore = ["minecraft:raw_iron", "minecraft:raw_copper", "minecraft:raw_gold", 
-        //1.21: no thermal
-        //"thermal:raw_lead", "thermal:raw_nickel", "create:raw_zinc",
+    const pureore = ["minecraft:raw_iron", "minecraft:raw_copper", "minecraft:raw_gold",
+        // 1.21: no thermal
+        // "thermal:raw_lead", "thermal:raw_nickel", "create:raw_zinc",
         // A2: more pure ores
         "alexscaves:uranium",
-        //"ad_astra:raw_desh", "ad_astra:raw_ostrum", "ad_astra:raw_calorite",
-        //"nuclearcraft:boron_chunk", "nuclearcraft:magnesium_chunk", "nuclearcraft:thorium_chunk",
-        //"tconstruct:raw_cobalt",
-        //"immersiveengineering:raw_bauxite",
+        // "ad_astra:raw_desh", "ad_astra:raw_ostrum", "ad_astra:raw_calorite",
+        // "nuclearcraft:boron_chunk", "nuclearcraft:magnesium_chunk", "nuclearcraft:thorium_chunk",
+        // "tconstruct:raw_cobalt",
+        // "immersiveengineering:raw_bauxite",
         // "tfmg:raw_lithium",
-        //"nuclearcraft:lithium_chunk",
-        //"scguns:raw_anthralite",
-        //"thermal:raw_silver", "thermal:raw_tin"
-        ];
+        // "nuclearcraft:lithium_chunk",
+        // "scguns:raw_anthralite",
+        // "thermal:raw_silver", "thermal:raw_tin"
+    ];
     pureore.forEach(pureore => {
         tooltip.add(pureore, Text.translatable("item.kubejs.pureore.tooltip"));
     });
@@ -106,6 +106,5 @@ ItemEvents.modifyTooltips(tooltip => {
     //     }
     // });
 
-    //tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
+    // tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
 });
-

@@ -11,7 +11,7 @@ const applyItemModel = (builder, modelPath) => {
     }
     return builder
 }
-//deprecated
+// deprecated
 const applyBlockModel = (builder, modelPath) => {
     if (builder.model) {
         return builder.model(modelPath)
@@ -262,7 +262,7 @@ StartupEvents.registry("block", event => {
         category_index++
         substrate_index = 0
     }
-//substrates[current_category[id, ingredient, outputitem]]
+    // substrates[current_category[id, ingredient, outputitem]]
     let createSubstrate = (c1, c2, id, name, model, ingredient, outputItem) => {
         global.substrate_mapping[id] = {
             category: category_index,
