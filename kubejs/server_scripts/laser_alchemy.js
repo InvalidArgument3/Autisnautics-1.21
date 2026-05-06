@@ -267,14 +267,13 @@ let process = function (level, entity, laserColor) {
     let shiftAmount = 0
 
     items.forEach(e => {
-        if (!laserColor || (laserColor != "red" && laserColor != "green" && laserColor != "blue")) {
-            console.log("invalid laser color")
-            console.log(laserColor)
-            return
-        }
-        
         if (!validForShifting) { 
             return 
+        }
+        
+        if (!laserColor || (laserColor != "red" && laserColor != "green" && laserColor != "blue")) {
+            validForShifting = false
+            return
         }
         
         if (!e.getString("id").startsWith("kubejs:substrate_")) {
@@ -288,7 +287,8 @@ let process = function (level, entity, laserColor) {
                 shiftCatalyst = e
                 return
             }
-            validForTransmutation = false
+            validForShifting = false
+            return
         }
         
         if (toShift && toShift != e.getString("id")) {//only one type of reagent at a time
@@ -302,7 +302,6 @@ let process = function (level, entity, laserColor) {
     if (validForShifting && toShift) {
         let categoryMapping = global.substrate_mapping[toShift.replace("kubejs:substrate_", "")]//get substrate_mapping for the reagent; silicon and silver do not have one!
         if (shiftCatalyst && global.substrate_mapping[shiftCatalyst.getString("id").replace("kubejs:substrate_", "")].index != categoryMapping.category) {
-            console.log("wrong catalyst category: " + shiftCatalyst.getString("id"))
             return // mismatched catalyst category
         }
         let resultCategory = categoryMapping.category
@@ -340,11 +339,9 @@ let process = function (level, entity, laserColor) {
                 }
                 break
             default:
-                console.log("i am error")
                 return
         }
-        if ( resultCategory == categoryMapping.category && resultIndex == categoryMapping.index ) {
-            console.log("nothing doing!")
+        if ( resultCategory == categoryMapping.category && resultIndex == categoryMapping.index ) {//no changes
             return
         }
         resultItem = global.substrates[resultCategory][resultIndex].id
@@ -374,79 +371,82 @@ let process = function (level, entity, laserColor) {
         return
     }
     
-/*
+
     // Catalyst Mastermind
     //forming new stuff by combinations, including accelerators
 
     let catCode = -1;
-    let guessedSet = []//set of indices within category e.g. [0,3,2,2] (never over 5)
-    let reagents = []//same as above but it's the substrates' item ids
+    let guessedSet = [] // set of indices within category e.g. [0,3,2,2] (never over 5)
+    let reagents = [] // same as above but it's the substrates' item ids
     let guessedString = ""
     let count = 0;
     let redstoneAccellerator = false
     let glowstoneAccellerator = false
-    let valid = true
+    let validForCode = true
 
-    if (items.length < 4)//need at least 4 items (can have 5 with accelerator)
+    if (items.length < 4) {// need at least 4 items (can have 5 with accelerator)
         return
+    }
 
     items.forEach(e => {
-        if (e.Count > 1) {//only one item allowed per stack
-            valid = false
+        if (e.getInt("count") > 1) { // only one item allowed per stack
+            validForCode = false
             return
         }
-        if (e.id.startsWith("kubejs:accellerator_redstone")) {//redstone switch
+        if (e.getString("id").startsWith("kubejs:accellerator_redstone")) { // redstone switch
             redstoneAccellerator = true
             return
         }
-        if (e.id.startsWith("kubejs:accellerator_glowstone")) {//glowstone switch
+        if (e.getString("id").startsWith("kubejs:accellerator_glowstone")) { // glowstone switch
             glowstoneAccellerator = true
             return
         }
-        if (!e.id.startsWith("kubejs:substrate_")) {//if it's not an accelerator it has to be a substrate
-            valid = false
+        if (!e.getString("id").startsWith("kubejs:substrate_")) { // if it's not an accelerator it has to be a substrate
+            validForCode = false
             return
         }
-        let mapping = global.substrate_mapping[e.id.replace("kubejs:substrate_", "")]//get substrate_mapping for the substrate
-        if (!mapping)//if it's chaos, silicon, or silver, fail
+        let mapping = global.substrate_mapping[e.getString("id").replace("kubejs:substrate_", "")]
+        if (!mapping) // weird substrates excluded
             return
-        if (catCode != -1 && catCode != mapping.category)//if we have a category and it doesn't match this one's category, fail
+        if (catCode != -1 && catCode != mapping.category) {// all substrates must have the same category
             return
-        catCode = mapping.category//category is set to the reagent's category (including catalysts category)
-        guessedSet.push(mapping.index)//pushes each item's category-specific index in order
-        reagents.push(e.id)//push a list of ids to reagents set
+        }
+        catCode = mapping.category
+        guessedSet.push(mapping.index)
+        //reagents.push(e.id)//push a list of ids to reagents set
+        reagents.push(e.getString("id"))
         count++//number of valid substrates; this is not Item.Count
-        guessedString = guessedString + "§6" + mapping.name + "§7" + (count < 4 ? ", " : "")//add substrate_mapping.name to guessedString with or without comma
+        guessedString = guessedString + "§6" + mapping.name + "§7" + (count < 4 ? ", " : "")
     })
 
-    if (!valid)//fail switch
+    if (!validForCode)
         return
-    if (count != 4)//if you put in 5 substrates, fail
+    if (count != 4)
         return
-    if (!cachedAlchemyData[catCode])//failsafe for invalid category
+    if (!cachedAlchemyData[catCode])
         return
 
-    let data = cachedAlchemyData[catCode]//get the object for our category
-    let unmatchedCorrectSet = data.code.slice()//clone the correct code set up earlier
-    let unmatchedGuessedSet = guessedSet.slice()//clone guessed code
-    let result = [0, 0, 0]//amount of each item to give back: ash, redstone, glowstone
-    let resultEval = [0, 0, 0, 0]//status of each guessed digit, 0=no match, 1=partial match, 2=exact match
-    let trueFalse = [true, false]//used to distinguish between exact matches or partial matches later
-    let retain = -1//whether one ingredient should be consumed (a random one)
+    let data = cachedAlchemyData[catCode]
+    let unmatchedCorrectSet = data.code.slice()
+    let unmatchedGuessedSet = guessedSet.slice()
+    let result = [0, 0, 0] // amount of each item to give back: ash, redstone, glowstone
+    let resultEval = [0, 0, 0, 0] // status of each guessed digit, 0=no match, 1=partial match, 2=exact match
+    let trueFalse = [true, false] // used to distinguish between exact matches or partial matches later
+    let retain = -1 // whether one ingredient should be consumed (a random one)
 
     trueFalse.forEach(exact => {
-        for (let digit = 0; digit < 4; digit++) {//for every digit in the guessed code...
+        for (let digit = 0; digit < 4; digit++) {
             let guessed = unmatchedGuessedSet[digit]
-            for (let digit2 = 0; digit2 < unmatchedCorrectSet.length; digit2++) {//for every digit in the correct code...
+            for (let digit2 = 0; digit2 < unmatchedCorrectSet.length; digit2++) {
                 let correct = unmatchedCorrectSet[digit2]
-                if (correct != guessed)//if the two aren't the same number at all, quit
+                if (correct != guessed)
                     continue
-                if (exact && digit != digit2)//if we're looking for exact matches and it's not an exact match, quit
+                if (exact && digit != digit2)
                     continue
 
-                resultEval[digit] = exact ? 2 : 1//write 2 if it's an exact match, 1 if it's not (0 means no match)
-                result[exact ? 2 : 1] = result[exact ? 2 : 1] + 1//add a hint item for each match
-                unmatchedGuessedSet[digit] = -2//these are to avoid processing the same thing twice I think?
+                resultEval[digit] = exact ? 2 : 1 // write 2 if it's an exact match, 1 if it's not (0 means no match)
+                result[exact ? 2 : 1] = result[exact ? 2 : 1] + 1 // add a hint item for each match
+                unmatchedGuessedSet[digit] = -2
                 unmatchedCorrectSet[digit2] = -1
                 break
             }
@@ -454,38 +454,40 @@ let process = function (level, entity, laserColor) {
     })
 
     if (glowstoneAccellerator || redstoneAccellerator) {
-        let random = new Random()
-        let shuffled = shuffle(Array(0, 1, 2, 3), random)//shuffle to ensure the same item doesn't get retained every time
+        let random = Utils.newRandom(Math.random()) // Utils.newRandom requires a seed or else it always returns the same instance
+        let shuffled = shuffle(Array(0, 1, 2, 3), random)
         for (let i = 0; i < 4; i++) {
             let j = shuffled[i]
-            if (glowstoneAccellerator && resultEval[j] == 2) {//exact matches
+            if (glowstoneAccellerator && resultEval[j] == 2) { // exact matches
                 retain = j
                 break
             }
-            if (redstoneAccellerator && resultEval[j] == 1) {//inexact matches
+            if (redstoneAccellerator && resultEval[j] == 1) { // inexact matches
                 retain = j
                 break
             }
         }
     }
 
-    result[0] = 4 - result[2] - result[1]//derive failed from total - exact - inexact, give that amount of ash
-
-    // console.log("Correct: " + data.code)
-    // console.log("Guessed: " + guessedSet)
-    // console.log("Result: " + result)
-    // console.log("Retained: " + retain)
+    result[0] = 4 - result[2] - result[1]
+    
+    /* For Testing
+    console.log("Correct: " + data.code)
+    console.log("Guessed: " + guessedSet)
+    console.log("Result: " + result)
+    console.log("Retained: " + retain)
+    */
 
     let errorId = -1
-    //match one of the 14 different failed_alchemy items based on how and where you fucked up
-    if (result[0] == 4)//oops, all ash!
+    
+    if (result[0] == 4) // oops, all ash!
         errorId = 0
-    if (result[0] == 3) {//3 failed
-        if (result[1] == 1)//a single partial match
+    if (result[0] == 3) { // 3 failed
+        if (result[1] == 1) // a single partial match
             errorId = 1
-        if (result[1] == 0)//zero partial matches, implying one true match
+        if (result[1] == 0) // zero partial matches, implying one true match
             errorId = 2
-    }//etc etc...
+    } // etc etc...
     if (result[0] == 2) {
         if (result[1] == 2)
             errorId = 3
@@ -515,40 +517,26 @@ let process = function (level, entity, laserColor) {
             errorId = 14
     }
 
-    let success = errorId == -1//boolean alias for if errorid wasn't set i.e. 4 correct guesses
+    let success = errorId == -1
     let resultItem = success ? data.result : `kubejs:failed_alchemy_${errorId}`
     level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
     level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
     level.server.runCommandSilent(`/particle minecraft:dust 0 1 1 1 ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 ${success ? "80" : "6"}`)
     level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 ${success ? "2" : "1.25"}`)
-    attackNearby(level, entity.x, entity.y, entity.z)
+    //attackNearby(level, entity.x, entity.y, entity.z)
     if (success)
         level.server.runCommandSilent(`/playsound minecraft:block.beacon.activate block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)//success noise, should add one for total failure
-    nbt.Items.clear()//clear cart
-
-    let resultItemNBT = {}
-    // let resultItemTagNBT = {}
-    // let resultItemLoreNBT = {}
-    // let resultItemLoreList = []
-
-    // resultItemLoreList.push({text: "' + guessedString + '", italic: false})
-    // resultItemLoreNBT.Lore = resultItemLoreList
-    // resultItemTagNBT.display = resultItemLoreNBT
-
-    resultItemNBT.Slot = 0
-    resultItemNBT.id = resultItem
-    resultItemNBT.Count = 1
-    // if (errorId != -1)
-    //     resultItemNBT.tag = resultItemTagNBT
-    nbt.Items.add(0, resultItemNBT)//always goes in first slot
-
-    if (retain != -1) {
-        resultItemNBT = {Slot: 1, id: reagents[retain], Count: 1};//a single retained item, always in second slot
-        nbt.Items.add(1, resultItemNBT)
+    
+    for (let i = 0; i < 5; i++) {
+        entity.extractItem(i, 256, false)
+        if (i == 0) {
+            entity.insertItem(i, Item.of(resultItem, 1), false)
+            continue
+        }
+        if (i == 1 && retain != -1) {
+            entity.insertItem(i, Item.of(reagents[retain], 1), false)
+        }
     }
-
-    entity.setNbt(nbt)//add to cart
-*/
 }
 
 BlockEvents.leftClicked(event => {
@@ -557,8 +545,11 @@ BlockEvents.leftClicked(event => {
     
     let block = event.getBlock()
     if (!block.id.startsWith("simulated:laser_pointer") || block.getProperties().get("powered") != "true") { return }
+    
+    let item = event.getItem()
+    if (!item.empty) { return }
+    
     let color = "other"
-    console.log(typeof block.getEntityData().getInt("LaserColor"))
     switch (block.getEntityData().getInt("LaserColor")) {
         case 16711680:
             color = "red"
@@ -568,14 +559,9 @@ BlockEvents.leftClicked(event => {
             break
         case 65280:
             color = "green"
-            console.log("big green")
             break
     }
-    let item = event.getItem()
-    if (!item.empty) { return }
-    
-    
-    
+
     console.log("BONK!")
     
     let level = event.getLevel()
