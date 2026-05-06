@@ -39,13 +39,24 @@ ItemEvents.modifyTooltips(tooltip => {
     not_consumed("kubejs:chromatic_resonator");
     not_consumed("kubejs:flash_drive");
 
-    global.substrates[0].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.igneous")));
-    global.substrates[1].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.herbal")));
-    global.substrates[2].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.volatile")));
-    global.substrates[3].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.crystalline")));
-    global.substrates[4].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.metallurgic")));
-    global.substrates[5].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.gemstone")));
-    global.substrates[6].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.catalyst")));
+    global.substrates[0].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.void")));
+    global.substrates[1].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.valkyriad")));
+    global.substrates[2].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.pandemoniac")));
+    global.substrates[3].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.lycanomorph")));
+    global.substrates[4].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.fractal")));
+    global.substrates[5].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.sloplike")));
+    global.substrates[6].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.memorial")));
+    global.substrates[7].forEach(e => tooltip.add(e.id, Text.translatable("item.kubejs.category.catalyst")));
+    tooltip.add("kubejs:substrate_void", Text.darkGray("\"yawn...\"").italic());
+    tooltip.add("kubejs:substrate_void", Text.darkGray("- Blobbian").italic());
+    tooltip.add("kubejs:substrate_valkyriad", Text.darkGray("Moored twenty million miles away, even as you hold it").italic());
+    tooltip.add("kubejs:substrate_pandemoniac", Text.darkGray("Echoes with the clamor of an infernal mob").italic());
+    tooltip.add("kubejs:substrate_lycanomorph", Text.darkGray("Bristles with disturbing geometry").italic());
+    tooltip.add("kubejs:substrate_fractal", Text.darkGray("\"To make a machine casing from scratch, you must first invent the universe.\"").italic());
+    tooltip.add("kubejs:substrate_fractal", Text.darkGray("- Unknown Engineer").italic());
+    tooltip.add("kubejs:substrate_sloplike", Text.darkGray("Smells of fresh-sprayed foam").italic());
+    tooltip.add("kubejs:substrate_memorial", Text.darkGray("Leaks profusely, but only when you aren't watching").italic());
+    tooltip.add("kubejs:substrate_chaos", Text.darkPurple("The gate and the key to all that should not be").italic());
 
     //tooltip.add("structurescompass:structures_compass", Text.translatable("item.structurescompass.structures_compass.tooltip"));
     tooltip.add("reliquary:alkahestry_tome", Text.translatable("item.reliquary.alkahestry_tome.tooltip"));
