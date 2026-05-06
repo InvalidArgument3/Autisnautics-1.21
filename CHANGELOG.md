@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.40]
+laser alchemy part 1
+- ported bonkers_chemistry using simulated:laser_pointer, implemented chaos transmutation
+- add laser shifting, transmuting reagents in a limited, lossy way using colored lasers
+- register items
+- tooltips.js: reagent/catalyst tooltips
+
 ## [0.0.39]
 - generate.js: fix all kubejs block models
 - autisnautics2textures: temporary replacement for thermal models used in machines
