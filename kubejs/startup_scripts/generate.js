@@ -288,7 +288,7 @@ StartupEvents.registry("block", event => {
         substrate.item(item => { item.rarity("uncommon") })
         return substrate
     }
-    
+
     /*
     Void            Stone    Lapis       Slime       EnderDust   Oil         Chocolate
     Valkyriad       Wool     Iron        Rope        Bait        Lead        Cuckoo
@@ -298,7 +298,7 @@ StartupEvents.registry("block", event => {
     Sloplike        Dirt     ConcreteP   Aluminum    Tofu        Cardboard   Beer
     Memorial        Calcite  DeadBush    Gold        Computer    Flywheel    Nickel
     */
-    
+
     reagent(0x5F5F5F, 0x8E8E8E, "stone", "Stone", "minecraft:stone", "minecraft:stone")
     reagent(0x335DC1, 0x7395E7, "lapis", "Lapis Lazuli", "minecraft:lapis_lazuli", "minecraft:lapis_lazuli")
     reagent(0x4F7E48, 0x8AD480, "slime", "Slime", "minecraft:slime_ball", "minecraft:slime_ball")
