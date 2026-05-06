@@ -39,7 +39,7 @@ let process = function (level, entity) {
                 //mappings: shuffle(Array(0, 1, 2, 3, 4, 5), random)//mappings: random array 0...SUBSTRATES_PER_CATEGORY-1 (6 reagents, or 6 catalysts for chaos)
                 //mappings may not be required anymore?
             }
-            console.log("[laser_alchemy] Initialized cachedAlchemyData for category " + cat ": " + cachedAlchemyData[cat])
+            console.log("[laser_alchemy] Initialized cachedAlchemyData for category " + cat + ": " + cachedAlchemyData[cat])
         }
         let total = []
         cachedAlchemyData["chaos_mapping"] = [] // chaos_mapping: array of each reagent with index as its pair
@@ -67,6 +67,12 @@ let process = function (level, entity) {
         }
         //the index of each entry is its pair in the ordered list
         console.log("[laser_alchemy] Initialized chaos_mapping: " + cachedAlchemyData["chaos_mapping"])
+        for (let i = 0; i < cachedAlchemyData["chaos_mapping"].length; i++) {
+            let j = cachedAlchemyData["chaos_mapping"][i]
+            if (j == i) {
+                console.log("[laser_alchemy] INSANITY CHECK: Reagent " + global.substrates[j].id + " is paired with itself?")
+            }
+        }
     }
 
     //let nbt = entity.getNbt()//entity: the hopper minecart passed as an argument
