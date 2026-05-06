@@ -1,4 +1,4 @@
-//bonkers_chemistry port using simulated:laser_pointer
+// bonkers_chemistry port using simulated:laser_pointer
 
 let LaserBehavior = Java.loadClass("dev.simulated_team.simulated.content.blocks.lasers.LaserBehaviour")
 
@@ -25,8 +25,8 @@ function shuffle(array, random) {
 
 
 let process = function (level, entity, laserColor) {
-    
-    //initialize cachedAlchemyData, runs only once per reload
+
+    // initialize cachedAlchemyData, runs only once per reload
     if (cachedSeed != level.getSeed()) {
         cachedSeed = level.getSeed()
         let random = Utils.newRandom(level.getSeed())
@@ -66,13 +66,13 @@ let process = function (level, entity, laserColor) {
             cachedAlchemyData["chaos_mapping"][total[i]] = total[i + 1]
             cachedAlchemyData["chaos_mapping"][total[i + 1]] = total[i]
         }
-        //the index of each entry is its pair in the ordered list, shuffle() ensures they are never the same
+        // the index of each entry is its pair in the ordered list, shuffle() ensures they are never the same
         console.log("[laser_alchemy] Initialized chaos_mapping: " + cachedAlchemyData["chaos_mapping"])
     }
 
     let items = entity.getNbt().Items
 
-/*
+    /*
     // Laser Recipe
     // Transmuting an item using a powered tool in place of a catalyst
 
@@ -186,62 +186,62 @@ let process = function (level, entity, laserColor) {
     let transmuteAmount = 0
 
     items.forEach(e => {
-        if (!validForTransmutation) { 
-            return 
+        if (!validForTransmutation) {
+            return
         }
-        
+
         if (!e.getString("id").startsWith("kubejs:substrate_")) {
             validForTransmutation = false
             return
         }
-        
-        
+
+
         let mapping = global.substrate_mapping[e.getString("id").replace("kubejs:substrate_", "")]
         if (e.getString("id") != "kubejs:substrate_silicon" && e.getString("id") != "kubejs:substrate_silver" && (!mapping || mapping.category == REAGENT_CATEGORIES)) {
-            if (catalyst || mapping) {//if unexpected catalyst, fail
+            if (catalyst || mapping) {// if unexpected catalyst, fail
                 validForTransmutation = false
                 return
             }
             catalyst = e
             return
         }
-        
-        if (toTransmute && toTransmute != e.getString("id")) {//only one type of reagent at a time
+
+        if (toTransmute && toTransmute != e.getString("id")) {// only one type of reagent at a time
             validForTransmutation = false
             return
         }
-        toTransmute = e.getString("id")//set reagent
-        transmuteAmount += e.getInt("count")//and count
+        toTransmute = e.getString("id")// set reagent
+        transmuteAmount += e.getInt("count")// and count
     })
 
     if (validForTransmutation && catalyst && toTransmute) {
-        let categoryMapping = global.substrate_mapping[toTransmute.replace("kubejs:substrate_", "")]//get substrate_mapping for the reagent; silicon and silver do not have one!
+        let categoryMapping = global.substrate_mapping[toTransmute.replace("kubejs:substrate_", "")]// get substrate_mapping for the reagent; silicon and silver do not have one!
         let resultItem
-        
-        if (toTransmute == "kubejs:substrate_silicon")//manually filling data in for weird reagents
+
+        if (toTransmute == "kubejs:substrate_silicon")// manually filling data in for weird reagents
             categoryMapping = { category: (REAGENT_CATEGORIES - 1), index: SUBSTRATES_PER_CATEGORY }
         if (toTransmute == "kubejs:substrate_silver")
             categoryMapping = { category: (REAGENT_CATEGORIES - 1), index: (SUBSTRATES_PER_CATEGORY + 1) }
-        let data = cachedAlchemyData["chaos_mapping"]//get the map of reagent pairs
-        let i1 = data[categoryMapping.category * SUBSTRATES_PER_CATEGORY + categoryMapping.index]//excludes last category which is catalysts
-        resultItem = i1 == NORMAL_REAGENTS ? "kubejs:substrate_silicon" : //manually assign weird reagent results
-            i1 == (NORMAL_REAGENTS + 1) ? "kubejs:substrate_silver" : 
+        let data = cachedAlchemyData["chaos_mapping"]// get the map of reagent pairs
+        let i1 = data[categoryMapping.category * SUBSTRATES_PER_CATEGORY + categoryMapping.index]// excludes last category which is catalysts
+        resultItem = i1 == NORMAL_REAGENTS ? "kubejs:substrate_silicon" : // manually assign weird reagent results
+            i1 == (NORMAL_REAGENTS + 1) ? "kubejs:substrate_silver" :
                 global.substrates[Math.floor(i1 / SUBSTRATES_PER_CATEGORY)][i1 % SUBSTRATES_PER_CATEGORY].id
-        
+
         // effects
         level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
         level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
         level.server.runCommandSilent(`/particle minecraft:effect ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 10`)
         level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
-        //attackNearby(level, entity.x, entity.y, entity.z)
-        
+        // attackNearby(level, entity.x, entity.y, entity.z)
+
         let resultCount = 0
         for (let i = 0; i < transmuteAmount; i++) {
             if (Math.random() < 0.5) // individual 50% chance per item; output = inputd2 - input, bell curve distribution
                 continue
             resultCount++
         }
-        
+
         for (let i = 0; i < 5; i++) {
             if (i == catalyst.getShort("Slot")) { // leave the catalyst alone!
                 continue
@@ -257,7 +257,7 @@ let process = function (level, entity, laserColor) {
         }
         return
     }
-    
+
     // Laser Shifting
     // Transmuting a reagent into another reagent in a limited, lossy way using colored lasers
 
@@ -272,16 +272,16 @@ let process = function (level, entity, laserColor) {
             console.log(laserColor)
             return
         }
-        
-        if (!validForShifting) { 
-            return 
+
+        if (!validForShifting) {
+            return
         }
-        
+
         if (!e.getString("id").startsWith("kubejs:substrate_")) {
             validForShifting = false
             return
         }
-        
+
         let mapping = global.substrate_mapping[e.getString("id").replace("kubejs:substrate_", "")]
         if (!mapping || mapping.category == REAGENT_CATEGORIES) { // weird reagent, or a catalyst
             if (mapping && !shiftCatalyst) { // catalyst shifting
@@ -290,17 +290,17 @@ let process = function (level, entity, laserColor) {
             }
             validForTransmutation = false
         }
-        
-        if (toShift && toShift != e.getString("id")) {//only one type of reagent at a time
+
+        if (toShift && toShift != e.getString("id")) {// only one type of reagent at a time
             validForShifting = false
             return
         }
-        toShift = e.getString("id")//set reagent
-        shiftAmount += e.getInt("count")//and count
+        toShift = e.getString("id")// set reagent
+        shiftAmount += e.getInt("count")// and count
     })
 
     if (validForShifting && toShift) {
-        let categoryMapping = global.substrate_mapping[toShift.replace("kubejs:substrate_", "")]//get substrate_mapping for the reagent; silicon and silver do not have one!
+        let categoryMapping = global.substrate_mapping[toShift.replace("kubejs:substrate_", "")]// get substrate_mapping for the reagent; silicon and silver do not have one!
         if (shiftCatalyst && global.substrate_mapping[shiftCatalyst.getString("id").replace("kubejs:substrate_", "")].index != categoryMapping.category) {
             console.log("wrong catalyst category: " + shiftCatalyst.getString("id"))
             return // mismatched catalyst category
@@ -308,56 +308,56 @@ let process = function (level, entity, laserColor) {
         let resultCategory = categoryMapping.category
         let resultIndex = categoryMapping.index
         let resultItem
-        
-        
+
+
         switch (laserColor) {
-            case "red": // redshifting: move down a category or index
-                if (shiftCatalyst && categoryMapping.index > 0) {
-                    resultIndex -= 1
-                    //resultItem = global.substrate_mapping[categoryMapping.category * SUBSTRATES_PER_CATEGORY + (categoryMapping.index - 1)].id
-                }
-                else if (!shiftCatalyst && categoryMapping.category > 0) {
-                    resultCategory -= 1
-                    //resultItem = global.substrate_mapping[(categoryMapping.category - 1) * SUBSTRATES_PER_CATEGORY + categoryMapping.index].id
-                }
-                break
-            case "blue": // blueshifting: move up a category or index
-                if (shiftCatalyst && categoryMapping.index < (SUBSTRATES_PER_CATEGORY - 1)) {
-                    resultIndex += 1
-                    //resultItem = global.substrate_mapping[categoryMapping.category * SUBSTRATES_PER_CATEGORY + (categoryMapping.index + 1)].id
-                }
-                else if (!shiftCatalyst && categoryMapping.category < (REAGENT_CATEGORIES - 1)) {
-                    resultCategory += 1
-                    //resultItem = global.substrate_mapping[(categoryMapping.category + 1) * SUBSTRATES_PER_CATEGORY + categoryMapping.index].id
-                }
-                break
-            case "green": // greenshifting: move to category or index 0
-                if (shiftCatalyst) {
-                    resultIndex = 0
-                }
-                else {
-                    resultCategory = 0
-                }
-                break
-            default:
-                console.log("i am error")
-                return
+        case "red": // redshifting: move down a category or index
+            if (shiftCatalyst && categoryMapping.index > 0) {
+                resultIndex -= 1
+                // resultItem = global.substrate_mapping[categoryMapping.category * SUBSTRATES_PER_CATEGORY + (categoryMapping.index - 1)].id
+            }
+            else if (!shiftCatalyst && categoryMapping.category > 0) {
+                resultCategory -= 1
+                // resultItem = global.substrate_mapping[(categoryMapping.category - 1) * SUBSTRATES_PER_CATEGORY + categoryMapping.index].id
+            }
+            break
+        case "blue": // blueshifting: move up a category or index
+            if (shiftCatalyst && categoryMapping.index < (SUBSTRATES_PER_CATEGORY - 1)) {
+                resultIndex += 1
+                // resultItem = global.substrate_mapping[categoryMapping.category * SUBSTRATES_PER_CATEGORY + (categoryMapping.index + 1)].id
+            }
+            else if (!shiftCatalyst && categoryMapping.category < (REAGENT_CATEGORIES - 1)) {
+                resultCategory += 1
+                // resultItem = global.substrate_mapping[(categoryMapping.category + 1) * SUBSTRATES_PER_CATEGORY + categoryMapping.index].id
+            }
+            break
+        case "green": // greenshifting: move to category or index 0
+            if (shiftCatalyst) {
+                resultIndex = 0
+            }
+            else {
+                resultCategory = 0
+            }
+            break
+        default:
+            console.log("i am error")
+            return
         }
         if ( resultCategory == categoryMapping.category && resultIndex == categoryMapping.index ) {
             console.log("nothing doing!")
             return
         }
         resultItem = global.substrates[resultCategory][resultIndex].id
-        
+
         // effects
         level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
         level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
         level.server.runCommandSilent(`/particle minecraft:effect ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 10`)
         level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
-        //attackNearby(level, entity.x, entity.y, entity.z)
-        
-        let resultCount = Math.floor((shiftAmount / (4 - Math.random())))//output is input divided by 3...4 
-        
+        // attackNearby(level, entity.x, entity.y, entity.z)
+
+        let resultCount = Math.floor((shiftAmount / (4 - Math.random())))// output is input divided by 3...4
+
         for (let i = 0; i < 5; i++) {
             if (shiftCatalyst && i == shiftCatalyst.getShort("Slot")) { // leave the catalyst alone!
                 continue
@@ -373,7 +373,7 @@ let process = function (level, entity, laserColor) {
         }
         return
     }
-    
+
 /*
     // Catalyst Mastermind
     //forming new stuff by combinations, including accelerators
@@ -554,35 +554,34 @@ let process = function (level, entity, laserColor) {
 BlockEvents.leftClicked(event => {
     let player = event.getPlayer()
     if (player.miningBlock) { return }
-    
+
     let block = event.getBlock()
     if (!block.id.startsWith("simulated:laser_pointer") || block.getProperties().get("powered") != "true") { return }
     let color = "other"
     console.log(typeof block.getEntityData().getInt("LaserColor"))
     switch (block.getEntityData().getInt("LaserColor")) {
-        case 16711680:
-            color = "red"
-            break
-        case 255:
-            color = "blue"
-            break
-        case 65280:
-            color = "green"
-            console.log("big green")
-            break
+    case 16711680:
+        color = "red"
+        break
+    case 255:
+        color = "blue"
+        break
+    case 65280:
+        color = "green"
+        console.log("big green")
+        break
     }
     let item = event.getItem()
     if (!item.empty) { return }
-    
-    
-    
+
+
     console.log("BONK!")
-    
+
     let level = event.getLevel()
-    
+
     let laser = block.getEntity().getAllBehaviours().stream().filter((behaviour) => behaviour instanceof LaserBehavior ).findFirst().get()
     let target = laser.getClosestHitResult().entity ? laser.getClosestHitResult().entity : null
-    
+
     if (target != null && target.type.equals("minecraft:hopper_minecart")) {
         target.attack(1)
         process(level, target, color)
