@@ -12,5 +12,19 @@ StartupEvents.registry("item", event => {
 StartupEvents.registry("fluid", event => {
     // 1.21: tconstruct liquid soul replacement
     // placeholder texture
-    event.create("liquid_soul").displayName("Liquid Soul").stillTexture("oritech:block/fluid/fluid_roiling_plasma").flowingTexture("oritech:block/fluid/fluid_roiling_plasma")// placeholder texture
+    event.create("liquid_soul").displayName("Liquid Soul").stillTexture("oritech:block/fluid/fluid_roiling_plasma").flowingTexture("oritech:block/fluid/fluid_roiling_plasma")
+    // 1.21: flux waste
+    event.create("flux_goo").displayName("Flux Goo").stillTexture("alexscaves:block/purple_soda_still").flowingTexture("alexscaves:block/purple_soda_flowing")
+})
+
+StartupEvents.registry("block", event => {
+    // 1.21: lidless jar transitional item
+    event.create("kubejs:incomplete_jar").modelGenerator(m => { m.parent("cabin:block/lidless_substrate")})
+        .soundType("glass")
+        .hardness(0.1)
+        .displayName("Lidless Jar")
+        .renderType("cutout")
+        .mapColor("NONE")
+        .waterlogged()
+        .box(.25, 0, .25, .75, 14.0 / 16.0, .75, false)
 })
