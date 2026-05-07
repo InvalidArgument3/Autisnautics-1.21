@@ -378,11 +378,11 @@ StartupEvents.registry("fluid", event => {
         event.create("number_" + i).displayName(`Liquified Logic (${i})`).stillTexture("cabin:fluid/number_still").flowingTexture("cabin:fluid/number_flow")
     event.create("matrix").displayName("Liquified Computation Matrix").stillTexture("cabin:fluid/matrix_still").flowingTexture("cabin:fluid/matrix_flow")
     event.create("fine_sand").displayName("Fine Sand").stillTexture("cabin:fluid/fine_sand_still").flowingTexture("cabin:fluid/fine_sand_flow")
-    //event.create("crude_oil").displayName("Crude Oil").stillTexture("thermal:block/fluids/crude_oil_still").flowingTexture("thermal:block/fluids/crude_oil_flow")
+    // event.create("crude_oil").displayName("Crude Oil").stillTexture("thermal:block/fluids/crude_oil_still").flowingTexture("thermal:block/fluids/crude_oil_flow")
     event.create("volatile_sky_solution").displayName("Volatile Sky Solution").stillTexture("blazinghot:fluid/molten_sturdy_alloy_still").flowingTexture("blazinghot:fluid/molten_sturdy_alloy_flow")
     event.create("chromatic_waste").displayName("Chromatic Waste").stillTexture("supplementaries:block/lumisene").flowingTexture("supplementaries:block/lumisene_flowing")
     // A2: molten anthralite
-    //event.create("molten_anthralite").displayName("Molten Anthralite").stillTexture("tconstruct:fluid/molten/compat_alloy/pewter/still").flowingTexture("tconstruct:fluid/molten/compat_alloy/pewter/flowing")
+    // event.create("molten_anthralite").displayName("Molten Anthralite").stillTexture("tconstruct:fluid/molten/compat_alloy/pewter/still").flowingTexture("tconstruct:fluid/molten/compat_alloy/pewter/flowing")
     //	event.create('liquid_smoke').displayName(`Liquid Smoke`).stillTexture('advancedrocketry:blocks/fluid/oxygen_still').flowingTexture('advancedrocketry:blocks/fluid/oxygen_flow').bucketColor(0xEBEBEB)
     // A2: liquid plastic (tfmg replacement)
     event.create("liquid_plastic").displayName("Liquid Plastic").stillTexture("oritech:block/fluid/fluid_strange_pale_2").flowingTexture("oritech:block/fluid/fluid_strange_pale_2")
