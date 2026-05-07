@@ -1,4 +1,10 @@
 # Changelog
+## [0.0.41]
+laser alchemy part 2
+- laser alchemy: implement reagent manufacturing + blend analysis using oritech centrifuge
+- _a2_generate.js: add intermediate lidless jar block, register legally distinct alchemical waste fluid
+- add convenient automated recipe for supplementaries:jar
+- generate.js: replace some old stuff, remove tags for reagent ingredients (broken?)
 
 ## [0.0.40]
 laser alchemy part 1
