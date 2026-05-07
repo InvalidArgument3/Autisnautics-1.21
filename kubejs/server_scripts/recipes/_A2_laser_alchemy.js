@@ -2,32 +2,32 @@ ServerEvents.recipes(event => {
     // supplementaries:jar automated qol recipe
     let incJar = "kubejs:incomplete_jar"
     event.recipes.create.sequenced_assembly(
-    ["supplementaries:jar"],
-    "minecraft:glass",
-    [
-        event.recipes.create.cutting(incJar, incJar),
-        event.recipes.create.deploying(incJar, [incJar, "minecraft:oak_slab"])
-    ])
-    .transitionalItem(incJar)
-    
+        ["supplementaries:jar"],
+        "minecraft:glass",
+        [
+            event.recipes.create.cutting(incJar, incJar),
+            event.recipes.create.deploying(incJar, [incJar, "minecraft:oak_slab"])
+        ])
+        .transitionalItem(incJar)
+
     event.recipes.create.deploying([incJar, "minecraft:oak_slab"], ["supplementaries:jar", "immersiveengineering:screwdriver"]).keepHeldItem(),
-    
+
     // Creating a reagent: j-j-jam it in
     global.substrates.forEach(a => {
         a.forEach(e => {
             if (!e.ingredient)
                 return
             event.recipes.create.sequenced_assembly(
-            [e.id],
-            incJar,
-            [
-                event.recipes.create.deploying(incJar, [incJar, Item.of(e.ingredient)]),
-                event.recipes.create.deploying(incJar, [incJar, "minecraft:oak_slab"])
-            ]).transitionalItem(incJar)
+                [e.id],
+                incJar,
+                [
+                    event.recipes.create.deploying(incJar, [incJar, Item.of(e.ingredient)]),
+                    event.recipes.create.deploying(incJar, [incJar, "minecraft:oak_slab"])
+                ]).transitionalItem(incJar)
         })
     })
-        
-    
+
+
     // Analyzing failed alchemy in Oritech centrifuge
     let failure = (id, outputs) => {
         let outputFluids = []
@@ -38,38 +38,38 @@ ServerEvents.recipes(event => {
             outputItems.push("" + outputs[1] + "x minecraft:redstone")
         if (outputs[2] > 0)
             outputItems.push("" + outputs[2] + "x minecraft:glowstone_dust")
-        
+
         event.recipes.oritech
             .centrifuge_fluid()
             .itemInputs(`kubejs:failed_alchemy_${id}`)
             .fluidInput("4000x minecraft:water")
             .itemOutputs(outputItems)
             .fluidOutputs(outputFluids)
-            .time(600)//30 seconds in the microwave
+            .time(600)// 30 seconds in the microwave
     }
-    
+
     for (let i = 0; i < 15; i++) {
         failure(i++, [4, 0, 0])
         failure(i++, [3, 1, 0])
         failure(i++, [3, 0, 1])
         failure(i++, [2, 2, 0])
         failure(i++, [2, 0, 2])
-    
+
         failure(i++, [2, 1, 1])
         failure(i++, [1, 3, 0])
         failure(i++, [1, 0, 3])
         failure(i++, [1, 2, 1])
         failure(i++, [1, 1, 2])
-    
+
         failure(i++, [0, 4, 0])
         failure(i++, [0, 0, 4])
         failure(i++, [0, 3, 1])
         failure(i++, [0, 1, 3])
         failure(i++, [0, 2, 2])
     }
-    
+
     //
-    
+
     /*
     let mundane = (id, outputs) => {
         let jsonOut = []
@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
         mundane(i++, [0, 1, 3])
         mundane(i++, [0, 2, 2])
     }
-    
+
 
     // Subtrate bottling and extracting
     event.remove({ type: "thermal:sawmill" })
