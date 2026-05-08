@@ -28,6 +28,7 @@ ServerEvents.recipes(event => {
 	 * @type {string}
 	*/
     let transitional
+    /*
     // - - - - - Chapter 1 - - - - -
     // Wood slab cutting
     let plankCutting = (wood) => {
@@ -158,7 +159,7 @@ ServerEvents.recipes(event => {
     // Gourmand Upgrade
     createMachine("thermal:dynamo_stirling", event, "thermal:dynamo_gourmand", "minecraft:golden_carrot")
     createMachine("thermal:dynamo_stirling", event, "thermal:dynamo_gourmand", "minecraft:golden_apple")
-
+    */
     // - - - - - Chapter 1A - - - - -
     event.remove({ type: "thermal:tree_extractor" })
     wood_types.forEach(wood => {
