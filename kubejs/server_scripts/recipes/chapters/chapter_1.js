@@ -22,9 +22,9 @@ ServerEvents.recipes(event => {
     let mouldTypes = ["very_small", "small", "medium", "large", "very_large", "cannon_end", "sliding_breech", "screw_breech", "autocannon_breech", "autocannon_recoil_spring", "autocannon_barrel"]
     let removeMould = (type) => {
         let originalMould = "createbigcannons:" + type + "_cast_mould"
-        //if (Item.exists(originalMould)) {
-            event.remove({ output: originalMould })
-        //}
+        // if (Item.exists(originalMould)) {
+        event.remove({ output: originalMould })
+        // }
     }
     mouldTypes.forEach(removeMould)
     // all moulds now start from the very large cast mould, by deploying a chisel on any log
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.cutting(Item.of("quark:ancient_planks_slab", 2), Ingredient.of("quark:ancient_planks")).processingTime(150)
     event.recipes.create.cutting(Item.of("quark:azalea_planks_slab", 2), Ingredient.of("quark:azalea_planks")).processingTime(150)
     event.recipes.create.cutting(Item.of("quark:blossom_planks_slab", 2), Ingredient.of("quark:blossom_planks")).processingTime(150)
-    
+
     // -- Andesite production
     // - Remove vanilla meme stone recipes
     event.remove({ id: "minecraft:diorite" })
@@ -55,10 +55,10 @@ ServerEvents.recipes(event => {
     event.remove({ id: "create:compacting/andesite_from_flint" })
     event.remove({ id: "create:compacting/diorite_from_flint" })
     event.remove({ id: "create:compacting/granite_from_flint" })
-    
+
     // -- Algal Blend - adding minecraft:seagrass as a valid ingredient
     event.replaceInput({ id: "architects_palette:algal_blend" }, "minecraft:kelp", ["minecraft:kelp", "minecraft:seagrass"])
-    
+
     // -- Andesite Alloy
     // - Remove other recipes
     event.remove({ id: "create:crafting/materials/andesite_alloy" })
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "blazinghot:mixing/molten_andesite" })
     // - Add new recipe
     event.recipes.create.mixing(Item.of("create:andesite_alloy", 2), ["architects_palette:algal_brick", "minecraft:andesite"])
-    
+
     // -- Kinetic Mechanism
     // - createdieselgenerators:hammer simplified recipe
     event.remove({ id: "createdieselgenerators:crafting/hammer" })
@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
         .id("kubejs:kinetic_mechanism")
     // Manual recipe
     event.shapeless("kubejs:kinetic_mechanism", ["createdieselgenerators:hammer", "create:cogwheel", "create:andesite_alloy", "#c:stripped_logs"]).id("kubejs:kinetic_mechanism_manual_only")
-    
+
     // -- Andesite Machine
     donutCraft(event, "kubejs:andesite_machine", "create:andesite_casing", "kubejs:kinetic_mechanism")
     // - Usage
@@ -112,11 +112,11 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("create:mechanical_drill", 1), "kubejs:drill_head")
     andesiteMachine(event, Item.of("create:mechanical_saw", 1), "kubejs:saw_blade")
     andesiteMachine(event, Item.of("create:deployer", 1), "create:brass_hand")
-    if (Platform.isLoaded("createdeco")) { 
-        andesiteMachine(event, Item.of("create:mechanical_roller", 1), "createdeco:andesite_hull") 
-    } 
-    else { 
-        andesiteMachine(event, Item.of("create:mechanical_roller", 1), "create:andesite_alloy_block") 
+    if (Platform.isLoaded("createdeco")) {
+        andesiteMachine(event, Item.of("create:mechanical_roller", 1), "createdeco:andesite_hull")
+    }
+    else {
+        andesiteMachine(event, Item.of("create:mechanical_roller", 1), "create:andesite_alloy_block")
     }
     andesiteMachine(event, Item.of("create:portable_storage_interface", 2))
     andesiteMachine(event, Item.of("create:andesite_funnel", 4))
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")
     // createaddition
     if (Platform.isLoaded("createaddition")) { andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft") }
-    
+
     // -- Parts for Chapter 1 factory machines
     // - Deployer: Brass Hand -> Gold Hand
     event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#c:plates/brass", "create:golden_sheet")
