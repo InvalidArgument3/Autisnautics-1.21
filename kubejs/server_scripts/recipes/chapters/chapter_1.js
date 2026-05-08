@@ -6,39 +6,45 @@ ServerEvents.recipes(event => {
     // -- Wood slab sawing line
     // - Remove conflicting saw recipes
     // Create: Sawing planks into various wooden blocks besides slabs
-    event.remove({ type: "create:cutting", input: /.*_planks$/, id: /create:cutting.*_planks_to_.*_slab&})
+    event.remove({ id: /^create:cutting(?=.*_planks_to_)(?!.*slab$).*$/, input: /.*_planks$/ })
     // Chisel: Stonecutting planks into chisel blocks
-    event.remove({ type: "minecraft:stonecutting", id: /chisel:carving\/planks.*/})
+    event.remove({ type: "minecraft:stonecutting", id: /chisel:planks_/})
     // Youkai's Feasts: Stonecutting planks into steamer_lid
+    // Replacement: add a stick to a pressure plate
     event.remove({ id: "youkaisfeasts:steamer_lid_from_planks_stonecutting" })
+    event.shapeless("youkaisfeasts:steamer_lid", ["minecraft:stick", "#minecraft:wooden_pressure_plates"])
     // Cuisine Delight: Stonecutting planks into plates
     // Replacement: cut a slab again to make 8 plates, and remove conflicting powergrid circuit board recipe
     event.remove({ id: "cuisinedelight:plate_from_planks_stonecutting" })
-    event.recipes.create.cutting(Item.of("cuisinedelight:plate", 8), "#minecraft:wooden_slabs").processingTime(150).id(`kubejs:cutting/wooden_slab_to_plates`)
+    event.recipes.create.cutting(Item.of("cuisinedelight:plate", 8), Ingredient.of("#minecraft:wooden_slabs")).processingTime(150).id(`kubejs:cutting/wooden_slab_to_plates`)
     event.remove({ id: "powergrid:cutting/empty_circuit_slabs" })
     // createbigcannons: all moulds are sawed from logs in one recipe, which has been widely regarded as a bad move
     let mouldTypes = ["very_small", "small", "medium", "large", "very_large", "cannon_end", "sliding_breech", "screw_breech", "autocannon_breech", "autocannon_recoil_spring", "autocannon_barrel"]
     let removeMould = (type) => {
         let originalMould = "createbigcannons:" + type + "_cast_mould"
-        if (Item.exists(originalMould)) {
+        //if (Item.exists(originalMould)) {
             event.remove({ output: originalMould })
-        }
+        //}
     }
     mouldTypes.forEach(removeMould)
     // all moulds now start from the very large cast mould, by deploying a chisel on any log
-    event.recipes.create.deploying("createbigcannons:very_large_cast_mould", ["#minecraft:logs", "#forge:chisels"])
+    event.recipes.create.deploying("createbigcannons:very_large_cast_mould", [Ingredient.of("#minecraft:logs"), Ingredient.of("#forge:chisels")])
     // smaller moulds are made by chiseling the very large mould down smaller and smaller
-    event.recipes.create.deploying("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", "#forge:chisels"])
+    event.recipes.create.deploying("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", Ingredient.of("#forge:chisels")])
+    event.recipes.create.deploying("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", Ingredient.of("#forge:chisels")])
     // the other moulds branch off from the generic ones by chiseling or hammering
     event.recipes.create.deploying("createbigcannons:sliding_breech_cast_mould", ["createbigcannons:large_cast_mould", "createdieselgenerators:hammer"])
     event.recipes.create.deploying("createbigcannons:cannon_end_cast_mould", ["createbigcannons:medium_cast_mould", "createdieselgenerators:hammer"])
-    event.recipes.create.deploying("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", "#forge:chisel"])
+    event.recipes.create.deploying("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", Ingredient.of("#forge:chisels")])
+    // - Compat recipes
+    event.recipes.create.cutting(Item.of("quark:ancient_planks_slab", 2), Ingredient.of("quark:ancient_planks")).processingTime(150)
+    event.recipes.create.cutting(Item.of("quark:azalea_planks_slab", 2), Ingredient.of("quark:azalea_planks")).processingTime(150)
+    event.recipes.create.cutting(Item.of("quark:blossom_planks_slab", 2), Ingredient.of("quark:blossom_planks")).processingTime(150)
     
     // -- Andesite production
     // - Remove vanilla meme stone recipes
@@ -86,7 +92,7 @@ ServerEvents.recipes(event => {
     transitional = "kubejs:incomplete_kinetic_mechanism"
     event.recipes.create.sequenced_assembly([
         "kubejs:kinetic_mechanism",
-    ], "#minecraft:wooden_slabs", [
+    ], Ingredient.of("#minecraft:wooden_slabs"), [
         event.recipes.create.deploying(transitional, [transitional, "create:andesite_alloy"]),
         event.recipes.create.deploying(transitional, [transitional, "create:andesite_alloy"]),
         event.recipes.create.deploying(transitional, [transitional, "createdieselgenerators:hammer"])
@@ -100,12 +106,11 @@ ServerEvents.recipes(event => {
     donutCraft(event, "kubejs:andesite_machine", "create:andesite_casing", "kubejs:kinetic_mechanism")
     // - Usage
     // Create
-    andesiteMachine(event, Item.of("create:portable_storage_interface", 2))
     andesiteMachine(event, Item.of("create:encased_fan", 1), "create:propeller")
     andesiteMachine(event, Item.of("create:mechanical_press", 1), "minecraft:iron_block")
     andesiteMachine(event, Item.of("create:mechanical_mixer", 1), "create:whisk")
-    andesiteMachine(event, Item.of("create:mechanical_drill", 1), "thermal:drill_head")
-    andesiteMachine(event, Item.of("create:mechanical_saw", 1), "thermal:saw_blade")
+    andesiteMachine(event, Item.of("create:mechanical_drill", 1), "kubejs:drill_head")
+    andesiteMachine(event, Item.of("create:mechanical_saw", 1), "kubejs:saw_blade")
     andesiteMachine(event, Item.of("create:deployer", 1), "create:brass_hand")
     if (Platform.isLoaded("createdeco")) { 
         andesiteMachine(event, Item.of("create:mechanical_roller", 1), "createdeco:andesite_hull") 
@@ -113,6 +118,7 @@ ServerEvents.recipes(event => {
     else { 
         andesiteMachine(event, Item.of("create:mechanical_roller", 1), "create:andesite_alloy_block") 
     }
+    andesiteMachine(event, Item.of("create:portable_storage_interface", 2))
     andesiteMachine(event, Item.of("create:andesite_funnel", 4))
     andesiteMachine(event, Item.of("create:andesite_tunnel", 4))
     andesiteMachine(event, Item.of("create:mechanical_harvester", 2))
