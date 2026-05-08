@@ -7,6 +7,9 @@ StartupEvents.registry("item", event => {
     event.create("haunted_dust").texture("cabin:item/ground_slimy_fern").color(0, 0xAC2EFC).displayName("Haunted Dust")
     // 1.21: new alchemy oil item
     event.create("crystallized_oil").texture("a2:item/crystallized_oil").displayName("Crystallized Oil")
+    // Chapter 1: saw blade and drill head
+    event.create("saw_blade").texture("a2:item/saw_blade").displayName("Saw Blade")
+    event.create("drill_head").texture("a2:item/drill_head").displayName("Drill Head")
 })
 
 StartupEvents.registry("fluid", event => {
