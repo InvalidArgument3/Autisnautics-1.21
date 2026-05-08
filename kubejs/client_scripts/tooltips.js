@@ -20,7 +20,7 @@ ItemEvents.modifyTooltips(tooltip => {
     holds("silver", 8 * 9);
     holds("gold", 9 * 9);
     */
-    
+
     tooltip.add("blazinghot:sturdy_casing", Text.darkGray("Cosmetic").italic());
     tooltip.add("blazinghot:blaze_casing", Text.darkGray("Cosmetic").italic());
 

@@ -27,13 +27,13 @@ ServerEvents.recipes(event => {
         event.replaceInput({ id: recipe }, "minecraft:dried_kelp", "kubejs:rubber")
     }
     kelpToRubber("createdieselgenerators:crafting/pumpjack_head")
-    //kelpToRubber("createdieselgenerators:crafting/kelp_handle") // Zinc Machines
+    // kelpToRubber("createdieselgenerators:crafting/kelp_handle") // Zinc Machines
     kelpToRubber("createornithopterglider:rope")
     kelpToRubber("offroad:small_tire")
     kelpToRubber("offroad:tire")
     kelpToRubber("powergrid:crafting/insulated_copper_wire")
     kelpToRubber("powergrid:crafting/copper_cord")
-    
+
     // -- Sealed Mechanisms
     transitional = "kubejs:incomplete_kinetic_mechanism"
     event.recipes.create.sequenced_assembly([
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
         M: "kubejs:kinetic_mechanism",
         R: "kubejs:rubber"
     }).id("kubejs:sealed_mechanism_manual_only")
-    
+
     // -- Copper Machine
     donutCraft(event, "kubejs:copper_machine", "create:copper_casing", "kubejs:sealed_mechanism")
     // - Usage

@@ -127,22 +127,22 @@ ServerEvents.recipes(event => {
     // Simulated/Aeronautics
     andesiteMachine(event, Item.of("simulated:physics_assembler", 1), "minecraft:lever")
     andesiteMachine(event, Item.of("simulated:steering_wheel", 1), "create:large_cogwheel")
-    if (Platform.isLoaded("immersive_aircraft")) { 
-        andesiteMachine(event, Item.of("aeronautics:andesite_propeller", 1), "immersive_aircraft:propeller") 
+    if (Platform.isLoaded("immersive_aircraft")) {
+        andesiteMachine(event, Item.of("aeronautics:andesite_propeller", 1), "immersive_aircraft:propeller")
         // convenience handcraft recipe for IA large propeller - same cost
         event.shaped("immersive_aircraft:propeller", [
             "PPP",
             "PAP",
             "PPP"
         ], {
-        A: "create:andesite_alloy",
-        P: "create:iron_sheet"
+            A: "create:andesite_alloy",
+            P: "create:iron_sheet"
         })
     }
-    else { 
-        andesiteMachine(event, Item.of("simulated:andesite_propeller", 1), "create:encased_fan") 
+    else {
+        andesiteMachine(event, Item.of("simulated:andesite_propeller", 1), "create:encased_fan")
     }
-    
+
     // AE2
     andesiteMachine(event, Item.of("ae2:meteorite_compass", 1), "minecraft:compass")
     andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")

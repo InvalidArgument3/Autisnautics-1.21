@@ -3,7 +3,7 @@
 ServerEvents.recipes(event => {
     // --- Chapter 1B
     let transitional
-    
+
     // -- Remove sturdy sheets, sturdy ingots, sturdy casing, molten sturdy alloy + bucket, sturdy everything
     event.remove({ id: "create:sequenced_assembly/sturdy_sheet"})
     event.remove({ id: /blazinghot:casting.*sturdy.*mold$/})
@@ -86,10 +86,10 @@ ServerEvents.recipes(event => {
     goldMold("nugget", "c:nuggets")
     goldMold("sheet", "c:plates")
     goldMold("rod", "c:rods")
-    
+
     // -- Magma block production
     event.blasting("minecraft:magma_block", "minecraft:deepslate")
-    
+
     // -- Reinforced mechanisms
     transitional = "kubejs:incomplete_reinforced_mechanism"
     event.recipes.create.sequenced_assembly([
@@ -108,7 +108,7 @@ ServerEvents.recipes(event => {
         C: "kubejs:kinetic_mechanism",
         O: "minecraft:obsidian"
     }).id("kubejs:reinforced_mechanism_manual_only")
-    
+
     // -- Gold Machine
     donutCraft(event, "kubejs:gold_machine", "create:railway_casing", "kubejs:reinforced_mechanism")
     // - Usage
@@ -122,5 +122,5 @@ ServerEvents.recipes(event => {
     goldMachine(event, Item.of("simulated:auger_shaft", 4))
     goldMachine(event, Item.of("simulated:swivel_bearing", 2))
     goldMachine(event, Item.of("aeronautics:propeller_bearing", 2))
-    
+
 })
