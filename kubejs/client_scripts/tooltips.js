@@ -20,6 +20,9 @@ ItemEvents.modifyTooltips(tooltip => {
     holds("silver", 8 * 9);
     holds("gold", 9 * 9);
     */
+    
+    tooltip.add("blazinghot:sturdy_casing", Text.darkGray("Cosmetic").italic());
+    tooltip.add("blazinghot:blaze_casing", Text.darkGray("Cosmetic").italic());
 
     main_assembly("kubejs:kinetic_mechanism", "1");
     bonus_assembly("kubejs:sealed_mechanism", "1A");
