@@ -30,7 +30,7 @@ ServerEvents.generateData("after_mods", event => {
         "immersiveengineering:bauxite", "immersiveengineering:nickel", "immersiveengineering:deep_nickel", "immersiveengineering:lead", "immersiveengineering:silver", "immersiveengineering:uranium",
         "minecraft:ore_coal", "minecraft:ore_coal_buried", "minecraft:ore_copper_large", "minecraft:ore_copper_small", "minecraft:ore_diamond_buried", "minecraft:ore_diamond_large", "minecraft:ore_diamond_medium", "minecraft:ore_diamond_small", "minecraft:ore_emerald", "minecraft:ore_gold", "minecraft:ore_gold_buried", "minecraft:ore_iron", "minecraft:ore_iron_small", "minecraft:ore_lapis", "minecraft:ore_lapis_buried", "minecraft:ore_redstone",
         // "mna:overworld_vinteum_ore",
-        // "nuclearcraft:boron_ore", "nuclearcraft:cobalt_ore", "nuclearcraft:lead_ore", "nuclearcraft:lithium_ore", "nuclearcraft:magnesium_ore", "nuclearcraft:platinum_ore", "nuclearcraft:silver_ore", "nuclearcraft:thorium_ore", "nuclearcraft:tin_ore", "nuclearcraft:uranium_ore", "nuclearcraft:zinc_ore",
+         "nuclearcraft:boron_ore", "nuclearcraft:cobalt_ore", "nuclearcraft:lead_ore", "nuclearcraft:lithium_ore", "nuclearcraft:magnesium_ore", "nuclearcraft:platinum_ore", "nuclearcraft:silver_ore", "nuclearcraft:thorium_ore", "nuclearcraft:tin_ore", "nuclearcraft:uranium_ore", "nuclearcraft:zinc_ore",
         // "projectred_exploration:electrotine_ore", "projectred_exploration:peridot_ore", "projectred_exploration:ruby_ore", "projectred_exploration:sapphire_ore", "projectred_exploration:silver_ore", "projectred_exploration:tin_ore",
         "regions_unexplored:ore_redstone_large",
         // "scguns:anthralite_ore", "scguns:sulfur_ore", "scguns:phosphorite",
@@ -38,11 +38,11 @@ ServerEvents.generateData("after_mods", event => {
         "theurgy:sal_ammoniac_ore",
         // "vs_clockwork:ore_wanderlite",
         // unwanted wasteland ores
-        // "nuclearcraft:lead_wasteland_ore", "nuclearcraft:silver_wasteland_ore", "nuclearcraft:tin_wasteland_ore", "nuclearcraft:zinc_wasteland_ore", "nuclearcraft:cobalt_wasteland_ore",
+         "nuclearcraft:lead_wasteland_ore", "nuclearcraft:silver_wasteland_ore", "nuclearcraft:tin_wasteland_ore", "nuclearcraft:zinc_wasteland_ore", "nuclearcraft:cobalt_wasteland_ore",
         // duplicate meme stone features
         "chisel:ore_diabase", "chisel:ore_limestone", "chisel:ore_marble",
         // 1.21
-        "oritech:ore_nickel", "oritech:ore_platinum", "oritech:uranium_patch", "oritech:resource_node_common", "oritech:resource_node_rare", "oritech:resource_node_other",
+        //"oritech:ore_nickel", "oritech:ore_platinum", "oritech:uranium_patch", "oritech:resource_node_common", "oritech:resource_node_rare", "oritech:resource_node_other",
         "stellaris:steel_ore_key", "stellaris:steel_ore_deepslate_key"
     ]
 
@@ -109,9 +109,9 @@ ServerEvents.generateData("after_mods", event => {
     // lithium - using nuclearcraft instead of tfmg because it spawns in the wasteland (exception in unify.json)
     // addOregenOverworld(event, "kubejs:ore_lithium_islands_pale", "nuclearcraft:lithium_ore", "minecraft:uniform", 92, 400, 10, 9, 0, "vanillabackport:pale_garden")
     // nickel
-    addOregenOverworld(event, "kubejs:ore_nickel_underground", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 4, 8, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_nickel_underground_big", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 0.002, 64, 0, "#minecraft:is_overworld")
-    addOregenOverworld(event, "kubejs:ore_nickel_underground_bottom", "oritech:nickel_ore", "minecraft:trapezoid", -84, -44, 6, 10, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_nickel_underground", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 4, 8, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_nickel_underground_big", "oritech:nickel_ore", "minecraft:trapezoid", -40, 40, 0.002, 64, 0, "#minecraft:is_overworld")
+    //addOregenOverworld(event, "kubejs:ore_nickel_underground_bottom", "oritech:nickel_ore", "minecraft:trapezoid", -84, -44, 6, 10, 0, "#minecraft:is_overworld")
     // niter: ore not necessary, there are several sources including tfmg geothermal vents and natural substitutes
     // peridot
     // addOregenOverworld(event, "kubejs:ore_peridot_underground_olivine", "projectred_exploration:peridot_ore", "minecraft:uniform", -64, -57, 1, 4, 0, "#minecraft:is_overworld")

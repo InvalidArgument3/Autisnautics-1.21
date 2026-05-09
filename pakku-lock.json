@@ -1361,68 +1361,6 @@
             ]
         },
         {
-            "pakku_id": "HHaBk3zlntxU6gvf",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "athena",
-                "modrinth": "athena-ctm"
-            },
-            "name": {
-                "curseforge": "Athena",
-                "modrinth": "Athena"
-            },
-            "id": {
-                "curseforge": "841890",
-                "modrinth": "b1ZV3DIJ"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "athena-neoforge-1.21-4.0.4.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/ZtIfQlxH/athena-neoforge-1.21-4.0.4.jar",
-                    "id": "ZtIfQlxH",
-                    "parent_id": "b1ZV3DIJ",
-                    "hashes": {
-                        "sha512": "ba44ad26707b08c9d1fd836f5a47ca8ae11c5cd1316ec015ad3f7f9d9cf163632ef053f7c140c412496d4ee58f5bac39aa35398679aee6bdbb8b050803f34f96",
-                        "sha1": "f8118e131399c8eb21c1efe0c00a0cb25b4f4b19"
-                    },
-                    "required_dependencies": [],
-                    "size": 98664,
-                    "date_published": "2026-04-12T15:27:28.687865Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "athena-neoforge-1.21-4.0.3.jar",
-                    "mc_versions": [
-                        "1.21"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7097/200/athena-neoforge-1.21-4.0.3.jar",
-                    "id": "7097200",
-                    "parent_id": "841890",
-                    "hashes": {
-                        "sha1": "f18bdfe934b6416d9d5f2360b4cb89e4a0a67925",
-                        "md5": "e09a72a942e6ad334f85e16a29abd6d1"
-                    },
-                    "required_dependencies": [],
-                    "size": 98665,
-                    "date_published": "2025-10-12T02:43:54.150Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "Tzec4oiMN4rJrUj8",
             "pakku_links": [
                 "YnLnP8tGs1vy348p",
@@ -11237,77 +11175,6 @@
             ]
         },
         {
-            "pakku_id": "KIvsOavntDJp8ioD",
-            "pakku_links": [
-                "Fr2vD59Es9rRCP58",
-                "DZykaJF3LrZpvDeG"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "kjs-oritech",
-                "curseforge": "kubejs-oritech"
-            },
-            "name": {
-                "modrinth": "KubeJS Oritech",
-                "curseforge": "KubeJS Oritech"
-            },
-            "id": {
-                "modrinth": "dobSKckb",
-                "curseforge": "1153301"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "kubejs_oritech-neoforge-1.21.1-0.4.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/dobSKckb/versions/xt4uMtC6/kubejs_oritech-neoforge-1.21.1-0.4.3.jar",
-                    "id": "xt4uMtC6",
-                    "parent_id": "dobSKckb",
-                    "hashes": {
-                        "sha512": "514e46713261f071e2bcb8475fbc06f34ca3d9ee041b7410ba039a78856474c2fb32c43e7067567bb3c43dc56dcda40f3467311843c480645a727518f41161d9",
-                        "sha1": "fad7f034b09d77185e6f9bb4db4e174d8295c58a"
-                    },
-                    "required_dependencies": [
-                        "4sYI62kA",
-                        "umyGl7zF"
-                    ],
-                    "size": 59097,
-                    "date_published": "2026-04-16T09:52:49.404295Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "kubejs_oritech-neoforge-1.21.1-0.4.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7934/555/kubejs_oritech-neoforge-1.21.1-0.4.3.jar",
-                    "id": "7934555",
-                    "parent_id": "1153301",
-                    "hashes": {
-                        "sha1": "fad7f034b09d77185e6f9bb4db4e174d8295c58a",
-                        "md5": "ddaa53f66f75d6ebe11daa1aa143e354"
-                    },
-                    "required_dependencies": [
-                        "238086",
-                        "1030830"
-                    ],
-                    "size": 59097,
-                    "date_published": "2026-04-16T09:52:47.723Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "aECJC4EO2aZaWmgP",
             "pakku_links": [
                 "r2IXASeD2rmC0eo4"
@@ -13712,6 +13579,78 @@
             ]
         },
         {
+            "pakku_id": "Dj7T3E21p0G78Bwp",
+            "pakku_links": [
+                "QNZpAPOM9lMJThSG",
+                "CT5JnONVCd47uhky"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "nuclearcraft-neohaul",
+                "modrinth": "nuclearcraft-neohaul"
+            },
+            "name": {
+                "curseforge": "Nuclearcraft Neohaul",
+                "modrinth": "Nuclearcraft Neohaul"
+            },
+            "id": {
+                "curseforge": "1523268",
+                "modrinth": "7hvoLzay"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "nuclearcraftneohaul-1.21.1-0.9.13.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/8049/561/nuclearcraftneohaul-1.21.1-0.9.13.jar",
+                    "id": "8049561",
+                    "parent_id": "1523268",
+                    "hashes": {
+                        "sha1": "0bf0cea985d74d78859ae8802075cc4ef34b23ef",
+                        "md5": "b4c4eb30bcaa2e1bf8443e60b9052b48"
+                    },
+                    "required_dependencies": [
+                        "563928",
+                        "247921"
+                    ],
+                    "size": 13704017,
+                    "date_published": "2026-05-06T19:44:41.093Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "nuclearcraftneohaul-1.21.1-0.9.13.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/7hvoLzay/versions/IwSDvmSh/nuclearcraftneohaul-1.21.1-0.9.13.jar",
+                    "id": "IwSDvmSh",
+                    "parent_id": "7hvoLzay",
+                    "hashes": {
+                        "sha512": "15df7917e9f831a4ee9b355f72c0e3e5c9c3c774a91b819174c9440a05cca3669ee21263b8af0e4a70ba855a3403b564c4ca673cc1771556510d5d0fbbad3470",
+                        "sha1": "0bf0cea985d74d78859ae8802075cc4ef34b23ef"
+                    },
+                    "required_dependencies": [
+                        "kkmrDlKT",
+                        "rHpb85Mf"
+                    ],
+                    "size": 13704017,
+                    "date_published": "2026-05-06T19:44:19.886894Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "CzrWPtdazkfJM1OW",
             "type": "MOD",
             "side": "SERVER",
@@ -13994,82 +13933,6 @@
                     "required_dependencies": [],
                     "size": 1577086,
                     "date_published": "2026-04-26T10:47:31.110Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "Fr2vD59Es9rRCP58",
-            "pakku_links": [
-                "vy3mfp3HWqXJk193",
-                "MoG49wuJHo4IY07G",
-                "HHaBk3zlntxU6gvf"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "oritech",
-                "modrinth": "oritech"
-            },
-            "name": {
-                "curseforge": "Oritech",
-                "modrinth": "Oritech"
-            },
-            "id": {
-                "curseforge": "1030830",
-                "modrinth": "4sYI62kA"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "oritech-neoforge-1.21.1-1.2.4.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/4sYI62kA/versions/eTaPqNmj/oritech-neoforge-1.21.1-1.2.4.jar",
-                    "id": "eTaPqNmj",
-                    "parent_id": "4sYI62kA",
-                    "hashes": {
-                        "sha512": "b6c26852459943cf3ae34f07c720c98303852de50444750784825a152c451187f4e5f8b6cf646df2531d1d41fbe1a4bbb55a4569f5503ea49fec8a8beeeb3e5b",
-                        "sha1": "c026cb0650103bfbac44098a8da18cf689f3cc85"
-                    },
-                    "required_dependencies": [
-                        "lhGA9TYQ",
-                        "b1ZV3DIJ",
-                        "8BmcQJ2H"
-                    ],
-                    "size": 10678703,
-                    "date_published": "2026-04-28T14:36:28.571467Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "oritech-neoforge-1.21.1-1.2.4.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8005/544/oritech-neoforge-1.21.1-1.2.4.jar",
-                    "id": "8005544",
-                    "parent_id": "1030830",
-                    "hashes": {
-                        "sha1": "c026cb0650103bfbac44098a8da18cf689f3cc85",
-                        "md5": "a814b121c059199afeac4ceb96bbacee"
-                    },
-                    "required_dependencies": [
-                        "419699",
-                        "841890",
-                        "388172"
-                    ],
-                    "size": 10678703,
-                    "date_published": "2026-04-28T14:39:28.270Z"
                 }
             ]
         },
@@ -20525,6 +20388,67 @@
                     "required_dependencies": [],
                     "size": 550701,
                     "date_published": "2026-04-18T20:07:19.410Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "CT5JnONVCd47uhky",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "zerocore",
+                "modrinth": "zerocore"
+            },
+            "name": {
+                "curseforge": "ZeroCore 2",
+                "modrinth": "ZeroCore"
+            },
+            "id": {
+                "curseforge": "247921",
+                "modrinth": "rHpb85Mf"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ZeroCore2-1.21.1-2.4.21.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7344/742/ZeroCore2-1.21.1-2.4.21.jar",
+                    "id": "7344742",
+                    "parent_id": "247921",
+                    "hashes": {
+                        "sha1": "7df2558f45c3e41bebe86a5ee2b28d56007bdbda",
+                        "md5": "64737cae90157c378ba9aee11e9098e3"
+                    },
+                    "required_dependencies": [],
+                    "size": 1551013,
+                    "date_published": "2025-12-17T17:01:22.903Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "ZeroCore2-1.21.1-2.4.9.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/rHpb85Mf/versions/6AlNHOWo/ZeroCore2-1.21.1-2.4.9.jar",
+                    "id": "6AlNHOWo",
+                    "parent_id": "rHpb85Mf",
+                    "hashes": {
+                        "sha512": "955cbf2729f03e539e069231d0015f5dcc74cecdf1d5de51cc942bc9397e789cae0e5fd941a6a73bc6ce11d046ba7cb66cca02f6fc4fd7f48fa05fe1bd0f5884",
+                        "sha1": "c7e7f135039df964a704245d05ca41ff2df2f496"
+                    },
+                    "required_dependencies": [],
+                    "size": 1529900,
+                    "date_published": "2024-09-18T04:55:08.337354Z"
                 }
             ]
         },
