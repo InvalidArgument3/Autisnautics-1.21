@@ -142,4 +142,8 @@ ServerEvents.recipes(event => {
         brassMachine(event, Item.of("numismatics:brass_depositor", 1))
         brassMachine(event, Item.of("numismatics:vendor", 1), "create:depot")
     }
+    // Immersive Aircraft - airship, warship, biplane, seaplane
+    if (Platform.isLoaded("immersive_aircraft")) {
+        brassMachine(event, Item.of("immersive_aircraft:engine", 1), "minecraft:blast_furnace")
+    }
 })

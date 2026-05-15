@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
     tweak_casing("create:copper", ["create:copper_sheet", "#minecraft:logs"])
     tweak_casing("create:railway", ["create:golden_sheet", "minecraft:deepslate"])
     tweak_casing("create:brass", ["create:brass_sheet", "#minecraft:logs"])
-    tweak_casing("kubejs:zinc", ["create:zinc_ingot", "minecraft:stone"])
+    // tweak_casing("kubejs:zinc", ["create:zinc_ingot", "minecraft:stone"]) // 1.21 removed
     tweak_casing("kubejs:lead", ["thermal:lead_plate", "minecraft:deepslate"])
     tweak_casing("kubejs:invar", ["thermal:invar_ingot", "minecraft:stone"])
     tweak_casing("kubejs:enderium", ["minecraft:ender_pearl", "minecraft:obsidian"])
@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     tweak_casing("create:shadow_steel", ["create:shadow_steel", "#minecraft:logs"])
     // recipe changes
     event.replaceInput({ id: "create:crafting/kinetics/adjustable_chain_gearshift" }, "create:electron_tube", "minecraft:redstone")
-    event.replaceInput({ id: "create:crafting/kinetics/rope_pulley" }, "#forge:wool", "#supplementaries:ropes")
+    event.replaceInput({ id: "create:crafting/kinetics/rope_pulley" }, "#minecraft:wool", "#supplementaries:ropes")// 1.21
     // windmill recipe tweaks
     event.remove({ id: "create:crafting/kinetics/white_sail" })
     event.shaped("2x create:white_sail", [
@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
         "NAN",
         "SSS"
     ], {
-        A: "#forge:wool",
+        A: "#minecraft:wool",// 1.21
         N: "minecraft:iron_nugget",
         S: "minecraft:stick"
     })

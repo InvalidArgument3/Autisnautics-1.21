@@ -15,7 +15,7 @@ StartupEvents.registry("item", event => {
 StartupEvents.registry("fluid", event => {
     // 1.21: tconstruct liquid soul replacement
     // placeholder texture
-    event.create("liquid_soul").displayName("Liquid Soul").stillTexture("oritech:block/fluid/fluid_roiling_plasma").flowingTexture("oritech:block/fluid/fluid_roiling_plasma")
+    event.create("agonized_plasma").displayName("Agonized Plasma").stillTexture("blazinghot:fluid/molten_sturdy_alloy_still").flowingTexture("blazinghot:fluid/molten_sturdy_alloy_flow")
     // 1.21: register new fluid for chapter 2 (temp texture)
     event.create("rising_sky_solution").displayName("Rising Sky Solution").stillTexture("blazinghot:fluid/molten_sturdy_alloy_still").flowingTexture("blazinghot:fluid/molten_sturdy_alloy_flow")
 })
