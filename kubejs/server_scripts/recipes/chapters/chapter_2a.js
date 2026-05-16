@@ -77,6 +77,15 @@ ServerEvents.recipes(event => {
     zincMachine(event, Item.of("powergrid:basin_heater", 1), "create:blaze_burner")
     zincMachine(event, Item.of("powergrid:heating_coil", 2)) // technically useless because of fan catalysts
     zincMachine(event, Item.of("powergrid:crt", 1), "minecraft:glowstone_dust")
+    // replacing gizmos
+    event.remove({ output: "powergrid:electrical_gizmo"})
+    event.remove({ id: "powergrid:crafting/portable_battery"})
+    event.shapeless(Item.of("powergrid:portable_battery", 1), ["create:copper_backtank", "powergrid:device_connector", "powergrid:battery"])
+    event.remove({ id: "powergrid:crafting/multimeter"})
+    event.shapeless(Item.of("powergrid:multimeter", 1), ["powergrid:voltage_gauge", Ingredient.of("#c:wires/copper"), "powergrid:current_gauge"])
+    event.replaceInput({ id: "powergrid:mechanical_crafting/electrozapper" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
+    event.replaceInput({ id: "powergrid:mechanical_crafting/electrobaton" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
+    
     
     // createaddition
     event.remove({ output: "createaddition:capacitor"})
