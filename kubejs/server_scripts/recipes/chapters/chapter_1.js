@@ -158,8 +158,8 @@ ServerEvents.recipes(event => {
     // createaddition
     if (Platform.isLoaded("createaddition")) { andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft") }
     // createbigcannons
-    if (Platform.isLoaded("createbigcannons")) { 
-        andesiteMachine(event, Item.of("createbigcannons:cannon_drill", 1), "create:fluid_pipe") 
+    if (Platform.isLoaded("createbigcannons")) {
+        andesiteMachine(event, Item.of("createbigcannons:cannon_drill", 1), "create:fluid_pipe")
         andesiteMachine(event, Item.of("createbigcannons:cannon_builder", 1), "minecraft:sticky_piston")
         andesiteMachine(event, Item.of("createbigcannons:cannon_loader", 1), "minecraft:piston")
     }
@@ -172,7 +172,7 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded("sliceanddice")) {
         andesiteMachine(event, Item.of("sliceanddice:slicer", 1), "create:turntable")
     }
-    
+
     // -- Parts for Chapter 1 factory machines
     // - Deployer: Brass Hand -> Gold Hand
     event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#c:plates/brass", "create:golden_sheet")

@@ -55,18 +55,18 @@ ServerEvents.recipes(event => {
     pulpCast(500, "sheet", "create:cardboard")
     pulpCast(1000, "rod", "create:cardboard_sword")
     event.recipes.create.compacting("create:cardboard_block", [Fluid.sizedIngredientOf('kubejs:liquid_pulp', 2000)])
-    
+
     // -- Potion of Haste: modded duplicates removed in potions.js
-    
+
     // -- Logistic Mechanisms
     transitional = "kubejs:incomplete_logistic_mechanism"
     event.recipes.create.sequenced_assembly([
         "kubejs:logistic_mechanism",
     ], "create:precision_mechanism", [
         event.recipes.create.filling(transitional, [transitional, Fluid.sizedIngredientOf(
-            Fluid.ingredientOf('create:potion', 
-                {'create:potion_fluid_bottle_type': 'regular', 
-                'minecraft:potion_contents': { potion: 'kubejs:haste' },
+            Fluid.ingredientOf('create:potion',
+                {'create:potion_fluid_bottle_type': 'regular',
+                    'minecraft:potion_contents': { potion: 'kubejs:haste' },
                 }
             ),
             500
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:logistic_mechanism")
-    
+
     // -- Lead Machine
     donutCraft(event, "kubejs:lead_machine", "kubejs:lead_casing", "kubejs:logistic_mechanism")
     // - Usages
@@ -93,9 +93,9 @@ ServerEvents.recipes(event => {
     // Item vault/Shipping container convenience recipes
     event.shapeless("create:item_vault", ["kubejs:lead_casing", Ingredient.of("#c:barrels/wooden")])
     colours.forEach(color => {
-        event.shapeless("createdeco:" + color + "_shipping_container", ["minecraft:" + color + "_dye", "kubejs:lead_casing", Ingredient.of("#c:barrels/wooden")])  
+        event.shapeless("createdeco:" + color + "_shipping_container", ["minecraft:" + color + "_dye", "kubejs:lead_casing", Ingredient.of("#c:barrels/wooden")])
     })
-    
+
     // Stellaris
     leadMachine(event, Item.of("stellaris:vacuumator", 1), "minecraft:bucket")
 })

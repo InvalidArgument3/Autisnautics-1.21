@@ -19,14 +19,14 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:infernal_mechanism")
-        
+
     // -- Powergrid Conductive Casing = Zinc Casing
     event.remove({ output: "powergrid:conductive_casing"})
     event.shapeless(Item.of("powergrid:conductive_casing", 2), ["create:zinc_ingot", "minecraft:stone"])
-    
+
     // -- Zinc Machine
     donutCraft(event, "kubejs:zinc_machine", "powergrid:conductive_casing", "kubejs:infernal_mechanism")
-    
+
     // - Nuclearcraft Usages: replacing lost thermal machines
     // Rock generation
     zincMachine(event, Item.of("nuclearcraftneohaul:cobblestone_generator", 1), "minecraft:piston")
@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "nuclearcraftneohaul:collector/from_cobblestone_generator_dense_rate"})
     // Nullification
     zincMachine(event, Item.of("nuclearcraftneohaul:universal_bin", 1), "minecraft:cactus")
-    
+
     // - Electricity Usages
     // powergrid
     // small parts, connectors, etc
@@ -85,8 +85,8 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of("powergrid:multimeter", 1), ["powergrid:voltage_gauge", Ingredient.of("#c:wires/copper"), "powergrid:current_gauge"])
     event.replaceInput({ id: "powergrid:mechanical_crafting/electrozapper" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
     event.replaceInput({ id: "powergrid:mechanical_crafting/electrobaton" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
-    
-    
+
+
     // createaddition
     event.remove({ output: "createaddition:capacitor"})
     event.remove({ output: "createaddition:alternator"}) // use powergrid :^)
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
     zincMachine(event, Item.of("createaddition:redstone_relay", 8))
     zincMachine(event, Item.of("createaddition:large_connector", 4))
     zincMachine(event, Item.of("createaddition:small_light_connector", 8), Ingredient.of("#c:wires/iron"))
-    
+
     // - Batteries and Accumulators
     // unify sulfuric acid, prefer nuclearcraft's
     // remove powergrid:acid and its recipes
@@ -106,7 +106,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "powergrid:mixing/etched_circuit_board"})
     // add nuclearcraft sulfuric acid low tech recipe - 1:250 instead of 1:1000 and uses blaze powder
     event.recipes.create.mixing(
-        Fluid.of("nuclearcraftneohaul:sulfuric_acid", 250), 
+        Fluid.of("nuclearcraftneohaul:sulfuric_acid", 250),
         [Ingredient.of("#c:dusts/sulfur"), "minecraft:blaze_powder", Fluid.sizedIngredientOf("minecraft:water", 500)]
     ).heated()
     // powergrid battery: because of device connectors, it's basically just worse than an accumulator
