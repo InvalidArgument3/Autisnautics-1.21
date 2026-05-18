@@ -8,14 +8,14 @@ ServerEvents.recipes(event => {
     // - Casting Liquid Pulp into cardboard things, in case you wanted to store pulp as liquid
     let moldMats = ["porcelain", "sturdy"]
     let pulpCast = (mb, mold, output) => {
-        moldMats.ForEach(moldMat => {
-            let moldItem = `#blazinghot:${moldMat}_${mold}_mold`
+        moldMats.forEach(moldMat => {
+            let moldItem = `blazinghot:${moldMat}_${mold}_mold`
             event.custom({
                 "type": "create:casting",
                 "cooling_duration": 300,
                 "ingredients": [
                     {
-                        "item": moldTag
+                        "item": moldItem
                     },
                     {
                         "type": "neoforge:tag",
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
                 "cooling_duration": 300,
                 "ingredients": [
                     {
-                        "tag": moldTag
+                        "item": moldItem
                     },
                     {
                         "type": "neoforge:tag",
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling(transitional, [transitional, Fluid.sizedIngredientOf(
             Fluid.ingredientOf('create:potion', 
                 {'create:potion_fluid_bottle_type': 'regular', 
-                'minecraft:potion_contents': { potion: 'minecraft:regeneration' },
+                'minecraft:potion_contents': { potion: 'kubejs:haste' },
                 }
             ),
             500
