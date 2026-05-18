@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
     pulpCast(1000, "rod", "create:cardboard_sword")
     event.recipes.create.compacting("create:cardboard_block", [Fluid.sizedIngredientOf('kubejs:liquid_pulp', 2000)])
 
-    // -- Potion of Haste: modded duplicates removed in potions.js
+    // -- Potion of Haste: modded duplicates removed in potions.js/datapack
 
     // -- Logistic Mechanisms
     transitional = "kubejs:incomplete_logistic_mechanism"
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling(transitional, [transitional, Fluid.sizedIngredientOf(
             Fluid.ingredientOf('create:potion',
                 {'create:potion_fluid_bottle_type': 'regular',
-                    'minecraft:potion_contents': { potion: 'kubejs:haste' },
+                    'minecraft:potion_contents': { potion: 'alexscaves:haste' },
                 }
             ),
             500

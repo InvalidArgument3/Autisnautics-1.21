@@ -423,6 +423,6 @@ StartupEvents.registry("potion", (event) => {
                 1
             )
     }
-
-    createCustomPotion("haste", "minecraft:haste", 180, 480, 90)
+    
+    //createCustomPotion("haste", "minecraft:haste", 180, 480, 90) // unified under alexscaves:haste instead
 })
