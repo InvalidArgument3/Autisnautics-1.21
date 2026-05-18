@@ -166,6 +166,7 @@ ServerEvents.recipes(event => {
     // numismatics
     if (Platform.isLoaded("numismatics")) {
         andesiteMachine(event, Item.of("numismatics:andesite_depositor", 1))
+        andesiteMachine(event, Item.of("numismatics:bank_terminal", 1), "minecraft:redstone_block")
     }
     // sliceanddice
     if (Platform.isLoaded("sliceanddice")) {
