@@ -17,10 +17,10 @@ ServerEvents.recipes(event => {
     event.remove({ id: "create:sequenced_assembly/precision_mechanism" })
     // - Simulated gyroscopic mechanisms, replaced with brass machines
     event.remove({ id: "simulated:sequenced_assembly/gyroscopic_mechanism" })
-    
+
     // -- Sky stone dust: infinimilling
     event.recipes.create.milling(["ae2:sky_dust", "ae2:sky_stone_block"], "ae2:sky_stone_block").processingTime(1000)
-    
+
     // -- Certus Quartz farming
     // - Crafting seed from dust + sand
     event.shapeless("2x kubejs:certus_crystal_seed", ["ae2:certus_quartz_dust", "#minecraft:sand"])
@@ -48,25 +48,25 @@ ServerEvents.recipes(event => {
 
     // -- Volatile Sky Solution
     event.recipes.create.mixing(
-        Fluid.of('kubejs:volatile_sky_solution', 500), 
+        Fluid.of('kubejs:volatile_sky_solution', 500),
         [SizedIngredient.of("ae2:sky_dust", 4), Fluid.sizedIngredientOf('minecraft:water', 500)]
     )
-    
+
     // -- Rising Sky Solution
     event.recipes.create.mixing(
-        ["ae2:certus_quartz_crystal", Fluid.of('kubejs:rising_sky_solution', 250)], 
+        ["ae2:certus_quartz_crystal", Fluid.of('kubejs:rising_sky_solution', 250)],
         ["ae2:charged_certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:volatile_sky_solution', 250)]
     )
-    
+
     // -- Polished Rose Quartz
     event.recipes.create.mixing(
         "create:polished_rose_quartz",
         ["ae2:certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:rising_sky_solution', 250)]
     )
-    
+
     // -- Electron tubes
     event.recipes.create.filling(
-        "create:electron_tube", 
+        "create:electron_tube",
         ["create:polished_rose_quartz", Fluid.sizedIngredientOf('blazinghot:molten_iron', 10)]
     )
 
@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
     brassMachine(event, Item.of("create:steam_whistle", 4))
     // items formerly using create:transmitter
     brassMachine(event, Item.of("create:display_link", 1), "minecraft:redstone_torch")
-    // Simulated/Aeronautics 
+    // Simulated/Aeronautics
     brassMachine(event, Item.of("aeronautics:steam_vent", 1))
     brassMachine(event, Item.of("simulated:navigation_table", 1), "minecraft:map")
     brassMachine(event, Item.of("simulated:docking_connector", 2), "create:chute")

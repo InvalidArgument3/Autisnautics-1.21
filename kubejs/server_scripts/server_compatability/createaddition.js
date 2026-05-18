@@ -3,9 +3,9 @@ if (Platform.isLoaded("createaddition")) {
     ServerEvents.recipes(event => {
         const hasThermal = Platform.isLoaded("thermal")
 
-        //andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft")
-        //brassMachine(event, Item.of("createaddition:portable_energy_interface", 2))
-        //brassMachine(event, Item.of("createaddition:tesla_coil", 1), "createaddition:copper_spool")
+        // andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft")
+        // brassMachine(event, Item.of("createaddition:portable_energy_interface", 2))
+        // brassMachine(event, Item.of("createaddition:tesla_coil", 1), "createaddition:copper_spool")
         /*
         if (hasThermal) {
             brassMachine(event, Item.of("createaddition:modular_accumulator", 1), "thermal:energy_cell_frame")
@@ -43,7 +43,7 @@ if (Platform.isLoaded("createaddition")) {
 
         // Remove heated basin ingot recipes
         event.remove({ id: "createaddition:mixing/electrum" })
-        
+
         /*
         // Connectors
         event.remove({ id: "createaddition:crafting/small_connector_copper" })
