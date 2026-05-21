@@ -47,14 +47,19 @@
 #Configurations related to block tags.
 [blockTags]
 	#List of block tags that should not be added.
-	blacklist = []
+	blacklist = [
+		"c:ores/steel"
+	]
 	#List of block tags that should be considered as defined.
 	customDefined = []
 
 #Configurations related to item tags.
 [itemTags]
 	#List of item tags that should not be added.
-	blacklist = []
+	blacklist = [
+		"c:ores/steel",
+		"create:crushed_raw_materials/steel"
+	]
 	#List of item tags that should be considered as defined.
 	customDefined = []
 
