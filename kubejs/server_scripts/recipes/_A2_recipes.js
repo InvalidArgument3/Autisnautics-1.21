@@ -75,8 +75,8 @@ ServerEvents.recipes(event => {
     })
 
     // brass: engine, warship, planes, brass jetpack
-    event.remove({ output: "immersive_aircraft:engine" })
-    brassMachine(event, Item.of("immersive_aircraft:engine", 1), "minecraft:blast_furnace")
+    // event.remove({ output: "immersive_aircraft:engine" })
+    // brassMachine(event, Item.of("immersive_aircraft:engine", 1), "minecraft:blast_furnace")
 
     // //tfmg/IE integration
     // re-add blasting mixture recipe as metallurgy.js removes all input:#create:crushed_raw_materials
@@ -756,10 +756,10 @@ ServerEvents.recipes(event => {
 
     // //powergrid integration
     // replace conductive casing recipes with zinc machine
-    event.replaceInput({}, "powergrid:conductive_casing", "kubejs:zinc_machine")
+    // event.replaceInput({}, "powergrid:conductive_casing", "kubejs:zinc_machine")
     // it's now a cosmetic block so make it cheaper
-    event.remove({ output: "powergrid:conductive_casing" })
-    event.shapeless(Item.of("powergrid:conductive_casing", 8), ["#forge:ingots/zinc", "create:andesite_casing"])
+    // event.remove({ output: "powergrid:conductive_casing" })
+    // event.shapeless(Item.of("powergrid:conductive_casing", 8), ["#forge:ingots/zinc", "create:andesite_casing"])
     // various junctions, connectors, etc. are now from stonecutting zinc machine 8:1
     let powergridWidgets = ["cord_junction", "lv_switch", "lv_button", "light_fixture", "device_connector", "socket", "fuse_holder"]
     powergridWidgets.forEach(widget => {

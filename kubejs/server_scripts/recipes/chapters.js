@@ -159,7 +159,7 @@ ServerEvents.recipes(event => {
     // Gourmand Upgrade
     createMachine("thermal:dynamo_stirling", event, "thermal:dynamo_gourmand", "minecraft:golden_carrot")
     createMachine("thermal:dynamo_stirling", event, "thermal:dynamo_gourmand", "minecraft:golden_apple")
-    */
+
     // - - - - - Chapter 1A - - - - -
     event.remove({ type: "thermal:tree_extractor" })
     wood_types.forEach(wood => {
@@ -446,7 +446,7 @@ ServerEvents.recipes(event => {
     brassMachine(event, Item.of("kubejs:pipe_module_tier_1", 4))
     // Lapidary Upgrade
     createMachine("thermal:dynamo_numismatic", event, Item.of("thermal:dynamo_lapidary", 1), "thermal:lapis_gear")
-
+    */
     // - - - - - Chapter 2A - - - - -
     // Vine Transmutation
     // donutCraft(event, "minecraft:weeping_vines", "occultism:spirit_attuned_gem", "minecraft:twisting_vines")

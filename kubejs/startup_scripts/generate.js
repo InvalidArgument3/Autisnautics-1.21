@@ -307,7 +307,7 @@ StartupEvents.registry("block", event => {
     reagent(0x7D6B5A, 0x8AD480, "chocolate", "Chocolate", "create:bar_of_chocolate", "create:bar_of_chocolate")
     category()
     reagent(0x7F7F7F, 0xD4D4D4, "wool", "Woollen", "minecraft:white_wool", "minecraft:white_wool")
-    reagent(0xA6A6A6, 0xD5D5D5, "iron", "Iron", "oritech:iron_dust", "oritech:iron_dust")
+    reagent(0xA6A6A6, 0xD5D5D5, "iron", "Iron", "immersiveengineering:dust_iron", "immersiveengineering:dust_iron")
     reagent(0xDDD1C1, 0xDBA520, "rope", "Rope", "simulated:rope_coupling", "simulated:rope_coupling")
     reagent(0xD30000, 0x708238, "bait", "Bait", "tide:bait", "tide:bait")
     reagent(0x232456, 0x7C95A4, "lead", "Leaden", "immersiveengineering:dust_lead", "immersiveengineering:dust_lead")
@@ -329,7 +329,7 @@ StartupEvents.registry("block", event => {
     category()
     reagent(0x783A2F, 0xBC6C5B, "granite", "Granite", "minecraft:granite", "minecraft:granite")
     reagent(0xB19E8F, 0xE7E2DB, "quartz", "Quartz", "minecraft:quartz", "minecraft:quartz")
-    reagent(0xDD7E5D, 0x17E9AB, "copper", "Copper", "oritech:copper_dust", "oritech:copper_dust")
+    reagent(0xDD7E5D, 0x17E9AB, "copper", "Copper", "immersiveengineering:dust_copper", "immersiveengineering:dust_copper")
     reagent(0x00A82B, 0xADFACB, "emerald", "Emerald", "minecraft:emerald", "minecraft:emerald")
     reagent(0xFC7781, 0xFCCED0, "burger", "Burger", "farmersdelight:hamburger", "farmersdelight:hamburger")
     reagent(0x529680, 0xA2CFC0, "prismarine", "Prismarine", "minecraft:prismarine_crystals", "minecraft:prismarine_crystals")
@@ -343,10 +343,10 @@ StartupEvents.registry("block", event => {
     category()
     reagent(0xB8AFAF, 0xD4D4D4, "calcite", "Calcified", "minecraft:calcite", "minecraft:calcite")
     reagent(0x1B1D1F, 0x7D6B5A, "deadbush", "Dead", "minecraft:dead_bush", "minecraft:dead_bush")
-    reagent(0xD99413, 0xFAF25E, "gold", "Golden", "oritech:gold_dust", "oritech:gold_dust")
+    reagent(0xD99413, 0xFAF25E, "gold", "Golden", "immersiveengineering:dust_gold", "immersiveengineering:dust_gold")
     reagent(0xb200ed, 0x05030A, "computer", "Computer", "computercraft:computer_normal", "computercraft:computer_normal")
     reagent(0xFAF25E, 0x22232D, "flywheel", "Flywheel", "create:flywheel", "create:flywheel")
-    reagent(0x977756, 0xE4D196, "nickel", "Nickel", "oritech:nickel_dust", "oritech:nickel_dust")
+    reagent(0x977756, 0xE4D196, "nickel", "Nickel", "immersiveengineering:dust_nickel", "immersiveengineering:dust_nickel")
     category()
     catalyst(0x22232D, 0x1CB7B9, "void", "Void")
     catalyst(0xDBA520, 0xFAF25E, "valkyriad", "Valkyriad")
@@ -381,8 +381,7 @@ StartupEvents.registry("fluid", event => {
     // event.create("crude_oil").displayName("Crude Oil").stillTexture("thermal:block/fluids/crude_oil_still").flowingTexture("thermal:block/fluids/crude_oil_flow")
     event.create("volatile_sky_solution").displayName("Volatile Sky Solution").stillTexture("blazinghot:fluid/molten_sturdy_alloy_still").flowingTexture("blazinghot:fluid/molten_sturdy_alloy_flow")
     event.create("chromatic_waste").displayName("Chromatic Waste").stillTexture("supplementaries:block/lumisene").flowingTexture("supplementaries:block/lumisene_flowing")
-    // A2: molten anthralite
-    // event.create("molten_anthralite").displayName("Molten Anthralite").stillTexture("tconstruct:fluid/molten/compat_alloy/pewter/still").flowingTexture("tconstruct:fluid/molten/compat_alloy/pewter/flowing")
+    event.create("liquid_pulp").displayName("Liquid Pulp").stillTexture("nuclearcraftneohaul:block/fluid/molten_still").flowingTexture("nuclearcraftneohaul:block/fluid/molten_flow").tint(0xb4a498)
     //	event.create('liquid_smoke').displayName(`Liquid Smoke`).stillTexture('advancedrocketry:blocks/fluid/oxygen_still').flowingTexture('advancedrocketry:blocks/fluid/oxygen_flow').bucketColor(0xEBEBEB)
     // A2: liquid plastic (tfmg replacement)
     event.create("liquid_plastic").displayName("Liquid Plastic").stillTexture("oritech:block/fluid/fluid_strange_pale_2").flowingTexture("oritech:block/fluid/fluid_strange_pale_2")
@@ -425,5 +424,5 @@ StartupEvents.registry("potion", (event) => {
             )
     }
 
-    createCustomPotion("haste", "minecraft:haste", 180, 480, 90)
+    // createCustomPotion("haste", "minecraft:haste", 180, 480, 90) // unified under alexscaves:haste instead
 })

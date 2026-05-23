@@ -1,4 +1,5 @@
 // Create Diesel Generators
+/*
 if (Platform.isLoaded("createdieselgenerators")) {
     ServerEvents.recipes(event => {
 
@@ -70,3 +71,4 @@ if (Platform.isLoaded("createdieselgenerators")) {
     })
 
 }
+*/

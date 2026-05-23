@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
         })
     })
 
-
+    /* todo replace
     // Analyzing failed alchemy in Oritech centrifuge
     let failure = (id, outputs) => {
         let outputFluids = []
@@ -67,6 +67,7 @@ ServerEvents.recipes(event => {
         failure(i++, [0, 1, 3])
         failure(i++, [0, 2, 2])
     }
+    */
 
     //
 

@@ -73,6 +73,8 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded("create_dragons_plus")) { copperMachine(event, Item.of("create_dragons_plus:fluid_hatch", 1), "create:chute") }
     // Create Diesel Generators
     // if (Platform.isLoaded("createdieselgenerators")) { copperMachine(event, Item.of("createdieselgenerators:pumpjack_hole", 1)) } // Zinc Machines
+    // sliceanddice
+    if (Platform.isLoaded("sliceanddice")) { copperMachine(event, Item.of("sliceanddice:sprinkler", 3)) }
     // Water-generating blocks:
     // cookingforblockheads:sink
     if (Platform.isLoaded("cookingforblockheads")) { copperMachine(event, Item.of("cookingforblockheads:sink", 1), "minecraft:bucket") }

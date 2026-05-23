@@ -124,7 +124,10 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("create:mechanical_harvester", 2))
     andesiteMachine(event, Item.of("create:mechanical_plough", 2))
     andesiteMachine(event, Item.of("create:contraption_controls", 1))
-    // Simulated/Aeronautics
+    andesiteMachine(event, Item.of("create:cart_assembler", 1))
+    // items formerly using create:transmitter
+    andesiteMachine(event, Item.of("create:redstone_link", 2), "minecraft:redstone_torch")
+    // Simulated/Aeronautics/Offroad
     andesiteMachine(event, Item.of("simulated:physics_assembler", 1), "minecraft:lever")
     andesiteMachine(event, Item.of("simulated:steering_wheel", 1), "create:large_cogwheel")
     if (Platform.isLoaded("immersive_aircraft")) {
@@ -140,14 +143,35 @@ ServerEvents.recipes(event => {
         })
     }
     else {
-        andesiteMachine(event, Item.of("simulated:andesite_propeller", 1), "create:encased_fan")
+        andesiteMachine(event, Item.of("aeronautics:andesite_propeller", 1), "create:encased_fan")
     }
+    // re-add the ability to turn wooden_propeller back into andesite_propeller
+    event.shapeless("aeronautics:andesite_propeller", ["aeronautics:wooden_propeller"])
+    andesiteMachine(event, Item.of("simulated:redstone_magnet", 2), "minecraft:redstone_block")
+    andesiteMachine(event, Item.of("aeronautics:adjustable_burner", 1), "minecraft:coal_block")
+    andesiteMachine(event, Item.of("offroad:wheel_mount", 1), Ingredient.of("#c:wires/iron"))
+    andesiteMachine(event, Item.of("simulated:torsion_spring", 1))
 
     // AE2
     andesiteMachine(event, Item.of("ae2:meteorite_compass", 1), "minecraft:compass")
     andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")
     // createaddition
     if (Platform.isLoaded("createaddition")) { andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft") }
+    // createbigcannons
+    if (Platform.isLoaded("createbigcannons")) {
+        andesiteMachine(event, Item.of("createbigcannons:cannon_drill", 1), "create:fluid_pipe")
+        andesiteMachine(event, Item.of("createbigcannons:cannon_builder", 1), "minecraft:sticky_piston")
+        andesiteMachine(event, Item.of("createbigcannons:cannon_loader", 1), "minecraft:piston")
+    }
+    // numismatics
+    if (Platform.isLoaded("numismatics")) {
+        andesiteMachine(event, Item.of("numismatics:andesite_depositor", 1))
+        andesiteMachine(event, Item.of("numismatics:bank_terminal", 1), "minecraft:redstone_block")
+    }
+    // sliceanddice
+    if (Platform.isLoaded("sliceanddice")) {
+        andesiteMachine(event, Item.of("sliceanddice:slicer", 1), "create:turntable")
+    }
 
     // -- Parts for Chapter 1 factory machines
     // - Deployer: Brass Hand -> Gold Hand

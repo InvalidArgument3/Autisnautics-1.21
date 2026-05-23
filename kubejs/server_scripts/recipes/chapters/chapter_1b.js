@@ -118,9 +118,16 @@ ServerEvents.recipes(event => {
     goldMachine(event, Item.of("create:track_signal", 4))
     goldMachine(event, Item.of("create:schedule", 4))
     goldMachine(event, Item.of("create:track_observer", 2))
-    // Simulated/Aeronautics
+    // Simulated/Aeronautics/Offroad
     goldMachine(event, Item.of("simulated:auger_shaft", 4))
     goldMachine(event, Item.of("simulated:swivel_bearing", 2))
+    goldMachine(event, Item.of("offroad:borehead_bearing", 1), "minecraft:iron_block")
+    if (Platform.isLoaded("createdeco")) {
+        goldMachine(event, Item.of("offroad:rockcutting_wheel", 1), "createdeco:andesite_hull")
+    }
+    else {
+        goldMachine(event, Item.of("offroad:rockcutting_wheel", 1), "create:andesite_alloy_block")
+    }
+    goldMachine(event, Item.of("simulated:swivel_bearing", 2))
     goldMachine(event, Item.of("aeronautics:propeller_bearing", 2))
-
 })

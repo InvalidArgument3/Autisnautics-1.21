@@ -1,3 +1,4 @@
+/*
 if (Platform.isLoaded("createdieselgenerators")) {
     if (typeof RecipeViewerEvents !== "undefined") RecipeViewerEvents.removeEntries("item", event => {
         const hide = (entry) => event.remove(entry)
@@ -40,3 +41,4 @@ if (Platform.isLoaded("createdieselgenerators")) {
         event.hide("createdieselgenerators:flowing_plant_oil")
     })
 }
+*/
