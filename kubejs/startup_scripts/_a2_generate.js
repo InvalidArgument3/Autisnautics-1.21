@@ -12,6 +12,7 @@ StartupEvents.registry("item", event => {
     event.create("drill_head").texture("a2:item/drill_head").displayName("Drill Head")
     // Chapter 2c: coke cake, IE compatibility
     event.create("coke_cake").texture("a2:item/coke_cake").displayName("Coke Cake")
+    event.create("incomplete_coke_cake").texture("a2:item/incomplete_coke_cake").displayName("Incomplete Coke Cake")
 })
 
 StartupEvents.registry("fluid", event => {
