@@ -121,4 +121,20 @@ ItemEvents.modifyTooltips(tooltip => {
     // });
 
     // tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
+    
+    // 1.21 chapter 2c: coke cake
+    tooltip.add("kubejs:coke_cake", {shift: false}, Text.join(Text.darkGray("Hold ["), Text.gray("Shift"), Text.darkGray("] for Summary")))
+    tooltip.add("kubejs:coke_cake", {shift: true}, Text.join(Text.darkGray("Hold ["), Text.white("Shift"), Text.darkGray("] for Summary")))
+    tooltip.add("kubejs:coke_cake", {shift: true}, Text.join(Text.of("A refreshing treat for your hard-\nworking ").color(0xc7954b), 
+                                                             Text.of("Blaze Burners").color(0xeeda78),
+                                                             Text.of(". Also delivers a\nblast of flavor to ").color(0xc7954b),
+                                                             Text.of("Blast Furnaces").color(0xeeda78),
+                                                             Text.of(".").color(0xc7954b)
+                                                            )
+                )
 });
+
+// unfortunately can't seem add to it as an actual fuel in JEI without making a mixin mod
+RecipeViewerEvents.addInformation("item", event => {
+    event.add("kubejs:coke_cake", ["Like a Blaze Cake, a Coke Cake will fuel Blaze Burners at Super-Heated levels."])
+})

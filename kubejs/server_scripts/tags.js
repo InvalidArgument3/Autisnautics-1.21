@@ -301,6 +301,11 @@ ServerEvents.tags("item", event => {
         .add("projectred_exploration:basalt")
         .add("projectred_exploration:basalt_brick")
         .add("projectred_exploration:basalt_cobble")
+        
+    // 1.21 chapter 2c: coke cakes stand up
+    event.get("create:upright_on_belt")
+        .add("kubejs:coke_cake")
+        .add("kubejs:incomplete_coke_cake")
 })
 
 ServerEvents.tags("block", event => {
