@@ -30,26 +30,6 @@ ServerEvents.recipes(event => {
                     }
                 ]
             })
-            event.custom({
-                "type": "create:casting",
-                "cooling_duration": 300,
-                "ingredients": [
-                    {
-                        "item": moldItem
-                    },
-                    {
-                        "type": "neoforge:tag",
-                        "amount": mb,
-                        "tag": "c:molten_brass"
-                    }
-                ],
-                "processing_time": 100,
-                "results": [
-                    {
-                        "id": output
-                    }
-                ]
-            })
         })
     }
     pulpCast(500, "sheet", "create:cardboard")

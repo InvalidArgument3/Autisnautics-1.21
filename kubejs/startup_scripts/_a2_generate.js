@@ -10,6 +10,8 @@ StartupEvents.registry("item", event => {
     // Chapter 1: saw blade and drill head
     event.create("saw_blade").texture("a2:item/saw_blade").displayName("Saw Blade")
     event.create("drill_head").texture("a2:item/drill_head").displayName("Drill Head")
+    // Chapter 2c: coke cake, IE compatibility
+    event.create("coke_cake").texture("a2:item/coke_cake").displayName("Coke Cake")
 })
 
 StartupEvents.registry("fluid", event => {

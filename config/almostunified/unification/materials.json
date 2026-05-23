@@ -1,14 +1,43 @@
 {
-  "mod_priorities": [],
-  "priority_overrides": {},
+  "mod_priorities": [
+    "minecraft",
+    "kubejs",
+    
+    "create",
+    
+    "powergrid",
+	"createdeco",
+    "createaddition",
+    "immersiveengineering",
+    "ae2",
+    "nuclearcraft",
+    
+    "occultism",
+    "tfmg",
+    "mekanism",
+    "chemlib",
+    "biggerreactors",
+    "silentgear",
+    "botania",
+    "pneumaticcraft",
+    "scguns",
+    "embers",
+    
+    "magistuarmory",
+    "createbigcannons", 
+    "stellaris"
+  ],
+  "priority_overrides": {"c:ores/lithium":"nuclearcraft", "c:ores/uranium":"nuclearcraft", "c:dusts/ender_pearl":"ae2", "c:dusts/ender":"ae2", "c:nuggets/steel": "createbigcannons"},
   "stone_variants": [
     "stone",
+    "nether",
     "andesite",
     "deepslate",
     "diorite",
     "granite",
     "netherrack",
-    "end_stone"
+    "end_stone",
+    "limestone"
   ],
   "tags": [
     "c:dusts/{material}",
@@ -25,7 +54,7 @@
     "c:wires/{material}"
   ],
   "ignored_tags": [],
-  "ignored_items": [],
+  "ignored_items": ["alexscaves:uranium"],
   "ignored_recipe_types": [
     "cucumber:shaped_tag"
   ],

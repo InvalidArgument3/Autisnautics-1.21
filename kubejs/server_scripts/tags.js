@@ -432,7 +432,11 @@ ServerEvents.tags("fluid", event => {
     event.remove("minecraft:water", "createaddition:flowing_seed_oil")
     event.remove("minecraft:water", "createaddition:bioethanol")
     event.remove("minecraft:water", "createaddition:flowing_bioethanol")
-
+    
+    // 1.21: liquid pulp as a tag
+    event.add("kubejs:liquid_pulp", "kubejs:liquid_pulp")
+    
+    /*
     // event.add("kubejs:liquid_plastic", "tfmg:liquid_plastic")
     // ^ deprecated, fluid tag was required for NC recipe
 
@@ -445,7 +449,9 @@ ServerEvents.tags("fluid", event => {
     event.add("forge:liquid_plastic", "kubejs:liquid_plastic")
     event.add("forge:molten_plastic", "kubejs:liquid_plastic")
     event.add("forge:plastic", "kubejs:liquid_plastic")
+    
 
     // creosote tagging
     // event.add("forge:creosote", "tfmg:creosote")
+    */
 })

@@ -19,28 +19,30 @@ ServerEvents.recipes(event => {
     event.recipes.create.cutting(Item.of("cuisinedelight:plate", 8), Ingredient.of("#minecraft:wooden_slabs")).processingTime(150).id(`kubejs:cutting/wooden_slab_to_plates`)
     event.remove({ id: "powergrid:cutting/empty_circuit_slabs" })
     // createbigcannons: all moulds are sawed from logs in one recipe, which has been widely regarded as a bad move
-    let mouldTypes = ["very_small", "small", "medium", "large", "very_large", "cannon_end", "sliding_breech", "screw_breech", "autocannon_breech", "autocannon_recoil_spring", "autocannon_barrel"]
-    let removeMould = (type) => {
-        let originalMould = "createbigcannons:" + type + "_cast_mould"
-        // if (Item.exists(originalMould)) {
-        event.remove({ output: originalMould })
-        // }
+    if (Platform.isLoaded("createbigcannons")) {
+        let mouldTypes = ["very_small", "small", "medium", "large", "very_large", "cannon_end", "sliding_breech", "screw_breech", "autocannon_breech", "autocannon_recoil_spring", "autocannon_barrel"]
+        let removeMould = (type) => {
+            let originalMould = "createbigcannons:" + type + "_cast_mould"
+            // if (Item.exists(originalMould)) {
+            event.remove({ output: originalMould })
+            // }
+        }
+        mouldTypes.forEach(removeMould)
+        // all moulds now start from the very large cast mould, by deploying a chisel on any log
+        event.recipes.create.deploying("createbigcannons:very_large_cast_mould", [Ingredient.of("#minecraft:logs"), Ingredient.of("#forge:chisels")])
+        // smaller moulds are made by chiseling the very large mould down smaller and smaller
+        event.recipes.create.deploying("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", Ingredient.of("#forge:chisels")])
+        event.recipes.create.deploying("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", Ingredient.of("#forge:chisels")])
+        // the other moulds branch off from the generic ones by chiseling or hammering
+        event.recipes.create.deploying("createbigcannons:sliding_breech_cast_mould", ["createbigcannons:large_cast_mould", "createdieselgenerators:hammer"])
+        event.recipes.create.deploying("createbigcannons:cannon_end_cast_mould", ["createbigcannons:medium_cast_mould", "createdieselgenerators:hammer"])
+        event.recipes.create.deploying("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", Ingredient.of("#forge:chisels")])
     }
-    mouldTypes.forEach(removeMould)
-    // all moulds now start from the very large cast mould, by deploying a chisel on any log
-    event.recipes.create.deploying("createbigcannons:very_large_cast_mould", [Ingredient.of("#minecraft:logs"), Ingredient.of("#forge:chisels")])
-    // smaller moulds are made by chiseling the very large mould down smaller and smaller
-    event.recipes.create.deploying("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", Ingredient.of("#forge:chisels")])
-    event.recipes.create.deploying("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", Ingredient.of("#forge:chisels")])
-    // the other moulds branch off from the generic ones by chiseling or hammering
-    event.recipes.create.deploying("createbigcannons:sliding_breech_cast_mould", ["createbigcannons:large_cast_mould", "createdieselgenerators:hammer"])
-    event.recipes.create.deploying("createbigcannons:cannon_end_cast_mould", ["createbigcannons:medium_cast_mould", "createdieselgenerators:hammer"])
-    event.recipes.create.deploying("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", Ingredient.of("#forge:chisels")])
     // - Compat recipes
     event.recipes.create.cutting(Item.of("quark:ancient_planks_slab", 2), Ingredient.of("quark:ancient_planks")).processingTime(150)
     event.recipes.create.cutting(Item.of("quark:azalea_planks_slab", 2), Ingredient.of("quark:azalea_planks")).processingTime(150)
