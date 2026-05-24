@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
 
     // -- Powergrid Conductive Casing = Zinc Casing
     event.remove({ output: "powergrid:conductive_casing"})
-    event.shapeless(Item.of("powergrid:conductive_casing", 2), ["create:zinc_ingot", "minecraft:stone"])
+    event.shapeless(Item.of("powergrid:conductive_casing", 2), [Ingredient.of("#c:plates/zinc"), "minecraft:stone"])
 
     // -- Zinc Machine
     donutCraft(event, "kubejs:zinc_machine", "powergrid:conductive_casing", "kubejs:infernal_mechanism")

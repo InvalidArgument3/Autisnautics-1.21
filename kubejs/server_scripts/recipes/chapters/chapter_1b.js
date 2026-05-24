@@ -31,7 +31,8 @@ ServerEvents.recipes(event => {
     event.remove({ output: "numismatics:banking_guide" })
     event.shapeless("numismatics:banking_guide", ["numismatics:cog", "minecraft:paper"])
     // - Sturdy casing: give a separate recipe so it's a cosmetic block
-    event.recipes.create.haunting("blazinghot:sturdy_casing", "create:railway_casing")
+    //event.recipes.create.haunting("blazinghot:sturdy_casing", "create:railway_casing")
+    // repurposed as Steel Casing
     // Might as well get the blaze casing and mixer while we're at it
     event.remove({ id: /blazinghot:.*blaze_casing.*/ })
     event.remove({ output: "blazinghot:blaze_whisk" })

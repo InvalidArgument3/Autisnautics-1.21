@@ -21,7 +21,7 @@ ItemEvents.modifyTooltips(tooltip => {
     holds("gold", 9 * 9);
     */
 
-    tooltip.add("blazinghot:sturdy_casing", Text.darkGray("Cosmetic").italic());
+    // tooltip.add("blazinghot:sturdy_casing", Text.darkGray("Cosmetic").italic());
     tooltip.add("blazinghot:blaze_casing", Text.darkGray("Cosmetic").italic());
 
     main_assembly("kubejs:kinetic_mechanism", "1");
