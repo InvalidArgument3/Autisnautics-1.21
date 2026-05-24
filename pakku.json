@@ -103,7 +103,9 @@
         },
         "teamsoffliner": {
             "side": "CLIENT"
+        },
+        "sodium": {
+            "update_strategy": "NONE"
         }
-    },
-    "export_server_side_projects_to_client": true
+    }
 }

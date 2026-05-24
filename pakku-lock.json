@@ -16840,6 +16840,7 @@
                 "curseforge": "394468",
                 "modrinth": "AANobbMI"
             },
+            "update_strategy": "NONE",
             "files": [
                 {
                     "type": "modrinth",
@@ -20581,6 +20582,42 @@
                     "required_dependencies": [],
                     "size": 54641,
                     "date_published": "2025-01-08T23:00:04.028518Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "F9uMpxqh6L7GvSKN",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "create-aeronauticstoolgun"
+            },
+            "name": {
+                "curseforge": "create aeronautics：toolgun"
+            },
+            "id": {
+                "curseforge": "1521349"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_aeronautics_toolgun-0.1.8.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8114/780/create_aeronautics_toolgun-0.1.8.jar",
+                    "id": "8114780",
+                    "parent_id": "1521349",
+                    "hashes": {
+                        "sha1": "bf749ff22906edc0692ba5e27cf7b5438609ee67",
+                        "md5": "63ed42f718838af5ee6ace7c1ad30e41"
+                    },
+                    "required_dependencies": [],
+                    "size": 765451,
+                    "date_published": "2026-05-19T17:14:09.640Z"
                 }
             ]
         },
