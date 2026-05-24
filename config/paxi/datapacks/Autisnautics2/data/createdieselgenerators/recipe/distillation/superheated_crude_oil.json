@@ -1,0 +1,26 @@
+{
+    "type": "createdieselgenerators:distillation",
+    "ingredients": [
+        {
+        "type": "fluid_tag",
+        "fluid_tag": "c:crude_oil",
+        "amount": 80
+        }
+    ],
+    "heat_requirement": "superheated",
+    "processing_time": 40,
+    "results": [
+        {
+        "id": "createdieselgenerators:diesel",
+        "amount": 60
+        },
+        {
+        "id": "createdieselgenerators:gasoline",
+        "amount": 30
+        },
+        {
+        "id": "immersivepetroleum:lubricant",
+        "amount": 10
+        }
+    ]
+}
