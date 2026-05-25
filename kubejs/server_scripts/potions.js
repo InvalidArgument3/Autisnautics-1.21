@@ -9,8 +9,8 @@ if (typeof MoreJS !== "undefined" && MoreJS.registerPotionBrewing) {
         // apothic_attributes, galosphere
         // event.removePotionBrewing({ output: /.*haste$/ });
         event.addPotionBrewing(Ingredient.of("minecraft:glow_berries"), "minecraft:awkward", "alexscaves:haste");
-        event.addPotionBrewing(Ingredient.of("minecraft:redstone"), "kubejs:haste", "alexscaves:long_haste");
-        event.addPotionBrewing(Ingredient.of("minecraft:glowstone_dust"), "kubejs:haste", "alexscaves:strong_haste");
+        event.addPotionBrewing(Ingredient.of("minecraft:redstone"), "alexscaves:haste", "alexscaves:long_haste");
+        event.addPotionBrewing(Ingredient.of("minecraft:glowstone_dust"), "alexscaves:haste", "alexscaves:strong_haste");
 
         // New Potion of Glowing recipe: brewing Glow Lichen in an Awkward Potion.
         event.addPotionBrewing(Ingredient.of("minecraft:glow_lichen"), "minecraft:awkward", "alexscaves:glowing")

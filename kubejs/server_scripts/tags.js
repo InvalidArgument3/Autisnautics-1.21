@@ -442,21 +442,17 @@ ServerEvents.tags("fluid", event => {
     event.add("kubejs:liquid_pulp", "kubejs:liquid_pulp")
     
     /*
-    // event.add("kubejs:liquid_plastic", "tfmg:liquid_plastic")
-    // ^ deprecated, fluid tag was required for NC recipe
-
     // kubejs molten anthralite
     event.add("forge:molten_anthralite", "kubejs:molten_anthralite")
     event.add("forge:anthralite", "kubejs:molten_anthralite")
     event.add("tconstruct:molten_anthralite", "kubejs:molten_anthralite")
-
-    // kubejs liquid plastic
-    event.add("forge:liquid_plastic", "kubejs:liquid_plastic")
-    event.add("forge:molten_plastic", "kubejs:liquid_plastic")
-    event.add("forge:plastic", "kubejs:liquid_plastic")
-    
-
-    // creosote tagging
-    // event.add("forge:creosote", "tfmg:creosote")
     */
+
+    // molten plastics tag
+    event.add("c:molten_plastic", "immersiveengineering:phenolic_resin")
+    event.add("c:molten_plastic", "nuclearcraftneohaul:phenol")
+    
+    // tagging IE fuels
+    event.add("c:diesel", "immersivepetroleum:diesel")
+    event.add("c:gasoline", "immersivepetroleum:gasoline")
 })
