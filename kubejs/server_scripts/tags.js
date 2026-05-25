@@ -301,7 +301,7 @@ ServerEvents.tags("item", event => {
         .add("projectred_exploration:basalt")
         .add("projectred_exploration:basalt_brick")
         .add("projectred_exploration:basalt_cobble")
-        
+
     // 1.21 chapter 2c: coke cakes stand up
     event.get("create:upright_on_belt")
         .add("kubejs:coke_cake")
@@ -437,10 +437,10 @@ ServerEvents.tags("fluid", event => {
     event.remove("minecraft:water", "createaddition:flowing_seed_oil")
     event.remove("minecraft:water", "createaddition:bioethanol")
     event.remove("minecraft:water", "createaddition:flowing_bioethanol")
-    
+
     // 1.21: liquid pulp as a tag
     event.add("kubejs:liquid_pulp", "kubejs:liquid_pulp")
-    
+
     /*
     // kubejs molten anthralite
     event.add("forge:molten_anthralite", "kubejs:molten_anthralite")
@@ -451,7 +451,7 @@ ServerEvents.tags("fluid", event => {
     // molten plastics tag
     event.add("c:molten_plastic", "immersiveengineering:phenolic_resin")
     event.add("c:molten_plastic", "nuclearcraftneohaul:phenol")
-    
+
     // tagging IE fuels
     event.add("c:diesel", "immersivepetroleum:diesel")
     event.add("c:gasoline", "immersivepetroleum:gasoline")
