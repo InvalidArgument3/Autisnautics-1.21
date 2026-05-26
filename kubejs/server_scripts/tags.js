@@ -306,6 +306,9 @@ ServerEvents.tags("item", event => {
     event.get("create:upright_on_belt")
         .add("kubejs:coke_cake")
         .add("kubejs:incomplete_coke_cake")
+        
+    // 1.21: oredict alexscaves:sulfur_dust
+    event.add("c:dusts/sulfur", "alexscaves:sulfur_dust")
 })
 
 ServerEvents.tags("block", event => {

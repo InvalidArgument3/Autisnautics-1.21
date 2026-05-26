@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
     tweak_casing("create:brass", ["create:brass_sheet", "#minecraft:logs"])
     // tweak_casing("kubejs:zinc", ["create:zinc_ingot", "minecraft:stone"]) // 1.21 removed
     tweak_casing("kubejs:lead", ["thermal:lead_plate", "minecraft:deepslate"])
-    tweak_casing("kubejs:invar", ["thermal:invar_ingot", "minecraft:stone"])
+    // tweak_casing("kubejs:invar", ["thermal:invar_ingot", "minecraft:stone"]) // 1.21 removed
     tweak_casing("kubejs:enderium", ["minecraft:ender_pearl", "minecraft:obsidian"])
     tweak_casing("kubejs:fluix", ["thermal:lead_plate", "minecraft:blackstone"])
     // tweak_casing('alloyed:steel', ["alloyed:steel_sheet", '#minecraft:logs'])

@@ -167,7 +167,7 @@ StartupEvents.registry("block", event => {
     event.create("enderium_casing").parentModel("cabin:block/enderium_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(4.0).displayName("Ender Casing")
     event.create("lead_casing").texture("cabin:block/lead_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Lead Casing")
     event.create("zinc_casing").texture("cabin:block/zinc_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Zinc Casing")
-    event.create("invar_casing").texture("cabin:block/invar_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Invar Casing")
+    event.create("constantan_casing").texture("cabin:block/constantan_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Constantan Casing")
     event.create("fluix_casing").texture("cabin:block/fluix_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Fluix Casing")
 
     event.create("computation_matrix").modelGenerator(model => { model.parent("cabin:block/computation_matrix") }).soundType("lantern").hardness(0.1).displayName("Computation Matrix").fullBlock(false).notSolid().box(1, 1, 1, 15, 15, 15).waterlogged().opaque(false).lightLevel(7).renderType("translucent")
@@ -201,6 +201,7 @@ StartupEvents.registry("block", event => {
     machine("Gold", "solid").tagBlock("mineable/axe").box(0, 0, 0, 16, 3, 16).box(0, 3, 0, 12, 16, 8).box(0, 3, 8, 10, 14, 16).box(12, 3, 1, 16, 10, 16)
     machine("Lead", "cutout").box(0, 0, 1, 16, 2, 15).box(1, 2, 7, 14, 14, 15).box(0, 2, 0, 7, 9, 12).box(10, 0, 8, 16, 11, 16).box(7.5, 14, 8.5, 12.5, 21, 13.5)
     machine("Steel", "cutout").box(0, 0, 0, 16, 2, 16).box(4, 2, 4, 14, 11, 14).box(1, 2, 5, 4, 9, 12)
+    machine("Constantan", "cutout")
     machine("Zinc", "cutout")
     machine("Enderium", "cutout")
 

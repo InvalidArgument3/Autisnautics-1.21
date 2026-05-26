@@ -124,8 +124,8 @@ let steelMachine = (event, outputIngredient, inputIngredient) => {
     return createMachine("kubejs:steel_machine", event, outputIngredient, inputIngredient)
 }
 
-let invarMachine = (event, outputIngredient, inputIngredient) => {
-    return createMachine("thermal:machine_frame", event, outputIngredient, inputIngredient)
+let constantanMachine = (event, outputIngredient, inputIngredient) => {
+    return createMachine("kubejs:constantan_machine", event, outputIngredient, inputIngredient)
 }
 
 let enderiumMachine = (event, outputIngredient, inputIngredient) => {
