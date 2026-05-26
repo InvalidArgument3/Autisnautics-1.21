@@ -3,12 +3,12 @@
 ServerEvents.recipes(event => {
     // --- Chapter 2c
     let transitional
-    
+
     // -- Obliterating biofuels and biofuel accessories
     // - Unifying #c:plantoil into immersiveengineering:plantoil
     event.remove({ id: "createaddition:compacting/seed_oil" })
     event.remove({ id: "createdieselgenerators:compacting/plant_oil" })
-    event.recipes.create.compacting(Fluid.of('immersiveengineering:plantoil', 100), [Ingredient.of("#c:seeds")]) //inferior to IE but simpler
+    event.recipes.create.compacting(Fluid.of('immersiveengineering:plantoil', 100), [Ingredient.of("#c:seeds")]) // inferior to IE but simpler
         .id("kubejs:compacting/plant_oil")
     // - Removing #c:ethanol as it's no longer required
     // createdieselgenerators
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "immersiveengineering:refinery/high_power_biodiesel" })
     event.remove({ id: "immersiveengineering:generator_fuel/biodiesel" })
     event.remove({ id: "immersiveengineering:generator_fuel/high_power_biodiesel" })
-    
+
     // -- Removing other unwanted fuels
     // - Stellaris
     // Crude Oil
@@ -71,9 +71,9 @@ ServerEvents.recipes(event => {
         "burn_time": 12000, // about the same rate as cdg burner on max
         "ingredients": [
             {
-            "type": "fluid_tag",
-            "amount": 1000,
-            "fluid_tag": "c:gasoline"
+                "type": "fluid_tag",
+                "amount": 1000,
+                "fluid_tag": "c:gasoline"
             }
         ],
         "results": [],
@@ -84,14 +84,14 @@ ServerEvents.recipes(event => {
         "burn_time": 12000,
         "ingredients": [
             {
-            "type": "fluid_tag",
-            "amount": 1000,
-            "fluid_tag": "c:diesel"
+                "type": "fluid_tag",
+                "amount": 1000,
+                "fluid_tag": "c:diesel"
             }
         ],
         "results": []
     })
-    
+
     // -- Removing unwanted generators
     // - simulated: portable_engine is hardcoded to run on sticks
     event.remove({ id: "simulated:red_portable_engine" })
@@ -113,7 +113,7 @@ ServerEvents.recipes(event => {
     // - Create Connected Kinetic Battery: use electricity if you want to store power
     event.remove({ id: "create_connected:kinetic_battery" })
     // NC decay generator is fine, requires rare mats and the output is pathetic
-    
+
     // -- Superheated-tier Fuel Production
     // - Blaze Cake/Blaze Roll
     // no more easy automated lava without superheating, to encourage other solutions
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:coke_cake")
-        
+
     event.recipes.create.sequenced_assembly([
         "kubejs:coke_cake",
     ], "create:blaze_cake_base", [
@@ -170,7 +170,7 @@ ServerEvents.recipes(event => {
     }).id("kubejs:blastfurnace/fuel_coke_cake")
     // Coke Cake as Blaze Burner fuel (1600t/half of blaze cake)
     // added as datapack: create\data_maps\item\superheated_blaze_burner_fuels.json
-    
+
     // -- Steel
     // - Remove unwanted recipes
     // magistuarmory
@@ -196,8 +196,8 @@ ServerEvents.recipes(event => {
         event.custom({
             "type": "createdieselgenerators:compression_molding",
             "ingredients": [
-                { "item": "magistuarmory:steel_ring" }, 
-                { "item": "magistuarmory:steel_ring" }, 
+                { "item": "magistuarmory:steel_ring" },
+                { "item": "magistuarmory:steel_ring" },
                 { "item": "magistuarmory:steel_ring" }
             ],
             "mold": "createdieselgenerators:chain",
@@ -211,7 +211,7 @@ ServerEvents.recipes(event => {
             "type": "farmersdelight:cutting",
             "ingredients": [
                 {
-                "tag": "c:leathers"
+                    "tag": "c:leathers"
                 }
             ],
             "result": [
@@ -236,18 +236,18 @@ ServerEvents.recipes(event => {
             "type": "nuclearcraftneohaul:melter_recipe",
             "fluidProducts": [
                 {
-                "amount": amount,
-                "ingredient": {
-                    "fluid": "createbigcannons:molten_steel"
-                }
+                    "amount": amount,
+                    "ingredient": {
+                        "fluid": "createbigcannons:molten_steel"
+                    }
                 }
             ],
             "itemIngredients": [
                 {
-                "count": 1,
-                "ingredient": {
-                    "tag": ingredientTag
-                }
+                    "count": 1,
+                    "ingredient": {
+                        "tag": ingredientTag
+                    }
                 }
             ],
             "powerModifier": 1.0,
@@ -258,31 +258,31 @@ ServerEvents.recipes(event => {
         ncMelter("c:dusts/steel", 90)
         ncMelter("c:nuggets/steel", 10)
         ncMelter("c:storage_blocks/steel", 810)
-        
+
         event.remove({ id: "nuclearcraftneohaul:fluid_mixer/ferroboron_from_steel_boron" })
         event.custom({
             "type": "nuclearcraftneohaul:salt_mixer_recipe",
             "fluidIngredients": [
-            {
-                "amount": 45,
-                "ingredient": {
-                "fluid": "createbigcannons:molten_steel"
+                {
+                    "amount": 45,
+                    "ingredient": {
+                        "fluid": "createbigcannons:molten_steel"
+                    }
+                },
+                {
+                    "amount": 45,
+                    "ingredient": {
+                        "fluid": "nuclearcraftneohaul:boron"
+                    }
                 }
-            },
-            {
-                "amount": 45,
-                "ingredient": {
-                "fluid": "nuclearcraftneohaul:boron"
-                }
-            }
             ],
             "fluidProducts": [
-            {
-                "amount": 90,
-                "ingredient": {
-                "fluid": "nuclearcraftneohaul:ferroboron"
+                {
+                    "amount": 90,
+                    "ingredient": {
+                        "fluid": "nuclearcraftneohaul:ferroboron"
+                    }
                 }
-            }
             ],
             "powerModifier": 1.0,
             "radiation": 0.0,
@@ -291,7 +291,7 @@ ServerEvents.recipes(event => {
     }
     // Stellaris: """"steel ore""""
     let steelOres = ["stellaris:raw_steel_ingot", "stellaris:steel_ore", "stellaris:deepslate_steel_ore", "stellaris:raw_steel_block", "stellaris:moon_steel_ore",
-                     Ingredient.of("#c:ores/steel"), Ingredient.of("#c:raw_materials/steel"), Ingredient.of("#c:storage_blocks/raw_steel")]
+        Ingredient.of("#c:ores/steel"), Ingredient.of("#c:raw_materials/steel"), Ingredient.of("#c:storage_blocks/raw_steel")]
     steelOres.forEach(i => {
         event.remove({ input: i })
         event.remove({ output: i })
@@ -299,53 +299,53 @@ ServerEvents.recipes(event => {
     // todo: completely obliterate these from existence
     event.remove({id: /stellaris:misc\/steel_ingot_from.*/})
     event.remove({id: /jaopca:immersiveengineering.*steel/})
-    
+
     // - New recipes
     // Superheated Mixing - produces createbigcannons:molten_steel
     event.recipes.create.mixing(Fluid.of("createbigcannons:molten_steel", 90), [Ingredient.of("#c:ingots/iron"), "minecraft:coal"]).superheated()
-    event.recipes.create.mixing(Fluid.of("createbigcannons:molten_steel", 10), 
-                                [Fluid.sizedIngredientOf("blazinghot:molten_iron", 10), 
-                                Fluid.sizedIngredientOf("nuclearcraftneohaul:coal", 10)]).superheated()
+    event.recipes.create.mixing(Fluid.of("createbigcannons:molten_steel", 10),
+        [Fluid.sizedIngredientOf("blazinghot:molten_iron", 10),
+            Fluid.sizedIngredientOf("nuclearcraftneohaul:coal", 10)]).superheated()
     // Nuclearcraft recipes: fully electrified
     // Alloy Furnace
     event.custom({
         "type": "nuclearcraftneohaul:alloy_furnace_recipe",
         "itemIngredients": [
             {
-            "count": 1,
-            "ingredient": [
-                {
-                "tag": "c:dusts/iron"
-                },
-                {
-                "tag": "c:ingots/iron"
-                }
-            ]
+                "count": 1,
+                "ingredient": [
+                    {
+                        "tag": "c:dusts/iron"
+                    },
+                    {
+                        "tag": "c:ingots/iron"
+                    }
+                ]
             },
             {
-            "count": 2,
-            "ingredient": [
-                {
-                "tag": "c:dusts/coal"
-                },
-                {
-                "tag": "c:dusts/graphite"
-                },
-                {
-                "tag": "c:ingots/graphite"
-                },
-                {
-                "item": "minecraft:coal"
-                }
-            ]
+                "count": 2,
+                "ingredient": [
+                    {
+                        "tag": "c:dusts/coal"
+                    },
+                    {
+                        "tag": "c:dusts/graphite"
+                    },
+                    {
+                        "tag": "c:ingots/graphite"
+                    },
+                    {
+                        "item": "minecraft:coal"
+                    }
+                ]
             }
         ],
         "itemProducts": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "immersiveengineering:ingot_steel"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "immersiveengineering:ingot_steel"
+                }
             }
         ],
         "powerModifier": 10.0,
@@ -354,39 +354,39 @@ ServerEvents.recipes(event => {
     })
     // Fluid Mixer
     event.custom({
-            "type": "nuclearcraftneohaul:salt_mixer_recipe",
-            "fluidIngredients": [
+        "type": "nuclearcraftneohaul:salt_mixer_recipe",
+        "fluidIngredients": [
             {
                 "amount": 90,
                 "ingredient": {
-                "fluid": "blazinghot:molten_iron"
+                    "fluid": "blazinghot:molten_iron"
                 }
             },
             {
                 "amount": 90,
                 "ingredient": {
-                "fluid": "nuclearcraftneohaul:coal"
+                    "fluid": "nuclearcraftneohaul:coal"
                 }
             }
-            ],
-            "fluidProducts": [
+        ],
+        "fluidProducts": [
             {
                 "amount": 90,
                 "ingredient": {
-                "fluid": "createbigcannons:molten_steel"
+                    "fluid": "createbigcannons:molten_steel"
                 }
             }
-            ],
-            "powerModifier": 10.0,
-            "radiation": 0.0,
-            "timeModifier": 1.0
+        ],
+        "powerModifier": 10.0,
+        "radiation": 0.0,
+        "timeModifier": 1.0
     })
-    
+
     // -- Mechanism Lubrication: Plant Oil or petroleum Lubricant
     // - Seed Oil/Plant Oil: unified above
     // - Replaced Create Diesel Generators Refining recipes to add Lubricant byproduct in datapack (fluid tag problems)
     // event.remove({ id: /createdieselgenerators:distillation.*/ })
-    
+
     // -- Refined Mechanisms
     transitional = "kubejs:incomplete_refined_mechanism"
     event.recipes.create.sequenced_assembly([
@@ -400,7 +400,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:refined_mechanism")
-    
+
     event.recipes.create.sequenced_assembly([
         "kubejs:refined_mechanism",
     ], "create:precision_mechanism", [
@@ -412,10 +412,10 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:refined_mechanism_vegan")
-    
+
     // -- Steel Casing (blazinghot:sturdy_casing retexture?)
     event.shapeless(Item.of("blazinghot:sturdy_casing", 2), [Ingredient.of("#c:plates/steel"), "minecraft:deepslate"])
-    
+
     // -- Steel Machine
     donutCraft(event, "kubejs:steel_machine", "blazinghot:sturdy_casing", "kubejs:refined_mechanism")
     // - Usages
@@ -439,7 +439,7 @@ ServerEvents.recipes(event => {
     steelMachine(event, Item.of("immersiveengineering:resonanz_engineering", 1), "minecraft:echo_shard")
     steelMachine(event, Item.of("immersiveengineering:generator", 1), "immersiveengineering:coil_mv")
     steelMachine(event, Item.of("immersiveengineering:radiator", 1), Ingredient.of("#c:plates/constantan"))
-    
+
     // -- Plastics
     // - Plastic Production
     // Making Nuclearcraft Phenol by heated mixing CDG gasoline with a catalyst
@@ -453,26 +453,26 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:infuser_recipe",
         "fluidIngredients": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "nuclearcraftneohaul:radaway"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:radaway"
+                }
             }
         ],
         "itemIngredients": [
             {
-            "count": 2,
-            "ingredient": {
-                "tag": "c:plates/plastic"
-            }
+                "count": 2,
+                "ingredient": {
+                    "tag": "c:plates/plastic"
+                }
             }
         ],
         "itemProducts": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:radaway"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:radaway"
+                }
             }
         ],
         "powerModifier": 0.5,
@@ -483,26 +483,26 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:infuser_recipe",
         "fluidIngredients": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "nuclearcraftneohaul:radaway_slow"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:radaway_slow"
+                }
             }
         ],
         "itemIngredients": [
             {
-            "count": 2,
-            "ingredient": {
-                "tag": "c:plates/plastic"
-            }
+                "count": 2,
+                "ingredient": {
+                    "tag": "c:plates/plastic"
+                }
             }
         ],
         "itemProducts": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:radaway_slow"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:radaway_slow"
+                }
             }
         ],
         "powerModifier": 0.5,
@@ -513,20 +513,20 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "nuclearcraftneohaul:ingot_former_recipe",
         "fluidIngredients": [
-        {
-            "amount": 250,
-            "ingredient": {
-            "fluid": "nuclearcraftneohaul:phenol"
+            {
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:phenol"
+                }
             }
-        }
         ],
         "itemProducts": [
-        {
-            "count": 1,
-            "ingredient": {
-            "item": "immersiveengineering:plate_duroplast"
+            {
+                "count": 1,
+                "ingredient": {
+                    "item": "immersiveengineering:plate_duroplast"
+                }
             }
-        }
         ],
         "powerModifier": 1.0,
         "radiation": 0.0,
@@ -541,19 +541,19 @@ ServerEvents.recipes(event => {
         "cooling_duration": 150,
         "ingredients": [
             {
-            "item": "blazinghot:sturdy_sheet_mold"
+                "item": "blazinghot:sturdy_sheet_mold"
             },
             {
-            "type": "neoforge:tag",
-            "amount": 250,
-            "tag": "c:molten_plastic"
+                "type": "neoforge:tag",
+                "amount": 250,
+                "tag": "c:molten_plastic"
             }
         ],
         "keep_mold": true,
         "processing_time": 50,
         "results": [
             {
-            "id": "immersiveengineering:plate_duroplast"
+                "id": "immersiveengineering:plate_duroplast"
             }
         ]
     })
@@ -562,22 +562,22 @@ ServerEvents.recipes(event => {
         "cooling_duration": 150,
         "ingredients": [
             {
-            "item": "blazinghot:porcelain_sheet_mold"
+                "item": "blazinghot:porcelain_sheet_mold"
             },
             {
-            "type": "neoforge:tag",
-            "amount": 250,
-            "tag": "c:molten_plastic"
+                "type": "neoforge:tag",
+                "amount": 250,
+                "tag": "c:molten_plastic"
             }
         ],
         "processing_time": 50,
         "results": [
             {
-            "id": "immersiveengineering:plate_duroplast"
+                "id": "immersiveengineering:plate_duroplast"
             }
         ]
     })
-    
+
     // - Plastic Uses
     // createaddition:straw - lets any blaze burner sip oil. paper straws are BANNED
     event.remove({ id: "create:rolling/paper" })
@@ -586,19 +586,19 @@ ServerEvents.recipes(event => {
         "type": "createaddition:rolling",
         "ingredients": [
             {
-            "item": "immersiveengineering:plate_duroplast"
+                "item": "immersiveengineering:plate_duroplast"
             }
         ],
         "results": [
             {
-            "id": "createaddition:straw"
+                "id": "createaddition:straw"
             }
         ]
     })
     // create fluid pipes and tanks
     event.shapeless(Item.of("create:fluid_pipe", 4), ["immersiveengineering:plate_duroplast", "immersiveengineering:plate_duroplast", "immersiveengineering:plate_duroplast", "minecraft:orange_dye"])
     donutCraft(event, "create:fluid_tank", "immersiveengineering:plate_duroplast", "minecraft:orange_dye")
-    
+
     // - todo more Plastic Uses
     // synthetics: string, leather, paper, bottles and jars, light bulbs, spools, insulated wires, barrels, glass(?)
 })
