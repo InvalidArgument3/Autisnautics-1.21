@@ -106,8 +106,6 @@ ServerEvents.recipes(event => {
     event.remove({ output: "immersiveengineering:thermoelectric_generator"})
     // portable generator: removed for now, charge a battery for small mobile RF
     event.remove({ output: "immersivepetroleum:gas_generator"})
-    // while we're at it
-    event.remove({ output: "immersiveengineering:cloche"})
     // - Stellaris: not needed for now
     event.remove({ id: /stellaris:misc\/.*generator/})
     // - Create Connected Kinetic Battery: use electricity if you want to store power

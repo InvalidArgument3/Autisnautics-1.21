@@ -230,8 +230,24 @@ ServerEvents.recipes(event => {
     // -- Constantan Machines
     donutCraft(event, "kubejs:constantan_machine", "kubejs:constantan_casing", "kubejs:inductive_mechanism")
     // - Usages
-    // Nuclearcraft
-    // todo
+    // Nuclearcraft - one-block replacements for other machines using RF
+    constantanMachine(event, Item.of("nuclearcraftneohaul:electric_furnace", 1), "minecraft:furnace") // smelting/bulk blasting
+    constantanMachine(event, Item.of("nuclearcraftneohaul:alloy_furnace", 1), "minecraft:blast_furnace") // alloying without melting, arc furnace equivalent
+    constantanMachine(event, Item.of("nuclearcraftneohaul:manufactory", 1), "create:mechanical_arm") // milling/sawing/misc
+    constantanMachine(event, Item.of("nuclearcraftneohaul:melter", 1), "create:blaze_burner") // melting
+    constantanMachine(event, Item.of("nuclearcraftneohaul:ingot_former", 1), "blazinghot:casting_depot") // casting
+    constantanMachine(event, Item.of("nuclearcraftneohaul:rock_crusher", 1), "create:crushing_wheel") // crushing wheel
+    constantanMachine(event, Item.of("nuclearcraftneohaul:assembler", 1), "minecraft:crafter") // mechanical crafting, but only in some cases (simple recipes, 4 ingredients max)
+    constantanMachine(event, Item.of("nuclearcraftneohaul:crystallizer", 1), "create:item_drain") // turning fluids directly into dust, or maybe precipitating byproducts only?
+    constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_extractor", 1), "minecraft:brewing_stand") // mostly useless, repurpose for alchemy experiments
+    constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_mixer", 1), "create:mechanical_mixer") // mixing fluids, esp. for alloys
+    
+    // Immersive Engineering
+    constantanMachine(event, Item.of("immersiveengineering:cloche", 1), "powergrid:growth_lamp") // cl*che as a replacement for lost thermal phytogenic insolator
+    constantanMachine(event, Item.of("immersiveengineering:fluid_pump", 1), "create:mechanical_pump") // RF pump
+    
+    // Stellaris
+    constantanMachine(event, Item.of("stellaris:water_pump", 1), Ingredient.of("#create:valve_handles")) // high performance RF pump, but only for water
 })
 
 
@@ -239,7 +255,7 @@ ServerEvents.recipes(event => {
 const CreateAllDataComponents = Java.loadClass('com.simibubi.create.AllDataComponents')
 
 EntityEvents.spawned(event => {
-    if (event.entity.item.get(CreateAllDataComponents.CHROMATIC_COMPOUND_COLLECTING_LIGHT) >= 1) {
+    if (event.entity.item && event.entity.item.get(CreateAllDataComponents.CHROMATIC_COMPOUND_COLLECTING_LIGHT) >= 1) {
         if (event.entity.item.getCustomData().getInt("kubejsLight")) {
             let data = event.entity.item.getCustomData()
             let light = data.getInt("kubejsLight")

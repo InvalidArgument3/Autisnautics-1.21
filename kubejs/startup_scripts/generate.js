@@ -369,9 +369,9 @@ StartupEvents.registry("block", event => {
     substrateblock(0x9FADB4, 0xBECCD2, "substrate_silver", "Silver Reagent", "cabin:block/substrate")
         .item(item => item.rarity("rare"))
 
-    acceleratorBlock(0xFFBC5E, "accellerator_glowstone", "Glowstone Accelerator", "cabin:block/accellerator")
+    acceleratorBlock(0xFFBC5E, "accelerator_glowstone", "Glowstone Accelerator", "cabin:block/accellerator")
 
-    acceleratorBlock(0xAA0F01, "accellerator_redstone", "Redstone Accelerator", "cabin:block/accellerator")
+    acceleratorBlock(0xAA0F01, "accelerator_redstone", "Redstone Accelerator", "cabin:block/accellerator")
 })
 
 StartupEvents.registry("fluid", event => {
