@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
 
     // opening a jar with a screwdriver
     event.recipes.create.item_application([incJar, "minecraft:oak_slab"], ["supplementaries:jar", "immersiveengineering:screwdriver"]).keepHeldItem()
-    
+
     // putting the lid back on an empty jar
     event.recipes.create.item_application("supplementaries:jar", [incJar, Ingredient.of("#minecraft:wooden_slabs")])
 
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
                 ]).transitionalItem(incJar)
         })
     })
-    
+
     // Accelerators
     event.recipes.create.sequenced_assembly(
         ["kubejs:accelerator_redstone"],
@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying(incJar, [incJar, Item.of("minecraft:redstone_block")]),
             event.recipes.create.deploying(incJar, [incJar, Ingredient.of("#minecraft:wooden_slabs")]),
             event.recipes.create.pressing(incJar, [incJar])
-    ]).transitionalItem(incJar)
+        ]).transitionalItem(incJar)
     event.recipes.create.sequenced_assembly(
         ["kubejs:accelerator_glowstone"],
         incJar,
@@ -47,8 +47,8 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying(incJar, [incJar, Item.of("minecraft:glowstone")]),
             event.recipes.create.deploying(incJar, [incJar, Ingredient.of("#minecraft:wooden_slabs")]),
             event.recipes.create.pressing(incJar, [incJar])
-    ]).transitionalItem(incJar)
-    
+        ]).transitionalItem(incJar)
+
     // NC Fluid Extractor -> Reagent Extractor
     // Reagent Extraction
     let reagentExtract = (e, substrate, special) => {
@@ -56,27 +56,27 @@ ServerEvents.recipes(event => {
             "type": "nuclearcraftneohaul:extractor_recipe",
             "itemIngredients": [
                 {
-                "count": 1,
-                "ingredient": {
-                    "item": substrate.id
-                }
+                    "count": 1,
+                    "ingredient": {
+                        "item": substrate.id
+                    }
                 }
             ],
             "itemProducts": [
                 {
-                "chancePercent": special ? 100 : 75,
-                "count": 1,
-                "ingredient": {
-                    "item": special ? special : substrate.ingredient
-                }
+                    "chancePercent": special ? 100 : 75,
+                    "count": 1,
+                    "ingredient": {
+                        "item": special ? special : substrate.ingredient
+                    }
                 }
             ],
             "fluidProducts": [
                 {
-                "amount": 75,
-                "ingredient": {
-                    "fluid": "nuclearcraftneohaul:corium" // temporary
-                }
+                    "amount": 75,
+                    "ingredient": {
+                        "fluid": "nuclearcraftneohaul:corium" // temporary
+                    }
                 }
             ],
             "powerModifier": 1.0,
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
             reagentExtract(event, s, null)
         })
     })
-    
+
     // Failed Alchemy Analysis in the Rock Crusher
     let failure = (id, outputs) => {
         let dustProducts = []
@@ -110,15 +110,15 @@ ServerEvents.recipes(event => {
         // testing 2 outputs
         if (outputs[2] > 0)
             dustProducts.push({ "count": outputs[2], "ingredient": { "item": "minecraft:glowstone_dust" } })
-        
+
         event.custom({
             "type": "nuclearcraftneohaul:rock_crusher_recipe",
             "itemIngredients": [
                 {
-                "count": 1,
-                "ingredient": {
-                    "item": `kubejs:failed_alchemy_${id}`
-                }
+                    "count": 1,
+                    "ingredient": {
+                        "item": `kubejs:failed_alchemy_${id}`
+                    }
                 }
             ],
             "itemProducts": dustProducts,
@@ -127,7 +127,7 @@ ServerEvents.recipes(event => {
             "timeModifier": 15.0 // 5 minutes
         }).id(`kubejs:failed_alchemy_analysis/${id}`)
     }
-    
+
     for (let i = 0; i < 15; i++) {
         failure(i++, [4, 0, 0])
         failure(i++, [3, 1, 0])

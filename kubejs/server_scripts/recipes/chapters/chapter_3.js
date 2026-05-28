@@ -241,11 +241,11 @@ ServerEvents.recipes(event => {
     constantanMachine(event, Item.of("nuclearcraftneohaul:crystallizer", 1), "create:item_drain") // turning fluids directly into dust, or maybe precipitating byproducts only?
     constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_extractor", 1), "minecraft:brewing_stand") // mostly useless, repurpose for alchemy experiments
     constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_mixer", 1), "create:mechanical_mixer") // mixing fluids, esp. for alloys
-    
+
     // Immersive Engineering
     constantanMachine(event, Item.of("immersiveengineering:cloche", 1), "powergrid:growth_lamp") // cl*che as a replacement for lost thermal phytogenic insolator
     constantanMachine(event, Item.of("immersiveengineering:fluid_pump", 1), "create:mechanical_pump") // RF pump
-    
+
     // Stellaris
     constantanMachine(event, Item.of("stellaris:water_pump", 1), Ingredient.of("#create:valve_handles")) // high performance RF pump, but only for water
 })

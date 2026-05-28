@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
     colours.forEach(color => {
         event.shapeless("createdeco:" + color + "_shipping_container", ["minecraft:" + color + "_dye", "kubejs:lead_casing", Ingredient.of("#c:barrels/wooden")])
     })
-    
+
     // Create Enchantment Industry
     leadMachine(event, Item.of("create_enchantment_industry:printer", 1), "#c:storage_blocks/lapis")
 
