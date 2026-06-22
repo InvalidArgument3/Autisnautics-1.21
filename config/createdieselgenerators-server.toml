@@ -5,6 +5,10 @@
 	"Canister can be filled by spouts" = true
 	#Combustibles do boom boom when on fire
 	"Combustibles blow up" = true
+	#Minimum height of the Distillation Tower required to process recipes
+	# Default: 3
+	# Range: 2 ~ 7
+	"Distillation Tower Minimum Height" = 3
 
 	["Server Configs"."Diesel Engines"]
 		#Turbocharged Diesel Engine Speed Multiplier
@@ -21,6 +25,8 @@
 		"Engines filled with a bucket" = false
 		#Whenever Diesel Engines can be disabled with redstone
 		"Engines disabled with redstone" = true
+		#If Diesel Engines can be controlled with a analog lever.
+		"Engines controlled by analog lever" = true
 
 	["Server Configs"."Oil Config"]
 		"Infinite oil chunk threshold" = 10000000

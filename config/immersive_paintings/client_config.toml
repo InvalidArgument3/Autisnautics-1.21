@@ -2,6 +2,7 @@
 version = 0
 showOtherPlayersPaintings = true
 showNSFWPaintings = true
+nsfwBlurAmount = 0.25
 thumbnailSize = 128
 lodResolutionMinimum = 32
 halfResolutionThreshold = 4.0

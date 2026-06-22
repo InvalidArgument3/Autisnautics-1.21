@@ -1,4 +1,3 @@
-
 [general]
 	#The alternative names of this material.
 	alternativeNames = []
@@ -22,4 +21,3 @@
 [create]
 	#The default byproduct material to output in Create's crushing.
 	byproduct = "minecraft:cobblestone"
-

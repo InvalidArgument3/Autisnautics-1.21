@@ -1,0 +1,64 @@
+#Log per-namespace power counts after each data reload.
+#Useful for addon and datapack authors debugging load issues.
+debug_power_loading = false
+#Send in-game chat feedback when a compat power action resolves to no-op (unsupported action type).
+#Useful for pack authors debugging why their imported powers aren't working.
+debug_compat_actions = false
+#Diagnostic logging for the ability HUD cluster and flight-ability
+#syncing: logs hover-state changes on the cooldown cluster (client)
+#and every server-side grant/clear/accept of flight abilities.
+#One line per state change, not per tick. Leave off in normal play.
+debug_hud = false
+#Layers in which each origin can be claimed by only one player on the server.
+#List the layer IDs that should enforce uniqueness; layers not listed are unaffected.
+#Once a player picks an origin in a listed layer, no one else can pick that same
+#origin there. Claims are released only by /neoorigins unlock, an Orb of Origin
+#re-pick, or /neoorigins reset. Operators in creative mode — and /neoorigins set —
+#bypass the lock and take over the claim.
+#Format: list of layer IDs. Example: ["neoorigins:origin"]
+unique_origin_layers = []
+
+#Per-power dimension restrictions.
+#Powers listed here will be disabled when the player is in the specified dimension(s).
+#Format: "<power_id> = <dimension1>, <dimension2>, ..."
+#Example: "neoorigins:elytrian_flight = minecraft:the_nether, minecraft:the_end"
+[dimension_restrictions]
+	rules = []
+
+#Compat origin filtering.
+#Origins from addon mods are hidden if fewer than this fraction of their
+#powers loaded successfully. Set to 0.0 to show all origins regardless.
+#Default 0.5 = origins with <50% of powers working are hidden.
+[compat_filtering]
+	#Minimum ratio of loaded powers (0.0-1.0) for an addon origin to appear.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	min_power_ratio = 0.5
+
+#Command access tuning.
+[commands]
+	#Allow non-OP players to run /neoorigins get <player> to look up
+	#another player's origin. Operators (permission level 2) can always
+	#run it regardless of this setting. Set to false to make origins
+	#visible only to staff.
+	public_origin_get = true
+
+#Commands that NeoOrigins powers are NEVER allowed to run.
+#Applies to the command/execute_command actions, the raycast
+#command_along_ray and command_at_hit extensions, and the command
+#condition. A blocked command is refused and logged instead of run.
+#Match is case-insensitive on the command root; `execute ... run X`
+#is unwrapped so X is what gets checked. List the root only (no slash).
+[command_powers]
+	#Command roots forbidden from power execution.
+	command_power_blacklist = ["op", "deop", "ban", "ban-ip", "pardon", "pardon-ip", "kick", "whitelist", "stop", "save-all", "save-off", "save-on", "setidletimeout", "debug", "perf", "datapack", "reload"]
+
+#Global entity exclusions for taming and scare powers (tame_mob,
+#scare_entities, mobs_ignore_player). Listed entities can never be
+#tamed, scared, or made to ignore a player by any power. The Warden,
+#Ender Dragon and Wither are ALWAYS excluded and need not be listed.
+#Format: entity ids (e.g. "minecraft:elder_guardian") or entity-type
+#tags (e.g. "#mymod:untameable").
+[entity_exclusions]
+	#Entity ids / #tags excluded from all taming and scare powers.
+	tame_scare_entity_blacklist = []

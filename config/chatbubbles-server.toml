@@ -1,5 +1,5 @@
 [Permissions]
-	#If true, only OPs can change the color
+	#If true, only OPs can change their visual settings
 	only_ops_can_change = false
 
 ["General Settings"]
@@ -20,12 +20,12 @@
 	# Range: 0.0 ~ 10.0
 	bubble_spacing = 4.0
 	#Default value for the offset between the bubbles and player's head (WARNING: Players can change their offset in game)
-	# Default: 2.0
+	# Default: 3.0
 	# Range: 0.0 ~ 50.0
 	bubble_offset = 2.0
 
 ["Time Settings"]
 	#How long will a single bubble last? (In ticks)
-	# Default: 100
+	# Default: 500
 	# Range: 20 ~ 1200
 	bubble_lifetime = 100

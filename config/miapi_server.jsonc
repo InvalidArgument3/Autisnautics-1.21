@@ -159,6 +159,12 @@
         WARNING: some anvil reworking mods break the repairing logic. Please report those issues to us.
         */
         "full_break_modular_items": true,
+        /*
+        Sets Broken items to be unbreakable.
+        This might prevent other mods from fully accidentally deleting
+        Modular items, but makes them impossible to be anvil repaired.
+        */
+        "unbreakable_broken": false,
         // How much of a Modules Durability is used to repair the Item
 
         "repair_ratio": 1.0,

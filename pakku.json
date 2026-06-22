@@ -105,7 +105,7 @@
             "side": "CLIENT"
         },
         "sodium": {
-            "update_strategy": "NONE"
+            "update_strategy": "LATEST"
         }
     }
 }

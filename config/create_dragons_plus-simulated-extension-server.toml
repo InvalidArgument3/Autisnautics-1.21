@@ -63,3 +63,19 @@
 	#.
 	#Should Fragile Fluid Tank containing dye fluid color block when it breaks
 	fragileFluidTankDyeColorBlock = true
+	#.
+	#Should Fragile Fluid Tank containing explosive fluid explode when it breaks
+	fragileFluidTankExplosiveFluidExplosion = true
+	#.
+	#Should explosions from Fragile Fluid Tank containing explosive fluid cause fire
+	fragileFluidTankExplosiveFluidCausesFire = true
+	#.
+	#The explosion power of a Fragile Fluid Tank containing a very small amount of explosive fluid
+	# Default: 1.0
+	# Range: 0.0 ~ 128.0
+	fragileFluidTankExplosiveFluidMinPower = 1.0
+	#.
+	#The explosion power of a full Fragile Fluid Tank containing explosive fluid
+	# Default: 4.0
+	# Range: 0.0 ~ 128.0
+	fragileFluidTankExplosiveFluidMaxPower = 4.0

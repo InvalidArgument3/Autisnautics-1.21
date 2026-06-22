@@ -187,3 +187,6 @@ visual_keybinder
 
 # sable
 .sable
+
+# cache
+cache/*

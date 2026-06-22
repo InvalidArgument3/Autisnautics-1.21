@@ -22,8 +22,10 @@
     "url": "https://api.deepseek.com/chat/completions",
     "secret_key": "",
     "headers": {},
+    "has_thinking_field": true,
     "models": [
-      "deepseek-chat"
+      "deepseek-v4-flash",
+      "deepseek-v4-pro"
     ]
   },
   "doubao": {
@@ -34,6 +36,7 @@
     "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
     "secret_key": "",
     "headers": {},
+    "has_thinking_field": true,
     "models": [
       "doubao-1.5-pro-256k-250115",
       "doubao-1.5-pro-32k-250115",

@@ -189,10 +189,6 @@
 	AutoGenSettingEnabled = false
 	#LLM AI Proxy Address, such as 127.0.0.1:1080, empty is no proxy, SOCKS proxies are not supported
 	LLMProxyAddress = ""
-	#The maximum historical conversation length cached by the maid
-	# Default: 24
-	# Range: 1 ~ 128
-	MaidMaxHistoryLLMSize = 16
 	#The maximum tokens that a player can use
 	# Default: 2147483647
 	# Range: > 1
@@ -216,3 +212,7 @@
 	MaidCanChatDistance = 12
 	#STT Proxy Address, such as 127.0.0.1:1080, empty is no proxy, SOCKS proxies are not supported
 	STTProxyAddress = ""
+	#Compress the maid's LLM chat history before the next player message when the previous chat request reaches this token count, in K tokens (1K = 1024 tokens)
+	# Default: 48
+	# Range: 8 ~ 1024
+	MaidHistoryCompressTokenLimit = 48

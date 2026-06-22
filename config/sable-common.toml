@@ -32,7 +32,13 @@ sub_level_punch_downward_strength_multiplier = 0.175
 # Default: 3
 # Range: > 0
 sub_level_punch_cooldown_ticks = 3
-#If Sable should attempt to authenticate with clients and send them sub-level data over UDP
+#If Sable should attempt to authenticate with clients and send them sub-level movement data over UDP
 attempt_udp_networking = true
 #If the entire Sable UDP Networking pipeline should be disabled. This can improve compatibility with certain mods like Replay mod and certain networking setups, but will have worse performance and latency for networking sub-levels.
 disable_udp_pipeline = false
+#Keeps sub-levels with intersecting players from unloading at all
+sub_levels_with_players_cannot_unload = true
+#If Sable should log when saving sub-levels for a dimension.
+sub_level_saving_log_message = true
+#If Sable should use verbose logging for its serialization system and the holding chunk-map. Not recommended- for debugging purposes only.
+verbose_serialization_logging = false

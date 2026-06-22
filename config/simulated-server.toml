@@ -207,6 +207,16 @@
 	# Default: 96.0
 	# Range: 0.0 ~ 256.0
 	max_swivel_bearing_speed = 96.0
+	#.
+	#The maximum FE capacity of Docking Connectors
+	# Default: 10000
+	# Range: > 0
+	docking_connector_fe_capacity = 10000
+	#.
+	#The maximum FE/t throughput of Docking Connectors
+	# Default: 10000
+	# Range: > 0
+	docking_connector_fe_throughput = 10000
 
 #.
 #Equipment and gadgets added by Simulated
