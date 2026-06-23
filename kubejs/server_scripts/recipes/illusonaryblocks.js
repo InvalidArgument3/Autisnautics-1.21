@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
                 { "fluid": "supplementaries:lumisene", "amount": 90 }
             ],
             "results": [
-                { "item": `9x ${output}` }
+                { "id": output, "count": 9 }
             ]
         })
     }

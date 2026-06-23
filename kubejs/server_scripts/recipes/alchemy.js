@@ -1,4 +1,8 @@
 ServerEvents.recipes(event => {
+    if (!Item.exists("kubejs:substrate_red")) {
+        return
+    }
+
     const hasThermal = Platform.isLoaded("thermal")
 
     let alchemy_mix = (output, catalyst, r1, r2, amount) => {

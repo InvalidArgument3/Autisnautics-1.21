@@ -1,11 +1,15 @@
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
 
-    let stone = Item.of("minecraft:cobblestone", 1).withChance(.5)
-    let experience = Item.of("create:experience_nugget", 1).withChance(0.75)
+    let stone = chanceItem("minecraft:cobblestone", 0.5)
+    let experience = chanceItem("create:experience_nugget", 0.75)
 
-    event.recipes.create.crushing([Item.of("thermal:sapphire", 2), Item.of("thermal:sapphire", 1).withChance(.25), experience,stone], "thermal:sapphire_ore")
-    event.recipes.create.crushing([Item.of("thermal:ruby", 2), Item.of("thermal:ruby", 1).withChance(.25), experience,stone], "thermal:ruby_ore")
+    if (Item.exists("thermal:sapphire_ore")) {
+        event.recipes.create.crushing([Item.of("thermal:sapphire", 2), chanceItem(Item.of("thermal:sapphire", 1), 0.25), experience, stone], "thermal:sapphire_ore")
+    }
+    if (Item.exists("thermal:ruby_ore")) {
+        event.recipes.create.crushing([Item.of("thermal:ruby", 2), chanceItem(Item.of("thermal:ruby", 1), 0.25), experience, stone], "thermal:ruby_ore")
+    }
 
     event.recipes.create.milling(Item.of("minecraft:redstone", 4), "thermal:cinnabar").processingTime(700)
     event.recipes.create.crushing(Item.of("minecraft:redstone", 6), "thermal:cinnabar").processingTime(500)

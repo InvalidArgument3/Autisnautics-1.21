@@ -5,13 +5,7 @@
 // A2: never mind, tin is back
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
-    const noopThermalBuilder = {
-        id() { return this },
-        energy() { return this }
-    }
-    const thermalRecipes = hasThermal
-        ? event.recipes.thermal
-        : new Proxy({}, { get: () => () => noopThermalBuilder })
+    const thermalRecipes = getThermalRecipes(event)
 
     // event.remove({ output: "#forge:nuggets/tin" })
     // event.remove({ output: "#forge:ingots/tin" })
@@ -68,7 +62,8 @@ ServerEvents.recipes(event => {
 
 // Tweaks for the metals that we actually want
 ServerEvents.recipes(event => {
-
+    const hasThermal = Platform.isLoaded("thermal")
+    const thermalRecipes = getThermalRecipes(event)
 
     // Thermal recipes for zinc
     // A2: JAOPCA handles this one
@@ -278,12 +273,14 @@ ServerEvents.recipes(event => {
     }
 
     // Plates
-    event.recipes.create.pressing(["thermal:lead_plate"], "thermal:lead_ingot")
-    event.recipes.create.pressing(["thermal:constantan_plate"], "thermal:constantan_ingot")
-    event.recipes.create.pressing(["thermal:nickel_plate"], "thermal:nickel_ingot")
-    event.recipes.create.pressing(["thermal:signalum_plate"], "thermal:signalum_ingot")
-    event.recipes.create.pressing(["thermal:lumium_plate"], "thermal:lumium_ingot")
-    event.recipes.create.pressing(["thermal:enderium_plate"], "thermal:enderium_ingot")
+    if (hasThermal) {
+        event.recipes.create.pressing(["thermal:lead_plate"], "thermal:lead_ingot")
+        event.recipes.create.pressing(["thermal:constantan_plate"], "thermal:constantan_ingot")
+        event.recipes.create.pressing(["thermal:nickel_plate"], "thermal:nickel_ingot")
+        event.recipes.create.pressing(["thermal:signalum_plate"], "thermal:signalum_ingot")
+        event.recipes.create.pressing(["thermal:lumium_plate"], "thermal:lumium_ingot")
+        event.recipes.create.pressing(["thermal:enderium_plate"], "thermal:enderium_ingot")
+    }
 
     // dusts
     event.recipes.create.milling("thermal:iron_dust", "#forge:ingots/iron")
@@ -316,8 +313,8 @@ ServerEvents.recipes(event => {
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_smelting" })
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_blasting" })
 
-    const stone = Item.of("minecraft:cobblestone", 1).withChance(.5)
-    let experience = Item.of("create:experience_nugget", 1).withChance(0.75)
+    const stone = chanceItem("minecraft:cobblestone", 0.5)
+    let experience = chanceItem("create:experience_nugget", 0.75)
 
     let dust_process = (materialName, byproduct, ByproductName) => {
         let crushedOre = "create:crushed_raw_" + materialName
@@ -413,20 +410,20 @@ ServerEvents.recipes(event => {
 
         // 'concentrated ore' to crushed ore
         event.recipes.create.milling([Item.of(crushedOre, 5)], rawOreTag).id("kubejs:ore_processing/milling/raw_ore/" + materialName)
-        event.recipes.create.crushing([Item.of(crushedOre, 5), Item.of(crushedOre, 2).withChance(0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
+        event.recipes.create.crushing([Item.of(crushedOre, 5), chanceItem(Item.of(crushedOre, 2), 0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
 
         // ore to crushed ore
-        event.recipes.create.crushing([Item.of(crushedOre, 3), Item.of(crushedOre, 1).withChance(0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
-        thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
+        event.recipes.create.crushing([Item.of(crushedOre, 3), chanceItem(Item.of(crushedOre, 1), 0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
+        thermalRecipes.pulverizer([chanceItem(Item.of(crushedOre), 4.5), chanceItem("minecraft:gravel", 0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
         // event.recipes.occultism.crushing(Item.of(dust, 3), Item.of(crushedOre), 200, -1, false).id(`kubejs:occultism/crushing/${materialName}`)
 
         // crushed ore to nuggets
         event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
-        event.recipes.create.splashing([Item.of(nugget, 2), Item.of(nuggetByproduct, 1).withChance(0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
+        event.recipes.create.splashing([Item.of(nugget, 2), chanceItem(Item.of(nuggetByproduct, 1), 0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
 
         // crushed ore to ore dust
         event.recipes.create.milling([Item.of(dust, 3)], crushedOre).id("kubejs:ore_processing/milling/crushed/" + materialName)
-        event.recipes.create.crushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
+        event.recipes.create.crushing([Item.of(dust, 3), chanceItem(Item.of(dust, 3), 0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
         thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
         // A2: nuclearcraft clean slurry to dust, tweak to even out the ore amounts
         let cleanSlurryTag = "forge:" + materialName + "_clean_slurry"
@@ -781,9 +778,9 @@ ServerEvents.recipes(event => {
     // milling/grinding: 2 scrap
     event.recipes.create.milling(Item.of("minecraft:netherite_scrap", 2), "minecraft:ancient_debris")
     // crushing: 2 scrap + 50% chance of 3 + exp + gold byproduct
-    event.recipes.create.crushing([Item.of("minecraft:netherite_scrap", 2), Item.of("minecraft:netherite_scrap", 1).withChance(0.5), experience, Item.of("minecraft:gold_nugget").withChance(0.5)], "minecraft:ancient_debris")
+    event.recipes.create.crushing([Item.of("minecraft:netherite_scrap", 2), chanceItem(Item.of("minecraft:netherite_scrap", 1), 0.5), experience, chanceItem("minecraft:gold_nugget", 0.5)], "minecraft:ancient_debris")
     // pulverizing: 3 scrap + gold byproduct
-    thermalRecipes.pulverizer([Item.of("minecraft:netherite_scrap").withChance(3.0), Item.of("minecraft:gold_nugget").withChance(0.2)], "minecraft:ancient_debris", 0.2)
+    thermalRecipes.pulverizer([chanceItem(Item.of("minecraft:netherite_scrap"), 3.0), chanceItem("minecraft:gold_nugget", 0.2)], "minecraft:ancient_debris", 0.2)
     // melting: 2.66 scrap or 2 scrap + byproducts
     event.custom({
         "type": "tconstruct:ore_melting",

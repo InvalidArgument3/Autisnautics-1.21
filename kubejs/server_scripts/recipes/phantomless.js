@@ -7,11 +7,12 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of("cofh_core:potion", 50, '{Potion:"minecraft:long_invisibility"}')])
     }
 
-    if (Platform.isLoaded("moreminecarts")) {
+    if (Platform.isLoaded("moreminecarts") && Item.exists("thermal:blitz_powder")) {
         event.replaceInput({}, "minecraft:phantom_membrane", "thermal:blitz_powder")
-        event.recipes.create.crushing([Item.of("moreminecarts:levitation_powder"), Item.of("moreminecarts:levitation_powder", 1).withChance(.5)], "thermal:blitz_powder")
+        event.recipes.create.crushing([Item.of("moreminecarts:levitation_powder"), chanceItem(Item.of("moreminecarts:levitation_powder", 1), 0.5)], "thermal:blitz_powder")
     }
     // alternate double jump recipe
+    if (Platform.isLoaded("tconstruct") && Item.exists("thermal:blitz_powder")) {
     event.custom({
         "type": "tconstruct:modifier",
         "inputs": [
@@ -31,6 +32,7 @@ ServerEvents.recipes(event => {
             "tag": "tconstruct:modifiable/armor/boots"
         }
     }).id("tconstruct:tools/modifiers/ability/double_jump")
+    }
     // slow fall potion is in startup script potions.js
 })
 

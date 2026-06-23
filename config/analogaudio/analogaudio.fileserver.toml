@@ -1,0 +1,16 @@
+# ============================================================
+# File Server Settings
+# ============================================================
+
+# Enables the built-in file server to host audio files, allowing users to upload their audio files to the server in multiplayer.
+# WARNING: This feature is intended for whitelisted servers where the individuals playing on it are trusted. This mod does not implement security measures to prevent users from uploading malicious files to your server. You are responsible for the security of your server, use this feature at your own risk.
+enabled = false
+
+# The port to run the file server on. It is highly recommended that you use an open port seperate from the one in use by Minecraft.
+port = 7000
+
+# The maximum allowed file size for uploaded files, in megabytes (mb).
+maxFileSize = 50
+
+# A list of file format extensions that are allowed to be uploaded to the file server.
+allowedFileFormats = ["ogg", "mp3", "wav", "flac", "aac", "m4a", "opus"]

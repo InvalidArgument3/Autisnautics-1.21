@@ -1,7 +1,11 @@
 if(Platform.isLoaded("create_enchantment_industry")) {
     ServerEvents.recipes(event => {
-        zincMachine(event, Item.of("create_enchantment_industry:disenchanter", 1), "#create:sandpaper")
-        zincMachine(event, Item.of("create_enchantment_industry:printer", 1), "#forge:storage_blocks/lapis")
+        if (Item.exists("create_enchantment_industry:disenchanter")) {
+            zincMachine(event, Item.of("create_enchantment_industry:disenchanter", 1), "#create:sandpaper")
+        }
+        if (Item.exists("create_enchantment_industry:printer")) {
+            zincMachine(event, Item.of("create_enchantment_industry:printer", 1), "#c:storage_blocks/lapis")
+        }
 
         event.remove({ id:"create_enchantment_industry:mixing/hyper_experience"})
         event.recipes.create.mixing(Fluid.of("create_enchantment_industry:hyper_experience", 10), [

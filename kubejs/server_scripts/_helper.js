@@ -505,3 +505,55 @@ var getPreferredItemFromTag = (tag) => {
     }
     return "minecraft:air";
 }
+
+const noopThermalBuilder = {
+    id() { return this },
+    energy() { return this }
+}
+
+/** No-op thermal recipe builder when Thermal is not loaded (Rhino has no Proxy). */
+function getThermalRecipes(event) {
+    if (Platform.isLoaded("thermal")) {
+        return event.recipes.thermal
+    }
+    const noop = () => noopThermalBuilder
+    return {
+        pulverizer: noop,
+        smelter: noop,
+        crucible: noop,
+        chiller: noop,
+        pyrolyzer: noop,
+        bottler: noop,
+        centrifuge: noop,
+        refinery: noop
+    }
+}
+
+/** KubeJS 1.21 Create chance output (replaces Item.of(...).withChance). */
+function chanceItem(item, chance) {
+    if (chance == null || chance >= 1) {
+        return Item.of(item)
+    }
+    return CreateItem.of(item, chance)
+}
+
+function blockLootTableId(blockId) {
+    const sep = blockId.indexOf(":")
+    return blockId.slice(0, sep) + ":blocks/" + blockId.slice(sep + 1)
+}
+
+function replaceBlockLootFromJson(event, blockId, json) {
+    const tableId = blockLootTableId(blockId)
+    if (event.hasLootTable(tableId)) {
+        event.getLootTable(tableId).clear()
+    } else {
+        event.create(tableId, LootType.BLOCK)
+    }
+    const table = event.getLootTable(tableId)
+    json.pools.forEach(poolData => {
+        table.createPool(pool => {
+            pool.setRolls(poolData.rolls ?? 1)
+            poolData.entries.forEach(entry => pool.addCustomEntry(entry))
+        })
+    })
+}

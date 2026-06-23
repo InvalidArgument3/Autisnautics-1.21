@@ -15,13 +15,7 @@ function ifiniDeploying(event, output, input, tool) {
 
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
-    const noopThermalBuilder = {
-        id() { return this },
-        energy() { return this }
-    }
-    const thermalRecipes = hasThermal
-        ? event.recipes.thermal
-        : new Proxy({}, { get: () => () => noopThermalBuilder })
+    const thermalRecipes = getThermalRecipes(event)
 
     /**
 	 * Used to store the name of an item when making sequenced assembly recipes
@@ -659,7 +653,7 @@ ServerEvents.recipes(event => {
         B: "minecraft:stick"
     })
     // Singularties
-    event.recipes.create.crushing([Item.of("ae2:singularity").withChance(1)], "create:crushing_wheel").processingTime(250)
+    event.recipes.create.crushing([Item.of("ae2:singularity")], "create:crushing_wheel").processingTime(250)
     // Quantum Entangled Singularties are from ae2
     // Dye Entangled Singularties
     let dyes = ["minecraft:orange_dye", "minecraft:magenta_dye", "minecraft:light_blue_dye", "minecraft:yellow_dye", "minecraft:lime_dye", "minecraft:pink_dye", "minecraft:cyan_dye", "minecraft:purple_dye", "minecraft:blue_dye", "minecraft:brown_dye", "minecraft:green_dye", "minecraft:red_dye"]
@@ -668,11 +662,11 @@ ServerEvents.recipes(event => {
     // Paint Balls
     event.remove({ id: /ae2:tools\/paintballs.*/ })
     event.recipes.create.crushing([
-        Item.of("ae2:red_paint_ball", 1).withChance(.90),
-        Item.of("ae2:yellow_paint_ball", 1).withChance(.80),
-        Item.of("ae2:green_paint_ball", 1).withChance(.70),
-        Item.of("ae2:blue_paint_ball", 1).withChance(.60),
-        Item.of("ae2:magenta_paint_ball", 1).withChance(.50)],
+        CreateItem.of("ae2:red_paint_ball", 0.90),
+        CreateItem.of("ae2:yellow_paint_ball", 0.80),
+        CreateItem.of("ae2:green_paint_ball", 0.70),
+        CreateItem.of("ae2:blue_paint_ball", 0.60),
+        CreateItem.of("ae2:magenta_paint_ball", 0.50)],
     "kubejs:dye_entangled_singularity").processingTime(50)
     // Paint Ball Depleting
     let colors = ["red", "yellow", "green", "blue", "magenta", "black"]
@@ -813,7 +807,7 @@ ServerEvents.recipes(event => {
     }).id("kubejs:coke_cutting")
     // Sand Ball
     event.recipes.create.splashing([
-        Item.of("kubejs:sand_ball").withChance(0.125)
+        chanceItem("kubejs:sand_ball", 0.125)
     ], "minecraft:sandstone")
     thermalRecipes.bottler("kubejs:sand_ball", [Fluid.of("minecraft:water", 50), "#forge:sand/colorless"], 0, 1000)
     // Sand Chunks
@@ -834,11 +828,11 @@ ServerEvents.recipes(event => {
     event.remove({ id:basalz })
     event.remove({ id:"thermal:machines/pulverizer/pulverizer_blizz_rod" })
     event.remove({ id:"thermal:machines/pulverizer/pulverizer_basalz_rod" })
-    thermalRecipes.pulverizer([Item.of(blizz).withChance(2.5), Item.of("minecraft:snowball").withChance(0.25)], "thermal:blizz_rod", 0, 800).id("kubejs:machines/pulverizer/blizz_powder")
-    thermalRecipes.pulverizer([Item.of(basalz).withChance(2.5), Item.of("thermal:slag").withChance(0.25)], "thermal:basalz_rod", 0, 800).id("kubejs:machines/pulverizer/basalz_powder")
+    thermalRecipes.pulverizer([chanceItem(Item.of(blizz), 2.5), chanceItem("minecraft:snowball", 0.25)], "thermal:blizz_rod", 0, 800).id("kubejs:machines/pulverizer/blizz_powder")
+    thermalRecipes.pulverizer([chanceItem(Item.of(basalz), 2.5), chanceItem("thermal:slag", 0.25)], "thermal:basalz_rod", 0, 800).id("kubejs:machines/pulverizer/basalz_powder")
     // Crushing powder recipes
-    event.recipes.create.crushing([Item.of(blizz, 1), Item.of(blizz, 1).withChance(.5)], "thermal:blizz_rod")
-    event.recipes.create.crushing([Item.of(basalz, 1), Item.of(basalz, 1).withChance(.5)], "thermal:basalz_rod")
+    event.recipes.create.crushing([Item.of(blizz, 1), chanceItem(Item.of(blizz, 1), 0.5)], "thermal:blizz_rod")
+    event.recipes.create.crushing([Item.of(basalz, 1), chanceItem(Item.of(basalz, 1), 0.5)], "thermal:basalz_rod")
     // Ice and Earth Charges
     event.remove({ id: "thermal:ice_charge_3" })
     event.remove({ id: "thermal:earth_charge_3" })

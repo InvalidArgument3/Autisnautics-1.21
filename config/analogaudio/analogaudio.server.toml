@@ -1,0 +1,21 @@
+# ============================================================
+# Server Settings
+# ============================================================
+
+# List of website domains allowed for cassette writing. (e.g., youtube.com)
+whitelistedUrls = ["youtube.com", "youtu.be", "soundcloud.com", "bandcamp.com"]
+
+# If enabled, the URL whitelist will be treated instead as a blacklist.
+whitelistAsBlacklist = false
+
+# Enables the static effect for walkie talkies and speakers.
+enableWalkieFiltering = true
+
+# Allows players to upload and write local files to cassette tapes.
+allowFileUploads = false
+
+# Controls the maximum distance in blocks you can hear radio audio before it falls off.
+globalRadioRange = 64
+
+# Controls the maximum distance in blocks you can hear speaker audio before it falls off.
+globalSpeakerRange = 64

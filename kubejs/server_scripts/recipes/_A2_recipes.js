@@ -59,7 +59,9 @@ ServerEvents.recipes(event => {
     // copper: copper jetpack - mechanism already replaced
     // gold: airships, quadrocopter, VS clockwork
     event.remove({ output: "vs_clockwork:physics_infuser" })
-    goldMachine(event, Item.of("vs_clockwork:physics_infuser", 1), "vs_clockwork:wanderlite_matrix")
+    if (Platform.isLoaded("vs_clockwork") && Item.exists("vs_clockwork:physics_infuser") && Item.exists("vs_clockwork:wanderlite_matrix")) {
+        goldMachine(event, Item.of("vs_clockwork:physics_infuser", 1), "vs_clockwork:wanderlite_matrix")
+    }
     event.replaceInput({ output: "immersive_aircraft:quadrocopter" }, "immersive_aircraft:boiler", "kubejs:gold_machine")
     event.remove({ output: "immersive_aircraft:airship" })
     event.shaped("immersive_aircraft:airship", [
@@ -586,42 +588,42 @@ ServerEvents.recipes(event => {
 
     // alexscaves galena to lead
     event.recipes.create.crushing([
-        Item.of("thermal:lead_dust", 1).withChance(.05),
-        Item.of("create:crushed_raw_lead", 1).withChance(.01),
-        Item.of("thermal:raw_lead", 1).withChance(.001)],// concentrated
+        CreateItem.of("thermal:lead_dust", 0.05),
+        CreateItem.of("create:crushed_raw_lead", 0.01),
+        CreateItem.of("thermal:raw_lead", 0.001)],// concentrated
     "alexscaves:galena").processingTime(500)
 
     // alexscaves scrap metal gacha
     event.recipes.create.crushing([
-        Item.of("minecraft:iron_nugget", 1).withChance(.5),
+        CreateItem.of("minecraft:iron_nugget", 0.5),
 
-        Item.of("create:copper_nugget", 1).withChance(.03),
-        Item.of("create:zinc_nugget", 1).withChance(.03),
-        Item.of("thermal:tin_nugget", 1).withChance(.03),
-        Item.of("thermal:lead_nugget", 1).withChance(.03),
+        CreateItem.of("create:copper_nugget", 0.03),
+        CreateItem.of("create:zinc_nugget", 0.03),
+        CreateItem.of("thermal:tin_nugget", 0.03),
+        CreateItem.of("thermal:lead_nugget", 0.03),
 
-        Item.of("createbigcannons:cast_iron_nugget", 1).withChance(.025),
-        Item.of("createdeco:industrial_iron_nugget", 1).withChance(.025),
+        CreateItem.of("createbigcannons:cast_iron_nugget", 0.025),
+        CreateItem.of("createdeco:industrial_iron_nugget", 0.025),
 
-        Item.of("thermal:nickel_nugget", 1).withChance(.0125),
-        Item.of("thermal:bronze_nugget", 1).withChance(.0125),
-        Item.of("nuclearcraft:lithium_nugget", 1).withChance(.0125),
-        Item.of("scguns:anthralite_nugget", 1).withChance(.0125),
+        CreateItem.of("thermal:nickel_nugget", 0.0125),
+        CreateItem.of("thermal:bronze_nugget", 0.0125),
+        CreateItem.of("nuclearcraft:lithium_nugget", 0.0125),
+        CreateItem.of("scguns:anthralite_nugget", 0.0125),
 
-        Item.of("tconstruct:rose_gold_nugget", 1).withChance(.004),
-        Item.of("tconstruct:pig_iron_nugget", 1).withChance(.004),
-        Item.of("tconstruct:amethyst_bronze_nugget", 1).withChance(.004),
+        CreateItem.of("tconstruct:rose_gold_nugget", 0.004),
+        CreateItem.of("tconstruct:pig_iron_nugget", 0.004),
+        CreateItem.of("tconstruct:amethyst_bronze_nugget", 0.004),
 
 
-        Item.of("tconstruct:steel_nugget", 1).withChance(.0025),
+        CreateItem.of("tconstruct:steel_nugget", 0.0025),
 
-        Item.of("createaddition:electrum_nugget", 1).withChance(.001),
-        Item.of("thermal:silver_nugget", 1).withChance(.0005),
+        CreateItem.of("createaddition:electrum_nugget", 0.001),
+        CreateItem.of("thermal:silver_nugget", 0.0005),
 
-        Item.of("rats:plastic_waste", 1).withChance(.0125),
-        Item.of("youkaishomecoming:can", 1).withChance(.025),
+        CreateItem.of("rats:plastic_waste", 0.0125),
+        CreateItem.of("youkaishomecoming:can", 0.025),
 
-        Item.of("tconstruct:debris_nugget", 1).withChance(.000001)
+        CreateItem.of("tconstruct:debris_nugget", 0.000001)
     ],
     "alexscaves:scrap_metal").processingTime(1)
 

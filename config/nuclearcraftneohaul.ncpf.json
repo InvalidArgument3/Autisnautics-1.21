@@ -51,78 +51,6 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:copper_turbine_dynamo_coil",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_turbine:coil": {
-              "efficiency": 1.06,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:beryllium_turbine_dynamo_coil",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:magnesium_turbine_dynamo_coil",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_turbine:coil": {
-              "efficiency": 0.88,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_turbine:bearing",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_turbine:connector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
           "name": "nuclearcraftneohaul:beryllium_turbine_dynamo_coil",
           "blockstate": {},
           "type": "block",
@@ -185,12 +113,12 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:aluminum_turbine_dynamo_coil",
+          "name": "nuclearcraftneohaul:magnesium_turbine_dynamo_coil",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_turbine:coil": {
-              "efficiency": 1.0,
+              "efficiency": 0.88,
               "rules": [
                 {
                   "type": "or",
@@ -200,12 +128,22 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:magnesium_turbine_dynamo_coil",
-                        "blockstate": {},
-                        "type": "block",
+                        "name": "nuclearcraft:overhaul_turbine:bearing",
+                        "type": "module",
                         "modules": {}
                       },
-                      "min": 2,
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_turbine:connector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
                       "max": 6,
                       "rules": []
                     }
@@ -244,6 +182,68 @@
                       "type": "between",
                       "block": {
                         "name": "nuclearcraftneohaul:copper_turbine_dynamo_coil",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:aluminum_turbine_dynamo_coil",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:coil": {
+              "efficiency": 1.0,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:magnesium_turbine_dynamo_coil",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:copper_turbine_dynamo_coil",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:coil": {
+              "efficiency": 1.06,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:beryllium_turbine_dynamo_coil",
                         "blockstate": {},
                         "type": "block",
                         "modules": {}
@@ -334,17 +334,6 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:extreme_alloy_turbine_rotor_blade",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_turbine:blade": {
-              "efficiency": 1.1,
-              "expansion": 1.6
-            }
-          }
-        },
-        {
           "name": "nuclearcraftneohaul:steel_turbine_rotor_blade",
           "blockstate": {},
           "type": "block",
@@ -363,6 +352,17 @@
             "nuclearcraft:overhaul_turbine:blade": {
               "efficiency": 1.2,
               "expansion": 1.8
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:extreme_alloy_turbine_rotor_blade",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:blade": {
+              "efficiency": 1.1,
+              "expansion": 1.6
             }
           }
         }
@@ -845,6 +845,19 @@
           }
         },
         {
+          "name": "nuclearcraftneohaul:radium_beryllium_source",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_msr:casing": {
+              "edge": false
+            },
+            "nuclearcraft:overhaul_msr:neutron_source": {
+              "efficiency": 0.9
+            }
+          }
+        },
+        {
           "name": "nuclearcraftneohaul:polonium_beryllium_source",
           "blockstate": {},
           "type": "block",
@@ -867,19 +880,6 @@
             },
             "nuclearcraft:overhaul_msr:neutron_source": {
               "efficiency": 1.0
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:radium_beryllium_source",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_msr:casing": {
-              "edge": false
-            },
-            "nuclearcraft:overhaul_msr:neutron_source": {
-              "efficiency": 0.9
             }
           }
         },
@@ -1432,6 +1432,33 @@
           }
         },
         {
+          "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_msr:neutron_shield": {
+              "efficiency": 0.75,
+              "closed": {
+                "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "heat_per_flux": 10.0
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
           "name": "nuclearcraftneohaul:boron_silver_shield",
           "blockstate": {
             "active": false
@@ -1585,6 +1612,284 @@
           }
         },
         {
+          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:emerald_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:emerald_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 195
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:end_stone_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:end_stone_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 65
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:reflector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:liquid_nitrogen_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:liquid_nitrogen_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 185
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:copper_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:purpur_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:lead_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:lead_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:lead_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 60
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
           "name": "nuclearcraftneohaul:quartz_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
@@ -1639,6 +1944,471 @@
                         "modules": {}
                       },
                       "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:arsenic_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:arsenic_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 135
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "axial",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:reflector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 3,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:glowstone_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:glowstone_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 90
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:manganese_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:manganese_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 150
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:redstone_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:redstone_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 85
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:enderium_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:enderium_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 155
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 3,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 55
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:slime_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:slime_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:slime_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 145
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 1,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:lead_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
                       "max": 6,
                       "rules": []
                     }
@@ -1709,6 +2479,208 @@
                       "type": "between",
                       "block": {
                         "name": "nuclearcraft:overhaul_msr:casing",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:liquid_helium_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:liquid_helium_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 190
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 2,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:purpur_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:purpur_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 95
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:reflector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:iron_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:iron_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 50
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:moderator",
                         "type": "module",
                         "modules": {}
                       },
@@ -1798,23 +2770,23 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
+          "name": "nuclearcraftneohaul:boron_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
           "modules": {
             "ncpf:block_recipes": {
               "recipes": [
                 {
-                  "name": "nuclearcraftneohaul:redstone_nak",
+                  "name": "nuclearcraftneohaul:boron_nak",
                   "type": "fluid",
                   "modules": {
                     "nuclearcraft:overhaul_msr:heater_stats": {
                       "output": {
-                        "name": "nuclearcraftneohaul:redstone_nak_hot",
+                        "name": "nuclearcraftneohaul:boron_nak_hot",
                         "type": "fluid",
                         "modules": {}
                       },
-                      "cooling": 85
+                      "cooling": 160
                     }
                   }
                 }
@@ -1822,14 +2794,14 @@
             },
             "nuclearcraft:overhaul_msr:recipe_ports": {
               "output": {
-                "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
                 "blockstate": {
                   "active": true
                 },
                 "type": "block"
               },
               "input": {
-                "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
                 "blockstate": {
                   "active": false
                 },
@@ -1846,8 +2818,148 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
+                        "name": "nuclearcraftneohaul:quartz_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 1,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:casing",
                         "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:prismarine_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:prismarine_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 115
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:carobbiite_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:carobbiite_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 140
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
                         "modules": {}
                       },
                       "min": 1,
@@ -1857,8 +2969,9 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
+                        "name": "nuclearcraftneohaul:copper_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
                         "modules": {}
                       },
                       "min": 1,
@@ -1936,23 +3049,23 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
+          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
           "modules": {
             "ncpf:block_recipes": {
               "recipes": [
                 {
-                  "name": "nuclearcraftneohaul:prismarine_nak",
+                  "name": "nuclearcraftneohaul:magnesium_nak",
                   "type": "fluid",
                   "modules": {
                     "nuclearcraft:overhaul_msr:heater_stats": {
                       "output": {
-                        "name": "nuclearcraftneohaul:prismarine_nak_hot",
+                        "name": "nuclearcraftneohaul:magnesium_nak_hot",
                         "type": "fluid",
                         "modules": {}
                       },
-                      "cooling": 115
+                      "cooling": 125
                     }
                   }
                 }
@@ -1960,78 +3073,14 @@
             },
             "nuclearcraft:overhaul_msr:recipe_ports": {
               "output": {
-                "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
                 "blockstate": {
                   "active": true
                 },
                 "type": "block"
               },
               "input": {
-                "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:fluorite_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:fluorite_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 165
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
                 "blockstate": {
                   "active": false
                 },
@@ -2048,19 +3097,81 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:gold_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
+                        "name": "nuclearcraft:overhaul_msr:moderator",
+                        "type": "module",
                         "modules": {}
                       },
                       "min": 1,
-                      "max": 6,
+                      "max": 1,
                       "rules": []
                     },
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
+                        "name": "nuclearcraft:overhaul_msr:casing",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:nether_brick_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:nether_brick_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 105
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater",
                         "blockstate": {},
                         "type": "block",
                         "modules": {}
@@ -2170,1382 +3281,6 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:villiaumite_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:villiaumite_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 180
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:lead_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:lead_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:lead_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 60
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:carobbiite_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:carobbiite_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 140
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:copper_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:purpur_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:purpur_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 95
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:reflector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:emerald_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:emerald_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 195
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:tin_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:tin_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:tin_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 120
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "axial",
-                      "block": {
-                        "name": "nuclearcraftneohaul:lapis_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 3,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:boron_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:boron_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:boron_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 160
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:quartz_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 1,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:casing",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:magnesium_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:magnesium_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 125
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 1,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:casing",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:enderium_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:enderium_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 155
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 3,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:silver_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:silver_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:silver_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 170
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:tin_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:iron_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:iron_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:iron_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 50
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:slime_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:slime_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:slime_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 145
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 1,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:lead_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:liquid_nitrogen_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:liquid_nitrogen_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 185
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:copper_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:purpur_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:cryotheum_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:cryotheum_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 205
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 3,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:standard_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 55
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:liquid_helium_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:liquid_helium_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 190
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 2,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:nether_brick_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:nether_brick_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 105
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:glowstone_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:glowstone_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 90
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:end_stone_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:end_stone_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 65
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:reflector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:arsenic_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:arsenic_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 135
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "axial",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:reflector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 3,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
           "name": "nuclearcraftneohaul:copper_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
@@ -3610,23 +3345,23 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater",
+          "name": "nuclearcraftneohaul:tin_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
           "modules": {
             "ncpf:block_recipes": {
               "recipes": [
                 {
-                  "name": "nuclearcraftneohaul:manganese_nak",
+                  "name": "nuclearcraftneohaul:tin_nak",
                   "type": "fluid",
                   "modules": {
                     "nuclearcraft:overhaul_msr:heater_stats": {
                       "output": {
-                        "name": "nuclearcraftneohaul:manganese_nak_hot",
+                        "name": "nuclearcraftneohaul:tin_nak_hot",
                         "type": "fluid",
                         "modules": {}
                       },
-                      "cooling": 150
+                      "cooling": 120
                     }
                   }
                 }
@@ -3634,77 +3369,14 @@
             },
             "nuclearcraft:overhaul_msr:recipe_ports": {
               "output": {
-                "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
                 "blockstate": {
                   "active": true
                 },
                 "type": "block"
               },
               "input": {
-                "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": false
-                },
-                "type": "block"
-              }
-            },
-            "nuclearcraft:overhaul_msr:heater": {
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "ncpf:block_recipes": {
-              "recipes": [
-                {
-                  "name": "nuclearcraftneohaul:obsidian_nak",
-                  "type": "fluid",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:heater_stats": {
-                      "output": {
-                        "name": "nuclearcraftneohaul:obsidian_nak_hot",
-                        "type": "fluid",
-                        "modules": {}
-                      },
-                      "cooling": 70
-                    }
-                  }
-                }
-              ]
-            },
-            "nuclearcraft:overhaul_msr:recipe_ports": {
-              "output": {
-                "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
-                "blockstate": {
-                  "active": true
-                },
-                "type": "block"
-              },
-              "input": {
-                "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
+                "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
                 "blockstate": {
                   "active": false
                 },
@@ -3721,7 +3393,7 @@
                     {
                       "type": "axial",
                       "block": {
-                        "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
+                        "name": "nuclearcraftneohaul:lapis_fission_coolant_heater",
                         "blockstate": {},
                         "type": "block",
                         "modules": {}
@@ -3813,463 +3485,807 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:lapis_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:lapis_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:copper_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:copper_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:lithium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:lithium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:aluminum_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:aluminum_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:gold_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:gold_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:quartz_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:quartz_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:diamond_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:diamond_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
-          "blockstate": {
-            "active": false
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
-          "blockstate": {
-            "active": true
-          },
-          "type": "block"
-        },
-        {
-          "name": "nuclearcraftneohaul:graphite_block",
+          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater",
           "blockstate": {},
           "type": "block",
           "modules": {
-            "nuclearcraft:overhaul_msr:moderator": {
-              "efficiency": 1.1,
-              "flux": 10
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:villiaumite_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:villiaumite_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 180
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:redstone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
             }
           }
+        },
+        {
+          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:cryotheum_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:cryotheum_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 205
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_msr:fuel_vessel",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 3,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:obsidian_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:obsidian_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 70
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "axial",
+                      "block": {
+                        "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 3,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:silver_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:silver_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:silver_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 170
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:tin_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "ncpf:block_recipes": {
+              "recipes": [
+                {
+                  "name": "nuclearcraftneohaul:fluorite_nak",
+                  "type": "fluid",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:heater_stats": {
+                      "output": {
+                        "name": "nuclearcraftneohaul:fluorite_nak_hot",
+                        "type": "fluid",
+                        "modules": {}
+                      },
+                      "cooling": 165
+                    }
+                  }
+                }
+              ]
+            },
+            "nuclearcraft:overhaul_msr:recipe_ports": {
+              "output": {
+                "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "input": {
+                "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
+                "blockstate": {
+                  "active": false
+                },
+                "type": "block"
+              }
+            },
+            "nuclearcraft:overhaul_msr:heater": {
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:gold_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:lithium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:lithium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:villiaumite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:prismarine_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:tin_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:iron_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:manganese_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:lead_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:obsidian_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_helium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:nether_brick_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:lapis_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:lapis_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:diamond_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:diamond_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:redstone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:quartz_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:quartz_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:boron_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:gold_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:gold_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:fluorite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:glowstone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:magnesium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:purpur_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:silver_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:standard_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:end_stone_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:carobbiite_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:cryotheum_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:enderium_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:copper_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:copper_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:emerald_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:aluminum_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:aluminum_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:arsenic_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block"
+        },
+        {
+          "name": "nuclearcraftneohaul:slime_fission_coolant_heater_port",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
         },
         {
           "name": "nuclearcraftneohaul:heavy_water_moderator",
@@ -4279,6 +4295,17 @@
             "nuclearcraft:overhaul_msr:moderator": {
               "efficiency": 1.0,
               "flux": 36
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:graphite_block",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_msr:moderator": {
+              "efficiency": 1.1,
+              "flux": 10
             }
           }
         },
@@ -4755,6 +4782,19 @@
           }
         },
         {
+          "name": "nuclearcraftneohaul:radium_beryllium_source",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:casing": {
+              "edge": false
+            },
+            "nuclearcraft:overhaul_sfr:neutron_source": {
+              "efficiency": 0.9
+            }
+          }
+        },
+        {
           "name": "nuclearcraftneohaul:polonium_beryllium_source",
           "blockstate": {},
           "type": "block",
@@ -4777,19 +4817,6 @@
             },
             "nuclearcraft:overhaul_sfr:neutron_source": {
               "efficiency": 1.0
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:radium_beryllium_source",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:casing": {
-              "edge": false
-            },
-            "nuclearcraft:overhaul_sfr:neutron_source": {
-              "efficiency": 0.9
             }
           }
         },
@@ -6314,6 +6341,33 @@
           }
         },
         {
+          "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+          "blockstate": {
+            "active": false
+          },
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:neutron_shield": {
+              "efficiency": 0.75,
+              "closed": {
+                "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+                "blockstate": {
+                  "active": true
+                },
+                "type": "block"
+              },
+              "heat_per_flux": 10.0
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:gadolinium_samarium_shield",
+          "blockstate": {
+            "active": true
+          },
+          "type": "block"
+        },
+        {
           "name": "nuclearcraftneohaul:boron_silver_shield",
           "blockstate": {
             "active": false
@@ -6467,12 +6521,12 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:aluminum_fission_heat_sink",
+          "name": "nuclearcraftneohaul:purpur_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 175,
+              "cooling": 95,
               "rules": [
                 {
                   "type": "and",
@@ -6482,9 +6536,8 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:quartz_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
+                        "name": "nuclearcraft:overhaul_sfr:reflector",
+                        "type": "module",
                         "modules": {}
                       },
                       "min": 1,
@@ -6494,7 +6547,7 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:lapis_fission_heat_sink",
+                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
                         "blockstate": {},
                         "type": "block",
                         "modules": {}
@@ -6553,12 +6606,12 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:gold_fission_heat_sink",
+          "name": "nuclearcraftneohaul:manganese_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 110,
+              "cooling": 150,
               "rules": [
                 {
                   "type": "or",
@@ -6568,7 +6621,215 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
+                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:nether_brick_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 105,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:obsidian_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:silver_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 170,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:tin_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:enderium_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 155,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 3,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:tin_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 120,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "axial",
+                      "block": {
+                        "name": "nuclearcraftneohaul:lapis_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 3,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:carobbiite_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 140,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:end_stone_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:copper_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:liquid_helium_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 190,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
                         "blockstate": {},
                         "type": "block",
                         "modules": {}
@@ -6584,12 +6845,12 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:end_stone_fission_heat_sink",
+          "name": "nuclearcraftneohaul:cryotheum_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 65,
+              "cooling": 205,
               "rules": [
                 {
                   "type": "or",
@@ -6599,8 +6860,39 @@
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraft:overhaul_sfr:reflector",
+                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
                         "type": "module",
+                        "modules": {}
+                      },
+                      "min": 3,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:copper_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 75,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:water_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
                         "modules": {}
                       },
                       "min": 1,
@@ -6643,399 +6935,6 @@
                       "block": {
                         "name": "nuclearcraft:overhaul_sfr:casing",
                         "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:magnesium_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 125,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 1,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:casing",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:emerald_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 195,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:prismarine_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:water_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 55,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:obsidian_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 70,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "axial",
-                      "block": {
-                        "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 3,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:tin_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 120,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "axial",
-                      "block": {
-                        "name": "nuclearcraftneohaul:lapis_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 3,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 185,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:copper_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:purpur_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 85,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 90,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:moderator",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:arsenic_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 135,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "axial",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:reflector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 3,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:lead_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 60,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:carobbiite_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 140,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:end_stone_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:copper_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
                         "modules": {}
                       },
                       "min": 1,
@@ -7110,36 +7009,23 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:slime_fission_heat_sink",
+          "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 145,
+              "cooling": 90,
               "rules": [
                 {
-                  "type": "and",
+                  "type": "or",
                   "min": 0,
                   "max": 0,
                   "rules": [
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:water_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 1,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:lead_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
+                        "name": "nuclearcraft:overhaul_sfr:moderator",
+                        "type": "module",
                         "modules": {}
                       },
                       "min": 2,
@@ -7153,12 +7039,12 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:quartz_fission_heat_sink",
+          "name": "nuclearcraftneohaul:arsenic_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 80,
+              "cooling": 135,
               "rules": [
                 {
                   "type": "or",
@@ -7166,11 +7052,51 @@
                   "max": 0,
                   "rules": [
                     {
+                      "type": "axial",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:reflector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 3,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 85,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
+                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:moderator",
+                        "type": "module",
                         "modules": {}
                       },
                       "min": 1,
@@ -7206,6 +7132,110 @@
                       },
                       "min": 2,
                       "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:lead_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 60,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:diamond_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 200,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:gold_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:obsidian_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 70,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "axial",
+                      "block": {
+                        "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 3,
                       "rules": []
                     }
                   ]
@@ -7288,286 +7318,6 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:diamond_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 200,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:gold_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:silver_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 170,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:glowstone_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:tin_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:liquid_helium_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 190,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 2,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:copper_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 75,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:water_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:nether_brick_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 105,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:obsidian_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:purpur_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 95,
-              "rules": [
-                {
-                  "type": "and",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:reflector",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    },
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
-                        "blockstate": {},
-                        "type": "block",
-                        "modules": {}
-                      },
-                      "min": 1,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:manganese_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 150,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 2,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "nuclearcraftneohaul:cryotheum_fission_heat_sink",
-          "blockstate": {},
-          "type": "block",
-          "modules": {
-            "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 205,
-              "rules": [
-                {
-                  "type": "or",
-                  "min": 0,
-                  "max": 0,
-                  "rules": [
-                    {
-                      "type": "between",
-                      "block": {
-                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
-                        "type": "module",
-                        "modules": {}
-                      },
-                      "min": 3,
-                      "max": 6,
-                      "rules": []
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
           "name": "nuclearcraftneohaul:lapis_fission_heat_sink",
           "blockstate": {},
           "type": "block",
@@ -7609,26 +7359,39 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:enderium_fission_heat_sink",
+          "name": "nuclearcraftneohaul:liquid_nitrogen_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
             "nuclearcraft:overhaul_sfr:heat_sink": {
-              "cooling": 155,
+              "cooling": 185,
               "rules": [
                 {
-                  "type": "or",
+                  "type": "and",
                   "min": 0,
                   "max": 0,
                   "rules": [
                     {
                       "type": "between",
                       "block": {
-                        "name": "nuclearcraft:overhaul_sfr:moderator",
-                        "type": "module",
+                        "name": "nuclearcraftneohaul:copper_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
                         "modules": {}
                       },
-                      "min": 3,
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:purpur_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
                       "max": 6,
                       "rules": []
                     }
@@ -7639,13 +7402,293 @@
           }
         },
         {
-          "name": "nuclearcraftneohaul:graphite_block",
+          "name": "nuclearcraftneohaul:water_fission_heat_sink",
           "blockstate": {},
           "type": "block",
           "modules": {
-            "nuclearcraft:overhaul_sfr:moderator": {
-              "efficiency": 1.1,
-              "flux": 10
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 55,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:fuel_cell",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:quartz_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 80,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:redstone_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:aluminum_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 175,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:quartz_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:lapis_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:slime_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 145,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:water_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 1,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:lead_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:emerald_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 195,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:prismarine_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:end_stone_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 65,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:reflector",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:magnesium_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 125,
+              "rules": [
+                {
+                  "type": "and",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:moderator",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 1,
+                      "rules": []
+                    },
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraft:overhaul_sfr:casing",
+                        "type": "module",
+                        "modules": {}
+                      },
+                      "min": 1,
+                      "max": 6,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:gold_fission_heat_sink",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:heat_sink": {
+              "cooling": 110,
+              "rules": [
+                {
+                  "type": "or",
+                  "min": 0,
+                  "max": 0,
+                  "rules": [
+                    {
+                      "type": "between",
+                      "block": {
+                        "name": "nuclearcraftneohaul:iron_fission_heat_sink",
+                        "blockstate": {},
+                        "type": "block",
+                        "modules": {}
+                      },
+                      "min": 2,
+                      "max": 2,
+                      "rules": []
+                    }
+                  ]
+                }
+              ]
             }
           }
         },
@@ -7657,6 +7700,17 @@
             "nuclearcraft:overhaul_sfr:moderator": {
               "efficiency": 1.0,
               "flux": 36
+            }
+          }
+        },
+        {
+          "name": "nuclearcraftneohaul:graphite_block",
+          "blockstate": {},
+          "type": "block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:moderator": {
+              "efficiency": 1.1,
+              "flux": 10
             }
           }
         },
