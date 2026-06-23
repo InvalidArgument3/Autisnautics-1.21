@@ -13,25 +13,25 @@ ServerEvents.recipes(event => {
     }
     // alternate double jump recipe
     if (Platform.isLoaded("tconstruct") && Item.exists("thermal:blitz_powder")) {
-    event.custom({
-        "type": "tconstruct:modifier",
-        "inputs": [
-            { "item": "minecraft:piston" },
-            { "item": "tconstruct:sky_slime" },
-            { "item": "minecraft:piston" },
-            { "item": "thermal:blitz_powder" },
-            { "item": "thermal:blitz_powder" }
+        event.custom({
+            "type": "tconstruct:modifier",
+            "inputs": [
+                { "item": "minecraft:piston" },
+                { "item": "tconstruct:sky_slime" },
+                { "item": "minecraft:piston" },
+                { "item": "thermal:blitz_powder" },
+                { "item": "thermal:blitz_powder" }
             // { "item": "trials:wind_charge" },
             // { "item": "trials:wind_charge" }
-        ],
-        "result": "tconstruct:double_jump",
-        "slots": {
-            "abilities": 1
-        },
-        "tools": {
-            "tag": "tconstruct:modifiable/armor/boots"
-        }
-    }).id("tconstruct:tools/modifiers/ability/double_jump")
+            ],
+            "result": "tconstruct:double_jump",
+            "slots": {
+                "abilities": 1
+            },
+            "tools": {
+                "tag": "tconstruct:modifiable/armor/boots"
+            }
+        }).id("tconstruct:tools/modifiers/ability/double_jump")
     }
     // slow fall potion is in startup script potions.js
 })
