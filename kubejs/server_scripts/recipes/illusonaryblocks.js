@@ -1,17 +1,9 @@
 ServerEvents.recipes(event => {
 
     let illusion = (input) => {
-        const output = `kubejs:trial_${input.replace(/^minecraft:|^trials:|^everythingcopper:/, "")}`;
-        event.custom({
-            "type": "create:filling",
-            "ingredients": [
-                { "item": input },
-                { "fluid": "supplementaries:lumisene", "amount": 90 }
-            ],
-            "results": [
-                { "id": output, "count": 9 }
-            ]
-        })
+        if (!Item.exists(input)) return
+        const output = `kubejs:trial_${input.replace(/^minecraft:|^trials:|^everythingcopper:/, "")}`
+        event.recipes.create.filling(Item.of(output, 9), [input, Fluid.sizedIngredientOf("supplementaries:lumisene", 90)])
     }
 
     illusion("minecraft:copper_block");

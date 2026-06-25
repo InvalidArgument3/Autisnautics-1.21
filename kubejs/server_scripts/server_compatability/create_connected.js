@@ -2,7 +2,7 @@ if(Platform.isLoaded("create_connected")) {
     ServerEvents.recipes(event => {
         const circuitPlate = Item.exists("projectred_core:platformed_plate")
             ? "projectred_core:platformed_plate"
-            : "#forge:plates/iron"
+            : "create:iron_sheet"
         event.remove({ id: "create_connected:sequenced_assembly/control_chip" })
         event.remove({ id: "create_connected:crafting/kinetics/sequenced_pulse_generator" })
         event.shapeless("create_connected:sequenced_pulse_generator", [circuitPlate, "create:electron_tube"])

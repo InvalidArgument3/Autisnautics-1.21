@@ -2,15 +2,13 @@
   "mod_priorities": [
     "minecraft",
     "kubejs",
-    
+    "nuclearcraftneohaul",
     "create",
-    
     "powergrid",
-	"createdeco",
+    "createdeco",
     "createaddition",
     "immersiveengineering",
     "ae2",
-    "nuclearcraft",
     
     "occultism",
     "tfmg",
@@ -27,7 +25,17 @@
     "createbigcannons", 
     "stellaris"
   ],
-  "priority_overrides": {"c:ores/lithium":"nuclearcraft", "c:ores/uranium":"nuclearcraft", "c:dusts/ender_pearl":"ae2", "c:dusts/ender":"ae2", "c:nuggets/steel": "createbigcannons"},
+  "priority_overrides": {
+    "c:ores/boron": "nuclearcraftneohaul",
+    "c:ores/lithium": "nuclearcraftneohaul",
+    "c:ores/magnesium": "nuclearcraftneohaul",
+    "c:ores/thorium": "nuclearcraftneohaul",
+    "c:ores/tin": "nuclearcraftneohaul",
+    "c:ores/uranium": "nuclearcraftneohaul",
+    "c:dusts/ender_pearl": "ae2",
+    "c:dusts/ender": "ae2",
+    "c:nuggets/steel": "createbigcannons"
+  },
   "stone_variants": [
     "stone",
     "nether",

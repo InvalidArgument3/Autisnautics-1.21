@@ -212,17 +212,7 @@ ServerEvents.recipes(event => {
         B: "alexscaves:azure_neodymium_ingot"
     })
 
-    // -- Inductive Mechanisms
-    transitional = "kubejs:incomplete_inductive_mechanism"
-    event.recipes.create.sequenced_assembly([
-        "kubejs:inductive_mechanism",
-    ], "create:precision_mechanism", [
-        event.recipes.create.deploying(transitional, [transitional, "kubejs:radiant_coil"]),
-        event.recipes.create.deploying(transitional, [transitional, "kubejs:radiant_coil"]),
-        event.recipes.create.deploying(transitional, [transitional, Ingredient.of("#kubejs:chromatic_resonators")])
-    ]).transitionalItem(transitional)
-        .loops(1)
-        .id("kubejs:inductive_mechanism")
+    // Inductive mechanism recipe lives in chapters.js (kubejs:inductive_mechanism)
 
     // -- Constantan Casing
     event.shapeless(Item.of("kubejs:constantan_casing", 2), [Ingredient.of("#c:plates/constantan"), "immersiveengineering:sheetmetal_steel"])

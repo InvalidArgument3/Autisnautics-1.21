@@ -9,9 +9,57 @@ let wood_types = ["minecraft:oak", "minecraft:spruce", "minecraft:birch", "minec
 
 let unregistered_axes = []
 
-/* ScriptFile.java#75: java.lang.UnsupportedOperationException
-//global.hasThermal = Platform.isLoaded("thermal")
-*/
+/** Mod / registry guards — use instead of global.hasThermal (broken on server scripts). */
+function modLoaded(modId) {
+    return Platform.isLoaded(modId)
+}
+
+function itemOr(primary, fallback) {
+    if (typeof primary === "string" && Item.exists(primary)) return primary
+    if (typeof fallback === "string" && Item.exists(fallback)) return fallback
+    if (fallback && String(fallback).charAt(0) === "#") return fallback
+    return fallback || primary
+}
+
+function fluidOr(primary, fallback) {
+    if (typeof primary === "string" && Fluid.exists(primary)) return primary
+    if (typeof fallback === "string" && Fluid.exists(fallback)) return fallback
+    return fallback || primary
+}
+
+function ifMod(modId, fn) {
+    if (Platform.isLoaded(modId)) fn()
+}
+
+function ifItem(itemId, fn) {
+    if (Item.exists(itemId)) fn()
+}
+
+function tagAddIfExists(event, tag, itemId) {
+    if (Item.exists(itemId)) event.add(tag, itemId)
+}
+
+function firstExistingItem(ids) {
+    for (var i = 0; i < ids.length; i++) {
+        if (Item.exists(ids[i])) return ids[i]
+    }
+    return null
+}
+
+/** Create 1.21 deploying — Item.of(x, n) in the KubeJS API expands to n inputs (max 2). */
+function createDeployingCount(event, output, heldItem, heldCount, tool) {
+    var outJson = typeof output === "string" ? { id: output } : { id: output.id, count: output.count || 1 }
+    var toolIng = Ingredient.of(tool)
+    var toolJson = toolIng.isEmpty() ? { item: String(tool) } : toolIng.toJson()
+    event.custom({
+        type: "create:deploying",
+        ingredients: [
+            { item: heldItem, count: heldCount },
+            toolJson
+        ],
+        results: [outJson]
+    })
+}
 
 // helper for 3x3 shaped recipes with a center item
 let donutCraft = (event, output, outer, inner) => {
@@ -23,6 +71,70 @@ let donutCraft = (event, output, outer, inner) => {
         A: outer,
         B: inner
     })
+}
+
+let deployTool = (event, output, held, tool) => {
+    let heldIng = Ingredient.of(held)
+    let toolStr = String(tool)
+    let toolIng
+    if (toolStr.indexOf("kubejs:saws") >= 0) {
+        toolIng = Ingredient.of("minecraft:iron_axe")
+    } else {
+        toolIng = Ingredient.of(tool)
+        if (toolIng.isEmpty()) {
+            toolIng = Ingredient.of("#c:tools/axes")
+        }
+        if (toolIng.isEmpty()) {
+            toolIng = Ingredient.of("minecraft:iron_axe")
+        }
+    }
+    let heldJson = heldIng.isEmpty() ? { "tag": String(held).replace(/^#/, "") } : heldIng.toJson()
+    let toolJson = toolIng.toJson()
+    event.custom({
+        "type": "create:deploying",
+        "ingredients": [heldJson, toolJson],
+        "results": [{ "id": output }]
+    })
+}
+
+/** Create 1.21 — tag strings in recipe helpers serialize as fluids; use raw JSON instead. */
+let createCuttingTag = (event, results, tag, processingTime, id) => {
+    let recipe = {
+        "type": "create:cutting",
+        "ingredients": [{ "tag": tag.replace(/^#/, "") }],
+        "results": Array.isArray(results) ? results : [results],
+        "processing_time": processingTime
+    }
+    if (id) {
+        event.custom(recipe).id(id)
+    } else {
+        event.custom(recipe)
+    }
+}
+
+let createFillingJson = (event, resultId, itemIngredient, fluidId, fluidAmount, id) => {
+    let itemJson = typeof itemIngredient === "string"
+        ? (itemIngredient.startsWith("#")
+            ? { "tag": itemIngredient.replace(/^#/, "") }
+            : { "item": itemIngredient })
+        : itemIngredient
+    let recipe = {
+        "type": "create:filling",
+        "ingredients": [
+            itemJson,
+            {
+                "type": "neoforge:single",
+                "amount": fluidAmount,
+                "fluid": fluidId
+            }
+        ],
+        "results": [{ "id": resultId }]
+    }
+    if (id) {
+        event.custom(recipe).id(id)
+    } else {
+        event.custom(recipe)
+    }
 }
 
 /**
@@ -66,6 +178,10 @@ let createMachine = (machineItem, event, outputIngredient, inputIngredient) => {
 
         let machineJson = machine.toJson()
         let inputJson = inputIng.toJson()
+        if (!inputJson || (inputJson.item === "minecraft:air")) {
+            console.log(`ERROR: inputIngredient serialized empty (${inputIngredient}), skipping machine recipe for ${outputId}`)
+            return
+        }
 
         let results;
         try {
@@ -128,6 +244,10 @@ let constantanMachine = (event, outputIngredient, inputIngredient) => {
     return createMachine("kubejs:constantan_machine", event, outputIngredient, inputIngredient)
 }
 
+let invarMachine = (event, outputIngredient, inputIngredient) => {
+    return constantanMachine(event, outputIngredient, inputIngredient)
+}
+
 let enderiumMachine = (event, outputIngredient, inputIngredient) => {
     return createMachine("kubejs:enderium_machine", event, outputIngredient, inputIngredient)
 }
@@ -187,7 +307,7 @@ let toThermalOutputJson = (value) => {
 }
 
 let addTreeOutput = (event, trunk, leaf, fluid) => {
-    if (!global.hasThermal) {
+    if (!Platform.isLoaded("thermal")) {
         return {
             id: () => {}
         }
@@ -222,6 +342,7 @@ let addTreeOutput = (event, trunk, leaf, fluid) => {
  * @param {number} castingTime the time it takes to cast a block in a casting table (nugget and ingot casting times will be calculated based on that)
  */
 let metalCasting = (event, metalName, castingTime) => {
+    if (!Platform.isLoaded("tconstruct")) return
     let fluidTag = "forge:molten_" + metalName
     let blockTag = "forge:storage_blocks/" + metalName
 
@@ -281,7 +402,7 @@ let metalCasting = (event, metalName, castingTime) => {
     })
 
     // ingot chilling
-    if (global.hasThermal && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
+    if (Platform.isLoaded("thermal") && Item.exists("thermal:chiller_ingot_cast") && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
         event.custom({
             "type": "thermal:chiller",
             "ingredients": [{
@@ -307,6 +428,7 @@ let metalCasting = (event, metalName, castingTime) => {
  * @param {number} temperature the temperature required to melt a block in the smeltery
  */
 let metalMelting = (event, metalName, outputFluid, meltingTime, temperature) => {
+    if (!Platform.isLoaded("tconstruct")) return
     let blockTag = "forge:storage_blocks/" + metalName
 
     // block melting
@@ -351,7 +473,7 @@ let metalMelting = (event, metalName, outputFluid, meltingTime, temperature) => 
     })
 
     // ingot crucible melting
-    if (global.hasThermal && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
+    if (Platform.isLoaded("thermal") && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
         event.custom({
             type: "thermal:crucible",
             ingredient: {
@@ -403,6 +525,14 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
     blockName = blockName.split(":")
     let blockNamespace = blockName[0]
     let blockIdentifier = blockName[1]
+    let deepslateIdentifier
+    if (blockNamespace === "nuclearcraftneohaul") {
+        deepslateIdentifier = blockIdentifier.replace(/_ore$/, "_deepslate_ore")
+    } else if (blockIdentifier.startsWith("ore_")) {
+        deepslateIdentifier = `deepslate_${blockIdentifier}`
+    } else {
+        deepslateIdentifier = `deepslate_${blockIdentifier}`
+    }
 
     // A2: shorthand for <1 vein per chunk
     let rarityFilter = 1
@@ -421,7 +551,7 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
                     "target": { "predicate_type": "minecraft:tag_match", "tag": "minecraft:stone_ore_replaceables" }
                 },
                 {
-                    "state": { "Name": `${blockNamespace}:deepslate_${blockIdentifier}` },
+                    "state": { "Name": `${blockNamespace}:${deepslateIdentifier}` },
                     "target": { "predicate_type": "minecraft:tag_match", "tag": "minecraft:deepslate_ore_replaceables" }
                 }
             ]
@@ -429,13 +559,10 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
     })
     let minInclusive = { "absolute": heightMin }
     let maxInclusive = { "absolute": heightMax }
-    // EMI Oregen will display more useful information if we change to using Above Bottom where it makes sense to
+    // Deepslate band: above_bottom reads clearer in EMI; sky-island crust uses absolute Y.
     if (heightMin < -64) {
         minInclusive = { "above_bottom": heightMin + 64 }
         maxInclusive = { "above_bottom": heightMax + 64 }
-    } else if (heightMax > 512) {
-        minInclusive = { "below_top": -(heightMin - 512) }
-        maxInclusive = { "below_top": -(heightMax - 512) }
     }
 
     if (rarityFilter == 1) {
@@ -489,19 +616,22 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
  * @param {string} tag Don't include a hashtag in the tag name
  */
 var getPreferredItemFromTag = (tag) => {
-    const preferredMods = ["minecraft", "kubejs", "create", "createdeco", "createaddition", "thermal", "tfmg", "tconstruct", "immersiveengineering", "ae2", "createaddition", "botania", "ad_astra", "scguns", "nuclearcraft", "embers"]
+    const preferredMods = ["minecraft", "kubejs", "nuclearcraftneohaul", "create", "createdeco", "createaddition", "thermal", "tfmg", "tconstruct", "immersiveengineering", "ae2", "createaddition", "botania", "ad_astra", "scguns", "embers"]
     const tagItems = Ingredient.of("#" + tag).itemIds;
     for (let i = 0; i < preferredMods.length; ++i) {
         let modId = preferredMods[i];
         for (let j = 0; j < tagItems.length; ++j) {
             let itemId = tagItems[j];
-            if (itemId.split(":")[0] === modId) {
+            if (itemId.split(":")[0] === modId && Item.exists(itemId) && itemId !== "minecraft:air" && itemId !== "minecraft:barrier") {
                 return itemId;
             }
         }
     }
-    if (tagItems.length > 0) {
-        return tagItems[0];
+    for (let j = 0; j < tagItems.length; ++j) {
+        let itemId = tagItems[j];
+        if (Item.exists(itemId) && itemId !== "minecraft:air" && itemId !== "minecraft:barrier") {
+            return itemId;
+        }
     }
     return "minecraft:air";
 }
@@ -529,6 +659,112 @@ function getThermalRecipes(event) {
     }
 }
 
+/** Nuclearcraft Neohaul recipe helpers (1.21 JSON format). Rhino-safe — no shorthand props, spread, or ?. */
+function ncModifiers(power, radiation, time) {
+    return {
+        powerModifier: power != null ? power : 1.0,
+        radiation: radiation != null ? radiation : 0.0,
+        timeModifier: time != null ? time : 1.0
+    }
+}
+
+function ncApplyModifiers(recipe, mods) {
+    var m = ncModifiers(mods && mods.power, mods && mods.radiation, mods && mods.time)
+    recipe.powerModifier = m.powerModifier
+    recipe.radiation = m.radiation
+    recipe.timeModifier = m.timeModifier
+    return recipe
+}
+
+function ncItemIng(entry) {
+    if (typeof entry === "string") {
+        return { count: 1, ingredient: entry.startsWith("#") ? { tag: entry.slice(1) } : { item: entry } }
+    }
+    var count = entry.count != null ? entry.count : 1
+    if (entry.tag) return { count: count, ingredient: { tag: entry.tag } }
+    if (entry.item) return { count: count, ingredient: { item: entry.item } }
+    return { count: 1, ingredient: { item: entry } }
+}
+
+function ncFluidIng(entry) {
+    var amount = entry.amount
+    if (entry.fluid) return { amount: amount, ingredient: { fluid: entry.fluid } }
+    if (entry.tag) return { amount: amount, ingredient: { tag: entry.tag } }
+    return { amount: amount, ingredient: { fluid: entry } }
+}
+
+function ncItemProd(entry) {
+    var count = entry.count != null ? entry.count : (entry.amount != null ? entry.amount : 1)
+    var item = entry.item != null ? entry.item : entry
+    return { count: count, ingredient: { item: item } }
+}
+
+function ncManufactoryRecipe(inputs, outputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:manufactory_recipe",
+        itemIngredients: inputs.map(ncItemIng),
+        itemProducts: outputs.map(ncItemProd)
+    }, mods)
+}
+
+function ncMelterRecipe(itemInputs, fluidOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:melter_recipe",
+        itemIngredients: itemInputs.map(ncItemIng),
+        fluidProducts: fluidOutputs.map(ncFluidIng)
+    }, mods)
+}
+
+function ncCrystallizerRecipe(fluidInputs, itemOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:crystallizer_recipe",
+        fluidIngredients: fluidInputs.map(ncFluidIng),
+        itemProducts: itemOutputs.map(ncItemProd)
+    }, mods)
+}
+
+function ncIngotFormerRecipe(fluidInputs, itemOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:ingot_former_recipe",
+        fluidIngredients: fluidInputs.map(ncFluidIng),
+        itemProducts: itemOutputs.map(ncItemProd)
+    }, mods)
+}
+
+function ncInfuserRecipe(fluidInputs, itemInputs, itemOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:infuser_recipe",
+        fluidIngredients: fluidInputs.map(ncFluidIng),
+        itemIngredients: itemInputs.map(ncItemIng),
+        itemProducts: itemOutputs.map(ncItemProd)
+    }, mods)
+}
+
+function ncEnricherRecipe(itemInputs, fluidInputs, fluidOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:enricher_recipe",
+        itemIngredients: itemInputs.map(ncItemIng),
+        fluidIngredients: fluidInputs.map(ncFluidIng),
+        fluidProducts: fluidOutputs.map(ncFluidIng)
+    }, mods)
+}
+
+function ncAssemblerRecipe(itemInputs, itemOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:assembler_recipe",
+        itemIngredients: itemInputs.map(ncItemIng),
+        itemProducts: itemOutputs.map(ncItemProd)
+    }, mods)
+}
+
+function ncAlloyFurnaceRecipe(itemInputs, itemOutputs, mods) {
+    return ncApplyModifiers({
+        type: "nuclearcraftneohaul:alloy_furnace_recipe",
+        itemIngredients: itemInputs.map(ncItemIng),
+        itemProducts: itemOutputs.map(ncItemProd)
+    }, mods)
+}
+
 /** KubeJS 1.21 Create chance output (replaces Item.of(...).withChance). */
 function chanceItem(item, chance) {
     if (chance == null || chance >= 1) {
@@ -552,7 +788,8 @@ function replaceBlockLootFromJson(event, blockId, json) {
     const table = event.getLootTable(tableId)
     json.pools.forEach(poolData => {
         table.createPool(pool => {
-            pool.setRolls(poolData.rolls ?? 1)
+            var rollCount = poolData.rolls != null ? poolData.rolls : 1
+            pool.rolls(rollCount)
             poolData.entries.forEach(entry => pool.addCustomEntry(entry))
         })
     })

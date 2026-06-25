@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     // Cuisine Delight: Stonecutting planks into plates
     // Replacement: cut a slab again to make 8 plates, and remove conflicting powergrid circuit board recipe
     event.remove({ id: "cuisinedelight:plate_from_planks_stonecutting" })
-    event.recipes.create.cutting(Item.of("cuisinedelight:plate", 8), Ingredient.of("#minecraft:wooden_slabs")).processingTime(150).id(`kubejs:cutting/wooden_slab_to_plates`)
+    createCuttingTag(event, [{ "id": "cuisinedelight:plate", "count": 8 }], "#minecraft:wooden_slabs", 150, "kubejs:cutting/wooden_slab_to_plates")
     event.remove({ id: "powergrid:cutting/empty_circuit_slabs" })
     // createbigcannons: all moulds are sawed from logs in one recipe, which has been widely regarded as a bad move
     if (Platform.isLoaded("createbigcannons")) {

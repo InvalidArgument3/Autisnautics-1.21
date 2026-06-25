@@ -38,7 +38,7 @@ if (Platform.isLoaded("createaddition")) {
         // Redstone Relay
         const circuitPlate = Item.exists("projectred_core:platformed_plate")
             ? "projectred_core:platformed_plate"
-            : "#forge:plates/iron"
+            : "create:iron_sheet"
         event.remove({ output: "createaddition:redstone_relay" })
         event.shapeless("createaddition:redstone_relay", [circuitPlate, "createaddition:connector"])
             .id("kubejs:compat/createaddition/redstone_relay_manual_only")
@@ -88,13 +88,17 @@ if (Platform.isLoaded("createaddition")) {
             .add("create_central_kitchen:honey_cake_slice")
 
         event.add("forge:storage_blocks/electrum", "createaddition:electrum_block")
-        event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
+        if (Platform.isLoaded("tconstruct")) {
+            event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
+        }
     })
     ServerEvents.tags("block", event => {
         event.add("minecraft:mineable/pickaxe", "createaddition:electrum_block")
         event.add("minecraft:needs_iron_tool", "createaddition:electrum_block")
         event.add("minecraft:beacon_base_blocks", "createaddition:electrum_block")
-        event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
+        if (Platform.isLoaded("tconstruct")) {
+            event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
+        }
     })
 
     LootJS.modifiers(event => {

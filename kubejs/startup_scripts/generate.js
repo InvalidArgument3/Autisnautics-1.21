@@ -86,23 +86,26 @@ StartupEvents.registry("item", event => {
     mechanism("Abstruse", "rare")
     mechanism("Calculation", "rare")
 
-    /* 1.21: no more tconstruct slimy ferns
+    /* 1.21: no more tconstruct slimy ferns — kubejs items still used in chapter 3 */
     let slime_types = ["Earth", "Sky", "Ender"]
     let slime_colours = [0x8FDB84, 0x00F9DE, 0xAC2EFC]
 
     for (let i = 0; i < slime_types.length; i++) {
         let name = slime_types[i]
         let id = name.toLowerCase()
-        event.create(`${id}_slimy_fern_leaf`)
+        event.create(id + "_slimy_fern_leaf")
             .color(0, slime_colours[i])
             .texture("cabin:item/slimy_fern_leaf")
             .displayName("Slimy Fern Leaf")
-        event.create(`${id}_slime_fern_paste`)
+        event.create(id + "_slime_fern_paste")
             .color(0, slime_colours[i])
             .texture("cabin:item/ground_slimy_fern")
             .displayName("Slimy Fern Blend")
+        event.create(id + "_slime_fern")
+            .color(0, slime_colours[i])
+            .texture("cabin:item/slimy_fern_leaf")
+            .displayName(name + " Slime Fern")
     }
-    */
 
     // Misc / Integration
     event.create("pipe_module_utility").texture("cabin:item/pipe_module_utility").displayName("Utility Pipe Module")
@@ -368,6 +371,10 @@ StartupEvents.registry("block", event => {
 
     substrateblock(0x9FADB4, 0xBECCD2, "substrate_silver", "Silver Reagent", "cabin:block/substrate")
         .item(item => item.rarity("rare"))
+
+    substrateblock(0xFC7781, 0xFCCED0, "substrate_cinnabar", "Cinnabar Reagent", "cabin:block/substrate")
+    substrateblock(0x735A65, 0xB8AFAF, "substrate_ruby", "Ruby Reagent", "cabin:block/substrate")
+    substrateblock(0x335DC1, 0x7395E7, "substrate_sapphire", "Sapphire Reagent", "cabin:block/substrate")
 
     acceleratorBlock(0xFFBC5E, "accelerator_glowstone", "Glowstone Accelerator", "cabin:block/accellerator")
 

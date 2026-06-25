@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
             event.custom({
                 "type": "farmersdelight:cutting",
                 "ingredients": [{ "item": log }],
-                "tool": { "tag": "forge:tools/axes" },
+                "tool": { "tag": "c:tools/axes" },
                 "result": [
                     { "item": { "id": strippedLog }, "chance": 1.0 },
                     { "item": { "id": "farmersdelight:tree_bark" }, "chance": 1.0 }
@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
             event.custom({
                 "type": "farmersdelight:cutting",
                 "ingredients": [{ "item": woodLog }],
-                "tool": { "tag": "forge:tools/axes" },
+                "tool": { "tag": "c:tools/axes" },
                 "result": [
                     { "item": { "id": strippedWood }, "chance": 1.0 },
                     { "item": { "id": "farmersdelight:tree_bark" }, "chance": 1.0 }

@@ -112,13 +112,7 @@ let metal_ores_json = (id, crushedId) => {
                                 "functions": [
                                     {
                                         "function": "minecraft:set_count",
-                                        "count": 1,
-                                    },
-                                    {
-                                        "function": "minecraft:apply_bonus",
-                                        "enchantment": "minecraft:fortune",
-                                        "formula": "minecraft:uniform_bonus_count",
-                                        "parameters": { "bonusMultiplier": 1 }
+                                        "count": 1
                                     },
                                     {
                                         "function": "minecraft:explosion_decay"
@@ -161,10 +155,11 @@ LootJS.lootTables(event => {
     let create_crushed_ore_types = ["iron", "gold", "copper", "zinc", "platinum", "silver", "tin", "lead", "aluminum", "uranium", "nickel"]
 
     jaopca_crushed_ore_types.forEach(metal => {
+        let crushedId = "jaopca:create_crushed." + metal
+        if (!Item.exists(crushedId)) return
         let jaopcaOreList = new RegExp("^.*:(deepslate_|nether_|moon_|mars_|venus_|mercury_|glacio_)?" + metal + "_(deepslate_)?ore$")
-        // console.log(`oreList for ` + metal + ` is: ` + Ingredient.of(jaopcaOreList).itemIds.toString())
         Ingredient.of(jaopcaOreList).itemIds.forEach(ore => {
-            replaceBlockLootFromJson(event, ore, metal_ores_json(ore, "jaopca:create_crushed." + metal))
+            replaceBlockLootFromJson(event, ore, metal_ores_json(ore, crushedId))
         })
     })
     create_crushed_ore_types.forEach(metal => {
@@ -174,8 +169,12 @@ LootJS.lootTables(event => {
             replaceBlockLootFromJson(event, ore, metal_ores_json(ore, "create:crushed_raw_" + metal))
         })
     })
-    replaceBlockLootFromJson(event, "scguns:anthralite_ore", metal_ores_json("scguns:anthralite_ore", "scguns:crushed_raw_anthralite"))
-    replaceBlockLootFromJson(event, "scguns:deepslate_anthralite_ore", metal_ores_json("scguns:deepslate_anthralite_ore", "scguns:crushed_raw_anthralite"))
+    if (Item.exists("scguns:anthralite_ore") && Item.exists("scguns:crushed_raw_anthralite")) {
+        replaceBlockLootFromJson(event, "scguns:anthralite_ore", metal_ores_json("scguns:anthralite_ore", "scguns:crushed_raw_anthralite"))
+    }
+    if (Item.exists("scguns:deepslate_anthralite_ore") && Item.exists("scguns:crushed_raw_anthralite")) {
+        replaceBlockLootFromJson(event, "scguns:deepslate_anthralite_ore", metal_ores_json("scguns:deepslate_anthralite_ore", "scguns:crushed_raw_anthralite"))
+    }
 
 
 })
