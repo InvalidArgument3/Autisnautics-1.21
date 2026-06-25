@@ -106,26 +106,26 @@ ServerEvents.tags("item", event => {
 
     // Ad Astra laser lamps
     if (Platform.isLoaded("ad_astra")) {
-    for (let i = 0; i < colours.length; ++i) {
-        let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
-        if (Item.exists(lamp)) {
-            event.add("kubejs:alchemical_laser_lamps", lamp)
-            event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+        for (let i = 0; i < colours.length; ++i) {
+            let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
+            if (Item.exists(lamp)) {
+                event.add("kubejs:alchemical_laser_lamps", lamp)
+                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+            }
+            lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
+            if (Item.exists(lamp)) {
+                event.add("kubejs:alchemical_laser_lamps", lamp)
+                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+            }
         }
-        lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
-        if (Item.exists(lamp)) {
-            event.add("kubejs:alchemical_laser_lamps", lamp)
-            event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-        }
-    }
     }
 
     if (Platform.isLoaded("thermal")) {
     // This tag prevents items from being consumed in press (market) recipes
-    event.get("thermal:crafting/dies").add("#kubejs:transaction_cards")
-    event.get("thermal:crafting/dies").add("kubejs:missingno")
+        event.get("thermal:crafting/dies").add("#kubejs:transaction_cards")
+        event.get("thermal:crafting/dies").add("kubejs:missingno")
 
-    event.get("thermal:crafting/casts").add("kubejs:three_cast").add("kubejs:eight_cast").add("kubejs:plus_cast").add("kubejs:minus_cast").add("kubejs:multiply_cast").add("kubejs:divide_cast").add("#kubejs:circuit_press")
+        event.get("thermal:crafting/casts").add("kubejs:three_cast").add("kubejs:eight_cast").add("kubejs:plus_cast").add("kubejs:minus_cast").add("kubejs:multiply_cast").add("kubejs:divide_cast").add("#kubejs:circuit_press")
     }
 
     event.get("create:upright_on_belt")
@@ -382,18 +382,18 @@ ServerEvents.tags("block", event => {
 
     // Ad Astra laser lamps
     if (Platform.isLoaded("ad_astra")) {
-    for (let i = 0; i < colours.length; ++i) {
-        let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
-        if (Item.exists(lamp)) {
-            event.add("kubejs:alchemical_laser_lamps", lamp)
-            event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+        for (let i = 0; i < colours.length; ++i) {
+            let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
+            if (Item.exists(lamp)) {
+                event.add("kubejs:alchemical_laser_lamps", lamp)
+                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+            }
+            lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
+            if (Item.exists(lamp)) {
+                event.add("kubejs:alchemical_laser_lamps", lamp)
+                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+            }
         }
-        lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
-        if (Item.exists(lamp)) {
-            event.add("kubejs:alchemical_laser_lamps", lamp)
-            event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-        }
-    }
     }
 
     if (Platform.isLoaded("tconstruct") && Item.exists("thermal:bronze_block")) {
@@ -409,18 +409,18 @@ ServerEvents.tags("block", event => {
     event.add("create:wrench_pickup", "mbd2:strainer")
 
     if (Platform.isLoaded("thermal")) {
-    event.add("create:wrench_pickup", /thermal:machine/)
-    event.add("create:wrench_pickup", /thermal:device/)
-    event.add("create:wrench_pickup", /thermal:dynamo/)
-    event.add("create:wrench_pickup", "thermal:tinker_bench")
-    event.add("create:wrench_pickup", "thermal:charge_bench")
-    event.add("create:wrench_pickup", "thermal:energy_cell_frame")
-    event.add("create:wrench_pickup", "thermal:energy_cell")
-    event.add("create:wrench_pickup", "thermal:fluid_cell_frame")
-    event.add("create:wrench_pickup", "thermal:fluid_cell")
-    event.add("create:wrench_pickup", "thermal:energy_duct")
-    event.add("create:wrench_pickup", "thermal:fluid_duct")
-    event.add("create:wrench_pickup", "thermal:fluid_duct_windowed")
+        event.add("create:wrench_pickup", /thermal:machine/)
+        event.add("create:wrench_pickup", /thermal:device/)
+        event.add("create:wrench_pickup", /thermal:dynamo/)
+        event.add("create:wrench_pickup", "thermal:tinker_bench")
+        event.add("create:wrench_pickup", "thermal:charge_bench")
+        event.add("create:wrench_pickup", "thermal:energy_cell_frame")
+        event.add("create:wrench_pickup", "thermal:energy_cell")
+        event.add("create:wrench_pickup", "thermal:fluid_cell_frame")
+        event.add("create:wrench_pickup", "thermal:fluid_cell")
+        event.add("create:wrench_pickup", "thermal:energy_duct")
+        event.add("create:wrench_pickup", "thermal:fluid_duct")
+        event.add("create:wrench_pickup", "thermal:fluid_duct_windowed")
     }
 
     /* // Supplementaries blocks added to wrench pickup - possible source of world load crash
@@ -503,12 +503,12 @@ ServerEvents.tags("block_entity_type", event => {
 
     // Add tags to basic vanilla-like chests and inventories to allow function with tinker's side inventory feature on crafting stations
     if (Platform.isLoaded("tconstruct")) {
-    event.get("tconstruct:side_inventories")
-        .add("quark:variant_chest")
-        .add("quark:variant_trapped_chest")
-        .add(/^everycomp:q.*_chest$/)
-        .add("farmersdelight:cabinet")
-        .add("ae2:sky_stone_chest")
+        event.get("tconstruct:side_inventories")
+            .add("quark:variant_chest")
+            .add("quark:variant_trapped_chest")
+            .add(/^everycomp:q.*_chest$/)
+            .add("farmersdelight:cabinet")
+            .add("ae2:sky_stone_chest")
     }
 })
 

@@ -744,26 +744,26 @@ ServerEvents.recipes(event => {
     // Chorus Fruit comes from the default thermal insolator recipe
     // Gold and Silver melting, might belong with market recipes
     if (hasTConstruct) {
-    event.custom({
-        "type": "tconstruct:melting",
-        "ingredient": { "tag": "forge:coins/silver" },
-        "result": {
-            "fluid": "tconstruct:molten_silver",
-            "amount": 10
-        },
-        "temperature": 790,
-        "time": 40
-    })
-    event.custom({ // worth it!
-        "type": "tconstruct:melting",
-        "ingredient": { "tag": "forge:coins/gold" },
-        "result": {
-            "fluid": "tconstruct:molten_gold",
-            "amount": 10
-        },
-        "temperature": 790,
-        "time": 40
-    })
+        event.custom({
+            "type": "tconstruct:melting",
+            "ingredient": { "tag": "forge:coins/silver" },
+            "result": {
+                "fluid": "tconstruct:molten_silver",
+                "amount": 10
+            },
+            "temperature": 790,
+            "time": 40
+        })
+        event.custom({ // worth it!
+            "type": "tconstruct:melting",
+            "ingredient": { "tag": "forge:coins/gold" },
+            "result": {
+                "fluid": "tconstruct:molten_gold",
+                "amount": 10
+            },
+            "temperature": 790,
+            "time": 40
+        })
     }
     // Enderium Ingots
     thermalRecipes.smelter("thermal:enderium_ingot", ["#forge:ingots/silver", "minecraft:chorus_fruit", "minecraft:ender_pearl"], 0, 10000)
@@ -772,9 +772,9 @@ ServerEvents.recipes(event => {
     if (hasThermal && Item.exists("thermal:enderium_ingot")) {
         thermalRecipes.smelter("kubejs:abstruse_mechanism", ["kubejs:inductive_mechanism", "thermal:enderium_ingot"], 0, 2000)
     } else {
-        var enderiumIngot = firstExistingItem(["thermal:enderium_ingot", "nuclearcraftneohaul:enderium_ingot"])
+        let enderiumIngot = firstExistingItem(["thermal:enderium_ingot", "nuclearcraftneohaul:enderium_ingot"])
         if (!enderiumIngot) {
-            var fromTag = getPreferredItemFromTag("forge:ingots/enderium")
+            let fromTag = getPreferredItemFromTag("forge:ingots/enderium")
             if (fromTag !== "minecraft:air") enderiumIngot = fromTag
         }
         if (enderiumIngot) {
@@ -922,30 +922,30 @@ ServerEvents.recipes(event => {
     // all gem melting recipes are automatically ported to megma crucible recipe in thermal.js
     // Printed Processors
     if (hasTConstruct) {
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": "ae2:calculation_processor_press" },
-        "cast_consumed": false,
-        "fluid": { "tag": "tconstruct:molten_copper", "amount": 90 },
-        "result": { "item": "ae2:printed_calculation_processor" },
-        "cooling_time": 150
-    })
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": "ae2:logic_processor_press" },
-        "cast_consumed": false,
-        "fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
-        "result": { "item": "ae2:printed_logic_processor" },
-        "cooling_time": 150
-    })
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": "ae2:engineering_processor_press" },
-        "cast_consumed": false,
-        "fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
-        "result": { "item": "ae2:printed_engineering_processor" },
-        "cooling_time": 150
-    })
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": { "item": "ae2:calculation_processor_press" },
+            "cast_consumed": false,
+            "fluid": { "tag": "tconstruct:molten_copper", "amount": 90 },
+            "result": { "item": "ae2:printed_calculation_processor" },
+            "cooling_time": 150
+        })
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": { "item": "ae2:logic_processor_press" },
+            "cast_consumed": false,
+            "fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
+            "result": { "item": "ae2:printed_logic_processor" },
+            "cooling_time": 150
+        })
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": { "item": "ae2:engineering_processor_press" },
+            "cast_consumed": false,
+            "fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
+            "result": { "item": "ae2:printed_engineering_processor" },
+            "cooling_time": 150
+        })
     }
     // Chiller recipes for printed processors (blazinghot when tconstruct absent)
     if (Platform.isLoaded("thermal")) {
@@ -1075,18 +1075,18 @@ ServerEvents.recipes(event => {
         let result = `kubejs:${e}`
         event.stonecutting(cast, nickelPlate)
         if (hasTConstruct) {
-        event.custom({
-            "type": "tconstruct:casting_table",
-            "cast": {
-                "item": cast
-            },
-            "fluid": {
-                "name": "kubejs:raw_logic",
-                "amount": 1
-            },
-            "result": Item.of(result),
-            "cooling_time": 10
-        })
+            event.custom({
+                "type": "tconstruct:casting_table",
+                "cast": {
+                    "item": cast
+                },
+                "fluid": {
+                    "name": "kubejs:raw_logic",
+                    "amount": 1
+                },
+                "result": Item.of(result),
+                "cooling_time": 10
+            })
         }
         if (hasThermal) {
             event.custom({
@@ -1178,16 +1178,16 @@ ServerEvents.recipes(event => {
     let meltOrCrucible = (id, out, outAmount) => {
         thermalRecipes.crucible(Fluid.of(out, outAmount), [id], 0, 100)
         if (hasTConstruct) {
-        event.custom({
-            "type": "tconstruct:melting",
-            "ingredient": { "item": id },
-            "result": {
-                "fluid": out,
-                "amount": outAmount
-            },
-            "temperature": 200,
-            "time": 20
-        })
+            event.custom({
+                "type": "tconstruct:melting",
+                "ingredient": { "item": id },
+                "result": {
+                    "fluid": out,
+                    "amount": outAmount
+                },
+                "temperature": 200,
+                "time": 20
+            })
         }
     }
     meltOrCrucible("kubejs:calculation_mechanism", "kubejs:raw_logic", 30)
@@ -1205,36 +1205,36 @@ ServerEvents.recipes(event => {
     let alloyAmount = 10
     let outAmount = 50
     if (hasTConstruct) {
-    event.custom({
-        "type": "tconstruct:alloy",
-        "inputs": [
-            { "name": "kubejs:number_0", "amount": alloyAmount },
-            { "name": "kubejs:number_1", "amount": alloyAmount },
-            { "name": "kubejs:number_2", "amount": alloyAmount },
-            { "name": "kubejs:number_3", "amount": alloyAmount },
-            { "name": "kubejs:number_4", "amount": alloyAmount },
-            { "name": "kubejs:number_5", "amount": alloyAmount },
-            { "name": "kubejs:number_6", "amount": alloyAmount },
-            { "name": "kubejs:number_7", "amount": alloyAmount },
-            { "name": "kubejs:number_8", "amount": alloyAmount },
-            { "name": "kubejs:number_9", "amount": alloyAmount }
-        ],
-        "result": {
-            "fluid": "kubejs:matrix",
-            "amount": outAmount
-        },
-        "temperature": 200
-    })
-    // Computation Matrix
-    event.custom({
-        "type": "tconstruct:casting_basin",
-        "fluid": {
-            "name": "kubejs:matrix",
-            "amount": 1000
-        },
-        "result": Item.of("kubejs:computation_matrix"),
-        "cooling_time": 20
-    })
+        event.custom({
+            "type": "tconstruct:alloy",
+            "inputs": [
+                { "name": "kubejs:number_0", "amount": alloyAmount },
+                { "name": "kubejs:number_1", "amount": alloyAmount },
+                { "name": "kubejs:number_2", "amount": alloyAmount },
+                { "name": "kubejs:number_3", "amount": alloyAmount },
+                { "name": "kubejs:number_4", "amount": alloyAmount },
+                { "name": "kubejs:number_5", "amount": alloyAmount },
+                { "name": "kubejs:number_6", "amount": alloyAmount },
+                { "name": "kubejs:number_7", "amount": alloyAmount },
+                { "name": "kubejs:number_8", "amount": alloyAmount },
+                { "name": "kubejs:number_9", "amount": alloyAmount }
+            ],
+            "result": {
+                "fluid": "kubejs:matrix",
+                "amount": outAmount
+            },
+            "temperature": 200
+        })
+        // Computation Matrix
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+                "name": "kubejs:matrix",
+                "amount": 1000
+            },
+            "result": Item.of("kubejs:computation_matrix"),
+            "cooling_time": 20
+        })
     }
 
     // Ad Astra Recipe Removals are found in ad_astra.js
@@ -1266,76 +1266,76 @@ ServerEvents.recipes(event => {
     ], materials)
     if (Platform.isLoaded("ad_astra")) {
     // Oxygen Loader
-    materials.S = "minecraft:bucket"
-    event.recipes.create.mechanical_crafting("ad_astra:oxygen_loader", [
-        "AAA",
-        "GSG",
-        "AMA"
-    ], materials)
-    // Oxygen Bubble Distributor
-    materials.S = "create:propeller"
-    event.recipes.create.mechanical_crafting("ad_astra:oxygen_distributor", [
-        "AAA",
-        "GSG",
-        "AMA"
-    ], materials)
-    // Oxygen Sensor
-    event.recipes.create.mechanical_crafting("ad_astra:oxygen_sensor", [
-        "AAA",
-        "GSG",
-        "AMA"
-    ], Object.assign(materials, {M:"minecraft:redstone_block"}))
-    // Space Suit.
-    let pattern = [
-        " A ",
-        "GSG",
-        " A "
-    ];
+        materials.S = "minecraft:bucket"
+        event.recipes.create.mechanical_crafting("ad_astra:oxygen_loader", [
+            "AAA",
+            "GSG",
+            "AMA"
+        ], materials)
+        // Oxygen Bubble Distributor
+        materials.S = "create:propeller"
+        event.recipes.create.mechanical_crafting("ad_astra:oxygen_distributor", [
+            "AAA",
+            "GSG",
+            "AMA"
+        ], materials)
+        // Oxygen Sensor
+        event.recipes.create.mechanical_crafting("ad_astra:oxygen_sensor", [
+            "AAA",
+            "GSG",
+            "AMA"
+        ], Object.assign(materials, {M:"minecraft:redstone_block"}))
+        // Space Suit.
+        let pattern = [
+            " A ",
+            "GSG",
+            " A "
+        ];
 
-    materials = {
-        A: "kubejs:matter_plastics",
-        G: "#forge:plates/gold",
-        S: "minecraft:iron_chestplate"
-    }
-    // chestplate
-    event.recipes.create.mechanical_crafting("ad_astra:space_suit", pattern, materials)
-    // helmet
-    materials.S = "minecraft:iron_helmet"
-    event.recipes.create.mechanical_crafting("ad_astra:space_helmet", pattern, materials)
-    // leggings
-    materials.S = "minecraft:iron_leggings"
-    event.recipes.create.mechanical_crafting("ad_astra:space_pants", pattern, materials)
-    // boots
-    materials.S = "minecraft:iron_boots"
-    event.recipes.create.mechanical_crafting("ad_astra:space_boots", pattern, materials)
+        materials = {
+            A: "kubejs:matter_plastics",
+            G: "#forge:plates/gold",
+            S: "minecraft:iron_chestplate"
+        }
+        // chestplate
+        event.recipes.create.mechanical_crafting("ad_astra:space_suit", pattern, materials)
+        // helmet
+        materials.S = "minecraft:iron_helmet"
+        event.recipes.create.mechanical_crafting("ad_astra:space_helmet", pattern, materials)
+        // leggings
+        materials.S = "minecraft:iron_leggings"
+        event.recipes.create.mechanical_crafting("ad_astra:space_pants", pattern, materials)
+        // boots
+        materials.S = "minecraft:iron_boots"
+        event.recipes.create.mechanical_crafting("ad_astra:space_boots", pattern, materials)
 
-    // Gas Tanks
-    materials = {
-        A: "kubejs:matter_plastics",
-        G: "#forge:plates/gold"
-    }
-    event.recipes.create.mechanical_crafting("ad_astra:gas_tank", [
-        "G",
-        "A",
-        "A"
-    ], materials)
-    materials.A = "#forge:ingots/invar"
-    materials.T = "ad_astra:gas_tank"
-    event.recipes.create.mechanical_crafting("ad_astra:large_gas_tank", [
-        " G ",
-        "ATA",
-        "ATA"
-    ], materials)
+        // Gas Tanks
+        materials = {
+            A: "kubejs:matter_plastics",
+            G: "#forge:plates/gold"
+        }
+        event.recipes.create.mechanical_crafting("ad_astra:gas_tank", [
+            "G",
+            "A",
+            "A"
+        ], materials)
+        materials.A = "#forge:ingots/invar"
+        materials.T = "ad_astra:gas_tank"
+        event.recipes.create.mechanical_crafting("ad_astra:large_gas_tank", [
+            " G ",
+            "ATA",
+            "ATA"
+        ], materials)
 
-    // Zip Gun
-    materials.T = "ad_astra:large_gas_tank"
-    event.recipes.create.mechanical_crafting("ad_astra:zip_gun", [
-        "AAG",
-        "T  "
-    ], materials)
+        // Zip Gun
+        materials.T = "ad_astra:large_gas_tank"
+        event.recipes.create.mechanical_crafting("ad_astra:zip_gun", [
+            "AAG",
+            "T  "
+        ], materials)
 
-    // Rocket Launch Pad
-    event.recipes.create.deploying(Item.of("ad_astra:launch_pad"), ["architects_palette:heavy_stone_bricks", "kubejs:matter_plastics"])
+        // Rocket Launch Pad
+        event.recipes.create.deploying(Item.of("ad_astra:launch_pad"), ["architects_palette:heavy_stone_bricks", "kubejs:matter_plastics"])
     }
 
     //	oil refining

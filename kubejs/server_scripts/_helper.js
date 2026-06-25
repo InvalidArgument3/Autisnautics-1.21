@@ -40,7 +40,7 @@ function tagAddIfExists(event, tag, itemId) {
 }
 
 function firstExistingItem(ids) {
-    for (var i = 0; i < ids.length; i++) {
+    for (let i = 0; i < ids.length; i++) {
         if (Item.exists(ids[i])) return ids[i]
     }
     return null
@@ -48,9 +48,9 @@ function firstExistingItem(ids) {
 
 /** Create 1.21 deploying — Item.of(x, n) in the KubeJS API expands to n inputs (max 2). */
 function createDeployingCount(event, output, heldItem, heldCount, tool) {
-    var outJson = typeof output === "string" ? { id: output } : { id: output.id, count: output.count || 1 }
-    var toolIng = Ingredient.of(tool)
-    var toolJson = toolIng.isEmpty() ? { item: String(tool) } : toolIng.toJson()
+    let outJson = typeof output === "string" ? { id: output } : { id: output.id, count: output.count || 1 }
+    let toolIng = Ingredient.of(tool)
+    let toolJson = toolIng.isEmpty() ? { item: String(tool) } : toolIng.toJson()
     event.custom({
         type: "create:deploying",
         ingredients: [
@@ -669,7 +669,7 @@ function ncModifiers(power, radiation, time) {
 }
 
 function ncApplyModifiers(recipe, mods) {
-    var m = ncModifiers(mods && mods.power, mods && mods.radiation, mods && mods.time)
+    let m = ncModifiers(mods && mods.power, mods && mods.radiation, mods && mods.time)
     recipe.powerModifier = m.powerModifier
     recipe.radiation = m.radiation
     recipe.timeModifier = m.timeModifier
@@ -680,22 +680,22 @@ function ncItemIng(entry) {
     if (typeof entry === "string") {
         return { count: 1, ingredient: entry.startsWith("#") ? { tag: entry.slice(1) } : { item: entry } }
     }
-    var count = entry.count != null ? entry.count : 1
+    let count = entry.count != null ? entry.count : 1
     if (entry.tag) return { count: count, ingredient: { tag: entry.tag } }
     if (entry.item) return { count: count, ingredient: { item: entry.item } }
     return { count: 1, ingredient: { item: entry } }
 }
 
 function ncFluidIng(entry) {
-    var amount = entry.amount
+    let amount = entry.amount
     if (entry.fluid) return { amount: amount, ingredient: { fluid: entry.fluid } }
     if (entry.tag) return { amount: amount, ingredient: { tag: entry.tag } }
     return { amount: amount, ingredient: { fluid: entry } }
 }
 
 function ncItemProd(entry) {
-    var count = entry.count != null ? entry.count : (entry.amount != null ? entry.amount : 1)
-    var item = entry.item != null ? entry.item : entry
+    let count = entry.count != null ? entry.count : (entry.amount != null ? entry.amount : 1)
+    let item = entry.item != null ? entry.item : entry
     return { count: count, ingredient: { item: item } }
 }
 
@@ -788,7 +788,7 @@ function replaceBlockLootFromJson(event, blockId, json) {
     const table = event.getLootTable(tableId)
     json.pools.forEach(poolData => {
         table.createPool(pool => {
-            var rollCount = poolData.rolls != null ? poolData.rolls : 1
+            let rollCount = poolData.rolls != null ? poolData.rolls : 1
             pool.rolls(rollCount)
             poolData.entries.forEach(entry => pool.addCustomEntry(entry))
         })

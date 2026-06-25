@@ -114,11 +114,11 @@ ServerEvents.recipes(event => {
                 if (!e.ingredient)
                     return
                 if (moltenGlass) {
-                event.custom({
-                    "type": "thermal:bottler",
-                    "ingredients": [Ingredient.of(e.ingredient).toJson(), { "fluid": moltenGlass, "amount": 100 }],
-                    "result": [{ "item": e.id }]
-                })
+                    event.custom({
+                        "type": "thermal:bottler",
+                        "ingredients": [Ingredient.of(e.ingredient).toJson(), { "fluid": moltenGlass, "amount": 100 }],
+                        "result": [{ "item": e.id }]
+                    })
                 }
                 event.custom({
                     "type": "thermal:sawmill",
@@ -151,33 +151,33 @@ ServerEvents.recipes(event => {
     if (hasThermal) {
         let moltenGlass = ["blazinghot:molten_glass", "tconstruct:molten_glass"].find(id => Fluid.exists(id))
         if (moltenGlass) {
-        event.custom({
-            "type": "thermal:bottler",
-            "ingredients": [
-                { "item": "thermal:signalum_nugget" },
-                { "fluid": moltenGlass, "amount": 100 }
-            ],
-            "result": [{ "item": "kubejs:accellerator_redstone" }]
-        })
+            event.custom({
+                "type": "thermal:bottler",
+                "ingredients": [
+                    { "item": "thermal:signalum_nugget" },
+                    { "fluid": moltenGlass, "amount": 100 }
+                ],
+                "result": [{ "item": "kubejs:accellerator_redstone" }]
+            })
 
-        event.custom({
-            "type": "thermal:bottler",
-            "ingredients": [
-                { "item": "thermal:lumium_nugget" },
-                { "fluid": moltenGlass, "amount": 100 }
-            ],
-            "result": [{ "item": "kubejs:accellerator_glowstone" }]
-        })
+            event.custom({
+                "type": "thermal:bottler",
+                "ingredients": [
+                    { "item": "thermal:lumium_nugget" },
+                    { "fluid": moltenGlass, "amount": 100 }
+                ],
+                "result": [{ "item": "kubejs:accellerator_glowstone" }]
+            })
 
-        // Not sure why silver subtrate has a recipe
-        event.custom({
-            "type": "thermal:bottler",
-            "ingredients": [
-                { "item": "thermal:silver_dust" },
-                { "fluid": moltenGlass, "amount": 100 }
-            ],
-            "result": [{ "item": "kubejs:substrate_silver" }]
-        })
+            // Not sure why silver subtrate has a recipe
+            event.custom({
+                "type": "thermal:bottler",
+                "ingredients": [
+                    { "item": "thermal:silver_dust" },
+                    { "fluid": moltenGlass, "amount": 100 }
+                ],
+                "result": [{ "item": "kubejs:substrate_silver" }]
+            })
         }
     }
 })

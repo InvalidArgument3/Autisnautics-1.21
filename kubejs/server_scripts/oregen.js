@@ -1,6 +1,6 @@
 ServerEvents.generateData("after_mods", event => {
     // Terralith 1.21 removed #terralith:mystical — use explicit biomes for lapis/sal ammoniac
-    var mysticalTerralithBiomes = [
+    let mysticalTerralithBiomes = [
         "terralith:amethyst_canyon",
         "terralith:amethyst_rainforest",
         "terralith:lavender_forest",

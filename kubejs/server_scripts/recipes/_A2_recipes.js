@@ -324,11 +324,7 @@ ServerEvents.recipes(event => {
     //     ))
     // }
     // melting bioplastic to liquid for whatever reason
-    event.custom(ncMelterRecipe(
-        [{ tag: "forge:ingots/plastic" }],
-        [{ amount: 90, fluid: "kubejs:liquid_plastic" }],
-        { radiation: 1.0 }
-    ))
+    event.custom(ncMelterRecipe([{ tag: "forge:ingots/plastic" }], [{ amount: 90, fluid: "kubejs:liquid_plastic" }], { radiation: 1.0 }))
     // // converting raw_plastic (loot only) to liquid_plastic
     // if (Item.exists("rats:raw_plastic")) {
     //     event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 90)], [Item.of("rats:raw_plastic", 1), Fluid.of("minecraft:water", 250)]).heated()
@@ -359,19 +355,11 @@ ServerEvents.recipes(event => {
             }).id(`kubejs:casting/bioplastic_${moldMat}_sheet`)
         })
     }
-    event.custom(ncIngotFormerRecipe(
-        [{ amount: 90, tag: "forge:liquid_plastic" }],
-        [{ item: "nuclearcraftneohaul:bioplastic" }],
-        { radiation: 1.0 }
-    ))
+    event.custom(ncIngotFormerRecipe([{ amount: 90, tag: "forge:liquid_plastic" }], [{ item: "nuclearcraftneohaul:bioplastic" }], { radiation: 1.0 }))
 
     // replace sugarcane for bioplastic with biomass
     event.remove({ output: "nuclearcraftneohaul:bioplastic" })
-    event.custom(ncManufactoryRecipe(
-        [{ count: 2, item: "createaddition:biomass" }],
-        [{ item: "nuclearcraftneohaul:bioplastic" }],
-        { radiation: 1.0 }
-    ))
+    event.custom(ncManufactoryRecipe([{ count: 2, item: "createaddition:biomass" }], [{ item: "nuclearcraftneohaul:bioplastic" }], { radiation: 1.0 }))
 
 
     // fix broken radaway item recipes
@@ -434,26 +422,14 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing(scrapMetalOutputs, "alexscaves:scrap_metal").processingTime(1)
 
     // synthesize alexscaves neodymium using nuclearcraft neodymium dust which is otherwise useless
-    event.custom(ncAssemblerRecipe(
-        [{ tag: "forge:dusts/neodymium" }, { item: "kubejs:substrate_cinnabar" }],
-        [{ item: "alexscaves:raw_scarlet_neodymium" }],
-        { radiation: 1.0 }
-    ))
-    event.custom(ncAssemblerRecipe(
-        [{ tag: "forge:dusts/neodymium" }, { tag: "forge:gems/lapis" }],
-        [{ item: "alexscaves:raw_azure_neodymium" }],
-        { radiation: 1.0 }
-    ))
+    event.custom(ncAssemblerRecipe([{ tag: "forge:dusts/neodymium" }, { item: "kubejs:substrate_cinnabar" }], [{ item: "alexscaves:raw_scarlet_neodymium" }], { radiation: 1.0 }))
+    event.custom(ncAssemblerRecipe([{ tag: "forge:dusts/neodymium" }, { tag: "forge:gems/lapis" }], [{ item: "alexscaves:raw_azure_neodymium" }], { radiation: 1.0 }))
 
     // globes for the wasteland
     event.remove({ output: "supplementaries:globe" })
     event.remove({ output: "supplementaries:globe_sepia" })
     // sepia globe: globe in NC nuclear furnace
-    event.custom(ncAlloyFurnaceRecipe(
-        [{ item: "supplementaries:globe" }, { item: "minecraft:clock" }],
-        [{ item: "supplementaries:globe_sepia" }],
-        { radiation: 1.0, time: 30.0 }
-    ))
+    event.custom(ncAlloyFurnaceRecipe([{ item: "supplementaries:globe" }, { item: "minecraft:clock" }], [{ item: "supplementaries:globe_sepia" }], { radiation: 1.0, time: 30.0 }))
     // globe
     event.shaped("supplementaries:globe", [
         "RM ",
@@ -605,34 +581,34 @@ ServerEvents.recipes(event => {
     event.remove({ id: "simpleradio:copper_wire" })
     // creating projectred red alloy wire with wiremaking machines (1:8)
     if (Item.exists("projectred_core:red_ingot") && Item.exists("projectred_transmission:red_alloy_wire")) {
-    event.custom({
-        "type":"createaddition:rolling",
-        "input": {
-            "item": "projectred_core:red_ingot"
-        },
-        "result": {
-            "item": "projectred_transmission:red_alloy_wire",
-            "count": 8
-        }
-    })
-    event.custom({
-        "type": "immersiveengineering:metal_press",
-        "energy": 2400,
-        "input": {
-            "item": "projectred_core:red_ingot"
-        },
-        "mold": "immersiveengineering:mold_wire",
-        "result": {
-            "base_ingredient": {
-                "item": "projectred_transmission:red_alloy_wire"
+        event.custom({
+            "type":"createaddition:rolling",
+            "input": {
+                "item": "projectred_core:red_ingot"
             },
-            "count": 8
-        }
-    })
+            "result": {
+                "item": "projectred_transmission:red_alloy_wire",
+                "count": 8
+            }
+        })
+        event.custom({
+            "type": "immersiveengineering:metal_press",
+            "energy": 2400,
+            "input": {
+                "item": "projectred_core:red_ingot"
+            },
+            "mold": "immersiveengineering:mold_wire",
+            "result": {
+                "base_ingredient": {
+                    "item": "projectred_transmission:red_alloy_wire"
+                },
+                "count": 8
+            }
+        })
     }
     if (Item.exists("projectred_transmission:red_alloy_wire") && Item.exists("projectred_transmission:white_insulated_wire")) {
     // recipe to insulate already-made red alloy wire
-    event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
+        event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
     }
     // automating createaddition barbed wire and IE razor wire
     if (ironWire) {
