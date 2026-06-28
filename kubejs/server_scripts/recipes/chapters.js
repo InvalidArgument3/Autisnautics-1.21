@@ -726,7 +726,7 @@ ServerEvents.recipes(event => {
     // // createMachine("thermal:dynamo_compression", event, Item.of("thermal:dynamo_disenchantment", 1), "occultism:spirit_attuned_gem")
     // // Default thermal machine recipes are kept in.
     // // Check older versions of the script to see commented out code for thermal machine crafting recipes
-    
+
     /*
     // - - - - - Chapter 3A - - - - -
     // Chorus Fruit comes from the default thermal insolator recipe
@@ -776,7 +776,7 @@ ServerEvents.recipes(event => {
     event.shapeless("thermal:fluid_duct_windowed", ["thermal:fluid_duct"])
     event.shapeless("thermal:fluid_duct", ["thermal:fluid_duct_windowed"])
     */
-    
+
     // - - - - - Chapter 4 - - - - -
     // Circuit Scraps
     event.stonecutting("ae2:silicon_press", "kubejs:circuit_scrap")

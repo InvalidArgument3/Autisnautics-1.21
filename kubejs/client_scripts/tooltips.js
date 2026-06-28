@@ -10,7 +10,7 @@ ItemEvents.modifyTooltips(tooltip => {
     tooltip.add("functionalstorage:storage_controller", Text.translatable("item.functionalstorage.controller.tooltip"));
     tooltip.add("functionalstorage:controller_extension", Text.translatable("item.functionalstorage.controller_extension.tooltip"));
 
-    
+
     let wastelandOres = ["uranium", "boron", "thorium", "magnesium"]
     wastelandOres.forEach(e => tooltip.add("nuclearcraftneohaul:" + e + "_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
     wastelandOres.forEach(e => tooltip.add("nuclearcraftneohaul:" + e + "_deepslate_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));

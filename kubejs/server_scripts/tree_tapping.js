@@ -33,7 +33,7 @@ BlockEvents.rightClicked(event => {
         if (checkTree(event, event.block) == true) {
             // damage the tool
             event.item.set(DataComponents.DAMAGE, event.item.get(DataComponents.DAMAGE) + 1)
-            
+
             let hitResult = event.getHitResult().location
             let entityPos = event.player.position()
             let hit = hitResult.multiply(49, 49, 49).add(entityPos).multiply(0.02, 0.02, 0.02)
