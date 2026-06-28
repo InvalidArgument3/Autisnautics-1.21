@@ -1,7 +1,7 @@
 ItemEvents.modifyTooltips(tooltip => {
     let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", Text.translatable("item.metalbarrels.barrel.tooltip", slots));
-    let main_assembly = (id, stage) => tooltip.add(id, Text.translatable("item.kubejs.main_assembly", stage == "4" ? "Finale" : "Chapter " + stage));
-    let bonus_assembly = (id, stage) => tooltip.add(id, Text.translatable("item.kubejs.bonus_assembly", "Chapter " + stage));
+    let main_assembly = (id, stage) => tooltip.add(id, Text.join(Text.gray("Main Assembly: "), Text.gold(stage == "4" ? "Finale" : "Chapter " + stage)));
+    let bonus_assembly = (id, stage) => tooltip.add(id, Text.join(Text.gray("Bonus Assembly: "), Text.gold("Chapter " + stage)));
     let not_consumed = (id) => tooltip.add(id, Text.translatable("item.kubejs.not_consumed_in_assembly"));
 
     tooltip.add("minecraft:redstone_ore", Text.translatable("item.minecraft.redstone_ore.tooltip"));
@@ -10,11 +10,12 @@ ItemEvents.modifyTooltips(tooltip => {
     tooltip.add("functionalstorage:storage_controller", Text.translatable("item.functionalstorage.controller.tooltip"));
     tooltip.add("functionalstorage:controller_extension", Text.translatable("item.functionalstorage.controller_extension.tooltip"));
 
-    /*
-    let wastelandOres = ["uranium", "boron", "thorium", "magnesium", "platinum"]
-    wastelandOres.forEach(e => tooltip.add("nuclearcraft:" + e + "_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
-    wastelandOres.forEach(e => tooltip.add("nuclearcraft:" + e + "_deepslate_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
+    
+    let wastelandOres = ["uranium", "boron", "thorium", "magnesium"]
+    wastelandOres.forEach(e => tooltip.add("nuclearcraftneohaul:" + e + "_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
+    wastelandOres.forEach(e => tooltip.add("nuclearcraftneohaul:" + e + "_deepslate_ore", Text.red("This world's natural " + e + " reserves were depleted long ago.")));
 
+    /*
     holds("copper", 5 * 9);
     holds("iron", 6 * 9);
     holds("silver", 8 * 9);
@@ -30,8 +31,10 @@ ItemEvents.modifyTooltips(tooltip => {
     main_assembly("create:precision_mechanism", "2");
     bonus_assembly("kubejs:infernal_mechanism", "2A");
     bonus_assembly("kubejs:logistic_mechanism", "2B");
+    bonus_assembly("kubejs:refined_mechanism", "2C");
     main_assembly("kubejs:inductive_mechanism", "3");
-    bonus_assembly("kubejs:abstruse_mechanism", "3A");
+    bonus_assembly("kubejs:atomic_mechanism", "3A");
+    bonus_assembly("kubejs:abstruse_mechanism", "3B");
     main_assembly("kubejs:calculation_mechanism", "4");
     /*
     not_consumed("cb_microblock:stone_saw");

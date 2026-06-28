@@ -256,36 +256,7 @@ ServerEvents.recipes(event => {
         ncMelter("c:dusts/steel", 90)
         ncMelter("c:nuggets/steel", 10)
         ncMelter("c:storage_blocks/steel", 810)
-
-        event.remove({ id: "nuclearcraftneohaul:fluid_mixer/ferroboron_from_steel_boron" })
-        event.custom({
-            "type": "nuclearcraftneohaul:salt_mixer_recipe",
-            "fluidIngredients": [
-                {
-                    "amount": 45,
-                    "ingredient": {
-                        "fluid": "createbigcannons:molten_steel"
-                    }
-                },
-                {
-                    "amount": 45,
-                    "ingredient": {
-                        "fluid": "nuclearcraftneohaul:boron"
-                    }
-                }
-            ],
-            "fluidProducts": [
-                {
-                    "amount": 90,
-                    "ingredient": {
-                        "fluid": "nuclearcraftneohaul:ferroboron"
-                    }
-                }
-            ],
-            "powerModifier": 1.0,
-            "radiation": 0.0,
-            "timeModifier": 1.0
-        })
+        // ferroboron usage in chapter_3a
     }
     // Stellaris: """"steel ore""""
     let steelOres = ["stellaris:raw_steel_ingot", "stellaris:steel_ore", "stellaris:deepslate_steel_ore", "stellaris:raw_steel_block", "stellaris:moon_steel_ore",

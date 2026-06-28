@@ -1,9 +1,5 @@
 (() => {
     const __hasRecipeViewerEvents = typeof RecipeViewerEvents !== "undefined"
-    const __hideIfExists = (event, ids) => {
-        let list = (Array.isArray(ids) ? ids : [ids]).filter(id => Item.exists(id))
-        if (list.length) event.hide(list)
-    }
     const __hideItems = (handler) => {
         if (__hasRecipeViewerEvents) {
             RecipeViewerEvents.removeEntries("item", event => handler({ hide: (entry) => event.remove(entry) }))
@@ -53,22 +49,20 @@
             "iron_plate",
             "cryo_fuel_bucket"
         ]
-        __hideIfExists(event, begoneEarth.map(begone => "ad_astra:" + begone))
+        event.hide(begoneEarth.map(begone=>{return `ad_astra:${begone}`}))
 
-        if (Platform.isLoaded("ad_astra")) {
-            event.hide(/^ad_astra:(netherite_space|jet_suit)_(helmet|suit|pants|boots)$/)
-            event.hide("ad_astra:jet_suit")
-            event.hide(/^ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)$/)
-            event.hide(/ad_astra:.*mars/)
-            event.hide(/ad_astra:.*venus/)
-            event.hide(/ad_astra:.*mercury/)
-            event.hide(/ad_astra:.*glacio/)
-            event.hide(/^ad_astra:(?!photovoltaic).*(ostrum|calorite|etrium).*/)
-            event.hide(/^ad_astra:.*conglomerate.*/)
-            event.hide(/^ad_astra:.*permafrost.*/)
-            event.hide(/^(ad_astra|everycomp|supplementaries):.*(aeronos|strophar|glacian).*/)
-            __hideIfExists(event, ["ad_astra:deepslate_desh_ore", "ad_astra:deepslate_ice_shard_ore"])
-        }
+        event.hide(/^ad_astra:(netherite_space|jet_suit)_(helmet|suit|pants|boots)$/)
+        event.hide("ad_astra:jet_suit")
+        event.hide(/^ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)$/)
+        event.hide(/ad_astra:.*mars/)
+        event.hide(/ad_astra:.*venus/)
+        event.hide(/ad_astra:.*mercury/)
+        event.hide(/ad_astra:.*glacio/)
+        event.hide(/^ad_astra:(?!photovoltaic).*(ostrum|calorite|etrium).*/)
+        event.hide(/^ad_astra:.*conglomerate.*/)
+        event.hide(/^ad_astra:.*permafrost.*/)
+        event.hide(/^(ad_astra|everycomp|supplementaries):.*(aeronos|strophar|glacian).*/)
+        event.hide(["ad_astra:deepslate_desh_ore", "ad_astra:deepslate_ice_shard_ore"])
 
         event.hide("biomesoplenty:blood")
 
@@ -206,8 +200,7 @@
     })
 
     __hideFluids(event => {
-        if (Fluid.exists("ad_astra:cryo_fuel")) {
-            event.hide("ad_astra:cryo_fuel")
-        }
+    // event.hide("tconstruct:molten_tin")
+        event.hide("ad_astra:cryo_fuel")
     })
 })();

@@ -10,10 +10,10 @@ ServerEvents.recipes(event => {
     tweak_casing("create:railway", ["create:golden_sheet", "minecraft:deepslate"])
     tweak_casing("create:brass", ["create:brass_sheet", "#minecraft:logs"])
     // tweak_casing("kubejs:zinc", ["create:zinc_ingot", "minecraft:stone"]) // 1.21 removed
-    tweak_casing("kubejs:lead", ["#c:plates/lead", "minecraft:deepslate"])
+    tweak_casing("kubejs:lead", ["thermal:lead_plate", "minecraft:deepslate"])
     // tweak_casing("kubejs:invar", ["thermal:invar_ingot", "minecraft:stone"]) // 1.21 removed
     tweak_casing("kubejs:enderium", ["minecraft:ender_pearl", "minecraft:obsidian"])
-    tweak_casing("kubejs:fluix", ["#c:plates/lead", "minecraft:blackstone"])
+    tweak_casing("kubejs:fluix", ["thermal:lead_plate", "minecraft:blackstone"])
     // tweak_casing('alloyed:steel', ["alloyed:steel_sheet", '#minecraft:logs'])
     tweak_casing("create:refined_radiance", ["create:refined_radiance", "#minecraft:logs"])
     tweak_casing("create:shadow_steel", ["create:shadow_steel", "#minecraft:logs"])
@@ -35,19 +35,19 @@ ServerEvents.recipes(event => {
     event.remove({ id: "create:crushing/obsidian" })
     event.recipes.create.crushing("create:powdered_obsidian", "minecraft:obsidian")
     // recompacting obsidian dust into its resource
-    event.recipes.create.compacting("minecraft:obsidian", "#forge:dusts/obsidian")
+    event.recipes.create.compacting("#forge:dusts/obsidian", "minecraft:obsidian")
 
     // Gravel and red sand washing buffs
     event.remove({ id: "create:splashing/gravel" })
     event.recipes.create.splashing([
-        chanceItem(Item.of("minecraft:iron_nugget", 2), 0.125),
-        chanceItem("minecraft:flint", 0.25)
+        Item.of(Item.of("minecraft:iron_nugget", 2)).withChance(0.125),
+        Item.of("minecraft:flint").withChance(0.25)
     ], "minecraft:gravel")
 
     event.remove({ id: "create:splashing/red_sand" })
     event.recipes.create.splashing([
-        chanceItem(Item.of("minecraft:gold_nugget", 2), 0.125),
-        chanceItem("minecraft:dead_bush", 0.05)
+        Item.of(Item.of("minecraft:gold_nugget", 2)).withChance(0.125),
+        Item.of("minecraft:dead_bush").withChance(0.05)
     ], "minecraft:red_sand")
 
     // unify dough and allow the slime recipe to take dough from farmer's delight

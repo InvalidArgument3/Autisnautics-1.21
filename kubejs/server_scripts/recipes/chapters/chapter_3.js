@@ -212,7 +212,17 @@ ServerEvents.recipes(event => {
         B: "alexscaves:azure_neodymium_ingot"
     })
 
-    // Inductive mechanism recipe lives in chapters.js (kubejs:inductive_mechanism)
+    // -- Inductive Mechanisms
+    transitional = "kubejs:incomplete_inductive_mechanism"
+    event.recipes.create.sequenced_assembly([
+        "kubejs:inductive_mechanism",
+    ], "create:precision_mechanism", [
+        event.recipes.create.deploying(transitional, [transitional, "kubejs:radiant_coil"]),
+        event.recipes.create.deploying(transitional, [transitional, "kubejs:radiant_coil"]),
+        event.recipes.create.deploying(transitional, [transitional, Ingredient.of("#kubejs:chromatic_resonators")])
+    ]).transitionalItem(transitional)
+        .loops(1)
+        .id("kubejs:inductive_mechanism")
 
     // -- Constantan Casing
     event.shapeless(Item.of("kubejs:constantan_casing", 2), [Ingredient.of("#c:plates/constantan"), "immersiveengineering:sheetmetal_steel"])
@@ -228,7 +238,8 @@ ServerEvents.recipes(event => {
     constantanMachine(event, Item.of("nuclearcraftneohaul:ingot_former", 1), "blazinghot:casting_depot") // casting
     constantanMachine(event, Item.of("nuclearcraftneohaul:rock_crusher", 1), "create:crushing_wheel") // crushing wheel
     constantanMachine(event, Item.of("nuclearcraftneohaul:assembler", 1), "minecraft:crafter") // mechanical crafting, but only in some cases (simple recipes, 4 ingredients max)
-    constantanMachine(event, Item.of("nuclearcraftneohaul:crystallizer", 1), "create:item_drain") // turning fluids directly into dust, or maybe precipitating byproducts only?
+    constantanMachine(event, Item.of("nuclearcraftneohaul:crystallizer", 1), "create:item_drain") // turning fluids directly into dust, or maybe precipitating byproducts only? used for borax in 3a
+    constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_enricher", 1), "create:spout") // reverse of crystallizer, create solutions from solids
     constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_extractor", 1), "minecraft:brewing_stand") // mostly useless, repurpose for alchemy experiments
     constantanMachine(event, Item.of("nuclearcraftneohaul:fluid_mixer", 1), "create:mechanical_mixer") // mixing fluids, esp. for alloys
 

@@ -15,18 +15,27 @@ RecipeViewerEvents.removeEntries("item", (event) => {
     // event.remove("nuclearcraft:ethanol_bucket")
     // event.remove("nuclearcraft:redstone_ethanol_bucket")
     // duplicate
-    if (Item.exists("jaopca:storage_blocks.sodium_chloride")) {
-        event.remove("jaopca:storage_blocks.sodium_chloride")
-    }
+    event.remove("jaopca:storage_blocks.sodium_chloride")
     // we redstone now
     // event.remove("thermal:cinnabar_dust")
     // no recipes
     event.remove("createdeco:netherite_sheet")
-    let hideJaopca = (id) => { if (Item.exists(id)) event.remove(id) }
-    hideJaopca("jaopca:create_crushed.netherite_scrap")
-    hideJaopca("jaopca:dusts.netherite_scrap")
-    hideJaopca("jaopca:molten.netherite_scrap")
-    hideJaopca("jaopca:molten.coal")
+    // fluid unification (buckets)
+    // event.remove(/embers:molten_(?!dawnstone).*/)
+    // hiddenNCMetals.forEach(metal => { event.remove("nuclearcraft:" + metal + "_bucket") })
+    // event.remove("createbigcannons:molten_steel_bucket")
+    // event.remove("createbigcannons:molten_bronze_bucket")
+    // event.remove("tfmg:molten_steel_bucket")
+    // crimes against humanity
+    // event.remove("tfmg:casting_basin")
+    // event.remove("tfmg:casting_spout")
+    // event.remove("tfmg:block_mold")
+    // event.remove("tfmg:ingot_mold")
+    // removed
+    event.remove("jaopca:create_crushed.netherite_scrap")
+    event.remove("jaopca:dusts.netherite_scrap")
+    event.remove("jaopca:molten.netherite_scrap")
+    event.remove("jaopca:molten.coal")
     /*
     // coal coke unification - thermal
     // event.remove("tfmg:coal_coke")

@@ -1,3 +1,5 @@
+let DataComponents = Java.loadClass('net.minecraft.core.component.DataComponents')
+
 // scarring trees to make resin
 
 // check if a block belongs to a tree
@@ -29,6 +31,9 @@ BlockEvents.rightClicked(event => {
     // right-clicking a log with a knife
     if (event.item.tags.toString().includes("c:tools/knife") && event.block.tags.toString().includes("minecraft:logs")) {
         if (checkTree(event, event.block) == true) {
+            // damage the tool
+            event.item.set(DataComponents.DAMAGE, event.item.get(DataComponents.DAMAGE) + 1)
+            
             let hitResult = event.getHitResult().location
             let entityPos = event.player.position()
             let hit = hitResult.multiply(49, 49, 49).add(entityPos).multiply(0.02, 0.02, 0.02)

@@ -8,14 +8,24 @@
             JEIEvents.hideItems(handler)
         }
     }
+    const __addItems = (handler) => {
+        if (__hasRecipeViewerEvents) {
+            RecipeViewerEvents.addEntries("item", event => handler({ add: (entry) => event.add(entry) }))
+        } else if (typeof JEIEvents !== "undefined") {
+            JEIEvents.addItems(handler)
+        }
+    }
 
     __hideItems(event => {
-        if (Item.exists("enderio:broken_spawner")) {
-            event.hide("enderio:broken_spawner")
-        }
-        event.hide("chiselsandbits:block_bit")
-        if (Item.exists("ae2:facade")) {
-            event.hide("ae2:facade")
-        }
+    // Cleanup
+        event.hide('enderio:broken_spawner')
+        event.hide('chiselsandbits:block_bit')
+        event.hide('ae2:facade')
+    })
+
+    __addItems(event => {
+        event.add(Item.of('ae2:facade', { item: "minecraft:iron_block" }))
+        event.add('enderio:broken_spawner')
+        event.add('enderio:reinforced_obsidian_block')
     })
 })();

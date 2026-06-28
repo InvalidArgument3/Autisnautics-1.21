@@ -36,13 +36,10 @@ if (Platform.isLoaded("createaddition")) {
         event.remove({ output: "createaddition:capacitor" })
 
         // Redstone Relay
-        const circuitPlate = Item.exists("projectred_core:platformed_plate")
-            ? "projectred_core:platformed_plate"
-            : "create:iron_sheet"
         event.remove({ output: "createaddition:redstone_relay" })
-        event.shapeless("createaddition:redstone_relay", [circuitPlate, "createaddition:connector"])
+        event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
             .id("kubejs:compat/createaddition/redstone_relay_manual_only")
-        event.recipes.create.deploying("createaddition:redstone_relay", [circuitPlate, "createaddition:connector"])
+        event.recipes.create.deploying("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
 
         // Remove heated basin ingot recipes
         event.remove({ id: "createaddition:mixing/electrum" })
@@ -88,20 +85,16 @@ if (Platform.isLoaded("createaddition")) {
             .add("create_central_kitchen:honey_cake_slice")
 
         event.add("forge:storage_blocks/electrum", "createaddition:electrum_block")
-        if (Platform.isLoaded("tconstruct")) {
-            event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
-        }
+        event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
     })
     ServerEvents.tags("block", event => {
         event.add("minecraft:mineable/pickaxe", "createaddition:electrum_block")
         event.add("minecraft:needs_iron_tool", "createaddition:electrum_block")
         event.add("minecraft:beacon_base_blocks", "createaddition:electrum_block")
-        if (Platform.isLoaded("tconstruct")) {
-            event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
-        }
+        event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
     })
 
-    LootJS.modifiers(event => {
-        event.addBlockModifier("createaddition:electrum_block").addLoot("createaddition:electrum_block")
+    ServerEvents.blockLootTables(event => {
+        event.addSimpleBlock("createaddition:electrum_block")
     })
 }

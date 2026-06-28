@@ -1,18 +1,14 @@
 
 ServerEvents.tags("item", event => {
 
-    // clockwork wanderlite ores removed with VS Clockwork — skip if absent
+    // clockwork wanderlite (and other ores that didnt get picked up in the forge:ores purge)
+    event.add("forge:ores", "vs_clockwork:wanderlite_deepslate_ore")
+    event.add("forge:ores", "vs_clockwork:wanderlite_end_ore")
+    event.add("c:ores", "vs_clockwork:wanderlite_deepslate_ore")
+    event.add("c:ores", "vs_clockwork:wanderlite_end_ore")
 
     event.add("forge:dusts/obsidian", "create:powdered_obsidian")
     event.add("forge:dusts", "create:powdered_obsidian")
-    event.add("forge:gems/cinnabar", "kubejs:substrate_cinnabar")
-    event.add("c:gems/cinnabar", "kubejs:substrate_cinnabar")
-    event.add("forge:ingots/nickel", "immersiveengineering:ingot_nickel")
-    event.add("forge:dusts/nickel", "immersiveengineering:dust_nickel")
-    event.add("forge:nuggets/nickel", "immersiveengineering:nugget_nickel")
-    event.add("forge:ores/nickel", "immersiveengineering:ore_nickel")
-    event.add("forge:ores/nickel", "immersiveengineering:deepslate_ore_nickel")
-    event.add("forge:raw_materials/nickel", "immersiveengineering:raw_nickel")
 
     // Fixes copper dupe.
     event.remove("forge:storage_blocks/copper", "minecraft:cut_copper");
@@ -31,16 +27,7 @@ ServerEvents.tags("item", event => {
 
     unregistered_axes.forEach(axe => {
         event.get("forge:tools/axes").add(axe)
-        event.get("c:tools/axes").add(axe)
     });
-    ;["minecraft:wooden_axe", "minecraft:stone_axe", "minecraft:iron_axe", "minecraft:golden_axe", "minecraft:diamond_axe", "minecraft:netherite_axe"].forEach(axe => {
-        event.add("c:tools/axes", axe)
-        event.add("forge:tools/axes", axe)
-    })
-    ;["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:golden_knife", "farmersdelight:diamond_knife", "farmersdelight:netherite_knife"].forEach(knife => {
-        event.add("c:tools/knives", knife)
-        event.add("forge:tools/knives", knife)
-    })
 
     event.get("forge:vines").add("minecraft:vine")
 
@@ -60,21 +47,12 @@ ServerEvents.tags("item", event => {
         .add(/reliquary:.*/)
         // .add(/waterstrainer:.*/)
         // .add("#occultism:miners/ores")
-    if (Item.exists("projectred_core:draw_plate")) {
-        event.get("forbidden_arcanus:modifier/eternal_incompatible").add("projectred_core:draw_plate")
-    }
-    if (Item.exists("projectred_core:multimeter")) {
-        event.get("forbidden_arcanus:modifier/eternal_incompatible").add("projectred_core:multimeter")
-    }
+        .add("projectred_core:draw_plate")
+        .add("projectred_core:multimeter")
 
     // crafting tools for the chapters
-    event.get("kubejs:saws").add("#c:tools/axes")
-    if (Item.exists("cb_microblock:stone_saw")) {
-        event.get("kubejs:saws").add("cb_microblock:stone_saw").add("cb_microblock:iron_saw").add("cb_microblock:diamond_saw")
-    }
-    if (Item.exists("projectred_core:screwdriver")) {
-        event.get("kubejs:screwdrivers").add("projectred_core:screwdriver")
-    }
+    event.get("kubejs:saws").add("cb_microblock:stone_saw").add("cb_microblock:iron_saw").add("cb_microblock:diamond_saw")
+    event.get("kubejs:screwdrivers").add("projectred_core:screwdriver")
     event.get("kubejs:chromatic_resonators").add("kubejs:chromatic_resonator")
     event.get("kubejs:flash_drives").add("kubejs:flash_drive")
 
@@ -89,9 +67,7 @@ ServerEvents.tags("item", event => {
     event.get("kubejs:cake_slices")
         .add("farmersdelight:cake_slice")
 
-    if (Platform.isLoaded("tconstruct") && Item.exists("thermal:bronze_block")) {
-        event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
-    }
+    event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
 
     // Create Deco laser lamps
     let decoLampColours = ["yellow", "red", "green", "blue"]
@@ -105,28 +81,20 @@ ServerEvents.tags("item", event => {
     }
 
     // Ad Astra laser lamps
-    if (Platform.isLoaded("ad_astra")) {
-        for (let i = 0; i < colours.length; ++i) {
-            let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
-            if (Item.exists(lamp)) {
-                event.add("kubejs:alchemical_laser_lamps", lamp)
-                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-            }
-            lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
-            if (Item.exists(lamp)) {
-                event.add("kubejs:alchemical_laser_lamps", lamp)
-                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-            }
-        }
+    for (let i = 0; i < colours.length; ++i) {
+        let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
+        event.add("kubejs:alchemical_laser_lamps", lamp)
+        event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+        lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
+        event.add("kubejs:alchemical_laser_lamps", lamp)
+        event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
     }
 
-    if (Platform.isLoaded("thermal")) {
     // This tag prevents items from being consumed in press (market) recipes
-        event.get("thermal:crafting/dies").add("#kubejs:transaction_cards")
-        event.get("thermal:crafting/dies").add("kubejs:missingno")
+    event.get("thermal:crafting/dies").add("#kubejs:transaction_cards")
+    event.get("thermal:crafting/dies").add("kubejs:missingno")
 
-        event.get("thermal:crafting/casts").add("kubejs:three_cast").add("kubejs:eight_cast").add("kubejs:plus_cast").add("kubejs:minus_cast").add("kubejs:multiply_cast").add("kubejs:divide_cast").add("#kubejs:circuit_press")
-    }
+    event.get("thermal:crafting/casts").add("kubejs:three_cast").add("kubejs:eight_cast").add("kubejs:plus_cast").add("kubejs:minus_cast").add("kubejs:multiply_cast").add("kubejs:divide_cast").add("#kubejs:circuit_press")
 
     event.get("create:upright_on_belt")
         .add("ae2:red_paint_ball")
@@ -166,10 +134,10 @@ ServerEvents.tags("item", event => {
         .add("kubejs:sky_slimy_fern_leaf")
         .add("kubejs:earth_slimy_fern_leaf")
         .add("kubejs:ender_slimy_fern_leaf")
+        .add("thermal:rubber")
+        .add("thermal:phytogro")
         .add("create:andesite_alloy")
         .add("minecraft:poisonous_potato")
-    if (Item.exists("thermal:rubber")) event.get("kubejs:treasure1").add("thermal:rubber")
-    if (Item.exists("thermal:phytogro")) event.get("kubejs:treasure1").add("thermal:phytogro")
 
     event.get("kubejs:treasure2")
         .add("minecraft:lantern")
@@ -190,6 +158,7 @@ ServerEvents.tags("item", event => {
         .add("minecraft:iron_ingot")
         .add("minecraft:copper_ingot")
         .add("create:zinc_ingot")
+        .add("thermal:rosin")
         .add("minecraft:spider_eye")
         .add("minecraft:nether_brick")
         .add("minecraft:beetroot_seeds")
@@ -197,16 +166,15 @@ ServerEvents.tags("item", event => {
         .add("minecraft:name_tag")
         .add("farmersdelight:rope")
         .add("create:cinder_flour")
+        .add("tconstruct:seared_brick")
         .add("farmersdelight:canvas")
-        .add("kubejs:substrate_cinnabar")
+        .add("thermal:cinnabar")
+        .add("thermal:sulfur")
+        .add("thermal:niter")
+        .add("thermal:apatite")
         .add("minecraft:compass")
         .add("minecraft:experience_bottle")
         .add("minecraft:golden_carrot")
-    if (Item.exists("thermal:rosin")) event.get("kubejs:treasure2").add("thermal:rosin")
-    if (Item.exists("tconstruct:seared_brick")) event.get("kubejs:treasure2").add("tconstruct:seared_brick")
-    if (Item.exists("thermal:sulfur")) event.get("kubejs:treasure2").add("thermal:sulfur")
-    if (Item.exists("thermal:niter")) event.get("kubejs:treasure2").add("thermal:niter")
-    if (Item.exists("thermal:apatite")) event.get("kubejs:treasure2").add("thermal:apatite")
     // .add('antiqueatlas:empty_antique_atlas')
 
     // Treasure3 is only given from quartz pots
@@ -221,6 +189,12 @@ ServerEvents.tags("item", event => {
         .add("minecraft:saddle")
         .add("ae2:certus_quartz_crystal")
         .add("ae2:fluix_crystal")
+        .add("thermal:ice_charge")
+        .add("thermal:lightning_charge")
+        .add("thermal:earth_charge")
+        .add("projectred_core:red_ingot")
+        .add("thermal:ruby")
+        .add("thermal:sapphire")
         .add("create:peculiar_bell")
         .add("minecraft:spectral_arrow")
         .add("minecraft:gold_ingot")
@@ -231,12 +205,6 @@ ServerEvents.tags("item", event => {
         .add("minecraft:prismarine_crystals")
         .add("minecraft:chorus_fruit")
         .add("minecraft:blaze_powder")
-    if (Item.exists("thermal:ice_charge")) event.get("kubejs:treasure3").add("thermal:ice_charge")
-    if (Item.exists("thermal:lightning_charge")) event.get("kubejs:treasure3").add("thermal:lightning_charge")
-    if (Item.exists("thermal:earth_charge")) event.get("kubejs:treasure3").add("thermal:earth_charge")
-    if (Item.exists("projectred_core:red_ingot")) event.get("kubejs:treasure3").add("projectred_core:red_ingot")
-    if (Item.exists("thermal:ruby")) event.get("kubejs:treasure3").add("thermal:ruby")
-    if (Item.exists("thermal:sapphire")) event.get("kubejs:treasure3").add("thermal:sapphire")
 
     event.get("kubejs:ore_processing/metal/dusts")
         .add("#forge:dusts/copper")
@@ -251,25 +219,18 @@ ServerEvents.tags("item", event => {
 
     // A2
     // event.add("forge:slag", "tfmg:slag")
-    // event.add(`forge:dusts/wood`, "nuclearcraftneohaul:sawdust")// item removed in neohaul
+    event.add(`forge:dusts/wood`, "nuclearcraft:sawdust")// useless?
     event.get("kubejs:saws")
-        .add("#c:tools/axes")
-    if (Item.exists("projectred_exploration:gold_saw")) {
-        event.get("kubejs:saws")
-            .add("projectred_exploration:gold_saw")
-            .add("projectred_exploration:ruby_saw")
-            .add("projectred_exploration:sapphire_saw")
-            .add("projectred_exploration:peridot_saw")
-    }
-    event.add("forge:ingots/plastic", "nuclearcraftneohaul:bioplastic")
+        .add("projectred_exploration:gold_saw")
+        .add("projectred_exploration:ruby_saw")
+        .add("projectred_exploration:sapphire_saw")
+        .add("projectred_exploration:peridot_saw")
+    event.add("forge:ingots/plastic", "nuclearcraft:bioplastic")
     event.add("forge:plates", "createdeco:zinc_sheet")
     event.add("forge:plates/zinc", "createdeco:zinc_sheet")
-    if (Item.exists("immersiveengineering:plate_lead")) {
-        event.add("forge:plates/lead", "immersiveengineering:plate_lead")
-    }
 
     // coal coke unification
-    event.add("forge:coal_coke", "immersiveengineering:coal_coke")
+    // event.add("forge:coal_coke", "tfmg:coal_coke")
     // event.add("forge:storage_blocks/coal_coke", "tfmg:coal_coke_block")
     // coal coke is not coal
     event.remove("forge:coal", "immersiveengineering:coal_coke")
@@ -303,18 +264,11 @@ ServerEvents.tags("item", event => {
     event.add("forge:storage_blocks", "scguns:treated_iron_block")
 
     // Plastic and Milk (moved from fluid block)
-    event.add("forge:ingots/plastic", "nuclearcraftneohaul:bioplastic")
+    event.add("forge:ingots/plastic", "nuclearcraft:bioplastic")
     event.get("kubejs:milk").add("minecraft:milk")
 
-    // oredict copper / iron / steel wires (only items that exist)
-    tagAddIfExists(event, "forge:wires/copper", "immersiveengineering:wire_copper")
-    tagAddIfExists(event, "c:wires/copper", "immersiveengineering:wire_copper")
-    tagAddIfExists(event, "forge:wires/copper", "simpleradio:copper_wire")
-    tagAddIfExists(event, "c:wires/copper", "simpleradio:copper_wire")
-    tagAddIfExists(event, "forge:wires/iron", "immersiveengineering:wire_iron")
-    tagAddIfExists(event, "c:wires/iron", "immersiveengineering:wire_iron")
-    tagAddIfExists(event, "forge:wires/steel", "immersiveengineering:wire_steel")
-    tagAddIfExists(event, "c:wires/steel", "immersiveengineering:wire_steel")
+    // oredict simpleradios wire
+    event.add("forge:wires/copper", "simpleradio:copper_wire")
 
     // tagging all chisels with durability
     event.get("forge:chisels")
@@ -340,23 +294,13 @@ ServerEvents.tags("item", event => {
     event.get("forge:stone/marble")// full blocks only
         .add(/chisel:marble.*/)
     event.get("chisel:carving/marble")// full blocks only
-    if (Item.exists("projectred_exploration:marble")) {
-        event.get("chisel:carving/marble").add("projectred_exploration:marble")
-    }
-    if (Item.exists("projectred_exploration:marble_brick")) {
-        event.get("chisel:carving/marble").add("projectred_exploration:marble_brick")
-    }
+        .add("projectred_exploration:marble")
+        .add("projectred_exploration:marble_brick")
     // basalt
     event.get("chisel:carving/basalt")// full blocks only
-    if (Item.exists("projectred_exploration:basalt")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt")
-    }
-    if (Item.exists("projectred_exploration:basalt_brick")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt_brick")
-    }
-    if (Item.exists("projectred_exploration:basalt_cobble")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt_cobble")
-    }
+        .add("projectred_exploration:basalt")
+        .add("projectred_exploration:basalt_brick")
+        .add("projectred_exploration:basalt_cobble")
 
     // 1.21 chapter 2c: coke cakes stand up
     event.get("create:upright_on_belt")
@@ -381,24 +325,16 @@ ServerEvents.tags("block", event => {
     }
 
     // Ad Astra laser lamps
-    if (Platform.isLoaded("ad_astra")) {
-        for (let i = 0; i < colours.length; ++i) {
-            let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
-            if (Item.exists(lamp)) {
-                event.add("kubejs:alchemical_laser_lamps", lamp)
-                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-            }
-            lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
-            if (Item.exists(lamp)) {
-                event.add("kubejs:alchemical_laser_lamps", lamp)
-                event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
-            }
-        }
+    for (let i = 0; i < colours.length; ++i) {
+        let lamp = `ad_astra:${colours[i]}_industrial_lamp`;
+        event.add("kubejs:alchemical_laser_lamps", lamp)
+        event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
+        lamp = `ad_astra:small_${colours[i]}_industrial_lamp`;
+        event.add("kubejs:alchemical_laser_lamps", lamp)
+        event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
     }
 
-    if (Platform.isLoaded("tconstruct") && Item.exists("thermal:bronze_block")) {
-        event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
-    }
+    event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
 
     // Not sure if anything checks for this block tag but don't want to risk it.
     event.remove("forge:storage_blocks/copper", "minecraft:cut_copper");
@@ -408,20 +344,18 @@ ServerEvents.tags("block", event => {
 
     event.add("create:wrench_pickup", "mbd2:strainer")
 
-    if (Platform.isLoaded("thermal")) {
-        event.add("create:wrench_pickup", /thermal:machine/)
-        event.add("create:wrench_pickup", /thermal:device/)
-        event.add("create:wrench_pickup", /thermal:dynamo/)
-        event.add("create:wrench_pickup", "thermal:tinker_bench")
-        event.add("create:wrench_pickup", "thermal:charge_bench")
-        event.add("create:wrench_pickup", "thermal:energy_cell_frame")
-        event.add("create:wrench_pickup", "thermal:energy_cell")
-        event.add("create:wrench_pickup", "thermal:fluid_cell_frame")
-        event.add("create:wrench_pickup", "thermal:fluid_cell")
-        event.add("create:wrench_pickup", "thermal:energy_duct")
-        event.add("create:wrench_pickup", "thermal:fluid_duct")
-        event.add("create:wrench_pickup", "thermal:fluid_duct_windowed")
-    }
+    event.add("create:wrench_pickup", /thermal:machine/)
+    event.add("create:wrench_pickup", /thermal:device/)
+    event.add("create:wrench_pickup", /thermal:dynamo/)
+    event.add("create:wrench_pickup", "thermal:tinker_bench")
+    event.add("create:wrench_pickup", "thermal:charge_bench")
+    event.add("create:wrench_pickup", "thermal:energy_cell_frame")
+    event.add("create:wrench_pickup", "thermal:energy_cell")
+    event.add("create:wrench_pickup", "thermal:fluid_cell_frame")
+    event.add("create:wrench_pickup", "thermal:fluid_cell")
+    event.add("create:wrench_pickup", "thermal:energy_duct")
+    event.add("create:wrench_pickup", "thermal:fluid_duct")
+    event.add("create:wrench_pickup", "thermal:fluid_duct_windowed")
 
     /* // Supplementaries blocks added to wrench pickup - possible source of world load crash
     event.add("create:wrench_pickup", "supplementaries:cog_block")
@@ -479,37 +413,25 @@ ServerEvents.tags("block", event => {
     event.get("forge:stone/marble")// full blocks only
         .add(/chisel:marble.*/)
     event.get("chisel:carving/marble")// full blocks only
-    if (Item.exists("projectred_exploration:marble")) {
-        event.get("chisel:carving/marble").add("projectred_exploration:marble")
-    }
-    if (Item.exists("projectred_exploration:marble_brick")) {
-        event.get("chisel:carving/marble").add("projectred_exploration:marble_brick")
-    }
+        .add("projectred_exploration:marble")
+        .add("projectred_exploration:marble_brick")
     // basalt
     event.get("chisel:carving/basalt")// full blocks only
-    if (Item.exists("projectred_exploration:basalt")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt")
-    }
-    if (Item.exists("projectred_exploration:basalt_brick")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt_brick")
-    }
-    if (Item.exists("projectred_exploration:basalt_cobble")) {
-        event.get("chisel:carving/basalt").add("projectred_exploration:basalt_cobble")
-    }
+        .add("projectred_exploration:basalt")
+        .add("projectred_exploration:basalt_brick")
+        .add("projectred_exploration:basalt_cobble")
 
 })
 
 ServerEvents.tags("block_entity_type", event => {
 
     // Add tags to basic vanilla-like chests and inventories to allow function with tinker's side inventory feature on crafting stations
-    if (Platform.isLoaded("tconstruct")) {
-        event.get("tconstruct:side_inventories")
-            .add("quark:variant_chest")
-            .add("quark:variant_trapped_chest")
-            .add(/^everycomp:q.*_chest$/)
-            .add("farmersdelight:cabinet")
-            .add("ae2:sky_stone_chest")
-    }
+    event.get("tconstruct:side_inventories")
+        .add("quark:variant_chest")
+        .add("quark:variant_trapped_chest")
+        .add(/^everycomp:q.*_chest$/)
+        .add("farmersdelight:cabinet")
+        .add("ae2:sky_stone_chest")
 })
 
 ServerEvents.tags("fluid", event => {
@@ -521,11 +443,6 @@ ServerEvents.tags("fluid", event => {
 
     // 1.21: liquid pulp as a tag
     event.add("kubejs:liquid_pulp", "kubejs:liquid_pulp")
-
-    // plastic pipeline — tag so EMI/datapack casting recipes show the fluid icon
-    event.add("forge:liquid_plastic", "kubejs:liquid_plastic")
-    event.add("forge:radaway", "nuclearcraftneohaul:radaway")
-    event.add("forge:radaway_slow", "nuclearcraftneohaul:radaway_slow")
 
     /*
     // kubejs molten anthralite
