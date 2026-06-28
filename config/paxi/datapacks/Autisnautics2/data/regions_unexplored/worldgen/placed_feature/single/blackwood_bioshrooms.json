@@ -1,0 +1,41 @@
+{
+  "feature": "regions_unexplored:single/blackwood_bioshrooms",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 1,
+      "max_inclusive": -16
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "regions_unexplored:blue_bioshroom",
+              "Properties": {
+                "stage": "0"
+              }
+            }
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
