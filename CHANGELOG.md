@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.42]
+- bunch of mod updates and cramming the kube scripts back together
+
+
 ## [0.0.41]
 laser alchemy part 2
 - laser alchemy: implement reagent manufacturing + blend analysis using oritech centrifuge
