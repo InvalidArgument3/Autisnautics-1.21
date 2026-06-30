@@ -3,17 +3,17 @@
 ServerEvents.recipes(event => {
     // --- Chapter 3a
     let transitional
-    
+
     // -- Potion of Glowing
     // recipe in potions.js: glow lichen + awkward potion
-    
+
     // -- Glowing Mushroom
     event.remove({ id: "nuclearcraftneohaul:glowing_mushroom" })
     event.remove({ id: "minecraft:glowing_mushroom" }) // nc un-crafting recipe using minecraft namespace
-    event.recipes.create.filling("nuclearcraftneohaul:glowing_mushroom", 
-                                ["minecraft:brown_mushroom", 
-                                potionIngredient("alexscaves:glowing", 50)]) // helper function
-    
+    event.recipes.create.filling("nuclearcraftneohaul:glowing_mushroom",
+        ["minecraft:brown_mushroom",
+            potionIngredient("alexscaves:glowing", 50)]) // helper function
+
     // -- Radaway
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway", 250)], [SizedIngredient.of("nuclearcraftneohaul:glowing_mushroom", 3), Fluid.sizedIngredientOf("minecraft:milk", 250)]).heated()
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway_slow", 250)], [SizedIngredient.of("minecraft:redstone", 1), Fluid.sizedIngredientOf("nuclearcraftneohaul:radaway", 250)]).heated()
@@ -23,26 +23,26 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:enricher_recipe",
         "fluidIngredients": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "minecraft:milk"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "minecraft:milk"
+                }
             }
         ],
         "fluidProducts": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "nuclearcraftneohaul:radaway"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:radaway"
+                }
             }
         ],
         "itemIngredients": [
             {
-            "count": 3,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:glowing_mushroom"
-            }
+                "count": 3,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:glowing_mushroom"
+                }
             }
         ],
         "powerModifier": 1.0,
@@ -53,26 +53,26 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:enricher_recipe",
         "fluidIngredients": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "nuclearcraftneohaul:radaway"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:radaway"
+                }
             }
         ],
         "fluidProducts": [
             {
-            "amount": 250,
-            "ingredient": {
-                "fluid": "nuclearcraftneohaul:radaway_slow"
-            }
+                "amount": 250,
+                "ingredient": {
+                    "fluid": "nuclearcraftneohaul:radaway_slow"
+                }
             }
         ],
         "itemIngredients": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "minecraft:redstone"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "minecraft:redstone"
+                }
             }
         ],
         "powerModifier": 1.0,
@@ -89,8 +89,8 @@ ServerEvents.recipes(event => {
         },
         "inputs": [
             {
-            "item": "nuclearcraftneohaul:glowing_mushroom",
-            "count": 3
+                "item": "nuclearcraftneohaul:glowing_mushroom",
+                "count": 3
             }
         ],
         "result": {
@@ -107,8 +107,8 @@ ServerEvents.recipes(event => {
         },
         "inputs": [
             {
-            "item": "minecraft:redstone",
-            "count": 1
+                "item": "minecraft:redstone",
+                "count": 1
             }
         ],
         "result": {
@@ -116,7 +116,7 @@ ServerEvents.recipes(event => {
             "id": "nuclearcraftneohaul:radaway_slow"
         }
     })
-    
+
     // -- Boron production
     // there are no natural sources left! but the trace amounts in evaporite...
     // - Borax production
@@ -137,18 +137,18 @@ ServerEvents.recipes(event => {
         ],
         "itemProducts": [
             {
-            "chancePercent": 100,
-            "count": 1,
-            "ingredient": {
-                "item": "minecraft:sand"
-            }
+                "chancePercent": 100,
+                "count": 1,
+                "ingredient": {
+                    "item": "minecraft:sand"
+                }
             },
             {
-            "chancePercent": 1,
-            "count": 1,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:borax"
-            }
+                "chancePercent": 1,
+                "count": 1,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:borax"
+                }
             }
         ],
         "powerModifier": 100.0,
@@ -167,18 +167,18 @@ ServerEvents.recipes(event => {
         ],
         "itemProducts": [
             {
-            "chancePercent": 100,
-            "count": 1,
-            "ingredient": {
-                "item": "minecraft:red_sand"
-            }
+                "chancePercent": 100,
+                "count": 1,
+                "ingredient": {
+                    "item": "minecraft:red_sand"
+                }
             },
             {
-            "chancePercent": 1,
-            "count": 1,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:borax"
-            }
+                "chancePercent": 1,
+                "count": 1,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:borax"
+                }
             }
         ],
         "powerModifier": 100.0,
@@ -187,11 +187,11 @@ ServerEvents.recipes(event => {
     }).id("kubejs:rock_crusher/borax_from_red_sandstone")
     // - Borax Solution from Borax: fluid enricher, default nc recipe
     // - Boric Acid from Borax Solution: 250mb borax solution + 50mb HCl (alexscaves acid) = 100mb boric acid + 125mb water + NaCl (galosphere:pink_salt_shard)
-    event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:boric_acid", 100), Fluid.of("minecraft:water", 125), "galosphere:pink_salt_shard"], 
-                                [Fluid.sizedIngredientOf("nuclearcraftneohaul:borax_solution", 250), Fluid.sizedIngredientOf("alexscaves:acid", 50)]).heated()
+    event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:boric_acid", 100), Fluid.of("minecraft:water", 125), "galosphere:pink_salt_shard"],
+        [Fluid.sizedIngredientOf("nuclearcraftneohaul:borax_solution", 250), Fluid.sizedIngredientOf("alexscaves:acid", 50)]).heated()
     // - Boron Dust from Boric Acid: Boric acid heats to Boron Trioxide, reacting with Aluminum = elemental boron, and a fiery explosion (thermite reaction)
     // rightClicked event in thermite_reaction.js, todo add information
-    
+
     // -- Ferroboron Alloy
     // - tweak recipes so Ferroboron alloy is only 20/80 boron/steel instead of 50/50
     event.remove({ id: "nuclearcraftneohaul:fluid_mixer/ferroboron_from_steel_boron" })
@@ -228,34 +228,34 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:alloy_furnace_recipe",
         "itemIngredients": [
             {
-            "count": 4,
-            "ingredient": [
-                {
-                "tag": "c:dusts/steel"
-                },
-                {
-                "tag": "c:ingots/steel"
-                }
-            ]
+                "count": 4,
+                "ingredient": [
+                    {
+                        "tag": "c:dusts/steel"
+                    },
+                    {
+                        "tag": "c:ingots/steel"
+                    }
+                ]
             },
             {
-            "count": 1,
-            "ingredient": [
-                {
-                "tag": "c:dusts/boron"
-                },
-                {
-                "tag": "c:ingots/boron"
-                }
-            ]
+                "count": 1,
+                "ingredient": [
+                    {
+                        "tag": "c:dusts/boron"
+                    },
+                    {
+                        "tag": "c:ingots/boron"
+                    }
+                ]
             }
         ],
         "itemProducts": [
             {
-            "count": 5,
-            "ingredient": {
-                "item": "nuclearcraftneohaul:ferroboron_alloy"
-            }
+                "count": 5,
+                "ingredient": {
+                    "item": "nuclearcraftneohaul:ferroboron_alloy"
+                }
             }
         ],
         "powerModifier": 2.25,
@@ -264,16 +264,16 @@ ServerEvents.recipes(event => {
     }).id("kubejs:alloy_smelter/ferroboron")
     // - compat
     // create
-    event.recipes.create.mixing(Fluid.of("nuclearcraftneohaul:ferroboron", 90), 
-                                [Fluid.sizedIngredientOf("createbigcannons:molten_steel", 72), 
-                                Fluid.sizedIngredientOf("nuclearcraftneohaul:boron", 18)])
-                                .superheated()
+    event.recipes.create.mixing(Fluid.of("nuclearcraftneohaul:ferroboron", 90),
+        [Fluid.sizedIngredientOf("createbigcannons:molten_steel", 72),
+            Fluid.sizedIngredientOf("nuclearcraftneohaul:boron", 18)])
+        .superheated()
     // IE arc furnace
     event.custom({
         "type": "immersiveengineering:arc_furnace",
         "additives": [
             {
-            "tag": "c:ingots/boron"
+                "tag": "c:ingots/boron"
             }
         ],
         "energy": 51200,
@@ -285,15 +285,15 @@ ServerEvents.recipes(event => {
         },
         "results": [
             {
-            "basePredicate": {
-                "tag": "c:ingots/ferroboron"
-            },
-            "count": 5
+                "basePredicate": {
+                    "tag": "c:ingots/ferroboron"
+                },
+                "count": 5
             }
         ],
         "time": 500 // due to 5x output
     })
-    
+
     // -- Atomic Mechanisms
     transitional = "kubejs:incomplete_atomic_mechanism"
     event.recipes.create.sequenced_assembly([
@@ -307,10 +307,10 @@ ServerEvents.recipes(event => {
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:atomic_mechanism")
-    
+
     // -- Boron Casing
     event.shapeless(Item.of("kubejs:boron_casing", 2), [Ingredient.of("#c:ingots/ferroboron"), "immersiveengineering:sheetmetal_lead"])
-    
+
     // -- Boron Machine
     donutCraft(event, "kubejs:boron_machine", "kubejs:boron_casing", "kubejs:atomic_mechanism")
     // - Usages
@@ -339,17 +339,17 @@ ServerEvents.recipes(event => {
         "energy": 200000,
         "ingredients": [
             {
-            "item": "kubejs:boron_machine"
+                "item": "kubejs:boron_machine"
             }
         ],
         "max_charge_rate": 2000,
         "results": [
             {
-            "id": "nuclearcraftneohaul:energy_upgrade"
+                "id": "nuclearcraftneohaul:energy_upgrade"
             }
         ]
     })
-    
+
     // -- Epilogue
     event.remove({ output: "supplementaries:globe" })
     event.shaped("supplementaries:globe", [
@@ -366,26 +366,26 @@ ServerEvents.recipes(event => {
         "type": "nuclearcraftneohaul:infuser_recipe",
         "fluidIngredients": [
             {
-            "amount": 1000,
-            "ingredient": {
-                "fluid": "blazinghot:molten_ancient_debris"
-            }
+                "amount": 1000,
+                "ingredient": {
+                    "fluid": "blazinghot:molten_ancient_debris"
+                }
             }
         ],
         "itemIngredients": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "supplementaries:globe"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "supplementaries:globe"
+                }
             }
         ],
         "itemProducts": [
             {
-            "count": 1,
-            "ingredient": {
-                "item": "supplementaries:globe_sepia"
-            }
+                "count": 1,
+                "ingredient": {
+                    "item": "supplementaries:globe_sepia"
+                }
             }
         ],
         "powerModifier": 100.0, // 1000 rf/t
