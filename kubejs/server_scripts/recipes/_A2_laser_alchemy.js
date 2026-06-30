@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
                 {
                     "count": 1,
                     "ingredient": {
-                        "item": substrate.id
+                        "item": special ? substrate : substrate.id
                     }
                 }
             ],
@@ -82,23 +82,19 @@ ServerEvents.recipes(event => {
             "powerModifier": 1.0,
             "radiation": 0.0,
             "timeModifier": 0.25 // 30 seconds
-        }).id(`kubejs:reagent_extraction/${substrate.id.slice(17)}`)
+        }).id(special ? `kubejs:reagent_extraction/${substrate.slice(17)}` : `kubejs:reagent_extraction/${substrate.id.slice(17)}`)
     }
     global.substrates.forEach(a => {
         a.forEach(s => {
             if (!s.ingredient) {
                 // Weird Reagents
-                if (s.id == "kubejs:substrate_silicon") {
-                    reagentExtract(event, s, "ae2:silicon")
-                }
-                else if (s.id == "kubejs:substrate_silver") {
-                    reagentExtract(event, s, "immersiveengineering:dust_silver")
-                }
-                else { return }
+                return
             }
             reagentExtract(event, s, null)
         })
     })
+    reagentExtract(event, "kubejs:substrate_silicon", "ae2:silicon")
+    reagentExtract(event, "kubejs:substrate_silver", "immersiveengineering:dust_silver")
 
     // Failed Alchemy Analysis in the Rock Crusher
     let failure = (id, outputs) => {
