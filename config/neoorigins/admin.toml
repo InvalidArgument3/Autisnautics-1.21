@@ -33,7 +33,7 @@ unique_origin_layers = []
 	#Minimum ratio of loaded powers (0.0-1.0) for an addon origin to appear.
 	# Default: 0.5
 	# Range: 0.0 ~ 1.0
-	min_power_ratio = 0.5
+	min_power_ratio = 0.0
 
 #Command access tuning.
 [commands]

@@ -8,7 +8,6 @@
         "config",
         "defaultconfigs",
         "kubejs",
-        "originpacks",
         "!kubejs/probe/**"
     ],
     "server_overrides": [
