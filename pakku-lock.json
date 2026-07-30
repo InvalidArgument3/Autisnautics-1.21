@@ -2037,7 +2037,6 @@
             "id": {
                 "curseforge": "1286032"
             },
-            "redistributable": false,
             "files": [
                 {
                     "type": "curseforge",
@@ -17817,6 +17816,47 @@
                     "required_dependencies": [],
                     "size": 93252,
                     "date_published": "2025-11-07T21:30:01.974642Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "AVAQwqcqSn357imd",
+            "pakku_links": [
+                "Tqqk6IDRcuSfihiI"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "structure-essentials-forge-fabric"
+            },
+            "name": {
+                "curseforge": "Structure Essentials"
+            },
+            "id": {
+                "curseforge": "832882"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "structureessentials-1.21.1-5.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7962/596/structureessentials-1.21.1-5.0.jar",
+                    "id": "7962596",
+                    "parent_id": "832882",
+                    "hashes": {
+                        "sha1": "5c059c2cb2ad8c43e1384b0939bf258801aadfea",
+                        "md5": "c6ab08c1607e6b1eba091455a499f581"
+                    },
+                    "required_dependencies": [
+                        "326652"
+                    ],
+                    "size": 60833,
+                    "date_published": "2026-04-21T19:51:52.317Z"
                 }
             ]
         },
