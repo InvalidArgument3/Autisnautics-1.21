@@ -19111,6 +19111,71 @@
             ]
         },
         {
+            "pakku_id": "xSRtYZwGflyhrOcS",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "worldedit",
+                "modrinth": "worldedit"
+            },
+            "name": {
+                "curseforge": "WorldEdit",
+                "modrinth": "WorldEdit"
+            },
+            "id": {
+                "curseforge": "225608",
+                "modrinth": "1u6JkXh5"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "worldedit-mod-7.3.8.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5830/452/worldedit-mod-7.3.8.jar",
+                    "id": "5830452",
+                    "parent_id": "225608",
+                    "hashes": {
+                        "sha1": "924fe181a29bd66be6783f6d589968ab0ee02250",
+                        "md5": "f5d6f09ca5c4b1958780d01a099b779d"
+                    },
+                    "required_dependencies": [],
+                    "size": 6222854,
+                    "date_published": "2024-10-21T11:00:19.003Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "worldedit-mod-7.3.8.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/WTAFvuRx/worldedit-mod-7.3.8.jar",
+                    "id": "WTAFvuRx",
+                    "parent_id": "1u6JkXh5",
+                    "hashes": {
+                        "sha512": "e039492df0b486e7ce76d0eaf8cb11eadad2e78220600b8498ab8eef4642a29e310a6bcb4378257553b3639c6d0bc1ebf0f73df3a7a677c6af6baf86716b0bc7",
+                        "sha1": "924fe181a29bd66be6783f6d589968ab0ee02250"
+                    },
+                    "required_dependencies": [],
+                    "size": 6222854,
+                    "date_published": "2024-10-21T11:01:40.791602Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "6ns5jV2sZ4lYsfOe",
             "type": "MOD",
             "side": "CLIENT",

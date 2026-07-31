@@ -193,3 +193,6 @@ visual_keybinder
 
 # cache
 cache/*
+
+# WorldEdit (dev tool — runtime unpack, sessions, local schematics)
+config/worldedit/
