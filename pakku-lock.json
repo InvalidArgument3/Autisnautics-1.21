@@ -9009,6 +9009,42 @@
             ]
         },
         {
+            "pakku_id": "n1mGUzPCku2NcePo",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fungal-infection-spore"
+            },
+            "name": {
+                "curseforge": "Fungal Infection: Spore"
+            },
+            "id": {
+                "curseforge": "678295"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "spore_1.21.1_2.2.0j_neo.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8342/823/spore_1.21.1_2.2.0j_neo.jar",
+                    "id": "8342823",
+                    "parent_id": "678295",
+                    "hashes": {
+                        "sha1": "43b07f98a760328a6d092f8a8c502e6ea81989e5",
+                        "md5": "103135f66d2299fd18d826b2a8d11596"
+                    },
+                    "required_dependencies": [],
+                    "size": 119073141,
+                    "date_published": "2026-06-29T20:52:59.980Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "gr8xivzAi5V4H4w9",
             "type": "MOD",
             "side": "CLIENT",
