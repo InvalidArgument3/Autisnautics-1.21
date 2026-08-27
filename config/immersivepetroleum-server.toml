@@ -39,6 +39,14 @@
 	#Automatically unlock IP recipes for new players
 	#Default: true
 	autounlock_recipes = true
-	#Set to false to disable the asphalt block boosting player speed
+	#Setting this to false disables the asphalt block boosting player speed
 	#Default: true
 	asphalt_speed = true
+
+[WorldGen]
+	#Set this to true if this mod was added to a pre-existing world.
+	#Enable this only if absolutely necessary.
+	#Side effects may include, but are not limited to, hiccups, chills, nausea, dizziness, headache, drowsiness, dry mouth, blurred vision, allergic reactions and crash-outs.
+	#See "Doctor Log-Files" should any symptoms appear while this is enabled.
+	#Default: false
+	regenerate_missing_reservoirs = false

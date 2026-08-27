@@ -5,6 +5,7 @@
 	filename: "professions"
 	group: "0810E42B2DD79973"
 	id: "1634333847CCE52A"
+	images: [ ]
 	order_index: 0
 	quest_links: [ ]
 	quests: [

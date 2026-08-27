@@ -4,6 +4,7 @@
 	filename: "generic"
 	group: "0BFB33D75F4EAD91"
 	id: "0F40BB44472F412C"
+	images: [ ]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -421,38 +422,6 @@
 			rewards: [{
 				id: "0DC5CB439FBDCA95"
 				item: {
-					components: {
-						"relics:data": {
-							abilities: {
-								abilities: {
-									water_dash: {
-										lock: {
-											breaks: 5
-										}
-										points: 0
-										research: {
-											links: { }
-											researched: 0b
-										}
-										stats: {
-											jump_bonus: {
-												initialQuality: 6
-											}
-											recovery_time: {
-												initialQuality: 6
-											}
-											speed_penalty: {
-												initialQuality: 1
-											}
-										}
-									}
-								}
-								synergies: { }
-							}
-							leveling: { }
-							statistic: { }
-						}
-					}
 					count: 1
 					id: "artifacts:aqua_dashers"
 				}

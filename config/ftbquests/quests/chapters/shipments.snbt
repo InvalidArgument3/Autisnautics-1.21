@@ -7,6 +7,7 @@
 	filename: "shipments"
 	group: "0810E42B2DD79973"
 	id: "08DF8E49DAFD4F9D"
+	images: [ ]
 	order_index: 2
 	quest_links: [ ]
 	quests: [

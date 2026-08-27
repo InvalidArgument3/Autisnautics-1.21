@@ -78,7 +78,11 @@
                 // A list of blocked regexes, if any material causes issues add their id to here
                 "blocked": []
             },
-            // An allow list since truly modular normally ignores smithing recipes that convert multiple items, as wrong detections become likely there.
+            /*
+            An allow list since truly modular normally ignores smithing recipes that convert multiple items, as wrong detections become likely there.
+            Normally convertion from multiple base materials (f.e. iron or diamong to netherite) are blocked from becoming modular recpies.
+            These usually seem to be cosmetic attachments rather then real materials.
+            */
             "allow_smithing_multi_ingredient_recipes": {
                 // Whether this property is enabled at all
                 "enable": true,

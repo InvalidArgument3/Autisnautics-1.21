@@ -191,6 +191,9 @@ visual_keybinder
 # sable
 .sable
 
+# analog audio (ffmpeg / yt-dlp binaries)
+.analoglib/
+
 # cache
 cache/*
 

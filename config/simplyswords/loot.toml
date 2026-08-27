@@ -1,17 +1,20 @@
 # Don't change this! Version used to track needed updates.
-version = 0
+version = 3
 enableLootDrops = true
 enableLootInVillages = false
 standardLootTableWeight = 0.1
 rareLootTableWeight = 0.4
 runicLootTableWeight = 0.7
-uniqueLootTableWeight = 0.3
+uniqueLootTableWeight = 0.05
+uniqueSoftPityStart = 25
+uniqueSoftPityIncrement = 0.2
+uniqueHardPity = 75
+tabletHardPity = 60
 enableContainedRemnants = true
 disabledUniqueWeaponLoot = [  ]
 
 [uniqueLootTableOptions]
-"minecraft:entities/wither" = 5.0
-"minecraft:entities/ender_dragon" = 50.0
+"minecraft:entities/ender_dragon" = 5.0
 "minecraft:chests/ruined_portal" = 0.0
 "minecraft:chests/village/village_armorer" = 0.0
 "minecraft:chests/village/village_butcher" = 0.0

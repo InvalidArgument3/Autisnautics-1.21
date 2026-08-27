@@ -4,6 +4,7 @@
 	filename: "cactoid"
 	group: "0BFB33D75F4EAD91"
 	id: "7C67100AFA5B43EA"
+	images: [ ]
 	order_index: 3
 	quest_links: [ ]
 	quests: [
@@ -92,41 +93,9 @@
 			dependencies: ["71659ADD9BF9E5A1"]
 			icon: {
 				components: {
-					"relics:data": {
-						abilities: {
-							abilities: {
-								drinking: {
-									lock: {
-										breaks: 5
-									}
-									points: 0
-									research: {
-										links: { }
-										researched: 0b
-									}
-									stats: {
-										air: {
-											initialQuality: 9
-										}
-										health: {
-											initialQuality: 2
-										}
-										hunger: {
-											initialQuality: 3
-										}
-										speed: {
-											initialQuality: 3
-										}
-									}
-								}
-							}
-							synergies: { }
-						}
-						leveling: { }
-						statistic: { }
-					}
+					"ftbquests:missing_item": "artifacts:novelty_drinking_hat"
 				}
-				id: "artifacts:novelty_drinking_hat"
+				id: "ftbquests:missing_item"
 			}
 			id: "0DCC71420C57E089"
 			rewards: [{

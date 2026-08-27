@@ -1,6 +1,6 @@
 #.
 #Config version check, values below 0 will disable config version checker
-# Default: 4
+# Default: 5
 # Range: > -2147483648
 configVersion = 4
 
@@ -50,7 +50,7 @@ configVersion = 4
 		rotorKd = 0.0020000000949949026
 		#.
 		#Maximum rotation speed of a rotor
-		# Default: 256
+		# Default: 272
 		# Range: > 0
 		rotorRPMMax = 256
 		#.
@@ -89,6 +89,13 @@ configVersion = 4
 		# Default: 2.0
 		# Range: 0.0 ~ 3.4028234663852886E38
 		fieldSaturationCurrent = 2.0
+		#.
+		# Default: 2.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		generatorLargeInductionRotorInertia = 2.0
+		#.
+		#Allow generator rotors to deal damage to entities
+		dangerousGenerators = true
 
 		#.
 		#Fine tune the kinetic stats of individual components
@@ -109,6 +116,7 @@ configVersion = 4
 				punch_card_reader = 2.0
 				variac = 0.0
 				generator_commutator = 8.0
+				generator_large_induction_rotor = 128.0
 
 			#.
 			#[in Stress Units]
@@ -172,21 +180,6 @@ configVersion = 4
 	# Range: > 0
 	TFMGConnectorPower = 10000
 	#.
-	#Forge Energy used by Electro-Zapper per shot
-	# Default: 100
-	# Range: > 1
-	electroZapperFePerShot = 100
-	#.
-	#Portable Battery Forge Energy capacity before enchants
-	# Default: 10000
-	# Range: > 1
-	portableBatteryBaseCapacity = 10000
-	#.
-	#Portable Battery Forge Energy capacity increase per level of Capacity enchant
-	# Default: 10000
-	# Range: > 1
-	portableBatteryEnchantCapacity = 10000
-	#.
 	#Initial charge of the acid battery
 	# Default: 0.8999999761581421
 	# Range: 0.0 ~ 1.0
@@ -232,21 +225,6 @@ configVersion = 4
 	# Range: 0.0 ~ 3.4028234663852886E38
 	carbonPileGain = 10.0
 	#.
-	#Max multimeter distance
-	# Default: 5.0
-	# Range: 1.0 ~ 3.4028234663852886E38
-	multimeterDistance = 5.0
-	#.
-	#Max multimeter voltage
-	# Default: 500.0
-	# Range: 1.0 ~ 3.4028234663852886E38
-	multimeterVoltage = 500.0
-	#.
-	#Max multimeter current
-	# Default: 50.0
-	# Range: 1.0 ~ 3.4028234663852886E38
-	multimeterCurrent = 50.0
-	#.
 	#Al parameter of small transformer core (affects resistance per turn)
 	# Default: 1.5
 	# Range: 0.0 ~ 3.4028234663852886E38
@@ -267,10 +245,127 @@ configVersion = 4
 	# Range: 0.0 ~ 1.0
 	mediumCoreK = 0.9999899864196777
 	#.
-	#Capacity of the acid battery, measured in joules
-	# Default: 720.0
+	#Capacity of the acid battery, measured in watt-hours
+	# Default: 120.0
 	# Range: 0.0 ~ 3.4028234663852886E38
 	acidBatteryCapacity = 720.0
+	#.
+	#Vary motor resistance based on stress consumption
+	motorDynamicResistance = true
+	#.
+	#Acid battery internal resistance when fully charged, measured in Ohms
+	# Default: 0.10000000149011612
+	# Range: 0.0010000000474974513 ~ 100.0
+	acidBatteryFullChargeInternalResistance = 0.10000000149011612
+	#.
+	#Minimum current flowing through a cut wire that will start causing damage
+	# Default: 0.20000000298023224
+	# Range: 0.0 ~ 3.4028234663852886E38
+	wireCutDamageCurrentThreshold = 0.20000000298023224
+	#.
+	#Enable circuit forming interaction for players in creative mode
+	creativePlayerShortsWires = false
+	#.
+	#Minimum current flowing through an entity for it to receive damage
+	# Default: 0.10000000149011612
+	# Range: 0.0 ~ 3.4028234663852886E38
+	entityCurrentDamageThreshold = 0.10000000149011612
+	#.
+	#Resistance of entities when they are shorting wires
+	# Default: 5000.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	entityResistance = 5000.0
+	#.
+	#Enables entities to form circuits when touching wires
+	entityWireInteractions = true
+	#.
+	#Maximum block range of the factory light projected light blocks
+	# Default: 16
+	# Range: > 0
+	factoryLightProjectionRange = 16
+	#.
+	#Control whether the plotter records voltage values when networks are not converged
+	plotterRecordNonconvergence = false
+	#.
+	#Block range of the electric pump
+	# Default: 24
+	# Range: > 0
+	electricPumpRange = 24
+	#.
+	#Controls how much power is needed to run the pump at a given speed
+	# Default: 2.134999990463257
+	# Range: 0.0 ~ 3.4028234663852886E38
+	electricPumpPower = 2.134999990463257
+	#.
+	#Maximum speed the pump can run at (can be above the Create's speed limit)
+	# Default: 256.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	electricPumpMaxSpeed = 256.0
+	#.
+	#Maximum value of the FE Inverter control pin voltage
+	# Default: 20.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	feInverterControlVoltage = 20.0
+	#.
+	#Capacitance of the FE Inverter control pin
+	# Default: 9.999999747378752E-5
+	# Range: 0.0 ~ 1.0
+	feInverterControlCapacitance = 9.999999747378752E-5
+	#.
+	#Controls the FE buffer size, and with it, the maximum generated voltage
+	# Default: 20000
+	# Range: > 0
+	feInverterBufferSize = 20000
+	#.
+	#Target open circuit voltage for the solar panels
+	# Default: 26.399999618530273
+	# Range: 0.0 ~ 100.0
+	solarPanelVocTarget = 26.399999618530273
+	#.
+	#Controls the amount of cells in the solar panel (Should be left at 48 if your not trying to imitate a real panel)
+	# Default: 48
+	# Range: 0 ~ 100
+	solarPanelCellCount = 48
+	#.
+	#Target short circuit current for the solar panels
+	# Default: 3.299999952316284
+	# Range: 0.0 ~ 100.0
+	solarPanelIscTarget = 3.299999952316284
+	#.
+	#Controls the voltage part of the max power point (should be around 80% of the Voc)
+	# Default: 21.1200008392334
+	# Range: 0.0 ~ 100.0
+	solarPanelVmpTarget = 21.1200008392334
+	#.
+	#Controls the current part of the max power point, (should be around 92% of the Isc)
+	# Default: 3.0360000133514404
+	# Range: 0.0 ~ 100.0
+	solarPanelImpTarget = 3.0360000133514404
+	#.
+	#This is the Nominal Operating Cell Temp of the solar cells in the panel
+	# Default: 45
+	# Range: 0 ~ 100
+	solarPanelNOCT = 45
+	#.
+	#Controls maximum number of solar panels in a single multiblock
+	# Default: 25
+	# Range: > 1
+	solarPanelMaxSize = 25
+	#.
+	#RPM required to cleanly turn off a HV switch for a given current flowing through it
+	# Default: 1.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	hvSwitchSparkExtinguishRPMFactor = 1.0
+	#.
+	#Minimum current for a HV switch spark to continue existing
+	# Default: 0.10000000149011612
+	# Range: 0.0 ~ 3.4028234663852886E38
+	hvSwitchSparkMinimumCurrent = 0.10000000149011612
+	#.
+	#Voltage required to spark when the switch is turning on, scales with contact distance
+	# Default: 1000.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	hvSwitchSparkPotentialFactor = 1000.0
 
 	#.
 	#Things related to how the simulation is handled (probably shouldn't be altered unless you know what you are doing)
@@ -289,12 +384,12 @@ configVersion = 4
 		splittingsTransformers = false
 		#.
 		#Maximum solver iterations for networks without dynamic residuals
-		# Default: 250
+		# Default: 200
 		# Range: > -2147483648
 		solverSimpleMaxIterations = 250
 		#.
 		#Maximum solver iterations for networks with dynamic residuals
-		# Default: 250
+		# Default: 200
 		# Range: > -2147483648
 		solverComplexMaxIterations = 250
 		#.
@@ -351,6 +446,8 @@ configVersion = 4
 		# Default: 0.9900000095367432
 		# Range: 0.0 ~ 1.0
 		solverMaxSearchAlpha = 0.9900000095367432
+		#.
+		seriesWireOptimization = false
 
 	#.
 	#Resistance values for all devices
@@ -381,6 +478,9 @@ configVersion = 4
 			basin_heater = 10.0
 			constant_speed_motor = 25.6
 			alarm_bell = 20.0
+			circuit_design_table = 480.0
+			electric_pump = 480.0
+			generator_large_induction_rotor = 1.0
 
 			[electricity.resistance-v3.resistance.power_gauge]
 				shunt_range_2kw = 2.0E7
@@ -406,6 +506,14 @@ configVersion = 4
 				range_200v = 2000000.0
 				range_2kv = 2.0E7
 				range_20v = 200000.0
+
+			[electricity.resistance-v3.resistance.redstone_converter]
+				min = 5.0
+				max = 1000.0
+
+			[electricity.resistance-v3.resistance.energy_meter]
+				series = 0.02500000037252903
+				shunt = 2000000.0
 
 	#.
 	#Thermal properties for all devices
@@ -438,6 +546,10 @@ configVersion = 4
 			mv_switch = 1.0
 			carbon_pile_coil = 2.0
 			crt = 3.0
+			circuit_design_table = 0.5
+			redstone_converter = 0.75
+			nether_transformer = 16.0
+			energy_meter = 2.0
 
 		#.
 		#[in Watts]
@@ -466,3 +578,72 @@ configVersion = 4
 			mv_switch = 51.2
 			carbon_pile_coil = 100.0
 			crt = 100.0
+			circuit_design_table = 50.0
+			redstone_converter = 50.0
+			nether_transformer = 4000.0
+			energy_meter = 100.0
+
+#.
+#Equipment configuration values
+[equipment]
+	#.
+	#.
+	#Energy used by Electro-Zapper per shot
+	# Default: 500
+	# Range: > 1
+	electroZapperEnergyPerShot = 500
+	#.
+	#Energy used by Electro-Baton per hit
+	# Default: 250
+	# Range: > 1
+	electroBatonEnergyPerShot = 250
+	#.
+	#Energy used by the tool for each block mined
+	# Default: 25
+	# Range: > 1
+	portableDrillEnergyPerUse = 25
+	#.
+	#Base mining speed of the Portable Drill
+	# Default: 6.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	drillMineSpeedBase = 6.0
+	#.
+	#Top mining speed of the Portable Drill when used continuously
+	# Default: 16.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	drillMineSpeedBulk = 16.0
+	#.
+	#Energy used by the tool for each block mined
+	# Default: 100
+	# Range: > 1
+	portableSawEnergyPerUse = 100
+	#.
+	#Mining speed of the Portable Saw
+	# Default: 6.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	sawMineSpeedBase = 6.0
+	#.
+	#Portable Battery energy capacity before enchants
+	# Default: 20000
+	# Range: > 1
+	portableBatteryBaseCapacity = 20000
+	#.
+	#Portable Battery energy capacity increase per level of Capacity enchant
+	# Default: 20000
+	# Range: > 1
+	portableBatteryEnchantCapacity = 20000
+	#.
+	#Max multimeter distance
+	# Default: 5.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	multimeterDistance = 5.0
+	#.
+	#Max multimeter voltage
+	# Default: 500.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	multimeterVoltage = 500.0
+	#.
+	#Max multimeter current
+	# Default: 50.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	multimeterCurrent = 50.0

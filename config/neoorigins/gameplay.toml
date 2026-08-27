@@ -1,3 +1,11 @@
+#Written by the mod to track one-time config migrations. Do not edit by hand.
+#The mod uses this to tell a config it has already fixed up from one written
+#by an older version, so that each migration runs exactly once. Deleting it
+#makes the mod treat this file as pre-2.2.22 again.
+# Default: 1
+# Range: > 0
+config_version = 1
+
 #Random origin assignment mode.
 #DISABLED: players choose their origin normally.
 #FIRST_JOIN: origins are randomly assigned on first join (no selection screen).
@@ -22,25 +30,34 @@
 	#Turn off to disable the on-land suffocation entirely.
 	dries_out = true
 	#Ticks per single air point lost while out of water.
-	#Default 10 = 1 air per 0.5s, 300 air → ~2.5 minutes to deplete.
-	#Larger values mean a slower drain. Vanilla cod uses ~1 tick per air;
-	#for a fish-comparable feel set this near 16 (≈4 minutes).
+	#Default 1 matches vanilla cod and salmon exactly: air starts at 300,
+	#so 300 ticks (15 seconds) on land before drown damage begins.
+	#Larger values mean a slower drain: the total land time in seconds is
+	#roughly (300 * this value) / 20, so 2 gives 30s and 4 gives 1 minute.
 	#Replaces the per-power drain_rate field in built-in dries_out JSONs.
-	# Default: 10
+	# Default: 1
 	# Range: 1 ~ 1200
-	drain_rate_ticks = 10
+	drain_rate_ticks = 1
 	#Damage applied per second once a dried-out aquatic player's virtual air
 	#is exhausted. Mirrors WaterAnimal.handleAirSupply cadence (vanilla cod / salmon).
 	#Default 2.0 (= 1 heart per second). Set to 0 to make dry-out non-lethal.
 	# Default: 2.0
 	# Range: 0.0 ~ 100.0
 	drown_damage_per_second = 2.0
-	#Pescivore restriction — when true, ocean origins (Abyssal, Kraken, Merling,
+	#Pescivore restriction: when true, ocean origins (Abyssal, Kraken, Merling,
 	#Siren) can only eat items in the neoorigins:fish_foods tag; non-fish food
 	#is silently cancelled. Set to false to let them eat anything (powered by
 	#the aquatic_fish_diet power's runtime check on this flag).
 	#Default true: matches the long-standing pescivore design.
 	fish_diet_required = true
+	#Extra items ocean origins (Abyssal, Kraken, Merling, Siren) may ALSO eat
+	#on top of the neoorigins:fish_foods tag. Additive: an item counts as fish
+	#food if it is in that tag OR listed here. Use this to whitelist modded fish
+	#(Aquaculture, Hybrid Aquatic, etc.) without editing a datapack.
+	#Format: item ids (e.g. "aquaculture:tuna") or tags (e.g. "#aquaculture:fishes").
+	#Referenced from JSON via the food_item_in_config_list condition with
+	#key "ocean_origins.extra_fish_foods".
+	extra_fish_foods = []
 
 #Friendly-fire filter for origin area-of-effect actions (poison sting,
 #fire burst, ink shot, etc.). When a toggle is true, that category of
@@ -111,21 +128,29 @@
 	#Per-evaluation chance (0.0 – 1.0) that a damageable helmet takes
 	#1 durability while the player is in direct sun. The condition is
 	#evaluated once per condition_passive interval (~1 second), so a
-	#value of 0.07 averages 1 durability per ~14 seconds — about 40
+	#value of 0.07 averages 1 durability per ~14 seconds, about 40
 	#minutes of continuous sun for a 165-durability iron helmet.
-	#Unbreaking still stacks via vanilla hurtAndBreak. Set to 0 to
-	#disable helmet protection (player always burns); set to 1 to
+	#Unbreaking still stacks via vanilla hurtAndBreak. Set to 0 so
+	#helmets never lose durability from sun protection; set to 1 to
 	#match vanilla zombie/skeleton wear rate (very fast).
+	#To make players burn even while wearing a helmet, set
+	#helmet_protection = false above.
 	# Default: 0.07
 	# Range: 0.0 ~ 1.0
 	helmet_dura_damage_chance = 0.07
+	#When true (default), wearing any helmet cancels sun burn for
+	#sun-damage origins. This is the current, vanilla-like behaviour.
+	#When false, sun-damage origins burn in daylight even with a
+	#helmet equipped, and the helmet takes no durability damage
+	#since it is no longer protecting the player.
+	helmet_protection = true
 
 #Orb of Origins settings.
 #Controls XP cost behaviour when a player uses an Orb of Origin.
 [orb_of_origins]
 	#Whether the XP cost scales with the number of prior orb uses.
 	#true  (default): Cost = levels_per_use * previous orb uses (first use free, then ramps).
-	#false: flat cost — every use (including the first) costs exactly levels_per_use levels.
+	#false: flat cost. Every use (including the first) costs exactly levels_per_use levels.
 	scale_cost = true
 	#XP levels charged per orb use.
 	#When scale_cost=true:  Cost = this value * number of previous orb uses (first use free).
@@ -134,6 +159,13 @@
 	# Default: 5
 	# Range: 0 ~ 1000
 	levels_per_use = 5
+	#Flat XP levels charged per Orb of Class use.
+	#The Orb of Class only resets the class layer (keeping the main origin),
+	#so it is intentionally cheaper than the full Orb of Origin reset.
+	#Set to 0 to disable its XP cost entirely.
+	# Default: 2
+	# Range: 0 ~ 1000
+	class_levels_per_use = 2
 
 #Auto-human mode.
 #When enabled, new players are automatically assigned neoorigins:human
@@ -148,8 +180,8 @@
 #that teleports the player there when the origin is first picked.
 [spawn_location]
 	#Master toggle for ALL origin spawn_location teleports.
-	#When false, no origin relocates the player on origin pick —
-	#built-in, datapack and compat origins all spawn at the world's
+	#When false, no origin relocates the player on origin pick.
+	#Built-in, datapack and compat origins all spawn at the world's
 	#normal spawn point. Overrides ocean_origins.spawn_in_ocean.
 	teleports_enabled = true
 
@@ -170,8 +202,19 @@
 #Active-ability cooldown behaviour.
 [cooldowns]
 	#When true, players in Creative mode ignore active-ability cooldowns
-	#entirely — every keybind / on-hit / on-kill power can fire without
+	#entirely: every keybind / on-hit / on-kill power can fire without
 	#waiting. Cooldowns still apply normally in Survival/Adventure, so a
 	#creative-mode player switching back to survival resumes any in-flight
 	#cooldown. Useful for testing powers without spam-waiting.
 	creative_no_cooldown = true
+
+#Skip the initial origin/class selection entirely.
+#When enabled, new players spawn with NO origin and the selection
+#screen never opens on first join. They play as an origin-less
+#player until granted one later (e.g. via an Orb of Origin).
+#Unlike auto-human mode this assigns nothing, and unlike disabling
+#every class it does not leave the player stuck invulnerable.
+#Takes priority over auto-human and random-assignment modes.
+[skip_initial_selection]
+	#Spawn new players with no origin and no selection screen.
+	enabled = false

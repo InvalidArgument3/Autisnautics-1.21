@@ -133,6 +133,11 @@ threadPoolPriority = "default"
 	# (Default: true) Whether to enable StructureWeightSampler optimizations to accelerate world generation
 	# 
 	optimizeStructureWeightSampler = "default"
+	# (Default: true) Enables the built-in integrations with other worldgen mods in density function compiler.
+	# 
+	# Depends on vanillaWorldGenOptimizations.useDensityFunctionCompiler
+	# 
+	enableBuiltinDFCIntegrations = "default"
 
 	[vanillaWorldGenOptimizations.nativeAcceleration]
 		# (Default: false) Enable the use of AVX512 for native acceleration

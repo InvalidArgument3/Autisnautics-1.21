@@ -127,6 +127,9 @@
     "maid": true,
     "shrine_lamp": true
   },
+  "quark": {
+    "oretoise_eating_cooldown": true
+  },
   "reliquary": {
     "pedestal": true,
     "altar": true,

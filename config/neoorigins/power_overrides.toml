@@ -61,7 +61,7 @@
 		multiplier = 0.25
 
 	[power_overrides.blazeling_water_damage]
-		# Default: 2.5
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 2.5
 
@@ -134,7 +134,7 @@
 		amplifier = 0
 
 	[power_overrides.cinderborn_water_weakness]
-		# Default: 3.0
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 3.0
 
@@ -166,7 +166,7 @@
 		multiplier = 1.5
 
 	[power_overrides.draconic_water_weakness]
-		# Default: 2.0
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 2.0
 
@@ -251,7 +251,7 @@
 		amount = 3.0
 
 	[power_overrides.enderite_water_damage]
-		# Default: 3.0
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 3.0
 
@@ -279,7 +279,7 @@
 		multiplier = 1.3
 
 	[power_overrides.feline_water_weakness]
-		# Default: 1.5
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 1.5
 
@@ -774,7 +774,7 @@
 		amplifier = 0
 
 	[power_overrides.strider_water_weakness]
-		# Default: 3.0
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 3.0
 
@@ -887,7 +887,7 @@
 		multiplier = 0.4
 
 	[power_overrides.vampire_water_weakness]
-		# Default: 2.0
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 2.0
 
@@ -921,7 +921,7 @@
 		hunger_cost = 3
 
 	[power_overrides.voidwalker_water_damage]
-		# Default: 1.75
+		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 1.75
 
@@ -1350,3 +1350,349 @@
 		# Default: 0
 		# Range: 0 ~ 100
 		hunger_cost = 0
+
+	[power_overrides.necromancer_water_breathing]
+		enabled = true
+
+	[power_overrides.phantom_water_breathing]
+		enabled = true
+
+	[power_overrides.revenant_water_breathing]
+		enabled = true
+
+	[power_overrides.skeleton_water_breathing]
+		enabled = true
+
+	[power_overrides.wraith_water_breathing]
+		enabled = true
+
+	[power_overrides.vampire_water_breathing]
+		enabled = true
+
+	[power_overrides.asura_frail_frame]
+		# Default: -6.0
+		# Range: -100.0 ~ 100.0
+		amount = -6.0
+
+	[power_overrides.asura_bloodrage_1]
+		enabled = true
+		# Default: 0
+		# Range: 0 ~ 255
+		amplifier = 0
+
+	[power_overrides.asura_bloodrage_2]
+		enabled = true
+		# Default: 1
+		# Range: 0 ~ 255
+		amplifier = 1
+
+	[power_overrides.asura_bloodrage_3]
+		enabled = true
+		# Default: 2
+		# Range: 0 ~ 255
+		amplifier = 2
+
+	[power_overrides.asura_unmovable]
+		# Default: 1.0
+		# Range: -1.0 ~ 1.0
+		amount = 1.0
+
+	[power_overrides.asura_slam]
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+
+	[power_overrides.asura_frenzy]
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+
+	[power_overrides.asura_undying_rage]
+		enabled = true
+		# Default: 1
+		# Range: 0 ~ 255
+		amplifier = 1
+
+	[power_overrides.asura_wrath_eruption]
+		# Default: 500
+		# Range: 0 ~ 72000
+		cooldown_ticks = 500
+
+	[power_overrides.windwalker_air_jumps]
+		# Default: 0
+		# Range: 0 ~ 10000
+		min = 0
+		# Default: 2
+		# Range: 1 ~ 100000
+		max = 2
+		# Default: 2
+		# Range: 0 ~ 100000
+		start_value = 2
+		# Default: 2
+		# Range: -1000 ~ 1000
+		regen_rate = 2
+		# Default: 1
+		# Range: 1 ~ 72000
+		regen_interval = 1
+
+	[power_overrides.windwalker_lofty_leap]
+		# Default: 0.12
+		# Range: -1.0 ~ 10.0
+		amount = 0.12
+
+	[power_overrides.windwalker_cloud_steps]
+		# Default: 0
+		# Range: 0 ~ 72000
+		cooldown_ticks = 0
+
+	[power_overrides.windwalker_gale_dash]
+		# Default: 2.0
+		# Range: 0.0 ~ 10.0
+		power = 2.0
+		# Default: 60
+		# Range: 0 ~ 72000
+		cooldown_ticks = 60
+
+	[power_overrides.windwalker_swift_current]
+		# Default: 0.02
+		# Range: -1.0 ~ 10.0
+		amount = 0.02
+
+	[power_overrides.windwalker_typhoon]
+		# Default: 800
+		# Range: 0 ~ 72000
+		cooldown_ticks = 800
+
+	[power_overrides.windwalker_riding_wind]
+		enabled = true
+
+	[power_overrides.windwalker_eye_of_storm]
+		# Default: 700
+		# Range: 0 ~ 72000
+		cooldown_ticks = 700
+
+	[power_overrides.qi_resource]
+		# Default: 0
+		# Range: 0 ~ 10000
+		min = 0
+		# Default: 100
+		# Range: 1 ~ 100000
+		max = 100
+		# Default: 50
+		# Range: 0 ~ 100000
+		start_value = 50
+		# Default: 1
+		# Range: -1000 ~ 1000
+		regen_rate = 1
+		# Default: 20
+		# Range: 1 ~ 72000
+		regen_interval = 20
+
+	[power_overrides.qi_meditation_charge]
+		# Default: 10
+		# Range: 1 ~ 72000
+		interval = 10
+		enabled = true
+
+	[power_overrides.qi_meditation_heal]
+		enabled = true
+		# Default: 0
+		# Range: 0 ~ 255
+		amplifier = 0
+
+	[power_overrides.qi_vibrating_palm]
+		# Default: 20
+		# Range: 0 ~ 72000
+		cooldown_ticks = 20
+		# Default: 25
+		# Range: 0 ~ 100000
+		resource_cost_amount = 25
+
+	[power_overrides.qi_hardened]
+		# Default: 160
+		# Range: 0 ~ 72000
+		cooldown_ticks = 160
+		# Default: 30
+		# Range: 0 ~ 100000
+		resource_cost_amount = 30
+
+	[power_overrides.qi_dantian_expansion]
+		# Default: 20
+		# Range: 1 ~ 72000
+		interval = 20
+		enabled = true
+
+	[power_overrides.qi_core_pressure]
+		# Default: 1.3
+		# Range: 0.0 ~ 100.0
+		multiplier = 1.3
+
+	[power_overrides.qi_flying_sword]
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldown_ticks = 100
+		# Default: 40
+		# Range: 0 ~ 100000
+		resource_cost_amount = 40
+
+	[power_overrides.golden_bell_iron_shirt]
+		# Default: 8.0
+		# Range: -100.0 ~ 100.0
+		amount = 8.0
+
+	[power_overrides.golden_bell_rooted]
+		# Default: 0.6
+		# Range: -1.0 ~ 1.0
+		amount = 0.6
+
+	[power_overrides.golden_bell_hard_qigong]
+		# Default: 4.0
+		# Range: 0.0 ~ 100.0
+		damage = 4.0
+		# Default: 0
+		# Range: 0 ~ 72000
+		fire_ticks = 0
+
+	[power_overrides.golden_bell_ring]
+		# Default: 600
+		# Range: 0 ~ 72000
+		cooldown_ticks = 600
+
+	[power_overrides.golden_bell_heavy_stance]
+		# Default: -0.02
+		# Range: -1.0 ~ 1.0
+		amount = -0.02
+
+	[power_overrides.golden_bell_diamond_body]
+		# Default: 6.0
+		# Range: -100.0 ~ 100.0
+		amount = 6.0
+
+	[power_overrides.golden_bell_reflected_force]
+		# Default: 8.0
+		# Range: 0.0 ~ 100.0
+		damage = 8.0
+		# Default: 0
+		# Range: 0 ~ 72000
+		fire_ticks = 0
+
+	[power_overrides.golden_bell_bell_toll]
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+
+	[power_overrides.iron_monk_stamina]
+		# Default: 0
+		# Range: 0 ~ 10000
+		min = 0
+		# Default: 100
+		# Range: 1 ~ 100000
+		max = 100
+		# Default: 100
+		# Range: 0 ~ 100000
+		start_value = 100
+		# Default: 2
+		# Range: -1000 ~ 1000
+		regen_rate = 2
+		# Default: 10
+		# Range: 1 ~ 72000
+		regen_interval = 10
+
+	[power_overrides.iron_monk_guard]
+		enabled = true
+		# Default: 0
+		# Range: 0 ~ 255
+		amplifier = 0
+
+	[power_overrides.iron_monk_guard_drain]
+		# Default: 20
+		# Range: 1 ~ 72000
+		interval = 20
+		enabled = true
+
+	[power_overrides.iron_monk_guard_block]
+		# Default: 0.1
+		# Range: 0.0 ~ 100.0
+		multiplier = 0.1
+
+	[power_overrides.iron_monk_palm_strike]
+		# Default: 40
+		# Range: 0 ~ 72000
+		cooldown_ticks = 40
+		# Default: 20
+		# Range: 0 ~ 100000
+		resource_cost_amount = 20
+
+	[power_overrides.iron_monk_iron_resolve]
+		# Default: 0.4
+		# Range: -1.0 ~ 1.0
+		amount = 0.4
+
+	[power_overrides.iron_monk_sea_of_stamina]
+		# Default: 20
+		# Range: 1 ~ 72000
+		interval = 20
+		enabled = true
+
+	[power_overrides.iron_monk_lohan_palm]
+		# Default: 120
+		# Range: 0 ~ 72000
+		cooldown_ticks = 120
+		# Default: 30
+		# Range: 0 ~ 100000
+		resource_cost_amount = 30
+
+	[power_overrides.jianxian_sword_heart]
+		# Default: 4.0
+		# Range: -100.0 ~ 100.0
+		amount = 4.0
+
+	[power_overrides.jianxian_keen_edge]
+		# Default: 1.0
+		# Range: -100.0 ~ 100.0
+		amount = 1.0
+
+	[power_overrides.jianxian_sword_qi]
+		# Default: 25
+		# Range: 0 ~ 72000
+		cooldown_ticks = 25
+
+	[power_overrides.jianxian_riding_sword]
+		enabled = true
+
+	[power_overrides.jianxian_flickering_slash]
+		# Default: 2.5
+		# Range: 0.0 ~ 10.0
+		power = 2.5
+		# Default: 80
+		# Range: 0 ~ 72000
+		cooldown_ticks = 80
+		# Default: 6.0
+		# Range: 0.0 ~ 100.0
+		damage = 6.0
+		# Default: 2.5
+		# Range: 0.0 ~ 64.0
+		damage_radius = 2.5
+		# Default: 0.5
+		# Range: 0.0 ~ 10.0
+		weapon_damage_scale = 0.5
+
+	[power_overrides.jianxian_ten_thousand_swords]
+		# Default: 600
+		# Range: 0 ~ 72000
+		cooldown_ticks = 600
+
+	[power_overrides.jianxian_sword_heart_unity]
+		# Default: 2.0
+		# Range: -100.0 ~ 100.0
+		amount = 2.0
+
+	[power_overrides.jianxian_heavenly_formation]
+		# Default: 400
+		# Range: 0 ~ 72000
+		cooldown_ticks = 400
+
+	[power_overrides.jianxian_heaven_severing_slash]
+		# Default: 300
+		# Range: 0 ~ 72000
+		cooldown_ticks = 300

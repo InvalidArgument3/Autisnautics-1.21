@@ -7,6 +7,7 @@
 		id: "psi:psimetal_exosuit_helmet"
 	}
 	id: "2EB3EC9861015754"
+	images: [ ]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
@@ -95,8 +96,11 @@
 			rewards: [{
 				id: "56812C32D7AB3581"
 				item: {
+					components: {
+						"ftbquests:missing_item": "youkaishomecoming:sparrow_sake"
+					}
 					count: 1
-					id: "youkaishomecoming:sparrow_sake"
+					id: "ftbquests:missing_item"
 				}
 				type: "item"
 			}]

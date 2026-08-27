@@ -7,6 +7,7 @@
 	id: "56284ADB6BDA71D8"
 	images: [{
 		height: 1.0d
+		id: "24E945F394D2E582"
 		image: "ftbteams:textures/add.png"
 		rotation: 0.0d
 		width: 1.0d
