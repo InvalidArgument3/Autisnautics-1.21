@@ -12161,6 +12161,74 @@
             ]
         },
         {
+            "pakku_id": "lSJSeLNxJPszDh64",
+            "pakku_links": [
+                "MoG49wuJHo4IY07G"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "markdownmanual",
+                "modrinth": "markdownmanual"
+            },
+            "name": {
+                "curseforge": "Markdown Manual",
+                "modrinth": "Markdown Manual"
+            },
+            "id": {
+                "curseforge": "502485",
+                "modrinth": "nPQ9xkPg"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "markdown_manual-MC1.21.1-neoforge-1.2.7+f05450f.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8715/694/markdown_manual-MC1.21.1-neoforge-1.2.7+f05450f.jar",
+                    "id": "8715694",
+                    "parent_id": "502485",
+                    "hashes": {
+                        "sha1": "efd7a81b602666624f13c11acab36f1696dedef6",
+                        "md5": "be2c275c4760aaf863deddbab9f57c3a"
+                    },
+                    "required_dependencies": [
+                        "419699"
+                    ],
+                    "size": 145665,
+                    "date_published": "2026-08-23T15:41:15.527Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "markdown_manual-MC1.21.1-neoforge-1.2.7+f05450f.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/nPQ9xkPg/versions/DXJD7b8A/markdown_manual-MC1.21.1-neoforge-1.2.7+f05450f.jar",
+                    "id": "DXJD7b8A",
+                    "parent_id": "nPQ9xkPg",
+                    "hashes": {
+                        "sha512": "c4526de6f8975561d12a4119c7f5fb81726c2b67e087f868fea4931eaadbc4b977f1c6370ac1dbcaf81ce8be9b391df5c2008d6da21a9033d62ef81d34898604",
+                        "sha1": "efd7a81b602666624f13c11acab36f1696dedef6"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ"
+                    ],
+                    "size": 145665,
+                    "date_published": "2026-08-23T15:41:17.028905Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "H3mmFUpLXf3WdLuQ",
             "pakku_links": [
                 "oeuSoIVlgjrKaGCz"
@@ -18093,6 +18161,50 @@
                     ],
                     "size": 13372466,
                     "date_published": "2026-06-21T18:14:37.623Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "6SIjWU3mJYNoFxlt",
+            "pakku_links": [
+                "MoG49wuJHo4IY07G",
+                "lSJSeLNxJPszDh64"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "tis3d"
+            },
+            "name": {
+                "modrinth": "TIS-3D"
+            },
+            "id": {
+                "modrinth": "L23x7zL8"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "tis3d-MC1.21.1-neoforge-2.0.0+fff58fd.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/L23x7zL8/versions/NpsuTsrm/tis3d-MC1.21.1-neoforge-2.0.0+fff58fd.jar",
+                    "id": "NpsuTsrm",
+                    "parent_id": "L23x7zL8",
+                    "hashes": {
+                        "sha512": "a54c0089453195bdb49d24fc0c18ff510a3fb01d8a9e411621f83c4f3ad496512d0fb34a251423621c8abf04051fe7fc6c491560d0e535a91065c038a96ac237",
+                        "sha1": "0f49248a932c560fe7fd0782de445d898e1ef9e8"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ",
+                        "nPQ9xkPg"
+                    ],
+                    "size": 676967,
+                    "date_published": "2026-08-26T09:02:25.397610Z"
                 }
             ]
         },
