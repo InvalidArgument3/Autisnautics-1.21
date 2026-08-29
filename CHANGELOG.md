@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.50]
+- bunch of mod updates, i can increment thev ersion number by 8 because I feel like it
+
 ## [0.0.42]
 - bunch of mod updates and cramming the kube scripts back together
 
