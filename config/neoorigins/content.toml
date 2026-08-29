@@ -76,8 +76,8 @@ disable_enhanced_vision = false
 	windwalker = false
 	qi_cultivator = false
 	iron_monk = false
-	golden_body = true
-	sword_immortal = true
+	golden_body = false
+	sword_immortal = false
 
 #Enable or disable built-in classes.
 #Set to false to remove a class from the selection screen.
