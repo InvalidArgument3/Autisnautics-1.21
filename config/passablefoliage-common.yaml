@@ -2,14 +2,16 @@
 ---
 modules:
   enchantment: true
-fallDamageReduction: 0.5
+fallDamageMultiplier: 0.5
 fallDamageThreshold: 20
-speedReductionHorizontal: 0.9
-speedReductionVertical: 0.9
+speedMultiplierHorizontal: 0.9
+speedMultiplierVertical: 0.9
 modifyPathFinding: true
 playerOnly: false
 alwaysNotViewBlocking: true
 alwaysLeafWalking: false
+leafWalkerFallSpeedThreshold: 0.8
+leafWalkerDragMultiplier: 0.6
 headHitter: false
 sounds:
   volume: 1.0

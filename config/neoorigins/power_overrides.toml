@@ -1696,3 +1696,21 @@
 		# Default: 300
 		# Range: 0 ~ 72000
 		cooldown_ticks = 300
+
+	[power_overrides.caveborn_copper_tint]
+		enabled = true
+
+	[power_overrides.caveborn_iron_tint]
+		enabled = true
+
+	[power_overrides.caveborn_gold_tint]
+		enabled = true
+
+	[power_overrides.caveborn_diamond_tint]
+		enabled = true
+
+	[power_overrides.caveborn_emerald_tint]
+		enabled = true
+
+	[power_overrides.caveborn_netherite_tint]
+		enabled = true

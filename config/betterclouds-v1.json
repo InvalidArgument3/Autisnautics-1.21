@@ -35,6 +35,7 @@
 	"lastTelemetryVersion": 0,
 	"gpuIncompatibleMessageEnabled": true,
 	"issueReportEnabled": true,
+	"cloudsDisabledMessageEnabled": true,
 	"enabledDimensions": [
 		"minecraft:overworld",
 		"bigglobe:overworld",

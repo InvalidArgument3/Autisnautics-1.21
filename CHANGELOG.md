@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.52]
+- updates
+
 ## [0.0.51]
 - fix AutisOrigins missing from NeoOrigins picker: add origin layer merge for all custom origins
 - disable remaining NeoOrigins built-ins (golden_body, sword_immortal) so only AutisOrigins show

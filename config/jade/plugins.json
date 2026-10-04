@@ -80,6 +80,9 @@
   "immersiveengineering": {
     "multiblock_icon": true
   },
+  "jadeaddons.computercraft": {
+    "computer_id": true
+  },
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
