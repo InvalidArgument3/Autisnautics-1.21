@@ -2174,6 +2174,67 @@
             ]
         },
         {
+            "pakku_id": "WAAsfZGA3QJcUcf3",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "biomespy",
+                "modrinth": "biomespy"
+            },
+            "name": {
+                "curseforge": "BiomeSpy",
+                "modrinth": "BiomeSpy"
+            },
+            "id": {
+                "curseforge": "1376024",
+                "modrinth": "OieZFwRr"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "biomespy-neoforge-1.21.1-1.3.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7488/72/biomespy-neoforge-1.21.1-1.3.3.jar",
+                    "id": "7488072",
+                    "parent_id": "1376024",
+                    "hashes": {
+                        "sha1": "079f612d2b3eed5502896c7cd691969f33b7ab1c",
+                        "md5": "7cbe40d5799f9ccea614ca397daf8d51"
+                    },
+                    "required_dependencies": [],
+                    "size": 38566,
+                    "date_published": "2026-01-19T11:46:11.050Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "biomespy-neoforge-1.21.1-1.3.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/OieZFwRr/versions/5ARULl76/biomespy-neoforge-1.21.1-1.3.3.jar",
+                    "id": "5ARULl76",
+                    "parent_id": "OieZFwRr",
+                    "hashes": {
+                        "sha512": "ec5d3e5e33b13427167e83f07f65ab7545ace4fd9fb51292e42ae8bf7f2febced60964716bd8d3d7b6f52e3d8efb3be352d96381f39f78a774ecc557ee46b241",
+                        "sha1": "079f612d2b3eed5502896c7cd691969f33b7ab1c"
+                    },
+                    "required_dependencies": [],
+                    "size": 38566,
+                    "date_published": "2026-01-19T11:47:30.454136Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "FusPHPR0SOJuObQ0",
             "type": "MOD",
             "side": "BOTH",
@@ -4041,7 +4102,7 @@
         {
             "pakku_id": "P33ydCaEfEq7Kvge",
             "pakku_links": [
-                "Tqqk6IDRcuSfihiI"
+                "ptOmc48Gy3Jz9zLC"
             ],
             "type": "MOD",
             "slug": {
@@ -6029,7 +6090,7 @@
             ]
         },
         {
-            "pakku_id": "Tqqk6IDRcuSfihiI",
+            "pakku_id": "ptOmc48Gy3Jz9zLC",
             "type": "MOD",
             "slug": {
                 "curseforge": "cupboard"
@@ -6043,7 +6104,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "cupboard-1.21.1-4.0.jar",
+                    "file_name": "cupboard-1.21.1-4.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6051,16 +6112,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8623/569/cupboard-1.21.1-4.0.jar",
-                    "id": "8623569",
+                    "url": "https://edge.forgecdn.net/files/8889/50/cupboard-1.21.1-4.2.jar",
+                    "id": "8889050",
                     "parent_id": "326652",
                     "hashes": {
-                        "sha1": "c9632e29158447d514663f230a734bed1aec0068",
-                        "md5": "df9167cd0d4e118e4a0c552ac028b77b"
+                        "sha1": "6c2d786a161f49470dad92b2edaefdac38a1e79b",
+                        "md5": "157cec3eeae81606df0183c9f6bdf341"
                     },
                     "required_dependencies": [],
-                    "size": 29598,
-                    "date_published": "2026-08-11T12:22:58.557Z"
+                    "size": 30517,
+                    "date_published": "2026-09-15T19:17:45.823Z"
                 }
             ]
         },
@@ -10489,6 +10550,69 @@
                     ],
                     "size": 54529,
                     "date_published": "2026-05-22T09:14:55.343Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "6MSs6UcOBAQfeHEM",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "ixeris",
+                "modrinth": "ixeris"
+            },
+            "name": {
+                "curseforge": "Ixeris",
+                "modrinth": "Ixeris"
+            },
+            "id": {
+                "curseforge": "1285307",
+                "modrinth": "p8RJPJIC"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Ixeris-4.6.8+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8939/532/Ixeris-4.6.8+1.21.1-neoforge.jar",
+                    "id": "8939532",
+                    "parent_id": "1285307",
+                    "hashes": {
+                        "sha1": "48c842b9a0b5c7d3c6ff85bb82a274f4bf1f2165",
+                        "md5": "9561dac162d2d0252f647be6dfcfaec8"
+                    },
+                    "required_dependencies": [],
+                    "size": 687031,
+                    "date_published": "2026-09-21T13:02:57.927Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "Ixeris-4.6.8+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/18x8vikP/Ixeris-4.6.8+1.21.1-neoforge.jar",
+                    "id": "18x8vikP",
+                    "parent_id": "p8RJPJIC",
+                    "hashes": {
+                        "sha512": "f2e72d5b5877b5557ec852f93efae5d86cda8d0b234516282ae753c397bb4d47a5863e89b1368114909b091f6a37946d905e593b77528f3f0956d63c01c64e3b",
+                        "sha1": "48c842b9a0b5c7d3c6ff85bb82a274f4bf1f2165"
+                    },
+                    "required_dependencies": [],
+                    "size": 687031,
+                    "date_published": "2026-09-21T13:02:59.897454Z"
                 }
             ]
         },
@@ -17954,47 +18078,6 @@
             ]
         },
         {
-            "pakku_id": "AVAQwqcqSn357imd",
-            "pakku_links": [
-                "Tqqk6IDRcuSfihiI"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "structure-essentials-forge-fabric"
-            },
-            "name": {
-                "curseforge": "Structure Essentials"
-            },
-            "id": {
-                "curseforge": "832882"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "structureessentials-1.21.1-5.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7962/596/structureessentials-1.21.1-5.0.jar",
-                    "id": "7962596",
-                    "parent_id": "832882",
-                    "hashes": {
-                        "sha1": "5c059c2cb2ad8c43e1384b0939bf258801aadfea",
-                        "md5": "c6ab08c1607e6b1eba091455a499f581"
-                    },
-                    "required_dependencies": [
-                        "326652"
-                    ],
-                    "size": 60833,
-                    "date_published": "2026-04-21T19:51:52.317Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "g2Hlnm4aRRhK466M",
             "type": "MOD",
             "side": "SERVER",
@@ -20558,6 +20641,9 @@
         },
         {
             "pakku_id": "rm2Uarl3zpP8Fvx8",
+            "pakku_links": [
+                "ptOmc48Gy3Jz9zLC"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "fix-gpu-memory-leak"
