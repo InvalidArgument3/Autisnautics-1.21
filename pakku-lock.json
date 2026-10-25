@@ -378,6 +378,91 @@
             ]
         },
         {
+            "pakku_id": "2kUtZ0Uupdfq9klR",
+            "pakku_links": [
+                "Cc3Py5PwRghWs7E3"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "aero_cam_sync"
+            },
+            "name": {
+                "modrinth": "Aeronautics Camera Sync"
+            },
+            "id": {
+                "modrinth": "ZGxtWu73"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "aero_cam_sync-1.4.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ZGxtWu73/versions/UbgVQ0qd/aero_cam_sync-1.4.0.jar",
+                    "id": "UbgVQ0qd",
+                    "parent_id": "ZGxtWu73",
+                    "hashes": {
+                        "sha512": "0af37dcf2d90c262858d07861243c0800a2aa72254a18eacf093de9a07cdaa5a51f9cfd9ca5f32a7efccf9a0936cfcda0ee9fbbb252b00377db21a3af6dffb4b",
+                        "sha1": "d2abb5fee04cfc0b71aace1cba9fd426e49babf4"
+                    },
+                    "required_dependencies": [
+                        "T9PomCSv"
+                    ],
+                    "size": 912604,
+                    "date_published": "2026-08-30T19:29:53.386583Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "lnqniO8TBx1iB2ZG",
+            "pakku_links": [
+                "2kUtZ0Uupdfq9klR",
+                "Cc3Py5PwRghWs7E3"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "aero-player-tilt"
+            },
+            "name": {
+                "curseforge": "Aeronautics Player Tilt"
+            },
+            "id": {
+                "curseforge": "1681706"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "aero_player_tilt-0.2.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9314/71/aero_player_tilt-0.2.5.jar",
+                    "id": "9314071",
+                    "parent_id": "1681706",
+                    "hashes": {
+                        "sha1": "39dfa2c6354b7bb1a3605a2555ac1622ac0228ea",
+                        "md5": "7bb94140dae454a36d0e09a1297d5e55"
+                    },
+                    "required_dependencies": [
+                        "1526820",
+                        "1312371"
+                    ],
+                    "size": 852385,
+                    "date_published": "2026-10-24T20:42:58.203Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "bN6ijDzZmtYYkQAw",
             "type": "MOD",
             "side": "BOTH",
@@ -4737,6 +4822,75 @@
             ]
         },
         {
+            "pakku_id": "hHsdRtZjKVEAMh4T",
+            "pakku_links": [
+                "Cc3Py5PwRghWs7E3",
+                "f4p7d0Bu0hclVY5B"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-walking-steel",
+                "modrinth": "create-walking-steel"
+            },
+            "name": {
+                "curseforge": "Create : Walking steel",
+                "modrinth": "Create : Walking steel"
+            },
+            "id": {
+                "curseforge": "1669164",
+                "modrinth": "YDfSQUPe"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_walking_steel-1.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8739/046/create_walking_steel-1.0.0.jar",
+                    "id": "8739046",
+                    "parent_id": "1669164",
+                    "hashes": {
+                        "sha1": "a5a12f55ef41e8e9259a50d25f868c7452d44b4c",
+                        "md5": "02399e1c59005c33c577d126950675a5"
+                    },
+                    "required_dependencies": [],
+                    "size": 86191,
+                    "date_published": "2026-08-26T13:11:55.313Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "create_walking_steel-1.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/YDfSQUPe/versions/QcrDonC0/create_walking_steel-1.0.0.jar",
+                    "id": "QcrDonC0",
+                    "parent_id": "YDfSQUPe",
+                    "hashes": {
+                        "sha512": "1b702d926f51b4394cdcbe7a740bceee69b4f17a268f5b4b139049746d3dc0910fc2342857650dc9a32b67db2c8fdc32324047bc8261914e21eda469c740c6c2",
+                        "sha1": "a5a12f55ef41e8e9259a50d25f868c7452d44b4c"
+                    },
+                    "required_dependencies": [
+                        "T9PomCSv",
+                        "LNytGWDc"
+                    ],
+                    "size": 86191,
+                    "date_published": "2026-08-26T13:18:23.816032Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ezsIZHVU2pWQ1mqD",
             "pakku_links": [
                 "Cc3Py5PwRghWs7E3",
@@ -4777,6 +4931,184 @@
                     ],
                     "size": 33123131,
                     "date_published": "2026-08-29T18:45:12.190765Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "1tyBJXGyxlbV4WIQ",
+            "pakku_links": [
+                "D8RbbSdEV2TtqKRU",
+                "ezsIZHVU2pWQ1mqD",
+                "f4p7d0Bu0hclVY5B"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-aeronautics-x-curios-api-compat",
+                "modrinth": "create-aeronautics-x-curios-api-compat"
+            },
+            "name": {
+                "curseforge": "Create Aeronautics x Curios API Compat",
+                "modrinth": "Create Aeronautics x Curios API Compat"
+            },
+            "id": {
+                "curseforge": "1532334",
+                "modrinth": "XdeUdp2p"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "createaeronauticscurios-neoforge-1.21.1-2.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9076/258/createaeronauticscurios-neoforge-1.21.1-2.3.jar",
+                    "id": "9076258",
+                    "parent_id": "1532334",
+                    "hashes": {
+                        "sha1": "cb04ac36f4b542a072c860297dfe8b273228a41c",
+                        "md5": "20d3c97b2e0b6587579edaac89d981e3"
+                    },
+                    "required_dependencies": [
+                        "309927",
+                        "676721",
+                        "328085"
+                    ],
+                    "size": 45263,
+                    "date_published": "2026-10-06T04:34:07.307Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "createaeronauticscurios-neoforge-1.21.1-2.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/XdeUdp2p/versions/mFcxlsvt/createaeronauticscurios-neoforge-1.21.1-2.2.jar",
+                    "id": "mFcxlsvt",
+                    "parent_id": "XdeUdp2p",
+                    "hashes": {
+                        "sha512": "b1ef38a5e9492f7b9295d8d2c4535e74e058d6c4b96fbfc8a5d8f37039f39a220e5ec162754b90ec8f2245a82c6b3ec726e6e706e0f11149ffd620ba69861f98",
+                        "sha1": "ded927b94810ff89791e1e57bcd20b468bd98a9f"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc",
+                        "vvuO3ImH",
+                        "oWaK0Q19"
+                    ],
+                    "size": 44697,
+                    "date_published": "2026-09-01T21:32:05.097088Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "x1rhsbzPtVTadSkH",
+            "pakku_links": [
+                "f4p7d0Bu0hclVY5B",
+                "ezsIZHVU2pWQ1mqD"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-aeronautics-automated-logistics",
+                "modrinth": "create-aeronautics-automated-logistics"
+            },
+            "name": {
+                "curseforge": "Create Aeronautics: Automated Logistics",
+                "modrinth": "Create Aeronautics: Automated Logistics"
+            },
+            "id": {
+                "curseforge": "1537420",
+                "modrinth": "73ZXeRfx"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_aeronautics_automated_logistics-0.7.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9184/782/create_aeronautics_automated_logistics-0.7.0.jar",
+                    "id": "9184782",
+                    "parent_id": "1537420",
+                    "hashes": {
+                        "sha1": "0da40850bdb4f3eb18340e6adb466d2af5fba50f",
+                        "md5": "cd140913f1b2c14b42b840a1184ee14b"
+                    },
+                    "required_dependencies": [],
+                    "size": 1766088,
+                    "date_published": "2026-10-14T23:38:28.783Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "create_aeronautics_automated_logistics-0.7.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/73ZXeRfx/versions/ESwTkggq/create_aeronautics_automated_logistics-0.7.0.jar",
+                    "id": "ESwTkggq",
+                    "parent_id": "73ZXeRfx",
+                    "hashes": {
+                        "sha512": "7a3e7e2942bf076e545dc7abf258b0e014244bf14aae84134f31d4e27b8d50da525ff41d23eaebcd24483c6f1206f269931038b18e7be04606fccc6c752ef103",
+                        "sha1": "0da40850bdb4f3eb18340e6adb466d2af5fba50f"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc",
+                        "oWaK0Q19"
+                    ],
+                    "size": 1766088,
+                    "date_published": "2026-10-14T23:39:19.018167Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "joz3cy6N2qdyu6qd",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "create-aeronautics-custom-propellers"
+            },
+            "name": {
+                "curseforge": "Create Aeronautics: Custom propellers"
+            },
+            "id": {
+                "curseforge": "1718605"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_aeronautics_propellers_plus-0.0.61.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/9023/12/create_aeronautics_propellers_plus-0.0.61.jar",
+                    "id": "9023012",
+                    "parent_id": "1718605",
+                    "hashes": {
+                        "sha1": "7c46909f14bdfab8ac2e86b40f89b5a9242f1847",
+                        "md5": "a14d6b6ac214dc0a7f496468265d160a"
+                    },
+                    "required_dependencies": [],
+                    "size": 65667,
+                    "date_published": "2026-09-30T23:21:19.767Z"
                 }
             ]
         },
@@ -5105,6 +5437,88 @@
                     ],
                     "size": 1356389,
                     "date_published": "2026-09-20T09:52:38.613Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "c3eQLZLlzoOgFTAt",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "create-aeroportals"
+            },
+            "name": {
+                "curseforge": "Create: AeroPortals"
+            },
+            "id": {
+                "curseforge": "1549100"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "aeroportals-1.21.1-1.3.6.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9281/419/aeroportals-1.21.1-1.3.6.jar",
+                    "id": "9281419",
+                    "parent_id": "1549100",
+                    "hashes": {
+                        "sha1": "0638ae05d712b3d0bbbb5c3a1ea39553b526ffa0",
+                        "md5": "60609d9a6bf671000f43201a8fe2918a"
+                    },
+                    "required_dependencies": [],
+                    "size": 551114,
+                    "date_published": "2026-10-21T20:47:44.470Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "aGw0Ypr8JWl9svtc",
+            "pakku_links": [
+                "jo55M6trJgWC6WFw",
+                "Cc3Py5PwRghWs7E3",
+                "f4p7d0Bu0hclVY5B"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "create-avionics"
+            },
+            "name": {
+                "modrinth": "Create: Avionics — ComputerCraft for Aeronautics"
+            },
+            "id": {
+                "modrinth": "h4nsLvjf"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "create_avionics-neoforge-1.21.1-0.6.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/h4nsLvjf/versions/9siqVCcu/create_avionics-neoforge-1.21.1-0.6.0.jar",
+                    "id": "9siqVCcu",
+                    "parent_id": "h4nsLvjf",
+                    "hashes": {
+                        "sha512": "da3a1cc9333db95781d466725939fd29a467cad21bea76df37e024b2bc0cd1a5c35c5d07ede17f101a2572cf96ba87555e506a8ad669ad8987a1e747fdad7ab6",
+                        "sha1": "a6b59ae72dae7e54b98fc88825fa6106d68298e4"
+                    },
+                    "required_dependencies": [
+                        "gu7yAYhd",
+                        "T9PomCSv",
+                        "LNytGWDc"
+                    ],
+                    "size": 170122,
+                    "date_published": "2026-09-01T14:11:14.149829Z"
                 }
             ]
         },
@@ -5592,6 +6006,80 @@
             ]
         },
         {
+            "pakku_id": "hu2ZswavsOH6lAxV",
+            "pakku_links": [
+                "f4p7d0Bu0hclVY5B",
+                "ezsIZHVU2pWQ1mqD",
+                "vy3mfp3HWqXJk193"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-flight-control",
+                "modrinth": "create-flight-control"
+            },
+            "name": {
+                "curseforge": "Create: Flight Control",
+                "modrinth": "Create: Flight Control"
+            },
+            "id": {
+                "curseforge": "1605193",
+                "modrinth": "IGVrnkhH"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_flight_control-neoforge-0.8.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9313/228/create_flight_control-neoforge-0.8.3.jar",
+                    "id": "9313228",
+                    "parent_id": "1605193",
+                    "hashes": {
+                        "sha1": "6efa89db07e45fe8687e8d1abe8ca284d3fb1630",
+                        "md5": "220595f2983e5cee89edf0fec6dba17c"
+                    },
+                    "required_dependencies": [
+                        "328085",
+                        "676721"
+                    ],
+                    "size": 5700878,
+                    "date_published": "2026-10-24T19:09:17.097Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "create_flight_control-neoforge-0.8.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/IGVrnkhH/versions/FSr0O2k8/create_flight_control-neoforge-0.8.3.jar",
+                    "id": "FSr0O2k8",
+                    "parent_id": "IGVrnkhH",
+                    "hashes": {
+                        "sha512": "24caa63157564786d944c4a4ad2f63aacfc441bffd4a9e2b83d639412ecb633c6753cb468f114e0fc2a829aa2f18438041defb60dc68d618afa0968bd35fa6fc",
+                        "sha1": "6efa89db07e45fe8687e8d1abe8ca284d3fb1630"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc",
+                        "oWaK0Q19",
+                        "8BmcQJ2H"
+                    ],
+                    "size": 5700878,
+                    "date_published": "2026-10-24T19:15:04.142677Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "S0vKfoCIurKz9xqo",
             "type": "MOD",
             "side": "BOTH",
@@ -5781,6 +6269,51 @@
                     ],
                     "size": 1894517,
                     "date_published": "2026-08-27T09:37:54.500Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "FVcNVjdjy1FGNyZW",
+            "pakku_links": [
+                "ezsIZHVU2pWQ1mqD",
+                "f4p7d0Bu0hclVY5B",
+                "Cc3Py5PwRghWs7E3"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "create-odometer"
+            },
+            "name": {
+                "curseforge": "Create: Odometer"
+            },
+            "id": {
+                "curseforge": "1731093"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create-odometer-neoforge-1.21.1-1.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9140/856/create-odometer-neoforge-1.21.1-1.2.0.jar",
+                    "id": "9140856",
+                    "parent_id": "1731093",
+                    "hashes": {
+                        "sha1": "be0e3158470d636dc7f36f049d3ddaeb2630189c",
+                        "md5": "13a0c3924e7b39f1e538654e757b188d"
+                    },
+                    "required_dependencies": [
+                        "676721",
+                        "328085",
+                        "1312371"
+                    ],
+                    "size": 121952,
+                    "date_published": "2026-10-12T00:30:25.860Z"
                 }
             ]
         },
