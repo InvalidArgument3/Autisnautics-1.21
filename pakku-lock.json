@@ -11524,8 +11524,8 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/iv3KiVkE/jei-1.21.1-neoforge-19.64.0.455.jar",
-                    "id": "iv3KiVkE-cf-mirror",
+                    "url": "https://edge.forgecdn.net/files/9205/121/jei-1.21.1-neoforge-19.64.0.455.jar",
+                    "id": "9205121",
                     "parent_id": "238222",
                     "hashes": {
                         "sha1": "f6d6fc08d54c40752926b570a2220471e8c45c1a",
@@ -11535,7 +11535,7 @@
                         "1689768"
                     ],
                     "size": 2375741,
-                    "date_published": "2026-10-16T08:32:41.534823Z"
+                    "date_published": "2026-10-16T08:32:27.66Z"
                 }
             ]
         },
