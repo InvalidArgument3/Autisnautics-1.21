@@ -1,0 +1,14 @@
+#Ignore movement below this simulation speed (m/s) to suppress parked jitter. Very slow travel below this is also excluded.
+# Default: 0.02
+# Range: 0.0 ~ 10.0
+minimumSpeed = 0.02
+#Reject discontinuous physics-step movement above this speed (m/s). Not a vehicle speed limit. Raise for unusually fast aircraft.
+# Default: 2000.0
+# Range: 1.0 ~ 1000000.0
+maximumPlausibleSpeed = 2000.0
+#Allow nearby players and ComputerCraft peripherals to reset trips. Operators can always reset through the menu.
+allowTripReset = true
+#Gauge refresh period in game ticks. Tracking always uses physics substeps.
+# Default: 5
+# Range: 1 ~ 100
+displaySyncTicks = 5

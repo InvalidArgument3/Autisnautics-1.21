@@ -1,0 +1,48 @@
+#Multiplicador de empuxo (escala do Create: Aeronautics).
+# Default: 1.0
+# Range: 0.0 ~ 1.7976931348623157E308
+propellerThrust = 1.0
+#Multiplicador de airflow (afeta partículas e empurrão de entidades).
+# Default: 0.1
+# Range: 0.0 ~ 1.7976931348623157E308
+propellerAirflow = 0.1
+#Raio, em blocos (cone de vento e alcance do empurrão de entidades).
+# Default: 2.0
+# Range: 0.25 ~ 8.0
+propellerRadius = 2.0
+#Multiplicador de empuxo (escala do Create: Aeronautics).
+# Default: 2.5
+# Range: 0.0 ~ 1.7976931348623157E308
+bigPropellerThrust = 2.5
+#Multiplicador de airflow (afeta partículas e empurrão de entidades).
+# Default: 0.15
+# Range: 0.0 ~ 1.7976931348623157E308
+bigPropellerAirflow = 0.15
+#Raio, em blocos (cone de vento e alcance do empurrão de entidades).
+# Default: 3.0
+# Range: 0.25 ~ 8.0
+bigPropellerRadius = 3.0
+#Multiplicador de empuxo (escala do Create: Aeronautics).
+# Default: 3.0
+# Range: 0.0 ~ 1.7976931348623157E308
+multiplePropellerThrust = 3.0
+#Multiplicador de airflow (afeta partículas e empurrão de entidades).
+# Default: 0.2
+# Range: 0.0 ~ 1.7976931348623157E308
+multiplePropellerAirflow = 0.2
+#Raio, em blocos (cone de vento e alcance do empurrão de entidades).
+# Default: 3.5
+# Range: 0.25 ~ 8.0
+multiplePropellerRadius = 3.5
+#Multiplicador de empuxo (escala do Create: Aeronautics).
+# Default: 1.5
+# Range: 0.0 ~ 1.7976931348623157E308
+diamond_propellerThrust = 1.5
+#Multiplicador de airflow (afeta partículas e empurrão de entidades).
+# Default: 0.75
+# Range: 0.0 ~ 1.7976931348623157E308
+diamond_propellerAirflow = 0.75
+#Raio, em blocos (cone de vento e alcance do empurrão de entidades).
+# Default: 2.5
+# Range: 0.25 ~ 8.0
+diamond_propellerRadius = 2.5

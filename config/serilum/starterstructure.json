@@ -1,0 +1,111 @@
+{
+	"//": "These settings are easier to change in-game! Mod List -> Starter Structure -> Config",
+	"Enable Starter Structure": {
+		"//": "Whether Starter Structure is enabled. When disabled, none of its features run and its other settings are hidden. Takes effect after a restart.",
+		"value": true
+	},
+	"shouldGenerateStructure": {
+		"//": "Whether a schematic that's located in './config/serilum/starterstructure/schematics/...' should be generated.",
+		"value": true
+	},
+	"forceExactSpawn": {
+		"//": "Usually player spawn points are in a randomized area. With this enabled, players will always spawn at the set coordinates (at the nearest air pocket).",
+		"value": true
+	},
+	"ignoreTreesDuringStructurePlacement": {
+		"//": "Prevents structures from being placed on top of trees. Any leaf and log blocks will be ignored during placement.",
+		"value": true
+	},
+	"generationIgnoreJigsawAndStructureBlocks": {
+		"//": "Some schematic files might contain jigsaw or structure blocks. These are by default ignored during structure generation.",
+		"value": true
+	},
+	"protectStructureBlocks": {
+		"//": "Whether the blocks from the generated structure should be protected from breaking/griefing.",
+		"value": true
+	},
+	"protectSpawnedEntities": {
+		"//": "Whether entities spawned inside the generated structure should be protected from damage.",
+		"value": true
+	},
+	"playersInCreativeModeIgnoreProtection": {
+		"//": "If enabled, players that are in creative mode will be able to break and place the structure blocks.",
+		"value": true
+	},
+	"playersInCreativeModeIgnoreEntityProtection": {
+		"//": "If enabled, players that are in creative mode will be able to damage protected entities which spawned in structures.",
+		"value": false
+	},
+	"preventSpawnedEntityMovement": {
+		"//": "If spawned entities inside the generated structure should not be allowed to move away from the block they spawned on. Disabled by default.",
+		"value": false
+	},
+	"spawnNonSignEntitiesFromSupportedSchematics": {
+		"//": "If entities from (structure block) schematic files should be spawned when found. These are entities not created with signs.",
+		"value": true
+	},
+	"shouldUseStructurePosition": {
+		"//": "If the generatedStructurePosition config options should be used.",
+		"value": false
+	},
+	"generatedStructureXPosition": {
+		"//": "The exact x position for the generated structure. Used when shouldUseStructurePosition is enabled. min: -10,000,000, max: 10,000,000",
+		"value": 0
+	},
+	"generatedStructureYPosition": {
+		"//": "The exact y position for the generated structure. Used when shouldUseStructurePosition is enabled. min: -1,000, max: 1,000",
+		"value": 0
+	},
+	"generatedStructureZPosition": {
+		"//": "The exact z position for the generated structure. Used when shouldUseStructurePosition is enabled. min: -10,000,000, max: 10,000,000",
+		"value": 0
+	},
+	"shouldUseStructureOffset": {
+		"//": "If the generatedStructureOffset config options should be used.",
+		"value": false
+	},
+	"generatedStructureXOffset": {
+		"//": "The x offset for the generated structure. Used when shouldUseStructureOffset is enabled. min: -1,000, max: 1,000",
+		"value": 0
+	},
+	"generatedStructureYOffset": {
+		"//": "The y offset for the generated structure. Can for example be set to -1 if you notice a building always spawns one block too high. Used when shouldUseStructureOffset is enabled. min: -1,000, max: 1,000",
+		"value": 0
+	},
+	"generatedStructureZOffset": {
+		"//": "The z offset for the generated structure. Used when shouldUseStructureOffset is enabled. min: -1,000, max: 1,000",
+		"value": 0
+	},
+	"shouldUseSpawnCoordinates": {
+		"//": "If the spawnCoordinate config options should be used.",
+		"value": false
+	},
+	"spawnXCoordinate": {
+		"//": "The new X coordinate of the spawn when shouldUseSpawnCoordinates is enabled. min: -10,000,000, max: 10,000,000",
+		"value": 0
+	},
+	"spawnYCoordinate": {
+		"//": "The new Y coordinate of the spawn when shouldUseSpawnCoordinates is enabled. min: -1,000, max: 1,000",
+		"value": 0
+	},
+	"spawnZCoordinate": {
+		"//": "The new Z coordinate of the spawn when shouldUseSpawnCoordinates is enabled. min: -10,000,000, max: 10,000,000",
+		"value": 0
+	},
+	"shouldUseSpawnCoordOffsets": {
+		"//": "If the spawnCoordOffset config options should be used.",
+		"value": true
+	},
+	"spawnXCoordOffset": {
+		"//": "The X coordinate offset of the spawn when shouldUseSpawnCoordOffsets is enabled. min: -1,000, max: 1,000",
+		"value": 8
+	},
+	"spawnYCoordOffset": {
+		"//": "The Y coordinate offset of the spawn when shouldUseSpawnCoordOffsets is enabled. min: -1,000, max: 1,000",
+		"value": 1
+	},
+	"spawnZCoordOffset": {
+		"//": "The Z coordinate offset of the spawn when shouldUseSpawnCoordOffsets is enabled. min: -1,000, max: 1,000",
+		"value": 8
+	}
+}

@@ -1,0 +1,55 @@
+[detection]
+	#Write detailed teleport diagnostics to the debug log. Turn on when reporting issues.
+	verbose_logging = false
+	#How often (in server ticks) to scan loaded SubLevels for portal contact.
+	# Default: 5
+	# Range: 1 ~ 200
+	scan_interval_ticks = 5
+	#Skip scanning any SubLevel whose world-space AABB exceeds this volume (cubic blocks).
+	# Default: 200000.0
+	# Range: 1.0 ~ 1.7976931348623157E308
+	max_sublevel_aabb_volume = 200000.0
+
+[teleport]
+	#Ticks after a teleport during which the same SubLevel will not be teleported again (anti-bounce).
+	# Default: 200
+	# Range: 0 ~ 24000
+	portal_cooldown_ticks = 200
+	#Horizontal block radius around the scaled destination point to search for an existing nether portal to link to.
+	# Default: 128
+	# Range: 0 ~ 1024
+	dest_portal_search_radius = 128
+	#If true, generate a portal frame at the destination (matching source dimensions) when no existing portal is found or the existing one is too small.
+	generate_matching_portal = true
+	#If true, when a player travels on foot and a new destination portal is created, enlarge it to match the size of the portal they entered.
+	match_player_portal_size = true
+	#If true, airships arrive from a teleport with all momentum removed. If false, they keep their velocity, subject to Sable's velocity retention setting.
+	clear_velocity_on_arrival = false
+	#DESTRUCTIVE: if true, blocks that would overlap the arriving airship are destroyed (without drops) to make room, instead of cancelling the teleport. Portal blocks, portal frames, and unbreakable blocks are never destroyed.
+	clear_destination_blocks = false
+	#If true, a lit nether portal built aboard an airship acts as a jump drive: shortly after the portal is lit the whole ship jumps to the other dimension, portal and all. The onboard portal must be extinguished and re-lit before it can jump again.
+	onboard_portal_jumps = false
+	#If true, onboard jumps link to or generate a matching destination portal using generate_matching_portal. If false, onboard jumps arrive at dimension-scaled coordinates without searching for or creating a destination portal; landing safety checks still apply.
+	onboard_generate_destination_portal = true
+	#Ticks between an onboard portal being lit and the ship jumping. Gives riders time to abort by breaking the portal.
+	# Default: 100
+	# Range: 0 ~ 24000
+	onboard_jump_delay_ticks = 100
+
+[safety]
+	#Catch airships that fall out of the bottom of a dimension and set them down safely.
+	#A ship that keeps falling is destroyed by the physics engine along with everything on board, with no drops and no way to get it back.
+	#Turn this off only if you want that to happen.
+	catch_falling_ships = true
+	#How far below the bottom of a dimension an airship has to fall before it is caught and set down.
+	# Default: 64
+	# Range: 0 ~ 512
+	catch_ships_below_floor = 64
+
+[travel_methods]
+	#Ways of travelling that AeroPortals will ignore. Anything listed here is left alone: the portal, drink, or cake still works for players on foot, it just no longer carries airships.
+	#Built-in ids: nether, end, aether, ars_nouveau, draconic, deeper_darker, create_teleporters, ender_gateway, pina_colada, telepastries, ae2_spatial, dimension_stack, kubejs
+	#Ids added by other mods or by KubeJS scripts can be listed too. Run /aeroportals methods in game to see every id and whether it is on.
+	#Example: ["nether", "end"] stops airships travelling through vanilla portals while leaving every modded portal working.
+	#Listing 'nether' also switches off onboard portal jump drives.
+	disabled = []

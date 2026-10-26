@@ -311,3 +311,7 @@
 		enableSaddleTurtle = true
 		#Allow saddle turtle to capture player
 		allowSaddleTurtleCapturePlayer = true
+
+	[Peripherals.Smart_Chest]
+		#If true, smart chestplate and its abilities will be disabled
+		disableSmartChestplate = false

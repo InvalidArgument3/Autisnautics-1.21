@@ -1,4 +1,14 @@
 # Changelog
+## [0.0.53]
+- NeoForge 21.1.248 → 21.1.265 (Propellers+ needs ≥249)
+- mass mod updates via pakku
+- Create Aeronautics companions: avionics, propellers+, portals, logistics, flight control, camera sync, player tilt, toolgun, curios/jetpack bridges
+- owo-lib 0.12.15.6: fix Accessories custom_payload kick on NeoForge ≥262
+- pin JEI to 19.64.0.455 (19.70 beta VerifyError with EMI)
+- fzzy_config: use real jar (Modrinth marked sources as primary)
+- Regions Unexplored 0.6.3: drop Autisnautics2 placed features for removed blackstone_cluster / steppe_grass
+- refresh generated configs after updates (serilum/almanac/letmedespawn migrations, aero defaults, etc.)
+
 ## [0.0.52]
 - updates
 

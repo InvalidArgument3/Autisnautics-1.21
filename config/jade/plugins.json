@@ -74,6 +74,9 @@
     "entity": true,
     "entity_variant": true
   },
+  "create_aeronautics_automated_logistics": {
+    "logistics_identity": true
+  },
   "ftbquests": {
     "barrier": true
   },

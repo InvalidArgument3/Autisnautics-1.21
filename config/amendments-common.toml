@@ -102,6 +102,8 @@
 	dye_blocks = false
 	#Prevents entities from taking suffocation damage while riding another entity
 	passenger_no_suffocation = false
+	#Following pets teleport with you instantly when you teleport
+	pets_follow_teleports = true
 
 [torch]
 	#Allows torches to set entities on fire
@@ -140,3 +142,11 @@
 	# Default: 35
 	# Range: 0 ~ 1000
 	freeze_ticks = 35
+
+[connections]
+	#Makes fences connect to walls, panes and iron bars
+	fences_to_walls_and_bars = true
+	#Makes wooden fences connect to nether brick fences
+	wooden_to_nether_fences = true
+	#Makes fences, walls, panes and bars connect to wall signs attached to them
+	wall_signs = true

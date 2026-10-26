@@ -1,0 +1,28 @@
+#Opt-in managed public-server workflow. FALSE preserves unlimited survival gameplay.
+#TRUE: configured owned-Age limit, 1 active owned Age, switching cooldown and soft data cap.
+#Existing Ages are never deleted by enabling this setting; legacy Ages stay unowned.
+#Command: /Mystcraft MultiplayerMode True (or False).
+multiplayerMode = false
+#Soft expansion cap per ordinary Age in decimal MB (1 MB = 1,000,000 bytes).
+#Only enforced in multiplayerMode. UnlimitedData Ages are exempt.
+#Existing chunks ALWAYS remain loadable/editable/saveable; no quota eviction.
+#Command: /Mystcraft MultiplayerDataCap 512. Changes affect all ordinary Ages.
+# Default: 384
+# Range: 1 ~ 1000000
+multiplayerDataCapMB = 384
+#Switching cooldown in seconds. Zero clears existing waits; other changes preserve issued deadlines.
+# Default: 1800
+# Range: 0 ~ 604800
+cooldownSeconds = 1800
+#Maximum owned Ages in managed mode. Lowering never deletes existing Ages.
+# Default: 3
+# Range: 1 ~ 1000000
+maxOwnedAges = 3
+#Seconds between asynchronous storage scans of active limited Ages.
+# Default: 30
+# Range: 5 ~ 3600
+ageStorageCheckSeconds = 30
+#Private warning threshold, as a percentage of the data cap.
+# Default: 90
+# Range: 1 ~ 99
+ageStorageWarningPercent = 90
