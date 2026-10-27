@@ -199,3 +199,6 @@ cache/*
 
 # WorldEdit (dev tool — runtime unpack, sessions, local schematics)
 config/worldedit/
+# Local smoke-test reports
+testing/out/
+
