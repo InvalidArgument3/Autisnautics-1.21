@@ -79,7 +79,7 @@
 			id: "3680C9F8751A9E5F"
 			rewards: [{
 				auto: "enabled"
-				command: "/tconstruct modifiers @p add tconstruct:flinging 1"
+				command: "/effect give @p minecraft:jump_boost 60 1"
 				id: "21EB47415778B6C2"
 				permission_level: 2
 				silent: true

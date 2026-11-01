@@ -16,7 +16,7 @@
 			dependencies: ["1688D58F977334FB"]
 			id: "0F7D65050E1F7A6E"
 			rewards: [{
-				command: "/effect give @p tconstruct:bleeding 12 0"
+				command: "/effect give @p minecraft:wither 12 0"
 				id: "6835BCC4E1205FDD"
 				permission_level: 2
 				silent: true

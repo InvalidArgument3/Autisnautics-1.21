@@ -223,7 +223,7 @@
 			]
 			id: "12DC1012CBEBB6F0"
 			rewards: [{
-				command: "/tconstruct modifiers @p add tconstruct:power 3"
+				command: "/effect give @p minecraft:strength 120 2"
 				id: "1E7184193EC1B06F"
 				permission_level: 2
 				silent: true
@@ -255,7 +255,7 @@
 			]
 			id: "5A64DBCFBF78856B"
 			rewards: [{
-				command: "/tconstruct modifiers @p add tconstruct:power 3"
+				command: "/effect give @p minecraft:strength 120 2"
 				id: "7AE8838B28BE5BB1"
 				permission_level: 2
 				silent: true

@@ -16,7 +16,7 @@
 			hide_dependency_lines: true
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:pickaxe"
+					"ftbquests:missing_item": "minecraft:iron_pickaxe"
 				}
 				id: "ftbquests:missing_item"
 			}
@@ -48,7 +48,7 @@
 			hide_dependency_lines: true
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:kama"
+					"ftbquests:missing_item": "minecraft:iron_hoe"
 				}
 				id: "ftbquests:missing_item"
 			}
@@ -80,7 +80,7 @@
 			hide_dependency_lines: true
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:hand_axe"
+					"ftbquests:missing_item": "minecraft:iron_axe"
 				}
 				id: "ftbquests:missing_item"
 			}
@@ -141,7 +141,7 @@
 			hide_dependency_lines: true
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:sledge_hammer"
+					"ftbquests:missing_item": "immersiveengineering:hammer"
 				}
 				id: "ftbquests:missing_item"
 			}
@@ -173,7 +173,7 @@
 			hide_dependency_lines: true
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:sword"
+					"ftbquests:missing_item": "minecraft:iron_sword"
 				}
 				id: "ftbquests:missing_item"
 			}

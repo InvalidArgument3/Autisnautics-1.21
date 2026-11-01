@@ -59,7 +59,7 @@
 			id: "6E3CD6919EAA9EE4"
 			rewards: [{
 				auto: "disabled"
-				command: "/effect give @p tconstruct:bleeding 10 0"
+				command: "/effect give @p minecraft:wither 10 0"
 				id: "05D87A9F3A21A75D"
 				permission_level: 2
 				silent: true

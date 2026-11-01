@@ -361,7 +361,7 @@
 		{
 			icon: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:creative_slot"
+					"ftbquests:missing_item": "create:creative_crate"
 				}
 				id: "ftbquests:missing_item"
 			}

@@ -97,7 +97,7 @@
 			id: "4D6258335F30247A"
 			item: {
 				components: {
-					"ftbquests:missing_item": "tconstruct:potion_bucket"
+					"ftbquests:missing_item": "minecraft:potion"
 				}
 				count: 1
 				id: "ftbquests:missing_item"
