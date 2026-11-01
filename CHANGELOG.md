@@ -1,4 +1,13 @@
 # Changelog
+## [0.0.54]
+- quest remap: Create / Taking Flight / Stellaris spine; hide dead CABIN economy + origin chapters; Thermal leftovers gated in KubeJS
+- scrub leftover Tinkers IDs from hidden quests, market, reward tables, and matrix prose
+- add Enigmatic Legacy Plus for Accursed One (cursed ring start + quest IDs); remove Researchd
+- starter kit: Sophisticated Backpack + pocket lantern
+- creative_tabs.js: stop KubeJS errors from missing cb_microblock / Supplementaries globe
+- ignore runtime item/recipe dumps under docs/dumps/
+- testing/: Prism CLI smoke-test scripts (launch-sp, ensure-test-world, log watch)
+
 ## [0.0.53]
 - NeoForge 21.1.248 → 21.1.265 (Propellers+ needs ≥249)
 - mass mod updates via pakku
