@@ -1,15 +1,7 @@
 {
     "name": "Placeholder of Seven Curses",
-    "description": "Accursed Ones spawn with a dreadful cursed placeholder. Once equipped, the ring cannot be removed unless you grasp divine power with your own bloody hands.",
+    "description": "Accursed Ones no longer spawn with the Ring of the Seven Curses. Find or craft it yourself if you want the burden.",
     "type": "origins:multiple",
-    "equipment": {
-        "type": "origins:action_on_callback",
-        "execute_chosen_when_orb": true,
-        "entity_action_gained": {
-            "type": "origins:execute_command",
-            "command": "/give @p enigmaticlegacyplus:cursed_ring 1"
-        }
-    },
     "quests": {
         "type": "origins:action_on_callback",
         "execute_chosen_when_orb": true,

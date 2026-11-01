@@ -3,6 +3,8 @@
 - quest remap: Create / Taking Flight / Stellaris spine; hide dead CABIN economy + origin chapters; Thermal leftovers gated in KubeJS
 - scrub leftover Tinkers IDs from hidden quests, market, reward tables, and matrix prose
 - add Enigmatic Legacy Plus for Accursed One (cursed ring start + quest IDs); remove Researchd
+- disable Seven Curses starter gear / Accursed origin ring give
+- shift Ender Chest inventory button left onto Create goggles slot
 - starter kit: Sophisticated Backpack + pocket lantern
 - creative_tabs.js: stop KubeJS errors from missing cb_microblock / Supplementaries globe
 - ignore runtime item/recipe dumps under docs/dumps/
