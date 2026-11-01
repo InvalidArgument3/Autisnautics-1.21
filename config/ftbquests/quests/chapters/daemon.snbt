@@ -1,4 +1,5 @@
 {
+	always_invisible: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "daemon"
@@ -24,7 +25,7 @@
 			tasks: [{
 				consume_items: false
 				id: "0FD161DEE23E1A60"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				only_from_crafting: false
 				type: "item"
 			}]
@@ -96,11 +97,8 @@
 			rewards: [{
 				id: "56812C32D7AB3581"
 				item: {
-					components: {
-						"ftbquests:missing_item": "youkaishomecoming:sparrow_sake"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "brewinandchewin:steel_toe_stout"
 				}
 				type: "item"
 			}]
@@ -118,28 +116,25 @@
 			rewards: [{
 				id: "20D30B1E037751CC"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mna:bell_of_bidding"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "minecraft:bell"
 				}
 				type: "item"
 			}]
 			tasks: [
 				{
 					id: "470E0CD7F74CD178"
-					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_head_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:carved_pumpkin" }
 					type: "item"
 				}
 				{
 					id: "3C6E096FEDFD469F"
-					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_torso_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:leather_chestplate" }
 					type: "item"
 				}
 				{
 					id: "5B20672C0177AF55"
-					item: { components: { "ftbquests:missing_item": "mna:constructs/construct_basic_legs_wickerwood" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:leather_leggings" }
 					type: "item"
 				}
 				{
@@ -170,7 +165,7 @@
 			tasks: [{
 				consume_items: false
 				id: "0D10A9483F91942D"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: -1.5d

@@ -1,4 +1,5 @@
 {
+	always_invisible: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "generic"
@@ -34,7 +35,7 @@
 				consume_items: false
 				count: 16L
 				id: "620B88139898C10E"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -103,11 +104,8 @@
 			rewards: [{
 				id: "2C007326D0D9A9A0"
 				item: {
-					components: {
-						"ftbquests:missing_item": "delightful:deluxe_cheeseburger"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "farmersdelight:hamburger"
 				}
 				type: "item"
 			}]
@@ -138,7 +136,7 @@
 			shape: "hexagon"
 			tasks: [{
 				id: "562C6AFEF41AA413"
-				item: { components: { "ftbquests:missing_item": "create_sa:andesite_jetpack_chestplate" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "create_jetpack:jetpack" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -157,11 +155,8 @@
 				count: 3
 				id: "30CB8688C9B20FCA"
 				item: {
-					components: {
-						"ftbquests:missing_item": "tconstruct:modifier_crystal"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "minecraft:amethyst_shard"
 				}
 				type: "item"
 			}]
@@ -169,13 +164,13 @@
 			tasks: [
 				{
 					id: "45555A61BE676E6B"
-					item: { components: { "ftbquests:missing_item": "tconstruct:earth_slime_crystal" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:slime_ball" }
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "770F04105CD38857"
-					item: { components: { "ftbquests:missing_item": "2x tconstruct:earth_congealed_slime" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:slime_block" }
 					type: "item"
 				}
 				{
@@ -255,7 +250,7 @@
 			shape: "hexagon"
 			tasks: [{
 				id: "20D8DDCC401AA0DD"
-				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:sand" }
 				type: "item"
 			}]
 			x: -1.0d
@@ -272,7 +267,7 @@
 			}]
 			tasks: [{
 				id: "4943249C86299A52"
-				item: { components: { "ftbquests:missing_item": "thermal:machine_press" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "create:mechanical_press" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -295,7 +290,7 @@
 			tasks: [{
 				consume_items: true
 				id: "5395BDAF022148E8"
-				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "numismatics:cog" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -307,11 +302,8 @@
 			rewards: [{
 				id: "4801E16FD954063B"
 				item: {
-					components: {
-						"ftbquests:missing_item": "tconstruct:sledge_hammer"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "createdieselgenerators:hammer"
 				}
 				type: "item"
 			}]
@@ -367,7 +359,7 @@
 			tasks: [{
 				consume_items: true
 				id: "4ABDB667D9C32513"
-				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:sand" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -410,7 +402,7 @@
 			tasks: [{
 				consume_items: true
 				id: "0966545656AD93C1"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: 1.5d
@@ -431,13 +423,13 @@
 				{
 					consume_items: true
 					id: "57581C0B4C15F11F"
-					item: { components: { "ftbquests:missing_item": "thermal:ruby" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:redstone" }
 					type: "item"
 				}
 				{
 					consume_items: true
 					id: "37D529AD9E7A26FE"
-					item: { components: { "ftbquests:missing_item": "thermal:sapphire" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:lapis_lazuli" }
 					type: "item"
 				}
 				{
@@ -449,7 +441,7 @@
 				{
 					consume_items: true
 					id: "16225BDE30981D9A"
-					item: { components: { "ftbquests:missing_item": "thermal:sulfur" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "immersiveengineering:dust_sulfur" }
 					type: "item"
 				}
 				{
@@ -491,7 +483,7 @@
 				consume_items: true
 				count: 100L
 				id: "638845FD9CAD46A4"
-				item: { components: { "ftbquests:missing_item": "100x tinkersjewelry:plain_ring" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:gold_nugget" }
 				type: "item"
 			}]
 			x: -1.5d
@@ -532,10 +524,7 @@
 		{
 			dependencies: ["4B8D31141A3D2965"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "enigmaticlegacy:ultimate_potion"
-				}
-				id: "ftbquests:missing_item"
+				id: "minecraft:potion"
 			}
 			id: "40D663C4D421DBAA"
 			rewards: [{
@@ -559,11 +548,8 @@
 			rewards: [{
 				id: "141FDD2B834C3754"
 				item: {
-					components: {
-						"ftbquests:missing_item": "nuclearcraft:salt"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "minecraft:sugar"
 				}
 				type: "item"
 			}]
@@ -588,7 +574,7 @@
 			tasks: [{
 				consume_items: true
 				id: "472D195C9400446A"
-				item: { components: { "ftbquests:missing_item": "enigmaticlegacy:etherium_block" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:diamond_block" }
 				type: "item"
 			}]
 			x: 2.5d

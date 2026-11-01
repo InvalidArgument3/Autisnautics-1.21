@@ -11,6 +11,9 @@
 		{
 			dependencies: ["28C41C062843C2CA"]
 			hide_until_deps_complete: true
+			icon: {
+				id: "create:builders_tea"
+			}
 			id: "727B43FD95C4A512"
 			rewards: [{
 				id: "05FBDFB7D5A9B322"
@@ -32,6 +35,9 @@
 		{
 			dependencies: ["727B43FD95C4A512"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:sand"
+			}
 			id: "0AF5F19F5D9FB5C9"
 			shape: "circle"
 			tasks: [{
@@ -48,11 +54,14 @@
 				"2FFFE1C5366930BB"
 			]
 			dependency_requirement: "one_completed"
+			icon: {
+				id: "kubejs:certus_crystal_seed"
+			}
 			id: "345B94F6D17605CD"
 			shape: "circle"
 			tasks: [{
 				id: "2E6AD53DE407260C"
-				item: { components: { "ftbquests:missing_item": "kubejs:certus_crystal_seed" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:certus_crystal_seed" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -82,6 +91,9 @@
 		}
 		{
 			dependencies: ["1642A27606A34984"]
+			icon: {
+				id: "ae2:certus_quartz_crystal"
+			}
 			id: "1861E583C9DAA0BA"
 			tasks: [
 				{
@@ -100,6 +112,9 @@
 		{
 			dependencies: ["727B43FD95C4A512"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:water_bucket"
+			}
 			id: "2FFFE1C5366930BB"
 			tasks: [
 				{
@@ -118,6 +133,9 @@
 		{
 			dependencies: ["727B43FD95C4A512"]
 			hide_dependency_lines: true
+			icon: {
+				id: "ae2:sky_dust"
+			}
 			id: "4F95D5136E944ADB"
 			tasks: [
 				{
@@ -138,11 +156,14 @@
 				"2FFFE1C5366930BB"
 				"4F95D5136E944ADB"
 			]
+			icon: {
+				id: "kubejs:volatile_sky_solution_bucket"
+			}
 			id: "1256352748B93449"
 			tasks: [
 				{
 					id: "36E36D584FCBC358"
-					item: { components: { "ftbquests:missing_item": "kubejs:volatile_sky_solution_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:volatile_sky_solution_bucket" }
 					type: "item"
 				}
 				{
@@ -159,11 +180,14 @@
 				"24FFFE0FC9EAEF8D"
 			]
 			dependency_requirement: "one_completed"
+			icon: {
+				id: "minecraft:redstone"
+			}
 			id: "619E34A7DE48B991"
 			tasks: [
 				{
 					id: "5F47790124641B2D"
-					item: { components: { "ftbquests:missing_item": "thermal:redstone_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:redstone" }
 					type: "item"
 				}
 				{
@@ -177,10 +201,7 @@
 		{
 			dependencies: ["53735DC4231AB566"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "tconstruct:copper_can"
-				}
-				id: "ftbquests:missing_item"
+				id: "minecraft:bucket"
 			}
 			id: "2167272204B6627B"
 			tasks: [{
@@ -195,6 +216,9 @@
 				"2167272204B6627B"
 				"06B061C0EE94BC90"
 			]
+			icon: {
+				id: "create:electron_tube"
+			}
 			id: "5351AF6CA73CB8E0"
 			tasks: [
 				{
@@ -213,6 +237,9 @@
 		{
 			dependencies: ["1256352748B93449"]
 			hide_dependency_lines: true
+			icon: {
+				id: "ae2:charged_certus_quartz_crystal"
+			}
 			id: "24FFFE0FC9EAEF8D"
 			tasks: [
 				{
@@ -231,6 +258,9 @@
 		{
 			dependencies: ["727B43FD95C4A512"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:cobblestone"
+			}
 			id: "0E46C1FCE5AEB1DF"
 			tasks: [
 				{
@@ -251,6 +281,9 @@
 				"5351AF6CA73CB8E0"
 				"6D8BB2D6A75ABB16"
 			]
+			icon: {
+				id: "create:precision_mechanism"
+			}
 			id: "19715EBCBBA1B4AD"
 			tasks: [
 				{
@@ -268,6 +301,9 @@
 		}
 		{
 			dependencies: ["19715EBCBBA1B4AD"]
+			icon: {
+				id: "create:precision_mechanism"
+			}
 			id: "7FC4D1E69377271D"
 			rewards: [
 				{
@@ -302,7 +338,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4C32A887DA89A75C"
-				item: { components: { "ftbquests:missing_item": "kubejs:brass_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:brass_machine" }
 				type: "item"
 			}]
 			x: -1.0d
@@ -310,6 +346,9 @@
 		}
 		{
 			dependencies: ["0E46C1FCE5AEB1DF"]
+			icon: {
+				id: "minecraft:gravel"
+			}
 			id: "1139F2E4E6FCFE29"
 			tasks: [
 				{
@@ -327,6 +366,9 @@
 		}
 		{
 			dependencies: ["1139F2E4E6FCFE29"]
+			icon: {
+				id: "minecraft:iron_nugget"
+			}
 			id: "53735DC4231AB566"
 			tasks: [
 				{
@@ -347,6 +389,9 @@
 				"1861E583C9DAA0BA"
 				"619E34A7DE48B991"
 			]
+			icon: {
+				id: "create:polished_rose_quartz"
+			}
 			id: "06B061C0EE94BC90"
 			tasks: [
 				{
@@ -367,11 +412,14 @@
 				"239C64263B91350D"
 				"1D9D65FBD06DD481"
 			]
+			icon: {
+				id: "kubejs:infernal_mechanism"
+			}
 			id: "3C50B4556375178E"
 			shape: "circle"
 			tasks: [{
 				id: "24070D354D67A3DF"
-				item: { components: { "ftbquests:missing_item": "kubejs:infernal_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:infernal_mechanism" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -384,6 +432,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:lava_bucket"
+			}
 			id: "1D9D65FBD06DD481"
 			tasks: [
 				{
@@ -406,11 +457,14 @@
 				"5DCF9C8212AA3BE3"
 			]
 			hide_until_deps_visible: true
+			icon: {
+				id: "minecraft:soul_sand"
+			}
 			id: "239C64263B91350D"
 			tasks: [
 				{
 					id: "7BBC2AAED0A77FDC"
-					item: { components: { "ftbquests:missing_item": "tconstruct:liquid_soul_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:soul_sand" }
 					type: "item"
 				}
 				{
@@ -428,6 +482,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:twisting_vines"
+			}
 			id: "223BB57AD0239511"
 			tasks: [
 				{
@@ -450,6 +507,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:weeping_vines"
+			}
 			id: "7E59B7DC239E621E"
 			tasks: [
 				{
@@ -468,11 +528,14 @@
 		{
 			dependencies: ["5351AF6CA73CB8E0"]
 			hide_dependency_lines: true
+			icon: {
+				id: "create:wrench"
+			}
 			id: "6D8BB2D6A75ABB16"
 			shape: "circle"
 			tasks: [{
 				id: "7DF53EF0CF55B5D7"
-				item: { components: { "ftbquests:missing_item": "projectred_core:screwdriver" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "create:wrench" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -480,17 +543,17 @@
 		}
 		{
 			dependencies: ["3C50B4556375178E"]
+			icon: {
+				id: "kubejs:infernal_mechanism"
+			}
 			id: "047FD4E54147D8F7"
 			rewards: [
 				{
 					count: 16
 					id: "5868F4AF0FBE0295"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:infernal_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:infernal_mechanism"
 					}
 					type: "item"
 				}
@@ -517,7 +580,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5D828A5601F86224"
-				item: { components: { "ftbquests:missing_item": "kubejs:zinc_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:zinc_machine" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -543,6 +606,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "create:blaze_burner"
+			}
 			id: "5DCF9C8212AA3BE3"
 			min_required_dependencies: 2
 			shape: "circle"
@@ -561,6 +627,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:nether_wart"
+			}
 			id: "6C029983EE2035A5"
 			tasks: [
 				{
@@ -581,6 +650,9 @@
 				"6C029983EE2035A5"
 				"4B891E9ED8DE6BB2"
 			]
+			icon: {
+				id: "minecraft:potion"
+			}
 			id: "2131996D22A87667"
 			tasks: [
 				{
@@ -603,6 +675,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:glow_berries"
+			}
 			id: "4B891E9ED8DE6BB2"
 			tasks: [
 				{
@@ -623,10 +698,13 @@
 				"1A06FA866B74E75B"
 				"2131996D22A87667"
 			]
+			icon: {
+				id: "kubejs:logistic_mechanism"
+			}
 			id: "44540B11F341AE09"
 			tasks: [{
 				id: "11E3919F63C8BAF9"
-				item: { components: { "ftbquests:missing_item": "kubejs:logistic_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:logistic_mechanism" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -639,11 +717,14 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:liquid_pulp_bucket"
+			}
 			id: "1A06FA866B74E75B"
 			tasks: [
 				{
 					id: "46D9FB5D9254BA03"
-					item: { components: { "ftbquests:missing_item": "kubejs:liquid_pulp_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:liquid_pulp_bucket" }
 					type: "item"
 				}
 				{
@@ -656,17 +737,17 @@
 		}
 		{
 			dependencies: ["44540B11F341AE09"]
+			icon: {
+				id: "kubejs:logistic_mechanism"
+			}
 			id: "7BE0F4512FE4936D"
 			rewards: [
 				{
 					count: 16
 					id: "55A28F3C8BB4A98E"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:logistic_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:logistic_mechanism"
 					}
 					type: "item"
 				}
@@ -693,7 +774,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "467FDE7905DFECE9"
-				item: { components: { "ftbquests:missing_item": "kubejs:lead_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:lead_machine" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -706,6 +787,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:nether_wart"
+			}
 			id: "4FFA0F65FA89D867"
 			tasks: [
 				{
@@ -723,28 +807,25 @@
 		}
 		{
 			dependencies: ["15978ED5A6E3DFFE"]
+			icon: {
+				id: "kubejs:logistic_mechanism"
+			}
 			id: "3B930AA32F92246B"
 			rewards: [
 				{
 					count: 16
 					id: "3C029AFF20C882D8"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:logistic_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:logistic_mechanism"
 					}
 					type: "item"
 				}
 				{
 					id: "00D2BA3BAF6B81A7"
 					item: {
-						components: {
-							"ftbquests:missing_item": "nuclearcraft:radaway"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "nuclearcraftneohaul:radaway"
 					}
 					random_bonus: 4
 					type: "item"
@@ -754,7 +835,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2402D45212D4CD6A"
-				item: { components: { "ftbquests:missing_item": "kubejs:lead_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:lead_machine" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -766,11 +847,14 @@
 				"319D13EA51472303"
 				"5943F8F91AA79D59"
 			]
+			icon: {
+				id: "kubejs:logistic_mechanism"
+			}
 			id: "15978ED5A6E3DFFE"
 			shape: "circle"
 			tasks: [{
 				id: "16BCC957A6178A32"
-				item: { components: { "ftbquests:missing_item": "kubejs:logistic_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:logistic_mechanism" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -781,6 +865,9 @@
 				"4FFA0F65FA89D867"
 				"10E93BEB78219368"
 			]
+			icon: {
+				id: "minecraft:potion"
+			}
 			id: "15368864A6946A93"
 			tasks: [
 				{
@@ -803,6 +890,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:glow_lichen"
+			}
 			id: "10E93BEB78219368"
 			tasks: [
 				{
@@ -825,6 +915,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:brown_mushroom"
+			}
 			id: "74D22D54CA80E7FD"
 			tasks: [
 				{
@@ -848,11 +941,14 @@
 				"6EDA86E4BE0F096B"
 			]
 			hide_until_deps_visible: true
+			icon: {
+				id: "nuclearcraftneohaul:radaway_bucket"
+			}
 			id: "319D13EA51472303"
 			tasks: [
 				{
 					id: "79B213EBA35838B4"
-					item: { components: { "ftbquests:missing_item": "nuclearcraft:radaway_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "nuclearcraftneohaul:radaway_bucket" }
 					type: "item"
 				}
 				{
@@ -870,10 +966,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "nuclearcraftneohaul:uranium_ingot"
+			}
 			id: "5943F8F91AA79D59"
 			tasks: [{
 				id: "5BE7FCD9CA40366E"
-				item: { components: { "ftbquests:missing_item": "alexscaves:uranium" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "nuclearcraftneohaul:uranium_ingot" }
 				type: "item"
 			}]
 			x: 3.5d
@@ -886,11 +985,14 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "create:crushed_raw_iron"
+			}
 			id: "68A8C2CB135ECA87"
 			tasks: [
 				{
 					id: "5708394524C3F225"
-					item: { components: { "ftbquests:missing_item": "tconstruct:molten_steel_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "create:crushed_raw_iron" }
 					type: "item"
 				}
 				{
@@ -906,11 +1008,14 @@
 				"74D22D54CA80E7FD"
 				"15368864A6946A93"
 			]
+			icon: {
+				id: "nuclearcraftneohaul:glowing_mushroom"
+			}
 			id: "02E41EDC1899468D"
 			tasks: [
 				{
 					id: "2E047220154B72B7"
-					item: { components: { "ftbquests:missing_item": "nuclearcraft:glowing_mushroom" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "nuclearcraftneohaul:glowing_mushroom" }
 					type: "item"
 				}
 				{
@@ -928,6 +1033,9 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:milk_bucket"
+			}
 			id: "2F1B9FE2E9C2FFEC"
 			tasks: [
 				{
@@ -946,6 +1054,9 @@
 		{
 			dependencies: ["3B930AA32F92246B"]
 			hide_until_deps_complete: true
+			icon: {
+				id: "supplementaries:globe_sepia"
+			}
 			id: "6EE9AA6D2A8FE0AD"
 			shape: "circle"
 			tasks: [{
@@ -958,15 +1069,15 @@
 		}
 		{
 			dependencies: ["6EE9AA6D2A8FE0AD"]
+			icon: {
+				id: "nuclearcraftneohaul:geiger_counter"
+			}
 			id: "7A3C54CE8AD783D4"
 			rewards: [{
 				id: "4B3FB9BB344E408F"
 				item: {
-					components: {
-						"ftbquests:missing_item": "nuclearcraft:geiger_counter"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "nuclearcraftneohaul:geiger_counter"
 				}
 				type: "item"
 			}]

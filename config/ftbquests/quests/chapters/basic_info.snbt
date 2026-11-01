@@ -47,6 +47,9 @@
 			y: 0.0d
 		}
 		{
+			icon: {
+				id: "minecraft:wooden_sword"
+			}
 			id: "6BC4C7084350D5D7"
 			tasks: [{
 				id: "3E8804BDBDD5EB5C"

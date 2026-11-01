@@ -10,6 +10,9 @@
 	quests: [
 		{
 			disable_toast: true
+			icon: {
+				id: "minecraft:orange_tulip"
+			}
 			id: "09356B3BEF298E06"
 			rewards: [
 				{
@@ -55,6 +58,9 @@
 		{
 			dependencies: ["69D55492A8F42A94"]
 			disable_toast: true
+			icon: {
+				id: "create:builders_tea"
+			}
 			id: "407236D2B1D2257D"
 			rewards: [{
 				id: "3D4250D2B4800C1C"
@@ -76,6 +82,9 @@
 		{
 			dependencies: ["407236D2B1D2257D"]
 			disable_toast: true
+			icon: {
+				id: "minecraft:cookie"
+			}
 			id: "2C7ADB6C11B918B1"
 			rewards: [{
 				id: "1BF6428DE53BC0FF"
@@ -97,6 +106,9 @@
 		{
 			dependencies: ["2C7ADB6C11B918B1"]
 			disable_toast: true
+			icon: {
+				id: "minecraft:wheat_seeds"
+			}
 			id: "1947C6CE179EBAC6"
 			rewards: [{
 				id: "4000DE1B90DA84CE"
@@ -118,16 +130,16 @@
 		{
 			dependencies: ["1947C6CE179EBAC6"]
 			disable_toast: true
+			icon: {
+				id: "numismatics:cog"
+			}
 			id: "58E38BA6D927409F"
 			rewards: [{
 				count: 15
 				id: "583C35BA7A7B9004"
 				item: {
-					components: {
-						"ftbquests:missing_item": "thermal:silver_coin"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "numismatics:cog"
 				}
 				type: "item"
 			}]
@@ -144,10 +156,7 @@
 			dependencies: ["58E38BA6D927409F"]
 			disable_toast: true
 			icon: {
-				components: {
-					"ftbquests:missing_item": "occultism:book_of_calling_djinni_manage_machine"
-				}
-				id: "ftbquests:missing_item"
+				id: "computercraft:computer_advanced"
 			}
 			id: "00003FCBB33E62C4"
 			rewards: [{

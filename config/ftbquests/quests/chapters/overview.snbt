@@ -16,6 +16,9 @@
 			]
 			disable_toast: true
 			hide_text_until_complete: true
+			icon: {
+				id: "kubejs:andesite_machine"
+			}
 			id: "0E98B4D2BBF55308"
 			shape: "square"
 			tasks: [{
@@ -34,6 +37,9 @@
 				"19715EBCBBA1B4AD"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:brass_machine"
+			}
 			id: "69275ECFC147E15B"
 			tasks: [{
 				disable_toast: true
@@ -51,6 +57,9 @@
 				"6CBA3D97CAD5DB63"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:radiant_coil"
+			}
 			id: "400CDC316DCDFE88"
 			tasks: [{
 				disable_toast: true
@@ -71,6 +80,9 @@
 			]
 			disable_toast: true
 			hide_until_deps_visible: false
+			icon: {
+				id: "kubejs:calculation_mechanism"
+			}
 			id: "08716DBF9C882623"
 			min_required_dependencies: 3
 			tasks: [{
@@ -89,6 +101,9 @@
 				"6545C3F427B12106"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:sealed_mechanism"
+			}
 			id: "342BB6EF80EBFDCA"
 			tasks: [{
 				disable_toast: true
@@ -106,6 +121,9 @@
 				"3C50B4556375178E"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:infernal_mechanism"
+			}
 			id: "2DC3AA8A89005C42"
 			tasks: [{
 				disable_toast: true
@@ -123,6 +141,9 @@
 				"6DBEF7A11890ADF8"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:zinc_machine"
+			}
 			id: "2F50046724A0DF9C"
 			tasks: [{
 				disable_toast: true
@@ -135,6 +156,9 @@
 			y: 2.5d
 		}
 		{
+			icon: {
+				id: "minecraft:oak_log"
+			}
 			id: "75FB28B253B14876"
 			rewards: [{
 				id: "619E1006A9C31AE1"
@@ -148,47 +172,62 @@
 			size: 2.0d
 			tasks: [{
 				id: "7F88BABEC9889C76"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: -13.5d
 			y: 0.0d
 		}
 		{
+			dependencies: ["5E62059675895213"]
+			icon: {
+				id: "aeronautics:andesite_propeller"
+			}
+			id: "7F08F344795D16E1"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "41642A517DDAA843"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
 			dependencies: [
-				"5E62059675895213"
+				"73473DC7269EC5B0"
 				"47965C310D9847DC"
 			]
+			icon: {
+				id: "stellaris:rocket"
+			}
 			id: "4F7A70041B67A348"
 			rewards: [{
 				id: "52F34D324E5E10E9"
 				item: {
-					components: {
-						"ftbquests:missing_item": "ad_astra:moon_globe"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "stellaris:moon_stone"
 				}
 				type: "item"
 			}]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
-				dimension: "ad_astra:moon"
+				dimension: "stellaris:moon"
 				icon: {
-					components: {
-						"ftbquests:missing_item": "ad_astra:tier_1_rocket"
-					}
-					id: "ftbquests:missing_item"
+					id: "stellaris:rocket"
 				}
 				id: "696B878D65A6BFCC"
 				type: "dimension"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["75FB28B253B14876"]
+			icon: {
+				id: "kubejs:kinetic_mechanism"
+			}
 			id: "61147823CC87F711"
 			shape: "circle"
 			tasks: [{
@@ -200,6 +239,9 @@
 		}
 		{
 			dependencies: ["0E98B4D2BBF55308"]
+			icon: {
+				id: "create:precision_mechanism"
+			}
 			id: "1E263994D4883A08"
 			shape: "circle"
 			tasks: [{
@@ -211,6 +253,9 @@
 		}
 		{
 			dependencies: ["69275ECFC147E15B"]
+			icon: {
+				id: "kubejs:inductive_mechanism"
+			}
 			id: "780E8AE86250C73D"
 			shape: "circle"
 			tasks: [{
@@ -222,6 +267,9 @@
 		}
 		{
 			dependencies: ["400CDC316DCDFE88"]
+			icon: {
+				id: "ae2:controller"
+			}
 			id: "26173D4777F439B1"
 			shape: "circle"
 			tasks: [{
@@ -233,6 +281,9 @@
 		}
 		{
 			dependencies: ["08716DBF9C882623"]
+			icon: {
+				id: "kubejs:computation_matrix"
+			}
 			id: "5E62059675895213"
 			shape: "circle"
 			tasks: [{
@@ -244,6 +295,9 @@
 		}
 		{
 			dependencies: ["0E98B4D2BBF55308"]
+			icon: {
+				id: "kubejs:rubber"
+			}
 			id: "7D872F933F45809B"
 			shape: "circle"
 			tasks: [{
@@ -255,6 +309,9 @@
 		}
 		{
 			dependencies: ["69275ECFC147E15B"]
+			icon: {
+				id: "create:blaze_burner"
+			}
 			id: "7888F9129E9FE517"
 			shape: "circle"
 			tasks: [{
@@ -266,6 +323,9 @@
 		}
 		{
 			dependencies: ["400CDC316DCDFE88"]
+			icon: {
+				id: "blazinghot:casting_depot"
+			}
 			id: "2BB2C7B95E3C89AE"
 			shape: "circle"
 			tasks: [{
@@ -277,6 +337,9 @@
 		}
 		{
 			dependencies: ["400CDC316DCDFE88"]
+			icon: {
+				id: "kubejs:substrate_chaos"
+			}
 			id: "3934AD57122B6FFE"
 			shape: "circle"
 			tasks: [{
@@ -288,6 +351,9 @@
 		}
 		{
 			dependencies: ["75FB28B253B14876"]
+			icon: {
+				id: "create:mechanical_press"
+			}
 			id: "7D6BC99CCCB29924"
 			rewards: [{
 				count: 3
@@ -327,7 +393,7 @@
 				}
 				{
 					id: "1900BA945C62D0CC"
-					item: { components: { "ftbquests:missing_item": "tconstruct:seared_melter" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "create:basin" }
 					type: "item"
 				}
 				{
@@ -344,6 +410,9 @@
 				"7664FBB32FCC6BE6"
 				"667F4F686A45EF3E"
 			]
+			icon: {
+				id: "kubejs:gold_machine"
+			}
 			id: "11C36A243F5108DC"
 			tasks: [{
 				id: "159661080AE7707A"
@@ -356,6 +425,9 @@
 		}
 		{
 			dependencies: ["0E98B4D2BBF55308"]
+			icon: {
+				id: "minecraft:deepslate"
+			}
 			id: "7664FBB32FCC6BE6"
 			shape: "circle"
 			tasks: [{
@@ -367,6 +439,9 @@
 		}
 		{
 			dependencies: ["69275ECFC147E15B"]
+			icon: {
+				id: "minecraft:potion"
+			}
 			id: "6D7D2E63F1E35329"
 			shape: "circle"
 			tasks: [{
@@ -382,6 +457,9 @@
 				"6D7D2E63F1E35329"
 			]
 			disable_toast: true
+			icon: {
+				id: "kubejs:logistic_mechanism"
+			}
 			id: "68DF462185A9AF63"
 			tasks: [{
 				disable_toast: true

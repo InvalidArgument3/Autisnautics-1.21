@@ -788,9 +788,9 @@ ServerEvents.recipes(event => {
     event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
     event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
     // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
-    event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "thermal:cured_rubber")
-    event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), [Item.of("#forge:wires/copper", 2), "thermal:cured_rubber"])
-    event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "thermal:cured_rubber"])
+    event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
+    event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), [Item.of("#forge:wires/copper", 2), "kubejs:rubber"])
+    event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
 
     // wires
     // unify wire recipes by removing sawing versions

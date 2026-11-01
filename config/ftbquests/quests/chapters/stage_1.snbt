@@ -11,13 +11,16 @@
 		{
 			dependencies: ["5799D55BB26BA52C"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:oak_log"
+			}
 			id: "2CB570195DA7E106"
 			shape: "square"
 			tasks: [
 				{
 					disable_toast: true
 					id: "58AB6E0FF2EA6AD4"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_log" }
 					type: "item"
 				}
 				{
@@ -31,6 +34,9 @@
 		{
 			dependencies: ["5799D55BB26BA52C"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:kelp"
+			}
 			id: "608BF7BE3CB666F3"
 			tasks: [
 				{
@@ -49,11 +55,14 @@
 		{
 			dependencies: ["5799D55BB26BA52C"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:sand"
+			}
 			id: "4CC420A6B673176A"
 			tasks: [
 				{
 					id: "72FE446F5BB1A93E"
-					item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:sand" }
 					type: "item"
 				}
 				{
@@ -67,6 +76,9 @@
 		{
 			dependencies: ["5799D55BB26BA52C"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:andesite"
+			}
 			id: "106C6DFDCB97327C"
 			tasks: [
 				{
@@ -95,6 +107,9 @@
 		}
 		{
 			dependencies: ["4CC420A6B673176A"]
+			icon: {
+				id: "minecraft:clay_ball"
+			}
 			id: "729FB5DD07C234E8"
 			tasks: [
 				{
@@ -115,6 +130,9 @@
 				"729FB5DD07C234E8"
 				"608BF7BE3CB666F3"
 			]
+			icon: {
+				id: "architects_palette:algal_blend"
+			}
 			id: "72BE175C83834838"
 			tasks: [
 				{
@@ -132,11 +150,14 @@
 		}
 		{
 			dependencies: ["2CB570195DA7E106"]
+			icon: {
+				id: "minecraft:oak_planks"
+			}
 			id: "532EFE32C3A515B5"
 			tasks: [
 				{
 					id: "3C7A4BA98EEC90E8"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_planks" }
 					type: "item"
 				}
 				{
@@ -149,11 +170,14 @@
 		}
 		{
 			dependencies: ["532EFE32C3A515B5"]
+			icon: {
+				id: "minecraft:oak_slab"
+			}
 			id: "19921941321965A4"
 			tasks: [
 				{
 					id: "1A63E51B0CF5C6DD"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_slab" }
 					type: "item"
 				}
 				{
@@ -166,11 +190,14 @@
 		}
 		{
 			dependencies: ["19921941321965A4"]
+			icon: {
+				id: "minecraft:stripped_oak_log"
+			}
 			id: "59E4A6163753BC12"
 			tasks: [
 				{
 					id: "23030B6D0072EBE8"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:stripped_oak_log" }
 					type: "item"
 				}
 				{
@@ -186,6 +213,9 @@
 				"106C6DFDCB97327C"
 				"32786E9D145FFE25"
 			]
+			icon: {
+				id: "create:andesite_alloy"
+			}
 			id: "73FCA432DEFC1DED"
 			tasks: [
 				{
@@ -203,6 +233,9 @@
 		}
 		{
 			dependencies: ["72BE175C83834838"]
+			icon: {
+				id: "architects_palette:algal_brick"
+			}
 			id: "32786E9D145FFE25"
 			tasks: [
 				{
@@ -224,11 +257,14 @@
 				"73FCA432DEFC1DED"
 				"5A055D0421861318"
 			]
+			icon: {
+				id: "kubejs:kinetic_mechanism"
+			}
 			id: "675C395B2074C24C"
 			tasks: [
 				{
 					id: "68B67FDC410885B3"
-					item: { components: { "ftbquests:missing_item": "kubejs:kinetic_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:kinetic_mechanism" }
 					type: "item"
 				}
 				{
@@ -246,16 +282,13 @@
 			]
 			hide_dependency_lines: true
 			icon: {
-				components: {
-					"ftbquests:missing_item": "cb_microblock:stone_saw"
-				}
-				id: "ftbquests:missing_item"
+				id: "createdieselgenerators:hammer"
 			}
 			id: "5A055D0421861318"
 			shape: "circle"
 			tasks: [{
 				id: "52A4AF128B571664"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createdieselgenerators:hammer" }
 				type: "item"
 			}]
 			x: 3.5d
@@ -264,6 +297,9 @@
 		{
 			dependencies: ["5A8DF2D8553904BF"]
 			hide_until_deps_complete: true
+			icon: {
+				id: "create:builders_tea"
+			}
 			id: "5799D55BB26BA52C"
 			rewards: [{
 				id: "49A9C8798141C302"
@@ -284,17 +320,17 @@
 		}
 		{
 			dependencies: ["675C395B2074C24C"]
+			icon: {
+				id: "kubejs:kinetic_mechanism"
+			}
 			id: "3F45DFEF31838A00"
 			rewards: [
 				{
 					count: 16
 					id: "30E03E42611E5613"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:kinetic_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:kinetic_mechanism"
 					}
 					type: "item"
 				}
@@ -321,7 +357,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2D4BB6A2E22A86E3"
-				item: { components: { "ftbquests:missing_item": "kubejs:andesite_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:andesite_machine" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -333,13 +369,16 @@
 				"681DACF11F193771"
 			]
 			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:raw_rubber"
+			}
 			id: "3728DF562D6DCE3A"
 			shape: "square"
 			tasks: [
 				{
 					count: 4L
 					id: "52B181D406A5AC67"
-					item: { components: { "ftbquests:missing_item": "thermal:device_tree_extractor" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:raw_rubber" }
 					type: "item"
 				}
 				{
@@ -352,11 +391,14 @@
 		}
 		{
 			dependencies: ["3728DF562D6DCE3A"]
+			icon: {
+				id: "kubejs:rubber"
+			}
 			id: "3EF5F89DBD6959E3"
 			tasks: [
 				{
 					id: "0F98BACE3B940BC9"
-					item: { components: { "ftbquests:missing_item": "thermal:rubber" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:rubber" }
 					type: "item"
 				}
 				{
@@ -369,12 +411,15 @@
 		}
 		{
 			dependencies: ["3EF5F89DBD6959E3"]
+			icon: {
+				id: "create:belt_connector"
+			}
 			id: "29D37095C73B3DEC"
 			shape: "square"
 			tasks: [
 				{
 					id: "7D328EB34500FE28"
-					item: { components: { "ftbquests:missing_item": "thermal:cured_rubber" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "create:belt_connector" }
 					type: "item"
 				}
 				{
@@ -387,11 +432,14 @@
 		}
 		{
 			dependencies: ["29D37095C73B3DEC"]
+			icon: {
+				id: "kubejs:sealed_mechanism"
+			}
 			id: "6545C3F427B12106"
 			shape: "circle"
 			tasks: [{
 				id: "2C94C22FBED69EE4"
-				item: { components: { "ftbquests:missing_item": "kubejs:sealed_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:sealed_mechanism" }
 				type: "item"
 			}]
 			x: -0.20000000000003126d
@@ -399,28 +447,25 @@
 		}
 		{
 			dependencies: ["6545C3F427B12106"]
+			icon: {
+				id: "kubejs:sealed_mechanism"
+			}
 			id: "0E0535849D8D9279"
 			rewards: [
 				{
 					count: 16
 					id: "0CDF1AD650CC3EA0"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:sealed_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:sealed_mechanism"
 					}
 					type: "item"
 				}
 				{
 					id: "200F3D1A04E713EF"
 					item: {
-						components: {
-							"ftbquests:missing_item": "thermal:cured_rubber"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:rubber"
 					}
 					random_bonus: 4
 					type: "item"
@@ -439,7 +484,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "31511DA3C34905F1"
-				item: { components: { "ftbquests:missing_item": "kubejs:copper_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:copper_machine" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -462,6 +507,9 @@
 				"28D3347E8FA277AD"
 			]
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:deepslate"
+			}
 			id: "5C4F6E63B02A25F0"
 			tasks: [
 				{
@@ -479,6 +527,9 @@
 		}
 		{
 			dependencies: ["5C4F6E63B02A25F0"]
+			icon: {
+				id: "minecraft:magma_block"
+			}
 			id: "4D8972AE5B614FB3"
 			tasks: [
 				{
@@ -496,6 +547,9 @@
 		}
 		{
 			dependencies: ["4D8972AE5B614FB3"]
+			icon: {
+				id: "minecraft:obsidian"
+			}
 			id: "4064D448404CD639"
 			tasks: [
 				{
@@ -513,6 +567,9 @@
 		}
 		{
 			dependencies: ["76706BE282ABAC31"]
+			icon: {
+				id: "create:track"
+			}
 			id: "667F4F686A45EF3E"
 			rewards: [{
 				count: 128
@@ -527,7 +584,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5F986F8FC1D339AA"
-				item: { components: { "ftbquests:missing_item": "kubejs:gold_machine" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:gold_machine" }
 				type: "item"
 			}]
 			x: 3.0d
@@ -535,11 +592,14 @@
 		}
 		{
 			dependencies: ["4064D448404CD639"]
+			icon: {
+				id: "kubejs:reinforced_mechanism"
+			}
 			id: "76706BE282ABAC31"
 			shape: "circle"
 			tasks: [{
 				id: "232D11392F252A8E"
-				item: { components: { "ftbquests:missing_item": "kubejs:reinforced_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:reinforced_mechanism" }
 				type: "item"
 			}]
 			x: 4.0d

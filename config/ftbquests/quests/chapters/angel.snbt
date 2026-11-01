@@ -2,20 +2,199 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "angel"
-	group: "0BFB33D75F4EAD91"
+	group: "331B6409EF6A7840"
 	id: "4F9F23CB1B32953F"
 	images: [ ]
 	order_index: 7
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["29DCAFA75FB1AB55"]
-		id: "7650D7E4FE40E2C7"
-		tasks: [{
-			id: "31FCD0DA0946A144"
-			item: { count: 1, id: "reliquary:angelic_feather" }
-			type: "item"
-		}]
-		x: 0.0d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			icon: {
+				id: "aeronautics:andesite_propeller"
+			}
+			id: "687C0B1646405F66"
+			rewards: [{
+				id: "776E2FF09E7453A2"
+				item: {
+					count: 1
+					id: "create:builders_tea"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "22BEB4AAC3605B77"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "vc_gliders:paraglider_wood"
+			}
+			id: "44574DD7ED012C32"
+			shape: "circle"
+			tasks: [{
+				id: "05F47CEB6C3B73D4"
+				item: { count: 1, id: "vc_gliders:paraglider_wood" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "vc_gliders:paraglider_iron"
+			}
+			id: "7185578FE136832B"
+			shape: "circle"
+			tasks: [{
+				id: "066D4C27794118E6"
+				item: { count: 1, id: "vc_gliders:paraglider_iron" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "immersive_aircraft:propeller"
+			}
+			id: "7EA9F909DD9B538A"
+			shape: "circle"
+			tasks: [{
+				id: "787E02C05B0F79C2"
+				item: { count: 1, id: "immersive_aircraft:propeller" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "immersive_aircraft:gyrodyne"
+			}
+			id: "77426DDB0F2283CA"
+			shape: "circle"
+			tasks: [{
+				id: "2AB3BD050328DCC8"
+				item: { count: 1, id: "immersive_aircraft:gyrodyne" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "immersive_aircraft:airship"
+			}
+			id: "67DCC1E05E49C5D0"
+			shape: "circle"
+			tasks: [{
+				id: "05DC730BF88E4D37"
+				item: { count: 1, id: "immersive_aircraft:airship" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:andesite_propeller"
+			}
+			id: "1FBE189EB3E6A3C1"
+			shape: "circle"
+			tasks: [{
+				id: "3D0E39892D22239D"
+				item: { count: 1, id: "aeronautics:andesite_propeller" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:white_envelope"
+			}
+			id: "3F57748D80359EF6"
+			shape: "circle"
+			tasks: [{
+				id: "0666EA1FEB694F19"
+				item: { count: 1, id: "aeronautics:white_envelope" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "aeronautics:propeller_bearing"
+			}
+			id: "4BE9B3642F8D9EB6"
+			shape: "circle"
+			tasks: [{
+				id: "119356DA211D2722"
+				item: { count: 1, id: "aeronautics:propeller_bearing" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependency_requirement: "one_completed"
+			icon: {
+				id: "create_jetpack:jetpack"
+			}
+			id: "044B37BCECAC6250"
+			shape: "circle"
+			tasks: [{
+				id: "765EF1A2AEDF8F2A"
+				item: { count: 1, id: "create_jetpack:jetpack" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			icon: {
+				id: "aeronautics:propeller_bearing"
+			}
+			id: "7D1250D39EDB5C02"
+			min_required_dependencies: 2
+			rewards: [{
+				count: 8
+				id: "3994DFDFA8924BAE"
+				item: {
+					count: 1
+					id: "create:builders_tea"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "0C3D02097CA4F313"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["29DCAFA75FB1AB55"]
+			hide_dependency_lines: true
+			icon: {
+				id: "reliquary:angelic_feather"
+			}
+			id: "7650D7E4FE40E2C7"
+			tasks: [{
+				id: "31FCD0DA0946A144"
+				item: { count: 1, id: "reliquary:angelic_feather" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+	]
 }

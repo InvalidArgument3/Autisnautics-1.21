@@ -48,16 +48,39 @@ function Ensure-OutDir {
     New-Item -ItemType Directory -Force -Path $script:OutDir | Out-Null
 }
 
-function Get-MinecraftJavaProcesses {
+function Get-PrismLaunchProcesses {
+    # Prism instance launched with --launch "<InstanceId>"
     $inst = $script:InstanceId
-    $mc = $script:MinecraftRoot
-    Get-CimInstance Win32_Process -Filter "Name = 'javaw.exe' OR Name = 'java.exe'" -ErrorAction SilentlyContinue |
+    Get-CimInstance Win32_Process -Filter "Name = 'prismlauncher.exe'" -ErrorAction SilentlyContinue |
         Where-Object {
             $_.CommandLine -and (
-                $_.CommandLine -like "*$inst*" -or
-                $_.CommandLine -like "*$mc*" -or
-                $_.CommandLine -like "*neoforge*"
+                $_.CommandLine -like "*--launch*$inst*" -or
+                $_.CommandLine -like "*--launch `"$inst`*" -or
+                $_.CommandLine -like "*--launch $inst*"
             )
+        }
+}
+
+function Get-MinecraftJavaProcesses {
+    # Sodium/NeoForge often rewrite Win32 CommandLine to a short main-class stub
+    # (e.g. "net.caffeinemc.sodium / net.minecraft.client.main.Main /"), so path/
+    # instance/neoforge matching alone misses the live client.
+    $inst = $script:InstanceId
+    $mc = $script:MinecraftRoot
+    $prismPids = @((Get-PrismLaunchProcesses | ForEach-Object { $_.ProcessId }))
+
+    Get-CimInstance Win32_Process -Filter "Name = 'javaw.exe' OR Name = 'java.exe'" -ErrorAction SilentlyContinue |
+        Where-Object {
+            $cl = $_.CommandLine
+            if (-not $cl) { return $false }
+            if ($cl -like "*redhat.java*" -or $cl -like "*jdt.ls*" -or $cl -like "*LanguageServer*") {
+                return $false
+            }
+            if ($cl -like "*$inst*" -or $cl -like "*$mc*" -or $cl -like "*neoforge*") { return $true }
+            if ($cl -like "*minecraft.client.main*" -or $cl -like "*caffeinemc.sodium*") { return $true }
+            if ($cl -like "*crash_assistant*") { return $true }
+            if ($prismPids -contains $_.ParentProcessId) { return $true }
+            $false
         }
 }
 
@@ -67,10 +90,14 @@ function Stop-MinecraftGame {
     foreach ($p in $procs) {
         try { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue } catch {}
     }
+    # Also close the Prism process that owns this --launch (leaves GUI Prism alone).
+    foreach ($p in @(Get-PrismLaunchProcesses)) {
+        try { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue } catch {}
+    }
     $deadline = (Get-Date).AddSeconds($TimeoutSec)
     while ((Get-Date) -lt $deadline) {
-        if (-not (Get-MinecraftJavaProcesses)) { return $true }
+        if (-not (Get-MinecraftJavaProcesses) -and -not (Get-PrismLaunchProcesses)) { return $true }
         Start-Sleep -Seconds 1
     }
-    return -not [bool](Get-MinecraftJavaProcesses)
+    return (-not [bool](Get-MinecraftJavaProcesses)) -and (-not [bool](Get-PrismLaunchProcesses))
 }

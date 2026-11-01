@@ -11,6 +11,9 @@
 		{
 			dependencies: ["74CFD83C501C4952"]
 			hide_until_deps_complete: true
+			icon: {
+				id: "create:builders_tea"
+			}
 			id: "4B80A801A5BE4A01"
 			rewards: [{
 				id: "01697377D270DD3C"
@@ -34,11 +37,14 @@
 				"1BF8F3CC8BEBB620"
 				"71D90A1E5D53FC0A"
 			]
+			icon: {
+				id: "kubejs:calculation_mechanism"
+			}
 			id: "6824055533465010"
 			tasks: [
 				{
 					id: "34B7E632F7FD83DB"
-					item: { components: { "ftbquests:missing_item": "kubejs:calculation_mechanism" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:calculation_mechanism" }
 					type: "item"
 				}
 				{
@@ -51,17 +57,17 @@
 		}
 		{
 			dependencies: ["6824055533465010"]
+			icon: {
+				id: "kubejs:calculation_mechanism"
+			}
 			id: "28DAED70768C6A50"
 			rewards: [
 				{
 					count: 16
 					id: "40B14407CE6BAB56"
 					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:calculation_mechanism"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "kubejs:calculation_mechanism"
 					}
 					type: "item"
 				}
@@ -77,11 +83,8 @@
 				{
 					id: "3FD881040347300A"
 					item: {
-						components: {
-							"ftbquests:missing_item": "thermal:lead_plate"
-						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "immersiveengineering:plate_lead"
 					}
 					random_bonus: 4
 					type: "item"
@@ -105,6 +108,9 @@
 		{
 			dependencies: ["4B80A801A5BE4A01"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:sand"
+			}
 			id: "22202C87352242D6"
 			tasks: [
 				{
@@ -122,11 +128,14 @@
 		}
 		{
 			dependencies: ["22202C87352242D6"]
+			icon: {
+				id: "kubejs:sand_ball"
+			}
 			id: "42F1A649D86DB86D"
 			tasks: [
 				{
 					id: "05FFE255DDB4E66F"
-					item: { components: { "ftbquests:missing_item": "kubejs:sand_ball" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:sand_ball" }
 					type: "item"
 				}
 				{
@@ -150,11 +159,14 @@
 		}
 		{
 			dependencies: ["42F1A649D86DB86D"]
+			icon: {
+				id: "kubejs:rough_sand"
+			}
 			id: "0F5AA5DF001DCDF5"
 			tasks: [
 				{
 					id: "006110328A2D022F"
-					item: { components: { "ftbquests:missing_item": "kubejs:rough_sand" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:rough_sand" }
 					type: "item"
 				}
 				{
@@ -170,11 +182,14 @@
 				"60A8B4C736CE3226"
 				"0F5AA5DF001DCDF5"
 			]
+			icon: {
+				id: "kubejs:purified_sand"
+			}
 			id: "343050A40A3AB1F0"
 			tasks: [
 				{
 					id: "76715E399222E329"
-					item: { components: { "ftbquests:missing_item": "kubejs:purified_sand" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:purified_sand" }
 					type: "item"
 				}
 				{
@@ -187,6 +202,9 @@
 		}
 		{
 			dependencies: ["46820FBDDDEE491E"]
+			icon: {
+				id: "minecraft:charcoal"
+			}
 			id: "3249CD08992F2BCD"
 			tasks: [
 				{
@@ -204,11 +222,14 @@
 		}
 		{
 			dependencies: ["3249CD08992F2BCD"]
+			icon: {
+				id: "immersiveengineering:coal_coke"
+			}
 			id: "1A383F96B312D1B8"
 			tasks: [
 				{
 					id: "7AFFEF4014CE671C"
-					item: { components: { "ftbquests:missing_item": "thermal:coal_coke" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "immersiveengineering:coal_coke" }
 					type: "item"
 				}
 				{
@@ -221,11 +242,14 @@
 		}
 		{
 			dependencies: ["1A383F96B312D1B8"]
+			icon: {
+				id: "kubejs:coke_chunk"
+			}
 			id: "16F920C2AF2FA2E0"
 			tasks: [
 				{
 					id: "36A367A143AD6175"
-					item: { components: { "ftbquests:missing_item": "kubejs:coke_chunk" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:coke_chunk" }
 					type: "item"
 				}
 				{
@@ -242,11 +266,14 @@
 				"4412F3B2827606E4"
 				"16F920C2AF2FA2E0"
 			]
+			icon: {
+				id: "kubejs:silicon_compound"
+			}
 			id: "2268AFAF6E9AB5E2"
 			tasks: [
 				{
 					id: "7824435744C12C18"
-					item: { components: { "ftbquests:missing_item": "kubejs:silicon_compound" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:silicon_compound" }
 					type: "item"
 				}
 				{
@@ -259,11 +286,14 @@
 		}
 		{
 			dependencies: ["5799B4124EE20DB1"]
+			icon: {
+				id: "minecraft:fire_charge"
+			}
 			id: "60A8B4C736CE3226"
 			tasks: [
 				{
 					id: "2C3C495C9B18005A"
-					item: { components: { "ftbquests:missing_item": "thermal:earth_charge" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:fire_charge" }
 					type: "item"
 				}
 				{
@@ -276,11 +306,14 @@
 		}
 		{
 			dependencies: ["6C4CB8F616A9C3DF"]
+			icon: {
+				id: "minecraft:blaze_powder"
+			}
 			id: "5799B4124EE20DB1"
 			tasks: [
 				{
 					id: "54F29099D9D81837"
-					item: { components: { "ftbquests:missing_item": "thermal:basalz_powder" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:blaze_powder" }
 					type: "item"
 				}
 				{
@@ -293,11 +326,14 @@
 		}
 		{
 			dependencies: ["0B602ED47A0195A4"]
+			icon: {
+				id: "minecraft:blaze_rod"
+			}
 			id: "6C4CB8F616A9C3DF"
 			tasks: [
 				{
 					id: "712E7C4EEB4BCF55"
-					item: { components: { "ftbquests:missing_item": "thermal:basalz_rod" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:blaze_rod" }
 					type: "item"
 				}
 				{
@@ -311,6 +347,9 @@
 		{
 			dependencies: ["4B80A801A5BE4A01"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:basalt"
+			}
 			id: "0B602ED47A0195A4"
 			tasks: [
 				{
@@ -329,16 +368,13 @@
 		{
 			dependencies: ["0B602ED47A0195A4"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "thermal:flux_magnet"
-				}
-				id: "ftbquests:missing_item"
+				id: "minecraft:lodestone"
 			}
 			id: "58B534C4AEB4139D"
 			tasks: [
 				{
 					id: "7538F2E8CFAF69F6"
-					item: { components: { "ftbquests:missing_item": "thermal:flux_magnet" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:lodestone" }
 					type: "item"
 				}
 				{
@@ -352,6 +388,9 @@
 		{
 			dependencies: ["4B80A801A5BE4A01"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:snowball"
+			}
 			id: "4B34B52092BA32BE"
 			tasks: [
 				{
@@ -389,11 +428,14 @@
 		}
 		{
 			dependencies: ["4B34B52092BA32BE"]
+			icon: {
+				id: "minecraft:breeze_rod"
+			}
 			id: "0AE7FAEBD5F86D9C"
 			tasks: [
 				{
 					id: "11B1248ECFCD2F26"
-					item: { components: { "ftbquests:missing_item": "thermal:blizz_rod" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:breeze_rod" }
 					type: "item"
 				}
 				{
@@ -406,11 +448,14 @@
 		}
 		{
 			dependencies: ["0AE7FAEBD5F86D9C"]
+			icon: {
+				id: "minecraft:wind_charge"
+			}
 			id: "01B0A6236A5073D1"
 			tasks: [
 				{
 					id: "7EA6D73F7A49EBAF"
-					item: { components: { "ftbquests:missing_item": "thermal:blizz_powder" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:wind_charge" }
 					type: "item"
 				}
 				{
@@ -423,11 +468,14 @@
 		}
 		{
 			dependencies: ["01B0A6236A5073D1"]
+			icon: {
+				id: "minecraft:snowball"
+			}
 			id: "4732465116D723EE"
 			tasks: [
 				{
 					id: "3DFF735C19CE82A5"
-					item: { components: { "ftbquests:missing_item": "thermal:ice_charge" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:snowball" }
 					type: "item"
 				}
 				{
@@ -443,6 +491,9 @@
 				"2268AFAF6E9AB5E2"
 				"4732465116D723EE"
 			]
+			icon: {
+				id: "ae2:silicon"
+			}
 			id: "067C5FDA4709F195"
 			tasks: [
 				{
@@ -464,6 +515,9 @@
 				"4B19B6EAD511378D"
 			]
 			dependency_requirement: "one_completed"
+			icon: {
+				id: "ae2:printed_silicon"
+			}
 			id: "71D90A1E5D53FC0A"
 			tasks: [
 				{
@@ -502,10 +556,7 @@
 			rewards: [{
 				command: "/ponder kubejs:alchemical_laser"
 				icon: {
-					components: {
-						"ftbquests:missing_item": "occultism:book_of_calling_djinni_manage_machine"
-					}
-					id: "ftbquests:missing_item"
+					id: "computercraft:computer_advanced"
 				}
 				id: "14F213F493035F9B"
 				type: "command"
@@ -521,12 +572,15 @@
 		{
 			dependencies: ["4B80A801A5BE4A01"]
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:oak_log"
+			}
 			id: "46820FBDDDEE491E"
 			shape: "square"
 			tasks: [
 				{
 					id: "0AA0DEB1A87DA675"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_log" }
 					type: "item"
 				}
 				{
@@ -540,11 +594,14 @@
 		{
 			dependencies: ["71D90A1E5D53FC0A"]
 			hide_dependency_lines: true
+			icon: {
+				id: "kubejs:flash_drive"
+			}
 			id: "1BF8F3CC8BEBB620"
 			shape: "circle"
 			tasks: [{
 				id: "1CC8A01100CE4AE3"
-				item: { components: { "ftbquests:missing_item": "kubejs:flash_drive" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:flash_drive" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -552,6 +609,9 @@
 		}
 		{
 			dependencies: ["0CE88FEA070DC46C"]
+			icon: {
+				id: "ae2:silicon"
+			}
 			id: "4B19B6EAD511378D"
 			tasks: [
 				{
@@ -580,6 +640,9 @@
 		}
 		{
 			dependencies: ["28DAED70768C6A50"]
+			icon: {
+				id: "ae2:printed_calculation_processor"
+			}
 			id: "24C48CFAAD71B230"
 			tasks: [
 				{
@@ -603,6 +666,9 @@
 		}
 		{
 			dependencies: ["24C48CFAAD71B230"]
+			icon: {
+				id: "ae2:calculation_processor"
+			}
 			id: "2B8F1D804107EB8C"
 			tasks: [
 				{

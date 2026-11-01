@@ -11,6 +11,9 @@
 		{
 			dependencies: ["251A91F6C21AEAFB"]
 			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:computation_matrix"
+			}
 			id: "5D0454F977C4F080"
 			rewards: [{
 				id: "0397D214E0A6CC89"
@@ -37,6 +40,9 @@
 				"25B76A897D97C9F1"
 				"73473DC7269EC5B0"
 			]
+			icon: {
+				id: "minecraft:enchanted_golden_apple"
+			}
 			id: "47965C310D9847DC"
 			rewards: [{
 				count: 3
@@ -55,7 +61,7 @@
 					id: "supplementaries:flag_gray"
 				}
 				id: "4418C7A289B17158"
-				item: { components: { "ftbquests:missing_item": "itemfilters:or" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "create:blaze_cake" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -75,12 +81,15 @@
 				"2441491CB5D5E57D"
 			]
 			dependency_requirement: "one_completed"
+			icon: {
+				id: "kubejs:computation_matrix"
+			}
 			id: "69311E02A8B3451D"
 			shape: "circle"
 			tasks: [{
 				count: 8L
 				id: "2C98415D43457049"
-				item: { components: { "ftbquests:missing_item": "kubejs:computation_matrix" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:computation_matrix" }
 				type: "item"
 			}]
 			x: 6.0d
@@ -89,10 +98,7 @@
 		{
 			dependencies: ["5D0454F977C4F080"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "thermal:fluid_cell"
-				}
-				id: "ftbquests:missing_item"
+				id: "create:fluid_tank"
 			}
 			id: "70D563EF30E9CB97"
 			shape: "square"
@@ -100,7 +106,7 @@
 			tasks: [
 				{
 					id: "2A4A54EBAFBEB39F"
-					item: { components: { "ftbquests:missing_item": "kubejs:raw_logic_bucket" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:raw_logic_bucket" }
 					type: "item"
 				}
 				{
@@ -113,11 +119,14 @@
 		}
 		{
 			dependencies: ["70D563EF30E9CB97"]
+			icon: {
+				id: "kubejs:three"
+			}
 			id: "5550A3E383EFEC90"
 			tasks: [
 				{
 					id: "343E4ED28EA67219"
-					item: { components: { "ftbquests:missing_item": "kubejs:three" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:three" }
 					type: "item"
 				}
 				{
@@ -130,11 +139,14 @@
 		}
 		{
 			dependencies: ["70D563EF30E9CB97"]
+			icon: {
+				id: "kubejs:eight"
+			}
 			id: "3126DE83A6741671"
 			tasks: [
 				{
 					id: "18BB7C8E32701CB6"
-					item: { components: { "ftbquests:missing_item": "kubejs:eight" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:eight" }
 					type: "item"
 				}
 				{
@@ -151,11 +163,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:zero"
+			}
 			id: "2441491CB5D5E57D"
 			tasks: [
 				{
 					id: "6FF94B3F20E69F43"
-					item: { components: { "ftbquests:missing_item": "kubejs:zero" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:zero" }
 					type: "item"
 				}
 				{
@@ -172,11 +187,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:one"
+			}
 			id: "42B5C0102B22F389"
 			tasks: [
 				{
 					id: "61A3EF7882F2A31E"
-					item: { components: { "ftbquests:missing_item": "kubejs:one" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:one" }
 					type: "item"
 				}
 				{
@@ -193,11 +211,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:two"
+			}
 			id: "5358E5F7FB59DD60"
 			tasks: [
 				{
 					id: "2AD655BD7E1A0EBF"
-					item: { components: { "ftbquests:missing_item": "kubejs:two" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:two" }
 					type: "item"
 				}
 				{
@@ -214,11 +235,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:four"
+			}
 			id: "55F959A18E904D6C"
 			tasks: [
 				{
 					id: "54FEAD9C942788CF"
-					item: { components: { "ftbquests:missing_item": "kubejs:four" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:four" }
 					type: "item"
 				}
 				{
@@ -235,11 +259,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:five"
+			}
 			id: "7927B6162577FA7B"
 			tasks: [
 				{
 					id: "0B94D4B1C2A131DA"
-					item: { components: { "ftbquests:missing_item": "kubejs:five" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:five" }
 					type: "item"
 				}
 				{
@@ -256,11 +283,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:six"
+			}
 			id: "1C6657984648B0D4"
 			tasks: [
 				{
 					id: "0127797E6B5249A2"
-					item: { components: { "ftbquests:missing_item": "kubejs:six" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:six" }
 					type: "item"
 				}
 				{
@@ -277,11 +307,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:seven"
+			}
 			id: "4A16CE3BC111280F"
 			tasks: [
 				{
 					id: "7FA25AD87CBD6B62"
-					item: { components: { "ftbquests:missing_item": "kubejs:seven" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:seven" }
 					type: "item"
 				}
 				{
@@ -298,11 +331,14 @@
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			icon: {
+				id: "kubejs:nine"
+			}
 			id: "7D808F15BEDD7A7B"
 			tasks: [
 				{
 					id: "2F81E83410906BB5"
-					item: { components: { "ftbquests:missing_item": "kubejs:nine" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:nine" }
 					type: "item"
 				}
 				{
@@ -316,6 +352,9 @@
 		{
 			dependencies: ["5D0454F977C4F080"]
 			hide_dependency_lines: true
+			icon: {
+				id: "ae2:matter_ball"
+			}
 			id: "3CBED6B591BCEDEA"
 			tasks: [
 				{
@@ -336,11 +375,14 @@
 				"6F750A66D0A559DE"
 				"3CBED6B591BCEDEA"
 			]
+			icon: {
+				id: "kubejs:matter_plastics"
+			}
 			id: "6A156D11D983661D"
 			shape: "circle"
 			tasks: [{
 				id: "25532A2369192051"
-				item: { components: { "ftbquests:missing_item": "kubejs:matter_plastics" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "kubejs:matter_plastics" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -349,6 +391,9 @@
 		{
 			dependencies: ["5D0454F977C4F080"]
 			hide_dependency_lines: true
+			icon: {
+				id: "stellaris:rocket"
+			}
 			id: "4761DAE59CDD93AF"
 			shape: "circle"
 			tasks: [{
@@ -360,11 +405,14 @@
 		}
 		{
 			dependencies: ["4761DAE59CDD93AF"]
+			icon: {
+				id: "createdieselgenerators:crude_oil_bucket"
+			}
 			id: "2BD76CB3F8BC215E"
 			shape: "circle"
 			tasks: [{
 				id: "0F12D5A3157F61C4"
-				item: { components: { "ftbquests:missing_item": "thermal:heavy_oil_bucket" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createdieselgenerators:crude_oil_bucket" }
 				type: "item"
 			}]
 			x: -1.0d
@@ -372,11 +420,14 @@
 		}
 		{
 			dependencies: ["4761DAE59CDD93AF"]
+			icon: {
+				id: "stellaris:fuel_bucket"
+			}
 			id: "26DD1CA6A8D4E249"
 			shape: "circle"
 			tasks: [{
 				id: "2EA66D1B4EEBFA62"
-				item: { components: { "ftbquests:missing_item": "thermal:refined_fuel_bucket" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "stellaris:fuel_bucket" }
 				type: "item"
 			}]
 			x: -1.0d
@@ -388,11 +439,14 @@
 				"26DD1CA6A8D4E249"
 			]
 			dependency_requirement: "one_completed"
+			icon: {
+				id: "stellaris:fuel_bucket"
+			}
 			id: "25B76A897D97C9F1"
 			shape: "circle"
 			tasks: [{
 				id: "5CAC7E6BDD460233"
-				item: { components: { "ftbquests:missing_item": "ad_astra:fuel_bucket" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "stellaris:fuel_bucket" }
 				type: "item"
 			}]
 			x: 0.5d
@@ -401,6 +455,9 @@
 		{
 			dependencies: ["5D0454F977C4F080"]
 			hide_dependency_lines: true
+			icon: {
+				id: "create:blaze_cake"
+			}
 			id: "6F750A66D0A559DE"
 			shape: "circle"
 			tasks: [{
@@ -414,32 +471,29 @@
 		{
 			dependencies: ["6A156D11D983661D"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "ad_astra:space_helmet"
-				}
-				id: "ftbquests:missing_item"
+				id: "stellaris:space_suit_helmet"
 			}
 			id: "6BA9A176EDA001A3"
 			shape: "circle"
 			tasks: [
 				{
 					id: "7E45D4E589606928"
-					item: { components: { "ftbquests:missing_item": "ad_astra:space_helmet" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "stellaris:space_suit_helmet" }
 					type: "item"
 				}
 				{
 					id: "00E67717F76ABA56"
-					item: { components: { "ftbquests:missing_item": "ad_astra:space_suit" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "stellaris:space_suit_chestplate" }
 					type: "item"
 				}
 				{
 					id: "3D1FB475F19FB099"
-					item: { components: { "ftbquests:missing_item": "ad_astra:space_pants" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "stellaris:space_suit_leggings" }
 					type: "item"
 				}
 				{
 					id: "29F72399D75E555C"
-					item: { components: { "ftbquests:missing_item": "ad_astra:space_boots" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "stellaris:space_suit_boots" }
 					type: "item"
 				}
 			]
@@ -448,11 +502,14 @@
 		}
 		{
 			dependencies: ["6A156D11D983661D"]
+			icon: {
+				id: "stellaris:oxygen_distributor"
+			}
 			id: "3AD7553F3C8593F9"
 			shape: "circle"
 			tasks: [{
 				id: "045DB251DB8BB97F"
-				item: { components: { "ftbquests:missing_item": "ad_astra:oxygen_loader" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "stellaris:oxygen_distributor" }
 				type: "item"
 			}]
 			x: 0.5d
@@ -460,11 +517,14 @@
 		}
 		{
 			dependencies: ["6A156D11D983661D"]
+			icon: {
+				id: "stellaris:rocket_launch_pad"
+			}
 			id: "4800892E1E70648D"
 			shape: "circle"
 			tasks: [{
 				id: "0BD3409A643682F5"
-				item: { components: { "ftbquests:missing_item": "ad_astra:launch_pad" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "stellaris:rocket_launch_pad" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -472,26 +532,29 @@
 		}
 		{
 			dependencies: ["70D563EF30E9CB97"]
+			icon: {
+				id: "kubejs:plus"
+			}
 			id: "4E85C8A2EEEB57C3"
 			tasks: [
 				{
 					id: "69462AA912169E3B"
-					item: { components: { "ftbquests:missing_item": "kubejs:plus" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:plus" }
 					type: "item"
 				}
 				{
 					id: "56E1C75AD6DF3119"
-					item: { components: { "ftbquests:missing_item": "kubejs:minus" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:minus" }
 					type: "item"
 				}
 				{
 					id: "3BF3D9E9B3782EA3"
-					item: { components: { "ftbquests:missing_item": "kubejs:multiply" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:multiply" }
 					type: "item"
 				}
 				{
 					id: "5914CB0D1D6E839E"
-					item: { components: { "ftbquests:missing_item": "kubejs:divide" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "kubejs:divide" }
 					type: "item"
 				}
 				{
@@ -509,16 +572,13 @@
 				"69311E02A8B3451D"
 			]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "ad_astra:tier_1_rocket"
-				}
-				id: "ftbquests:missing_item"
+				id: "stellaris:rocket"
 			}
 			id: "73473DC7269EC5B0"
 			shape: "circle"
 			tasks: [{
 				id: "40C42947058AA817"
-				item: { components: { "ftbquests:missing_item": "ad_astra:tier_1_rocket" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "stellaris:rocket" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -534,6 +594,9 @@
 			]
 			dependency_requirement: "one_completed"
 			hide_dependency_lines: true
+			icon: {
+				id: "minecraft:grass_block"
+			}
 			id: "5B0727505DC791DF"
 			invisible: true
 			min_required_dependencies: 1
@@ -563,7 +626,7 @@
 			invisible_until_tasks: 2
 			size: 0.066d
 			tasks: [{
-				dimension: "ad_astra:earth_orbit"
+				dimension: "stellaris:earth_orbit"
 				id: "1E9A31CD9922C4D4"
 				type: "dimension"
 			}]
@@ -577,7 +640,7 @@
 			invisible_until_tasks: 2
 			size: 0.066d
 			tasks: [{
-				dimension: "ad_astra:moon_orbit"
+				dimension: "stellaris:moon"
 				id: "07E1966C4161B858"
 				type: "dimension"
 			}]
@@ -591,7 +654,7 @@
 			invisible_until_tasks: 2
 			size: 0.066d
 			tasks: [{
-				dimension: "ad_astra:mars_orbit"
+				dimension: "stellaris:mars_orbit"
 				id: "66D7010C274A0BD4"
 				type: "dimension"
 			}]
@@ -605,7 +668,7 @@
 			invisible_until_tasks: 2
 			size: 0.066d
 			tasks: [{
-				dimension: "ad_astra:mercury_orbit"
+				dimension: "stellaris:mercury_orbit"
 				id: "73D99A27A447C2B7"
 				type: "dimension"
 			}]
@@ -619,7 +682,7 @@
 			invisible_until_tasks: 2
 			size: 0.066d
 			tasks: [{
-				dimension: "ad_astra:glacio_orbit"
+				dimension: "stellaris:venus_orbit"
 				id: "4878254BF48F2240"
 				type: "dimension"
 			}]

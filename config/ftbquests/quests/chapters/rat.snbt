@@ -1,4 +1,5 @@
 {
+	always_invisible: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "rat"
@@ -15,11 +16,8 @@
 			rewards: [{
 				id: "079B0A91F27CCFCD"
 				item: {
-					components: {
-						"ftbquests:missing_item": "rats:cheese"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "farmersdelight:milk_bottle"
 				}
 				type: "item"
 			}]
@@ -27,7 +25,7 @@
 				consume_items: false
 				count: 16L
 				id: "1F06E9D8DA8BE5C7"
-				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -71,7 +69,7 @@
 				{
 					consume_items: false
 					id: "5DA07794E31B6312"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_log" }
 					only_from_crafting: false
 					type: "item"
 				}

@@ -1,4 +1,5 @@
 {
+	always_invisible: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "cactoid"
@@ -63,7 +64,7 @@
 			}]
 			tasks: [{
 				id: "7F1E10172BC23CF6"
-				item: { components: { "ftbquests:missing_item": "scguns:gun_bench" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createbigcannons:cannon_builder" }
 				type: "item"
 			}]
 			x: -1.5d
@@ -92,10 +93,7 @@
 		{
 			dependencies: ["71659ADD9BF9E5A1"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "artifacts:novelty_drinking_hat"
-				}
-				id: "ftbquests:missing_item"
+				id: "farmersdelight:apple_cider"
 			}
 			id: "0DCC71420C57E089"
 			rewards: [{
@@ -107,7 +105,7 @@
 					consume_items: true
 					count: 64L
 					id: "38A1B2B321498134"
-					item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "minecraft:oak_log" }
 					only_from_crafting: false
 					type: "item"
 				}
