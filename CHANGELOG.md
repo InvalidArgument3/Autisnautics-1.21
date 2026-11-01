@@ -1,4 +1,9 @@
 # Changelog
+## [0.0.55]
+- add Astral Sorcery 2.0.3 (alpha) + ObserverLib
+- drop Infinite Railways / Railways Untold / Steam 'n' Rails (Skylands worldgen mismatch)
+- pakku lock refresh: mod file bumps from sync; restore Yeetus Narratus + Piglin Proliferation after collateral rm
+
 ## [0.0.54]
 - quest remap: Create / Taking Flight / Stellaris spine; hide dead CABIN economy + origin chapters; Thermal leftovers gated in KubeJS
 - scrub leftover Tinkers IDs from hidden quests, market, reward tables, and matrix prose
