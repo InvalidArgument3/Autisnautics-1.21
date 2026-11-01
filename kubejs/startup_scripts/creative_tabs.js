@@ -5,24 +5,22 @@ StartupEvents.modifyCreativeTab("create:base", event => {
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
     event.addAfter("minecraft:recovery_compass", "minecraft:bundle")
 
-    event.add("cb_microblock:stone_saw")
-    event.add("cb_microblock:iron_saw")
-    event.add("cb_microblock:diamond_saw")
+    if (Platform.isLoaded("cb_microblock")) {
+        event.add("cb_microblock:stone_saw")
+        event.add("cb_microblock:iron_saw")
+        event.add("cb_microblock:diamond_saw")
+    }
 })
 
-StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
-    event.addAfter("minecraft:stick", ["cb_microblock:stone_rod"])
-})
+if (Platform.isLoaded("cb_microblock")) {
+    StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
+        event.addAfter("minecraft:stick", ["cb_microblock:stone_rod"])
+    })
+}
 
-// Does not work
-// StartupEvents.modifyCreativeTab("cb_microblock:microblocks", event => {
-//     event.remove({ mod: "cb_microblock"})
-//     event.removeDisplay({ mod: "cb_microblock"})
-//     event.removeSearch({ mod: "cb_microblock"})
-// })
-
-
-StartupEvents.modifyCreativeTab('minecraft:functional_blocks', event => {
-    // necessary because of dumb supplementaries config behavior
-    event.addAfter('supplementaries:globe', 'supplementaries:globe_sepia')
-})
+if (Platform.isLoaded("supplementaries")) {
+    StartupEvents.modifyCreativeTab("minecraft:functional_blocks", event => {
+        // globe may be stripped from the tab by Supplementaries config; don't addAfter it
+        event.add("supplementaries:globe_sepia")
+    })
+}

@@ -202,3 +202,7 @@ config/worldedit/
 # Local smoke-test reports
 testing/out/
 
+# Runtime item/recipe dumps (regenerate via KubeJS / jar scan)
+docs/dumps/*
+!docs/dumps/README.md
+

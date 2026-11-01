@@ -177,7 +177,7 @@ ServerEvents.recipes(event => {
         "PGMRP",
         "OOCOO"
     ], {
-        T: "enigmaticlegacy:withered_tome",
+        T: "enigmaticlegacyplus:void_tome",
         E: "reliquary:eye_of_the_storm",
         G: "kubejs:accelerator_glowstone",
         R: "kubejs:accelerator_redstone",
@@ -186,7 +186,7 @@ ServerEvents.recipes(event => {
         H: "dungeonnowloading:chaotic_hexahedron",
         O: "minecraft:crying_obsidian",
         P: "embers:alchemy_pedestal",
-        X: "enigmaticlegacy:forbidden_axe",
+        X: "enigmaticlegacyplus:execution_axe",
         S: "minecraft:player_head",
         D: "reliquary:phoenix_down",
         A: "reliquary:alkahestry_altar",

@@ -7,7 +7,7 @@
         "execute_chosen_when_orb": true,
         "entity_action_gained": {
             "type": "origins:execute_command",
-            "command": "/give @p minecraft:stick"
+            "command": "/give @p enigmaticlegacyplus:cursed_ring 1"
         }
     },
     "quests": {

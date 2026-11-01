@@ -1,9 +1,6 @@
 {
 	icon: {
-		components: {
-			"ftbquests:missing_item": "enigmaticlegacy:ultimate_potion"
-		}
-		id: "ftbquests:missing_item"
+		id: "enigmaticlegacyplus:twisted_potion"
 	}
 	id: "0A7863B6DB890FCC"
 	loot_size: 1
@@ -166,11 +163,8 @@
 		{
 			id: "798D7A6C947A7A19"
 			item: {
-				components: {
-					"ftbquests:missing_item": "enigmaticlegacy:recall_potion"
-				}
 				count: 1
-				id: "ftbquests:missing_item"
+				id: "enigmaticlegacyplus:recall_potion"
 			}
 			weight: 0.05f
 		}

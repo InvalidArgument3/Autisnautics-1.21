@@ -8061,6 +8061,51 @@
             ]
         },
         {
+            "pakku_id": "0dtEOurlSvb2WG3t",
+            "pakku_links": [
+                "461CNh682f8eGIav",
+                "D8RbbSdEV2TtqKRU",
+                "tMobjkO6vt1114xK"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "enigmatic-legacy-plus"
+            },
+            "name": {
+                "curseforge": "Enigmatic Legacy Plus"
+            },
+            "id": {
+                "curseforge": "1391021"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "enigmaticlegacyplus-1.21.1-1.1.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9141/458/enigmaticlegacyplus-1.21.1-1.1.2.jar",
+                    "id": "9141458",
+                    "parent_id": "1391021",
+                    "hashes": {
+                        "sha1": "717add3fabab571b88d97eadcfabafe6a27ad1e8",
+                        "md5": "ff9661c731d3f4456178961e5ab662cd"
+                    },
+                    "required_dependencies": [
+                        "308989",
+                        "309927",
+                        "306770"
+                    ],
+                    "size": 7294944,
+                    "date_published": "2026-10-12T02:35:27.923Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "m8OaY2A6yEzXK2tI",
             "type": "MOD",
             "side": "CLIENT",
@@ -11535,7 +11580,7 @@
                         "1689768"
                     ],
                     "size": 2375741,
-                    "date_published": "2026-10-16T08:32:27.66Z"
+                    "date_published": "2026-10-16T08:32:27.660Z"
                 }
             ]
         },
@@ -15868,67 +15913,6 @@
             ]
         },
         {
-            "pakku_id": "UUyV12mWWNN3Ybtu",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "porting-dead-libs",
-                "modrinth": "porting-dead-libs"
-            },
-            "name": {
-                "curseforge": "Porting Dead Libs",
-                "modrinth": "Porting Dead Libs"
-            },
-            "id": {
-                "curseforge": "1173919",
-                "modrinth": "fKkUaEuN"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "portingdeadlibs-1.1.8-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7249/956/portingdeadlibs-1.1.8-1.21.1.jar",
-                    "id": "7249956",
-                    "parent_id": "1173919",
-                    "hashes": {
-                        "sha1": "c1f9b4af84fc22a60bf460a67d792e5b9f92b6a0",
-                        "md5": "01682b78f86dcc0cd8b855c9699cb521"
-                    },
-                    "required_dependencies": [],
-                    "size": 385217,
-                    "date_published": "2025-11-22T16:59:27.487Z"
-                },
-                {
-                    "type": "modrinth",
-                    "file_name": "portingdeadlibs-1.1.8-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fKkUaEuN/versions/sBoHobf5/portingdeadlibs-1.1.8-1.21.1.jar",
-                    "id": "sBoHobf5",
-                    "parent_id": "fKkUaEuN",
-                    "hashes": {
-                        "sha512": "b3feefbafc46c187bd03c3e80f2f5871582a75c69ce24c0f1b742c559185ce25255c0e92a908b1170fe8fd3cd9f8288189af7cc22cbeed914f3f96d88d2e7dee",
-                        "sha1": "c1f9b4af84fc22a60bf460a67d792e5b9f92b6a0"
-                    },
-                    "required_dependencies": [],
-                    "size": 385217,
-                    "date_published": "2025-11-22T16:59:36.744146Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "y9HmZBgEJFmZxKqo",
             "pakku_links": [
                 "MoG49wuJHo4IY07G"
@@ -16516,74 +16500,6 @@
                     "required_dependencies": [],
                     "size": 2239779,
                     "date_published": "2026-10-17T19:07:11.717Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "qlmMkID7hZIQ70gU",
-            "pakku_links": [
-                "UUyV12mWWNN3Ybtu"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "researchd",
-                "modrinth": "researchd"
-            },
-            "name": {
-                "curseforge": "Researchd",
-                "modrinth": "Researchd"
-            },
-            "id": {
-                "curseforge": "1283539",
-                "modrinth": "Z7WCVLWd"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "researchd-1.2.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Z7WCVLWd/versions/a7jVXEhN/researchd-1.2.5.jar",
-                    "id": "a7jVXEhN",
-                    "parent_id": "Z7WCVLWd",
-                    "hashes": {
-                        "sha512": "8755e5799556214cd35710f13f2266db197ee3c0d1a2dd28e10775c18e6a4d4fba601209aceb527b61dd93beb21b6ec5984b85aaa35a6f810b56653e11c2479a",
-                        "sha1": "524aad014c59fcec490581ee3880735756ea87ef"
-                    },
-                    "required_dependencies": [
-                        "fKkUaEuN"
-                    ],
-                    "size": 1066447,
-                    "date_published": "2026-08-19T19:33:56.179597Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "researchd-1.2.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8686/705/researchd-1.2.5.jar",
-                    "id": "8686705",
-                    "parent_id": "1283539",
-                    "hashes": {
-                        "sha1": "524aad014c59fcec490581ee3880735756ea87ef",
-                        "md5": "9c8f9301950971b5829327f443880acc"
-                    },
-                    "required_dependencies": [
-                        "1173919"
-                    ],
-                    "size": 1066447,
-                    "date_published": "2026-08-19T19:33:43.900Z"
                 }
             ]
         },
