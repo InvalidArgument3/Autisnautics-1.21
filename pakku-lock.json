@@ -20346,6 +20346,47 @@
             ]
         },
         {
+            "pakku_id": "llHKbqA3pmhtAAqZ",
+            "pakku_links": [
+                "WB2yzupkEaYOHZeW"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "vista"
+            },
+            "name": {
+                "curseforge": "Vista"
+            },
+            "id": {
+                "curseforge": "1368607"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "vista-1.21.1-5.6.0-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9348/194/vista-1.21.1-5.6.0-neoforge.jar",
+                    "id": "9348194",
+                    "parent_id": "1368607",
+                    "hashes": {
+                        "sha1": "3982b43169a835ee6847ba3ce9c309ae3ba95350",
+                        "md5": "32e2ae2b49262c43cfd6f77c235b522d"
+                    },
+                    "required_dependencies": [
+                        "499980"
+                    ],
+                    "size": 5883642,
+                    "date_published": "2026-10-28T00:03:33.283Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ZochjMxFBLTodYIs",
             "type": "MOD",
             "side": "BOTH",
@@ -21382,6 +21423,43 @@
             ]
         },
         {
+            "pakku_id": "jSNM6dVm6Wfhpm8o",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "yeetus-narratus"
+            },
+            "name": {
+                "modrinth": "Yeetus Narratus"
+            },
+            "id": {
+                "modrinth": "eMNOv9vF"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "YeetusNarratus-1.21.1-21.1.217-1.5.8.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/eMNOv9vF/versions/6rnMiIzl/YeetusNarratus-1.21.1-21.1.217-1.5.8.jar",
+                    "id": "6rnMiIzl",
+                    "parent_id": "eMNOv9vF",
+                    "hashes": {
+                        "sha512": "d886d2a3d3c856755bdc4ea11480d5edd0b32274aadf519b42f534a2567112891bb0653588ec85de51943c5562a218fc0be8b7e3130774e427f5ae0aa24f3e8b",
+                        "sha1": "100287de52621b2946c0d3986461e3840a344d14"
+                    },
+                    "required_dependencies": [],
+                    "size": 124112,
+                    "date_published": "2026-01-10T01:39:40.327961Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "eQSgtzHsPr4zUSuh",
             "type": "MOD",
             "side": "BOTH",
@@ -22060,43 +22138,6 @@
                     "required_dependencies": [],
                     "size": 3642581,
                     "date_published": "2025-02-23T11:38:31.027Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "jSNM6dVm6Wfhpm8o",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "yeetus-narratus"
-            },
-            "name": {
-                "modrinth": "Yeetus Narratus"
-            },
-            "id": {
-                "modrinth": "eMNOv9vF"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "YeetusNarratus-1.21.1-21.1.217-1.5.8.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eMNOv9vF/versions/6rnMiIzl/YeetusNarratus-1.21.1-21.1.217-1.5.8.jar",
-                    "id": "6rnMiIzl",
-                    "parent_id": "eMNOv9vF",
-                    "hashes": {
-                        "sha512": "d886d2a3d3c856755bdc4ea11480d5edd0b32274aadf519b42f534a2567112891bb0653588ec85de51943c5562a218fc0be8b7e3130774e427f5ae0aa24f3e8b",
-                        "sha1": "100287de52621b2946c0d3986461e3840a344d14"
-                    },
-                    "required_dependencies": [],
-                    "size": 124112,
-                    "date_published": "2026-01-10T01:39:40.327961Z"
                 }
             ]
         }
