@@ -430,7 +430,7 @@ vanilla_button {
   nine_slice_slider_handle_border_x = 5
   nine_slice_slider_handle_border_y = 5
   element_type = vanilla_button
-  instance_identifier = 604394
+  instance_identifier = mc_titlescreen_accessibility_button
   appearance_delay = no_delay
   appearance_delay_seconds = 1.0
   fade_in_v2 = no_fading
@@ -439,12 +439,12 @@ vanilla_button {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 3441
-  auto_sizing_base_screen_height = 1377
+  auto_sizing_base_screen_width = 3440
+  auto_sizing_base_screen_height = 1380
   sticky_anchor = false
   anchor_point = mid-centered
-  x = 103
-  y = 47
+  x = 104
+  y = 48
   width = 20
   height = 20
   stretch_x = false
@@ -466,7 +466,7 @@ vanilla_button {
   advanced_vertical_tilt_mode = false
   horizontal_tilt_degrees = 0.0
   advanced_horizontal_tilt_mode = false
-  is_hidden = true
+  is_hidden = false
   automated_button_clicks = 0
 }
 
@@ -745,7 +745,7 @@ vanilla_button {
   nine_slice_slider_handle_border_x = 5
   nine_slice_slider_handle_border_y = 5
   element_type = vanilla_button
-  instance_identifier = 376394
+  instance_identifier = mc_titlescreen_language_button
   appearance_delay = no_delay
   appearance_delay_seconds = 1.0
   fade_in_v2 = no_fading
@@ -754,12 +754,12 @@ vanilla_button {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 3441
-  auto_sizing_base_screen_height = 1377
+  auto_sizing_base_screen_width = 3440
+  auto_sizing_base_screen_height = 1380
   sticky_anchor = false
   anchor_point = mid-centered
-  x = -123
-  y = 23
+  x = -124
+  y = 48
   width = 20
   height = 20
   stretch_x = false
@@ -1200,8 +1200,8 @@ vanilla_button {
   auto_sizing_base_screen_height = 1380
   sticky_anchor = false
   anchor_point = mid-centered
-  x = -123
-  y = 0
+  x = -124
+  y = -22
   width = 20
   height = 20
   stretch_x = false
@@ -1326,7 +1326,7 @@ vanilla_button {
   auto_sizing_base_screen_height = 1380
   sticky_anchor = false
   anchor_point = mid-centered
-  x = 102
+  x = 104
   y = 23
   width = 20
   height = 20
