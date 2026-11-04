@@ -6185,42 +6185,6 @@
             ]
         },
         {
-            "pakku_id": "c3eQLZLlzoOgFTAt",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "create-aeroportals"
-            },
-            "name": {
-                "curseforge": "Create: AeroPortals"
-            },
-            "id": {
-                "curseforge": "1549100"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "aeroportals-1.21.1-1.3.6.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9281/419/aeroportals-1.21.1-1.3.6.jar",
-                    "id": "9281419",
-                    "parent_id": "1549100",
-                    "hashes": {
-                        "sha1": "0638ae05d712b3d0bbbb5c3a1ea39553b526ffa0",
-                        "md5": "60609d9a6bf671000f43201a8fe2918a"
-                    },
-                    "required_dependencies": [],
-                    "size": 551114,
-                    "date_published": "2026-10-21T20:47:44.470Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "M6Y4ngJVv7YjktfG",
             "type": "MOD",
             "side": "BOTH",
@@ -23251,48 +23215,6 @@
                     "required_dependencies": [],
                     "size": 14934795,
                     "date_published": "2026-09-27T00:00:00Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "Nj5S3ctbAREbO5UW",
-            "pakku_links": [
-                "yS9aBudVdBzG4pGV"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "immersive-aeronautics"
-            },
-            "name": {
-                "curseforge": "Immersive Aeronautics - Immersive Portals +  Create: Aeronautics"
-            },
-            "id": {
-                "curseforge": "1629108"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "Immersive-Aeronautics1.1.4-1.21.1-NeoForge.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/8586/854/Immersive-Aeronautics1.1.4-1.21.1-NeoForge.jar",
-                    "id": "8586854",
-                    "parent_id": "1629108",
-                    "hashes": {
-                        "sha1": "fa6390f64e172d83116b04ce22f18d7359286084",
-                        "md5": "3db4795f092e11d8bccaf4c0566ec92a"
-                    },
-                    "required_dependencies": [
-                        "348521"
-                    ],
-                    "size": 2020342,
-                    "date_published": "2026-08-06T06:04:32.903Z"
                 }
             ]
         }
