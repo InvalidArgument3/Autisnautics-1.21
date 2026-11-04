@@ -1,12 +1,12 @@
 # Changelog
 ## [0.0.59]
-- **pack now requires Java 25** (client and server): Cobblemon 1.7.3 → 1.8.4, patched to run on Java 25 (Java 21 lock lifted; bundled GraalJS `Unsafe.ensureClassInitialized` call replaced). Not on Modrinth/CF, shipped from the repo via Git LFS as an override (`mods/Cobblemon-neoforge-1.8.4+1.21.1-j25.jar`)
+- **pack now requires Java 25** (client and server): Cobblemon 1.7.3 → 1.8.4, patched to run on Java 25 (Java 21 lock lifted; bundled GraalJS `Unsafe.ensureClassInitialized` call replaced). Not on Modrinth/CF, shipped from the repo via Git LFS as a manual override (`.pakku/overrides/mods/Cobblemon-neoforge-1.8.4+1.21.1-j25.jar`)
 - Cobblemon add-ons for 1.8.4: MoreCobblemonTweaks 1.3.6, CobbledLevels 2.1.0, Create Industries 1.5.0, cobblemarks+ 1.2.2, Lootrmon 0.0.0.3, summon orbs 1.0.0 (cobblemon_summon_orbs build); CCC Myths & Legends compat → 2.21 mod version (CF) replacing the 1.7.3 datapack zip
 - add Immersive Aeronautics 1.1.4 (Immersive Portals for Create Aeronautics / Sable)
 - add local IA compat jars via Git LFS: iasodiumfix 1.0.0 (IA portal views × Sodium 0.8 batch cache flicker fix, client) and iavistacompat 1.0.0 (IA × Vista)
 - add Voxy 0.2.17-alpha-sodium08 **experimental portal-LOD build** (Voxy LODs render inside same-dimension IA portal views; client only, via Git LFS). Kill switch: add `-Dvoxy.portalLods=false` to JVM args
 - aero_ik_legs not included (removed from our build); Create Aeronautics Landing Legs (legworks) stays
-- CI: build checkout pulls Git LFS files so the override jars land in the exported packs
+- CI: build checkout pulls Git LFS files so the manual override jars (`.pakku/overrides/mods`, `.pakku/client-overrides/mods`) land in the exported packs
 
 ## [0.0.58]
 - Cobblemon 1.7.3 + addons: CobbledLevels 2.0.0, Legendary Birds 1.2 (2.0 needs Cobblemon ≥1.8.1), MoreCobblemonTweaks 1.3.3, cobblemarks+ 1.1, Create Industries 1.3.2, summon orbs, cobblemore lib, CobGyms 3.0.1, CCC Myths & Legends compat, Extra Move Anims, Lootrmon
