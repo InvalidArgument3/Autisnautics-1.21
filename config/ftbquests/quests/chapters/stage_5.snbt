@@ -353,13 +353,13 @@
 			dependencies: ["5D0454F977C4F080"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:matter_ball"
+				id: "immersivepetroleum:paraffin_wax"
 			}
 			id: "3CBED6B591BCEDEA"
 			tasks: [
 				{
 					id: "245415CFAEFCA7ED"
-					item: { count: 1, id: "ae2:matter_ball" }
+					item: { count: 1, id: "immersivepetroleum:paraffin_wax" }
 					type: "item"
 				}
 				{

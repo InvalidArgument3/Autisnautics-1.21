@@ -1098,6 +1098,13 @@ ServerEvents.recipes(event => {
             "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball",
             "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball"
         ]).superheated()
+    } else if (Platform.isLoaded("immersivepetroleum")) {
+        // AE2 -> RS port: no matter balls without AE2, so Matter Plastics come from Paraffin Wax
+        event.recipes.create.compacting("kubejs:matter_plastics", [
+            "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax",
+            "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax",
+            "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax", "immersivepetroleum:paraffin_wax"
+        ]).superheated().id("kubejs:rs_port/matter_plastics")
     }
 
     event.recipes.create.mechanical_crafting("kubejs:navigation_computer", [

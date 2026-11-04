@@ -129,8 +129,8 @@
 		"&8&o- Encyclopedia Daemonica&r"
 	]
 	quest.034B6B71E610D8E1.title: "Blobbius Caelus"
-	quest.03B7909623F97843.quest_desc: ["{cabin.quest.03B7909623F97843.description1}"]
-	quest.03B7909623F97843.title: "Redstone Link"
+	quest.03B7909623F97843.quest_desc: ["Paint balls were removed along with AE2. Tick the checkmark to continue."]
+	quest.03B7909623F97843.title: "Overcorrection (removed)"
 	quest.040A0552921E1115.quest_subtitle: "{cabin.quest.003E0D1CE60B166A.subtitle}"
 	quest.040A0552921E1115.title: "{cabin.quest.040A0552921E1115.title}"
 	quest.04468935C9A7298F.quest_desc: ["{cabin.quest.04468935C9A7298F.description1}"]
@@ -156,12 +156,13 @@
 	quest.05446225038D260A.title: "Hot Cocoa"
 	quest.05C7E580ED88B556.quest_desc: ["{cabin.quest.05C7E580ED88B556.description1}"]
 	quest.05C7E580ED88B556.title: "End Stone"
-	quest.067C5FDA4709F195.quest_desc: ["{cabin.quest.067C5FDA4709F195.description1}"]
+	quest.067C5FDA4709F195.quest_desc: ["Heat silicon compound into Refined Storage Silicon. Create heated mixing or a blast furnace works."]
 	quest.067C5FDA4709F195.quest_subtitle: "{cabin.quest.067C5FDA4709F195.subtitle}"
 	quest.067C5FDA4709F195.title: "Silicon"
 	quest.06B061C0EE94BC90.quest_desc: [
-		"{cabin.quest.06B061C0EE94BC90.description1}"
-		"{cabin.quest.06B061C0EE94BC90.description2}"
+		"Polish your Rose Quartz with Sandpaper, by hand or with Deployers holding Sandpaper."
+		""
+		"(Sorry to all Mineralogists.)"
 	]
 	quest.06B061C0EE94BC90.quest_subtitle: "{cabin.quest.06B061C0EE94BC90.subtitle}"
 	quest.06B061C0EE94BC90.title: "Polished Rose Quartz"
@@ -374,13 +375,13 @@
 	quest.11C36A243F5108DC.title: "{cabin.quest.11C36A243F5108DC.title}"
 	quest.1250AE58911C27A9.quest_subtitle: "{cabin.quest.1250AE58911C27A9.subtitle}"
 	quest.1250AE58911C27A9.title: "{cabin.quest.1250AE58911C27A9.title}"
-	quest.1256352748B93449.quest_desc: ["{cabin.quest.1256352748B93449.description1}"]
+	quest.1256352748B93449.quest_desc: ["AE2 (Applied Energistics 2) was removed from this pack in favour of Refined Storage, so this step no longer exists. Tick the checkmark to continue."]
 	quest.1256352748B93449.quest_subtitle: "{cabin.quest.1256352748B93449.subtitle}"
-	quest.1256352748B93449.title: "Volatile Sky Solution Bucket"
+	quest.1256352748B93449.title: "Volatile Sky Solution (removed)"
 	quest.128900FD54A81038.quest_desc: ["Lesser races might try and navigate this broken landscape with gliders and boats, but the Cactoids know better. There's no problem that can't be solved by shooting at it. The first step to building your problem-solvers will be forging some iron."]
 	quest.128900FD54A81038.title: "Big Iron"
 	quest.128F1A9528CA4130.quest_subtitle: "{cabin.quest.0CCF34BF1C5829AE.subtitle}"
-	quest.128F1A9528CA4130.title: "Certus Quartz Crystal"
+	quest.128F1A9528CA4130.title: "Nether Quartz"
 	quest.12B37E99B1D3837E.quest_desc: ["{cabin.quest.12B37E99B1D3837E.description1}"]
 	quest.12B37E99B1D3837E.title: "{cabin.quest.12B37E99B1D3837E.title}"
 	quest.12D18A30803D57D6.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
@@ -422,9 +423,9 @@
 	]
 	quest.15978ED5A6E3DFFE.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
 	quest.15978ED5A6E3DFFE.title: "Uranium Enrichment"
-	quest.1642A27606A34984.quest_desc: ["{cabin.quest.1642A27606A34984.description1}"]
+	quest.1642A27606A34984.quest_desc: ["Certus crystal growing was removed along with AE2. Tick the checkmark to continue."]
 	quest.1642A27606A34984.quest_subtitle: "{cabin.quest.1642A27606A34984.subtitle}"
-	quest.1642A27606A34984.title: "Certus Quartz Crystal"
+	quest.1642A27606A34984.title: "Crystal Growth (removed)"
 	quest.16F920C2AF2FA2E0.quest_desc: ["{cabin.quest.16F920C2AF2FA2E0.description1}"]
 	quest.16F920C2AF2FA2E0.quest_subtitle: "{cabin.quest.16F920C2AF2FA2E0.subtitle}"
 	quest.16F920C2AF2FA2E0.title: "Coke Chunk"
@@ -446,9 +447,9 @@
 	quest.185F9F8EBD0F8F87.quest_desc: ["{cabin.quest.185F9F8EBD0F8F87.description1}"]
 	quest.185F9F8EBD0F8F87.quest_subtitle: "{cabin.quest.185F9F8EBD0F8F87.subtitle}"
 	quest.185F9F8EBD0F8F87.title: "{cabin.quest.185F9F8EBD0F8F87.title}"
-	quest.1861E583C9DAA0BA.quest_desc: ["{cabin.quest.1861E583C9DAA0BA.description1}"]
+	quest.1861E583C9DAA0BA.quest_desc: ["Craft Rose Quartz from Nether Quartz and Redstone (Create's own recipe is back now that AE2 is gone)."]
 	quest.1861E583C9DAA0BA.quest_subtitle: "{cabin.quest.1861E583C9DAA0BA.subtitle}"
-	quest.1861E583C9DAA0BA.title: "Certus Quartz Crystal"
+	quest.1861E583C9DAA0BA.title: "Rose Quartz"
 	quest.18EDB4CD525CE110.quest_subtitle: "{cabin.quest.18EDB4CD525CE110.subtitle}"
 	quest.18EDB4CD525CE110.title: "{cabin.quest.18EDB4CD525CE110.title}"
 	quest.1947C6CE179EBAC6.quest_desc: [
@@ -605,16 +606,12 @@
 	quest.24328C973480E4E8.title: "{cabin.quest.24328C973480E4E8.title}"
 	quest.2441491CB5D5E57D.quest_desc: ["{cabin.quest.2441491CB5D5E57D.description1}"]
 	quest.2441491CB5D5E57D.quest_subtitle: "{cabin.quest.2441491CB5D5E57D.subtitle}"
-	quest.24C48CFAAD71B230.quest_desc: ["{cabin.quest.24C48CFAAD71B230.description1}"]
+	quest.24C48CFAAD71B230.quest_desc: ["Craft Raw Basic, Improved and Advanced Processors from Processor Binding, iron/gold/diamond, Silicon and Redstone, then smelt them into Refined Storage processors."]
 	quest.24C48CFAAD71B230.quest_subtitle: "{cabin.quest.24C48CFAAD71B230.subtitle}"
-	quest.24C48CFAAD71B230.title: "Printed Calculation Processor"
-	quest.24FFFE0FC9EAEF8D.quest_desc: [
-		"{cabin.quest.24FFFE0FC9EAEF8D.description1}"
-		""
-		"{cabin.quest.24FFFE0FC9EAEF8D.description2}"
-	]
+	quest.24C48CFAAD71B230.title: "Raw Processors"
+	quest.24FFFE0FC9EAEF8D.quest_desc: ["AE2 (Applied Energistics 2) was removed from this pack in favour of Refined Storage, so this step no longer exists. Tick the checkmark to continue."]
 	quest.24FFFE0FC9EAEF8D.quest_subtitle: "{cabin.quest.24FFFE0FC9EAEF8D.subtitle}"
-	quest.24FFFE0FC9EAEF8D.title: "Charged Certus Quartz Crystal"
+	quest.24FFFE0FC9EAEF8D.title: "The (Re-)Charger (removed)"
 	quest.252015A3FD4F1528.title: "Flinging is the New Sling"
 	quest.252B9DD5BFB8184A.quest_desc: [
 		"{cabin.quest.252B9DD5BFB8184A.description1}"
@@ -679,7 +676,7 @@
 	quest.28DAED70768C6A50.quest_desc: [
 		"{cabin.quest.28DAED70768C6A50.description1}"
 		""
-		"{cabin.quest.28DAED70768C6A50.description2}"
+		"If you have not used Refined Storage before, it's well worth learning; even a basic autocrafting setup saves a ton of time. This quest links the Refined Storage wiki."
 		""
 		"{cabin.quest.28DAED70768C6A50.description3}"
 	]
@@ -722,7 +719,7 @@
 	quest.2C196D41B3B087C6.title: "Lead Casing"
 	quest.2C2E304910D7F33D.quest_subtitle: "{cabin.quest.2C2E304910D7F33D.subtitle}"
 	quest.2C2E304910D7F33D.title: "{cabin.quest.2C2E304910D7F33D.title}"
-	quest.2C40901DB42DD8F8.quest_desc: ["{cabin.quest.2C40901DB42DD8F8.description1}"]
+	quest.2C40901DB42DD8F8.quest_desc: ["Draining Chromatic Singularities leaves a significant amount of Lumisene, which has to be disposed of (or burned for light) before it starts clogging up the production line."]
 	quest.2C40901DB42DD8F8.title: "Bone Meal"
 	quest.2C7ADB6C11B918B1.quest_desc: [
 		"{cabin.quest.2C7ADB6C11B918B1.description1}"
@@ -730,9 +727,9 @@
 		"{cabin.quest.2C7ADB6C11B918B1.description2}"
 	]
 	quest.2C7ADB6C11B918B1.title: "Cookie"
-	quest.2C81D358594C4352.quest_desc: ["{cabin.quest.2C81D358594C4352.description1}"]
+	quest.2C81D358594C4352.quest_desc: ["The Crushing Wheel anomaly needed AE2. Instead, Refined Storage's Quartz Enriched Iron (iron and Nether Quartz) anchors the colour in the Chromatic Singularity mix."]
 	quest.2C81D358594C4352.quest_subtitle: "{cabin.quest.2C81D358594C4352.subtitle}"
-	quest.2C81D358594C4352.title: "Singularity"
+	quest.2C81D358594C4352.title: "Quartz Enriched Iron"
 	quest.2C9012E65F43EC72.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
 	quest.2C9012E65F43EC72.title: "{cabin.quest.2C9012E65F43EC72.title}"
 	quest.2CB570195DA7E106.quest_desc: [
@@ -742,9 +739,9 @@
 	]
 	quest.2CB570195DA7E106.quest_subtitle: "{cabin.quest.2CB570195DA7E106.subtitle}"
 	quest.2CB570195DA7E106.title: "Log"
-	quest.2CCD84D55DE71EB2.quest_desc: ["{cabin.quest.2CCD84D55DE71EB2.description1}"]
+	quest.2CCD84D55DE71EB2.quest_desc: ["Heated Mixing: 1 Crushing Wheel, 2 Quartz Enriched Iron, 1 Ender Pearl and one each of Red, Yellow, Green, Blue and Magenta Dye form a Chromatic Singularity, the very essence of colour."]
 	quest.2CCD84D55DE71EB2.quest_subtitle: "{cabin.quest.2CCD84D55DE71EB2.subtitle}"
-	quest.2CCD84D55DE71EB2.title: "Dye Entangled Singularity"
+	quest.2CCD84D55DE71EB2.title: "Chromatic Singularity"
 	quest.2D022872F99F9907.quest_subtitle: "{cabin.quest.2D022872F99F9907.subtitle}"
 	quest.2D022872F99F9907.title: "{cabin.quest.2D022872F99F9907.title}"
 	quest.2D75D1864FB1EF75.quest_subtitle: "{cabin.quest.1D6150F2480B976E.subtitle}"
@@ -789,8 +786,8 @@
 	]
 	quest.3025B5861FE17ADF.quest_subtitle: "{cabin.quest.3025B5861FE17ADF.subtitle}"
 	quest.3025B5861FE17ADF.title: "Sand"
-	quest.302FCD205CC2F708.quest_desc: ["{cabin.quest.302FCD205CC2F708.description1}"]
-	quest.302FCD205CC2F708.title: "Blue Paint Ball"
+	quest.302FCD205CC2F708.quest_desc: ["One of the five spectrum dyes that go into a Chromatic Singularity."]
+	quest.302FCD205CC2F708.title: "Blue Dye"
 	quest.30C8408E8F663FA2.title: "its a tree :)"
 	quest.3126DE83A6741671.quest_desc: [
 		"{cabin.quest.3126DE83A6741671.description1}"
@@ -841,12 +838,12 @@
 	quest.343050A40A3AB1F0.quest_desc: ["{cabin.quest.343050A40A3AB1F0.description1}"]
 	quest.343050A40A3AB1F0.quest_subtitle: "{cabin.quest.343050A40A3AB1F0.subtitle}"
 	quest.343050A40A3AB1F0.title: "Purified Sand"
-	quest.345B94F6D17605CD.quest_desc: ["{cabin.quest.345B94F6D17605CD.description1}"]
+	quest.345B94F6D17605CD.quest_desc: ["With AE2 gone there is no Certus Quartz to grow. Grab some Nether Quartz instead: crafted together with Redstone it becomes Rose Quartz."]
 	quest.345B94F6D17605CD.quest_subtitle: "{cabin.quest.345B94F6D17605CD.subtitle}"
-	quest.345B94F6D17605CD.title: "Certus Quartz Seed"
-	quest.34A1D176C78FB64E.quest_desc: ["{cabin.quest.34A1D176C78FB64E.description1}"]
+	quest.345B94F6D17605CD.title: "Nether Quartz"
+	quest.34A1D176C78FB64E.quest_desc: ["Certus crystal growing was removed along with AE2. Tick the checkmark to continue."]
 	quest.34A1D176C78FB64E.quest_subtitle: "{cabin.quest.34A1D176C78FB64E.subtitle}"
-	quest.34A1D176C78FB64E.title: "Certus Quartz Crystal"
+	quest.34A1D176C78FB64E.title: "Crystal Growth (removed)"
 	quest.352F5F851045653A.quest_subtitle: "{cabin.quest.352F5F851045653A.subtitle}"
 	quest.352F5F851045653A.title: "{cabin.quest.352F5F851045653A.title}"
 	quest.35F18B3DFEFEC5C6.quest_desc: [
@@ -878,20 +875,12 @@
 	quest.3728DF562D6DCE3A.title: "Raw Rubber"
 	quest.374933A06E016CE9.quest_desc: ["{cabin.quest.374933A06E016CE9.description1}"]
 	quest.374933A06E016CE9.title: "Redstone"
-	quest.375C9A43FE5620B6.quest_desc: [
-		"{cabin.quest.375C9A43FE5620B6.description1}"
-		""
-		"{cabin.quest.050A20198A80CF1A.description2}"
-	]
+	quest.375C9A43FE5620B6.quest_desc: ["AE2 Ender Dust is gone; plain Ender Pearls go into the Chromatic Singularity mix instead."]
 	quest.375C9A43FE5620B6.quest_subtitle: "{cabin.quest.375C9A43FE5620B6.subtitle}"
-	quest.375C9A43FE5620B6.title: "Ender Dust"
+	quest.375C9A43FE5620B6.title: "Ender Pearls"
 	quest.376F399A85832658.title: "Basic Information"
-	quest.381F8F373605BB97.quest_desc: [
-		"{cabin.quest.381F8F373605BB97.description1}"
-		""
-		"{cabin.quest.381F8F373605BB97.description2}"
-	]
-	quest.381F8F373605BB97.title: "Yellow Paint Ball"
+	quest.381F8F373605BB97.quest_desc: ["One of the five spectrum dyes that go into a Chromatic Singularity."]
+	quest.381F8F373605BB97.title: "Yellow Dye"
 	quest.382EBC32AC27C839.quest_desc: ["{cabin.quest.382EBC32AC27C839.description1}"]
 	quest.382EBC32AC27C839.title: "Log"
 	quest.38B063C8DE71E86D.quest_desc: [
@@ -979,12 +968,8 @@
 	quest.3AD7553F3C8593F9.quest_subtitle: "{cabin.quest.3AD7553F3C8593F9.subtitle}"
 	quest.3ADD69413C0798FE.quest_desc: ["i heard theres these weird eyeball thingies scattered all over the world. and if i catch 'em all and put them in the weird blinky jars i win a free trip to somewhere blobbins never been before! its gonna be the best souvenir collection ever!!!"]
 	quest.3ADD69413C0798FE.title: "Blobbo's big Adventure"
-	quest.3B421C8F7947E542.quest_desc: [
-		"{cabin.quest.3B421C8F7947E542.description1}"
-		""
-		"{cabin.quest.3B421C8F7947E542.description2}"
-	]
-	quest.3B421C8F7947E542.title: "Red Paint Ball"
+	quest.3B421C8F7947E542.quest_desc: ["The first of the five spectrum dyes that go into a Chromatic Singularity."]
+	quest.3B421C8F7947E542.title: "Red Dye"
 	quest.3B431AAADE8845FA.quest_desc: ["{cabin.quest.3B431AAADE8845FA.description1}"]
 	quest.3B431AAADE8845FA.title: "Accellerator Redstone"
 	quest.3B448BBF4352E4AB.quest_desc: ["The Casting Assistant Device is a versatile tool. Organic minds struggle to comprehend it, but when programmed correctly, it commands countless powers. Even the power to soar between the floating isles. Start with a CAD Assembly, a Core, and a Socket. Then combine them in a CAD Assembler to produce the blessed technology."]
@@ -995,11 +980,11 @@
 	quest.3B86BE3E3211A392.title: "A Balanced Jetpack?"
 	quest.3B930AA32F92246B.quest_desc: ["Excellent! Lead Machines are built to operate under extreme radiation, so they're an essential foundation for Nuclearcraft machines. The power of the atom is in the palm of your hand..."]
 	quest.3B930AA32F92246B.title: "Logistic Mechanism"
-	quest.3BE15AA5C237AB80.quest_desc: ["{cabin.quest.3BE15AA5C237AB80.description1}"]
+	quest.3BE15AA5C237AB80.quest_desc: ["The last of the five spectrum dyes that go into a Chromatic Singularity."]
 	quest.3BE15AA5C237AB80.quest_subtitle: "{cabin.quest.3BE15AA5C237AB80.subtitle}"
-	quest.3BE15AA5C237AB80.title: "Magenta Paint Ball"
-	quest.3BFC4DFCE765F3EA.quest_desc: ["{cabin.quest.3BFC4DFCE765F3EA.description1}"]
-	quest.3BFC4DFCE765F3EA.title: "Ender Dust"
+	quest.3BE15AA5C237AB80.title: "Magenta Dye"
+	quest.3BFC4DFCE765F3EA.quest_desc: ["Set aside some Ender Pearls (AE2 Ender Dust is no longer in the pack)."]
+	quest.3BFC4DFCE765F3EA.title: "Ender Pearls"
 	quest.3C45250D863E65CB.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
 	quest.3C45250D863E65CB.title: "{cabin.quest.3C45250D863E65CB.title}"
 	quest.3C50B4556375178E.quest_desc: [
@@ -1014,13 +999,9 @@
 	quest.3C79A7679BA1AA3C.title: "{cabin.quest.3C79A7679BA1AA3C.title}"
 	quest.3CA6DD7C5516A330.quest_subtitle: "{cabin.quest.04468935C9A7298F.subtitle}"
 	quest.3CA6DD7C5516A330.title: "{cabin.quest.3CA6DD7C5516A330.title}"
-	quest.3CBED6B591BCEDEA.quest_desc: [
-		"{cabin.quest.3CBED6B591BCEDEA.description1}"
-		""
-		"{cabin.quest.3CBED6B591BCEDEA.description2}"
-	]
+	quest.3CBED6B591BCEDEA.quest_desc: ["Rocketry Equipment is built from the light but robust material of Matter Plastics. Without AE2 Matter Balls, Matter Plastics are made from Paraffin Wax, a distillation product from Immersive Petroleum."]
 	quest.3CBED6B591BCEDEA.quest_subtitle: "{cabin.quest.3CBED6B591BCEDEA.subtitle}"
-	quest.3CBED6B591BCEDEA.title: "Matter Ball"
+	quest.3CBED6B591BCEDEA.title: "Paraffin Wax"
 	quest.3CD739455666E2A8.quest_subtitle: "{cabin.quest.33B5C951B4AE8322.subtitle}"
 	quest.3CD739455666E2A8.title: "{cabin.quest.3CD739455666E2A8.title}"
 	quest.3CEC6538990D89C3.quest_subtitle: "{cabin.quest.07081911727142C8.subtitle}"
@@ -1287,13 +1268,9 @@
 	quest.4F953BACF4D1C151.quest_desc: ["{cabin.quest.4F953BACF4D1C151.description1}"]
 	quest.4F953BACF4D1C151.quest_subtitle: "{cabin.quest.4F953BACF4D1C151.subtitle}"
 	quest.4F953BACF4D1C151.title: "{cabin.quest.4F953BACF4D1C151.title}"
-	quest.4F95D5136E944ADB.quest_desc: [
-		"{cabin.quest.4F95D5136E944ADB.description1}"
-		""
-		"{cabin.quest.4F95D5136E944ADB.description2}"
-	]
+	quest.4F95D5136E944ADB.quest_desc: ["AE2 (Applied Energistics 2) was removed from this pack in favour of Refined Storage, so this step no longer exists. Tick the checkmark to continue."]
 	quest.4F95D5136E944ADB.quest_subtitle: "{cabin.quest.4F95D5136E944ADB.subtitle}"
-	quest.4F95D5136E944ADB.title: "Sky Dust"
+	quest.4F95D5136E944ADB.title: "Skystone Infini-mill (removed)"
 	quest.4FD46F841CCD59F8.quest_desc: ["{cabin.quest.4FD46F841CCD59F8.description1}"]
 	quest.4FD46F841CCD59F8.quest_subtitle: "{cabin.quest.09DC2E2BE2BE32F4.subtitle}"
 	quest.4FD46F841CCD59F8.title: "Chest"
@@ -1454,15 +1431,9 @@
 		"{cabin.quest.5A055D0421861318.description2}"
 	]
 	quest.5A055D0421861318.title: "Engineer's Hammer"
-	quest.5A199B898D41A309.quest_desc: [
-		"{cabin.quest.5A199B898D41A309.description1}"
-		""
-		"{cabin.quest.5A199B898D41A309.description2}"
-		""
-		"{cabin.quest.5A199B898D41A309.description3}"
-	]
+	quest.5A199B898D41A309.quest_desc: ["The TNT reactor made AE2 Quantum Entangled Singularities, which no longer exist. Tick the checkmark and mix a Chromatic Singularity directly instead."]
 	quest.5A199B898D41A309.quest_subtitle: "{cabin.quest.5A199B898D41A309.subtitle}"
-	quest.5A199B898D41A309.title: "Quantum Entangled Singularity"
+	quest.5A199B898D41A309.title: "The Reactor (removed)"
 	quest.5A64DBCFBF78856B.quest_desc: ["adds Power III to flinging staff so it's not useless"]
 	quest.5A64DBCFBF78856B.title: "flingingstaff_power"
 	quest.5A6926E64EEE7729.title: "Lead Casing"
@@ -1544,9 +1515,9 @@
 	quest.612100C7C6E0A7C9.title: "Golden Pickaxe"
 	quest.6199E449AF2BADBA.title: "Uranium Rod"
 	quest.619E34A7DE48B991.quest_desc: [
-		"{cabin.quest.619E34A7DE48B991.description1}"
+		"Redstone is all the energy your quartz needs now: Nether Quartz plus Redstone makes Rose Quartz."
 		""
-		"{cabin.quest.619E34A7DE48B991.description2}"
+		"The charged-certus mixer was removed along with AE2."
 	]
 	quest.619E34A7DE48B991.quest_subtitle: "{cabin.quest.619E34A7DE48B991.subtitle}"
 	quest.619E34A7DE48B991.title: "Redstone"
@@ -1660,10 +1631,10 @@
 		"It could be a useful alternative for traversing the islands - if you can figure out how to program it with the right spells."
 	]
 	quest.69FDD93C8097E0FB.title: "The Other Gun"
-	quest.6A156D11D983661D.quest_desc: ["{cabin.quest.6A156D11D983661D.description1}"]
+	quest.6A156D11D983661D.quest_desc: ["Compact 9 Paraffin Wax into Matter Plastics in a Super-Heated Compactor. You'll need a couple of these."]
 	quest.6A156D11D983661D.title: "Matter Plastics"
-	quest.6A76E65324F0ACC0.quest_desc: ["{cabin.quest.6A76E65324F0ACC0.description1}"]
-	quest.6A76E65324F0ACC0.title: "Green Paint Ball"
+	quest.6A76E65324F0ACC0.quest_desc: ["One of the five spectrum dyes that go into a Chromatic Singularity."]
+	quest.6A76E65324F0ACC0.title: "Green Dye"
 	quest.6AC1CED0D341150E.quest_desc: [
 		"{cabin.quest.6AC1CED0D341150E.description1}"
 		""
@@ -1715,13 +1686,9 @@
 	quest.6CBA3D97CAD5DB63.title: "Inductive Mechanism"
 	quest.6CC8D9848625CC34.quest_desc: ["The path you've chosen is not for the faint of heart. If you're a bad enough dude to handle the Seven Curses, then put on the ring..."]
 	quest.6CC8D9848625CC34.title: "One Ring to Rule Them All"
-	quest.6D1519B746E032FB.quest_desc: [
-		"{cabin.quest.6D1519B746E032FB.description1}"
-		""
-		"{cabin.quest.6D1519B746E032FB.description2}"
-	]
+	quest.6D1519B746E032FB.quest_desc: ["The Entropy Manipulator was part of AE2, which this pack no longer has. Tick the checkmark to continue."]
 	quest.6D1519B746E032FB.quest_subtitle: "{cabin.quest.6D1519B746E032FB.subtitle}"
-	quest.6D1519B746E032FB.title: "Entropy Manipulator"
+	quest.6D1519B746E032FB.title: "Entropy Charger (removed)"
 	quest.6D26DAB7D0FF6E90.quest_desc: [
 		"{cabin.quest.6D26DAB7D0FF6E90.description1}"
 		""
@@ -1806,9 +1773,9 @@
 	quest.715BBD0DF0136FF1.title: "{cabin.quest.715BBD0DF0136FF1.title}"
 	quest.71659ADD9BF9E5A1.quest_desc: ["The crossbow: a weapon so simple, even the tyrants of the outer isles permit their peasants to own one. While it's hardly a real weapon by Cactoid standards, your race's talent for biosmithing will help you transform it into something better later."]
 	quest.71659ADD9BF9E5A1.title: "Legal in the UK"
-	quest.71D90A1E5D53FC0A.quest_desc: ["{cabin.quest.71D90A1E5D53FC0A.description1}"]
+	quest.71D90A1E5D53FC0A.quest_desc: ["The AE2 Inscriber presses are gone. Refined Storage processors start from Processor Binding (string and slime)."]
 	quest.71D90A1E5D53FC0A.quest_subtitle: "{cabin.quest.71D90A1E5D53FC0A.subtitle}"
-	quest.71D90A1E5D53FC0A.title: "Printed Silicon"
+	quest.71D90A1E5D53FC0A.title: "Processor Binding"
 	quest.725FFE8BD6E45F96.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"
 	quest.725FFE8BD6E45F96.title: "{cabin.quest.725FFE8BD6E45F96.title}"
 	quest.727B43FD95C4A512.quest_desc: [
@@ -1945,7 +1912,7 @@
 		"{cabin.quest.7B080B5C87247EA1.description2}"
 	]
 	quest.7B080B5C87247EA1.title: "Ingot Electrum"
-	quest.7B23C933D76458BA.quest_desc: ["{cabin.quest.7B23C933D76458BA.description1}"]
+	quest.7B23C933D76458BA.quest_desc: ["Run a Chromatic Singularity through an Item Drain to extract Chromatic Compound. The leftover Lumisene burns as a light source, handy for turning the compound into Refined Radiance; drop it into the void for Shadow Steel."]
 	quest.7B23C933D76458BA.quest_subtitle: "{cabin.quest.7B23C933D76458BA.subtitle}"
 	quest.7B23C933D76458BA.title: "Chromatic Compound"
 	quest.7B5B7BB304E14C6D.quest_subtitle: "{cabin.quest.01428232944D8BE9.subtitle}"

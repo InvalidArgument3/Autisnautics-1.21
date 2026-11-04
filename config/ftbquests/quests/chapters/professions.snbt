@@ -407,7 +407,7 @@
 			tasks: [
 				{
 					id: "05FA6BA978E2C59F"
-					item: { count: 1, id: "ae2:certus_quartz_crystal" }
+					item: { count: 1, id: "minecraft:quartz" }
 					type: "item"
 				}
 				{

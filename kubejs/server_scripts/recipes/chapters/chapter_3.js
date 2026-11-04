@@ -165,6 +165,27 @@ ServerEvents.recipes(event => {
         })
     }
 
+    // AE2 -> RS port: chromatic compound without AE2 singularities / paint balls.
+    // Chromatic Singularity = heated mixing of a Crushing Wheel (the old "crush the crushing wheel" step),
+    // 2 RS Quartz Enriched Iron (stands in for the AE2 singularity), an Ender Pearl (stands in for the
+    // quantum entanglement) and the five spectrum dyes. An Item Drain then "spectrally corrects" it into
+    // Chromatic Compound and leaves Lumisene (burnable light source for Refined Radiance), like the old
+    // paint-ball draining did. Shadow Steel / Refined Radiance then work through Create's own compound mechanics.
+    if (!Platform.isLoaded("ae2") && Platform.isLoaded("refinedstorage")) {
+        event.recipes.create.mixing("kubejs:dye_entangled_singularity", [
+            "create:crushing_wheel",
+            "refinedstorage:quartz_enriched_iron", "refinedstorage:quartz_enriched_iron",
+            "minecraft:ender_pearl",
+            "minecraft:red_dye", "minecraft:yellow_dye", "minecraft:green_dye",
+            "minecraft:blue_dye", "minecraft:magenta_dye"
+        ]).heated().id("kubejs:rs_port/chromatic_singularity")
+        if (Platform.isLoaded("supplementaries")) {
+            event.recipes.create.emptying(["create:chromatic_compound", Fluid.of("supplementaries:lumisene", 250)], "kubejs:dye_entangled_singularity").id("kubejs:rs_port/chromatic_compound")
+        } else {
+            event.recipes.create.emptying(["create:chromatic_compound", Fluid.of("minecraft:water", 250)], "kubejs:dye_entangled_singularity").id("kubejs:rs_port/chromatic_compound")
+        }
+    }
+
 
     // -- Refined Radiance: Create is bugged so this can't be made without a beacon, temporary fix below (EntityEvents.spawned for dropped items)
     // - besides burning lumisene waste, you can manufacture torches from trees, deploy bonemeal on glow lichen, etc...

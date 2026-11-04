@@ -153,12 +153,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:red_paint_ball"
+				id: "minecraft:red_dye"
 			}
 			id: "3978E4B39C9DB44D"
 			tasks: [{
 				id: "0A7F5C2865C6F5F5"
-				item: { count: 1, id: "ae2:red_paint_ball" }
+				item: { count: 1, id: "minecraft:red_dye" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -168,12 +168,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:orange_paint_ball"
+				id: "minecraft:orange_dye"
 			}
 			id: "122D3D6743D1DD04"
 			tasks: [{
 				id: "6FD70BEFECE67F2C"
-				item: { count: 1, id: "ae2:orange_paint_ball" }
+				item: { count: 1, id: "minecraft:orange_dye" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -183,12 +183,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:yellow_paint_ball"
+				id: "minecraft:yellow_dye"
 			}
 			id: "1E856F69C03B1D75"
 			tasks: [{
 				id: "2A79E5D1D6C6787F"
-				item: { count: 1, id: "ae2:yellow_paint_ball" }
+				item: { count: 1, id: "minecraft:yellow_dye" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -198,12 +198,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:green_paint_ball"
+				id: "minecraft:green_dye"
 			}
 			id: "49957428564E8101"
 			tasks: [{
 				id: "183677E3CD7A38E0"
-				item: { count: 1, id: "ae2:green_paint_ball" }
+				item: { count: 1, id: "minecraft:green_dye" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -213,12 +213,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:blue_paint_ball"
+				id: "minecraft:blue_dye"
 			}
 			id: "678C5FC6A898E988"
 			tasks: [{
 				id: "7E01B9B59066FD90"
-				item: { count: 1, id: "ae2:blue_paint_ball" }
+				item: { count: 1, id: "minecraft:blue_dye" }
 				type: "item"
 			}]
 			x: -2.5d
@@ -228,12 +228,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:magenta_paint_ball"
+				id: "minecraft:magenta_dye"
 			}
 			id: "3377A2C391B6F03A"
 			tasks: [{
 				id: "217E5A578A83222B"
-				item: { count: 1, id: "ae2:magenta_paint_ball" }
+				item: { count: 1, id: "minecraft:magenta_dye" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -333,12 +333,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:fluix_crystal"
+				id: "minecraft:amethyst_shard"
 			}
 			id: "421E285B7D642676"
 			tasks: [{
 				id: "10EF9D8072B539A4"
-				item: { count: 1, id: "ae2:fluix_crystal" }
+				item: { count: 1, id: "minecraft:amethyst_shard" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -393,12 +393,12 @@
 			dependencies: ["05446225038D260A"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:certus_quartz_crystal"
+				id: "minecraft:quartz"
 			}
 			id: "7CA6AC3B07E07D81"
 			tasks: [{
 				id: "6C839FAE45EC2AB4"
-				item: { count: 1, id: "ae2:certus_quartz_crystal" }
+				item: { count: 1, id: "minecraft:quartz" }
 				type: "item"
 			}]
 			x: 3.5d

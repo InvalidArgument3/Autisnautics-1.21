@@ -75,7 +75,7 @@
 					id: "1825E20FFD3BEBFF"
 					item: {
 						count: 1
-						id: "ae2:fluix_crystal"
+						id: "refinedstorage:quartz_enriched_iron"
 					}
 					random_bonus: 4
 					type: "item"
@@ -90,7 +90,7 @@
 					type: "item"
 				}
 				{
-					command: "/tellraw @p {\"text\":\"\\u00A79Link to AE2 Guide\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.youtube.com/watch?v=u0ouTWgdcXk\"}}"
+					command: "/tellraw @p {\"text\":\"Link to the Refined Storage wiki\",\"color\":\"green\",\"underlined\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://refinedmods.com/refined-storage/\"}}"
 					id: "0BFFA00BD71FC785"
 					type: "command"
 				}
@@ -409,15 +409,10 @@
 		{
 			dependencies: ["4B34B52092BA32BE"]
 			icon: {
-				id: "ae2:entropy_manipulator"
+				id: "minecraft:packed_ice"
 			}
 			id: "6D1519B746E032FB"
 			tasks: [
-				{
-					id: "641183133CA49CCA"
-					item: { count: 1, id: "ae2:entropy_manipulator" }
-					type: "item"
-				}
 				{
 					id: "49EAB67814570219"
 					type: "checkmark"
@@ -516,13 +511,13 @@
 			]
 			dependency_requirement: "one_completed"
 			icon: {
-				id: "ae2:printed_silicon"
+				id: "refinedstorage:processor_binding"
 			}
 			id: "71D90A1E5D53FC0A"
 			tasks: [
 				{
 					id: "12C1BB8D09D664B4"
-					item: { count: 1, id: "ae2:printed_silicon" }
+					item: { count: 1, id: "refinedstorage:processor_binding" }
 					type: "item"
 				}
 				{
@@ -641,23 +636,23 @@
 		{
 			dependencies: ["28DAED70768C6A50"]
 			icon: {
-				id: "ae2:printed_calculation_processor"
+				id: "refinedstorage:raw_basic_processor"
 			}
 			id: "24C48CFAAD71B230"
 			tasks: [
 				{
 					id: "10D5C1E5071B1B53"
-					item: { count: 1, id: "ae2:printed_calculation_processor" }
+					item: { count: 1, id: "refinedstorage:raw_basic_processor" }
 					type: "item"
 				}
 				{
 					id: "32F50DF8BD6E3927"
-					item: { count: 1, id: "ae2:printed_logic_processor" }
+					item: { count: 1, id: "refinedstorage:raw_improved_processor" }
 					type: "item"
 				}
 				{
 					id: "2E5AD5026FDB28CB"
-					item: { count: 1, id: "ae2:printed_engineering_processor" }
+					item: { count: 1, id: "refinedstorage:raw_advanced_processor" }
 					type: "item"
 				}
 			]
