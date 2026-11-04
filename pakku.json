@@ -88,6 +88,15 @@
         "create-aeronautics": {
             "update_strategy": "LATEST"
         },
+        "aeronautics-camera-sync": {
+            "side": "BOTH"
+        },
+        "aero_cam_sync": {
+            "side": "BOTH"
+        },
+        "aero-player-tilt": {
+            "side": "BOTH"
+        },
         "sable": {
             "update_strategy": "LATEST"
         },

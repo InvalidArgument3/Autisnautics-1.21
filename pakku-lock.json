@@ -433,7 +433,7 @@
         {
             "pakku_id": "du4XMqy5qDmxwoTt",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "curseforge": "aeronautics-camera-sync",
                 "modrinth": "aero_cam_sync"

@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.57]
+- fix serverpack crashloop: forge-auto-install NeoForge pin tracks pakku-lock again (was stuck on 21.1.227)
+- Aeronautics Camera Sync → BOTH so Player Tilt's required dep ships in the serverpack
+
 ## [0.0.56]
 - add Vista
 - drop Embers Questing (NPE on null recipe results at world load)
