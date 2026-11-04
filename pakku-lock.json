@@ -3952,6 +3952,45 @@
             ]
         },
         {
+            "pakku_id": "QcEz6Yru4Q5hvPbi",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "cobblemon-cobble-it"
+            },
+            "name": {
+                "modrinth": "Cobblemon: Cobble it"
+            },
+            "id": {
+                "modrinth": "HzO6N0jB"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cobbleit-1.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/HzO6N0jB/versions/GDUmwVRG/cobbleit-1.0.0.jar",
+                    "id": "GDUmwVRG",
+                    "parent_id": "HzO6N0jB",
+                    "hashes": {
+                        "sha512": "aa0ca6191d32289030e6d0376fd52431ffc82cc9cbc712e9104298a92be7a4c0ad3a22914a32adc942143acf689ac0a29ecf595564936b9e8d17236a2484d726",
+                        "sha1": "68f0534959a66c04e04eb3b57ace106db42b9aef"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 7031,
+                    "date_published": "2025-10-22T11:18:35.741924Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "swQt5jOjSjJZj2hE",
             "type": "MOD",
             "side": "SERVER",

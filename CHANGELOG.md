@@ -4,6 +4,7 @@
 - Cobblemon add-ons for 1.8.4: MoreCobblemonTweaks 1.3.6, CobbledLevels 2.1.0, Create Industries 1.5.0, cobblemarks+ 1.2.2, Lootrmon 0.0.0.3, summon orbs 1.0.0 (cobblemon_summon_orbs build); CCC Myths & Legends compat → 2.21 mod version (CF) replacing the 1.7.3 datapack zip
 - add **Immersive Portals: Aeronautics 2.8.17** (`ip_aeronautics`, bundles Immersive Portals core 6.0.7+ipa.2.8.17), our modified fork of Immersive Aeronautics / Immersive Portals for NeoForge, shipped via Git LFS as a manual override (`.pakku/overrides/mods/ip_aeronautics-2.8.17.jar`). It replaces the old portal mods: Immersive Aeronautics 1.1.4 and Create: Aeroportals 1.3.6 are removed, and the earlier local iasodiumfix / iavistacompat jars are dropped. Incompatible with Create Transferables and Dimensional Threading (neither is in the pack)
 - add Voxy 0.2.17-alpha-sodium08 **experimental portal-LOD build** (`ipa10`, built for IP: Aeronautics; Voxy LODs render inside same-dimension portal views; client only, via Git LFS in `.pakku/client-overrides/mods/`). Kill switch: add `-Dvoxy.portalLods=false` to JVM args
+- add Cobblemon: Cobble it 1.0.0 (Modrinth, client)
 - aero_ik_legs not included (removed from our build); Create Aeronautics Landing Legs (legworks) stays
 - CI: build checkout pulls Git LFS files so the manual override jars (`.pakku/overrides/mods`, `.pakku/client-overrides/mods`) land in the exported packs
 
