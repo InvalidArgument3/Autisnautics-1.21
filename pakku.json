@@ -157,6 +157,14 @@
         },
         "fresh-animations-extensions": {
             "side": "CLIENT"
+        },
+        "cobblemotion": {
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT"
+        },
+        "winterglides-extra-animations-cobblemon": {
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT"
         }
     },
     "export_server_side_projects_to_client": true

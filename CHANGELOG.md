@@ -5,6 +5,7 @@
 - add **Immersive Portals: Aeronautics 2.8.17** (`ip_aeronautics`, bundles Immersive Portals core 6.0.7+ipa.2.8.17), our modified fork of Immersive Aeronautics / Immersive Portals for NeoForge, shipped via Git LFS as a manual override (`.pakku/overrides/mods/ip_aeronautics-2.8.17.jar`). It replaces the old portal mods: Immersive Aeronautics 1.1.4 and Create: Aeroportals 1.3.6 are removed, and the earlier local iasodiumfix / iavistacompat jars are dropped. Incompatible with Create Transferables and Dimensional Threading (neither is in the pack)
 - add Voxy 0.2.17-alpha-sodium08 **experimental portal-LOD build** (`ipa10`, built for IP: Aeronautics; Voxy LODs render inside same-dimension portal views; client only, via Git LFS in `.pakku/client-overrides/mods/`). Kill switch: add `-Dvoxy.portalLods=false` to JVM args
 - add Cobblemon: Cobble it 1.0.0 (Modrinth, client)
+- fix Cobblemotion 1.5.1 and Winterglide's Extra Animations 1.1 placement: now resource packs (`resourcepacks/`, client) instead of zips in `mods/`, plus their data halves as Paxi datapacks (`config/paxi/datapacks/`, both sides), matching the dev instance. Enable them in the resource pack menu like the Fresh Animations packs
 - aero_ik_legs not included (removed from our build); Create Aeronautics Landing Legs (legworks) stays
 - CI: build checkout pulls Git LFS files so the manual override jars (`.pakku/overrides/mods`, `.pakku/client-overrides/mods`) land in the exported packs
 

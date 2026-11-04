@@ -3801,8 +3801,8 @@
         },
         {
             "pakku_id": "lQy30syQAGPg3Xgq",
-            "type": "MOD",
-            "side": "SERVER",
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "cobblemotion"
             },
@@ -21424,8 +21424,8 @@
         },
         {
             "pakku_id": "DMqTLTxMMCcCqvFu",
-            "type": "MOD",
-            "side": "SERVER",
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "winterglides-extra-animations-cobblemon"
             },
