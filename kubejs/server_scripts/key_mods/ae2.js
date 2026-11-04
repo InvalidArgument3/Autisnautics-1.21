@@ -1,5 +1,6 @@
 // priority: 1
-ServerEvents.recipes(event => {
+// AE2 removed (swapped to Refined Storage): only run when AE2 is installed
+if (Platform.isLoaded("ae2")) ServerEvents.recipes(event => {
     event.remove({ output: "ae2:vibration_chamber" })
 
     event.remove({ id: "ae2:transform/flawed_budding_quartz" })

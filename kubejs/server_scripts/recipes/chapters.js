@@ -772,11 +772,14 @@ ServerEvents.recipes(event => {
     // - - - - - Chapter 4 - - - - -
     // Shared Create silicon line (Autisnautics). Thermal/Tinkers extras only when present.
     const scrapMetal = hasThermal ? "thermal:invar_ingot" : "immersiveengineering:ingot_steel"
-    event.stonecutting("ae2:silicon_press", "kubejs:circuit_scrap")
-    event.stonecutting("ae2:engineering_processor_press", "kubejs:circuit_scrap")
-    event.stonecutting("ae2:calculation_processor_press", "kubejs:circuit_scrap")
-    event.stonecutting("ae2:logic_processor_press", "kubejs:circuit_scrap")
-    event.shaped(Item.of("kubejs:circuit_scrap", 2), [" A ", "ABA", " A "], { A: scrapMetal, B: "#kubejs:circuit_press" })
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.stonecutting("ae2:silicon_press", "kubejs:circuit_scrap")
+        event.stonecutting("ae2:engineering_processor_press", "kubejs:circuit_scrap")
+        event.stonecutting("ae2:calculation_processor_press", "kubejs:circuit_scrap")
+        event.stonecutting("ae2:logic_processor_press", "kubejs:circuit_scrap")
+        event.shaped(Item.of("kubejs:circuit_scrap", 2), [" A ", "ABA", " A "], { A: scrapMetal, B: "#kubejs:circuit_press" })
+    }
 
     if (hasThermal) {
         event.remove({ id: "thermal:machines/pyrolyzer/pyrolyzer_logs" })
@@ -816,16 +819,19 @@ ServerEvents.recipes(event => {
     }
     event.recipes.create.emptying(["kubejs:rough_sand", Fluid.of("kubejs:fine_sand", 500)], "kubejs:sand_ball")
 
-    event.remove({ id: "ae2:tools/misctools_entropy_manipulator" })
-    const entropyPlate = hasThermal ? "thermal:lead_plate" : "immersiveengineering:plate_lead"
-    event.shaped("ae2:entropy_manipulator", [
-        "S  ",
-        " M ",
-        "  M"
-    ], {
-        M: entropyPlate,
-        S: "ae2:fluix_crystal"
-    })
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.remove({ id: "ae2:tools/misctools_entropy_manipulator" })
+        const entropyPlate = hasThermal ? "thermal:lead_plate" : "immersiveengineering:plate_lead"
+        event.shaped("ae2:entropy_manipulator", [
+            "S  ",
+            " M ",
+            "  M"
+        ], {
+            M: entropyPlate,
+            S: "ae2:fluix_crystal"
+        })
+    }
 
     if (hasThermal) {
         let blizz = "thermal:blizz_powder"; let basalz = "thermal:basalz_powder"
@@ -884,8 +890,9 @@ ServerEvents.recipes(event => {
     } else {
         // Autisnautics: Create substitutes for Thermal earth/ice charges + keep AE2 inscriber.
         event.recipes.create.splashing("kubejs:purified_sand", "kubejs:rough_sand")
-        event.recipes.create.mixing("ae2:silicon", ["kubejs:silicon_compound"]).heated().id("kubejs:silicon_from_compound")
-        event.blasting("ae2:silicon", "kubejs:silicon_compound").id("kubejs:silicon_blast")
+        // AE2 -> Refined Storage: silicon line now yields RS silicon when AE2 is absent
+        event.recipes.create.mixing(Platform.isLoaded("ae2") ? "ae2:silicon" : "refinedstorage:silicon", ["kubejs:silicon_compound"]).heated().id("kubejs:silicon_from_compound")
+        event.blasting(Platform.isLoaded("ae2") ? "ae2:silicon" : "refinedstorage:silicon", "kubejs:silicon_compound").id("kubejs:silicon_blast")
     }
 
     event.custom({
@@ -900,59 +907,65 @@ ServerEvents.recipes(event => {
         ]
     })
 
-    event.custom(ifiniDeploying(event, "ae2:printed_silicon", "ae2:silicon", "ae2:silicon_press"))
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.custom(ifiniDeploying(event, "ae2:printed_silicon", "ae2:silicon", "ae2:silicon_press"))
+    }
 
-    let processorTypes = ["calculation", "logic", "engineering"]
-    processorTypes.forEach(e => {
-        let transitional = `kubejs:incomplete_${e}_processor`
-        let energizeStep = hasThermal
-            ? {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": transitional },
-                    { "fluid": "thermal:redstone", "amount": 250 }
-                ],
-                "results": [{ "item": transitional }]
-            }
-            : {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": transitional },
-                    { "item": "minecraft:redstone" }
-                ],
-                "results": [{ "item": transitional }]
-            }
-        event.custom({
-            "type": "create:sequenced_assembly",
-            "ingredient": { "item": "ae2:printed_silicon" },
-            "loops": 1,
-            "results": [{ "item": `ae2:${e}_processor` }],
-            "sequence": [
-                {
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        let processorTypes = ["calculation", "logic", "engineering"]
+        processorTypes.forEach(e => {
+            let transitional = `kubejs:incomplete_${e}_processor`
+            let energizeStep = hasThermal
+                ? {
+                    "type": "create:filling",
+                    "ingredients": [
+                        { "item": transitional },
+                        { "fluid": "thermal:redstone", "amount": 250 }
+                    ],
+                    "results": [{ "item": transitional }]
+                }
+                : {
                     "type": "create:deploying",
                     "ingredients": [
                         { "item": transitional },
-                        { "item": `ae2:printed_${e}_processor` }
+                        { "item": "minecraft:redstone" }
                     ],
                     "results": [{ "item": transitional }]
-                },
-                energizeStep,
-                {
-                    "type": "create:pressing",
-                    "ingredients": [{ "item": transitional }],
-                    "results": [{ "item": transitional }]
                 }
-            ],
-            "transitionalItem": { "item": transitional }
-        }).id("kubejs:" + e + "_processor")
-    })
+            event.custom({
+                "type": "create:sequenced_assembly",
+                "ingredient": { "item": "ae2:printed_silicon" },
+                "loops": 1,
+                "results": [{ "item": `ae2:${e}_processor` }],
+                "sequence": [
+                    {
+                        "type": "create:deploying",
+                        "ingredients": [
+                            { "item": transitional },
+                            { "item": `ae2:printed_${e}_processor` }
+                        ],
+                        "results": [{ "item": transitional }]
+                    },
+                    energizeStep,
+                    {
+                        "type": "create:pressing",
+                        "ingredients": [{ "item": transitional }],
+                        "results": [{ "item": transitional }]
+                    }
+                ],
+                "transitionalItem": { "item": transitional }
+            }).id("kubejs:" + e + "_processor")
+        })
+    }
 
     const flashIngot = Platform.isLoaded("tconstruct") ? "tconstruct:cobalt_ingot" : "immersiveengineering:ingot_steel"
     event.shaped("kubejs:flash_drive", [
         "SCA"
     ], {
         A: flashIngot,
-        C: "ae2:logic_processor",
+        C: Platform.isLoaded("ae2") ? "ae2:logic_processor" : "refinedstorage:improved_processor", // AE2 -> RS port
         S: "minecraft:iron_ingot"
     })
 
@@ -960,34 +973,37 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         "kubejs:calculation_mechanism",
     ], "kubejs:inductive_mechanism", [
-        event.recipes.create.deploying(transitional, [transitional, "ae2:printed_silicon"]),
-        event.recipes.create.deploying(transitional, [transitional, "ae2:printed_silicon"]),
+        event.recipes.create.deploying(transitional, [transitional, Platform.isLoaded("ae2") ? "ae2:printed_silicon" : "refinedstorage:silicon"]), // AE2 -> RS port
+        event.recipes.create.deploying(transitional, [transitional, Platform.isLoaded("ae2") ? "ae2:printed_silicon" : "refinedstorage:silicon"]), // AE2 -> RS port
         event.recipes.create.deploying(transitional, [transitional, "#kubejs:flash_drives"])
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:calculation_mechanism")
 
-    event.remove({ output: "ae2:quartz_glass" })
-    if (hasThermal) {
-        thermalRecipes.smelter("ae2:quartz_glass", [["ae2:certus_quartz_dust", "thermal:quartz_dust"]])
-        thermalRecipes.smelter(Item.of("ae2:fluix_crystal", 2), ["minecraft:quartz", "ae2:charged_certus_quartz_crystal", "minecraft:redstone"])
-        event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#forge:ingots/iron", "thermal:lead_plate")
-    } else {
-        event.recipes.create.mixing("ae2:quartz_glass", ["ae2:certus_quartz_dust", "minecraft:glass"]).heated()
-    }
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.remove({ output: "ae2:quartz_glass" })
+        if (hasThermal) {
+            thermalRecipes.smelter("ae2:quartz_glass", [["ae2:certus_quartz_dust", "thermal:quartz_dust"]])
+            thermalRecipes.smelter(Item.of("ae2:fluix_crystal", 2), ["minecraft:quartz", "ae2:charged_certus_quartz_crystal", "minecraft:redstone"])
+            event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#forge:ingots/iron", "thermal:lead_plate")
+        } else {
+            event.recipes.create.mixing("ae2:quartz_glass", ["ae2:certus_quartz_dust", "minecraft:glass"]).heated()
+        }
 
-    event.remove({ output: "ae2:controller" })
-    donutCraft(event, "ae2:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism")
-    fluixMachine(event, Item.of("ae2:condenser", 1), "ae2:fluix_pearl")
-    fluixMachine(event, Item.of("ae2:drive", 1), "ae2:engineering_processor")
-    fluixMachine(event, Item.of("ae2:formation_core", 4), "ae2:logic_processor")
-    fluixMachine(event, Item.of("ae2:annihilation_core", 4), "ae2:calculation_processor")
-    fluixMachine(event, Item.of("ae2:chest", 1), "minecraft:chest")
-    event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "minecraft:redstone", "kubejs:calculation_mechanism")
-    event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "ae2:logic_processor", "#c:dusts/redstone")
-    event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
-    event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "ae2:engineering_processor", "#c:dusts/glowstone")
-    event.replaceInput({ id: "ae2:network/crafting/patterns_blank" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+        event.remove({ output: "ae2:controller" })
+        donutCraft(event, "ae2:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism")
+        fluixMachine(event, Item.of("ae2:condenser", 1), "ae2:fluix_pearl")
+        fluixMachine(event, Item.of("ae2:drive", 1), "ae2:engineering_processor")
+        fluixMachine(event, Item.of("ae2:formation_core", 4), "ae2:logic_processor")
+        fluixMachine(event, Item.of("ae2:annihilation_core", 4), "ae2:calculation_processor")
+        fluixMachine(event, Item.of("ae2:chest", 1), "minecraft:chest")
+        event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "minecraft:redstone", "kubejs:calculation_mechanism")
+        event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "ae2:logic_processor", "#c:dusts/redstone")
+        event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+        event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "ae2:engineering_processor", "#c:dusts/glowstone")
+        event.replaceInput({ id: "ae2:network/crafting/patterns_blank" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+    }
 
     // - - - - - Finale (Chapter 5) - - - - -
     // Autisnautics Create path for digits / matrix / plastics. CABIN Ad Astra stays gated.
@@ -1075,11 +1091,14 @@ ServerEvents.recipes(event => {
         "kubejs:calculation_mechanism"
     ]).id("kubejs:computation_matrix_from_digits")
 
-    event.recipes.create.compacting("kubejs:matter_plastics", [
-        "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball",
-        "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball",
-        "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball"
-    ]).superheated()
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.recipes.create.compacting("kubejs:matter_plastics", [
+            "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball",
+            "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball",
+            "ae2:matter_ball", "ae2:matter_ball", "ae2:matter_ball"
+        ]).superheated()
+    }
 
     event.recipes.create.mechanical_crafting("kubejs:navigation_computer", [
         "AAAAA",
@@ -1089,7 +1108,7 @@ ServerEvents.recipes(event => {
         "AAMAA"
     ], {
         A: "kubejs:matter_plastics",
-        M: "ae2:controller",
+        M: Platform.isLoaded("ae2") ? "ae2:controller" : "refinedstorage:controller", // AE2 -> RS port
         G: "create:precision_mechanism",
         S: "kubejs:computation_matrix"
     })
@@ -1099,7 +1118,7 @@ ServerEvents.recipes(event => {
         "AMA"
     ], {
         A: "kubejs:matter_plastics",
-        M: "ae2:controller",
+        M: Platform.isLoaded("ae2") ? "ae2:controller" : "refinedstorage:controller", // AE2 -> RS port
         G: "create:precision_mechanism",
         S: "create:empty_schematic"
     })

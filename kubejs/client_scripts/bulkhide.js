@@ -28,12 +28,12 @@
 
         event.hide(/itemfilters/)
 
-        event.hide(["ae2:inscriber", "ae2:vibration_chamber"])
+        event.hide(/^ae2:(inscriber|vibration_chamber)$/)
         event.hide(/ae2:.*_budding_quartz/)
-        event.hide("ae2:small_quartz_bud")
-        event.hide("ae2:medium_quartz_bud")
-        event.hide("ae2:large_quartz_bud")
-        event.hide("ae2:quartz_cluster")
+        event.hide(/^ae2:small_quartz_bud$/)
+        event.hide(/^ae2:medium_quartz_bud$/)
+        event.hide(/^ae2:large_quartz_bud$/)
+        event.hide(/^ae2:quartz_cluster$/)
 
         event.hide("architects_palette:withered_bone")
 
@@ -193,7 +193,7 @@
         event.hide("thermal:device_hive_extractor")
 
         event.hide("cb_microblock:microblock")
-        event.hide("ae2:facade")
+        event.hide(/^ae2:facade$/)
         event.hide("chiselsandbits:block_bit")
 
         event.hide("trials:crafter")

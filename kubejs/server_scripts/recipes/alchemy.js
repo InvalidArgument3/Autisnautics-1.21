@@ -126,7 +126,7 @@ ServerEvents.recipes(event => {
         event.custom({
             "type": "thermal:sawmill",
             "ingredient": { "item": "kubejs:substrate_silicon" },
-            "result": [{ "item": "ae2:silicon", "count": 1 }],
+            "result": [{ "item": Platform.isLoaded("ae2") ? "ae2:silicon" : "refinedstorage:silicon", "count": 1 }], // AE2 -> RS port
             "energy": 2000
         })
 

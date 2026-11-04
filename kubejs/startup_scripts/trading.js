@@ -413,8 +413,8 @@ StartupEvents.registry("item", event => {
         simple("Apatite", "4x thermal:apatite", 8, S, 0x27A9BB, 0x2CC7C9)
         simple("Niter", "4x thermal:niter", 8, S, 0x735A65, 0xB8AFAF)
         simple("Nether Quartz", "8x minecraft:quartz", 24, S, 0xB19E8F, 0xE7E2DB)
-        simple("Certus Quartz", "8x ae2:certus_quartz_crystal", 24, S, 0x91C5FC, 0xA7CBCF)
-        simple("Fluix Quartz", "8x ae2:fluix_crystal", 32, S, 0x8F5CCB, 0xFC7ED4)
+        if (Platform.isLoaded("ae2")) simple("Certus Quartz", "8x ae2:certus_quartz_crystal", 24, S, 0x91C5FC, 0xA7CBCF)
+        if (Platform.isLoaded("ae2")) simple("Fluix Quartz", "8x ae2:fluix_crystal", 32, S, 0x8F5CCB, 0xFC7ED4)
         simple("Cured Rubber", "6x thermal:cured_rubber", 16, S, 0x3D363C, 0x594F55)
         simple("Bitumen", "1x thermal:bitumen", 8, S, 0x0B0909, 0x0B0909)
 

@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
             reagentExtract(event, s, null)
         })
     })
-    reagentExtract(event, "kubejs:substrate_silicon", "ae2:silicon")
+    reagentExtract(event, "kubejs:substrate_silicon", Platform.isLoaded("ae2") ? "ae2:silicon" : "refinedstorage:silicon") // AE2 -> RS port
     reagentExtract(event, "kubejs:substrate_silver", "immersiveengineering:dust_silver")
 
     // Failed Alchemy Analysis in the Rock Crusher

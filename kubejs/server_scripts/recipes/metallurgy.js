@@ -134,27 +134,30 @@ ServerEvents.recipes(event => {
     event.remove({ type: "minecraft:crafting_shapeless", output: "thermal:enderium_dust" })
     event.remove({ type: "minecraft:crafting_shapeless", output: "thermal:bronze_dust" })
     event.remove({ type: "minecraft:crafting_shapeless", output: "thermal:invar_dust" })
-    // A2: nuclearcraft grinds pearls into ae2:ender_dust, not enderium
-    event.remove({ type: "nuclearcraft:manufactory", output: "thermal:enderium_dust" })
-    event.remove({ type: "nuclearcraft:manufactory", output: "#forge:dusts/enderium" })
-    event.custom({
-        "type": "nuclearcraft:manufactory",
-        "input": [
-            {
-                "count": 1,
-                "item": "minecraft:ender_pearl"
-            }
-        ],
-        "output": [
-            {
-                "amount": 1,
-                "item": "ae2:ender_dust"
-            }
-        ],
-        "powerModifier": 1.0,
-        "radiation": 1.0,
-        "timeModifier": 1.0
-    })
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        // A2: nuclearcraft grinds pearls into ae2:ender_dust, not enderium
+        event.remove({ type: "nuclearcraft:manufactory", output: "thermal:enderium_dust" })
+        event.remove({ type: "nuclearcraft:manufactory", output: "#forge:dusts/enderium" })
+        event.custom({
+            "type": "nuclearcraft:manufactory",
+            "input": [
+                {
+                    "count": 1,
+                    "item": "minecraft:ender_pearl"
+                }
+            ],
+            "output": [
+                {
+                    "amount": 1,
+                    "item": "ae2:ender_dust"
+                }
+            ],
+            "powerModifier": 1.0,
+            "radiation": 1.0,
+            "timeModifier": 1.0
+        })
+    }
 
     // Create new alloying recipes
     // Mixing Alloys
@@ -455,7 +458,7 @@ ServerEvents.recipes(event => {
 
         // ore dust to fluid
         thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)
-        event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
+        if (Platform.isLoaded("ae2")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
         // A2: NC melter
         event.remove({ type: "nuclearcraft:melter", input: dustTag })
         event.custom({

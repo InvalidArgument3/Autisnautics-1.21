@@ -49,7 +49,10 @@ ServerEvents.recipes(event => {
         "timeModifier": 0.5
     })
     // - Bulk Washing Haunted Dust to Ender Dust (can also be obtained through laser alchemy)
-    event.recipes.create.splashing(["ae2:ender_dust"], "kubejs:haunted_dust")
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.recipes.create.splashing(["ae2:ender_dust"], "kubejs:haunted_dust")
+    }
 
     // -- Gunpowder Production
     // - Remove unwanted sources
@@ -95,69 +98,72 @@ ServerEvents.recipes(event => {
         B: "minecraft:stick"
     })
     // - Crushing the Crushing Wheel in the Crushing Wheel...
-    event.recipes.create.crushing([Item.of("ae2:singularity")], "create:crushing_wheel").processingTime(250)
+    // AE2 removed: singularity/paint-ball chromatic compound line needs AE2 (no RS equivalent)
+    if (Platform.isLoaded("ae2")) {
+        event.recipes.create.crushing([Item.of("ae2:singularity")], "create:crushing_wheel").processingTime(250)
 
-    // -- Chromatic Singularities
-    let chromaticColors = colours.slice(1).filter((entry) => (entry.includes("gray") || entry.includes("black")) == false ) // only colorful dyes allowed
-    chromaticColors.forEach(color => {
-        event.recipes.create.compacting(Item.of("kubejs:dye_entangled_singularity", 1), [`minecraft:${color}_dye`, "ae2:quantum_entangled_singularity"])
-    })
-    // - More efficient but complex recipe using create dragons plus liquid dye
-    if (Platform.isLoaded("create_dragons_plus")) {
+        // -- Chromatic Singularities
+        let chromaticColors = colours.slice(1).filter((entry) => (entry.includes("gray") || entry.includes("black")) == false ) // only colorful dyes allowed
         chromaticColors.forEach(color => {
-            event.recipes.create.compacting([Item.of("kubejs:dye_entangled_singularity", 1), Fluid.of("minecraft:water", 125)],
-                [Fluid.sizedIngredientOf(`create_dragons_plus:${color}_dye`, 125), "ae2:quantum_entangled_singularity"])
+            event.recipes.create.compacting(Item.of("kubejs:dye_entangled_singularity", 1), [`minecraft:${color}_dye`, "ae2:quantum_entangled_singularity"])
+        })
+        // - More efficient but complex recipe using create dragons plus liquid dye
+        if (Platform.isLoaded("create_dragons_plus")) {
+            chromaticColors.forEach(color => {
+                event.recipes.create.compacting([Item.of("kubejs:dye_entangled_singularity", 1), Fluid.of("minecraft:water", 125)],
+                    [Fluid.sizedIngredientOf(`create_dragons_plus:${color}_dye`, 125), "ae2:quantum_entangled_singularity"])
+            })
+        }
+
+        // -- Paint Balls and Color Correction
+        event.remove({ id: /ae2:tools\/paintballs.*/ })
+        event.recipes.create.crushing([
+            CreateItem.of("ae2:red_paint_ball", 0.9),
+            CreateItem.of("ae2:yellow_paint_ball", 0.75),
+            CreateItem.of("ae2:green_paint_ball", 0.6),
+            CreateItem.of("ae2:blue_paint_ball", 0.45),
+            CreateItem.of("ae2:magenta_paint_ball", 0.3)],
+        "kubejs:dye_entangled_singularity").processingTime(50)
+        // - Paint Ball Depleting: using supplementaries:lumisene as a more fun waste material, which can also be lit on fire as a light source later
+        let spectrum = ["red", "yellow", "green", "blue", "magenta", "black"]
+        for (let i = 0; i < spectrum.length; i++) {
+            let color = spectrum[i];
+            if (i == spectrum.length - 1)
+                continue;
+            event.recipes.create.emptying([`ae2:${spectrum[i + 1]}_paint_ball`, Fluid.of("supplementaries:lumisene", 100)], `ae2:${color}_paint_ball`)
+        }
+
+        // -- Chromatic Compound
+        event.recipes.create.mechanical_crafting("create:chromatic_compound", [
+            "AA",
+            "AA"
+        ], {
+            A: "ae2:magenta_paint_ball"
+        })
+        // Convenience recipe with higher tech
+        event.custom({
+            "type": "nuclearcraftneohaul:assembler_recipe",
+            "itemIngredients": [
+                {
+                    "count": 4,
+                    "ingredient": {
+                        "item": "ae2:magenta_paint_ball"
+                    }
+                }
+            ],
+            "itemProducts": [
+                {
+                    "count": 1,
+                    "ingredient": {
+                        "item": "create:chromatic_compound"
+                    }
+                }
+            ],
+            "powerModifier": 1.0,
+            "radiation": 0.0,
+            "timeModifier": 1.0
         })
     }
-
-    // -- Paint Balls and Color Correction
-    event.remove({ id: /ae2:tools\/paintballs.*/ })
-    event.recipes.create.crushing([
-        CreateItem.of("ae2:red_paint_ball", 0.9),
-        CreateItem.of("ae2:yellow_paint_ball", 0.75),
-        CreateItem.of("ae2:green_paint_ball", 0.6),
-        CreateItem.of("ae2:blue_paint_ball", 0.45),
-        CreateItem.of("ae2:magenta_paint_ball", 0.3)],
-    "kubejs:dye_entangled_singularity").processingTime(50)
-    // - Paint Ball Depleting: using supplementaries:lumisene as a more fun waste material, which can also be lit on fire as a light source later
-    let spectrum = ["red", "yellow", "green", "blue", "magenta", "black"]
-    for (let i = 0; i < spectrum.length; i++) {
-        let color = spectrum[i];
-        if (i == spectrum.length - 1)
-            continue;
-        event.recipes.create.emptying([`ae2:${spectrum[i + 1]}_paint_ball`, Fluid.of("supplementaries:lumisene", 100)], `ae2:${color}_paint_ball`)
-    }
-
-    // -- Chromatic Compound
-    event.recipes.create.mechanical_crafting("create:chromatic_compound", [
-        "AA",
-        "AA"
-    ], {
-        A: "ae2:magenta_paint_ball"
-    })
-    // Convenience recipe with higher tech
-    event.custom({
-        "type": "nuclearcraftneohaul:assembler_recipe",
-        "itemIngredients": [
-            {
-                "count": 4,
-                "ingredient": {
-                    "item": "ae2:magenta_paint_ball"
-                }
-            }
-        ],
-        "itemProducts": [
-            {
-                "count": 1,
-                "ingredient": {
-                    "item": "create:chromatic_compound"
-                }
-            }
-        ],
-        "powerModifier": 1.0,
-        "radiation": 0.0,
-        "timeModifier": 1.0
-    })
 
 
     // -- Refined Radiance: Create is bugged so this can't be made without a beacon, temporary fix below (EntityEvents.spawned for dropped items)

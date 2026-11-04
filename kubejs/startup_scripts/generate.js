@@ -308,7 +308,8 @@ StartupEvents.registry("block", event => {
     reagent(0x5F5F5F, 0x8E8E8E, "stone", "Stone", "minecraft:stone", "minecraft:stone")
     reagent(0x335DC1, 0x7395E7, "lapis", "Lapis Lazuli", "minecraft:lapis_lazuli", "minecraft:lapis_lazuli")
     reagent(0x4F7E48, 0x8AD480, "slime", "Slime", "minecraft:slime_ball", "minecraft:slime_ball")
-    reagent(0x17F9AB, 0x1CB7B9, "ender", "Ender", "ae2:ender_dust", "ae2:ender_dust")
+    // AE2 -> RS swap: AE2 ender dust falls back to ender pearls when AE2 is absent
+    reagent(0x17F9AB, 0x1CB7B9, "ender", "Ender", Platform.isLoaded("ae2") ? "ae2:ender_dust" : "minecraft:ender_pearl", Platform.isLoaded("ae2") ? "ae2:ender_dust" : "minecraft:ender_pearl")
     reagent(0x22232D, 0x4C4C4C, "oil", "Petroleum", "kubejs:crystallized_oil", "kubejs:crystallized_oil")
     reagent(0x7D6B5A, 0x8AD480, "chocolate", "Chocolate", "create:bar_of_chocolate", "create:bar_of_chocolate")
     category()
@@ -395,7 +396,7 @@ StartupEvents.registry("fluid", event => {
 
 ItemEvents.modification(event => {
     let colors = ["red", "yellow", "green", "blue", "magenta", "black"]
-    colors.forEach(element => {
+    if (Platform.isLoaded("ae2")) colors.forEach(element => {
         event.modify("ae2:" + element + "_paint_ball", item => {
             item.maxStackSize = 1
         })

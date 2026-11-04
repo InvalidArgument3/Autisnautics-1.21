@@ -425,6 +425,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
+        with:
+          lfs: true # custom jars in .pakku/*overrides/mods/ are stored in Git LFS
 
       - name: Replace strings with version # Replaces the word "DEV" in the file with the version number, two examples of uses in a modpack are commented below, add as needed.
         shell: bash

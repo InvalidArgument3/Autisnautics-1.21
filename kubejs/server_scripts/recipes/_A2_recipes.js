@@ -721,7 +721,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /^createdeco:.*coin(stack)?$/ })
 
     // forcing the use of ae2 ender dust
-    event.replaceOutput({}, "thermal:ender_pearl_dust", "ae2:ender_dust")
+    if (Platform.isLoaded("ae2")) event.replaceOutput({}, "thermal:ender_pearl_dust", "ae2:ender_dust")
 
     // adding electrotine alloy recipes (where did the original one go?)
     event.shapeless("projectred_core:electrotine_ingot", [Item.of("projectred_core:electrotine_dust", 8), "minecraft:iron_ingot"])

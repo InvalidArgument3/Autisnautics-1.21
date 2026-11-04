@@ -118,9 +118,6 @@
         "better-world-loading-forge": {
             "redistributable": true
         },
-        "cobblemon": {
-            "update_strategy": "NONE"
-        },
         "cobblemon-legendary-birds": {
             "update_strategy": "NONE"
         },
@@ -159,6 +156,14 @@
             "side": "CLIENT"
         },
         "fresh-animations-extensions": {
+            "side": "CLIENT"
+        },
+        "cobblemotion": {
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT"
+        },
+        "winterglides-extra-animations-cobblemon": {
+            "type": "RESOURCE_PACK",
             "side": "CLIENT"
         }
     },
