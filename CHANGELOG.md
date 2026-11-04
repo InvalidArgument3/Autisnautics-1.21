@@ -1,4 +1,9 @@
 # Changelog
+## [0.0.56]
+- add Vista
+- drop Embers Questing (NPE on null recipe results at world load)
+- FancyMenu: align title-screen side icons; enable modpack mode to lock layout editing
+
 ## [0.0.55]
 - add Astral Sorcery 2.0.3 (alpha) + ObserverLib
 - drop Infinite Railways / Railways Untold / Steam 'n' Rails (Skylands worldgen mismatch)
