@@ -9,8 +9,11 @@ ServerEvents.recipes(event => {
     // - Electron tubes
     event.remove({ id: "create:crafting/materials/electron_tube" })
     // - Rose quartz, including alternate mod sanding options
-    event.remove({ output: "create:polished_rose_quartz" })
-    event.remove({ id: "create:sandpaper_polishing/rose_quartz" })
+    // AE2 removed: only strip Create's rose-quartz polishing when the AE2 certus line below exists
+    if (Platform.isLoaded("ae2")) {
+        event.remove({ output: "create:polished_rose_quartz" })
+        event.remove({ id: "create:sandpaper_polishing/rose_quartz" })
+    }
     // - Default certus crystal growing
     event.remove({ id: "ae2:transform/certus_quartz_crystals" })
     // - Create precision mechanisms
@@ -19,50 +22,53 @@ ServerEvents.recipes(event => {
     event.remove({ id: "simulated:sequenced_assembly/gyroscopic_mechanism" })
 
     // -- Sky stone dust: infinimilling
-    event.recipes.create.milling(["ae2:sky_dust", "ae2:sky_stone_block"], "ae2:sky_stone_block").processingTime(1000)
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        event.recipes.create.milling(["ae2:sky_dust", "ae2:sky_stone_block"], "ae2:sky_stone_block").processingTime(1000)
 
-    // -- Certus Quartz farming
-    // - Crafting seed from dust + sand
-    event.shapeless("2x kubejs:certus_crystal_seed", ["ae2:certus_quartz_dust", "#minecraft:sand"])
-    // - Superior Mechanical Crafting version: splitting a crystal into two seeds
-    event.recipes.create.mechanical_crafting(Item.of("kubejs:certus_crystal_seed", 2), ["A"], { A: "ae2:certus_quartz_crystal" })
-    event.recipes.create.mechanical_crafting(Item.of("kubejs:fluix_crystal_seed", 2), ["A"], { A: "ae2:fluix_crystal" })
-    // - Growth loop
-    let grow = (from, via, to) => {
-        event.recipes.create.sequenced_assembly([
-            to,
-        ], from, [
-            event.recipes.create.filling(via, [via, Fluid.sizedIngredientOf('minecraft:water', 500)])
-        ]).transitionalItem(via)
-            .loops(4)
-            .id("kubejs:grow_" + to.split(":")[1])
+        // -- Certus Quartz farming
+        // - Crafting seed from dust + sand
+        event.shapeless("2x kubejs:certus_crystal_seed", ["ae2:certus_quartz_dust", "#minecraft:sand"])
+        // - Superior Mechanical Crafting version: splitting a crystal into two seeds
+        event.recipes.create.mechanical_crafting(Item.of("kubejs:certus_crystal_seed", 2), ["A"], { A: "ae2:certus_quartz_crystal" })
+        event.recipes.create.mechanical_crafting(Item.of("kubejs:fluix_crystal_seed", 2), ["A"], { A: "ae2:fluix_crystal" })
+        // - Growth loop
+        let grow = (from, via, to) => {
+            event.recipes.create.sequenced_assembly([
+                to,
+            ], from, [
+                event.recipes.create.filling(via, [via, Fluid.sizedIngredientOf('minecraft:water', 500)])
+            ]).transitionalItem(via)
+                .loops(4)
+                .id("kubejs:grow_" + to.split(":")[1])
+        }
+        // Certus
+        grow("kubejs:certus_crystal_seed", "kubejs:growing_certus_seed", "kubejs:tiny_certus_crystal")
+        grow("kubejs:tiny_certus_crystal", "kubejs:growing_tiny_certus_crystal", "kubejs:small_certus_crystal")
+        grow("kubejs:small_certus_crystal", "kubejs:growing_small_certus_crystal", "ae2:certus_quartz_crystal")
+        // Fluix
+        grow("kubejs:fluix_crystal_seed", "kubejs:growing_fluix_seed", "kubejs:tiny_fluix_crystal")
+        grow("kubejs:tiny_fluix_crystal", "kubejs:growing_tiny_fluix_crystal", "kubejs:small_fluix_crystal")
+        grow("kubejs:small_fluix_crystal", "kubejs:growing_small_fluix_crystal", "ae2:fluix_crystal")
+
+        // -- Volatile Sky Solution
+        event.recipes.create.mixing(
+            Fluid.of('kubejs:volatile_sky_solution', 500),
+            [SizedIngredient.of("ae2:sky_dust", 4), Fluid.sizedIngredientOf('minecraft:water', 500)]
+        )
+
+        // -- Rising Sky Solution
+        event.recipes.create.mixing(
+            ["ae2:certus_quartz_crystal", Fluid.of('kubejs:rising_sky_solution', 250)],
+            ["ae2:charged_certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:volatile_sky_solution', 250)]
+        )
+
+        // -- Polished Rose Quartz
+        event.recipes.create.mixing(
+            "create:polished_rose_quartz",
+            ["ae2:certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:rising_sky_solution', 250)]
+        )
     }
-    // Certus
-    grow("kubejs:certus_crystal_seed", "kubejs:growing_certus_seed", "kubejs:tiny_certus_crystal")
-    grow("kubejs:tiny_certus_crystal", "kubejs:growing_tiny_certus_crystal", "kubejs:small_certus_crystal")
-    grow("kubejs:small_certus_crystal", "kubejs:growing_small_certus_crystal", "ae2:certus_quartz_crystal")
-    // Fluix
-    grow("kubejs:fluix_crystal_seed", "kubejs:growing_fluix_seed", "kubejs:tiny_fluix_crystal")
-    grow("kubejs:tiny_fluix_crystal", "kubejs:growing_tiny_fluix_crystal", "kubejs:small_fluix_crystal")
-    grow("kubejs:small_fluix_crystal", "kubejs:growing_small_fluix_crystal", "ae2:fluix_crystal")
-
-    // -- Volatile Sky Solution
-    event.recipes.create.mixing(
-        Fluid.of('kubejs:volatile_sky_solution', 500),
-        [SizedIngredient.of("ae2:sky_dust", 4), Fluid.sizedIngredientOf('minecraft:water', 500)]
-    )
-
-    // -- Rising Sky Solution
-    event.recipes.create.mixing(
-        ["ae2:certus_quartz_crystal", Fluid.of('kubejs:rising_sky_solution', 250)],
-        ["ae2:charged_certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:volatile_sky_solution', 250)]
-    )
-
-    // -- Polished Rose Quartz
-    event.recipes.create.mixing(
-        "create:polished_rose_quartz",
-        ["ae2:certus_quartz_crystal", Fluid.sizedIngredientOf('kubejs:rising_sky_solution', 250)]
-    )
 
     // -- Electron tubes
     event.recipes.create.filling(

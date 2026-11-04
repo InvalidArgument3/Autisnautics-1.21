@@ -36,11 +36,11 @@ ServerEvents.tags("item", event => {
 
     // This tag lets these items be turned into circuit scraps and be melted into invar
     event.get("kubejs:circuit_press")
-        .add("ae2:name_press")
-        .add("ae2:silicon_press")
-        .add("ae2:logic_processor_press")
-        .add("ae2:engineering_processor_press")
-        .add("ae2:calculation_processor_press")
+        .add(/^ae2:name_press$/)
+        .add(/^ae2:silicon_press$/)
+        .add(/^ae2:logic_processor_press$/)
+        .add(/^ae2:engineering_processor_press$/)
+        .add(/^ae2:calculation_processor_press$/)
 
     event.get("forbidden_arcanus:modifier/eternal_incompatible")
         .add(/exchangers:.*/)
@@ -56,7 +56,7 @@ ServerEvents.tags("item", event => {
     event.get("kubejs:chromatic_resonators").add("kubejs:chromatic_resonator")
     event.get("kubejs:flash_drives").add("kubejs:flash_drive")
 
-    event.get("kubejs:machines").add("kubejs:andesite_machine").add("kubejs:copper_machine").add("kubejs:gold_machine").add("kubejs:brass_machine").add("kubejs:zinc_machine").add("kubejs:lead_machine").add("kubejs:steel_machine").add("kubejs:constantan_machine").add("kubejs:enderium_machine").add("ae2:controller")
+    event.get("kubejs:machines").add("kubejs:andesite_machine").add("kubejs:copper_machine").add("kubejs:gold_machine").add("kubejs:brass_machine").add("kubejs:zinc_machine").add("kubejs:lead_machine").add("kubejs:steel_machine").add("kubejs:constantan_machine").add("kubejs:enderium_machine").add(/^ae2:controller$/)
 
     event.get("kubejs:sellable_discs").add("minecraft:music_disc_13", "minecraft:music_disc_cat", "minecraft:music_disc_blocks", "minecraft:music_disc_chirp", "minecraft:music_disc_far", "minecraft:music_disc_mall", "minecraft:music_disc_mellohi", "minecraft:music_disc_stal", "minecraft:music_disc_strad", "minecraft:music_disc_ward", "minecraft:music_disc_11", "minecraft:music_disc_wait", "minecraft:music_disc_otherside", "minecraft:music_disc_5", "minecraft:music_disc_pigstep", "minecraft:music_disc_relic", "supplementaries:music_disc_heave_ho", "quark:music_disc_endermosh");
     event.get("kubejs:transaction_cards").add("#kubejs:transaction_cards/import")
@@ -97,12 +97,12 @@ ServerEvents.tags("item", event => {
     event.get("thermal:crafting/casts").add("kubejs:three_cast").add("kubejs:eight_cast").add("kubejs:plus_cast").add("kubejs:minus_cast").add("kubejs:multiply_cast").add("kubejs:divide_cast").add("#kubejs:circuit_press")
 
     event.get("create:upright_on_belt")
-        .add("ae2:red_paint_ball")
-        .add("ae2:yellow_paint_ball")
-        .add("ae2:green_paint_ball")
-        .add("ae2:blue_paint_ball")
-        .add("ae2:magenta_paint_ball")
-        .add("ae2:black_paint_ball")
+        .add(/^ae2:red_paint_ball$/)
+        .add(/^ae2:yellow_paint_ball$/)
+        .add(/^ae2:green_paint_ball$/)
+        .add(/^ae2:blue_paint_ball$/)
+        .add(/^ae2:magenta_paint_ball$/)
+        .add(/^ae2:black_paint_ball$/)
 
     // Items in the treasure tags are given as loot from treasure pots
     event.get("kubejs:treasure1")
@@ -187,8 +187,8 @@ ServerEvents.tags("item", event => {
         .add("create:rose_quartz")
         .add("create:brass_hand")
         .add("minecraft:saddle")
-        .add("ae2:certus_quartz_crystal")
-        .add("ae2:fluix_crystal")
+        .add(/^ae2:certus_quartz_crystal$/)
+        .add(/^ae2:fluix_crystal$/)
         .add("thermal:ice_charge")
         .add("thermal:lightning_charge")
         .add("thermal:earth_charge")
@@ -394,8 +394,8 @@ ServerEvents.tags("block", event => {
     event.get("create:simple_mounted_storage")
         .add(/^farmersdelight:.*_cabinet$|^everycomp:fd.*_cabinet$/)
         // AE2 Sky stone chests (These don't work with the create:chest_mounted_storage tag for some reason so they are here instead)
-        .add("ae2:sky_stone_chest")
-        .add("ae2:smooth_sky_stone_chest")
+        .add(/^ae2:sky_stone_chest$/)
+        .add(/^ae2:smooth_sky_stone_chest$/)
 
     // why?
     event.remove("forge:storage_blocks/iron", "scguns:treated_iron_block")
@@ -431,7 +431,7 @@ ServerEvents.tags("block_entity_type", event => {
         .add("quark:variant_trapped_chest")
         .add(/^everycomp:q.*_chest$/)
         .add("farmersdelight:cabinet")
-        .add("ae2:sky_stone_chest")
+        .add(/^ae2:sky_stone_chest$/)
 })
 
 ServerEvents.tags("fluid", event => {

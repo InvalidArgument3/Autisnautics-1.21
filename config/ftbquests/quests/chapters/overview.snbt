@@ -268,7 +268,7 @@
 		{
 			dependencies: ["400CDC316DCDFE88"]
 			icon: {
-				id: "ae2:controller"
+				id: "refinedstorage:controller"
 			}
 			id: "26173D4777F439B1"
 			shape: "circle"

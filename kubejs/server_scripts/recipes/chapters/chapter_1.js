@@ -155,8 +155,11 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("simulated:torsion_spring", 1))
 
     // AE2
-    andesiteMachine(event, Item.of("ae2:meteorite_compass", 1), "minecraft:compass")
-    andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")
+    // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
+    if (Platform.isLoaded("ae2")) {
+        andesiteMachine(event, Item.of("ae2:meteorite_compass", 1), "minecraft:compass")
+        andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")
+    }
     // createaddition
     if (Platform.isLoaded("createaddition")) { andesiteMachine(event, Item.of("createaddition:rolling_mill", 1), "create:shaft") }
     // createbigcannons

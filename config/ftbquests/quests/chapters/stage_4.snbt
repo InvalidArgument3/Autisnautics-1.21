@@ -99,7 +99,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3E607053D3B0C552"
-				item: { count: 1, id: "ae2:controller" }
+				item: { count: 1, id: "refinedstorage:controller" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -492,13 +492,13 @@
 				"4732465116D723EE"
 			]
 			icon: {
-				id: "ae2:silicon"
+				id: "refinedstorage:silicon"
 			}
 			id: "067C5FDA4709F195"
 			tasks: [
 				{
 					id: "263459FBEC9F9868"
-					item: { count: 1, id: "ae2:silicon" }
+					item: { count: 1, id: "refinedstorage:silicon" }
 					type: "item"
 				}
 				{
@@ -610,13 +610,13 @@
 		{
 			dependencies: ["0CE88FEA070DC46C"]
 			icon: {
-				id: "ae2:silicon"
+				id: "refinedstorage:silicon"
 			}
 			id: "4B19B6EAD511378D"
 			tasks: [
 				{
 					id: "6FCB9E7E2CC10348"
-					item: { count: 1, id: "ae2:silicon" }
+					item: { count: 1, id: "refinedstorage:silicon" }
 					type: "item"
 				}
 				{
@@ -667,23 +667,23 @@
 		{
 			dependencies: ["24C48CFAAD71B230"]
 			icon: {
-				id: "ae2:calculation_processor"
+				id: "refinedstorage:basic_processor"
 			}
 			id: "2B8F1D804107EB8C"
 			tasks: [
 				{
 					id: "186FEC9FE047828F"
-					item: { count: 1, id: "ae2:calculation_processor" }
+					item: { count: 1, id: "refinedstorage:basic_processor" }
 					type: "item"
 				}
 				{
 					id: "2DCA8F3CB7884170"
-					item: { count: 1, id: "ae2:logic_processor" }
+					item: { count: 1, id: "refinedstorage:improved_processor" }
 					type: "item"
 				}
 				{
 					id: "75950A3A22C9DC8E"
-					item: { count: 1, id: "ae2:engineering_processor" }
+					item: { count: 1, id: "refinedstorage:advanced_processor" }
 					type: "item"
 				}
 			]
