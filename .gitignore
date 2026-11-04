@@ -1,7 +1,12 @@
 # Minecraft
 local/
 saves/
-mods/
+/mods/*
+# Custom / patched jars shipped via Git LFS (see pakku.json overrides)
+!/mods/Cobblemon-neoforge-1.8.4+1.21.1-j25.jar
+!/mods/voxy-0.2.17-alpha-sodium08-portal-lods-phase1.jar
+!/mods/iasodiumfix-1.0.0-local.jar
+!/mods/iavistacompat-1.0.0-local.jar
 logs/
 crash-reports/
 backups/

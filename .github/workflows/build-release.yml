@@ -400,6 +400,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
+        with:
+          lfs: true # patched/custom jars in mods/ are stored in Git LFS and shipped as pakku overrides
 
       - name: Replace strings with version # Replaces the word "DEV" in the file with the version number, two examples of uses in a modpack are commented below, add as needed.
         shell: bash
@@ -438,6 +440,8 @@ jobs:
         run: |
           curl https://github.com/juraj-hrivnak/pakku/releases/latest/download/pakku.jar -o pakku.jar -L -J
           java -jar pakku.jar fetch
+          # pakku fetch deletes files in mods/ it doesn't know about; restore the LFS override jars
+          git checkout -- mods/
           java -jar pakku.jar export
 
           mkdir -p .pakku/multimc-overrides/flame
