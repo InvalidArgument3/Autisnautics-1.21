@@ -1,4 +1,11 @@
 # Changelog
+## [0.0.58]
+- Cobblemon 1.7.3 + addons: CobbledLevels 2.0.0, Legendary Birds 1.2 (2.0 needs Cobblemon ≥1.8.1), MoreCobblemonTweaks 1.3.3, cobblemarks+ 1.1, Create Industries 1.3.2, summon orbs, cobblemore lib, CobGyms 3.0.1, CCC Myths & Legends compat, Extra Move Anims, Lootrmon
+- EMF 3.3.12 + ETF 7.2.7 + emf_compat_core 2.3.2
+- Fresh Animations 1.11.2 + FA+ Player 1.1 + FA+ All Extensions 1.10.1; Cobblemotion 1.5.1; Winterglide Extra Animations
+- Create Aeronautics Landing Legs (legworks) 1.0.0, Octo Arms 1.6.0, Spatial GUI 1.10.1, Touch'n Motion 1.0.4
+- skipped: cobbleit (CF modpack, not a mod); voxy (Fabric-only, not on 1.21.1 NeoForge)
+
 ## [0.0.57]
 - fix serverpack crashloop: forge-auto-install NeoForge pin tracks pakku-lock again (was stuck on 21.1.227)
 - Aeronautics Camera Sync → BOTH so Player Tilt's required dep ships in the serverpack

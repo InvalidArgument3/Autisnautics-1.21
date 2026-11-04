@@ -117,6 +117,49 @@
         },
         "better-world-loading-forge": {
             "redistributable": true
+        },
+        "cobblemon": {
+            "update_strategy": "NONE"
+        },
+        "cobblemon-legendary-birds": {
+            "update_strategy": "NONE"
+        },
+        "cobblemon-cobbled-levels": {
+            "update_strategy": "NONE"
+        },
+        "more-cobblemon-tweaks": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
+        "cobblemarks-plus": {
+            "update_strategy": "NONE"
+        },
+        "cobblemon-create-industries": {
+            "update_strategy": "NONE"
+        },
+        "lootrmon": {
+            "update_strategy": "NONE"
+        },
+        "entity-model-features": {
+            "side": "CLIENT"
+        },
+        "entity-texture-features-fabric": {
+            "side": "CLIENT"
+        },
+        "emf-compat-core": {
+            "side": "CLIENT"
+        },
+        "spatial-gui": {
+            "side": "CLIENT"
+        },
+        "fresh-animations": {
+            "side": "CLIENT"
+        },
+        "fa-player-extension": {
+            "side": "CLIENT"
+        },
+        "fresh-animations-extensions": {
+            "side": "CLIENT"
         }
     },
     "export_server_side_projects_to_client": true
