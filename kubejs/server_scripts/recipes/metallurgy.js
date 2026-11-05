@@ -458,7 +458,9 @@ ServerEvents.recipes(event => {
 
         // ore dust to fluid
         thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)
+        // AE2 -> RS port: matter balls are gone, paraffin wax is the same stand-in used for matter plastics
         if (Platform.isLoaded("ae2")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
+        else if (Platform.isLoaded("immersivepetroleum")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "immersivepetroleum:paraffin_wax"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
         // A2: NC melter
         event.remove({ type: "nuclearcraft:melter", input: dustTag })
         event.custom({

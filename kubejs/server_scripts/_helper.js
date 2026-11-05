@@ -137,7 +137,9 @@ let enderiumMachine = (event, outputIngredient, inputIngredient) => {
 }
 
 let fluixMachine = (event, outputIngredient, inputIngredient) => {
-    return createMachine("ae2:controller", event, outputIngredient, inputIngredient)
+    // AE2 -> RS port: the tier machine is whichever controller the pack is actually running
+    let machineItem = Platform.isLoaded("ae2") ? "ae2:controller" : "refinedstorage:controller"
+    return createMachine(machineItem, event, outputIngredient, inputIngredient)
 }
 
 let toThermalInputJson = (value) => {

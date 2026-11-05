@@ -1003,6 +1003,30 @@ ServerEvents.recipes(event => {
         event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
         event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "ae2:engineering_processor", "#c:dusts/glowstone")
         event.replaceInput({ id: "ae2:network/crafting/patterns_blank" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+    } else if (Platform.isLoaded("refinedstorage")) {
+        // AE2 -> RS port: calculation mechanism gates the controller (fluix casing donut),
+        // then the controller item-applies into the blocks that used to be fluix machines.
+        event.remove({ id: "refinedstorage:silicon" })
+        event.remove({ output: "refinedstorage:controller" })
+        event.shapeless(Item.of("kubejs:fluix_casing", 2), ["refinedstorage:quartz_enriched_iron", "refinedstorage:machine_casing"]).id("kubejs:rs_port/fluix_casing")
+        donutCraft(event, "refinedstorage:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism").id("kubejs:rs_port/controller")
+        fluixMachine(event, Item.of("refinedstorage:disk_drive", 1), "refinedstorage:advanced_processor")
+        fluixMachine(event, Item.of("refinedstorage:grid", 1), "refinedstorage:improved_processor")
+        fluixMachine(event, Item.of("refinedstorage:construction_core", 4), "minecraft:glowstone_dust")
+        fluixMachine(event, Item.of("refinedstorage:destruction_core", 4), "minecraft:quartz")
+        fluixMachine(event, Item.of("refinedstorage:wireless_transmitter", 1), "minecraft:ender_pearl")
+        event.replaceInput({ id: "refinedstorage:1k_storage_part" }, "#c:dusts/redstone", "kubejs:calculation_mechanism")
+        event.remove({ id: "refinedstorage:pattern" })
+        event.shaped("refinedstorage:pattern", [
+            "GRG",
+            "RMR",
+            "EEE"
+        ], {
+            G: "#c:glass_blocks",
+            R: "#c:dusts/redstone",
+            M: "kubejs:calculation_mechanism",
+            E: "refinedstorage:quartz_enriched_iron"
+        }).id("kubejs:rs_port/pattern")
     }
 
     // - - - - - Finale (Chapter 5) - - - - -
