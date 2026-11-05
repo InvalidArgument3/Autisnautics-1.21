@@ -55,13 +55,13 @@
 			]
 			dependency_requirement: "one_completed"
 			icon: {
-				id: "kubejs:certus_crystal_seed"
+				id: "minecraft:quartz"
 			}
 			id: "345B94F6D17605CD"
 			shape: "circle"
 			tasks: [{
 				id: "2E6AD53DE407260C"
-				item: { count: 1, id: "kubejs:certus_crystal_seed" }
+				item: { count: 1, id: "minecraft:quartz" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -92,13 +92,13 @@
 		{
 			dependencies: ["1642A27606A34984"]
 			icon: {
-				id: "ae2:certus_quartz_crystal"
+				id: "create:rose_quartz"
 			}
 			id: "1861E583C9DAA0BA"
 			tasks: [
 				{
 					id: "68D808533C34AB5C"
-					item: { count: 1, id: "ae2:certus_quartz_crystal" }
+					item: { count: 1, id: "create:rose_quartz" }
 					type: "item"
 				}
 				{
@@ -134,15 +134,10 @@
 			dependencies: ["727B43FD95C4A512"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:sky_dust"
+				id: "minecraft:redstone"
 			}
 			id: "4F95D5136E944ADB"
 			tasks: [
-				{
-					id: "69C6513B25BB6ABA"
-					item: { count: 1, id: "ae2:sky_dust" }
-					type: "item"
-				}
 				{
 					id: "3C8D449468C6DD27"
 					type: "checkmark"
@@ -157,15 +152,10 @@
 				"4F95D5136E944ADB"
 			]
 			icon: {
-				id: "kubejs:volatile_sky_solution_bucket"
+				id: "minecraft:water_bucket"
 			}
 			id: "1256352748B93449"
 			tasks: [
-				{
-					id: "36E36D584FCBC358"
-					item: { count: 1, id: "kubejs:volatile_sky_solution_bucket" }
-					type: "item"
-				}
 				{
 					id: "1CB43671DBA7EBB6"
 					type: "checkmark"
@@ -238,15 +228,10 @@
 			dependencies: ["1256352748B93449"]
 			hide_dependency_lines: true
 			icon: {
-				id: "ae2:charged_certus_quartz_crystal"
+				id: "minecraft:redstone_torch"
 			}
 			id: "24FFFE0FC9EAEF8D"
 			tasks: [
-				{
-					id: "23DAE14596F025DF"
-					item: { count: 1, id: "ae2:charged_certus_quartz_crystal" }
-					type: "item"
-				}
 				{
 					id: "56F78EAD35D1046E"
 					type: "checkmark"
@@ -319,7 +304,7 @@
 					id: "7A797A069B28AE89"
 					item: {
 						count: 1
-						id: "ae2:certus_quartz_crystal"
+						id: "refinedstorage:quartz_enriched_iron"
 					}
 					random_bonus: 4
 					type: "item"

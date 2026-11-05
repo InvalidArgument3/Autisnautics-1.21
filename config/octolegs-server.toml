@@ -1,0 +1,142 @@
+#Springs while a leg is planted. Mass is whatever Sable reports for the ship.
+[plant]
+	#How far a leg compresses, in blocks, when it carries exactly its rated mass.
+	# Default: 0.45
+	# Range: 0.05 ~ 2.0
+	restSag = 0.45
+	#Vertical damping ratio. 1 is critical.
+	# Default: 0.85
+	# Range: 0.05 ~ 3.0
+	dampingRatio = 0.85
+	#Parked feet resist sliding with this fraction of the support force.
+	# Default: 1.4
+	# Range: 0.0 ~ 5.0
+	gripFriction = 1.4
+	#Park anchor spring frequency, radians per second.
+	# Default: 7.0
+	# Range: 0.0 ~ 40.0
+	gripOmega = 7.0
+	#How fast an airborne leg lengthens to search for ground, blocks per second.
+	# Default: 3.0
+	# Range: 0.0 ~ 20.0
+	extendRate = 3.0
+
+#Leveling runs once per ship per tick over downward legs.
+[level]
+	#Rest-length change per block of tilt, blocks per second.
+	# Default: 0.45
+	# Range: 0.0 ~ 5.0
+	levelGain = 0.45
+	#How fast rest length returns to the tentacle's ride height.
+	# Default: 0.25
+	# Range: 0.0 ~ 5.0
+	rideGain = 0.25
+	#Cap on rest-length change, blocks per second.
+	# Default: 0.6
+	# Range: 0.05 ~ 5.0
+	maxRestRate = 0.6
+	#Extra support on the low side, as a fraction of ship weight per block of tilt.
+	# Default: 4.0
+	# Range: 0.0 ~ 40.0
+	antiRoll = 4.0
+
+#Powered gait. A ship may have any number of legs. These are not a count cap.
+[walk]
+	#Unused as a cap. A ship is not limited to this many mounts. Kept so older config files still load.
+	# Default: 4
+	# Range: 1 ~ 1000000
+	minLegs = 4
+	#Minimum feet that must stay down. The gait also keeps at least half planted, however many legs there are.
+	# Default: 2
+	# Range: 1 ~ 1000000
+	minGrounded = 2
+	#Rotational speed that counts as full gait speed.
+	# Default: 32.0
+	# Range: 1.0 ~ 256.0
+	nominalRpm = 32.0
+	#Slower than this, a mount stays in the plant. It does not join the trot.
+	# Default: 8.0
+	# Range: 0.0 ~ 256.0
+	minRpm = 8.0
+	#Step cycles per second at full speed factor.
+	# Default: 0.7
+	# Range: 0.05 ~ 5.0
+	gaitHz = 0.7
+	#Fraction of the cycle a foot stays down. Above 0.5 the two phases overlap.
+	# Default: 0.62
+	# Range: 0.5 ~ 0.9
+	duty = 0.62
+	#How hard a planted foot chases the target speed, 1/seconds.
+	# Default: 6.0
+	# Range: 0.1 ~ 40.0
+	response = 6.0
+	#Acceleration cap per rated mass, blocks per second squared, before efficiency.
+	# Default: 9.0
+	# Range: 0.1 ~ 40.0
+	accel = 9.0
+	#During a trot only about half the legs are down, so each may briefly push this multiple of its rating.
+	# Default: 2.0
+	# Range: 1.0 ~ 4.0
+	stanceBurst = 2.0
+	#Off. When true, powered mounts walk from their own Stride with no Leg Controls. Leave this off.
+	legacyStride = false
+	#Log, once a tick per ship, whether a helm was found, the input, the heading, and each leg's mode.
+	debugLogging = false
+	#Blocks per second at full RPM, full mass rating, and speed factor 1.
+	# Default: 6.0
+	# Range: 0.2 ~ 40.0
+	cruiseSpeed = 6.0
+	#How fast jump and sneak change ride height, blocks per second.
+	# Default: 1.5
+	# Range: 0.1 ~ 8.0
+	rideRate = 1.5
+	#How quickly the body moves to the ride height.
+	# Default: 2.5
+	# Range: 0.2 ~ 12.0
+	rideResponse = 2.5
+	#Degrees per second at full RPM and full mass rating. A Leg Controls block can override this.
+	# Default: 45.0
+	# Range: 5.0 ~ 180.0
+	turnSpeed = 45.0
+	#Seconds a foot takes to swing to its next foothold. A Leg Controls block can override this.
+	# Default: 0.32
+	# Range: 0.15 ~ 1.0
+	stepDuration = 0.32
+	#When the stride cap is on, new footholds stay within this fraction of reach from the neutral rest point.
+	# Default: 0.55
+	# Range: 0.25 ~ 0.8
+	strideFraction = 0.55
+	#Off. When true, new footholds are limited to strideFraction of reach. A Leg Controls block can override this.
+	strideCapEnabled = false
+	#Draw the committed foothold on each tentacle.
+	debugRender = false
+	#How many legs may run a full foothold search on one tick. The rest wait their turn. Not a limit on leg count.
+	# Default: 4
+	# Range: 1 ~ 1000000
+	searchesPerTick = 4
+	#Default for a new helm. A foot steps when it is this fraction of reach from the ideal rest point. Lower is an earlier step. The Leg Controls screen can override it per ship, from 0.15 to 0.85.
+	# Default: 0.4
+	# Range: 0.15 ~ 0.85
+	stepTriggerFraction = 0.4
+
+#Multipliers on every tentacle's catalogue stats. Applied live.
+[scale]
+	# Default: 1.0
+	# Range: 0.25 ~ 4.0
+	reach = 1.0
+	# Default: 1.0
+	# Range: 0.05 ~ 20.0
+	mass = 1.0
+	# Default: 1.0
+	# Range: 0.05 ~ 4.0
+	speed = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 8.0
+	stress = 1.0
+
+#The Leg Controls helm.
+[controls]
+	#Drop the pilot when they are farther than this many blocks from the helm, measured in world space. 0 disables the check. Death and a dimension change always release.
+	# Default: 8.0
+	# Range: 0.0 ~ 512.0
+	maxPilotDistance = 8.0

@@ -67,13 +67,13 @@
 		{
 			dependencies: ["2CCD84D55DE71EB2"]
 			icon: {
-				id: "ae2:red_paint_ball"
+				id: "minecraft:red_dye"
 			}
 			id: "3B421C8F7947E542"
 			shape: "circle"
 			tasks: [{
 				id: "26CA0A31856D4445"
-				item: { count: 1, id: "ae2:red_paint_ball" }
+				item: { count: 1, id: "minecraft:red_dye" }
 				type: "item"
 			}]
 			x: -0.85d
@@ -85,13 +85,13 @@
 				"3B421C8F7947E542"
 			]
 			icon: {
-				id: "ae2:yellow_paint_ball"
+				id: "minecraft:yellow_dye"
 			}
 			id: "381F8F373605BB97"
 			shape: "circle"
 			tasks: [{
 				id: "629CDAD0644963F4"
-				item: { count: 1, id: "ae2:yellow_paint_ball" }
+				item: { count: 1, id: "minecraft:yellow_dye" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -103,13 +103,13 @@
 				"381F8F373605BB97"
 			]
 			icon: {
-				id: "ae2:green_paint_ball"
+				id: "minecraft:green_dye"
 			}
 			id: "6A76E65324F0ACC0"
 			shape: "circle"
 			tasks: [{
 				id: "4BBF150A1DD3A0AF"
-				item: { count: 1, id: "ae2:green_paint_ball" }
+				item: { count: 1, id: "minecraft:green_dye" }
 				type: "item"
 			}]
 			x: -3.0d
@@ -121,13 +121,13 @@
 				"6A76E65324F0ACC0"
 			]
 			icon: {
-				id: "ae2:blue_paint_ball"
+				id: "minecraft:blue_dye"
 			}
 			id: "302FCD205CC2F708"
 			shape: "circle"
 			tasks: [{
 				id: "16C40B4F7D56B9C9"
-				item: { count: 1, id: "ae2:blue_paint_ball" }
+				item: { count: 1, id: "minecraft:blue_dye" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -139,13 +139,13 @@
 				"302FCD205CC2F708"
 			]
 			icon: {
-				id: "ae2:magenta_paint_ball"
+				id: "minecraft:magenta_dye"
 			}
 			id: "3BE15AA5C237AB80"
 			tasks: [
 				{
 					id: "5DF1A84700EB5D15"
-					item: { count: 1, id: "ae2:magenta_paint_ball" }
+					item: { count: 1, id: "minecraft:magenta_dye" }
 					type: "item"
 				}
 				{
@@ -311,13 +311,13 @@
 		{
 			dependencies: ["7AAE71F57FB89BCC"]
 			icon: {
-				id: "ae2:singularity"
+				id: "refinedstorage:quartz_enriched_iron"
 			}
 			id: "2C81D358594C4352"
 			tasks: [
 				{
 					id: "5BF8BF7A24029B57"
-					item: { count: 1, id: "ae2:singularity" }
+					item: { count: 1, id: "refinedstorage:quartz_enriched_iron" }
 					type: "item"
 				}
 				{
@@ -335,15 +335,10 @@
 				"375C9A43FE5620B6"
 			]
 			icon: {
-				id: "ae2:quantum_entangled_singularity"
+				id: "minecraft:tnt"
 			}
 			id: "5A199B898D41A309"
 			tasks: [
-				{
-					id: "63C5611154B9B124"
-					item: { count: 1, id: "ae2:quantum_entangled_singularity" }
-					type: "item"
-				}
 				{
 					id: "3A68EA184DE4D9B4"
 					type: "checkmark"
@@ -427,13 +422,13 @@
 			]
 			dependency_requirement: "one_completed"
 			icon: {
-				id: "ae2:ender_dust"
+				id: "minecraft:ender_pearl"
 			}
 			id: "375C9A43FE5620B6"
 			tasks: [
 				{
 					id: "74E8DBEBD9AA5D72"
-					item: { count: 1, id: "ae2:ender_dust" }
+					item: { count: 1, id: "minecraft:ender_pearl" }
 					type: "item"
 				}
 				{
@@ -837,13 +832,13 @@
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
-				id: "ae2:ender_dust"
+				id: "minecraft:ender_pearl"
 			}
 			id: "3BFC4DFCE765F3EA"
 			shape: "circle"
 			tasks: [{
 				id: "56C6D2D683E35E74"
-				item: { count: 1, id: "ae2:ender_dust" }
+				item: { count: 1, id: "minecraft:ender_pearl" }
 				type: "item"
 			}]
 			x: -3.0d
