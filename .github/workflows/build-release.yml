@@ -1,10 +1,12 @@
 name: Build Project
-run-name: "Project Build #${{ github.run_number }}"
+run-name: "Project Build #${{ github.run_number }} (${{ github.head_ref || github.ref_name }})"
 on:
+  # Every branch, not only main and dev. Tags are excluded so creating a release
+  # tag does not start another build. Release publishing stays main-only.
   push:
     branches:
-      - dev
-      - main
+      - "**"
+  pull_request:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -35,6 +37,7 @@ jobs:
       exists: ${{ steps.check.outputs.exists }}
       make_release: ${{ steps.check.outputs.make_release }}
       make_pr: ${{ steps.check.outputs.make_pr }}
+      artifact_suffix: ${{ steps.check.outputs.artifact_suffix }}
       pakku-lock_changed: ${{ steps.filter.outputs.pakku-lock }}
       kubejs_changed: ${{ steps.filter.outputs.kubejs }}
       webhook_present: ${{ steps.webhook.outputs.present }}
@@ -215,6 +218,8 @@ jobs:
       - name: Check
         id: check
         shell: bash
+        env:
+          HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           MC_VERSIONS_JSON='${{ steps.pakku_lock_info.outputs.mc_versions }}'
           MINECRAFT_VERSION=$(echo "$MC_VERSIONS_JSON" | jq -r '.[0]' | tr -d '[]"')
@@ -229,17 +234,36 @@ jobs:
           echo "loader_type=$LOADER_TYPE" >> $GITHUB_OUTPUT
 
 
+          if [ -n "$GITHUB_HEAD_REF" ]; then
+            RAW_BRANCH="$GITHUB_HEAD_REF"
+          else
+            RAW_BRANCH="$GITHUB_REF_NAME"
+          fi
+          SAFE_BRANCH=$(printf '%s' "$RAW_BRANCH" | sed 's#[^A-Za-z0-9._-]#-#g' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//' | cut -c1-80)
+          if [ -z "$SAFE_BRANCH" ]; then
+            SAFE_BRANCH="branch"
+          fi
+          if [ -n "$HEAD_COMMIT_SHA" ]; then
+            RAW_SHA="$HEAD_COMMIT_SHA"
+          else
+            RAW_SHA="$GITHUB_SHA"
+          fi
+          SHORT_SHA=$(printf '%s' "$RAW_SHA" | cut -c1-7)
+
           if ${{ env.DEV_ENVIRONMENT == 'true' }}; then
             echo "project_version=build_#${{ github.run_number }}" >> $GITHUB_OUTPUT
+            echo "artifact_suffix=-${SAFE_BRANCH}-${SHORT_SHA}" >> $GITHUB_OUTPUT
           else
             echo "project_version=${{ steps.changelog.outputs.version }}" >> $GITHUB_OUTPUT
+            echo "artifact_suffix=" >> $GITHUB_OUTPUT
           fi
 
           echo "project_name=${{ steps.pakku_info.outputs.name }}" >> $GITHUB_OUTPUT
           echo "release_type=${{ steps.pakku_info.outputs.release_type }}" >> $GITHUB_OUTPUT
           echo "exists=${{ steps.check_tag.outputs.exists }}" >> $GITHUB_OUTPUT
           echo "make_release=${{ steps.check_tag.outputs.exists == 'false' && env.DEV_ENVIRONMENT == 'false' }}" >> $GITHUB_OUTPUT
-          echo "make_pr=${{ steps.check_tag.outputs.exists  == 'false'  && env.DEV_ENVIRONMENT == 'true' }}" >> $GITHUB_OUTPUT
+          # Only a push to dev opens the release PR. Other branches just build.
+          echo "make_pr=${{ github.event_name == 'push' && github.ref_name == 'dev' && steps.check_tag.outputs.exists == 'false' }}" >> $GITHUB_OUTPUT
 
       - name: Format diff
         id: format_diff
@@ -266,6 +290,7 @@ jobs:
             **Tag Exists**: `${{ steps.check.outputs.exists }}`
             **Make Pull Request**: `${{ steps.check.outputs.make_pr }}`
             **Make Release**: `${{ steps.check.outputs.make_release }}`
+            **Artifact Suffix**: `${{ steps.check.outputs.artifact_suffix }}`
             
 
             ${{ steps.changelog_dev.outputs.description }}
@@ -345,7 +370,7 @@ jobs:
     name: Update MMC-Pack 
     needs: [info]
     runs-on: ubuntu-latest
-    if: needs.info.outputs.pakku-lock_changed == 'true'
+    if: ${{ needs.info.outputs.pakku-lock_changed == 'true' && github.event_name == 'push' && (github.ref_name == 'main' || github.ref_name == 'dev') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5.0.0
@@ -458,7 +483,7 @@ jobs:
       - name: Upload artifact CurseForge
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{ needs.info.outputs.project_file_name }}-curseforge
+          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-curseforge
           path: ./build/curseforge/*-curseforge.zip
           if-no-files-found: error
 
@@ -509,7 +534,7 @@ jobs:
       - name: Upload server artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{ needs.info.outputs.project_file_name }}-serverpack
+          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-serverpack
           path: ./build/serverpack/*-serverpack.zip
           if-no-files-found: error
 
