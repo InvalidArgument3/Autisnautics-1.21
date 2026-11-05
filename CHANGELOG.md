@@ -1,8 +1,9 @@
 # Changelog
 ## [0.0.60]
+- remove Grassier Grass 1.4.5
 - add **Create Aeronautics: Octo Legs 0.3.6** (`octolegs`, both sides): placeable tentacle legs for Create Aeronautics ships. Our own mod, not on Modrinth/CF; shipped via Git LFS as a manual override (`.pakku/overrides/mods/octolegs-0.3.6+mc1.21.1.jar`). Server config `config/octolegs-server.toml` included (also `legworks-server.toml` and `tentaworks-server.toml` for Landing Legs / Octo Arms)
 - add **Let it Walk! 0.1.1** (CurseForge, beta, both sides): Create/Sable walking machines. Requires Create and Sable (both already in the pack)
-- add Grassier Grass 1.4.5 (Modrinth, both sides) and Fancy World Animations [FWA] 1.3.4 (Modrinth, client)
+- add Fancy World Animations [FWA] 1.3.4 (Modrinth, client)
 - re-add **iavistacompat 1.0.0-local** (both sides), our Vista ↔ Immersive Portals: Aeronautics bridge: IP:A cancels vanilla chunk tracking, so Vista viewfinders far away showed no live feed; this feeds Vista's view zones into IP's per-player chunk loaders and cancels Vista's conflicting entity-tracking mixin. Shipped via Git LFS (`.pakku/overrides/mods/iavistacompat-1.0.0-local.jar`)
 - Voxy portal-LOD build `ipa10` → **`ipa10f`** (client only, `.pakku/client-overrides/mods/`). **Test build**: intended to fix LOD flicker with IP:A portals, not yet confirmed in game. Kill switch unchanged: `-Dvoxy.portalLods=false`
 

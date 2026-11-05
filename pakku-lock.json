@@ -11205,43 +11205,6 @@
             ]
         },
         {
-            "pakku_id": "bKIBgf3AB24Slw0X",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "grassier-grass"
-            },
-            "name": {
-                "modrinth": "Grassier Grass"
-            },
-            "id": {
-                "modrinth": "3jCB9cn2"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "grassiergrass-neoforge-1.4.5+mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/3jCB9cn2/versions/hWKkBn3u/grassiergrass-neoforge-1.4.5+mc1.21.1.jar",
-                    "id": "hWKkBn3u",
-                    "parent_id": "3jCB9cn2",
-                    "hashes": {
-                        "sha512": "5e1085f8039b9e42ce9a11ce3bdfc668e14f86b7b8240940cc4c922640af1dcf0c294a2a5853194fd6625b2f6f3fe8029f6cf405abb9ab496e274971bb36b0fd",
-                        "sha1": "679fa7d59ef34fc9a28534d6d9f2b227c9033719"
-                    },
-                    "required_dependencies": [],
-                    "size": 2350729,
-                    "date_published": "2026-07-18T21:03:09.446975Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "8TYVh6jPQkDrimSb",
             "type": "MOD",
             "side": "BOTH",
