@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.63]
+- remove **Create: Atmospherics 2.0.0-oceans** (`aeronautics-wind-and-weather`, both sides). Too heavy. Also drop `config/aeronauticswinds-common.toml` and the `aeronauticswinds:*` entries in `config/submarine_hull.json`
+
 ## [0.0.62]
 - bump **Create Aeronautics: Octo Legs** 0.3.6 → **0.5.2** (both sides, `.pakku/overrides/mods/`, Git LFS): wall climb and wall-descend foothold fixes. Aim rises/drops with vertical motion; the step trigger uses horizontal and vertical separation from that aim so sneak-descend walks down the same face. Notes in `docs/octolegs-0.5.0-notes.md`, `0.5.1`, `0.5.2` (plus `docs/limb-systems-analysis.md`)
 - refresh `config/vista-common.toml` for newer Vista schema (television / picture tape / mirror / wave gate / view finder sections)

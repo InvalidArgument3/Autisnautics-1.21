@@ -163,10 +163,6 @@
             "type": "RESOURCE_PACK",
             "side": "CLIENT"
         },
-        "aeronautics-wind-and-weather": {
-            "side": "BOTH",
-            "redistributable": false
-        },
         "create-deep-seas": {
             "side": "BOTH",
             "redistributable": false
