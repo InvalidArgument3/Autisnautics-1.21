@@ -146,9 +146,6 @@
         "emf-compat-core": {
             "side": "CLIENT"
         },
-        "spatial-gui": {
-            "side": "CLIENT"
-        },
         "fresh-animations": {
             "side": "CLIENT"
         },
