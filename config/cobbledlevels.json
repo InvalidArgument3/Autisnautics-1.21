@@ -1,0 +1,166 @@
+{
+  "DimensionMinLevel": [
+    "minecraft:the_nether: 50",
+    "minecraft:the_end: 70"
+  ],
+  "DimensionMaxLevel": [
+    "minecraft:the_nether: 70"
+  ],
+  "BiomeMinLevel": [
+    "minecraft:swamp: 40",
+    "minecraft:deep_dark: 60"
+  ],
+  "BiomeMaxLevel": [
+    "minecraft:deep_dark: 80"
+  ],
+  "StructureMinLevel": [
+    "minecraft:end_city: 70"
+  ],
+  "StructureMaxLevel": [
+    "minecraft:village_plains: 15"
+  ],
+  "SpeciesLevelRanges": [
+    "cobblemon:caterpie: 1-10"
+  ],
+  "PartyScaling": {
+    "Enabled": true,
+    "MinVariance": 7,
+    "Bias": "NORMAL"
+  },
+  "DistanceScaling": {
+    "Enabled": true,
+    "LevelNearSpawn": 1,
+    "MaxLevel": 100,
+    "ScalingArea": -1,
+    "LockLevelAtMax": true,
+    "Influence": 0.6,
+    "ScalingType": "POWER_SCALING",
+    "LINEAR_SCALING": {
+      "PercentagePerDistance": 0.02,
+      "LevelPerDistance": 0.5,
+      "DistancePerIncrease": 100
+    },
+    "POWER_SCALING": {
+      "DistanceForMaxLevel": 20000,
+      "Exponent": 2.0
+    },
+    "LOG_SCALING": {
+      "BaseDistance": 1024
+    }
+  },
+  "DifficultyScaling": {
+    "Enabled": true,
+    "DifficultyMultiplier": 1.0
+  },
+  "DepthScaling": {
+    "Enabled": true,
+    "StartHeight": 64,
+    "PercentagePerBlock": 0.005,
+    "MaxIncrease": 0.5
+  },
+  "General": {
+    "RespectEvolutionStages": true,
+    "OnlyScaleUpwards": false,
+    "PreferLatestMoves": false,
+    "StartScalingOnLvl": 0,
+    "StopScalingOnLvl": 100,
+    "ExclusionInterval": 0,
+    "DimensionBlacklist": [],
+    "ExcludedPokemon": [
+      "cobblemon:articuno",
+      "cobblemon:zapdos",
+      "cobblemon:moltres",
+      "cobblemon:mew",
+      "cobblemon:mewtwo",
+      "cobblemon:deoxys",
+      "cobblemon:raikou",
+      "cobblemon:entei",
+      "cobblemon:suicune",
+      "cobblemon:lugia",
+      "cobblemon:hooh",
+      "cobblemon:regirock",
+      "cobblemon:regice",
+      "cobblemon:registeel",
+      "cobblemon:latias",
+      "cobblemon:latios",
+      "cobblemon:kyogre",
+      "cobblemon:groudon",
+      "cobblemon:rayquaza",
+      "cobblemon:uxie",
+      "cobblemon:mesprit",
+      "cobblemon:azelf",
+      "cobblemon:dialga",
+      "cobblemon:palkia",
+      "cobblemon:heatran",
+      "cobblemon:regigigas",
+      "cobblemon:giratina",
+      "cobblemon:cresselia",
+      "cobblemon:cobalion",
+      "cobblemon:terrakion",
+      "cobblemon:virizion",
+      "cobblemon:tornadus",
+      "cobblemon:thundurus",
+      "cobblemon:landorus",
+      "cobblemon:reshiram",
+      "cobblemon:zekrom",
+      "cobblemon:kyurem",
+      "cobblemon:xerneas",
+      "cobblemon:yveltal",
+      "cobblemon:zygarde",
+      "cobblemon:tapukoko",
+      "cobblemon:tapulele",
+      "cobblemon:tapubulu",
+      "cobblemon:tapufini",
+      "cobblemon:solgaleo",
+      "cobblemon:lunala",
+      "cobblemon:necrozma",
+      "cobblemon:typenull",
+      "cobblemon:silvally",
+      "cobblemon:zacian",
+      "cobblemon:zamazenta",
+      "cobblemon:eternatus",
+      "cobblemon:regieleki",
+      "cobblemon:regidrago",
+      "cobblemon:glastrier",
+      "cobblemon:spectrier",
+      "cobblemon:calyrex",
+      "cobblemon:kubfu",
+      "cobblemon:urshifu",
+      "cobblemon:koraidon",
+      "cobblemon:miraidon",
+      "cobblemon:tinglu",
+      "cobblemon:chienpao",
+      "cobblemon:wochien",
+      "cobblemon:chiyu",
+      "cobblemon:ogerpon",
+      "cobblemon:celebi",
+      "cobblemon:jirachi",
+      "cobblemon:phione",
+      "cobblemon:manaphy",
+      "cobblemon:darkrai",
+      "cobblemon:shaymin",
+      "cobblemon:arceus",
+      "cobblemon:victini",
+      "cobblemon:keldeo",
+      "cobblemon:meloetta",
+      "cobblemon:genesect",
+      "cobblemon:diancie",
+      "cobblemon:hoopa",
+      "cobblemon:volcanion",
+      "cobblemon:magearna",
+      "cobblemon:marshadow",
+      "cobblemon:zeraora",
+      "cobblemon:meltan",
+      "cobblemon:melmetal",
+      "cobblemon:zarude",
+      "cobblemon:pecharunt",
+      "cobblemon:okidogi",
+      "cobblemon:munkidori",
+      "cobblemon:fezandipiti",
+      "cobblemon:terapagos",
+      "cobblemon:cosmog",
+      "cobblemon:cosmoem",
+      "cobblemon:enamorus"
+    ]
+  }
+}

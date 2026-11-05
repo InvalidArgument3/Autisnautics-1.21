@@ -1,0 +1,52 @@
+// Spatial GUI screen profiles
+//
+// A profile is a group of settings overrides. This is mainly for modpack creators or advanced users.
+// Any other setting not included in a profile uses your normal Spatial GUI config settings.
+//
+// "rules" decides which screens use which profile. For each screen, the first match overrides:
+//   1. exact class name   "net.minecraft.client.gui.screens.inventory.CraftingScreen"
+//   2. category           "#inventory", "#containers" or "#pause"
+//   3. "#all"             every screen not included above
+//
+// Setting names are the same as in spatial-gui.json5. Setting "guiScale" automatically turns on "overrideGuiScale".
+//
+// You can find exact class names in the 'seenScreens' list in the config,
+// either in game under the 'Screens' tab or in spatial-gui.json5
+//
+// Example, remove the // to use:
+// {
+//   profiles: {
+//     compact: { guiScale: 3, firstPersonScreenScale: 1.2 },
+//     wide:    { autoDetectCameraMode: true, guiScale: 4, curvedScreenEnabled: true, curvedScreenArcDegrees: 60 }
+//   },
+//   rules: {
+//     "#containers": "compact",
+//     "net.minecraft.client.gui.screens.inventory.CraftingScreen": "wide"
+//   }
+// }
+
+{
+  "profiles": {
+    "Profile 1": {
+      "viewMode": "THIRD_PERSON",
+      "firstPersonScreenScale": 1.8,
+      "screenScale": 3.5,
+      "firstPersonScreenSideOffset": 0.0,
+      "screenSideOffset": -0.6,
+      "firstPersonScreenHeightOffset": 0.0,
+      "screenHeightOffset": -0.4,
+      "firstPersonScreenDistance": 1.5,
+      "screenDistance": 2.5,
+      "firstPersonScreenYawOffset": 180.0,
+      "screenYawOffset": 160.0,
+      "firstPersonScreenPitchOffset": 0.0,
+      "screenPitchOffset": 0.0,
+      "curvedScreenEnabled": false,
+      "curvedScreenArcDegrees": 30
+    }
+  },
+  "rules": {
+    "#all": "Profile 1"
+  },
+  "default": "Profile 1"
+}

@@ -1,0 +1,526 @@
+[
+  {
+    "enchantment": "yo_hooks:agility",
+    "weight": 1
+  },
+  {
+    "enchantment": "minecraft:aqua_affinity",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:arrow_inducting",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:astral_transferring",
+    "weight": 3
+  },
+  {
+    "enchantment": "farmersdelight:backstabbing",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:bane_of_arthropods",
+    "weight": 5
+  },
+  {
+    "enchantment": "piglinproliferation:bang",
+    "weight": 10
+  },
+  {
+    "enchantment": "minecraft:blast_protection",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexsmobs:board_return",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:bonking",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:bouncing_bolt",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:bouncy_ball",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:breach",
+    "weight": 2
+  },
+  {
+    "enchantment": "create:capacity",
+    "weight": 10
+  },
+  {
+    "enchantment": "enigmaticlegacyplus:ceaseless",
+    "weight": 1
+  },
+  {
+    "enchantment": "minecraft:channeling",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:charting_call",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:chomping_spirit",
+    "weight": 3
+  },
+  {
+    "enchantment": "spore:corrosive_potency",
+    "weight": 1
+  },
+  {
+    "enchantment": "spore:cryogenic_aspect",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:crystallization",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:dark_nock",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:dazing_sweep",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:density",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:depth_strider",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:detonating_death",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:double_stab",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:efficiency",
+    "weight": 10
+  },
+  {
+    "enchantment": "touhou_little_maid:enders_ender",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:energy_efficiency",
+    "weight": 5
+  },
+  {
+    "enchantment": "galosphere:enfeeble",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:enveloping_bubble",
+    "weight": 3
+  },
+  {
+    "enchantment": "enigmaticlegacyplus:etheric_resonance",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:explosive_flavor",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:far_flung",
+    "weight": 5
+  },
+  {
+    "enchantment": "tentaworks:far_reach",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:feather_falling",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:ferrous_haste",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:field_extension",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:fire_aspect",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:fire_protection",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:flame",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:flinging",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:fortune",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:frost_walker",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:gamma_ray",
+    "weight": 2
+  },
+  {
+    "enchantment": "spore:gastric_spewage",
+    "weight": 1
+  },
+  {
+    "enchantment": "yo_hooks:gentle_touch",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:heavy_slam",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:herd_phalanx",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:humungous_hex",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:impaling",
+    "weight": 2
+  },
+  {
+    "enchantment": "touhou_little_maid:impeding",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:impending_stab",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:infinity",
+    "weight": 1
+  },
+  {
+    "enchantment": "minecraft:knockback",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:lasting_morale",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexsmobs:lavawax",
+    "weight": 5
+  },
+  {
+    "enchantment": "yo_hooks:long_reach",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:looting",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:loyalty",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:luck_of_the_sea",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:lunge",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:lure",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:mending",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:multiple_mint",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:multishot",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:peppermint_punting",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:piercing",
+    "weight": 10
+  },
+  {
+    "enchantment": "alexscaves:plummeting_flight",
+    "weight": 3
+  },
+  {
+    "enchantment": "create:potato_recovery",
+    "weight": 10
+  },
+  {
+    "enchantment": "minecraft:power",
+    "weight": 10
+  },
+  {
+    "enchantment": "alexscaves:precise_volley",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:projectile_protection",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:protection",
+    "weight": 10
+  },
+  {
+    "enchantment": "minecraft:punch",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:quick_charge",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:rapid_possession",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:relentless_darkness",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:respiration",
+    "weight": 2
+  },
+  {
+    "enchantment": "dungeonsdelight:ricochet",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:riptide",
+    "weight": 2
+  },
+  {
+    "enchantment": "galosphere:rupture",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:sated_blade",
+    "weight": 3
+  },
+  {
+    "enchantment": "astralsorcery:scorching_heat",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:sea_swing",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:seapairing",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:second_wave",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:seekcandy",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexsmobs:serpentfriend",
+    "weight": 2
+  },
+  {
+    "enchantment": "dungeonsdelight:serrated_strike",
+    "weight": 5
+  },
+  {
+    "enchantment": "spore:serrated_thorns",
+    "weight": 1
+  },
+  {
+    "enchantment": "reliquary:severing",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:shaded_respite",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:sharp_cane",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:sharpness",
+    "weight": 10
+  },
+  {
+    "enchantment": "enigmaticlegacyplus:sharpshooter",
+    "weight": 10
+  },
+  {
+    "enchantment": "galosphere:sifting",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:sightless",
+    "weight": 3
+  },
+  {
+    "enchantment": "tentaworks:silent_step",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:silk_touch",
+    "weight": 1
+  },
+  {
+    "enchantment": "enigmaticlegacyplus:slayer",
+    "weight": 5
+  },
+  {
+    "enchantment": "minecraft:smite",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:soak_seeking",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:solar",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:soul_speed",
+    "weight": 1
+  },
+  {
+    "enchantment": "touhou_little_maid:speedy",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexscaves:spell_lasting",
+    "weight": 5
+  },
+  {
+    "enchantment": "supplementaries:stasis",
+    "weight": 2
+  },
+  {
+    "enchantment": "alexsmobs:straddle_jump",
+    "weight": 10
+  },
+  {
+    "enchantment": "alexscaves:straight_hook",
+    "weight": 3
+  },
+  {
+    "enchantment": "galosphere:sustain",
+    "weight": 1
+  },
+  {
+    "enchantment": "minecraft:sweeping_edge",
+    "weight": 2
+  },
+  {
+    "enchantment": "tentaworks:swift",
+    "weight": 2
+  },
+  {
+    "enchantment": "minecraft:swift_sneak",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:swiftwood",
+    "weight": 5
+  },
+  {
+    "enchantment": "spore:symbiotic_reconstitution",
+    "weight": 1
+  },
+  {
+    "enchantment": "alexscaves:targeted_ricochet",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:taxing_bellow",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:thorns",
+    "weight": 1
+  },
+  {
+    "enchantment": "tentaworks:thrift",
+    "weight": 5
+  },
+  {
+    "enchantment": "alexscaves:triple_splash",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:triple_split",
+    "weight": 3
+  },
+  {
+    "enchantment": "alexscaves:tsunami",
+    "weight": 2
+  },
+  {
+    "enchantment": "piglinproliferation:turning",
+    "weight": 10
+  },
+  {
+    "enchantment": "alexscaves:twilight_perfection",
+    "weight": 3
+  },
+  {
+    "enchantment": "minecraft:unbreaking",
+    "weight": 5
+  },
+  {
+    "enchantment": "spore:voracious_maw",
+    "weight": 1
+  },
+  {
+    "enchantment": "minecraft:wind_burst",
+    "weight": 2
+  },
+  {
+    "enchantment": "enigmaticlegacyplus:wrath",
+    "weight": 10
+  },
+  {
+    "enchantment": "alexscaves:x_ray",
+    "weight": 3
+  }
+]

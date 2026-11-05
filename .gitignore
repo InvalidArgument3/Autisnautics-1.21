@@ -206,3 +206,9 @@ testing/out/
 docs/dumps/*
 !docs/dumps/README.md
 
+# Client disconnect logs
+/debug/
+
+# Cobblemon unpacks Pokemon Showdown here on launch
+/showdown/
+
