@@ -1,5 +1,7 @@
 # Changelog
 ## [0.0.60]
+- add **Create: Atmospherics 2.0.0-oceans** (CurseForge `aeronautics-wind-and-weather`, both sides): wind, sails, waves, and weather for Create. Needs Create 6.0.10 and Sable 2.0.x, already in the pack. All Rights Reserved, not redistributed
+- add **Create: Deep Seas 3.4.7** (CurseForge, beta, both sides): submarines and boats on Create Aeronautics. Needs Create, Create Aeronautics, and Sable, already in the pack. All Rights Reserved, not redistributed
 - remove Grassier Grass 1.4.5
 - add **Create Aeronautics: Octo Legs 0.3.6** (`octolegs`, both sides): placeable tentacle legs for Create Aeronautics ships. Our own mod, not on Modrinth/CF; shipped via Git LFS as a manual override (`.pakku/overrides/mods/octolegs-0.3.6+mc1.21.1.jar`). Server config `config/octolegs-server.toml` included (also `legworks-server.toml` and `tentaworks-server.toml` for Landing Legs / Octo Arms)
 - add **Let it Walk! 0.1.1** (CurseForge, beta, both sides): Create/Sable walking machines. Requires Create and Sable (both already in the pack)

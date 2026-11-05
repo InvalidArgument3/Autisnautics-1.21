@@ -165,6 +165,14 @@
         "winterglides-extra-animations-cobblemon": {
             "type": "RESOURCE_PACK",
             "side": "CLIENT"
+        },
+        "aeronautics-wind-and-weather": {
+            "side": "BOTH",
+            "redistributable": false
+        },
+        "create-deep-seas": {
+            "side": "BOTH",
+            "redistributable": false
         }
     },
     "export_server_side_projects_to_client": true
