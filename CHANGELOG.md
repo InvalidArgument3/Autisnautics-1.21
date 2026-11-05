@@ -1,4 +1,9 @@
 # Changelog
+## [0.0.62]
+- bump **Create Aeronautics: Octo Legs** 0.3.6 → **0.5.2** (both sides, `.pakku/overrides/mods/`, Git LFS): wall climb and wall-descend foothold fixes. Aim rises/drops with vertical motion; the step trigger uses horizontal and vertical separation from that aim so sneak-descend walks down the same face. Notes in `docs/octolegs-0.5.0-notes.md`, `0.5.1`, `0.5.2` (plus `docs/limb-systems-analysis.md`)
+- refresh `config/vista-common.toml` for newer Vista schema (television / picture tape / mirror / wave gate / view finder sections)
+- track first-launch configs for Create Atmospherics, Create Deep Seas, Extra Disks, Let it Walk, and ExtraQuests: `aeronauticswinds-common.toml`, `create_high_seas-server.toml`, `create_submarine-common.toml`, `create_submarine-server.toml`, `create_submarine-vortex.toml`, `submarine_hull.json`, `extradisks-server.toml`, `let_it_walk-server.toml`, `config/extraquests/`
+
 ## [0.0.61]
 - re-add **iasodiumfix 1.0.0-local** (client only, `.pakku/client-overrides/mods/`, Git LFS). **Test fix** for parts of the world de-rendering near portals: Sodium 0.8 caches draw batches per region, and portal views could reuse the main view's (or another portal's) cached batches. The fix clears a region's cached batches whenever a different render pass (main view vs a specific portal and layer) draws it. IP: Aeronautics 2.8.17 already clears them when the render list changes, but its portal lists are per layer, so two portals on the same layer could still share stale batches. Checked against Sodium 0.8.13 and IP: Aeronautics 2.8.17. Remove the jar to revert
 - remove Spatial GUI 1.10.1 (client only; YACL stays as other mods need it)

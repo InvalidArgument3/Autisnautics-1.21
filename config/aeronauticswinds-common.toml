@@ -1,0 +1,520 @@
+[general]
+	#Let every player use the commands that only read: /atmospherics info, forecast, almanac,
+	#event list and season query. Changing the weather, wind or season stays op-only.
+	openReadOnlyCommands = true
+
+[wind]
+	#Average baseline wind speed in m/s.
+	# Default: 6.0
+	# Range: 0.0 ~ 60.0
+	baseWindSpeed = 6.0
+	#Hard cap on instantaneous wind speed in m/s.
+	# Default: 55.0
+	# Range: 1.0 ~ 120.0
+	maxWindSpeed = 55.0
+	#Global multiplier applied to all computed wind forces.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	windScaleFactor = 1.0
+	#Multiplier for simulated and external wind. Commands bypass this multiplier, while local ocean exposure still applies.
+	# Default: 1.1
+	# Range: 0.5 ~ 2.0
+	automaticWindSpeedMultiplier = 1.1
+	#Open-water exposure multiplier. Deep oceans receive a small additional boost.
+	# Default: 1.45
+	# Range: 1.0 ~ 3.0
+	oceanWindMultiplier = 1.45
+	#Y below which surface friction fully applies.
+	# Default: 64.0
+	# Range: -64.0 ~ 320.0
+	altitudeWindFloor = 64.0
+	#Y above which wind reaches its full free-stream strength.
+	# Default: 200.0
+	# Range: 64.0 ~ 400.0
+	altitudeWindCeiling = 200.0
+	#Y where occasional broad high-altitude wind bands begin to affect the sky.
+	# Default: 128.0
+	# Range: 64.0 ~ 384.0
+	highAltitudeWindStart = 128.0
+	#Y where high-altitude wind bands reach their complete strength.
+	# Default: 220.0
+	# Range: 96.0 ~ 512.0
+	highAltitudeWindFull = 220.0
+	#Maximum multiplier inside the strongest occasional upper-atmosphere wind bands.
+	# Default: 2.75
+	# Range: 1.0 ~ 6.0
+	highAltitudeWindMaxMultiplier = 2.75
+	#Fraction of free-stream wind at ground level (terrain drag).
+	# Default: 0.45
+	# Range: 0.0 ~ 1.0
+	surfaceWindFraction = 0.45
+	#How much wind strengthens/weakens across a day (0..1).
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	diurnalAmplitude = 0.35
+	#Vertical thermal/updraft strength in hot regions, m/s.
+	# Default: 3.0
+	# Range: 0.0 ~ 20.0
+	thermalStrength = 3.0
+
+[ships]
+	#Enable opt-in windcatcher forces and restrained extreme-storm hull loads.
+	enableWindOnContraptions = true
+	#Server-authoritative mode: ambient wind applies shape drag to every Sable contraption instead of only Windcatcher-equipped vessels. Ordinary Create windmills stay unchanged.
+	globalWindAffectsAllContraptions = false
+	#Only aeronauticswinds:wind_sails blocks opt in; Create sails and propellers are excluded.
+	enableSailForces = true
+	# Default: 2.5
+	# Range: 0.0 ~ 5.0
+	sailForceMultiplier = 2.5
+	#Dedicated Windcatcher acceleration strength; does not affect hulls or projectiles.
+	# Default: 1.0
+	# Range: 0.1 ~ 8.0
+	windcatcherAccelerationMultiplier = 1.0
+	#Aligned Windcatcher area needed per 100 occupied ship blocks for full wind speed. Weight raises the requirement.
+	# Default: 3.5
+	# Range: 0.5 ~ 30.0
+	windcatcherFullSpeedAreaPercent = 3.5
+	#Hard cap on wind acceleration in m/s^2 at base wind speed. Scales dynamically with actual wind speed.
+	# Default: 4.0
+	# Range: 0.05 ~ 30.0
+	maxWindAcceleration = 4.0
+	#Maximum effective sail lever arm in blocks before torque is capped.
+	# Default: 5.0
+	# Range: 0.0 ~ 32.0
+	maxWindTorqueLever = 5.0
+	#Fraction of computed sail-position torque applied to ships.
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	windTorqueResponse = 0.35
+	#Shape-drag coefficient. Ambient hull drag is only 10% of this in global affect-everything mode.
+	# Default: 0.8
+	# Range: 0.0 ~ 4.0
+	hullDragCoefficient = 0.8
+	# Default: 256.0
+	# Range: 1.0 ~ 4096.0
+	hullAreaCap = 256.0
+	#Gentle ambient hull-drag share for Sable sublevels without Windcatchers. This gives balloons and bare contraptions slight drift and sway; zero disables it.
+	# Default: 0.025
+	# Range: 0.0 ~ 0.25
+	ambientNonSailWindFactor = 0.025
+	#Maximum extra no-sail hull response from presenting a large face to the wind. At 0.18, the largest exposed surfaces receive at most 18% more force.
+	# Default: 0.18
+	# Range: 0.0 ~ 1.0
+	largeSurfaceWindBonus = 0.18
+	#Extra hull drag in severe storms, including on ships without windcatchers.
+	# Default: 0.12
+	# Range: 0.0 ~ 1.0
+	stormHullWindFactor = 0.12
+	#Additional storm load on Sable bodies without Windcatchers, useful for aircraft and airships in tornadoes.
+	# Default: 0.22
+	# Range: 0.0 ~ 2.0
+	stormNonSailWindFactor = 0.22
+	#Natural wind speed in m/s where non-Windcatcher Sable hulls begin receiving an extreme-weather load. Ordinary wind remains opt-in.
+	# Default: 28.0
+	# Range: 5.0 ~ 100.0
+	extremeSableWindThreshold = 28.0
+	#Ticks between loaded-plot scans for dedicated windcatcher blocks.
+	# Default: 80
+	# Range: 20 ~ 600
+	sailRescanInterval = 80
+	#Enable passive water drag, directional keels, and shaft-steered rudders for Sable vessels.
+	enableHydrodynamicSailing = true
+	#Let the air inside a Sable hull float it, as real boats float, instead of only its solid blocks. Open hulls take water when their rim goes under.
+	enableHullAirBuoyancy = true
+	#Strength of the directional sideways water resistance supplied by each Keel.
+	# Default: 18.0
+	# Range: 0.0 ~ 100.0
+	keelLateralDrag = 18.0
+	#Steering authority of each Rudder while the hull is moving through water.
+	# Default: 5.0
+	# Range: 0.0 ~ 30.0
+	rudderControlStrength = 5.0
+	#General water drag applied to immersed hydrodynamic control surfaces.
+	# Default: 0.45
+	# Range: 0.0 ~ 4.0
+	waterHullDrag = 0.45
+	#Maximum cloth blocks in one Yard-selected sail rig. Prevents accidental server-sized selections.
+	# Default: 256
+	# Range: 4 ~ 4096
+	maxSailRigArea = 256
+	#Creative players cut sails at the Sail Loft without kits, sticks, string, banners or dye.
+	#Off by default: the loft asks everyone for the materials.
+	creativeFreeCutting = false
+	#Base integrity of a Cotton Sail rig before prolonged seawater exposure destroys it.
+	# Default: 2400
+	# Range: 100 ~ 100000
+	cottonSailDurability = 2400
+	#Base integrity of a Canvas Sail rig. Canvas is deliberately much more durable.
+	# Default: 12000
+	# Range: 100 ~ 500000
+	canvasSailDurability = 12000
+	#Server-side rate multiplier for sail wear while cloth touches ocean water.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	seawaterRotMultiplier = 1.0
+	#Server-side rate multiplier for sail wear above each material's safe wind load. Set to 0 to disable aerodynamic degradation.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	sailStressWearMultiplier = 1.0
+	#Enable high-altitude turbulence and gentle airframe shaking for aircraft constructed with Create mod sails.
+	enableSailTurbulence = true
+	#Y altitude where atmospheric turbulence begins to affect Create sail aircraft.
+	# Default: 120.0
+	# Range: 0.0 ~ 500.0
+	sailTurbulenceMinAltitude = 120.0
+	#Y altitude where atmospheric turbulence reaches its full strength.
+	# Default: 220.0
+	# Range: 64.0 ~ 600.0
+	sailTurbulenceFullAltitude = 220.0
+	#Multiplier for linear turbulence buffeting forces.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	sailTurbulenceForceStrength = 1.0
+	#Multiplier for angular turbulence roll/pitch/yaw rocking torques.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	sailTurbulenceTorqueStrength = 1.0
+	#Share of one normal Windcatcher's Create stress capacity. RPM still equals wind speed.
+	# Default: 0.55
+	# Range: 0.05 ~ 2.0
+	windmillSuPerWindcatcher = 0.55
+	#Hard SU capacity ceiling for a Windcatcher windmill. Prevents large sail arrays from producing runaway stress.
+	# Default: 8192.0
+	# Range: 256.0 ~ 65536.0
+	windmillMaxStressCapacity = 8192.0
+
+[ocean]
+	#Let the wind drift vanilla boats and rafts on open water. Disabled by default.
+	enableOceanSailing = false
+	#How strongly the wind drifts vanilla boats when enableOceanSailing is on.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	boatWindFactor = 1.0
+	#Track a real sea state (significant height, peak period, direction, swell memory) per 64-block ocean cell.
+	enableSeaState = true
+	#Let the tracked sea state drive orbital wave forces on hulls, buoys and floating entities, and be offered to Physics Mod.
+	enableWavePhysics = true
+	#Multiplier on the Pierson-Moskowitz equilibrium wave height. 1.0 is physically honest; raise it for a dramatic ocean.
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	waveHeightGain = 1.0
+	#Seconds for the sea to close half the distance to a new equilibrium height while wind blows.
+	# Default: 20.0
+	# Range: 1.0 ~ 600.0
+	waveGrowthHalfLifeSeconds = 20.0
+	#How much longer swell survives than it took to grow. 12 means a swell raised in a minute lingers about twelve minutes.
+	# Default: 12.0
+	# Range: 1.0 ~ 100.0
+	waveSwellPersistence = 12.0
+	#How often a tracked ocean cell re-integrates its sea state, in ticks.
+	# Default: 4
+	# Range: 1 ~ 100
+	waveRefreshTicks = 4
+	#Open water upwind, in blocks, over which a fresh breeze (8 m/s) raises its full sea. Stronger
+	#winds need more (nearly three times the fetch for twice the wind), so bays stay small and only long
+	#stretches of open sea build a full storm sea.
+	# Default: 640.0
+	# Range: 16.0 ~ 20000.0
+	waveFetchReferenceBlocks = 640.0
+	#Seconds of steady wind after which the sea counts as fully developed for its fetch.
+	# Default: 90.0
+	# Range: 2.0 ~ 7200.0
+	waveDurationReferenceSeconds = 90.0
+	#How hard storms whip up the open sea. Storms, gales and hurricanes blow at least a real storm's
+	#wind over the water (this share of it), however light the wind round about. 0 leaves it to the wind alone.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	stormSeas = 1.0
+	#Highest significant wave height the sea may reach, in blocks. Single waves in a big set run up to about twice that.
+	# Default: 14.0
+	# Range: 2.0 ~ 30.0
+	stormSeaCap = 14.0
+	#Real waves on the sea: one wave surface that ships, boats, items and the drawn water all follow.
+	oceanWaves = true
+	#Scales every wave on the sea, from ripples to storm seas.
+	# Default: 1.25
+	# Range: 0.0 ~ 3.0
+	oceanWaveScale = 1.25
+	#Long swell from distant storms, bigger in winter and different from one ocean region to the next.
+	# Default: 1.2
+	# Range: 0.0 ~ 3.0
+	oceanSwell = 1.2
+	#Waves steepen, break and run up the beach near the shore.
+	surfWaves = true
+	#The sea rises and falls twice a day, more at full and new moon.
+	tides = true
+	#Height between low and high water at spring tide, in blocks.
+	# Default: 1.2
+	# Range: 0.0 ~ 3.0
+	tideRange = 1.2
+	#Players, mobs, items and boats bob and drift with the waves and the tide.
+	wavesMoveFloatingThings = true
+	#Sable ships float on the wave surface, pitching and rolling over the swell.
+	shipsRideWaves = true
+	#Boats on the water are Sable bodies: they pitch and roll with the waves and bump into ships, docks and the shore.
+	boatPhysics = true
+
+[rivers]
+	#Carve river networks into new chunks: streams start in the hills, join and widen on the way
+	#down, fill deep basins into lakes, and always reach a bigger river, a lake that drains on or
+	#the sea. Only worlds created with this on get them, and only in chunks generated from then on.
+	enableRiverGeneration = true
+	#How many streams there are. Read once, when a world is created, so its rivers stay seamless.
+	# Default: 1.0
+	# Range: 0.25 ~ 4.0
+	riverDensity = 1.0
+	#River water flows downstream and carries players, mobs, items, boats and ships with it.
+	enableRiverCurrents = true
+	#How hard the current pushes. 1.0 drifts a raft at the river's own speed.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	riverCurrentStrength = 1.0
+
+[weather]
+	enableWeatherRegions = true
+	# Default: 512
+	# Range: 128 ~ 16384
+	weatherRegionSize = 512
+	# Default: 0.5
+	# Range: 0.0 ~ 4.0
+	weatherChangeRate = 0.5
+	#Make rain, snow, and storm precipitation only fall directly beneath clouds and stop above cloud altitude.
+	rainOnlyBeneathClouds = true
+	#Let gales and hurricanes shove exposed players and scatter loose items, ice storms
+	#slow anyone on open ground, and hurricanes throw lightning. Shelter always protects.
+	#Deep freeze and scorcher work through temperature and are governed by its own switches.
+	enableExtremeWeatherHazards = true
+	#Allow intense sandstorms and blizzards to lift loose real blocks as falling blocks. Disabled by default.
+	enableStormBlockMovement = false
+	#Maximum real blocks lifted per player each weather-effects pass.
+	# Default: 2
+	# Range: 0 ~ 12
+	stormBlockMoveLimit = 2
+	#Allow severe hail, thunderstorms, sandstorms, and blizzards to damage exposed crops, flowers, and natural leaves.
+	enableStormVegetationDamage = true
+	#Maximum exposed vegetation blocks damaged per player each five-second weather pass.
+	# Default: 2
+	# Range: 0 ~ 12
+	stormVegetationDamageLimit = 2
+	#Rain leaves shallow puddles on open flat ground (grass, dirt, paths, stone, planks) that
+	#dry up once it stops: quickly in sun and heat, slowly in the cold, and they freeze over
+	#in frost. They never replace a block, block a path or touch farmland.
+	enablePuddles = true
+	#How many puddles rain leaves. 0 makes none.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	puddleAmount = 1.0
+
+[rare_events]
+	#Rare weather events: tornadoes, waterspouts, rogue waves, maelstroms, haboobs, meteor
+	#showers and more. They start near players when the place, season and weather suit them.
+	enableRareEvents = true
+	#How often rare events happen. 1.0 is roughly one event per player every four in-game days.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	rareEventFrequency = 1.0
+	#Let tornadoes strip leaves, flowers and crops in their path. Off by default.
+	rareEventBlockDamage = false
+	#Let F3 and stronger tornadoes tear blocks loose and fling them about (F5 takes nearly anything).
+	#Also needs the mobGriefing game rule.
+	tornadoBlockDamage = true
+	#Let a tsunami's wall of water and the debris in its flood kill. Off, it stops at one heart like
+	#every other weather hazard. Needs enableExtremeWeatherHazards for any harm at all.
+	tsunamiLethal = true
+	#Let a tsunami tear out plants, fences, doors, Create machinery and (the great ones) light
+	#buildings in its path, and break moving contraptions apart. Also needs the mobGriefing game rule.
+	tsunamiBlockDamage = true
+
+[seasons]
+	#Enable dynamic regional seasons (Spring, Summer, Autumn, Winter).
+	enableSeasons = true
+	#Duration of each season in in-game Minecraft days (default 6 = 24 days/year).
+	# Default: 6
+	# Range: 1 ~ 120
+	daysPerSeason = 6
+	#Long summer days and short winter ones: the sun is up for about 14.5 hours at midsummer
+	#and 9.5 at midwinter, instead of 12 all year.
+	seasonalDayLength = true
+	#Automatically synchronize with Serene Seasons, Ecliptic Seasons, Homeostatic Seasons, or Forge Seasons when installed.
+	preferExternalSeasons = true
+	#Block distance along Z axis for Northern/Southern hemisphere inversion.
+	# Default: 2000.0
+	# Range: 100.0 ~ 100000.0
+	hemisphereTransitionDistance = 2000.0
+	#The almanac: a dozen events that come round every year at their own point in the
+	#seasons (spring thaw, cherry blossom, the Perseids, the harvest moon, the halcyon
+	#days, frost fairs and more). Each changes the world a little and none does harm.
+	enableSeasonalEvents = true
+	#Modulate crop and sapling growth speed based on seasons and frost dormancy.
+	enableSeasonalCropEffects = true
+	#Allow sub-zero winter temperatures to freeze standing surface water and accumulate snow.
+	enableWinterFreezing = true
+	#Allow hot summer heat to dry unwatered farmland and melt winter snow/ice.
+	enableSummerDrying = true
+	#Allow trees to shed fallen leaf litter onto the ground in Autumn.
+	enableFallenLeaves = true
+	#Allow natural deciduous trees to enter winter dormancy and thin out outer leaves in sub-zero frost.
+	enableTreeDefoliation = true
+	#Allow trees to regrow full lush green canopies when Spring arrives.
+	enableTreeRegrowth = true
+
+[heat_and_steam]
+	#Enable player thermal comfort, cold breath condensation, and freezing risk.
+	enablePlayerTemperatureEffects = true
+	#Damage entities that stand in scalding (steaming) or very hot water. The chilling effect of hot fluids still applies while this is off.
+	enableScaldingDamage = true
+	#Damage entities that linger in freezing water, and expose them to frostbite.
+	enableHypothermiaDamage = true
+	#Enable glass-roofed and heated greenhouse climate protection for crops.
+	enableGreenhouses = true
+	#Players resting in a sealed greenhouse warmer than 30 C slowly regenerate, like in a sauna.
+	enableGreenhouseSauna = true
+	#Let tagged heat and cooling sources convert nearby water between plain, hot, steaming, cold and chilled. Sources and rates are data-driven through the aeronauticswinds heat/cooling tags.
+	enableThermalFluidConversion = true
+	#Ticks between thermal conversion passes. Each pass may move a position one step along the ladder, so this is how fast water heats or chills.
+	# Default: 40
+	# Range: 1 ~ 1200
+	thermalConversionIntervalTicks = 40
+	#Maximum positions examined per conversion pass. Keeps the cost bounded on busy servers no matter how many players are online.
+	# Default: 96
+	# Range: 1 ~ 4096
+	thermalConversionsPerPass = 96
+	#Radius in blocks around each player that a conversion pass will look at, and the distance a cauldron's banked heat reaches.
+	# Default: 3
+	# Range: 1 ~ 8
+	thermalConversionRadius = 3
+	#Make Create Aeronautics hot-air balloon lift respond to ambient and onboard temperature.
+	enableHeatBuoyancy = true
+	#Balloon temperature-response strength. 1.2 is physically scaled; 0 disables the temperature adjustment.
+	# Default: 1.2
+	# Range: 0.0 ~ 20.0
+	heatBuoyancyPerThousand = 1.2
+	#Newtons of reaction thrust a Steam Vent produces per spare boiler heat level.
+	#Spare levels are the boiler's heat level minus the Steam Engines already drawing on it,
+	#so a vent and an engine compete for the same steam exactly as two engines would.
+	# Default: 420.0
+	# Range: 0.0 ~ 5000.0
+	steamThrustPerHeatLevel = 420.0
+	#Multiplier for reaction thrust generated by venting steam on Sable ships.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	steamThrustMultiplier = 1.0
+	#Whether high-velocity steam blasts from open pipes and flap valves push entities and deal scalding damage.
+	steamBlastEntityPush = true
+	#A boiler's burners must bring all the water piped in to the boil, at the temperature of the
+	#water round the boiler (the biome and season). Flood a small fire with cold sea water and it
+	#stops boiling and the steam falls away; off, Create's boiler ignores the feed's temperature.
+	boilerFeedCooling = true
+
+[flight]
+	#Enable wind glider aerodynamics for players using the Wind Rider item.
+	enableSkyEntityWind = true
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	skyEntityWindFactor = 1.0
+	#How rough the air is for gliders, elytra and flying ships: gusts, updrafts and downdrafts,
+	#and shear under cloud bases. Barely felt in fair weather, wild in squalls and hurricanes.
+	#0 turns it off.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	flightTurbulence = 1.0
+	#Prevent Wind Rider gliders from being boosted or damaged by fireworks.
+	preventWindRiderFireworks = true
+	#Standard horizontal cruising speed for the Wind Rider in blocks/tick (~8.4 m/s).
+	# Default: 0.42
+	# Range: 0.1 ~ 1.5
+	gliderCruiseSpeed = 0.42
+	#Gentle descent sink rate for the Wind Rider in blocks/tick (~2.2 m/s).
+	# Default: 0.11
+	# Range: 0.02 ~ 0.5
+	gliderSinkRate = 0.11
+	#Maximum horizontal forward speed gained when pitching down into a glide dive in blocks/tick.
+	# Default: 0.65
+	# Range: 0.2 ~ 2.0
+	gliderDiveSpeed = 0.65
+	#Minimum speed when holding sneak to flare / air-brake for precision landing in blocks/tick.
+	# Default: 0.18
+	# Range: 0.05 ~ 0.5
+	gliderAirBrakeSpeed = 0.18
+	#Enable stamina drain while gliding (Zelda/Genshin style). Disabled by default for unrestricted flight.
+	enableGliderStamina = false
+	#Duration of a full stamina bar in seconds when stamina is enabled.
+	# Default: 25.0
+	# Range: 5.0 ~ 300.0
+	gliderStaminaDurationSeconds = 25.0
+	#Allow deploying the glider if the Wind Rider is anywhere in inventory or hands, without needing to occupy the chest armor slot.
+	allowInventoryGliderDeploy = true
+	#Allow campfires, lava, fire, and magma blocks to create ascending thermal updrafts for gliders.
+	enableCampfireUpdrafts = true
+	#Vertical height of the thermal updraft column above standard campfires/fires in blocks.
+	# Default: 24.0
+	# Range: 4.0 ~ 128.0
+	campfireUpdraftHeight = 24.0
+	#Vertical height of the thermal updraft column above hay-bale signal campfires in blocks.
+	# Default: 50.0
+	# Range: 8.0 ~ 256.0
+	signalFireUpdraftHeight = 50.0
+	#Upward vertical velocity applied by campfire thermal updrafts in blocks/tick.
+	# Default: 0.42
+	# Range: 0.05 ~ 1.5
+	campfireUpdraftStrength = 0.42
+	#Upward vertical velocity applied by lava thermal updrafts in blocks/tick.
+	# Default: 0.35
+	# Range: 0.05 ~ 1.5
+	lavaUpdraftStrength = 0.35
+	#The End's own air: wind circling the main island and drawing in towards it, rising air off
+	#every island's rim, the void throwing gliders back up, and weightless air by the gateways.
+	endAir = true
+	#Allow wind to deflect vanilla and modded projectiles using a restrained, capped model.
+	enableProjectileWind = true
+	#Crosswind strength for ordinary projectiles. One is still intentionally subtle.
+	# Default: 0.12
+	# Range: 0.0 ~ 5.0
+	projectileWindFactor = 0.12
+	#Fraction of vertical wind applied to projectiles. Zero prevents storms forcing arrows downward.
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	projectileVerticalWindFactor = 0.0
+	#Opt in to wind deflection for TaCZ bullets. Off by default so firearm aim remains exact.
+	enableTaczBulletWind = false
+	#TaCZ bullet crosswind multiplier when TaCZ bullet wind is enabled.
+	# Default: 0.02
+	# Range: 0.0 ~ 1.0
+	taczBulletWindFactor = 0.02
+
+[compatibility]
+	#Apply wind pushing to Immersive Aircraft vehicles. Disabled by default.
+	enableImmersiveAircraftWind = false
+	#Use ProtoManly Weather, Weather2, or Simple Clouds as the authoritative wind source when installed.
+	preferExternalWeatherWind = true
+	#Conversion multiplier from ProtoManly Weather's wind vector to m/s.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	pmWeatherWindScale = 1.0
+	#Conversion from Weather2's normalized wind speed to m/s.
+	# Default: 20.0
+	# Range: 0.0 ~ 100.0
+	weather2WindScale = 20.0
+	#Conversion from Simple Clouds' cloud speed to m/s. Its cloud direction also becomes wind direction.
+	# Default: 6.0
+	# Range: 0.0 ~ 100.0
+	simpleCloudsWindScale = 6.0
+	#Mirror /atmospherics weather and wind changes into installed weather mods.
+	syncExternalWeatherCommands = true
+	#Continuously align Simple Clouds movement with the authoritative wind source.
+	syncExternalCloudMovement = true
+	#Ticks between external cloud movement synchronization passes.
+	# Default: 20
+	# Range: 5 ~ 200
+	externalWeatherSyncInterval = 20
+	#Recognize PMWeather supercells/cyclones and Weather2 tornado stages as local disasters.
+	enableExternalDisasterWind = true
+	#Vertical updraft added to external tornado-strength horizontal wind above the extreme threshold.
+	# Default: 0.16
+	# Range: 0.0 ~ 1.0
+	externalDisasterUpdraftStrength = 0.16
+	#Maximum bounded tornado updraft contributed by this compatibility layer, in m/s.
+	# Default: 7.0
+	# Range: 0.0 ~ 30.0
+	maxExternalDisasterUpdraft = 7.0
