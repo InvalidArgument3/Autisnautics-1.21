@@ -8135,6 +8135,7 @@
             "id": {
                 "modrinth": "Smytm33T"
             },
+            "update_strategy": "NONE",
             "files": [
                 {
                     "type": "modrinth",
@@ -12097,6 +12098,8 @@
             "id": {
                 "modrinth": "yOy4oSzi"
             },
+            "update_strategy": "NONE",
+            "redistributable": false,
             "files": [
                 {
                     "type": "modrinth",
@@ -12136,6 +12139,8 @@
             "id": {
                 "modrinth": "9nfaJPtX"
             },
+            "update_strategy": "NONE",
+            "redistributable": false,
             "files": [
                 {
                     "type": "modrinth",
@@ -16633,7 +16638,7 @@
         {
             "pakku_id": "jTMwX7bOCsNH5CVk",
             "pakku_links": [
-                "kJJf7KicCZCE4uKg"
+                "XHCkPM256Reg6KHe"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -21758,7 +21763,7 @@
             ]
         },
         {
-            "pakku_id": "kJJf7KicCZCE4uKg",
+            "pakku_id": "XHCkPM256Reg6KHe",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -21774,28 +21779,6 @@
                 "modrinth": "Ua7DFN59"
             },
             "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "YungsApi-1.21.1-NeoForge-5.1.9.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Ua7DFN59/versions/2prKITKh/YungsApi-1.21.1-NeoForge-5.1.9.jar",
-                    "id": "2prKITKh",
-                    "parent_id": "Ua7DFN59",
-                    "hashes": {
-                        "sha512": "7e3cf0b429e8a1c51dca094c2d8eabf12245bb42cbcd8b6e3e54959f931bef93201b81a08d200b417059aaa438e8eb445c3978a09568597bfb588199b7775967",
-                        "sha1": "2c4b740c8ad27bbcb2a21b85b64f011b809aed91"
-                    },
-                    "required_dependencies": [],
-                    "size": 413763,
-                    "date_published": "2026-09-16T11:24:46.968948Z"
-                },
                 {
                     "type": "curseforge",
                     "file_name": "YungsApi-1.21.1-NeoForge-5.1.9.jar",
@@ -21817,11 +21800,36 @@
                     "required_dependencies": [],
                     "size": 413763,
                     "date_published": "2026-09-16T11:24:30.020Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "YungsApi-1.21.1-NeoForge-5.1.9.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Ua7DFN59/versions/2prKITKh/YungsApi-1.21.1-NeoForge-5.1.9.jar",
+                    "id": "2prKITKh",
+                    "parent_id": "Ua7DFN59",
+                    "hashes": {
+                        "sha512": "7e3cf0b429e8a1c51dca094c2d8eabf12245bb42cbcd8b6e3e54959f931bef93201b81a08d200b417059aaa438e8eb445c3978a09568597bfb588199b7775967",
+                        "sha1": "2c4b740c8ad27bbcb2a21b85b64f011b809aed91"
+                    },
+                    "required_dependencies": [],
+                    "size": 413763,
+                    "date_published": "2026-09-16T11:24:46.968948Z"
                 }
             ]
         },
         {
             "pakku_id": "zhemK5FQdSIoLTtI",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -21889,6 +21897,9 @@
         },
         {
             "pakku_id": "mKjetGGdxNJLxBcM",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -21956,6 +21967,9 @@
         },
         {
             "pakku_id": "lwMT8ZEOICUOArXu",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -22023,6 +22037,9 @@
         },
         {
             "pakku_id": "RLrCinouQ54g3NQR",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -22090,6 +22107,9 @@
         },
         {
             "pakku_id": "CRpBu1AzpyYAwswK",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -22157,6 +22177,9 @@
         },
         {
             "pakku_id": "BivVnij2xIJFviTm",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -22224,6 +22247,9 @@
         },
         {
             "pakku_id": "WO7cho8mMAxnEji3",
+            "pakku_links": [
+                "XHCkPM256Reg6KHe"
+            ],
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -22286,6 +22312,34 @@
                     ],
                     "size": 157761,
                     "date_published": "2025-02-04T20:17:27.403Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "5WEg2MzZwVuKLUrT",
+            "type": "MOD",
+            "slug": {
+                "github": "InvalidArgument3/YUNGs-Better-Caves"
+            },
+            "name": {
+                "github": "YUNGs-Better-Caves"
+            },
+            "id": {
+                "github": "1447866834"
+            },
+            "files": [
+                {
+                    "type": "github",
+                    "file_name": "YungsBetterCaves-1.21.1-NeoForge-3.1.7.jar",
+                    "release_type": "release",
+                    "url": "https://github.com/InvalidArgument3/YUNGs-Better-Caves/releases/download/v3.1.7/YungsBetterCaves-1.21.1-NeoForge-3.1.7.jar",
+                    "id": "716058924",
+                    "parent_id": "1447866834",
+                    "hashes": {
+                        "sha256": "14bbec3551c8e82887aa922fda297ed3a56e959eb964f4e0a37e81a0e2131eed"
+                    },
+                    "size": 400486,
+                    "date_published": "2026-11-06T05:42:14Z"
                 }
             ]
         },
