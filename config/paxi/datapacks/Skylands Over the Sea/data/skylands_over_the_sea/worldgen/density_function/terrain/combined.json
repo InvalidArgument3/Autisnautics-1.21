@@ -4,5 +4,12 @@
   "min_inclusive": -64,
   "max_exclusive": 81,
   "when_in_range": "skylands_over_the_sea:terrain/default",
-  "when_out_of_range": "skylands_over_the_sea:terrain/final"
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": 81,
+    "max_exclusive": 205,
+    "when_in_range": -0.1,
+    "when_out_of_range": "skylands_over_the_sea:terrain/final"
+  }
 }
