@@ -1,6 +1,6 @@
 {
   "check_the_wiki_for_more_information": "https://qouteall.fun/immptl/wiki/Config-Options",
-  "maxPortalLayer": 5,
+  "maxPortalLayer": 1,
   "lagAttackProof": true,
   "enableCrossPortalSound": true,
   "pureMirror": false,
@@ -34,7 +34,7 @@
   "lightVanillaNetherPortalWhenCrouching": true,
   "enableServerPerformanceAdjustment": true,
   "enableDatapackPortalGen": true,
-  "indirectLoadingRadiusCap": 8,
+  "indirectLoadingRadiusCap": 3,
   "regularPortalLengthLimit": 64,
   "scaleLimit": 30,
   "easeCreativePermission": true,
