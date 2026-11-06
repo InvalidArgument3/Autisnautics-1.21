@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.71]
+- replace the starter house with joshspaceboy's Skyview island (house and island only, airship left out). Empty cells are structure void so the paste does not carve a box out of the skylands. Spawn is on the island grass, and the island is lifted 64 blocks above the surface
+
 ## [0.0.70]
 - force `redistributable: true` on the All Rights Reserved mods so the server pack actually contains them: Iron's Artifice, Iron's Lib, Create Aeronautics, Deep Seas, Walking Steel, Flight Control, Eco Stack Manager, KubeJS Diesel Generators, Natural Temperature, NeoOrigins, NuclearCraft Neohaul, Presence Footsteps
 
