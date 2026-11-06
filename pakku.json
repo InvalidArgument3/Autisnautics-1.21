@@ -86,7 +86,8 @@
             "side": "CLIENT"
         },
         "create-aeronautics": {
-            "update_strategy": "LATEST"
+            "update_strategy": "LATEST",
+            "redistributable": true
         },
         "aeronautics-camera-sync": {
             "side": "BOTH"
@@ -165,7 +166,7 @@
         },
         "create-deep-seas": {
             "side": "BOTH",
-            "redistributable": false
+            "redistributable": true
         },
         "emf-compat-better-combat": {
             "side": "CLIENT",
@@ -174,12 +175,36 @@
         "irons-lib": {
             "side": "BOTH",
             "update_strategy": "NONE",
-            "redistributable": false
+            "redistributable": true
         },
         "irons-artifice": {
             "side": "BOTH",
             "update_strategy": "NONE",
-            "redistributable": false
+            "redistributable": true
+        },
+        "create-walking-steel": {
+            "redistributable": true
+        },
+        "create-flight-control": {
+            "redistributable": true
+        },
+        "eco-stack-manager": {
+            "redistributable": true
+        },
+        "kubejs-diesel-generators": {
+            "redistributable": true
+        },
+        "natural-temperature": {
+            "redistributable": true
+        },
+        "neoorigins": {
+            "redistributable": true
+        },
+        "nuclearcraft-neohaul": {
+            "redistributable": true
+        },
+        "presence-footsteps-neoforge": {
+            "redistributable": true
         }
     },
     "export_server_side_projects_to_client": true

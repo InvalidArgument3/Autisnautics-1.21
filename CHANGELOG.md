@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.70]
+- force `redistributable: true` on the All Rights Reserved mods so the server pack actually contains them: Iron's Artifice, Iron's Lib, Create Aeronautics, Deep Seas, Walking Steel, Flight Control, Eco Stack Manager, KubeJS Diesel Generators, Natural Temperature, NeoOrigins, NuclearCraft Neohaul, Presence Footsteps
+
 ## [0.0.69]
 - commit the leftover instance configs: C2ME drops the removed native-acceleration block, Jade plugin list, NuclearCraft overhaul coils, submarine hull block list (Mystcraft entries gone), JAOPCA blank lines, FTB quest formatting, plus first-launch AttributeFix, Hilt, Iron's Artifice, and Modern Foundry Cristel configs
 

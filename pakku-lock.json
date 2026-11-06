@@ -5438,7 +5438,7 @@
             "id": {
                 "curseforge": "1533137"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -5483,7 +5483,7 @@
                 "curseforge": "1669164",
                 "modrinth": "YDfSQUPe"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -5548,7 +5548,7 @@
                 "curseforge": "676721",
                 "modrinth": "oWaK0Q19"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -6732,7 +6732,7 @@
                 "curseforge": "1605193",
                 "modrinth": "IGVrnkhH"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -8540,7 +8540,7 @@
                 "curseforge": "1067929",
                 "modrinth": "YfTOSsIw"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -12099,7 +12099,7 @@
                 "modrinth": "yOy4oSzi"
             },
             "update_strategy": "NONE",
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -12140,7 +12140,7 @@
                 "modrinth": "9nfaJPtX"
             },
             "update_strategy": "NONE",
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -13234,7 +13234,7 @@
                 "curseforge": "1152400",
                 "modrinth": "10UMLVgM"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15145,7 +15145,7 @@
                 "curseforge": "1550903",
                 "modrinth": "QZt2fevq"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15268,7 +15268,7 @@
                 "curseforge": "1495375",
                 "modrinth": "RUtQ9kfe"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15854,7 +15854,7 @@
                 "curseforge": "1523268",
                 "modrinth": "7hvoLzay"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -17349,7 +17349,7 @@
                 "curseforge": "1390302",
                 "modrinth": "JIEwmDVI"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
