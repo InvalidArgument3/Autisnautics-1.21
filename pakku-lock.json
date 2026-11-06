@@ -21006,67 +21006,6 @@
             ]
         },
         {
-            "pakku_id": "qsga6bLUEm6C6CGl",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "touhou-little-maid",
-                "modrinth": "touhou-little-maid"
-            },
-            "name": {
-                "curseforge": "Touhou Little Maid",
-                "modrinth": "Touhou Little Maid"
-            },
-            "id": {
-                "curseforge": "355044",
-                "modrinth": "R0bDWFAW"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/R0bDWFAW/versions/tXG1TkGx/touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
-                    "id": "tXG1TkGx",
-                    "parent_id": "R0bDWFAW",
-                    "hashes": {
-                        "sha512": "147bc10f5cc7159ee16c4918795155b3e52cf6bab5e09f588ed3fec14f8b47bbc512948bb8fef30346a47feba2692b6dbe20781c6cc1dc1d2c6b9377a9649bbe",
-                        "sha1": "f96507810deaa2ffd8c3bd86a79d6ccbd56ca32e"
-                    },
-                    "required_dependencies": [],
-                    "size": 24408776,
-                    "date_published": "2026-05-09T07:29:13.571833Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8061/852/touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
-                    "id": "8061852",
-                    "parent_id": "355044",
-                    "hashes": {
-                        "sha1": "f96507810deaa2ffd8c3bd86a79d6ccbd56ca32e",
-                        "md5": "2d565c3b3ab257e5ca8e0918bae2919d"
-                    },
-                    "required_dependencies": [],
-                    "size": 24408776,
-                    "date_published": "2026-05-09T07:33:11.967Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "pNTUZxyJq7P2S9j1",
             "type": "MOD",
             "slug": {

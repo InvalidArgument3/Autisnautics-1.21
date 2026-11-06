@@ -366,26 +366,6 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["3AD0072806C85E8A"]
-			id: "503719738ECF7E47"
-			rewards: [{
-				id: "23ED3A644AC1B763"
-				item: {
-					count: 1
-					id: "magistuarmory:crown_decoration"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				entity: "touhou_little_maid:fairy"
-				id: "523056C667A20E3D"
-				type: "kill"
-				value: 100L
-			}]
-			x: 1.5d
-			y: -2.0d
-		}
-		{
 			can_repeat: true
 			dependencies: ["3AD0072806C85E8A"]
 			id: "232166AEE943A162"

@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.73]
+- remove Touhou Little Maid, its configs, the "Mass Bullying" fairy quest, and the leftover AttributeFix, Jade, and Astral amulet entries that pointed at it
+
 ## [0.0.72]
 - Immersive Portals: replace the 5-layer skyland stack with the **9-layer Abyssal Ascent** dim stack (top→bottom): overworld, `infinite_abyss:first_layer`, `deeperdarker:otherside`, `oceanworld:deepsea`, `dimension_of_caves:cave`, `infernalcross:dimension`, nether, `undergarden:undergarden`, end. Keep `maxPortalLayer` 1, `indirectLoadingRadiusCap` 3, `netherPortalMode` disabled, `endPortalMode` normal
 - Paxi datapack **Autisnautics Abyssal Stack**: ported abyss/cave/infernal dims + Lithostitched boundary rifts; aquifers on for BC-carved layers; `fluid_level_floodedness: -1.0` on first_layer/cave/infernal; cave/infernal `min_y: -48` so ImmPtl floor bedrock matches `bottomY`

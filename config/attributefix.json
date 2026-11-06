@@ -132,17 +132,6 @@
         "value": 1024
       }
     },
-    "touhou_little_maid:maid_use_item_speed": {
-      "enabled": false,
-      "min": {
-        "default": -2147483648,
-        "value": -2147483648
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "hexcasting:feeble_mind": {
       "enabled": false,
       "min": {
@@ -165,17 +154,6 @@
         "value": 10
       }
     },
-    "touhou_little_maid:maid_hunger": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "forge:entity_reach": {
       "enabled": false,
       "min": {
@@ -187,17 +165,6 @@
         "value": 1024
       }
     },
-    "touhou_little_maid:maid_trident_cooldown": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "additionalentityattributes:magic_protection": {
       "enabled": false,
       "min": {
@@ -207,17 +174,6 @@
       "max": {
         "default": 1024,
         "value": 1024
-      }
-    },
-    "touhou_little_maid:maid_gun_attack_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
       }
     },
     "scguns:additional_bullet_damage": {
@@ -462,17 +418,6 @@
         "value": 1024
       }
     },
-    "touhou_little_maid:maid_shoot_cooldown": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "attributeslib:mining_speed": {
       "enabled": false,
       "min": {
@@ -715,17 +660,6 @@
         "value": 100
       }
     },
-    "touhou_little_maid:maid_passive_use_shield_tick": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "l2damagetracker:damage_absorption": {
       "enabled": false,
       "min": {
@@ -845,17 +779,6 @@
       "max": {
         "default": 1024,
         "value": 1024
-      }
-    },
-    "touhou_little_maid:maid_crossbow_attack_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
       }
     },
     "tetra:draw_speed": {
@@ -1120,17 +1043,6 @@
       "max": {
         "default": 1,
         "value": 1
-      }
-    },
-    "touhou_little_maid:maid_pickup_range": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-        "value": 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
       }
     },
     "additionalentityattributes:bonus_rare_loot_rolls": {

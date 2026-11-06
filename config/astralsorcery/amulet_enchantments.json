@@ -112,10 +112,6 @@
     "weight": 10
   },
   {
-    "enchantment": "touhou_little_maid:enders_ender",
-    "weight": 1
-  },
-  {
     "enchantment": "alexscaves:energy_efficiency",
     "weight": 5
   },
@@ -206,10 +202,6 @@
   {
     "enchantment": "minecraft:impaling",
     "weight": 2
-  },
-  {
-    "enchantment": "touhou_little_maid:impeding",
-    "weight": 5
   },
   {
     "enchantment": "alexscaves:impending_stab",
@@ -422,10 +414,6 @@
   {
     "enchantment": "minecraft:soul_speed",
     "weight": 1
-  },
-  {
-    "enchantment": "touhou_little_maid:speedy",
-    "weight": 2
   },
   {
     "enchantment": "alexscaves:spell_lasting",
