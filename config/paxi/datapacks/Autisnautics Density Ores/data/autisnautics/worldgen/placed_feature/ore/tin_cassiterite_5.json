@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/tin_cassiterite_5",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 31,
+            "weight": 8410
+          },
+          {
+            "data": 32,
+            "weight": 1590
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 485
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

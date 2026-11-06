@@ -201,7 +201,7 @@
       "type": "minecraft:interpolated"
     }
   },
-  "ore_veins_enabled": false,
+  "ore_veins_enabled": true,
   "sea_level": 188,
   "spawn_target": [
     {

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "autisnautics:ore/ancient_relic_1"
+  ],
+  "step": "underground_ores"
+}

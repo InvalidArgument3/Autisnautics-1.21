@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/aluminium_bauxite_5",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 82,
+            "weight": 4799
+          },
+          {
+            "data": 83,
+            "weight": 5201
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 485
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

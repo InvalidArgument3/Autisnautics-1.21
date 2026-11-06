@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/lead_galena_5",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 3,
+            "weight": 973
+          },
+          {
+            "data": 4,
+            "weight": 9027
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 485
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

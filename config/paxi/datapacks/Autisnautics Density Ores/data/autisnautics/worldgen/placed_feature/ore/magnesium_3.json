@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/magnesium_3",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 0,
+            "weight": 9352
+          },
+          {
+            "data": 1,
+            "weight": 648
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 205
+        },
+        "max_inclusive": {
+          "absolute": 349
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

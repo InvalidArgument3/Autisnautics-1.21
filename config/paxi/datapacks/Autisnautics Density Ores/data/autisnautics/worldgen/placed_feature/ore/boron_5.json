@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/boron_5",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 37,
+            "weight": 6092
+          },
+          {
+            "data": 38,
+            "weight": 3908
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 485
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

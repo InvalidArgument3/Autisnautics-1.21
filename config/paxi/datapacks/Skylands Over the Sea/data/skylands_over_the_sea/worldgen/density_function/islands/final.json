@@ -3,8 +3,8 @@
   "argument": {
     "type": "minecraft:range_choice",
     "input": "skylands_over_the_sea:y",
-    "min_inclusive": 80,
-    "max_exclusive": 144,
+    "min_inclusive": 205,
+    "max_exclusive": 269,
     "when_in_range": {
       "type": "minecraft:max",
       "argument1": "skylands_over_the_sea:islands/layer1/depth_bottom",
@@ -13,8 +13,8 @@
     "when_out_of_range": {
       "type": "minecraft:range_choice",
       "input": "skylands_over_the_sea:y",
-      "min_inclusive": 144,
-      "max_exclusive": 192,
+      "min_inclusive": 269,
+      "max_exclusive": 317,
       "when_in_range": {
         "type": "minecraft:max",
         "argument1": "skylands_over_the_sea:islands/layer1/depth_top",
@@ -27,8 +27,8 @@
       "when_out_of_range": {
         "type": "minecraft:range_choice",
         "input": "skylands_over_the_sea:y",
-        "min_inclusive": 192,
-        "max_exclusive": 240,
+        "min_inclusive": 317,
+        "max_exclusive": 365,
         "when_in_range": {
           "type": "minecraft:max",
           "argument1": "skylands_over_the_sea:islands/layer1/depth_top",
@@ -45,8 +45,8 @@
         "when_out_of_range": {
           "type": "minecraft:range_choice",
           "input": "skylands_over_the_sea:y",
-          "min_inclusive": 240,
-          "max_exclusive": 288,
+          "min_inclusive": 365,
+          "max_exclusive": 413,
           "when_in_range": {
             "type": "minecraft:max",
             "argument1": "skylands_over_the_sea:islands/layer2/depth_top",
@@ -63,8 +63,8 @@
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "skylands_over_the_sea:y",
-            "min_inclusive": 288,
-            "max_exclusive": 336,
+            "min_inclusive": 413,
+            "max_exclusive": 461,
             "when_in_range": {
               "type": "minecraft:max",
               "argument1": "skylands_over_the_sea:islands/layer3/depth_top",
@@ -77,8 +77,8 @@
             "when_out_of_range": {
               "type": "minecraft:range_choice",
               "input": "skylands_over_the_sea:y",
-              "min_inclusive": 336,
-              "max_exclusive": 400,
+              "min_inclusive": 461,
+              "max_exclusive": 525,
               "when_in_range": {
                 "type": "minecraft:max",
                 "argument1": "skylands_over_the_sea:islands/layer4/depth_top",
@@ -87,14 +87,14 @@
               "when_out_of_range": {
                 "type": "minecraft:range_choice",
                 "input": "skylands_over_the_sea:y",
-                "min_inclusive": 432,
-                "max_exclusive": 464,
+                "min_inclusive": 557,
+                "max_exclusive": 589,
                 "when_in_range": "skylands_over_the_sea:islands/layer6/depth_bottom",
                 "when_out_of_range": {
                   "type": "minecraft:range_choice",
                   "input": "skylands_over_the_sea:y",
-                  "min_inclusive": 464,
-                  "max_exclusive": 495,
+                  "min_inclusive": 589,
+                  "max_exclusive": 620,
                   "when_in_range": "skylands_over_the_sea:islands/layer6/depth_top",
                   "when_out_of_range": -0.1
                 }

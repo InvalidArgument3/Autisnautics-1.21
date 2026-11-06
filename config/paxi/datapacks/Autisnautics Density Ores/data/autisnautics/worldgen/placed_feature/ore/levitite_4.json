@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/levitite_4",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 0,
+            "weight": 800
+          },
+          {
+            "data": 1,
+            "weight": 9200
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 350
+        },
+        "max_inclusive": {
+          "absolute": 484
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

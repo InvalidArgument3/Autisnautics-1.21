@@ -1,0 +1,27 @@
+{
+  "feature": "cobblemon:ore/dusk_stone",
+  "placement": [
+    {
+      "count": 5,
+      "type": "minecraft:count"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 350
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      },
+      "type": "minecraft:height_range"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

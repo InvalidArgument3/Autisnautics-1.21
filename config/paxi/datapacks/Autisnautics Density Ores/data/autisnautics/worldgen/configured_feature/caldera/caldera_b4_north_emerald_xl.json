@@ -1,0 +1,9 @@
+{
+  "type": "lithostitched:structure_template",
+  "config": {
+    "template": "autisnautics:caldera/caldera_b4_north_emerald_xl",
+    "processors": "minecraft:empty",
+    "liquid_settings": "ignore_waterlogging",
+    "rotation": "none"
+  }
+}

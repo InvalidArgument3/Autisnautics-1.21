@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/nickel_3",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 1,
+            "weight": 3658
+          },
+          {
+            "data": 2,
+            "weight": 6342
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 205
+        },
+        "max_inclusive": {
+          "absolute": 349
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "feature": "autisnautics:ore/redstone_4",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 1,
+            "weight": 4780
+          },
+          {
+            "data": 2,
+            "weight": 5220
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 350
+        },
+        "max_inclusive": {
+          "absolute": 484
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

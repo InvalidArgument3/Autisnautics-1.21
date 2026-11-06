@@ -1,0 +1,27 @@
+{
+  "feature": "cobblemon:ore/dripstone_moon_stone",
+  "placement": [
+    {
+      "count": 256,
+      "type": "minecraft:count"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 205
+        },
+        "max_inclusive": {
+          "absolute": 620
+        }
+      },
+      "type": "minecraft:height_range"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

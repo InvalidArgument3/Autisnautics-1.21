@@ -1,0 +1,1148 @@
+{
+  "feature": "autisnautics:caldera/caldera_b3_north_amethyst_xxl",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2168
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "lithostitched:condition",
+      "condition": {
+        "type": "lithostitched:all_of",
+        "conditions": [
+          {
+            "type": "lithostitched:height_filter",
+            "range_type": "absolute",
+            "heightmap": "WORLD_SURFACE_WG",
+            "permitted_range": {
+              "min_inclusive": 212,
+              "max_inclusive": 610
+            }
+          },
+          {
+            "type": "lithostitched:sample_density",
+            "density_function": "autisnautics:caldera/wavy_z",
+            "min_inclusive": -15000.0,
+            "max_inclusive": -10001.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                13,
+                -2,
+                0
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                13,
+                -3,
+                0
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              13,
+              -5,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                12,
+                -2,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                12,
+                -3,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                9,
+                -2,
+                9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                9,
+                -3,
+                9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              9,
+              -5,
+              9
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -2,
+                12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -3,
+                12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -2,
+                13
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -3,
+                13
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -5,
+              13
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -2,
+                12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -3,
+                12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -9,
+                -2,
+                9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -9,
+                -3,
+                9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -9,
+              -5,
+              9
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -12,
+                -2,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -12,
+                -3,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -13,
+                -2,
+                0
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -13,
+                -3,
+                0
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -13,
+              -5,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -12,
+                -2,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -12,
+                -3,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -9,
+                -2,
+                -9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -9,
+                -3,
+                -9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -9,
+              -5,
+              -9
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -2,
+                -12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -3,
+                -12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -2,
+                -13
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -3,
+                -13
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -5,
+              -13
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -2,
+                -12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -3,
+                -12
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                9,
+                -2,
+                -9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                9,
+                -3,
+                -9
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              9,
+              -5,
+              -9
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                12,
+                -2,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                12,
+                -3,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -2,
+                2
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                2,
+                -2,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -2,
+                -2,
+                5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -2,
+                2
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -5,
+                -2,
+                -2
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -2,
+                -2,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                2,
+                -2,
+                -5
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                5,
+                -2,
+                -2
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:cave_air",
+                "minecraft:void_air",
+                "minecraft:water",
+                "minecraft:lava",
+                "minecraft:bubble_column",
+                "minecraft:powder_snow"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -7,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -8,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -9,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              4,
+              -7,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              4,
+              -8,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -4,
+              -7,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -4,
+              -8,
+              0
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -7,
+              4
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -8,
+              4
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -7,
+              -4
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -8,
+              -4
+            ],
+            "tag": "minecraft:base_stone_overworld"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              2,
+              0
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              3,
+              0
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              4,
+              1,
+              4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              4,
+              2,
+              4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -4,
+              1,
+              4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -4,
+              2,
+              4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              4,
+              1,
+              -4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              4,
+              2,
+              -4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -4,
+              1,
+              -4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -4,
+              2,
+              -4
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "lithostitched:offset",
+      "x_offset": -14,
+      "y_offset": -8,
+      "z_offset": -14
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

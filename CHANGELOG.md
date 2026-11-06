@@ -1,4 +1,16 @@
 # Changelog
+## [0.0.67]
+- track **Autisnautics Density Ores** Paxi datapack (folder was listed in `config/paxi/datapack_load_order.json` since 0.0.64 but never committed): density oregen + Cobblemon sky-island ores + **105 molten caldera** `placed_feature` / structure NBTs
+- Skylands Over the Sea: shift all 8 `skylands_over_the_sea:y` windows in `density_function/islands/final.json` by **+125** (0.0.64 shipped the unshifted ranges); restore `"ore_veins_enabled": true` in Skylands `noise_settings/overworld.json`
+- Autisnautics2: shift 23 Regions Unexplored Overworld cave-plant / crystal / redstone ceiling `placed_feature` heights by **+125** (`absolute` 256→381; `ore_redstone_large` 112→237)
+
+## [0.0.66]
+- use the **YUNG's Better Caves** fork `InvalidArgument3/YUNGs-Better-Caves` **3.1.7** (GitHub) instead of stock 3.1.6; restore `config/bettercaves/` and Autisnautics2 island cave carvers (`better_cave` / `surface_cave`)
+
+## [0.0.65]
+- drop stock **YUNG's Better Caves 3.1.6** and **Mystcraft Reborn** (plus their configs)
+- Immersive Portals: cap `maxPortalLayer` 5→**1** and `indirectLoadingRadiusCap` 8→**3**
+
 ## [0.0.64]
 - remove **World Preview NeoForged 1.3.1** (`world-preview-neoforged-(unofficial)`, client). Crashes Create World with C2ME when the Preview tab closes its dummy `ServerLevel` off-thread (`Async update chunks`)
 - bump **Create Aeronautics: Octo Legs** 0.5.2 → **0.7.3** (both sides, `.pakku/overrides/mods/`, Git LFS); refresh `config/octolegs-server.toml` (`minFootDistance`)
