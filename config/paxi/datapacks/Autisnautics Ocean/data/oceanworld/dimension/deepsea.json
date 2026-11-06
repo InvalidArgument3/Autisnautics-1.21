@@ -1,0 +1,93 @@
+{
+  "type": "oceanworld:deepsea",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "oceanworld:deepwater",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:deep_frozen_ocean",
+          "parameters": {
+            "temperature": [
+              -1,
+              -0.5
+            ],
+            "humidity": [
+              0,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.5
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:warm_ocean",
+          "parameters": {
+            "temperature": [
+              0.4,
+              1
+            ],
+            "humidity": [
+              0,
+              1
+            ],
+            "continentalness": [
+              0.6,
+              1
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:deep_ocean",
+          "parameters": {
+            "temperature": [
+              0,
+              0.5
+            ],
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              0,
+              0
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "alexscaves:abyssal_chasm",
+          "parameters": {
+            "temperature": [
+              0,
+              0.3
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -1,
+              -0.5
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

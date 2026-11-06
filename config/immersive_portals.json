@@ -27,7 +27,7 @@
   "portalWandCursorAlignment": 2,
   "saveMemoryInBufferPack": false,
   "initialScreenShown": true,
-  "netherPortalMode": "adaptive",
+  "netherPortalMode": "disabled",
   "endPortalMode": "normal",
   "enableMirrorCreation": true,
   "enableWarning": true,
@@ -53,5 +53,58 @@
   "serverRejectClientWithoutImmPtl": true,
   "serverTeleportLogging": false,
   "enableCrossPortalInteraction": true,
-  "disabledWarnings": []
+  "disabledWarnings": [],
+  "dimStackPreset": {
+    "loop": false,
+    "gravityTransform": false,
+    "entries": [
+      {
+        "dimensionIdStr": "immersive_portals:skyland",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "minecraft:overworld",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "oceanworld:deepsea",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "topY": 300,
+        "bottomY": -64,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "minecraft:the_nether",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "minecraft:the_end",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      }
+    ]
+  }
 }

@@ -1,5 +1,10 @@
 # Changelog
-## [0.0.67]
+## [0.0.68]
+- Immersive Portals: default dimension stack for new worlds, top to bottom: skyland, overworld, `oceanworld:deepsea`, nether, end. `netherPortalMode` disabled so an 8:1 portal cannot skip the ocean. `maxPortalLayer` stays 1
+- Paxi datapack **Autisnautics Ocean**: Abyssal Ascent deep sea (`oceanworld:deepsea`, water to y=300, floor portal at y=-64). Biomes: deep frozen ocean, warm ocean, deep ocean, Alex's Caves abyssal chasm
+- add **The Beyond 1.0.1** (CurseForge/Modrinth, both sides) and **Isleweaver 0.0.3b** (Modrinth) so Nullscape can share the End
+
+
 - track **Autisnautics Density Ores** Paxi datapack (folder was listed in `config/paxi/datapack_load_order.json` since 0.0.64 but never committed): density oregen + Cobblemon sky-island ores + **105 molten caldera** `placed_feature` / structure NBTs
 - Skylands Over the Sea: shift all 8 `skylands_over_the_sea:y` windows in `density_function/islands/final.json` by **+125** (0.0.64 shipped the unshifted ranges); restore `"ore_veins_enabled": true` in Skylands `noise_settings/overworld.json`
 - Autisnautics2: shift 23 Regions Unexplored Overworld cave-plant / crystal / redstone ceiling `placed_feature` heights by **+125** (`absolute` 256→381; `ore_redstone_large` 112→237)

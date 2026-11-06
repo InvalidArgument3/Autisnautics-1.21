@@ -20450,6 +20450,104 @@
             ]
         },
         {
+            "pakku_id": "eBADeE9KmcPWTvdY",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "the-beyond",
+                "modrinth": "the-beyond"
+            },
+            "name": {
+                "curseforge": "The Beyond",
+                "modrinth": "The Beyond"
+            },
+            "id": {
+                "curseforge": "658435",
+                "modrinth": "QFR0NFEH"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "the_beyond-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9274/55/the_beyond-1.0.1.jar",
+                    "id": "9274055",
+                    "parent_id": "658435",
+                    "hashes": {
+                        "sha1": "8b6dba68ae4cfb32e364daef3df4023ff56db495",
+                        "md5": "d732317d69ff26ac57265ff974a751bf"
+                    },
+                    "required_dependencies": [],
+                    "size": 13843490,
+                    "date_published": "2026-10-21T04:31:30.030Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "the_beyond-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/QFR0NFEH/versions/aBH0IbX3/the_beyond-1.0.1.jar",
+                    "id": "aBH0IbX3",
+                    "parent_id": "QFR0NFEH",
+                    "hashes": {
+                        "sha512": "a5ef455761a877414763f791a4ffbbdddde22bf19bffa5f4c15a35fb4b151c788589453c630a626405aef85dfecb5c2abeb1fdac7e9f2673075b31aaacc1a6c6",
+                        "sha1": "8b6dba68ae4cfb32e364daef3df4023ff56db495"
+                    },
+                    "required_dependencies": [],
+                    "size": 13843490,
+                    "date_published": "2026-10-21T04:32:07.497544Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "HD1EJPkKJlVJ5sGr",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "isleweaver"
+            },
+            "name": {
+                "modrinth": "The Beyond - Isleweaver Addon"
+            },
+            "id": {
+                "modrinth": "erNCpdqn"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "isleweaver-0.0.3b-InDev.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/erNCpdqn/versions/vsuc3Sww/isleweaver-0.0.3b-InDev.jar",
+                    "id": "vsuc3Sww",
+                    "parent_id": "erNCpdqn",
+                    "hashes": {
+                        "sha512": "3f034a81d22453ff7afcf7dd0060e85e0a1dc27e146e70fe0bb0aaa948c2ee0671006116a514353bdcff9a95e1bea3a1ab9596bdf4afad0e4783ff5a555071fe",
+                        "sha1": "a0a9202f0c41b127629bb82ff849bad03ad6eb49"
+                    },
+                    "required_dependencies": [],
+                    "size": 247073,
+                    "date_published": "2026-10-17T15:25:26.699024Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "UrjrWwIUtwyBuKAx",
             "type": "MOD",
             "side": "BOTH",
