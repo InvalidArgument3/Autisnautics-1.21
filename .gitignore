@@ -13,6 +13,12 @@ modernfix/
 fancymenu_data/
 ESM/
 data/
+# Keep Paxi datapack `data/` trees tracked (Minecraft datapack namespace folders).
+# Negations must follow the ignore rule.
+!config/paxi/datapacks/
+!config/paxi/datapacks/**
+!config/paxi/datapacks/**/data/
+!config/paxi/datapacks/**/data/**
 servers.dat
 
 icon.png

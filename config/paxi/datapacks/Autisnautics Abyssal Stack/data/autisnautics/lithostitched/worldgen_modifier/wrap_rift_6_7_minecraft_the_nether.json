@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 106,
+  "dimension": "minecraft:the_nether",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_6_7_minecraft_the_nether"
+}

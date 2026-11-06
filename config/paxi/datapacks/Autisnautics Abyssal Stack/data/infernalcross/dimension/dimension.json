@@ -1,0 +1,96 @@
+{
+  "type": "infernalcross:dimension",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "infernalcross:dimension",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "regions_unexplored:scorching_caves",
+          "parameters": {
+            "temperature": [
+              0.5,
+              1.0
+            ],
+            "humidity": [
+              -0.5,
+              0.2
+            ],
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "alexscaves:forlorn_hollows",
+          "parameters": {
+            "temperature": [
+              -1.0,
+              -0.2
+            ],
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:basalt_deltas",
+          "parameters": {
+            "temperature": [
+              0.2,
+              0.8
+            ],
+            "humidity": [
+              -1.0,
+              -0.3
+            ],
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": [
+              0.3,
+              1.0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:nether_wastes",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:soul_sand_valley",
+          "parameters": {
+            "temperature": [
+              -0.4,
+              0.2
+            ],
+            "humidity": [
+              0.3,
+              1.0
+            ],
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -0.3,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

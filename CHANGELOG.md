@@ -1,4 +1,10 @@
 # Changelog
+## [0.0.72]
+- Immersive Portals: replace the 5-layer skyland stack with the **9-layer Abyssal Ascent** dim stack (top→bottom): overworld, `infinite_abyss:first_layer`, `deeperdarker:otherside`, `oceanworld:deepsea`, `dimension_of_caves:cave`, `infernalcross:dimension`, nether, `undergarden:undergarden`, end. Keep `maxPortalLayer` 1, `indirectLoadingRadiusCap` 3, `netherPortalMode` disabled, `endPortalMode` normal
+- Paxi datapack **Autisnautics Abyssal Stack**: ported abyss/cave/infernal dims + Lithostitched boundary rifts; aquifers on for BC-carved layers; `fluid_level_floodedness: -1.0` on first_layer/cave/infernal; cave/infernal `min_y: -48` so ImmPtl floor bedrock matches `bottomY`
+- add **Deeper and Darker 1.4.1** and **The Undergarden 0.9.6** (Modrinth, both sides) + first-launch common/Cristel configs
+- `.gitignore`: allow `config/paxi/datapacks/**/data/` so Paxi datapack namespace folders stay trackable
+
 ## [0.0.71]
 - replace the starter house with joshspaceboy's Skyview island (house and island only, airship left out). Empty cells are structure void so the paste does not carve a box out of the skylands. Spawn is on the island grass, and the island is lifted 64 blocks above the surface
 

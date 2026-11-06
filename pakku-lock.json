@@ -5438,7 +5438,6 @@
             "id": {
                 "curseforge": "1533137"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -5483,7 +5482,6 @@
                 "curseforge": "1669164",
                 "modrinth": "YDfSQUPe"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -5548,7 +5546,6 @@
                 "curseforge": "676721",
                 "modrinth": "oWaK0Q19"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -6732,7 +6729,6 @@
                 "curseforge": "1605193",
                 "modrinth": "IGVrnkhH"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "curseforge",
@@ -7450,6 +7446,43 @@
                     "required_dependencies": [],
                     "size": 410690,
                     "date_published": "2025-05-14T13:34:49.793Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "K4beCfn3YU82Qwop",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "deeperdarker"
+            },
+            "name": {
+                "modrinth": "Deeper and Darker"
+            },
+            "id": {
+                "modrinth": "fnAffV0n"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "deeperdarker-neoforge-1.21.1-1.4.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/fnAffV0n/versions/TuD0Zvi3/deeperdarker-neoforge-1.21.1-1.4.1.jar",
+                    "id": "TuD0Zvi3",
+                    "parent_id": "fnAffV0n",
+                    "hashes": {
+                        "sha512": "38d8d87878f39a063feb029db17702bedadf7554233ae56db6018c21225b6dff4d4cc31f4b0995254fd488e2a687f3b15bf9647c59dd42b9032791d34316ed0c",
+                        "sha1": "b6094adde68bd4b909bc75c64901e1f3fb99ad8f"
+                    },
+                    "required_dependencies": [],
+                    "size": 3906057,
+                    "date_published": "2026-06-05T17:56:22.995603Z"
                 }
             ]
         },
@@ -8540,7 +8573,6 @@
                 "curseforge": "1067929",
                 "modrinth": "YfTOSsIw"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -12099,7 +12131,6 @@
                 "modrinth": "yOy4oSzi"
             },
             "update_strategy": "NONE",
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -12140,7 +12171,6 @@
                 "modrinth": "9nfaJPtX"
             },
             "update_strategy": "NONE",
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -13234,7 +13264,6 @@
                 "curseforge": "1152400",
                 "modrinth": "10UMLVgM"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15145,7 +15174,6 @@
                 "curseforge": "1550903",
                 "modrinth": "QZt2fevq"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15268,7 +15296,6 @@
                 "curseforge": "1495375",
                 "modrinth": "RUtQ9kfe"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -15854,7 +15881,6 @@
                 "curseforge": "1523268",
                 "modrinth": "7hvoLzay"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -17349,7 +17375,6 @@
                 "curseforge": "1390302",
                 "modrinth": "JIEwmDVI"
             },
-            "redistributable": true,
             "files": [
                 {
                     "type": "modrinth",
@@ -20544,6 +20569,43 @@
                     "required_dependencies": [],
                     "size": 247073,
                     "date_published": "2026-10-17T15:25:26.699024Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "lcmPW9rCwgZ3Huou",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "the-undergarden"
+            },
+            "name": {
+                "modrinth": "The Undergarden"
+            },
+            "id": {
+                "modrinth": "Ejfl5qDL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "The_Undergarden-1.21.1-0.9.6.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/Ejfl5qDL/versions/sY4KZ9q3/The_Undergarden-1.21.1-0.9.6.jar",
+                    "id": "sY4KZ9q3",
+                    "parent_id": "Ejfl5qDL",
+                    "hashes": {
+                        "sha512": "bb98ea4bb0755e0a1ae67bae3534f1002b91945f7b565b21a408fade678bbc1e9f2b564a00b7157e38ab5eb77d69070b9f16db66de3cd5b41d5c89cbef721bf4",
+                        "sha1": "75f1753eefa0b7b8e3afd7377deaf9fe71392476"
+                    },
+                    "required_dependencies": [],
+                    "size": 45294936,
+                    "date_published": "2026-04-02T17:20:54.228421Z"
                 }
             ]
         },

@@ -205,6 +205,12 @@
         },
         "presence-footsteps-neoforge": {
             "redistributable": true
+        },
+        "deeperdarker": {
+            "side": "BOTH"
+        },
+        "the-undergarden": {
+            "side": "BOTH"
         }
     },
     "export_server_side_projects_to_client": true

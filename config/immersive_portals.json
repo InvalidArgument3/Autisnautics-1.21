@@ -59,7 +59,17 @@
     "gravityTransform": false,
     "entries": [
       {
-        "dimensionIdStr": "immersive_portals:skyland",
+        "dimensionIdStr": "minecraft:overworld",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "bottomY": -52
+      },
+      {
+        "dimensionIdStr": "infinite_abyss:first_layer",
         "scale": 1.0,
         "flipped": false,
         "horizontalRotation": 0.0,
@@ -68,7 +78,7 @@
         "connectsNext": true
       },
       {
-        "dimensionIdStr": "minecraft:overworld",
+        "dimensionIdStr": "deeperdarker:otherside",
         "scale": 1.0,
         "flipped": false,
         "horizontalRotation": 0.0,
@@ -81,11 +91,32 @@
         "scale": 1.0,
         "flipped": false,
         "horizontalRotation": 0.0,
-        "topY": 300,
-        "bottomY": -64,
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
-        "connectsNext": true
+        "connectsNext": true,
+        "topY": 300,
+        "bottomY": -64
+      },
+      {
+        "dimensionIdStr": "dimension_of_caves:cave",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "topY": 128,
+        "bottomY": -48
+      },
+      {
+        "dimensionIdStr": "infernalcross:dimension",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "bottomY": -48
       },
       {
         "dimensionIdStr": "minecraft:the_nether",
@@ -94,7 +125,19 @@
         "horizontalRotation": 0.0,
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
-        "connectsNext": true
+        "connectsNext": true,
+        "topY": 256
+      },
+      {
+        "dimensionIdStr": "undergarden:undergarden",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "undergarden:depthrock",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "topY": 128,
+        "bottomY": -64
       },
       {
         "dimensionIdStr": "minecraft:the_end",
@@ -103,7 +146,8 @@
         "horizontalRotation": 0.0,
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
-        "connectsNext": true
+        "connectsNext": false,
+        "topY": 384
       }
     ]
   }

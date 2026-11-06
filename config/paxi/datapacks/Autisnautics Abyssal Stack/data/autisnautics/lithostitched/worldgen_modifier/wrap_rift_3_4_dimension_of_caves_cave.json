@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 103,
+  "dimension": "dimension_of_caves:cave",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_3_4_dimension_of_caves_cave"
+}

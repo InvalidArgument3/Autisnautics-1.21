@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 100,
+  "dimension": "minecraft:overworld",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_0_1_minecraft_overworld"
+}

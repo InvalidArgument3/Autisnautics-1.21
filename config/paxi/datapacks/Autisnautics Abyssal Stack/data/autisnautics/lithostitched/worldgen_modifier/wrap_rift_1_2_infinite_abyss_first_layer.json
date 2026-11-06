@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 101,
+  "dimension": "infinite_abyss:first_layer",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_1_2_infinite_abyss_first_layer"
+}

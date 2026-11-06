@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "lithostitched:wrapped_marker"
+  },
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": -2.4,
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "autisnautics:rift/mask_5_6",
+      "argument2": {
+        "type": "minecraft:min",
+        "argument1": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_y": -64,
+          "to_y": -46,
+          "from_value": 0,
+          "to_value": 1
+        },
+        "argument2": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_y": -18,
+          "to_y": 0,
+          "from_value": 1,
+          "to_value": 0
+        }
+      }
+    }
+  }
+}
