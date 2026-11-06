@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.69]
+- commit the leftover instance configs: C2ME drops the removed native-acceleration block, Jade plugin list, NuclearCraft overhaul coils, submarine hull block list (Mystcraft entries gone), JAOPCA blank lines, FTB quest formatting, plus first-launch AttributeFix, Hilt, Iron's Artifice, and Modern Foundry Cristel configs
+
 ## [0.0.68]
 - Immersive Portals: default dimension stack for new worlds, top to bottom: skyland, overworld, `oceanworld:deepsea`, nether, end. `netherPortalMode` disabled so an 8:1 portal cannot skip the ocean. `maxPortalLayer` stays 1
 - Paxi datapack **Autisnautics Ocean**: Abyssal Ascent deep sea (`oceanworld:deepsea`, water to y=300, floor portal at y=-64). Biomes: deep frozen ocean, warm ocean, deep ocean, Alex's Caves abyssal chasm

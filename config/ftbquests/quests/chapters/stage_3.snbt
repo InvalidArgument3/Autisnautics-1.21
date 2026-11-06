@@ -338,12 +338,10 @@
 				id: "minecraft:tnt"
 			}
 			id: "5A199B898D41A309"
-			tasks: [
-				{
-					id: "3A68EA184DE4D9B4"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "3A68EA184DE4D9B4"
+				type: "checkmark"
+			}]
 			x: -1.5d
 			y: 5.5d
 		}

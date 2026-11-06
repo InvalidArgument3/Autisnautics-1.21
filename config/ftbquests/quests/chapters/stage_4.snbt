@@ -412,12 +412,10 @@
 				id: "minecraft:packed_ice"
 			}
 			id: "6D1519B746E032FB"
-			tasks: [
-				{
-					id: "49EAB67814570219"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "49EAB67814570219"
+				type: "checkmark"
+			}]
 			x: 6.0d
 			y: 3.0d
 		}

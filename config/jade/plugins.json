@@ -74,6 +74,9 @@
     "entity": true,
     "entity_variant": true
   },
+  "astralsorcery": {
+    "lumen": true
+  },
   "create_aeronautics_automated_logistics": {
     "logistics_identity": true
   },
@@ -97,24 +100,15 @@
     "block_properties": false,
     "mod_name": true
   },
+  "legworks": {
+    "leg_status": true
+  },
   "balm": {
     "jade": true
   },
   "functionalstorage": {
     "armory": true,
     "drawer": true
-  },
-  "ae2": {
-    "part_icon": true,
-    "charger": true,
-    "debug": true,
-    "part_tooltip": true,
-    "grid_node_state": true,
-    "pattern_provider": true,
-    "part_mod_name": true,
-    "power_storage": true,
-    "crafting_monitor": true,
-    "part_name": true
   },
   "neoorigins": {
     "origin": true

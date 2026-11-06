@@ -1929,6 +1929,26 @@
     "maxWaterDepth": 59,
     "implosionChance": 0.39013878
   },
+  "amendments:modernfoundry/double_blood_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "amendments:modernfoundry/double_earth_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "amendments:modernfoundry/double_ender_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "amendments:modernfoundry/double_magma_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "amendments:modernfoundry/double_sky_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
   "amendments:skull_candle": {
     "maxWaterDepth": 29,
     "implosionChance": 0.4806853
@@ -31177,15 +31197,27 @@
     "maxWaterDepth": 41,
     "implosionChance": 0.39013878
   },
+  "irons_lib:player_statue": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "irons_lib:transmog_table": {
+    "maxWaterDepth": 45,
+    "implosionChance": 0.3497237
+  },
+  "irons_patreon_lib:player_statue": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "irons_patreon_lib:transmog_table": {
+    "maxWaterDepth": 45,
+    "implosionChance": 0.3497237
+  },
   "jaopca:raw_storage_blocks.neptunium": {
     "maxWaterDepth": 101,
     "implosionChance": 0.15540898
   },
   "jaopca:storage_blocks.alugentum": {
-    "maxWaterDepth": 101,
-    "implosionChance": 0.15540898
-  },
-  "jaopca:storage_blocks.amethyst": {
     "maxWaterDepth": 101,
     "implosionChance": 0.15540898
   },
@@ -31382,10 +31414,6 @@
     "implosionChance": 0.15540898
   },
   "jaopca:storage_blocks.protactinium_233": {
-    "maxWaterDepth": 101,
-    "implosionChance": 0.15540898
-  },
-  "jaopca:storage_blocks.quartz": {
     "maxWaterDepth": 101,
     "implosionChance": 0.15540898
   },
@@ -37853,6 +37881,1746 @@
     "maxWaterDepth": 29,
     "implosionChance": 0.4806853
   },
+  "modernfoundry:amethyst_bronze_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:beetroot_soup_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:black_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:black_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:blaze_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:blaze_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:blazewood": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:blazewood_fence": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:blazewood_slab": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:blazewood_stairs": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:blazing_blood_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:blood_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:blood_earth_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:blood_ender_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:blood_ichor_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:blood_sky_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:blood_slime_fern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:blood_slime_leaves": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:blood_slime_sapling": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:blood_slime_tall_grass": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:blood_vanilla_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:bloodshroom_button": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:bloodshroom_door": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:bloodshroom_fence": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:bloodshroom_fence_gate": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:bloodshroom_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:bloodshroom_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:bloodshroom_planks": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:bloodshroom_planks_slab": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:bloodshroom_planks_stairs": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:bloodshroom_pressure_plate": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:bloodshroom_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:bloodshroom_trapdoor": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:bloodshroom_wall_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:bloodshroom_wall_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:bloodshroom_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:blue_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:blue_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:brown_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:brown_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:budding_earth_slime_crystal": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:budding_ender_slime_crystal": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:budding_ichor_slime_crystal": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:budding_sky_slime_crystal": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:cast_chest": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:cave_spider_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:cave_spider_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:cheese_block": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.38637057
+  },
+  "modernfoundry:chiseled_scorched_bricks": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:cinderslime_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:clear_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:clear_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:clear_tinted_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:cobalt_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:cobalt_cluster": {
+    "maxWaterDepth": 70,
+    "implosionChance": 0.3497237
+  },
+  "modernfoundry:cobalt_ore": {
+    "maxWaterDepth": 104,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:cobalt_platform": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:copper_gauge": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:crafting_station": {
+    "maxWaterDepth": 43,
+    "implosionChance": 0.37082404
+  },
+  "modernfoundry:cyan_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:cyan_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:drowned_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:drowned_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:earth_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:earth_congealed_slime": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:earth_earth_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:earth_ender_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:earth_enderbark_roots": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.5119372
+  },
+  "modernfoundry:earth_ichor_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:earth_sky_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:earth_slime_crystal_block": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:earth_slime_crystal_cluster": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:earth_slime_dirt": {
+    "maxWaterDepth": 39,
+    "implosionChance": 0.39852893
+  },
+  "modernfoundry:earth_slime_fern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:earth_slime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:earth_slime_leaves": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:earth_slime_sapling": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:earth_slime_tall_grass": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:earth_vanilla_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:end_fluid_cannon": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:ender_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:ender_congealed_slime": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:ender_earth_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ender_ender_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ender_enderbark_roots": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.5119372
+  },
+  "modernfoundry:ender_ichor_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ender_sky_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ender_slime": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ender_slime_crystal_block": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:ender_slime_crystal_cluster": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:ender_slime_dirt": {
+    "maxWaterDepth": 39,
+    "implosionChance": 0.39852893
+  },
+  "modernfoundry:ender_slime_fern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ender_slime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:ender_slime_leaves": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:ender_slime_sapling": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ender_slime_tall_grass": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ender_slime_vine": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.50653845
+  },
+  "modernfoundry:ender_vanilla_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:enderbark_button": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:enderbark_door": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:enderbark_fence": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:enderbark_fence_gate": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:enderbark_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:enderbark_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:enderbark_planks": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:enderbark_planks_slab": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:enderbark_planks_stairs": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:enderbark_pressure_plate": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:enderbark_roots": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.5119372
+  },
+  "modernfoundry:enderbark_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:enderbark_trapdoor": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:enderbark_wall_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:enderbark_wall_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:enderbark_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:enderman_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:enderman_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:exposed_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:fake_storage_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:fiery_liquid_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:fire_dragon_blood_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:foundry_controller": {
+    "maxWaterDepth": 112,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:glow": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:gold_bars": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:gold_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:gray_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:gray_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:green_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:green_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:greenheart_button": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:greenheart_door": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:greenheart_fence": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:greenheart_fence_gate": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:greenheart_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:greenheart_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:greenheart_planks": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:greenheart_planks_slab": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:greenheart_planks_stairs": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:greenheart_pressure_plate": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:greenheart_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:greenheart_trapdoor": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:greenheart_wall_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:greenheart_wall_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:greenheart_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:grout": {
+    "maxWaterDepth": 50,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:hepatizon_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:honey_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:husk_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:husk_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:ice_dragon_blood_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:ichor_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:ichor_congealed_slime": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:ichor_earth_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ichor_ender_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ichor_enderbark_roots": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.5119372
+  },
+  "modernfoundry:ichor_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:ichor_ichor_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ichor_sky_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:ichor_slime": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ichor_slime_crystal_block": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:ichor_slime_crystal_cluster": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:ichor_slime_dirt": {
+    "maxWaterDepth": 39,
+    "implosionChance": 0.39852893
+  },
+  "modernfoundry:ichor_slime_fern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ichor_slime_leaves": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:ichor_slime_sapling": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ichor_slime_tall_grass": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:ichor_vanilla_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:iron_platform": {
+    "maxWaterDepth": 101,
+    "implosionChance": 0.15540898
+  },
+  "modernfoundry:knightmetal_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:knightmetal_cluster": {
+    "maxWaterDepth": 70,
+    "implosionChance": 0.3497237
+  },
+  "modernfoundry:knightslime_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:large_earth_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:large_ender_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:large_ichor_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:large_sky_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:light_blue_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:light_blue_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:light_gray_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:light_gray_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:lightning_dragon_blood_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:lime_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:lime_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:liquid_soul_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:magenta_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:magenta_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:magma_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:magma_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:manyullyn_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:meat_soup_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:medium_earth_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:medium_ender_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:medium_ichor_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:medium_sky_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:modifier_worktable": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:molten_aluminum_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_amethyst_bronze_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_amethyst_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_bendalloy_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_brass_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_bronze_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_cadmium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_certus_quartz_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_chromium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_cinderslime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_clay_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_cobalt_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_constantan_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_copper_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_debris_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_diamond_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_duralumin_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_electrum_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_emerald_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_ender_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_enderium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_fire_dragonsteel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_fluix_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_glass_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_gold_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_hepatizon_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_ice_dragonsteel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_invar_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_iron_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_knightmetal_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_knightslime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_lead_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_lightning_dragonsteel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_lumium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_manyullyn_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_netherite_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_nickel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_nicrosil_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_obsidian_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_osmium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_pewter_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_pig_iron_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_platinum_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_porcelain_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_quartz_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_queens_slime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_refined_glowstone_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_refined_obsidian_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_rose_gold_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_signalum_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_silver_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_slimesteel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_soulsteel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_steel_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_steeleaf_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_tin_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_tungsten_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_uranium_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:molten_zinc_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:mushroom_stew_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:nahuatl": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:nahuatl_fence": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:nahuatl_slab": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:nahuatl_stairs": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:nether_grout": {
+    "maxWaterDepth": 50,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:obsidian_gauge": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:obsidian_pane": {
+    "maxWaterDepth": 321,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:orange_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:orange_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:oxidized_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:part_builder": {
+    "maxWaterDepth": 43,
+    "implosionChance": 0.37082404
+  },
+  "modernfoundry:part_chest": {
+    "maxWaterDepth": 43,
+    "implosionChance": 0.37082404
+  },
+  "modernfoundry:pig_iron_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:piglin_brute_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:piglin_brute_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:pink_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:pink_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:polished_scorched_stone": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:potted_blood_slime_fern": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_blood_slime_sapling": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_earth_slime_fern": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_earth_slime_sapling": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_ender_slime_fern": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_ender_slime_sapling": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_ichor_slime_fern": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_ichor_slime_sapling": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_sky_slime_fern": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:potted_sky_slime_sapling": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:punji": {
+    "maxWaterDepth": 50,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:purple_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:purple_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:queens_slime_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:rabbit_stew_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:raw_cobalt_block": {
+    "maxWaterDepth": 76,
+    "implosionChance": 0.09205584
+  },
+  "modernfoundry:red_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:red_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:rose_gold_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:scorched_alloyer": {
+    "maxWaterDepth": 112,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_anvil": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_basin": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_bricks": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_bricks_fence": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_bricks_slab": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_bricks_stairs": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_channel": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_chute": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_drain": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_duct": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_faucet": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_fluid_cannon": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_fuel_gauge": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_fuel_tank": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_glass_pane": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_ingot_gauge": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_ingot_tank": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_ladder": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_lamp": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_lantern": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_proxy_tank": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_road": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_road_slab": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_road_stairs": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_soul_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_soul_glass_pane": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_stone": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_stone_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:scorched_table": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:scorched_tinted_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.25527754
+  },
+  "modernfoundry:seared_basin": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_bricks": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_bricks_slab": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_bricks_stairs": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_bricks_wall": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_casting_tank": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_channel": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_chute": {
+    "maxWaterDepth": 125,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_cobble": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_cobble_slab": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_cobble_stairs": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_cobble_wall": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_cracked_bricks": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_drain": {
+    "maxWaterDepth": 125,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_duct": {
+    "maxWaterDepth": 125,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_fancy_bricks": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_faucet": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_fluid_cannon": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_fuel_gauge": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_fuel_tank": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_glass_pane": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_heater": {
+    "maxWaterDepth": 148,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_ingot_gauge": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_ingot_tank": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_ladder": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_lamp": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_lantern": {
+    "maxWaterDepth": 61,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_melter": {
+    "maxWaterDepth": 148,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_paver": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_paver_slab": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_paver_stairs": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_soul_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_soul_glass_pane": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_stone": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_stone_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:seared_stone_slab": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_stone_stairs": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_table": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_tinted_glass": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:seared_triangle_bricks": {
+    "maxWaterDepth": 91,
+    "implosionChance": 0.2197415
+  },
+  "modernfoundry:sky_cake": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:sky_congealed_slime": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:sky_earth_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:sky_ender_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:sky_enderbark_roots": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.5119372
+  },
+  "modernfoundry:sky_ichor_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:sky_sky_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:sky_slime": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:sky_slime_crystal_block": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:sky_slime_crystal_cluster": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:sky_slime_dirt": {
+    "maxWaterDepth": 39,
+    "implosionChance": 0.39852893
+  },
+  "modernfoundry:sky_slime_fern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:sky_slime_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:sky_slime_leaves": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:sky_slime_sapling": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:sky_slime_tall_grass": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "modernfoundry:sky_slime_vine": {
+    "maxWaterDepth": 26,
+    "implosionChance": 0.50653845
+  },
+  "modernfoundry:sky_vanilla_slime_grass": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:skyroot_button": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:skyroot_door": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:skyroot_fence": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:skyroot_fence_gate": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:skyroot_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:skyroot_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:skyroot_planks": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:skyroot_planks_slab": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:skyroot_planks_stairs": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "modernfoundry:skyroot_pressure_plate": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "modernfoundry:skyroot_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:skyroot_trapdoor": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "modernfoundry:skyroot_wall_hanging_sign": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:skyroot_wall_sign": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:skyroot_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:slimesteel_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:small_earth_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:small_ender_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:small_ichor_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:small_sky_slime_crystal_bud": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "modernfoundry:smeltery_controller": {
+    "maxWaterDepth": 148,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:soul_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:soul_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:soulsteel_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:spider_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:spider_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:steel_block": {
+    "maxWaterDepth": 99,
+    "implosionChance": 0.17082405
+  },
+  "modernfoundry:steel_cluster": {
+    "maxWaterDepth": 70,
+    "implosionChance": 0.3497237
+  },
+  "modernfoundry:stray_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:stray_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:stripped_bloodshroom_log": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_bloodshroom_wood": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_enderbark_log": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_enderbark_wood": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_greenheart_log": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_greenheart_wood": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_skyroot_log": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:stripped_skyroot_wood": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "modernfoundry:tinker_station": {
+    "maxWaterDepth": 43,
+    "implosionChance": 0.37082404
+  },
+  "modernfoundry:tinkers_anvil": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:tinkers_chest": {
+    "maxWaterDepth": 43,
+    "implosionChance": 0.37082404
+  },
+  "modernfoundry:venom_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "modernfoundry:waxed_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:waxed_exposed_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:waxed_oxidized_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:waxed_weathered_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:weathered_copper_platform": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "modernfoundry:white_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:white_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:yellow_clear_stained_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:yellow_clear_stained_glass_pane": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "modernfoundry:zombified_piglin_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "modernfoundry:zombified_piglin_wall_head": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
   "moonlight:spawn_box": {
     "maxWaterDepth": 267,
     "implosionChance": 0.05
@@ -38068,178 +39836,6 @@
   "mowziesmobs:thatch_block": {
     "maxWaterDepth": 23,
     "implosionChance": 0.5344535
-  },
-  "mystcraft_reborn:blue_book_receptacle": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:blue_crystal_block": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:blue_crystal_cluster": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:book_shredding_receptacle": {
-    "maxWaterDepth": 68,
-    "implosionChance": 0.330409
-  },
-  "mystcraft_reborn:budding_blue_crystal": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:budding_green_crystal": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:budding_pink_crystal": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:budding_red_crystal": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:budding_yellow_crystal": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:classic_sponge": {
-    "maxWaterDepth": 24,
-    "implosionChance": 0.52299964
-  },
-  "mystcraft_reborn:editing_table": {
-    "maxWaterDepth": 45,
-    "implosionChance": 0.3497237
-  },
-  "mystcraft_reborn:green_book_receptacle": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:green_crystal_block": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:green_crystal_cluster": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:large_blue_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:large_green_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:large_pink_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:large_red_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:large_yellow_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:link_portal": {
-    "maxWaterDepth": 30,
-    "implosionChance": 0.25540897
-  },
-  "mystcraft_reborn:media_export_receptacle": {
-    "maxWaterDepth": 68,
-    "implosionChance": 0.330409
-  },
-  "mystcraft_reborn:medium_blue_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:medium_green_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:medium_pink_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:medium_red_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:medium_yellow_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:picture_book_player": {
-    "maxWaterDepth": 101,
-    "implosionChance": 0.15540898
-  },
-  "mystcraft_reborn:pink_book_receptacle": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:pink_crystal_block": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:pink_crystal_cluster": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:printing_table": {
-    "maxWaterDepth": 45,
-    "implosionChance": 0.3497237
-  },
-  "mystcraft_reborn:red_book_receptacle": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:red_crystal_block": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:red_crystal_cluster": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:small_blue_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:small_green_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:small_pink_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:small_red_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:small_yellow_crystal_bud": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:writing_desk": {
-    "maxWaterDepth": 45,
-    "implosionChance": 0.3497237
-  },
-  "mystcraft_reborn:yellow_book_receptacle": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:yellow_crystal_block": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
-  },
-  "mystcraft_reborn:yellow_crystal_cluster": {
-    "maxWaterDepth": 35,
-    "implosionChance": 0.43337092
   },
   "neoorigins:temporary_cobweb": {
     "maxWaterDepth": 83,
@@ -41575,6 +43171,10 @@
   },
   "octolegs:leg_controls": {
     "maxWaterDepth": 49,
+    "implosionChance": 0.30540898
+  },
+  "octolegs:nav_table": {
+    "maxWaterDepth": 77,
     "implosionChance": 0.30540898
   },
   "octolegs:octo_leg_mount": {
@@ -53536,6 +55136,346 @@
   "tentaworks:netherite_tentacle_rig": {
     "maxWaterDepth": 400,
     "implosionChance": 0.05
+  },
+  "the_beyond:amphora": {
+    "maxWaterDepth": 47,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:auroracite": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:bedazzled_end_stone": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:bellow": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:bleeding_thorn": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "the_beyond:blinding_thorn": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "the_beyond:bonfire": {
+    "maxWaterDepth": 362,
+    "implosionChance": 0.05
+  },
+  "the_beyond:brittle_metal": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:brittle_metal_block": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:brittle_metal_door": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:brittle_metal_slab": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:brittle_metal_stairs": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:chiseled_memor": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:cobbled_pearl": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:cobbled_pearl_brick_slab": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:cobbled_pearl_brick_stairs": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:cobbled_pearl_brick_wall": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:cobbled_pearl_bricks": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:coil_vertebrae": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4594535
+  },
+  "the_beyond:creeping_zymote": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:ectoplasm": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:enadrake_flare": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:enadrake_hut": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:enatious_totem_seed": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:engraved_end_stone": {
+    "maxWaterDepth": 61,
+    "implosionChance": 0.2197415
+  },
+  "the_beyond:ferrojelly_block": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:gauss_vent": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.41513878
+  },
+  "the_beyond:gaussanite": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.41513878
+  },
+  "the_beyond:gellid_void_block": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "the_beyond:guster": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:magnolilly": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:memor": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:memor_faucet": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:memor_pillar": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:memor_stairs": {
+    "maxWaterDepth": 196,
+    "implosionChance": 0.05
+  },
+  "the_beyond:mirror": {
+    "maxWaterDepth": 22,
+    "implosionChance": 0.540469
+  },
+  "the_beyond:molten_metal": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "the_beyond:nacre": {
+    "maxWaterDepth": 34,
+    "implosionChance": 0.44013876
+  },
+  "the_beyond:obiroot": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:obiroot_arm": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "the_beyond:obiroot_sprout": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.6
+  },
+  "the_beyond:ornate_mirror": {
+    "maxWaterDepth": 22,
+    "implosionChance": 0.540469
+  },
+  "the_beyond:pale_nacre": {
+    "maxWaterDepth": 34,
+    "implosionChance": 0.44013876
+  },
+  "the_beyond:pale_raked_nacre": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:pearl": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.575
+  },
+  "the_beyond:pearl_brick_slab": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:pearl_brick_stairs": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:pearl_brick_wall": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:pearl_bricks": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.560469
+  },
+  "the_beyond:pearl_chimes": {
+    "maxWaterDepth": 22,
+    "implosionChance": 0.540469
+  },
+  "the_beyond:pearl_slab": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.575
+  },
+  "the_beyond:pearl_stairs": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.575
+  },
+  "the_beyond:pearl_wall": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.575
+  },
+  "the_beyond:peeping_obiroot": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:perka_stalk": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.49876356
+  },
+  "the_beyond:perka_stalk_mouth": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4594535
+  },
+  "the_beyond:plate_block": {
+    "maxWaterDepth": 67,
+    "implosionChance": 0.16850506
+  },
+  "the_beyond:plated_end_stone": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.20150934
+  },
+  "the_beyond:polar_antenna": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.35527754
+  },
+  "the_beyond:polar_bulb": {
+    "maxWaterDepth": 82,
+    "implosionChance": 0.24350506
+  },
+  "the_beyond:polar_pillar": {
+    "maxWaterDepth": 82,
+    "implosionChance": 0.24350506
+  },
+  "the_beyond:portelain": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_door": {
+    "maxWaterDepth": 47,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_mosaic": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_pillar": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_slab": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_stairs": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_tiles": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:portelain_wall": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "the_beyond:prismograph": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "the_beyond:projector": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "the_beyond:raked_nacre": {
+    "maxWaterDepth": 34,
+    "implosionChance": 0.44013876
+  },
+  "the_beyond:reaching_zymote": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:refuge": {
+    "maxWaterDepth": 81,
+    "implosionChance": 0.050349243
+  },
+  "the_beyond:rich_nacre": {
+    "maxWaterDepth": 34,
+    "implosionChance": 0.44013876
+  },
+  "the_beyond:rich_raked_nacre": {
+    "maxWaterDepth": 34,
+    "implosionChance": 0.44013876
+  },
+  "the_beyond:soot_block": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585
+  },
+  "the_beyond:stardust": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:unstable_nacre": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.41513878
+  },
+  "the_beyond:vile_growth": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:vilet": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585
+  },
+  "the_beyond:void_crystal": {
+    "maxWaterDepth": 22,
+    "implosionChance": 0.540469
+  },
+  "the_beyond:void_flame": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "the_beyond:xylem": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "the_beyond:zymote": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585
   },
   "theurgy:calcination_oven": {
     "maxWaterDepth": 49,

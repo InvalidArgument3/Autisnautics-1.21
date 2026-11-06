@@ -137,12 +137,10 @@
 				id: "minecraft:redstone"
 			}
 			id: "4F95D5136E944ADB"
-			tasks: [
-				{
-					id: "3C8D449468C6DD27"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "3C8D449468C6DD27"
+				type: "checkmark"
+			}]
 			x: -1.0d
 			y: 4.0d
 		}
@@ -155,12 +153,10 @@
 				id: "minecraft:water_bucket"
 			}
 			id: "1256352748B93449"
-			tasks: [
-				{
-					id: "1CB43671DBA7EBB6"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "1CB43671DBA7EBB6"
+				type: "checkmark"
+			}]
 			x: -1.0d
 			y: 5.5d
 		}
@@ -231,12 +227,10 @@
 				id: "minecraft:redstone_torch"
 			}
 			id: "24FFFE0FC9EAEF8D"
-			tasks: [
-				{
-					id: "56F78EAD35D1046E"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "56F78EAD35D1046E"
+				type: "checkmark"
+			}]
 			x: 1.0d
 			y: 6.0d
 		}
