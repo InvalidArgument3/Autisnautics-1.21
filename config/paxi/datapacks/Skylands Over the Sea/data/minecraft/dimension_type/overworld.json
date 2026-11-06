@@ -9,16 +9,16 @@
   "has_ceiling": false,
   "coordinate_scale": 1,
   "ambient_light": 0.04,
-  "logical_height": 640,
+  "logical_height": 720,
   "effects": "minecraft:overworld",
   "infiniburn": "#minecraft:infiniburn_overworld",
   "min_y": -64,
-  "height": 640,
+  "height": 720,
   "monster_spawn_light_level": {
     "type": "minecraft:uniform",
     "value": {
-    "min_inclusive": 0,
-    "max_inclusive": 7
+      "min_inclusive": 0,
+      "max_inclusive": 7
     }
   },
   "monster_spawn_block_light_limit": 0

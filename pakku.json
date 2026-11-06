@@ -166,6 +166,20 @@
         "create-deep-seas": {
             "side": "BOTH",
             "redistributable": false
+        },
+        "emf-compat-better-combat": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
+        "irons-lib": {
+            "side": "BOTH",
+            "update_strategy": "NONE",
+            "redistributable": false
+        },
+        "irons-artifice": {
+            "side": "BOTH",
+            "update_strategy": "NONE",
+            "redistributable": false
         }
     },
     "export_server_side_projects_to_client": true

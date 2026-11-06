@@ -1,4 +1,13 @@
 # Changelog
+## [0.0.64]
+- remove **World Preview NeoForged 1.3.1** (`world-preview-neoforged-(unofficial)`, client). Crashes Create World with C2ME when the Preview tab closes its dummy `ServerLevel` off-thread (`Async update chunks`)
+- bump **Create Aeronautics: Octo Legs** 0.5.2 → **0.7.3** (both sides, `.pakku/overrides/mods/`, Git LFS); refresh `config/octolegs-server.toml` (`minFootDistance`)
+- add **Modern Foundry 1.21.1-1.6.1** (TinkersConstruct Unofficial Port jar, both sides, `.pakku/overrides/mods/`, Git LFS). Hilt 1.13 is jar-in-jar. First-launch `config/modernfoundry-common.toml` / `modernfoundry-client.toml`
+- add **EMF Compat: Better Combat 2.1.1** (Modrinth, client) + `config/emf_compat.json`
+- add **Iron's Arms 'n Artifice 1.21.1-1.1.1** and **Iron's Lib 1.21.1-2.3.0** (Modrinth, both sides, not redistributed)
+- KubeJS: levitite startup/tags (Rhino-safe ItemStack handling), oregen/`_helper` height + explicit-ore helpers, Simple Clouds init tweak, 50 km worldborder script
+- track `config/cobbledlevels.json`; tune `config/cobblemon/main.json` spawn rates; update Skylands Over the Sea density/worldgen + Paxi datapack load order
+
 ## [0.0.63]
 - remove **Create: Atmospherics 2.0.0-oceans** (`aeronautics-wind-and-weather`, both sides). Too heavy. Also drop `config/aeronauticswinds-common.toml` and the `aeronauticswinds:*` entries in `config/submarine_hull.json`
 

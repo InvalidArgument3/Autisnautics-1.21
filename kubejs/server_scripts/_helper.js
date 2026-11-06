@@ -160,7 +160,9 @@ let toThermalInputJson = (value) => {
         if (fluid && !fluid.isEmpty()) {
             return { fluid: fluid.id, amount: fluid.amount };
         }
-    } catch (e) { }
+    } catch (e) {
+        /* ignore */
+    }
     // Last resort, try as ingredient string
     try {
         return Ingredient.of(value).toJson();
@@ -188,7 +190,9 @@ let toThermalOutputJson = (value) => {
         if (fluid && !fluid.isEmpty()) {
             return { fluid: fluid.id, amount: fluid.amount };
         }
-    } catch (e) { }
+    } catch (e) {
+        /* ignore */
+    }
     return {};
 }
 
@@ -439,9 +443,9 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
     if (heightMin < -64) {
         minInclusive = { "above_bottom": heightMin + 64 }
         maxInclusive = { "above_bottom": heightMax + 64 }
-    } else if (heightMax > 512) {
-        minInclusive = { "below_top": -(heightMin - 512) }
-        maxInclusive = { "below_top": -(heightMax - 512) }
+    } else if (heightMax > 656) {
+        minInclusive = { "below_top": -(heightMin - 656) }
+        maxInclusive = { "below_top": -(heightMax - 656) }
     }
 
     if (rarityFilter == 1) {
@@ -494,7 +498,7 @@ let addOregenOverworld = function (event, featureName, blockName, heightType, he
  * Gets the prefered item from a tag. Useful for porting Mantle recipes that use tags as outputs.
  * @param {string} tag Don't include a hashtag in the tag name
  */
-var getPreferredItemFromTag = (tag) => {
+let getPreferredItemFromTag = (tag) => {
     const preferredMods = ["minecraft", "kubejs", "create", "createdeco", "createaddition", "thermal", "tfmg", "tconstruct", "immersiveengineering", "ae2", "createaddition", "botania", "ad_astra", "scguns", "nuclearcraft", "embers"]
     const tagItems = Ingredient.of("#" + tag).itemIds;
     for (let i = 0; i < preferredMods.length; ++i) {
@@ -515,3 +519,12 @@ var getPreferredItemFromTag = (tag) => {
 let potionIngredient = (id, amount) => {
     return Fluid.sizedIngredientOf(`create:potion[create:potion_fluid_bottle_type="regular",minecraft:potion_contents={potion:"${id}"}]`, amount)
 }
+
+// Explicit-variant ore helper: never manufactures a nonexistent deepslate ID.
+let addOregenExplicit = function(event, id, stoneBlock, deepBlock, minY, maxY, count, size, biome) {
+    let targets = [{target: {predicate_type: "minecraft:tag_match", tag: "minecraft:stone_ore_replaceables"}, state: {Name: stoneBlock}}];
+    if (deepBlock) targets.push({target: {predicate_type: "minecraft:tag_match", tag: "minecraft:deepslate_ore_replaceables"}, state: {Name: deepBlock}});
+    event.json(id.replace(":", ":worldgen/configured_feature/"), {type: "minecraft:ore", config: {size: size, discard_chance_on_air_exposure: 0, targets: targets}});
+    event.json(id.replace(":", ":worldgen/placed_feature/"), {feature: id, placement: [{type: "minecraft:count", count: count}, {type: "minecraft:in_square"}, {type: "minecraft:height_range", height: {type: "minecraft:uniform", min_inclusive: {absolute: minY}, max_inclusive: {absolute: maxY}}}, {type: "minecraft:biome"}]});
+    event.json(id.replace(":", ":neoforge/biome_modifier/"), {type: "neoforge:add_features", biomes: biome || "#minecraft:is_overworld", features: id, step: "underground_ores"});
+};

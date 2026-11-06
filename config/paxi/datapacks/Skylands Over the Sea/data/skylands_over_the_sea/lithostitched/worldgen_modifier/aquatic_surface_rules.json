@@ -3,7 +3,9 @@
   "predicate": {
     "type": "lithostitched:true"
   },
-  "levels": ["minecraft:overworld"],
+  "levels": [
+    "minecraft:overworld"
+  ],
   "surface_rule": {
     "type": "minecraft:sequence",
     "sequence": [
@@ -11,7 +13,20 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:biome",
-          "biome_is": ["minecraft:river", "minecraft:frozen_river", "regions_unexplored:cold_river", "terralith:warm_river", "regions_unexplored:muddy_river", "regions_unexplored:tropical_river", "minecraft:swamp","minecraft:mangrove_swamp","regions_unexplored:fen","regions_unexplored:marsh","terralith:orchid_swamp","regions_unexplored:bayou"]
+          "biome_is": [
+            "minecraft:river",
+            "minecraft:frozen_river",
+            "regions_unexplored:cold_river",
+            "terralith:warm_river",
+            "regions_unexplored:muddy_river",
+            "regions_unexplored:tropical_river",
+            "minecraft:swamp",
+            "minecraft:mangrove_swamp",
+            "regions_unexplored:fen",
+            "regions_unexplored:marsh",
+            "terralith:orchid_swamp",
+            "regions_unexplored:bayou"
+          ]
         },
         "then_run": {
           "type": "minecraft:condition",
@@ -21,7 +36,7 @@
               "type": "minecraft:y_above",
               "add_stone_depth": false,
               "anchor": {
-                  "absolute": 420
+                "absolute": 545
               },
               "surface_depth_multiplier": 0
             }

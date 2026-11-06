@@ -4,12 +4,12 @@
     "coordinate": "skylands_over_the_sea:y",
     "points": [
       {
-        "location": 136,
+        "location": 261,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 136,
+        "location": 261,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer1/noise",
@@ -33,7 +33,7 @@
         }
       },
       {
-        "location": 152,
+        "location": 277,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer1/noise",
@@ -57,17 +57,17 @@
         }
       },
       {
-        "location": 152,
+        "location": 277,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 184,
+        "location": 309,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 184,
+        "location": 309,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer2/noise",
@@ -91,7 +91,7 @@
         }
       },
       {
-        "location": 200,
+        "location": 325,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer2/noise",
@@ -115,17 +115,17 @@
         }
       },
       {
-        "location": 200,
+        "location": 325,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 232,
+        "location": 357,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 232,
+        "location": 357,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer3/noise",
@@ -149,7 +149,7 @@
         }
       },
       {
-        "location": 248,
+        "location": 373,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer3/noise",
@@ -173,17 +173,17 @@
         }
       },
       {
-        "location": 248,
+        "location": 373,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 280,
+        "location": 405,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 280,
+        "location": 405,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer4/noise",
@@ -207,7 +207,7 @@
         }
       },
       {
-        "location": 296,
+        "location": 421,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer4/noise",
@@ -231,17 +231,17 @@
         }
       },
       {
-        "location": 296,
+        "location": 421,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 328,
+        "location": 453,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 328,
+        "location": 453,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer5/noise",
@@ -265,7 +265,7 @@
         }
       },
       {
-        "location": 344,
+        "location": 469,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer5/noise",
@@ -289,17 +289,17 @@
         }
       },
       {
-        "location": 344,
+        "location": 469,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 456,
+        "location": 581,
         "derivative": 0,
         "value": 0
       },
       {
-        "location": 456,
+        "location": 581,
         "derivative": 0,
         "value": {
           "coordinate": "skylands_over_the_sea:islands/layer6/noise",
@@ -323,7 +323,7 @@
         }
       },
       {
-        "location": 472,
+        "location": 597,
         "derivative": 0,
         "value": 0
       }

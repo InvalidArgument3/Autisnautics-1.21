@@ -6,12 +6,12 @@
       "coordinate": "skylands_over_the_sea:y",
       "points": [
         {
-          "location": 80,
+          "location": 205,
           "derivative": 0,
           "value": -0.1
         },
         {
-          "location": 96,
+          "location": 221,
           "derivative": 0,
           "value": {
             "coordinate": "skylands_over_the_sea:islands/final",

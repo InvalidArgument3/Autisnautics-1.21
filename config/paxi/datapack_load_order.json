@@ -1,3 +1,7 @@
 {
-  "loadOrder": ["Terralith", "Skylands Over the Sea"]
+  "loadOrder": [
+    "Terralith",
+    "Skylands Over the Sea",
+    "Autisnautics Density Ores"
+  ]
 }

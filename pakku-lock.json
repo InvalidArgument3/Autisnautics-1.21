@@ -8123,6 +8123,46 @@
             ]
         },
         {
+            "pakku_id": "jTSbBhMDmP4aY9fO",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "emf-compat-better-combat"
+            },
+            "name": {
+                "modrinth": "EMF Compat: Better Combat"
+            },
+            "id": {
+                "modrinth": "Smytm33T"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "emf_compat_better_combat_neoforge_1.21.1_2.1.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Smytm33T/versions/XMKvaKv8/emf_compat_better_combat_neoforge_1.21.1_2.1.1.jar",
+                    "id": "XMKvaKv8",
+                    "parent_id": "Smytm33T",
+                    "hashes": {
+                        "sha512": "2f1c25748e799ca567756275a4eaa5fedf4c302aa335409d67b9bc0f2c4659ff635e9518bb403b16280f55a062072070da5b030450c501a3f5f5c762f18fc156",
+                        "sha1": "180e04f2ba543ec74a2bfb70c61b7044cd12c5a7"
+                    },
+                    "required_dependencies": [
+                        "hbGct5uU",
+                        "4I1XuqiY"
+                    ],
+                    "size": 173271,
+                    "date_published": "2026-10-15T13:42:18.505658Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Mppv8RJhWcOuhViu",
             "pakku_links": [
                 "riI4ABzzBZnodmie"
@@ -12041,6 +12081,82 @@
                     ],
                     "size": 2540723,
                     "date_published": "2026-06-13T15:58:55.503Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "wDY1fwqOdyH3Ec3d",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "irons-artifice"
+            },
+            "name": {
+                "modrinth": "Iron's Arms 'n Artifice"
+            },
+            "id": {
+                "modrinth": "yOy4oSzi"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "irons_artifice-1.21.1-1.1.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/yOy4oSzi/versions/ttABG4v0/irons_artifice-1.21.1-1.1.1.jar",
+                    "id": "ttABG4v0",
+                    "parent_id": "yOy4oSzi",
+                    "hashes": {
+                        "sha512": "130a5a26b8183e6089cc38b36acb8332526e96640d32010de0fd6a339c11437277d62f300dfc14418835b6545557f114e539b2e8fadcb7c044acbb8c2c0d79cf",
+                        "sha1": "5ef0f22aa7b9df7007cf53cbc103b394d23d1bcf"
+                    },
+                    "required_dependencies": [
+                        "8BmcQJ2H"
+                    ],
+                    "size": 1570683,
+                    "date_published": "2026-10-22T17:56:10.808407Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "YSNatMVbn2Is8S8b",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "irons-lib"
+            },
+            "name": {
+                "modrinth": "Iron's Lib"
+            },
+            "id": {
+                "modrinth": "9nfaJPtX"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "irons_lib-1.21.1-2.3.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/9nfaJPtX/versions/dgH7P81J/irons_lib-1.21.1-2.3.0.jar",
+                    "id": "dgH7P81J",
+                    "parent_id": "9nfaJPtX",
+                    "hashes": {
+                        "sha512": "74c609a583af1547c36ad39a7f89074a221f106fad5a246810d4921f91d0fc2df5660ef75f47f33e5f546cc51147d78ecbcff883da4a53f24002311697d0a99b",
+                        "sha1": "539b49b1a3988d4084a80470f0cfa404258bf0d0"
+                    },
+                    "required_dependencies": [],
+                    "size": 481888,
+                    "date_published": "2026-10-25T23:31:19.997180Z"
                 }
             ]
         },
