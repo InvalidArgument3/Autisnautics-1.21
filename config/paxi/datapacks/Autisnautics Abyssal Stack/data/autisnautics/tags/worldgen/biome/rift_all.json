@@ -1,0 +1,3744 @@
+{
+  "values": [
+    {
+      "id": "alexscaves:abyssal_chasm",
+      "required": false
+    },
+    {
+      "id": "alexscaves:candy_cavity",
+      "required": false
+    },
+    {
+      "id": "alexscaves:forlorn_hollows",
+      "required": false
+    },
+    {
+      "id": "alexscaves:magnetic_caves",
+      "required": false
+    },
+    {
+      "id": "alexscaves:primordial_caves",
+      "required": false
+    },
+    {
+      "id": "alexscaves:toxic_caves",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:blooming_caverns",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:deeplands",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:echoing_forest",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:overcast_columns",
+      "required": false
+    },
+    {
+      "id": "minecraft:badlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:birch_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:cherry_grove",
+      "required": false
+    },
+    {
+      "id": "minecraft:dark_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:deep_frozen_ocean",
+      "required": false
+    },
+    {
+      "id": "minecraft:desert",
+      "required": false
+    },
+    {
+      "id": "minecraft:dripstone_caves",
+      "required": false
+    },
+    {
+      "id": "minecraft:end_barrens",
+      "required": false
+    },
+    {
+      "id": "minecraft:end_highlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:end_midlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:eroded_badlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:flower_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:frozen_ocean",
+      "required": false
+    },
+    {
+      "id": "minecraft:frozen_peaks",
+      "required": false
+    },
+    {
+      "id": "minecraft:frozen_river",
+      "required": false
+    },
+    {
+      "id": "minecraft:grove",
+      "required": false
+    },
+    {
+      "id": "minecraft:ice_spikes",
+      "required": false
+    },
+    {
+      "id": "minecraft:jagged_peaks",
+      "required": false
+    },
+    {
+      "id": "minecraft:jungle",
+      "required": false
+    },
+    {
+      "id": "minecraft:lush_caves",
+      "required": false
+    },
+    {
+      "id": "minecraft:meadow",
+      "required": false
+    },
+    {
+      "id": "minecraft:mushroom_fields",
+      "required": false
+    },
+    {
+      "id": "minecraft:old_growth_birch_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:old_growth_pine_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:old_growth_spruce_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:pale_garden",
+      "required": false
+    },
+    {
+      "id": "minecraft:plains",
+      "required": false
+    },
+    {
+      "id": "minecraft:savanna",
+      "required": false
+    },
+    {
+      "id": "minecraft:savanna_plateau",
+      "required": false
+    },
+    {
+      "id": "minecraft:small_end_islands",
+      "required": false
+    },
+    {
+      "id": "minecraft:snowy_plains",
+      "required": false
+    },
+    {
+      "id": "minecraft:snowy_slopes",
+      "required": false
+    },
+    {
+      "id": "minecraft:snowy_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:stony_peaks",
+      "required": false
+    },
+    {
+      "id": "minecraft:stony_shore",
+      "required": false
+    },
+    {
+      "id": "minecraft:sunflower_plains",
+      "required": false
+    },
+    {
+      "id": "minecraft:swamp",
+      "required": false
+    },
+    {
+      "id": "minecraft:taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:the_end",
+      "required": false
+    },
+    {
+      "id": "minecraft:wooded_badlands",
+      "required": false
+    },
+    {
+      "id": "nullscape:crystal_peaks",
+      "required": false
+    },
+    {
+      "id": "nullscape:shadowlands",
+      "required": false
+    },
+    {
+      "id": "nullscape:void_barrens",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:alpha_grove",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:ancient_delta",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:arid_mountains",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:ashen_woodland",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:autumnal_maple_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:bamboo_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:baobab_savanna",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:barley_fields",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:bayou",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:bioshroom_caves",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:blackstone_basin",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:blackwood_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:boreal_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:chalk_cliffs",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:clover_plains",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:cold_boreal_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:cold_deciduous_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:cold_river",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:deciduous_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:dry_bushland",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:eucalyptus_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:fen",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:flower_fields",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:frozen_pine_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:frozen_tundra",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:fungal_fen",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:glistering_meadow",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:golden_boreal_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:grassland",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:grassy_beach",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:gravel_beach",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:highland_fields",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:hyacinth_deeps",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:icy_heights",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:infernal_holt",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:inferno",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:joshua_desert",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:magnolia_woodland",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:maple_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:marsh",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:mauve_hills",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:mountains",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:muddy_river",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:mycotoxic_undergrowth",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:old_growth_bayou",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:old_growth_boreal_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:old_growth_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:old_growth_golden_boreal_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:orchard",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:outback",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:pine_slopes",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:pine_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:poppy_fields",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:prairie",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:prismachasm",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:pumpkin_fields",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:rainforest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:redstone_abyss",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:redstone_caves",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:redwoods",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:rocky_meadow",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:rocky_reef",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:saguaro_desert",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:scorching_caves",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:shrubland",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:silver_birch_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:sparse_rainforest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:sparse_redwoods",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:spires",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:steppe",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:temperate_grove",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:towering_cliffs",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:tropical_river",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:tropics",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:tundra",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:willow_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:windswept_maple_forest",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:wisteria_grove",
+      "required": false
+    },
+    {
+      "id": "terrablender:deferred_placeholder",
+      "required": false
+    },
+    {
+      "id": "terralith:alpha_islands",
+      "required": false
+    },
+    {
+      "id": "terralith:alpha_islands_winter",
+      "required": false
+    },
+    {
+      "id": "terralith:alpine_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:alpine_highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:amethyst_canyon",
+      "required": false
+    },
+    {
+      "id": "terralith:amethyst_rainforest",
+      "required": false
+    },
+    {
+      "id": "terralith:ancient_sands",
+      "required": false
+    },
+    {
+      "id": "terralith:arid_highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:ashen_savanna",
+      "required": false
+    },
+    {
+      "id": "terralith:basalt_cliffs",
+      "required": false
+    },
+    {
+      "id": "terralith:birch_taiga",
+      "required": false
+    },
+    {
+      "id": "terralith:blooming_plateau",
+      "required": false
+    },
+    {
+      "id": "terralith:blooming_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:brushland",
+      "required": false
+    },
+    {
+      "id": "terralith:bryce_canyon",
+      "required": false
+    },
+    {
+      "id": "terralith:caldera",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/andesite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/deep_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/diorite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/frostfire_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/fungal_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/granite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/infested_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/mantle_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/thermal_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/tuff_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/underground_jungle",
+      "required": false
+    },
+    {
+      "id": "terralith:cloud_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:cold_shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:deep_warm_ocean",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_canyon",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_oasis",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_spires",
+      "required": false
+    },
+    {
+      "id": "terralith:emerald_peaks",
+      "required": false
+    },
+    {
+      "id": "terralith:forested_highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:fractured_savanna",
+      "required": false
+    },
+    {
+      "id": "terralith:frozen_cliffs",
+      "required": false
+    },
+    {
+      "id": "terralith:glacial_chasm",
+      "required": false
+    },
+    {
+      "id": "terralith:granite_cliffs",
+      "required": false
+    },
+    {
+      "id": "terralith:gravel_beach",
+      "required": false
+    },
+    {
+      "id": "terralith:gravel_desert",
+      "required": false
+    },
+    {
+      "id": "terralith:haze_mountain",
+      "required": false
+    },
+    {
+      "id": "terralith:highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:hot_shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:ice_marsh",
+      "required": false
+    },
+    {
+      "id": "terralith:jungle_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:lavender_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:lavender_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:lush_desert",
+      "required": false
+    },
+    {
+      "id": "terralith:lush_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:mirage_isles",
+      "required": false
+    },
+    {
+      "id": "terralith:moonlight_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:moonlight_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:orchid_swamp",
+      "required": false
+    },
+    {
+      "id": "terralith:painted_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:red_oasis",
+      "required": false
+    },
+    {
+      "id": "terralith:rocky_jungle",
+      "required": false
+    },
+    {
+      "id": "terralith:rocky_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:rocky_shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:sakura_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:sakura_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:sandstone_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:savanna_badlands",
+      "required": false
+    },
+    {
+      "id": "terralith:savanna_slopes",
+      "required": false
+    },
+    {
+      "id": "terralith:scarlet_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:shield",
+      "required": false
+    },
+    {
+      "id": "terralith:shield_clearing",
+      "required": false
+    },
+    {
+      "id": "terralith:shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:siberian_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:siberian_taiga",
+      "required": false
+    },
+    {
+      "id": "terralith:skylands_autumn",
+      "required": false
+    },
+    {
+      "id": "terralith:skylands_spring",
+      "required": false
+    },
+    {
+      "id": "terralith:skylands_summer",
+      "required": false
+    },
+    {
+      "id": "terralith:skylands_winter",
+      "required": false
+    },
+    {
+      "id": "terralith:snowy_badlands",
+      "required": false
+    },
+    {
+      "id": "terralith:snowy_cherry_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:snowy_maple_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:snowy_shield",
+      "required": false
+    },
+    {
+      "id": "terralith:steppe",
+      "required": false
+    },
+    {
+      "id": "terralith:stony_spires",
+      "required": false
+    },
+    {
+      "id": "terralith:temperate_highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:tropical_jungle",
+      "required": false
+    },
+    {
+      "id": "terralith:valley_clearing",
+      "required": false
+    },
+    {
+      "id": "terralith:volcanic_crater",
+      "required": false
+    },
+    {
+      "id": "terralith:volcanic_peaks",
+      "required": false
+    },
+    {
+      "id": "terralith:warm_river",
+      "required": false
+    },
+    {
+      "id": "terralith:warped_mesa",
+      "required": false
+    },
+    {
+      "id": "terralith:white_cliffs",
+      "required": false
+    },
+    {
+      "id": "terralith:white_mesa",
+      "required": false
+    },
+    {
+      "id": "terralith:windswept_spires",
+      "required": false
+    },
+    {
+      "id": "terralith:wintry_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:wintry_lowlands",
+      "required": false
+    },
+    {
+      "id": "terralith:yellowstone",
+      "required": false
+    },
+    {
+      "id": "terralith:yosemite_cliffs",
+      "required": false
+    },
+    {
+      "id": "terralith:yosemite_lowlands",
+      "required": false
+    },
+    {
+      "id": "undergarden:ancient_sea",
+      "required": false
+    },
+    {
+      "id": "undergarden:barren_abyss",
+      "required": false
+    },
+    {
+      "id": "undergarden:blood_mushroom_bog",
+      "required": false
+    },
+    {
+      "id": "undergarden:dead_sea",
+      "required": false
+    },
+    {
+      "id": "undergarden:dense_forest",
+      "required": false
+    },
+    {
+      "id": "undergarden:depths",
+      "required": false
+    },
+    {
+      "id": "undergarden:forgotten_field",
+      "required": false
+    },
+    {
+      "id": "undergarden:frostfields",
+      "required": false
+    },
+    {
+      "id": "undergarden:frosty_smogstem_forest",
+      "required": false
+    },
+    {
+      "id": "undergarden:gronglegrowth",
+      "required": false
+    },
+    {
+      "id": "undergarden:icy_sea",
+      "required": false
+    },
+    {
+      "id": "undergarden:indigo_mushroom_bog",
+      "required": false
+    },
+    {
+      "id": "undergarden:infected_depths",
+      "required": false
+    },
+    {
+      "id": "undergarden:ink_mushroom_bog",
+      "required": false
+    },
+    {
+      "id": "undergarden:puff_mushroom_forest",
+      "required": false
+    },
+    {
+      "id": "undergarden:rogdorium_grove",
+      "required": false
+    },
+    {
+      "id": "undergarden:smog_spires",
+      "required": false
+    },
+    {
+      "id": "undergarden:smogstem_forest",
+      "required": false
+    },
+    {
+      "id": "undergarden:veil_mushroom_bog",
+      "required": false
+    },
+    {
+      "id": "undergarden:wigglewood_forest",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:frosted_caves",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:lost_caves",
+      "required": false
+    },
+    {
+      "id": "aquaculture:empty",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:moon_dial_biomes",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:obliteration_biomes",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:column_biomes",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:focal_point_biomes",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:dig_site_biomes",
+      "required": false
+    },
+    {
+      "id": "astralsorcery:rotunda_biomes",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:collections/cold",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:collections/in_end",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:collections/in_nether",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:has_structure/gauntlet_arena",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:has_structure/lich_tower",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:has_structure/none",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:has_structure/obsidilith_arena",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:has_structure/void_blossom",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/bergmite_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/bergmite_kalosbiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/cubone_alolabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/cubone_kantobiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/dartrix_alolabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/dartrix_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/dewott_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/dewott_unovabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/exeggcute_alolabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/exeggcute_kantobiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/goomy_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/goomy_kalosbiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/koffing_galarbiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/koffing_kantobiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/mimejr_galarbiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/mimejr_sinnohbiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/petilil_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/petilil_unovabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/pikachu_alolabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/pikachu_kantobiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/quilava_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/quilava_johtobiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/rufflet_hisuibiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/regional/rufflet_unovabiome",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/archipelago",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/archipelago_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/continental",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/continental_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/elegant",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/elegant_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/fancy",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/forsaken",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/garden",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/garden_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/high_plains",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/icy_snow",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/icy_snow_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/inferno",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/jungle",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/jungle_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/marine",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/marine_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/meadow",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/meadow_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/monsoon",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/monsoon_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/ocean_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/polar",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/river",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/river_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/sandstorm",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/sandstorm_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/savanna",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/savanna_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/sun",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/tundra",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/tundra_anti",
+      "required": false
+    },
+    {
+      "id": "cobblemon:evolution/vivillon/void",
+      "required": false
+    },
+    {
+      "id": "cobblemon:form_change/bagworm_cloak/plant_cloak",
+      "required": false
+    },
+    {
+      "id": "cobblemon:form_change/bagworm_cloak/sandy_cloak",
+      "required": false
+    },
+    {
+      "id": "cobblemon:form_change/bagworm_cloak/trash_cloak",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/acacia_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/apricorn_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/birch_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/cherry_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/crimson_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/dark_oak_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/flowering_azalea_leaves",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/gravel",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/jungle_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/mangrove_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/mud",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/oak_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/red_sand",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/sand",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/spruce_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_block/warped_log",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_density/dense",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_density/sparse",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_feature/apricorns_dense",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_feature/apricorns_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_feature/apricorns_sparse",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_feature/revival_herbs",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_feature/saccharine_tree",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_dawn_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_dawn_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_dusk_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_dusk_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_fire_stone_nether",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_fire_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_fire_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_ice_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_ice_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_leaf_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_leaf_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_moon_stone_dripstone",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_moon_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_moon_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_shiny_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_shiny_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_sun_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_sun_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_thunder_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_thunder_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_water_stone_normal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_ore/ore_water_stone_rare",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_season/autumn",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_season/spring",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_season/summer",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_season/winter",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_structure/village_plains_pokecenter",
+      "required": false
+    },
+    {
+      "id": "cobblemon:has_structure/village_plains_pokecenter_signtest",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_arid",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_badlands",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_bamboo",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_beach",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_cave",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_cherry_blossom",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_coast",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_cold",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_cold_and_temperate_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_cold_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_deep_dark",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_deep_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_desert",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_dripstone",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_end",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_floral",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_forest",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_freezing",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_freshwater",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_frozen_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_glacial",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_grassland",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_highlands",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_hills",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_island",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_jungle",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_lukewarm_and_temperate_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_lukewarm_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_lush",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_magical",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_mirage_island",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_mountain",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_mushroom",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_overworld",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_peak",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_plains",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_plateau",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_river",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_sandy",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_savanna",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_shrubland",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_sky",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_snowy",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_snowy_forest",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_snowy_plains",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_snowy_taiga",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_spooky",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_stony_beach",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_swamp",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_taiga",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_temperate",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_temperate_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_thermal",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_tropical_island",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_tundra",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_volcanic",
+      "required": false
+    },
+    {
+      "id": "cobblemon:is_warm_ocean",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_basalt",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_crimson",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_desert",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_forest",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_frozen",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_fungus",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_mountain",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_overgrowth",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_quartz",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_soul_fire",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_soul_sand",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_toxic",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_warped",
+      "required": false
+    },
+    {
+      "id": "cobblemon:nether/is_wasteland",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_fiery",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_icy",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_mars",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_mercury",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_moon",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_space",
+      "required": false
+    },
+    {
+      "id": "cobblemon:space/is_venus",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/badlands_pyramid",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/black_spiral",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/campsite",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/dark_forest_settlement",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/desert_shrine",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/end_shipwreck",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/farmstead",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/guide_post_cold",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/guide_post_warm",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/mangrove_hut",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/mausoleum",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/ruins",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/birch",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/dark",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/desert",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/forest",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/jungle",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/mangrove",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/supply_cache/taiga",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/tavern",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/watchtower_plains",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/watchtower_savanna",
+      "required": false
+    },
+    {
+      "id": "explorify:has_structure/watchtower_taiga",
+      "required": false
+    },
+    {
+      "id": "c:is_cave",
+      "required": false
+    },
+    {
+      "id": "c:is_underground",
+      "required": false
+    },
+    {
+      "id": "galosphere:has_structure/forgotten_ruins",
+      "required": false
+    },
+    {
+      "id": "galosphere:has_structure/pink_salt_shrine",
+      "required": false
+    },
+    {
+      "id": "galosphere:crystal_canyons",
+      "required": false
+    },
+    {
+      "id": "galosphere:lichen_caves",
+      "required": false
+    },
+    {
+      "id": "galosphere:pink_salt_caves",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/mineshaft",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_standard",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_overworld",
+      "required": false
+    },
+    {
+      "id": "minecraft:stronghold_biased_to",
+      "required": false
+    },
+    {
+      "id": "c:is_swamp",
+      "required": false
+    },
+    {
+      "id": "immersiveengineering:generate_ancient_seabed",
+      "required": false
+    },
+    {
+      "id": "immersiveengineering:generate_hardened_clay_pan",
+      "required": false
+    },
+    {
+      "id": "c:end_islands",
+      "required": false
+    },
+    {
+      "id": "nullscape:all_nullscape_biomes",
+      "required": false
+    },
+    {
+      "id": "nullscape:has_structure/dragon_skeleton",
+      "required": false
+    },
+    {
+      "id": "nullscape:has_structure/rift",
+      "required": false
+    },
+    {
+      "id": "forge:is_cold/end",
+      "required": false
+    },
+    {
+      "id": "forge:is_dry/end",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_end",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/end_city",
+      "required": false
+    },
+    {
+      "id": "quark:glimmering_weald",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_cherry",
+      "required": false
+    },
+    {
+      "id": "quark:has_sunny_blossom_trees",
+      "required": false
+    },
+    {
+      "id": "quark:prevents_toretoise_spawns",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_acacia",
+      "required": false
+    },
+    {
+      "id": "quark:prevents_stoneling_spawns",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_mangrove",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_birch",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_spruce",
+      "required": false
+    },
+    {
+      "id": "quark:has_serene_blossom_trees",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_dark_oak",
+      "required": false
+    },
+    {
+      "id": "quark:has_warm_blossom_trees",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_jungle",
+      "required": false
+    },
+    {
+      "id": "quark:has_fallen_oak",
+      "required": false
+    },
+    {
+      "id": "quark:has_fiery_blossom_trees",
+      "required": false
+    },
+    {
+      "id": "quark:has_frosty_blossom_trees",
+      "required": false
+    },
+    {
+      "id": "quark:has_lower_fallen_tree_density",
+      "required": false
+    },
+    {
+      "id": "c:is_mushroom",
+      "required": false
+    },
+    {
+      "id": "c:is_magical",
+      "required": false
+    },
+    {
+      "id": "c:is_rare",
+      "required": false
+    },
+    {
+      "id": "c:is_overworld",
+      "required": false
+    },
+    {
+      "id": "minecraft:without_patrol_spawns",
+      "required": false
+    },
+    {
+      "id": "minecraft:without_wandering_trader_spawns",
+      "required": false
+    },
+    {
+      "id": "minecraft:without_zombie_sieges",
+      "required": false
+    },
+    {
+      "id": "undergarden:biome_lethality",
+      "required": false
+    },
+    {
+      "id": "undergarden:has_structure/catacombs",
+      "required": false
+    },
+    {
+      "id": "undergarden:has_structure/denizen_camp",
+      "required": false
+    },
+    {
+      "id": "undergarden:has_structure/depleted_mine",
+      "required": false
+    },
+    {
+      "id": "undergarden:has_structure/forgotten_vestige",
+      "required": false
+    },
+    {
+      "id": "undergarden:is_depths_biome",
+      "required": false
+    },
+    {
+      "id": "undergarden:is_undergarden",
+      "required": false
+    },
+    {
+      "id": "c:no_default_monsters",
+      "required": false
+    },
+    {
+      "id": "modernfoundry:islands/blood",
+      "required": false
+    },
+    {
+      "id": "modernfoundry:islands/clay",
+      "required": false
+    },
+    {
+      "id": "modernfoundry:islands/earthslime",
+      "required": false
+    },
+    {
+      "id": "modernfoundry:islands/enderslime",
+      "required": false
+    },
+    {
+      "id": "modernfoundry:islands/skyslime",
+      "required": false
+    },
+    {
+      "id": "c:caves",
+      "required": false
+    },
+    {
+      "id": "c:is_dark_forest",
+      "required": false
+    },
+    {
+      "id": "c:is_spooky",
+      "required": false
+    },
+    {
+      "id": "c:is_tree/deciduous",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_dark_leaf_litter",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_pale_leaf_litter",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_red_leaf_litter",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_bamboo_jungle",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_birch_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_cherry_grove",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_dappled_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_flower_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_meadow",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_old_growth_birch_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_old_growth_pine_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_old_growth_spruce_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_pale_garden",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_savanna",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_snowy_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_sparse_jungle",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_swamp",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_windswept_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/abandoned_camp_wooded_badlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/trial_chambers",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/woodland_mansion",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_bushes",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_camels",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_cold_variant_farm_animals",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_coral_variant_zombie_nautilus",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_dry_grass",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_dry_grass_rarely",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_birch_trees",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_birch_trees_rarely",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_jungle_trees",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_oak_trees",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_spruce_trees",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_spruce_trees_rarely",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_fallen_super_birch_trees",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_firefly_bushes",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_firefly_bushes_swamp",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_leaf_litter",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_leaf_litter_patches",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_nautilus",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_nautilus_frequently",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_noise_based_wildflowers",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_warm_variant_farm_animals",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_wildflowers",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_zombie_horses",
+      "required": false
+    },
+    {
+      "id": "minecraft:dappled_forest",
+      "required": false
+    },
+    {
+      "id": "minecraft:sulfur_caves",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:has_structure/skeleton_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:has_structure/small_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:has_structure/small_nether_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:has_structure/spider_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:has_structure/zombie_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterfortresses:has_structure/better_fortress",
+      "required": false
+    },
+    {
+      "id": "betterstrongholds:has_structure/better_stronghold",
+      "required": false
+    },
+    {
+      "id": "betterwitchhuts:has_structure/better_witch_hut",
+      "required": false
+    },
+    {
+      "id": "betterwitchhuts:has_structure/witch_circle",
+      "required": false
+    },
+    {
+      "id": "c:is_cold/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_hot/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_icy",
+      "required": false
+    },
+    {
+      "id": "c:is_sandy",
+      "required": false
+    },
+    {
+      "id": "forge:is_cave",
+      "required": false
+    },
+    {
+      "id": "forge:is_cold",
+      "required": false
+    },
+    {
+      "id": "forge:is_hot",
+      "required": false
+    },
+    {
+      "id": "forge:is_sandy",
+      "required": false
+    },
+    {
+      "id": "forge:is_underground",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/stronghold",
+      "required": false
+    },
+    {
+      "id": "travelerstitles:is_underground",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:cave_biomes",
+      "required": false
+    },
+    {
+      "id": "yungsextras:has_structure/desert_decorations",
+      "required": false
+    },
+    {
+      "id": "yungsextras:has_structure/swamp_structures",
+      "required": false
+    },
+    {
+      "id": "yungsextras:has_structure/vanilla_desert_well",
+      "required": false
+    },
+    {
+      "id": "alexscaves:alexs_caves_biomes",
+      "required": false
+    },
+    {
+      "id": "alexscaves:cave_map_border_on",
+      "required": false
+    },
+    {
+      "id": "alexscaves:has_cave_structures",
+      "required": false
+    },
+    {
+      "id": "alexscaves:has_no_ancient_cities_in",
+      "required": false
+    },
+    {
+      "id": "alexscaves:has_no_underground_cabins",
+      "required": false
+    },
+    {
+      "id": "alexscaves:has_no_vanilla_structures_in",
+      "required": false
+    },
+    {
+      "id": "alexscaves:has_underground_cabins",
+      "required": false
+    },
+    {
+      "id": "alexscaves:is_candy_cavity",
+      "required": false
+    },
+    {
+      "id": "alexscaves:only_ambient_loop_underwater",
+      "required": false
+    },
+    {
+      "id": "alexscaves:override_all_vanilla_music_in",
+      "required": false
+    },
+    {
+      "id": "alexscaves:override_underwater_ambience_in",
+      "required": false
+    },
+    {
+      "id": "alexscaves:trench_ignores_stone_in",
+      "required": false
+    },
+    {
+      "id": "forge:is_magical",
+      "required": false
+    },
+    {
+      "id": "forge:is_spooky",
+      "required": false
+    },
+    {
+      "id": "forge:is_wasteland",
+      "required": false
+    },
+    {
+      "id": "forge:no_default_monsters",
+      "required": false
+    },
+    {
+      "id": "forge:is_sparse/overworld",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_deep_ocean",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:skreechers_can_spawn_wardens",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_desert_crocodiles",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_huge_catfish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_murmurs_ignore_height",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_nether_tarantula_hawks",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_red_gusters",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_soul_gusters",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_white_mantis_shrimp",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spawns_white_seals",
+      "required": false
+    },
+    {
+      "id": "blueprint:original_source_marker",
+      "required": false
+    },
+    {
+      "id": "cobblemon:modded_humid_biomes",
+      "required": false
+    },
+    {
+      "id": "cobgyms:has_structure/gym_entrance_aquatic",
+      "required": false
+    },
+    {
+      "id": "cobgyms:has_structure/gym_entrance_volcanic",
+      "required": false
+    },
+    {
+      "id": "cobgyms:has_structure/gym_entrance_woodland",
+      "required": false
+    },
+    {
+      "id": "cobgyms:cobgyms_biome",
+      "required": false
+    },
+    {
+      "id": "create_abyss:abyss",
+      "required": false
+    },
+    {
+      "id": "createdieselgenerators:oil_biomes",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:has_structure/ancient_temple",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:has_structure/gloomaze",
+      "required": false
+    },
+    {
+      "id": "geode_plus:has_echo_crystal",
+      "required": false
+    },
+    {
+      "id": "geode_plus:has_echo_geode",
+      "required": false
+    },
+    {
+      "id": "dimdungeons:biome_dungeon",
+      "required": false
+    },
+    {
+      "id": "enigmaticlegacyplus:has_structure/spellstone_hut",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_badlands_mauler",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_barnacle",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_buttercup_patch",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_crab",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_desert_mauler",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_glare",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_iceologer",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_illusioner",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_penguin",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_rascal",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_savanna_mauler",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:collections/snowy",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:collections/snowy_forest",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:collections/snowy_mountains",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:collections/snowy_plains",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:collections/taigas",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_moobloom/any",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_moobloom/buttercup",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_structure/citadel",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_structure/iceologer_cabin",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_structure/illusioner_shack",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:has_structure/illusioner_training_grounds",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/beach",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/cold",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/desert",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/hot_dry",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/hot_humid",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:compat/warm",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/apple_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/bayberry_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/blueberry_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/cranberry_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/durian_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/fig_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/hamimelon_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/hawberry_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/kiwi_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/lemon_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/lychee_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/mango_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/mangosteen_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/orange_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/peach_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/pear_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/persimmon_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:plants/pineapple_biomes",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/birch",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/fruitful_forest",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/plains",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/swamp",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/taiga",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/taiga_cold",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/tropical",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:vanilla/windswept",
+      "required": false
+    },
+    {
+      "id": "ftbessentials:ignore_rtp",
+      "required": false
+    },
+    {
+      "id": "mes:has_structure/end_biomes",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_auroracite_layer",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/desert",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/jungle",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/plains",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/savanna",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/snow",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/swamp",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/taiga",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:has_structure/has_mowzie_structure",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:is_magical",
+      "required": false
+    },
+    {
+      "id": "dungeonsdelight:wild_rotbulb_generates_in",
+      "required": false
+    },
+    {
+      "id": "nuclearcraftneohaul:nuclear_wasteland",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:without_traveler_spawns",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:generates_traveler_camp",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:cannot_generate_traveler_camp",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:generates_traveler_camp_gathering",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:travelers_compass_search",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:generates_traveler_soul_camp",
+      "required": false
+    },
+    {
+      "id": "c:is_birch_forest",
+      "required": false
+    },
+    {
+      "id": "c:is_dead",
+      "required": false
+    },
+    {
+      "id": "c:is_desert",
+      "required": false
+    },
+    {
+      "id": "c:is_floral",
+      "required": false
+    },
+    {
+      "id": "c:is_flower_forest",
+      "required": false
+    },
+    {
+      "id": "c:is_lush",
+      "required": false
+    },
+    {
+      "id": "c:is_nether_forest",
+      "required": false
+    },
+    {
+      "id": "c:is_old_growth",
+      "required": false
+    },
+    {
+      "id": "c:is_plains",
+      "required": false
+    },
+    {
+      "id": "c:is_plateau",
+      "required": false
+    },
+    {
+      "id": "c:is_shallow_ocean",
+      "required": false
+    },
+    {
+      "id": "c:is_snowy",
+      "required": false
+    },
+    {
+      "id": "c:is_snowy_plains",
+      "required": false
+    },
+    {
+      "id": "c:is_stony_shores",
+      "required": false
+    },
+    {
+      "id": "c:is_wasteland",
+      "required": false
+    },
+    {
+      "id": "c:is_windswept",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/ashen",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/black",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/chestnut",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/pale",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/rusty",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/snowy",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/spotted",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/striped",
+      "required": false
+    },
+    {
+      "id": "c:has_wolf_variant/woods",
+      "required": false
+    },
+    {
+      "id": "c:is_dense_vegetation/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_dry/nether",
+      "required": false
+    },
+    {
+      "id": "c:is_dry/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_hot/nether",
+      "required": false
+    },
+    {
+      "id": "c:is_mountain/peak",
+      "required": false
+    },
+    {
+      "id": "c:is_mountain/slope",
+      "required": false
+    },
+    {
+      "id": "c:is_sparse_vegetation/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_temperate/overworld",
+      "required": false
+    },
+    {
+      "id": "c:is_tree/coniferous",
+      "required": false
+    },
+    {
+      "id": "c:is_tree/jungle",
+      "required": false
+    },
+    {
+      "id": "c:is_tree/savanna",
+      "required": false
+    },
+    {
+      "id": "c:is_wet/overworld",
+      "required": false
+    },
+    {
+      "id": "lithostitched:has_villager_type/snowy",
+      "required": false
+    },
+    {
+      "id": "minecraft:allows_surface_slime_spawns",
+      "required": false
+    },
+    {
+      "id": "minecraft:allows_tropical_fish_spawns_at_any_height",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_closer_water_fog",
+      "required": false
+    },
+    {
+      "id": "minecraft:increased_fire_burnout",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_badlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_beach",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_hill",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_jungle",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_mountain",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_nether",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_ocean",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_river",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_savanna",
+      "required": false
+    },
+    {
+      "id": "minecraft:is_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:mineshaft_blocking",
+      "required": false
+    },
+    {
+      "id": "minecraft:polar_bears_spawn_on_alternate_blocks",
+      "required": false
+    },
+    {
+      "id": "minecraft:produces_corals_from_bonemeal",
+      "required": false
+    },
+    {
+      "id": "minecraft:snow_golem_melts",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_cold_variant_frogs",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_gold_rabbits",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_snow_foxes",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_warm_variant_frogs",
+      "required": false
+    },
+    {
+      "id": "minecraft:spawns_white_rabbits",
+      "required": false
+    },
+    {
+      "id": "minecraft:water_on_map_outlines",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/bastion_remnant",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/buried_treasure",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/desert_pyramid",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/igloo",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/jungle_temple",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ocean_ruin_cold",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ocean_ruin_warm",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/pillager_outpost",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_desert",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_jungle",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_mountain",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_ocean",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/ruined_portal_swamp",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/swamp_hut",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/village_desert",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/village_plains",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/village_savanna",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/village_snowy",
+      "required": false
+    },
+    {
+      "id": "minecraft:has_structure/village_taiga",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:all",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:all_nether",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:all_overworld",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:all_overworld_no_deep_caves",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:removed",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:collection/caves",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/ashen",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/black",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/chestnut",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/pale",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/rusty",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/snowy",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/spotted",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/striped",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:has_wolf_variant/woods",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:surface/peat",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:surface/sand",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:surface/silt",
+      "required": false
+    },
+    {
+      "id": "spore:cold_biome",
+      "required": false
+    },
+    {
+      "id": "c:is_cold",
+      "required": false
+    },
+    {
+      "id": "c:is_dry",
+      "required": false
+    },
+    {
+      "id": "stellaris:has_structure/earth_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:has_structure/mercury_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:has_structure/meteor_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:has_structure/oil_well_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:has_structure/venus_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:mars_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:mercury_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:moon_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:orbit_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:sandstorm_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:venus_biomes",
+      "required": false
+    },
+    {
+      "id": "stellaris:infernal_venus_barrens",
+      "required": false
+    },
+    {
+      "id": "stellaris:jupiter",
+      "required": false
+    },
+    {
+      "id": "stellaris:mars_desert",
+      "required": false
+    },
+    {
+      "id": "stellaris:mars_ice_spikes",
+      "required": false
+    },
+    {
+      "id": "stellaris:mars_rocky_plains",
+      "required": false
+    },
+    {
+      "id": "stellaris:mercury",
+      "required": false
+    },
+    {
+      "id": "stellaris:mercury_fire_land",
+      "required": false
+    },
+    {
+      "id": "stellaris:moon_caves",
+      "required": false
+    },
+    {
+      "id": "stellaris:moon_desert",
+      "required": false
+    },
+    {
+      "id": "stellaris:space",
+      "required": false
+    },
+    {
+      "id": "stellaris:venus_desert",
+      "required": false
+    },
+    {
+      "id": "the_beyond:end_biomes",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_bridges",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_gardens",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_pancake_lakes",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_platforms",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_remains",
+      "required": false
+    },
+    {
+      "id": "the_beyond:has_sparse_platforms",
+      "required": false
+    },
+    {
+      "id": "the_beyond:hidden_until/beyond",
+      "required": false
+    },
+    {
+      "id": "the_beyond:hidden_until/farlands",
+      "required": false
+    },
+    {
+      "id": "the_beyond:hidden_until/wall",
+      "required": false
+    },
+    {
+      "id": "the_beyond:is_extra_foggy",
+      "required": false
+    },
+    {
+      "id": "the_beyond:is_farlands",
+      "required": false
+    },
+    {
+      "id": "the_beyond:is_foggy",
+      "required": false
+    },
+    {
+      "id": "the_beyond:is_tainted",
+      "required": false
+    },
+    {
+      "id": "the_beyond:region/beyond",
+      "required": false
+    },
+    {
+      "id": "the_beyond:region/farlands",
+      "required": false
+    },
+    {
+      "id": "the_beyond:region/tainted",
+      "required": false
+    },
+    {
+      "id": "the_beyond:void_biomes",
+      "required": false
+    },
+    {
+      "id": "the_beyond:attracta_expanse",
+      "required": false
+    },
+    {
+      "id": "the_beyond:chestral_hollows",
+      "required": false
+    },
+    {
+      "id": "the_beyond:fumarole_uplands",
+      "required": false
+    },
+    {
+      "id": "the_beyond:lustrous_echoes",
+      "required": false
+    },
+    {
+      "id": "the_beyond:peer_lands",
+      "required": false
+    },
+    {
+      "id": "the_beyond:the_paths",
+      "required": false
+    },
+    {
+      "id": "the_beyond:true_void",
+      "required": false
+    },
+    {
+      "id": "c:is_badlands",
+      "required": false
+    },
+    {
+      "id": "c:is_beach",
+      "required": false
+    },
+    {
+      "id": "c:is_deep_ocean",
+      "required": false
+    },
+    {
+      "id": "c:is_jungle",
+      "required": false
+    },
+    {
+      "id": "c:is_mountain",
+      "required": false
+    },
+    {
+      "id": "c:is_ocean",
+      "required": false
+    },
+    {
+      "id": "tide:can_catch_starfish",
+      "required": false
+    },
+    {
+      "id": "tide:has_cherry_grove_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_coastal_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_deep_dark_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_desert_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_dripstone_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_end_oasis",
+      "required": false
+    },
+    {
+      "id": "tide:has_frozen_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_jungle_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_mushroom_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_plains_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_rocky_fish",
+      "required": false
+    },
+    {
+      "id": "tide:has_structure/fishing_boat",
+      "required": false
+    },
+    {
+      "id": "tide:has_swamp_fish",
+      "required": false
+    },
+    {
+      "id": "tide:is_saltwater",
+      "required": false
+    },
+    {
+      "id": "tide:the_void",
+      "required": false
+    },
+    {
+      "id": "tide:water_biomes",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/blackstone_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/deepslate_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/end_stone_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/mossy_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/mud_bricks_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/prismarine_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/purpur_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/red_nether_bricks_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/sandy_waystone",
+      "required": false
+    },
+    {
+      "id": "waystones:has_structure/waystone",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:sakura_birch_forest",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:sakura_forest",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:sakura_taiga",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:animal_path",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/no_grape",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/tuna",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/redbean",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/crab_mud",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/soybean",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/deer",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/udumbara",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/grape",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/boar",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/crab",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/tea",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/cucumber",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/black_grape",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/lamprey",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:spawns/white_grape",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:cherry_biomes",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:crab_fishing",
+      "required": false
+    },
+    {
+      "id": "youkaisfeasts:youkai_biomes",
+      "required": false
+    }
+  ]
+}

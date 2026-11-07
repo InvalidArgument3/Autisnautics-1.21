@@ -1,6 +1,6 @@
 {
   "type": "lithostitched:wrap_noise_router",
-  "priority": 102,
+  "priority": 2005,
   "dimension": "oceanworld:deepsea",
   "target": "final_density",
   "wrapper_function": "autisnautics:rift/wrap_rift_2_3_oceanworld_deepsea"

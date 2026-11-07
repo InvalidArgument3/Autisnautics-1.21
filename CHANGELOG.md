@@ -1,4 +1,15 @@
 # Changelog
+## [0.0.74]
+- Abyssal Stack: align permanent staggered rift footprints across every floor/ceiling boundary; add late top-layer cleanup and shared-mask runtime safety passes to remove bedrock, obsidian/replacement blocks and other solid caps inside rifts without opening boundaries outside them
+- Keep the temporary center test enabled at **250 m diameter** (radius 125); its trigger is modular in `rift/center_trigger.json` and can be disabled by replacing that density function with `0.0` without removing the permanent staggered-rift fixes
+- KubeJS boundary cleanup: cooperative **2 ms/tick target**, resumable within chunks/columns, cached footprint evaluations and all three safety passes; add low-rate `[RiftPerf]` queue/pass/MSPT diagnostics. Native engine calls can overrun the budget; this is not a hard latency guarantee
+- Immersive Portals: enable server teleport logging, retaining portal performance settings and the nine-layer stack
+- Update custom LFS overrides: **Octolegs 0.7.5** and **Voxy portal-LOD ipa10h**; retain the other five custom override jars
+- Bundle both Adventurer's Harness jars as **both-side Git LFS overrides**; keep the four resolved platform additions and CreativeCore update exactly version/hash locked through Modrinth
+- Update **CreativeCore 2.13.53**; add **LittleTiles 1.6.0-pre237**, **Adventurer's Harness 1.1**, **Create: Adventurer's Harness 1.0**, **Nearby Crafting 1.3.0**, **Recipe Book Access 1.4.0** (both sides), and **Nowheel 2.1.1** (client); remove **WorldEdit 7.3.8**
+- Include Cobblemon boss addon/load order, Natural Temperature equatorial distance 25000, new harness/nearby-crafting common/server defaults and Undergarden JAOPCA materials
+- Worldgen changes require a **new world or ungenerated chunks**: already-generated 1 km holes do not shrink. Fluids remain, including water sections and Nether lava
+
 ## [0.0.73]
 - remove Touhou Little Maid, its configs, the "Mass Bullying" fairy quest, and the leftover AttributeFix, Jade, and Astral amulet entries that pointed at it
 

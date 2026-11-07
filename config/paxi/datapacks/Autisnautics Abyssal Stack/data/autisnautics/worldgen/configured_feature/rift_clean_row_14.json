@@ -1,0 +1,328 @@
+{
+  "type": "lithostitched:composite",
+  "config": {
+    "features": [
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 0
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 1
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 2
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 3
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 4
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 5
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 6
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 7
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 8
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 9
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 10
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 11
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 12
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 13
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 14
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_column_14",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 15
+          },
+          {
+            "type": "lithostitched:condition",
+            "condition": {
+              "type": "lithostitched:sample_noise_router",
+              "target": "final_density",
+              "min_inclusive": -2014.1,
+              "max_inclusive": -2013.9
+            }
+          }
+        ]
+      }
+    ],
+    "placement_type": "never_cancel"
+  }
+}

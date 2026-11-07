@@ -1,0 +1,212 @@
+#Per-tier numbers: arms, the largest Mining/Building selection per side, and the reach for digging and building.
+[tiers]
+
+	[tiers.iron]
+		#Mechanical arms on the harness.
+		# Default: 4
+		# Range: 1 ~ 6
+		arms = 4
+		#Largest box Mining selects and largest shape Building makes, per side, in blocks.
+		# Default: 7
+		# Range: 1 ~ 64
+		selection = 7
+		#How far the arms reach to dig and build, in blocks from the eyes.
+		# Default: 5
+		# Range: 1 ~ 32
+		armReach = 5
+		#Climbing Mode walking speed for this tier, as a multiple of climbing.speed.
+		# Default: 1.0
+		# Range: 0.1 ~ 5.0
+		climbSpeedFactor = 1.0
+
+	[tiers.diamond]
+		#Mechanical arms on the harness.
+		# Default: 5
+		# Range: 1 ~ 6
+		arms = 5
+		#Largest box Mining selects and largest shape Building makes, per side, in blocks.
+		# Default: 9
+		# Range: 1 ~ 64
+		selection = 9
+		#How far the arms reach to dig and build, in blocks from the eyes.
+		# Default: 6
+		# Range: 1 ~ 32
+		armReach = 6
+		#Climbing Mode walking speed for this tier, as a multiple of climbing.speed.
+		# Default: 1.25
+		# Range: 0.1 ~ 5.0
+		climbSpeedFactor = 1.25
+
+	[tiers.netherite]
+		#Mechanical arms on the harness.
+		# Default: 6
+		# Range: 1 ~ 6
+		arms = 6
+		#Largest box Mining selects and largest shape Building makes, per side, in blocks.
+		# Default: 12
+		# Range: 1 ~ 64
+		selection = 12
+		#How far the arms reach to dig and build, in blocks from the eyes.
+		# Default: 7
+		# Range: 1 ~ 32
+		armReach = 7
+		#Climbing Mode walking speed for this tier, as a multiple of climbing.speed.
+		# Default: 1.5
+		# Range: 0.1 ~ 5.0
+		climbSpeedFactor = 1.5
+
+#Fuel costs, in furnace burn ticks (one coal is 1600).
+[fuel]
+	#Per block dug.
+	# Default: 20
+	# Range: 0 ~ 100000
+	mining = 20
+	#Per block placed.
+	# Default: 20
+	# Range: 0 ~ 100000
+	building = 20
+	#Per game tick while Climbing Mode is on.
+	# Default: 1
+	# Range: 0 ~ 100000
+	climbing = 1
+	#Per grapple launch.
+	# Default: 40
+	# Range: 0 ~ 100000
+	grapple = 40
+	#Per slingshot launch.
+	# Default: 100
+	# Range: 0 ~ 100000
+	slingshot = 100
+	#Per hit by the Warrior's Harness arms.
+	# Default: 20
+	# Range: 0 ~ 100000
+	fighting = 20
+	#Per second slingshot hook (the first hook pays the grapple cost).
+	# Default: 0
+	# Range: 0 ~ 100000
+	secondHook = 0
+	#When off, the harness never needs fuel: every ability is free and the arms are always powered.
+	required = true
+	#Players in Creative mode use no fuel.
+	creativeFree = true
+
+[mining]
+	#Mining Mode can be turned on.
+	enabled = true
+	#Multiplies how fast the arms dig (2.0 digs twice as fast).
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	digSpeed = 1.0
+	#No block takes an arm longer than this to dig, in seconds.
+	# Default: 30.0
+	# Range: 0.5 ~ 300.0
+	maxDigSeconds = 30.0
+	#With the Tool slot empty, the arms still dig like the harness tier's own pickaxe, axe, shovel and hoe.
+	builtInTools = true
+	#The tool in the Tool slot loses durability as the arms dig.
+	toolWear = true
+	#Dug blocks' drops go straight into the wearer's inventory. When off, they drop at the block.
+	dropsToInventory = true
+	#A job is given up when every remaining block stays out of reach this long, in seconds.
+	# Default: 5.0
+	# Range: 0.5 ~ 600.0
+	giveUpSeconds = 5.0
+	#Building keeps retrying blocks it can't place or reach yet; it stops when this long passes without placing one, in seconds.
+	# Default: 5.0
+	# Range: 0.5 ~ 600.0
+	buildGraceSeconds = 5.0
+
+[building]
+	#Building Mode can be turned on.
+	enabled = true
+	#Time an arm takes to set each block in place, in game ticks (20 a second).
+	# Default: 3
+	# Range: 1 ~ 100
+	placeTicks = 3
+
+[climbing]
+	#Climbing Mode can be turned on.
+	enabled = true
+	#Holding Sprint on the legs multiplies their speed by this.
+	# Default: 1.45
+	# Range: 1.0 ~ 4.0
+	sprintFactor = 1.45
+	#How far a leg can plant, in blocks, for every tier.
+	# Default: 7
+	# Range: 2 ~ 16
+	legReach = 7
+	#Arms used as legs when Climbing Mode is on while Mining or Building is on.
+	# Default: 2
+	# Range: 1 ~ 6
+	legsWhileWorking = 2
+	#Walking speed on the legs, in blocks per tick.
+	# Default: 0.2
+	# Range: 0.05 ~ 1.0
+	speed = 0.2
+	#When the fuel runs out while climbing, the legs let go one at a time over this many seconds.
+	# Default: 2.0
+	# Range: 0.0 ~ 30.0
+	powerDownSeconds = 2.0
+
+[grapple]
+	#Holding the Grapple key shoots a hook to swing on.
+	swingEnabled = true
+	#Tapping the Grapple key shoots a hook that pulls the wearer to it.
+	zipEnabled = true
+	#Sneaking on the ground while hooked draws the slingshot.
+	slingshotEnabled = true
+	#How fast Jump reels the cable in and Sneak lets it out, in blocks per tick.
+	# Default: 0.3
+	# Range: 0.05 ~ 2.0
+	reelSpeed = 0.3
+	#Top speed while swinging on the cable, in blocks per tick.
+	# Default: 2.0
+	# Range: 0.5 ~ 10.0
+	maxSwingSpeed = 2.0
+	#A tap's pull, as a share of a fully drawn one-hook slingshot.
+	# Default: 0.5
+	# Range: 0.05 ~ 2.0
+	zipSpeedFactor = 0.5
+	#How far the grapple head can be shot, in blocks.
+	# Default: 32
+	# Range: 4 ~ 128
+	range = 32
+	#Time to build full slingshot tension, in seconds.
+	# Default: 2.0
+	# Range: 0.1 ~ 30.0
+	tensionSeconds = 2.0
+	#Launch speed at full tension with two hooks, in blocks per tick.
+	# Default: 6.0
+	# Range: 0.1 ~ 10.0
+	launchSpeed = 6.0
+	#Share of the two-hook speed a one-hook slingshot gets.
+	# Default: 0.7
+	# Range: 0.0 ~ 1.0
+	oneHookFactor = 0.7
+
+#Netherite Warrior's Harness only.
+[fighting]
+	#Combat Mode can be turned on.
+	enabled = true
+	#The weapon in the Weapon slot loses durability with each hit.
+	weaponWear = true
+	#How far the arms reach to strike, in blocks.
+	# Default: 4.5
+	# Range: 1.0 ~ 16.0
+	range = 4.5
+	#Damage per hit with the Weapon slot empty (2 hearts is 4).
+	# Default: 4.0
+	# Range: 0.0 ~ 100.0
+	unarmedDamage = 4.0
+	#Cooldown of each arm between its strikes, in seconds.
+	# Default: 0.625
+	# Range: 0.05 ~ 10.0
+	armCooldown = 0.625
+	#How many foes the arms may strike at the same time, one arm each.
+	# Default: 3
+	# Range: 1 ~ 6
+	simultaneousArms = 3
+	#With a single foe the arms take turns on it: seconds between one arm's strike and the next.
+	# Default: 0.3125
+	# Range: 0.05 ~ 10.0
+	singleFoeInterval = 0.3125

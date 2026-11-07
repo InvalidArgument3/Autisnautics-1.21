@@ -211,6 +211,18 @@
         },
         "the-undergarden": {
             "side": "BOTH"
+        },
+        "create-nowheel": {
+            "side": "CLIENT"
+        },
+        "recipe-book-access-api": {
+            "side": "BOTH"
+        },
+        "nearby-crafting": {
+            "side": "BOTH"
+        },
+        "littletiles": {
+            "side": "BOTH"
         }
     },
     "export_server_side_projects_to_client": true

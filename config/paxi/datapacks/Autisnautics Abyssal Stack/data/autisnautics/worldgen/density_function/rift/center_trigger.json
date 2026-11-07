@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "lithostitched:axis",
+        "axis": "x"
+      },
+      "argument2": {
+        "type": "lithostitched:axis",
+        "axis": "x"
+      }
+    },
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "lithostitched:axis",
+        "axis": "z"
+      },
+      "argument2": {
+        "type": "lithostitched:axis",
+        "axis": "z"
+      }
+    }
+  },
+  "min_inclusive": 0,
+  "max_exclusive": 15625,
+  "when_in_range": 1,
+  "when_out_of_range": 0
+}

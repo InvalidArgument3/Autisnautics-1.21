@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#autisnautics:rift_all",
+  "features": "autisnautics:rift_boundary_cleanup",
+  "step": "top_layer_modification"
+}

@@ -7201,7 +7201,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
+                    "file_name": "CreativeCore_NEOFORGE_v2.13.53_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7209,37 +7209,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/vRMtFt35/CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
-                    "id": "vRMtFt35",
+                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/M3URMOz9/CreativeCore_NEOFORGE_v2.13.53_mc1.21.1.jar",
+                    "id": "M3URMOz9",
                     "parent_id": "OsZiaDHq",
                     "hashes": {
-                        "sha512": "864301fa1229511203fc291e9b683db5af3cb4aa4faed0ef1eb54112491b3c97f9b5006b42d41fb2c169f7fc93ad13459f5079c6ffc73dc4b145ee61b7687997",
-                        "sha1": "eb2242b3d4442ad4017ba0624a7f9588e778b157"
+                        "sha512": "91d2be2d894094089964e5e4e9c9cfb996b703884d72b3f0a696668792802d0775ab358ea76c9bff0c75dd30e01a3fa9c3d05a52a1265965edabedef39a3f989",
+                        "sha1": "56f51e9effa80e7fbc7301fc74d63363a1571707"
                     },
                     "required_dependencies": [],
-                    "size": 1236490,
-                    "date_published": "2026-10-09T13:48:39.104547Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9108/41/CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
-                    "id": "9108041",
-                    "parent_id": "257814",
-                    "hashes": {
-                        "sha1": "eb2242b3d4442ad4017ba0624a7f9588e778b157",
-                        "md5": "852ea4400c238011173e8251896e6bdc"
-                    },
-                    "required_dependencies": [],
-                    "size": 1236490,
-                    "date_published": "2026-10-09T13:48:29.103Z"
+                    "size": 1236971,
+                    "date_published": "2026-11-06T13:41:53.176644Z"
                 }
             ]
         },
@@ -21671,71 +21650,6 @@
             ]
         },
         {
-            "pakku_id": "xSRtYZwGflyhrOcS",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "worldedit",
-                "modrinth": "worldedit"
-            },
-            "name": {
-                "curseforge": "WorldEdit",
-                "modrinth": "WorldEdit"
-            },
-            "id": {
-                "curseforge": "225608",
-                "modrinth": "1u6JkXh5"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "worldedit-mod-7.3.8.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "fabric",
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5830/452/worldedit-mod-7.3.8.jar",
-                    "id": "5830452",
-                    "parent_id": "225608",
-                    "hashes": {
-                        "sha1": "924fe181a29bd66be6783f6d589968ab0ee02250",
-                        "md5": "f5d6f09ca5c4b1958780d01a099b779d"
-                    },
-                    "required_dependencies": [],
-                    "size": 6222854,
-                    "date_published": "2024-10-21T11:00:19.003Z"
-                },
-                {
-                    "type": "modrinth",
-                    "file_name": "worldedit-mod-7.3.8.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "fabric",
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/WTAFvuRx/worldedit-mod-7.3.8.jar",
-                    "id": "WTAFvuRx",
-                    "parent_id": "1u6JkXh5",
-                    "hashes": {
-                        "sha512": "e039492df0b486e7ce76d0eaf8cb11eadad2e78220600b8498ab8eef4642a29e310a6bcb4378257553b3639c6d0bc1ebf0f73df3a7a677c6af6baf86716b0bc7",
-                        "sha1": "924fe181a29bd66be6783f6d589968ab0ee02250"
-                    },
-                    "required_dependencies": [],
-                    "size": 6222854,
-                    "date_published": "2024-10-21T11:01:40.791602Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "6ns5jV2sZ4lYsfOe",
             "type": "MOD",
             "side": "CLIENT",
@@ -23349,6 +23263,163 @@
                     "required_dependencies": [],
                     "size": 3642581,
                     "date_published": "2025-02-23T11:38:31.027Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "CRthdYmLGbTAq1Q8",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "recipe-book-access-api"
+            },
+            "name": {
+                "modrinth": "Recipe Book Access API"
+            },
+            "id": {
+                "modrinth": "aWgs4SgO"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "recipebookaccess-neoforge-mc1.21-1.4.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/aWgs4SgO/versions/vmxGum19/recipebookaccess-neoforge-mc1.21-1.4.0.jar",
+                    "id": "vmxGum19",
+                    "parent_id": "aWgs4SgO",
+                    "hashes": {
+                        "sha512": "08676ad2be9aae5b7a2592e149a747a322968b3491a366f346eead198ede662e1b10e93aa5bb6c4d2b25f9ee54694a2237ca0f0b2da1e4ea36b919faf70b79ab",
+                        "sha1": "9b7e33abfa2f59235503f51fcd6bcbbf8cf6ef1a"
+                    },
+                    "required_dependencies": [],
+                    "size": 53031,
+                    "date_published": "2026-09-27T13:20:06.786896Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "CprJaWgWMfyGqCmn",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "create-nowheel"
+            },
+            "name": {
+                "modrinth": "Create: Nowheel"
+            },
+            "id": {
+                "modrinth": "c47YxuuI"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "nowheel-2.1.1+1.21.1neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/c47YxuuI/versions/3NKOvEei/nowheel-2.1.1+1.21.1neoforge.jar",
+                    "id": "3NKOvEei",
+                    "parent_id": "c47YxuuI",
+                    "hashes": {
+                        "sha512": "87e71aa5c7db450c4f42242922cf192537be99ff041ae8c959c219938ddebc06455858693afe9a536c8d7fcfd6fda136a8d0f017c050e4f27d04350b7cb43956",
+                        "sha1": "83c6885a3e980ffbd458e89b6e5bcceb410e6840"
+                    },
+                    "required_dependencies": [
+                        "NNAgCjsB",
+                        "LNytGWDc"
+                    ],
+                    "size": 86568,
+                    "date_published": "2026-09-21T20:28:10.280956Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "NowirZ1wOj0bEJdR",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "nearby-crafting"
+            },
+            "name": {
+                "modrinth": "Nearby Crafting"
+            },
+            "id": {
+                "modrinth": "DsjH66Cm"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "nearbycrafting-neoforge-mc1.21-1.3.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/DsjH66Cm/versions/ngkDkpKz/nearbycrafting-neoforge-mc1.21-1.3.0.jar",
+                    "id": "ngkDkpKz",
+                    "parent_id": "DsjH66Cm",
+                    "hashes": {
+                        "sha512": "8082bc605e3bdff53808e3e1237bfbf53b27dbda12298b648e49afcd27fe1eedfa79c2c6fc6fb6c34fbdf42ae7915e3988d24ef4eb7a0653fd6f4d44039fefb4",
+                        "sha1": "3eda40d4ca7a44a06a2a2447aa434ea5877217e6"
+                    },
+                    "required_dependencies": [
+                        "aWgs4SgO"
+                    ],
+                    "size": 258345,
+                    "date_published": "2026-09-27T13:25:47.634945Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ZX7jrQBEbORTIaeP",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "littletiles"
+            },
+            "name": {
+                "modrinth": "LittleTiles"
+            },
+            "id": {
+                "modrinth": "RCRxC1tD"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "LittleTiles_BETA_v1.6.0-pre237_mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/RCRxC1tD/versions/dGjooVZk/LittleTiles_BETA_v1.6.0-pre237_mc1.21.1.jar",
+                    "id": "dGjooVZk",
+                    "parent_id": "RCRxC1tD",
+                    "hashes": {
+                        "sha512": "9780f5a03eeae66a4683bcdc5ddf4ca995340c87fb1be8fae728c576d0301cf3b5f6717d01da85b87d536c6a0f29713fb306ccb4ac892d19a26d4901ed215c07",
+                        "sha1": "315ded6cdc02f653fd4f9facff64bade05a09d84"
+                    },
+                    "required_dependencies": [
+                        "OsZiaDHq"
+                    ],
+                    "size": 2871536,
+                    "date_published": "2026-11-06T13:42:31.212811Z"
                 }
             ]
         }

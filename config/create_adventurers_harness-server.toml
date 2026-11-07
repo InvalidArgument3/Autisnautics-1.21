@@ -1,0 +1,17 @@
+[air]
+	#How many furnace burn ticks of harness work one unit of Backtank air pays for.
+	#Every running cost of Adventurer's Harness is in burn ticks (a coal is 1600), so at 20:
+	#1 air per block mined or placed, 1 air per second of Climbing Mode, 2 per grapple,
+	#5 per slingshot and 1 per hit. A Copper Backtank holds 900 air (Create's airInBacktank).
+	# Default: 20
+	# Range: 1 ~ 1600
+	burnTicksPerAir = 20
+	#A Backtank in a harness also supplies Create's own air users, as if worn on the back:
+	#the Diving Helmet's breathing, the Extendo Grip and the Potato Cannon.
+	harnessTankFeedsCreateTools = true
+	#A Netherite (or Warrior's) Harness with both a Backtank and fuel spends the Backtank's air first.
+	#Off: it burns its fuel first and uses the air only once the fuel runs out.
+	netheriteSpendsAirFirst = true
+	#A Netherite Backtank (with air) in a Netherite Warrior's Harness counts as the chest piece
+	#of Create's Netherite diving set (fire immunity with the Netherite Diving Helmet, leggings and boots).
+	warriorCountsForNetheriteSet = true
