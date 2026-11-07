@@ -7,29 +7,29 @@ wide square [-100000, 100000] is center enumeration only
 
 boundary 1  mask_0_1  overworld floor / infinite_abyss:first_layer ceiling
   shift x 0 z 0
-  Y carve overworld y=-53..639 and infinite_abyss:first_layer y=40..127
+  Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
   centers in ±20000: 319   per 5,000,000 blocks: 0.9968
   centers in ±100000: 8000   per 5,000,000 blocks: 1.0000
   width min 101 max 217   min edge gap 108.90 blocks
   raster points 25010001 open 102706 distinct rifts hit 321 distance mismatches 0
-  nearest 1 center -636 1300 radius 77.363 width 155 dist_origin 1447.2 rim_dist 1369.9 Y carve overworld y=-53..639 and infinite_abyss:first_layer y=40..127
-  nearest 2 center 1286 -765 radius 58.116 width 117 dist_origin 1496.3 rim_dist 1438.2 Y carve overworld y=-53..639 and infinite_abyss:first_layer y=40..127
-  nearest 3 center 1784 882 radius 56.568 width 113 dist_origin 1990.1 rim_dist 1933.6 Y carve overworld y=-53..639 and infinite_abyss:first_layer y=40..127
+  nearest 1 center -636 1300 radius 77.363 width 155 dist_origin 1447.2 rim_dist 1369.9 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
+  nearest 2 center 1286 -765 radius 58.116 width 117 dist_origin 1496.3 rim_dist 1438.2 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
+  nearest 3 center 1784 882 radius 56.568 width 113 dist_origin 1990.1 rim_dist 1933.6 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
 
 boundary 2  mask_1_2  infinite_abyss:first_layer floor / deeperdarker:otherside ceiling
   shift x 4096 z 7193
-  Y carve infinite_abyss:first_layer y=0..79 and deeperdarker:otherside y=40..127
+  Y floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127
   centers in ±20000: 320   per 5,000,000 blocks: 1.0000
   centers in ±100000: 8000   per 5,000,000 blocks: 1.0000
   width min 101 max 217   min edge gap 108.90 blocks
   raster points 25010001 open 102310 distinct rifts hit 322 distance mismatches 0
-  nearest 1 center -654 -257 radius 76.885 width 153 dist_origin 702.7 rim_dist 625.8 Y carve infinite_abyss:first_layer y=0..79 and deeperdarker:otherside y=40..127
-  nearest 2 center -1121 -861 radius 80.606 width 161 dist_origin 1413.5 rim_dist 1332.9 Y carve infinite_abyss:first_layer y=0..79 and deeperdarker:otherside y=40..127
-  nearest 3 center 450 -1804 radius 70.257 width 141 dist_origin 1859.3 rim_dist 1789.0 Y carve infinite_abyss:first_layer y=0..79 and deeperdarker:otherside y=40..127
+  nearest 1 center -654 -257 radius 76.885 width 153 dist_origin 702.7 rim_dist 625.8 Y floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127
+  nearest 2 center -1121 -861 radius 80.606 width 161 dist_origin 1413.5 rim_dist 1332.9 Y floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127
+  nearest 3 center 450 -1804 radius 70.257 width 141 dist_origin 1859.3 rim_dist 1789.0 Y floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127
 
 boundary 3  mask_2_3  deeperdarker:otherside floor / oceanworld:deepsea ceiling
   shift x 8192 z 14386
-  Y carve deeperdarker:otherside y=0..79 and oceanworld:deepsea y=160..319
+  Y floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..301
   centers in ±20000: 320   per 5,000,000 blocks: 1.0000
   centers in ±100000: 7994   per 5,000,000 blocks: 0.9992
   width min 101 max 217   min edge gap 108.90 blocks
@@ -37,7 +37,7 @@ boundary 3  mask_2_3  deeperdarker:otherside floor / oceanworld:deepsea ceiling
 
 boundary 4  mask_3_4  oceanworld:deepsea floor / dimension_of_caves:cave ceiling
   shift x 12288 z 21579
-  Y carve oceanworld:deepsea y=-64..179 and dimension_of_caves:cave y=40..127
+  Y floor oceanworld:deepsea y=-64..-40, ceiling dimension_of_caves:cave y=103..127
   centers in ±20000: 321   per 5,000,000 blocks: 1.0031
   centers in ±100000: 8003   per 5,000,000 blocks: 1.0004
   width min 101 max 217   min edge gap 152.43 blocks
@@ -45,7 +45,7 @@ boundary 4  mask_3_4  oceanworld:deepsea floor / dimension_of_caves:cave ceiling
 
 boundary 5  mask_4_5  dimension_of_caves:cave floor / infernalcross:dimension ceiling
   shift x 16384 z 28772
-  Y carve dimension_of_caves:cave y=-48..63 and infernalcross:dimension y=0..63
+  Y floor dimension_of_caves:cave y=-48..-24, ceiling infernalcross:dimension y=39..63
   centers in ±20000: 326   per 5,000,000 blocks: 1.0187
   centers in ±100000: 7996   per 5,000,000 blocks: 0.9995
   width min 101 max 217   min edge gap 198.28 blocks
@@ -53,7 +53,7 @@ boundary 5  mask_4_5  dimension_of_caves:cave floor / infernalcross:dimension ce
 
 boundary 6  mask_5_6  infernalcross:dimension floor / minecraft:the_nether ceiling
   shift x 20480 z 35965
-  Y carve infernalcross:dimension y=-48..15 and minecraft:the_nether y=112..255
+  Y floor infernalcross:dimension y=-48..-24, ceiling minecraft:the_nether y=231..255
   centers in ±20000: 316   per 5,000,000 blocks: 0.9875
   centers in ±100000: 8007   per 5,000,000 blocks: 1.0009
   width min 101 max 217   min edge gap 194.50 blocks
@@ -61,7 +61,7 @@ boundary 6  mask_5_6  infernalcross:dimension floor / minecraft:the_nether ceili
 
 boundary 7  mask_6_7  minecraft:the_nether floor / undergarden:undergarden ceiling
   shift x 24576 z 43158
-  Y carve minecraft:the_nether y=0..143 and undergarden:undergarden y=40..127
+  Y floor minecraft:the_nether y=0..24, ceiling undergarden:undergarden y=103..127
   centers in ±20000: 323   per 5,000,000 blocks: 1.0093
   centers in ±100000: 7985   per 5,000,000 blocks: 0.9981
   width min 101 max 217   min edge gap 134.31 blocks
@@ -69,7 +69,7 @@ boundary 7  mask_6_7  minecraft:the_nether floor / undergarden:undergarden ceili
 
 boundary 8  mask_7_8  undergarden:undergarden floor / minecraft:the_end ceiling
   shift x 28672 z 50351
-  Y carve undergarden:undergarden y=-64..63 and minecraft:the_end y=80..383
+  Y floor undergarden:undergarden y=-64..-40, ceiling minecraft:the_end y=359..383
   centers in ±20000: 323   per 5,000,000 blocks: 1.0093
   centers in ±100000: 8000   per 5,000,000 blocks: 1.0000
   width min 101 max 217   min edge gap 134.31 blocks

@@ -5,7 +5,7 @@
     "axis": "y"
   },
   "min_inclusive": -64,
-  "max_exclusive": 180,
+  "max_exclusive": -39,
   "when_in_range": {
     "type": "minecraft:range_choice",
     "input": "autisnautics:rift/effective_mask_3_4",

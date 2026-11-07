@@ -53,14 +53,14 @@ public class RiftCalc {
         "boundary 8  mask_7_8  undergarden:undergarden floor / minecraft:the_end ceiling"
     };
     static final String[] YBAND = {
-        "carve overworld y=-53..639 and infinite_abyss:first_layer y=40..127",
-        "carve infinite_abyss:first_layer y=0..79 and deeperdarker:otherside y=40..127",
-        "carve deeperdarker:otherside y=0..79 and oceanworld:deepsea y=160..319",
-        "carve oceanworld:deepsea y=-64..179 and dimension_of_caves:cave y=40..127",
-        "carve dimension_of_caves:cave y=-48..63 and infernalcross:dimension y=0..63",
-        "carve infernalcross:dimension y=-48..15 and minecraft:the_nether y=112..255",
-        "carve minecraft:the_nether y=0..143 and undergarden:undergarden y=40..127",
-        "carve undergarden:undergarden y=-64..63 and minecraft:the_end y=80..383"
+        "floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127",
+        "floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127",
+        "floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..301",
+        "floor oceanworld:deepsea y=-64..-40, ceiling dimension_of_caves:cave y=103..127",
+        "floor dimension_of_caves:cave y=-48..-24, ceiling infernalcross:dimension y=39..63",
+        "floor infernalcross:dimension y=-48..-24, ceiling minecraft:the_nether y=231..255",
+        "floor minecraft:the_nether y=0..24, ceiling undergarden:undergarden y=103..127",
+        "floor undergarden:undergarden y=-64..-40, ceiling minecraft:the_end y=359..383"
     };
 
     static CellularDensityFunction distanceFn;

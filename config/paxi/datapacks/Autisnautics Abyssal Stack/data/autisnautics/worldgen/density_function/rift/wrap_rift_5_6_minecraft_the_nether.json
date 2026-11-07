@@ -4,7 +4,7 @@
     "type": "lithostitched:axis",
     "axis": "y"
   },
-  "min_inclusive": 112,
+  "min_inclusive": 231,
   "max_exclusive": 256,
   "when_in_range": {
     "type": "minecraft:range_choice",
