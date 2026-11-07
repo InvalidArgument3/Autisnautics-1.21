@@ -5854,6 +5854,47 @@
             ]
         },
         {
+            "pakku_id": "e2ndZ0ILWseao32Z",
+            "pakku_links": [
+                "F9OUhskWxYr63coj"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "create-control-panels"
+            },
+            "name": {
+                "curseforge": "Create Control Panels"
+            },
+            "id": {
+                "curseforge": "1773450"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_controlling-neoforge-0.2.3-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9435/415/create_controlling-neoforge-0.2.3-1.21.1.jar",
+                    "id": "9435415",
+                    "parent_id": "1773450",
+                    "hashes": {
+                        "sha1": "4d051355d73c5ad883868e52f5d23cfa2b933a2a",
+                        "md5": "33d07c964c778a1208b026956f675e72"
+                    },
+                    "required_dependencies": [
+                        "328085"
+                    ],
+                    "size": 374979,
+                    "date_published": "2026-11-04T16:14:33.700Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "55fPSU4fwI6CbxJh",
             "pakku_links": [
                 "F9OUhskWxYr63coj"
@@ -6884,6 +6925,46 @@
                     ],
                     "size": 471085,
                     "date_published": "2026-09-25T19:38:15.343Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "CprJaWgWMfyGqCmn",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "create-nowheel"
+            },
+            "name": {
+                "modrinth": "Create: Nowheel"
+            },
+            "id": {
+                "modrinth": "c47YxuuI"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "nowheel-2.1.1+1.21.1neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/c47YxuuI/versions/3NKOvEei/nowheel-2.1.1+1.21.1neoforge.jar",
+                    "id": "3NKOvEei",
+                    "parent_id": "c47YxuuI",
+                    "hashes": {
+                        "sha512": "87e71aa5c7db450c4f42242922cf192537be99ff041ae8c959c219938ddebc06455858693afe9a536c8d7fcfd6fda136a8d0f017c050e4f27d04350b7cb43956",
+                        "sha1": "83c6885a3e980ffbd458e89b6e5bcceb410e6840"
+                    },
+                    "required_dependencies": [
+                        "NNAgCjsB",
+                        "LNytGWDc"
+                    ],
+                    "size": 86568,
+                    "date_published": "2026-09-21T20:28:10.280956Z"
                 }
             ]
         },
@@ -15260,6 +15341,46 @@
             ]
         },
         {
+            "pakku_id": "NowirZ1wOj0bEJdR",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "nearby-crafting"
+            },
+            "name": {
+                "modrinth": "Nearby Crafting"
+            },
+            "id": {
+                "modrinth": "DsjH66Cm"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "nearbycrafting-neoforge-mc1.21-1.3.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/DsjH66Cm/versions/ngkDkpKz/nearbycrafting-neoforge-mc1.21-1.3.0.jar",
+                    "id": "ngkDkpKz",
+                    "parent_id": "DsjH66Cm",
+                    "hashes": {
+                        "sha512": "8082bc605e3bdff53808e3e1237bfbf53b27dbda12298b648e49afcd27fe1eedfa79c2c6fc6fb6c34fbdf42ae7915e3988d24ef4eb7a0653fd6f4d44039fefb4",
+                        "sha1": "3eda40d4ca7a44a06a2a2447aa434ea5877217e6"
+                    },
+                    "required_dependencies": [
+                        "aWgs4SgO"
+                    ],
+                    "size": 258345,
+                    "date_published": "2026-09-27T13:25:47.634945Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "MN8vudBALsUj1V4Z",
             "type": "MOD",
             "side": "BOTH",
@@ -17750,6 +17871,44 @@
                     "required_dependencies": [],
                     "size": 353558,
                     "date_published": "2026-05-07T23:07:27.720Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "CRthdYmLGbTAq1Q8",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "recipe-book-access-api"
+            },
+            "name": {
+                "modrinth": "Recipe Book Access API"
+            },
+            "id": {
+                "modrinth": "aWgs4SgO"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "recipebookaccess-neoforge-mc1.21-1.4.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/aWgs4SgO/versions/vmxGum19/recipebookaccess-neoforge-mc1.21-1.4.0.jar",
+                    "id": "vmxGum19",
+                    "parent_id": "aWgs4SgO",
+                    "hashes": {
+                        "sha512": "08676ad2be9aae5b7a2592e149a747a322968b3491a366f346eead198ede662e1b10e93aa5bb6c4d2b25f9ee54694a2237ca0f0b2da1e4ea36b919faf70b79ab",
+                        "sha1": "9b7e33abfa2f59235503f51fcd6bcbbf8cf6ef1a"
+                    },
+                    "required_dependencies": [],
+                    "size": 53031,
+                    "date_published": "2026-09-27T13:20:06.786896Z"
                 }
             ]
         },
@@ -23263,124 +23422,6 @@
                     "required_dependencies": [],
                     "size": 3642581,
                     "date_published": "2025-02-23T11:38:31.027Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "CRthdYmLGbTAq1Q8",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "recipe-book-access-api"
-            },
-            "name": {
-                "modrinth": "Recipe Book Access API"
-            },
-            "id": {
-                "modrinth": "aWgs4SgO"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "recipebookaccess-neoforge-mc1.21-1.4.0.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/aWgs4SgO/versions/vmxGum19/recipebookaccess-neoforge-mc1.21-1.4.0.jar",
-                    "id": "vmxGum19",
-                    "parent_id": "aWgs4SgO",
-                    "hashes": {
-                        "sha512": "08676ad2be9aae5b7a2592e149a747a322968b3491a366f346eead198ede662e1b10e93aa5bb6c4d2b25f9ee54694a2237ca0f0b2da1e4ea36b919faf70b79ab",
-                        "sha1": "9b7e33abfa2f59235503f51fcd6bcbbf8cf6ef1a"
-                    },
-                    "required_dependencies": [],
-                    "size": 53031,
-                    "date_published": "2026-09-27T13:20:06.786896Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "CprJaWgWMfyGqCmn",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "create-nowheel"
-            },
-            "name": {
-                "modrinth": "Create: Nowheel"
-            },
-            "id": {
-                "modrinth": "c47YxuuI"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "nowheel-2.1.1+1.21.1neoforge.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/c47YxuuI/versions/3NKOvEei/nowheel-2.1.1+1.21.1neoforge.jar",
-                    "id": "3NKOvEei",
-                    "parent_id": "c47YxuuI",
-                    "hashes": {
-                        "sha512": "87e71aa5c7db450c4f42242922cf192537be99ff041ae8c959c219938ddebc06455858693afe9a536c8d7fcfd6fda136a8d0f017c050e4f27d04350b7cb43956",
-                        "sha1": "83c6885a3e980ffbd458e89b6e5bcceb410e6840"
-                    },
-                    "required_dependencies": [
-                        "NNAgCjsB",
-                        "LNytGWDc"
-                    ],
-                    "size": 86568,
-                    "date_published": "2026-09-21T20:28:10.280956Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "NowirZ1wOj0bEJdR",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "nearby-crafting"
-            },
-            "name": {
-                "modrinth": "Nearby Crafting"
-            },
-            "id": {
-                "modrinth": "DsjH66Cm"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "nearbycrafting-neoforge-mc1.21-1.3.0.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/DsjH66Cm/versions/ngkDkpKz/nearbycrafting-neoforge-mc1.21-1.3.0.jar",
-                    "id": "ngkDkpKz",
-                    "parent_id": "DsjH66Cm",
-                    "hashes": {
-                        "sha512": "8082bc605e3bdff53808e3e1237bfbf53b27dbda12298b648e49afcd27fe1eedfa79c2c6fc6fb6c34fbdf42ae7915e3988d24ef4eb7a0653fd6f4d44039fefb4",
-                        "sha1": "3eda40d4ca7a44a06a2a2447aa434ea5877217e6"
-                    },
-                    "required_dependencies": [
-                        "aWgs4SgO"
-                    ],
-                    "size": 258345,
-                    "date_published": "2026-09-27T13:25:47.634945Z"
                 }
             ]
         }

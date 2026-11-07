@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.77]
+- add **Create Control Panels 0.2.3** (CurseForge `create-control-panels`, `create_controlling-neoforge-0.2.3-1.21.1.jar`, both sides). Needs Create 6.0.8 or newer; Create 6.0.10 is already in the pack
+
 ## [0.0.76]
 - Remove **LittleTiles 1.6.0-pre237** (`littletiles`, Modrinth `RCRxC1tD`, `LittleTiles_BETA_v1.6.0-pre237_mc1.21.1.jar`, both sides) and its pakku side override. Drop `config/littletiles.json`, which is only that mod's config. CreativeCore stays: AmbientSounds and ItemPhysic still require it, and nothing else in the lock depends on LittleTiles
 - Existing worlds keep their other blocks. LittleTiles tiles, doors, and structures already placed will not load and those blocks are lost when the chunks load. No other mods were updated
