@@ -130,10 +130,12 @@
             "update_strategy": "NONE"
         },
         "cobblemarks-plus": {
-            "update_strategy": "NONE"
+            "update_strategy": "NONE",
+            "redistributable": true
         },
         "cobblemon-create-industries": {
-            "update_strategy": "NONE"
+            "update_strategy": "NONE",
+            "redistributable": true
         },
         "lootrmon": {
             "update_strategy": "NONE"
@@ -210,7 +212,8 @@
             "side": "BOTH"
         },
         "the-undergarden": {
-            "side": "BOTH"
+            "side": "BOTH",
+            "redistributable": true
         },
         "create-nowheel": {
             "side": "CLIENT"
@@ -223,6 +226,102 @@
         },
         "littletiles": {
             "side": "BOTH"
+        },
+        "almostunified": {
+            "redistributable": true
+        },
+        "aquaculture": {
+            "redistributable": true
+        },
+        "architects-palette": {
+            "redistributable": true
+        },
+        "autochefs-delight": {
+            "redistributable": true
+        },
+        "balm": {
+            "redistributable": true
+        },
+        "better-combat": {
+            "redistributable": true
+        },
+        "better-compatibility-checker": {
+            "redistributable": true
+        },
+        "brewin-and-chewin": {
+            "redistributable": true
+        },
+        "collective": {
+            "redistributable": true
+        },
+        "corpse": {
+            "redistributable": true
+        },
+        "crafting-tweaks": {
+            "redistributable": true
+        },
+        "crawl-on-demand": {
+            "redistributable": true
+        },
+        "copycats": {
+            "redistributable": true
+        },
+        "create-curios-jetpack": {
+            "redistributable": true
+        },
+        "epic-knights-shields-armor-and-weapons": {
+            "redistributable": true
+        },
+        "explorify": {
+            "redistributable": true
+        },
+        "fungal-infectionspore": {
+            "redistributable": true
+        },
+        "galosphere": {
+            "redistributable": true
+        },
+        "immersivepetroleum": {
+            "redistributable": true
+        },
+        "jade-addons-forge": {
+            "redistributable": true
+        },
+        "mru": {
+            "redistributable": true
+        },
+        "macaws-bridges": {
+            "redistributable": true
+        },
+        "notenoughrecipebook": {
+            "redistributable": true
+        },
+        "passive-shield": {
+            "redistributable": true
+        },
+        "octo-lib": {
+            "redistributable": true
+        },
+        "simple-voice-chat": {
+            "redistributable": true
+        },
+        "sophisticated-storage-create-integration": {
+            "redistributable": true
+        },
+        "starter-structure": {
+            "redistributable": true
+        },
+        "labels": {
+            "redistributable": true
+        },
+        "the-beyond": {
+            "redistributable": true
+        },
+        "waystones": {
+            "redistributable": true
+        },
+        "yungs-cave-biomes": {
+            "redistributable": true
         }
     },
     "export_server_side_projects_to_client": true
