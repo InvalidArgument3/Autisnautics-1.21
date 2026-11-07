@@ -61,7 +61,8 @@
         resetPass(task);pending[key]=task;queue.push(task);depth++
         if (!previous) recentOrder.push(key)
         recent[key]=task
-        while (recentOrder.length>4096) {const expired=recentOrder.shift();delete recent[expired]}
+        // Rhino 2101 reinitializes const on every loop pass and throws "redeclaration of var".
+        while (recentOrder.length>4096) {let expired=recentOrder.shift();delete recent[expired]}
     }
     NativeEvents.onEvent(ChunkLoad,event => {
         const level=event.getLevel()
@@ -75,7 +76,7 @@
         request(level,dim,cp.x,cp.z,!fresh&&!marked)
         if (fresh) for (let x=cp.x-1;x<=cp.x+1;x++) for (let z=cp.z-1;z<=cp.z+1;z++) {
             if (x===cp.x&&z===cp.z) continue
-            const previous=recent[keyOf(dim,x,z)]
+            let previous=recent[keyOf(dim,x,z)]
             if (previous) request(level,dim,x,z,previous.legacy)
         }
     })
@@ -105,7 +106,7 @@
     }
     function insideOtherFace(task,col,y) {
         for (let f=0;f<task.faces.length;f++) {
-            const s=task.faces[f]
+            let s=task.faces[f]
             if (task.kinds[f*256+col]===1&&y>=s.lo&&y<s.hi) return true
         }
         return false
@@ -188,10 +189,10 @@
         stats.maxTickGapMs=Math.max(stats.maxTickGapMs,gap)
         let deadline=started+budgetMs,probes=0
         while (head<queue.length&&Date.now()<deadline&&probes++<64) {
-            const task=queue[head++]
+            let task=queue[head++]
             if (pending[task.key]!==task) continue
             if (task.due>clock) {queue.push(task);continue}
-            const before=Date.now(),result=sweep(task,deadline),spent=Date.now()-before
+            let before=Date.now(),result=sweep(task,deadline),spent=Date.now()-before
             task.passMs+=spent;stats.workMs+=spent;stats.slices++
             if (result===0) {delete pending[task.key];depth--;continue}
             if (result===2) {

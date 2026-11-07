@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.79]
+- Turn off the temporary origin-center rift disk. `config/paxi/datapacks/Autisnautics Abyssal Stack/data/autisnautics/worldgen/density_function/rift/center_trigger.json` is now constant `0`, so the dimension masks stay the seeded staggered boundaries. Already generated chunks are unchanged. New chunks no longer carve that 250 m center test (radius 125)
+- Fix the live rift cleanup crash. KubeJS Rhino 2101.2.8 throws `TypeError: redeclaration of var previous` at `kubejs/server_scripts/rift_boundary_postgen.js:78` because a `const` inside a loop is initialized again on the next pass. The fresh-chunk neighbor scan died on the second column, so boundary cleanup never ran. The same `const` bindings in the recent-key trim, the overlapping-face check, and the server tick queue are now `let`. Cleanup behavior is unchanged. A running server needs a restart after the file is replaced so the old chunk listener is gone
+
 ## [0.0.78]
 - KubeJS recipe scripts no longer crash the recipe callback when Thermal is absent (Proxy stub), when Create `.withChance()` is gone on 1.21, or when optional mods and items are missing (Tinkers, Create Deco cast iron nugget, Clockwork physics infuser, `substrate_red`, Create Enchantment Industry disenchanter, old NuclearCraft machine JSON skipped)
 - Live silicon and Refined Storage recipes in `chapters.js` can register
