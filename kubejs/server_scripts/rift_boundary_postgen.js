@@ -1,4 +1,4 @@
-// Shared seeded rift masks. Center-only geometry remains in rift/center_trigger.json (radius 125).
+// Shared seeded rift masks. Optional center geometry stays modular in rift/center_trigger.json (currently disabled).
 // NEW chunks only: v4 markers resume this work; legacy v3 markers retain boundary-only behavior.
 // Seal before draining; cooperative 2 ms slices, halo caching, three delayed safety passes.
 // Native setBlock/clearArea calls cannot be preempted; native overruns are measured, not hidden.
