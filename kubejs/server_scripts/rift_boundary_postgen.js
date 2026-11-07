@@ -4,6 +4,7 @@
 // A pass is complete only after the exit band was observed clear. getChunkNow misses retry,
 // then park with the marker kept. This script never loads or generates a chunk.
 // Existing chunks are not swept from here. See rift_boundary_repair.js for the manual preview.
+// Span lo/hi stay equal to the floor and ceiling slabs from 2be80e19. Do not widen them.
 // Native setBlock/clearArea calls cannot be preempted; native overruns are measured, not hidden.
 ;(function () {
     const ServerLevel = Java.loadClass('net.minecraft.server.level.ServerLevel')
