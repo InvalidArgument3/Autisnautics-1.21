@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.84]
+- Overworld side of rift boundary 0_1 now reaches the build bottom. Density `min_inclusive` in `wrap_rift_0_1_minecraft_overworld.json` and `dry_active_minecraft_overworld.json` moves from -53 to **-153**. `max_exclusive` stays -27. The clean column for that row covers Y=-64 through -28. Nominal -153 is below the Overworld `min_y` of -64, and block placement stays clamped to -64. The Abyss slab, every other boundary, and the portal plane at Y=-49 are unchanged
+- Postgen for that Overworld face uses `lo`/`clearLo` -153. Loops still clamp to the dimension minimum Y. The upper edge stays -27. The manual repair command is unchanged except a comment: the 2048 block cap stays, so a full column may need another preview and apply. Already generated columns do not change by themselves
+
 ## [0.0.83]
 - Immersive Portals Overworld stack entry: `bottomY` -52 → **-49** in `config/immersive_portals.json` `dimStackPreset`. The Abyss entry is unchanged and still has no `topY` or `bottomY`. No carve, mask, radius, or roof rule was edited. This is the generation preset for a new stack link. Portals already saved in a world are not moved by this file
 
