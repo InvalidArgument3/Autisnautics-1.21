@@ -4,6 +4,16 @@
 const FLAG = 'kubejs/exported/.dump_now'
 const ALWAYS = false // touch kubejs/exported/.dump_now to dump on next ServerEvents.loaded
 
+// KubeJS 2101 blocks java.nio.file.Files and has no Utils.fileExists.
+// JsonIO.read returns null when the flag is absent, and throws if the touched file is empty.
+function dumpFlagPresent() {
+    try {
+        return JsonIO.read(FLAG) != null
+    } catch (e) {
+        return true
+    }
+}
+
 function dumpRegistries(server) {
     const outDir = 'kubejs/exported'
     const docsDir = 'docs/dumps'
@@ -27,20 +37,20 @@ function dumpRegistries(server) {
 
     if (!ids) {
         try {
-            const reg = Utils.getRegistry('minecraft:item')
+            const Registries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
             ids = []
-            reg.forEach(id => ids.push(String(id)))
+            Registries.ITEM.keySet().forEach(id => ids.push(String(id)))
         } catch (e) {
             console.error('[autis-dump] no item registry API: ' + e)
             return
         }
     }
 
-    for (const id of ids) {
-        const s = String(id)
+    for (let id of ids) {
+        let s = String(id)
         itemIds.push(s)
         try {
-            const stack = Item.of(s)
+            let stack = Item.of(s)
             itemMeta.push({
                 id: s,
                 display: stack.getDisplayName ? String(stack.getDisplayName().getString()) : s,
@@ -83,10 +93,10 @@ function dumpRegistries(server) {
             const rm = server.getRecipeManager()
             // NeoForge RecipeManager iteration varies; best-effort
             if (rm.getRecipes) {
-                for (const holder of rm.getRecipes()) {
-                    const id = holder.id ? String(holder.id) : String(holder)
+                for (let holder of rm.getRecipes()) {
+                    let id = holder.id ? String(holder.id) : String(holder)
                     all.push(id)
-                    const ns = id.includes(':') ? id.split(':')[0] : 'unknown'
+                    let ns = id.includes(':') ? id.split(':')[0] : 'unknown'
                     recipeIndex.counts_by_namespace[ns] = (recipeIndex.counts_by_namespace[ns] || 0) + 1
                 }
             }
@@ -104,14 +114,13 @@ function dumpRegistries(server) {
 }
 
 ServerEvents.loaded(event => {
-    const want = ALWAYS || JsonIO.read(FLAG) != null || Utils.fileExists(FLAG)
-    if (!want) return
+    if (!ALWAYS && !dumpFlagPresent()) return
     try {
         dumpRegistries(event.server)
     } catch (e) {
         console.error('[autis-dump] failed: ' + e)
     }
     try {
-        if (Utils.fileExists(FLAG)) Utils.deleteFile(FLAG)
+        JsonIO.write(FLAG, null)
     } catch (e) { /* ignore */ }
 })

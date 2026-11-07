@@ -132,10 +132,21 @@ let metal_ores_json = (id, crushedId) => {
         ]
     }
 }
-ServerEvents.blockLootTables(event => {
+// KubeJS 2101 has no ServerEvents.blockLootTables. Same JSON via generateData.
+ServerEvents.generateData("after_mods", event => {
+    function lootPath(blockId) {
+        let parts = blockId.split(":")
+        return parts[0] + ":loot_table/blocks/" + parts[1]
+    }
+    function simpleBlock(blockId) {
+        event.json(lootPath(blockId), {
+            type: "minecraft:block",
+            pools: [{ rolls: 1, entries: [{ type: "minecraft:item", name: blockId }] }]
+        })
+    }
 
-    event.addSimpleBlock("minecraft:twisting_vines", "minecraft:twisting_vines")
-    event.addSimpleBlock("minecraft:weeping_vines", "minecraft:weeping_vines")
+    simpleBlock("minecraft:twisting_vines")
+    simpleBlock("minecraft:weeping_vines")
     /*
     let extra_ores = ["minecraft:", "minecraft:deepslate_"]
 
@@ -162,18 +173,18 @@ ServerEvents.blockLootTables(event => {
         let jaopcaOreList = new RegExp("^.*:(deepslate_|nether_|moon_|mars_|venus_|mercury_|glacio_)?" + metal + "_(deepslate_)?ore$")
         // console.log(`oreList for ` + metal + ` is: ` + Ingredient.of(jaopcaOreList).itemIds.toString())
         Ingredient.of(jaopcaOreList).itemIds.forEach(ore => {
-            event.addJson(ore, metal_ores_json(ore, "jaopca:create_crushed." + metal))
+            event.json(lootPath(ore), metal_ores_json(ore, "jaopca:create_crushed." + metal))
         })
     })
     create_crushed_ore_types.forEach(metal => {
         let createOreList = new RegExp("^.*:(deepslate_|nether_|moon_|mars_|venus_|mercury_|glacio_)?" + metal + "_(deepslate_)?ore$")
         // console.log(`oreList for ` + metal + ` is: ` + Ingredient.of(createOreList).itemIds.toString())
         Ingredient.of(createOreList).itemIds.forEach(ore => {
-            event.addJson(ore, metal_ores_json(ore, "create:crushed_raw_" + metal))
+            event.json(lootPath(ore), metal_ores_json(ore, "create:crushed_raw_" + metal))
         })
     })
-    event.addJson("scguns:anthralite_ore", metal_ores_json("scguns:anthralite_ore", "scguns:crushed_raw_anthralite"))
-    event.addJson("scguns:deepslate_anthralite_ore", metal_ores_json("scguns:deepslate_anthralite_ore", "scguns:crushed_raw_anthralite"))
+    event.json(lootPath("scguns:anthralite_ore"), metal_ores_json("scguns:anthralite_ore", "scguns:crushed_raw_anthralite"))
+    event.json(lootPath("scguns:deepslate_anthralite_ore"), metal_ores_json("scguns:deepslate_anthralite_ore", "scguns:crushed_raw_anthralite"))
 
 
 })
