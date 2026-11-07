@@ -193,29 +193,29 @@ ServerEvents.recipes(event => {
     // make tome of alkahestry an endgame item
     event.remove({ type: "minecraft:crafting_shapeless", input: "reliquary:witch_hat", output: "reliquary:alkahestry_tome" })
     if (Item.exists("embers:alchemy_pedestal") && Item.exists("botania:conjuration_catalyst") && Item.exists("dungeonnowloading:chaotic_hexahedron")) {
-    event.recipes.create.mechanical_crafting("reliquary:alkahestry_tome", [
-        " HTE ",
-        "  A  ",
-        "SXADW",
-        "PGMRP",
-        "OOCOO"
-    ], {
-        T: "enigmaticlegacyplus:void_tome",
-        E: "reliquary:eye_of_the_storm",
-        G: "kubejs:accelerator_glowstone",
-        R: "kubejs:accelerator_redstone",
-        M: "kubejs:missingno",
-        C: "botania:conjuration_catalyst",
-        H: "dungeonnowloading:chaotic_hexahedron",
-        O: "minecraft:crying_obsidian",
-        P: "embers:alchemy_pedestal",
-        X: "enigmaticlegacyplus:execution_axe",
-        S: "minecraft:player_head",
-        D: "reliquary:phoenix_down",
-        A: "reliquary:alkahestry_altar",
-        W: "minecraft:wither_skeleton_skull",
+        event.recipes.create.mechanical_crafting("reliquary:alkahestry_tome", [
+            " HTE ",
+            "  A  ",
+            "SXADW",
+            "PGMRP",
+            "OOCOO"
+        ], {
+            T: "enigmaticlegacyplus:void_tome",
+            E: "reliquary:eye_of_the_storm",
+            G: "kubejs:accelerator_glowstone",
+            R: "kubejs:accelerator_redstone",
+            M: "kubejs:missingno",
+            C: "botania:conjuration_catalyst",
+            H: "dungeonnowloading:chaotic_hexahedron",
+            O: "minecraft:crying_obsidian",
+            P: "embers:alchemy_pedestal",
+            X: "enigmaticlegacyplus:execution_axe",
+            S: "minecraft:player_head",
+            D: "reliquary:phoenix_down",
+            A: "reliquary:alkahestry_altar",
+            W: "minecraft:wither_skeleton_skull",
 
-    })
+        })
     }
 
     // //chapter fixes
@@ -298,57 +298,57 @@ ServerEvents.recipes(event => {
     // Logistic Mechanism and kubejs pulp recipes removed in chapters.js
     // Filling steps use Tinkers molten metals. Skip when that mod is absent.
     if (Platform.isLoaded("tconstruct")) {
-    custom({
-        "type": "create:sequenced_assembly",
-        "ingredient": { "item": "create:precision_mechanism" },
-        "results": [
-            { "item": "kubejs:logistic_mechanism" }
-        ],
-        "loops": 1,
-        "sequence": [
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "tconstruct:molten_steel", "amount": 90 }// can't use tags for fluids
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "tconstruct:molten_uranium", "amount": 10 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "tconstruct:molten_lead", "amount": 90 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "nuclearcraftneohaul:radaway", "amount": 250 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            }
-        ],
-        "transitionalItem": { "item": "kubejs:incomplete_logistic_mechanism" }
-    }).id("kubejs:logistic_mechanism")
+        custom({
+            "type": "create:sequenced_assembly",
+            "ingredient": { "item": "create:precision_mechanism" },
+            "results": [
+                { "item": "kubejs:logistic_mechanism" }
+            ],
+            "loops": 1,
+            "sequence": [
+                {
+                    "type": "create:filling",
+                    "ingredients": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" },
+                        { "fluid": "tconstruct:molten_steel", "amount": 90 }// can't use tags for fluids
+                    ],
+                    "results": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" }
+                    ]
+                },
+                {
+                    "type": "create:filling",
+                    "ingredients": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" },
+                        { "fluid": "tconstruct:molten_uranium", "amount": 10 }
+                    ],
+                    "results": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" }
+                    ]
+                },
+                {
+                    "type": "create:filling",
+                    "ingredients": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" },
+                        { "fluid": "tconstruct:molten_lead", "amount": 90 }
+                    ],
+                    "results": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" }
+                    ]
+                },
+                {
+                    "type": "create:filling",
+                    "ingredients": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" },
+                        { "fluid": "nuclearcraftneohaul:radaway", "amount": 250 }
+                    ],
+                    "results": [
+                        { "item": "kubejs:incomplete_logistic_mechanism" }
+                    ]
+                }
+            ],
+            "transitionalItem": { "item": "kubejs:incomplete_logistic_mechanism" }
+        }).id("kubejs:logistic_mechanism")
     }
     // Radaway: 3x glowing mushroom and 1 bottle of milk, heated mixing
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway", 250)], [Item.of("nuclearcraftneohaul:glowing_mushroom", 3), Fluid.of("minecraft:milk", 250)]).heated()
@@ -421,71 +421,71 @@ ServerEvents.recipes(event => {
 
     // Rats is not installed. These ids throw if read.
     if (Platform.isLoaded("rats")) {
-    event.remove({ output: "rats:raw_plastic" })
-    event.remove({ input: "rats:plastic_waste" })
-    event.replaceInput({}, "rats:raw_plastic", "#forge:ingots/plastic")
+        event.remove({ output: "rats:raw_plastic" })
+        event.remove({ input: "rats:plastic_waste" })
+        event.replaceInput({}, "rats:raw_plastic", "#forge:ingots/plastic")
 
-    // converting plastic waste to liquid plastic by "recycling", now with kubejs:liquid_plastic
-    event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 10), "quark:dirty_shard"], [Item.of("rats:plastic_waste", 9), Fluid.of("minecraft:water", 1000)]).heated()
-    // glass shard gives em an extra step to process plus it's a glass source I guess
-    // alt liquid_plastic recipe: nuclearcraft melter, 1 plastic waste -> 10mb liquid plastic (9x more efficient and no waste product)
-    custom({
-        "type": "nuclearcraft:melter",
-        "input": [
-            {
-                "count": 1,
-                "item": "rats:plastic_waste"
-            }
-        ],
-        "outputFluids": [
-            {
-                "amount": 10,
-                "tag": "kubejs:liquid_plastic"
-            }
-        ],
-        "powerModifier": 1.0,
-        "radiation": 1.0,
-        "timeModifier": 1.0
-    })
-    // melting bioplastic to liquid for whatever reason
-    custom({
-        "type": "nuclearcraft:melter",
-        "input": [
-            {
-                "count": 1,
-                "tag": "forge:ingots/plastic"
-            }
-        ],
-        "outputFluids": [
-            {
-                "amount": 90,
-                "fluid": "kubejs:liquid_plastic"
-            }
-        ],
-        "powerModifier": 1.0,
-        "radiation": 1.0,
-        "timeModifier": 1.0
-    })
-    // converting raw_plastic (loot only) to liquid_plastic
-    event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 90)], [Item.of("rats:raw_plastic", 1), Fluid.of("minecraft:water", 250)]).heated()
-    custom({
-        "type": "nuclearcraft:melter",
-        "input": [
-            {
-                "count": 1,
-                "item": "rats:raw_plastic"
-            }
-        ],
-        "outputFluids": [
-            {
-                "amount": 90,
-                "fluid": "kubejs:liquid_plastic"
-            }
-        ],
-        "powerModifier": 1.0,
-        "radiation": 1.0,
-        "timeModifier": 1.0
-    })
+        // converting plastic waste to liquid plastic by "recycling", now with kubejs:liquid_plastic
+        event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 10), "quark:dirty_shard"], [Item.of("rats:plastic_waste", 9), Fluid.of("minecraft:water", 1000)]).heated()
+        // glass shard gives em an extra step to process plus it's a glass source I guess
+        // alt liquid_plastic recipe: nuclearcraft melter, 1 plastic waste -> 10mb liquid plastic (9x more efficient and no waste product)
+        custom({
+            "type": "nuclearcraft:melter",
+            "input": [
+                {
+                    "count": 1,
+                    "item": "rats:plastic_waste"
+                }
+            ],
+            "outputFluids": [
+                {
+                    "amount": 10,
+                    "tag": "kubejs:liquid_plastic"
+                }
+            ],
+            "powerModifier": 1.0,
+            "radiation": 1.0,
+            "timeModifier": 1.0
+        })
+        // melting bioplastic to liquid for whatever reason
+        custom({
+            "type": "nuclearcraft:melter",
+            "input": [
+                {
+                    "count": 1,
+                    "tag": "forge:ingots/plastic"
+                }
+            ],
+            "outputFluids": [
+                {
+                    "amount": 90,
+                    "fluid": "kubejs:liquid_plastic"
+                }
+            ],
+            "powerModifier": 1.0,
+            "radiation": 1.0,
+            "timeModifier": 1.0
+        })
+        // converting raw_plastic (loot only) to liquid_plastic
+        event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 90)], [Item.of("rats:raw_plastic", 1), Fluid.of("minecraft:water", 250)]).heated()
+        custom({
+            "type": "nuclearcraft:melter",
+            "input": [
+                {
+                    "count": 1,
+                    "item": "rats:raw_plastic"
+                }
+            ],
+            "outputFluids": [
+                {
+                    "amount": 90,
+                    "fluid": "kubejs:liquid_plastic"
+                }
+            ],
+            "powerModifier": 1.0,
+            "radiation": 1.0,
+            "timeModifier": 1.0
+        })
     }
 
     // forming bioplastic from liquid plastic
@@ -796,36 +796,36 @@ ServerEvents.recipes(event => {
     // event.shapeless(Item.of("powergrid:conductive_casing", 8), ["#forge:ingots/zinc", "create:andesite_casing"])
     // various junctions, connectors, etc. are now from stonecutting zinc machine 8:1
     if (Platform.isLoaded("powergrid")) {
-    let powergridWidgets = ["cord_junction", "lv_switch", "lv_button", "light_fixture", "device_connector", "socket", "fuse_holder"]
-    powergridWidgets.forEach(widget => {
-        event.remove({ output: "powergrid:" + widget })
-        zincMachine(event, Item.of("powergrid:" + widget, 8))
-    })
-    // machinify some more recipes
-    event.recipes.create.filling("powergrid:battery", ["kubejs:zinc_machine", Fluid.of("powergrid:acid", 250)])
-    event.remove({ output: "powergrid:mv_switch" })
-    zincMachine(event, Item.of("powergrid:mv_switch", 4))
-    event.remove({ output: "powergrid:spark_gap" })
-    zincMachine(event, Item.of("powergrid:spark_gap", 4))
-    event.remove({ id: "powergrid:crafting/generator_housing" })
-    zincMachine(event, Item.of("powergrid:generator_housing", 2))
-    event.remove({ output: "powergrid:hv_switch" })
-    zincMachine(event, Item.of("powergrid:hv_switch", 1), "#forge:rods/iron")
-    event.remove({ output: "powergrid:hv_breaker" })
-    zincMachine(event, Item.of("powergrid:hv_breaker", 1), "create:precision_mechanism")
-    event.remove({ output: "powergrid:contactor" })
-    zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
-    // add superior automated versions of some common recipes
-    // coils: deploy stick on wire, 3:1 instead of 4:1
-    event.recipes.create.deploying("powergrid:copper_coil", [Item.of("#forge:wires/copper", 3), "minecraft:stick"])
-    event.recipes.create.deploying("powergrid:resistive_coil", [Item.of("#forge:wires/iron", 3), "minecraft:stick"])
-    // connectors: filling metal on substrate, 10:1 instead of 30:1
-    event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
-    event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
-    // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
-    event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
-    event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), [Item.of("#forge:wires/copper", 2), "kubejs:rubber"])
-    event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
+        let powergridWidgets = ["cord_junction", "lv_switch", "lv_button", "light_fixture", "device_connector", "socket", "fuse_holder"]
+        powergridWidgets.forEach(widget => {
+            event.remove({ output: "powergrid:" + widget })
+            zincMachine(event, Item.of("powergrid:" + widget, 8))
+        })
+        // machinify some more recipes
+        event.recipes.create.filling("powergrid:battery", ["kubejs:zinc_machine", Fluid.of("powergrid:acid", 250)])
+        event.remove({ output: "powergrid:mv_switch" })
+        zincMachine(event, Item.of("powergrid:mv_switch", 4))
+        event.remove({ output: "powergrid:spark_gap" })
+        zincMachine(event, Item.of("powergrid:spark_gap", 4))
+        event.remove({ id: "powergrid:crafting/generator_housing" })
+        zincMachine(event, Item.of("powergrid:generator_housing", 2))
+        event.remove({ output: "powergrid:hv_switch" })
+        zincMachine(event, Item.of("powergrid:hv_switch", 1), "#forge:rods/iron")
+        event.remove({ output: "powergrid:hv_breaker" })
+        zincMachine(event, Item.of("powergrid:hv_breaker", 1), "create:precision_mechanism")
+        event.remove({ output: "powergrid:contactor" })
+        zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
+        // add superior automated versions of some common recipes
+        // coils: deploy stick on wire, 3:1 instead of 4:1
+        event.recipes.create.deploying("powergrid:copper_coil", [Item.of("#forge:wires/copper", 3), "minecraft:stick"])
+        event.recipes.create.deploying("powergrid:resistive_coil", [Item.of("#forge:wires/iron", 3), "minecraft:stick"])
+        // connectors: filling metal on substrate, 10:1 instead of 30:1
+        event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
+        event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
+        // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
+        event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
+        event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), [Item.of("#forge:wires/copper", 2), "kubejs:rubber"])
+        event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
     }
 
     // wires
@@ -846,32 +846,32 @@ ServerEvents.recipes(event => {
     event.remove({ id: "simpleradio:copper_wire" })
     // creating projectred red alloy wire with wiremaking machines (1:8)
     if (Item.exists("projectred_core:red_ingot") && Item.exists("projectred_transmission:red_alloy_wire")) {
-    custom({
-        "type":"createaddition:rolling",
-        "input": {
-            "item": "projectred_core:red_ingot"
-        },
-        "result": {
-            "item": "projectred_transmission:red_alloy_wire",
-            "count": 8
-        }
-    })
-    custom({
-        "type": "immersiveengineering:metal_press",
-        "energy": 2400,
-        "input": {
-            "item": "projectred_core:red_ingot"
-        },
-        "mold": "immersiveengineering:mold_wire",
-        "result": {
-            "base_ingredient": {
-                "item": "projectred_transmission:red_alloy_wire"
+        custom({
+            "type":"createaddition:rolling",
+            "input": {
+                "item": "projectred_core:red_ingot"
             },
-            "count": 8
-        }
-    })
-    // recipe to insulate already-made red alloy wire
-    event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
+            "result": {
+                "item": "projectred_transmission:red_alloy_wire",
+                "count": 8
+            }
+        })
+        custom({
+            "type": "immersiveengineering:metal_press",
+            "energy": 2400,
+            "input": {
+                "item": "projectred_core:red_ingot"
+            },
+            "mold": "immersiveengineering:mold_wire",
+            "result": {
+                "base_ingredient": {
+                    "item": "projectred_transmission:red_alloy_wire"
+                },
+                "count": 8
+            }
+        })
+        // recipe to insulate already-made red alloy wire
+        event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
     }
     // automating createaddition barbed wire and IE razor wire
     event.recipes.create.deploying("createaddition:barbed_wire", [Item.of("#forge:wires/iron", 2), "#forge:wires/iron"])
