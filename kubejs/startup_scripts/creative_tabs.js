@@ -3,6 +3,9 @@ StartupEvents.modifyCreativeTab("create:base", event => {
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
+    // Vanilla 1.21 already lists the bundle here. addAfter throws if it is
+    // already present and then the saws below never run. Move it.
+    try { event.remove("minecraft:bundle") } catch (e) {}
     event.addAfter("minecraft:recovery_compass", "minecraft:bundle")
 
     if (Platform.isLoaded("cb_microblock")) {

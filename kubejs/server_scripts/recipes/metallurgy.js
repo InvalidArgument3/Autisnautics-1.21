@@ -287,23 +287,36 @@ ServerEvents.recipes(event => {
         })
     }
 
-    // Plates
-    event.recipes.create.pressing(["thermal:lead_plate"], "thermal:lead_ingot")
-    event.recipes.create.pressing(["thermal:constantan_plate"], "thermal:constantan_ingot")
-    event.recipes.create.pressing(["thermal:nickel_plate"], "thermal:nickel_ingot")
-    event.recipes.create.pressing(["thermal:signalum_plate"], "thermal:signalum_ingot")
-    event.recipes.create.pressing(["thermal:lumium_plate"], "thermal:lumium_ingot")
-    event.recipes.create.pressing(["thermal:enderium_plate"], "thermal:enderium_ingot")
+    // Plates. Create 6 wants an item result, not a one-element string array.
+    let pressPlate = (plate, ingot) => {
+        if (!Item.exists(plate) || !Item.exists(ingot)) return
+        event.recipes.create.pressing(Item.of(plate), ingot)
+    }
+    pressPlate("thermal:lead_plate", "thermal:lead_ingot")
+    pressPlate("thermal:constantan_plate", "thermal:constantan_ingot")
+    pressPlate("thermal:nickel_plate", "thermal:nickel_ingot")
+    pressPlate("thermal:signalum_plate", "thermal:signalum_ingot")
+    pressPlate("thermal:lumium_plate", "thermal:lumium_ingot")
+    pressPlate("thermal:enderium_plate", "thermal:enderium_ingot")
 
-    // dusts
-    event.recipes.create.milling("thermal:iron_dust", "#forge:ingots/iron")
-    event.recipes.create.milling("thermal:gold_dust", "#forge:ingots/gold")
-    event.recipes.create.milling("thermal:nickel_dust", "#forge:ingots/nickel")
-    event.recipes.create.milling("thermal:lead_dust", "#forge:ingots/lead")
-    event.recipes.create.milling("thermal:copper_dust", "#forge:ingots/copper")
+    // dusts. A tag passed through the Create builder is re-read as a sized fluid
+    // (amount 1000) and milling then rejects the fluid input. Write the tag plainly.
+    let millDust = (dust, ingotTag) => {
+        if (!Item.exists(dust)) return
+        event.custom({
+            type: "create:milling",
+            ingredients: [{ tag: ingotTag }],
+            results: [{ id: dust }],
+            processing_time: 100
+        })
+    }
+    millDust("thermal:iron_dust", "forge:ingots/iron")
+    millDust("thermal:gold_dust", "forge:ingots/gold")
+    millDust("thermal:nickel_dust", "forge:ingots/nickel")
+    millDust("thermal:lead_dust", "forge:ingots/lead")
+    millDust("thermal:copper_dust", "forge:ingots/copper")
     // A2: nuclearcraft has zinc dust now, remove kubejs item
-    // event.recipes.create.milling("kubejs:zinc_dust", "#forge:ingots/zinc")
-    event.recipes.create.milling("nuclearcraft:zinc_dust", "#forge:ingots/zinc")
+    millDust("nuclearcraft:zinc_dust", "forge:ingots/zinc")
 
     // other metal unification
     /* A2: JAOPCA gets it?
@@ -421,25 +434,43 @@ ServerEvents.recipes(event => {
             { id: /^quark:tweaks\/blasting\/raw.*/ }
         ])
 
+        // Create 6 reads a builder tag ingredient as a sized fluid. These write {tag} themselves.
+        let tagIng = (tag) => ({ tag: String(tag).replace(/^#/, "") })
+        let out = (id, count, chance) => {
+            let row = { id: id }
+            if (count && count !== 1) row.count = count
+            if (chance !== undefined) row.chance = chance
+            return row
+        }
+        let processing = (type, results, ingredients, id, extra) => {
+            let json = { type: type, results: results, ingredients: ingredients }
+            if (extra) Object.assign(json, extra)
+            event.custom(json).id(id)
+        }
         // Missing crushed items (scguns anthralite) must not abort the rest of the recipe pass.
         if (Item.exists(crushedOre)) {
-            // 'concentrated ore' to crushed ore
-            event.recipes.create.milling([Item.of(crushedOre, 5)], rawOreTag).id("kubejs:ore_processing/milling/raw_ore/" + materialName)
-            event.recipes.create.crushing([Item.of(crushedOre, 5), CreateItem.of(Item.of(crushedOre, 2), 0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
-
-            // ore to crushed ore
-            event.recipes.create.crushing([Item.of(crushedOre, 3), CreateItem.of(crushedOre, 0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
+            processing("create:milling", [out(crushedOre, 5)], [tagIng(rawOreTag)], "kubejs:ore_processing/milling/raw_ore/" + materialName, { processing_time: 100 })
+            processing("create:crushing", [out(crushedOre, 5), out(crushedOre, 2, 0.5)], [tagIng(rawOreTag)], "kubejs:ore_processing/crushing/raw_ore/" + materialName)
+            processing("create:crushing", [out(crushedOre, 3), out(crushedOre, 1, 0.5), out("create:experience_nugget", 1, 0.75), out("minecraft:cobblestone", 1, 0.5)], [tagIng(oreTag)], "kubejs:ore_processing/crushing/ore/" + materialName)
             if (hasThermal) thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
 
-            // crushed ore to nuggets
-            event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
+            if (nugget && nugget !== "minecraft:barrier" && Item.exists(nugget)) {
+                event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
+            }
 
-            // crushed ore to ore dust
-            event.recipes.create.milling([Item.of(dust, 3)], crushedOre).id("kubejs:ore_processing/milling/crushed/" + materialName)
-            event.recipes.create.crushing([Item.of(dust, 3), CreateItem.of(Item.of(dust, 3), 0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
-            if (hasThermal) thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
+            if (dust && dust !== "minecraft:barrier" && Item.exists(dust)) {
+                processing("create:milling", [out(dust, 3)], [{ item: crushedOre }], "kubejs:ore_processing/milling/crushed/" + materialName, { processing_time: 100 })
+                processing("create:crushing", [out(dust, 3), out(dust, 3, 0.5)], [{ item: crushedOre }], "kubejs:ore_processing/crushing/crushed/" + materialName)
+                if (hasThermal) thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
+            }
         }
-        event.recipes.create.splashing([Item.of(nugget, 2), CreateItem.of(Item.of(nuggetByproduct, 1), 0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
+        if (nugget && nugget !== "minecraft:barrier" && Item.exists(nugget)) {
+            let splash = [out(nugget, 2)]
+            if (nuggetByproduct && nuggetByproduct !== "minecraft:barrier" && Item.exists(nuggetByproduct)) {
+                splash.push(out(nuggetByproduct, 1, 0.85))
+            }
+            processing("create:splashing", splash, [tagIng(dustTag)], "kubejs:ore_processing/splashing/dust/" + materialName)
+        }
         // A2: nuclearcraft clean slurry to dust, tweak to even out the ore amounts
         let cleanSlurryTag = "forge:" + materialName + "_clean_slurry"
         event.remove({ type: "nuclearcraft:crystallizer", output: dust })
@@ -462,8 +493,11 @@ ServerEvents.recipes(event => {
             "timeModifier": 1.0
         })
 
-        // ore dust to nuggets
-        event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id("kubejs:ore_processing/smelting/dust/" + materialName)
+        // ore dust to nuggets. A missing dust tag becomes an empty ingredient and the
+        // missing nugget becomes a barrier stack; neither recipe should be registered.
+        if (nugget && nugget !== "minecraft:barrier" && Item.exists(nugget) && !Ingredient.of(dustTag).isEmpty()) {
+            event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id("kubejs:ore_processing/smelting/dust/" + materialName)
+        }
 
         // ore dust to fluid
         if (hasThermal && hasTcon) thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)

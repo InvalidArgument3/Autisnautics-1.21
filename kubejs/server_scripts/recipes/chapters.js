@@ -786,7 +786,7 @@ ServerEvents.recipes(event => {
         "type": "create:sequenced_assembly",
         "ingredient": { "tag": "c:coal_coke" }, // IE / NeoForge; forge:coal_coke remapped on 1.21
         "loops": 2,
-        "results": [{ "item": "kubejs:coke_chunk" }],
+        "results": [{ "id": "kubejs:coke_chunk" }],
         "sequence": [
             {
                 "type": "create:filling",
@@ -794,16 +794,16 @@ ServerEvents.recipes(event => {
                     { "item": "kubejs:incomplete_coke_chunk" },
                     { "fluid": "minecraft:water", "amount": 250 }
                 ],
-                "results": [{ "item": "kubejs:incomplete_coke_chunk" }]
+                "results": [{ "id": "kubejs:incomplete_coke_chunk" }]
             },
             {
                 "type": "create:cutting",
                 "ingredients": [{ "item": "kubejs:incomplete_coke_chunk" }],
-                "results": [{ "item": "kubejs:incomplete_coke_chunk" }],
+                "results": [{ "id": "kubejs:incomplete_coke_chunk" }],
                 "processingTime": 100
             }
         ],
-        "transitionalItem": { "item": "kubejs:incomplete_coke_chunk" }
+        "transitionalItem": { "id": "kubejs:incomplete_coke_chunk" }
     }).id("kubejs:coke_cutting")
 
     event.recipes.create.splashing([
@@ -898,7 +898,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:coke_chunk" }
         ],
         "results": [
-            { "item": "kubejs:silicon_compound" }
+            { "id": "kubejs:silicon_compound" }
         ]
     })
 
@@ -1081,7 +1081,7 @@ ServerEvents.recipes(event => {
                         "O": { "item": "kubejs:" + opNames[op] },
                         "B": { "item": "kubejs:" + nums[b] }
                     },
-                    "result": { "item": output },
+                    "result": { "id": output, "count": 1 },
                     "acceptMirrored": false
                 }).id(`kubejs:calculation/${nums[a]}_${opNames[op]}_${nums[b]}_equals_${nums[result]}`)
 
@@ -1093,7 +1093,7 @@ ServerEvents.recipes(event => {
                         "O": { "item": "kubejs:" + opNames[op] },
                         "B": { "item": "kubejs:" + nums[b] }
                     },
-                    "result": { "item": output },
+                    "result": { "id": output, "count": 1 },
                     "acceptMirrored": false
                 }).id(`kubejs:calculation/${nums[a]}_${opNames[op]}_${nums[b]}_equals_${nums[result]}_vertical`)
             }

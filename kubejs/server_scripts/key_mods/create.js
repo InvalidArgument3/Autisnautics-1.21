@@ -2,6 +2,10 @@
 ServerEvents.recipes(event => {
     // casing recipe changes
     let tweak_casing = (name, mats) => {
+        for (let mat of mats) {
+            if (typeof mat === "string" && !mat.startsWith("#") && !Item.exists(mat)) return
+        }
+        if (!Item.exists(name + "_casing") && !name.startsWith("kubejs:")) return
         event.remove({ output: name + "_casing"})
         event.shapeless(Item.of(name + "_casing", 2), mats)
     }

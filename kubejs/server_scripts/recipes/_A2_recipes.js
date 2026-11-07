@@ -10,6 +10,45 @@ ServerEvents.recipes(event => {
         }
         return event.custom(json)
     }
+    // Create 6 treats "3x #tag" and builder tag ingredients as sized fluids.
+    let deployIngredient = (spec) => {
+        let count = 1
+        let body = spec
+        if (spec && spec.id) {
+            let stackCount = spec.count || 1
+            if (stackCount > 1) return { type: "neoforge:sized", count: stackCount, ingredient: { item: spec.id } }
+            return { item: spec.id }
+        }
+        if (typeof spec !== "string") return spec
+        let sized = spec.match(/^(\d+)x (.+)$/)
+        if (sized) {
+            count = parseInt(sized[1], 10)
+            body = sized[2]
+        }
+        let base = body.startsWith("#") ? { tag: body.slice(1) } : { item: body }
+        if (count > 1) return { type: "neoforge:sized", count: count, ingredient: base }
+        return base
+    }
+    let deploy = (result, inputs) => {
+        let id = result
+        let count = 1
+        if (result && result.id) {
+            id = result.id
+            count = result.count || 1
+        } else if (typeof result === "string") {
+            let sized = result.match(/^(\d+)x (.+)$/)
+            if (sized) {
+                count = parseInt(sized[1], 10)
+                id = sized[2]
+            }
+        }
+        if (typeof id === "string" && !Item.exists(id)) return skipRecipe
+        return event.custom({
+            type: "create:deploying",
+            ingredients: inputs.map(deployIngredient),
+            results: [{ id: id, count: count }]
+        })
+    }
 
     // //create stuff & additions wrangling
     // replace create_sa clown mechanisms with a&b mechanisms
@@ -260,19 +299,19 @@ ServerEvents.recipes(event => {
     }
     mouldTypes.forEach(removeMould)
     // all moulds now start from the very large cast mould, by deploying a saw on any log
-    event.recipes.create.deploying("createbigcannons:very_large_cast_mould", ["#minecraft:logs", "#kubejs:saws"])
+    deploy("createbigcannons:very_large_cast_mould", ["#minecraft:logs", "#kubejs:saws"])
     // smaller moulds are made by sawing the very large mould down smaller and smaller
-    event.recipes.create.deploying("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", "#kubejs:saws"])
-    event.recipes.create.deploying("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:large_cast_mould", ["createbigcannons:very_large_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:medium_cast_mould", ["createbigcannons:large_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:small_cast_mould", ["createbigcannons:medium_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:very_small_cast_mould", ["createbigcannons:small_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:autocannon_breech_cast_mould", ["createbigcannons:very_small_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:autocannon_recoil_spring_cast_mould", ["createbigcannons:autocannon_breech_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:autocannon_barrel_cast_mould", ["createbigcannons:autocannon_recoil_spring_cast_mould", "#kubejs:saws"])
     // the other moulds branch off from the generic ones by chiseling or sawing
-    event.recipes.create.deploying("createbigcannons:sliding_breech_cast_mould", ["createbigcannons:large_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:cannon_end_cast_mould", ["createbigcannons:medium_cast_mould", "#forge:chisels"])
-    event.recipes.create.deploying("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", "#kubejs:saws"])
+    deploy("createbigcannons:sliding_breech_cast_mould", ["createbigcannons:large_cast_mould", "#forge:chisels"])
+    deploy("createbigcannons:cannon_end_cast_mould", ["createbigcannons:medium_cast_mould", "#forge:chisels"])
+    deploy("createbigcannons:screw_breech_cast_mould", ["createbigcannons:cannon_end_cast_mould", "#kubejs:saws"])
 
     // might as well fix this createbigcannons shit while i'm at it
     event.remove({ id: "createbigcannons/cutting/autocannon_cartridge_sheet_copper" })// duplicate
@@ -809,15 +848,15 @@ ServerEvents.recipes(event => {
         event.remove({ id: "powergrid:crafting/generator_housing" })
         zincMachine(event, Item.of("powergrid:generator_housing", 2))
         event.remove({ output: "powergrid:hv_switch" })
-        zincMachine(event, Item.of("powergrid:hv_switch", 1), "#forge:rods/iron")
+        zincMachine(event, Item.of("powergrid:hv_switch", 1), "#c:rods/iron")
         event.remove({ output: "powergrid:hv_breaker" })
         zincMachine(event, Item.of("powergrid:hv_breaker", 1), "create:precision_mechanism")
         event.remove({ output: "powergrid:contactor" })
         zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
         // add superior automated versions of some common recipes
         // coils: deploy stick on wire, 3:1 instead of 4:1
-        event.recipes.create.deploying("powergrid:copper_coil", ["3x #forge:wires/copper", "minecraft:stick"])
-        event.recipes.create.deploying("powergrid:resistive_coil", ["3x #forge:wires/iron", "minecraft:stick"])
+        deploy("powergrid:copper_coil", ["3x #forge:wires/copper", "minecraft:stick"])
+        deploy("powergrid:resistive_coil", ["3x #forge:wires/iron", "minecraft:stick"])
         // connectors: filling metal on substrate, 10:1 instead of 30:1
         if (Platform.isLoaded("tconstruct")) {
             event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
@@ -825,8 +864,8 @@ ServerEvents.recipes(event => {
         }
         // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
         event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
-        event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), ["2x #forge:wires/copper", "kubejs:rubber"])
-        event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
+        deploy(Item.of("powergrid:insulated_copper_wire", 2), ["2x #forge:wires/copper", "kubejs:rubber"])
+        deploy(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
     }
 
     // wires
@@ -875,8 +914,8 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
     }
     // automating createaddition barbed wire and IE razor wire
-    event.recipes.create.deploying("createaddition:barbed_wire", ["2x #forge:wires/iron", "#forge:wires/iron"])
-    event.recipes.create.deploying("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#forge:wires/steel"])
+    deploy("createaddition:barbed_wire", ["2x #forge:wires/iron", "#forge:wires/iron"])
+    deploy("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#forge:wires/steel"])
 
 
     // //chisel integration
