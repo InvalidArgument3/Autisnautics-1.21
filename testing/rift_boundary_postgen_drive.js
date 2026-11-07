@@ -40,6 +40,7 @@ function chunkEvent(dim, x, z, chunkNow) {
 var density = {
     compute: function (point) {
         if (point.y === 127 && point.x === 1 && point.z === 0) return -2001
+        if (point.y === 127 && point.x === 64 && point.z === 64) return -2001
         return 0
     }
 }
@@ -66,3 +67,28 @@ onChunk(chunkEvent('infinite_abyss:first_layer', 0, 0, loaded))
 var guard = 0
 while (guard++ < 80) onTick({ server: {} })
 if (blockReads < 1) throw new Error('overlap-face loop never ran; blockReads=' + blockReads)
+
+// A loaded-looking event whose chunk is not yet readable must keep its marker and retry.
+var removed = 0
+var absent = makeLevel('infinite_abyss:first_layer', null)
+absent.persistentData.remove = function () { removed++ }
+onChunk({
+    getLevel: function () { return absent },
+    isNewChunk: function () { return true },
+    getChunk: function () { return { getPos: function () { return { x: 4, z: 4 } } } }
+})
+var spins = 0
+while (spins++ < 12) onTick({ server: {} })
+if (removed !== 0) throw new Error('marker removed while getChunkNow stayed null')
+var readsBeforeResume = blockReads
+absent.getChunkSource = function () {
+    return {
+        getChunkNow: function () { return loaded },
+        randomState: function () {
+            return { router: function () { return { finalDensity: function () { return density } } } }
+        }
+    }
+}
+var resumed = 0
+while (resumed++ < 40) onTick({ server: {} })
+if (blockReads <= readsBeforeResume) throw new Error('retry did not resume a chunk that became readable without a second load event')
