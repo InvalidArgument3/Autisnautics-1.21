@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4001,
+  "dimension": "dimension_of_caves:cave",
+  "target": "fluid_level_floodedness",
+  "wrapper_function": "autisnautics:rift/dry_floodedness_dimension_of_caves_cave"
+}

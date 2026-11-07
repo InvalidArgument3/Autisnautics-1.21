@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4003,
+  "dimension": "infinite_abyss:first_layer",
+  "target": "fluid_level_floodedness",
+  "wrapper_function": "autisnautics:rift/dry_floodedness_infinite_abyss_first_layer"
+}

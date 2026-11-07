@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4004,
+  "dimension": "minecraft:overworld",
+  "target": "initial_density_without_jaggedness",
+  "wrapper_function": "autisnautics:rift/dry_surface_minecraft_overworld"
+}

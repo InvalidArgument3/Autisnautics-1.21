@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4007,
+  "dimension": "oceanworld:deepsea",
+  "target": "fluid_level_floodedness",
+  "wrapper_function": "autisnautics:rift/dry_floodedness_oceanworld_deepsea"
+}

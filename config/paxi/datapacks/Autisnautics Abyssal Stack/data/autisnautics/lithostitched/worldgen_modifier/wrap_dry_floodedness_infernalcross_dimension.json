@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4002,
+  "dimension": "infernalcross:dimension",
+  "target": "fluid_level_floodedness",
+  "wrapper_function": "autisnautics:rift/dry_floodedness_infernalcross_dimension"
+}

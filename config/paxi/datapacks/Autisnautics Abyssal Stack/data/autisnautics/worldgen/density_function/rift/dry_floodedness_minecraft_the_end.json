@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:range_choice",
+  "input": "autisnautics:rift/dry_active_minecraft_the_end",
+  "min_inclusive": 0.5,
+  "max_exclusive": 1.5,
+  "when_in_range": -64,
+  "when_out_of_range": {
+    "type": "lithostitched:wrapped_marker"
+  }
+}
