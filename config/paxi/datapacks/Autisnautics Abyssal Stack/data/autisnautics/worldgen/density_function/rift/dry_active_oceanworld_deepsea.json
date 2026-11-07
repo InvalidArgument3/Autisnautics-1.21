@@ -6,8 +6,8 @@
       "type": "lithostitched:axis",
       "axis": "y"
     },
-    "min_inclusive": 160,
-    "max_exclusive": 320,
+    "min_inclusive": 275,
+    "max_exclusive": 302,
     "when_in_range": {
       "type": "minecraft:range_choice",
       "input": "autisnautics:rift/effective_mask_2_3",
@@ -25,7 +25,7 @@
       "axis": "y"
     },
     "min_inclusive": -64,
-    "max_exclusive": 180,
+    "max_exclusive": -39,
     "when_in_range": {
       "type": "minecraft:range_choice",
       "input": "autisnautics:rift/effective_mask_3_4",
