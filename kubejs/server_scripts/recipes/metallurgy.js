@@ -310,13 +310,13 @@ ServerEvents.recipes(event => {
             processing_time: 100
         })
     }
-    millDust("thermal:iron_dust", "forge:ingots/iron")
-    millDust("thermal:gold_dust", "forge:ingots/gold")
-    millDust("thermal:nickel_dust", "forge:ingots/nickel")
-    millDust("thermal:lead_dust", "forge:ingots/lead")
-    millDust("thermal:copper_dust", "forge:ingots/copper")
+    millDust("thermal:iron_dust", "c:ingots/iron")
+    millDust("thermal:gold_dust", "c:ingots/gold")
+    millDust("thermal:nickel_dust", "c:ingots/nickel")
+    millDust("thermal:lead_dust", "c:ingots/lead")
+    millDust("thermal:copper_dust", "c:ingots/copper")
     // A2: nuclearcraft has zinc dust now, remove kubejs item
-    millDust("nuclearcraft:zinc_dust", "forge:ingots/zinc")
+    millDust("nuclearcraft:zinc_dust", "c:ingots/zinc")
 
     // other metal unification
     /* A2: JAOPCA gets it?
@@ -435,7 +435,11 @@ ServerEvents.recipes(event => {
         ])
 
         // Create 6 reads a builder tag ingredient as a sized fluid. These write {tag} themselves.
-        let tagIng = (tag) => ({ tag: String(tag).replace(/^#/, "") })
+        let tagIng = (tag) => {
+            let name = String(tag).replace(/^#/, "")
+            if (name.startsWith("forge:")) name = "c:" + name.slice("forge:".length)
+            return { tag: name }
+        }
         let out = (id, count, chance) => {
             let row = { id: id }
             if (count && count !== 1) row.count = count

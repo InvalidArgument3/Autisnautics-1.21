@@ -25,6 +25,7 @@ ServerEvents.recipes(event => {
             count = parseInt(sized[1], 10)
             body = sized[2]
         }
+        if (body.startsWith("#forge:")) body = "#c:" + body.slice("#forge:".length)
         let base = body.startsWith("#") ? { tag: body.slice(1) } : { item: body }
         if (count > 1) return { type: "neoforge:sized", count: count, ingredient: base }
         return base
@@ -43,6 +44,11 @@ ServerEvents.recipes(event => {
             }
         }
         if (typeof id === "string" && !Item.exists(id)) return skipRecipe
+        let needsSaw = inputs.some(spec => typeof spec === "string" && spec.indexOf("kubejs:saws") >= 0)
+        if (needsSaw) {
+            let saw = ["cb_microblock:stone_saw", "cb_microblock:iron_saw", "cb_microblock:diamond_saw", "projectred_exploration:gold_saw", "projectred_exploration:ruby_saw", "projectred_exploration:sapphire_saw", "projectred_exploration:peridot_saw"].some(item => Item.exists(item))
+            if (!saw) return skipRecipe
+        }
         return event.custom({
             type: "create:deploying",
             ingredients: inputs.map(deployIngredient),

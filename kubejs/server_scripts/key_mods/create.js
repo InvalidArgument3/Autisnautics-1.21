@@ -39,7 +39,12 @@ ServerEvents.recipes(event => {
     event.remove({ id: "create:crushing/obsidian" })
     event.recipes.create.crushing("create:powdered_obsidian", "minecraft:obsidian")
     // recompacting obsidian dust into its resource
-    event.recipes.create.compacting("#forge:dusts/obsidian", "minecraft:obsidian")
+    // The comment is dust back into obsidian. A tag cannot be a processing result.
+    event.custom({
+        type: "create:compacting",
+        ingredients: [{ tag: "c:dusts/obsidian" }],
+        results: [{ id: "minecraft:obsidian" }]
+    })
 
     // Gravel and red sand washing buffs
     event.remove({ id: "create:splashing/gravel" })

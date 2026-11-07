@@ -792,7 +792,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "kubejs:incomplete_coke_chunk" },
-                    { "fluid": "minecraft:water", "amount": 250 }
+                    { "type": "neoforge:single", "fluid": "minecraft:water", "amount": 250 }
                 ],
                 "results": [{ "id": "kubejs:incomplete_coke_chunk" }]
             },
@@ -893,7 +893,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "create:compacting",
         "ingredients": [
-            { "fluid": "kubejs:fine_sand", "amount": 500 },
+            { "type": "neoforge:single", "fluid": "kubejs:fine_sand", "amount": 500 },
             { "item": "kubejs:purified_sand" },
             { "item": "kubejs:coke_chunk" }
         ],

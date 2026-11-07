@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
             "type": "create:filling",
             "ingredients": [
                 { "item": input },
-                { "fluid": "supplementaries:lumisene", "amount": 90 }
+                { "type": "neoforge:single", "fluid": "supplementaries:lumisene", "amount": 90 }
             ],
             "results": [
                 { "id": output, "count": 9 }
