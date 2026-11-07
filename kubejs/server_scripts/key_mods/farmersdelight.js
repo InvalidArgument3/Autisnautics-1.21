@@ -28,16 +28,28 @@ ServerEvents.recipes(event => {
             event.custom({
                 "type": "farmersdelight:cutting",
                 "ingredients": [{ "item": log }],
-                "tool": { "tag": "forge:tools/axes" },
-                "result": [{ "item": strippedLog }, { "item": "farmersdelight:tree_bark" }]
+                "tool": [
+                    { "type": "farmersdelight:item_ability", "action": "axe_strip" },
+                    { "tag": "minecraft:axes" }
+                ],
+                "result": [
+                    { "item": { "id": strippedLog, "count": 1 } },
+                    { "item": { "id": "farmersdelight:tree_bark", "count": 1 } }
+                ]
             })
         }
         if (Item.exists(woodLog) && Item.exists(strippedWood)) {
             event.custom({
                 "type": "farmersdelight:cutting",
                 "ingredients": [{ "item": woodLog }],
-                "tool": { "tag": "forge:tools/axes" },
-                "result": [{ "item": strippedWood }, { "item": "farmersdelight:tree_bark" }]
+                "tool": [
+                    { "type": "farmersdelight:item_ability", "action": "axe_strip" },
+                    { "tag": "minecraft:axes" }
+                ],
+                "result": [
+                    { "item": { "id": strippedWood, "count": 1 } },
+                    { "item": { "id": "farmersdelight:tree_bark", "count": 1 } }
+                ]
             })
         }
     })
