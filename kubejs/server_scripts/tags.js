@@ -221,13 +221,18 @@ ServerEvents.tags("item", event => {
 
     // A2
     // event.add("forge:slag", "tfmg:slag")
-    event.add(`forge:dusts/wood`, "nuclearcraft:sawdust")// useless?
+    // immersiveengineering:dust_wood is the sawdust item. nuclearcraft:sawdust is not in nuclearcraftneohaul.
+    event.add("c:dusts/wood", "immersiveengineering:dust_wood")
+    event.add("forge:dusts/wood", "immersiveengineering:dust_wood")
+    if (Item.exists("nuclearcraftneohaul:bioplastic")) {
+        event.add("c:ingots/plastic", "nuclearcraftneohaul:bioplastic")
+        event.add("forge:ingots/plastic", "nuclearcraftneohaul:bioplastic")
+    }
     event.get("kubejs:saws")
         .add("projectred_exploration:gold_saw")
         .add("projectred_exploration:ruby_saw")
         .add("projectred_exploration:sapphire_saw")
         .add("projectred_exploration:peridot_saw")
-    event.add("forge:ingots/plastic", "nuclearcraft:bioplastic")
     event.add("forge:plates", "createdeco:zinc_sheet")
     event.add("forge:plates/zinc", "createdeco:zinc_sheet")
 
@@ -265,8 +270,7 @@ ServerEvents.tags("item", event => {
     event.add("forge:storage_blocks/treated_iron", "scguns:treated_iron_block")
     event.add("forge:storage_blocks", "scguns:treated_iron_block")
 
-    // Plastic and Milk (moved from fluid block)
-    event.add("forge:ingots/plastic", "nuclearcraft:bioplastic")
+    // Plastic is nuclearcraftneohaul:bioplastic, tagged above. Milk stays here.
     event.get("kubejs:milk").add("minecraft:milk")
 
     // oredict simpleradios wire

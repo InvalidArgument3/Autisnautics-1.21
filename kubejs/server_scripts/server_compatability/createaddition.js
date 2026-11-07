@@ -35,11 +35,14 @@ if (Platform.isLoaded("createaddition")) {
         // Remove capacitors
         event.remove({ output: "createaddition:capacitor" })
 
-        // Redstone Relay
-        event.remove({ output: "createaddition:redstone_relay" })
-        event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
-            .id("kubejs:compat/createaddition/redstone_relay_manual_only")
-        event.recipes.create.deploying("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
+        // Redstone Relay. projectred_core is not in this pack, so the 1.21 Create
+        // Addition recipe (connector, electron tube, redstone, stone) stays.
+        if (Item.exists("projectred_core:platformed_plate")) {
+            event.remove({ output: "createaddition:redstone_relay" })
+            event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
+                .id("kubejs:compat/createaddition/redstone_relay_manual_only")
+            event.recipes.create.deploying("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
+        }
 
         // Remove heated basin ingot recipes
         event.remove({ id: "createaddition:mixing/electrum" })

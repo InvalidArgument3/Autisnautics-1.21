@@ -12,22 +12,16 @@ ServerEvents.recipes(event => {
     }
     // Create 6 treats "3x #tag" and builder tag ingredients as sized fluids.
     let deployIngredient = (spec) => {
-        let count = 1
         let body = spec
-        if (spec && spec.id) {
-            let stackCount = spec.count || 1
-            if (stackCount > 1) return { type: "neoforge:sized", count: stackCount, ingredient: { item: spec.id } }
-            return { item: spec.id }
-        }
+        if (spec && spec.id) return { item: spec.id }
         if (typeof spec !== "string") return spec
         let sized = spec.match(/^(\d+)x (.+)$/)
-        if (sized) {
-            count = parseInt(sized[1], 10)
-            body = sized[2]
-        }
-        if (body.startsWith("#forge:")) body = "#c:" + body.slice("#forge:".length)
+        if (sized) body = sized[2]
+        // Pack-defined forge:chisels holds chisel:iron_chisel, diamond_chisel, and hitech_chisel.
+        // Other forge: item tags in this pack are empty; the items live under c:.
+        if (body.startsWith("#forge:") && !body.startsWith("#forge:chisels")) body = "#c:" + body.slice("#forge:".length)
         let base = body.startsWith("#") ? { tag: body.slice(1) } : { item: body }
-        if (count > 1) return { type: "neoforge:sized", count: count, ingredient: base }
+        // Create 6 processing recipes store plain ingredients, not stack counts.
         return base
     }
     let deploy = (result, inputs) => {
@@ -163,7 +157,7 @@ ServerEvents.recipes(event => {
         "   ",
         "SSS"
     ], {
-        S: "#forge:dusts/wood"
+        S: "#c:dusts/wood"
     })
 
     // unify sawdusts
@@ -202,24 +196,23 @@ ServerEvents.recipes(event => {
         event.recipes.thermal.fisher_boost('farmersdelight:canvas', 2, 0.02, 'autisnautics2datapack:gameplay/straining')
     }
     // add a few more sources of straw for canvas
-    custom({// wheat
-        "type": "farmersdelight:cutting",
-        "ingredients": [{ "item": "minecraft:wheat" }],
-        "result": [
-            { "item": "farmersdelight:straw" },
-            { "chance": 0.25, "item": "minecraft:wheat_seeds" }
-        ],
-        "tool": { "tag": "forge:tools/knives" }
-    })
-    custom({// flax
-        "type": "farmersdelight:cutting",
-        "ingredients": [{ "item": "supplementaries:flax" }],
-        "result": [
-            { "item": "farmersdelight:straw" },
-            { "item": "minecraft:string" }
-        ],
-        "tool": { "tag": "forge:tools/knives" }
-    })
+    let knifeCut = (input, results) => {
+        if (!Item.exists(input)) return
+        custom({
+            type: "farmersdelight:cutting",
+            ingredients: [{ item: input }],
+            result: results,
+            tool: { tag: "c:tools/knife" }
+        })
+    }
+    knifeCut("minecraft:wheat", [
+        { item: { id: "farmersdelight:straw", count: 1 } },
+        { item: { id: "minecraft:wheat_seeds", count: 1 }, chance: 0.25 }
+    ])
+    knifeCut("supplementaries:flax", [
+        { item: { id: "farmersdelight:straw", count: 1 } },
+        { item: { id: "minecraft:string", count: 1 } }
+    ])
     // modify aquatic entangler recipe so it's easier to get
     if (hasThermal) {
         event.replaceInput({ output: "thermal:device_fisher" }, "thermal:redstone_servo", "minecraft:barrel")
@@ -276,7 +269,12 @@ ServerEvents.recipes(event => {
     handrailTypes.forEach(removeHandrails)
 
     // another step of sawing turns a wooden slab into 8 plates
-    event.recipes.create.cutting(Item.of("cuisinedelight:plate", 8), "#minecraft:wooden_slabs").processingTime(150).id(`kubejs:cutting/wooden_slab_to_plates`)
+    event.custom({
+        type: "create:cutting",
+        ingredients: [{ tag: "minecraft:wooden_slabs" }],
+        results: [{ id: "cuisinedelight:plate", count: 8 }],
+        processing_time: 150
+    }).id("kubejs:cutting/wooden_slab_to_plates")
     // formwork blocks are stonecut from hollow logs
     // event.stonecutting(Item.of("tfmg:formwork_block", 8), "#quark:hollow_logs")
     // handrails get a shaped recipe
@@ -594,8 +592,19 @@ ServerEvents.recipes(event => {
     // fix broken radaway item recipes
     event.remove({ output: Item.of("nuclearcraftneohaul:radaway") })
     event.remove({ output: Item.of("nuclearcraftneohaul:radaway_slow") })
-    event.recipes.create.filling("nuclearcraftneohaul:radaway", ["#forge:ingots/plastic", Fluid.of("nuclearcraftneohaul:radaway", 250)])
-    event.recipes.create.filling("nuclearcraftneohaul:radaway_slow", ["#forge:ingots/plastic", Fluid.of("nuclearcraftneohaul:radaway_slow", 250)])
+    let fillRadaway = (result, fluid) => {
+        if (!Item.exists(result) || !Item.exists("nuclearcraftneohaul:bioplastic")) return
+        event.custom({
+            type: "create:filling",
+            ingredients: [
+                { item: "nuclearcraftneohaul:bioplastic" },
+                { type: "neoforge:single", fluid: fluid, amount: 250 }
+            ],
+            results: [{ id: result, count: 1 }]
+        })
+    }
+    fillRadaway("nuclearcraftneohaul:radaway", "nuclearcraftneohaul:radaway")
+    fillRadaway("nuclearcraftneohaul:radaway_slow", "nuclearcraftneohaul:radaway_slow")
     custom({
         "type": "nuclearcraft:fluid_infuser",
         "inputFluids": [
@@ -860,9 +869,20 @@ ServerEvents.recipes(event => {
         event.remove({ output: "powergrid:contactor" })
         zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
         // add superior automated versions of some common recipes
-        // coils: deploy stick on wire, 3:1 instead of 4:1
-        deploy("powergrid:copper_coil", ["3x #forge:wires/copper", "minecraft:stick"])
-        deploy("powergrid:resistive_coil", ["3x #forge:wires/iron", "minecraft:stick"])
+        // Create 6 deployer recipes accept two unsized ingredients, so a 3-wire
+        // deploy cannot be expressed. Mechanical crafting keeps the 3:1 ratio.
+        let coil = (result, wireTag) => event.custom({
+            type: "create:mechanical_crafting",
+            pattern: ["WWW", " S "],
+            key: {
+                W: { tag: wireTag },
+                S: { item: "minecraft:stick" }
+            },
+            result: { id: result, count: 1 },
+            accept_mirrored: false
+        })
+        if (Item.exists("powergrid:copper_coil")) coil("powergrid:copper_coil", "c:wires/copper")
+        if (Item.exists("powergrid:resistive_coil")) coil("powergrid:resistive_coil", "c:wires/iron")
         // connectors: filling metal on substrate, 10:1 instead of 30:1
         if (Platform.isLoaded("tconstruct")) {
             event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
@@ -870,8 +890,17 @@ ServerEvents.recipes(event => {
         }
         // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
         event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
-        deploy(Item.of("powergrid:insulated_copper_wire", 2), ["2x #forge:wires/copper", "kubejs:rubber"])
-        deploy(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
+        if (Item.exists("powergrid:insulated_copper_wire") && Item.exists("kubejs:rubber")) {
+            event.shapeless(Item.of("powergrid:insulated_copper_wire", 2), ["#c:wires/copper", "#c:wires/copper", "kubejs:rubber"])
+                .id("kubejs:powergrid_insulated_copper_wire")
+        }
+        if (Item.exists("powergrid:copper_cord") && Item.exists("kubejs:rubber")) {
+            event.shapeless(Item.of("powergrid:copper_cord", 2), [
+                "powergrid:insulated_copper_wire", "powergrid:insulated_copper_wire",
+                "powergrid:insulated_copper_wire", "powergrid:insulated_copper_wire",
+                "kubejs:rubber"
+            ]).id("kubejs:powergrid_copper_cord")
+        }
     }
 
     // wires
@@ -882,10 +911,10 @@ ServerEvents.recipes(event => {
     custom({
         "type": "createdieselgenerators:wire_cutting",
         "ingredients": [{
-            "tag": "forge:plates/lead"
+            "tag": "c:plates/lead"
         }],
         "results": [{
-            "item": "immersiveengineering:wire_lead"
+            "id": "immersiveengineering:wire_lead"
         }]
     })
     // unify simpleradios copper wire
@@ -920,7 +949,10 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
     }
     // automating createaddition barbed wire and IE razor wire
-    deploy("createaddition:barbed_wire", ["2x #forge:wires/iron", "#forge:wires/iron"])
+    if (Item.exists("createaddition:barbed_wire")) {
+        event.shapeless("createaddition:barbed_wire", ["#c:wires/iron", "#c:wires/iron", "#c:wires/iron"])
+            .id("kubejs:createaddition_barbed_wire")
+    }
     deploy("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#forge:wires/steel"])
 
 

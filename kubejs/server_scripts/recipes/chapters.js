@@ -800,10 +800,10 @@ ServerEvents.recipes(event => {
                 "type": "create:cutting",
                 "ingredients": [{ "item": "kubejs:incomplete_coke_chunk" }],
                 "results": [{ "id": "kubejs:incomplete_coke_chunk" }],
-                "processingTime": 100
+                "processing_time": 100
             }
         ],
-        "transitionalItem": { "id": "kubejs:incomplete_coke_chunk" }
+        "transitional_item": { "id": "kubejs:incomplete_coke_chunk" }
     }).id("kubejs:coke_cutting")
 
     event.recipes.create.splashing([
@@ -970,7 +970,7 @@ ServerEvents.recipes(event => {
     ], "kubejs:inductive_mechanism", [
         event.recipes.create.deploying(transitional, [transitional, Platform.isLoaded("ae2") ? "ae2:printed_silicon" : "refinedstorage:silicon"]), // AE2 -> RS port
         event.recipes.create.deploying(transitional, [transitional, Platform.isLoaded("ae2") ? "ae2:printed_silicon" : "refinedstorage:silicon"]), // AE2 -> RS port
-        event.recipes.create.deploying(transitional, [transitional, "#kubejs:flash_drives"])
+        event.recipes.create.deploying(transitional, [transitional, "kubejs:flash_drive"])
     ]).transitionalItem(transitional)
         .loops(1)
         .id("kubejs:calculation_mechanism")

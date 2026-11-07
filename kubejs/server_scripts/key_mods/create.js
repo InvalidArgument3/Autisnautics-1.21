@@ -14,10 +14,11 @@ ServerEvents.recipes(event => {
     tweak_casing("create:railway", ["create:golden_sheet", "minecraft:deepslate"])
     tweak_casing("create:brass", ["create:brass_sheet", "#minecraft:logs"])
     // tweak_casing("kubejs:zinc", ["create:zinc_ingot", "minecraft:stone"]) // 1.21 removed
-    tweak_casing("kubejs:lead", ["thermal:lead_plate", "minecraft:deepslate"])
+    // thermal:lead_plate is not registered. Immersive Engineering's plate is the lead plate in c:plates/lead.
+    tweak_casing("kubejs:lead", ["immersiveengineering:plate_lead", "minecraft:deepslate"])
     // tweak_casing("kubejs:invar", ["thermal:invar_ingot", "minecraft:stone"]) // 1.21 removed
     tweak_casing("kubejs:enderium", ["minecraft:ender_pearl", "minecraft:obsidian"])
-    tweak_casing("kubejs:fluix", ["thermal:lead_plate", "minecraft:blackstone"])
+    tweak_casing("kubejs:fluix", ["immersiveengineering:plate_lead", "minecraft:blackstone"])
     // tweak_casing('alloyed:steel', ["alloyed:steel_sheet", '#minecraft:logs'])
     tweak_casing("create:refined_radiance", ["create:refined_radiance", "#minecraft:logs"])
     tweak_casing("create:shadow_steel", ["create:shadow_steel", "#minecraft:logs"])
