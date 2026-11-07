@@ -135,27 +135,42 @@ ServerEvents.recipes(event => {
         "radiation": 0.0,
         "timeModifier": 1.25
     })
-    // - Coke Cake
-    transitional = "kubejs:incomplete_coke_cake"
-    event.recipes.create.sequenced_assembly([
-        "kubejs:coke_cake",
-    ], "create:blaze_cake_base", [
-        event.recipes.create.deploying(transitional, [transitional, Ingredient.of("#c:coal_coke")]),
-        event.recipes.create.pressing(transitional, [transitional]),
-        event.recipes.create.filling(transitional, [transitional, Fluid.sizedIngredientOf("immersiveengineering:creosote", 250)])
-    ]).transitionalItem(transitional)
-        .loops(1)
-        .id("kubejs:coke_cake")
-
-    event.recipes.create.sequenced_assembly([
-        "kubejs:coke_cake",
-    ], "create:blaze_cake_base", [
-        event.recipes.create.deploying(transitional, [transitional, Ingredient.of("#neoforge:coal_petcoke")]),
-        event.recipes.create.pressing(transitional, [transitional]),
-        event.recipes.create.filling(transitional, [transitional, Fluid.sizedIngredientOf("immersiveengineering:creosote", 250)])
-    ]).transitionalItem(transitional)
-        .loops(1)
-        .id("kubejs:coke_cake_petcoke")
+    // - Coke Cake. The Create builder writes a tag ingredient with amount 1000,
+    // which sequenced assembly then counts as a fluid input. Deploying allows none.
+    let cokeAssembly = (id, cokeTag) => {
+        event.custom({
+            type: "create:sequenced_assembly",
+            ingredient: { item: "create:blaze_cake_base" },
+            transitional_item: { id: "kubejs:incomplete_coke_cake" },
+            loops: 1,
+            results: [{ id: "kubejs:coke_cake" }],
+            sequence: [
+                {
+                    type: "create:deploying",
+                    ingredients: [
+                        { item: "kubejs:incomplete_coke_cake" },
+                        { tag: cokeTag }
+                    ],
+                    results: [{ id: "kubejs:incomplete_coke_cake" }]
+                },
+                {
+                    type: "create:pressing",
+                    ingredients: [{ item: "kubejs:incomplete_coke_cake" }],
+                    results: [{ id: "kubejs:incomplete_coke_cake" }]
+                },
+                {
+                    type: "create:filling",
+                    ingredients: [
+                        { item: "kubejs:incomplete_coke_cake" },
+                        { type: "neoforge:single", fluid: "immersiveengineering:creosote", amount: 250 }
+                    ],
+                    results: [{ id: "kubejs:incomplete_coke_cake" }]
+                }
+            ]
+        }).id(id)
+    }
+    cokeAssembly("kubejs:coke_cake", "c:coal_coke")
+    cokeAssembly("kubejs:coke_cake_petcoke", "c:coal_petcoke")
     // IE Furnace Fuel recipes will only accept Coke Cake now
     event.remove({ id: /immersiveengineering:blastfurnace\/fuel_.*/ })
     event.remove({ id: /immersivepetroleum:blastfurnace\/fuel_.*/ })

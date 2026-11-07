@@ -438,6 +438,9 @@ ServerEvents.recipes(event => {
         let tagIng = (tag) => {
             let name = String(tag).replace(/^#/, "")
             if (name.startsWith("forge:")) name = "c:" + name.slice("forge:".length)
+            // NuclearCraft's platinum is the lead_platinum alloy and platinum_block.
+            // There is no raw platinum item and no platinum ore, so these tags are empty.
+            if (name === "c:raw_materials/platinum" || name === "c:ores/platinum") return null
             return { tag: name }
         }
         let out = (id, count, chance) => {
@@ -453,9 +456,13 @@ ServerEvents.recipes(event => {
         }
         // Missing crushed items (scguns anthralite) must not abort the rest of the recipe pass.
         if (Item.exists(crushedOre)) {
-            processing("create:milling", [out(crushedOre, 5)], [tagIng(rawOreTag)], "kubejs:ore_processing/milling/raw_ore/" + materialName, { processing_time: 100 })
-            processing("create:crushing", [out(crushedOre, 5), out(crushedOre, 2, 0.5)], [tagIng(rawOreTag)], "kubejs:ore_processing/crushing/raw_ore/" + materialName)
-            processing("create:crushing", [out(crushedOre, 3), out(crushedOre, 1, 0.5), out("create:experience_nugget", 1, 0.75), out("minecraft:cobblestone", 1, 0.5)], [tagIng(oreTag)], "kubejs:ore_processing/crushing/ore/" + materialName)
+            let rawIng = tagIng(rawOreTag)
+            let oreIng = tagIng(oreTag)
+            if (rawIng) {
+                processing("create:milling", [out(crushedOre, 5)], [rawIng], "kubejs:ore_processing/milling/raw_ore/" + materialName, { processing_time: 100 })
+                processing("create:crushing", [out(crushedOre, 5), out(crushedOre, 2, 0.5)], [rawIng], "kubejs:ore_processing/crushing/raw_ore/" + materialName)
+            }
+            if (oreIng) processing("create:crushing", [out(crushedOre, 3), out(crushedOre, 1, 0.5), out("create:experience_nugget", 1, 0.75), out("minecraft:cobblestone", 1, 0.5)], [oreIng], "kubejs:ore_processing/crushing/ore/" + materialName)
             if (hasThermal) thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
 
             if (nugget && nugget !== "minecraft:barrier" && Item.exists(nugget)) {
