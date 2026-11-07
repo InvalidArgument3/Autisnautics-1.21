@@ -23383,45 +23383,6 @@
                     "date_published": "2026-09-27T13:25:47.634945Z"
                 }
             ]
-        },
-        {
-            "pakku_id": "ZX7jrQBEbORTIaeP",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "littletiles"
-            },
-            "name": {
-                "modrinth": "LittleTiles"
-            },
-            "id": {
-                "modrinth": "RCRxC1tD"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "LittleTiles_BETA_v1.6.0-pre237_mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/RCRxC1tD/versions/dGjooVZk/LittleTiles_BETA_v1.6.0-pre237_mc1.21.1.jar",
-                    "id": "dGjooVZk",
-                    "parent_id": "RCRxC1tD",
-                    "hashes": {
-                        "sha512": "9780f5a03eeae66a4683bcdc5ddf4ca995340c87fb1be8fae728c576d0301cf3b5f6717d01da85b87d536c6a0f29713fb306ccb4ac892d19a26d4901ed215c07",
-                        "sha1": "315ded6cdc02f653fd4f9facff64bade05a09d84"
-                    },
-                    "required_dependencies": [
-                        "OsZiaDHq"
-                    ],
-                    "size": 2871536,
-                    "date_published": "2026-11-06T13:42:31.212811Z"
-                }
-            ]
         }
     ],
     "lockfile_version": 2

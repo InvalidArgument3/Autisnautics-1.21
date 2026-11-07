@@ -224,9 +224,6 @@
         "nearby-crafting": {
             "side": "BOTH"
         },
-        "littletiles": {
-            "side": "BOTH"
-        },
         "almostunified": {
             "redistributable": true
         },
