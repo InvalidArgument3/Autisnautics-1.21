@@ -21,8 +21,7 @@
         "start_server.bat",
         "start_server.sh",
         "UPDATEFROMGITHUB.sh",
-        "README.md",
-        "config/DistantHorizons.toml"
+        "README.md"
     ],
     "client_overrides": [
         "resourcepacks"
