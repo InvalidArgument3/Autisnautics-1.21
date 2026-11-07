@@ -13,6 +13,8 @@ ServerEvents.recipes(event => {
         }
     }
 
+    // CABIN color substrates (substrate_red and the rest of this chain) are not registered in generate.js.
+    if (Item.exists("kubejs:substrate_red")) {
     alchemy_mix("red", "herbal", "diorite", "andesite")
     alchemy_mix("orange", "herbal", "granite", "diorite")
     alchemy_mix("yellow", "herbal", "cobblestone", "granite")
@@ -48,6 +50,7 @@ ServerEvents.recipes(event => {
     alchemy_smelt("cobblestone", "igneous", "lapis", "gold", 20)
     alchemy_smelt("basalt", "igneous", "ruby", "nickel", 20)
     alchemy_smelt("scoria", "igneous", "cinnabar", "zinc", 20)
+    }
 
     let mundane = (id, outputs) => {
         let jsonOut = []

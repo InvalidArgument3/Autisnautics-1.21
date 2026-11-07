@@ -40,14 +40,14 @@ ServerEvents.recipes(event => {
     // Gravel and red sand washing buffs
     event.remove({ id: "create:splashing/gravel" })
     event.recipes.create.splashing([
-        Item.of(Item.of("minecraft:iron_nugget", 2)).withChance(0.125),
-        Item.of("minecraft:flint").withChance(0.25)
+        CreateItem.of("2x minecraft:iron_nugget", 0.125),
+        CreateItem.of("minecraft:flint", 0.25)
     ], "minecraft:gravel")
 
     event.remove({ id: "create:splashing/red_sand" })
     event.recipes.create.splashing([
-        Item.of(Item.of("minecraft:gold_nugget", 2)).withChance(0.125),
-        Item.of("minecraft:dead_bush").withChance(0.05)
+        CreateItem.of("2x minecraft:gold_nugget", 0.125),
+        CreateItem.of("minecraft:dead_bush", 0.05)
     ], "minecraft:red_sand")
 
     // unify dough and allow the slime recipe to take dough from farmer's delight

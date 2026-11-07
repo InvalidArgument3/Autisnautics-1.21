@@ -4,15 +4,6 @@
 // Redstone, silver and tin do not exist in A&B and we need a bit of scripting to remove them
 // A2: never mind, tin is back
 ServerEvents.recipes(event => {
-    const hasThermal = Platform.isLoaded("thermal")
-    const noopThermalBuilder = {
-        id() { return this },
-        energy() { return this }
-    }
-    const thermalRecipes = hasThermal
-        ? event.recipes.thermal
-        : new Proxy({}, { get: () => () => noopThermalBuilder })
-
     // event.remove({ output: "#forge:nuggets/tin" })
     // event.remove({ output: "#forge:ingots/tin" })
     // event.remove({ output: "#forge:storage_blocks/tin" })
@@ -68,7 +59,27 @@ ServerEvents.recipes(event => {
 
 // Tweaks for the metals that we actually want
 ServerEvents.recipes(event => {
-
+    const hasThermal = Platform.isLoaded("thermal")
+    const hasTcon = Platform.isLoaded("tconstruct")
+    const skipRecipe = { id() { return this }, energy() { return this } }
+    const skipCall = () => skipRecipe
+    // Stand-in for the old Proxy: thermal calls no-op when the mod is absent.
+    // Arguments are still evaluated, so missing-item and .withChance() calls stay inside hasThermal.
+    const thermalRecipes = hasThermal ? event.recipes.thermal : {
+        pulverizer: skipCall,
+        smelter: skipCall,
+        crucible: skipCall
+    }
+    const kubeCustom = event.custom
+    const custom = (json) => {
+        let type = json && json.type
+        if (typeof type === "string") {
+            let ns = type.split(":")[0]
+            // Old type ids (tconstruct, embers, nuclearcraft) whose mod is not loaded.
+            if (ns !== "minecraft" && ns !== "kubejs" && !Platform.isLoaded(ns)) return skipRecipe
+        }
+        return kubeCustom(json)
+    }
 
     // Thermal recipes for zinc
     // A2: JAOPCA handles this one
@@ -139,7 +150,7 @@ ServerEvents.recipes(event => {
         // A2: nuclearcraft grinds pearls into ae2:ender_dust, not enderium
         event.remove({ type: "nuclearcraft:manufactory", output: "thermal:enderium_dust" })
         event.remove({ type: "nuclearcraft:manufactory", output: "#forge:dusts/enderium" })
-        event.custom({
+        custom({
             "type": "nuclearcraft:manufactory",
             "input": [
                 {
@@ -163,7 +174,7 @@ ServerEvents.recipes(event => {
     // Mixing Alloys
     let moltenAlloy = function (fluidAlloy, fluid1, fluid2) {
         // Recipe ids are actually important here since the id that comes later in alphabetical order is the one that is prioritized
-        event.custom({
+        custom({
             "type": "create:mixing",
             "ingredients": [
                 { "amount": 2, "fluid": fluid1 },
@@ -175,41 +186,36 @@ ServerEvents.recipes(event => {
             processingTime: 1
         }).id(`kubejs:mixing/${fluidAlloy}_2`)
     }
-    moltenAlloy("molten_brass", "tconstruct:molten_copper", "tconstruct:molten_zinc")
-    moltenAlloy("molten_constantan", "tconstruct:molten_copper", "tconstruct:molten_nickel")
-    moltenAlloy("molten_rose_gold", "tconstruct:molten_copper", "tconstruct:molten_gold")
-    moltenAlloy("molten_electrum", "tconstruct:molten_silver", "tconstruct:molten_gold")
+    if (hasTcon) {
+        moltenAlloy("molten_brass", "tconstruct:molten_copper", "tconstruct:molten_zinc")
+        moltenAlloy("molten_constantan", "tconstruct:molten_copper", "tconstruct:molten_nickel")
+        moltenAlloy("molten_rose_gold", "tconstruct:molten_copper", "tconstruct:molten_gold")
+        moltenAlloy("molten_electrum", "tconstruct:molten_silver", "tconstruct:molten_gold")
+    }
     // remove existing smelter recipes because they accept dusts
     event.remove({ id: "thermal:machines/smelter/smelter_alloy_constantan" })
     event.remove({ id: "thermal:machines/smelter/smelter_alloy_electrum" })
     event.remove({ id: "thermal:machines/smelter/smelter_alloy_netherite" })
     // alloy smelter recipes
     thermalRecipes.smelter(Item.of("create:brass_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/zinc"])
-    thermalRecipes.smelter(Item.of("tconstruct:rose_gold_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/gold"])
-    thermalRecipes.smelter(Item.of("thermal:constantan_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/nickel"])
-    thermalRecipes.smelter(Item.of(getPreferredItemFromTag("forge:ingots/electrum"), 2), ["#forge:ingots/silver", "#forge:ingots/gold"])
-    thermalRecipes.smelter(Item.of("minecraft:netherite_ingot", 1), [Item.of("#forge:ingots/netherite_scrap", 4), Item.of("#forge:ingots/gold", 4)])
-    // bronze
-    thermalRecipes.smelter("3x thermal:bronze_ingot", [Item.of("minecraft:copper_ingot", 3), "#forge:sand"])
-
-    // Nickel Compound
-    event.shapeless("kubejs:nickel_compound", ["thermal:nickel_ingot", "thermal:iron_dust", "thermal:iron_dust", "thermal:iron_dust", "thermal:iron_dust"])
-    thermalRecipes.smelter(["kubejs:invar_compound", "kubejs:invar_compound"], ["thermal:nickel_ingot", "minecraft:iron_ingot"])
-    // Invar Compound
-    event.blasting("kubejs:invar_compound", "kubejs:nickel_compound")
-    { // Invar ingots
-        let s = "kubejs:invar_compound"
+    if (hasThermal) {
+        if (hasTcon) thermalRecipes.smelter(Item.of("tconstruct:rose_gold_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/gold"])
+        thermalRecipes.smelter(Item.of("thermal:constantan_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/nickel"])
+        thermalRecipes.smelter(Item.of(getPreferredItemFromTag("forge:ingots/electrum"), 2), ["#forge:ingots/silver", "#forge:ingots/gold"])
+        thermalRecipes.smelter("3x thermal:bronze_ingot", [Item.of("minecraft:copper_ingot", 3), "#forge:sand"])
+        event.shapeless("kubejs:nickel_compound", ["thermal:nickel_ingot", "thermal:iron_dust", "thermal:iron_dust", "thermal:iron_dust", "thermal:iron_dust"])
+        thermalRecipes.smelter(["kubejs:invar_compound", "kubejs:invar_compound"], ["thermal:nickel_ingot", "minecraft:iron_ingot"])
         event.recipes.create.sequenced_assembly([
             "thermal:invar_ingot",
         ], "kubejs:invar_compound", [
-            event.recipes.create.pressing(s, s)
-        ]).transitionalItem(s)
-            .loops(16)
-            .id("kubejs:invar")
+            event.recipes.create.pressing("kubejs:invar_compound", "kubejs:invar_compound")
+        ]).transitionalItem("kubejs:invar_compound").loops(16).id("kubejs:invar")
     }
+    thermalRecipes.smelter(Item.of("minecraft:netherite_ingot", 1), [Item.of("#forge:ingots/netherite_scrap", 4), Item.of("#forge:ingots/gold", 4)])
+    event.blasting("kubejs:invar_compound", "kubejs:nickel_compound")
 
     // smeltery alloys
-    event.custom({
+    custom({
         "type": "tconstruct:alloy",
         "inputs": [
             { "name": "tconstruct:molten_silver", "amount": 90 },
@@ -222,7 +228,7 @@ ServerEvents.recipes(event => {
         },
         "temperature": 1000
     })
-    event.custom({
+    custom({
         "type": "tconstruct:alloy",
         "inputs": [
             { "name": "tconstruct:molten_silver", "amount": 90 },
@@ -235,7 +241,7 @@ ServerEvents.recipes(event => {
         },
         "temperature": 1000
     })
-    event.custom({
+    custom({
         "type": "tconstruct:alloy",
         "inputs": [
             // A2: bronze is 9:1 copper/tin, no glass
@@ -251,7 +257,7 @@ ServerEvents.recipes(event => {
 
     // Thermal alloys
     if (hasThermal) {
-        event.custom({
+        custom({
             "type": "thermal:refinery",
             "ingredient": {
                 "fluid": "thermal:glowstone",
@@ -265,7 +271,7 @@ ServerEvents.recipes(event => {
             "energy": 2000
         })
 
-        event.custom({
+        custom({
             "type": "thermal:refinery",
             "ingredient": {
                 "fluid": "thermal:redstone",
@@ -319,8 +325,8 @@ ServerEvents.recipes(event => {
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_smelting" })
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_blasting" })
 
-    const stone = Item.of("minecraft:cobblestone", 1).withChance(.5)
-    let experience = Item.of("create:experience_nugget", 1).withChance(0.75)
+    const stone = CreateItem.of("minecraft:cobblestone", 0.5)
+    let experience = CreateItem.of("create:experience_nugget", 0.75)
 
     let dust_process = (materialName, byproduct, ByproductName) => {
         let crushedOre = "create:crushed_raw_" + materialName
@@ -416,25 +422,25 @@ ServerEvents.recipes(event => {
 
         // 'concentrated ore' to crushed ore
         event.recipes.create.milling([Item.of(crushedOre, 5)], rawOreTag).id("kubejs:ore_processing/milling/raw_ore/" + materialName)
-        event.recipes.create.crushing([Item.of(crushedOre, 5), Item.of(crushedOre, 2).withChance(0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
+        event.recipes.create.crushing([Item.of(crushedOre, 5), CreateItem.of(Item.of(crushedOre, 2), 0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
 
         // ore to crushed ore
-        event.recipes.create.crushing([Item.of(crushedOre, 3), Item.of(crushedOre, 1).withChance(0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
-        thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
+        event.recipes.create.crushing([Item.of(crushedOre, 3), CreateItem.of(crushedOre, 0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
+        if (hasThermal) thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
         // event.recipes.occultism.crushing(Item.of(dust, 3), Item.of(crushedOre), 200, -1, false).id(`kubejs:occultism/crushing/${materialName}`)
 
         // crushed ore to nuggets
         event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
-        event.recipes.create.splashing([Item.of(nugget, 2), Item.of(nuggetByproduct, 1).withChance(0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
+        event.recipes.create.splashing([Item.of(nugget, 2), CreateItem.of(Item.of(nuggetByproduct, 1), 0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
 
         // crushed ore to ore dust
         event.recipes.create.milling([Item.of(dust, 3)], crushedOre).id("kubejs:ore_processing/milling/crushed/" + materialName)
-        event.recipes.create.crushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
-        thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
+        event.recipes.create.crushing([Item.of(dust, 3), CreateItem.of(Item.of(dust, 3), 0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
+        if (hasThermal) thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
         // A2: nuclearcraft clean slurry to dust, tweak to even out the ore amounts
         let cleanSlurryTag = "forge:" + materialName + "_clean_slurry"
         event.remove({ type: "nuclearcraft:crystallizer", output: dust })
-        event.custom({
+        custom({
             "type": "nuclearcraft:crystallizer",
             "inputFluids": [
                 {
@@ -457,13 +463,15 @@ ServerEvents.recipes(event => {
         event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id("kubejs:ore_processing/smelting/dust/" + materialName)
 
         // ore dust to fluid
-        thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)
+        if (hasThermal && hasTcon) thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)
         // AE2 -> RS port: matter balls are gone, paraffin wax is the same stand-in used for matter plastics
-        if (Platform.isLoaded("ae2")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
-        else if (Platform.isLoaded("immersivepetroleum")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "immersivepetroleum:paraffin_wax"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
+        let fluidNs = fluid.split(":")[0]
+        let fluidOk = fluidNs === "kubejs" || Platform.isLoaded(fluidNs)
+        if (fluidOk && Platform.isLoaded("ae2")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
+        else if (fluidOk && Platform.isLoaded("immersivepetroleum")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "immersivepetroleum:paraffin_wax"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
         // A2: NC melter
         event.remove({ type: "nuclearcraft:melter", input: dustTag })
-        event.custom({
+        custom({
             "type": "nuclearcraft:melter",
             "input": [
                 {
@@ -481,7 +489,7 @@ ServerEvents.recipes(event => {
             "timeModifier": 1.0
         })
         // NC melter direct ore melting
-        event.custom({
+        custom({
             "type": "nuclearcraft:melter",
             "input": [
                 {
@@ -500,7 +508,7 @@ ServerEvents.recipes(event => {
         })
         // ingots too I guess
         event.remove({ type: "nuclearcraft:melter", input: ingotTag })
-        event.custom({
+        custom({
             "type": "nuclearcraft:melter",
             "input": [
                 {
@@ -523,7 +531,7 @@ ServerEvents.recipes(event => {
 
         // melting crushed ores to nuggets
         if (hasThermal) {
-            event.custom({
+            custom({
                 "type": "thermal:smelter",
                 "ingredient": { "item": crushedOre },
                 "result": [
@@ -537,7 +545,7 @@ ServerEvents.recipes(event => {
         }
 
         // melting ore dusts to fluid
-        event.custom({
+        custom({
             "type": "tconstruct:melting",
             "ingredient": { "tag": dustTag.slice(1) },
             "result": { "fluid": fluid, "amount": 30 },
@@ -589,7 +597,7 @@ ServerEvents.recipes(event => {
 
     // Other Tweaks
     /* A2: not necessary?
-    event.custom({
+    custom({
         "type": "tconstruct:ore_melting",
         "ingredient": {
             "tag": "forge:ores/cobalt"
@@ -612,7 +620,7 @@ ServerEvents.recipes(event => {
 
     // A2: netherite redone below
     /*
-    event.custom({
+    custom({
         "type": "tconstruct:ore_melting",
         "ingredient": {
             "tag": "forge:ores/netherite_scrap"
@@ -638,7 +646,7 @@ ServerEvents.recipes(event => {
     */
 
     // metal recycling
-    event.custom({
+    custom({
         "type": "tconstruct:melting",
         "ingredient": { "tag": "kubejs:recycling/iron" },
         "result": {
@@ -649,7 +657,7 @@ ServerEvents.recipes(event => {
         "time": 40
     })
 
-    event.custom({
+    custom({
         "type": "tconstruct:melting",
         "ingredient": { "tag": "kubejs:circuit_press" },
         "result": {
@@ -664,7 +672,7 @@ ServerEvents.recipes(event => {
     let rodMats = ["brass", "copper", "electrum", "gold"]
     let wireMats = ["iron", "gold"]
     rodMats.forEach(e => {
-        event.custom({
+        custom({
             "type": "tconstruct:casting_table",
             "cast": {
                 "tag": "tconstruct:casts/multi_use/rod"
@@ -677,7 +685,7 @@ ServerEvents.recipes(event => {
             "cooling_time": 1
         }).id(`kubejs:smeltery/casting/metal/${e}/rod_gold_cast`)
 
-        event.custom({
+        custom({
             "type": "tconstruct:casting_table",
             "cast": {
                 "tag": `tconstruct:casts/single_use/rod`
@@ -692,7 +700,7 @@ ServerEvents.recipes(event => {
         }).id(`kubejs:smeltery/casting/metal/${e}/rod_sand_cast`)
     })
     wireMats.forEach(e => {
-        event.custom({
+        custom({
             "type": "tconstruct:casting_table",
             "cast": {
                 "tag": "tconstruct:casts/multi_use/wire"
@@ -705,7 +713,7 @@ ServerEvents.recipes(event => {
             "cooling_time": 1
         }).id(`kubejs:smeltery/casting/metal/${e}/wire_gold_cast`)
 
-        event.custom({
+        custom({
             "type": "tconstruct:casting_table",
             "cast": {
                 "tag": `tconstruct:casts/single_use/wire`
@@ -728,7 +736,7 @@ ServerEvents.recipes(event => {
         let ingotTag = "#forge:ingots/" + metal
         // dust melting
         event.remove({ type: "nuclearcraft:melter", input: dustTag })
-        event.custom({
+        custom({
             "type": "nuclearcraft:melter",
             "input": [
                 {
@@ -747,7 +755,7 @@ ServerEvents.recipes(event => {
         })
         // ingot melting
         event.remove({ type: "nuclearcraft:melter", input: ingotTag })
-        event.custom({
+        custom({
             "type": "nuclearcraft:melter",
             "input": [
                 {
@@ -786,11 +794,11 @@ ServerEvents.recipes(event => {
     // milling/grinding: 2 scrap
     event.recipes.create.milling(Item.of("minecraft:netherite_scrap", 2), "minecraft:ancient_debris")
     // crushing: 2 scrap + 50% chance of 3 + exp + gold byproduct
-    event.recipes.create.crushing([Item.of("minecraft:netherite_scrap", 2), Item.of("minecraft:netherite_scrap", 1).withChance(0.5), experience, Item.of("minecraft:gold_nugget").withChance(0.5)], "minecraft:ancient_debris")
+    event.recipes.create.crushing([Item.of("minecraft:netherite_scrap", 2), CreateItem.of(Item.of("minecraft:netherite_scrap", 1), 0.5), experience, CreateItem.of("minecraft:gold_nugget", 0.5)], "minecraft:ancient_debris")
     // pulverizing: 3 scrap + gold byproduct
-    thermalRecipes.pulverizer([Item.of("minecraft:netherite_scrap").withChance(3.0), Item.of("minecraft:gold_nugget").withChance(0.2)], "minecraft:ancient_debris", 0.2)
+    if (hasThermal) thermalRecipes.pulverizer([Item.of("minecraft:netherite_scrap").withChance(3.0), Item.of("minecraft:gold_nugget").withChance(0.2)], "minecraft:ancient_debris", 0.2)
     // melting: 2.66 scrap or 2 scrap + byproducts
-    event.custom({
+    custom({
         "type": "tconstruct:ore_melting",
         "ingredient": {
             "tag": "forge:ores/netherite_scrap"
@@ -813,7 +821,7 @@ ServerEvents.recipes(event => {
             }
         ]
     })
-    event.custom({
+    custom({
         "type": "nuclearcraft:melter",
         "input": [
             {
@@ -830,7 +838,7 @@ ServerEvents.recipes(event => {
         "radiation": 1.0,
         "timeModifier": 4.0
     })
-    event.custom({
+    custom({
         "type": "embers:melting",
         "bonus": {
             "amount": 30,
@@ -847,7 +855,7 @@ ServerEvents.recipes(event => {
 
     // processing storage blocks
     // block from casting basin
-    event.custom({
+    custom({
         "type": "tconstruct:casting_basin",
         "cooling_time": 221,
         "fluid": {
@@ -859,7 +867,7 @@ ServerEvents.recipes(event => {
         }
     })
     // molten from block
-    event.custom({
+    custom({
         "type": "tconstruct:melting",
         "ingredient": {
             "tag": "forge:storage_blocks/netherite_scrap"
@@ -871,7 +879,7 @@ ServerEvents.recipes(event => {
         "temperature": 1175,
         "time": 221
     })
-    event.custom({
+    custom({
         "type": "embers:melting",
         "input": {
             "tag": "forge:storage_blocks/netherite_scrap"
@@ -884,7 +892,7 @@ ServerEvents.recipes(event => {
 
     // processing nuggets
     // molten from nugget
-    event.custom({
+    custom({
         "type": "embers:melting",
         "input": {
             "tag": "forge:nuggets/netherite_scrap"
@@ -895,7 +903,7 @@ ServerEvents.recipes(event => {
         }
     })
     // nugget from molten
-    event.custom({
+    custom({
         "type": "embers:stamping",
         "fluid": {
             "amount": 10,
@@ -911,7 +919,7 @@ ServerEvents.recipes(event => {
 
     // processing scrap
     // molten from scrap
-    event.custom({
+    custom({
         "type": "embers:melting",
         "input": {
             "tag": "forge:ingots/netherite_scrap"
@@ -922,7 +930,7 @@ ServerEvents.recipes(event => {
         }
     })
     // scrap from molten
-    event.custom({
+    custom({
         "type": "embers:stamping",
         "fluid": {
             "amount": 90,
@@ -954,7 +962,7 @@ ServerEvents.recipes(event => {
     ncMetals.forEach(metal => {
         function ncCast(value, key, map) {
             if (!(metal == "anthralite" && key == "plate")) {// doesn't exist
-                event.custom({
+                custom({
                     "type": "tconstruct:casting_table",
                     "cast": {
                         "tag": "tconstruct:casts/multi_use/" + key
@@ -966,7 +974,7 @@ ServerEvents.recipes(event => {
                     "result": { "tag": "forge:" + key + "s/" + metal },
                     "cooling_time": 1
                 }).id("kubejs:smeltery/casting/metal/" + metal + "/" + key + "_gold_cast")
-                event.custom({
+                custom({
                     "type": "tconstruct:casting_table",
                     "cast": {
                         "tag": "tconstruct:casts/single_use/" + key
@@ -981,7 +989,7 @@ ServerEvents.recipes(event => {
             }
         }
         recipeMap.forEach(ncCast)
-        event.custom({
+        custom({
             "type": "tconstruct:casting_basin",
             "cooling_time": 221,
             "fluid": {

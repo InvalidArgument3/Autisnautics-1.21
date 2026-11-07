@@ -15,13 +15,8 @@ function ifiniDeploying(event, output, input, tool) {
 
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
-    const noopThermalBuilder = {
-        id() { return this },
-        energy() { return this }
-    }
-    const thermalRecipes = hasThermal
-        ? event.recipes.thermal
-        : new Proxy({}, { get: () => () => noopThermalBuilder })
+    // Rhino in this KubeJS build has no Proxy. Only touch thermal inside hasThermal.
+    const thermalRecipes = hasThermal ? event.recipes.thermal : null
 
     /**
 	 * Used to store the name of an item when making sequenced assembly recipes
@@ -812,7 +807,7 @@ ServerEvents.recipes(event => {
     }).id("kubejs:coke_cutting")
 
     event.recipes.create.splashing([
-        Item.of("kubejs:sand_ball").withChance(0.125)
+        CreateItem.of("kubejs:sand_ball", 0.125)
     ], "minecraft:sandstone")
     if (hasThermal) {
         thermalRecipes.bottler("kubejs:sand_ball", [Fluid.of("minecraft:water", 50), "#forge:sand/colorless"], 0, 1000)

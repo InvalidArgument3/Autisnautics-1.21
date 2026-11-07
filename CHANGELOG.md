@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.78]
+- KubeJS recipe scripts no longer crash the recipe callback when Thermal is absent (Proxy stub), when Create `.withChance()` is gone on 1.21, or when optional mods and items are missing (Tinkers, Create Deco cast iron nugget, Clockwork physics infuser, `substrate_red`, Create Enchantment Industry disenchanter, old NuclearCraft machine JSON skipped)
+- Live silicon and Refined Storage recipes in `chapters.js` can register
+
 ## [0.0.77]
 - add **Create Control Panels 0.2.3** (CurseForge `create-control-panels`, `create_controlling-neoforge-0.2.3-1.21.1.jar`, both sides). Needs Create 6.0.8 or newer; Create 6.0.10 is already in the pack
 
