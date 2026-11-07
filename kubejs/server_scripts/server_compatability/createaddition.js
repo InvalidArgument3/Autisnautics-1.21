@@ -94,7 +94,10 @@ if (Platform.isLoaded("createaddition")) {
         event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
     })
 
-    ServerEvents.blockLootTables(event => {
-        event.addSimpleBlock("createaddition:electrum_block")
+    ServerEvents.generateData("after_mods", event => {
+        event.json("createaddition:loot_table/blocks/electrum_block", {
+            type: "minecraft:block",
+            pools: [{ rolls: 1, entries: [{ type: "minecraft:item", name: "createaddition:electrum_block" }] }]
+        })
     })
 }

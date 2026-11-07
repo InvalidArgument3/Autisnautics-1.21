@@ -1,7 +1,6 @@
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
     const skipRecipe = { id() { return this } }
-    const kubeCustom = event.custom
     const custom = (json) => {
         let type = json && json.type
         if (typeof type === "string") {
@@ -9,7 +8,7 @@ ServerEvents.recipes(event => {
             // Old type ids (tconstruct, embers, nuclearcraft) whose mod is not loaded.
             if (ns !== "minecraft" && ns !== "kubejs" && !Platform.isLoaded(ns)) return skipRecipe
         }
-        return kubeCustom(json)
+        return event.custom(json)
     }
 
     // //create stuff & additions wrangling
@@ -411,7 +410,7 @@ ServerEvents.recipes(event => {
     })
     // synthetic glowing mushroom recipe: 50mb of Potion of Glowing on a brown mushroom
     if (Item.exists("nuclearcraftneohaul:glowing_mushroom")) {
-        event.recipes.create.filling("nuclearcraftneohaul:glowing_mushroom", ["minecraft:brown_mushroom", Fluid.of("create:potion", 50, '{Potion:"alexscaves:glowing"}')])
+        event.recipes.create.filling("nuclearcraftneohaul:glowing_mushroom", ["minecraft:brown_mushroom", Fluid.of('create:potion[create:potion_fluid_bottle_type="regular",minecraft:potion_contents={potion:"alexscaves:glowing"}]', 50)])
     }
     // potion of glowing recipe in startup_scripts
 
@@ -817,14 +816,16 @@ ServerEvents.recipes(event => {
         zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
         // add superior automated versions of some common recipes
         // coils: deploy stick on wire, 3:1 instead of 4:1
-        event.recipes.create.deploying("powergrid:copper_coil", [Item.of("#forge:wires/copper", 3), "minecraft:stick"])
-        event.recipes.create.deploying("powergrid:resistive_coil", [Item.of("#forge:wires/iron", 3), "minecraft:stick"])
+        event.recipes.create.deploying("powergrid:copper_coil", ["3x #forge:wires/copper", "minecraft:stick"])
+        event.recipes.create.deploying("powergrid:resistive_coil", ["3x #forge:wires/iron", "minecraft:stick"])
         // connectors: filling metal on substrate, 10:1 instead of 30:1
-        event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
-        event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
+        if (Platform.isLoaded("tconstruct")) {
+            event.recipes.create.filling("powergrid:wire_connector", ["create:andesite_alloy", Fluid.of("tconstruct:molten_copper", 10)])
+            event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
+        }
         // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
         event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
-        event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), [Item.of("#forge:wires/copper", 2), "kubejs:rubber"])
+        event.recipes.create.deploying(Item.of("powergrid:insulated_copper_wire", 2), ["2x #forge:wires/copper", "kubejs:rubber"])
         event.recipes.create.deploying(Item.of("powergrid:copper_cord", 2), [Item.of("powergrid:insulated_copper_wire", 4), "kubejs:rubber"])
     }
 
@@ -874,7 +875,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying("projectred_transmission:white_insulated_wire", ["projectred_transmission:red_alloy_wire", "minecraft:white_wool"])
     }
     // automating createaddition barbed wire and IE razor wire
-    event.recipes.create.deploying("createaddition:barbed_wire", [Item.of("#forge:wires/iron", 2), "#forge:wires/iron"])
+    event.recipes.create.deploying("createaddition:barbed_wire", ["2x #forge:wires/iron", "#forge:wires/iron"])
     event.recipes.create.deploying("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#forge:wires/steel"])
 
 

@@ -38,7 +38,9 @@ ServerEvents.recipes(event => {
     // A2: electrum gear is useless
     // event.replaceInput({ id: "thermal:parts/electrum_gear" }, "#forge:ingots/constantan", "#forge:ingots/electrum")
 
-    event.replaceInput({ id: "thermal:storage/electrum_ingot_from_block" }, "thermal:electrum_block", "#forge:storage_blocks/electrum")
+    if (Platform.isLoaded("thermal")) {
+        event.replaceInput({ id: "thermal:storage/electrum_ingot_from_block" }, "thermal:electrum_block", "#forge:storage_blocks/electrum")
+    }
 
     // A2: remove useless parts while we're at it
     event.remove({ output: "#forge:gears/tin" })
@@ -70,7 +72,6 @@ ServerEvents.recipes(event => {
         smelter: skipCall,
         crucible: skipCall
     }
-    const kubeCustom = event.custom
     const custom = (json) => {
         let type = json && json.type
         if (typeof type === "string") {
@@ -78,7 +79,7 @@ ServerEvents.recipes(event => {
             // Old type ids (tconstruct, embers, nuclearcraft) whose mod is not loaded.
             if (ns !== "minecraft" && ns !== "kubejs" && !Platform.isLoaded(ns)) return skipRecipe
         }
-        return kubeCustom(json)
+        return event.custom(json)
     }
 
     // Thermal recipes for zinc
@@ -210,8 +211,8 @@ ServerEvents.recipes(event => {
         ], "kubejs:invar_compound", [
             event.recipes.create.pressing("kubejs:invar_compound", "kubejs:invar_compound")
         ]).transitionalItem("kubejs:invar_compound").loops(16).id("kubejs:invar")
+        thermalRecipes.smelter(Item.of("minecraft:netherite_ingot", 1), [Item.of("minecraft:netherite_scrap", 4), Item.of("minecraft:gold_ingot", 4)])
     }
-    thermalRecipes.smelter(Item.of("minecraft:netherite_ingot", 1), [Item.of("#forge:ingots/netherite_scrap", 4), Item.of("#forge:ingots/gold", 4)])
     event.blasting("kubejs:invar_compound", "kubejs:nickel_compound")
 
     // smeltery alloys
@@ -420,23 +421,25 @@ ServerEvents.recipes(event => {
             { id: /^quark:tweaks\/blasting\/raw.*/ }
         ])
 
-        // 'concentrated ore' to crushed ore
-        event.recipes.create.milling([Item.of(crushedOre, 5)], rawOreTag).id("kubejs:ore_processing/milling/raw_ore/" + materialName)
-        event.recipes.create.crushing([Item.of(crushedOre, 5), CreateItem.of(Item.of(crushedOre, 2), 0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
+        // Missing crushed items (scguns anthralite) must not abort the rest of the recipe pass.
+        if (Item.exists(crushedOre)) {
+            // 'concentrated ore' to crushed ore
+            event.recipes.create.milling([Item.of(crushedOre, 5)], rawOreTag).id("kubejs:ore_processing/milling/raw_ore/" + materialName)
+            event.recipes.create.crushing([Item.of(crushedOre, 5), CreateItem.of(Item.of(crushedOre, 2), 0.5)], rawOreTag).id("kubejs:ore_processing/crushing/raw_ore/" + materialName)
 
-        // ore to crushed ore
-        event.recipes.create.crushing([Item.of(crushedOre, 3), CreateItem.of(crushedOre, 0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
-        if (hasThermal) thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
-        // event.recipes.occultism.crushing(Item.of(dust, 3), Item.of(crushedOre), 200, -1, false).id(`kubejs:occultism/crushing/${materialName}`)
+            // ore to crushed ore
+            event.recipes.create.crushing([Item.of(crushedOre, 3), CreateItem.of(crushedOre, 0.5), experience, stone], oreTag).id("kubejs:ore_processing/crushing/ore/" + materialName)
+            if (hasThermal) thermalRecipes.pulverizer([Item.of(crushedOre).withChance(4.5), Item.of("minecraft:gravel").withChance(0.2)], oreTag, 0.2).id("kubejs:ore_processing/pulverizing/ore/" + materialName)
 
-        // crushed ore to nuggets
-        event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
+            // crushed ore to nuggets
+            event.smelting(Item.of(nugget, 3), crushedOre).id("kubejs:ore_processing/smelting/crushed/" + materialName)
+
+            // crushed ore to ore dust
+            event.recipes.create.milling([Item.of(dust, 3)], crushedOre).id("kubejs:ore_processing/milling/crushed/" + materialName)
+            event.recipes.create.crushing([Item.of(dust, 3), CreateItem.of(Item.of(dust, 3), 0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
+            if (hasThermal) thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
+        }
         event.recipes.create.splashing([Item.of(nugget, 2), CreateItem.of(Item.of(nuggetByproduct, 1), 0.85)], dustTag).id("kubejs:ore_processing/splashing/dust/" + materialName)
-
-        // crushed ore to ore dust
-        event.recipes.create.milling([Item.of(dust, 3)], crushedOre).id("kubejs:ore_processing/milling/crushed/" + materialName)
-        event.recipes.create.crushing([Item.of(dust, 3), CreateItem.of(Item.of(dust, 3), 0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
-        if (hasThermal) thermalRecipes.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
         // A2: nuclearcraft clean slurry to dust, tweak to even out the ore amounts
         let cleanSlurryTag = "forge:" + materialName + "_clean_slurry"
         event.remove({ type: "nuclearcraft:crystallizer", output: dust })
@@ -466,7 +469,12 @@ ServerEvents.recipes(event => {
         if (hasThermal && hasTcon) thermalRecipes.crucible(Fluid.of(fluid, 30), dustTag, 0, 3000).id("kubejs:ore_processing/crucible/dust/" + materialName)
         // AE2 -> RS port: matter balls are gone, paraffin wax is the same stand-in used for matter plastics
         let fluidNs = fluid.split(":")[0]
-        let fluidOk = fluidNs === "kubejs" || Platform.isLoaded(fluidNs)
+        let fluidOk = false
+        try {
+            fluidOk = (fluidNs === "kubejs" || Platform.isLoaded(fluidNs)) && Fluid.exists(fluid)
+        } catch (e) {
+            fluidOk = false
+        }
         if (fluidOk && Platform.isLoaded("ae2")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "ae2:matter_ball"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
         else if (fluidOk && Platform.isLoaded("immersivepetroleum")) event.recipes.create.mixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), "immersivepetroleum:paraffin_wax"]).superheated().id("kubejs:ore_processing/mixing/dust/" + materialName)
         // A2: NC melter

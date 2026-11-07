@@ -3,9 +3,16 @@
 // or always once per JVM if AUTIS_DUMP_ALWAYS (see below).
 const FLAG = 'kubejs/exported/.dump_now'
 const ALWAYS = false // touch kubejs/exported/.dump_now to dump on next ServerEvents.loaded
-// KubeJS 2101 UtilsWrapper has no fileExists/deleteFile. NIO answers a touched flag file, including an empty one.
-const DumpFiles = Java.loadClass('java.nio.file.Files')
-const DumpPaths = Java.loadClass('java.nio.file.Paths')
+
+// KubeJS 2101 blocks java.nio.file.Files and has no Utils.fileExists.
+// JsonIO.read returns null when the flag is absent, and throws if the touched file is empty.
+function dumpFlagPresent() {
+    try {
+        return JsonIO.read(FLAG) != null
+    } catch (e) {
+        return true
+    }
+}
 
 function dumpRegistries(server) {
     const outDir = 'kubejs/exported'
@@ -107,22 +114,13 @@ function dumpRegistries(server) {
 }
 
 ServerEvents.loaded(event => {
-    let want = ALWAYS
-    if (!want) {
-        try {
-            want = DumpFiles.isRegularFile(DumpPaths.get(FLAG))
-        } catch (e) {
-            console.error('[autis-dump] flag check failed: ' + e)
-            return
-        }
-    }
-    if (!want) return
+    if (!ALWAYS && !dumpFlagPresent()) return
     try {
         dumpRegistries(event.server)
     } catch (e) {
         console.error('[autis-dump] failed: ' + e)
     }
     try {
-        DumpFiles.deleteIfExists(DumpPaths.get(FLAG))
+        JsonIO.write(FLAG, null)
     } catch (e) { /* ignore */ }
 })

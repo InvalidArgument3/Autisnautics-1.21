@@ -6,13 +6,9 @@ var Ingredient = {}
 var console = { info: function () {}, warn: function () {}, error: function (m) { throw new Error(String(m)) } }
 var Java = {
     loadClass: function (name) {
-        if (name === 'java.nio.file.Files') {
-            return {
-                isRegularFile: function () { return false },
-                deleteIfExists: function () { return false }
-            }
+        if (name.indexOf('java.nio.file.') === 0) {
+            throw new Error("Class is not allowed by class filter: " + name)
         }
-        if (name === 'java.nio.file.Paths') return { get: function () { return {} } }
         return function () {}
     }
 }

@@ -1,10 +1,8 @@
 ServerEvents.recipes(event => {
     // phantom membrane replacements
     if (Platform.isLoaded("railways")) {
-        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of("create:potion", 50, '{Potion:"minecraft:invisibility"}')])
-        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of("create:potion", 50, '{Potion:"minecraft:long_invisibility"}')])
-        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of("cofh_core:potion", 50, '{Potion:"minecraft:invisibility"}')])
-        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of("cofh_core:potion", 50, '{Potion:"minecraft:long_invisibility"}')])
+        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of('create:potion[create:potion_fluid_bottle_type="regular",minecraft:potion_contents={potion:"minecraft:invisibility"}]', 50)])
+        event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of('create:potion[create:potion_fluid_bottle_type="regular",minecraft:potion_contents={potion:"minecraft:long_invisibility"}]', 50)])
     }
 
     if (Platform.isLoaded("moreminecarts")) {
