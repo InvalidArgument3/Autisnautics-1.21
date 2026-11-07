@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.81]
+- Add **No Height Temperature 1.0.0** (`noheighttemp-1.0.0-local.jar`, required on client and server). Disables height-based biome temperature cooling, fixing unwanted snow at the raised surface after the +125 ocean and sky-island shift. Biome temperatures and northern cold biomes remain unchanged; existing snow and ice are not removed
+- Update shared client/server **Voxy** override from portal-LOD **ipa10h** to **ipa10i** (`0.2.17-alpha-sodium08-portal-lods-ipa10i`), matching the latest custom build installed in the client
+
 ## [0.0.80]
 - Custom Voxy 0.2.17-alpha is now included on the server as well as the client. Distant Horizons server config removed (the mod is not in the pack)
 
