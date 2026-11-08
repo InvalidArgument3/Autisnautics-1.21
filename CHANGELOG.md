@@ -1,4 +1,10 @@
 # Changelog
+## [Unreleased]
+- Rift cleanup and the manual repair command sit on the floor/ceiling slab spans from `2be80e19` (one disc per cell, carve limited to the slab). Those `lo`/`hi` values are not widened back to the older full-height ranges, and fluid sealing stays inside that slab
+- Rift exits are opened at generation for stack biomes that were missing from `#autisnautics:rift_all`: abyss `minecraft:deep_dark`, infernal and vanilla nether biomes, and the overworld and deepsea ocean, river, beach, and windswept biomes named in this repo's dimension files. The mask shape is unchanged. The late air feature still runs only where that boundary's sentinel is present, so bedrock and other solid caps inside the opening are removed during generation instead of waiting on a player visit. Nether and End build height are not defined in this repo, so their preset top planes are not retuned here
+- Rift cleanup no longer drops a job when `getChunkNow` is briefly null. It retries, then parks the chunk and keeps the v4/v3 marker. The marker is removed only after a pass observes the exit band clear. The script still does not load or generate chunks
+- Operators can preview one already loaded chunk with `/autisnautics_rift preview`. Applying a change requires a fresh token, an explicit block-id list, a cap, and the word `confirm`. Block entities are left in place. Nothing scans the world automatically. Reverting the scripts does not put removed blocks back
+
 ## [0.0.81]
 - Add **No Height Temperature 1.0.0** (`noheighttemp-1.0.0-local.jar`, required on client and server). Disables height-based biome temperature cooling, fixing unwanted snow at the raised surface after the +125 ocean and sky-island shift. Biome temperatures and northern cold biomes remain unchanged; existing snow and ice are not removed
 - Update shared client/server **Voxy** override from portal-LOD **ipa10h** to **ipa10i** (`0.2.17-alpha-sodium08-portal-lods-ipa10i`), matching the latest custom build installed in the client

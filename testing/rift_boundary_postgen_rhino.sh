@@ -17,10 +17,24 @@ needles = [
     "for (let f=0;f<task.faces.length;f++) {\n            let s=task.faces[f]",
     "let task=queue[head++]",
     "let before=Date.now(),result=sweep(task,deadline),spent=Date.now()-before",
+    '"dimension": "minecraft:overworld", "lo": -53, "hi": -27',
+    '"dimension": "infinite_abyss:first_layer", "lo": 103, "hi": 128, "anchor": 127',
+    '"dimension": "oceanworld:deepsea", "lo": 275, "hi": 302',
+    '"dimension": "minecraft:the_nether", "lo": 231, "hi": 256',
+]
+forbidden = [
+    '"hi": 640',
+    '"lo": 40, "hi": 128',
+    '"lo": 160, "hi": 320',
+    '"lo": 112, "hi": 256',
+    '"lo": 80, "hi": 384',
 ]
 for needle in needles:
     if needle not in text:
         sys.exit("missing Rhino-safe binding:\n" + needle)
+for needle in forbidden:
+    if needle in text:
+        sys.exit("wide pre-slab span returned:\n" + needle)
 if "const previous=recent[keyOf" in text:
     sys.exit("neighbor scan still redeclares const previous")
 print("binding scan ok")

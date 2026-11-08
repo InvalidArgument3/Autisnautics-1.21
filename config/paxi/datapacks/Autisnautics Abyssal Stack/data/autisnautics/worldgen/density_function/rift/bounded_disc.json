@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:clamp",
+  "input": {
+    "type": "minecraft:add",
+    "argument1": 0.25,
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": 0.0625,
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": 50,
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 59,
+            "argument2": {
+              "type": "lithostitched:cellular",
+              "grid_dimensions": {
+                "horizontal": 2236,
+                "vertical": 0
+              },
+              "jitter": 0.9,
+              "return_type": "cell_value",
+              "salt": 810457
+            }
+          }
+        },
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": -1,
+          "argument2": {
+            "type": "lithostitched:cellular",
+            "grid_dimensions": {
+              "horizontal": 2236,
+              "vertical": 0
+            },
+            "jitter": 0.9,
+            "return_type": "distance_1",
+            "salt": 810457
+          }
+        }
+      }
+    }
+  },
+  "min": 0,
+  "max": 1
+}
