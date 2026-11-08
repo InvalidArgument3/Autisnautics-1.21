@@ -17,7 +17,7 @@ needles = [
     "for (let f=0;f<task.faces.length;f++) {\n            let s=task.faces[f]",
     "let task=queue[head++]",
     "let before=Date.now(),result=sweep(task,deadline),spent=Date.now()-before",
-    '"dimension": "minecraft:overworld", "lo": -53, "hi": -27',
+    '"dimension": "minecraft:overworld", "lo": -153, "hi": -27',
     '"dimension": "infinite_abyss:first_layer", "lo": 103, "hi": 128, "anchor": 127',
     '"dimension": "oceanworld:deepsea", "lo": 275, "hi": 302',
     '"dimension": "minecraft:the_nether", "lo": 231, "hi": 256',
