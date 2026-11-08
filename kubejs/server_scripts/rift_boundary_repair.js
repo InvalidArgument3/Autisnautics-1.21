@@ -10,7 +10,7 @@
 // chunkX and chunkZ are chunk coordinates, not block coordinates.
 // Only the interior of that boundary's clear band is considered. The next boundary is not opened.
 // Y is clamped to the dimension build limits. The 2048 block cap stays; preview again and apply
-// the next batch. Do not raise the cap to clear a whole chunk in one call.
+// the next batch. A deepsea ceiling column through Y=319 can exceed 2048 non-air blocks in one chunk.
 ;(function () {
     const Pos = Java.loadClass('net.minecraft.core.BlockPos')
     const hardCap = 2048

@@ -1,4 +1,9 @@
 # Changelog
+## [Unreleased]
+- Deepsea ceiling of rift boundary 2_3 now reaches the top of that dimension. Density `max_exclusive` in `wrap_rift_2_3_oceanworld_deepsea.json` and the ceiling window of `dry_active_oceanworld_deepsea.json` moves from 302 to **320**. `min_inclusive` stays 275. The clean column covers Y=275 through Y=319. Deepsea `min_y` is -64 and height is 384, so Y=319 is the top block. That dimension has no bedrock roof. The deepsea floor at Y=-64, the portal plane at Y=300, and the disc are unchanged
+- The other stack faces already include the floor or ceiling block of their dimension, and those windows stay as they are: Overworld Y=-64, Abyss Y=0 and Y=127, Otherside Y=0 and Y=127 (height 128), Caves Y=-48 and Y=127, Infernal Y=-48 and Y=63, Nether Y=0 and Y=255 (height 256), Undergarden Y=-64 and Y=127 (height 192), End Y=383 (Nullscape height 384)
+- Already generated chunks do not change by themselves. `/autisnautics_rift` still caps one apply at 2048 blocks, so a full deepsea ceiling column may need another preview and apply. Reverting these files does not put removed blocks back
+
 ## [0.0.84]
 - Overworld side of rift boundary 0_1 now reaches the build bottom. Density `min_inclusive` in `wrap_rift_0_1_minecraft_overworld.json` and `dry_active_minecraft_overworld.json` moves from -53 to **-153**. `max_exclusive` stays -27. The clean column for that row covers Y=-64 through -28. Nominal -153 is below the Overworld `min_y` of -64, and block placement stays clamped to -64. The Abyss slab, every other boundary, and the portal plane at Y=-49 are unchanged
 - Postgen for that Overworld face uses `lo`/`clearLo` -153. Loops still clamp to the dimension minimum Y. The upper edge stays -27. The manual repair command is unchanged except a comment: the 2048 block cap stays, so a full column may need another preview and apply. Already generated columns do not change by themselves
