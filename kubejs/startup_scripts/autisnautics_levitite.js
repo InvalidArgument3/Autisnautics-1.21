@@ -56,7 +56,9 @@ NativeEvents.onEvent(Java.loadClass('net.neoforged.neoforge.event.tick.EntityTic
     // Aero drag .93 * vanilla/ItemPhysic .98 = .9114.
     // v_next = .9114*v + .0068 -> .07675 post-tick, .07138 at movement (~1.43 blocks/s upward).
     const vy = Math.min(0.080, v.y + 0.0068);
-    entity.setDeltaMovement(v.x * 0.92, vy, v.z * 0.92);
+    // KubeJS remaps setDeltaMovement(double, double, double) to setMotion. The Vec3 overload
+    // keeps the Java name, so three numbers throw EvaluatorException every entity tick.
+    entity.setMotion(v.x * 0.92, vy, v.z * 0.92);
     if (!entity.level().isClientSide() && entity.getY() > entity.level().getMaxBuildHeight() + 64) {
         entity.discard();
     }
