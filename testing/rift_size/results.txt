@@ -7,14 +7,14 @@ wide square [-100000, 100000] is center enumeration only
 
 boundary 1  mask_0_1  overworld floor / infinite_abyss:first_layer ceiling
   shift x 0 z 0
-  Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
+  Y floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127
   centers in ±20000: 319   per 5,000,000 blocks: 0.9968
   centers in ±100000: 8000   per 5,000,000 blocks: 1.0000
   width min 101 max 217   min edge gap 108.90 blocks
   raster points 25010001 open 102706 distinct rifts hit 321 distance mismatches 0
-  nearest 1 center -636 1300 radius 77.363 width 155 dist_origin 1447.2 rim_dist 1369.9 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
-  nearest 2 center 1286 -765 radius 58.116 width 117 dist_origin 1496.3 rim_dist 1438.2 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
-  nearest 3 center 1784 882 radius 56.568 width 113 dist_origin 1990.1 rim_dist 1933.6 Y floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127
+  nearest 1 center -636 1300 radius 77.363 width 155 dist_origin 1447.2 rim_dist 1369.9 Y floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127
+  nearest 2 center 1286 -765 radius 58.116 width 117 dist_origin 1496.3 rim_dist 1438.2 Y floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127
+  nearest 3 center 1784 882 radius 56.568 width 113 dist_origin 1990.1 rim_dist 1933.6 Y floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127
 
 boundary 2  mask_1_2  infinite_abyss:first_layer floor / deeperdarker:otherside ceiling
   shift x 4096 z 7193

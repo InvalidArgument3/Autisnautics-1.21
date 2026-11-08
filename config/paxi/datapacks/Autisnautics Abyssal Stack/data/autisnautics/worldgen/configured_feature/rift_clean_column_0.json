@@ -3,964 +3,959 @@
   "config": {
     "features": [
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -12,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -11,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -10,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -9,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -8,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -7,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -6,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -5,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -4,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -3,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -2,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": -1,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 0,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 1,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 2,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 3,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 4,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 5,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 6,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 7,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 8,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 9,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 10,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 11,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 12,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 13,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 14,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 15,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 16,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 17,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 18,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 19,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 20,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 21,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 22,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 23,
             "z_offset": 0
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
           }
         ]
       },
       {
-        "feature": "autisnautics:rift_clear_block",
+        "feature": "autisnautics:rift_water_block",
         "placement": [
           {
             "type": "lithostitched:offset",
             "x_offset": 0,
             "y_offset": 24,
             "z_offset": 0
-          },
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
           {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:matching_blocks",
-                "blocks": [
-                  "minecraft:air",
-                  "minecraft:cave_air",
-                  "minecraft:void_air",
-                  "minecraft:water"
-                ]
-              }
-            }
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 25,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 26,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 27,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 28,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 29,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 30,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 31,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 32,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 33,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 34,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 35,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 36,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 37,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 38,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 39,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 40,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 41,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 42,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 43,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 44,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 45,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 46,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 47,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 48,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 49,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 50,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 51,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 52,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 53,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 54,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 55,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 56,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 57,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 58,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 59,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 60,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 61,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 62,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 63,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 64,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 65,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 66,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 67,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 68,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 69,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 70,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 71,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 72,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 73,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_water_block",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 74,
+            "z_offset": 0
           }
         ]
       }
