@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.83]
+- Immersive Portals Overworld stack entry: `bottomY` -52 → **-49** in `config/immersive_portals.json` `dimStackPreset`. The Abyss entry is unchanged and still has no `topY` or `bottomY`. No carve, mask, radius, or roof rule was edited. This is the generation preset for a new stack link. Portals already saved in a world are not moved by this file
+
 ## [0.0.82]
 - KubeJS server scripts load on this pack again. The item dump uses `JsonIO` instead of the missing `Utils.fileExists` and the blocked `java.nio.file.Files` API. Block loot is written with `ServerEvents.generateData` because `ServerEvents.blockLootTables` is not on this KubeJS build. Recipe callbacks stay bound to the recipe event, skip Thermal, Tinkers, and fluids that are not installed, and use `let` where Rhino would redeclare a `const` inside a loop
 - Create 6 recipe JSON uses `id` and `count` results and `neoforge:single` fluid inputs. Tag counts are `3x #c:...` or repeated ingredients. The Create builder was turning some tags into fluid inputs with `amount: 1000`, so coke cake and the slab-to-plate cut are written as plain JSON. Lead casings use `immersiveengineering:plate_lead`. Chiseled copper and copper grates use the vanilla 1.21 items. The lapis printer uses `c:storage_blocks/lapis`. Sawdust uses `c:dusts/wood` (`immersiveengineering:dust_wood`)
