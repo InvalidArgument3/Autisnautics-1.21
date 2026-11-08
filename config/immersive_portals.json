@@ -69,24 +69,6 @@
         "bottomY": -49
       },
       {
-        "dimensionIdStr": "infinite_abyss:first_layer",
-        "scale": 1.0,
-        "flipped": false,
-        "horizontalRotation": 0.0,
-        "bedrockReplacementStr": "minecraft:obsidian",
-        "connectsPrevious": true,
-        "connectsNext": true
-      },
-      {
-        "dimensionIdStr": "deeperdarker:otherside",
-        "scale": 1.0,
-        "flipped": false,
-        "horizontalRotation": 0.0,
-        "bedrockReplacementStr": "minecraft:obsidian",
-        "connectsPrevious": true,
-        "connectsNext": true
-      },
-      {
         "dimensionIdStr": "oceanworld:deepsea",
         "scale": 1.0,
         "flipped": false,
@@ -109,6 +91,35 @@
         "bottomY": -48
       },
       {
+        "dimensionIdStr": "infinite_abyss:first_layer",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "deeperdarker:otherside",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true
+      },
+      {
+        "dimensionIdStr": "undergarden:undergarden",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "undergarden:depthrock",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "topY": 128,
+        "bottomY": -64
+      },
+      {
         "dimensionIdStr": "infernalcross:dimension",
         "scale": 1.0,
         "flipped": false,
@@ -127,17 +138,6 @@
         "connectsPrevious": true,
         "connectsNext": true,
         "topY": 256
-      },
-      {
-        "dimensionIdStr": "undergarden:undergarden",
-        "scale": 1.0,
-        "flipped": false,
-        "horizontalRotation": 0.0,
-        "bedrockReplacementStr": "undergarden:depthrock",
-        "connectsPrevious": true,
-        "connectsNext": true,
-        "topY": 128,
-        "bottomY": -64
       },
       {
         "dimensionIdStr": "minecraft:the_end",
