@@ -147,6 +147,21 @@ StartupEvents.registry("item", event => {
     event.create("mystic_pottery_sherd").texture("cabin:item/mystic_pottery_sherd").displayName("Mystic Pottery Sherd").tag("minecraft:decorated_pot_ingredients").tag("minecraft:decorated_pot_sherds")
     event.create("cozy_pottery_sherd").texture("cabin:item/cozy_pottery_sherd").displayName("Cozy Pottery Sherd").tag("minecraft:decorated_pot_ingredients").tag("minecraft:decorated_pot_sherds")
     event.create("circuit_pottery_sherd").texture("cabin:item/circuit_pottery_sherd").displayName("Circuit Pottery Sherd").tag("minecraft:decorated_pot_ingredients").tag("minecraft:decorated_pot_sherds")
+
+    // Chapter 4 wafer line. One item per state so Create filters can route them.
+    let wafer = (id, name, tint) => {
+        event.create(id).texture("cabin:item/silicon_compound").color(0, tint).displayName(name)
+    }
+    wafer("silicon_wafer", "Blank Silicon Wafer", 0xD5DDE6)
+    wafer("latent_wafer", "Exposed Wafer", 0xC45CFF)
+    wafer("annealed_wafer", "Annealed Wafer", 0xFF8A3D)
+    wafer("washed_wafer", "Washed Wafer", 0x9FE7FF)
+    wafer("polished_wafer", "Polished Wafer", 0xF2F7FF)
+    wafer("insulated_die", "Insulated Wafer Stack", 0x7EE0C8)
+    wafer("ruined_wafer", "Ruined Wafer", 0x6B1020)
+    event.create("incomplete_wafer_die", "create:sequenced_assembly").texture("cabin:item/silicon_compound").color(0, 0x9FE7FF).displayName("Wafer in the Press")
+    event.create("spirit_of_lithography").texture("cabin:item/circuit_scrap").color(0, 0xB388FF).glow(true).displayName("Lithography Spirit")
+    event.create("dram").texture("cabin:item/circuit_scrap").color(0, 0x3DDC4A).displayName("Defective DRAM")
 })
 
 StartupEvents.registry("block", event => {

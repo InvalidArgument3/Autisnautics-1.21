@@ -36,6 +36,15 @@ ItemEvents.modifyTooltips(tooltip => {
     bonus_assembly("kubejs:atomic_mechanism", "3A");
     bonus_assembly("kubejs:abstruse_mechanism", "3B");
     main_assembly("kubejs:calculation_mechanism", "4");
+    tooltip.add("kubejs:silicon_wafer", Text.gray("Yield 0. Damage 0. Contamination 0."));
+    tooltip.add("kubejs:spirit_of_lithography", Text.gray("A bottled soul. Deploying it writes the pattern, and also cuts and dirties the die."));
+    tooltip.add("kubejs:latent_wafer", Text.gray("Yield up. Damage up. Contamination up. Anneal before washing."));
+    tooltip.add("kubejs:annealed_wafer", Text.gray("Damage cleared. Contamination worse. Ready for solvent."));
+    tooltip.add("kubejs:washed_wafer", Text.gray("Contamination cleared. Dice it, polish it, or stack it."));
+    tooltip.add("kubejs:polished_wafer", Text.gray("Same die, cleaner surface. Better bin when pressed."));
+    tooltip.add("kubejs:insulated_die", Text.gray("Three wafers. The diamond pays the stack penalty."));
+    tooltip.add("kubejs:ruined_wafer", Text.gray("Demons in the lattice. Haunt it, or drown it in concentrated souls."));
+    tooltip.add("kubejs:dram", Text.gray("Failed memory. The press will keep making these."));
     /*
     not_consumed("cb_microblock:stone_saw");
     not_consumed("cb_microblock:iron_saw");

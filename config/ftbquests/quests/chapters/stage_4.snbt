@@ -585,7 +585,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["71D90A1E5D53FC0A"]
+			dependencies: ["71D90A1E5D53FC0A" "FABFAB000000000A"]
 			hide_dependency_lines: true
 			icon: {
 				id: "kubejs:flash_drive"
@@ -693,6 +693,128 @@
 			}]
 			x: -1.0d
 			y: -2.5d
+		}
+		{
+			dependencies: ["067C5FDA4709F195"]
+			hide_until_deps_complete: true
+			icon: { id: "kubejs:silicon_wafer" }
+			id: "FABFAB0000000001"
+			tasks: [{
+				id: "FABFAB0000000101"
+				item: { count: 1, id: "kubejs:silicon_wafer" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["067C5FDA4709F195"]
+			hide_until_deps_complete: true
+			icon: { id: "kubejs:spirit_of_lithography" }
+			id: "FABFAB0000000002"
+			tasks: [{
+				id: "FABFAB0000000102"
+				item: { count: 1, id: "kubejs:spirit_of_lithography" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["FABFAB0000000001" "FABFAB0000000002"]
+			icon: { id: "kubejs:latent_wafer" }
+			id: "FABFAB0000000003"
+			tasks: [{
+				id: "FABFAB0000000103"
+				item: { count: 1, id: "kubejs:latent_wafer" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["FABFAB0000000003"]
+			icon: { id: "kubejs:annealed_wafer" }
+			id: "FABFAB0000000004"
+			tasks: [{
+				id: "FABFAB0000000104"
+				item: { count: 1, id: "kubejs:annealed_wafer" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["FABFAB0000000004"]
+			icon: { id: "kubejs:washed_wafer" }
+			id: "FABFAB0000000005"
+			tasks: [{
+				id: "FABFAB0000000105"
+				item: { count: 1, id: "kubejs:washed_wafer" }
+				type: "item"
+			}]
+			x: 11.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["FABFAB0000000005"]
+			icon: { id: "kubejs:polished_wafer" }
+			id: "FABFAB0000000006"
+			tasks: [{
+				id: "FABFAB0000000106"
+				item: { count: 1, id: "kubejs:polished_wafer" }
+				type: "item"
+			}]
+			x: 11.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["FABFAB0000000005"]
+			icon: { id: "kubejs:insulated_die" }
+			id: "FABFAB0000000007"
+			tasks: [{
+				id: "FABFAB0000000107"
+				item: { count: 1, id: "kubejs:insulated_die" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["FABFAB0000000003"]
+			icon: { id: "kubejs:ruined_wafer" }
+			id: "FABFAB0000000008"
+			tasks: [{
+				id: "FABFAB0000000108"
+				item: { count: 1, id: "kubejs:ruined_wafer" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["FABFAB0000000005"]
+			icon: { id: "kubejs:dram" }
+			id: "FABFAB0000000009"
+			tasks: [{
+				id: "FABFAB0000000109"
+				item: { count: 1, id: "kubejs:dram" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["FABFAB0000000005"]
+			icon: { id: "refinedstorage:raw_improved_processor" }
+			id: "FABFAB000000000A"
+			tasks: [{
+				id: "FABFAB000000010A"
+				item: { count: 1, id: "refinedstorage:raw_improved_processor" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 5.5d
 		}
 	]
 }

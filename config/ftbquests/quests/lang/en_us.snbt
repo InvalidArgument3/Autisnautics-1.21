@@ -606,7 +606,39 @@
 	quest.24328C973480E4E8.title: "{cabin.quest.24328C973480E4E8.title}"
 	quest.2441491CB5D5E57D.quest_desc: ["{cabin.quest.2441491CB5D5E57D.description1}"]
 	quest.2441491CB5D5E57D.quest_subtitle: "{cabin.quest.2441491CB5D5E57D.subtitle}"
-	quest.24C48CFAAD71B230.quest_desc: ["Craft Raw Basic, Improved and Advanced Processors from Processor Binding, iron/gold/diamond, Silicon and Redstone, then smelt them into Refined Storage processors."]
+	quest.24C48CFAAD71B230.quest_desc: ["These no longer craft by hand. Dice washed, polished, or insulated wafers. Smelt whatever raw processor the press actually gives you."]
+	quest.FABFAB0000000001.title: "Blank Wafers"
+	quest.FABFAB0000000001.quest_desc: ["Saw one Refined Storage silicon into six wafers. Each later step is its own item, so a normal Create filter can route the line."]
+	quest.FABFAB0000000002.title: "Lithography Spirit"
+	quest.FABFAB0000000002.quest_desc: [
+		"Pull alchemical sulfur out of something that used to be alive (Theurgy liquefaction), then heat-mix it with a mercury shard, redstone, and liquid experience."
+		""
+		"Eight spirits a batch. Deploying one writes the pattern. It also damages the die and contaminates it."
+	]
+	quest.FABFAB0000000003.title: "Expose"
+	quest.FABFAB0000000003.quest_desc: ["Deploy a lithography spirit onto a blank wafer. A second spirit on an exposed wafer ruins it."]
+	quest.FABFAB0000000004.title: "Anneal"
+	quest.FABFAB0000000004.quest_desc: ["Superheat an exposed wafer. The damage comes out. The contamination gets worse. Annealing a blank wafer ruins it."]
+	quest.FABFAB0000000005.title: "Wash"
+	quest.FABFAB0000000005.quest_desc: [
+		"Spout sal ammoniac or sulfuric acid onto an annealed wafer."
+		""
+		"Washing a blank or an exposed wafer etches the pattern off. That one is ruined."
+	]
+	quest.FABFAB0000000006.title: "Polish"
+	quest.FABFAB0000000006.quest_desc: ["Optional. Deploy sandpaper onto a washed wafer. Better odds when you dice it."]
+	quest.FABFAB0000000007.title: "Insulate"
+	quest.FABFAB0000000007.quest_desc: ["Optional. Stack three washed wafers with a diamond. The diamond is the insulation. This is the plate that actually wants to be an advanced processor."]
+	quest.FABFAB0000000008.title: "Exorcism"
+	quest.FABFAB0000000008.quest_desc: [
+		"A ruined wafer is full of demons. The wafer dimension is not built yet."
+		""
+		"Haunt the wafer with a soul sand fan and it comes back blank. Spouting concentrated souls does the same thing on purpose."
+	]
+	quest.FABFAB0000000009.title: "Defective DRAM"
+	quest.FABFAB0000000009.quest_desc: ["The press also bins failures: defective DRAM, a basic CAD core, and cooked bacon. You will get DRAM. Keep the line moving."]
+	quest.FABFAB000000000A.title: "Good Bin"
+	quest.FABFAB000000000A.quest_desc: ["Dice a washed, polished, or insulated wafer in a sequenced press. A raw improved processor is what the flash drive wants. Advanced is the jackpot. Smelt after."]
 	quest.24C48CFAAD71B230.quest_subtitle: "{cabin.quest.24C48CFAAD71B230.subtitle}"
 	quest.24C48CFAAD71B230.title: "Raw Processors"
 	quest.24FFFE0FC9EAEF8D.quest_desc: ["AE2 (Applied Energistics 2) was removed from this pack in favour of Refined Storage, so this step no longer exists. Tick the checkmark to continue."]
