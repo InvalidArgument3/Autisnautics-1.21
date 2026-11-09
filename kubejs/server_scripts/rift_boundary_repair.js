@@ -10,7 +10,8 @@
 // chunkX and chunkZ are chunk coordinates, not block coordinates.
 // Only the interior of that boundary's clear band is considered. The next boundary is not opened.
 // Y is clamped to the dimension build limits. The 2048 block cap stays; preview again and apply
-// the next batch. Do not raise the cap to clear a whole chunk in one call.
+// the next batch. Overworld blocks below waterBelow are replaced with water. Include minecraft:air
+// in the allowlist when the existing column is already open. A full water column exceeds 2048 blocks.
 ;(function () {
     const Pos = Java.loadClass('net.minecraft.core.BlockPos')
     const hardCap = 2048
@@ -87,8 +88,10 @@
                         let lo=Math.max(face.clearLo,minY), hi=Math.min(face.clearHi,maxY), y=lo
                         while (y<hi) {
                             let pos=new Pos(x,y,z), state=chunk.getBlockState(pos), id=String(state.getBlock().id)
-                            if (!state.isAir()) {
-                                let row={x:x,y:y,z:z,id:id,boundary:face.boundary,anchor:face.anchor,entity:hasEntity(chunk,pos,state)}
+                            let water=face.waterBelow!==undefined && y<face.waterBelow
+                            if (water && id==='minecraft:water') { y++; continue }
+                            if (!state.isAir() || water) {
+                                let row={x:x,y:y,z:z,id:id,boundary:face.boundary,anchor:face.anchor,entity:hasEntity(chunk,pos,state),water:water}
                                 rows.push(row)
                                 if (row.entity) protectedCounts[id]=(protectedCounts[id]||0)+1
                                 else counts[id]=(counts[id]||0)+1
@@ -126,9 +129,9 @@
         let found=collect(level, chunk, dim, cx, cz, boundary)
         if (found.error) { tell(ctx,found.error); return 0 }
         let token=remember({dim:dim,cx:cx,cz:cz,boundary:boundary,rows:found.rows})
-        tell(ctx,'preview token '+token+' '+dim+' chunk '+cx+','+cz+' boundary '+boundary+' non-air='+found.rows.length+' replaceable '+formatCounts(found.counts)+' protected '+formatCounts(found.protectedCounts))
+        tell(ctx,'preview token '+token+' '+dim+' chunk '+cx+','+cz+' boundary '+boundary+' targets='+found.rows.length+' replaceable '+formatCounts(found.counts)+' protected '+formatCounts(found.protectedCounts))
         if (boundary==='all') tell(ctx,'Preview one boundary before apply. all does not authorize a change.')
-        else tell(ctx,'Apply only ids you accept, with this token. Block entities stay. Example: /autisnautics_rift apply '+dim+' '+cx+' '+cz+' '+boundary+' minecraft:bedrock 256 '+token+' confirm')
+        else tell(ctx,'Apply only ids you accept, with this token. Block entities stay. Overworld columns below sea level become water, so list minecraft:air when the hole is already open. Example: /autisnautics_rift apply '+dim+' '+cx+' '+cz+' '+boundary+' minecraft:air,minecraft:stone,minecraft:deepslate,minecraft:bedrock 2048 '+token+' confirm')
         return 1
     }
     function apply(ctx, dim, cx, cz, boundary, allowText, maxText, token) {
@@ -153,15 +156,17 @@
         if (!chunk) { tell(ctx,'Chunk is not loaded. Nothing was changed.'); return 0 }
         let rift=api(), changed=0, skipped=0, i=0
         if (!rift) { tell(ctx,'Rift cleanup script has not published its span table.'); return 0 }
-        let air=Java.loadClass('net.minecraft.world.level.block.Blocks').AIR.defaultBlockState()
+        let Blocks=Java.loadClass('net.minecraft.world.level.block.Blocks')
+        let air=Blocks.AIR.defaultBlockState(), water=Blocks.WATER.defaultBlockState()
         while (i<snapshot.rows.length && changed<maxBlocks) {
             let row=snapshot.rows[i]
             i++
             if (row.boundary!==boundary || !allow[row.id]) { skipped++; continue }
             let pos=new Pos(row.x,row.y,row.z), state=chunk.getBlockState(pos), id=String(state.getBlock().id)
-            if (id!==row.id || state.isAir()) { skipped++; continue }
+            if (id!==row.id) { skipped++; continue }
+            if (state.isAir() && !row.water) { skipped++; continue }
             if (hasEntity(chunk,pos,state)) { skipped++; continue }
-            try { level.setBlock(pos, air, rift.quiet); changed++ } catch (error) { skipped++ }
+            try { level.setBlock(pos, row.water?water:air, rift.quiet); changed++ } catch (error) { skipped++ }
         }
         delete previews[token]
         console.info('[RiftRepair] apply '+dim+' chunk '+cx+','+cz+' '+boundary+' changed='+changed+' skipped='+skipped+' cap='+maxBlocks+' allow='+allowText)

@@ -53,7 +53,7 @@ public class RiftCalc {
         "boundary 8  mask_7_8  undergarden:undergarden floor / minecraft:the_end ceiling"
     };
     static final String[] YBAND = {
-        "floor overworld y=-53..-28, ceiling infinite_abyss:first_layer y=103..127",
+        "floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127",
         "floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127",
         "floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..301",
         "floor oceanworld:deepsea y=-64..-40, ceiling dimension_of_caves:cave y=103..127",
