@@ -186,6 +186,12 @@ StartupEvents.registry("block", event => {
     event.create("constantan_casing").texture("cabin:block/constantan_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Constantan Casing")
     event.create("boron_casing").texture("cabin:block/boron_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Boron Casing")
     event.create("fluix_casing").texture("cabin:block/fluix_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Fluix Casing")
+    event.create("wafer_gate", "cardinal").parentModel("kubejs:block/wafer_gate").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).lightLevel(6).displayName("Wafer Gate")
+        .blockEntity(info => {
+            let EnumSet = Java.loadClass("java.util.EnumSet")
+            let Direction = Java.loadClass("net.minecraft.core.Direction")
+            info.inventory("wafer", EnumSet.allOf(Direction), 1, 1)
+        })
 
     event.create("computation_matrix").modelGenerator(model => { model.parent("cabin:block/computation_matrix") }).soundType("lantern").hardness(0.1).displayName("Computation Matrix").fullBlock(false).notSolid().box(1, 1, 1, 15, 15, 15).waterlogged().opaque(false).lightLevel(7).renderType("translucent")
         .item(i => { i.rarity("uncommon") })

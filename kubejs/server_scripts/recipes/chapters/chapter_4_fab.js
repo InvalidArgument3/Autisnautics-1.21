@@ -93,4 +93,14 @@ ServerEvents.recipes(event => {
     dice("kubejs:wafer_dice", "kubejs:washed_wafer", bins)
     dice("kubejs:wafer_dice_polished", "kubejs:polished_wafer", better)
     dice("kubejs:wafer_dice_stacked", "kubejs:insulated_die", jackpot)
+
+    event.shaped("kubejs:wafer_gate", [
+        "QSQ",
+        "SCS",
+        "QSQ"
+    ], {
+        Q: "minecraft:quartz_block",
+        S: "refinedstorage:silicon",
+        C: "minecraft:crying_obsidian"
+    }).id("kubejs:wafer_gate")
 })

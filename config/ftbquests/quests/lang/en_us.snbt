@@ -631,9 +631,11 @@
 	quest.FABFAB0000000007.quest_desc: ["Optional. Stack three washed wafers with a diamond. The diamond is the insulation. This is the plate that actually wants to be an advanced processor."]
 	quest.FABFAB0000000008.title: "Exorcism"
 	quest.FABFAB0000000008.quest_desc: [
-		"A ruined wafer is full of demons. The wafer dimension is not built yet."
+		"A ruined wafer is full of demons. There is no demon mod in the pack, so the lattice sends wraiths, foxhounds, and a wildfire."
 		""
-		"Haunt the wafer with a soul sand fan and it comes back blank. Spouting concentrated souls does the same thing on purpose."
+		"Craft a Wafer Gate and right-click it with the ruined wafer. The gate holds the wafer. Right-click again to enter the cell. Kill everything in it and the held wafer becomes a blank one. Sneak-click to take it out."
+		""
+		"Dying in the cell sends you back to the gate with your inventory. The same wafer is still seated, so you can try again. A soul sand fan or a spout of concentrated souls still skips the fight."
 	]
 	quest.FABFAB0000000009.title: "Defective DRAM"
 	quest.FABFAB0000000009.quest_desc: ["The press also bins failures: defective DRAM, a basic CAD core, and cooked bacon. You will get DRAM. Keep the line moving."]

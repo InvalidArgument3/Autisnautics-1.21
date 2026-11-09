@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "supported_formats": {
+      "min_inclusive": 15,
+      "max_inclusive": 99
+    },
+    "description": "Void wafer dimension for the chip-fab exorcism. Not part of the rift stack."
+  }
+}

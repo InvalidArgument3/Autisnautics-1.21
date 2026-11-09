@@ -43,7 +43,8 @@ ItemEvents.modifyTooltips(tooltip => {
     tooltip.add("kubejs:washed_wafer", Text.gray("Contamination cleared. Dice it, polish it, or stack it."));
     tooltip.add("kubejs:polished_wafer", Text.gray("Same die, cleaner surface. Better bin when pressed."));
     tooltip.add("kubejs:insulated_die", Text.gray("Three wafers. The diamond pays the stack penalty."));
-    tooltip.add("kubejs:ruined_wafer", Text.gray("Demons in the lattice. Haunt it, or drown it in concentrated souls."));
+    tooltip.add("kubejs:ruined_wafer", Text.gray("Demons in the lattice. Seat it in a Wafer Gate, haunt it, or drown it in concentrated souls."));
+    tooltip.add("kubejs:wafer_gate", Text.gray("Holds one wafer, like a lectern. Right-click to enter. Sneak-click to take the wafer back. Dying sends you home with your items."));
     tooltip.add("kubejs:dram", Text.gray("Failed memory. The press will keep making these."));
     /*
     not_consumed("cb_microblock:stone_saw");
