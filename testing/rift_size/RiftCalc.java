@@ -55,7 +55,7 @@ public class RiftCalc {
     static final String[] YBAND = {
         "floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127",
         "floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127",
-        "floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..301",
+        "floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..319",
         "floor oceanworld:deepsea y=-64..-40, ceiling dimension_of_caves:cave y=103..127",
         "floor dimension_of_caves:cave y=-48..-24, ceiling infernalcross:dimension y=39..63",
         "floor infernalcross:dimension y=-48..-24, ceiling minecraft:the_nether y=231..255",

@@ -29,7 +29,7 @@ boundary 2  mask_1_2  infinite_abyss:first_layer floor / deeperdarker:otherside 
 
 boundary 3  mask_2_3  deeperdarker:otherside floor / oceanworld:deepsea ceiling
   shift x 8192 z 14386
-  Y floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..301
+  Y floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..319
   centers in ±20000: 320   per 5,000,000 blocks: 1.0000
   centers in ±100000: 7994   per 5,000,000 blocks: 0.9992
   width min 101 max 217   min edge gap 108.90 blocks
