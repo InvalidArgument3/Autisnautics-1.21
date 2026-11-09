@@ -5,7 +5,8 @@
 // then park with the marker kept. This script never loads or generates a chunk.
 // Existing chunks are not swept from here. See rift_boundary_repair.js for the manual preview.
 // Each face opens through the floor or ceiling it belongs to. The inner slab edge stays put.
-// Overworld 0_1 floor: nominal lo/clearLo -153, hi/clearHi -27. Loops clamp to min Y, so blocks run Y=-64 through -28.
+// Overworld 0_1: lo/clearLo stay nominal -153, hi/clearHi is 23. Loops clamp to min Y, so blocks run Y=-64 through Y=22.
+// waterBelow 188 fills that column with water, because Skylands sea level is 188 and the whole column sits under it.
 // Deepsea 2_3 ceiling: lo/clearLo 275, hi/clearHi 320. Deepsea min_y is -64 and height is 384, so the top block is Y=319.
 // Other faces already include their edge block: abyss Y=0 and Y=127, otherside Y=0 and Y=127,
 // deepsea floor Y=-64, caves Y=-48 and Y=127, infernal Y=-48 and Y=63, nether Y=0 and Y=255,
@@ -22,7 +23,7 @@
     const Box = Java.loadClass('net.minecraft.world.level.levelgen.structure.BoundingBox')
     // No UPDATE_NEIGHBORS (1); UPDATE_CLIENTS (2) + UPDATE_KNOWN_SHAPE (16).
     const QUIET = 18, budgetMs = 2
-    const spans = [{"boundary": "0_1", "dimension": "minecraft:overworld", "lo": -153, "hi": -27, "anchor": -52, "sentinel": -2000, "clearLo": -153, "clearHi": -27}, {"boundary": "0_1", "dimension": "infinite_abyss:first_layer", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2001, "clearLo": 103, "clearHi": 128}, {"boundary": "1_2", "dimension": "infinite_abyss:first_layer", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2002, "clearLo": 0, "clearHi": 25}, {"boundary": "1_2", "dimension": "deeperdarker:otherside", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2003, "clearLo": 103, "clearHi": 128}, {"boundary": "2_3", "dimension": "deeperdarker:otherside", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2004, "clearLo": 0, "clearHi": 25}, {"boundary": "2_3", "dimension": "oceanworld:deepsea", "lo": 275, "hi": 320, "anchor": 299, "sentinel": -2005, "clearLo": 275, "clearHi": 320}, {"boundary": "3_4", "dimension": "oceanworld:deepsea", "lo": -64, "hi": -39, "anchor": -64, "sentinel": -2006, "clearLo": -64, "clearHi": -39}, {"boundary": "3_4", "dimension": "dimension_of_caves:cave", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2007, "clearLo": 103, "clearHi": 128}, {"boundary": "4_5", "dimension": "dimension_of_caves:cave", "lo": -48, "hi": -23, "anchor": -48, "sentinel": -2008, "clearLo": -48, "clearHi": -23}, {"boundary": "4_5", "dimension": "infernalcross:dimension", "lo": 39, "hi": 64, "anchor": 63, "sentinel": -2009, "clearLo": 39, "clearHi": 64}, {"boundary": "5_6", "dimension": "infernalcross:dimension", "lo": -48, "hi": -23, "anchor": -48, "sentinel": -2010, "clearLo": -48, "clearHi": -23}, {"boundary": "5_6", "dimension": "minecraft:the_nether", "lo": 231, "hi": 256, "anchor": 255, "sentinel": -2011, "clearLo": 231, "clearHi": 256}, {"boundary": "6_7", "dimension": "minecraft:the_nether", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2012, "clearLo": 0, "clearHi": 25}, {"boundary": "6_7", "dimension": "undergarden:undergarden", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2013, "clearLo": 103, "clearHi": 128}, {"boundary": "7_8", "dimension": "undergarden:undergarden", "lo": -64, "hi": -39, "anchor": -64, "sentinel": -2014, "clearLo": -64, "clearHi": -39}, {"boundary": "7_8", "dimension": "minecraft:the_end", "lo": 359, "hi": 384, "anchor": 383, "sentinel": -2015, "clearLo": 359, "clearHi": 384}]
+    const spans = [{"boundary": "0_1", "dimension": "minecraft:overworld", "lo": -153, "hi": 23, "anchor": -52, "sentinel": -2000, "clearLo": -153, "clearHi": 23, "waterBelow": 188}, {"boundary": "0_1", "dimension": "infinite_abyss:first_layer", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2001, "clearLo": 103, "clearHi": 128}, {"boundary": "1_2", "dimension": "infinite_abyss:first_layer", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2002, "clearLo": 0, "clearHi": 25}, {"boundary": "1_2", "dimension": "deeperdarker:otherside", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2003, "clearLo": 103, "clearHi": 128}, {"boundary": "2_3", "dimension": "deeperdarker:otherside", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2004, "clearLo": 0, "clearHi": 25}, {"boundary": "2_3", "dimension": "oceanworld:deepsea", "lo": 275, "hi": 320, "anchor": 299, "sentinel": -2005, "clearLo": 275, "clearHi": 320}, {"boundary": "3_4", "dimension": "oceanworld:deepsea", "lo": -64, "hi": -39, "anchor": -64, "sentinel": -2006, "clearLo": -64, "clearHi": -39}, {"boundary": "3_4", "dimension": "dimension_of_caves:cave", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2007, "clearLo": 103, "clearHi": 128}, {"boundary": "4_5", "dimension": "dimension_of_caves:cave", "lo": -48, "hi": -23, "anchor": -48, "sentinel": -2008, "clearLo": -48, "clearHi": -23}, {"boundary": "4_5", "dimension": "infernalcross:dimension", "lo": 39, "hi": 64, "anchor": 63, "sentinel": -2009, "clearLo": 39, "clearHi": 64}, {"boundary": "5_6", "dimension": "infernalcross:dimension", "lo": -48, "hi": -23, "anchor": -48, "sentinel": -2010, "clearLo": -48, "clearHi": -23}, {"boundary": "5_6", "dimension": "minecraft:the_nether", "lo": 231, "hi": 256, "anchor": 255, "sentinel": -2011, "clearLo": 231, "clearHi": 256}, {"boundary": "6_7", "dimension": "minecraft:the_nether", "lo": 0, "hi": 25, "anchor": 0, "sentinel": -2012, "clearLo": 0, "clearHi": 25}, {"boundary": "6_7", "dimension": "undergarden:undergarden", "lo": 103, "hi": 128, "anchor": 127, "sentinel": -2013, "clearLo": 103, "clearHi": 128}, {"boundary": "7_8", "dimension": "undergarden:undergarden", "lo": -64, "hi": -39, "anchor": -64, "sentinel": -2014, "clearLo": -64, "clearHi": -39}, {"boundary": "7_8", "dimension": "minecraft:the_end", "lo": 359, "hi": 384, "anchor": 383, "sentinel": -2015, "clearLo": 359, "clearHi": 384}];
     const wallIds = {
         'minecraft:overworld':'minecraft:stone',
         'infinite_abyss:first_layer':'minecraft:deepslate',
@@ -36,6 +37,11 @@
     }
     // Euclidean two-block outer ring: 4 axial points at distance 2 and their nearer neighbours.
     const offsets = [[0,0],[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1],[2,0],[-2,0],[0,2],[0,-2]]
+    function wantsWater(span,y) { return span.waterBelow!==undefined && y<span.waterBelow }
+    function fillState(span,y) {
+        if (wantsWater(span,y)) return Blocks.WATER.defaultBlockState()
+        return Blocks.AIR.defaultBlockState()
+    }
     let walls = {}, clock = 0, pending = {}, queue = [], head = 0, depth = 0
     let recent = {}, recentOrder = [], lastTickWall = Date.now(), lastLog = Date.now()
     let trimAvailable = true, parked = [], parkOverflow = false
@@ -147,12 +153,15 @@
         // Overlapping incoming/outgoing rifts must never be walled off by the other's outer ring.
         if (task.phase===1&&insideOtherFace(task,task.col,y)) return
         // Fully air sections need no per-block Java/Rhino crossings. Never skip a wet/non-air section.
+        // The overworld column below sea level is filled with water, so an all-air section still needs work.
         if (((y&15)===0||y===lo)&&chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
-            task.y=Math.min(hi,(Math.floor(y/16)+1)*16);stats.airSkipped+=task.y-y;return
+            if (task.legacy||task.phase!==2||!wantsWater(s,y)) {
+                task.y=Math.min(hi,(Math.floor(y/16)+1)*16);stats.airSkipped+=task.y-y;return
+            }
         }
         const pos=new Pos(x,y,z),state=chunk.getBlockState(pos)
         stats.checks++
-        if (state.isAir()) return
+        if (state.isAir()&&(task.legacy||task.phase!==2||!wantsWater(s,y))) return
         const wet=!state.getFluidState().isEmpty()
         if (task.legacy) {
             const id=String(state.getBlock().id)
@@ -161,7 +170,8 @@
             if (wet) {task.level.setBlock(pos,wallFor(task.dim,y),QUIET);stats.sealed++}
             return
         } else if (!wet&&(y<s.clearLo||y>=s.clearHi)) return
-        task.level.setBlock(pos,Blocks.AIR.defaultBlockState(),QUIET)
+        if (!task.legacy&&wantsWater(s,y)&&String(state.getBlock().id)==='minecraft:water') return
+        task.level.setBlock(pos,task.legacy?Blocks.AIR.defaultBlockState():fillState(s,y),QUIET)
         stats.removed++;if(wet)stats.fluidsCleared++
     }
     // Public LevelTicks.clearArea also updates scheduler indexes and collected-this-tick queues.
@@ -200,10 +210,17 @@
         if (task.y>=hi) {task.col++;task.y=null;return}
         let y=task.y++, pos=new Pos(task.x*16+(task.col>>4),y,task.z*16+(task.col&15))
         if (((y&15)===0||y===lo)&&chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
-            task.y=Math.min(hi,(Math.floor(y/16)+1)*16);return
+            if (task.legacy||!wantsWater(s,y)) {
+                task.y=Math.min(hi,(Math.floor(y/16)+1)*16);return
+            }
         }
         let state=chunk.getBlockState(pos)
         stats.checks++
+        if (!task.legacy&&wantsWater(s,y)) {
+            if (String(state.getBlock().id)==='minecraft:water') return
+            task.unresolved++
+            return
+        }
         if (state.isAir()) return
         if (task.legacy) {
             let id=String(state.getBlock().id)
