@@ -14,6 +14,8 @@ import com.neep.meatlib.transfer.MeatlibCapabilities;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
+import com.neep.neepmeat.plc.arm.RoboticArmBlock;
+import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
 import com.neep.neepmeat.machine.transport.BasicTankBlock;
@@ -69,6 +71,11 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> ALLOY_KILN_ITEM = CONTEXT.item("alloy_kiln", () -> new BlockItem(ALLOY_KILN.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AlloyKilnBlockEntity>> ALLOY_KILN_BE = BLOCK_ENTITIES.register("alloy_kiln",
             () -> BlockEntityType.Builder.of(AlloyKilnBlockEntity::new, ALLOY_KILN.get()).build(null));
+    public static final DeferredBlock<RoboticArmBlock> ROBOTIC_ARM = CONTEXT.block("robotic_arm", RoboticArmBlock::new);
+    public static final DeferredItem<BlockItem> ROBOTIC_ARM_ITEM = CONTEXT.item("robotic_arm", () -> new BlockItem(ROBOTIC_ARM.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RoboticArmBlockEntity>> ROBOTIC_ARM_BE = BLOCK_ENTITIES.register("robotic_arm",
+            () -> BlockEntityType.Builder.of(RoboticArmBlockEntity::new, ROBOTIC_ARM.get()).build(null));
+
     public static final DeferredHolder<MenuType<?>, MenuType<AlloyKilnMenu>> ALLOY_MENU = MENUS.register("alloy_kiln",
             () -> IMenuTypeExtension.create((id, inventory, buf) -> {
                 BlockPos pos = buf.readBlockPos();
@@ -164,6 +171,7 @@ public final class NeepMachines {
     private static void creative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == BuildingBlocks.TAB.getKey()) {
             event.accept(ALLOY_KILN_ITEM.get());
+            event.accept(ROBOTIC_ARM_ITEM.get());
             event.accept(ITEM_PIPE_ITEM.get());
             event.accept(FILTER_ITEM_PIPE_ITEM.get());
             event.accept(MERGE_PIPE_ITEM.get());

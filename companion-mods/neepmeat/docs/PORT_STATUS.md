@@ -68,7 +68,16 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | EMI in widget screens | ported | `EMIScreenSupport` draws EMI's screen manager on the foreground listener, using EMI's public `EmiApi` plus the runtime classes already in the pack's EMI jar (`EmiDrawContext`, `EmiScreenManager`). |
 | PLC screens | missing | `PLCProgramScreen` and the other PLC screens import the PLC block entity, the compiler, and NEEPASM. They land with those systems. The widgets they extend are in. |
 
-Robot arm, NEEPASM, living machines, and the meatgun are still the next batches. The same scratch rewrite is the source for those.
+## Robot arm
+
+| System | State | Notes |
+| --- | --- | --- |
+| Block and entity | ported | `robotic_arm`. Tip steps toward the target at a speed clamped from input power, and stops at 4.5 blocks from the shoulder. Below 0.05 power, `setTarget` throws `NeepASM.RuntimeException`. The held stack is one `ItemStack` (upstream's Fabric `ResourceAmount<ItemVariant>`). |
+| Renderer | ported | The two-bone solve is the upstream one. The base is the block model. The spinny bit and both segments are the upstream JSON models, registered as extra models and drawn by the block-entity renderer. Upstream's Flywheel visual is not compiled. Flywheel stays off the compile classpath until a renderer actually needs the Create copy. |
+| Recipe | missing | The craft needs `contractile_actuator` and `control_unit`, which are not items yet. |
+| Game test | ported | An unpowered arm refuses a target. A powered arm moves toward one. The held cobblestone survives save and load. 23 tests passed on `0.30.0-neoforge.8`. |
+
+NEEPASM, the PLC, living machines, and the meatgun are still the next batches. The scratch rewrite is the source for those.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

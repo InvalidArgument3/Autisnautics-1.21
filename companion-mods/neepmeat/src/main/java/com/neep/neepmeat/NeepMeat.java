@@ -60,6 +60,8 @@ public final class NeepMeat {
             bus.addListener(NeepMeatClient::onItemColors);
             bus.addListener(NeepMeatClient::onScreens);
             bus.addListener(NeepMeatClient::onClientExtensions);
+            bus.addListener(NeepMeatClient::onRenderers);
+            bus.addListener(NeepMeatClient::onExtraModels);
         }
         ModList.get().getModContainerById("geckolib").ifPresentOrElse(
                 mod -> LOG.info("NeepMeat {} loaded with GeckoLib {}", container.getModInfo().getVersion(), mod.getModInfo().getVersion()),

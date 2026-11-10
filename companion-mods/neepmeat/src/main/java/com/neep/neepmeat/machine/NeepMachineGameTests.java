@@ -9,7 +9,9 @@
 package com.neep.neepmeat.machine;
 
 import com.neep.neepmeat.NeepMeat;
+import com.neep.meatlib.neepasm.NeepASM;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
+import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidTankBlockEntity;
 import com.neep.neepmeat.machine.transport.ItemPipeBlockEntity;
@@ -90,5 +92,41 @@ public class NeepMachineGameTests {
                     "moved " + to.tank().getFluidAmount());
             helper.succeed();
         });
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 100)
+    public static void roboticArmMovesTowardTargetWhenPowered(GameTestHelper helper) {
+        BlockPos pos = new BlockPos(1, 0, 1);
+        helper.setBlock(pos, NeepMachines.ROBOTIC_ARM.get().defaultBlockState());
+        RoboticArmBlockEntity arm = helper.getBlockEntity(pos);
+        boolean refused = false;
+        try {
+            arm.setTarget(null, helper.absolutePos(new BlockPos(1, 1, 1)));
+        } catch (NeepASM.RuntimeException exception) {
+            refused = true;
+        }
+        helper.assertTrue(refused, "unpowered arm accepted a target");
+        arm.setInputPower(1.0F);
+        BlockPos target = helper.absolutePos(new BlockPos(1, 1, 2));
+        try {
+            arm.setTarget(null, target);
+        } catch (NeepASM.RuntimeException exception) {
+            helper.fail("powered arm refused a target: " + exception.getMessage());
+        }
+        double before = arm.getX();
+        for (int tick = 0; tick < 8; tick++) {
+            arm.serverTick();
+        }
+        helper.assertTrue(arm.getX() != before || arm.reachedTarget(null), "tip did not move");
+        double left = arm.getX() - (target.getX() + 0.5);
+        double depth = arm.getZ() - (target.getZ() + 0.5);
+        helper.assertTrue(left * left + depth * depth < 1.0, "tip stayed away from the target");
+        arm.setStored(null, new ItemStack(Items.COBBLESTONE, 3));
+        var saved = arm.saveWithoutMetadata(helper.getLevel().registryAccess());
+        RoboticArmBlockEntity loaded = new RoboticArmBlockEntity(helper.absolutePos(pos), arm.getBlockState());
+        loaded.loadWithComponents(saved, helper.getLevel().registryAccess());
+        helper.assertTrue(loaded.getStored(null).is(Items.COBBLESTONE) && loaded.getStored(null).getCount() == 3,
+                "stored stack did not survive NBT");
+        helper.succeed();
     }
 }

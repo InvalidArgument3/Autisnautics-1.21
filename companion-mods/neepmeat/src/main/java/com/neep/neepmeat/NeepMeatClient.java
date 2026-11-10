@@ -24,10 +24,14 @@ package com.neep.neepmeat;
 
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.fluid.BloodFluids;
+import com.neep.neepmeat.client.renderer.RoboticArmRenderer;
 import com.neep.neepmeat.machine.NeepMachines;
 import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
 import com.neep.neepmeat.machine.transport.FilterPipeScreen;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.ModelEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
@@ -65,6 +69,16 @@ public final class NeepMeatClient {
     public static void onScreens(RegisterMenuScreensEvent event) {
         event.register(NeepMachines.ALLOY_MENU.get(), AlloyKilnScreen::new);
         event.register(NeepMachines.FILTER_MENU.get(), FilterPipeScreen::new);
+    }
+
+    public static void onRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(NeepMachines.ROBOTIC_ARM_BE.get(), RoboticArmRenderer::new);
+    }
+
+    public static void onExtraModels(ModelEvent.RegisterAdditional event) {
+        event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/spinny_bit")));
+        event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/segment_1")));
+        event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/segment_2")));
     }
 
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {
