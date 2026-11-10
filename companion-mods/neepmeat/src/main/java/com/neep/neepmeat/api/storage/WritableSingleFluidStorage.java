@@ -53,6 +53,13 @@ public class WritableSingleFluidStorage extends SingleVariantStorage<FluidVarian
         return this;
     }
 
+    public static boolean handleInteract(com.neep.meatlib.transfer.Storage<FluidVariant> storage, net.minecraft.world.level.Level level, net.minecraft.world.entity.player.Player player, net.minecraft.world.InteractionHand hand) {
+        if (storage instanceof IFluidHandler handler) {
+            return net.neoforged.neoforge.fluids.FluidUtil.interactWithFluidHandler(player, hand, handler);
+        }
+        return false;
+    }
+
     public void writeNbt(CompoundTag tag) {
         tag.putString("fluid", net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(variant.fluid()).toString());
         tag.putLong("amount", amount);

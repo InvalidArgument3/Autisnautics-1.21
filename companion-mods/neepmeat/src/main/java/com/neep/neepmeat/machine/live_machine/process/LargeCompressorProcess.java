@@ -15,7 +15,7 @@ import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
 import com.neep.neepmeat.fluid.CompressedAir;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
-import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.api.live_machine.LivingMachineBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity;
 import net.minecraft.network.chat.Component;
 
@@ -27,7 +27,7 @@ public class LargeCompressorProcess implements Process {
             LivingMachineComponents.LARGE_COMPRESSOR);
 
     @Override
-    public void serverTick(LivingMachineControllerBlockEntity machine) {
+    public void serverTick(LivingMachineBlockEntity machine) {
         List<LargeCompressorBlockEntity> compressors = machine.components(LivingMachineComponents.LARGE_COMPRESSOR);
         if (compressors.isEmpty() || machine.components(LivingMachineComponents.MOTOR_PORT).isEmpty()) {
             return;

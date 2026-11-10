@@ -14,13 +14,12 @@ package com.neep.neepmeat.machine.live_machine.process;
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
-import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.api.live_machine.LivingMachineBlockEntity;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageView;
 import com.neep.meatlib.transfer.Transaction;
 import com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity;
-import com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.component.ItemInputComponent;
 import net.minecraft.network.chat.Component;
 
@@ -34,10 +33,10 @@ public class CrusherProcess implements Process {
             LivingMachineComponents.MOTOR_PORT);
 
     @Override
-    public void serverTick(LivingMachineControllerBlockEntity machine) {
+    public void serverTick(LivingMachineBlockEntity machine) {
         List<CrusherSegmentBlockEntity> crushers = machine.components(LivingMachineComponents.CRUSHER_SEGMENT);
         List<ItemInputComponent> inputs = machine.components(LivingMachineComponents.ITEM_INPUT);
-        if (crushers.isEmpty() || inputs.isEmpty() || crushers.size() > 4 || machine.power() < 0.1f) {
+        if (crushers.isEmpty() || inputs.isEmpty() || crushers.size() > 4 || machine.getPower() < 0.1f) {
             return;
         }
         ItemInputComponent input = inputs.getFirst();
@@ -46,9 +45,13 @@ public class CrusherProcess implements Process {
             if (crusher.isEmpty()) {
                 takeInput(storage, crusher);
             } else if (crusher.addProgress(machine.getProgressIncrement())) {
-                List<ItemPortBlockEntity> outputs = machine.components(LivingMachineComponents.ITEM_OUTPUT);
+                List<com.neep.neepmeat.machine.live_machine.component.ItemOutputComponent> outputs = machine.components(LivingMachineComponents.ITEM_OUTPUT);
                 if (!outputs.isEmpty()) {
-                    outputs.getFirst().setStack(crusher.takeResult());
+                    net.minecraft.world.item.ItemStack result = crusher.takeResult();
+                    try (Transaction transaction = Transaction.openOuter()) {
+                        outputs.getFirst().getInternalStorage().insert(ItemVariant.of(result), result.getCount(), transaction);
+                        transaction.commit();
+                    }
                 }
             }
         }

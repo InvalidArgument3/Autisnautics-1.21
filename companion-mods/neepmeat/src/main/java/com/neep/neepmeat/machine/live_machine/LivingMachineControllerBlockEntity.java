@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
-public class LivingMachineControllerBlockEntity extends BlockEntity {
+public class LivingMachineControllerBlockEntity extends com.neep.neepmeat.api.live_machine.LivingMachineBlockEntity {
     public static final int MAX_BLOCKS = 128;
 
     private final List<StructureEntry> structures = new ArrayList<>();
@@ -56,6 +56,21 @@ public class LivingMachineControllerBlockEntity extends BlockEntity {
 
     public LivingMachineControllerBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.CONTROLLER_BE.get(), pos, state);
+    }
+
+    @Override
+    public float getPower() {
+        return power;
+    }
+
+    @Override
+    public float getProgressIncrement() {
+        return power * (float) (1 - Math.pow(degradation.getDegradation(), 4));
+    }
+
+    @Override
+    public <T> List<T> components(com.neep.neepmeat.api.live_machine.ComponentType<?> type) {
+        return new ArrayList<>((Collection<T>) components.get(type.getBitIdx()));
     }
 
     public void serverTick() {
@@ -79,11 +94,7 @@ public class LivingMachineControllerBlockEntity extends BlockEntity {
     }
 
     public float power() {
-        return power;
-    }
-
-    public float getProgressIncrement() {
-        return power * (float) (1 - Math.pow(degradation.getDegradation(), 4));
+        return getPower();
     }
 
     public float getHealth() {
@@ -96,11 +107,6 @@ public class LivingMachineControllerBlockEntity extends BlockEntity {
 
     public @Nullable Process process() {
         return process;
-    }
-
-    @SuppressWarnings("unchecked")
-    public <T> List<T> components(ComponentType<?> type) {
-        return new ArrayList<>((Collection<T>) components.get(type.getBitIdx()));
     }
 
     private void selectProcess() {

@@ -22,6 +22,10 @@ public final class PowerUtil {
     public static final float MOTOR_TORQUE_LOSS = 300f;
     /** One per-unit of energy is one step of a recipe counter. */
     public static final long BASE_POWER = 1000;
+
+    public static long referencePower() {
+        return BASE_POWER;
+    }
     public static final long DROPLET_POWER = 1;
     /** Fabric droplets in one NeoForge millibucket. Energy is stored per millibucket. */
     public static final int DROPLETS_PER_MILLIBUCKET = 81;

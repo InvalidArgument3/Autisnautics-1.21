@@ -15,12 +15,17 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.live_machine.LivingMachineBlock;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.live_machine.block.ExtractorBlock;
+import com.neep.neepmeat.machine.live_machine.block.FluidPortBlock;
+import com.neep.neepmeat.machine.live_machine.block.ItemInputPortBlock;
+import com.neep.neepmeat.machine.live_machine.block.ItemOutputPortBlock;
 import com.neep.neepmeat.machine.live_machine.block.PortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ServicePortBlock;
 import com.neep.neepmeat.machine.live_machine.block.SilkyExtractorBlock;
 import com.neep.neepmeat.machine.live_machine.block.entity.ExtractorBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.FluidOutputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ReprocessorBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ServicePortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.SilkyExtractorBlockEntity;
@@ -36,6 +41,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public final class LivingMachines {
+    public static final java.util.List<net.minecraft.world.item.Item> ITEM_PORTS = new java.util.ArrayList<>();
     private static final RegistrationContext CONTEXT = new RegistrationContext(NeepMeat.ID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, NeepMeat.ID);
@@ -87,11 +93,15 @@ public final class LivingMachines {
     public static final DeferredBlock<SilkyExtractorBlock> SILKY_EXTRACTOR = CONTEXT.block("silky_extractor", () -> new SilkyExtractorBlock(CONTEXT, ItemSettings.block(), portSettings()));
     public static final DeferredBlock<ServicePortBlock<ServicePortBlockEntity>> SERVICE_PORT = CONTEXT.block("service_port",
             () -> new ServicePortBlock<>(CONTEXT, ItemSettings.block(), ServicePortBlockEntity::new, portSettings()));
-    public static final DeferredBlock<ComponentMachineBlock> ITEM_INPUT = CONTEXT.block("item_input_port", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.INPUT));
-    public static final DeferredBlock<ComponentMachineBlock> ITEM_OUTPUT = CONTEXT.block("item_output_port", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.OUTPUT));
+    public static final DeferredBlock<ItemInputPortBlock> ITEM_INPUT = CONTEXT.block("item_input_port",
+            () -> new ItemInputPortBlock(CONTEXT, ItemSettings.block(), ItemInputPortBlockEntity::new, portSettings()));
+    public static final DeferredBlock<ItemOutputPortBlock> ITEM_OUTPUT = CONTEXT.block("item_output_port",
+            () -> new ItemOutputPortBlock(CONTEXT, ItemSettings.block(), ItemOutputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<ComponentMachineBlock> REPROCESSOR = CONTEXT.block("reprocessor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.REPROCESSOR));
-    public static final DeferredBlock<PortBlock<FluidInputPortBlockEntity>> FLUID_INPUT = CONTEXT.block("fluid_input_port",
-            () -> new PortBlock<>(CONTEXT, ItemSettings.block(), FluidInputPortBlockEntity::new, portSettings()));
+    public static final DeferredBlock<FluidPortBlock<FluidInputPortBlockEntity>> FLUID_INPUT = CONTEXT.block("fluid_input_port",
+            () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidInputPortBlockEntity::new, portSettings()));
+    public static final DeferredBlock<FluidPortBlock<FluidOutputPortBlockEntity>> FLUID_OUTPUT = CONTEXT.block("fluid_output_port",
+            () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidOutputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<ComponentMachineBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.CRUSHER));
     public static final DeferredBlock<ComponentMachineBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.COMPRESSOR));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExtractorBlockEntity>> EXTRACTOR_BE =
@@ -106,9 +116,10 @@ public final class LivingMachines {
             BLOCK_ENTITIES.register("reprocessor", () -> BlockEntityType.Builder.of(ReprocessorBlockEntity::new, REPROCESSOR.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidInputPortBlockEntity>> FLUID_INPUT_BE =
             BLOCK_ENTITIES.register("fluid_input_port", () -> BlockEntityType.Builder.of(FluidInputPortBlockEntity::new, FLUID_INPUT.get()).build(null));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity>> ITEM_PORT_BE =
-            BLOCK_ENTITIES.register("item_port", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity::new,
-                    ITEM_OUTPUT.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemOutputPortBlockEntity>> ITEM_OUTPUT_BE =
+            BLOCK_ENTITIES.register("item_output_port", () -> BlockEntityType.Builder.of(ItemOutputPortBlockEntity::new, ITEM_OUTPUT.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidOutputPortBlockEntity>> FLUID_OUTPUT_BE =
+            BLOCK_ENTITIES.register("fluid_output_port", () -> BlockEntityType.Builder.of(FluidOutputPortBlockEntity::new, FLUID_OUTPUT.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity>> CRUSHER_BE =
             BLOCK_ENTITIES.register("crusher_segment", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity::new, CRUSHER.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity>> COMPRESSOR_BE =

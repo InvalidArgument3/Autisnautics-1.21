@@ -13,17 +13,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class CombinedStorage<T> implements Storage<T> {
-    private final List<Storage<T>> parts;
+public class CombinedStorage<T, S extends Storage<T>> implements Storage<T> {
+    private final List<S> parts;
 
-    public CombinedStorage(List<Storage<T>> parts) {
+    public CombinedStorage(List<S> parts) {
         this.parts = parts;
     }
 
     @Override
     public long insert(T resource, long maxAmount, TransactionContext transaction) {
         long left = maxAmount;
-        for (Storage<T> part : parts) {
+        for (S part : parts) {
             if (left <= 0) {
                 break;
             }
@@ -35,7 +35,7 @@ public class CombinedStorage<T> implements Storage<T> {
     @Override
     public long extract(T resource, long maxAmount, TransactionContext transaction) {
         long left = maxAmount;
-        for (Storage<T> part : parts) {
+        for (S part : parts) {
             if (left <= 0) {
                 break;
             }
@@ -47,7 +47,7 @@ public class CombinedStorage<T> implements Storage<T> {
     @Override
     public Iterator<StorageView<T>> iterator() {
         List<StorageView<T>> views = new ArrayList<>();
-        for (Storage<T> part : parts) {
+        for (S part : parts) {
             part.forEach(views::add);
         }
         return views.iterator();

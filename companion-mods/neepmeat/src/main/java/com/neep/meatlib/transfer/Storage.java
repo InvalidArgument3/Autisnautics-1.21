@@ -10,6 +10,16 @@
 package com.neep.meatlib.transfer;
 
 public interface Storage<T> extends Iterable<StorageView<T>> {
+    default Iterable<StorageView<T>> nonEmptyViews() {
+        java.util.List<StorageView<T>> views = new java.util.ArrayList<>();
+        for (StorageView<T> view : this) {
+            if (view.getAmount() > 0) {
+                views.add(view);
+            }
+        }
+        return views;
+    }
+
     long insert(T resource, long maxAmount, TransactionContext transaction);
 
     long extract(T resource, long maxAmount, TransactionContext transaction);

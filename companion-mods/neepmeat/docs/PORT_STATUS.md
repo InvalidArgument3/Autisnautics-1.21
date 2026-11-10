@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Item and fluid ports, jar 0.30.0-neoforge.31
+
+`ItemInputPortBlock`, `ItemOutputPortBlock`, and `FluidPortBlock` are the upstream blocks. The item input opens `ItemInputScreenHandler` through `MenuType` (`IMenuTypeExtension`). The item output is the nine-slot upstream block entity. `FluidPortBlock` fills from a bucket and calls `TankBlockEntity.showContents`. `LivingMachineBlockEntity` is the controller base and implements `ComponentHolder`. `FluidPump.of` and `AcceptorModes` back the fluid output.
+
+Deviations: `TankBlockEntity.showContents` writes the action bar instead of `TankMessagePacket`. `ItemPipeUtil.EjectOperation` returns zero because item pipes are not ported, so auto-eject keeps the stack. `ItemOutputScreenHandler.setEject` writes the property slot directly. `playerHoldingPipe` is always false. `ScrollableItem.swapStack` copies data components. The reprocessor and compressor are still one block. The crusher still turns cobblestone into gravel, and it now inserts that stack into the nine-slot output. The trommel, ball mill, and the other  processes are not in the jar.
+
 ## Leaf living-machine types, jar 0.30.0-neoforge.30
 
 The 2,198-file Loom tree is no longer in git. `tools/loom-migrated/regenerate.sh` fetches commit `0d36776`, runs Loom 1.9.2 `migrateMappings`, and writes `tools/loom-migrated/neepmeat` and `meatlib`, both gitignored. `apply_121_drift.py` also rewrites `use` to `useWithoutItem` and makes `onRemove`, `rotate`, and `mirror` protected.

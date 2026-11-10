@@ -132,10 +132,10 @@ public class LivingMachineGameTests {
         controller.serverTick();
         controller.serverTick();
         com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity crusher = helper.getBlockEntity(new BlockPos(4, 0, 1));
-        com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.CrusherProcess, "process");
         helper.assertTrue(crusher.stack().isEmpty(), "slot " + crusher.stack());
-        helper.assertTrue(output.stack().is(net.minecraft.world.item.Items.GRAVEL), "result " + output.stack());
+        helper.assertTrue(output.getInventory().getItem(0).is(net.minecraft.world.item.Items.GRAVEL), "result " + output.getInventory().getItem(0));
         helper.succeed();
     }
 

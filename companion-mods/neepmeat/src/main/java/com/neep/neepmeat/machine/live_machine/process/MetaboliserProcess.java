@@ -15,7 +15,7 @@ import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
 import com.neep.neepmeat.fluid.MeatFluid;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
-import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.api.live_machine.LivingMachineBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity;
 import net.minecraft.network.chat.Component;
@@ -29,7 +29,7 @@ public class MetaboliserProcess implements Process {
             LivingMachineComponents.METABOLISER_SEGMENT);
 
     @Override
-    public void serverTick(LivingMachineControllerBlockEntity machine) {
+    public void serverTick(LivingMachineBlockEntity machine) {
         List<StomachBlockEntity> stomachs = machine.components(LivingMachineComponents.STOMACH);
         List<MetaboliserSegmentBlockEntity> segments = machine.components(LivingMachineComponents.METABOLISER_SEGMENT);
         if (stomachs.isEmpty() || segments.isEmpty() || segments.size() > MAX_SEGMENTS) {
@@ -52,7 +52,7 @@ public class MetaboliserProcess implements Process {
     }
 
     @Override
-    public List<Component> getProblems(LivingMachineControllerBlockEntity machine) {
+    public List<Component> getProblems(LivingMachineBlockEntity machine) {
         if (machine.components(LivingMachineComponents.METABOLISER_SEGMENT).size() > MAX_SEGMENTS) {
             return List.of(Component.literal("Too many segments (>" + MAX_SEGMENTS + ")"));
         }

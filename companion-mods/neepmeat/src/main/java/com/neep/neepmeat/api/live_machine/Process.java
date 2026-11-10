@@ -8,23 +8,24 @@
 
 package com.neep.neepmeat.api.live_machine;
 
-import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
 public interface Process {
-    void serverTick(LivingMachineControllerBlockEntity machine);
+    Component NO_PROCESS = Component.empty();
 
-    default void onStart(LivingMachineControllerBlockEntity machine) {}
+    void serverTick(LivingMachineBlockEntity machine);
 
-    default void onStop(LivingMachineControllerBlockEntity machine) {}
+    default void onStart(LivingMachineBlockEntity machine) {}
+
+    default void onStop(LivingMachineBlockEntity machine) {}
 
     List<ComponentType<?>> getRequired();
 
     Component getName();
 
-    default List<Component> getProblems(LivingMachineControllerBlockEntity machine) {
+    default List<Component> getProblems(LivingMachineBlockEntity machine) {
         return List.of();
     }
 }

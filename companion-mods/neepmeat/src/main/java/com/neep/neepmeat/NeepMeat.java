@@ -40,6 +40,8 @@ import org.slf4j.Logger;
 @Mod(NeepMeat.ID)
 public final class NeepMeat {
     public static final String ID = "neepmeat";
+    /** Loom sources use {@code NAMESPACE}. */
+    public static final String NAMESPACE = ID;
     public static final Logger LOG = LogUtils.getLogger();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ID);
@@ -60,6 +62,7 @@ public final class NeepMeat {
         com.neep.neepmeat.fluid.MeatFluid.register(bus);
         com.neep.neepmeat.fluid.CompressedAir.register(bus);
         com.neep.neepmeat.entity.NeepEntities.register(bus);
+        com.neep.neepmeat.init.NMScreenHandlers.register(bus);
         com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();
         BLOCKS.register(bus);
         ITEMS.register(bus);
@@ -72,6 +75,14 @@ public final class NeepMeat {
             bus.addListener(NeepMeatClient::onRenderers);
             bus.addListener(NeepMeatClient::onExtraModels);
         }
+        geckolibLog(container);
+    }
+
+    public static net.minecraft.network.chat.MutableComponent translationKey(String prefix, String path) {
+        return net.minecraft.network.chat.Component.translatable(prefix + "." + ID + "." + path);
+    }
+
+    private static void geckolibLog(ModContainer container) {
         ModList.get().getModContainerById("geckolib").ifPresentOrElse(
                 mod -> LOG.info("NeepMeat {} loaded with GeckoLib {}", container.getModInfo().getVersion(), mod.getModInfo().getVersion()),
                 () -> LOG.info("NeepMeat {} loaded; GeckoLib is not in this runtime", container.getModInfo().getVersion()));

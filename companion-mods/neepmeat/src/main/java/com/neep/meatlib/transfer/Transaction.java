@@ -46,6 +46,10 @@ public final class Transaction implements TransactionContext, AutoCloseable {
         rollbacks.add(rollback);
     }
 
+    public void commit() {
+        onRename();
+    }
+
     @Override
     public void onRename() {
         if (!open) {
