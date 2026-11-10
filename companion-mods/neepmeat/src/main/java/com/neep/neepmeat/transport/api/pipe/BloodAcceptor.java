@@ -34,7 +34,13 @@ public interface BloodAcceptor {
         return influx;
     }
 
-    Mode mode();
+    default Mode getMode() {
+        return Mode.SINK;
+    }
+
+    default Mode mode() {
+        return getMode();
+    }
 
     enum Mode {
         SINK,

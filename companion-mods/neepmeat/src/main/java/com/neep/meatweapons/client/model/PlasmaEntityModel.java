@@ -47,7 +47,7 @@ public class PlasmaEntityModel extends EntityModel<FusionBlastEntity>
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
+	public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, int color)
 	{
 		bb_main.render(matrices, vertices, light, overlay);
 	}

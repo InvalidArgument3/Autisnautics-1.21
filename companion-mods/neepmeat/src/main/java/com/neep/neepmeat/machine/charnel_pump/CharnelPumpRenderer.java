@@ -114,7 +114,7 @@ public class CharnelPumpRenderer implements BlockEntityRenderer<CharnelPumpBlock
             emitter.pos(2, new Vector3f(o, p, g)).uv(2, u0, v1);
             emitter.pos(3, new Vector3f(o, p, 0)).uv(3, u1, v1);
             BakedQuad quad = emitter.toBakedQuad(sprite);
-            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, light, OverlayTexture.NO_OVERLAY);
+            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, 1.0F, light, OverlayTexture.NO_OVERLAY);
 
             k = o;
             l = p;

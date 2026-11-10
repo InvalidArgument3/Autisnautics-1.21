@@ -106,7 +106,7 @@ public class LargeTrommelRenderer implements BlockEntityRenderer<LargeTrommelBlo
             emitter.pos(2, new Vector3f(x0, y1, z + 1)).uv(2, u0, v1);
             emitter.pos(3, new Vector3f(x1, y1, z + 1)).uv(3, u1, v1);
             BakedQuad quad = emitter.toBakedQuad(sprite);
-            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, light, OverlayTexture.NO_OVERLAY);
+            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, 1.0F, light, OverlayTexture.NO_OVERLAY);
             emitter.emit();
 
             // Right face (looking from the trommel's controller block)
@@ -115,7 +115,7 @@ public class LargeTrommelRenderer implements BlockEntityRenderer<LargeTrommelBlo
             emitter.pos(2, new Vector3f(x2, y0, z + 1)).uv(2, u0, v1);
             emitter.pos(3, new Vector3f(x0, y1, z + 1)).uv(3, u1, v1);
             quad = emitter.toBakedQuad(sprite);
-            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, light, OverlayTexture.NO_OVERLAY);
+            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, 1.0F, light, OverlayTexture.NO_OVERLAY);
             emitter.emit();
 
             // Left face
@@ -124,7 +124,7 @@ public class LargeTrommelRenderer implements BlockEntityRenderer<LargeTrommelBlo
             emitter.pos(3, new Vector3f(x3, y0, z + 1)).uv(3, u0, v1);
             emitter.pos(2, new Vector3f(x1, y1, z + 1)).uv(2, u1, v1);
             quad = emitter.toBakedQuad(sprite);
-            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, light, OverlayTexture.NO_OVERLAY);
+            consumer.putBulkData(matrices.last(), quad, cr, cg, cb, 1.0F, light, OverlayTexture.NO_OVERLAY);
             emitter.emit();
         }
     }

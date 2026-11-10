@@ -89,6 +89,6 @@ public class CastingBasinRenderer implements BlockEntityRenderer<CastingBasinBlo
 
         emitter.spriteBake(0, sprite, MutableQuadView.BAKE_LOCK_UV);
         emitter.spriteColor(0, -1, -1, -1, -1);
-        consumer.putBulkData(matrices.last(), emitter.toBakedQuad(0, sprite, false), r, g, b, light, OverlayTexture.NO_OVERLAY);
+        consumer.putBulkData(matrices.last(), emitter.toBakedQuad(0, sprite, false), r, g, b, 1.0F, light, OverlayTexture.NO_OVERLAY);
     }
 }

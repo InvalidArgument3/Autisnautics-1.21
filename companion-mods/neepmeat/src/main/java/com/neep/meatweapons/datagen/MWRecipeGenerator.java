@@ -49,7 +49,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
     {
         // Barrels
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.IRON_BARREL, 1)
-                .unlockedBy("has", RecipeProvider.has(Items.IRON_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(Items.IRON_INGOT))
                 .define('n', Items.IRON_NUGGET)
                 .define('i', Items.IRON_INGOT)
                 .pattern(" ni")
@@ -57,7 +57,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("in ")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.MEAT_STEEL_BARREL, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('n', NMItems.MEAT_SCRAP)
                 .define('i', NMItems.MEAT_STEEL_INGOT)
                 .pattern(" ni")
@@ -67,7 +67,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
 
         // Base modules
         new ShapedRecipeBuilder(RecipeCategory.TOOLS, MWItems.MEATGUN_PISTOL, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('n', Items.IRON_NUGGET)
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('c', NMItems.CONTROL_UNIT)
@@ -77,7 +77,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("nnc")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.TOOLS, MWItems.MEATGUN_STAFF, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('c', NMItems.CONTROL_UNIT)
                 .define('i', NMItems.INTERNAL_COMPONENTS)
@@ -88,7 +88,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
 
         // Tinker table
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWBlocks.TINKER_TABLE.asItem(), 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('n', Items.IRON_NUGGET)
                 .define('m', Items.IRON_INGOT)
                 .define('b', NMItems.BIOELECTRIC_ORGAN)
@@ -101,7 +101,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
 
         // Modules
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.PISTOL, 1)
-                .unlockedBy("has", RecipeProvider.has(Items.IRON_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(Items.IRON_INGOT))
                 .define('b', MWItems.IRON_BARREL)
                 .define('i', Items.IRON_INGOT)
                 .pattern("  ")
@@ -109,7 +109,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern(" i")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.CHUGGER, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('b', MWItems.IRON_BARREL)
                 .define('i', Items.IRON_NUGGET)
@@ -118,7 +118,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("mm")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.GRENADE_LAUNCHER, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('b', MWItems.IRON_BARREL)
                 .define('i', Items.IRON_NUGGET)
@@ -128,7 +128,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("mm ")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.UNDERBARREL, 1)
-                .unlockedBy("has", RecipeProvider.has(Items.IRON_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(Items.IRON_INGOT))
                 .define('m', Items.IRON_INGOT)
                 .define('b', NMItems.INTERNAL_COMPONENTS)
                 .define('i', Items.IRON_NUGGET)
@@ -137,7 +137,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("bm")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.DOUBLE_CAROUSEL, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('b', NMItems.INTERNAL_COMPONENTS)
                 .define('i', Items.IRON_INGOT)
@@ -146,7 +146,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("bi")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.TRIPLE_CAROUSEL, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .define('b', NMItems.INTERNAL_COMPONENTS)
                 .define('c', NMItems.CONTRACTILE_ACTUATOR)
@@ -157,7 +157,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .save(exporter);
 
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.HALBERD, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('d', Items.DIAMOND)
                 .define('m', NMItems.MEAT_STEEL_INGOT)
                 .pattern("dm ")
@@ -165,7 +165,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("dm ")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.SHORT_PHAGE_RAY, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('b', NMBlocks.LINEAR_OSCILLATOR.asItem())
                 .define('o', NMItems.HUNGRY_HETEROSTRUCTURE)
                 .define('m', NMItems.MEAT_STEEL_INGOT)
@@ -175,7 +175,7 @@ public class MWRecipeGenerator extends MeatRecipeProvider
                 .pattern("mm ")
                 .save(exporter);
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.PHAGE_RAY_SPEED_MODIFIER, 1)
-                .unlockedBy("has", RecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
+                .unlockedBy("has", com.neep.meatlib.datagen.FabricRecipeProvider.has(NMItems.MEAT_STEEL_INGOT))
                 .define('g', NMBlocks.REINFORCED_GLASS.asItem())
                 .define('o', NMItems.HUNGRY_HETEROSTRUCTURE)
                 .define('m', NMItems.MEAT_STEEL_INGOT)

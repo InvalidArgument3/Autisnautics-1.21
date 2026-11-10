@@ -437,7 +437,7 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
             float g = (float)(i >> 8 & 0xFF) / 255.0f;
             float b = (float)(i & 0xFF) / 255.0f;
 
-            vertices.putBulkData(entry, bakedQuad, r, g, b, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
+            vertices.putBulkData(entry, bakedQuad, r, g, b, 1.0F, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
         }
     }
 }

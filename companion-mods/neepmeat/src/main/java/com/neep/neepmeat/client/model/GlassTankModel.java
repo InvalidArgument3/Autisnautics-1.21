@@ -36,10 +36,10 @@ public class GlassTankModel extends Model
     }
 
     @Override
-    public void renderToBuffer(PoseStack matrixStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha)
+    public void renderToBuffer(PoseStack matrixStack, VertexConsumer buffer, int packedLight, int packedOverlay, int color)
     {
         ImmutableList.of(this.bb_main).forEach((modelRenderer) -> {
-            modelRenderer.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            modelRenderer.render(matrixStack, buffer, packedLight, packedOverlay, color);
         });
     }
 

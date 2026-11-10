@@ -62,30 +62,30 @@ public class MeatRecipeProvider extends FabricRecipeProvider
 
     public static void offerStairsRecipe(RecipeOutput exporter, ItemLike output, ItemLike input)
     {
-        RecipeProvider.stairBuilder(output, Ingredient.of(input)).unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input)).save(exporter);
+        RecipeProvider.stairBuilder(output, Ingredient.of(input)).unlockedBy(RecipeProvider.getHasName(input), com.neep.meatlib.datagen.FabricRecipeProvider.has(input)).save(exporter);
     }
 
     public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, ItemLike input)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
-                .unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input))
-                .unlockedBy(RecipeProvider.getHasName(dye), RecipeProvider.has(dye))
+                .unlockedBy(RecipeProvider.getHasName(input), com.neep.meatlib.datagen.FabricRecipeProvider.has(input))
+                .unlockedBy(RecipeProvider.getHasName(dye), com.neep.meatlib.datagen.FabricRecipeProvider.has(dye))
                 .save(exporter);
     }
 
     public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, ItemLike input, String path)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
-                .unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input))
-                .unlockedBy(RecipeProvider.getHasName(dye), RecipeProvider.has(dye))
+                .unlockedBy(RecipeProvider.getHasName(input), com.neep.meatlib.datagen.FabricRecipeProvider.has(input))
+                .unlockedBy(RecipeProvider.getHasName(dye), com.neep.meatlib.datagen.FabricRecipeProvider.has(dye))
                 .save(exporter, path);
     }
 
     public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, TagKey<Item> input)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
-                .unlockedBy("has_dye", RecipeProvider.has(input))
-                .unlockedBy(RecipeProvider.getHasName(dye), RecipeProvider.has(dye))
+                .unlockedBy("has_dye", com.neep.meatlib.datagen.FabricRecipeProvider.has(input))
+                .unlockedBy(RecipeProvider.getHasName(dye), com.neep.meatlib.datagen.FabricRecipeProvider.has(dye))
                 .save(exporter);
     }
 
@@ -94,8 +94,8 @@ public class MeatRecipeProvider extends FabricRecipeProvider
         ResourceLocation outputId = BuiltInRegistries.ITEM.getKey(output.asItem());
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(outputId.getNamespace(), outputId.getPath() + suffix);
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
-                .unlockedBy("has_dye", RecipeProvider.has(input))
-                .unlockedBy(RecipeProvider.getHasName(dye), RecipeProvider.has(dye))
+                .unlockedBy("has_dye", com.neep.meatlib.datagen.FabricRecipeProvider.has(input))
+                .unlockedBy(RecipeProvider.getHasName(dye), com.neep.meatlib.datagen.FabricRecipeProvider.has(dye))
                 .save(exporter, id);
     }
 

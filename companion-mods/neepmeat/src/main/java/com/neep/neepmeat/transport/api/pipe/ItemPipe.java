@@ -13,11 +13,19 @@
  */
 package com.neep.neepmeat.transport.api.pipe;
 
+import com.neep.meatlib.util.graph.PipeVertex;
+import com.neep.meatlib.transfer.ItemVariant;
+import com.neep.meatlib.transfer.TransactionContext;
+import com.neep.meatlib.util.PipeConnections;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
 public interface ItemPipe {
     boolean isConnected(Level world, BlockPos pos, BlockState state, Direction direction);
@@ -30,4 +38,51 @@ public interface ItemPipe {
         return world instanceof Level level && isConnected(level, pos, state, direction);
     }
 
+    default boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction) {
+        return false;
+    }
+
+    default boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed) {
+        return true;
+    }
+
+    default boolean canItemLeave(com.neep.meatlib.transfer.ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace) {
+        return true;
+    }
+
+    default PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state) {
+        return null;
+    }
+
+    default PipeConnections getConnections(BlockState state, @Nullable Direction forbidden) {
+        return new PipeConnections();
+    }
+
+    default boolean endPoint() {
+        return false;
+    }
+
+    default boolean supportsRouting() {
+        return false;
+    }
+
+    default boolean alwaysAutoConnect(BlockState state, Direction face) {
+        return false;
+    }
+
+    default boolean singleOutput() {
+        return false;
+    }
+
+    default boolean prioritise() {
+        return false;
+    }
+
+    default boolean canConnectTo(BlockState hereState, BlockState toState, Direction toFace, Level world, BlockPos toPos) {
+        return false;
+    }
+
+    default VoxelShape getShapeForState(BlockState state) {
+        return net.minecraft.world.phys.shapes.Shapes.block();
+    }
 }

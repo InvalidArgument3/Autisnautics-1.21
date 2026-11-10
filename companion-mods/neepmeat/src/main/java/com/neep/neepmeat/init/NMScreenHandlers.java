@@ -34,28 +34,52 @@ public final class NMScreenHandlers {
     public static void register(IEventBus bus) {
         MENUS.register(bus);
     }
-    public static net.minecraft.world.inventory.MenuType<?> ADVANCED_ROUTER;
-    public static net.minecraft.world.inventory.MenuType<?> ALLOY_KILN;
-    public static net.minecraft.world.inventory.MenuType<?> BUFFER_SCREEN_HANDLER;
-    public static net.minecraft.world.inventory.MenuType<?> BUILDER;
-    public static net.minecraft.world.inventory.MenuType<?> CONTENT_DETECTOR_SCREEN_HANDLER;
-    public static net.minecraft.world.inventory.MenuType<?> DEPLOYER;
-    public static net.minecraft.world.inventory.MenuType<?> DISPLAY_PLATE;
-    public static net.minecraft.world.inventory.MenuType<?> DISTRIBUTOR_POINT;
-    public static net.minecraft.world.inventory.MenuType<?> FABRICATOR;
-    public static net.minecraft.world.inventory.MenuType<?> FILTER;
-    public static net.minecraft.world.inventory.MenuType<?> FLUID_RATIONER;
-    public static net.minecraft.world.inventory.MenuType<?> GUIDE;
-    public static net.minecraft.world.inventory.MenuType<?> IMPLANTER;
-    public static net.minecraft.world.inventory.MenuType<?> LIVING_MACHINE;
-    public static net.minecraft.world.inventory.MenuType<?> PHAGE_RAY;
-    public static net.minecraft.world.inventory.MenuType<?> PLC;
-    public static net.minecraft.world.inventory.MenuType<?> PROGRAM_CABINET;
-    public static net.minecraft.world.inventory.MenuType<?> PROGRAM_CARD;
-    public static net.minecraft.world.inventory.MenuType<?> ROUTER;
-    public static net.minecraft.world.inventory.MenuType<?> SEPARATOR;
-    public static net.minecraft.world.inventory.MenuType<?> SMALL_COMPRESSOR;
-    public static net.minecraft.world.inventory.MenuType<?> STIRLING_ENGINE;
-    public static net.minecraft.world.inventory.MenuType<?> UPGRADE_MANAGER;
-    public static net.minecraft.world.inventory.MenuType<?> VASCULAR_CONDENSER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType ADVANCED_ROUTER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType ALLOY_KILN;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType BUFFER_SCREEN_HANDLER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType BUILDER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType CONTENT_DETECTOR_SCREEN_HANDLER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType DEPLOYER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType DISPLAY_PLATE;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType DISTRIBUTOR_POINT;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType FABRICATOR;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType FILTER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType FLUID_RATIONER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType GUIDE;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType IMPLANTER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType LIVING_MACHINE;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType PHAGE_RAY;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType PLC;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType PROGRAM_CABINET;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType PROGRAM_CARD;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType ROUTER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType SEPARATOR;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType SMALL_COMPRESSOR;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType STIRLING_ENGINE;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType UPGRADE_MANAGER;
+    @SuppressWarnings("rawtypes")
+    public static net.minecraft.world.inventory.MenuType VASCULAR_CONDENSER;
 }

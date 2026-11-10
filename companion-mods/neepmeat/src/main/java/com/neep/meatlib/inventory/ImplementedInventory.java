@@ -40,7 +40,13 @@ public interface ImplementedInventory extends Container, NbtSerialisable {
         return of(NonNullList.withSize(size, ItemStack.EMPTY), onChange);
     }
 
-    NonNullList<ItemStack> items();
+    default NonNullList<ItemStack> items() {
+        return getItems();
+    }
+
+    default NonNullList<ItemStack> getItems() {
+        return items();
+    }
 
     @Override
     default int getContainerSize() {

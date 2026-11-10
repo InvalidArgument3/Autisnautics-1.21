@@ -1,3 +1,31 @@
+## Opcode debt and override bases, jar 0.30.0-neoforge.57
+
+Combined-tree errors: **2788** at the start of this run, **2671** at the end. That is 117, not 500. `exclude.txt` stays **1358**. `tools/port-errors/symbols.txt` is the end histogram.
+
+"Does not override" fell from 384 to 324. The compiler does not name the missing supertype method, so the breakdown is by the class that still carries the annotation, then by the method name. The largest classes are `RoutingNetworkImpl` 10, `TankBlock` 6, `InstructionBrowserWidget` 5, `PressureWashParticleType` 5, `MuzzleFlashParticleType` 5, `AdvancedEjectorBlock` 5, `OreDustSmeltingRecipe` 5, `OreDustBlastingRecipe` 5, and `DataVariantImpl` 5. The largest method names are `codec` 6, `streamCodec` 6, `saveAdditional` 6, `loadAdditional` 6, `saveWithoutMetadata` 6, and `register` 6. Before this pass the same errors clustered on `SyncableBlockEntity`, `BaseFacingBlock`, `ParticleType`, `BaseBlock`, `FluidPipeBlockEntity`, `ItemPipeBlock`, `EntityModel`, `MeatlibRecipe`, `ImplementedInventory`, `SmeltingRecipe`, and `BlastingRecipe`.
+
+Top of the end histogram: does not override 324, invalid constructor reference 43, invalid method reference 26, `serverTick` 26, raw `FluidPipeBlockEntity` 15, invalid method reference 15, `Fluid` to `BuiltFluid` 15, `extract` 14, `getId` 14, `checkType` 14, `ResourceKey<LootTable>` to `ResourceLocation` 13, `setVisualizer` 13, `LOOKUP` 12, `addListener` 12, `addVertex` 12. `putBulkData` and `has(Item)` left the top twenty: the bulk-quad call now passes the 1.21 alpha float, and recipe unlocks call the public `FabricRecipeProvider.has`.
+
+Making `FluidPipeBlockEntity` generic so the fifteen parameterized uses would compile broke inference in the included `NeepMachines` sources. That change was reverted. A second pass at the same cluster, default methods for the pipe and acceptor interfaces, is already in the compiling set (`ItemPipe` connection defaults, `BloodAcceptor.mode`/`getMode`, `ImplementedInventory.items`/`getItems`). It cleared the acceptor and inventory overrides that only differed by name. It cannot clear `insert` until `ItemInPipe` compiles, and `ItemInPipe` still needs the excluded `PipeItemMemory`.
+
+Instruction opcodes that still call `Instruction.end()` instead of their real provider: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. `END` is the real end opcode. The matching instruction classes that exist (`Area3Instruction`, `CombineInstruction`, `CountInstruction`, `DelayInstruction`, `ExecInstruction`, `ExtFetchInstruction`, `FindSlotInstruction`, `ImplantInstruction`, `NeepBusReadInstruction`, `NeepBusWriteInstruction`, `RequestItemInstruction`, `RisingEdgeInstruction`, `RobotInstruction`, `RouteItemInstruction`, `SayInstruction`, `WaitRedstoneInstruction`) are all still on `exclude.txt`, so `Instructions.java` cannot name them while the included compile stays green. `SingletonInstructions` holds `ALLOT`, `DYCALL`, `DYLOC`, `FETCH`, `FILL`, and `STORE` as `Instruction.EMPTY` for the same reason.
+
+`NMFluids.BLOOD`, `MEAT`, `WORK_FLUID`, `COMPRESSED_AIR`, and `TISSUE_SLURRY` are filled from their registered source fluids at the end of the fluid registry event, with `FOOD` and `ETHEREAL_FUEL`. The remaining `NMFluids` fields (animal feed, eldritch enzymes, fat, liquid clay, oil of brome, patina treatment, pinkdrink, p-milk, sludge) stay null. Screen-handler, block-entity, and living-machine fields added for missing names are also null until a registry event assigns them.
+
+Deviations that remain:
+
+- The opcodes listed above execute as `Instruction.end()`.
+- `BloodAcceptor.getMode()` defaults to `SINK` when a type only overrides `mode()`.
+- `ItemPipe` connection defaults return false, null, or empty connections.
+- `TransferVariant.getObject()` returns null.
+- `ParticleRegistry` stream codecs write nothing and decode null.
+- `getFoodProperties(ItemStack.EMPTY, null)` ignores the stack's own food components.
+- `RecipeContextMatch` on `MeatlibRecipe` catches `ClassCastException` when the input is not `C`.
+- Synced component keys store a compound tag. `get` is not the original implant or workpiece object.
+- `QuadEmitter` still does not store edited vertex positions.
+- Menu types and the extra living-machine block fields are null until something assigns them.
+- `NMFluids` fields are null until the fluid registry event, and the nine unregistered names stay null after it.
+
 ## Long-tail grind, jar 0.30.0-neoforge.56
 
 `VertexConsumer.setNormal` calls that had dropped a `Matrix3f` now use `setNormal(PoseStack.Pose, x, y, z)`. The wrench outline builds a pose that includes the extra local rotation before that call.

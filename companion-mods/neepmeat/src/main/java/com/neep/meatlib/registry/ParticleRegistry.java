@@ -13,6 +13,9 @@
 package com.neep.meatlib.registry;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.fabricmc.fabric.api.client.particle.v1.FabricSpriteProvider;
 import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.core.Registry;
@@ -34,9 +37,15 @@ public class ParticleRegistry
         return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new ParticleType<T>(false, factory)
         {
             @Override
-            public Codec<T> codec()
+            public MapCodec<T> codec()
             {
-                return function.apply(this);
+                return MapCodec.assumeMapUnsafe(function.apply(this));
+            }
+
+            @Override
+            public StreamCodec<? super RegistryFriendlyByteBuf, T> streamCodec()
+            {
+                return StreamCodec.of((buf, value) -> {}, buf -> null);
             }
         });
     }
