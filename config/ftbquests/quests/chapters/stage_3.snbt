@@ -566,13 +566,13 @@
 				"3BFC4DFCE765F3EA"
 			]
 			icon: {
-				id: "immersiveengineering:ingot_electrum"
+				id: "createaddition:electrum_ingot"
 			}
 			id: "7B080B5C87247EA1"
 			shape: "circle"
 			tasks: [{
 				id: "0EC104535857B542"
-				item: { count: 1, id: "immersiveengineering:ingot_electrum" }
+				item: { count: 1, id: "createaddition:electrum_ingot" }
 				type: "item"
 			}]
 			x: -1.5d

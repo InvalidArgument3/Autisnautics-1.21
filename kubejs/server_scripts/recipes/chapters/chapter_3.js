@@ -276,6 +276,19 @@ ServerEvents.recipes(event => {
 
     // Stellaris
     constantanMachine(event, Item.of("stellaris:water_pump", 1), Ingredient.of("#create:valve_handles")) // high performance RF pump, but only for water
+
+    // Abstruse mechanism. The only other recipe is a Thermal smelter inside the
+    // commented Chapter 3A block in chapters.js, and Thermal is not installed.
+    // Heated mixing uses the inductive mechanism this chapter already crafts,
+    // plus an ender pearl and a chorus fruit (the vanilla half of that old alloy).
+    event.recipes.create.mixing("kubejs:abstruse_mechanism", [
+        "kubejs:inductive_mechanism",
+        "minecraft:ender_pearl",
+        "minecraft:chorus_fruit"
+    ]).heated().id("kubejs:abstruse_mechanism")
+    // The enderium-machine donut in chapters.js sits in that same comment, so it
+    // never loads. This is the one live copy: ender casing around the mechanism.
+    donutCraft(event, "kubejs:enderium_machine", "kubejs:enderium_casing", "kubejs:abstruse_mechanism")
 })
 
 

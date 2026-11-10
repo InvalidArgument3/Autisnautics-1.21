@@ -3,8 +3,7 @@ let hiddenEmbersMetals = ["iron", "zinc", "lead", "copper", "nickel", "gold", "t
 
 RecipeViewerEvents.removeEntries("item", (event) => {
     event.remove("immersive_aircraft:boiler")
-    // replaced with polished equivalent
-    event.remove("create:rose_quartz")
+    // Plain rose quartz is a Stage 2 quest item. Do not hide it.
     // tfmg meme stones
     // event.remove("tfmg:lignite")
     // event.remove(/.*tfmg.*galena.*/)

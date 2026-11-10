@@ -393,11 +393,11 @@ let process = function (level, entity, laserColor) {
             validForCode = false
             return
         }
-        if (e.getString("id").startsWith("kubejs:accellerator_redstone")) { // redstone switch
+        if (e.getString("id").startsWith("kubejs:accelerator_redstone")) { // redstone switch
             redstoneAccellerator = true
             return
         }
-        if (e.getString("id").startsWith("kubejs:accellerator_glowstone")) { // glowstone switch
+        if (e.getString("id").startsWith("kubejs:accelerator_glowstone")) { // glowstone switch
             glowstoneAccellerator = true
             return
         }
