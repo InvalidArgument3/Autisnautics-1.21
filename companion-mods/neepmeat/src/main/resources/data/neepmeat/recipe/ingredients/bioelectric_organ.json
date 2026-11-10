@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    "cbc",
+    " g "
+  ],
+  "key": {
+    "c": {
+      "item": "neepmeat:copper_coil"
+    },
+    "b": {
+      "item": "neepmeat:internal_components"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "neepmeat:bioelectric_organ",
+    "count": 2,
+    "id": "neepmeat:bioelectric_organ"
+  }
+}

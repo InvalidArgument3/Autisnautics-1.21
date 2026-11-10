@@ -3,7 +3,10 @@
  *
  * This file is part of NEEPMeat.
  *
- * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
+ * Throughput is the upstream basic pipe value: 10125 fabric droplets, which is
+ * 125 mB. A pipe holds one packet and pushes it out the next connected side.
+ * Pumps and the fluid vertex graph are not ported, so nothing enters a pipe
+ * unless something calls {@link #insert}.
  */
 
 package com.neep.neepmeat.machine.transport;
@@ -19,44 +22,82 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public class FluidPipeBlockEntity extends BlockEntity {
-    private static final int RATE = 250;
-    private FluidStack buffer = FluidStack.EMPTY;
-    private int cooldown;
+    /** {@code data/neepmeat/transport/fluid_transport.json} basic_pipe_throughput, converted from droplets. */
+    public static final int THROUGHPUT_MB = 125;
+
+    private FluidStack held = FluidStack.EMPTY;
+    private Direction in = Direction.NORTH;
+    private int lastOutput;
 
     public FluidPipeBlockEntity(BlockPos pos, BlockState state) {
         super(NeepMachines.FLUID_PIPE_BE.get(), pos, state);
     }
 
+    @Override
+    public void onLoad() {
+        super.onLoad();
+        if (level != null && !level.isClientSide && getBlockState().getBlock() instanceof ConnectedPipeBlock pipe) {
+            pipe.refreshConnections(level, worldPosition);
+        }
+    }
+
+    public int insert(FluidStack stack, Direction from) {
+        if (stack.isEmpty() || !held.isEmpty() || level == null) {
+            return 0;
+        }
+        Direction out = chooseOutput(from);
+        if (out == null) {
+            return 0;
+        }
+        int amount = Math.min(THROUGHPUT_MB, stack.getAmount());
+        held = stack.copy();
+        held.setAmount(amount);
+        in = from;
+        lastOutput = out.ordinal();
+        setChanged();
+        return amount;
+    }
+
     public void serverTick() {
         Level level = getLevel();
-        if (level == null || level.isClientSide) {
+        if (level == null || held.isEmpty()) {
             return;
         }
-        if (cooldown-- > 0) {
-            return;
-        }
-        cooldown = 5;
-        Direction facing = getBlockState().getValue(FluidPipeBlock.FACING);
-        if (!buffer.isEmpty()) {
-            IFluidHandler destination = level.getCapability(Capabilities.FluidHandler.BLOCK, worldPosition.relative(facing), facing.getOpposite());
-            if (destination != null) {
-                int filled = destination.fill(buffer.copy(), IFluidHandler.FluidAction.EXECUTE);
-                buffer.shrink(filled);
-                if (buffer.getAmount() <= 0) {
-                    buffer = FluidStack.EMPTY;
-                }
-                setChanged();
+        Direction out = Direction.values()[lastOutput];
+        BlockPos target = worldPosition.relative(out);
+        BlockState state = level.getBlockState(target);
+        if (state.getBlock() instanceof FluidPipeBlock && level.getBlockEntity(target) instanceof FluidPipeBlockEntity next) {
+            int moved = next.insert(held, out.getOpposite());
+            held.shrink(moved);
+        } else {
+            IFluidHandler handler = level.getCapability(Capabilities.FluidHandler.BLOCK, target, out.getOpposite());
+            if (handler != null) {
+                int moved = handler.fill(held.copy(), IFluidHandler.FluidAction.EXECUTE);
+                held.shrink(moved);
             }
-            return;
         }
-        IFluidHandler source = level.getCapability(Capabilities.FluidHandler.BLOCK, worldPosition.relative(facing.getOpposite()), facing);
-        if (source == null) {
-            return;
+        if (held.getAmount() <= 0) {
+            held = FluidStack.EMPTY;
         }
-        FluidStack drained = source.drain(RATE, IFluidHandler.FluidAction.EXECUTE);
-        if (!drained.isEmpty()) {
-            buffer = drained;
-            setChanged();
+        setChanged();
+    }
+
+    public int heldAmount() {
+        return held.getAmount();
+    }
+
+    private Direction chooseOutput(Direction from) {
+        for (Direction direction : Direction.values()) {
+            if (direction == from || level == null) {
+                continue;
+            }
+            BlockPos neighbour = worldPosition.relative(direction);
+            BlockState state = level.getBlockState(neighbour);
+            if (state.getBlock() instanceof FluidPipeBlock
+                    || level.getCapability(Capabilities.FluidHandler.BLOCK, neighbour, direction.getOpposite()) != null) {
+                return direction;
+            }
         }
+        return null;
     }
 }

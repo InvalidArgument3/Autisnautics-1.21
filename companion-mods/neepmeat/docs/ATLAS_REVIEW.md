@@ -41,20 +41,15 @@ These are upstream recipes, called out so they are not a surprise:
 
 ## Alloy kiln, for Atlas review
 
-Shipped, because every ingredient already exists:
+The three upstream alloy recipes are now in the jar, unchanged:
 
-- `neepmeat:alloy_brick_from_asbestos` is the upstream alloy recipe: one `neepmeat:asbestos` plus one sand becomes one bricks, 200 ticks, in the alloy kiln. It is not a new ratio.
+- asbestos + sand → bricks (`ingots/brick_from_asbestos`)
+- iron ingot + raw meat brick → meat steel ingot
+- copper ingot + whisper flour → whisper brass ingot
 
-Not shipped, because an item is missing:
+The kiln's crafting recipe is the upstream one: sandy bricks, a blast furnace, and refractory bricks. No ratio was rewritten.
 
-- `meat_steel_ingot` needs `neepmeat:raw_meat_brick` and outputs `neepmeat:meat_steel_ingot`.
-- `whisper_brass_ingot` needs `neepmeat:whisper_flour` and outputs `neepmeat:whisper_brass_ingot`.
-
-The upstream crafting recipe for the kiln itself uses `neepmeat:refractory_brick`, which is not registered, so the kiln has no crafting recipe. Do not treat that as a balance change. When refractory bricks exist, the upstream pattern (sandy bricks, blast furnace, refractory bricks) should come back unchanged unless Atlas says otherwise.
-
-Item pipes, fluid pipes, and the 8000 mB tank have no recipes. They are placeable from creative mode for the game tests.
-
-The program board does not run programs and has no recipe.
+Other upstream crafting recipes were copied only when every item already exists. Recipes that need a block this port has not registered yet were left out rather than substituted. Nothing new was priced.
 
 ## Not in this phase
 

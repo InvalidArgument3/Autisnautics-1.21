@@ -16,8 +16,6 @@ import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
-import com.neep.neepmeat.machine.plc.ProgramBoardBlock;
-import com.neep.neepmeat.machine.plc.ProgramBoardBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidPipeBlock;
 import com.neep.neepmeat.machine.transport.FluidPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidTankBlock;
@@ -72,11 +70,6 @@ public final class NeepMachines {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidTankBlockEntity>> FLUID_TANK_BE = BLOCK_ENTITIES.register("fluid_tank",
             () -> BlockEntityType.Builder.of(FluidTankBlockEntity::new, FLUID_TANK.get()).build(null));
 
-    public static final DeferredBlock<ProgramBoardBlock> PROGRAM_BOARD = CONTEXT.block("program_board", ProgramBoardBlock::new);
-    public static final DeferredItem<BlockItem> PROGRAM_BOARD_ITEM = CONTEXT.item("program_board", () -> new BlockItem(PROGRAM_BOARD.get(), new Item.Properties()));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ProgramBoardBlockEntity>> PROGRAM_BOARD_BE = BLOCK_ENTITIES.register("program_board",
-            () -> BlockEntityType.Builder.of(ProgramBoardBlockEntity::new, PROGRAM_BOARD.get()).build(null));
-
     public static final DeferredHolder<net.minecraft.world.item.crafting.RecipeType<?>, net.minecraft.world.item.crafting.RecipeType<AlloyKilnRecipe>> ALLOY_TYPE = NeepRecipes.ALLOY;
 
     private NeepMachines() {}
@@ -102,7 +95,6 @@ public final class NeepMachines {
             event.accept(ITEM_PIPE_ITEM.get());
             event.accept(FLUID_PIPE_ITEM.get());
             event.accept(FLUID_TANK_ITEM.get());
-            event.accept(PROGRAM_BOARD_ITEM.get());
         }
     }
 }

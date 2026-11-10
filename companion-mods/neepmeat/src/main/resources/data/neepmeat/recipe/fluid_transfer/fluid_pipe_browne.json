@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cic",
+    "   ",
+    "cic"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "neepmeat:browne_ingot"
+    }
+  },
+  "result": {
+    "item": "neepmeat:fluid_pipe",
+    "count": 10,
+    "id": "neepmeat:fluid_pipe"
+  }
+}

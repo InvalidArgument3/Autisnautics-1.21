@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "neepmeat:bloody_bricks"
+  },
+  "result": {
+    "item": "neepmeat:bloody_tiles",
+    "id": "neepmeat:bloody_tiles"
+  }
+}

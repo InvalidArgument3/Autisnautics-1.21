@@ -3,7 +3,8 @@
  *
  * This file is part of NEEPMeat.
  *
- * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
+ * NeoForge port of the basic fluid pipe connections. Pumps, filters, windows,
+ * and the fluid node graph are not in this class.
  */
 
 package com.neep.neepmeat.machine.transport;
@@ -12,28 +13,22 @@ import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import org.jetbrains.annotations.Nullable;
 
-/** Pulls fluid from behind and pushes it forward. Cube model, not the upstream pipe mesh. */
-public class FluidPipeBlock extends BaseEntityBlock {
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+public class FluidPipeBlock extends ConnectedPipeBlock {
     public static final MapCodec<FluidPipeBlock> CODEC = simpleCodec(properties -> new FluidPipeBlock());
 
     public FluidPipeBlock() {
-        super(MeatlibBlockSettings.create().strength(0.8F).properties());
-        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+        super(MeatlibBlockSettings.create().strength(0.8F).nonOpaque().properties());
     }
 
     @Override
@@ -42,13 +37,11 @@ public class FluidPipeBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
+    protected boolean connectsTo(LevelAccessor level, BlockPos neighbourPos, BlockState neighbour, Direction fromNeighbour) {
+        if (neighbour.getBlock() instanceof FluidPipeBlock) {
+            return true;
+        }
+        return level instanceof Level real && real.getCapability(Capabilities.FluidHandler.BLOCK, neighbourPos, fromNeighbour) != null;
     }
 
     @Override
@@ -63,7 +56,7 @@ public class FluidPipeBlock extends BaseEntityBlock {
 
     @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(net.minecraft.world.level.Level level, BlockState state, BlockEntityType<T> type) {
         if (level.isClientSide) {
             return null;
         }

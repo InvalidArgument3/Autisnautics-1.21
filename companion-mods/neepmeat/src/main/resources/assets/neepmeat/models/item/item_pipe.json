@@ -1,3 +1,5 @@
 {
-  "parent": "neepmeat:block/item_pipe"
+	"parent": "neepmeat:block/pneumatic_pipe/item"
 }
+
+

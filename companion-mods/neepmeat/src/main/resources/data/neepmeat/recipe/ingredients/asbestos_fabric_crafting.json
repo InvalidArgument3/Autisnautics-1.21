@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "neepmeat:asbestos_dust"
+    }
+  },
+  "result": {
+    "item": "neepmeat:asbestos_fabric",
+    "count": 1,
+    "id": "neepmeat:asbestos_fabric"
+  }
+}

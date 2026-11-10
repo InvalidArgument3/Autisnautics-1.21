@@ -24,6 +24,7 @@ package com.neep.neepmeat;
 
 import com.mojang.logging.LogUtils;
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.item.MaterialItems;
 import com.neep.neepmeat.machine.NeepMachines;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -48,6 +49,7 @@ public final class NeepMeat {
         IEventBus bus = container.getEventBus();
         BuildingBlocks.bootstrap();
         NeepMachines.register(bus);
+        MaterialItems.register(bus);
         BLOCKS.register(bus);
         ITEMS.register(bus);
         TABS.register(bus);

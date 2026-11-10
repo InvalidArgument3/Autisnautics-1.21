@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "neepmeat:browne_ore_dust"
+  },
+  "result": {
+    "item": "neepmeat:browne_ingot",
+    "id": "neepmeat:browne_ingot"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

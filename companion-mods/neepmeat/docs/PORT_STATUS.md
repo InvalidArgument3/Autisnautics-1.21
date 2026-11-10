@@ -42,6 +42,25 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## Phase 2b continued: materials and the real pipe meshes
+
+Jar `0.30.0-neoforge.4`.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Crafting materials | ported | The 35 `BaseCraftingItem` entries from `NMItems` that are not already blocks: refractory brick, meat steel, whisper brass, raw and cooked meat brick, organs, coils, asbestos dust, and the rest. Food stats for meat scrap, meat bricks, blood bubble, and asbestos dust match `NMFoodComponents`. Tools, weapons, implants, and enlightenment foods are separate items and are not registered. |
+| Recipes | partial | Vanilla crafting, smelting, smoking, and stonecutting recipes whose items all exist are copied, plus all three upstream `alloy_smelting` recipes. The kiln craft is the upstream pattern (sandy bricks, blast furnace, refractory bricks). Recipes that need an unregistered block (data cable, machine block, tanks, ejectors, and so on) are left out, because a missing item fails the datapack. Machine recipe types other than alloy smelting have no serializer yet. |
+| Alloy kiln | ported, screen is not upstream | Same behaviour as the previous checkpoint. The screen is still a flat menu, not the meatlib widget kit. |
+| Item pipe | partial real port | Multipart model, arm shapes, and connection properties are the upstream pipe. `ConnectionType` still serialises as `true` / `false`. An inserted stack crosses at speed `0.1` (ten ticks) and round-robins into another pipe or an item handler. The pipe does not pull by itself. Filters, merge pipes, drivers, the route list, and `PipeVertex` are not ported. |
+| Fluid pipe | partial real port | Upstream rusty-pipe multipart model, except the unconditional part `rusty_pipe/pipe_sides`, which the upstream git tree does not contain (no json anywhere in the checkout). One packet of 125 mB, the upstream `basic_pipe_throughput` of 10125 fabric droplets. Pumps, filters, windows, coloured pipes, and the fluid node graph are not ported. Nothing enters unless `insert` is called. |
+| Fluid tank | visual stub | Still the 8000 mB cube. Not an upstream tank. |
+| Program board | removed | It was not an upstream block. |
+| PLC, robot arm, NEEPASM | missing | The real blocks are `plc`, `robotic_arm`, `executor`, `program_cabinet`, processor, builder, implanter, and the redstone interface. The instruction package is 68 classes plus the compiler and its screen, on Fabric transfer and the unported screen kit. |
+| Screen widget kit | missing | |
+| Other machines, blood fluid, weapons, entities | missing | |
+| Mixins | none added | |
+| Flywheel / Myron | not used | |
+
 ## Phase 2b checkpoint: one machine, pipes, a program board
 
 Jar `0.30.0-neoforge.3`. This is a working slice, not the rest of the mod.
@@ -145,27 +164,17 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` and `./gradlew test` on JDK 21, jar `0.30.0-neoforge.3`:
+`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.4`:
 
 ```
-meatlib 0.30.0-neoforge.3 loaded
-NeepMeat 0.30.0-neoforge.3 loaded with GeckoLib 4.9.3
+meatlib 0.30.0-neoforge.4 loaded
+NeepMeat 0.30.0-neoforge.4 loaded with GeckoLib 4.9.3
 All 10 required tests passed :)
 BUILD SUCCESSFUL
 ```
 
-The ten tests are the earlier six plus alloy kiln (asbestos + sand + coal → bricks), item pipe (dirt from chest to chest), fluid pipe (water from tank to tank), and program-board text.
+The ten tests are the earlier six plus the alloy kiln (asbestos + sand + coal → bricks), the three alloy recipes and the kiln crafting recipe loading, an item pushed into an item pipe arriving in the chest after the ten-tick crossing, and 125 mB pushed through a fluid pipe.
 
-`./gradlew runServer`:
-
-```
-meatlib 0.30.0-neoforge.3 loaded
-NeepMeat 0.30.0-neoforge.3 loaded with GeckoLib 4.9.3
-Done (0.301s)! For help, type "help"
-```
-
-No `ERROR` lines on that server boot.
-
-`./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. The only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. No missing model and no missing subtitle. The main menu was not clicked through. JEI and EMI categories were not clicked.
+`./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. After `pipe_sides` was dropped from the fluid-pipe blockstate, the only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. The main menu was not clicked through. A dedicated server boot was not repeated on this jar; the game-test server is the dedicated boot that ran the tests.
 
 Not tested: Java 25, a Prism/Pakku instance with the pack's 402 mods, Sodium/Iris together with this jar, crafting in a GUI, or multiplayer with the jar in `.pakku/overrides/mods`. The jar was not added there.
