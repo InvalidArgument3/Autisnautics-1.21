@@ -1261,16 +1261,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "Truly-Modular-archery-archery-forge-2.2.1-1.21.jar",
+                    "file_name": "Truly-Modular-archery-archery-forge-2.2.2-1.21.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/Archery/releases/download/2.2.1-1.21/Truly-Modular-archery-archery-forge-2.2.1-1.21.jar",
-                    "id": "730971078",
+                    "url": "https://github.com/InvalidArgument3/Archery/releases/download/2.2.2-1.21/Truly-Modular-archery-archery-forge-2.2.2-1.21.jar",
+                    "id": "731050662",
                     "parent_id": "1452480967",
                     "hashes": {
-                        "sha256": "39df29580c3665f6df25c040ff7bcd563cd20d4a0f443dcd5b48fbf5f6e1b75d"
+                        "sha256": "e5ced252a0188f28139b311a1f19b056b422e33ef66874cb3ae804a8385e8cf9"
                     },
-                    "size": 156169,
-                    "date_published": "2026-11-10T10:13:36Z"
+                    "size": 156227,
+                    "date_published": "2026-11-10T10:41:05Z"
                 }
             ]
         },
@@ -1413,16 +1413,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "Truly-Modular-armory-armory-forge-2.2.1-1.21.jar",
+                    "file_name": "Truly-Modular-armory-armory-forge-2.2.2-1.21.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/Armory/releases/download/2.2.1-1.21/Truly-Modular-armory-armory-forge-2.2.1-1.21.jar",
-                    "id": "730974264",
+                    "url": "https://github.com/InvalidArgument3/Armory/releases/download/2.2.2-1.21/Truly-Modular-armory-armory-forge-2.2.2-1.21.jar",
+                    "id": "731054612",
                     "parent_id": "1452481003",
                     "hashes": {
-                        "sha256": "c2a5ba0f7875a1ca815e9a58ea52a9996b9b541c9e106a9643904e4a4b74bcf9"
+                        "sha256": "5b5ca3c74342783c769e4b07e6accf4880a79173926d38972924c57160801437"
                     },
-                    "size": 397091,
-                    "date_published": "2026-11-10T10:15:00Z"
+                    "size": 397184,
+                    "date_published": "2026-11-10T10:42:17Z"
                 }
             ]
         },
@@ -1479,16 +1479,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "Truly-Modular-arsenal-arsenal-forge-2.4.1-1.21.jar",
+                    "file_name": "Truly-Modular-arsenal-arsenal-forge-2.4.2-1.21.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/Arsenal/releases/download/2.4.1-1.21/Truly-Modular-arsenal-arsenal-forge-2.4.1-1.21.jar",
-                    "id": "730969855",
+                    "url": "https://github.com/InvalidArgument3/Arsenal/releases/download/2.4.2-1.21/Truly-Modular-arsenal-arsenal-forge-2.4.2-1.21.jar",
+                    "id": "731051745",
                     "parent_id": "1452480936",
                     "hashes": {
-                        "sha256": "5a53fbf9c44472a4dd353ee7b490d2a950d3f57c2606a45858c6ec7d5e5419a4"
+                        "sha256": "401629bf071b351792aa089ef8c31987756b7929af84c2863b39a4c391cb9f4c"
                     },
-                    "size": 610417,
-                    "date_published": "2026-11-10T10:13:13Z"
+                    "size": 621911,
+                    "date_published": "2026-11-10T10:41:23Z"
                 }
             ]
         },
@@ -15316,16 +15316,16 @@
             "files": [
                 {
                     "type": "github",
-                    "file_name": "Truly-Modular-miapi-neoforge-2.4.3-1.21.1.jar",
+                    "file_name": "Truly-Modular-miapi-neoforge-2.4.4-1.21.1.jar",
                     "release_type": "release",
-                    "url": "https://github.com/InvalidArgument3/Modular-Item-API/releases/download/2.4.3-1.21.1/Truly-Modular-miapi-neoforge-2.4.3-1.21.1.jar",
-                    "id": "730983627",
+                    "url": "https://github.com/InvalidArgument3/Modular-Item-API/releases/download/2.4.4-1.21.1/Truly-Modular-miapi-neoforge-2.4.4-1.21.1.jar",
+                    "id": "731061365",
                     "parent_id": "1452480903",
                     "hashes": {
-                        "sha256": "67ec963a8d1f312292c9c611738c8cde490f922e977d7b1963652bbe7721f9e3"
+                        "sha256": "e8eb234d5747ee0c745788b8e27b9afdb4a5660cd6e5681c472c0e4082a7e53e"
                     },
-                    "size": 4018661,
-                    "date_published": "2026-11-10T10:18:47Z"
+                    "size": 4019299,
+                    "date_published": "2026-11-10T10:44:38Z"
                 }
             ]
         },
