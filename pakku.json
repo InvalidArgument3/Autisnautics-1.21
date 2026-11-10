@@ -152,14 +152,17 @@
             "side": "CLIENT"
         },
         "fa-player-extension": {
-            "side": "CLIENT"
+            "side": "CLIENT",
+            "redistributable": true
         },
         "fresh-animations-extensions": {
-            "side": "CLIENT"
+            "side": "CLIENT",
+            "redistributable": true
         },
         "cobblemotion": {
             "type": "RESOURCE_PACK",
-            "side": "CLIENT"
+            "side": "CLIENT",
+            "redistributable": true
         },
         "winterglides-extra-animations-cobblemon": {
             "type": "RESOURCE_PACK",
@@ -181,6 +184,9 @@
         "irons-artifice": {
             "side": "BOTH",
             "update_strategy": "NONE",
+            "redistributable": true
+        },
+        "irons-spells-n-spellbooks": {
             "redistributable": true
         },
         "create-walking-steel": {
@@ -230,6 +236,9 @@
             "redistributable": true
         },
         "architects-palette": {
+            "redistributable": true
+        },
+        "ars-nouveau": {
             "redistributable": true
         },
         "autochefs-delight": {
@@ -317,6 +326,30 @@
             "redistributable": true
         },
         "yungs-cave-biomes": {
+            "redistributable": true
+        },
+        "xaeros-minimap": {
+            "redistributable": true
+        },
+        "sound": {
+            "redistributable": true
+        },
+        "default-options": {
+            "redistributable": true
+        },
+        "yeetus-experimentus": {
+            "redistributable": true
+        },
+        "certain-questing-additions": {
+            "redistributable": true
+        },
+        "fusion-connected-textures": {
+            "redistributable": true
+        },
+        "client-tweaks": {
+            "redistributable": true
+        },
+        "xaeros-world-map": {
             "redistributable": true
         }
     },
