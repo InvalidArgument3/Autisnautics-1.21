@@ -8572,7 +8572,8 @@
     {
       "pakku_id": "jTSbBhMDmP4aY9fO",
       "pakku_links": [
-        "WXzh7fzt3JK2uBe6"
+        "WXzh7fzt3JK2uBe6",
+        "fwKxTgijTyIlOVor"
       ],
       "type": "MOD",
       "side": "CLIENT",
@@ -8614,10 +8615,52 @@
       ]
     },
     {
+      "pakku_id": "fwKxTgijTyIlOVor",
+      "pakku_links": [
+        "WXzh7fzt3JK2uBe6"
+      ],
+      "type": "MOD",
+      "side": "CLIENT",
+      "slug": {
+        "modrinth": "emf-compat-core"
+      },
+      "name": {
+        "curseforge": "EMF Compat: Core",
+        "modrinth": "EMF Compat: Core"
+      },
+      "id": {
+        "curseforge": "1605113",
+        "modrinth": "hbGct5uU"
+      },
+      "files": [
+        {
+          "type": "modrinth",
+          "file_name": "emf_compat_core_neoforge_1.21.1_2.3.2.jar",
+          "mc_versions": [
+            "1.21.1"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "release_type": "release",
+          "url": "https://cdn.modrinth.com/data/hbGct5uU/versions/ai1LOVRO/emf_compat_core_neoforge_1.21.1_2.3.2.jar",
+          "id": "KaQZblRC",
+          "parent_id": "ai1LOVRO",
+          "hashes": {
+            "sha512": "e0d264dd700380b9a17103fa023f76e9210ca818af1dd6bf20b48d2998324392a369c0ffd5ed131a249805555679ec8741e8c2d547ddc169d1fb33d2a7b51675",
+            "sha1": "67e4a92e2df2a2b86a655cfc081d971a81f5a9f8"
+          },
+          "size": 174702,
+          "date_published": "2026-10-16T10:15:00.031605Z"
+        }
+      ]
+    },
+    {
       "pakku_id": "qIC8jb5Gt7BdI2UE",
       "pakku_links": [
         "wDY1fwqOdyH3Ec3d",
-        "WXzh7fzt3JK2uBe6"
+        "WXzh7fzt3JK2uBe6",
+        "fwKxTgijTyIlOVor"
       ],
       "type": "MOD",
       "side": "CLIENT",
@@ -19237,6 +19280,7 @@
       "id": {
         "modrinth": "RH2KUdKJ"
       },
+      "update_strategy": "NONE",
       "files": [
         {
           "type": "modrinth",
@@ -21591,7 +21635,8 @@
     {
       "pakku_id": "E1Lm5OEfjdtP2H9b",
       "pakku_links": [
-        "WXzh7fzt3JK2uBe6"
+        "WXzh7fzt3JK2uBe6",
+        "fwKxTgijTyIlOVor"
       ],
       "type": "MOD",
       "slug": {
