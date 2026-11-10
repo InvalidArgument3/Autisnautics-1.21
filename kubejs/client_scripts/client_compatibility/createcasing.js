@@ -1,5 +1,5 @@
 (function () {
-    if (Platform.isLoaded("createdieselgenerators")) {
+    if (Platform.isLoaded("createcasing")) {
         if (typeof RecipeViewerEvents !== "undefined") RecipeViewerEvents.removeEntries("item", event => {
             const hide = (entry) => event.remove(entry)
             hide("createcasing:oak_shaft")

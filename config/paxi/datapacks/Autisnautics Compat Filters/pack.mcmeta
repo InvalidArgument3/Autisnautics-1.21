@@ -1,0 +1,18 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Drop bundled data that names ids this pack does not register."
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "copycats",
+        "path": "physics_block_properties/copycat_catwalk\\.json"
+      },
+      {
+        "namespace": "tm_armory",
+        "path": "miapi/material_extensions/test\\.json"
+      }
+    ]
+  }
+}

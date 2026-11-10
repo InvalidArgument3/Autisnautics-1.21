@@ -37,32 +37,36 @@
 
         event.hide("architects_palette:withered_bone")
 
-        let begoneEarth = [
-            "tier_1_rover", "tier_2_rocket", "tier_3_rocket", "tier_4_rocket",
-            "steel_cable", "desh_cable", "desh_fluid_pipe", "ostrum_fluid_pipe", "cable_duct", "fluid_pipe_duct",
-            "coal_generator", "compressor", "etrionic_blast_furnace", "nasa_workbench", "fuel_refinery",
-            "water_pump", "energizer", "cryo_freezer",
-            "etrionic_capacitor",
-            "oxygen_gear", "wheel", "engine_frame", "fan", "rocket_nose_cone", "rocket_fin",
-            "etrionic_core", "photovoltaic_vesnium_cell",
-            "infernal_spire_block", "sky_stone",
-            "iron_plate",
-            "cryo_fuel_bucket"
-        ]
-        event.hide(begoneEarth.map(begone=>{return `ad_astra:${begone}`}))
+        if (Platform.isLoaded("ad_astra")) {
+            let begoneEarth = [
+                "tier_1_rover", "tier_2_rocket", "tier_3_rocket", "tier_4_rocket",
+                "steel_cable", "desh_cable", "desh_fluid_pipe", "ostrum_fluid_pipe", "cable_duct", "fluid_pipe_duct",
+                "coal_generator", "compressor", "etrionic_blast_furnace", "nasa_workbench", "fuel_refinery",
+                "water_pump", "energizer", "cryo_freezer",
+                "etrionic_capacitor",
+                "oxygen_gear", "wheel", "engine_frame", "fan", "rocket_nose_cone", "rocket_fin",
+                "etrionic_core", "photovoltaic_vesnium_cell",
+                "infernal_spire_block", "sky_stone",
+                "iron_plate",
+                "cryo_fuel_bucket"
+            ]
+            event.hide(begoneEarth.map(begone=>{return `ad_astra:${begone}`}))
 
-        event.hide(/^ad_astra:(netherite_space|jet_suit)_(helmet|suit|pants|boots)$/)
-        event.hide("ad_astra:jet_suit")
-        event.hide(/^ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)$/)
-        event.hide(/ad_astra:.*mars/)
-        event.hide(/ad_astra:.*venus/)
-        event.hide(/ad_astra:.*mercury/)
-        event.hide(/ad_astra:.*glacio/)
-        event.hide(/^ad_astra:(?!photovoltaic).*(ostrum|calorite|etrium).*/)
-        event.hide(/^ad_astra:.*conglomerate.*/)
-        event.hide(/^ad_astra:.*permafrost.*/)
-        event.hide(/^(ad_astra|everycomp|supplementaries):.*(aeronos|strophar|glacian).*/)
-        event.hide(["ad_astra:deepslate_desh_ore", "ad_astra:deepslate_ice_shard_ore"])
+            event.hide(/^ad_astra:(netherite_space|jet_suit)_(helmet|suit|pants|boots)$/)
+            event.hide("ad_astra:jet_suit")
+            event.hide(/^ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)$/)
+            event.hide(/ad_astra:.*mars/)
+            event.hide(/ad_astra:.*venus/)
+            event.hide(/ad_astra:.*mercury/)
+            event.hide(/ad_astra:.*glacio/)
+            event.hide(/^ad_astra:(?!photovoltaic).*(ostrum|calorite|etrium).*/)
+            event.hide(/^ad_astra:.*conglomerate.*/)
+            event.hide(/^ad_astra:.*permafrost.*/)
+            event.hide(/^ad_astra:.*(aeronos|strophar|glacian).*/)
+            event.hide(["ad_astra:deepslate_desh_ore", "ad_astra:deepslate_ice_shard_ore"])
+        }
+        if (Platform.isLoaded("everycomp")) event.hide(/^everycomp:.*(aeronos|strophar|glacian).*/)
+        event.hide(/^supplementaries:.*(aeronos|strophar|glacian).*/)
 
         event.hide("biomesoplenty:blood")
 
@@ -148,49 +152,51 @@
         event.hide("projectred_transmission:low_load_power_wire")
         event.hide("projectred_transmission:low_load_framed_power_wire")
 
-        event.hide("thermal:rs_control_augment")
-        event.hide("thermal:side_config_augment")
-        event.hide("thermal:press_coin_die")
-        event.hide("thermal:press_gear_die")
-        event.hide("thermal:press_packing_2x2_die")
-        event.hide("thermal:press_packing_3x3_die")
-        event.hide("thermal:press_unpacking_die")
-        event.hide("thermal:iron_coin")
-        event.hide("thermal:copper_coin")
-        event.hide("thermal:tin_coin")
-        event.hide("thermal:lead_coin")
-        event.hide("thermal:nickel_coin")
-        event.hide("thermal:netherite_coin")
-        event.hide("thermal:bronze_coin")
-        event.hide("thermal:constantan_coin")
-        event.hide("thermal:invar_coin")
-        event.hide("thermal:electrum_coin")
-        event.hide("thermal:signalum_coin")
-        event.hide("thermal:lumium_coin")
-        event.hide("thermal:enderium_coin")
-        event.hide("thermal:gold_plate")
-        event.hide("thermal:iron_plate")
-        event.hide("thermal:copper_plate")
-        event.hide("thermal:netherite_plate")
-        /* A2: re-add silver ore and tin
-    event.hide("thermal:silver_ore")
-    event.hide("thermal:deepslate_silver_ore")
-    event.hide("thermal:tin_ore")
-    event.hide("thermal:deepslate_tin_ore")
-    event.hide("thermal:tin_nugget")
-    event.hide("thermal:tin_ingot")
-    event.hide("thermal:tin_block")
-    event.hide("thermal:tin_dust")
-    event.hide("thermal:tin_plate")
-    event.hide("thermal:tin_gear")
-    event.hide("thermal:raw_tin")
-    event.hide("thermal:raw_tin_block")
-    */
-        event.hide("thermal:netherite_nugget")
-        event.hide("thermal:copper_nugget")
-        event.hide("thermal:ender_pearl_dust")
-        event.hide("thermal:servo_attachment")
-        event.hide("thermal:device_hive_extractor")
+        if (Platform.isLoaded("thermal")) {
+            event.hide("thermal:rs_control_augment")
+            event.hide("thermal:side_config_augment")
+            event.hide("thermal:press_coin_die")
+            event.hide("thermal:press_gear_die")
+            event.hide("thermal:press_packing_2x2_die")
+            event.hide("thermal:press_packing_3x3_die")
+            event.hide("thermal:press_unpacking_die")
+            event.hide("thermal:iron_coin")
+            event.hide("thermal:copper_coin")
+            event.hide("thermal:tin_coin")
+            event.hide("thermal:lead_coin")
+            event.hide("thermal:nickel_coin")
+            event.hide("thermal:netherite_coin")
+            event.hide("thermal:bronze_coin")
+            event.hide("thermal:constantan_coin")
+            event.hide("thermal:invar_coin")
+            event.hide("thermal:electrum_coin")
+            event.hide("thermal:signalum_coin")
+            event.hide("thermal:lumium_coin")
+            event.hide("thermal:enderium_coin")
+            event.hide("thermal:gold_plate")
+            event.hide("thermal:iron_plate")
+            event.hide("thermal:copper_plate")
+            event.hide("thermal:netherite_plate")
+            /* A2: re-add silver ore and tin
+        event.hide("thermal:silver_ore")
+        event.hide("thermal:deepslate_silver_ore")
+        event.hide("thermal:tin_ore")
+        event.hide("thermal:deepslate_tin_ore")
+        event.hide("thermal:tin_nugget")
+        event.hide("thermal:tin_ingot")
+        event.hide("thermal:tin_block")
+        event.hide("thermal:tin_dust")
+        event.hide("thermal:tin_plate")
+        event.hide("thermal:tin_gear")
+        event.hide("thermal:raw_tin")
+        event.hide("thermal:raw_tin_block")
+        */
+            event.hide("thermal:netherite_nugget")
+            event.hide("thermal:copper_nugget")
+            event.hide("thermal:ender_pearl_dust")
+            event.hide("thermal:servo_attachment")
+            event.hide("thermal:device_hive_extractor")
+        }
 
         event.hide("cb_microblock:microblock")
         event.hide(/^ae2:facade$/)
@@ -201,6 +207,6 @@
 
     __hideFluids(event => {
     // event.hide("tconstruct:molten_tin")
-        event.hide("ad_astra:cryo_fuel")
+        if (Platform.isLoaded("ad_astra")) event.hide("ad_astra:cryo_fuel")
     })
 })();
