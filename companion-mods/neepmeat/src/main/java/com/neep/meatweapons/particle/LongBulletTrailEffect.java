@@ -122,18 +122,18 @@ public class LongBulletTrailEffect extends BeamGraphicsEffect
         consumer.addVertex(position, -d, 0, -d)
                 .setColor(1.0f, 1, 1, a)
                 .setUv(0, 0)
-                .setOverlay(o).setLight(l).setNormal(0, 1, 0);
+                .setOverlay(o).setLight(l).setNormal(entry, 0, 1, 0);
         consumer.addVertex(position, -d, 0, d)
                 .setColor(1.0f, 1, 1, a)
                 .setUv(0, 1)
-                .setOverlay(o).setLight(l).setNormal(0, 1, 0);
+                .setOverlay(o).setLight(l).setNormal(entry, 0, 1, 0);
         consumer.addVertex(position, d, 0, d)
                 .setColor(1.0f, 1, 1, a)
                 .setUv(1, 1)
-                .setOverlay(o).setLight(l).setNormal(0, 1, 0);
+                .setOverlay(o).setLight(l).setNormal(entry, 0, 1, 0);
         consumer.addVertex(position, d, 0, -d)
                 .setColor(1.0f, 1, 1, a)
                 .setUv(1, 0)
-                .setOverlay(o).setLight(l).setNormal(0, 1, 0);
+                .setOverlay(o).setLight(l).setNormal(entry, 0, 1, 0);
     }
 }

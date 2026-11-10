@@ -155,9 +155,9 @@ public class PathSoldierEntity extends WeaponSwitchingHostileEntity implements P
     }
 
     @Override
-    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
+    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData)
     {
-        var data = super.finalizeSpawn(world, difficulty, spawnReason, entityData, entityNbt);
+        var data = super.finalizeSpawn(world, difficulty, spawnReason, entityData);
 
         var player = world.getNearestPlayer(this, 100);
         if (player != null)

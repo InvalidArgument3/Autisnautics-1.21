@@ -17,4 +17,5 @@ import net.minecraft.client.gui.GuiGraphics;
 public interface TooltipRenderer
 {
     void renderTooltipLayer(GuiGraphics context, int mouseX, int mouseY, float delta);
+
 }

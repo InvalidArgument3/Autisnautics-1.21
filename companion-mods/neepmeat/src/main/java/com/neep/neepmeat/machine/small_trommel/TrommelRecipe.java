@@ -30,4 +30,5 @@ public interface TrommelRecipe extends RecipeContextMatch {
     boolean takeInputs(TrommelStorage storage, TransactionContext transaction);
 
     boolean ejectOutputs(TrommelStorage storage, TransactionContext transaction);
+
 }

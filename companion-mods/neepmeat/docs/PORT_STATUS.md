@@ -1,3 +1,13 @@
+## Long-tail grind, jar 0.30.0-neoforge.56
+
+`VertexConsumer.setNormal` calls that had dropped a `Matrix3f` now use `setNormal(PoseStack.Pose, x, y, z)`. The wrench outline builds a pose that includes the extra local rotation before that call.
+
+Combined-tree errors: **2975** at the start of this run, **2788** at the end. That is 187, not 700. `exclude.txt` stays **1358**. `tools/port-errors/symbols.txt` is the end histogram. The top entry is still "does not override" at 384. The next names are invalid constructor references 43, invalid method references 26, `serverTick` 26, raw `FluidPipeBlockEntity` 15, `Fluid` to `BuiltFluid` 15, `extract` 14, `getId` 14, `putBulkData` 14, `checkType` 14, `has(Item)` 14.
+
+Two attempts were made past that tail. Signature groups were aligned with 1.21 (`finalizeSpawn`, recipe `assemble` / `HolderLookup`, reload listeners, food properties, screen and block-entity renderer registration, `checkType`, lookup `getId`). Missing members were then added (screen handlers, block entities, fluids, instruction opcodes, living-machine fields). A third attempt, default methods on the interfaces those overrides implement, did not compile: the methods referenced types those files do not import, and one target was a class rather than an interface. That attempt was reverted so the included sources stay green. Fixing all 384 override failures would still leave the tree above 2,275.
+
+Missing instruction opcodes are `Instruction.end()` until their real providers are wired. `NMFluids` fields for blood, meat, work fluid, compressed air, tissue slurry, food, and ethereal fuel are filled at the fluid registry event. The other fluid fields stay null.
+
 ## Override restore, jar 0.30.0-neoforge.55
 
 The three run-47 shortcuts are gone.

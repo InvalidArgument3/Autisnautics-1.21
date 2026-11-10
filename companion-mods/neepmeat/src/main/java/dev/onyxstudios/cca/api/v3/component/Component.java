@@ -16,4 +16,5 @@ public interface Component {
     void readFromNbt(@NotNull CompoundTag tag);
 
     void writeToNbt(@NotNull CompoundTag tag);
+
 }

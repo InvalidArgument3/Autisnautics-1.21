@@ -38,7 +38,7 @@ public class TransportClient
         net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.PROCESS_CARD, ProcessCardScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), ItemTransport.ITEM_REQUESTER);
-        BlockEntityRenderers.register(ItemTransport.ITEM_REQUESTER_BE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(ItemTransport.ITEM_REQUESTER_BE, ItemPipeRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.FLUID_GAUGE, FluidGaugeBlockRenderer::new);
     }
 }

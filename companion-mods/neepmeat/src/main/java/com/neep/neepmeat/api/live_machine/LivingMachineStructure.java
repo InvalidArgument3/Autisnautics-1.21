@@ -12,4 +12,5 @@ import java.util.EnumMap;
 
 public interface LivingMachineStructure {
     EnumMap<StructureProperty, PropertyValue> getProperties();
+
 }

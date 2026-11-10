@@ -58,14 +58,14 @@ public class NMVisuals
         boolean skipVanillaRender = !MeatLib.CONFIG.dontSkipVanillaRender.getRealValue();
 
         VisualizerRegistry.setVisualizer(NMBlockEntities.CRUSHER, new SimpleBlockEntityVisualizer<>(CrusherVisual::new, t -> false));
-        BlockEntityRenderers.register(NMBlockEntities.CRUSHER, CrusherRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.CRUSHER, CrusherRenderer::new);
 
         VisualizerRegistry.setVisualizer(LivingMachines.CRUSHER_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(CrusherSegmentVisual::new, t -> false));
 
         VisualizerRegistry.setVisualizer(LivingMachines.LARGE_TROMMEL_BE, new SimpleBlockEntityVisualizer<>(LargeTrommelVisual::new, t -> false));
-        BlockEntityRenderers.register(LivingMachines.LARGE_TROMMEL_BE, LargeTrommelRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.LARGE_TROMMEL_BE, LargeTrommelRenderer::new);
 
-        BlockEntityRenderers.register(LivingMachines.LARGEST_HOPPER_BE, LargestHopperRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.LARGEST_HOPPER_BE, LargestHopperRenderer::new);
 
         VisualizerRegistry.setVisualizer(LivingMachines.LUCKY_ONE_BE, new SimpleBlockEntityVisualizer<>(LuckyOneVisual::new, t -> skipVanillaRender));
         VisualizerRegistry.setVisualizer(IntrusionReactor.DISRUPTOR_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(DisruptorSegmentVisual::new, t -> skipVanillaRender));
@@ -119,37 +119,37 @@ public class NMVisuals
 
         if (MeatLib.CONFIG.registerDummyBERs.getRealValue())
         {
-            BlockEntityRenderers.register(LivingMachines.CRUSHER_SEGMENT_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.CRUSHER_SEGMENT_BE, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(LivingMachines.LUCKY_ONE_BE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(IntrusionReactor.DISRUPTOR_SEGMENT_BE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.MOTOR, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.ADVANCED_MOTOR, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.LARGE_MOTOR, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.STIRLING_ENGINE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.HYDRAULIC_PRESS, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(LivingMachines.CHARNEL_PUMP_BE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(LivingMachines.BALL_MILL_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.LUCKY_ONE_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(IntrusionReactor.DISRUPTOR_SEGMENT_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.MOTOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ADVANCED_MOTOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.LARGE_MOTOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.STIRLING_ENGINE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.HYDRAULIC_PRESS, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.CHARNEL_PUMP_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.BALL_MILL_BE, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(NMBlockEntities.FABRICATOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.FABRICATOR, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(PLCBlocks.ROBOTIC_ARM_ENTITY, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(PLCBlocks.IMPLANTER_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(PLCBlocks.ROBOTIC_ARM_ENTITY, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(PLCBlocks.IMPLANTER_BE, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(NMBlockEntities.PYLON, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(PLCBlocks.PLC_ENTITY, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(PLCBlocks.BUILDER_BE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.LINEAR_OSCILLATOR, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.EJECTOR, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NMBlockEntities.ITEM_PUMP, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(ItemTransport.FILTERED_EJECTOR_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.PYLON, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(PLCBlocks.PLC_ENTITY, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(PLCBlocks.BUILDER_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.LINEAR_OSCILLATOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.EJECTOR, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ITEM_PUMP, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(ItemTransport.FILTERED_EJECTOR_BE, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(NMBlockEntities.LARGE_FAN, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.LARGE_FAN, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(NeepBus.VERTICAL_GAUGE_BE, DummyBlockEntityRenderer::new);
-            BlockEntityRenderers.register(NeepBus.LINEAR_LEVER_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NeepBus.VERTICAL_GAUGE_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NeepBus.LINEAR_LEVER_BE, DummyBlockEntityRenderer::new);
 
-            BlockEntityRenderers.register(LivingMachines.TREE_VACUUM_BE, DummyBlockEntityRenderer::new);
+            net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.TREE_VACUUM_BE, DummyBlockEntityRenderer::new);
         }
     }
 }

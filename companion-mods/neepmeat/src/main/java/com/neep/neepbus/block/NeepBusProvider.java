@@ -59,4 +59,5 @@ public interface NeepBusProvider
     }
 
     void networkChanged(Level world, BlockPos pos, BlockPos whereChanged);
+
 }

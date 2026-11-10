@@ -62,4 +62,5 @@ public interface BlockEntityClientSerializable
             // The packet is ClientboundBlockEntityDataPacket from SyncableBlockEntity.sync.
         }
     }
+
 }

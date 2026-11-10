@@ -33,7 +33,7 @@ public class MeatRecipeReloadListener implements SimpleSynchronousResourceReload
     }
 
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         for(ResourceLocation id : manager.listResources("recipes", path -> path.getPath().endsWith(".json")).keySet())
         {

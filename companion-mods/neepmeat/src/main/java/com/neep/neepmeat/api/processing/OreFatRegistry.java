@@ -265,7 +265,7 @@ public class OreFatRegistry implements SimpleSynchronousResourceReloadListener
      * Entries that already exist for a given output will not be replaced by generated entries.
      */
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         inputToEntry.clear();
         nbtToEntry.clear();

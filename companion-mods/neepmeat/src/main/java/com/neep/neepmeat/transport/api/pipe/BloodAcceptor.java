@@ -42,4 +42,5 @@ public interface BloodAcceptor {
         ACTIVE_SINK,
         BALANCE
     }
+
 }

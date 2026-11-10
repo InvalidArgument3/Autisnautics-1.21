@@ -13,4 +13,5 @@ public interface InsertionOnlyStorage<T> extends Storage<T> {
     default long extract(T resource, long maxAmount, TransactionContext transaction) {
         return 0;
     }
+
 }

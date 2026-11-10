@@ -19,4 +19,5 @@ public interface NbtSerialisable {
     CompoundTag writeNbt(CompoundTag nbt);
 
     void readNbt(CompoundTag nbt);
+
 }

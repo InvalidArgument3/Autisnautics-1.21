@@ -19,4 +19,5 @@ public interface PLCRobot extends PLCActuator, ImplanterActuator, CombineActuato
 {
     @Override
     default void targetRestPos() { }
+
 }

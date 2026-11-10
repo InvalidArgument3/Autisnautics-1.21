@@ -13,4 +13,5 @@ public interface MeatlibItem {
     default TooltipSupplier meatlibTooltip() {
         return TooltipSupplier.BLANK;
     }
+
 }

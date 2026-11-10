@@ -18,4 +18,5 @@ import net.minecraft.world.item.ItemStack;
 public interface GeneralOreDustSmeltingRecipe
 {
     ItemStack getOutput(RegistryAccess dynamicRegistryManager, ItemStack input);
+
 }

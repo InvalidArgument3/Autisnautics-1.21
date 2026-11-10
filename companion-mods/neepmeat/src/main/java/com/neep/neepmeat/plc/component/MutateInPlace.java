@@ -107,4 +107,5 @@ public interface MutateInPlace<T> {
             return pos;
         }
     }
+
 }

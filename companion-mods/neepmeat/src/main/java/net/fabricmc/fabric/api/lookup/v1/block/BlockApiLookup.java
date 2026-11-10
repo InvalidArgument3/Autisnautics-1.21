@@ -18,8 +18,18 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 public final class BlockApiLookup<A, C> {
+    private final ResourceLocation id;
+
+    private BlockApiLookup(ResourceLocation id) {
+        this.id = id;
+    }
+
     public static <A, C> BlockApiLookup<A, C> get(ResourceLocation id, Class<A> api, Class<C> context) {
-        return new BlockApiLookup<>();
+        return new BlockApiLookup<>(id);
+    }
+
+    public ResourceLocation getId() {
+        return id;
     }
 
     public A find(Level world, BlockPos pos, C context) {
@@ -31,6 +41,8 @@ public final class BlockApiLookup<A, C> {
     }
 
     public void registerSelf(Block... blocks) {}
+
+    public void registerSelf(BlockEntityType<?>... types) {}
 
     public void registerForBlocks(BlockApiProvider<A, C> provider, Block... blocks) {}
 

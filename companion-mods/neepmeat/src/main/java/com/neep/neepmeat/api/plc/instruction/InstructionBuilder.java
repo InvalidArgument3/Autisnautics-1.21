@@ -27,4 +27,5 @@ public interface InstructionBuilder
     Instruction build();
 
     int argumentCount();
+
 }

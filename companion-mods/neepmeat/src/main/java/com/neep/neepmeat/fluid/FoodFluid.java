@@ -84,6 +84,11 @@ public final class FoodFluid {
         if (event.getRegistryKey() == Registries.FLUID) {
             NMFluids.FOOD = STILL.get();
             NMFluids.ETHEREAL_FUEL = EtherealFuel.STILL.get();
+            NMFluids.BLOOD = BloodFluids.BLOOD.get();
+            NMFluids.MEAT = MeatFluid.STILL.get();
+            NMFluids.WORK_FLUID = WorkFluid.STILL.get();
+            NMFluids.COMPRESSED_AIR = CompressedAir.STILL.get();
+            NMFluids.TISSUE_SLURRY = TissueSlurry.STILL.get();
         }
     }
 

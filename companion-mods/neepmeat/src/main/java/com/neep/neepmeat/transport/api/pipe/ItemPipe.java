@@ -29,4 +29,5 @@ public interface ItemPipe {
     default boolean isConnected(BlockGetter world, BlockPos pos, BlockState state, Direction direction) {
         return world instanceof Level level && isConnected(level, pos, state, direction);
     }
+
 }

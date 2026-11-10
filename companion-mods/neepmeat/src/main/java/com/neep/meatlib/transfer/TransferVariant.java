@@ -16,6 +16,10 @@ public interface TransferVariant<T> {
 
     boolean isBlank();
 
+    default T getObject() {
+        return null;
+    }
+
     default CompoundTag toNbt() {
         return new CompoundTag();
     }

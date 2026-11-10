@@ -207,10 +207,10 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
 
     @Nullable
     @Override
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData)
     {
         updateGoals();
-        return super.finalizeSpawn(world, difficulty, spawnReason, entityData, entityNbt);
+        return super.finalizeSpawn(world, difficulty, spawnReason, entityData);
     }
 
     @Override

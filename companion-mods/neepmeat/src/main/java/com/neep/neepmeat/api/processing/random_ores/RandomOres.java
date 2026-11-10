@@ -124,7 +124,7 @@ public class RandomOres implements SimpleSynchronousResourceReloadListener
     }
 
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         stateToTempEntry.clear();
         entries.clear();

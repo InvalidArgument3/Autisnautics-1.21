@@ -79,7 +79,7 @@ public class ExtraMouthImplant implements EntityImplant
             if (
                     stack.getRarity() == Rarity.COMMON  // Avoid eating golden apples and expensive things
                     && stack.getItem().isEdible()
-                    && stack.getItem().getFoodProperties() != null
+                    && stack.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null) != null
                     && filterList.matches(ItemVariant.of(stack)))
 
             {
@@ -93,17 +93,17 @@ public class ExtraMouthImplant implements EntityImplant
         if (emptyHearts > 3)
         {
             // Prioritise high saturation if damaged
-            foodStacks.sort(Comparator.<IntObjectPair<ItemStack>>comparingDouble(s -> s.value().getItem().getFoodProperties().getSaturationModifier()).reversed());
+            foodStacks.sort(Comparator.<IntObjectPair<ItemStack>>comparingDouble(s -> s.value().getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getSaturationModifier()).reversed());
 
             return foodStacks.get(0);
         }
         else
         {
-            foodStacks.sort(Comparator.<IntObjectPair<ItemStack>>comparingInt(s -> s.value().getItem().getFoodProperties().getNutrition()).reversed());
+            foodStacks.sort(Comparator.<IntObjectPair<ItemStack>>comparingInt(s -> s.value().getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getNutrition()).reversed());
 
             for (var pair : foodStacks)
             {
-                if (emptyHunger >= pair.value().getItem().getFoodProperties().getNutrition())
+                if (emptyHunger >= pair.value().getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getNutrition())
                 {
                     return pair;
                 }
@@ -112,7 +112,7 @@ public class ExtraMouthImplant implements EntityImplant
 
         // If no small items are available, wait for empty hunger to drop below half of the smallest item's hunger.
         IntObjectPair<ItemStack> smallest = foodStacks.get(foodStacks.size() - 1);
-        if (emptyHunger > smallest.value().getItem().getFoodProperties().getNutrition() / 2)
+        if (emptyHunger > smallest.value().getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getNutrition() / 2)
             return smallest;
 
         return null;

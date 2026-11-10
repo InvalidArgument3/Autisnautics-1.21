@@ -19,6 +19,10 @@ public abstract class FabricRecipeProvider {
 
     public void buildRecipes(RecipeOutput output) {}
 
+    public String getName() {
+        return "recipes";
+    }
+
     public static Criterion<?> has(ItemLike item) {
         return InventoryChangeTrigger.TriggerInstance.hasItems(item);
     }

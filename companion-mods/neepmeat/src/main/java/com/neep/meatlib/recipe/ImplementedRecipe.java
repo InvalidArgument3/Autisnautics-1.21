@@ -14,7 +14,7 @@ package com.neep.meatlib.recipe;
 
 import com.neep.meatlib.inventory.ImplementedInventory;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 
@@ -24,7 +24,7 @@ import net.minecraft.world.item.crafting.Recipe;
 public abstract class ImplementedRecipe<T extends ImplementedRecipe.DummyInventory> implements Recipe<T>
 {
     @Override
-    public ItemStack craft(T inventory, RegistryAccess registryManager)
+    public ItemStack assemble(T inventory, HolderLookup.Provider registryManager)
     {
         return ItemStack.EMPTY;
     }
@@ -36,7 +36,7 @@ public abstract class ImplementedRecipe<T extends ImplementedRecipe.DummyInvento
     }
 
     @Override
-    public ItemStack getResultItem(RegistryAccess dynamicRegistryManager)
+    public ItemStack getResultItem(HolderLookup.Provider dynamicRegistryManager)
     {
         return ItemStack.EMPTY;
     }

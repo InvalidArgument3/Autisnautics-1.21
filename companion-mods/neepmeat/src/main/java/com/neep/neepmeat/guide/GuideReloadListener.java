@@ -113,7 +113,7 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
     }
 
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         root = null;
         articleNodes.clear();

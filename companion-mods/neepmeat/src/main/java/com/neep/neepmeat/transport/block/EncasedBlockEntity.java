@@ -20,4 +20,5 @@ public interface EncasedBlockEntity
     BlockState getCamoState();
     void setCamoState(BlockState camoState);
     VoxelShape getCamoShape();
+
 }

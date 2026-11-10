@@ -1,32 +1,32 @@
-# symbol histogram after run 47
-# honest post-revert combined-tree errors were 3074
-# end of run: 2975
+# symbol histogram after run 48
+# start: 2975
+# end: 2788
 
-408	does not override
-27	other	invalid method reference
-22	other	method register in class BlockEntityRenderers cannot be applied to given types;
-17	cannot find symbol	method getId
-16	other	incompatible types: inference variable T has incompatible bounds
+384	does not override
+43	other	incompatible types: invalid constructor reference
+26	other	invalid method reference
+26	cannot find symbol	method serverTick
 15	other	type FluidPipeBlockEntity does not take parameters
 15	other	incompatible types: invalid method reference
-15	cannot find symbol	variable LOOKUP
+15	other	incompatible types: Fluid cannot be converted to BuiltFluid<?,?>
 14	cannot find symbol	method extract
-14	cannot find symbol	method getObject
-14	other	no suitable method found for putBulkData(Pose,BakedQuad,float,float,float,int,in
-14	cannot find symbol	method serverTick
-14	other	no suitable method found for checkType(BlockEntityType<T>,BlockEntityType<CAP#1>
+14	cannot find symbol	method getId
+14	other	no suitable method found for putBulkData(Pose,BakedQuad,float,float,float,int,
+14	other	no suitable method found for checkType(BlockEntityType<T>,BlockEntityType<CAP#
 14	other	no suitable method found for has(Item)
-13	other	incompatible types: ResourceKey<LootTable> cannot be converted to ResourceLocati
+13	other	incompatible types: ResourceKey<LootTable> cannot be converted to ResourceLoca
 13	cannot find symbol	variable super
+13	other	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockE
 13	cannot find symbol	method register
+12	cannot find symbol	variable LOOKUP
 12	cannot find symbol	method addListener
 12	cannot find symbol	method addVertex
 11	cannot find symbol	method getItems
 11	cannot find symbol	method floatValue
 11	other	incompatible types: CAP#1 cannot be converted to ImplantManager
 11	other	static methods cannot be annotated with @Override
+11	other	incompatible types: inference variable T has incompatible bounds
 11	cannot find symbol	method getStorage
-11	other	method getFoodProperties in interface IItemExtension cannot be applied to given 
 11	cannot find symbol	method getBlockState
 11	other	incompatible types: Block cannot be converted to Properties
 10	cannot find symbol	class RequestContext
@@ -37,18 +37,8 @@
 10	cannot find symbol	method getTexture
 10	cannot find symbol	method getComponent
 10	cannot find symbol	variable builder
-10	other	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEnt
 10	cannot find symbol	method getAmount
 9	other	no interface expected here
 9	cannot find symbol	class RequestType
 9	cannot find symbol	class Serializer
 9	cannot find symbol	class Entry
-9	cannot find symbol	method getTag
-9	cannot find symbol	method map
-9	other	no suitable method found for register(MappedRegistry<EntityImplantInstaller>,Res
-8	cannot find symbol	class ExtendedScreenHandlerType
-8	cannot find symbol	class RenderProvider
-8	other	incompatible types: possible lossy conversion from double to float
-8	other	method fromNamespaceAndPath in class ResourceLocation cannot be applied to given
-8	cannot find symbol	method putCompound
-8	other	incompatible types: DeferredHolder<SoundEvent,SoundEvent> cannot be converted to

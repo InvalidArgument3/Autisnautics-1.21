@@ -23,4 +23,5 @@ public interface ConfigEntry
     void setAddress(String address);
 
     default Component getTooltip() { return Component.empty(); }
+
 }

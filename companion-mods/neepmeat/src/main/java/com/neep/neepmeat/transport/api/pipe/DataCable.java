@@ -31,4 +31,5 @@ public interface DataCable {
     default boolean checkAdjacentConnection() {
         return true;
     }
+
 }

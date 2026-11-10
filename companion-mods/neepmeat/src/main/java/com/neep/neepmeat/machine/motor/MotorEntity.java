@@ -28,4 +28,5 @@ public interface MotorEntity {
 
     @Nullable
     MotorisedBlock getConnectedBlock();
+
 }

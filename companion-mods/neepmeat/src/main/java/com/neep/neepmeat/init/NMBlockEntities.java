@@ -131,4 +131,9 @@ public final class NMBlockEntities {
         MOTOR = com.neep.neepmeat.machine.NeepMachines.MOTOR_BE.get();
         ALLOY_KILN = com.neep.neepmeat.machine.NeepMachines.ALLOY_KILN_BE.get();
     }
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> CONTROL_TRACK;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> ENCASED_PNEUMATIC_PIPE;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> HOLDING_TRACK;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> SOLIDITY_DETECTOR;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> SURGERY_PLATFORM;
 }

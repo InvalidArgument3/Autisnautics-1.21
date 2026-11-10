@@ -17,4 +17,5 @@ import dev.onyxstudios.cca.api.v3.component.Component;
 public interface ItemIdentityComponent extends Component
 {
     long getId();
+
 }

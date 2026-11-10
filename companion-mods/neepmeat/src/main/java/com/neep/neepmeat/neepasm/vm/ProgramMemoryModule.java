@@ -33,4 +33,5 @@ public interface ProgramMemoryModule
 
         default Stream<ObjectIntPair<String>> getRelocatedSymbols() { return Stream.empty(); }
     }
+
 }

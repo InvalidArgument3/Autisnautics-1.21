@@ -244,4 +244,33 @@ public class Instructions {
         }
         return notGlob;
     }
+    public static final InstructionProvider AREA3 = createTrivialBlock("area3", Instruction.end());
+    public static final InstructionProvider COMBINE = createTrivialBlock("combine", Instruction.end());
+    public static final InstructionProvider COUNT = createTrivialBlock("count", Instruction.end());
+    public static final InstructionProvider DELAY = createTrivialBlock("delay", Instruction.end());
+    public static final InstructionProvider DYCALL = createTrivialBlock("dycall", Instruction.end());
+    public static final InstructionProvider DYLOC = createTrivialBlock("dyloc", Instruction.end());
+    public static final InstructionProvider EXEC = createTrivialBlock("exec", Instruction.end());
+    public static final InstructionProvider EXTFETCH = createTrivialBlock("extfetch", Instruction.end());
+    public static final InstructionProvider EXTSTORE = createTrivialBlock("extstore", Instruction.end());
+    public static final InstructionProvider FINDSLOT = createTrivialBlock("findslot", Instruction.end());
+    public static final InstructionProvider ICLEAR = createTrivialBlock("iclear", Instruction.end());
+    public static final InstructionProvider IDISABLE = createTrivialBlock("idisable", Instruction.end());
+    public static final InstructionProvider IENABLE = createTrivialBlock("ienable", Instruction.end());
+    public static final InstructionProvider IHANDLER = createTrivialBlock("ihandler", Instruction.end());
+    public static final InstructionProvider IMPLANT = createTrivialBlock("implant", Instruction.end());
+    public static final InstructionProvider IWAIT = createTrivialBlock("iwait", Instruction.end());
+    public static final InstructionProvider NEEPBUS_READ = createTrivialBlock("neepbus_read", Instruction.end());
+    public static final InstructionProvider NEEPBUS_WRITE = createTrivialBlock("neepbus_write", Instruction.end());
+    public static final InstructionProvider REMOVE = createTrivialBlock("remove", Instruction.end());
+    public static final InstructionProvider REQUEST = createTrivialBlock("request", Instruction.end());
+    public static final InstructionProvider RISING_EDGE = createTrivialBlock("rising_edge", Instruction.end());
+    public static final InstructionProvider ROBOT = createTrivialBlock("robot", Instruction.end());
+    public static final InstructionProvider ROUTE = createTrivialBlock("route", Instruction.end());
+    public static final InstructionProvider SAY = createTrivialBlock("say", Instruction.end());
+    public static final InstructionProvider SELITEM = createTrivialBlock("selitem", Instruction.end());
+    public static final InstructionProvider SHL = createTrivialBlock("shl", Instruction.end());
+    public static final InstructionProvider SHR = createTrivialBlock("shr", Instruction.end());
+    public static final InstructionProvider STOCK = createTrivialBlock("stock", Instruction.end());
+    public static final InstructionProvider WAIT_REDSTONE = createTrivialBlock("wait_redstone", Instruction.end());
 }

@@ -123,9 +123,9 @@ public class FoodCartonItem extends BaseItem
             float sat = MeatFluidUtil.getSaturation(nbt);
             return new Entry(food, sat);
         }
-        else if (variant.getItem().getFoodProperties() != null)
+        else if (variant.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null) != null)
         {
-            return new Entry(variant.getItem().getFoodProperties());
+            return new Entry(variant.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null));
         }
         else
         {
@@ -138,7 +138,7 @@ public class FoodCartonItem extends BaseItem
         Item item = stack.getItem();
         if (item.isEdible())
         {
-            List<Pair<MobEffectInstance, Float>> list = item.getFoodProperties().getEffects();
+            List<Pair<MobEffectInstance, Float>> list = item.getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getEffects();
             for (Pair<MobEffectInstance, Float> pair : list)
             {
                 if (world.isClientSide || pair.getFirst() == null || !(world.random.nextFloat() < pair.getSecond())) continue;
@@ -159,10 +159,9 @@ public class FoodCartonItem extends BaseItem
     }
 
     @Override
-    public @Nullable FoodProperties getFoodProperties()
+    public @Nullable FoodProperties getFoodProperties(ItemStack stack, @Nullable net.minecraft.world.entity.LivingEntity entity)
     {
-        // This method is not stack-aware, so we can't do anything.
-        return super.getFoodProperties();
+        return super.getFoodProperties(stack, entity);
     }
 
     public int getTint(ItemStack stack, int index)

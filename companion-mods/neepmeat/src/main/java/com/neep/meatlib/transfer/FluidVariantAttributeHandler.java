@@ -18,4 +18,5 @@ public interface FluidVariantAttributeHandler {
     default int getColor(FluidVariant variant) {
         return FluidVariantAttributes.getColor(variant);
     }
+
 }

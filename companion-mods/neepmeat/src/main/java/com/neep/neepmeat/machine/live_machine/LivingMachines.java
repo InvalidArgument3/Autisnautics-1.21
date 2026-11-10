@@ -191,4 +191,17 @@ public final class LivingMachines {
             event.accept(LUCKY_ONE_ITEM.get());
         }
     }
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> CHARNEL_PUMP_BE;
+    public static net.minecraft.world.level.block.Block CRUSHER_SEGMENT;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> CRUSHER_SEGMENT_BE;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> LARGEST_HOPPER_BE;
+    public static net.minecraft.world.level.block.Block LARGE_TROMMEL;
+    public static net.minecraft.world.level.block.entity.BlockEntityType<?> LARGE_TROMMEL_BE;
+    public static net.minecraft.world.level.block.Block LIVING_MACHINE_CONTROLLER;
+    public static net.minecraft.world.level.block.Block OPEN_BLOOD_BUBBLE_MACHINE_BLOCK;
+    public static net.minecraft.world.level.block.Block OPEN_MACHINE_BLOCK;
+    public static net.minecraft.world.level.block.Block OPEN_MEAT_STEEL_MACHINE_BLOCK;
+    public static net.minecraft.world.level.block.Block OPEN_MEAT_STEEL_MACHINE_BLOCK_2;
+    public static net.minecraft.world.level.block.Block OPEN_SKIN_MACHINE_BLOCK;
+    public static net.minecraft.world.level.block.Block SKIN_MACHINE_BLOCK;
 }

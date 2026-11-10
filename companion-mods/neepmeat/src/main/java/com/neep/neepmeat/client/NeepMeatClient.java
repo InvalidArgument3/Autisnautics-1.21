@@ -251,12 +251,12 @@ public class NeepMeatClient implements ClientModInitializer
         NMVisuals.init();
 
         // BlockEntity renderers
-        BlockEntityRenderers.register(NMBlockEntities.WINDOW_PIPE, WindowPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.WINDOW_PIPE, WindowPipeRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.GLASS_TANK, GlassTankRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.GLASS_TANK, GlassTankRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(MODEL_GLASS_TANK_LAYER, GlassTankModel::getTexturedModelData);
-        BlockEntityRenderers.register(NMBlockEntities.FLUID_BUFFER, FluidBufferRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.ITEM_BUFFER_BLOCK_ENTITY, c -> new ItemBlockEntityRenderer<>(
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.FLUID_BUFFER, FluidBufferRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ITEM_BUFFER_BLOCK_ENTITY, c -> new ItemBlockEntityRenderer<>(
                 c, be -> be.getStorage(null).getAsStack(), (be) ->
         {
             float target = be.getStorage(null).getAmount() <= 0 ? 0.3f : 0;
@@ -264,52 +264,52 @@ public class NeepMeatClient implements ClientModInitializer
             return (be.getBlockState().getValue(DisplayPlateBlock.TOP) ? 1.15f : 0.25f) + be.stackRenderDelta;
         }));
 //        BlockEntityRendererFactories.register(NMBlockEntities.TROMMEL, TrommelRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.SMALL_TROMMEL, SmallTrommelRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.INTEGRATOR, IntegratorEggRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.ADVANCED_INTEGRATOR, AdvancedIntegratorRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.BIG_LEVER, BigLeverRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.ITEM_PIPE, ItemPipeRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.FILTER_ITEM_PIPE, ItemPipeRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.SPEED_ITEM_PIPE, ItemPipeRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.ENCASED_PNEUMATIC_PIPE, ItemPipeRenderer::new);
-        BlockEntityRenderers.register(ItemTransport.STORAGE_BUS_BE, ItemPipeRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.MERGE_ITEM_PIPE, MergePipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.SMALL_TROMMEL, SmallTrommelRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.INTEGRATOR, IntegratorEggRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ADVANCED_INTEGRATOR, AdvancedIntegratorRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.BIG_LEVER, BigLeverRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ITEM_PIPE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.FILTER_ITEM_PIPE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.SPEED_ITEM_PIPE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ENCASED_PNEUMATIC_PIPE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(ItemTransport.STORAGE_BUS_BE, ItemPipeRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.MERGE_ITEM_PIPE, MergePipeRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.ITEM_PUMP, ItemPumpRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.EJECTOR, EjectorRenderer::new);
 //        BlockEntityRendererFactories.register(ItemTransport.FILTERED_EJECTOR_BE, EjectorRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.CONVERTER, ConverterRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.ADVANCED_MOTOR, AdvancedMotorRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.DEPLOYER, DeployerRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.DEPLOYER, DeployerRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.AGITATOR, AgitatorRenderer::new);
 //        BlockEntityRendererFactories.register(NMBlockEntities.VAT_CONTROLLER, VatRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.MIXER, MixerRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.MULTI_TANK, MultiTankRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.MIXER, MixerRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.MULTI_TANK, MultiTankRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.CRUCIBLE, CrucibleRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.ALEMBIC, AlembicRenderer::new);
-        BlockEntityRenderers.register(NMBlockEntities.CASTING_BASIN, CastingBasinRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.CRUCIBLE, CrucibleRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ALEMBIC, AlembicRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.CASTING_BASIN, CastingBasinRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.PEDESTAL, c -> new ItemBlockEntityRenderer<>(
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.PEDESTAL, c -> new ItemBlockEntityRenderer<>(
                 c, be -> be.getStorage(null).getResource().toStack(), be -> 0.67f));
 //        BlockEntityRendererFactories.register(NMBlockEntities.ASSEMBLER, AssemblerRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.DEATH_BLADES, DeathBladesRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.DEATH_BLADES, DeathBladesRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.FEEDING_TROUGH, TroughRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.FEEDING_TROUGH, TroughRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.BOTTLER, BottlerRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.BOTTLER, BottlerRenderer::new);
 
 //        BlockEntityRendererFactories.register(NMBlockEntities.PYLON, PylonInstance::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.SYNTHESISER, SynthesiserRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.SYNTHESISER, SynthesiserRenderer::new);
 
-        BlockEntityRenderers.register(LivingMachines.CHARNEL_PUMP_BE, CharnelPumpRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.CHARNEL_PUMP_BE, CharnelPumpRenderer::new);
 
 //        BlockEntityRendererFactories.register(PLCBlocks.PLC_ENTITY, PLCInstance::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.ITEM_MINCER, ItemMincerRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.ITEM_MINCER, ItemMincerRenderer::new);
 
-        BlockEntityRenderers.register(NMBlockEntities.REACTION_CORE, ReactionCoreRenderer::new);
+        net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.REACTION_CORE, ReactionCoreRenderer::new);
 
 //        BlockEntityRendererFactories.register(PLCBlocks.ROBOTIC_ARM_ENTITY, RoboticArmRenderer::new);
 

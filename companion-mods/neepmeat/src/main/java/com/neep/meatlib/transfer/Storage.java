@@ -42,4 +42,5 @@ public interface Storage<T> extends Iterable<StorageView<T>> {
             }
         };
     }
+
 }

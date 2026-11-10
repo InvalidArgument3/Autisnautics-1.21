@@ -91,61 +91,61 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
             float b = ((col) & 0xff) / 255f;
 
             // Along x
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
             // Along z
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, -d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, -d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, -d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, -d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
             // Along y
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, -d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, -d, u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, -d, d, u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, d, u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, -d, -d, u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, -d,u0, v0, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, -d, d, d,u0, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, d,u1, v1, r, g, b, alpha, -1, 0, 0, i);
-            this.vertex1(matrix4f, matrix3f, vertexConsumer, d, d, -d,u1, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, -d,u0, v0, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, -d, d, d,u0, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, d,u1, v1, r, g, b, alpha, -1, 0, 0, i);
+            this.vertex1(matrix4f, entry, vertexConsumer, d, d, -d,u1, v0, r, g, b, alpha, -1, 0, 0, i);
 
 
             // Fins
 //            for (int u = 0; u < 4; u++)
 //            {
 //                matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90.0F));
-//                this.vertex1(matrix4f, matrix3f, vertexConsumer, -8, -2, 0, 0.0F, 0, alpha, 0, 1, 0, i);
-//                this.vertex1(matrix4f, matrix3f, vertexConsumer, 8, -2, 0, 1, 0.0F, alpha, 0, 1, 0, i);
-//                this.vertex1(matrix4f, matrix3f, vertexConsumer, 8, 2, 0, 1, 1, alpha, 0, 1, 0, i);
-//                this.vertex1(matrix4f, matrix3f, vertexConsumer, -8, 2, 0, 0.0F, 1, alpha, 0, 1, 0, i);
+//                this.vertex1(matrix4f, entry, vertexConsumer, -8, -2, 0, 0.0F, 0, alpha, 0, 1, 0, i);
+//                this.vertex1(matrix4f, entry, vertexConsumer, 8, -2, 0, 1, 0.0F, alpha, 0, 1, 0, i);
+//                this.vertex1(matrix4f, entry, vertexConsumer, 8, 2, 0, 1, 1, alpha, 0, 1, 0, i);
+//                this.vertex1(matrix4f, entry, vertexConsumer, -8, 2, 0, 0.0F, 1, alpha, 0, 1, 0, i);
 //            }
         }
 
         matrixStack.popPose();
     }
 
-    public void vertex1(Matrix4f positionMatrix, Matrix3f normalMatrix, VertexConsumer vertexConsumer, float x, float y, float z, float u, float v, float r, float g, float b, float alpha, int normalX, int normalZ, int normalY, int light)
+    public void vertex1(Matrix4f positionMatrix, PoseStack.Pose pose, VertexConsumer vertexConsumer, float x, float y, float z, float u, float v, float r, float g, float b, float alpha, int normalX, int normalZ, int normalY, int light)
     {
         vertexConsumer.addVertex(positionMatrix, x, y, z)
                 .setColor(r, g, b, alpha)
                 .setUv(u, v)
                 .setOverlay(OverlayTexture.NO_OVERLAY)
                 .setLight(light)
-                .setNormal((float) normalX, (float) normalY, (float) normalZ)
+                .setNormal(pose, (float) normalX, (float) normalY, (float) normalZ)
                 ;
     }
 

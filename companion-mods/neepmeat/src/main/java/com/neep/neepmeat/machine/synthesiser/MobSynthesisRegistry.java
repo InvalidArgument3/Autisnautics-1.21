@@ -77,7 +77,7 @@ public class MobSynthesisRegistry implements SimpleSynchronousResourceReloadList
     }
 
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         entries.clear();
         denyTypes.clear();

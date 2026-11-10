@@ -87,10 +87,10 @@ public class KeeperEntity extends WeaponSwitchingHostileEntity
 
     @Nullable
     @Override
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData)
     {
         updateAttackType();
-        return super.finalizeSpawn(world, difficulty, spawnReason, entityData, entityNbt);
+        return super.finalizeSpawn(world, difficulty, spawnReason, entityData);
     }
 
     @Override

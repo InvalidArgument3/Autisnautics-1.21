@@ -52,4 +52,5 @@ public interface RecipeInput<T, C> extends Predicate<C>
     {
         return ResourceLocation.CODEC.xmap(i -> TagKey.create(registry.key(), i), TagKey::location);
     }
+
 }

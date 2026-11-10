@@ -71,4 +71,5 @@ public interface EncasedBlock
     }
 
     boolean canReplace(ItemStack stack, BlockItem blockItem);
+
 }

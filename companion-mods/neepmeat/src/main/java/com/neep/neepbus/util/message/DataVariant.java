@@ -162,4 +162,5 @@ public interface DataVariant
             return stringValue();
         }
     }
+
 }

@@ -68,7 +68,7 @@ public class FluidTransportConstants implements SimpleSynchronousResourceReloadL
     }
 
     @Override
-    public void onResourceManagerReload(ResourceManager manager)
+    public void reload(ResourceManager manager)
     {
         for (ResourceLocation id : manager.listResources("transport", path -> path.getPath().endsWith("transport/fluid_transport.json")).keySet())
         {

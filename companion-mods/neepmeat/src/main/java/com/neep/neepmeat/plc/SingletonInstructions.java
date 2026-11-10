@@ -97,4 +97,10 @@ public class SingletonInstructions {
             ThordData apply(ThordData data) throws NeepASM.RuntimeException;
         }
     }
+    public static final Instruction ALLOT = Instruction.EMPTY;
+    public static final Instruction DYCALL = Instruction.EMPTY;
+    public static final Instruction DYLOC = Instruction.EMPTY;
+    public static final Instruction FETCH = Instruction.EMPTY;
+    public static final Instruction FILL = Instruction.EMPTY;
+    public static final Instruction STORE = Instruction.EMPTY;
 }

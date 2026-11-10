@@ -72,9 +72,7 @@ public class WrenchPlacementHelper
                     local.translate(-0.5f, -0.5f, -0.5f);
 
                     matrices.translate(-camPos.x, -camPos.y, -camPos.z);
-                    drawOutline(vcp,
-                            matrices.last().pose(), matrices.last().normal(),
-                            local);
+                    drawOutline(vcp, matrices.last(), local);
 
                     matrices.popPose();
 
@@ -88,9 +86,11 @@ public class WrenchPlacementHelper
 
 //    private static void drawSquare(MultiBufferSource vcp, Matrix4f matrix4f, float f, float g, float h, float i, float j, float k)
     // f j h; f j k; i j h; i j k
-    private static void drawOutline(MultiBufferSource vcp, Matrix4f matrix4f, Matrix3f normal, Matrix4f local)
+    private static void drawOutline(MultiBufferSource vcp, PoseStack.Pose pose, Matrix4f local)
     {
         VertexConsumer consumer = vcp.getBuffer(RenderType.lines());
+        Matrix4f matrix4f = new Matrix4f(pose.pose());
+        Matrix3f normal = new Matrix3f(pose.normal());
 
         float r = 1;
         float g = 0.36f;
@@ -102,6 +102,7 @@ public class WrenchPlacementHelper
         // Can't apply an arbitrary transform to a PoseStack's normal as well as position.
         matrix4f.mul(local);
         normal.rotate(local.getNormalizedRotation(new Quaternionf()));
+        PoseStack.Pose transformed = new PoseStack.Pose(matrix4f, normal);
 
         shape.forAllEdges((minX, minY, minZ, maxX, maxY, maxZ) ->
         {
@@ -110,8 +111,8 @@ public class WrenchPlacementHelper
             float m = (float) (maxZ - minZ);
             float n = Mth.sqrt(k * k + l * l + m * m);
 //            Vector4f p1 = local.transform(new Vector4f());
-            consumer.addVertex(matrix4f, (float) (minX), (float) (minY), (float) (minZ)).setColor(r, g, b, a).setNormal(k /= n, l /= n, m /= n);
-            consumer.addVertex(matrix4f, (float) (maxX), (float) (maxY), (float) (maxZ)).setColor(r, g, b, a).setNormal(k, l, m);
+            consumer.addVertex(matrix4f, (float) (minX), (float) (minY), (float) (minZ)).setColor(r, g, b, a).setNormal(transformed, k /= n, l /= n, m /= n);
+            consumer.addVertex(matrix4f, (float) (maxX), (float) (maxY), (float) (maxZ)).setColor(r, g, b, a).setNormal(transformed, k, l, m);
         });
     }
 }

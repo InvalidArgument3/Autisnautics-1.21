@@ -15,4 +15,5 @@ package com.neep.neepmeat.api.plc.interrupt;
 public interface InterruptEmitter
 {
     void addListener(InterruptReceiver receiver);
+
 }

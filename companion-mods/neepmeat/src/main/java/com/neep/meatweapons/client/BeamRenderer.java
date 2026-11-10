@@ -51,27 +51,27 @@ public class BeamRenderer
         PoseStack.Pose entry = matrices.last();
         Matrix4f model = entry.pose();
 
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, -t / 2, 0, 0, 1); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, -t / 2, (float) beam.length(), 1, 1); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, t / 2, (float) beam.length(), 1, 0); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, t / 2, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, -t / 2, 0, 0, 1); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, -t / 2, (float) beam.length(), 1, 1); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, t / 2, (float) beam.length(), 1, 0); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, t / 2, 0, 0, 0); // p0
 
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, 0, 0, 0, 1); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, 0, (float) beam.length(), 1, 1); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, 0, (float) beam.length(), 1, 0); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, 0, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, -t / 2, 0, 0, 0, 1); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, -t / 2, 0, (float) beam.length(), 1, 1); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, t / 2, 0, (float) beam.length(), 1, 0); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, t / 2, 0, 0, 0, 0); // p0
 
         matrices.mulPose(Axis.ZP.rotationDegrees(45));
 
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, -t / 2, 0, 0, 1); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, -t / 2, (float) beam.length(), 1, 1); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, t / 2, (float) beam.length(), 1, 0); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, t / 2, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, -t / 2, 0, 0, 1); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, -t / 2, (float) beam.length(), 1, 1); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, t / 2, (float) beam.length(), 1, 0); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, t / 2, 0, 0, 0); // p0
 
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, 0, 0, 0, 1); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, 0, (float) beam.length(), 1, 1); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, 0, (float) beam.length(), 1, 0); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, 0, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, -t / 2, 0, 0, 0, 1); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, -t / 2, 0, (float) beam.length(), 1, 1); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, t / 2, 0, (float) beam.length(), 1, 0); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, t / 2, 0, 0, 0, 0); // p0
 
         matrices.popPose();
     }
@@ -137,15 +137,15 @@ public class BeamRenderer
         float end = len / 32f;
 //        float end = 1;
 
-        vertex(vertexConsumer, model, normal, r, g, b, a1, l, 0, -t / 2, 0, 1, 0); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, -t / 2, len, 1, end); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, 0, t / 2, len, 0, end); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a1, l, 0, t / 2, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a1, l, 0, -t / 2, 0, 1, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, -t / 2, len, 1, end); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, 0, t / 2, len, 0, end); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a1, l, 0, t / 2, 0, 0, 0); // p0
 
-        vertex(vertexConsumer, model, normal, r, g, b, a1, l, -t / 2, 0, 0, 1, 0); // p0
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, 0, len, 1, end); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, 0, len, 0, end); // p1
-        vertex(vertexConsumer, model, normal, r, g, b, a1, l, t / 2, 0, 0, 0, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a1, l, -t / 2, 0, 0, 1, 0); // p0
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, -t / 2, 0, len, 1, end); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a, l, t / 2, 0, len, 0, end); // p1
+        vertex(vertexConsumer, model, entry, r, g, b, a1, l, t / 2, 0, 0, 0, 0); // p0
 
         matrices.popPose();
     }
@@ -181,10 +181,10 @@ public class BeamRenderer
             float o = Mth.sin(seg * 6.2831855F / 8.0F) * scale;
             float p = Mth.cos(seg * 6.2831855F / 8.0F) * scale;
             float q = seg / 8.0F;
-            consumer.addVertex(matrix4f, k, l, 0.0F).setColor(255, 255, 255, a0).setUv(m, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, k, l, g).setColor(255, 255, 255, 255).setUv(m, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, o, p, g).setColor(255, 255, 255, 255).setUv(q, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, o, p, 0.0F).setColor(255, 255, 255, a0).setUv(q, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, k, l, 0.0F).setColor(255, 255, 255, a0).setUv(m, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(entry, 0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, k, l, g).setColor(255, 255, 255, 255).setUv(m, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(entry, 0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, o, p, g).setColor(255, 255, 255, 255).setUv(q, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(entry, 0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, o, p, 0.0F).setColor(255, 255, 255, a0).setUv(q, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(entry, 0.0F, 1.0F, 0.0F);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(k*.2, l*.2, 0), 0, 1);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(k, l, g), 0, 1);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(o, p, g), 0, 1);
@@ -197,14 +197,14 @@ public class BeamRenderer
         matrices.popPose();
     }
 
-    public static void vertex(VertexConsumer buffer, Matrix4f matrix, Matrix3f normalMatrix, int r, int g, int b, int a, int light, float x, float y, float z, float u, float v)
+    public static void vertex(VertexConsumer buffer, Matrix4f matrix, PoseStack.Pose pose, int r, int g, int b, int a, int light, float x, float y, float z, float u, float v)
     {
         buffer.addVertex(matrix, x, y, z)
                 .setColor(r, g, b, a)
                 .setUv(u, v)
                 .setOverlay(OverlayTexture.NO_OVERLAY)
                 .setLight(light)
-                .setNormal(0.0f, 1.0f, 0.0f)
+                .setNormal(pose, 0.0f, 1.0f, 0.0f)
                 ;
     }
 

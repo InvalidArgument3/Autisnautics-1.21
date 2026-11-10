@@ -15,4 +15,5 @@ import net.minecraft.world.MenuProvider;
 
 public interface ExtendedScreenHandlerFactory extends MenuProvider {
     void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf);
+
 }

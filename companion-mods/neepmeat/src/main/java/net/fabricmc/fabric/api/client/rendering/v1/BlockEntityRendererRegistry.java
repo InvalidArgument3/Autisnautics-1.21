@@ -18,7 +18,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 public final class BlockEntityRendererRegistry {
     private BlockEntityRendererRegistry() {}
 
-    public static <T extends BlockEntity> void register(BlockEntityType<T> type, BlockEntityRendererProvider<T> provider) {
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    public static void register(BlockEntityType type, BlockEntityRendererProvider provider) {
         FabricClientEvents.blockEntityRenderer(type, provider);
     }
 }

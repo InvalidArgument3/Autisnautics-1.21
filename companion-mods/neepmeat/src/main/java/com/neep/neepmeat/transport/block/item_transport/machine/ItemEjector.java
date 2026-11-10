@@ -72,4 +72,5 @@ public interface ItemEjector extends ItemEjectorUpdate
             return RedstoneMode.ACTIVE_WITH;
         }
     };
+
 }

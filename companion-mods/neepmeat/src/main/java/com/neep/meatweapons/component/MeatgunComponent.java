@@ -47,4 +47,5 @@ public interface MeatgunComponent extends Component, TriggerReceiver
     UUID getUuid();
 
     MeatgunCore getCore();
+
 }

@@ -171,4 +171,5 @@ final class ListInventory implements ImplementedInventory {
     public void setChanged() {
         onChange.run();
     }
+
 }
