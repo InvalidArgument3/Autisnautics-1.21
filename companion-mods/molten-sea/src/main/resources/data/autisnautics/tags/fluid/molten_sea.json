@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "modernfoundry:molten_aluminum", "required": false },
+    { "id": "modernfoundry:flowing_molten_aluminum", "required": false },
+    { "id": "modernfoundry:molten_zinc", "required": false },
+    { "id": "modernfoundry:flowing_molten_zinc", "required": false },
+    { "id": "modernfoundry:molten_tin", "required": false },
+    { "id": "modernfoundry:flowing_molten_tin", "required": false },
+    { "id": "modernfoundry:molten_iron", "required": false },
+    { "id": "modernfoundry:flowing_molten_iron", "required": false },
+    { "id": "modernfoundry:molten_nickel", "required": false },
+    { "id": "modernfoundry:flowing_molten_nickel", "required": false },
+    { "id": "modernfoundry:molten_copper", "required": false },
+    { "id": "modernfoundry:flowing_molten_copper", "required": false },
+    { "id": "modernfoundry:molten_silver", "required": false },
+    { "id": "modernfoundry:flowing_molten_silver", "required": false },
+    { "id": "modernfoundry:molten_lead", "required": false },
+    { "id": "modernfoundry:flowing_molten_lead", "required": false },
+    { "id": "modernfoundry:molten_gold", "required": false },
+    { "id": "modernfoundry:flowing_molten_gold", "required": false },
+    { "id": "modernfoundry:molten_platinum", "required": false },
+    { "id": "modernfoundry:flowing_molten_platinum", "required": false },
+    { "id": "modernfoundry:molten_osmium", "required": false },
+    { "id": "modernfoundry:flowing_molten_osmium", "required": false }
+  ]
+}
