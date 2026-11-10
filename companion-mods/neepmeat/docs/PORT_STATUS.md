@@ -1,6 +1,48 @@
 # Port status
 
-Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak, and 11 in Myron, plus 4,244 resource files. A line-by-line Fabric 1.20.1 Yarn port does not compile on NeoForge 1.21.1: registries, transfer APIs, menus, networking, data components, and rendering all moved. This phase gets a real mod on the pack toolchain and ports the slice that can be honest full blocks.
+Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak, and 11 in Myron, plus 4,244 resource files. A line-by-line Fabric 1.20.1 Yarn port does not compile on NeoForge 1.21.1: registries, transfer APIs, menus, networking, data components, and rendering all moved.
+
+## Phase 2 milestone: meatlib
+
+meatlib is a second mod id in the same jar (`meatlib` 0.30.0-neoforge.2). It is inlined, not a Gradle subproject, so machines can import `com.neep.meatlib` without another build. NeoForge 1.21 freezes the block registry outside `RegisterEvent`, and `new Block()` writes an intrusive holder, so registration is `DeferredRegister` suppliers. Upstream's "construct, then register the instance" pattern throws `Registry is already frozen`.
+
+### meatlib now covers
+
+| Area | State | What it does |
+| --- | --- | --- |
+| Mod init | ported | `@Mod("meatlib")`, engineering formatter, datapack-sync log |
+| Registries | ported | `RegistrationContext` with `DeferredRegister` blocks and items. `BaseBlock.register` and `BaseHorFacingBlock.register` build the block in the block event and the item in the item event. `meatlib:probe` is a no-item stone cube that proves the path. It is not a gameplay block. |
+| Block settings | ported | `MeatlibBlockSettings` unwraps to `BlockBehaviour.Properties`. Tag names are recorded for later datagen. They are not injected yet. |
+| Items and tooltips | ported | `BaseItem`, `BaseBlockItem`, `TooltipSupplier`. Tooltips apply from `ItemTooltipEvent`, not a mixin. |
+| Inventories | ported | `ImplementedInventory` on `Container`, saving item stacks with 1.21 `ItemStack.save(HolderLookup)`. |
+| Block entities | ported | `SyncableBlockEntity` splits save NBT from the client update tag and sends `ClientboundBlockEntityDataPacket`. No block entity type is registered until a machine exists. |
+| Fluids and items capabilities | ported | `MultiFluidBuffer` is a multi-tank `IFluidHandler` in milli-buckets. `MeatlibCapabilities.itemHandler` / `fluidHandler` register block-entity capabilities. Nothing calls them yet. |
+| Payloads | ported | `ChannelFormat` dynamic proxy and `ParamCodec` (int, long, float, double, boolean, string, uuid, nbt) ride on one NeoForge payload, `meatlib:channel`. |
+| Data components | ported | `meatlib:unique_id` (`DataComponentType<UUID>`), the old Cardinal Components item id. |
+| Attachments | ported | `meatlib:unique_id` entity attachment, new UUID on first read, copied on death. |
+| Menus | ported as a registry | `MeatlibMenus` is on the mod bus. No menu is registered. Client logs `meatlib client screen hook ready`. |
+| Sounds | ported | `ui_beep`, `plc_select`, `click`, `wrench_click`, with the ogg files and subtitle keys. |
+| Wrench | ported | `Wrenchable` rotates horizontal facing or facing. `PlayerInteractEvent.RightClickBlock` runs it when the held item is in `#meatlib:wrenches` or `#c:tools/wrenches`. The meatlib tag is empty. |
+| Screens / auto layout | missing | The upstream widget kit (GUIUtil, BetterHandledScreen, panels, config widgets) is not ported. Menus can be registered. The screens that draw them are the next client slice. |
+| Flywheel `client/flw` | blocked | Not compiled. When a machine renderer needs it, depend `compileOnly` on the Flywheel Create 6.0.10 bundles, and do not jar it. |
+| Mixins | not ported | Sync, tooltips, and wrench use events and block-entity methods. Spawn helper, enchantment helper, and client accessors are still open. |
+| Larkdown, datagen, Valkyrian Skies, fake player | missing | Not required to boot. |
+| Myron | replaced later | NeoForge's built-in OBJ loader (`ObjLoader` / model json `"loader": "neoforge:obj"`) is the planned replacement. No OBJ model is loaded in this milestone. |
+
+Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, and entities are still not registered.
+
+### Plan for the rest
+
+1. Machines on `BaseBlock` / `BaseHorFacingBlock`, `SyncableBlockEntity`, `ImplementedInventory`, and `MeatlibCapabilities`. One machine end to end (block, block entity, menu, JEI category) before the rest.
+2. Pipes on `MultiFluidBuffer` and item handlers. Blood as a NeoForge fluid type, milli-buckets, not Fabric droplets. `MiscUtil.dropletsToMb` divides by 81 only for old Fabric numbers.
+3. PLC on `ChannelFormat` and NEEPSpeak, which is already in the jar.
+4. Weapons and entities after that. Item NBT becomes `MeatlibComponents` or new component types. GeckoLib for the animated ones.
+5. OBJ models through NeoForge's loader, not Myron.
+6. JEI categories first, then the same recipes in EMI.
+7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
+8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
+
+## Phase 1 (still true)
 
 Legend: **ported** means it registers and has the upstream model and, where the ingredients exist, the upstream recipe. **stubbed** means the id exists but behaviour is thinner than upstream. **missing** means the id is not registered. **blocked** means the next step needs a subsystem that is not ported yet.
 
@@ -24,7 +66,7 @@ Legend: **ported** means it registers and has the upstream model and, where the 
 
 | System | State | Notes |
 | --- | --- | --- |
-| Mod bootstrap `neepmeat` | ported | NeoForge 21.1.265, ModDevGradle 2.0.141, Java 21 |
+| Mod bootstrap `neepmeat` and `meatlib` | ported | NeoForge 21.1.265, ModDevGradle 2.0.141, Java 21. Jar version `0.30.0-neoforge.2`. |
 | Creative tab `neepmeat:general` | ported | Holds the 136 blocks below. Upstream also had one general group. |
 | Building-block families | ported | Full cube or pillar, plus stairs, slab, and wall when upstream `BaseBuildingBlock` made them. 136 block ids, listed in `phase1-block-ids.txt`. |
 | Smooth tile, 16 dyes | ported | Shared tinted model. Block and item colours use `DyeColor.getFireworkColor()`, same call as upstream. |
@@ -58,7 +100,7 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 | System | Files (approx.) | State | Why |
 | --- | --- | --- | --- |
-| meatlib registry, screens, transfer, mixins | 310 | blocked | Phase 2 prerequisite. Fabric APIs throughout. |
+| meatlib core (registries, caps, payloads, inventories, block entities, sounds) | see milestone above | ported | Screen widget kit, Flywheel helpers, larkdown, and mixins are not in this jar. |
 | Machines (`machine/`, including living machines, reactor, crusher, mixer, kiln, mincer, press, power flower, phage ray, synthesiser, surgery, charnel pump, …) | 276+ | missing | Each block class extends meatlib blocks and uses Fabric transfer, block entities, and often Flywheel or GeckoLib. |
 | Item pipes, fluid pipes, blood network, tanks (`transport/`) | 238 | blocked | Fabric `FluidStorage` / `ItemStorage` and a custom graph. Needs NeoForge handlers. |
 | Client screens and renderers | 195 | missing | Follows the machines. |
@@ -82,15 +124,24 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` (headless) on JDK 21:
+`./gradlew runGameTestServer` (headless) on JDK 21, jar `0.30.0-neoforge.2`:
 
-- Mod list includes NEEPMeat 0.30.0-neoforge.1, GeckoLib 4.9.3, JEI 19.64.0.455, EMI 1.1.24+1.21.1
-- Log line: `NeepMeat 0.30.0-neoforge.1 loaded with GeckoLib 4.9.3`
-- `Loaded 1512 recipes` with no recipe parse error
-- `All 3 required tests passed`: place `neepmeat:polished_metal`, find its recipe, run the NEEPSpeak pattern parser
+```
+meatlib 0.30.0-neoforge.2 loaded
+NeepMeat 0.30.0-neoforge.2 loaded with GeckoLib 4.9.3
+All 6 required tests passed :)
+```
 
-`./gradlew runServer` reached `Done (0.337s)! For help, type "help"` with the same load line and no `ERROR` from NeepMeat.
+The six tests are the original three (place `neepmeat:polished_metal`, its recipe, NEEPSpeak parser) plus the meatlib probe block, a `MultiFluidBuffer` fill of 1500 mB of water and a drain of 1000 mB, and a `ChannelFormat.INT` round trip of the value 42.
 
-`./gradlew runClient` on `DISPLAY=:1` reached LWJGL 3.3.3 and built the block atlas. The only `ERROR` was `Failed to open OpenAL device` / ALSA `cannot find card '0'`, which is this VM having no sound device. After the concrete-wall parent fix, the client log has no `Unable to load model` line. The main menu was not clicked through; the process was stopped once resources had loaded. No world was joined on the client.
+`./gradlew runServer`:
+
+```
+meatlib 0.30.0-neoforge.2 loaded
+NeepMeat 0.30.0-neoforge.2 loaded with GeckoLib 4.9.3
+Done (0.300s)! For help, type "help"
+```
+
+`./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5`, loaded both mods, and logged `meatlib client screen hook ready`. The only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. No missing model and no missing subtitle. The main menu was not clicked through. No world was joined on the client.
 
 Not tested: Java 25, a Prism/Pakku instance with the pack's 402 mods, Sodium/Iris together with this jar, crafting in a GUI, or multiplayer with the jar in `.pakku/overrides/mods`. The jar was not added there.

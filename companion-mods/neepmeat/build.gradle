@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '0.30.0-neoforge.1'
+version = '0.30.0-neoforge.2'
 group = 'com.neep'
 base { archivesName = 'neepmeat' }
 
@@ -16,6 +16,7 @@ neoForge {
     version = '21.1.265'
     mods {
         neepmeat { sourceSet sourceSets.main }
+        meatlib { sourceSet sourceSets.main }
     }
     runs {
         client {

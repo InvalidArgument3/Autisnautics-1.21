@@ -4,14 +4,9 @@ Checked against `pakku-lock.json` (Minecraft 1.21.1, NeoForge 21.1.265, 402 proj
 
 ## Mod ids
 
-This jar registers one mod id: `neepmeat`.
+This jar registers two mod ids: `neepmeat` and `meatlib` (inlined library, same jar).
 
-Upstream's Loom build also nested two other mods:
-
-- `meatlib` (the library subproject)
-- `myron-neepmeat` (the OBJ loader fork)
-
-Neither id is registered in this phase, so a later phase can still claim them. `meatweapons` and `neepbus` are package and data namespaces inside the NeepMeat jar, not separate Fabric mod ids.
+Upstream also nested `myron-neepmeat`. That id is still not registered. NeoForge's built-in OBJ loader is the planned replacement. `meatweapons` and `neepbus` are package and data namespaces inside the NeepMeat jar, not separate Fabric mod ids.
 
 A search of `pakku-lock.json` slugs, names, and filenames, plus a workspace text search, found no `neepmeat`, `meatlib`, `neepbus`, `meatweapons`, or `myron`. That does not cover mod ids hidden inside jars that were not extracted.
 
