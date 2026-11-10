@@ -127,7 +127,7 @@ public final class LivingMachines {
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock> TREE_VACUUM =
             CONTEXT.block("tree_vacuum", com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock::new);
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock> DISTRIBUTOR =
-            CONTEXT.block("distributor_point", () -> new com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock(portSettings()));
+            CONTEXT.block("distributor_point", () -> new com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock(CONTEXT, portSettings()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExtractorBlockEntity>> EXTRACTOR_BE =
             BLOCK_ENTITIES.register("extractor", () -> BlockEntityType.Builder.of(ExtractorBlockEntity::new, EXTRACTOR.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SilkyExtractorBlockEntity>> SILKY_EXTRACTOR_BE =

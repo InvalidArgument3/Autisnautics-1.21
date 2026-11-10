@@ -9,7 +9,7 @@
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  *
- * NeepBus inputs are not on this block entity. The address, mode, and parcel queue are.
+ * NeepBus "Send" sets {@link #sendNext}. "Set channel" replaces the address.
  */
 
 package com.neep.neepmeat.machine.live_machine.block.entity;
@@ -22,8 +22,10 @@ import com.neep.neepmeat.entity.skyworm.SkywormEntity;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock;
+import com.neep.neepbus.util.message.DataVariant;
 import com.neep.neepmeat.transport.worm.DistributorParcel;
 import com.neep.neepmeat.transport.worm.DistributorRouting;
+import com.neep.neepmeat.transport.worm.RouteLock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -31,6 +33,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
@@ -39,9 +42,15 @@ import java.util.List;
 
 public class DistributorPointBlockEntity extends SyncableBlockEntity implements DistributorPoint {
     public static final String NULL_ADDRESS = "";
+    public static final int MIN_COOLDOWN = 300;
     private String address = NULL_ADDRESS;
     private Mode mode = Mode.RECEIVE;
     private boolean powered;
+    private int maxCooldown = MIN_COOLDOWN;
+    private boolean autoSend = true;
+    public int timeUntilPickup;
+    @Nullable public RouteLock routeLock;
+    public boolean sendNext;
     private final List<DistributorParcel> queuedParcels = new ArrayList<>();
 
     public DistributorPointBlockEntity(BlockPos pos, BlockState state) {
@@ -95,6 +104,48 @@ public class DistributorPointBlockEntity extends SyncableBlockEntity implements 
 
     public List<DistributorParcel> getQueuedParcels() {
         return queuedParcels;
+    }
+
+    public BlockPos getDumpPos() {
+        return getBlockPos().relative(getBlockState().getValue(DistributorPointBlock.VERTICAL_DIRECTION));
+    }
+
+    public int getMaxCooldown() {
+        return maxCooldown;
+    }
+
+    public boolean shouldAutoSend() {
+        return autoSend;
+    }
+
+    public void onPlaced() {
+        if (level != null) {
+            DistributorRouting.get(level).registerPoint(this);
+        }
+    }
+
+    public void onBroken() {
+        if (level != null) {
+            DistributorRouting.get(level).releaseRoute(getBlockPos());
+        }
+    }
+
+    public void scheduleSend(RouteLock lock, SkywormAnimationTimes times) {
+        this.timeUntilPickup = times.descend();
+        this.routeLock = lock;
+        setChanged();
+        if (level != null) {
+            createWorm(level, getBlockState(), getBlockPos(), times);
+        }
+    }
+
+    public void busWrite(String port, DataVariant value) {
+        if ("Send".equals(port)) {
+            sendNext = true;
+            setChanged();
+        } else if ("Set channel".equals(port)) {
+            setAddress(value.stringValue());
+        }
     }
 
     @Override

@@ -333,6 +333,13 @@ public class LivingMachineGameTests {
         destination.setAddress("alpha");
         destination.setMode(com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity.Mode.RECEIVE);
         destination.setPowered(true);
+        net.minecraft.server.level.ServerLevel level = (net.minecraft.server.level.ServerLevel) helper.getLevel();
+        net.minecraft.server.level.ServerPlayer watcher = net.neoforged.neoforge.common.util.FakePlayerFactory.getMinecraft(level);
+        net.minecraft.core.BlockPos watch = helper.absolutePos(destPos);
+        watcher.setPos(watch.getX() + 0.5, watch.getY() + 1, watch.getZ() + 0.5);
+        if (!level.players().contains(watcher)) {
+            level.players().add(watcher);
+        }
         com.neep.neepmeat.transport.worm.DistributorRouting routing = com.neep.neepmeat.transport.worm.DistributorRouting.get(helper.getLevel());
         com.neep.neepmeat.transport.worm.DistributorParcel parcel = new com.neep.neepmeat.transport.worm.DistributorParcel(
                 java.util.List.of(new com.neep.meatlib.transfer.ResourceAmount<>(com.neep.meatlib.transfer.ItemVariant.of(net.minecraft.world.item.Items.COBBLESTONE), 1)),

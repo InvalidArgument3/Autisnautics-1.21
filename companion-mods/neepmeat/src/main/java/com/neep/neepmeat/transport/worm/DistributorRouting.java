@@ -11,7 +11,7 @@
  *
  * Cardinal Components stored this on the world. Here it is a per-level map.
  * A route delivers its parcel after the animation total, and spawns the receiver worm
- * when the ascend window starts. The 60-block player gate is not applied.
+ * when the ascend window starts, and only if a player is within 60 blocks.
  */
 
 package com.neep.neepmeat.transport.worm;
@@ -81,7 +81,8 @@ public final class DistributorRouting {
             long elapsed = world.getGameTime() - entry.startTime;
             if (elapsed == entry.times.receiverWormAppear()) {
                 BlockPos pos = entry.destination;
-                if (world.hasChunkAt(pos)) {
+                if (world.hasChunkAt(pos) && world instanceof net.minecraft.server.level.ServerLevel server
+                        && server.hasNearbyAlivePlayer(pos.getX(), pos.getY(), pos.getZ(), 60)) {
                     BlockState state = world.getBlockState(pos);
                     if (state.is(LivingMachines.DISTRIBUTOR.get())) {
                         DistributorPointBlockEntity.createWorm(world, state, pos, entry.times);
@@ -98,6 +99,21 @@ public final class DistributorRouting {
                 iterator.remove();
             }
         }
+    }
+
+    public @org.jetbrains.annotations.Nullable DistributorDestination findAndRoute(BlockPos exclude, String address) {
+        java.util.List<PointHandle> matches = new java.util.ArrayList<>();
+        for (PointHandle handle : handles.values()) {
+            if (handle.mode().canReceive() && handle.powered() && handle.matches(address)
+                    && !handle.pos().equals(exclude) && !blocked.contains(handle.pos())) {
+                matches.add(handle);
+            }
+        }
+        if (matches.isEmpty()) {
+            return null;
+        }
+        PointHandle chosen = matches.get(world.getRandom().nextInt(matches.size()));
+        return new DistributorDestination(world, chosen.pos());
     }
 
     public RouteLock acquireRoute(BlockPos pos) {

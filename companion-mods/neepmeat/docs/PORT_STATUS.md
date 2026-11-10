@@ -388,6 +388,10 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Distributor, jar 0.30.0-neoforge.38
+
+`DistributorPointBlock` uses the upstream collision boxes and a radius-1 disc. `busWrite("Send")` sets `sendNext`. `busWrite("Set channel")` replaces the address. The receiver worm spawns only when `hasNearbyAlivePlayer` is true within 60 blocks. `DistributorPointProcess` extracts a parcel from the item and fluid inputs, locks a route, and inserts a received parcel into the outputs, dropping leftover items at the dump position. `SkywormEntity.spawnFromAltar` requires a player and a ring of `neepmeat:worm_altar`. The centre lava is cleared to air because `contaminated_rubble` is not registered. Data-cable connection properties are not on the structure block.
+
 ## Registered shells, jar 0.30.0-neoforge.37
 
 `block/StomachBlock`, `block/MetaboliserSegmentBlock`, `block/entity/LivingMachineControllerBlockEntity`, and `block/entity/MotorPortBlockEntity` are the classes that are registered. The previous parent copies are gone. `LivingMachines.CRUSHER` is `CrusherSegmentBlock`, a radius-1 disc. The largest hopper is that same disc and `strike` keeps a killed mob's drops. The phage beam is an end-rod particle line, and silk touch is applied to the harvest tool when a silky extractor is present. The tree vacuum sends `TreeVacuumAnimationPacket`, which sets `animationTicks` to 10 on the client.
