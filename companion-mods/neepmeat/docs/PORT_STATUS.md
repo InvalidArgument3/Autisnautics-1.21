@@ -145,6 +145,12 @@ The integrator holds one item and a data counter. With 1024 data, a rough brain 
 
 `ENTITY.find` returns the surgery platform's target. That target is the non-spectator, non-minecart entity standing on the block above. A pig spawned there is the entity the lookup returns.
 
+## Motor buffer, jar 0.30.0-neoforge.15
+
+The fuel buffer is 200 droplets again, which is `basicMotorMaxPower / dropletEnergy` (400 / 2). A full buffer burns in one tick and delivers 0.4 per unit. The energy registry stores energy per droplet, matching upstream.
+
+NeoForge fluid handlers move whole millibuckets, and one millibucket is 81 droplets. A bucket fill therefore stores 162 droplets and leaves 38 droplets of capacity unused. The internal buffer is still 200. That is the trade-off, not a larger tank.
+
 The living-machine graph, the blood network, and vascular conduits are not ported. `BuilderRobot` and the full PLC shell are not replaced yet. The meatgun is still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood

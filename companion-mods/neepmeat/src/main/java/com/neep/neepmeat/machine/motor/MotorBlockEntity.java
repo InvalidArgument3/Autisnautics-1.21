@@ -4,7 +4,7 @@
  * This file is part of NEEPMeat.
  *
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
- * Each tick burns ethereal fuel up to {@link #MAX_POWER} absolute units.
+ * Each tick burns ethereal fuel up to {@link #MAX_POWER} absolute units from a 200-droplet buffer.
  * Per-unit power is that energy divided by {@link com.neep.neepmeat.api.PowerUtil#BASE_POWER}.
  * Rotor speed is per-unit watts divided by the load torque, which defaults to 300.
  */
@@ -21,15 +21,15 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import org.jetbrains.annotations.Nullable;
 
 public class MotorBlockEntity extends BlockEntity implements MotorEntity {
     /** Upstream {@code basicMotorMaxPower}. */
     public static final int MAX_POWER = 400;
-    public static final int TANK_CAPACITY = 8000;
+    /** Upstream buffer: {@code basicMotorMaxPower / dropletEnergy} = 400 / 2 = 200 droplets. */
+    public static final int TANK_CAPACITY_DROPLETS = 200;
 
-    private final LiquidFuelMachine fuel = new LiquidFuelMachine(TANK_CAPACITY);
+    private final LiquidFuelMachine fuel = new LiquidFuelMachine(TANK_CAPACITY_DROPLETS);
     private float angle;
     private float power;
     private @Nullable MotorisedBlock connected;
@@ -38,8 +38,8 @@ public class MotorBlockEntity extends BlockEntity implements MotorEntity {
         super(NeepMachines.MOTOR_BE.get(), pos, state);
     }
 
-    public FluidTank tank() {
-        return fuel.tank();
+    public LiquidFuelMachine tank() {
+        return fuel;
     }
 
     public void serverTick() {

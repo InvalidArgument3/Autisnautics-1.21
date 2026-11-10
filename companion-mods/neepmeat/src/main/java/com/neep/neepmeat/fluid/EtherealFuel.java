@@ -85,8 +85,7 @@ public final class EtherealFuel {
     }
 
     private static void energy(FMLCommonSetupEvent event) {
-        FluidEnegyRegistry.getInstance().register(STILL.get(),
-                2.0 * PowerUtil.DROPLET_POWER * PowerUtil.DROPLETS_PER_MILLIBUCKET, true, null);
+        FluidEnegyRegistry.getInstance().register(STILL.get(), 2.0 * PowerUtil.DROPLET_POWER, true, null);
     }
 
     private static void creative(BuildCreativeModeTabContentsEvent event) {

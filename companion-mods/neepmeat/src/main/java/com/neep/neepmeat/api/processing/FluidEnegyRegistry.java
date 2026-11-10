@@ -23,7 +23,7 @@ public class FluidEnegyRegistry extends HashMap<Fluid, FluidEnegyRegistry.Entry>
         return INSTANCE;
     }
 
-    /** {@code baseEnergy} is energy per millibucket, which is the upstream droplet energy times 81. */
+    /** {@code baseEnergy} is energy per Fabric droplet, matching upstream. */
     public void register(Fluid fluid, double baseEnergy, boolean energised, @Nullable Fluid exhaust) {
         put(fluid, new Entry(baseEnergy, energised, exhaust));
     }
