@@ -10,7 +10,8 @@
 // Overworld floor 0_1 keeps lo/clearLo -153 and hi/clearHi 23. Loops clamp to min Y, so blocks run Y=-64 through Y=22.
 // waterBelow 188 fills that column with water, because Skylands sea level is 188 and the whole column sits under it.
 // Deepsea ceiling is now boundary 0_1: lo/clearLo 275, hi/clearHi 320. Deepsea min_y is -64 and height is 384, so the top block is Y=319.
-// Molten depths faces are the solid obsidian caps only: ceiling Y=295..319 and floor Y=-64..-40. The metal seas sit between those caps.
+// Molten depths faces are the solid obsidian caps only: ceiling Y=295..319 and floor Y=-64..-40.
+// The continuous metal sea is Y=-39..294 and is not cleared here. The floor loop stops before Y=-39.
 // Native setBlock/clearArea calls cannot be preempted; native overruns are measured, not hidden.
 ;(function () {
     const ServerLevel = Java.loadClass('net.minecraft.server.level.ServerLevel')

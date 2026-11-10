@@ -19,6 +19,9 @@ data/
 !config/paxi/datapacks/**
 !config/paxi/datapacks/**/data/
 !config/paxi/datapacks/**/data/**
+# Companion-mod datapack files live under src/main/resources/data.
+!companion-mods/**/data/
+!companion-mods/**/data/**
 servers.dat
 
 icon.png
