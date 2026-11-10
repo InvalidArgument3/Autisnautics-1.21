@@ -87,8 +87,8 @@ public class MeatgunProjectileEntity extends AbstractArrow
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(COL, 0x80000000); // Grey by default
+        super.defineSynchedData(builder);
+        builder.define(COL, 0x80000000); // Grey by default
     }
 
     @Override

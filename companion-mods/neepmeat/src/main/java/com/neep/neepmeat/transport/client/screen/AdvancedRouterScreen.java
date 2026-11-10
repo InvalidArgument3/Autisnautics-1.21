@@ -60,7 +60,7 @@ public class AdvancedRouterScreen extends BaseHandledScreen<AdvancedRouterScreen
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

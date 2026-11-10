@@ -17,7 +17,7 @@ import com.neep.meatlib.registry.RegistrationContext;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -70,7 +70,7 @@ public class PaintedBlockCollection<T extends PaintedBlockCollection.PaintedBloc
             return col.getFireworkColor();
         }
 
-        public void generateRecipe(Consumer<FinishedRecipe> exporter)
+        public void generateRecipe(RecipeOutput exporter)
         {
 
         }

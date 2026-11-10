@@ -78,11 +78,11 @@ public class BaseGunRenderer<T extends BaseGunItem & GeoAnimatable> extends GeoI
                         currentTransform.z);
             }
 
-            RenderType renderType = getRenderType(this.animatable, getTextureLocation(this.animatable), bufferSource, Minecraft.getInstance().getFrameTime());
+            RenderType renderType = getRenderType(this.animatable, getTextureLocation(this.animatable), bufferSource, Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks());
             VertexConsumer buffer = ItemRenderer.getFoilBufferDirect(bufferSource, renderType, false, this.currentItemStack != null && this.currentItemStack.hasFoil());
 
             defaultRender(matrices, this.animatable, bufferSource, renderType, buffer,
-                    0, Minecraft.getInstance().getFrameTime(), packedLight);
+                    0, Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks(), packedLight);
         }
     }
 

@@ -18,7 +18,7 @@ import com.neep.meatlib.registry.BlockRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -46,7 +46,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter)
+    public void buildRecipes(RecipeOutput exporter)
     {
         // This is a bit stupid
         BlockRegistry.REGISTERED_BLOCKS.stream()
@@ -60,12 +60,12 @@ public class MeatRecipeProvider extends FabricRecipeProvider
         EXPORTER_CONSUMERS.forEach(consumer -> consumer.accept(exporter));
     }
 
-    public static void offerStairsRecipe(Consumer<FinishedRecipe> exporter, ItemLike output, ItemLike input)
+    public static void offerStairsRecipe(RecipeOutput exporter, ItemLike output, ItemLike input)
     {
         RecipeProvider.stairBuilder(output, Ingredient.of(input)).unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input)).save(exporter);
     }
 
-    public static void offerEightDyeingRecipe(Consumer<FinishedRecipe> exporter, ItemLike output, ItemLike dye, ItemLike input)
+    public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, ItemLike input)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
                 .unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input))
@@ -73,7 +73,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
                 .save(exporter);
     }
 
-    public static void offerEightDyeingRecipe(Consumer<FinishedRecipe> exporter, ItemLike output, ItemLike dye, ItemLike input, String path)
+    public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, ItemLike input, String path)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
                 .unlockedBy(RecipeProvider.getHasName(input), RecipeProvider.has(input))
@@ -81,7 +81,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
                 .save(exporter, path);
     }
 
-    public static void offerEightDyeingRecipe(Consumer<FinishedRecipe> exporter, ItemLike output, ItemLike dye, TagKey<Item> input)
+    public static void offerEightDyeingRecipe(RecipeOutput exporter, ItemLike output, ItemLike dye, TagKey<Item> input)
     {
         createEightDyeingRecipe(output, Ingredient.of(dye), Ingredient.of(input))
                 .unlockedBy("has_dye", RecipeProvider.has(input))
@@ -89,7 +89,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
                 .save(exporter);
     }
 
-    public static void offerEightDyeingRecipe(Consumer<FinishedRecipe> exporter, String suffix, ItemLike output, ItemLike dye, TagKey<Item> input)
+    public static void offerEightDyeingRecipe(RecipeOutput exporter, String suffix, ItemLike output, ItemLike dye, TagKey<Item> input)
     {
         ResourceLocation outputId = BuiltInRegistries.ITEM.getKey(output.asItem());
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(outputId.getNamespace(), outputId.getPath() + suffix);
@@ -106,7 +106,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
 
     // Aargh! Multiple DataGeneratorEntrypoints under the namespace overwrite each other so I am forced to employ this method...
     @FunctionalInterface
-    public interface Subsidiary extends Consumer<Consumer<FinishedRecipe>> { }
+    public interface Subsidiary extends Consumer<RecipeOutput> { }
 
     protected static List<Subsidiary> EXPORTER_CONSUMERS = new ArrayList<>();
 

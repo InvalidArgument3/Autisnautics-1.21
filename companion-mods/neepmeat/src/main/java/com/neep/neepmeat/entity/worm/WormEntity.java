@@ -118,14 +118,14 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(CURRENT_ACTION, WormAction.EmptyAction.ID.toString());
+        super.defineSynchedData(builder);
+        builder.define(CURRENT_ACTION, WormAction.EmptyAction.ID.toString());
 
-        entityData.define(HEAD_X, getX());
-        entityData.define(HEAD_Y, getY() + 15);
-        entityData.define(HEAD_Z, getZ());
-        entityData.define(HEAD_PITCH, -90f);
-        entityData.define(HEAD_YAW, 0f);
+        builder.define(HEAD_X, getX());
+        builder.define(HEAD_Y, getY() + 15);
+        builder.define(HEAD_Z, getZ());
+        builder.define(HEAD_PITCH, -90f);
+        builder.define(HEAD_YAW, 0f);
     }
 
     public static AttributeSupplier.Builder createLivingAttributes()

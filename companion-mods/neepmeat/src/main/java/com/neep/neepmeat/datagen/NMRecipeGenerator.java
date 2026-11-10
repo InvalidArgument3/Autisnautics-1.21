@@ -21,7 +21,7 @@ import com.neep.neepmeat.init.NMItems;
 import com.neep.neepmeat.transport.FluidTransport;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Items;
@@ -42,12 +42,12 @@ public class NMRecipeGenerator extends MeatRecipeProvider
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter)
+    public void buildRecipes(RecipeOutput exporter)
     {
         generateRecipes(exporter);
     }
 
-    protected static void generateRecipes(Consumer<FinishedRecipe> exporter)
+    protected static void generateRecipes(RecipeOutput exporter)
     {
         MeatRecipeProvider.nineBlockStorageRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, NMItems.MEAT_STEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, NMBlocks.MEAT_STEEL_BLOCK);
         MeatRecipeProvider.nineBlockStorageRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, NMItems.BROWNE_INGOT, RecipeCategory.BUILDING_BLOCKS, NMBlocks.BROWNE_BLOCK);

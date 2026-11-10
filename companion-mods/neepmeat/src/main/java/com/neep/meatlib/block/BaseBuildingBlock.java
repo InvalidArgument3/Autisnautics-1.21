@@ -16,7 +16,7 @@ import com.neep.meatlib.datagen.MeatRecipeProvider;
 import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.registry.RegistrationContext;
 import java.util.function.Consumer;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
@@ -59,7 +59,7 @@ public class BaseBuildingBlock extends Block implements MeatlibBlock
         return new BaseWallBlock(ctx, ItemSettings.block(), properties);
     }
 
-    public void generateRecipes(Consumer<FinishedRecipe> exporter)
+    public void generateRecipes(RecipeOutput exporter)
     {
         MeatRecipeProvider.slab(exporter, RecipeCategory.BUILDING_BLOCKS, this.slab, this);
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, this.slab, this, 2);

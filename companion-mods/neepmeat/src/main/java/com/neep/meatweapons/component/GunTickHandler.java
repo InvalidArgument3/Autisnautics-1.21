@@ -140,7 +140,7 @@ public class GunTickHandler implements Component, CommonTickingComponent
             HudRenderCallback.EVENT.register((drawContext, tickDelta) ->
             {
                 Minecraft client = Minecraft.getInstance();
-                float dt = client.getDeltaFrameTime();
+                float dt = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
 
                 if (!client.isPaused())
                 {

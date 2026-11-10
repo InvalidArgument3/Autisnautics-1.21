@@ -1,3 +1,13 @@
+## File grind, jar 0.30.0-neoforge.48
+
+`FinishedRecipe` is gone from the datagen signatures. Those methods take `net.minecraft.data.recipes.RecipeOutput`. No class was added under `net.minecraft`.
+
+`TrackedValue` reads a NeoForge `ModConfigSpec` registered on the mod container (`meatlib.toml`, `neepmeat.toml`). Until the spec loads, `getRealValue()` returns the default.
+
+`LootTableLoadEvent` builds a `LootTable.Builder`, passes it to the Fabric listener, and appends those pools onto the existing table through `LootTable.DIRECT_CODEC`. `NMBlocks.block()` returns `NMItemSettings`, and `retainsInv`, `neepbus`, and `plcActuator` append the upstream tooltip lines. `PLCBlockEntity.getSurgeryRobot()` returns a controller that stores the player and the aim position. The loom `SurgicalRobot` movement class is still excluded. `BuiltinItemRendererRegistry` registers an `IClientItemExtensions` BEWLR on `RegisterClientExtensionsEvent`.
+
+`exclude.txt` went from 1437 to **1413** (24 files). Combined-tree errors are about **4520** after the recipe and frame-time rewrites, down from 4612. Two attempts to lift the files that were clean in the full compile failed: those files name excluded types in the same package, so they do not compile while their neighbours stay excluded. The next hubs (`WormEntity`, `FarmingScutter`) still fail their own signatures.
+
 ## Histogram, jar 0.30.0-neoforge.47
 
 `tools/port-errors/symbols.txt` is the breakdown of the 3,401 missing symbols from the 5,633-error tree. The top of that list is not the Fabric packages. `vertex`, `getNullable`, `TrackedValue`, `setLeft`, and `block` each repeat dozens of times.

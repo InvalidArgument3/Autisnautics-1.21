@@ -11,6 +11,7 @@
 package net.fabricmc.fabric.api.loot.v2;
 
 import com.neep.meatlib.event.RegisterEvent;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -20,6 +21,6 @@ public final class LootTableEvents {
     private LootTableEvents() {}
     @FunctionalInterface
     public interface Modify {
-        void modify(ResourceManager resourceManager, Object lootManager, ResourceLocation id, LootTable.Builder tableBuilder, Object source);
+        void modify(ResourceManager resourceManager, HolderLookup.Provider lootManager, ResourceLocation id, LootTable.Builder tableBuilder, LootTable source);
     }
 }

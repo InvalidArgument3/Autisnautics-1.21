@@ -58,7 +58,7 @@ public class ItemOutputPortScreen extends BetterHandledScreen<ItemOutputScreenHa
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        super.renderBackground(context);
+        super.renderBackground(context, mouseX, mouseY, delta);
         context.blit(TEXTURE, leftPos, topPos, 0, 0, imageWidth, 87);
 
 //        GUIUtil.drawInventoryBackground(context, x, y + 88);

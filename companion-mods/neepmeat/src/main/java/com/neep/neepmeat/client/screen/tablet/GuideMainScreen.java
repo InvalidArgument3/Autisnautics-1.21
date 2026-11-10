@@ -164,7 +164,7 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
     }
 
     @Override
-    public void renderBackground(GuiGraphics context)
+    public void renderBackground(GuiGraphics context, int mouseX, int mouseY, float delta)
     {
         int c = GuideCols.backgroundCol();
         context.fillGradient(0, 0, this.width, this.height, c, c);
@@ -173,7 +173,7 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
     @Override
     public void render(GuiGraphics matrices, int mouseX, int mouseY, float delta)
     {
-        this.renderBackground(matrices);
+        this.renderBackground(matrices, mouseX, mouseY, delta);
 
         // Initial animation
         matrices.pose().pushPose();

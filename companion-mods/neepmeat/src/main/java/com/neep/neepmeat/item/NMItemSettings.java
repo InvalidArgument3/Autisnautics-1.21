@@ -11,61 +11,55 @@ public class NMItemSettings extends ItemSettings
 {
     public static NMItemSettings block()
     {
-        return (NMItemSettings) new NMItemSettings().factory(BaseBlockItem::new);
+        NMItemSettings settings = new NMItemSettings();
+        settings.factory(BaseBlockItem::new);
+        return settings;
     }
 
-    public NMItemSettings tooltip(TooltipSupplier tooltipSupplier)
+    public NMItemSettings tooltip(TooltipSupplier supplier)
     {
-        super.tooltip(tooltipSupplier);
+        super.tooltip(supplier);
         return this;
     }
 
     public NMItemSettings requiresMotor()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, REQUIRES_MOTOR);
-        return this;
+        return tooltip(REQUIRES_MOTOR);
     }
 
     public NMItemSettings requiresVascular()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, REQUIRES_VASCULAR);
-        return this;
+        return tooltip(REQUIRES_VASCULAR);
     }
 
     public NMItemSettings requiresIchor()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, REQUIRES_ICHOR);
-        return this;
+        return tooltip(REQUIRES_ICHOR);
     }
 
     public NMItemSettings neepbus()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, NEEPBUS_PART);
-        return this;
+        return tooltip(NEEPBUS_PART);
     }
 
     public NMItemSettings retainsInv()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, RETAINS_INVENTORY);
-        return this;
+        return tooltip(RETAINS_INVENTORY);
     }
 
     public NMItemSettings plc()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, PLC_COMPATIBLE);
-        return this;
+        return tooltip(PLC_COMPATIBLE);
     }
 
     public NMItemSettings plcInterrupt()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, PLC_INTERRUPT);
-        return this;
+        return tooltip(PLC_INTERRUPT);
     }
 
     public NMItemSettings plcActuator()
     {
-        this.tooltipSupplier = TooltipSupplier.combine(tooltipSupplier, PLC_ACTUATOR);
-        return this;
+        return tooltip(PLC_ACTUATOR);
     }
 
     public static final TooltipSupplier REQUIRES_MOTOR = (stack, tooltip) -> tooltip.add(Component.translatable("tooltip." + NeepMeat.NAMESPACE + ".requires_motor").setStyle(PLCCols.EMPHASIS_TEXT));

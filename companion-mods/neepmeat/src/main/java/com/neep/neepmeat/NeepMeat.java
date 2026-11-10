@@ -64,6 +64,7 @@ public final class NeepMeat {
         com.neep.neepmeat.recipe.NeepComponents.COMPONENTS.register(bus);
         MaterialItems.register(bus);
         com.neep.neepmeat.block.RecipeBlocks.register(bus);
+        com.neep.meatlib.config.ConfigFiles.register(container, net.neoforged.fml.config.ModConfig.Type.COMMON, "neepmeat.toml", CONFIG);
         BloodFluids.register(bus);
         com.neep.neepmeat.fluid.EtherealFuel.register(bus);
         com.neep.neepmeat.fluid.MeatFluid.register(bus);

@@ -86,7 +86,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
         transformation.apply(leftHanded, matrices);
         matrices.translate(-0.5F, -0.5F, -0.5F);
 
-        renderInner(stack, player, playerEntityRenderer, mode, matrices, vcp, true, mainHand, leftHanded, client.getFrameTime(), light, overlay);
+        renderInner(stack, player, playerEntityRenderer, mode, matrices, vcp, true, mainHand, leftHanded, client.getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
     }
 
     private ItemStack getItemInOtherHand(ItemInHandRenderer renderer, boolean mainHand)
@@ -135,7 +135,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
         MeatgunModule root = component.getRootHolder().root;
         renderRecursive(matrices, root, stack, component, mode, vcp,
                 Minecraft.getInstance().level.getGameTime(),
-                Minecraft.getInstance().getFrameTime(), light, overlay);
+                Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
 
         renderScreen(client, matrices, mode, vcp, component.getRootHolder(), tickDelta, leftHanded);
 

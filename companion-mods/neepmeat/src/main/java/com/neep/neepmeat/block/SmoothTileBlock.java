@@ -22,7 +22,7 @@ import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.NMItemGroups;
 import com.neep.neepmeat.datagen.tag.NMTags;
 import java.util.function.Consumer;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -42,7 +42,7 @@ public class SmoothTileBlock extends PaintedBlockCollection.PaintedBlock impleme
         return new Item(this, ctx, ItemSettings.block());
     }
 
-    public void generateRecipe(Consumer<FinishedRecipe> exporter)
+    public void generateRecipe(RecipeOutput exporter)
     {
         MeatRecipeProvider.offerEightDyeingRecipe(exporter, "_dyeing", this, DyeItem.byColor(getCol()), NMTags.SMOOTH_TILE);
         MeatRecipeProvider.offerEightDyeingRecipe(exporter, this, DyeItem.byColor(getCol()), Blocks.SMOOTH_STONE);

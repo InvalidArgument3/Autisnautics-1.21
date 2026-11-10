@@ -6,12 +6,14 @@
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
  * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 package com.neep.neepmeat.client.renderer.item;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+
 
 import com.neep.meatlib.client.RotationAxis;
 import com.neep.meatlib.client.event.UseAttackCallback;
@@ -67,7 +69,7 @@ public class RolledNewspaperRenderer implements BuiltinItemRendererRegistry.Dyna
     {
         BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(NMExtraModels.ROLLED_NEWSPAPER));
 
-        swing = Math.max(0, swing - 0.1f * client.getDeltaFrameTime());
+        swing = Math.max(0, swing - 0.1f * client.getDeltaTracker().getGameTimeDeltaPartialTick(true));
 
         if (mode == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || mode == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
         {

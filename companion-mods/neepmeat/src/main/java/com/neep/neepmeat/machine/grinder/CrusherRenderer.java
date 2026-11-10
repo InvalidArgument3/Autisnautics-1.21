@@ -47,7 +47,7 @@ public class CrusherRenderer implements BlockEntityRenderer<CrusherBlockEntity>
     public void render(CrusherBlockEntity be, float tickDelta, PoseStack matrices, MultiBufferSource vertexConsumers, int light, int overlay)
     {
         if (!Minecraft.getInstance().isPaused())
-            be.sinAngle += Minecraft.getInstance().getDeltaFrameTime() * 4 * be.progressIncrement();
+            be.sinAngle += Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true) * 4 * be.progressIncrement();
 
         Direction facing = be.getBlockState().getValue(CrusherBlock.FACING);
 

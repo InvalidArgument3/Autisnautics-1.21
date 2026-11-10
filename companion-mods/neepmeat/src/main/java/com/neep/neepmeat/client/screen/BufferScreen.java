@@ -42,7 +42,7 @@ public class BufferScreen extends AbstractContainerScreen<BufferScreenHandler>
 
     @Override
     public void render(GuiGraphics matrices, int mouseX, int mouseY, float delta) {
-        renderBackground(matrices);
+        renderBackground(matrices, mouseX, mouseY, delta);
         super.render(matrices, mouseX, mouseY, delta);
         renderTooltip(matrices, mouseX, mouseY);
     }

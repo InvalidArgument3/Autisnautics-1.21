@@ -74,7 +74,7 @@ public class DisplayPlateScreen extends BaseHandledScreen<DisplayPlateScreenHand
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
 //        RenderSystem.setShader(GameRenderer::getPositionTexShader);
 //        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
 //        RenderSystem.setShaderTexture(0, TEXTURE);

@@ -59,8 +59,8 @@ public class FusionBlastEntity extends AbstractArrow
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        this.entityData.define(POWER, power);
+        super.defineSynchedData(builder);
+        this.builder.define(POWER, power);
     }
 
     @Override

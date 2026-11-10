@@ -96,10 +96,10 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(SYNC_ID, 0);
-        entityData.define(VISIBILITY, 0.0f);
-        entityData.define(PHASE2, false);
+        super.defineSynchedData(builder);
+        builder.define(SYNC_ID, 0);
+        builder.define(VISIBILITY, 0.0f);
+        builder.define(PHASE2, false);
     }
 
     public int getSyncId()

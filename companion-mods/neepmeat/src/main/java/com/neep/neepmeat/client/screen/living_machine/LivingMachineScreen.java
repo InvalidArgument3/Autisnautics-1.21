@@ -86,7 +86,7 @@ public class LivingMachineScreen extends BetterHandledScreen<LivingMachineScreen
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        super.renderBackground(context);
+        super.renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

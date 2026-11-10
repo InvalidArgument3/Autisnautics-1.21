@@ -102,7 +102,7 @@ public class FabricatorVisual extends AbstractBlockEntityVisual<FabricatorBlockE
             blockEntity.animation = false;
 
         float oldMainAngle = mainAngle;
-        mainAngle += paused ? 0 : client.getDeltaFrameTime() * speed;
+        mainAngle += paused ? 0 : client.getDeltaTracker().getGameTimeDeltaPartialTick(true) * speed;
         boolean changed = mainAngle != oldMainAngle;
 
         rotor.setIdentityTransform()

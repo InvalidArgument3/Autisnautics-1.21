@@ -47,7 +47,7 @@ public class LimbEntity extends SimpleEntity
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
+        super.defineSynchedData(builder);
     }
 
     @Override

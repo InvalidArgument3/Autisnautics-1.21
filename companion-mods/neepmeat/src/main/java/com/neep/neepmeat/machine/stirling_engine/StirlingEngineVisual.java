@@ -66,7 +66,7 @@ public class StirlingEngineVisual extends AbstractBlockEntityVisual<StirlingEngi
 
         matrices.translate(0.5, 0.5, 0.5);
 
-        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaFrameTime();
+        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
         blockEntity.angle = Mth.wrapDegrees(blockEntity.angle + blockEntity.getSpeed() * delta);
         matrices.mulPose(Axis.ZN.rotationDegrees(blockEntity.angle));
         matrices.translate(-0.5, -0.5, -0.5);

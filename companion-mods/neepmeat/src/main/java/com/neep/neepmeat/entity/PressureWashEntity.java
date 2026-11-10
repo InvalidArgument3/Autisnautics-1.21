@@ -64,9 +64,9 @@ public class PressureWashEntity extends SimpleProjectileEntity
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(COLOUR, 0xffffff);
-        entityData.define(FLUID, Fluids.EMPTY);
+        super.defineSynchedData(builder);
+        builder.define(COLOUR, 0xffffff);
+        builder.define(FLUID, Fluids.EMPTY);
     }
 
     protected void processBlock(BlockPos pos, BlockState state)

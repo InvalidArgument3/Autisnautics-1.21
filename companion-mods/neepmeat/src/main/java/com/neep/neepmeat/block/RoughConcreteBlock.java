@@ -27,7 +27,7 @@ import com.neep.neepmeat.datagen.tag.NMTags;
 import java.util.Map;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.level.BlockGetter;
@@ -49,7 +49,7 @@ public class RoughConcreteBlock extends BaseBuildingBlock
     }
 
     @Override
-    public void generateRecipes(Consumer<FinishedRecipe> exporter)
+    public void generateRecipes(RecipeOutput exporter)
     {
         super.generateRecipes(exporter);
         MeatRecipeProvider.offerEightDyeingRecipe(exporter, "_dyeing", this, DyeItem.byColor(col), NMTags.ROUGH_CONCRETE);

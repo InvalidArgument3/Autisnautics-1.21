@@ -33,7 +33,7 @@ public class NeepBusConfigScreen<T extends NeepBusConfigScreenHandler> extends B
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

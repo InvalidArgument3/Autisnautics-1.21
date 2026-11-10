@@ -44,16 +44,44 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
     private boolean running;
     private @Nullable InstructionPlc machine;
 
-    public RobotHandle getSurgeryRobot() {
-        return RobotHandle.NONE;
+    private final SurgeryController surgeryRobot = new SurgeryController();
+
+    public SurgeryController getSurgeryRobot() {
+        return surgeryRobot;
     }
 
-    /** The loom robot lives on the surgery table. This handle keeps the call sites. */
-    public static final class RobotHandle {
-        public static final RobotHandle NONE = new RobotHandle();
+    /** The controller the loom {@code SurgicalRobot} exposes. Movement stays in that excluded class. */
+    public static final class SurgeryController {
+        private double x;
+        private double y;
+        private double z;
+        private float pitch;
+        private float yaw;
+        private @Nullable Player controller;
 
         public @Nullable Player getController() {
-            return null;
+            return controller;
+        }
+
+        public void setController(@Nullable Player player) {
+            this.controller = player;
+        }
+
+        public double getX() { return x; }
+        public double getY() { return y; }
+        public double getZ() { return z; }
+        public float getPitch() { return pitch; }
+        public float getYaw() { return yaw; }
+
+        public void setPos(double x, double y, double z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        public void setPitchYaw(float pitch, float yaw) {
+            this.pitch = pitch;
+            this.yaw = yaw;
         }
     }
 

@@ -18,8 +18,8 @@ import net.minecraft.world.level.block.Block;
 
 public final class NMBlocks {
     /** Loom registration uses {@code NMBlocks.block()} for the item settings. */
-    public static com.neep.meatlib.item.ItemSettings block() {
-        return com.neep.meatlib.item.ItemSettings.block();
+    public static com.neep.neepmeat.item.NMItemSettings block() {
+        return com.neep.neepmeat.item.NMItemSettings.block();
     }
     public static Block C;
     public static Block METAL;

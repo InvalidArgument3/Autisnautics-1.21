@@ -19,7 +19,7 @@ import com.neep.meatlib.registry.RegistrationContext;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.BlockItem;
@@ -104,7 +104,7 @@ public class MetalScaffoldingBlock extends BaseBlock implements MeatlibBlock, Si
         return world.getBlockState(pos.below()).is(this);
     }
 
-    public void generateRecipe(Consumer<FinishedRecipe> exporter)
+    public void generateRecipe(RecipeOutput exporter)
     {
         MeatRecipeProvider.offerStairsRecipe(exporter, stairs, this);
         MeatRecipeProvider.slab(exporter, RecipeCategory.BUILDING_BLOCKS, slab, this);

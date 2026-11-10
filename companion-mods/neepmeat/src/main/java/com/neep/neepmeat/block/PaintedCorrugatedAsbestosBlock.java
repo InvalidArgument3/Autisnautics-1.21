@@ -25,7 +25,7 @@ import com.neep.neepmeat.datagen.tag.NMTags;
 import com.neep.neepmeat.init.NMBlocks;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -73,7 +73,7 @@ public class PaintedCorrugatedAsbestosBlock extends PaintedBlockCollection.Paint
     }
 
     @Override
-    public void generateRecipe(Consumer<FinishedRecipe> exporter)
+    public void generateRecipe(RecipeOutput exporter)
     {
         MeatRecipeProvider.offerEightDyeingRecipe(exporter, "_dyeing", this, DyeItem.byColor(getCol()), NMTags.PAINTED_CORRUGATED_ASBESTOS);
         MeatRecipeProvider.offerEightDyeingRecipe(exporter, this, DyeItem.byColor(getCol()), NMBlocks.CORRUGATED_ASBESTOS);

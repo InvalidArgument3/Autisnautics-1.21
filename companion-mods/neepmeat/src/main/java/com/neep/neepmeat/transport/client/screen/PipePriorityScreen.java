@@ -47,7 +47,7 @@ public class PipePriorityScreen extends BetterHandledScreen<PipePriorityScreenHa
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

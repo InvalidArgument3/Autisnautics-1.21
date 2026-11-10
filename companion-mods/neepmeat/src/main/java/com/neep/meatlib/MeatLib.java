@@ -48,6 +48,7 @@ public final class MeatLib {
         if (dist.isClient()) {
             bus.addListener(MeatLibClient::onScreens);
         }
+        com.neep.meatlib.config.ConfigFiles.register(container, net.neoforged.fml.config.ModConfig.Type.COMMON, "meatlib.toml", CONFIG);
         LOG.info("meatlib {} loaded", container.getModInfo().getVersion());
     }
 

@@ -84,7 +84,7 @@ public class AdvancedEjectorScreen extends BetterHandledScreen<AdvancedEjectorSc
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

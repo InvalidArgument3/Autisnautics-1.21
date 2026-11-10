@@ -63,7 +63,7 @@ public class ContentDetectorScreen extends BetterHandledScreen<ContentDetectorSc
     @Override
     public void render(GuiGraphics context, int mouseX, int mouseY, float delta)
     {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
         super.render(context, mouseX, mouseY, delta);
         renderTooltip(context, mouseX, mouseY);
     }

@@ -164,7 +164,7 @@ public class ImplanterScreen extends BetterHandledScreen<ImplanterScreenHandler>
     }
 
     @Override
-    public void renderBackground(GuiGraphics context)
+    public void renderBackground(GuiGraphics context, int mouseX, int mouseY, float delta)
     {
     }
 

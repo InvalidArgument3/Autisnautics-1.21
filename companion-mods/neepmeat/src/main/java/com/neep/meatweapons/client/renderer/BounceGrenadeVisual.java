@@ -48,7 +48,7 @@ public class BounceGrenadeVisual extends RelightingEntityVisual<BounceGrenadeEnt
         float tickDelta = context.partialTick();
 
         if (!entity.isInGround())
-            renderTime += Minecraft.getInstance().getDeltaFrameTime();
+            renderTime += Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
 
         model.setIdentityTransform()
                 .translate(getVisualPosition(tickDelta))

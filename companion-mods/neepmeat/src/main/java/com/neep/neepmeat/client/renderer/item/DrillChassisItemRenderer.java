@@ -6,12 +6,14 @@
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
  * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 package com.neep.neepmeat.client.renderer.item;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+
 
 import com.neep.meatweapons.client.meatgun.RecoilManager;
 import com.neep.meatweapons.client.renderer.MeatgunPistolRenderer;
@@ -88,7 +90,7 @@ public class DrillChassisItemRenderer implements BuiltinItemRendererRegistry.Dyn
     @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vcp, int light, int overlay)
     {
-        float tickDelta = client.getFrameTime();
+        float tickDelta = client.getDeltaTracker().getRealtimeDeltaTicks();
 
         MeatgunComponent component = MWComponents.MEATGUN.get(stack);
 
@@ -178,7 +180,7 @@ public class DrillChassisItemRenderer implements BuiltinItemRendererRegistry.Dyn
         MeatgunModule root = component.getRootHolder().root;
         renderRecursive(matrices, root, stack, component, mode, vcp,
                 Minecraft.getInstance().level.getGameTime(),
-                Minecraft.getInstance().getFrameTime(), light, overlay);
+                Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
 
         matrices.popPose();
     }

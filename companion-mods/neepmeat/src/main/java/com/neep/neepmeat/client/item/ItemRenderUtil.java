@@ -37,7 +37,7 @@ public class ItemRenderUtil
         float equipProgress = 0;
         if (!client.player.swinging)
             equipProgress = ItemRenderUtil.getEquipProgress(client.gameRenderer.itemInHandRenderer,
-                    leftHanded && client.player.getMainArm() == HumanoidArm.RIGHT, client.getFrameTime());
+                    leftHanded && client.player.getMainArm() == HumanoidArm.RIGHT, client.getDeltaTracker().getRealtimeDeltaTicks());
         ItemRenderUtil.applyEquipOffset(matrices, leftHanded ? HumanoidArm.LEFT : HumanoidArm.RIGHT, equipProgress);
 
         return equipProgress;

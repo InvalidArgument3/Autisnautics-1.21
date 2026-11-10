@@ -123,7 +123,7 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        this.entityData.define(DATA_START_POS, BlockPos.ZERO);
+        this.builder.define(DATA_START_POS, BlockPos.ZERO);
     }
 
     @Override

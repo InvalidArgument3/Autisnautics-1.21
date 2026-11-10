@@ -18,7 +18,7 @@ import com.neep.meatweapons.init.MWBlocks;
 import com.neep.neepmeat.init.NMBlocks;
 import com.neep.neepmeat.init.NMItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
@@ -40,12 +40,12 @@ public class MWRecipeGenerator extends MeatRecipeProvider
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter)
+    public void buildRecipes(RecipeOutput exporter)
     {
         generateRecipes(exporter);
     }
 
-    protected static void generateRecipes(Consumer<FinishedRecipe> exporter)
+    protected static void generateRecipes(RecipeOutput exporter)
     {
         // Barrels
         new ShapedRecipeBuilder(RecipeCategory.MISC, MWItems.IRON_BARREL, 1)

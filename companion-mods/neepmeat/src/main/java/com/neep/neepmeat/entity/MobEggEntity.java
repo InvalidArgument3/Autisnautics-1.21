@@ -56,10 +56,10 @@ public class MobEggEntity extends SimpleEntity
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        this.entityData.define(WOBBLE_TICKS, 0);
-        this.entityData.define(WOBBLE_STRENGTH, 0f);
-        this.entityData.define(WOBBLE_DIRECTION, 1f);
+        super.defineSynchedData(builder);
+        this.builder.define(WOBBLE_TICKS, 0);
+        this.builder.define(WOBBLE_STRENGTH, 0f);
+        this.builder.define(WOBBLE_DIRECTION, 1f);
     }
 
     public MobEggEntity(Level world, EntityType<?> hatchType)

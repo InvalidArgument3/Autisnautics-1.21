@@ -59,7 +59,7 @@ public class PhageRayVisual extends AbstractEntityVisual<PhageRayEntity> impleme
         matrices.pushPose();
         matrices.translate(getVisualPosition().x, getVisualPosition().y - 0.5, getVisualPosition().z);
 
-        float tickDelta = Minecraft.getInstance().getFrameTime();;
+        float tickDelta = Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks();;
         float pitch = entity.getViewXRot(tickDelta);
 //        float yaw = entity.getYaw(tickDelta);
         float yaw = Mth.rotLerp(tickDelta, entity.yRotO, entity.getYRot());

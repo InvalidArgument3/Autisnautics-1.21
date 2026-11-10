@@ -5,7 +5,7 @@ import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.init.NMBlocks;
 import java.util.function.Consumer;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 
@@ -17,7 +17,7 @@ public class RawAsbestosBlock extends BaseBuildingBlock
     }
 
     @Override
-    public void generateRecipes(Consumer<FinishedRecipe> exporter)
+    public void generateRecipes(RecipeOutput exporter)
     {
         super.generateRecipes(exporter);
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.ASBESTOS_TILE, this);

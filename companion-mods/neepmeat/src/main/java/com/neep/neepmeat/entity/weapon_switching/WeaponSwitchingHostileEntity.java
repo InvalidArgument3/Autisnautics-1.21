@@ -60,8 +60,8 @@ public abstract class WeaponSwitchingHostileEntity extends Monster implements Ra
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(AIM_PROGRESS, 0f);
+        super.defineSynchedData(builder);
+        builder.define(AIM_PROGRESS, 0f);
     }
 
     @Override

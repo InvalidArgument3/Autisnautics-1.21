@@ -65,7 +65,7 @@ public class HUDOverlays
             }
         }
 
-        float f = client.getDeltaFrameTime();
+        float f = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
 
         if (vignetteState == 1)
         {
@@ -96,7 +96,7 @@ public class HUDOverlays
     protected static void pylonVignette(float tickDelta)
     {
         // LPF
-        pylonVignetteEnvelope = Mth.lerp(0.04f * Minecraft.getInstance().getDeltaFrameTime(),
+        pylonVignetteEnvelope = Mth.lerp(0.04f * Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true),
                 pylonVignetteEnvelope,
                 pylonVignetteState == 1 ? 1 : 0);
 

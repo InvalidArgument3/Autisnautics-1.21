@@ -34,6 +34,24 @@ import net.neoforged.neoforge.event.tick.LevelTickEvent;
 public final class FabricGameEvents {
     private FabricGameEvents() {}
 
+    /** Keeps the loaded table and appends pools the Fabric listener added. */
+    private static net.minecraft.world.level.storage.loot.LootTable mergePools(
+            net.minecraft.world.level.storage.loot.LootTable existing,
+            net.minecraft.world.level.storage.loot.LootTable added,
+            net.minecraft.core.HolderLookup.Provider registries) {
+        var ops = registries.createSerializationContext(net.minecraft.nbt.NbtOps.INSTANCE);
+        net.minecraft.nbt.CompoundTag base = (net.minecraft.nbt.CompoundTag) net.minecraft.world.level.storage.loot.LootTable.DIRECT_CODEC
+                .encodeStart(ops, existing).getOrThrow();
+        net.minecraft.nbt.CompoundTag extra = (net.minecraft.nbt.CompoundTag) net.minecraft.world.level.storage.loot.LootTable.DIRECT_CODEC
+                .encodeStart(ops, added).getOrThrow();
+        net.minecraft.nbt.ListTag pools = base.getList("pools", net.minecraft.nbt.Tag.TAG_COMPOUND);
+        for (net.minecraft.nbt.Tag pool : extra.getList("pools", net.minecraft.nbt.Tag.TAG_COMPOUND)) {
+            pools.add(pool);
+        }
+        base.put("pools", pools);
+        return net.minecraft.world.level.storage.loot.LootTable.DIRECT_CODEC.parse(ops, base).getOrThrow();
+    }
+
     @SubscribeEvent
     public static void onLevelTick(LevelTickEvent.Pre event) {
         if (event.getLevel() instanceof ServerLevel level) {
@@ -91,8 +109,15 @@ public final class FabricGameEvents {
 
     @SubscribeEvent
     public static void onLoot(LootTableLoadEvent event) {
-        for (var listener : LootTableEvents.MODIFY.listeners()) {
-            listener.modify(null, null, event.getName(), null, null);
+        if (LootTableEvents.MODIFY.listeners().isEmpty()) {
+            return;
         }
+        net.minecraft.world.level.storage.loot.LootTable existing = event.getTable();
+        net.minecraft.world.level.storage.loot.LootTable.Builder builder = net.minecraft.world.level.storage.loot.LootTable.lootTable();
+        for (var listener : LootTableEvents.MODIFY.listeners()) {
+            listener.modify(null, event.getRegistries(), event.getName(), builder, existing);
+        }
+        net.minecraft.world.level.storage.loot.LootTable added = builder.build();
+        event.setTable(mergePools(existing, added, event.getRegistries()));
     }
 }

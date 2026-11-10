@@ -124,7 +124,7 @@ public class TinkerTableScreen extends BetterHandledScreen<TinkerTableScreenHand
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY)
     {
-        super.renderBackground(context);
+        super.renderBackground(context, mouseX, mouseY, delta);
     }
 
     @Override

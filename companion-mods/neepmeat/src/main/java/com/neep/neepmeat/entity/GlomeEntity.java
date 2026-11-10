@@ -58,8 +58,8 @@ public class GlomeEntity extends FlyingMob
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        super.defineSynchedData();
-        entityData.define(MAX_TIME, 160);
+        super.defineSynchedData(builder);
+        builder.define(MAX_TIME, 160);
     }
 
     @Override

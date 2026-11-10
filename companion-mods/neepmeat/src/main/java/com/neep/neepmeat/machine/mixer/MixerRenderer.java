@@ -79,7 +79,7 @@ public class MixerRenderer implements BlockEntityRenderer<MixerBlockEntity>
         matrices.pushPose();
         matrices.translate(0.5, 1.5, 0.5);
 
-        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaFrameTime();
+        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
 
         be.bladeSpeed = Mth.lerp(0.5f, be.bladeSpeed,
                 be.currentRecipe == null || be.progressIncrement() <= be.minPower ? 0 : 50f * be.progressIncrement()

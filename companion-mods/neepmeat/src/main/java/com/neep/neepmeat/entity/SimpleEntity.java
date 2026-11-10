@@ -56,9 +56,9 @@ public abstract class SimpleEntity extends Entity
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        this.entityData.define(SIDEWAYS_SPEED, 0f);
-        this.entityData.define(FORWARD_SPEED, 0f);
-        this.entityData.define(UPWARD_SPEED, 0f);
+        this.builder.define(SIDEWAYS_SPEED, 0f);
+        this.builder.define(FORWARD_SPEED, 0f);
+        this.builder.define(UPWARD_SPEED, 0f);
     }
 
     protected float getBaseMovementSpeedMultiplier()
