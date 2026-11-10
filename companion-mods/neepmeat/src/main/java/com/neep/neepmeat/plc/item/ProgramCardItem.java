@@ -1,4 +1,5 @@
 package com.neep.neepmeat.plc.item;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.init.MeatlibSounds;
 import com.neep.meatlib.item.BaseItem;
@@ -99,7 +100,8 @@ public class ProgramCardItem extends BaseItem implements PlacementPreview
         return Component.literal(name).setStyle(Style.EMPTY.withItalic(true));
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
         tooltip.add(Component.nullToEmpty("Symbols:"));

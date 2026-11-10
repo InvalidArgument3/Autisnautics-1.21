@@ -37,6 +37,7 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
         super(context);
     }
 
+    @Override
     public ResourceLocation getTexture(BulletEntity entity)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/bullet.png");

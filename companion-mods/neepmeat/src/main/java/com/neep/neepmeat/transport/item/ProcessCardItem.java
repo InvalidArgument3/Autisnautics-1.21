@@ -26,6 +26,7 @@ public class ProcessCardItem extends BaseItem
         super(tooltipSupplier, settings);
     }
 
+    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -45,7 +46,8 @@ public class ProcessCardItem extends BaseItem
         return InteractionResultHolder.success(stack);
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
         var component = NMComponents.PROCESS_STORAGE.getNullable(itemStack);

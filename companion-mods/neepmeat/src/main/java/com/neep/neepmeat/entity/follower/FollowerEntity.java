@@ -117,6 +117,7 @@ public class FollowerEntity extends PathfinderMob
         return super.hurt(source, amount);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();
@@ -224,6 +225,7 @@ public class FollowerEntity extends PathfinderMob
         return nbt;
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);

@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.machine.reactor.block;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.block.BaseBlock;
 import com.neep.meatlib.item.BaseBlockItem;
@@ -51,6 +52,7 @@ public class ReceiverOrganismBlock extends BaseBlock implements ReceiverOrganism
         return properties;
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);
@@ -83,7 +85,8 @@ public class ReceiverOrganismBlock extends BaseBlock implements ReceiverOrganism
             super(block, ctx, itemSettings);
         }
 
-        public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+        @Override
+        public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
         {
             super.appendHoverText(itemStack, world, tooltip, tooltipContext);
             getBlock().appendHoverText(itemStack, world, tooltip, tooltipContext);

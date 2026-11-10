@@ -55,6 +55,7 @@ public record ModuleLootCondition(TagKey<MeatgunModule.Type<? extends MeatgunMod
         return test(lootContext.getParamOrNull(LootContextParams.TOOL), tagKey);
     }
 
+    @Override
     public static boolean test(@Nullable ItemStack tool, TagKey<MeatgunModule.Type<? extends MeatgunModule>> tag)
     {
         return test(tool, m ->
@@ -67,6 +68,7 @@ public record ModuleLootCondition(TagKey<MeatgunModule.Type<? extends MeatgunMod
         });
     }
 
+    @Override
     public static boolean test(@Nullable ItemStack tool, Predicate<MeatgunModule.Type<? extends MeatgunModule>> predicate)
     {
         if (tool != null)
@@ -86,11 +88,13 @@ public record ModuleLootCondition(TagKey<MeatgunModule.Type<? extends MeatgunMod
 
     public record CodecSerialiser<T>(Codec<T> codec) implements Serializer<T>
     {
+        @Override
         public void serialize(JsonObject json, T object, JsonSerializationContext context)
         {
             codec.encode(object, JsonOps.INSTANCE, json);
         }
 
+        @Override
         public T deserialize(JsonObject json, JsonDeserializationContext context)
         {
             return codec.parse(JsonOps.INSTANCE, json).result().orElseThrow();

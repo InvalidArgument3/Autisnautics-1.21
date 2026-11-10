@@ -112,11 +112,13 @@ public class IntegratorStorage
     {
         protected long capacity = FluidConstants.BUCKET;
 
+        @Override
         protected FluidVariant getBlankVariant()
         {
             return FluidVariant.BLANK;
         }
 
+        @Override
         protected long getCapacity(FluidVariant variant)
         {
             return capacity;
@@ -134,6 +136,7 @@ public class IntegratorStorage
             this.variant = FluidVariant.fromNbt((CompoundTag) nbt.get("resource"));
         }
 
+        @Override
         public boolean supportsExtraction()
         {
             return InsertionOnlyStorage.super.supportsExtraction();
@@ -145,6 +148,7 @@ public class IntegratorStorage
             return InsertionOnlyStorage.super.iterator();
         }
 
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return variant.getFluid().is(NMTags.BLOOD);

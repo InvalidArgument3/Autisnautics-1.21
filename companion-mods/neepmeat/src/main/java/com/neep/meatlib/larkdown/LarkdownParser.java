@@ -62,6 +62,7 @@ public class LarkdownParser
         this.parsers = parsers;
     }
 
+    @Override
     public void parse() throws IOException, LarkdownParseException
     {
         parsed = true;

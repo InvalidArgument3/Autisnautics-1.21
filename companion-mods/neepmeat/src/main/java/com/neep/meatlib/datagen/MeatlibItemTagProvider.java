@@ -28,6 +28,7 @@ public class MeatlibItemTagProvider extends FabricTagProvider.ItemTagProvider
         super(output, registriesFuture);
     }
 
+    @Override
     protected void addTags(HolderLookup.Provider arg)
     {
 //        Multimap<TagKey<Item>, Item> map = HashMultimap.create();

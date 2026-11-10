@@ -43,6 +43,7 @@ public class VerrucousStonePortBlockEntity extends SyncableBlockEntity
 {
     private final WritableSingleFluidStorage storage = new WritableSingleFluidStorage(FluidConstants.BUCKET * 4)
     {
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return variant.isOf(NMFluids.ETHEREAL_FUEL.still());

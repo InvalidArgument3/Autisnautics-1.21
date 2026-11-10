@@ -58,6 +58,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
         return 1;
     }
 
+    @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vcp, int light, int overlay)
     {
         // Remove the transformations applied by ItemRenderer

@@ -64,6 +64,7 @@ public class MincerBlockEnity extends SyncableBlockEntity implements MotorisedBl
 
     protected WritableSingleFluidStorage fluidStorage = new WritableSingleFluidStorage(2 * FluidConstants.BUCKET, this::setChanged)
     {
+        @Override
         public boolean supportsInsertion()
         {
             return false;

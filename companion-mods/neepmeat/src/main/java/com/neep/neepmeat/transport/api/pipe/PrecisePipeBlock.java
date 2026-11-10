@@ -158,7 +158,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     @Override
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return shapes.get(state);
     }
@@ -182,7 +182,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean connection = canConnectTo(state, neighborState, direction.getOpposite(), (Level) world, neighborPos, false);
 
@@ -342,6 +342,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     private static final Direction[] HORIZONTAL = new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
+    @Override
     private BlockState rotate(BlockState oldState, int offset)
     {
         BlockState newState = oldState;
@@ -420,7 +421,8 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
         return false;
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         // Prevent mobs getting confused
         return false;

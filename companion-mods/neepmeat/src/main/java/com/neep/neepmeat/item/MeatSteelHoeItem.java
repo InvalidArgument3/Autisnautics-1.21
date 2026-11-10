@@ -42,6 +42,7 @@ public class MeatSteelHoeItem extends HoeItem
         return super.getDestroySpeed(stack, state);
     }
 
+    @Override
     public boolean isCorrectToolForDrops(BlockState state)
     {
         return super.isCorrectToolForDrops(state) || state.is(Blocks.COBWEB);

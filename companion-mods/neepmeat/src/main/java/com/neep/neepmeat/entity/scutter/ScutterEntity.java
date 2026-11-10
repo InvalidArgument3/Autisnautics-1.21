@@ -46,6 +46,7 @@ public abstract class ScutterEntity extends PathfinderMob implements FollowingSc
     {
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();

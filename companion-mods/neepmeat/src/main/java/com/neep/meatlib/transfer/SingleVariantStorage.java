@@ -29,6 +29,15 @@ public abstract class SingleVariantStorage<T> implements Storage<T>, StorageView
 
     protected void onFinalCommit() {}
 
+    /** Fabric single-variant storages overrode this. Subclasses still do. */
+    protected boolean canInsert(T resource) {
+        return true;
+    }
+
+    protected boolean supportsInsertion() {
+        return true;
+    }
+
     @Override
     public T getResource() {
         return variant;
@@ -51,7 +60,7 @@ public abstract class SingleVariantStorage<T> implements Storage<T>, StorageView
 
     @Override
     public long insert(T resource, long maxAmount, TransactionContext transaction) {
-        if (maxAmount <= 0 || resource == null || matches(resource, blank())) {
+        if (maxAmount <= 0 || resource == null || matches(resource, blank()) || !canInsert(resource)) {
             return 0;
         }
         if (amount > 0 && !matches(variant, resource)) {

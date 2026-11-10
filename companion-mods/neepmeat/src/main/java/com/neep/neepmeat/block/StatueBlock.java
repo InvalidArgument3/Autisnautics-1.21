@@ -43,7 +43,8 @@ public class StatueBlock extends BaseHorFacingBlock implements SimpleWaterlogged
         registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }
@@ -63,7 +64,7 @@ public class StatueBlock extends BaseHorFacingBlock implements SimpleWaterlogged
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         if (state.getValue(WATERLOGGED))
         {
@@ -74,7 +75,7 @@ public class StatueBlock extends BaseHorFacingBlock implements SimpleWaterlogged
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return SHAPE;
     }

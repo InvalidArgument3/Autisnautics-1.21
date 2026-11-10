@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.item;
+import net.minecraft.world.entity.LivingEntity;
 
 import com.neep.meatlib.item.BaseItem;
 import com.neep.meatlib.item.TooltipSupplier;
@@ -40,7 +41,8 @@ public class MopItem extends BaseItem implements WeakTwoHanded
         super(tooltipSupplier, settings);
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 40;
     }
@@ -51,6 +53,7 @@ public class MopItem extends BaseItem implements WeakTwoHanded
         return false;
     }
 
+    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;

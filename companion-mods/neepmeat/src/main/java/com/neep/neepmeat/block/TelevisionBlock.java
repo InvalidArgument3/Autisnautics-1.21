@@ -47,7 +47,7 @@ public class TelevisionBlock extends BaseBlock
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, sourcePos, notify);
         if (sourceBlock.isSignalSource(world.getBlockState(sourcePos)))

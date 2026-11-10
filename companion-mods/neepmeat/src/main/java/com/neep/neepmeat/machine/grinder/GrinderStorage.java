@@ -36,6 +36,7 @@ public class GrinderStorage extends SimpleContainer implements CrusherRecipeCont
         this.parent = parent;
         this.inputStorage = new WritableStackStorage(parent::sync)
         {
+            @Override
             public boolean canInsert(ItemVariant resource)
             {
                 return true;
@@ -44,6 +45,7 @@ public class GrinderStorage extends SimpleContainer implements CrusherRecipeCont
 
         this.outputStorage = new WritableStackStorage(parent::sync, 32)
         {
+            @Override
             public boolean supportsInsertion()
             {
                 return false;
@@ -52,6 +54,7 @@ public class GrinderStorage extends SimpleContainer implements CrusherRecipeCont
 
         this.extraStorage = new WritableStackStorage(parent::sync, 32)
         {
+            @Override
             public boolean supportsInsertion()
             {
                 return false;

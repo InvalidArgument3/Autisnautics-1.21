@@ -104,6 +104,7 @@ public class LargeFanBlock extends BigBlock<LargeFanBlock.LargeFanStructureBlock
             super(parent, settings);
         }
 
+        @Override
         protected BlockEntityType<LargeFanStructureEntity> registerBlockEntity()
         {
             return Registry.register(

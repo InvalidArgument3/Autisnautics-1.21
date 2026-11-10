@@ -106,6 +106,7 @@ public class ShortBromeBlock extends CropBlock
                 && floor.getValue(HALF) == DoubleBlockHalf.LOWER && floor.getValue(AGE1) == 2;
     }
 
+    @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         super.playerWillDestroy(world, pos, state, player);
@@ -130,6 +131,7 @@ public class ShortBromeBlock extends CropBlock
         }
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return asItem().getDefaultInstance();
@@ -208,7 +210,7 @@ public class ShortBromeBlock extends CropBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return switch (state.getValue(AGE1))
         {

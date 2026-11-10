@@ -53,6 +53,7 @@ public class RepeaterEntity extends SimpleEntity implements GeoEntity
         }
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(
@@ -65,6 +66,7 @@ public class RepeaterEntity extends SimpleEntity implements GeoEntity
         return PlayState.CONTINUE;
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;

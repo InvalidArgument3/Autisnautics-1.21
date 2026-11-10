@@ -31,6 +31,7 @@ public class MeatLibClient implements ClientModInitializer
     public static EMIScreenSupport EMI_UTIL = null;
     @Nullable public static REIScreenSupport REI_UTIL = null;
 
+    @Override
     public void onInitializeClient()
     {
         if (MeatLib.vsUtil != null)

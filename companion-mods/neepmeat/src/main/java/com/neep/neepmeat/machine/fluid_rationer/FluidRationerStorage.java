@@ -59,6 +59,7 @@ public class FluidRationerStorage extends WritableSingleFluidStorage
         return filters.isEmpty() || filters.contains(variant);
     }
 
+    @Override
     public CompoundTag toNbt(CompoundTag nbt)
     {
         super.toNbt(nbt);
@@ -66,6 +67,7 @@ public class FluidRationerStorage extends WritableSingleFluidStorage
         return nbt;
     }
 
+    @Override
     public CompoundTag readNbt(CompoundTag nbt)
     {
         super.readNbt(nbt);

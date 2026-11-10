@@ -43,6 +43,7 @@ public class ReservoirBlockEntity extends SyncableBlockEntity
         super(type, pos, state);
         storage = new WritableSingleFluidStorage(8 * FluidConstants.BUCKET, this::setChanged)
         {
+            @Override
             protected boolean canInsert(FluidVariant variant)
             {
                 return variant.isOf(Fluids.WATER);

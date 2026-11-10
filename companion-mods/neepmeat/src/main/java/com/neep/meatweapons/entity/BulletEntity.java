@@ -45,6 +45,7 @@ public class BulletEntity extends MeatgunProjectileEntity
         this.setNoGravity(true);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
 //        return ProjectileSpawnPacket.create(this, MWNetwork.SPAWN_ID);

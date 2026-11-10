@@ -85,6 +85,7 @@ public class MergePipeBlock extends ItemPipeBlock implements Wrenchable
         return state.getValue(MergePipeBlock.FACING);
     }
 
+    @Override
     public boolean alwaysAutoConnect(BlockState state, Direction face)
     {
         return state.getValue(FACING) == face;
@@ -107,6 +108,7 @@ public class MergePipeBlock extends ItemPipeBlock implements Wrenchable
         return b;
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         PipeConnections set = new PipeConnections();
@@ -122,17 +124,20 @@ public class MergePipeBlock extends ItemPipeBlock implements Wrenchable
         return set;
     }
 
+    @Override
     public boolean singleOutput()
     {
         return true;
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         return (inFace != state.getValue(FACING) || routed)
                 && super.canItemEnter(variant, amount, world, pos, state, inFace, routed);
     }
 
+    @Override
     public boolean canItemLeave(ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace, boolean routed)
     {
         return (outFace == state.getValue(FACING) || routed)

@@ -59,7 +59,7 @@ public abstract class MultiBlockStructure<T extends BigBlockStructureEntity> ext
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         if (world.getBlockEntity(pos) instanceof BigBlockStructureEntity be)
         {
@@ -107,11 +107,13 @@ public abstract class MultiBlockStructure<T extends BigBlockStructureEntity> ext
         return 1;
     }
 
+    @Override
     public ItemLike dropsLike()
     {
         return null;
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return parent.getCloneItemStack(world, pos, state);

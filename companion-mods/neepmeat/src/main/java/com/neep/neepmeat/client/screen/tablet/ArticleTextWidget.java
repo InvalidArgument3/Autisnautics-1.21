@@ -267,7 +267,8 @@ public class ArticleTextWidget implements Rectangle, Point.Mutable, GuiEventList
         searchResult = article.search(searchString.toString().toLowerCase(Locale.ROOT), w, this);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         return true;
     }

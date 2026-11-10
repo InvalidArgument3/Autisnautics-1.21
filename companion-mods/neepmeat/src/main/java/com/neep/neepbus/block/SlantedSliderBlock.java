@@ -111,7 +111,7 @@ public class SlantedSliderBlock extends BaseHorFacingBlock implements EntityBloc
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         if (direction.getAxis().isVertical())
             return state;
@@ -151,7 +151,7 @@ public class SlantedSliderBlock extends BaseHorFacingBlock implements EntityBloc
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         Direction facing = state.getValue(FACING);
         if (facing == Direction.EAST || facing == Direction.WEST)

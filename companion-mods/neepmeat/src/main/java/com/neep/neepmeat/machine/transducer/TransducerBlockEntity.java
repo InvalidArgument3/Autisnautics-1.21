@@ -46,6 +46,7 @@ public class TransducerBlockEntity extends SyncableBlockEntity
 {
     protected WritableSingleFluidStorage storage = new WritableSingleFluidStorage(FluidConstants.BUCKET, this::setChanged)
     {
+        @Override
         public boolean supportsInsertion()
         {
             return false;

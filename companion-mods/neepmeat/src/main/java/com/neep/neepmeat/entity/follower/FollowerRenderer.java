@@ -39,11 +39,13 @@ public class FollowerRenderer extends EntityRenderer<FollowerEntity>
     {
     }
 
+    @Override
     public Vec3 getPositionOffset(FollowerEntity entity, float tickDelta)
     {
         return super.getRenderOffset(entity, tickDelta);
     }
 
+    @Override
     public ResourceLocation getTexture(FollowerEntity entity)
     {
         return TEXTURE;

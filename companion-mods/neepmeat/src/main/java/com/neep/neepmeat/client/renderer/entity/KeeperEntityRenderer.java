@@ -44,6 +44,7 @@ public class KeeperEntityRenderer extends HumanoidMobRenderer<KeeperEntity, Keep
 //        this.addFeature(new ArmorFeatureRenderer<>(this, new KeeperEntityModel(ctx.getPart(legsArmorLayer)), new KeeperEntityModel(ctx.getPart(bodyArmorLayer))));
     }
 
+    @Override
     public ResourceLocation getTexture(KeeperEntity mobEntity)
     {
         return TEXTURE;

@@ -164,6 +164,7 @@ public abstract class FilterEntryWidget<T extends Filter> extends GeneralPanel i
             super(x, y, w, h, toggled, message, onToggle);
         }
 
+        @Override
         protected void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             String box = isToggled() ? "☒" : "☐";
@@ -199,6 +200,7 @@ public abstract class FilterEntryWidget<T extends Filter> extends GeneralPanel i
             handler.removeFilter.emitter().apply(index);
         }
 
+        @Override
         protected void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             int borderCol = isWithin(mouseX, mouseY) ? PLCCols.SELECTED.col : PLCCols.BORDER.col;

@@ -29,11 +29,13 @@ public class PowerEmitterBlockEntity extends SyncableBlockEntity
 
     private final AbstractBloodAcceptor bloodAcceptor = new AbstractBloodAcceptor()
     {
+        @Override
         public Mode getMode()
         {
             return Mode.SOURCE;
         }
 
+        @Override
         public long getOutput()
         {
             return powerOutput;

@@ -30,6 +30,7 @@ public class BaseSlabBlock extends SlabBlock implements MeatlibBlock
         this.blockItem = itemSettings.create(this, ctx);
     }
 
+    @Override
     public LootTable.@Nullable Builder genLoot(BlockLootSubProvider generator)
     {
         return generator.createSlabItemTable(this);

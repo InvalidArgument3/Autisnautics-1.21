@@ -103,6 +103,7 @@ public class ProcessInterfaceBlock extends BaseFacingBlock implements EntityBloc
         super.onRemove(state, world, pos, newState, moved);
     }
 
+    @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof ProcessInterfaceBlockEntity be)

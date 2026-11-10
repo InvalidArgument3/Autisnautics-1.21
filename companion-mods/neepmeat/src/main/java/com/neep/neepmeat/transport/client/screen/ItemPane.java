@@ -156,7 +156,8 @@ public class ItemPane implements ClickableWidget, Rectangle.Mutable
         }
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         scrollRow = (int) Math.min(scrollableRows, Math.max(scrollRow - amount, 0));
         return ClickableWidget.super.mouseScrolled(mouseX, mouseY, amount);
@@ -396,21 +397,25 @@ public class ItemPane implements ClickableWidget, Rectangle.Mutable
             updateSearch();
         }
 
+        @Override
         public int x0()
         {
             return x;
         }
 
+        @Override
         public int y0()
         {
             return y;
         }
 
+        @Override
         public int nw()
         {
             return w;
         }
 
+        @Override
         public int nh()
         {
             return textRenderer.lineHeight;

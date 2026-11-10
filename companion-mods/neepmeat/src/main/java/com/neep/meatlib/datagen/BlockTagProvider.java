@@ -28,6 +28,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider
         super(output, lookupCompletableFuture);
     }
 
+    @Override
     protected void addTags(HolderLookup.Provider arg)
     {
         for (Block entry : BlockRegistry.REGISTERED_BLOCKS)

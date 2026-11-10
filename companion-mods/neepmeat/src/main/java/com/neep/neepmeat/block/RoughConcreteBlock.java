@@ -140,14 +140,14 @@ public class RoughConcreteBlock extends BaseBuildingBlock
         }
 
         @Override
-        public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+        protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
         {
             return shapeMap.get(state);
 //            return this.getShapeMap(4.0F, 3.0F, 16.0F, 0.0F).get(state);
         }
 
         @Override
-        public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+        protected VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
         {
             return collisionMap.get(state);
         }

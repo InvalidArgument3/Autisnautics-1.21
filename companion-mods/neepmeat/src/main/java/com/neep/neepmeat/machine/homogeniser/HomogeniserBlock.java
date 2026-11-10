@@ -46,7 +46,8 @@ public class HomogeniserBlock extends BaseHorFacingBlock implements EntityBlock,
         super(itemName, itemSettings, settings);
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }
@@ -65,7 +66,7 @@ public class HomogeniserBlock extends BaseHorFacingBlock implements EntityBlock,
 
     @SuppressWarnings("deprecation")
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return SHAPE;
     }

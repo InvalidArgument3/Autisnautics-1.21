@@ -71,6 +71,7 @@ public class CharnelCompactorBlock extends BaseBlock implements DataCable
         return item.getDefaultInstance().is(NMTags.CHARNEL_COMPACTOR) ? 1 : 0;
     }
 
+    @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
         InteractionHand hand = InteractionHand.MAIN_HAND;
@@ -166,7 +167,7 @@ public class CharnelCompactorBlock extends BaseBlock implements DataCable
         }
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return OUTLINE_SHAPE;
     }

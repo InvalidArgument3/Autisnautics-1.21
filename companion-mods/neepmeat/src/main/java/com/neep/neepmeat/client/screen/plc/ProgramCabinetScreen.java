@@ -99,6 +99,7 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             super(0, 0, rows, cols, slots, handler);
         }
 
+        @Override
         protected void drawSlot(GuiGraphics context, MobileSlot mobileSlot)
         {
             ResourceLocation tex = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/gui/plc/program_cabinet.png");
@@ -115,6 +116,7 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             setSlotPositions(x + 2, y + 2, slots, cols, rows);
         }
 
+        @Override
         protected static void setSlotPositions(int x, int y, List<MobileSlot> slots, int nx, int ny)
         {
             int dx = 20; // Usually 18
@@ -153,6 +155,7 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             tooltip(NeepMeat.translationKey("tooltip", "program_cabinet.segment_offset", ProgramCabinetBlockEntity.SLOTS));
         }
 
+        @Override
         public void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             super.renderButton(context, mouseX, mouseY, delta);

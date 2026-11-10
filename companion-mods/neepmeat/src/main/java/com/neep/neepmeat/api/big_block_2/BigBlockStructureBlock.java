@@ -76,7 +76,7 @@ public class BigBlockStructureBlock extends Block implements LivingMachineStruct
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
         super.onRemove(state, level, pos, newState, moved);
         if (newState.is(this)) {
             return;

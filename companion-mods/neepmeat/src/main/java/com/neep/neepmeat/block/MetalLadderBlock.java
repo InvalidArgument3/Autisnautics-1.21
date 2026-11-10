@@ -78,7 +78,7 @@ public class MetalLadderBlock extends LadderBlock implements MeatlibBlock
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         return getState(world, pos, super.updateShape(state, direction, neighborState, world, pos, neighborPos));
     }

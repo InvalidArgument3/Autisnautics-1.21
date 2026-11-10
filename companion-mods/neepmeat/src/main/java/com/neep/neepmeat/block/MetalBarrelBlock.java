@@ -129,7 +129,7 @@ public class MetalBarrelBlock extends BarrelBlock implements MeatlibBlock, Wrenc
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         BlockState superState = super.updateShape(state, direction, neighborState, world, pos, neighborPos);
         Direction facing = state.getValue(FACING);

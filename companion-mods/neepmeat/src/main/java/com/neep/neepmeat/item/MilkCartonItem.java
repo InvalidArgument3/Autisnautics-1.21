@@ -56,7 +56,8 @@ public class MilkCartonItem extends BaseItem
         return stack;
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 32;
     }

@@ -41,21 +41,25 @@ public class TransposerBlock extends BaseFacingBlock implements ItemPipe, Entity
         super(ctx, itemSettings, settings);
     }
 
+    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         return 0;
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         return false;
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         return new PipeConnections(state.getValue(FACING));
     }
 
+    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction)
     {
         return direction == state.getValue(FACING);
@@ -67,6 +71,7 @@ public class TransposerBlock extends BaseFacingBlock implements ItemPipe, Entity
         return face == state.getValue(FACING);
     }
 
+    @Override
     public PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state)
     {
         if (world.getBlockEntity(pos) instanceof TransposerBlockEntity be)

@@ -46,6 +46,7 @@ public class FoodCartonItem extends BaseItem
         super(tooltip, settings);
     }
 
+    @Override
     public boolean isEdible()
     {
         return true;
@@ -146,7 +147,8 @@ public class FoodCartonItem extends BaseItem
         }
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         CompoundTag nbt = itemStack.getTag();
         float hunger = MeatFluidUtil.getHunger(nbt);
@@ -156,6 +158,7 @@ public class FoodCartonItem extends BaseItem
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
     }
 
+    @Override
     public @Nullable FoodProperties getFoodProperties()
     {
         // This method is not stack-aware, so we can't do anything.

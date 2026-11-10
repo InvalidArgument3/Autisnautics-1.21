@@ -86,7 +86,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
 
     @Override
     @SuppressWarnings("deprecation")
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         BlockPos subtracted = fromPos.subtract(pos);
         Direction direction = Direction.fromDelta(subtracted.getX(), subtracted.getY(), subtracted.getZ());
@@ -151,7 +151,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         if (state.getValue(WATERLOGGED))
         {

@@ -54,7 +54,7 @@ public class ToiletBlock extends BaseHorFacingBlock
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         if (world.hasNeighborSignal(pos) && state.getValue(OPEN))
         {
@@ -102,7 +102,7 @@ public class ToiletBlock extends BaseHorFacingBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return OPEN_SHAPE;
     }

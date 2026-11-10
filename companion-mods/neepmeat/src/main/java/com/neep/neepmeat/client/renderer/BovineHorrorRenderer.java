@@ -40,6 +40,7 @@ public class BovineHorrorRenderer extends GeoEntityRenderer<BovineHorrorEntity>
         this.shadowRadius = 1.5F;
     }
 
+    @Override
     public void render(BovineHorrorEntity animatable, float entityYaw, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight)
     {
         animatable.prevVisibility = (float) Mth.lerp(0.1, animatable.prevVisibility, animatable.getVisibility());
@@ -60,6 +61,7 @@ public class BovineHorrorRenderer extends GeoEntityRenderer<BovineHorrorEntity>
         poseStack.popPose();
     }
 
+    @Override
     public Color getRenderColor(BovineHorrorEntity animatable, float partialTick, int packedLight)
     {
         float alpha = animatable.prevVisibility;
@@ -70,6 +72,7 @@ public class BovineHorrorRenderer extends GeoEntityRenderer<BovineHorrorEntity>
         return Color.ofRGBA(1, 1, 1, alpha);
     }
 
+    @Override
     public RenderType getRenderType(BovineHorrorEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick)
     {
         if (SightUtil.canPlayerSee(Minecraft.getInstance().player))
@@ -79,6 +82,7 @@ public class BovineHorrorRenderer extends GeoEntityRenderer<BovineHorrorEntity>
         return RenderType.entityTranslucent(texture);
     }
 
+    @Override
     protected void applyRotations(BovineHorrorEntity animatable, PoseStack poseStack, float ageInTicks, float rotationYaw, float partialTick)
     {
         poseStack.mulPose(Axis.YP.rotationDegrees(180f - rotationYaw));

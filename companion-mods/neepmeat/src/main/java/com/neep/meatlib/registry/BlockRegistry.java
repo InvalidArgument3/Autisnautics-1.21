@@ -110,6 +110,7 @@ public class BlockRegistry
                 .isValidSpawn((p1, p2, p3, p4) -> false)
                 .isSuffocating((p1, p2, p3) -> false).isViewBlocking(((state, world, pos) -> false)))
         {
+            @Override
             public ItemLike dropsLike()
             {
                 return null;

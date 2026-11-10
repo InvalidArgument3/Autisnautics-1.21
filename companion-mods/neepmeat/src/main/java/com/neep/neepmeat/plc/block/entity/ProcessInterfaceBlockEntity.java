@@ -391,6 +391,7 @@ public class ProcessInterfaceBlockEntity extends SyncableBlockEntity implements 
     }
 
 
+    @Override
     public void saveToItem(ItemStack stack)
     {
         CompoundTag createdNbt = saveWithoutMetadata();

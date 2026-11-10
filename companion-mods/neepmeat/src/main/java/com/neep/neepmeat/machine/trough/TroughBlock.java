@@ -50,7 +50,7 @@ public class TroughBlock extends BaseHorFacingBlock implements EntityBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return Block.box(0, 0, 0, 16, 11, 16);
     }
@@ -74,7 +74,8 @@ public class TroughBlock extends BaseHorFacingBlock implements EntityBlock
         return NMBlockEntities.FEEDING_TROUGH.create(pos, state);
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }

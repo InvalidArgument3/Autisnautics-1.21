@@ -49,6 +49,7 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
         this.client = client;
     }
 
+    @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vertexConsumers, int light, int overlay)
     {
         BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.TISSUE_OPERATOR_MAIN);

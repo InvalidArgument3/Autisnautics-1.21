@@ -106,6 +106,7 @@ public class RenderingRecipe implements RenderingBasinRecipe
         return NMrecipeTypes.RENDERING;
     }
 
+    @Override
     public ItemVariant takeInputs(CrucibleStorage storage, int amount, TransactionContext transaction)
     {
         ItemVariant item = null;

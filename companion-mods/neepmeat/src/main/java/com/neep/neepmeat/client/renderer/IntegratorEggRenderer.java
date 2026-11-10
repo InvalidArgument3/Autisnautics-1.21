@@ -83,6 +83,7 @@ public class IntegratorEggRenderer extends GeoBlockRenderer<IntegratorBlockEntit
         matrices.popPose();
     }
 
+    @Override
     public void defaultRender(PoseStack matrices, IntegratorBlockEntity be, MultiBufferSource vertexConsumers, RenderType renderType, VertexConsumer buffer, float yaw, float tickDelta, int packedLight)
     {
         if (!be.isMature)

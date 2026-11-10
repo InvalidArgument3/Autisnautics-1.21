@@ -63,6 +63,7 @@ public class ExplodingShellEntity extends AbstractArrow
         this.destructive = destructive;
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
 //        return ProjectileSpawnPacket.create(this, MWNetwork.SPAWN_ID);

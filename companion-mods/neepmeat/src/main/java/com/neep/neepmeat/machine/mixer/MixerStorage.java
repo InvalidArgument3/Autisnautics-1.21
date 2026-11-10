@@ -138,6 +138,7 @@ public class MixerStorage implements ImplementedRecipe.DummyInventory
             super(capacity, finalCallback);
         }
 
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return !locked && super.canInsert(variant);

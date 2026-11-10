@@ -134,6 +134,7 @@ public class TagFilterWidget extends FilterEntryWidget<TagFilter>
             GUIUtil.renderBorderInner(context, x0(), this.y0(), nw(), nh(), borderCol, 0);
         }
 
+        @Override
         public void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             super.renderButton(context, mouseX, mouseY, delta);
@@ -164,6 +165,7 @@ public class TagFilterWidget extends FilterEntryWidget<TagFilter>
             return super.renderUnselectedText(context, string, selectionWithin, textStart, m, col, j);
         }
 
+        @Override
         public String getPrefix()
         {
             return "#";

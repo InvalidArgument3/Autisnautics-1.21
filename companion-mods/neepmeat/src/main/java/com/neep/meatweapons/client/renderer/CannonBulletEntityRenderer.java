@@ -46,6 +46,7 @@ public class CannonBulletEntityRenderer extends EntityRenderer<CannonBulletEntit
         matrixStack.popPose();
     }
 
+    @Override
     public ResourceLocation getTexture(CannonBulletEntity entity)
     {
         // TODO: change

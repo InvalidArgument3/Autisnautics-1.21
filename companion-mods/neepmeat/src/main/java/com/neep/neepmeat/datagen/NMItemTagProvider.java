@@ -35,11 +35,13 @@ public class NMItemTagProvider extends FabricTagProvider.ItemTagProvider
         super(output, registriesFuture);
     }
 
+    @Override
     public String getName()
     {
         return "Tags for " + this.registryKey.location() + " (" + NeepMeat.NAMESPACE + ")";
     }
 
+    @Override
     protected void addTags(HolderLookup.Provider arg)
     {
         tag(NMTags.CHARNEL_COMPACTOR)

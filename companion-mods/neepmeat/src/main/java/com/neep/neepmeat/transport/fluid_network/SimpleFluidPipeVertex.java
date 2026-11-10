@@ -53,11 +53,13 @@ public abstract class SimpleFluidPipeVertex extends SnapshotParticipant<Resource
         return variant;
     }
 
+    @Override
     protected ResourceAmount<FluidVariant> createSnapshot()
     {
         return new ResourceAmount<>(variant, amount);
     }
 
+    @Override
     protected void readSnapshot(ResourceAmount<FluidVariant> snapshot)
     {
         this.variant = snapshot.resource();

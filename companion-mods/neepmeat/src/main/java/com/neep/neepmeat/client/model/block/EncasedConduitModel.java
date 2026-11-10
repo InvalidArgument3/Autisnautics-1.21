@@ -75,6 +75,7 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
 //    }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
         particleSprite = textureGetter.apply(particleSpriteId);
@@ -85,11 +86,13 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
     }
 
     /* FabricBakedModel */
+    @Override
     public boolean isVanillaAdapter()
     {
         return false;
     }
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         if (blockView.getBlockEntity(pos) instanceof EncasedBlockEntity entity)
@@ -107,6 +110,7 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
         }
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
 

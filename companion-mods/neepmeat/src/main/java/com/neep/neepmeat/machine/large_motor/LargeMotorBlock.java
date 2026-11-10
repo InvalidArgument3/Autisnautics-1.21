@@ -89,7 +89,7 @@ public class LargeMotorBlock extends BigBlock<LargeMotorStructureBlock> implemen
 
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
 //        return rotateShape(NORMAL_SHAPE, state.get(FACING));
         return shapeMap.get(state.getValue(FACING));

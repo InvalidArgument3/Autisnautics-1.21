@@ -176,6 +176,7 @@ public class MobEggEntity extends SimpleEntity
         return nbt;
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);

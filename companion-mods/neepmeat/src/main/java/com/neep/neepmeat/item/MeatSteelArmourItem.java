@@ -49,6 +49,7 @@ public class MeatSteelArmourItem extends ArmorItem implements MeatlibItem, GeoIt
         return PlayState.CONTINUE;
     }
 
+    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()
@@ -69,16 +70,19 @@ public class MeatSteelArmourItem extends ArmorItem implements MeatlibItem, GeoIt
         });
     }
 
+    @Override
     public Supplier<Object> getRenderProvider()
     {
         return renderProvider;
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(new AnimationController(this, "controller", 20, this::predicate));
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;

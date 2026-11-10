@@ -163,6 +163,7 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
         init();
     }
 
+    @Override
     public void renderBackground(GuiGraphics context)
     {
         int c = GuideCols.backgroundCol();
@@ -197,7 +198,8 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY) { }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         return this.getChildAt(mouseX, mouseY).filter(element ->
                 element.mouseScrolled(mouseX, mouseY, amount)).isPresent();

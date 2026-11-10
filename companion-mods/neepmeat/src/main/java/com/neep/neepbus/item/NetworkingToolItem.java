@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepbus.item;
+import net.minecraft.world.item.Item;
 
 import com.google.common.collect.Queues;
 import com.google.common.collect.Sets;
@@ -125,7 +126,8 @@ public class NetworkingToolItem extends BaseItem
         return false;
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
         CompoundTag nbt = itemStack.getTagElement("networking");

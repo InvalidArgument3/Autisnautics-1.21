@@ -30,6 +30,7 @@ import org.jetbrains.annotations.Nullable;
 @OnlyIn(Dist.CLIENT)
 public class OreFatFluidVariantRenderHandler implements FluidVariantRenderHandler
 {
+    @Override
     public int getColor(FluidVariant fluidVariant, @Nullable BlockAndTintGetter view, @Nullable BlockPos pos)
     {
         CompoundTag nbt = fluidVariant.getNbt();
@@ -46,6 +47,7 @@ public class OreFatFluidVariantRenderHandler implements FluidVariantRenderHandle
     }
 
     @Nullable
+    @Override
     public TextureAtlasSprite[] getSprites(FluidVariant fluidVariant)
     {
         // Use the fluid render handler by default.

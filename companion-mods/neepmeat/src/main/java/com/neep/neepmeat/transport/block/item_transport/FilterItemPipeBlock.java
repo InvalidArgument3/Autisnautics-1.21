@@ -51,6 +51,7 @@ public class FilterItemPipeBlock extends ItemPipeBlock
         return super.useWithoutItem(state, world, pos, player, hit);
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         if (world.getBlockEntity(pos) instanceof FilterItemPipeBlockEntity be)
@@ -60,6 +61,7 @@ public class FilterItemPipeBlock extends ItemPipeBlock
         return false;
     }
 
+    @Override
     public boolean prioritise()
     {
         return true;

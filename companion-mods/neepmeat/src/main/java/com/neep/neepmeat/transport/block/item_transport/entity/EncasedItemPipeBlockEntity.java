@@ -108,16 +108,19 @@ public class EncasedItemPipeBlockEntity extends ItemPipeBlockEntity implements E
         return cachedShape;
     }
 
+    @Override
     public void fromClientTag(CompoundTag nbt)
     {
         load(nbt);
     }
 
+    @Override
     public void toClientTag(CompoundTag nbt)
     {
         saveAdditional(nbt);
     }
 
+    @Override
     public void onReceiveNbt(CompoundTag nbt)
     {
         level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_IMMEDIATE);

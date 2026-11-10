@@ -228,7 +228,8 @@ public class FilterPanel extends Panel
         return super.charTyped(chr, modifiers);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         scroll = (float) Mth.clamp(scroll + amount * 2, maxScroll(), 0);
 

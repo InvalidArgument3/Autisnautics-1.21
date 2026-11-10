@@ -81,6 +81,7 @@ public class MobEggItem extends Item implements MeatlibItem
         else return super.getName(stack);
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
     {
         super.appendHoverText(stack, world, tooltip, context);

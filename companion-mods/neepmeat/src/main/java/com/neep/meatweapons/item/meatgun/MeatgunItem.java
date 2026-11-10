@@ -74,6 +74,7 @@ public abstract class MeatgunItem extends BaseItem implements Meatgun, WeakTwoHa
                 .withStyle(ChatFormatting.GRAY));
     };
 
+    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -135,7 +136,8 @@ public abstract class MeatgunItem extends BaseItem implements Meatgun, WeakTwoHa
         return super.overrideStackedOnOther(stack, slot, clickType, player);
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         MeatgunComponent meatgun = getMeatgunComponent(itemStack);
         if (meatgun.getRootHolder().moduleCache().getModules().size() == 1)

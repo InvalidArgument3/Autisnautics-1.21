@@ -66,7 +66,7 @@ public class CapillaryFluidPipeBlock extends AbstractPipeBlock implements Entity
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         BlockState state2 = enforceApiConnections(world, pos, state);
         world.setBlock(pos, state2, Block.UPDATE_ALL);
@@ -87,7 +87,7 @@ public class CapillaryFluidPipeBlock extends AbstractPipeBlock implements Entity
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean connection = canConnectTo(neighborState, direction.getOpposite(), (Level) world, neighborPos);
         if (!world.isClientSide())
@@ -111,6 +111,7 @@ public class CapillaryFluidPipeBlock extends AbstractPipeBlock implements Entity
         return state.setValue(DIR_TO_CONNECTION.get(direction), connection1);
     }
 
+    @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
         return super.useWithoutItem(state, world, pos, player, hit);

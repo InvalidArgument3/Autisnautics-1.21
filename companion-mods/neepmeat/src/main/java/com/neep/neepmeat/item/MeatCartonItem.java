@@ -1,4 +1,5 @@
 package com.neep.neepmeat.item;
+import net.minecraft.world.entity.LivingEntity;
 
 import com.neep.meatlib.item.BaseItem;
 import com.neep.meatlib.item.TooltipSupplier;
@@ -32,7 +33,8 @@ public class MeatCartonItem extends BaseItem
         return SoundEvents.HONEYCOMB_WAX_ON;
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 32;
     }

@@ -72,6 +72,7 @@ public class GeneralBipedEntityModel<T extends Mob> extends HumanoidModel<T>
         return modelData;
     }
 
+    @Override
     public void setAngles(T livingEntity, float f, float g, float h, float i, float j)
     {
         super.setupAnim(livingEntity, f, g, h, i, j);

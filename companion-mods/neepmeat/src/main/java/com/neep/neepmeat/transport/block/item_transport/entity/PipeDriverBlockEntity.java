@@ -136,6 +136,7 @@ public class PipeDriverBlockEntity extends SyncableBlockEntity implements PLCAct
         return worldPosition;
     }
 
+    @Override
     public void spawnItem(@Nullable ResourceAmount<ItemVariant> stored)
     {
         if (stored == null)

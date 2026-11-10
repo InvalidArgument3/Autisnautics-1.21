@@ -67,7 +67,8 @@ public class GuideArticlePane extends ContentPane implements Renderable, GuiEven
         return super.mouseClicked(mouseX, mouseY, button);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         articleWidget.scroll((int) Math.round(amount));
         return true;

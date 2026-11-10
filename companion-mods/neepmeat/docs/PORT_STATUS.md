@@ -1,3 +1,13 @@
+## Overrides restored, jar 0.30.0-neoforge.45
+
+The bulk deletion of `@Override` is reversed. `apply_121_drift.py` now rewrites signatures and keeps the annotation: `appendHoverText` takes `Item.TooltipContext`, `getUseDuration` takes a `LivingEntity`, `mouseScrolled` takes the extra scroll axis, `isPathfindable` drops the world and position, and `neighborChanged`, `onRemove`, `getShape`, `updateShape`, and `useWithoutItem` are protected. `SingleVariantStorage.canInsert` is the method Fabric storages overrode.
+
+`fromClientTag` and `toClientTag` still have `@Override` and still do not match a 1.21 method. They were Fabric's client sync hooks. They are not deleted. Nothing calls them until a sync payload replaces them. Thirty-four `@Override` annotations that the restorer attached to static methods or to methods that only shared a name were taken off again, because those were never overrides.
+
+Combined-tree error count with the annotations restored: **5533** (was 5622 immediately after the restore, 5044 before it). That is not under 2500. `exclude.txt` holds 1907 files so this commit still compiles.
+
+Duplicate simple names are different packages (the hand-ported pipe classes under `machine/transport` and the Loom copies under `transport/block`). The hand-ported living machines, NEEPASM, and the integrator egg were not replaced by Loom copies. REI category slot positions (input at x=1, output at x=61, extra output at x=81 or 87) are on the JEI categories. Recipe contents are still empty.
+
 # Port status
 
 Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak, and 11 in Myron, plus 4,244 resource files. A line-by-line Fabric 1.20.1 Yarn port does not compile on NeoForge 1.21.1: registries, transfer APIs, menus, networking, data components, and rendering all moved.

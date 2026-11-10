@@ -63,7 +63,7 @@ public class BaseLightBlock extends BaseBlock
     }
 
     @SuppressWarnings("deprecation")
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         if (!world.isClientSide)
         {

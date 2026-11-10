@@ -77,7 +77,7 @@ public class StopValveBlock extends FluidPipeBlock implements EntityBlock, Wrenc
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
         if (world.isClientSide())

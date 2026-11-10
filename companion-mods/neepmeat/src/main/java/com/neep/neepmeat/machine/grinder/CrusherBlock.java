@@ -135,7 +135,7 @@ public class CrusherBlock extends BaseHorFacingBlock implements EntityBlock, Wre
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return CrusherBlock.box(0,0,0,16,15,16);
 

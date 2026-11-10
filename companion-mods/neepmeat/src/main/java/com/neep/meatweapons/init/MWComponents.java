@@ -48,6 +48,7 @@ public class MWComponents implements ItemComponentInitializer, WorldComponentIni
                     ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "gun_tick_handler"),
                     GunTickHandler.class);
 
+    @Override
     public void registerItemComponentFactories(@NotNull ItemComponentFactoryRegistry registry)
     {
         registry.register(MWItems.BASIC_PISTOL, MEATGUN, stack -> new MeatgunComponentImpl(stack, MEATGUN));
@@ -59,11 +60,13 @@ public class MWComponents implements ItemComponentInitializer, WorldComponentIni
         registry.register(MWItems.ASSAULT_DRILL, ASSAULT_DRILL, AssaultDrillComponent::new);
     }
 
+    @Override
     public void registerWorldComponentFactories(@NotNull WorldComponentFactoryRegistry registry)
     {
 //        registry.register(MEATGUN_PARTICLES, MeatgunParticleManager::new);
     }
 
+    @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry)
     {
         registry.registerFor(Player.class, GUN_TICK_HANDLER, GunTickHandler::new);

@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepbus.block;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.block.BaseFacingBlock;
 import com.neep.meatlib.item.BaseBlockItem;
@@ -90,6 +91,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
         return super.getDrops(state, builder);
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);
@@ -130,11 +132,13 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
         return MiscUtil.checkType(type, NeepBus.PID_CONTROLLER_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return new ItemStack(this);
     }
 
+    @Override
     public ItemStack getPickedStack(BlockState state, BlockGetter view, BlockPos pos, Player player, HitResult result)
     {
         if (view.getBlockEntity(pos) instanceof PIDControllerBlockEntity be)
@@ -163,7 +167,8 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
             return super.getName(stack);
         }
 
-        public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+        @Override
+        public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
         {
             super.appendHoverText(itemStack, world, tooltip, tooltipContext);
             getBlock().appendHoverText(itemStack, world, tooltip, tooltipContext);

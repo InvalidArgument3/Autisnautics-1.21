@@ -72,7 +72,7 @@ public class MetalScaffoldingBlock extends BaseBlock implements MeatlibBlock, Si
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         state = state.setValue(BOTTOM, world.getBlockState(pos.above()).getBlock() instanceof MetalScaffoldingBlock);
 

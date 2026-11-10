@@ -485,6 +485,7 @@ public class MeatgunProjectileEntity extends AbstractArrow
         return nbt;
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);

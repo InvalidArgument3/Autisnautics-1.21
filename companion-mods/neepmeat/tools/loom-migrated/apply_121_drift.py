@@ -78,6 +78,17 @@ REPLACEMENTS = [
     (re.compile(r"import net\.minecraft\.item\.\*;"), "import net.minecraft.world.item.*;"),
     (re.compile(r"import net\.minecraft\.recipe\.\*;"), "import net.minecraft.world.item.crafting.*;"),
     (re.compile(r"import net\.minecraft\.text\.\*;"), "import net.minecraft.network.chat.*;"),
+    # 1.21 signatures. The @Override stays so the method is still dispatched.
+    (re.compile(r"(appendHoverText\s*\(\s*ItemStack\s+\w+\s*,\s*)Level\s+(\w+)"),
+     r"\1Item.TooltipContext \2"),
+    (re.compile(r"getUseDuration\s*\(\s*ItemStack\s+(\w+)\s*\)"),
+     r"getUseDuration(ItemStack \1, LivingEntity entity)"),
+    (re.compile(r"mouseScrolled\s*\(\s*double\s+(\w+)\s*,\s*double\s+(\w+)\s*,\s*double\s+(\w+)\s*\)"),
+     r"mouseScrolled(double \1, double \2, double scrollX, double \3)"),
+    (re.compile(r"isPathfindable\s*\(\s*BlockState\s+(\w+)\s*,\s*BlockGetter\s+\w+\s*,\s*BlockPos\s+\w+\s*,\s*PathComputationType\s+(\w+)\s*\)"),
+     r"isPathfindable(BlockState \1, PathComputationType \2)"),
+    (re.compile(r"public (void neighborChanged|void onRemove|VoxelShape getShape|VoxelShape getCollisionShape|boolean isPathfindable|BlockState updateShape|InteractionResult useWithoutItem)\("),
+     r"protected \1("),
 ]
 
 

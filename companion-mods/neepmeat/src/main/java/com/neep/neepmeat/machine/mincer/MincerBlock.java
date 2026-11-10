@@ -46,13 +46,14 @@ public class MincerBlock extends TallBlock implements EntityBlock
         this.registerDefaultState(getStateDefinition().any().setValue(RUNNING, false));
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return OUTLINE;
     }

@@ -11,6 +11,7 @@
  */
 
 package com.neep.meatlib.item;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.registry.RegistrationContext;
 import java.util.List;
@@ -32,7 +33,8 @@ public class BaseSeedsItem extends ItemNameBlockItem implements MeatlibItem
         this.lore = loreLines;
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         for (int i = 0; i < lore; ++i)
         {

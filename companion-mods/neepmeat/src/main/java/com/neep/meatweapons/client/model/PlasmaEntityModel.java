@@ -40,11 +40,13 @@ public class PlasmaEntityModel extends EntityModel<FusionBlastEntity>
 //		bb_main.cub(-1.5F, -3.0F, 0.0F, 3.0F, 3.0F, 3.0F, 0.0F, false);
 	}
 
+	@Override
 	public void setAngles(FusionBlastEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
 	{
 
 	}
 
+	@Override
 	public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
 	{
 		bb_main.render(matrices, vertices, light, overlay);

@@ -36,6 +36,7 @@ public class AssaultDrillItemRenderer implements BuiltinItemRendererRegistry.Dyn
     {
     }
 
+    @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vcp, int light, int overlay)
     {
         AssaultDrillRendererInstance instance = RendererInstance.getNullable(stack);

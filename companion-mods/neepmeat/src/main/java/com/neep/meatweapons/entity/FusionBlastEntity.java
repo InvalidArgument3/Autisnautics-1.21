@@ -63,6 +63,7 @@ public class FusionBlastEntity extends AbstractArrow
         this.entityData.define(POWER, power);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();

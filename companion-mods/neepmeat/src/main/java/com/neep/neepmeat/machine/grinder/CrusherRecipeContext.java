@@ -74,11 +74,13 @@ public interface CrusherRecipeContext
             this.xp = nbt.getFloat("amount");
         }
 
+        @Override
         protected Float createSnapshot()
         {
             return xp;
         }
 
+        @Override
         protected void readSnapshot(Float snapshot)
         {
             this.xp = snapshot;

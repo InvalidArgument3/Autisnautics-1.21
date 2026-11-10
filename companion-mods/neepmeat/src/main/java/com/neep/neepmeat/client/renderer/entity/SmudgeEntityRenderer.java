@@ -146,6 +146,7 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
 //                .next();
     }
 
+    @Override
     public ResourceLocation getTexture(SmudgeEntity entity)
     {
         return TEXTURE;

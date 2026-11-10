@@ -47,7 +47,7 @@ public class EncasedDataCableBlock extends DataCableBlock implements EncasedBloc
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         if (view.getBlockEntity(pos) instanceof EncasedDataCableBlockEntity be)
         {
@@ -63,7 +63,7 @@ public class EncasedDataCableBlock extends DataCableBlock implements EncasedBloc
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, sourcePos, notify);
         if (world.getBlockEntity(pos) instanceof EncasedDataCableBlockEntity be)
@@ -73,6 +73,7 @@ public class EncasedDataCableBlock extends DataCableBlock implements EncasedBloc
         }
     }
 
+    @Override
     public void onConnectionUpdate(Level world, BlockState state, BlockState newState, BlockPos pos, Player entity)
     {
         super.onConnectionUpdate(world, state, newState, pos, entity);

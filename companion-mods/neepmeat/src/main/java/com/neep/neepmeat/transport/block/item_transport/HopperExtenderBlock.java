@@ -144,7 +144,7 @@ public class HopperExtenderBlock extends AbstractPipeBlock implements EntityBloc
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean connection = canConnectTo(neighborState, direction.getOpposite(), (Level) world, neighborPos);
 
@@ -158,7 +158,7 @@ public class HopperExtenderBlock extends AbstractPipeBlock implements EntityBloc
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
         if (world.getBlockEntity(pos) instanceof HopperExtenderBlockEntity be)

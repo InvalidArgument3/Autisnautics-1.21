@@ -111,7 +111,7 @@ public class RedstoneTransducerBlock extends SimplePipeBlock implements EntityBl
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         if (world.getBlockEntity(pos) instanceof RedstoneTransducerBlockEntity be)
         {

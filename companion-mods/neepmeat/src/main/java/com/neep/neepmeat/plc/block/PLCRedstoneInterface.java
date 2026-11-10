@@ -71,7 +71,7 @@ public class PLCRedstoneInterface extends BaseBlock implements EntityBlock, Data
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         if (world.getBlockEntity(pos) instanceof PLCRedstoneInterfaceBlockEntity be)
         {

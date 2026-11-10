@@ -99,6 +99,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
         return defaultBlockState().setValue(FACING, ctx.getPlayer().isShiftKeyDown() ? ctx.getHorizontalDirection() : ctx.getHorizontalDirection().getOpposite());
     }
 
+    @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof ProgramCabinetBlockEntity be)
@@ -171,6 +172,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
                         return super.useWithoutItem(state, world, pos, player, hit);
                     }
 
+                    @Override
                     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
                     {
         InteractionHand hand = InteractionHand.MAIN_HAND;
@@ -196,6 +198,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
         }
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);

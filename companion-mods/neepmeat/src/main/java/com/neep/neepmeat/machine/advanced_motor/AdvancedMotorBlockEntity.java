@@ -55,6 +55,7 @@ public class AdvancedMotorBlockEntity extends SyncableBlockEntity implements Mot
             return influx;
         }
 
+        @Override
         public Mode getMode()
         {
             return Mode.SINK;

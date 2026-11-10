@@ -80,6 +80,7 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
         return stacks;
     }
 
+    @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof PLCBlockEntity be)
@@ -92,7 +93,7 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
     }

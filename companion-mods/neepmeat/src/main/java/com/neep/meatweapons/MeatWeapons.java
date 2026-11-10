@@ -93,6 +93,7 @@ public class MeatWeapons implements ModInitializer
 //        v.setValue(v.getDefaultValue(), true);
 //    }
 
+    @Override
     public void onInitialize()
     {
         MeatLibRegistration.forContext(MWBlocks.class, MWBlocks.C);

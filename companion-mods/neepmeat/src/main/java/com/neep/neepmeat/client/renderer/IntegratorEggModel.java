@@ -23,16 +23,19 @@ import software.bernie.geckolib.model.GeoModel;
 @OnlyIn(Dist.CLIENT)
 public class IntegratorEggModel<I extends BlockEntity> extends GeoModel<IntegratorBlockEntity>
 {
+    @Override
     public ResourceLocation getModelResource(IntegratorBlockEntity object)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "geo/integrator.geo.json");
     }
 
+    @Override
     public ResourceLocation getTextureResource(IntegratorBlockEntity object)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/entity/integrator_basic.png");
     }
 
+    @Override
     public ResourceLocation getAnimationResource(IntegratorBlockEntity animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "animations/integrator.animation.json");

@@ -75,6 +75,7 @@ public class ScaffoldBottomModel implements UnbakedModel, BakedModel, FabricBake
     }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
 
@@ -111,11 +112,13 @@ public class ScaffoldBottomModel implements UnbakedModel, BakedModel, FabricBake
         return this;
     }
 
+    @Override
     public boolean isVanillaAdapter()
     {
         return false;
     }
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         context.pushTransform(mesh -> ScaffoldTopModel.getFaces(mesh, blockView, pos, block));
@@ -124,6 +127,7 @@ public class ScaffoldBottomModel implements UnbakedModel, BakedModel, FabricBake
         context.popTransform();
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         context.meshConsumer().accept(outerMesh);

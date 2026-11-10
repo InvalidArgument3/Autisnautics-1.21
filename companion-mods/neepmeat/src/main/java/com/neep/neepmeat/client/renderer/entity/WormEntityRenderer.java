@@ -33,6 +33,7 @@ public class WormEntityRenderer extends GeoEntityRenderer<WormEntity>
         super(ctx, new WormEntityModel());
     }
 
+    @Override
     public void render(WormEntity entity, float entityYaw, float tickDelta, PoseStack matrices, MultiBufferSource vcp, int packedLight)
     {
 //        setCurrentModelRenderCycle(EModelRenderCycle.INITIAL);
@@ -142,6 +143,7 @@ public class WormEntityRenderer extends GeoEntityRenderer<WormEntity>
 
     }
 
+    @Override
     public boolean shouldRender(WormEntity entity, Frustum frustum, double x, double y, double z)
     {
         return super.shouldRender(entity, frustum, x, y, z);
@@ -155,6 +157,7 @@ public class WormEntityRenderer extends GeoEntityRenderer<WormEntity>
 //        matrices.translate(0, -0.5, 0);
 //    }
 
+    @Override
     public ResourceLocation getTexture(WormEntity entity)
     {
         return TEXTURE;

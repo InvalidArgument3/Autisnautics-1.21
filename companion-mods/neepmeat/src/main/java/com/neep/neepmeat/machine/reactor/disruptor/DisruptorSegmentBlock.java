@@ -80,7 +80,7 @@ public class DisruptorSegmentBlock extends BigBlock<DisruptorSegmentBlock.Struct
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         EnumMap<Direction.Axis, VoxelShape> shapeMap = new EnumMap<>(Map.of(
                 Direction.Axis.Y, Shapes.joinUnoptimized(
@@ -120,6 +120,7 @@ public class DisruptorSegmentBlock extends BigBlock<DisruptorSegmentBlock.Struct
             super(parent, settings);
         }
 
+        @Override
         protected BlockEntityType<StructureBlockEntity> registerBlockEntity()
         {
             return NMBlockEntities.register("disruptor_segment_structure", (p, s) -> new StructureBlockEntity(getBlockEntityType(), p, s), this);

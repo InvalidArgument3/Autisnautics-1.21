@@ -37,6 +37,7 @@ public interface Divide
             this(Anchor.START, rel);
         }
 
+        @Override
         public int amount(int dimension)
         {
             return anchor.apply(dimension, Math.round(rel * dimension));

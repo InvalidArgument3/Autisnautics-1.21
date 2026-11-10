@@ -56,13 +56,13 @@ public class PumpBlock extends BaseFacingBlock implements EntityBlock, Wrenchabl
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return Shapes.box(0f, 0f, 0f, 1f, 1.0f, 1f);
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
         if (world.getBlockEntity(pos) instanceof PumpBlockEntity be)

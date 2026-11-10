@@ -168,17 +168,20 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
 //        }
     }
 
+    @Override
     public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf)
     {
         buf.writeInt(desiredPower);
     }
 
+    @Override
     public Component getDisplayName()
     {
         return Component.nullToEmpty("Vascular Source Converter");
     }
 
     @Nullable
+    @Override
     public AbstractContainerMenu createMenu(int syncId, Inventory inv, Player player)
     {
         return new VSCScreenHandler(inv, syncId, this);
@@ -290,6 +293,7 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
     // Represents the sink with respect to this block - the side that absorbs power
     private class NormalSinkAcceptor extends AbstractBloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.ACTIVE_SINK;
@@ -317,11 +321,13 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
 
     private class NormalSourceAcceptor implements BloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.SOURCE;
         }
 
+        @Override
         public long getOutput()
         {
             return powerToSource;

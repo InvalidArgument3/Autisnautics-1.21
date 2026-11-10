@@ -55,11 +55,13 @@ public class PowerFlowerGrowthBlock extends BaseBlock implements PowerFlower
         this.registerDefaultState(defaultBlockState().setValue(GROWTH, 0));
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }
 
+    @Override
     public boolean autoGenDrop()
     {
         return false;
@@ -72,7 +74,7 @@ public class PowerFlowerGrowthBlock extends BaseBlock implements PowerFlower
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return state.getValue(GROWTH) == 0 ? fullShape : topShape;
     }
@@ -85,7 +87,7 @@ public class PowerFlowerGrowthBlock extends BaseBlock implements PowerFlower
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
 //        if (state.get(GROWTH) == 0 && sourcePos.equals(pos.down()) && !validBlock(world.getBlockState(sourcePos).getBlock()))
 //        {
@@ -158,7 +160,7 @@ public class PowerFlowerGrowthBlock extends BaseBlock implements PowerFlower
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         return getState(world, pos);
     }

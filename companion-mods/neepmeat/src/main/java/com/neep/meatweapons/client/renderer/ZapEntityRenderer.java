@@ -78,6 +78,7 @@ public class ZapEntityRenderer extends ArrowRenderer<ZapProjectileEntity>
         RenderSystem.enableBlend();
     }
 
+    @Override
     public ResourceLocation getTexture(ZapProjectileEntity entity)
     {
         return TEXTURE;

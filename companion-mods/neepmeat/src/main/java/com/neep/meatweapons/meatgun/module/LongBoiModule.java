@@ -160,6 +160,7 @@ public class LongBoiModule extends ShooterModule
         return consume(amountPerShot, inventory, player, hand);
     }
 
+    @Override
     protected boolean consume(int amount, Container inventory, Player player, InteractionHand hand)
     {
         var consume = listener.getHolder().getAmmoOrReload(ammoType(), amount, inventory, player, hand);

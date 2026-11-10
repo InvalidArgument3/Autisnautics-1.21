@@ -48,6 +48,7 @@ public class NeepMeatModelProvider implements ModelLoadingPlugin
             return null;
     }
 
+    @Override
     public void onInitializeModelLoader(Context context)
     {
         context.resolveModel().register((context1) ->

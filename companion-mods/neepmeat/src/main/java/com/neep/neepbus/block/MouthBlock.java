@@ -86,6 +86,7 @@ public class MouthBlock extends BaseBlock implements DataCable, NeepBusProvider,
         return stacks;
     }
 
+    @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof MouthBlockEntity be)
@@ -102,7 +103,7 @@ public class MouthBlock extends BaseBlock implements DataCable, NeepBusProvider,
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, sourcePos, notify);
 

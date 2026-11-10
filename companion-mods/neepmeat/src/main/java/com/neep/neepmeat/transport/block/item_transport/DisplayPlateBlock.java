@@ -54,7 +54,7 @@ public class DisplayPlateBlock extends BaseBlock implements EntityBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return state.getValue(TOP) ? TOP_SHAPE : DEFAULT_SHAPE;
     }

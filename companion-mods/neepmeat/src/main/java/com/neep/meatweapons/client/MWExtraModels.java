@@ -84,6 +84,7 @@ public class MWExtraModels implements ModelLoadingPlugin
         out.accept(ASSAULT_DRILL_PART_4);
     }
 
+    @Override
     public void onInitializeModelLoader(Context pluginContext)
     {
         provideExtraModels(pluginContext::addModels);

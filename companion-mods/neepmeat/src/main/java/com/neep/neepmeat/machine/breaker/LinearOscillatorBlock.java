@@ -68,7 +68,7 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
         return SHAPES.get(state.getValue(FACING));
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return getShapeForState(state);
     }
@@ -85,7 +85,7 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         if (world.getBlockEntity(pos) instanceof LinearOscillatorBlockEntity be && !world.isClientSide())
         {
@@ -100,6 +100,7 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
         return new LinearOscillatorBlockEntity(pos, state);
     }
 
+    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         return 0;
@@ -111,6 +112,7 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
         return face == state.getValue(FACING).getOpposite();
     }
 
+    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction face)
     {
         return face == state.getValue(FACING).getOpposite();

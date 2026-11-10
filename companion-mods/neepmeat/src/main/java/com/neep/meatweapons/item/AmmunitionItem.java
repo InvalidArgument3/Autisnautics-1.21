@@ -69,7 +69,8 @@ public class AmmunitionItem extends BaseItem
         }
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 10;
     }

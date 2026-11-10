@@ -38,6 +38,7 @@ import org.jetbrains.annotations.Nullable;
 @OnlyIn(Dist.CLIENT)
 public class NeepBusClient implements ClientModInitializer
 {
+    @Override
     public void onInitializeClient()
     {
         NetworkingToolClient.init();

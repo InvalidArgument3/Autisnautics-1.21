@@ -78,7 +78,7 @@ public class FlameJetBlock extends BaseFacingBlock implements EntityBlock
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         if (world.getBlockEntity(pos) instanceof FlameJetBlockEntity be)
         {

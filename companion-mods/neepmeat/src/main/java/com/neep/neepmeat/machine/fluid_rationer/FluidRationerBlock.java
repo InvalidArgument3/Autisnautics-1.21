@@ -66,7 +66,7 @@ public class FluidRationerBlock extends BaseFacingBlock implements EntityBlock, 
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         var nextState = state;
 

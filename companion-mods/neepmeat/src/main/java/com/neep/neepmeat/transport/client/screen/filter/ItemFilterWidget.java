@@ -87,6 +87,7 @@ public class ItemFilterWidget extends FilterEntryWidget<ItemFilter>
             this.slotIndex = slotIndex;
         }
 
+        @Override
         protected void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             GUIUtil.renderBorderInner(context, x0(), y0(), 18, 18, PLCCols.BORDER.col, 0);

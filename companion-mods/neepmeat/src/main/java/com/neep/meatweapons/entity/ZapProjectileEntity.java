@@ -43,6 +43,7 @@ public class ZapProjectileEntity extends AbstractArrow
         this.setNoGravity(false);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();

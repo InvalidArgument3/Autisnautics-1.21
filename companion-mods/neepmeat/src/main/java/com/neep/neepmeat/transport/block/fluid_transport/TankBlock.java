@@ -91,13 +91,14 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
         return NMBlockEntities.TANK.create(pos, state);
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return new ItemStack(this);
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return switch (state.getValue(AXIS))
         {
@@ -107,6 +108,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
         };
     }
 
+    @Override
     public ItemStack getPickedStack(BlockState state, BlockGetter view, BlockPos pos, Player player, HitResult result)
     {
         if (player.isCreative())
@@ -219,6 +221,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
             this.capacity = tankType.capacity();
         }
 
+        @Override
         protected FluidVariant getBlankResource()
         {
             return FluidVariant.BLANK;
@@ -235,6 +238,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
             return nbt.getCompound("BlockEntityTag");
         }
 
+        @Override
         protected FluidVariant getResource(ItemVariant currentVariant)
         {
             CompoundTag nbt = getBlockEntityTag(currentVariant);
@@ -244,6 +248,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
             return WritableSingleFluidStorage.readFluidVariant(nbt);
         }
 
+        @Override
         protected long getAmount(ItemVariant currentVariant)
         {
             CompoundTag nbt = getBlockEntityTag(currentVariant);
@@ -253,6 +258,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
             return WritableSingleFluidStorage.readAmount(nbt);
         }
 
+        @Override
         protected long getCapacity(FluidVariant variant)
         {
 //            NbtCompound nbt = getBlockEntityTag(ItemVariant.of(stack));
@@ -263,6 +269,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
             return capacity;
         }
 
+        @Override
         protected ItemVariant getUpdatedVariant(ItemVariant currentVariant, FluidVariant newResource, long newAmount)
         {
             ItemStack stack = currentVariant.toStack();

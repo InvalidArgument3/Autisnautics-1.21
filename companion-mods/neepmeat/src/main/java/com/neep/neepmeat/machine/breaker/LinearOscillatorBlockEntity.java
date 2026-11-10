@@ -166,12 +166,14 @@ public class LinearOscillatorBlockEntity extends SyncableBlockEntity implements 
         this.cooldown = nbt.getFloat(NBT_COOLDOWN);
     }
 
+    @Override
     public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putFloat(NBT_COOLDOWN, cooldown);
     }
 
+    @Override
     public void fromClientTag(CompoundTag nbt)
     {
         this.prevExtension = nbt.getFloat("prev_extension");
@@ -183,6 +185,7 @@ public class LinearOscillatorBlockEntity extends SyncableBlockEntity implements 
         }
     }
 
+    @Override
     public void toClientTag(CompoundTag nbt)
     {
         nbt.putLong("world_time", getLevel().getGameTime());

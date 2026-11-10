@@ -39,6 +39,7 @@ public class WrithingEarthSpoutBlock extends BaseBlock implements EntityBlock
         super(ctx, itemSettings, settings);
     }
 
+    @Override
     public boolean autoGenDrop()
     {
         return false;

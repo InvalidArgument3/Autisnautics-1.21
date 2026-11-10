@@ -26,6 +26,7 @@ public class HandCannonItemRenderer extends GeoItemRenderer<HandCannonItem>
         super(new HandCannonItemModel());
     }
 
+    @Override
     public RenderType getRenderType(HandCannonItem animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick)
     {
         return RenderType.entityTranslucent(getTextureLocation(animatable));

@@ -19,16 +19,19 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class WormEntityModel extends GeoModel<WormEntity>
 {
+    @Override
     public ResourceLocation getModelResource(WormEntity object)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "geo/god_worm.geo.json");
     }
 
+    @Override
     public ResourceLocation getTextureResource(WormEntity object)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/block/duat_stone.png");
     }
 
+    @Override
     public ResourceLocation getAnimationResource(WormEntity animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "animations/god_worm.animation.json");

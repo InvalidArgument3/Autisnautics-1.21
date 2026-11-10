@@ -86,7 +86,7 @@ public abstract class BigBlock2 extends BaseEntityBlock implements BlockPlacemen
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
         super.onRemove(state, level, pos, newState, moved);
         if (newState.is(this) || newState.is(structure.get())) {
             return;

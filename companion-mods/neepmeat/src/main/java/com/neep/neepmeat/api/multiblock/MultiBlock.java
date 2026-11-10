@@ -48,6 +48,7 @@ public interface MultiBlock
             }
         }
 
+        @Override
         public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
         {
             super.saveAdditional(nbt, registries);

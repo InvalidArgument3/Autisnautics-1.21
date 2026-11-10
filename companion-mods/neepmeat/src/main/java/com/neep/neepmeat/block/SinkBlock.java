@@ -41,7 +41,7 @@ public class SinkBlock extends BaseHorFacingBlock
         super(ctx, itemSettings, settings.noOcclusion());
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return SHAPES.get(state.getValue(FACING));
     }

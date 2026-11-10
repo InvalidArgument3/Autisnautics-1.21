@@ -39,11 +39,13 @@ public class MeatRecipeProvider extends FabricRecipeProvider
         super(output);
     }
 
+    @Override
     public String getName()
     {
         return "MeatLib automatic recipes";
     }
 
+    @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter)
     {
         // This is a bit stupid

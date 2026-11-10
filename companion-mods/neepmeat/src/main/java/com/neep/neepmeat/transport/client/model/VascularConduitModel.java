@@ -83,6 +83,7 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
     }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
         PARTICLE_SPRITE = textureGetter.apply(PARTICLE_SPRITE_ID);
@@ -118,11 +119,13 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
     }
 
     /* FabricBakedModel */
+    @Override
     public boolean isVanillaAdapter() {return false;}
 
 
 //    ThreadLocal<BlockPos.Mutable> mutable = new ThreadLocal<>();
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         for (Direction direction : Direction.values())
@@ -142,6 +145,7 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
         }
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
 

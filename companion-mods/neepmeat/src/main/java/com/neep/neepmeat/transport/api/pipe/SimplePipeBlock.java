@@ -117,7 +117,7 @@ public abstract class SimplePipeBlock extends Block implements MeatlibBlock
 
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean connection = canConnectTo(neighborState, direction.getOpposite(), (Level) world, neighborPos);
 
@@ -188,7 +188,7 @@ public abstract class SimplePipeBlock extends Block implements MeatlibBlock
 
     @Override
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return shapes.get(state);
     }

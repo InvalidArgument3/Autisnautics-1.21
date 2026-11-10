@@ -64,7 +64,7 @@ public class DumpingTrackBlock extends BaseRailBlock implements SpecialRail
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         if (!world.isClientSide && world.getBlockState(pos).is(this))
         {

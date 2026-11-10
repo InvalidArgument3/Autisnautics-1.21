@@ -80,6 +80,7 @@ public class GlomeEntity extends FlyingMob
 
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return new ClientboundAddEntityPacket(this);

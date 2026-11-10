@@ -96,6 +96,7 @@ public class RegistryRecipeInputSerialiser<R> implements RecipeInput.Serialiser<
                 }, Either::left);
     }
 
+    @Override
     public RegistryRecipeInput<R> fromBuffer(FriendlyByteBuf buf)
     {
         RegistryRecipeInput.Entry<R> entry = null;
@@ -147,6 +148,7 @@ public class RegistryRecipeInputSerialiser<R> implements RecipeInput.Serialiser<
         return type;
     }
 
+    @Override
     public Codec<RegistryRecipeInput<R>> codec()
     {
         return codec;

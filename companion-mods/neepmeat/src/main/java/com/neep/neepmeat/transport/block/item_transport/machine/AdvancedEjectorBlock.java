@@ -56,6 +56,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         super(ctx, itemSettings, settings);
     }
 
+    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction)
     {
         if (direction == state.getValue(FACING))
@@ -64,6 +65,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         return super.canConnect(world, pos, state, direction);
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         var set = super.getConnections(state, forbidden);
@@ -89,7 +91,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, fromPos, notify);
         if (world.getBlockEntity(pos) instanceof AdvancedEjectorBlockEntity be)

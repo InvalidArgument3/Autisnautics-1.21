@@ -32,16 +32,19 @@ import java.util.List;
 @OnlyIn(Dist.CLIENT)
 public class CoarseMeatVariantRenderHandler implements FluidVariantRenderHandler
 {
+    @Override
     public void appendTooltip(FluidVariant fluidVariant, List<Component> tooltip, TooltipFlag tooltipContext)
     {
     }
 
+    @Override
     public int getColor(FluidVariant fluidVariant, @Nullable BlockAndTintGetter view, @Nullable BlockPos pos)
     {
         return MeatFluidUtil.getColour(fluidVariant);
     }
 
     @Nullable
+    @Override
     public TextureAtlasSprite[] getSprites(FluidVariant fluidVariant)
     {
         // Use the fluid render handler by default.

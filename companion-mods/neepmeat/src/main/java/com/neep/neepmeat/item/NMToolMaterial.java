@@ -57,6 +57,7 @@ public enum NMToolMaterial implements Tier
         return attackDamage;
     }
 
+    @Override
     public int getLevel()
     {
         return miningLevel;

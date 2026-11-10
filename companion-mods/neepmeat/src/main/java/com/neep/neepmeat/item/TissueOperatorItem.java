@@ -108,6 +108,7 @@ public class TissueOperatorItem extends BaseSwordItem implements OverrideSwingIt
         return ArmPose.BOW_AND_ARROW;
     }
 
+    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -121,6 +122,7 @@ public class TissueOperatorItem extends BaseSwordItem implements OverrideSwingIt
         return false;
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
     {
         super.appendHoverText(stack, world, tooltip, context);
@@ -188,7 +190,8 @@ public class TissueOperatorItem extends BaseSwordItem implements OverrideSwingIt
         }
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 40;
     }

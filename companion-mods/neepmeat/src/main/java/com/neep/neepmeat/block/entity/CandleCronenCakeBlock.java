@@ -69,6 +69,7 @@ public class CandleCronenCakeBlock extends CandleCakeBlock implements MeatlibBlo
         super.onRemove(state, world, pos, newState, moved);
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return NMBlocks.CRONENCAKE.getCloneItemStack(world, pos, state);

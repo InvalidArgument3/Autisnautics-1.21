@@ -51,6 +51,7 @@ public class FlameJetBlockEntity extends SyncableBlockEntity implements Burner
 
     WritableSingleFluidStorage storage = new WritableSingleFluidStorage(4 * FluidConstants.BUCKET, this::sync)
     {
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return variant.isOf(Fluids.LAVA);

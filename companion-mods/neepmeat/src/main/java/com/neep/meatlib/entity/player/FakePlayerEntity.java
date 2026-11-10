@@ -128,6 +128,7 @@ public class FakePlayerEntity extends ServerPlayer
     }
 
     @Nullable
+    @Override
     public Team getTeam() {
         // Scoreboard team is checked using the gameprofile name by default, which we don't want.
         return null;

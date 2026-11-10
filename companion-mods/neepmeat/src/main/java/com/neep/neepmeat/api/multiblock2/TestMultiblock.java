@@ -75,7 +75,7 @@ public class TestMultiblock extends Multiblock2ControllerBlock<TestMultiblock.TM
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return Shapes.block();
     }
@@ -98,7 +98,7 @@ public class TestMultiblock extends Multiblock2ControllerBlock<TestMultiblock.TM
         }
 
         @Override
-        public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+        protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
         {
             return Shapes.block();
         }

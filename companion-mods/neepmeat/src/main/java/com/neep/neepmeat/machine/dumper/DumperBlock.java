@@ -53,13 +53,13 @@ public class DumperBlock extends BaseBlock implements EntityBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return OUTLINE_SHAPE;
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
         if (world.getBlockEntity(pos) instanceof DumperBlockEntity be)

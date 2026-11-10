@@ -135,7 +135,7 @@ public class WoodenHopperBlock extends HopperBlock implements Wrenchable
         return Wrenchable.super.onWrench(world, pos, state, player, hand, hitResult, stack);
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return switch (state.getValue(FACING))
         {
@@ -149,7 +149,7 @@ public class WoodenHopperBlock extends HopperBlock implements Wrenchable
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return switch (state.getValue(FACING))
         {

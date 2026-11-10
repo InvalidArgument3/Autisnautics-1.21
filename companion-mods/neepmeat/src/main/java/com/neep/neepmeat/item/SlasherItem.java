@@ -109,12 +109,14 @@ public class SlasherItem extends AnimatedSword implements GeoItem
         return null;
     }
 
+    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()
         {
             private SwordRenderer<SlasherItem> renderer;
 
+            @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer()
             {
                 if (this.renderer == null)
@@ -133,16 +135,19 @@ public class SlasherItem extends AnimatedSword implements GeoItem
         });
     }
 
+    @Override
     public Supplier<Object> getRenderProvider()
     {
         return rendererProvider;
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(new AnimationController<>(this, CONTROLLER_NAME, 20, this::predicate));
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;

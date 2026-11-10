@@ -47,7 +47,7 @@ public class StorageDriverBlock extends ItemPipeBlock implements ItemPipe
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return super.getShape(state, view, pos, context);
     }
@@ -109,7 +109,7 @@ public class StorageDriverBlock extends ItemPipeBlock implements ItemPipe
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, fromPos, notify);
         if (!world.isClientSide())

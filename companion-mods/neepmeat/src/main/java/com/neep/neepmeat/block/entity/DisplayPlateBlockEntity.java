@@ -64,6 +64,7 @@ public class DisplayPlateBlockEntity extends SyncableBlockEntity implements Exte
                 super.onFinalCommit();
             }
 
+            @Override
             protected long getCapacity(ItemVariant variant)
             {
                 if (!variant.isBlank())
@@ -126,17 +127,20 @@ public class DisplayPlateBlockEntity extends SyncableBlockEntity implements Exte
         }
     }
 
+    @Override
     public Component getDisplayName()
     {
         return Component.empty();
     }
 
     @Nullable
+    @Override
     public AbstractContainerMenu createMenu(int syncId, Inventory playerInventory, Player player)
     {
         return new DisplayPlateScreenHandler(playerInventory, syncId, delegate, capacity);
     }
 
+    @Override
     public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf)
     {
         buf.writeInt(capacity);
@@ -156,16 +160,19 @@ public class DisplayPlateBlockEntity extends SyncableBlockEntity implements Exte
             storage.setStack(stack);
         }
 
+        @Override
         public BlockPos getOutputPos()
         {
             return getBlockState().getValue(DisplayPlateBlock.TOP) ? worldPosition.above() : worldPosition;
         }
 
+        @Override
         public Level getWorld()
         {
             return level;
         }
 
+        @Override
         public void setResult(int consumed, ItemStack stack)
         {
             // Handle >1 count

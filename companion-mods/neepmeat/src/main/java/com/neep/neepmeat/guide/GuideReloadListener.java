@@ -83,6 +83,7 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
         return INSTANCE;
     }
 
+    @Override
     public ResourceLocation getFabricId()
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "guide");
@@ -111,6 +112,7 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
         };
     }
 
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         root = null;

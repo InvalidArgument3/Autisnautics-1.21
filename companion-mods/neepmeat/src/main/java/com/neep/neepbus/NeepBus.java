@@ -89,6 +89,7 @@ public class NeepBus implements ModInitializer
 
     public static Item NETWORKING_TOOL = new NetworkingToolItem(NMItems.C, TooltipSupplier.hidden(3), new MeatlibItemSettings().group(NMItemGroups.GENERAL));
 
+    @Override
     public void onInitialize()
     {
         VERTICAL_GAUGE_BE = NMBlockEntities.register("vertical_gauge", (p, s) -> new VerticalGaugeBlockEntity(VERTICAL_GAUGE_BE, p, s), VERTICAL_GAUGE);

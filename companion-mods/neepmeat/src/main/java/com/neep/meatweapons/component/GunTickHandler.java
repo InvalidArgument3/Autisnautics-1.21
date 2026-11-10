@@ -63,6 +63,7 @@ public class GunTickHandler implements Component, CommonTickingComponent
         return 0;
     }
 
+    @Override
     public void tick()
     {
         ads.tick();

@@ -40,6 +40,7 @@ import java.util.List;
 
 public class CompoundInjectorItem extends BaseItem
 {
+    @Override
     public final int healsFor = 8; // Health replenished each use (discounting initial damage)
     public final int initialDamage = 1;
 
@@ -60,7 +61,8 @@ public class CompoundInjectorItem extends BaseItem
         return hasUses(stack) ? UseAnim.BLOCK : UseAnim.NONE;
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 15;
     }
@@ -153,6 +155,7 @@ public class CompoundInjectorItem extends BaseItem
         return healsFor;
     }
 
+    @Override
     private void use(ItemStack stack, Player player)
     {
         if (hasUses(stack))

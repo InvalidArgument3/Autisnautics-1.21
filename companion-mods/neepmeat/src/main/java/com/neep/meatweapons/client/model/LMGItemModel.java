@@ -19,17 +19,20 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class LMGItemModel extends GeoModel<LMGItem>
 {
+    @Override
     public ResourceLocation getModelResource(LMGItem object)
     {
         // Apparently, the model folder MUST be called 'geo'.
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "geo/light_machine_gun.geo.json");
     }
 
+    @Override
     public ResourceLocation getTextureResource(LMGItem object)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/general/light_machine_gun.png");
     }
 
+    @Override
     public ResourceLocation getAnimationResource(LMGItem animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "animations/light_machine_gun.animation.json");

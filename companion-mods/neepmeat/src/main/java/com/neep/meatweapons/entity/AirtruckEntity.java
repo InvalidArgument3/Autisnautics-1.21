@@ -125,11 +125,13 @@ public class AirtruckEntity extends AbstractVehicleEntity implements GeoEntity
         return SoundEvents.IRON_GOLEM_DAMAGE;
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(new AnimationController<AirtruckEntity>(this, "controller", 0, this::predicate));
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;

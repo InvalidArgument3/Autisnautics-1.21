@@ -30,11 +30,13 @@ public class NMBlockTagProvider extends FabricTagProvider.BlockTagProvider
     {
         super(output, registriesFuture); }
 
+    @Override
     public String getName()
     {
         return "Tags for " + this.registryKey.location() + " (" + NeepMeat.NAMESPACE + ")";
     }
 
+    @Override
     protected void addTags(HolderLookup.Provider arg)
     {
         // Blocks whose corresponding items will be used as recipe inputs for crushing if their loot table

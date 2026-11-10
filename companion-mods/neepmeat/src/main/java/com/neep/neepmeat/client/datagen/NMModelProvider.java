@@ -37,11 +37,13 @@ public class NMModelProvider extends FabricModelProvider
         super(output);
     }
 
+    @Override
     public String getName()
     {
         return super.getName() + "(neepmeat)";
     }
 
+    @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator)
     {
 //        Identifier modelId = new Identifier(NeepMeat.NAMESPACE, "block/painted_corrugated_asbestos");
@@ -71,6 +73,7 @@ public class NMModelProvider extends FabricModelProvider
         }
     }
 
+    @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator)
     {
     }

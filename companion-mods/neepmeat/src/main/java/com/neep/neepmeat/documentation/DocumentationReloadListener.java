@@ -64,6 +64,7 @@ public class DocumentationReloadListener implements SimpleSynchronousResourceRel
         return catEntries.values();
     }
 
+    @Override
     public ResourceLocation getFabricId()
     {
         return ResourceLocation.fromNamespaceAndPath(MeatLib.NAMESPACE, "documentation");
@@ -78,6 +79,7 @@ public class DocumentationReloadListener implements SimpleSynchronousResourceRel
         };
     }
 
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         catEntries.clear();

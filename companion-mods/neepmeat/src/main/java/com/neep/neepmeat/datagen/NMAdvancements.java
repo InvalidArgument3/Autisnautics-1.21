@@ -39,6 +39,7 @@ public class NMAdvancements extends FabricAdvancementProvider
         super(output);
     }
 
+    @Override
     public void generateAdvancement(Consumer<Advancement> consumer)
     {
         Advancement root = Advancement.Builder.advancement()

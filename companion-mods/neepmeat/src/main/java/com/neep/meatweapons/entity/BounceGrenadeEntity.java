@@ -66,6 +66,7 @@ public class BounceGrenadeEntity extends MeatgunProjectileEntity
         this.destructive = destructive;
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();

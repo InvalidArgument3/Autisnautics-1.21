@@ -73,7 +73,7 @@ public class FluidGaugeBlock<T> extends BaseFacingBlock implements EntityBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return SHAPE_MAP.get(state.getValue(FACING));
     }

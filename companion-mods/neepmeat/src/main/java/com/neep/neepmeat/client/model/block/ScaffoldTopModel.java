@@ -108,6 +108,7 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
     }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
         // Get the sprites
@@ -155,11 +156,13 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
         return this;
     }
 
+    @Override
     public boolean isVanillaAdapter()
     {
         return false;
     }
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         // Janky scaffolding rendering.
@@ -206,6 +209,7 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
 
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         context.meshConsumer().accept(outerMesh);

@@ -29,6 +29,7 @@ public class BaseDoorBlock extends DoorBlock implements MeatlibBlock
         ctx.append(this, itemSettings.create(this, ctx));
     }
 
+    @Override
     public @Nullable LootTable.Builder genLoot(BlockLootSubProvider generator)
     {
         return generator.createDoorTable(this);

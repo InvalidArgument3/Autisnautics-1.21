@@ -82,6 +82,7 @@ public class ReactionCoreRenderer implements BlockEntityRenderer<ReactionCoreBlo
         }
     }
 
+    @Override
     public boolean rendersOutsideBoundingBox(ReactionCoreBlockEntity blockEntity)
     {
         return true;

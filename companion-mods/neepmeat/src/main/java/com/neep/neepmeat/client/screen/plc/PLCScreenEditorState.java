@@ -104,7 +104,8 @@ public class PLCScreenEditorState extends ScreenSubElement implements Renderable
         editorField.setHeight(screenHeight);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         return super.mouseScrolled(mouseX, mouseY, amount);
     }

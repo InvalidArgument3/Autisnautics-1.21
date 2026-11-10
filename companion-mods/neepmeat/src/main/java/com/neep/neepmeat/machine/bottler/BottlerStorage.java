@@ -39,6 +39,7 @@ public class BottlerStorage implements NbtSerialisable
         this.parent = parent;
         itemStorage = new WritableStackStorage(parent::sync, 1)
         {
+            @Override
             protected boolean canInsert(ItemVariant variant)
             {
                 return super.canInsert(variant);

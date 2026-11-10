@@ -286,6 +286,7 @@ class TreePane extends TinkerTableScreen.PaneWidget
             return size.nh();
         }
 
+        @Override
         public boolean mouseClicked(double mouseX, double mouseY, int button)
         {
             if (bounds.isWithin(mouseX, mouseY))
@@ -298,6 +299,7 @@ class TreePane extends TinkerTableScreen.PaneWidget
             return false;
         }
 
+        @Override
         public void init(int x, int y)
         {
             local = size.offset(x, y);
@@ -347,6 +349,7 @@ class TreePane extends TinkerTableScreen.PaneWidget
             this.slots = slots;
         }
 
+        @Override
         public void init(int x, int y)
         {
             this.absX = x;
@@ -426,6 +429,7 @@ class TreePane extends TinkerTableScreen.PaneWidget
             }
         }
 
+        @Override
         public boolean mouseClicked(double mouseX, double mouseY, int button)
         {
             if (isWithin(mouseX, mouseY))

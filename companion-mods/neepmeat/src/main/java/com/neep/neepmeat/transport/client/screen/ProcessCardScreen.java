@@ -84,6 +84,7 @@ public class ProcessCardScreen extends BetterHandledScreen<ProcessCardScreenHand
 
         }
 
+        @Override
         public void init()
         {
             int slotsW = 5;
@@ -107,7 +108,8 @@ public class ProcessCardScreen extends BetterHandledScreen<ProcessCardScreenHand
             w = slotsW * 17;
         }
 
-        public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+        @Override
+        public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
         {
             return super.mouseScrolled(mouseX, mouseY, amount);
         }
@@ -155,6 +157,7 @@ public class ProcessCardScreen extends BetterHandledScreen<ProcessCardScreenHand
             tooltipDelayMs = 0;
         }
 
+        @Override
         protected void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             GUIUtil.renderBorderInner(context, x0(), y0(), 18, 18, PLCCols.BORDER.col, 0);
@@ -175,7 +178,8 @@ public class ProcessCardScreen extends BetterHandledScreen<ProcessCardScreenHand
 //            }
         }
 
-        public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+        @Override
+        public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
         {
             ItemStack stack = get.get();
             if (!stack.isEmpty())

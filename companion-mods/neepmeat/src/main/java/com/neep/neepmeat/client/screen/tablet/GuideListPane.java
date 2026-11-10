@@ -162,7 +162,8 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
         return super.charTyped(chr, modifiers);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         int prevScroll = scroll;
         scroll = (int) Mth.clamp(scroll + amount * 10,
@@ -322,6 +323,7 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
             node.visitScreen(parent);
         }
 
+        @Override
         public void renderButton(GuiGraphics matrices, int mouseX, int mouseY, float delta)
         {
             // Delay animation by 16 ticks if the screen has been opened for fewer than 32 ticks.

@@ -76,6 +76,7 @@ public class VascularSensorBlockEntity extends SyncableBlockEntity implements Co
 
     private class Acceptor implements BloodAcceptor, BalancingBloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.BALANCE;

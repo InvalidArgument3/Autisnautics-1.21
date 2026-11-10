@@ -176,6 +176,7 @@ public class PipetteItem extends BaseItem
             this.capacity = FluidConstants.BUCKET;
         }
 
+        @Override
         public static FluidVariant getResource(ItemVariant stack)
         {
             CompoundTag nbt = stack.copyOrCreateNbt();
@@ -185,6 +186,7 @@ public class PipetteItem extends BaseItem
             return FluidVariant.fromNbt(root.getCompound(KEY_RESOURCE));
         }
 
+        @Override
         public static long getAmount(ItemVariant stack)
         {
             CompoundTag nbt = stack.copyOrCreateNbt();
@@ -192,6 +194,7 @@ public class PipetteItem extends BaseItem
             return root.getLong(KEY_AMOUNT);
         }
 
+        @Override
         public long insert(FluidVariant insertedResource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(insertedResource, maxAmount);
@@ -220,6 +223,7 @@ public class PipetteItem extends BaseItem
             return 0;
         }
 
+        @Override
         public long extract(FluidVariant extractedResource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(extractedResource, maxAmount);
@@ -247,11 +251,13 @@ public class PipetteItem extends BaseItem
             return 0;
         }
 
+        @Override
         public boolean isResourceBlank()
         {
             return getResource().isBlank();
         }
 
+        @Override
         public FluidVariant getResource()
         {
             return getResource(context.getItemVariant());
@@ -269,6 +275,7 @@ public class PipetteItem extends BaseItem
             context.exchange(ItemVariant.of(stack.getItem(), nbt), 1, transaction);
         }
 
+        @Override
         public long getAmount()
         {
             return getAmount(context.getItemVariant());
@@ -286,6 +293,7 @@ public class PipetteItem extends BaseItem
             context.exchange(ItemVariant.of(stack.getItem(), nbt), 1, transaction);
         }
 
+        @Override
         public long getCapacity()
         {
             return capacity;

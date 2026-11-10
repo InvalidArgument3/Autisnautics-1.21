@@ -30,6 +30,7 @@ public class GeneralBipedEntityRenderer<T extends Mob, M extends GeneralBipedEnt
         this.texture = texture;
     }
 
+    @Override
     public ResourceLocation getTexture(T entity)
     {
         return texture;

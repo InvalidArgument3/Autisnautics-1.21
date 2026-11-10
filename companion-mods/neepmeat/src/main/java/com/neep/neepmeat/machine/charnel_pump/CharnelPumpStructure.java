@@ -39,6 +39,7 @@ public class CharnelPumpStructure extends BigBlockStructure<CharnelPumpStructure
         super(parent, settings);
     }
 
+    @Override
     protected BlockEntityType<CPSBlockEntity> registerBlockEntity()
     {
         return Registry.register(
@@ -49,7 +50,7 @@ public class CharnelPumpStructure extends BigBlockStructure<CharnelPumpStructure
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return Shapes.block();
     }

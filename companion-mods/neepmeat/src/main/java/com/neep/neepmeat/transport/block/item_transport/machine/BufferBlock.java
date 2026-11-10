@@ -55,13 +55,13 @@ public class BufferBlock extends BaseBlock implements EntityBlock
         return new BufferBlockEntity(pos, state);
     }
 
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         return super.updateShape(state, direction, neighborState, world, pos, neighborPos);
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         world.setBlockAndUpdate(pos, state.setValue(POWERED, world.hasNeighborSignal(pos)));
     }

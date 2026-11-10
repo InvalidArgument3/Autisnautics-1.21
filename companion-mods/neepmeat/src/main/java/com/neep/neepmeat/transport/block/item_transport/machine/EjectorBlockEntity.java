@@ -76,11 +76,13 @@ public class EjectorBlockEntity extends SyncableBlockEntity
         super(type, pos, state);
     }
 
+    @Override
     public void fromClientTag(CompoundTag tag)
     {
         this.shuttle = tag.getInt("shuttle_ticks");
     }
 
+    @Override
     public void toClientTag(CompoundTag tag)
     {
         tag.putInt("shuttle_ticks", shuttle);

@@ -98,6 +98,7 @@ public class MWClient implements ClientModInitializer
 
     }
 
+    @Override
     public void onInitializeClient()
     {
         Myron.registerNamespace(MeatWeapons.NAMESPACE);

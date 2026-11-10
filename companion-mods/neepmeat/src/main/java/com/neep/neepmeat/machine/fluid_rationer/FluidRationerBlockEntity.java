@@ -227,17 +227,20 @@ public class FluidRationerBlockEntity extends SyncableBlockEntity implements Ext
         config.readNbt(nbt.getCompound("config"));
     }
 
+    @Override
     public Component getDisplayName()
     {
         return FluidTransport.FLUID_RATIONER.getName();
     }
 
     @Nullable
+    @Override
     public AbstractContainerMenu createMenu(int syncId, Inventory inv, Player player)
     {
         return new FluidRationerScreenHandler(syncId, inv, outputStorage.inventory, propertyDelegate, config);
     }
 
+    @Override
     public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf)
     {
         buf.writeVarInt(targetAmount);

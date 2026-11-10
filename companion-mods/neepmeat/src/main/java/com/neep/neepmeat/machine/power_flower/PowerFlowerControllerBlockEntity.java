@@ -55,6 +55,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
 
     private final WritableSingleFluidStorage waterStorage = new WritableSingleFluidStorage(4 * FluidConstants.BUCKET, this::setChanged)
     {
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return variant.isOf(Fluids.WATER);
@@ -63,6 +64,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
 
     private final WritableSingleFluidStorage foodStorage = new WritableSingleFluidStorage(4 * FluidConstants.BUCKET, this::setChanged)
     {
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return foodEnergy(variant).energy != 0;
@@ -72,6 +74,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
 
     private final WritableSingleFluidStorage outputStorage = new WritableSingleFluidStorage(4 * FluidConstants.BUCKET, this::setChanged)
     {
+        @Override
         protected boolean canInsert(FluidVariant variant)
         {
             return variant.isOf(NMFluids.ETHEREAL_FUEL.still());

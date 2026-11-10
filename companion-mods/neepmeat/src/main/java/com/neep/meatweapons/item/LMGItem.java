@@ -47,7 +47,8 @@ public class LMGItem extends BaseGunItem
         return new LMGItemModel();
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 99999;
     }

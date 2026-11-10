@@ -83,7 +83,7 @@ public class ChuteBlock extends BaseHorFacingBlock implements EntityBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         if (state.getValue(OPEN))
         {
@@ -138,7 +138,7 @@ public class ChuteBlock extends BaseHorFacingBlock implements EntityBlock
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         super.neighborChanged(state, world, pos, sourceBlock, sourcePos, notify);
         if (!canExist(world, pos, state))
@@ -185,7 +185,8 @@ public class ChuteBlock extends BaseHorFacingBlock implements EntityBlock
         return NMBlockEntities.CHUTE.create(pos, state);
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }

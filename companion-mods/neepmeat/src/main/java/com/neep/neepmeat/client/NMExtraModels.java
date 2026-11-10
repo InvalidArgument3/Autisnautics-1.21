@@ -180,6 +180,7 @@ public class NMExtraModels implements ModelLoadingPlugin
     {
     }
 
+    @Override
     public void onInitializeModelLoader(Context context)
     {
         provideExtraModels(context, context::addModels);

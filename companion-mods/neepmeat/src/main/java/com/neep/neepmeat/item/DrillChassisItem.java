@@ -154,6 +154,7 @@ public class DrillChassisItem extends MeatgunItem implements OverrideSwingItem, 
     }
 
 
+    @Override
     public boolean isSuitableFor(ItemStack stack, BlockState state)
     {
         if (getHead(stack) instanceof MiningMeatgunModule mining)

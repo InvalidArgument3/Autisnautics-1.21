@@ -47,7 +47,7 @@ public class FluidExciterBlock extends TallBlock implements EntityBlock
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         world.getBlockEntity(pos, NMBlockEntities.FLUID_EXCITER).ifPresent(FluidExciterBlockEntity::updateCache);
         super.neighborChanged(state, world, pos, block, fromPos, notify);
@@ -112,7 +112,7 @@ public class FluidExciterBlock extends TallBlock implements EntityBlock
         }
 
         @Override
-        public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+        protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
         {
             if (VascularConduit.find(world, sourcePos, world.getBlockState(sourcePos)) == null && !sourceBlock.equals(this))
             {

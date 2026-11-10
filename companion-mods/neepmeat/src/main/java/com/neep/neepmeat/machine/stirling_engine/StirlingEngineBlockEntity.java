@@ -116,6 +116,7 @@ public class StirlingEngineBlockEntity extends SyncableBlockEntity implements Me
         cache = LazyBlockApiCache.of(MotorisedBlock.LOOKUP, worldPosition.relative(facing), this::getLevel, () -> null);
     }
 
+    @Override
     public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
@@ -126,6 +127,7 @@ public class StirlingEngineBlockEntity extends SyncableBlockEntity implements Me
         nbt.putLong("output_power", outputPower);
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);

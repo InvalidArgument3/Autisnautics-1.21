@@ -97,6 +97,7 @@ extends Entity {
 
     public abstract SoundEvent getDamageSound();
 
+    @Override
     protected float getEyeHeight(Pose pose, EntityDimensions dimensions)
     {
         return dimensions.height;
@@ -141,6 +142,7 @@ extends Entity {
         return LivingEntity.resetForwardDirectionOfRelativePortalPosition(super.getRelativePortalPosition(portalAxis, portalRect));
     }
 
+    @Override
     public double getPassengersRidingOffset()
     {
         return 0.2;
@@ -195,6 +197,7 @@ extends Entity {
         return !this.isRemoved();
     }
 
+    @Override
     public void lerpTo(double x, double y, double z, float yaw, float pitch, int interpolationSteps, boolean interpolate) {
         this.x = x;
         this.y = y;
@@ -506,6 +509,7 @@ extends Entity {
         return this.getFirstPassenger() instanceof LivingEntity living ? living : null;
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return new ClientboundAddEntityPacket(this);

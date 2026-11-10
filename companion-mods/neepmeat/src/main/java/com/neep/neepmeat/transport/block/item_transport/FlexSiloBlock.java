@@ -111,7 +111,7 @@ public class FlexSiloBlock extends FlexStorageBlock<FlexSiloBlockEntity>
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean up = world.getBlockState(pos.above()).is(this);
         boolean down = world.getBlockState(pos.below()).is(this);

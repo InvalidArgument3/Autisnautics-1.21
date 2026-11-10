@@ -59,6 +59,7 @@ public class EggEntityRenderer extends EntityRenderer<MobEggEntity>
         super.render(entity, f, b, matrices, vertexConsumerProvider, i);
     }
 
+    @Override
     public ResourceLocation getTexture(MobEggEntity entity)
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/entity/glome.png");

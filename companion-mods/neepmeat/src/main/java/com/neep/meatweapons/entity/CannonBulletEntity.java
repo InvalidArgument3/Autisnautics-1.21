@@ -38,6 +38,7 @@ public class CannonBulletEntity extends AbstractArrow
         this.setNoGravity(false);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return super.getAddEntityPacket();

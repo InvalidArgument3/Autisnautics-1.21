@@ -27,6 +27,7 @@ public class BlockLootTableProvider extends FabricBlockLootTableProvider
         super(output);
     }
 
+    @Override
     public void generate()
     {
         for (Block entry : BlockRegistry.REGISTERED_BLOCKS)

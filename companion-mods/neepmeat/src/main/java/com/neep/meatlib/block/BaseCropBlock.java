@@ -56,13 +56,14 @@ public class BaseCropBlock extends CropBlock implements MeatlibBlock, MeatlibBlo
 //        this.seedsItem = new BaseSeedsItem(this, ctx, itemMaxStack, lore);
 //    }
 
+    @Override
     public ItemLike dropsLike()
     {
         return null;
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return AGE_TO_SHAPE[state.getValue(this.getAgeProperty())];
     }

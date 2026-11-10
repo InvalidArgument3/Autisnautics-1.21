@@ -183,6 +183,7 @@ public class HeaterBlockEntity extends LiquidFuelMachine implements BloodAccepto
         return influx;
     }
 
+    @Override
     public Mode getMode()
     {
         return Mode.SINK;

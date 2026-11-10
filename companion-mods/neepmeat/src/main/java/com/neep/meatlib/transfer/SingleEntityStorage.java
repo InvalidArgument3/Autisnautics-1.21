@@ -32,6 +32,7 @@ public class SingleEntityStorage extends SnapshotParticipant<EntityVariant<?>> i
         return storage;
     }
 
+    @Override
     public long insert(EntityVariant<?> resource, long maxAmount, TransactionContext transaction)
     {
         if (!isResourceBlank() || maxAmount == 0) return 0;
@@ -41,36 +42,43 @@ public class SingleEntityStorage extends SnapshotParticipant<EntityVariant<?>> i
         return 0;
     }
 
+    @Override
     public long extract(EntityVariant<?> resource, long maxAmount, TransactionContext transaction)
     {
         return 0;
     }
 
+    @Override
     public boolean isResourceBlank()
     {
         return Objects.equals(getResource(), EntityVariant.getBlank());
     }
 
+    @Override
     public EntityVariant<?> getResource()
     {
         return variant;
     }
 
+    @Override
     public long getAmount()
     {
         return isResourceBlank() ? 0 : 1;
     }
 
+    @Override
     public long getCapacity()
     {
         return 1;
     }
 
+    @Override
     protected EntityVariant<?> createSnapshot()
     {
         return getResource();
     }
 
+    @Override
     protected void readSnapshot(EntityVariant<?> snapshot)
     {
         this.variant = snapshot;

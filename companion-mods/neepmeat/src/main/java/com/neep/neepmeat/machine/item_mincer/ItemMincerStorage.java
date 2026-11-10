@@ -29,6 +29,7 @@ public class ItemMincerStorage implements NbtSerialisable
     {
         outputStorage = new WritableSingleFluidStorage(2 * FluidConstants.BUCKET, parent::sync)
         {
+            @Override
             public boolean supportsInsertion()
             {
                 return false;
@@ -37,6 +38,7 @@ public class ItemMincerStorage implements NbtSerialisable
 
         inputStorage = new WritableStackStorage(parent::sync, 64)
         {
+            @Override
             protected boolean canInsert(ItemVariant variant)
             {
                 FoodProperties food = variant.getItem().getFoodProperties();

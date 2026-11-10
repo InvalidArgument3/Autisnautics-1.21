@@ -39,7 +39,7 @@ public class ScaffoldTrapdoorBlock extends BaseTrapdoorBlock
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         if (!state.getValue(OPEN).booleanValue())
         {

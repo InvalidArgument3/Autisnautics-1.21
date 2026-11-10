@@ -40,6 +40,7 @@ public class MopRenderer implements BuiltinItemRendererRegistry.DynamicItemRende
         this.client = client;
     }
 
+    @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vcp, int light, int overlay)
     {
         BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.MOP_MAIN);

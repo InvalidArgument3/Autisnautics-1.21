@@ -90,7 +90,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
 
     @Override
     @SuppressWarnings("deprecation")
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos fromPos, boolean notify)
     {
         if (world instanceof ServerLevel serverWorld)
         {
@@ -131,7 +131,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         if (state.getValue(WATERLOGGED))
         {
@@ -202,6 +202,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return ItemStorage.SIDED.find(world, pos, direction) != null;
     }
 
+    @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
         InteractionHand hand = InteractionHand.MAIN_HAND;
@@ -261,6 +262,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return MiscUtil.checkType(type, NMBlockEntities.ITEM_PIPE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(world1, pos, state1), null, world);
     }
 
+    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         if (world.getBlockEntity(pos) instanceof ItemPipeBlockEntity be)
@@ -270,6 +272,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return 0;
     }
 
+    @Override
     public Direction getOutputDirection(ItemInPipe item, BlockPos pos, BlockState state, Level world, Direction in, @Nullable BlockEntity beIn, boolean overridePathNode, TransactionContext transaction)
     {
 //        Set<Direction> connections = ((ItemPipe) state.getBlock()).getConnections(state, direction -> direction != in);
@@ -350,11 +353,13 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return out;
     }
 
+    @Override
     public boolean supportsRouting()
     {
         return true;
     }
 
+    @Override
     public PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state)
     {
         if (world.getBlockEntity(pos) instanceof ItemPipeBlockEntity be)
@@ -365,6 +370,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return null;
     }
 
+    @Override
     public boolean endPoint()
     {
         return false;

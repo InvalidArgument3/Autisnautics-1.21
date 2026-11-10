@@ -59,11 +59,13 @@ public class MachineBlock extends BaseBlock implements LivingMachineStructure
         this(ctx, itemSettings, properties, settings, null);
     }
 
+    @Override
     public boolean canOpen()
     {
         return openVariant != null;
     }
 
+    @Override
     public boolean makeOpen(Level world, BlockPos pos, BlockState state, @Nullable LivingMachineBlockEntity be)
     {
         if (openVariant != null)
@@ -94,6 +96,7 @@ public class MachineBlock extends BaseBlock implements LivingMachineStructure
         return properties;
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);

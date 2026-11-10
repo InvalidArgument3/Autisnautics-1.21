@@ -19,17 +19,20 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class AirtruckModel extends GeoModel<AirtruckEntity>
 {
+    @Override
     public ResourceLocation getModelResource(AirtruckEntity object)
     {
         // Apparently, the model folder MUST be called 'geo'.
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "geo/airtruck.geo.json");
     }
 
+    @Override
     public ResourceLocation getTextureResource(AirtruckEntity object)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/airtruck.png");
     }
 
+    @Override
     public ResourceLocation getAnimationResource(AirtruckEntity animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "animations/airtruck.animation.json");

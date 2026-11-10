@@ -33,6 +33,7 @@ public class FilterItemPipeBlockEntity extends ItemPipeBlockEntity
         super(type, pos, state, Vertex::new);
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant item)
     {
         return filters.matches(item);

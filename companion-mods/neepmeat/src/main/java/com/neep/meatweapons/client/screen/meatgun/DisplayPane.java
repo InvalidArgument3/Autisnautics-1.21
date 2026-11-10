@@ -122,7 +122,8 @@ class DisplayPane extends TinkerTableScreen.PaneWidget
         return true;
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         scale += amount / 10;
         return true;

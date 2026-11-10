@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.item;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.client.MeatlibFluidRendering;
 import com.neep.meatlib.item.BaseItem;
@@ -78,6 +79,7 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
         return false;
     }
 
+    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -253,7 +255,8 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
         return super.getName(stack);
     }
 
-    public void appendHoverText(ItemStack stack   , Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack stack   , Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         var component = NMComponents.PRESSURE_WASHER.getNullable(stack);
         if (component != null)
@@ -313,6 +316,7 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             return context.getItemVariant().toStack((int) context.getAmount());
         }
 
+        @Override
         public long insert(FluidVariant insertedResource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(insertedResource, maxAmount);
@@ -341,6 +345,7 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             return 0;
         }
 
+        @Override
         public long extract(FluidVariant extractedResource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(extractedResource, maxAmount);
@@ -368,16 +373,19 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             return 0;
         }
 
+        @Override
         public boolean isResourceBlank()
         {
             return getResource().isBlank();
         }
 
+        @Override
         public FluidVariant getResource()
         {
             return getResource(context.getItemVariant());
         }
 
+        @Override
         public static FluidVariant getResource(ItemVariant stack)
         {
             return NMComponents.PRESSURE_WASHER.get(stack.toStack()).getFluid();
@@ -392,11 +400,13 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             context.exchange(ItemVariant.of(stack.copy()), 1, transaction);
         }
 
+        @Override
         public long getAmount()
         {
             return getAmount(context.getItemVariant());
         }
 
+        @Override
         public static long getAmount(ItemVariant stack)
         {
             return NMComponents.PRESSURE_WASHER.get(stack.toStack()).getAmount();
@@ -411,6 +421,7 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             context.exchange(ItemVariant.of(stack.copy()), 1, transaction);
         }
 
+        @Override
         public long getCapacity()
         {
             return NMComponents.PRESSURE_WASHER.get(getStack())

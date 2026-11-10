@@ -41,11 +41,13 @@ public class BaseGunRenderer<T extends BaseGunItem & GeoAnimatable> extends GeoI
         super(model);
     }
 
+    @Override
     public RenderType getRenderType(T animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick)
     {
         return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
+    @Override
     public void renderByItem(ItemStack stack, ItemDisplayContext transformType, PoseStack matrices,
                        MultiBufferSource bufferSource, int packedLight, int packedOverlay)
     {

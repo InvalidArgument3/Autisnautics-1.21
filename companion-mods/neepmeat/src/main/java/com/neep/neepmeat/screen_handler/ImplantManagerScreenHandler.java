@@ -53,17 +53,20 @@ public class ImplantManagerScreenHandler extends BasicScreenHandler
     {
         return new ExtendedScreenHandlerFactory()
         {
+            @Override
             public void writeScreenOpeningData(ServerPlayer serverPlayerEntity, FriendlyByteBuf buf)
             {
                 PacketBufUtil.writeBlockPos(buf, pos);
                 buf.writeBoolean(verify);
             }
 
+            @Override
             public Component getDisplayName()
             {
                 return Component.empty();
             }
 
+            @Override
             public @Nullable AbstractContainerMenu createMenu(int syncId, Inventory playerInventory, Player player)
             {
                 return new ImplantManagerScreenHandler(syncId, playerInventory, delegate, verify);

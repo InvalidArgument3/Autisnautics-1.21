@@ -29,11 +29,13 @@ public class GlassTankBlockEntity extends TankBlockEntity
 //        this.buffer = new WritableFluidBuffer(this, 8 * FluidConstants.BUCKET);
     }
 
+    @Override
     public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
     }
 
+    @Override
     public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
         super.loadAdditional(tag, registries);

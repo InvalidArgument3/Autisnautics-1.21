@@ -76,6 +76,7 @@ public class MobSynthesisRegistry implements SimpleSynchronousResourceReloadList
         return INSTANCE;
     }
 
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         entries.clear();
@@ -154,6 +155,7 @@ public class MobSynthesisRegistry implements SimpleSynchronousResourceReloadList
         });
     }
 
+    @Override
     public ResourceLocation getFabricId()
     {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "cloning");

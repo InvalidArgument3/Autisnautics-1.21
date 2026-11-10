@@ -54,7 +54,8 @@ public abstract class AbstractAxialFluidPipe extends BaseFacingBlock implements 
         super(ctx, itemSettings, settings);
     }
 
-    public VoxelShape getShape(BlockState state)
+    @Override
+    protected VoxelShape getShape(BlockState state)
     {
         Direction facing = state.getValue(FACING);
         return switch (facing.getAxis())
@@ -72,13 +73,13 @@ public abstract class AbstractAxialFluidPipe extends BaseFacingBlock implements 
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return getShape(state);
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         if (world.isClientSide())
             return;

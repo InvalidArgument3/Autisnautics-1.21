@@ -54,7 +54,8 @@ public class MA75Item extends BaseGunItem implements WeakTwoHanded
         return false;
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 99999;
     }

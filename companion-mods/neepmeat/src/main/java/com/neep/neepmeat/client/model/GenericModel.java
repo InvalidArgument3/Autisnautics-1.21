@@ -31,16 +31,19 @@ public class GenericModel<T extends GeoAnimatable> extends GeoModel<T>
         this.animPath = animPath;
     }
 
+    @Override
     public ResourceLocation getModelResource(GeoAnimatable object)
     {
         return ResourceLocation.fromNamespaceAndPath(namespace, modelPath);
     }
 
+    @Override
     public ResourceLocation getTextureResource(GeoAnimatable object)
     {
         return ResourceLocation.fromNamespaceAndPath(namespace, texturePath);
     }
 
+    @Override
     public ResourceLocation getAnimationResource(GeoAnimatable animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(namespace, animPath);

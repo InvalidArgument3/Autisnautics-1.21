@@ -93,7 +93,7 @@ public class VSCBlock extends BaseFacingBlock implements EntityBlock, DataCable,
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify)
     {
         if (!world.isClientSide() && world.getBlockEntity(pos) instanceof VSCBlockEntity be)
         {

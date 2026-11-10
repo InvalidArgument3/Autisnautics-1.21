@@ -333,6 +333,7 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
         return Component.translatable("entity.minecraft.falling_block_type", this.block.getBlock().getName());
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return new ClientboundAddEntityPacket(this, Block.getId(this.getBlockState()));

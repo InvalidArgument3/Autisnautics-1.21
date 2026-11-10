@@ -120,6 +120,7 @@ public class NeepMeatClient implements ClientModInitializer
     public static final ModelLayerLocation GLOME = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "glome"), "main");
     public static final ModelLayerLocation EGG = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "egg"), "main");
 
+    @Override
     public void onInitializeClient()
     {
         Myron.registerNamespace(NeepMeat.NAMESPACE);

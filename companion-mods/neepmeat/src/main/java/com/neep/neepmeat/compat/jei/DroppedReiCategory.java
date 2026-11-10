@@ -55,5 +55,21 @@ public class DroppedReiCategory implements IRecipeCategory<ItemStack> {
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, ItemStack recipe, IFocusGroup focuses) {}
+    public void setRecipe(IRecipeLayoutBuilder builder, ItemStack recipe, IFocusGroup focuses) {
+        String id = type.getUid().getPath();
+        // Slot offsets are the REI category's startPoint deltas.
+        if ("alloy_smelting".equals(id) || "mixing".equals(id)) {
+            builder.addInputSlot(1, 0).addItemStack(recipe);
+            builder.addInputSlot(1, 20).addItemStack(recipe);
+        } else {
+            builder.addInputSlot(1, 9).addItemStack(recipe);
+        }
+        builder.addOutputSlot(61, 9).addItemStack(recipe);
+        if ("grinding".equals(id) || "block_crushing".equals(id) || "enlightening".equals(id) || "advanced_crushing".equals(id)) {
+            builder.addOutputSlot(81, 9).addItemStack(recipe);
+        }
+        if ("trommel".equals(id)) {
+            builder.addOutputSlot(87, 9).addItemStack(recipe);
+        }
+    }
 }

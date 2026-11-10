@@ -57,16 +57,19 @@ public class PortTestBlock extends BaseBlock implements NeepBusProvider, DataCab
             {
                 player.openMenu(new ExtendedScreenHandlerFactory()
                 {
+                    @Override
                     public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf)
                     {
                         NeepBusConfigScreenHandler.writeOpeningData(be.config, buf);
                     }
 
+                    @Override
                     public Component getDisplayName()
                     {
                         return Component.empty();
                     }
 
+                    @Override
                     public AbstractContainerMenu createMenu(int syncId, Inventory playerInventory, Player player)
                     {
                         return new NeepBusConfigScreenHandler(playerInventory, syncId, be.config);

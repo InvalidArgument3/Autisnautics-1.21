@@ -290,6 +290,7 @@ public class ItemPipeBlockEntity extends SyncableBlockEntity implements NetworkT
     private record InsertCallback(ItemInPipe item, Direction in, Direction out, Level world,
                                   ItemPipeBlockEntity be) implements TransactionContext.CloseCallback
     {
+        @Override
         public void onClose(TransactionContext transaction, TransactionContext.Result result)
         {
             if (result.wasCommitted())

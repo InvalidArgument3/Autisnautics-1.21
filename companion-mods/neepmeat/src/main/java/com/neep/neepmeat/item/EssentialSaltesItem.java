@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.item;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.item.BaseItem;
 import com.neep.meatlib.item.TooltipSupplier;
@@ -65,7 +66,8 @@ public class EssentialSaltesItem extends BaseItem
         else return super.getName(stack);
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
         EntityType<?> type = getEntityType(itemStack);

@@ -83,7 +83,8 @@ public class CheeseCleaverItem extends BaseSwordItem
        return stack;
     }
 
-    public int getUseDuration(ItemStack stack)
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity)
     {
         return 20;
     }

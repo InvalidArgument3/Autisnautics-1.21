@@ -112,7 +112,8 @@ public class SliderScreen extends AbstractContainerScreen<SliderScreenHandler>
         super.mouseMoved(mouseX, mouseY);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         menu.incrementC2S.emitter().scroll(amount, !Screen.hasShiftDown());
         return true;

@@ -155,7 +155,7 @@ public abstract class AbstractPipeBlock extends BaseBlock implements SimpleWater
 
     @Override
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
     {
         return shapes.get(state);
     }
@@ -178,7 +178,7 @@ public abstract class AbstractPipeBlock extends BaseBlock implements SimpleWater
 
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos)
     {
         boolean connection = canConnectTo(neighborState, direction.getOpposite(), (Level) world, neighborPos);
 
@@ -288,6 +288,7 @@ public abstract class AbstractPipeBlock extends BaseBlock implements SimpleWater
 
     private static final Direction[] HORIZONTAL = new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
+    @Override
     private static BlockState rotate(BlockState oldState, int offset)
     {
         BlockState newState = oldState;
@@ -365,7 +366,8 @@ public abstract class AbstractPipeBlock extends BaseBlock implements SimpleWater
         return false;
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType type)
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type)
     {
         return false;
     }

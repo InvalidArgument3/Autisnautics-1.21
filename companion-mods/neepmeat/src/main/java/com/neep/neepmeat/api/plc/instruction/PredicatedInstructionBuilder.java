@@ -56,6 +56,7 @@ public class PredicatedInstructionBuilder implements InstructionBuilder
         return this;
     }
 
+    @Override
     public boolean isComplete()
     {
         return arguments.size() == provider.maxArguments();
@@ -73,6 +74,7 @@ public class PredicatedInstructionBuilder implements InstructionBuilder
         return arguments.size();
     }
 
+    @Override
     public static Builder create()
     {
         return new Builder();

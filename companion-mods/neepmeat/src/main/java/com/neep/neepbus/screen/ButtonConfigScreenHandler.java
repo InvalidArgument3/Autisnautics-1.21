@@ -35,16 +35,19 @@ public class ButtonConfigScreenHandler extends NeepBusConfigScreenHandler
     {
         return new ExtendedScreenHandlerFactory()
         {
+            @Override
             public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf)
             {
                 NeepBusConfigScreenHandler.writeOpeningData(config, buf);
             }
 
+            @Override
             public Component getDisplayName()
             {
                 return Component.empty();
             }
 
+            @Override
             public AbstractContainerMenu createMenu(int syncId, Inventory playerInventory, Player player)
             {
                 return new ButtonConfigScreenHandler(playerInventory, syncId, config, button);

@@ -40,6 +40,7 @@ public class ProcessCardComponent extends ItemComponent
         putCompound("dependencies", inventory.writeNbt(new CompoundTag()));
     }
 
+    @Override
     public void onTagInvalidated()
     {
         super.onTagInvalidated();

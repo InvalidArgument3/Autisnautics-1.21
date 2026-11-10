@@ -63,7 +63,8 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
         return UseAnim.NONE;
     }
 
-    public int getUseDuration(ItemStack stack) {
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity) {
         return 70000;
     }
 

@@ -40,6 +40,7 @@ public class SurgeryTableContext implements NbtSerialisable
 
     WritableStackStorage storage = new WritableStackStorage(() -> {}, Integer.MAX_VALUE)
     {
+        @Override
         public boolean supportsInsertion()
         {
             return false;

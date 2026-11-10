@@ -108,17 +108,20 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
 
     }
 
+    @Override
     protected Float createSnapshot()
     {
         return increaseProbability;
     }
 
+    @Override
     protected void readSnapshot(Float snapshot)
     {
         // Reset after unsuccessful commit.
         increaseProbability = snapshot;
     }
 
+    @Override
     protected void onFinalCommit()
     {
         // Apply pending action
@@ -155,6 +158,7 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
 
     private class TopStorage implements InsertionOnlyStorage<ItemVariant>
     {
+        @Override
         public long insert(ItemVariant resource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(resource, maxAmount);
@@ -184,6 +188,7 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
             return 1;
         }
 
+        @Override
         public Iterator<StorageView<ItemVariant>> iterator()
         {
             return Collections.emptyIterator();
@@ -216,21 +221,25 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
             return 1;
         }
 
+        @Override
         public boolean isResourceBlank()
         {
             return getResource().isBlank();
         }
 
+        @Override
         public ItemVariant getResource()
         {
             return OUTPUT;
         }
 
+        @Override
         public long getAmount()
         {
             return hasOutput() ? 1 : 0;
         }
 
+        @Override
         public long getCapacity()
         {
             return 1;

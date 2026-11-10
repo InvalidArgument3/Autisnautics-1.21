@@ -71,6 +71,7 @@ public abstract class SimpleEntity extends Entity
         return false;
     }
 
+    @Override
     public void lerpTo(double x, double y, double z, float yaw, float pitch, int interpolationSteps, boolean interpolate)
     {
         this.serverX = x;
@@ -287,6 +288,7 @@ public abstract class SimpleEntity extends Entity
 
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return new ClientboundAddEntityPacket(this);

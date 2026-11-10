@@ -55,6 +55,7 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
         this(context, 1.0F, false);
     }
 
+    @Override
     protected int getBlockLight(ShockStaffProjectileEntity entity, BlockPos pos)
     {
         return this.lit ? 15 : super.getBlockLightLevel(entity, pos);
@@ -141,6 +142,7 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
         }
     }
 
+    @Override
     public ResourceLocation getTexture(ShockStaffProjectileEntity entity)
     {
         return TEXTURE;

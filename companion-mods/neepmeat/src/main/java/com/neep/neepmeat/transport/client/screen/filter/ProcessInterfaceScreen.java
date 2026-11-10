@@ -118,7 +118,8 @@ public class ProcessInterfaceScreen extends BetterHandledScreen<ProcessInterface
         accessor.setFieldFocused(focused);
     }
 
-    public boolean mouseScrolled(double mouseX, double mouseY, double amount)
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double amount)
     {
         return super.mouseScrolled(mouseX, mouseY, amount);
     }

@@ -95,6 +95,7 @@ public class CronenCakeBlock extends CakeBlock implements MeatlibBlock
         super.createBlockStateDefinition(builder);
     }
 
+    @Override
     public boolean autoGenDrop()
     {
         return false;

@@ -28,6 +28,7 @@ public class LargeMotorStructureBlock extends BigBlockStructure<LargeMotorStruct
         super(parent, settings);
     }
 
+    @Override
     protected BlockEntityType<LargeMotorStructureEntity> registerBlockEntity()
     {
         return Registry.register(

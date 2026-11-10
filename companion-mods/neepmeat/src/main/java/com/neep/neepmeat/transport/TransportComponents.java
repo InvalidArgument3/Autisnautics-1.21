@@ -30,11 +30,13 @@ public class TransportComponents implements ChunkComponentInitializer, BlockComp
                     BloodNetworkChunkComponent.class);
 
 
+    @Override
     public void registerChunkComponentFactories(ChunkComponentFactoryRegistry registry)
     {
         registry.register(BLOOD_NETWORK, BloodNetworkChunkComponent.class, BloodNetworkChunkComponent::new);
     }
 
+    @Override
     public void registerBlockComponentFactories(BlockComponentFactoryRegistry registry)
     {
 

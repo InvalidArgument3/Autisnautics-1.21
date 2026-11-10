@@ -21,6 +21,16 @@ public class BaseItem extends Item implements MeatlibItem {
         this.tooltip = settings.tooltip();
     }
 
+    public BaseItem(Properties settings) {
+        super(settings);
+        this.tooltip = TooltipSupplier.BLANK;
+    }
+
+    public BaseItem(TooltipSupplier tooltip, Properties settings) {
+        super(settings);
+        this.tooltip = tooltip == null ? TooltipSupplier.BLANK : tooltip;
+    }
+
     public static DeferredItem<BaseItem> register(RegistrationContext context, String path, ItemSettings settings) {
         return context.item(path, () -> new BaseItem(settings));
     }

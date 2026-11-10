@@ -34,6 +34,7 @@ public class CastingBasinStorage implements NbtSerialisable, ImplementedRecipe.D
         this.parent = parent;
         this.outputStorage = new WritableStackStorage(this::syncOutput, 1)
         {
+            @Override
             public boolean supportsInsertion()
             {
                 return false;
@@ -42,11 +43,13 @@ public class CastingBasinStorage implements NbtSerialisable, ImplementedRecipe.D
 
         this.inputStorage = new WritableSingleFluidStorage(FluidConstants.INGOT, parent::sync)
         {
+            @Override
             protected boolean canInsert(FluidVariant variant)
             {
                 return super.canInsert(variant) && !locked;
             }
 
+            @Override
             protected boolean canExtract(FluidVariant variant)
             {
                 return super.canExtract(variant) && !locked;

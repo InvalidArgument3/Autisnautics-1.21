@@ -24,6 +24,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 public class NMDataGen extends MeatLibDataGen
 {
+    @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator)
     {
         var pack = fabricDataGenerator.createPack();

@@ -60,6 +60,7 @@ public class OpenMachineBlock extends BaseHorFacingBlock implements LivingMachin
         this.parent = parent;
     }
 
+    @Override
     public ItemLike dropsLike()
     {
         return parent;
@@ -116,6 +117,7 @@ public class OpenMachineBlock extends BaseHorFacingBlock implements LivingMachin
         return parent.getProperties();
     }
 
+    @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
     {
         parent.appendHoverText(stack, world, tooltip, options);

@@ -56,11 +56,13 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
 
     public static final ParticleOptions.Deserializer<Parameters> PARAMETER_FACTORY = new ParticleOptions.Deserializer<>()
     {
+        @Override
         public Parameters fromCommand(ParticleType<Parameters> type, StringReader reader) throws CommandSyntaxException
         {
             throw new CommandSyntaxException(new SimpleCommandExceptionType(Component.nullToEmpty("not supported")), Component.nullToEmpty("not supported"));
         }
 
+        @Override
         public Parameters fromNetwork(ParticleType<Parameters> type, FriendlyByteBuf buf)
         {
             return ((PressureWashParticleType) type).paramCodec.decode(buf);
@@ -74,6 +76,7 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
         paramCodec = createParamCodec(this);
     }
 
+    @Override
     public Codec<Parameters> codec()
     {
         return codec;
@@ -92,11 +95,13 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
             return type;
         }
 
+        @Override
         public void writeToNetwork(FriendlyByteBuf buf)
         {
             type.paramCodec.encode(this, buf);
         }
 
+        @Override
         public String writeToString()
         {
             return "???";

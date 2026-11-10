@@ -206,6 +206,7 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
     }
 
     @Nullable
+    @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
     {
         updateGoals();
@@ -287,6 +288,7 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
         return nbt;
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -355,6 +357,7 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
                 || source.is(DamageTypes.IN_WALL);
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(
@@ -381,6 +384,7 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
         return PlayState.CONTINUE;
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;

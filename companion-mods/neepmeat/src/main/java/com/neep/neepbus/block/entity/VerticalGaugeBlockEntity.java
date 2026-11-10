@@ -68,6 +68,7 @@ public class VerticalGaugeBlockEntity extends SyncableBlockEntity implements Ind
         fromClientTag(nbt);
     }
 
+    @Override
     public void fromClientTag(CompoundTag nbt)
     {
         this.value = nbt.getFloat("value");
@@ -79,6 +80,7 @@ public class VerticalGaugeBlockEntity extends SyncableBlockEntity implements Ind
         this.usePrefix = nbt.getBoolean("use_prefix");
     }
 
+    @Override
     public void toClientTag(CompoundTag nbt)
     {
         nbt.putFloat("value", value);

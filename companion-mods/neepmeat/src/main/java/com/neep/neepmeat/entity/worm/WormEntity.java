@@ -142,6 +142,7 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         return nbt;
     }
 
+    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -149,6 +150,7 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         currentAction = WormActions.fromNbt(nbt.getCompound("currentAction"), this);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket()
     {
         return new ClientboundAddEntityPacket(this);
@@ -338,11 +340,13 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         lerpHeadAngles(tick, totalTicks, pitchYaw.x, pitchYaw.y);
     }
 
+    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers)
     {
         controllers.add(new AnimationController<>(this, "controller", 5, this::controller));
     }
 
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache()
     {
         return instanceCache;
@@ -390,6 +394,7 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
             return this == entity || parent == entity;
         }
 
+        @Override
         public Packet<ClientGamePacketListener> getAddEntityPacket()
         {
             throw new UnsupportedOperationException();

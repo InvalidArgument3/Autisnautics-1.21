@@ -19,17 +19,20 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class FusionCannonItemModel extends GeoModel<FusionCannonItem>
 {
+    @Override
     public ResourceLocation getModelResource(FusionCannonItem object)
     {
         // Apparently, the model folder MUST be called 'geo'.
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "geo/fusion.geo.json");
     }
 
+    @Override
     public ResourceLocation getTextureResource(FusionCannonItem object)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/general/fusion.png");
     }
 
+    @Override
     public ResourceLocation getAnimationResource(FusionCannonItem animatable)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "animations/fusion.animation.json");

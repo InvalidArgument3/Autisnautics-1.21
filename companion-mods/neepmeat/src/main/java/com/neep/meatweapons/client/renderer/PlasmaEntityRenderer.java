@@ -54,6 +54,7 @@ public class PlasmaEntityRenderer extends EntityRenderer<FusionBlastEntity>
         matrixStack.popPose();
     }
 
+    @Override
     public ResourceLocation getTexture(FusionBlastEntity entity) {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/plasma.png");
     }

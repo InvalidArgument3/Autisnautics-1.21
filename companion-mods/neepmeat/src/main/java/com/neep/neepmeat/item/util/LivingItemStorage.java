@@ -36,6 +36,7 @@ public class LivingItemStorage extends SnapshotParticipant<Integer> implements I
         this.context = context;
     }
 
+    @Override
     public long insert(FluidVariant insertedVariant, long maxAmount, TransactionContext transaction)
     {
         int fluidPerDurability = LivingTools.getFluidForDurability(insertedVariant);
@@ -79,22 +80,26 @@ public class LivingItemStorage extends SnapshotParticipant<Integer> implements I
         return 0;
     }
 
+    @Override
     public @NotNull Iterator<StorageView<FluidVariant>> iterator()
     {
         return Iterators.singletonIterator(this);
     }
 
+    @Override
     protected Integer createSnapshot()
     {
         return stack.getDamageValue();
     }
 
+    @Override
     protected void readSnapshot(Integer snapshot)
     {
         stack.setDamageValue(snapshot);
 //        context.exchange(ItemVariant.of(stack), stack.getCount(),
     }
 
+    @Override
     public long extract(FluidVariant resource, long maxAmount, TransactionContext transaction)
     {
         return 0;

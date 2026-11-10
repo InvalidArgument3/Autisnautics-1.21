@@ -61,6 +61,7 @@ public class RolledNewspaperRenderer implements BuiltinItemRendererRegistry.Dyna
         swing = 1;
     }
 
+    @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vertexConsumers, int light, int overlay)
     {
         BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.ROLLED_NEWSPAPER);

@@ -56,7 +56,7 @@ public class SolidityDetectorBlock extends BaseFacingBlock implements EntityBloc
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         world.scheduleTick(pos, this, 2);
     }

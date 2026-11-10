@@ -81,6 +81,7 @@ public class ItemOutputPortBlockEntity extends SyncableBlockEntity implements It
         return inventory;
     }
 
+    @Override
     public Storage<ItemVariant> getInternalStorage()
     {
         return delegate;

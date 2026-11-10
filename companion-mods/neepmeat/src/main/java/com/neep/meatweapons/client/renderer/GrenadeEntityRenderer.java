@@ -44,6 +44,7 @@ public class GrenadeEntityRenderer extends EntityRenderer<BounceGrenadeEntity>
 //        matrixStack.pop();
     }
 
+    @Override
     public ResourceLocation getTexture(BounceGrenadeEntity entity)
     {
         // TODO: change

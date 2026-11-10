@@ -49,6 +49,7 @@ public class SynthesiserStorage implements NbtSerialisable
     {
         this.meatStorage = new WritableSingleFluidStorage(FluidConstants.BUCKET * 9, parent::sync)
         {
+            @Override
             protected boolean canInsert(FluidVariant variant)
             {
                 return variant.isOf(NMFluids.MEAT.still());
@@ -57,6 +58,7 @@ public class SynthesiserStorage implements NbtSerialisable
 
         this.fluidStorage = new WritableSingleFluidStorage(FluidConstants.BUCKET * 9, parent::sync)
         {
+            @Override
             protected boolean canInsert(FluidVariant variant)
             {
                 return super.canInsert(variant);

@@ -80,6 +80,7 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
         PARTICLE_SPRITE = textureGetter.apply(PARTICLE_SPRITE_ID);
@@ -121,8 +122,10 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     }
 
     /* FabricBakedModel */
+    @Override
     public boolean isVanillaAdapter() {return false;}
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         for (Direction direction : Direction.values())
@@ -142,6 +145,7 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
         }
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
 

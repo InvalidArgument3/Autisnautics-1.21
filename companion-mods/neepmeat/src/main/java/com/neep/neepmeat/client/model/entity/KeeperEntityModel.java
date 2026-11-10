@@ -32,6 +32,7 @@ extends HumanoidModel<com.neep.neepmeat.entity.keeper.KeeperEntity>
         super(modelPart);
     }
 
+    @Override
     public void setAngles(KeeperEntity hostileEntity, float f, float g, float h, float i, float j)
     {
         super.setupAnim(hostileEntity, f, g, h, i, j);

@@ -28,6 +28,7 @@ public class RepeaterEntityRenderer extends GeoEntityRenderer<RepeaterEntity>
         super(renderManager, model);
     }
 
+    @Override
     public RenderType getRenderType(RepeaterEntity animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick)
     {
         return RenderType.entityCutout(texture);

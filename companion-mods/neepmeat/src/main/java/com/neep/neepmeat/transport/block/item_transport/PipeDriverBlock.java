@@ -59,6 +59,7 @@ public class PipeDriverBlock extends BaseBlock implements EntityBlock, ItemPipe
         this.registerDefaultState(defaultBlockState().setValue(VALID, false).setValue(HAS_REQUESTS, false));
     }
 
+    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         return 0;
@@ -70,16 +71,19 @@ public class PipeDriverBlock extends BaseBlock implements EntityBlock, ItemPipe
         return true;
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         return false;
     }
 
+    @Override
     public boolean canItemLeave(ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace, boolean routed)
     {
         return false;
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         return PipeConnections.ALL.copy();
@@ -93,7 +97,7 @@ public class PipeDriverBlock extends BaseBlock implements EntityBlock, ItemPipe
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         super.neighborChanged(state, world, pos, block, fromPos, notify);
         if (!world.isClientSide()) world.getBlockEntity(pos, ItemTransport.PIPE_DRIVER_BE).ifPresent(be -> be.getNetwork(null).invalidate());
@@ -162,11 +166,13 @@ public class PipeDriverBlock extends BaseBlock implements EntityBlock, ItemPipe
         return InteractionResult.SUCCESS;
     }
 
+    @Override
     public PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state)
     {
         return ItemPipeVertex.NULL;
     }
 
+    @Override
     public boolean alwaysAutoConnect(BlockState state, Direction face)
     {
         return true;

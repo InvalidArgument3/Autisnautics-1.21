@@ -38,7 +38,7 @@ public class TransducerBlock extends BaseBlock implements EntityBlock, NormalPla
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
+    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
     {
         world.getBlockEntity(pos, NMBlockEntities.TRANSDUCER).ifPresent(TransducerBlockEntity::update);
         super.neighborChanged(state, world, pos, block, fromPos, notify);

@@ -30,16 +30,19 @@ public class BaseGunModel<T extends BaseGunItem> extends GeoModel<T>
     }
 
 
+    @Override
     public ResourceLocation getModelResource(T object)
     {
         return modelPath;
     }
 
+    @Override
     public ResourceLocation getTextureResource(T object)
     {
         return texturePath;
     }
 
+    @Override
     public ResourceLocation getAnimationResource(T animatable)
     {
         return animationPath;

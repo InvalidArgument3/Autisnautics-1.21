@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.item;
+import net.minecraft.world.item.Item;
 
 import com.neep.meatlib.block.MeatlibBlock;
 import com.neep.meatlib.client.MeatlibFluidRendering;
@@ -76,7 +77,8 @@ public class TankItem extends FluidComponentItem
         return tankType.capacity();
     }
 
-    public void appendHoverText(ItemStack itemStack, Level world, List<Component> tooltip, TooltipFlag tooltipContext)
+    @Override
+    public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
         CompoundTag blockNbt = getBlockEntityData(itemStack);

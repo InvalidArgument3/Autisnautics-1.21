@@ -79,6 +79,7 @@ public class FlexTankModel implements UnbakedModel, BakedModel, FabricBakedModel
     }
 
     @Nullable
+    @Override
     public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
     {
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);
@@ -102,16 +103,19 @@ public class FlexTankModel implements UnbakedModel, BakedModel, FabricBakedModel
         return this;
     }
 
+    @Override
     public boolean isVanillaAdapter()
     {
         return false;
     }
 
+    @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         context.meshConsumer().accept(outerMesh);
     }
 
+    @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
         context.meshConsumer().accept(outerMesh);

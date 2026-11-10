@@ -66,27 +66,32 @@ public class EntityVariant<T extends Entity> implements TransferVariant<EntityTy
         return BLANK;
     }
 
+    @Override
     public boolean isBlank()
     {
         return entityType == null;
     }
 
+    @Override
     public EntityType<T> getObject()
     {
         return entityType;
     }
 
+    @Override
     public @Nullable CompoundTag getNbt()
     {
         return nbt;
     }
 
+    @Override
     public CompoundTag toNbt()
     {
         throw new NotImplementedException();
 //        return ;
     }
 
+    @Override
     public void toPacket(FriendlyByteBuf buf)
     {
         throw new NotImplementedException();

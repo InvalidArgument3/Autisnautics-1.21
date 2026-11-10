@@ -75,7 +75,7 @@ public class BigBlock2Structure extends BaseDummyBlock
 
     @Override
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         Vec3i offset = parent.getOffset(state);
         BlockState originState = world.getBlockState(pos.subtract(offset));
@@ -105,6 +105,7 @@ public class BigBlock2Structure extends BaseDummyBlock
         return parent.getDescriptionId();
     }
 
+    @Override
     public ItemLike dropsLike()
     {
         return parent;
@@ -117,6 +118,7 @@ public class BigBlock2Structure extends BaseDummyBlock
         return 1;
     }
 
+    @Override
     public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
     {
         return parent.getCloneItemStack(world, pos, state);
