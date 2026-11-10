@@ -12,18 +12,12 @@
 
 package com.neep.neepmeat.transport.interfaces;
 
-import com.neep.neepmeat.enlightenment.EnlightenmentEventManager;
 import com.neep.neepmeat.transport.blood_network.BloodNetworkManager;
 import com.neep.neepmeat.transport.item_network.PipeCacheImpl;
 
 public interface IServerWorld
 {
     default PipeCacheImpl getItemNetwork()
-    {
-        return null;
-    }
-
-    default EnlightenmentEventManager getEnlightenmentEventManager()
     {
         return null;
     }

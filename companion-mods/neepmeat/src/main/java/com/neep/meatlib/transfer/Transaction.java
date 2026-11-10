@@ -17,7 +17,12 @@ public final class Transaction implements TransactionContext, AutoCloseable {
 
     private final Transaction parent;
     private final List<Runnable> rollbacks = new ArrayList<>();
+    private final List<Runnable> outerCommits = new ArrayList<>();
+    private final List<SlotDelta> slotDeltas = new ArrayList<>();
     private boolean open = true;
+
+    /** Net change reserved against a handler slot. Positive is an insert. */
+    public record SlotDelta(Object target, int index, Object variant, int delta) {}
 
     private Transaction(Transaction parent) {
         this.parent = parent;
@@ -46,6 +51,48 @@ public final class Transaction implements TransactionContext, AutoCloseable {
         rollbacks.add(rollback);
     }
 
+    /**
+     * Runs only if the outermost transaction commits. Nested abort discards it.
+     * Nested commit moves it to the parent.
+     */
+    public void addOuterCommit(Runnable action) {
+        if (!open) {
+            throw new IllegalStateException("transaction is closed");
+        }
+        outerCommits.add(action);
+    }
+
+    public void reserve(Object target, int index, Object variant, int delta) {
+        if (!open) {
+            throw new IllegalStateException("transaction is closed");
+        }
+        slotDeltas.add(new SlotDelta(target, index, variant, delta));
+    }
+
+    public int slotDelta(Object target, int index) {
+        int sum = 0;
+        for (Transaction cursor = this; cursor != null; cursor = cursor.parent) {
+            for (SlotDelta delta : cursor.slotDeltas) {
+                if (delta.target == target && delta.index == index) {
+                    sum += delta.delta;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public Object slotVariant(Object target, int index) {
+        Object variant = null;
+        for (Transaction cursor = this; cursor != null; cursor = cursor.parent) {
+            for (SlotDelta delta : cursor.slotDeltas) {
+                if (delta.target == target && delta.index == index && delta.variant != null) {
+                    variant = delta.variant;
+                }
+            }
+        }
+        return variant;
+    }
+
     public void commit() {
         onRename();
     }
@@ -58,10 +105,17 @@ public final class Transaction implements TransactionContext, AutoCloseable {
         open = false;
         if (parent == null) {
             CURRENT.remove();
+            for (Runnable action : outerCommits) {
+                action.run();
+            }
         } else {
             parent.rollbacks.addAll(rollbacks);
+            parent.outerCommits.addAll(outerCommits);
+            parent.slotDeltas.addAll(slotDeltas);
         }
         rollbacks.clear();
+        outerCommits.clear();
+        slotDeltas.clear();
     }
 
     @Override
@@ -74,6 +128,8 @@ public final class Transaction implements TransactionContext, AutoCloseable {
             rollbacks.get(index).run();
         }
         rollbacks.clear();
+        outerCommits.clear();
+        slotDeltas.clear();
         if (parent == null) {
             CURRENT.remove();
         }

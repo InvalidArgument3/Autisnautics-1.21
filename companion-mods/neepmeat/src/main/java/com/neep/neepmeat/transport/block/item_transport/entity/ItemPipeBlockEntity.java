@@ -55,7 +55,7 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemPipeBlockEntity extends BlockEntity {
+public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmeat.transport.api.item_network.RoutablePipe {
     public static final float SPEED = 0.1F;
 
     private final List<TravellingItem> items = new ArrayList<>();
@@ -63,8 +63,57 @@ public class ItemPipeBlockEntity extends BlockEntity {
     private final List<FilterEntry> filters = new ArrayList<>();
     private int lastOutput;
 
+    private static boolean routableRegistered;
+
     public ItemPipeBlockEntity(BlockPos pos, BlockState state) {
         super(NeepMachines.ITEM_PIPE_BE.get(), pos, state);
+        if (!routableRegistered) {
+            routableRegistered = true;
+            com.neep.neepmeat.transport.api.item_network.RoutablePipe.LOOKUP.registerForBlockEntity(
+                    (blockEntity, context) -> blockEntity instanceof ItemPipeBlockEntity pipe
+                            && pipe.getBlockState().getBlock() instanceof com.neep.neepmeat.machine.transport.StorageBusBlock ? pipe : null,
+                    NeepMachines.ITEM_PIPE_BE.get());
+        }
+    }
+
+    @Override
+    public com.neep.neepmeat.transport.api.item_network.RoutablePipe.Result request(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, long amount, com.neep.neepmeat.transport.fluid_network.node.NodePos fromPos, com.neep.neepmeat.transport.api.item_network.RoutingNetwork.RequestContext context, com.neep.meatlib.transfer.TransactionContext transaction) {
+        return com.neep.neepmeat.transport.api.item_network.RoutablePipe.Result.FAIL;
+    }
+
+    @Override
+    public long request2(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, long amount, com.neep.neepmeat.transport.fluid_network.node.NodePos dest, com.neep.meatlib.transfer.TransactionContext transaction) {
+        return 0;
+    }
+
+    @Override
+    public java.util.stream.Stream<com.neep.meatlib.transfer.StorageView<com.neep.meatlib.transfer.ItemVariant>> getAvailable(com.neep.meatlib.transfer.TransactionContext transaction) {
+        if (!(getBlockState().getBlock() instanceof com.neep.neepmeat.machine.transport.StorageBusBlock) || level == null) {
+            return java.util.stream.Stream.empty();
+        }
+        java.util.List<com.neep.meatlib.transfer.StorageView<com.neep.meatlib.transfer.ItemVariant>> views = new java.util.ArrayList<>();
+        for (net.minecraft.core.Direction direction : net.minecraft.core.Direction.values()) {
+            net.neoforged.neoforge.items.IItemHandler handler = level.getCapability(
+                    net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, worldPosition.relative(direction), direction.getOpposite());
+            if (handler == null) {
+                continue;
+            }
+            com.neep.meatlib.transfer.Storage<com.neep.meatlib.transfer.ItemVariant> storage = com.neep.meatlib.transfer.ItemHandlerStorage.of(handler);
+            if (storage != null) {
+                storage.forEach(views::add);
+            }
+        }
+        return views.stream();
+    }
+
+    @Override
+    public BlockPos getRoutablePipePos() {
+        return worldPosition;
+    }
+
+    @Override
+    public com.neep.neepmeat.transport.fluid_network.node.NodePos requestDestPosDir() {
+        return null;
     }
 
     public PipeNode vertex() {
@@ -312,6 +361,14 @@ public class ItemPipeBlockEntity extends BlockEntity {
         public PipeVertex getPipeVertex(ServerLevel level, BlockPos pos, BlockState state) {
             return this;
         }
+    }
+
+    public java.util.List<com.neep.neepmeat.transport.item_network.ItemInPipe> getItems() {
+        java.util.List<com.neep.neepmeat.transport.item_network.ItemInPipe> result = new java.util.ArrayList<>();
+        for (TravellingItem item : items) {
+            result.add(new com.neep.neepmeat.transport.item_network.ItemInPipe(com.neep.meatlib.transfer.ItemVariant.of(item.stack), item.stack.getCount()));
+        }
+        return result;
     }
 
     private static final class TravellingItem {

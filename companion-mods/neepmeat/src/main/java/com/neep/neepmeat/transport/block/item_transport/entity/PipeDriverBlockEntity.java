@@ -16,6 +16,7 @@ import com.neep.neepmeat.machine.transport.FilterPipeMenu;
 import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
 import com.neep.neepmeat.machine.transport.StorageBusBlock;
 import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
+import com.neep.neepmeat.transport.block.item_transport.RoutingNetworkImpl;
 import com.neep.neepmeat.transport.block.fluid_transport.FluidPipeBlock;
 import com.neep.neepmeat.transport.block.fluid_transport.PumpBlock;
 import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
@@ -41,13 +42,75 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PipeDriverBlockEntity extends BlockEntity {
+public class PipeDriverBlockEntity extends BlockEntity implements com.neep.neepmeat.plc.robot.PLCActuator {
     /**
      * The live {@code RoutingNetworkImpl} stays excluded until {@code ItemTransport} and
      * {@code PipeCacheImpl} compile. Stock reads zero when this is null.
      */
+    private RoutingNetworkImpl network;
+
     public RoutingNetwork getNetwork(Void ignored) {
-        return null;
+        if (!(level instanceof net.minecraft.server.level.ServerLevel server)) {
+            return null;
+        }
+        if (network == null) {
+            network = new RoutingNetworkImpl(worldPosition, () -> server);
+        }
+        if (network.needsUpdate()) {
+            network.update();
+        }
+        return network;
+    }
+
+    @Override
+    public BlockPos getBasePos() {
+        return worldPosition;
+    }
+
+    @Override
+    public void spawnItem(net.minecraft.world.item.ItemStack stored) {
+    }
+
+    @Override
+    public net.minecraft.world.item.ItemStack getStored(com.neep.neepmeat.api.plc.PLC plc) {
+        return net.minecraft.world.item.ItemStack.EMPTY;
+    }
+
+    @Override
+    public void setStored(com.neep.neepmeat.api.plc.PLC plc, net.minecraft.world.item.ItemStack stored) {
+    }
+
+    @Override
+    public void dumpStored(com.neep.neepmeat.api.plc.PLC plc) {
+    }
+
+    @Override
+    public boolean reachedTarget(com.neep.neepmeat.api.plc.PLC plc) {
+        return true;
+    }
+
+    @Override
+    public void setTarget(com.neep.neepmeat.api.plc.PLC plc, @org.jetbrains.annotations.Nullable BlockPos target) {
+    }
+
+    @Override
+    public double getX() {
+        return worldPosition.getX() + 0.5;
+    }
+
+    @Override
+    public double getY() {
+        return worldPosition.getY() + 0.5;
+    }
+
+    @Override
+    public double getZ() {
+        return worldPosition.getZ() + 0.5;
+    }
+
+    @Override
+    public boolean actuatorRemoved() {
+        return isRemoved();
     }
     private final List<DeferredRequest> deferred = new ArrayList<>();
     private int cooldown;

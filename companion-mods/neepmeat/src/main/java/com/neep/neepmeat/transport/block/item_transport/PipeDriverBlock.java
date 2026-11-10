@@ -29,6 +29,8 @@ import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
+import com.neep.meatlib.item.ItemSettings;
+import com.neep.meatlib.registry.RegistrationContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -37,17 +39,26 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Nullable;
 
-public class PipeDriverBlock extends BaseEntityBlock {
+public class PipeDriverBlock extends BaseEntityBlock implements com.neep.neepmeat.transport.api.pipe.ItemPipe {
     public static final BooleanProperty VALID = BooleanProperty.create("valid");
     public static final MapCodec<PipeDriverBlock> CODEC = simpleCodec(properties -> new PipeDriverBlock());
 
     public PipeDriverBlock() {
-        super(MeatlibBlockSettings.create().strength(1.5F).properties());
+        this(MeatlibBlockSettings.create().strength(1.5F).properties());
+    }
+
+    public PipeDriverBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties properties) {
+        this(properties);
+    }
+
+    private PipeDriverBlock(BlockBehaviour.Properties properties) {
+        super(properties);
         registerDefaultState(defaultBlockState().setValue(VALID, false));
     }
 
@@ -59,6 +70,25 @@ public class PipeDriverBlock extends BaseEntityBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(VALID);
+    }
+
+    @Override
+    public boolean isConnected(net.minecraft.world.level.Level world, BlockPos pos, BlockState state, net.minecraft.core.Direction direction) {
+        return true;
+    }
+
+    @Override
+    public long insert(net.minecraft.world.level.Level world, BlockPos pos, BlockState state, net.minecraft.core.Direction direction, com.neep.neepmeat.transport.item_network.ItemInPipe item, com.neep.meatlib.transfer.TransactionContext transaction) {
+        return 0;
+    }
+
+    @Override
+    public com.neep.meatlib.util.PipeConnections getConnections(BlockState state, @org.jetbrains.annotations.Nullable net.minecraft.core.Direction forbidden) {
+        com.neep.meatlib.util.PipeConnections connections = new com.neep.meatlib.util.PipeConnections(java.util.EnumSet.allOf(net.minecraft.core.Direction.class));
+        if (forbidden != null) {
+            connections.set(forbidden, false);
+        }
+        return connections;
     }
 
     @Override

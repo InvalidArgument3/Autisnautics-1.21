@@ -27,10 +27,13 @@ import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEn
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.mojang.serialization.MapCodec;
+import com.neep.meatlib.item.ItemSettings;
+import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -41,6 +44,10 @@ public class MergePipeBlock extends ItemPipeBlock {
 
     public MergePipeBlock() {
         super();
+    }
+
+    public MergePipeBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties properties) {
+        super(ctx, itemSettings, properties);
     }
 
     @Override

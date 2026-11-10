@@ -5,7 +5,7 @@
  *
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
  * Item and fluid lookups use BlockCapabilityCache. Other lookups call BlockApiLookup.find.
- * Capability insert and extract ignore the Fabric transaction.
+ * Capability insert and extract wait for the outer transaction to commit.
  */
 
 package net.fabricmc.fabric.api.lookup.v1.block;
@@ -32,7 +32,7 @@ public final class BlockApiCache<A, C> {
     private BlockApiCache(BlockApiLookup<A, C> lookup, ServerLevel level, BlockPos pos) {
         this.lookup = lookup;
         this.level = level;
-        this.pos = pos;
+        this.pos = pos.immutable();
     }
 
     public static <A, C> BlockApiCache<A, C> create(BlockApiLookup<A, C> lookup, ServerLevel level, BlockPos pos) {

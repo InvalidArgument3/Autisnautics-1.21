@@ -51,7 +51,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class FilteredEjectorBlock extends EjectorBlock
 {
-    public FilteredEjectorBlock(RegistrationContext ctx, ItemSettings itemSettings, FabricBlockSettings settings)
+    public FilteredEjectorBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties settings)
     {
         super(ctx, itemSettings, settings);
     }

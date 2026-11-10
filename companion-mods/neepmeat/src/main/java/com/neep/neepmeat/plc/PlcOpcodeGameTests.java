@@ -61,6 +61,29 @@ public class PlcOpcodeGameTests {
     }
 
     @GameTest(template = "empty")
+    public static void stockReadsAChestThroughThePipeDriver(GameTestHelper helper) {
+        BlockPos chest = new BlockPos(1, 1, 1);
+        BlockPos bus = new BlockPos(2, 1, 1);
+        BlockPos driver = new BlockPos(3, 1, 1);
+        helper.setBlock(chest, Blocks.CHEST.defaultBlockState());
+        ChestBlockEntity blockEntity = helper.getBlockEntity(chest);
+        blockEntity.setItem(0, new ItemStack(Items.COBBLESTONE, 4));
+        helper.setBlock(bus, NeepMachines.STORAGE_BUS.get().defaultBlockState());
+        helper.setBlock(driver, NeepMachines.PIPE_DRIVER.get().defaultBlockState());
+        com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity pipe = helper.getBlockEntity(driver);
+        try {
+            PLCProgram program = compile(helper, "stock \"minecraft:cobblestone\"\n");
+            InstructionPlc plc = new InstructionPlc(program, pipe);
+            run(plc, 8);
+            helper.assertTrue(plc.error() == null, "error " + plc.error());
+            helper.assertTrue(plc.dataStack().pop().getAsInt() == 4, "stock through the driver");
+            helper.succeed();
+        } catch (NeepASM.ProgramBuildException | NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+        }
+    }
+
+    @GameTest(template = "empty")
     public static void disableInterruptsClearsTheFlag(GameTestHelper helper) {
         try {
             PLCProgram program = compile(helper, "idisable\n");

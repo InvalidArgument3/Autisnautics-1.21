@@ -148,8 +148,6 @@ com/neep/neepmeat/api/multiblock2/MultiBlockStructure.java
 com/neep/neepmeat/api/multiblock2/Multiblock2ControllerBlock.java
 com/neep/neepmeat/api/multiblock2/MultiblockUnassembledPattern.java
 com/neep/neepmeat/api/multiblock2/TestMultiblock.java
-com/neep/neepmeat/api/plc/instruction/DyCallInstruction.java
-com/neep/neepmeat/api/plc/instruction/DyLocInstruction.java
 com/neep/neepmeat/api/plc/instruction/PredicatedInstructionBuilder.java
 com/neep/neepmeat/api/plc/recipe/ManufactureStep.java
 com/neep/neepmeat/api/processing/BlockCrushingRegistry.java
@@ -584,13 +582,11 @@ com/neep/neepmeat/plc/block/entity/ProgramCabinetBlockEntity.java
 com/neep/neepmeat/plc/editor/ProgramEditor.java
 com/neep/neepmeat/plc/editor/ShellState.java
 com/neep/neepmeat/plc/instruction/CombineInstruction.java
-com/neep/neepmeat/plc/instruction/ExecInstruction.java
 com/neep/neepmeat/plc/instruction/ImplantInstruction.java
 com/neep/neepmeat/plc/instruction/NeepBusReadInstruction.java
 com/neep/neepmeat/plc/instruction/NeepBusWriteInstruction.java
 com/neep/neepmeat/plc/instruction/RemoveInstruction.java
 com/neep/neepmeat/plc/instruction/WaitRedstoneInstruction.java
-com/neep/neepmeat/plc/instruction/block/Area3Instruction.java
 com/neep/neepmeat/plc/instruction/block/SelItemInstruction.java
 com/neep/neepmeat/plc/instruction/gui/InstructionAttributes.java
 com/neep/neepmeat/plc/item/ProgramCardItem.java
@@ -647,11 +643,10 @@ com/neep/neepmeat/thord/token/ThordLexer.java
 com/neep/neepmeat/transport/FluidPipeBlockItem.java
 com/neep/neepmeat/transport/FluidTransport.java
 com/neep/neepmeat/transport/ItemPipeBlockItem.java
-com/neep/neepmeat/transport/ItemTransport.java
 com/neep/neepmeat/transport/TransportComponents.java
 com/neep/neepmeat/transport/api/AutoEjector.java
 com/neep/neepmeat/transport/api/FluidTransportConstants.java
-com/neep/neepmeat/transport/api/item_network/CraftingPredicate.java
+com/neep/neepmeat/transport/ItemTransport.java
 com/neep/neepmeat/transport/api/item_network/StorageDriver.java
 com/neep/neepmeat/transport/api/pipe/AbstractAxialFluidPipe.java
 com/neep/neepmeat/transport/api/pipe/AbstractPipeBlock.java
@@ -749,9 +744,7 @@ com/neep/neepmeat/transport/item/ProcessCardComponent.java
 com/neep/neepmeat/transport/item/ProcessCardItem.java
 com/neep/neepmeat/transport/item_network/ItemPipeGraphHelperImpl.java
 com/neep/neepmeat/transport/item_network/ItemPipeVertexImpl.java
-com/neep/neepmeat/transport/item_network/PipeCacheImpl.java
 com/neep/neepmeat/transport/item_network/RetrievalTarget.java
-com/neep/neepmeat/transport/item_network/RoutingNetworkCache.java
 com/neep/neepmeat/transport/item_network/RoutingNetworkDFSFinder.java
 com/neep/neepmeat/transport/screen/FilterScreenHandler.java
 com/neep/neepmeat/transport/screen/LimiterValveScreenHandler.java
@@ -763,7 +756,6 @@ com/neep/neepmeat/transport/screen/TransportScreenHandlers.java
 com/neep/neepmeat/transport/screen/VSCScreenHandler.java
 com/neep/neepmeat/transport/screen/widget/RequestListWidgetHandler.java
 com/neep/neepmeat/transport/screen/widget/RequesterConfigWidgetHandler.java
-com/neep/neepmeat/transport/util/PipePathfinding.java
 com/neep/neepmeat/transport/worm/GlobalDistributorRouting.java
 com/neep/neepmeat/util/FilterUtils.java
 com/neep/neepmeat/util/TagSuggestions.java
@@ -1062,7 +1054,6 @@ com/neep/neepmeat/transport/block/fluid_transport/FluidGaugeBlock.java
 com/neep/neepmeat/transport/block/fluid_transport/WindowPipeBlock.java
 com/neep/neepmeat/transport/block/item_transport/FlexSiloBlock.java
 com/neep/neepmeat/transport/block/item_transport/entity/AdvancedRouterBlockEntity.java
-com/neep/neepmeat/transport/block/item_transport/entity/NetworkTrackingItemPipe.java
 com/neep/neepmeat/transport/block/item_transport/machine/ItemEjector.java
 com/neep/neepmeat/transport/block/item_transport/machine/ItemEjectorUpdate.java
 com/neep/neepmeat/transport/client/renderer/FluidGaugeBlockRenderer.java
@@ -1078,7 +1069,6 @@ com/neep/neepmeat/transport/client/screen/filter/AdvancedEjectorConfigWidget.jav
 com/neep/neepmeat/transport/client/screen/filter/EmptyFilterWidget.java
 com/neep/neepmeat/transport/client/screen/filter/FilterButtonsPanel.java
 com/neep/neepmeat/transport/client/screen/filter/FilterPanel.java
-com/neep/neepmeat/transport/interfaces/IServerWorld.java
 com/neep/neepmeat/transport/screen/AdvancedEjectorScreenHandler.java
 com/neep/neepmeat/transport/screen/FilterWidgetHandler.java
 com/neep/neepmeat/transport/screen/ItemEjectorWidgetHandler.java
@@ -1087,8 +1077,6 @@ com/neep/neepmeat/transport/screen/PowerEmitterScreenHandler.java
 com/neep/neepmeat/transport/screen/ProcessInterfaceScreenHandler.java
 com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java
 com/neep/neepmeat/transport/screen/widget/VSCConfigWidgetHandler.java
-com/neep/neepmeat/transport/util/BOM.java
-com/neep/neepmeat/util/PipeGraphUtil.java
 com/neep/neepmeat/util/SightUtil.java
 com/neep/meatweapons/client/meatgun/animation/AnimatedAction.java
 com/neep/meatweapons/client/meatgun/animation/ChopMeatgunAnimation.java
@@ -1297,4 +1285,3 @@ com/neep/neepmeat/thord/word/FunctionWord.java
 com/neep/neepmeat/thord/word/ImmediateWord.java
 com/neep/neepmeat/thord/word/VariableWord.java
 com/neep/neepmeat/thord/word/Word.java
-com/neep/neepmeat/transport/block/item_transport/RoutingNetworkImpl.java

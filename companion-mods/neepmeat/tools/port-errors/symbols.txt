@@ -1,24 +1,23 @@
-# run 56 end
-# start 2141
-# end 2132
-
-185	does not override
-25	invalid method reference
-14	no suitable method found for of
-13	cannot find symbol method getId()
-12	incompatible types: invalid method reference
-12	no suitable method found for register
-12	method stonecutterResultFromBase in class RecipeProvider cannot be applied to given types
-11	incompatible types: CAP#1 cannot be converted to ImplantManager
-11	incompatible types: inference variable T has incompatible bounds
-11	incompatible types: Block cannot be converted to Properties
-11	no suitable method found for checkType
-10	cannot find symbol variable builder
-9	cannot find symbol class Serializer
-9	cannot find symbol class Entry
-9	cannot find symbol method getStorage(<null>)
-8	cannot find symbol class RenderProvider
-8	incompatible types: possible lossy conversion from double to float
-8	method fromNamespaceAndPath in class ResourceLocation cannot be applied to given types
-8	incompatible types: BuiltFluid cannot be converted to Fluid
-8	cannot find symbol variable vertex
+start 2132
+end 2073
+plc 167
+1074 cannot find symbol
+ 183 method does not override or implement a method from a supertype
+  20 invalid method reference
+  14 incompatible types: invalid method reference
+  12 method stonecutterResultFromBase in class RecipeProvider cannot be applied to given types;
+  11 incompatible types: CAP#1 cannot be converted to ImplantManager
+  11 incompatible types: inference variable T has incompatible bounds
+  11 incompatible types: Block cannot be converted to Properties
+   9 no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+   8 incompatible types: possible lossy conversion from double to float
+   8 method fromNamespaceAndPath in class ResourceLocation cannot be applied to given types;
+   8 incompatible types: BuiltFluid<CAP#1,CAP#2> cannot be converted to Fluid
+   8 Serializer is not abstract and does not override abstract method streamCodec() in RecipeSerializer
+   8 codec() in Serializer cannot implement codec() in RecipeSerializer
+   7 getHasName(ItemLike) has protected access in RecipeProvider
+   7 method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+   7 method addClosable in class BasicScreenHandler cannot be applied to given types;
+   7 incompatible types: DeferredHolder<SoundEvent,SoundEvent> cannot be converted to SoundEvent
+   7 method translationKey in class NeepMeat cannot be applied to given types;
+   7 constructor ItemPipeBlockEntity in class ItemPipeBlockEntity cannot be applied to given types;

@@ -12,7 +12,6 @@
 
 package com.neep.neepmeat.transport.util;
 
-import com.neep.meatlib.storage.MeatlibStorageUtil;
 import com.neep.neepmeat.util.PipeGraphUtil;
 import com.neep.neepmeat.transport.api.pipe.ItemPipe;
 import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEntity;
@@ -27,6 +26,7 @@ import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.ResourceAmount;
+import com.neep.meatlib.transfer.Transaction;
 import com.neep.meatlib.transfer.TransactionContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -117,7 +117,7 @@ public class PipePathfinding
                 var storage = node.vertex.getStorage(face);
                 if (storage != null)
                 {
-                    long transferable = MeatlibStorageUtil.simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
+                    long transferable = simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
                     if (transferable > 0)
                     {
                         return LongObjectPair.of(transferable, makeRoute(world, node, face));
@@ -177,7 +177,7 @@ public class PipePathfinding
                 var storage = vertex.getStorage(direction);
                 if (storage != null)
                 {
-                    long transferable = MeatlibStorageUtil.simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
+                    long transferable = simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
                     if (transferable > 0)
                     {
                         // There's probably an elegant way of avoiding this
@@ -257,7 +257,7 @@ public class PipePathfinding
                     var storage = vertex.getStorage(direction);
                     if (storage != null)
                     {
-                        long transferable = MeatlibStorageUtil.simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
+                        long transferable = simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction);
                         if (transferable > 0)
                         {
                             return LongObjectPair.of(transferable, ItemRoute.EMPTY);
@@ -334,11 +334,20 @@ public class PipePathfinding
                 }
                 else if ((storage = ItemStorage.SIDED.find(world, offset, offsetState, null, direction.getOpposite())) != null)
                 {
-                    return Math.max(0, MeatlibStorageUtil.simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction)
+                    return Math.max(0, simulateInsert(storage, item.resource(), Long.MAX_VALUE, transaction)
                             - alreadyInTransit);
                 }
             }
         }
         return 0;
+    }
+
+    private static long simulateInsert(Storage<ItemVariant> storage, ItemVariant resource, long amount, TransactionContext transaction) {
+        Transaction parent = transaction instanceof Transaction open ? open : null;
+        try (Transaction nested = parent == null ? Transaction.openOuter() : parent.openNested()) {
+            long moved = storage.insert(resource, amount, nested);
+            nested.abort();
+            return moved;
+        }
     }
 }

@@ -11,6 +11,7 @@ package com.neep.meatlib.block;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 /**
@@ -128,6 +130,10 @@ public final class MeatlibBlockSettings {
         for (TagKey<Block> tag : extra) {
             tags.add(tag);
         }
+        return this;
+    }
+
+    public MeatlibBlockSettings simpleDrop(Supplier<Item> drop) {
         return this;
     }
 

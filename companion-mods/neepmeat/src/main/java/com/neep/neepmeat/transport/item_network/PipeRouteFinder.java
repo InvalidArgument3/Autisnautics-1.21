@@ -28,6 +28,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEnti
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 
 import com.neep.neepmeat.transport.ItemRoute;
+import com.neep.neepmeat.transport.item_network.ItemPipeVertex;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
@@ -48,13 +49,13 @@ public final class PipeRouteFinder {
     private PipeRouteFinder() {}
 
     public static ItemRoute find(Level level, BlockPos start, Direction enteredFrom, ItemStack stack) {
-        PriorityQueue<Node> frontier = new PriorityQueue<>(Comparator.comparingInt(node -> node.cost));
+        PriorityQueue<Search> frontier = new PriorityQueue<>(Comparator.comparingInt(node -> node.cost));
         Set<BlockPos> visited = new HashSet<>();
-        Node startNode = new Node(start, 0, null, null);
+        Search startNode = new Search(start, 0, null, null);
         frontier.add(startNode);
         visited.add(start);
         while (!frontier.isEmpty()) {
-            Node node = frontier.poll();
+            Search node = frontier.poll();
             for (Direction direction : Direction.values()) {
                 if (node == startNode && direction == enteredFrom) {
                     continue;
@@ -66,7 +67,7 @@ public final class PipeRouteFinder {
                         continue;
                     }
                     int cost = node.cost + (pipe.prioritise() ? -1 : 1);
-                    frontier.add(new Node(next, cost, node, direction));
+                    frontier.add(new Search(next, cost, node, direction));
                     continue;
                 }
                 IItemHandler handler = level.getCapability(Capabilities.ItemHandler.BLOCK, next, direction.getOpposite());
@@ -78,7 +79,7 @@ public final class PipeRouteFinder {
         return ItemRoute.EMPTY;
     }
 
-    private static ItemRoute route(Node node, Direction last) {
+    private static ItemRoute route(Search node, Direction last) {
         List<Direction> steps = new ArrayList<>();
         steps.add(last);
         while (node.exit != null) {
@@ -89,17 +90,35 @@ public final class PipeRouteFinder {
         return new ItemRoute(steps);
     }
 
-    public static final class Node {
+    private static final class Search {
         private final BlockPos pos;
         private final int cost;
-        private final Node parent;
+        private final Search parent;
         private final Direction exit;
 
-        private Node(BlockPos pos, int cost, Node parent, Direction exit) {
+        private Search(BlockPos pos, int cost, Search parent, Direction exit) {
             this.pos = pos;
             this.cost = cost;
             this.parent = parent;
             this.exit = exit;
+        }
+    }
+
+    /** Vertex node used by the item-network pathfinder. */
+    public static final class Node implements Comparable<Node> {
+        public final ItemPipeVertex vertex;
+        public int cost;
+        public Node parent;
+        public Direction parentOutFace;
+        public Direction inFace;
+
+        public Node(ItemPipeVertex vertex) {
+            this.vertex = java.util.Objects.requireNonNull(vertex);
+        }
+
+        @Override
+        public int compareTo(Node other) {
+            return Integer.compare(cost, other.cost);
         }
     }
 }

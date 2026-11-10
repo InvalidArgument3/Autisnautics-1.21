@@ -27,6 +27,8 @@ import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEn
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.mojang.serialization.MapCodec;
+import com.neep.meatlib.item.ItemSettings;
+import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -35,6 +37,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
@@ -43,6 +46,10 @@ public class FilterItemPipeBlock extends ItemPipeBlock {
 
     public FilterItemPipeBlock() {
         super();
+    }
+
+    public FilterItemPipeBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties properties) {
+        super(ctx, itemSettings, properties);
     }
 
     @Override

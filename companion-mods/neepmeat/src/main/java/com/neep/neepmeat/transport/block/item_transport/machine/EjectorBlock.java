@@ -69,9 +69,9 @@ public class EjectorBlock extends BaseFacingBlock implements EntityBlock, ItemPi
 {
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
 
-    public EjectorBlock(RegistrationContext ctx, ItemSettings itemSettings, FabricBlockSettings settings)
+    public EjectorBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties settings)
     {
-        super(ctx, itemSettings, settings.noOcclusion().isRedstoneConductor(InventoryDetectorBlock::never));
+        super(ctx, itemSettings, settings);
         registerDefaultState(defaultBlockState().setValue(ACTIVE, false));
     }
 

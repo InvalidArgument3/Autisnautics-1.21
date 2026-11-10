@@ -17,15 +17,25 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.ArrayList;
+import java.util.IdentityHashMap;
+import java.util.List;
+import java.util.Map;
+
 public final class BlockApiLookup<A, C> {
     private final ResourceLocation id;
+    private final Class<A> api;
+    private final List<BlockApiProvider<A, C>> fallbacks = new ArrayList<>();
+    private final Map<Block, BlockApiProvider<A, C>> blocks = new IdentityHashMap<>();
+    private final Map<BlockEntityType<?>, BlockEntityApiProvider<A, C>> blockEntities = new IdentityHashMap<>();
 
-    private BlockApiLookup(ResourceLocation id) {
+    private BlockApiLookup(ResourceLocation id, Class<A> api) {
         this.id = id;
+        this.api = api;
     }
 
     public static <A, C> BlockApiLookup<A, C> get(ResourceLocation id, Class<A> api, Class<C> context) {
-        return new BlockApiLookup<>(id);
+        return new BlockApiLookup<>(id, api);
     }
 
     public ResourceLocation getId() {
@@ -33,24 +43,69 @@ public final class BlockApiLookup<A, C> {
     }
 
     public A find(Level world, BlockPos pos, C context) {
-        return null;
+        if (world == null || pos == null) {
+            return null;
+        }
+        return find(world, pos, world.getBlockState(pos), world.getBlockEntity(pos), context);
     }
 
     public A find(Level world, BlockPos pos, BlockState state, BlockEntity blockEntity, C context) {
+        if (blockEntity != null) {
+            BlockEntityApiProvider<A, C> provider = blockEntities.get(blockEntity.getType());
+            if (provider != null) {
+                A found = provider.find(blockEntity, context);
+                if (found != null) {
+                    return found;
+                }
+            }
+        }
+        if (state != null) {
+            BlockApiProvider<A, C> provider = blocks.get(state.getBlock());
+            if (provider != null) {
+                A found = provider.find(world, pos, state, blockEntity, context);
+                if (found != null) {
+                    return found;
+                }
+            }
+        }
+        for (BlockApiProvider<A, C> fallback : fallbacks) {
+            A found = fallback.find(world, pos, state, blockEntity, context);
+            if (found != null) {
+                return found;
+            }
+        }
         return null;
     }
 
-    public void registerSelf(Block... blocks) {}
+    public void registerSelf(Block... blocks) {
+        registerForBlocks((world, pos, state, blockEntity, context) -> api.isInstance(state.getBlock()) ? api.cast(state.getBlock()) : null, blocks);
+    }
 
-    public void registerSelf(BlockEntityType<?>... types) {}
+    public void registerSelf(BlockEntityType<?>... types) {
+        for (BlockEntityType<?> type : types) {
+            registerForBlockEntity((blockEntity, context) -> api.isInstance(blockEntity) ? api.cast(blockEntity) : null, type);
+        }
+    }
 
-    public void registerForBlocks(BlockApiProvider<A, C> provider, Block... blocks) {}
+    public void registerForBlocks(BlockApiProvider<A, C> provider, Block... blocks) {
+        for (Block block : blocks) {
+            this.blocks.put(block, provider);
+        }
+    }
 
-    public void registerForBlockEntity(BlockEntityApiProvider<A, C> provider, BlockEntityType<?> type) {}
+    public void registerForBlockEntity(BlockEntityApiProvider<A, C> provider, BlockEntityType<?> type) {
+        blockEntities.put(type, provider);
+    }
 
-    public void registerForBlockEntities(BlockEntityApiProvider<A, C> provider, BlockEntityType<?>... types) {}
+    public void registerForBlockEntities(BlockEntityApiProvider<A, C> provider, BlockEntityType<?>... types) {
+        for (BlockEntityType<?> type : types) {
+            registerForBlockEntity(provider, type);
+        }
+    }
 
-    public void registerFallback(BlockApiProvider<A, C> provider) {}
+    public void registerFallback(BlockApiProvider<A, C> provider) {
+        fallbacks.add(provider);
+    }
 
     @FunctionalInterface
     public interface BlockApiProvider<A, C> {

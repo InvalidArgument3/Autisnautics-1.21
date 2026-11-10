@@ -1,3 +1,19 @@
+## Transaction-aware capabilities and a live item network, jar 0.30.0-neoforge.65
+
+Combined-tree errors: **2132** at the start of this run, **2073** at the end. That is 59, not 400, and not at 1,732. The PLC closure was **172** and is **167**. `exclude.txt` is **1286**. It lost the routing network, the pipe cache, and AREA3, EXEC, DYCALL, and DYLOC. `tools/port-errors/symbols.txt` is the end histogram.
+
+Item and fluid capability adapters simulate inside the transaction and apply the move in `Transaction.addOuterCommit`. An abort drops the plan. Nested commit moves it to the parent. Fluid amounts convert at 81 droplets per millibucket, floored, and a remainder below 81 droplets moves nothing. Views report droplets.
+
+`TransferGameTests.abortedItemInsertLeavesTheChestAlone` inserts four cobblestone into a chest, aborts, and checks the chest is empty, then commits the same insert and checks the count. `fluidRoundTripUsesWholeMillibuckets` checks that 80 droplets store nothing, an aborted 81-droplet insert stores nothing, and a committed 161-droplet insert stores one millibucket that extracts back as 81 droplets.
+
+`PipeCacheImpl`, `PipePathfinding`, and `PipeGraphUtil` compile. `RoutingNetworkImpl` is included. `PipeDriverBlockEntity.getNetwork` builds that network and updates it. `stockReadsAChestThroughThePipeDriver` places a chest, a storage bus, and a pipe driver and checks `stock "minecraft:cobblestone"` pushes 4. The storage bus is the existing `ItemPipeBlockEntity` on `StorageBusBlock`; `StorageDriverBlockEntity` is still excluded. `BlockApiCache` copies its position so a reused mutable position does not retarget every cache. `BlockApiLookup.find` runs block-entity providers, block providers, and fallbacks.
+
+`ItemTransport` still does not compile in the included set. Its block registrations name classes that are still excluded. The pipe lookup and BFS depth live on `ItemPipeLookup`, and `ItemTransport` points at those same fields. Including `ItemTransport` after the constructor fixes failed on the excluded block classes. Splitting the lookup was the second path, and that is what the network uses.
+
+Opcodes that still execute as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM, WAIT_REDSTONE. AREA3, DYCALL, DYLOC, and EXEC are real providers. `END` is the real end opcode. A second include of the seven remaining instruction classes failed: NeepBus still needs `PLCBlockEntity.getSender`, select-item needs `BuilderBlockEntity.selectItem`, remove needs the recipe packages, and wait-redstone needs a `LazyBlockApiCache.of` for a `Void` context.
+
+`IServerWorld` no longer exposes `getEnlightenmentEventManager`. That class pulls the excluded enlightenment package. `MeatlibBlockSettings.simpleDrop` accepts the drop supplier and does not change the drop. `EjectorBlock`, `ItemPumpBlock`, and `FilteredEjectorBlock` take `BlockBehaviour.Properties`. Their previous `noOcclusion` call on `FabricBlockSettings` is not applied by the constructor. `pipeToAny` moves the item amount with `stackToAny` and does not consult pipe filters. `PipeGraphUtil` no longer names the excluded fluid-pipe vertex in its unused particle helper.
+
 ## Cached block lookups and more opcodes, jar 0.30.0-neoforge.64
 
 Combined-tree errors: **2141** at the start of this run, **2132** at the end. That is 9, not 400. The PLC closure was **175** and is **172**. `exclude.txt` is **1300**. `tools/port-errors/symbols.txt` is the end histogram.

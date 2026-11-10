@@ -36,6 +36,16 @@ public interface ItemPipe extends ConnectablePipe {
     /** Upstream leaves insertion abstract. The item and its removal callback live on {@link ItemInPipe} and {@code PipeItemMemory}. */
     long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction);
 
+    @Nullable
+    static ItemPipe findItemPipe(BlockState state) {
+        return state.getBlock() instanceof ItemPipe pipe ? pipe : null;
+    }
+
+    @Nullable
+    static ConnectablePipe findItemPipe(Level world, BlockPos pos, BlockState state) {
+        return findItemPipe(state);
+    }
+
     static boolean isConnectedIn(Level world, BlockPos pos, BlockState state, Direction direction) {
         return state.getBlock() instanceof ItemPipe pipe && pipe.isConnected(world, pos, state, direction);
     }
@@ -57,6 +67,10 @@ public interface ItemPipe extends ConnectablePipe {
     /** Upstream lets an item leave only through a connected face. */
     default boolean canItemLeave(com.neep.meatlib.transfer.ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace) {
         return isConnectedIn(world, pos, state, outFace);
+    }
+
+    default boolean canItemLeave(com.neep.meatlib.transfer.ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace, boolean routed) {
+        return canItemLeave(item, world, pos, state, outFace);
     }
 
     @Override

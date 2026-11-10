@@ -28,11 +28,14 @@ import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
+import com.neep.meatlib.item.ItemSettings;
+import com.neep.meatlib.registry.RegistrationContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -46,6 +49,10 @@ public class ItemPipeBlock extends ConnectedPipeBlock {
 
     public ItemPipeBlock() {
         super(MeatlibBlockSettings.create().strength(0.8F).nonOpaque().properties());
+    }
+
+    public ItemPipeBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties properties) {
+        super(properties);
     }
 
     @Override

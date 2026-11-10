@@ -57,6 +57,10 @@ public final class RegistrationContext {
     private final DeferredRegister.Items items;
     private final Set<String> appended = new HashSet<>();
 
+    public RegistrationContext(String namespace, Supplier<?> itemGroup) {
+        this(namespace);
+    }
+
     public RegistrationContext(String namespace) {
         this.namespace = namespace;
         this.blocks = DeferredRegister.createBlocks(namespace);

@@ -34,6 +34,10 @@ public interface DataStack
     /// Result may have remaining references. Do not mutate.
     ThordData peekUnsafe(int i) throws NeepASM.RuntimeException;
 
+    default ThordData peek(int i) throws NeepASM.RuntimeException {
+        return peekUnsafe(i);
+    }
+
     int size();
     boolean isEmpty();
 }

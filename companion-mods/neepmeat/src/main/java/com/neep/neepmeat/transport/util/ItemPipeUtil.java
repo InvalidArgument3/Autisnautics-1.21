@@ -39,6 +39,10 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 public final class ItemPipeUtil {
     private ItemPipeUtil() {}
 
+    public static boolean canDumpInto(Level level, BlockPos pos, BlockState state) {
+        return state.isAir() || state.canBeReplaced();
+    }
+
     public static final class EjectOperation {
         private final ServerLevel world;
         private final BlockPos pos;
@@ -59,6 +63,10 @@ public final class ItemPipeUtil {
         public EjectOperation useRouting(boolean routing) {
             this.routing = routing;
             return this;
+        }
+
+        public EjectOperation pipeToAny(com.neep.neepmeat.transport.item_network.ItemInPipe item, TransactionContext transaction) {
+            return stackToAny(item.resource(), item.amount(), transaction);
         }
 
         public EjectOperation stackToAny(ItemVariant resource, long amount, TransactionContext transaction) {

@@ -59,7 +59,9 @@ public class EnlightenmentEventManager
     {
         ServerTickEvents.START_WORLD_TICK.register(world ->
         {
-            ((IServerWorld) world).getEnlightenmentEventManager().tick(world);
+            if (world instanceof net.minecraft.server.level.ServerLevel server) {
+                ((IServerWorld) server).getEnlightenmentEventManager().tick(server);
+            }
         });
     }
 
@@ -68,7 +70,6 @@ public class EnlightenmentEventManager
         return ((IServerWorld) world).getEnlightenmentEventManager();
     }
 
-    @Override
     protected void tick(ServerLevel world)
     {
         ++counter;

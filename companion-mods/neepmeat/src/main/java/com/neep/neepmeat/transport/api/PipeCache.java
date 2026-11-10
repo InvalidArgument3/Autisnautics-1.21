@@ -24,4 +24,6 @@ public interface PipeCache
     long eject(BlockPos from, Direction out, ItemVariant variant, long amount, TransactionContext transaction);
 
     long route(BlockPos from, Direction in, BlockPos to, Direction out, ItemVariant variant, long amount, TransactionContext transaction);
+
+    long route(BlockPos from, Direction fromFace, com.neep.neepmeat.transport.item_network.ItemRoute route, ItemVariant variant, long amount, TransactionContext transaction);
 }

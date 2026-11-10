@@ -4,7 +4,7 @@
  * This file is part of NEEPMeat.
  *
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
- * Amounts are item counts. NeoForge handlers have no Fabric transaction.
+ * Amounts are item counts. The handler is only changed when the outer transaction commits.
  */
 
 package com.neep.meatlib.transfer;
@@ -29,39 +29,95 @@ public final class ItemHandlerStorage implements Storage<ItemVariant> {
 
     @Override
     public long insert(ItemVariant resource, long maxAmount, TransactionContext transaction) {
-        if (resource == null || resource.isBlank() || maxAmount <= 0) {
+        if (!(transaction instanceof Transaction open) || resource == null || resource.isBlank() || maxAmount <= 0) {
             return 0;
         }
         long left = maxAmount;
-        long inserted = 0;
+        List<int[]> plan = new ArrayList<>();
         for (int slot = 0; slot < handler.getSlots() && left > 0; slot++) {
-            ItemStack remaining = handler.insertItem(slot, stackFor(resource, left), false);
-            long moved = Math.min(left, stackFor(resource, left).getCount()) - remaining.getCount();
-            if (moved > 0) {
-                inserted += moved;
-                left -= moved;
+            int space = insertSpace(open, slot, resource);
+            if (space <= 0) {
+                continue;
             }
+            int offered = (int) Math.min(left, Math.min(space, stackFor(resource, left).getCount()));
+            ItemStack rejected = handler.insertItem(slot, stackFor(resource, offered), true);
+            int accepted = offered - rejected.getCount();
+            if (accepted <= 0) {
+                continue;
+            }
+            plan.add(new int[] {slot, accepted});
+            open.reserve(handler, slot, resource, accepted);
+            left -= accepted;
         }
-        return inserted;
+        if (plan.isEmpty()) {
+            return 0;
+        }
+        open.addOuterCommit(() -> {
+            for (int[] move : plan) {
+                handler.insertItem(move[0], stackFor(resource, move[1]), false);
+            }
+        });
+        return maxAmount - left;
     }
 
     @Override
     public long extract(ItemVariant resource, long maxAmount, TransactionContext transaction) {
-        if (resource == null || resource.isBlank() || maxAmount <= 0) {
+        if (!(transaction instanceof Transaction open) || resource == null || resource.isBlank() || maxAmount <= 0) {
             return 0;
         }
         long left = maxAmount;
-        long taken = 0;
+        List<int[]> plan = new ArrayList<>();
         for (int slot = 0; slot < handler.getSlots() && left > 0; slot++) {
-            ItemStack stack = handler.getStackInSlot(slot);
-            if (stack.isEmpty() || !resource.equals(ItemVariant.of(stack))) {
+            int available = extractable(open, slot, resource);
+            if (available <= 0) {
                 continue;
             }
-            ItemStack extracted = handler.extractItem(slot, (int) Math.min(left, Integer.MAX_VALUE), false);
-            taken += extracted.getCount();
-            left -= extracted.getCount();
+            int want = (int) Math.min(left, available);
+            ItemStack simulated = handler.extractItem(slot, want, true);
+            int accepted = Math.min(want, simulated.getCount());
+            if (accepted <= 0 && available > 0 && handler.getStackInSlot(slot).isEmpty()) {
+                accepted = want;
+            }
+            if (accepted <= 0) {
+                continue;
+            }
+            plan.add(new int[] {slot, accepted});
+            open.reserve(handler, slot, resource, -accepted);
+            left -= accepted;
         }
-        return taken;
+        if (plan.isEmpty()) {
+            return 0;
+        }
+        open.addOuterCommit(() -> {
+            for (int[] move : plan) {
+                handler.extractItem(move[0], move[1], false);
+            }
+        });
+        return maxAmount - left;
+    }
+
+    private int insertSpace(Transaction transaction, int slot, ItemVariant resource) {
+        ItemStack stack = handler.getStackInSlot(slot);
+        int count = stack.getCount() + transaction.slotDelta(handler, slot);
+        int limit = Math.min(handler.getSlotLimit(slot), resource.toStack().getMaxStackSize());
+        if (count <= 0) {
+            return limit;
+        }
+        ItemVariant present = stack.isEmpty() ? (ItemVariant) transaction.slotVariant(handler, slot) : ItemVariant.of(stack);
+        if (present == null || !present.equals(resource)) {
+            return 0;
+        }
+        return Math.max(0, limit - count);
+    }
+
+    private int extractable(Transaction transaction, int slot, ItemVariant resource) {
+        ItemStack stack = handler.getStackInSlot(slot);
+        int count = stack.getCount() + transaction.slotDelta(handler, slot);
+        if (count <= 0) {
+            return 0;
+        }
+        ItemVariant present = stack.isEmpty() ? (ItemVariant) transaction.slotVariant(handler, slot) : ItemVariant.of(stack);
+        return present != null && present.equals(resource) ? count : 0;
     }
 
     @Override

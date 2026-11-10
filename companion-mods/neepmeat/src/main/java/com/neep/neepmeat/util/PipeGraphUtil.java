@@ -17,7 +17,6 @@ import com.google.common.collect.Queues;
 import com.google.common.collect.Sets;
 import com.neep.meatlib.util.graph.ConnectablePipe;
 import com.neep.meatlib.util.graph.PipeVertex;
-import com.neep.neepmeat.transport.fluid_network.node.BlockFluidPipeVertex;
 import com.neep.neepmeat.transport.item_network.ItemPipeVertex;
 import it.unimi.dsi.fastutil.Pair;
 import java.util.*;
@@ -67,10 +66,6 @@ public class PipeGraphUtil
             return;
 
         BlockPos particlePos = BlockPos.ZERO;
-        if (vertex instanceof BlockFluidPipeVertex bpv)
-        {
-            particlePos = BlockPos.of(bpv.getPos());
-        }
         if (vertex instanceof ItemPipeVertex ipv)
         {
             particlePos = ipv.getPos();

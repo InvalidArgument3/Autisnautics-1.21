@@ -31,6 +31,7 @@ import com.neep.neepmeat.transport.api.item_network.RoutablePipe;
 import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
 import com.neep.neepmeat.transport.api.pipe.ItemPipe;
 import com.neep.neepmeat.transport.block.item_transport.*;
+import com.neep.neepmeat.transport.block.item_transport.entity.FlexSiloBlockEntity;
 import com.neep.neepmeat.transport.block.item_transport.entity.ManualRequesterBlockEntity;
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 import com.neep.neepmeat.transport.block.item_transport.entity.RequesterBlockEntity;
@@ -54,10 +55,10 @@ public class ItemTransport
 {
     public static final RegistrationContext C = new RegistrationContext(NeepMeat.NAMESPACE, () -> NMItemGroups.GENERAL);
 
-    public static final int BFS_MAX_DEPTH = 800;
+    public static final int BFS_MAX_DEPTH = ItemPipeLookup.BFS_MAX_DEPTH;
     public static final Block PROCESS_INTERFACE = new ProcessInterfaceBlock(C, NMBlocks.block().plcInterrupt(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
 
-    public static BlockApiLookup<ItemPipe, Direction> ITEM_PIPE_LOOKUP = BlockApiLookup.get(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "item_pipe"), ItemPipe.class, Direction.class);
+    public static BlockApiLookup<ItemPipe, Direction> ITEM_PIPE_LOOKUP = ItemPipeLookup.LOOKUP;
     public static BlockEntityType<PipeDriverBlockEntity> PIPE_DRIVER_BE;
     public static BlockEntityType<StorageDriverBlockEntity> STORAGE_BUS_BE;
     public static BlockEntityType<ManualRequesterBlockEntity> ITEM_REQUESTER_BE;
@@ -87,7 +88,7 @@ public class ItemTransport
     public static final Block DUMPER = new DumperBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(Blocks.OAK_WOOD).tags(MINEABLE_WITH_AXE).properties());
     public static final Block REQUESTER = new RequesterBlock(C, NMBlocks.block().neepbus().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(EJECTOR).properties());
 
-    public static final FlexSiloBlock FLEX_SILO = new FlexSiloBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), FluidTransport.FLEX_TANK_SETTINGS, () -> NMBlockEntities.FLEX_SILO);
+    public static final FlexSiloBlock FLEX_SILO = new FlexSiloBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), FluidTransport.FLEX_TANK_SETTINGS, () -> (BlockEntityType<FlexSiloBlockEntity>) (BlockEntityType<?>) NMBlockEntities.FLEX_SILO);
 
     public static final Item PROCESS_CARD = new ProcessCardItem(TooltipSupplier.hidden(1), new MeatlibItemSettings().group(NMItemGroups.GENERAL));
 

@@ -54,9 +54,9 @@ import org.jetbrains.annotations.Nullable;
 
 public class ItemPumpBlock extends EjectorBlock
 {
-    public ItemPumpBlock(RegistrationContext ctx, ItemSettings itemSettings, FabricBlockSettings settings)
+    public ItemPumpBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties settings)
     {
-        super(ctx, itemSettings, settings.noOcclusion().isRedstoneConductor(InventoryDetectorBlock::never));
+        super(ctx, itemSettings, settings);
     }
 
     @Override

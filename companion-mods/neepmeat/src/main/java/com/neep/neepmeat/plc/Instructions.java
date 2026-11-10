@@ -273,13 +273,13 @@ public class Instructions {
         }
         return notGlob;
     }
-    public static final InstructionProvider AREA3 = createTrivialBlock("area3", Instruction.end());
+    public static final InstructionProvider AREA3 = createTrivialBlock("area3", new com.neep.neepmeat.plc.instruction.block.Area3Instruction());
     public static final InstructionProvider COMBINE = createTrivialBlock("combine", Instruction.end());
     public static final InstructionProvider COUNT = register(new SimplerInstructionProvider(CountInstruction::new, (view, parser, scope) -> CountInstruction.parser(view, parser), "COUNT"));
     public static final InstructionProvider DELAY = register(new SimplerInstructionProvider(DelayInstruction::new, DelayInstruction::parse, "DELAY"));
-    public static final InstructionProvider DYCALL = createTrivialBlock("dycall", Instruction.end());
-    public static final InstructionProvider DYLOC = createTrivialBlock("dyloc", Instruction.end());
-    public static final InstructionProvider EXEC = createTrivialBlock("exec", Instruction.end());
+    public static final InstructionProvider DYCALL = createTrivialBlock("dycall", new com.neep.neepmeat.api.plc.instruction.DyCallInstruction());
+    public static final InstructionProvider DYLOC = createTrivialBlock("dyloc", new com.neep.neepmeat.api.plc.instruction.DyLocInstruction());
+    public static final InstructionProvider EXEC = register(new SimplerInstructionProvider((world, nbt) -> new com.neep.neepmeat.plc.instruction.ExecInstruction(world, nbt), (view, parser, scope) -> com.neep.neepmeat.plc.instruction.ExecInstruction.parser(view, parser, scope), "EXEC"));
     public static final InstructionProvider EXTFETCH = register(new SimplerInstructionProvider(ExtFetchInstruction::new, ExtFetchInstruction::parser, "EXTFETCH"));
     public static final InstructionProvider EXTSTORE = register(new SimplerInstructionProvider(ExtStoreInstruction::new, ExtStoreInstruction::parser, "EXTSTORE"));
     public static final InstructionProvider FINDSLOT = register(new SimplerInstructionProvider((world, nbt) -> new FindSlotInstruction(nbt), FindSlotInstruction::parser, "FINDSLOT"));

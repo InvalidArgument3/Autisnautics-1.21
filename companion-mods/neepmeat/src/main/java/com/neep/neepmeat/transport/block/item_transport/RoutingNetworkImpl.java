@@ -28,7 +28,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEn
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.neep.neepmeat.init.NMParticles;
-import com.neep.neepmeat.transport.ItemTransport;
+import com.neep.neepmeat.transport.ItemPipeLookup;
 import com.neep.neepmeat.transport.api.item_network.Craftable;
 import com.neep.neepmeat.transport.api.item_network.CraftingPredicate;
 import com.neep.neepmeat.transport.api.item_network.RoutablePipe;
@@ -131,7 +131,7 @@ public class RoutingNetworkImpl implements RoutingNetwork
 
         finder.reset();
         finder.queueBlock(pos);
-        finder.loop(ItemTransport.BFS_MAX_DEPTH);
+        finder.loop(ItemPipeLookup.BFS_MAX_DEPTH);
 
         if (finder.controllers > 1)
         {
@@ -568,7 +568,10 @@ public class RoutingNetworkImpl implements RoutingNetwork
         @Override
         protected State processPos(BlockPos pos)
         {
-            ItemPipe fromPipe = ItemTransport.ITEM_PIPE_LOOKUP.find(worldSupplier.get(), pos, null);
+            ItemPipe fromPipe = ItemPipeLookup.LOOKUP.find(worldSupplier.get(), pos, null);
+            if (fromPipe == null) {
+                return State.CONTINUE;
+            }
 
             // Fail if there is a second controller in the network.
             if (checkController(worldSupplier.get(), pos)) return State.FAIL;
@@ -583,7 +586,7 @@ public class RoutingNetworkImpl implements RoutingNetwork
                     addResult(mutable, BlockApiCache.create(RoutablePipe.LOOKUP, worldSupplier.get(), mutable));
                 }
 
-                ItemPipe toPipe = ItemTransport.ITEM_PIPE_LOOKUP.find(worldSupplier.get(), mutable, null);
+                ItemPipe toPipe = ItemPipeLookup.LOOKUP.find(worldSupplier.get(), mutable, null);
                 if (toPipe != null)
                 {
                     queueBlock(mutable);

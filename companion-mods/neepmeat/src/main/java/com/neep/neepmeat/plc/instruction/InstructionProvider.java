@@ -26,5 +26,9 @@ public interface InstructionProvider
     // TODO: remove NBT for independence of Minecraft
     Instruction loadStatic(Supplier<Level> world, CompoundTag nbt);
 
+    default Instruction createFromNbt(Supplier<Level> world, CompoundTag nbt) {
+        return loadStatic(world, nbt);
+    }
+
     InstructionParser getParser();
 }
