@@ -111,7 +111,15 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | Builder | ported | `builder` holds 27 slots, moves its tip, places the selected block item, and breaks blocks up to obsidian hardness into its inventory. `bplace` and `bbreak` use it. A test places cobblestone and breaks dirt. |
 | Screens | partial | `PLCScreen` edits and runs the stored source. The upstream 16-file shell is not copied. |
 
-The motor, manufacture recipes, living machines, and the meatgun are still the next batches.
+## Motor, jar 0.30.0-neoforge.11
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.11` and passed all 31 tests.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Motor | ported | `motor_unit` faces a `MotorisedBlock` and calls `motorTick(MotorEntity)` and `setInputPower(1)`. Fuel extraction from `LiquidFuelMachine` is not in this block, so the output is a constant one mechanical unit. A test powers the arm from the motor in front. |
+
+Manufacture recipes, living machines, and the meatgun are still the next batches.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

@@ -213,7 +213,7 @@ public class RoboticArmBlockEntity extends SyncableBlockEntity implements Combin
     }
 
     @Override
-    public boolean motorTick() {
+    public boolean motorTick(com.neep.neepmeat.machine.motor.MotorEntity motor) {
         return false;
     }
 

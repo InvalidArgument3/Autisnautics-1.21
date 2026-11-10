@@ -14,6 +14,8 @@ import com.neep.meatlib.transfer.MeatlibCapabilities;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
+import com.neep.neepmeat.machine.motor.MotorBlock;
+import com.neep.neepmeat.machine.motor.MotorBlockEntity;
 import com.neep.neepmeat.plc.arm.RoboticArmBlock;
 import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
 import com.neep.neepmeat.plc.block.BuilderBlock;
@@ -112,6 +114,11 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> BUILDER_ITEM = CONTEXT.item("builder", () -> new BlockItem(BUILDER.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BuilderBlockEntity>> BUILDER_BE = BLOCK_ENTITIES.register("builder",
             () -> BlockEntityType.Builder.of(BuilderBlockEntity::new, BUILDER.get()).build(null));
+
+    public static final DeferredBlock<MotorBlock> MOTOR = CONTEXT.block("motor_unit", MotorBlock::new);
+    public static final DeferredItem<BlockItem> MOTOR_ITEM = CONTEXT.item("motor_unit", () -> new BlockItem(MOTOR.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MotorBlockEntity>> MOTOR_BE = BLOCK_ENTITIES.register("motor_unit",
+            () -> BlockEntityType.Builder.of(MotorBlockEntity::new, MOTOR.get()).build(null));
 
     public static final DeferredHolder<MenuType<?>, MenuType<AlloyKilnMenu>> ALLOY_MENU = MENUS.register("alloy_kiln",
             () -> IMenuTypeExtension.create((id, inventory, buf) -> {
@@ -213,6 +220,7 @@ public final class NeepMachines {
             event.accept(PLC_ITEM.get());
             event.accept(EXECUTOR_ITEM.get());
             event.accept(BUILDER_ITEM.get());
+            event.accept(MOTOR_ITEM.get());
             event.accept(ITEM_PIPE_ITEM.get());
             event.accept(FILTER_ITEM_PIPE_ITEM.get());
             event.accept(MERGE_PIPE_ITEM.get());

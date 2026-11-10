@@ -9,11 +9,10 @@
 package com.neep.neepmeat.api.machine;
 
 /**
- * Fabric's {@code BlockApiLookup} is a NeoForge capability once the motor exists.
- * {@code motorTick} does not take {@code MotorEntity} yet. That class is still upstream.
+ * The motor in front calls {@link #motorTick} and {@link #setInputPower}.
  */
 public interface MotorisedBlock {
-    boolean motorTick();
+    boolean motorTick(com.neep.neepmeat.machine.motor.MotorEntity motor);
 
     void setInputPower(float power);
 

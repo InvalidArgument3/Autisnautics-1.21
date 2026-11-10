@@ -201,6 +201,17 @@ public class PlcOpcodeGameTests {
         helper.succeed();
     }
 
+    @GameTest(template = "empty")
+    public static void motorPowersTheArm(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), NeepMachines.ROBOTIC_ARM.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 0, 2), NeepMachines.MOTOR.get().defaultBlockState());
+        com.neep.neepmeat.machine.motor.MotorBlockEntity motor = helper.getBlockEntity(new BlockPos(1, 0, 2));
+        motor.serverTick();
+        RoboticArmBlockEntity arm = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        helper.assertTrue(arm.power() == com.neep.neepmeat.machine.motor.MotorBlockEntity.OUTPUT, "arm power " + arm.power());
+        helper.succeed();
+    }
+
     private static PLCProgram compile(GameTestHelper helper, String source) throws NeepASM.ProgramBuildException {
         ServerLevel level = helper.getLevel();
         NeepAsmCompilePipeline pipeline = new NeepAsmCompilePipeline(() -> level);
