@@ -50,6 +50,7 @@ public final class NeepMeat {
         IEventBus bus = container.getEventBus();
         BuildingBlocks.bootstrap();
         NeepMachines.register(bus);
+        com.neep.neepmeat.machine.StageMachines.register(bus);
         com.neep.neepmeat.recipe.NeepComponents.COMPONENTS.register(bus);
         MaterialItems.register(bus);
         BloodFluids.register(bus);

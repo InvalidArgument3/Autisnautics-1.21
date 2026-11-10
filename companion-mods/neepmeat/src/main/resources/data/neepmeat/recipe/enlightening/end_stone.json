@@ -1,0 +1,12 @@
+{
+  "type": "neepmeat:enlightening",
+  "item_input": {
+    "resource": "minecraft:netherrack",
+    "amount": 1
+  },
+  "data": 256,
+  "output": {
+    "resource": "minecraft:end_stone",
+    "amount": 1
+  }
+}

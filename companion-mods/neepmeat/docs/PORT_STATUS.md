@@ -137,7 +137,15 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 
 The motor burns ethereal fuel. Upstream stores two energy units per Fabric droplet. A millibucket is 81 droplets, so the registry stores 162 energy per millibucket. Each tick asks for 400 absolute units, drains 2 millibuckets, and gets 324 back, which is 0.324 per unit. Rotor speed is that power in watts divided by the load torque of 300. An empty motor supplies nothing. The tank holds 8000 millibuckets so a bucket fits. Upstream's buffer was 200 droplets.
 
-`BuilderRobot` and the full PLC shell are not replaced yet. Living machines and the meatgun are still out.
+## Enlightening and entity mutation, jar 0.30.0-neoforge.14
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.14` and passed all 35 tests.
+
+The integrator holds one item and a data counter. With 1024 data, a rough brain becomes an enlightened brain. Seven enlightening recipes load. Four are left out because their results are not registered: blood bubble sapling, flesh potato, grave brome, and whisper wheat seeds.
+
+`ENTITY.find` returns the surgery platform's target. That target is the non-spectator, non-minecart entity standing on the block above. A pig spawned there is the entity the lookup returns.
+
+The living-machine graph, the blood network, and vascular conduits are not ported. `BuilderRobot` and the full PLC shell are not replaced yet. The meatgun is still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

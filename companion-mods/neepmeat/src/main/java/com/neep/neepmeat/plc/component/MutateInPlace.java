@@ -8,6 +8,7 @@
 
 package com.neep.neepmeat.plc.component;
 
+import com.neep.neepmeat.machine.surgery.SurgeryPlatformBlockEntity;
 import com.neep.neepmeat.recipe.ManufactureRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,7 +24,12 @@ import java.util.function.Consumer;
 
 public interface MutateInPlace<T> {
     Lookup<ItemStack> ITEM = MutateInPlace::findItem;
-    Lookup<Entity> ENTITY = (level, pos, direction) -> null;
+    Lookup<Entity> ENTITY = (level, pos, direction) -> {
+        if (level.getBlockEntity(pos) instanceof SurgeryPlatformBlockEntity platform) {
+            return platform.mutate();
+        }
+        return null;
+    };
 
     @Nullable T get();
 
