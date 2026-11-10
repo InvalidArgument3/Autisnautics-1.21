@@ -1,6 +1,6 @@
 {
   "type": "lithostitched:wrap_noise_router",
-  "priority": 2010,
+  "priority": 2000,
   "dimension": "infernalcross:dimension",
   "target": "final_density",
   "wrapper_function": "autisnautics:rift/wrap_rift_5_6_infernalcross_dimension"

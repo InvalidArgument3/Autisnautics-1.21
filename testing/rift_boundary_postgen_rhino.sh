@@ -21,6 +21,11 @@ needles = [
     '"dimension": "infinite_abyss:first_layer", "lo": 103, "hi": 128, "anchor": 127',
     '"dimension": "oceanworld:deepsea", "lo": 275, "hi": 320',
     '"dimension": "minecraft:the_nether", "lo": 231, "hi": 256',
+    '"boundary": "0_1", "dimension": "oceanworld:deepsea", "lo": 275',
+    '"boundary": "7_8", "dimension": "autisnautics:molten_depths", "lo": 295',
+    '"boundary": "8_9", "dimension": "autisnautics:molten_depths", "lo": -64',
+    '"boundary": "8_9", "dimension": "minecraft:the_end", "lo": 359',
+    "'autisnautics:molten_depths':'minecraft:obsidian'",
 ]
 forbidden = [
     '"hi": 640',
@@ -28,6 +33,8 @@ forbidden = [
     '"lo": 160, "hi": 320',
     '"lo": 112, "hi": 256',
     '"lo": 80, "hi": 384',
+    '"boundary": "0_1", "dimension": "infinite_abyss:first_layer"',
+    '"boundary": "2_3", "dimension": "oceanworld:deepsea"',
 ]
 for needle in needles:
     if needle not in text:

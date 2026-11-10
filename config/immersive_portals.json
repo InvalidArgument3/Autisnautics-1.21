@@ -97,7 +97,9 @@
         "horizontalRotation": 0.0,
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
-        "connectsNext": true
+        "connectsNext": true,
+        "topY": 127,
+        "bottomY": 0
       },
       {
         "dimensionIdStr": "deeperdarker:otherside",
@@ -106,7 +108,9 @@
         "horizontalRotation": 0.0,
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
-        "connectsNext": true
+        "connectsNext": true,
+        "topY": 127,
+        "bottomY": 0
       },
       {
         "dimensionIdStr": "undergarden:undergarden",
@@ -127,7 +131,8 @@
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
         "connectsNext": true,
-        "bottomY": -48
+        "bottomY": -48,
+        "topY": 63
       },
       {
         "dimensionIdStr": "minecraft:the_nether",
@@ -137,7 +142,19 @@
         "bedrockReplacementStr": "minecraft:obsidian",
         "connectsPrevious": true,
         "connectsNext": true,
-        "topY": 256
+        "topY": 256,
+        "bottomY": 0
+      },
+      {
+        "dimensionIdStr": "autisnautics:molten_depths",
+        "scale": 1.0,
+        "flipped": false,
+        "horizontalRotation": 0.0,
+        "bedrockReplacementStr": "minecraft:obsidian",
+        "connectsPrevious": true,
+        "connectsNext": true,
+        "topY": 300,
+        "bottomY": -64
       },
       {
         "dimensionIdStr": "minecraft:the_end",

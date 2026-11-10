@@ -1,0 +1,11 @@
+{
+  "type": "autisnautics:molten_depths",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "autisnautics:molten_depths",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "autisnautics:molten_depths"
+    }
+  }
+}
