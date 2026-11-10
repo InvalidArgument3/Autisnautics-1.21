@@ -85,6 +85,13 @@ public class LivingMachineControllerBlockEntity extends com.neep.neepmeat.api.li
         }
         power = nextPower;
         degradation.tick();
+        for (int index = components.bits.nextSetBit(0); index >= 0; index = components.bits.nextSetBit(index + 1)) {
+            for (LivingMachineComponent component : components.<LivingMachineComponent>get(index)) {
+                if (component instanceof com.neep.neepmeat.machine.live_machine.component.PoweredComponent powered) {
+                    powered.setProgressIncrement(getProgressIncrement());
+                }
+            }
+        }
         if (process != null) {
             process.serverTick(this);
         }

@@ -16,6 +16,9 @@ import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargestHopperBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -41,5 +44,19 @@ public class LargestHopperBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new LargestHopperBlockEntity(pos, state);
+    }
+
+    @Override
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+        if (!level.isClientSide() && level.getGameTime() % 3 == 0 && entity.onGround()
+                && entity instanceof ItemEntity item && level.getBlockEntity(pos) instanceof LargestHopperBlockEntity hopper) {
+            hopper.insertEntity(item);
+        }
+    }
+
+    public void collect(Level level, BlockPos pos, ItemEntity item) {
+        if (level.getBlockEntity(pos) instanceof LargestHopperBlockEntity hopper) {
+            hopper.insertEntity(item);
+        }
     }
 }

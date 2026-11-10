@@ -66,6 +66,11 @@ public final class NeepRecipes {
                 }
             });
 
+    public static final DeferredHolder<RecipeType<?>, RecipeType<BioreactorRecipe>> BIOREACTOR = TYPES.register("bioreactor",
+            () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "bioreactor")));
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BioreactorRecipe>> BIOREACTOR_SERIALIZER =
+            SERIALIZERS.register("bioreactor", () -> BioreactorRecipe.SERIALIZER);
+
     public static final DeferredHolder<RecipeType<?>, RecipeType<BallMillRecipe>> BALL_MILL = TYPES.register("ball_mill",
             () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "ball_mill")));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BallMillRecipe>> BALL_MILL_SERIALIZER =

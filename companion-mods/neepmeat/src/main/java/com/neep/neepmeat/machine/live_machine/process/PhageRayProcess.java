@@ -12,28 +12,54 @@
 
 package com.neep.neepmeat.machine.live_machine.process;
 
+import com.neep.meatlib.transfer.Transaction;
+import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineBlockEntity;
 import com.neep.neepmeat.api.live_machine.Process;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
+import com.neep.neepmeat.machine.phage_ray.PhageRayBlockEntity;
+import com.neep.neepmeat.machine.phage_ray.PhageRayEntity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-/** The phage ray entity is not ported, so this process does not harvest yet. */
 public class PhageRayProcess implements Process {
+    private static final List<ComponentType<?>> REQUIRED = List.of(LivingMachineComponents.PHAGE_RAY);
+
     @Override
     public void serverTick(LivingMachineBlockEntity be) {
-        be.components(LivingMachineComponents.PHAGE_RAY);
+        be.withComponents(LivingMachineComponents.PHAGE_RAY).ifPresent(result -> {
+            PhageRayBlockEntity ray = (PhageRayBlockEntity) result.t1().iterator().next();
+            ray.serverTick();
+            boolean canHarvest = !be.getComponent(LivingMachineComponents.EXTRACTOR).isEmpty();
+            boolean silkTouch = canHarvest && !be.getComponent(LivingMachineComponents.SILKY_EXTRACTOR).isEmpty();
+            PhageRayEntity entity = ray.getTetheredEntity();
+            if (entity == null) {
+                return;
+            }
+            try (Transaction transaction = Transaction.openOuter()) {
+                entity.tickProcess(canHarvest, silkTouch, be.getCombinedItemOutput(), transaction);
+                transaction.commit();
+            }
+        });
     }
 
     @Override
     public List<ComponentType<?>> getRequired() {
-        return List.of(LivingMachineComponents.PHAGE_RAY, LivingMachineComponents.MOTOR_PORT);
+        return REQUIRED;
     }
 
     @Override
     public Component getName() {
-        return Component.translatable("process.neepmeat.phage_ray");
+        return NeepMeat.translationKey("process", "phage_ray");
+    }
+
+    public interface PhageRay {
+        boolean trigger();
+        Vec3 getBeamOrigin();
+        Vec3 getClientBeamEnd(Vec3 start, float tickDelta);
+        int getAge();
     }
 }

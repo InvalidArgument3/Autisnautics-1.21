@@ -22,6 +22,7 @@ import net.minecraft.world.level.material.Fluids;
 public class StomachBlockEntity extends BlockEntity implements LivingMachineComponent {
     private Fluid fluid = Fluids.EMPTY;
     private long droplets;
+    private final InputSlot slot = new InputSlot();
 
     public StomachBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.STOMACH_BE.get(), pos, state);
@@ -47,6 +48,39 @@ public class StomachBlockEntity extends BlockEntity implements LivingMachineComp
 
     public long droplets() {
         return droplets;
+    }
+
+    public InputSlot slot() {
+        return slot;
+    }
+
+    public static final class InputSlot {
+        private float counter;
+        private com.neep.neepmeat.recipe.BioreactorRecipe recipe;
+
+        public void tickRecipe(float progressIncrement, com.neep.neepmeat.machine.live_machine.process.BioreactorProcess.Context context) {
+            if (recipe == null) {
+                recipe = com.neep.meatlib.recipe.MeatlibRecipes.getInstance()
+                        .matchBioreactor(com.neep.neepmeat.recipe.NeepRecipes.BIOREACTOR.get(), context)
+                        .orElse(null);
+                if (recipe != null) {
+                    counter = recipe.getProcessTime();
+                }
+            }
+            if (recipe == null) {
+                return;
+            }
+            if (counter > 0) {
+                counter = Math.max(0, counter - progressIncrement);
+                return;
+            }
+            try (com.neep.meatlib.transfer.Transaction transaction = com.neep.meatlib.transfer.Transaction.openOuter()) {
+                if (recipe.takeInputs(context, transaction) && recipe.ejectOutputs(context, transaction)) {
+                    transaction.commit();
+                }
+                recipe = null;
+            }
+        }
     }
 
     @Override

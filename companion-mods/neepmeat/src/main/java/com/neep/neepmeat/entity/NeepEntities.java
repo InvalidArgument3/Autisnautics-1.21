@@ -23,6 +23,8 @@ public final class NeepEntities {
             () -> EntityType.Builder.of(MachineWormEntity::new, MobCategory.MONSTER).sized(1.0F, 1.0F).build("machine_worm"));
     public static final DeferredHolder<EntityType<?>, EntityType<com.neep.neepmeat.entity.skyworm.SkywormEntity>> SKYWORM = ENTITIES.register("skyworm",
             () -> EntityType.Builder.of(com.neep.neepmeat.entity.skyworm.SkywormEntity::new, MobCategory.MISC).sized(1.0F, 4.0F).build("skyworm"));
+    public static final DeferredHolder<EntityType<?>, EntityType<com.neep.neepmeat.machine.phage_ray.PhageRayEntity>> PHAGE_RAY = ENTITIES.register("phage_ray",
+            () -> EntityType.Builder.<com.neep.neepmeat.machine.phage_ray.PhageRayEntity>of(com.neep.neepmeat.machine.phage_ray.PhageRayEntity::new, MobCategory.MISC).sized(0.8F, 0.8F).build("phage_ray"));
 
     private NeepEntities() {}
 

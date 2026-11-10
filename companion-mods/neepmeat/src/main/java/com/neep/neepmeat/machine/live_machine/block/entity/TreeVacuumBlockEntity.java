@@ -20,8 +20,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-/** Faces the trunk. Tree breaking is not wired yet. */
+/** Faces the trunk. {@code progress} fills until {@link TreeVacuumProcess} breaks the tree. */
 public class TreeVacuumBlockEntity extends BlockEntity implements LivingMachineComponent {
+    public static final int MAX_PROGRESS = 5;
+    public float progress;
+    public boolean extended;
+
     public TreeVacuumBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.TREE_VACUUM_BE.get(), pos, state);
     }

@@ -17,19 +17,30 @@ import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.neepmeat.machine.live_machine.block.entity.IntegrationPortBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Nullable;
 
 public class IntegrationPortBlock extends BaseEntityBlock {
+    public static final BooleanProperty OPEN = BooleanProperty.create("open");
+
     public IntegrationPortBlock() {
         super(MeatlibBlockSettings.create().strength(2).properties());
+        registerDefaultState(defaultBlockState().setValue(OPEN, true));
     }
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return MapCodec.unit(this);
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(OPEN);
     }
 
     @Override

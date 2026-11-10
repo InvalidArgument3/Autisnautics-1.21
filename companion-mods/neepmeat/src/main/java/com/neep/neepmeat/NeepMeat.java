@@ -67,6 +67,8 @@ public final class NeepMeat {
         com.neep.neepmeat.fluid.TissueSlurry.bootstrap(bus);
         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(com.neep.meatlib.recipe.MeatlibRecipes::onServerStarted);
         com.neep.neepmeat.fluid.CompressedAir.register(bus);
+        com.neep.neepmeat.fluid.WorkFluid.register(bus);
+        com.neep.neepmeat.machine.EffectMachines.register(bus);
         com.neep.neepmeat.entity.NeepEntities.register(bus);
         com.neep.neepmeat.init.NMScreenHandlers.register(bus);
         com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();

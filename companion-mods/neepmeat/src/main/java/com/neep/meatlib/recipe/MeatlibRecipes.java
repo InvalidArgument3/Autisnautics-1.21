@@ -77,6 +77,18 @@ public final class MeatlibRecipes {
         return Optional.empty();
     }
 
+    public Optional<com.neep.neepmeat.recipe.BioreactorRecipe> matchBioreactor(RecipeType<com.neep.neepmeat.recipe.BioreactorRecipe> type, com.neep.neepmeat.machine.live_machine.process.BioreactorProcess.Context context) {
+        if (manager == null) {
+            return Optional.empty();
+        }
+        for (RecipeHolder<com.neep.neepmeat.recipe.BioreactorRecipe> holder : manager.getAllRecipesFor(type)) {
+            if (holder.value().accepts(context)) {
+                return Optional.of(holder.value());
+            }
+        }
+        return Optional.empty();
+    }
+
     public Optional<?> get(ResourceLocation id) {
         if (manager == null || id == null) {
             return Optional.empty();

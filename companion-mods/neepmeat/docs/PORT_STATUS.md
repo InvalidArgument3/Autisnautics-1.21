@@ -388,6 +388,87 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Shell effects, jar 0.30.0-neoforge.36
+
+The phage ray breaks the block its beam points at and puts the drops in the item output. The charnel pump consumes compressed air and moves one bottle of work fluid into a well head. The disruptor writes its disruption into the reaction core, and the core's organisation falls by `disruption * 5`. The largest hopper swallows an item entity. The tree vacuum breaks the log two blocks in front of it and collects the drop. The integration port accepts one ingot of work fluid from an item and closes when the machine has power. The bioreactor turns 1000 droplets each of blood, meat, and work fluid into 3000 droplets of work fluid. The digester turns one raw iron and one ingot of blood into one ingot of meat.
+
+`shell` means the upstream path only forwards to another class, or the block is not the one that is registered. `partial` means the effect works and a piece of the Loom file is still absent. `faithful` means the file does the upstream job this jar relies on.
+
+| File | Ours / Loom | Status |
+| --- | --- | --- |
+| `GroundInfuserBlock.java` | 70 / 70 | faithful |
+| `LargeCompressorBlock.java` | 104 / 204 | partial |
+| `LivingMachineComponents.java` | 54 / 110 | faithful |
+| `LivingMachines.java` | 189 / 241 | faithful |
+| `Processes.java` | 75 / 91 | faithful |
+| `block/BallMillBlock.java` | 61 / 241 | partial |
+| `block/CrusherSegmentBlock.java` | 41 / 104 | shell |
+| `block/DistributorPointBlock.java` | 59 / 283 | partial |
+| `block/ExtractorBlock.java` | 38 / 38 | faithful |
+| `block/FluidPortBlock.java` | 82 / 77 | faithful |
+| `block/IntegrationPortBlock.java` | 56 / 62 | faithful |
+| `block/ItemInputPortBlock.java` | 48 / 50 | faithful |
+| `block/ItemOutputPortBlock.java` | 43 / 43 | faithful |
+| `block/ItemPortBlockItem.java` | 54 / 54 | faithful |
+| `block/LargeTrommelBlock.java` | 92 / 165 | partial |
+| `block/LargestHopperBlock.java` | 62 / 156 | partial |
+| `block/LuckyOneBlock.java` | 98 / 98 | faithful |
+| `block/MetaboliserSegmentBlock.java` | 13 / 190 | shell |
+| `block/PortBlock.java` | 78 / 88 | faithful |
+| `block/ReprocessorBlock.java` | 73 / 88 | faithful |
+| `block/ServicePortBlock.java` | 63 / 69 | faithful |
+| `block/SilkyExtractorBlock.java` | 38 / 38 | faithful |
+| `block/StomachBlock.java` | 13 / 225 | shell |
+| `block/TestLivingMachineBlock.java` | 42 / 121 | partial |
+| `block/TreeVacuumBlock.java` | 65 / 177 | partial |
+| `block/entity/BallMillBlockEntity.java` | 85 / 180 | partial |
+| `block/entity/CrusherSegmentBlockEntity.java` | 84 / 273 | partial |
+| `block/entity/DistributorPoint.java` | 32 / 50 | faithful |
+| `block/entity/DistributorPointBlockEntity.java` | 172 / 310 | partial |
+| `block/entity/ExtractorBlockEntity.java` | 41 / 41 | faithful |
+| `block/entity/FluidInputPortBlockEntity.java` | 71 / 70 | faithful |
+| `block/entity/FluidOutputPortBlockEntity.java` | 80 / 80 | faithful |
+| `block/entity/IntegrationPortBlockEntity.java` | 101 / 135 | faithful |
+| `block/entity/ItemInputPortBlockEntity.java` | 86 / 85 | faithful |
+| `block/entity/ItemOutputPortBlockEntity.java` | 245 / 241 | faithful |
+| `block/entity/LargeCompressorBlockEntity.java` | 53 / 67 | faithful |
+| `block/entity/LargeTrommelBlockEntity.java` | 112 / 171 | partial |
+| `block/entity/LargestHopperBlockEntity.java` | 86 / 169 | partial |
+| `block/entity/LivingMachineControllerBlockEntity.java` | 19 / 112 | shell |
+| `block/entity/LuckyOneBlockEntity.java` | 56 / 117 | partial |
+| `block/entity/MetaboliserSegmentBlockEntity.java` | 57 / 100 | faithful |
+| `block/entity/MotorPortBlockEntity.java` | 19 / 62 | shell |
+| `block/entity/ReprocessorBlockEntity.java` | 41 / 41 | faithful |
+| `block/entity/ServicePortBlockEntity.java` | 41 / 41 | faithful |
+| `block/entity/SilkyExtractorBlockEntity.java` | 41 / 41 | faithful |
+| `block/entity/StomachBlockEntity.java` | 95 / 141 | partial |
+| `block/entity/StorageProvider.java` | 22 / 22 | faithful |
+| `block/entity/TreeVacuumBlockEntity.java` | 42 / 82 | partial |
+| `component/ChestComponent.java` | 53 / 53 | faithful |
+| `component/FluidInputComponent.java` | 26 / 26 | faithful |
+| `component/FluidOutputComponent.java` | 26 / 26 | faithful |
+| `component/HopperComponent.java` | 53 / 53 | faithful |
+| `component/ItemInputComponent.java` | 23 / 23 | faithful |
+| `component/ItemOutputComponent.java` | 25 / 24 | faithful |
+| `component/MetaboliserSegmentComponent.java` | 20 / 20 | faithful |
+| `component/PoweredComponent.java` | 37 / 37 | faithful |
+| `item/StomachBlockItem.java` | 23 / 44 | partial |
+| `process/BallMillProcess.java` | 46 / 108 | partial |
+| `process/BioreactorProcess.java` | 60 / 77 | faithful |
+| `process/CharnelPumpProcess.java` | 63 / 103 | faithful |
+| `process/CrusherProcess.java` | 95 / 169 | partial |
+| `process/DisruptorProcess.java` | 109 / 120 | faithful |
+| `process/DistributorPointProcess.java` | 45 / 195 | partial |
+| `process/LargeCompressorProcess.java` | 51 / 66 | faithful |
+| `process/LargeTrommelProcess.java` | 76 / 129 | faithful |
+| `process/MetaboliserProcess.java` | 71 / 120 | faithful |
+| `process/PhageRayProcess.java` | 65 / 119 | faithful |
+| `process/PressurisedDigesterProcess.java` | 80 / 113 | faithful |
+| `process/TreeVacuumProcess.java` | 129 / 227 | faithful |
+Counts: 45 faithful, 19 partial, 5 shell. The shells are: `block/StomachBlock`, `block/MetaboliserSegmentBlock`, `block/CrusherSegmentBlock`, `block/entity/LivingMachineControllerBlockEntity`, and `block/entity/MotorPortBlockEntity`. Those four wrappers only construct the class that actually runs, and the crusher segment block is not the block `LivingMachines.CRUSHER` registers.
+
+Deviations in this batch: the phage beam does not render and silk touch is not applied. The charnel pump does not spawn spouts or grant enlightenment. The reaction core does not flood-fill a receiver organism. The digester does not build ore-fat fluids from smelting recipes; raw iron and blood become meat, and compressed air still halves the blood cost. The largest hopper does not damage mobs and is not the upstream cylinder. The tree vacuum has no client animation.
+
 ## Recipes, multiblocks, and distributor, jar 0.30.0-neoforge.35
 
 `machine/live_machine` matches all 69 upstream paths. The package has more files than that because of the port's tests and helpers. `./gradlew runGameTestServer` passed 62 tests on this jar.
