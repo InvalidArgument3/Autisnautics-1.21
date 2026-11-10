@@ -84,6 +84,7 @@ public class AdvancedEjectorBlockEntity extends ItemPipeBlockEntity implements I
         super(type, pos, state, Vertex::new);
     }
 
+    @Override
     public void serverTick(Level world, BlockPos pos, BlockState state)
     {
         if (counter <= 0 && active)
@@ -222,7 +223,7 @@ public class AdvancedEjectorBlockEntity extends ItemPipeBlockEntity implements I
     }
 
     @Override
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(tag, registries);
         filterList.readNbt(tag);
@@ -235,7 +236,7 @@ public class AdvancedEjectorBlockEntity extends ItemPipeBlockEntity implements I
     }
 
     @Override
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
         filterList.writeNbt(tag);

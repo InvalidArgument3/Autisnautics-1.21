@@ -76,6 +76,7 @@ public class MobSynthesisRegistry implements SimpleSynchronousResourceReloadList
         return INSTANCE;
     }
 
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         entries.clear();

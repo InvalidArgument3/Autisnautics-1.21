@@ -225,9 +225,10 @@ public class FollowerEntity extends PathfinderMob
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         if (nbt.contains("persistent_target"))
             this.targetUUID = nbt.getUUID("persistent_target");
         else

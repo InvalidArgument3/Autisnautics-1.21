@@ -42,6 +42,7 @@ public class TinkerTableBlockEntity extends SyncableBlockEntity implements MenuP
     {
         private NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
 
+        @Override
         public NonNullList<ItemStack> getItems()
         {
             return items;
@@ -60,14 +61,14 @@ public class TinkerTableBlockEntity extends SyncableBlockEntity implements MenuP
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         inventory.writeNbt(nbt);
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         inventory.readNbt(nbt);

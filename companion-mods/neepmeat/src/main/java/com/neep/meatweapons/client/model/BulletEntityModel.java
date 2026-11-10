@@ -39,6 +39,7 @@ public class BulletEntityModel extends EntityModel<BulletEntity>
 
     }
 
+    @Override
     public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
     {
         // translate model down

@@ -96,7 +96,7 @@ public final class MeatlibRecipes {
         }
         for (Object holderObj : manager.getAllRecipesFor((RecipeType) type)) {
             RecipeHolder<?> holder = (RecipeHolder<?>) holderObj;
-            if (accepts(holder.value(), input)) {
+            if (holder.value() instanceof RecipeContextMatch match && match.matches(input, null)) {
                 return Optional.of((T) holder.value());
             }
         }
@@ -114,32 +114,6 @@ public final class MeatlibRecipes {
             values.add((T) holder.value());
         }
         return values;
-    }
-
-    private static boolean accepts(Object recipe, Object input) {
-        if (recipe == null || input == null) {
-            return false;
-        }
-        for (java.lang.reflect.Method method : recipe.getClass().getMethods()) {
-            if (method.getParameterCount() != 1) {
-                continue;
-            }
-            if (!method.getName().equals("matches") && !method.getName().equals("accepts")) {
-                continue;
-            }
-            if (!method.getParameterTypes()[0].isInstance(input)) {
-                continue;
-            }
-            try {
-                Object result = method.invoke(recipe, input);
-                if (result instanceof Boolean matched) {
-                    return matched;
-                }
-            } catch (ReflectiveOperationException ignored) {
-                return false;
-            }
-        }
-        return false;
     }
 
     public Optional<?> get(ResourceLocation id) {

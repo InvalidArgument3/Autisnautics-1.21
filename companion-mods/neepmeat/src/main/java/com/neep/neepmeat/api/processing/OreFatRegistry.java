@@ -264,6 +264,7 @@ public class OreFatRegistry implements SimpleSynchronousResourceReloadListener
      * and outputs that match the tags in fat.json.
      * Entries that already exist for a given output will not be replaced by generated entries.
      */
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         inputToEntry.clear();

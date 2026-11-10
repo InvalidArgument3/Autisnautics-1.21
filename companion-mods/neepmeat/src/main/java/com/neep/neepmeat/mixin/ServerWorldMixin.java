@@ -62,7 +62,6 @@ public abstract class ServerWorldMixin implements IServerWorld
         return neepmeat$enlightenmentEventManager;
     }
 
-    @Override
     public BloodNetworkManager getBloodNetworkManager() { return neepmeat$bloodNetworkManager.get(); }
 
 //    @Override

@@ -86,9 +86,10 @@ public class CompressorScutterEntity extends ScutterEntity implements FollowingS
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         inventory.readNbt(nbt);
         burner.readNbt(nbt);
 

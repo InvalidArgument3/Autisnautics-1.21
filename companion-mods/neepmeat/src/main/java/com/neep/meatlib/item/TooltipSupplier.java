@@ -43,6 +43,12 @@ public interface TooltipSupplier {
         return second == null ? first : first.append(second);
     }
 
+    static void wrapLines(List<Component> tooltip, Component text) {
+        if (tooltip != null && text != null) {
+            tooltip.add(text);
+        }
+    }
+
     static TooltipSupplier simple(int lines) {
         return (stack, tooltip) -> {
             for (int line = 0; line < lines; line++) {

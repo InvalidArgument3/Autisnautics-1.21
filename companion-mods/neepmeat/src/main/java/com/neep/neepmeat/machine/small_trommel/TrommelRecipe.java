@@ -12,12 +12,20 @@
 
 package com.neep.neepmeat.machine.small_trommel;
 
+import com.neep.meatlib.recipe.RecipeContextMatch;
 import com.neep.meatlib.transfer.TransactionContext;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
-public interface TrommelRecipe {
+public interface TrommelRecipe extends RecipeContextMatch {
     int INPUT_AMOUNT = 9000;
 
     boolean matches(TrommelStorage inventory);
+
+    @Override
+    default boolean matches(Object input, @Nullable Level level) {
+        return input instanceof TrommelStorage storage && matches(storage);
+    }
 
     boolean takeInputs(TrommelStorage storage, TransactionContext transaction);
 

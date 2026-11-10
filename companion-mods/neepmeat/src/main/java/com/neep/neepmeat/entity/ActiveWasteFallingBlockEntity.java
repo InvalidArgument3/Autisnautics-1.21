@@ -353,7 +353,7 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag nbt)
+    protected void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         nbt.put("BlockState", NbtUtils.writeBlockState(this.block));
         nbt.putInt("Time", this.time);
@@ -370,7 +370,7 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
     }
 
     @Override
-    protected void readAdditionalSaveData(CompoundTag nbt)
+    protected void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         this.block = NbtUtils.readBlockState(this.level().holderLookup(Registries.BLOCK), nbt.getCompound("BlockState"));
         this.time = nbt.getInt("Time");

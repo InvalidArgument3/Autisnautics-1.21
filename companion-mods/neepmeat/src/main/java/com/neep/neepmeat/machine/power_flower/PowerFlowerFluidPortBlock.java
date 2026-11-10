@@ -84,7 +84,7 @@ public class PowerFlowerFluidPortBlock extends BaseBlock implements EntityBlock,
         {
             super.loadAdditional(nbt, registries);
             if (nbt.contains("parent_pos"))
-                this.controllerPos = NbtUtils.readBlockPos(nbt.getCompound("parent_pos"));
+                this.controllerPos = NbtUtils.readBlockPos(nbt, "parent_pos").orElse(net.minecraft.core.BlockPos.ZERO);
         }
 
         @Nullable

@@ -31,7 +31,6 @@ public interface GuideNode
 
     interface Simple extends GuideNode
     {
-        @Override
         default List<GuideNode> getChildren() { return Collections.emptyList(); }
 
         @Override

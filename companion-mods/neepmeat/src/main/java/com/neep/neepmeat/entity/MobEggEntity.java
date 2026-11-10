@@ -176,22 +176,11 @@ public class MobEggEntity extends SimpleEntity
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         this.hatchType = nbt.contains("hatchType") ? BuiltInRegistries.ENTITY_TYPE.get(ResourceLocation.parse(nbt.getString("hatchType"))) : null;
-    }
-
-    @Override
-    protected void readAdditionalSaveData(CompoundTag nbt)
-    {
-
-    }
-
-    @Override
-    protected void addAdditionalSaveData(CompoundTag nbt)
-    {
-
     }
 
     public void setWobbleTicks(int wobbleTicks)

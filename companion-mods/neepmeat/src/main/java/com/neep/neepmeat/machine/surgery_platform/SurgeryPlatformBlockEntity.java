@@ -90,11 +90,13 @@ public class SurgeryPlatformBlockEntity extends SyncableBlockEntity
 
         }
 
+        @Override
         public BlockPos getOutputPos()
         {
             return worldPosition.above();
         }
 
+        @Override
         public Level getWorld()
         {
             return level;

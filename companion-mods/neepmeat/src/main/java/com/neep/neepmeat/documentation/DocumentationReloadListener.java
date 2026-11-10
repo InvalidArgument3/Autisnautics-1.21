@@ -79,6 +79,7 @@ public class DocumentationReloadListener implements SimpleSynchronousResourceRel
         };
     }
 
+    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         catEntries.clear();

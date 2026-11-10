@@ -36,7 +36,7 @@ public abstract class CardSlot extends Slot
             {
                 this.setByPlayer(stack.split(i));
             }
-            else if (ItemStack.isSameItemSameTags(itemStack, stack))
+            else if (ItemStack.isSameItemSameComponents(itemStack, stack))
             {
                 stack.shrink(i);
                 itemStack.grow(i);

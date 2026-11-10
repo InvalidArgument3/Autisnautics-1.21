@@ -327,7 +327,7 @@ public class ShortPhageRayModule extends AmmunitionUsingModule
     public ItemStack createStack(MeatgunModuleItem item)
     {
         ItemStack stack = super.createStack(item);
-        stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().put("Enchantments", enchantments);
+        com.neep.meatlib.item.StackNbt.edit(stack, nbt -> nbt.put("Enchantments", enchantments));
         return stack;
     }
 

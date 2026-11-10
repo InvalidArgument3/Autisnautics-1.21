@@ -23,11 +23,13 @@ public class NMTrackedData
     public static final EntityDataSerializer<Double> DOUBLE = new EntityDataSerializer<>()
     {
 
+        @Override
         public void write(FriendlyByteBuf packetByteBuf, Double d)
         {
             packetByteBuf.writeDouble(d);
         }
 
+        @Override
         public Double read(FriendlyByteBuf packetByteBuf)
         {
             return (double) packetByteBuf.readFloat();
@@ -41,11 +43,13 @@ public class NMTrackedData
     };
     public static final EntityDataSerializer<Fluid> FLUID = new EntityDataSerializer<Fluid>()
     {
+        @Override
         public void write(FriendlyByteBuf buf, Fluid value)
         {
             buf.writeById(BuiltInRegistries.FLUID::getId, value);
         }
 
+        @Override
         public Fluid read(FriendlyByteBuf buf)
         {
             return buf.readById(BuiltInRegistries.FLUID::byId);

@@ -67,6 +67,8 @@ public final class NeepMeat {
         com.neep.meatlib.config.ConfigFiles.register(container, net.neoforged.fml.config.ModConfig.Type.COMMON, "neepmeat.toml", CONFIG);
         BloodFluids.register(bus);
         com.neep.neepmeat.fluid.EtherealFuel.register(bus);
+        com.neep.neepmeat.fluid.FoodFluid.register(bus);
+        com.neep.neepmeat.component.SyncedComponents.register(bus);
         com.neep.neepmeat.fluid.MeatFluid.register(bus);
         com.neep.neepmeat.fluid.TissueSlurry.bootstrap(bus);
         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(com.neep.meatlib.recipe.MeatlibRecipes::onServerStarted);

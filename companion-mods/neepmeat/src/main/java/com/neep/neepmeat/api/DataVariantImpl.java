@@ -33,21 +33,25 @@ public class DataVariantImpl implements DataResource
         this.data = data;
     }
 
+    @Override
     public boolean isBlank()
     {
         return data == DataType.BLANK;
     }
 
+    @Override
     public DataType getObject()
     {
         return data;
     }
 
+    @Override
     public @Nullable CompoundTag getNbt()
     {
         return null;
     }
 
+    @Override
     public CompoundTag toNbt()
     {
         CompoundTag result = new CompoundTag();
@@ -86,6 +90,7 @@ public class DataVariantImpl implements DataResource
         return false;
     }
 
+    @Override
     public void toPacket(FriendlyByteBuf buf)
     {
         buf.writeBoolean(!isBlank());

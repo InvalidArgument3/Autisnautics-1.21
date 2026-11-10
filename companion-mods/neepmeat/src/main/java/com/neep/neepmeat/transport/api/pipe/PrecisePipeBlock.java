@@ -342,6 +342,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     private static final Direction[] HORIZONTAL = new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
+    @Override
     private BlockState rotate(BlockState oldState, int offset)
     {
         BlockState newState = oldState;

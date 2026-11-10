@@ -136,7 +136,7 @@ public abstract class FlexStorageBlockEntity<T extends FlexStorageBlockEntity<?>
         super.loadAdditional(nbt, registries);
         if (nbt.contains("root"))
         {
-            this.root = NbtUtils.readBlockPos(nbt.getCompound("root"));
+            this.root = NbtUtils.readBlockPos(nbt, "root").orElse(net.minecraft.core.BlockPos.ZERO);
         }
 
         if (nbt.contains("children"))

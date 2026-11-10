@@ -72,6 +72,7 @@ public class EntityVariant<T extends Entity> implements TransferVariant<EntityTy
         return entityType == null;
     }
 
+    @Override
     public EntityType<T> getObject()
     {
         return entityType;

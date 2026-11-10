@@ -54,7 +54,7 @@ public class DelegatePlayerInventory extends FakePlayerEntity.FakePlayerInventor
 
     private boolean hasRemainingSpaceForItem(ItemStack existingStack, ItemStack stack)
     {
-        return !existingStack.isEmpty() && ItemStack.isSameItemSameTags(existingStack, stack) && existingStack.isStackable() && existingStack.getCount() < existingStack.getMaxStackSize() && existingStack.getCount() < this.getMaxStackSize();
+        return !existingStack.isEmpty() && ItemStack.isSameItemSameComponents(existingStack, stack) && existingStack.isStackable() && existingStack.getCount() < existingStack.getMaxStackSize() && existingStack.getCount() < this.getMaxStackSize();
     }
 
     public int getFreeSlot()
@@ -82,7 +82,7 @@ public class DelegatePlayerInventory extends FakePlayerEntity.FakePlayerInventor
     {
         for (int i = 0; i < inventory.getContainerSize(); ++i)
         {
-            if (!(inventory.getItem(i)).isEmpty() && ItemStack.isSameItemSameTags(stack, inventory.getItem(i)))
+            if (!(inventory.getItem(i)).isEmpty() && ItemStack.isSameItemSameComponents(stack, inventory.getItem(i)))
             {
                 return i;
             }
@@ -96,7 +96,7 @@ public class DelegatePlayerInventory extends FakePlayerEntity.FakePlayerInventor
         for (int i = 0; i < inventory.getContainerSize(); ++i)
         {
             ItemStack itemStack = inventory.getItem(i);
-            if (!inventory.getItem(i).isEmpty() && ItemStack.isSameItemSameTags(stack, inventory.getItem(i)) && !inventory.getItem(i).isDamaged() && !itemStack.isEnchanted() && !itemStack.hasCustomHoverName())
+            if (!inventory.getItem(i).isEmpty() && ItemStack.isSameItemSameComponents(stack, inventory.getItem(i)) && !inventory.getItem(i).isDamaged() && !itemStack.isEnchanted() && !itemStack.hasCustomHoverName())
             {
                 return i;
             }
@@ -458,7 +458,7 @@ public class DelegatePlayerInventory extends FakePlayerEntity.FakePlayerInventor
         while (var2.hasNext())
         {
             ItemStack itemStack = var2.next();
-            if (!itemStack.isEmpty() && ItemStack.isSameItemSameTags(itemStack, stack))
+            if (!itemStack.isEmpty() && ItemStack.isSameItemSameComponents(itemStack, stack))
             {
                 return true;
             }

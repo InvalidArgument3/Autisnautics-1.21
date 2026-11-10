@@ -181,10 +181,10 @@ public class BeamRenderer
             float o = Mth.sin(seg * 6.2831855F / 8.0F) * scale;
             float p = Mth.cos(seg * 6.2831855F / 8.0F) * scale;
             float q = seg / 8.0F;
-            consumer.addVertex(matrix4f, k, l, 0.0F).setColor(255, 255, 255, a0).setUv(m, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(matrix3f, 0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, k, l, g).setColor(255, 255, 255, 255).setUv(m, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(matrix3f, 0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, o, p, g).setColor(255, 255, 255, 255).setUv(q, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(matrix3f, 0.0F, 1.0F, 0.0F);
-            consumer.addVertex(matrix4f, o, p, 0.0F).setColor(255, 255, 255, a0).setUv(q, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(matrix3f, 0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, k, l, 0.0F).setColor(255, 255, 255, a0).setUv(m, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, k, l, g).setColor(255, 255, 255, 255).setUv(m, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, o, p, g).setColor(255, 255, 255, 255).setUv(q, i).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
+            consumer.addVertex(matrix4f, o, p, 0.0F).setColor(255, 255, 255, a0).setUv(q, h).setOverlay(OverlayTexture.NO_OVERLAY).setLight(light).setNormal(0.0F, 1.0F, 0.0F);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(k*.2, l*.2, 0), 0, 1);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(k, l, g), 0, 1);
 //            vertex(consumer, matrix4f, matrix3f, 255, 255, 255, 255, light, new Vec3d(o, p, g), 0, 1);
@@ -204,7 +204,7 @@ public class BeamRenderer
                 .setUv(u, v)
                 .setOverlay(OverlayTexture.NO_OVERLAY)
                 .setLight(light)
-                .setNormal(normalMatrix, 0.0f, 1.0f, 0.0f)
+                .setNormal(0.0f, 1.0f, 0.0f)
                 ;
     }
 

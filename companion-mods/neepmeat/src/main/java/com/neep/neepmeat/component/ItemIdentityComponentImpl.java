@@ -58,6 +58,7 @@ public class ItemIdentityComponentImpl extends ItemComponent implements ItemIden
         return id;
     }
 
+    @Override
     public void onTagInvalidated()
     {
         id = null;

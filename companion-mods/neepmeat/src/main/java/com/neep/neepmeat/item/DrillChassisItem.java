@@ -114,7 +114,7 @@ public class DrillChassisItem extends MeatgunItem implements OverrideSwingItem, 
     }
 
     @Override
-    public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged)
     {
         return false;
     }
@@ -154,6 +154,7 @@ public class DrillChassisItem extends MeatgunItem implements OverrideSwingItem, 
     }
 
 
+    @Override
     public boolean isSuitableFor(ItemStack stack, BlockState state)
     {
         if (getHead(stack) instanceof MiningMeatgunModule mining)

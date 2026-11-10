@@ -33,7 +33,7 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public final class BallMillRecipe implements Recipe<SingleRecipeInput> {
+public final class BallMillRecipe implements Recipe<SingleRecipeInput>, com.neep.meatlib.recipe.RecipeContextMatch {
     private final ResourceSpec input;
     private final List<ResourceSpec> output;
     private final RecipeType<?> type;
@@ -62,6 +62,17 @@ public final class BallMillRecipe implements Recipe<SingleRecipeInput> {
 
     public boolean accepts(ItemStack stack) {
         return input.acceptsItem(stack);
+    }
+
+    @Override
+    public boolean matches(Object input, Level level) {
+        if (input instanceof ItemStack stack) {
+            return accepts(stack);
+        }
+        if (input instanceof SingleRecipeInput recipeInput) {
+            return accepts(recipeInput.item());
+        }
+        return false;
     }
 
     public long inputAmount() {

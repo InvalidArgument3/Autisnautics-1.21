@@ -206,6 +206,7 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
     }
 
     @Nullable
+    @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
     {
         updateGoals();
@@ -287,9 +288,10 @@ public class BovineHorrorEntity extends Monster implements AnimationSyncable, Ge
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         this.entityData.set(PHASE2, nbt.getBoolean("phase2"));
     }
 

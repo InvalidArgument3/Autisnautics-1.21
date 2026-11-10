@@ -66,6 +66,7 @@ public class CrucibleStorageImpl implements CrucibleStorage, NbtSerialisable
                 return processed;
             }
 
+            @Override
             protected ItemVariant getBlankVariant()
             {
                 return ItemVariant.BLANK;

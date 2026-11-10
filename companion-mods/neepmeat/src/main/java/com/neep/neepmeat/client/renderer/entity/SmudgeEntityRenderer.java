@@ -122,28 +122,28 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
 //                .texture(u1, v1)
 //                .overlay(OverlayTexture.DEFAULT_UV)
 //                .light(light)
-//                .setNormal(normal, 0, 1, 0)
+//                .setNormal(0, 1, 0)
 //                .next();
 //        vertexConsumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
 //                .texture(u1, v0)
 //                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .setNormal(normal, 0, 1, 0)
+//                .setNormal(0, 1, 0)
 //                .next();
 //        vertexConsumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
 //                .texture(u0, v0)
 //                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .setNormal(normal, 0, 1, 0)
+//                .setNormal(0, 1, 0)
 //                .next();
 //        vertexConsumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
 //                .texture(u0, v1)
 //                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .setNormal(normal, 0, 1, 0)
+//                .setNormal(0, 1, 0)
 //                .next();
     }
 

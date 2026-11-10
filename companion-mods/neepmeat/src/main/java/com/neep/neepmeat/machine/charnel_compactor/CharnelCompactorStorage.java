@@ -158,6 +158,7 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
 
     private class TopStorage implements InsertionOnlyStorage<ItemVariant>
     {
+        @Override
         public long insert(ItemVariant resource, long maxAmount, TransactionContext transaction)
         {
             StoragePreconditions.notBlankNotNegative(resource, maxAmount);
@@ -187,6 +188,7 @@ public class CharnelCompactorStorage extends SnapshotParticipant<Float>
             return 1;
         }
 
+        @Override
         public Iterator<StorageView<ItemVariant>> iterator()
         {
             return Collections.emptyIterator();

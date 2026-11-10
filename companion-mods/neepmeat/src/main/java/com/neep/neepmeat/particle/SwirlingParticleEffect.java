@@ -28,6 +28,7 @@ public class SwirlingParticleEffect implements ParticleOptions
 {
     public static final ParticleOptions.Deserializer<SwirlingParticleEffect> PARAMETERS_FACTORY = new ParticleOptions.Deserializer<>()
     {
+        @Override
         public SwirlingParticleEffect fromCommand(ParticleType<SwirlingParticleEffect> particleType, StringReader stringReader) throws CommandSyntaxException
         {
             stringReader.expect(' ');
@@ -39,6 +40,7 @@ public class SwirlingParticleEffect implements ParticleOptions
             return new SwirlingParticleEffect(particleType, state, radius, speed);
         }
 
+        @Override
         public SwirlingParticleEffect fromNetwork(ParticleType<SwirlingParticleEffect> particleType, FriendlyByteBuf packetByteBuf)
         {
             return new SwirlingParticleEffect(particleType, Block.BLOCK_STATE_REGISTRY.byId(packetByteBuf.readVarInt()), packetByteBuf.readDouble(), packetByteBuf.readDouble());
@@ -76,11 +78,13 @@ public class SwirlingParticleEffect implements ParticleOptions
         return type;
     }
 
+    @Override
     public void writeToNetwork(FriendlyByteBuf buf)
     {
         buf.writeVarInt(Block.BLOCK_STATE_REGISTRY.getId(this.blockState));
     }
 
+    @Override
     public String writeToString()
     {
         return BuiltInRegistries.PARTICLE_TYPE.getKey(this.getType()) + " " + BlockStateParser.serialize(this.blockState);

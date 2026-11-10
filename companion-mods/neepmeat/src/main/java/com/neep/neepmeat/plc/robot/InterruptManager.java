@@ -133,7 +133,7 @@ public class InterruptManager implements NbtSerialisable
         for (int i = 0; i < list.size(); ++i)
         {
             CompoundTag compound = list.getCompound(i);
-            BlockPos pos = NbtUtils.readBlockPos(compound.getCompound("pos"));
+            BlockPos pos = NbtUtils.readBlockPos(compound, "pos").orElse(net.minecraft.core.BlockPos.ZERO);
             Label label = Instructions.labelFromNbt(compound.getCompound("label"));
             table.put(pos, label);
         }

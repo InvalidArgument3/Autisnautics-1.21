@@ -30,7 +30,7 @@ import net.minecraft.world.level.Level;
 
 import java.util.Optional;
 
-public final class CrushingRecipe implements Recipe<SingleRecipeInput> {
+public final class CrushingRecipe implements Recipe<SingleRecipeInput>, com.neep.meatlib.recipe.RecipeContextMatch {
     private final boolean destroy;
     private final ResourceSpec input;
     private final ResourceSpec output;
@@ -93,6 +93,17 @@ public final class CrushingRecipe implements Recipe<SingleRecipeInput> {
 
     public boolean accepts(ItemStack stack) {
         return !destroy && input != null && input.acceptsItem(stack);
+    }
+
+    @Override
+    public boolean matches(Object input, Level level) {
+        if (input instanceof ItemStack stack) {
+            return accepts(stack);
+        }
+        if (input instanceof SingleRecipeInput recipeInput) {
+            return accepts(recipeInput.item());
+        }
+        return false;
     }
 
     public ItemStack rollOutput(RandomSource random) {

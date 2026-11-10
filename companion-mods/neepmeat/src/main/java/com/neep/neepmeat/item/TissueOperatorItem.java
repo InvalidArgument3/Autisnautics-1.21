@@ -108,7 +108,8 @@ public class TissueOperatorItem extends BaseSwordItem implements OverrideSwingIt
         return ArmPose.BOW_AND_ARROW;
     }
 
-    public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged)
     {
         return false;
     }

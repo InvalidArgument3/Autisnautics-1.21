@@ -26,7 +26,6 @@ public interface Action extends NbtSerialisable
     @Override
     default CompoundTag writeNbt(CompoundTag nbt) {return nbt;}
 
-    @Override
     default void readNbt(CompoundTag nbt) {};
 
     @FunctionalInterface

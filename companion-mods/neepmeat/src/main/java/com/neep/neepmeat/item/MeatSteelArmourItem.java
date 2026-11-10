@@ -49,6 +49,7 @@ public class MeatSteelArmourItem extends ArmorItem implements MeatlibItem, GeoIt
         return PlayState.CONTINUE;
     }
 
+    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()

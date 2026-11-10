@@ -61,14 +61,14 @@ public class VascularSensorBlockEntity extends SyncableBlockEntity implements Co
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         config.writeNbt(nbt);
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         config.readNbt(nbt);
@@ -76,6 +76,7 @@ public class VascularSensorBlockEntity extends SyncableBlockEntity implements Co
 
     private class Acceptor implements BloodAcceptor, BalancingBloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.BALANCE;

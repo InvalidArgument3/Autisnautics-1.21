@@ -65,7 +65,7 @@ public class EncasedItemPipeBlockEntity extends ItemPipeBlockEntity implements E
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         BlockState camoState = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("camo_state"));
@@ -77,7 +77,7 @@ public class EncasedItemPipeBlockEntity extends ItemPipeBlockEntity implements E
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.put("camo_state", NbtUtils.writeBlockState(camoState));
@@ -126,16 +126,19 @@ public class EncasedItemPipeBlockEntity extends ItemPipeBlockEntity implements E
         return cachedShape;
     }
 
+    @Override
     public void fromClientTag(CompoundTag nbt)
     {
         load(nbt);
     }
 
+    @Override
     public void toClientTag(CompoundTag nbt)
     {
         saveAdditional(nbt);
     }
 
+    @Override
     public void onReceiveNbt(CompoundTag nbt)
     {
         level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_IMMEDIATE);

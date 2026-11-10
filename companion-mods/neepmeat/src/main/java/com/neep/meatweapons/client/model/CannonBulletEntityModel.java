@@ -45,6 +45,7 @@ public class CannonBulletEntityModel extends EntityModel<CannonBulletEntity>
 
 	}
 
+	@Override
 	public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
 	{
 		bb_main.render(matrices, vertices, light, overlay);

@@ -143,11 +143,13 @@ public abstract class BogItemStorage implements Storage<ItemVariant>, NbtSeriali
 
     protected class StackView extends SingleVariantStorage<ItemVariant>
     {
+        @Override
         protected ItemVariant getBlankVariant()
         {
             return ItemVariant.BLANK;
         }
 
+        @Override
         protected long getCapacity(ItemVariant variant)
         {
             return getStackSize();

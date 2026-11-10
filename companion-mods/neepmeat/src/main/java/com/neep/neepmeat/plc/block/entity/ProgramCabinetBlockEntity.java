@@ -54,7 +54,7 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.put("inventory", inventory.writeNbt(new CompoundTag()));
@@ -71,7 +71,7 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         inventory.readNbt(nbt.getCompound("inventory"));
@@ -144,6 +144,7 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
         return programMap.getOrDefault(name, PLCProgram.EMPTY);
     }
 
+    @Override
     public Instruction getInstruction(int segment, int address)
     {
         updatePrograms();
@@ -161,6 +162,7 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
        return symbolToAddress.getOrDefault(symbol, -1);
     }
 
+    @Override
     public void saveToItem(ItemStack stack)
     {
         CompoundTag createdNbt = saveWithoutMetadata();

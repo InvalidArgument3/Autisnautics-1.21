@@ -40,7 +40,6 @@ import java.util.List;
 
 public class CompoundInjectorItem extends BaseItem
 {
-    @Override
     public final int healsFor = 8; // Health replenished each use (discounting initial damage)
     public final int initialDamage = 1;
 
@@ -140,8 +139,7 @@ public class CompoundInjectorItem extends BaseItem
 
     public static void setHealsRemaining(ItemStack stack, int heals)
     {
-        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
-        nbt.putInt("Heals", heals);
+        com.neep.meatlib.item.StackNbt.edit(stack, nbt -> nbt.putInt("Heals", heals));
     }
 
     public static int getHealsRemaining(ItemStack stack)
@@ -155,6 +153,7 @@ public class CompoundInjectorItem extends BaseItem
         return healsFor;
     }
 
+    @Override
     private void use(ItemStack stack, Player player)
     {
         if (hasUses(stack))

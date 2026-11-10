@@ -145,7 +145,7 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
                 .setUv(u, v)
                 .setOverlay(OverlayTexture.NO_OVERLAY)
                 .setLight(light)
-                .setNormal(normalMatrix, (float) normalX, (float) normalY, (float) normalZ)
+                .setNormal((float) normalX, (float) normalY, (float) normalZ)
                 ;
     }
 

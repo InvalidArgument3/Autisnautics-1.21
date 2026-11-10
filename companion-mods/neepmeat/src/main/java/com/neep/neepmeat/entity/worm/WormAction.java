@@ -26,7 +26,6 @@ public interface WormAction extends NbtSerialisable
     @Override
     default CompoundTag writeNbt(CompoundTag nbt) {return nbt;}
 
-    @Override
     default void readNbt(CompoundTag nbt) {};
 
     @FunctionalInterface

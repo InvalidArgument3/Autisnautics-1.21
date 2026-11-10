@@ -37,6 +37,7 @@ public class NMModelProvider extends FabricModelProvider
         super(output);
     }
 
+    @Override
     public String getName()
     {
         return super.getName() + "(neepmeat)";

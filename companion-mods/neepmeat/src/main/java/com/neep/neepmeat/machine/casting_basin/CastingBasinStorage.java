@@ -49,6 +49,7 @@ public class CastingBasinStorage implements NbtSerialisable, ImplementedRecipe.D
                 return super.canInsert(variant) && !locked;
             }
 
+            @Override
             protected boolean canExtract(FluidVariant variant)
             {
                 return super.canExtract(variant) && !locked;

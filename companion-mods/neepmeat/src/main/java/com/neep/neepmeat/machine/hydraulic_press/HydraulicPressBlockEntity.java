@@ -70,6 +70,7 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
             return super.canInsert(variant) && variant.isOf(Fluids.WATER) && (!recipeControlled || (recipeState == 0 && hasRecipe()));
         }
 
+        @Override
         protected boolean canExtract(FluidVariant variant)
         {
             return super.canExtract(variant) && variant.isOf(Fluids.WATER) && (!recipeControlled || recipeState == 2);
@@ -122,6 +123,7 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
         }
     }
 
+    @Override
     protected void finishRecipe()
     {
         if (level.getBlockEntity(worldPosition.below()) instanceof CastingBasinBlockEntity basin)
@@ -214,7 +216,7 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         fluidStorage.toNbt(nbt);
@@ -227,7 +229,7 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         fluidStorage.readNbt(nbt);

@@ -116,7 +116,7 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putInt("desired_power", desiredPower);
@@ -128,7 +128,7 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.desiredPower = nbt.getInt("desired_power");
@@ -293,6 +293,7 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
     // Represents the sink with respect to this block - the side that absorbs power
     private class NormalSinkAcceptor extends AbstractBloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.ACTIVE_SINK;
@@ -325,6 +326,7 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
             return Mode.SOURCE;
         }
 
+        @Override
         public long getOutput()
         {
             return powerToSource;

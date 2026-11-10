@@ -68,7 +68,6 @@ public interface SelfRegistrable
             return apply((String) o);
         }
 
-        @Override
         String apply(String key);
     }
 }

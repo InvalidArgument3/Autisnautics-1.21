@@ -485,9 +485,10 @@ public class MeatgunProjectileEntity extends AbstractArrow
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         this.homingRadius = nbt.getFloat("homing_range");
         this.prioritiseHoming = nbt.getBoolean("prioritise_homing");
         this.homingSpeed = nbt.getFloat("homing_speed");

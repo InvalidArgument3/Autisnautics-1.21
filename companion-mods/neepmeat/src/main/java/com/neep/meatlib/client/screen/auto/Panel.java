@@ -73,7 +73,6 @@ public abstract class Panel extends AbstractContainerEventHandler implements Con
         return false;
     }
 
-    @Override
     public abstract void init();
 
     protected abstract List<Renderable> drawables();

@@ -26,7 +26,8 @@ public class ProcessCardItem extends BaseItem
         super(tooltipSupplier, settings);
     }
 
-    public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged)
     {
         return false;
     }

@@ -120,6 +120,7 @@ public class HoundEntityRenderer extends LivingEntityRenderer<HoundEntity, Hound
         return 4 * Mth.sin(f);
     }
 
+    @Override
     protected boolean hasLabel(HoundEntity livingEntity)
     {
         // For some reason the label is rendered by default.

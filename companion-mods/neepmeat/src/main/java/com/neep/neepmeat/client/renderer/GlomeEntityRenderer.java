@@ -61,6 +61,7 @@ public class GlomeEntityRenderer extends LivingEntityRenderer<GlomeEntity, Glome
     }
 
     @Nullable
+    @Override
     protected RenderType getRenderLayer(GlomeEntity entity, boolean showBody, boolean translucent, boolean showOutline)
     {
         return RenderType.entityTranslucent(getTexture(entity));
@@ -72,6 +73,7 @@ public class GlomeEntityRenderer extends LivingEntityRenderer<GlomeEntity, Glome
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/entity/glome.png");
     }
 
+    @Override
     protected void renderLabelIfPresent(GlomeEntity entity, Component text, PoseStack matrices, MultiBufferSource vertexConsumers, int light)
     {
 //        super.renderLabelIfPresent(entity, text, matrices, vertexConsumers, light);

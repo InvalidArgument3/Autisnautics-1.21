@@ -208,7 +208,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
 
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         inventory.writeNbt(nbt);
@@ -219,7 +219,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         inventory.readNbt(nbt);
@@ -653,6 +653,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
             return 0;
         }
 
+        @Override
         public IngredientResult request(Predicate<ItemVariant> predicate, boolean recursive, long maxAmount, TransactionContext transaction)
         {
             if (!bufferedStack.isEmpty() && predicate.test(ItemVariant.of(bufferedStack)) || predicate.test(ItemVariant.of(previewStack)))
@@ -745,12 +746,13 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
         // Outside transaction scope - no snapshots
         public void appendBuffered(ItemStack newBuffered)
         {
-            if (!bufferedStack.isEmpty() && ItemStack.isSameItemSameTags(bufferedStack, newBuffered))
+            if (!bufferedStack.isEmpty() && ItemStack.isSameItemSameComponents(bufferedStack, newBuffered))
                 bufferedStack.grow(newBuffered.getCount());
             else
                 bufferedStack = newBuffered; // This will overwrite the buffer if it can't combine with the new stack, but it will probably be fine.
         }
 
+        @Override
         public boolean supportsInsertion()
         {
             return false;
@@ -811,6 +813,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
             return Iterators.singletonIterator(this);
         }
 
+        @Override
         private void load()
         {
             if (needsLoading)

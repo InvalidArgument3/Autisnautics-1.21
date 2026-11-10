@@ -125,16 +125,12 @@ public interface Rectangle extends Point
     {
         Rectangle getDelegate();
 
-        @Override
         default int x0() { return getDelegate().x0(); }
 
-        @Override
         default int y0() { return getDelegate().y0(); }
 
-        @Override
         default int nw() { return getDelegate().nw(); }
 
-        @Override
         default int nh() { return getDelegate().nh(); }
     }
 }

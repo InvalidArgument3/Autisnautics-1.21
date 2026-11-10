@@ -142,9 +142,10 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
 
         currentAction = WormActions.fromNbt(nbt.getCompound("currentAction"), this);
     }

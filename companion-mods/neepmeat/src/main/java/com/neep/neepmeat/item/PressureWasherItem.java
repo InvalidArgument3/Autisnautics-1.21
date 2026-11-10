@@ -79,7 +79,8 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
         return false;
     }
 
-    public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged)
     {
         return false;
     }

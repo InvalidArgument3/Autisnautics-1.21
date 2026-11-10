@@ -46,18 +46,17 @@ public class TransformingTools
     {
         if (isTransformingTool(oldStack))
         {
-            CompoundTag nbt = oldStack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().getCompound(ROOT_ID);
+            CompoundTag nbt = com.neep.meatlib.item.StackNbt.read(oldStack).getCompound(ROOT_ID);
 
             // Retrieve alternate stack from NBT
-            ItemStack newStack = ItemStack.of(nbt);
-            
+            ItemStack newStack = ItemStack.parseOptional(player.registryAccess(), nbt);
+
             // Clear oldStack's transforming tool NBT to avoid infinitely recursive NBT
-            oldStack.removeTagKey(ROOT_ID);
-            CompoundTag oldStackNbt = oldStack.save(new CompoundTag());
+            com.neep.meatlib.item.StackNbt.edit(oldStack, tag -> tag.remove(ROOT_ID));
+            CompoundTag oldStackNbt = (CompoundTag) oldStack.save(player.registryAccess());
 
             // Convert the old stack to NBT and store it in the new stack
-            CompoundTag newStackNbt = newStack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
-            newStackNbt.put(ROOT_ID, oldStackNbt);
+            com.neep.meatlib.item.StackNbt.edit(newStack, tag -> tag.put(ROOT_ID, oldStackNbt));
 
             player.setItemInHand(InteractionHand.MAIN_HAND, newStack);
         }
@@ -71,7 +70,7 @@ public class TransformingTools
         CompoundTag nbt1 = variant1.getNbt() != null ? variant1.copyNbt() : new CompoundTag();
 
         ItemStack itemStack2 = variant2.toStack();
-        setLore(itemStack2.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag(), Component.literal("[Transforming Item]").withStyle(ChatFormatting.DARK_RED));
+        com.neep.meatlib.item.StackNbt.edit(itemStack2, tag -> setLore(tag, Component.literal("[Transforming Item]").withStyle(ChatFormatting.DARK_RED)));
         setLore(nbt1, Component.literal("[Transforming Item]").withStyle(ChatFormatting.DARK_RED));
 
         nbt1.put(ROOT_ID, itemStack2.save(new CompoundTag()));

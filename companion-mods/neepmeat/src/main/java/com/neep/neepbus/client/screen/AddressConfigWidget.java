@@ -121,6 +121,7 @@ public class AddressConfigWidget extends GeneralPanel
             GUIUtil.drawText(context, textRenderer, Component.nullToEmpty(entry.get().name() + ": "), x0() + 2, this.y0(), PLCCols.TEXT.col, false);
         }
 
+        @Override
         protected String getPrefix()
         {
             return "→";
@@ -150,6 +151,7 @@ public class AddressConfigWidget extends GeneralPanel
             return super.keyPressed(keyCode, scanCode, modifiers);
         }
 
+        @Override
         public void appendClickableNarrations(NarrationElementOutput builder)
         {
 

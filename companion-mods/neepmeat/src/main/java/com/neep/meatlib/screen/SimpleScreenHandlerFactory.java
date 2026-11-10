@@ -17,6 +17,5 @@ import net.minecraft.world.MenuProvider;
 
 public interface SimpleScreenHandlerFactory extends MenuProvider
 {
-    @Override
     default Component getDisplayName() { return Component.empty(); }
 }

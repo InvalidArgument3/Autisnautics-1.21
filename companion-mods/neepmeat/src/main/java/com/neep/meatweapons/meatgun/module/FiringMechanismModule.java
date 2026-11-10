@@ -10,7 +10,6 @@ public abstract class FiringMechanismModule extends AbstractMeatgunModule
         super(listener, List.of());
     }
 
-    @Override
     public abstract  Type<? extends MeatgunModule> getType();
 
     public abstract float getOverclock();

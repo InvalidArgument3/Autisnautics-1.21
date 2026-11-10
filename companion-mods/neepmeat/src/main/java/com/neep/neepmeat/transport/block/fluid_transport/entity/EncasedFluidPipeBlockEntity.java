@@ -60,6 +60,7 @@ public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialis
         super(type, pos, state, constructor);
     }
 
+    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         var nbt = super.getUpdateTag(registries);
@@ -67,18 +68,21 @@ public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialis
         return nbt;
     }
 
+    @Override
     public void tick()
     {
         super.tick();
     }
 
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.put("camo_state", NbtUtils.writeBlockState(camoState));
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         BlockState camoState = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("camo_state"));

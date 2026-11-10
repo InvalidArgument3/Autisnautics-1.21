@@ -33,6 +33,7 @@ public abstract class WeaponSwitchingHostileEntity extends Monster implements Ra
         super(entityType, world);
     }
 
+    @Override
     protected void dropCustomDeathLoot(DamageSource source, int lootingMultiplier, boolean allowDrops)
     {
         super.dropCustomDeathLoot(source, lootingMultiplier, allowDrops);
@@ -104,7 +105,7 @@ public abstract class WeaponSwitchingHostileEntity extends Monster implements Ra
         for (int i = 0; i < internalInventory.getContainerSize(); i++)
         {
             var otherStack = internalInventory.getItem(i);
-            if (otherStack.isEmpty() || ItemStack.isSameItemSameTags(otherStack, stack))
+            if (otherStack.isEmpty() || ItemStack.isSameItemSameComponents(otherStack, stack))
             {
                 internalInventory.setItem(i, stack.copyWithCount(otherStack.getCount() + stack.getCount()));
                 return true;

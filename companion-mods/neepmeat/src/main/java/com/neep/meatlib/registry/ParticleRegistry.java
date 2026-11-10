@@ -33,6 +33,7 @@ public class ParticleRegistry
     {
         return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new ParticleType<T>(false, factory)
         {
+            @Override
             public Codec<T> codec()
             {
                 return function.apply(this);

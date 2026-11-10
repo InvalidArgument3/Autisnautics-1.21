@@ -101,7 +101,7 @@ public class ProgramCabinetScreenHandler extends BasicScreenHandler
             {
                 Slot slot = this.slots.get(i);
                 ItemStack slotStack = slot.getItem();
-                if (!slotStack.isEmpty() && ItemStack.isSameItemSameTags(stack, slotStack))
+                if (!slotStack.isEmpty() && ItemStack.isSameItemSameComponents(stack, slotStack))
                 {
                     int j = slotStack.getCount() + stack.getCount();
                     int maxCount = Math.min(slot.getMaxStackSize(), slotStack.getMaxStackSize());

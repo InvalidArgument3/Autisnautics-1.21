@@ -47,12 +47,14 @@ public class GlassTankBlockEntity extends TankBlockEntity
 //        this.buffer = new WritableFluidBuffer(this, 8 * FluidConstants.BUCKET);
     }
 
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    @Override
+    public void saveAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
     }
 
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    @Override
+    public void loadAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(tag, registries);
     }

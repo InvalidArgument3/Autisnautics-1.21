@@ -86,6 +86,7 @@ public class KeeperEntity extends WeaponSwitchingHostileEntity
     }
 
     @Nullable
+    @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
     {
         updateAttackType();
@@ -175,9 +176,10 @@ public class KeeperEntity extends WeaponSwitchingHostileEntity
         return super.saveWithoutId(nbt);
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         updateAttackType();
     }
 

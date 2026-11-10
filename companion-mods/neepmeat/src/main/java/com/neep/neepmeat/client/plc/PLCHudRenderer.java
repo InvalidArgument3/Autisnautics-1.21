@@ -117,8 +117,8 @@ public class PLCHudRenderer
         k /= n;
         l /= n;
         m /= n;
-        consumer.addVertex(entry.pose(), minX, minY, minZ).setColor(r, g, b, a).setNormal(entry.normal(), k, l, m);
-        consumer.addVertex(entry.pose(), maxX, maxY, maxZ).setColor(r, g, b, a).setNormal(entry.normal(), k, l, m);
+        consumer.addVertex(entry.pose(), minX, minY, minZ).setColor(r, g, b, a).setNormal(k, l, m);
+        consumer.addVertex(entry.pose(), maxX, maxY, maxZ).setColor(r, g, b, a).setNormal(k, l, m);
     }
 
     public static void init()

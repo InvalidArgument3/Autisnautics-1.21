@@ -1,3 +1,27 @@
+## Override restore, jar 0.30.0-neoforge.55
+
+The three run-47 shortcuts are gone.
+
+`@Override` annotations removed in `659e1172` are restored. Where the declaration had already been renamed onto the 1.21 method (`getTextureLocation`, `setupAnim`, `renderWidget`, `getAddEntityPacket(ServerEntity)`, `appendHoverText(Item.TooltipContext, ...)`, `playerWillDestroy` returning `BlockState`, `getCloneItemStack(LevelReader, ...)`, three-argument `bake`), the annotation sits on that method. Entity `load`/`save` that were still the block-entity shape are `readAdditionalSaveData` and `addAdditionalSaveData`. Item reequip is `shouldCauseReequipAnimation(ItemStack, ItemStack, boolean)`. `Model.renderToBuffer` takes the extra packed colour. Food builders use `saturationModifier`. `NbtUtils.readBlockPos` takes the parent tag and the key and returns `Optional`.
+
+Honest combined-tree count after that restore: **3074**. End of this run: **2975**. That is 99 errors, not 800. `exclude.txt` stays **1358**. `tools/port-errors/symbols.txt` is the end histogram. The top entry is still "does not override" at 408, and the missing symbols are 669 distinct names. Grouped signature replacement and adding the missing methods on our types both move the count by tens. Neither cleared a family of several hundred.
+
+`ItemStack` custom data writes go through `CustomData.update` (`StackNbt.edit`). Reads use `copyTag()`.
+
+`MeatlibRecipes.getFirstMatch` calls `RecipeContextMatch.matches(input, level)`. `MeatlibRecipe` implements that by calling its typed `matches(C)`. `CrushingRecipe`, `BallMillRecipe`, and `TrommelRecipe` implement it directly.
+
+`ComponentKey.sync` writes the component NBT into a `CompoundTag` attachment registered with `AttachmentType.sync` and calls `IAttachmentHolder.syncData`. The attachment value is the tag, not the original component class. `NMComponents` keys are those synced attachments.
+
+`NMFluids.FOOD` is a source fluid with a `FluidType`, flowing fluid, block, and bucket (`FoodFluid`). `NMFluids.ETHEREAL_FUEL` is the already registered ethereal-fuel source. Both fields are filled at the end of the fluid registry event.
+
+Deviations that remain:
+
+- `RecipeContextMatch` on `MeatlibRecipe` catches `ClassCastException` when the input is not `C`.
+- Synced component keys store a compound tag. `get` is not the original implant or workpiece object.
+- Some `setNormal` calls that passed a `Matrix3f` now pass the three floats, so that normal is not rotated by the matrix.
+- `QuadEmitter` still does not store edited vertex positions.
+- `NMFluids.ETHEREAL_FUEL` and `FOOD` are null until the fluid registry event.
+
 ## Symbol histogram, jar 0.30.0-neoforge.54
 
 Combined-tree errors: **3773** before, **2769** after. `exclude.txt` stays **1358**. The histogram is `tools/port-errors/symbols.txt`.

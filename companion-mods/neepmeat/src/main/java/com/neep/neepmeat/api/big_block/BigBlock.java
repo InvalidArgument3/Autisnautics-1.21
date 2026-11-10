@@ -40,7 +40,6 @@ public abstract class BigBlock<T extends BigBlockStructure<?>> extends Block imp
 
     protected abstract T registerStructureBlock(RegistrationContext ctx);
 
-    @Override
     public abstract BigBlockPattern getVolume(BlockState blockState);
 
     @Override

@@ -162,11 +162,13 @@ public class EjectorBlock extends BaseFacingBlock implements EntityBlock, ItemPi
         builder.add(ACTIVE);
     }
 
+    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         return 0;
     }
 
+    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction)
     {
         return direction == state.getValue(FACING);
@@ -178,6 +180,7 @@ public class EjectorBlock extends BaseFacingBlock implements EntityBlock, ItemPi
         return canConnect(blockView, pos, state, face);
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         Direction facing = state.getValue(FACING);

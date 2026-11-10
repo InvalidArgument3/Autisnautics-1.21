@@ -14,6 +14,7 @@ public class BetterMeleeGoal extends MeleeAttackGoal
         super(mob, speed, pauseWhenMobIdle);
     }
 
+    @Override
     public double getAttackReachSqr(LivingEntity entity)
     {
         return super.getAttackReachSqr(entity);
@@ -66,6 +67,7 @@ public class BetterMeleeGoal extends MeleeAttackGoal
         critTimer--;
     }
 
+    @Override
     protected void checkAndPerformAttack(LivingEntity target, double squaredDistance)
     {
         double d = this.getAttackReachSqr(target);

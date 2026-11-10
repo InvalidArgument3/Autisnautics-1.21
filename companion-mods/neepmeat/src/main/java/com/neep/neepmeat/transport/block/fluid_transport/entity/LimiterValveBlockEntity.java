@@ -64,25 +64,29 @@ public class LimiterValveBlockEntity extends FluidPipeBlockEntity<LimiterValveBl
         super(type, pos, state, constructor);
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.maxFlowRate = nbt.getInt("maxFlowRate");
         this.mode = FluidUnit.values()[nbt.getInt("mbMode")];
     }
 
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putInt("maxFlowRate", maxFlowRate);
         nbt.putInt("mbMode", mode.ordinal());
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getUpdatePacket()
     {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
+    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         return saveWithoutMetadata();

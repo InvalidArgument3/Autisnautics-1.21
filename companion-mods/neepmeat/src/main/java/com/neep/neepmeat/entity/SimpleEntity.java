@@ -71,6 +71,7 @@ public abstract class SimpleEntity extends Entity
         return false;
     }
 
+    @Override
     public void lerpTo(double x, double y, double z, float yaw, float pitch, int interpolationSteps, boolean interpolate)
     {
         this.serverX = x;

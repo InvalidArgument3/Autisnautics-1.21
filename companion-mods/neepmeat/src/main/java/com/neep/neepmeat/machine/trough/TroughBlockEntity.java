@@ -83,7 +83,6 @@ public class TroughBlockEntity extends SyncableBlockEntity implements MotorisedB
         @Override
         public long extract(ItemVariant resource, long maxAmount, TransactionContext transaction) { return 0; }
 
-        @Override
         public @NotNull Iterator<StorageView<ItemVariant>> iterator() { return Collections.emptyIterator(); }
     };
 

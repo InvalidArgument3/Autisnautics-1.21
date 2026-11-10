@@ -43,6 +43,7 @@ public class GlomeEntityModel extends EntityModel<GlomeEntity>
 	{
 	}
 
+	@Override
 	public void renderToBuffer(PoseStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		bb_main.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}

@@ -62,6 +62,7 @@ public class ManualRequesterBlock extends MergePipeBlock implements EntityBlock,
         this.registerDefaultState(super.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
+    @Override
     protected VoxelShape getCentreShape()
     {
         return Block.box(3, 3, 3, 13, 13, 13);

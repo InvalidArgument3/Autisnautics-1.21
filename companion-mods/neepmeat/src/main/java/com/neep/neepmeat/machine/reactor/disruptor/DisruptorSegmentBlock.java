@@ -120,6 +120,7 @@ public class DisruptorSegmentBlock extends BigBlock<DisruptorSegmentBlock.Struct
             super(parent, settings);
         }
 
+        @Override
         protected BlockEntityType<StructureBlockEntity> registerBlockEntity()
         {
             return NMBlockEntities.register("disruptor_segment_structure", (p, s) -> new StructureBlockEntity(getBlockEntityType(), p, s), this);

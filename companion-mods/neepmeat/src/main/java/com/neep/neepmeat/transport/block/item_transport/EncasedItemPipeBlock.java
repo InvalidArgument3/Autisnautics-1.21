@@ -87,6 +87,7 @@ public class EncasedItemPipeBlock extends ItemPipeBlock implements EncasedBlock
         }
     }
 
+    @Override
     public void onConnectionUpdate(Level world, BlockState state, BlockState newState, BlockPos pos, Player entity)
     {
         super.onConnectionUpdate(world, state, newState, pos, entity);

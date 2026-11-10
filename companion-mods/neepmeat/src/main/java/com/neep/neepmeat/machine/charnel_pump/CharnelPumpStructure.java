@@ -39,6 +39,7 @@ public class CharnelPumpStructure extends BigBlockStructure<CharnelPumpStructure
         super(parent, settings);
     }
 
+    @Override
     protected BlockEntityType<CPSBlockEntity> registerBlockEntity()
     {
         return Registry.register(

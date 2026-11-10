@@ -120,7 +120,8 @@ public class MeatgunModuleItem extends Item
     }
 
     // TODO: Why is this necessary? This item should do nothing.
-    public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged)
     {
         return false;
     }

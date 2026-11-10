@@ -99,6 +99,7 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             super(0, 0, rows, cols, slots, handler);
         }
 
+        @Override
         protected void drawSlot(GuiGraphics context, MobileSlot mobileSlot)
         {
             ResourceLocation tex = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/gui/plc/program_cabinet.png");

@@ -60,7 +60,7 @@ public class VascularCondenserBlockEntity extends SyncableBlockEntity implements
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putLong("stored", storedAbs);
@@ -69,7 +69,7 @@ public class VascularCondenserBlockEntity extends SyncableBlockEntity implements
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.storedAbs = nbt.getLong("stored");
@@ -127,6 +127,7 @@ public class VascularCondenserBlockEntity extends SyncableBlockEntity implements
 
     private class Acceptor implements BloodAcceptor, BalancingBloodAcceptor
     {
+        @Override
         public Mode getMode()
         {
             return Mode.BALANCE;

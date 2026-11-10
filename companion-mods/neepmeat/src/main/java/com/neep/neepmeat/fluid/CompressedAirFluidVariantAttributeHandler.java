@@ -20,11 +20,13 @@ import java.util.Optional;
 
 public class CompressedAirFluidVariantAttributeHandler implements FluidVariantAttributeHandler
 {
+    @Override
     public Optional<SoundEvent> getFillSound(FluidVariant variant)
     {
         return Optional.of(NMSounds.COMPRESSED_AIR_FILL.get());
     }
 
+    @Override
     public Optional<SoundEvent> getEmptySound(FluidVariant variant)
     {
         return Optional.of(NMSounds.COMPRESSED_AIR_FILL.get());

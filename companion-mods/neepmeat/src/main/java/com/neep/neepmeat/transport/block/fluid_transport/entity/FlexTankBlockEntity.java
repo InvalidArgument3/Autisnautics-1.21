@@ -75,14 +75,14 @@ public class FlexTankBlockEntity extends FlexStorageBlockEntity<FlexTankBlockEnt
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         storage.writeNbt(nbt);
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         storage.readNbt(nbt);
@@ -137,6 +137,7 @@ public class FlexTankBlockEntity extends FlexStorageBlockEntity<FlexTankBlockEnt
             return Collections.emptyIterator();
         }
 
+        @Override
         protected long getCapacity(FluidVariant variant)
         {
             return children.size() * FlexTankBlockEntity.this.capacity;

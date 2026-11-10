@@ -110,8 +110,8 @@ public class WrenchPlacementHelper
             float m = (float) (maxZ - minZ);
             float n = Mth.sqrt(k * k + l * l + m * m);
 //            Vector4f p1 = local.transform(new Vector4f());
-            consumer.addVertex(matrix4f, (float) (minX), (float) (minY), (float) (minZ)).setColor(r, g, b, a).setNormal(normal, k /= n, l /= n, m /= n);
-            consumer.addVertex(matrix4f, (float) (maxX), (float) (maxY), (float) (maxZ)).setColor(r, g, b, a).setNormal(normal, k, l, m);
+            consumer.addVertex(matrix4f, (float) (minX), (float) (minY), (float) (minZ)).setColor(r, g, b, a).setNormal(k /= n, l /= n, m /= n);
+            consumer.addVertex(matrix4f, (float) (maxX), (float) (maxY), (float) (maxZ)).setColor(r, g, b, a).setNormal(k, l, m);
         });
     }
 }

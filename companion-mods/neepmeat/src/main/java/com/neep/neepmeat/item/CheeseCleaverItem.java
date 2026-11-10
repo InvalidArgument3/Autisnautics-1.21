@@ -36,9 +36,7 @@ public class CheeseCleaverItem extends BaseSwordItem
 
     public static void writeCharged(ItemStack stack, boolean charged)
     {
-        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
-        nbt.putBoolean("charged", charged);
-        stack.save(nbt);
+        com.neep.meatlib.item.StackNbt.edit(stack, nbt -> nbt.putBoolean("charged", charged));
     }
 
     @Override

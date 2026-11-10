@@ -51,20 +51,21 @@ public class FilterItemPipeBlockEntity extends ItemPipeBlockEntity
         super(type, pos, state, Vertex::new);
     }
 
+    @Override
     public boolean canItemEnter(ItemVariant item)
     {
         return filters.matches(item);
     }
 
     @Override
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(tag, registries);
         filters.readNbt(tag);
     }
 
     @Override
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
         filters.writeNbt(tag);

@@ -120,7 +120,6 @@ public class ThordWordArticle implements Article
             return true;
         }
 
-        @Override
         public ResourceLocation getIcon() { return ResourceLocation.parse("air"); }
     }
 
@@ -151,7 +150,6 @@ public class ThordWordArticle implements Article
             screen.setArticleScroll(scroll);
         }
 
-        @Override
         public ResourceLocation getIcon() { return ResourceLocation.parse("air"); }
     }
 

@@ -105,6 +105,7 @@ public class BigBlock2Structure extends BaseDummyBlock
         return parent.getDescriptionId();
     }
 
+    @Override
     public ItemLike dropsLike()
     {
         return parent;

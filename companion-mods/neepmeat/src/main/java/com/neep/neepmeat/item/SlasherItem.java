@@ -109,12 +109,14 @@ public class SlasherItem extends AnimatedSword implements GeoItem
         return null;
     }
 
+    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()
         {
             private SwordRenderer<SlasherItem> renderer;
 
+            @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer()
             {
                 if (this.renderer == null)

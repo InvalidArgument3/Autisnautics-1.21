@@ -48,6 +48,7 @@ public class OreDustBlastingRecipe extends BlastingRecipe implements GeneralOreD
         this.inputDustType = inputDustType;
     }
 
+    @Override
     public boolean matches(Container inventory, Level world)
     {
         ItemStack stack = inventory.getItem(0);
@@ -71,6 +72,7 @@ public class OreDustBlastingRecipe extends BlastingRecipe implements GeneralOreD
         return ItemStack.EMPTY;
     }
 
+    @Override
     public ItemStack assemble(Container inventory, RegistryAccess registryManager)
     {
         return getOutput(registryManager, inventory.getItem(0)).copy();
@@ -111,6 +113,7 @@ public class OreDustBlastingRecipe extends BlastingRecipe implements GeneralOreD
                 ).apply(instance, (dustItem, xp) -> id -> factory.apply(id, dustItem, xp, this.cookTime)));
         }
 
+        @Override
         public T fromJson(ResourceLocation id, JsonObject json)
         {
             return codec.parse(JsonOps.INSTANCE, json).getOrThrow(true, s ->
@@ -119,12 +122,14 @@ public class OreDustBlastingRecipe extends BlastingRecipe implements GeneralOreD
             }).apply(id);
         }
 
+        @Override
         public void write(FriendlyByteBuf buf, OreDustBlastingRecipe recipe)
         {
             buf.writeById(BuiltInRegistries.ITEM::getId, recipe.inputDustType);
             buf.writeFloat(recipe.experience);
         }
 
+        @Override
         public T fromNetwork(ResourceLocation id, FriendlyByteBuf buf)
         {
             Item dust = buf.readById(BuiltInRegistries.ITEM::byId);

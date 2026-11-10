@@ -55,6 +55,7 @@ public class AdvancedMotorBlockEntity extends SyncableBlockEntity implements Mot
             return influx;
         }
 
+        @Override
         public Mode getMode()
         {
             return Mode.SINK;
@@ -143,7 +144,7 @@ public class AdvancedMotorBlockEntity extends SyncableBlockEntity implements Mot
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putFloat("loadTorque", loadTorque);
@@ -151,7 +152,7 @@ public class AdvancedMotorBlockEntity extends SyncableBlockEntity implements Mot
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.loadTorque = nbt.getFloat("loadTorque");

@@ -138,6 +138,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
         return new ItemStack(this);
     }
 
+    @Override
     public ItemStack getPickedStack(BlockState state, BlockGetter view, BlockPos pos, Player player, HitResult result)
     {
         if (view.getBlockEntity(pos) instanceof PIDControllerBlockEntity be)

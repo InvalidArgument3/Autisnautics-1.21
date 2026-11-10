@@ -68,11 +68,13 @@ public class FluidExciterBlockEntity extends SyncableBlockEntity implements Bloc
             return maxAmount;
         }
 
+        @Override
         protected boolean canExtract(FluidVariant variant)
         {
             return false;
         }
 
+        @Override
         public boolean supportsExtraction()
         {
             return false;
@@ -81,6 +83,7 @@ public class FluidExciterBlockEntity extends SyncableBlockEntity implements Bloc
 
     private final BloodAcceptor bloodAcceptor = new AbstractBloodAcceptor()
     {
+        @Override
         public long getOutput()
         {
             // Reset output so that it drops to zero when fluid input stops.
@@ -89,6 +92,7 @@ public class FluidExciterBlockEntity extends SyncableBlockEntity implements Bloc
             return injectedOutput;
         }
 
+        @Override
         public Mode getMode()
         {
             return Mode.SOURCE;

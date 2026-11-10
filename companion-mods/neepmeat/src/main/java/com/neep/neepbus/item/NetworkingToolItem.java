@@ -72,7 +72,7 @@ public class NetworkingToolItem extends BaseItem
             }
             else
             {
-                BlockPos first = NbtUtils.readBlockPos(nbt.getCompound("first"));
+                BlockPos first = NbtUtils.readBlockPos(nbt, "first").orElse(net.minecraft.core.BlockPos.ZERO);
                 BlockPos second = context.getClickedPos();
                 DataPort firstPort = DataPort.DATA_PORT.find(context.getLevel(), first, null);
                 if (firstPort != null && findRoute(context.getLevel(), first, second, 20))
@@ -134,7 +134,7 @@ public class NetworkingToolItem extends BaseItem
         if (nbt != null)
         {
             String name = nbt.getString("first_name");
-            BlockPos pos = NbtUtils.readBlockPos(nbt.getCompound("first"));
+            BlockPos pos = NbtUtils.readBlockPos(nbt, "first").orElse(net.minecraft.core.BlockPos.ZERO);
             tooltip.add(Component.translatable(getDescriptionId() + ".from", pos.getX(), pos.getY(), pos.getZ()));
         }
     }

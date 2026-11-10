@@ -62,7 +62,7 @@ public class SimpleDataPort implements DataPort, NbtSerialisable
         if (nbt.contains("target"))
         {
             this.target = LazyBlockApiCache.of(DataPort.DATA_PORT,
-                    NbtUtils.readBlockPos(nbt.getCompound("target")),
+                    NbtUtils.readBlockPos(nbt, "target").orElse(net.minecraft.core.BlockPos.ZERO),
                     parent::getLevel,
                     () -> null);
         }

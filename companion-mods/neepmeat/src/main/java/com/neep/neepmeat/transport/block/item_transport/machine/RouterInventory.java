@@ -38,6 +38,7 @@ public class RouterInventory implements ImplementedInventory
 {
     protected NonNullList<ItemStack> items = NonNullList.withSize(18, ItemStack.EMPTY);
 
+    @Override
     public NonNullList<ItemStack> getItems()
     {
         return items;

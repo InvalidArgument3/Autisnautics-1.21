@@ -1,11 +1,10 @@
-# symbol histogram, combined tree, jar 0.30.0-neoforge.54
-# before this run: 3773
-# after this run: 2769
+# symbol histogram after run 47
+# honest post-revert combined-tree errors were 3074
+# end of run: 2975
 
-122	does not override
+408	does not override
 27	other	invalid method reference
 22	other	method register in class BlockEntityRenderers cannot be applied to given types;
-18	other	incompatible types: Matrix3f cannot be converted to Pose
 17	cannot find symbol	method getId
 16	other	incompatible types: inference variable T has incompatible bounds
 15	other	type FluidPipeBlockEntity does not take parameters
@@ -20,14 +19,9 @@
 13	other	incompatible types: ResourceKey<LootTable> cannot be converted to ResourceLocati
 13	cannot find symbol	variable super
 13	cannot find symbol	method register
-12	cannot find symbol	variable PLCPropertyDelegate
-12	cannot find symbol	method wrapLines
 12	cannot find symbol	method addListener
-12	cannot find symbol	method loadAdditional
 12	cannot find symbol	method addVertex
-11	cannot find symbol	method map
 11	cannot find symbol	method getItems
-11	other	method readBlockPos in class NbtUtils cannot be applied to given types;
 11	cannot find symbol	method floatValue
 11	other	incompatible types: CAP#1 cannot be converted to ImplantManager
 11	other	static methods cannot be annotated with @Override
@@ -45,10 +39,16 @@
 10	cannot find symbol	variable builder
 10	other	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEnt
 10	cannot find symbol	method getAmount
-10	cannot find symbol	method saturationMod
 9	other	no interface expected here
 9	cannot find symbol	class RequestType
 9	cannot find symbol	class Serializer
 9	cannot find symbol	class Entry
 9	cannot find symbol	method getTag
+9	cannot find symbol	method map
 9	other	no suitable method found for register(MappedRegistry<EntityImplantInstaller>,Res
+8	cannot find symbol	class ExtendedScreenHandlerType
+8	cannot find symbol	class RenderProvider
+8	other	incompatible types: possible lossy conversion from double to float
+8	other	method fromNamespaceAndPath in class ResourceLocation cannot be applied to given
+8	cannot find symbol	method putCompound
+8	other	incompatible types: DeferredHolder<SoundEvent,SoundEvent> cannot be converted to

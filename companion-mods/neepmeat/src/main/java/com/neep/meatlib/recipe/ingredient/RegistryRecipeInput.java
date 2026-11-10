@@ -175,6 +175,7 @@ public class RegistryRecipeInput<R> implements RecipeInput<R, StorageView<? exte
         return false;
     }
 
+    @Override
     public boolean test(TransferVariant<?> variant, long amount)
     {
         cacheMatching();
@@ -243,6 +244,7 @@ public class RegistryRecipeInput<R> implements RecipeInput<R, StorageView<? exte
         return entry.getMatching();
     }
 
+    @Override
     public R[] getMatching()
     {
         return matchingObjects;

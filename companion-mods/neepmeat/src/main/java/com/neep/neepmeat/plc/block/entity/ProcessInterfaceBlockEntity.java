@@ -356,7 +356,7 @@ public class ProcessInterfaceBlockEntity extends SyncableBlockEntity implements 
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         requests.clear();
@@ -391,6 +391,7 @@ public class ProcessInterfaceBlockEntity extends SyncableBlockEntity implements 
     }
 
 
+    @Override
     public void saveToItem(ItemStack stack)
     {
         CompoundTag createdNbt = saveWithoutMetadata();
@@ -399,7 +400,7 @@ public class ProcessInterfaceBlockEntity extends SyncableBlockEntity implements 
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         ListTag list = new ListTag();

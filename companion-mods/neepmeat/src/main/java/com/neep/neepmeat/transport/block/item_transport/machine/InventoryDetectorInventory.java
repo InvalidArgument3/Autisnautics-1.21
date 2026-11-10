@@ -44,6 +44,7 @@ public class InventoryDetectorInventory implements ImplementedInventory
 
     protected InventoryStorage inventoryStorage = InventoryStorage.of(this, null);
 
+    @Override
     public NonNullList<ItemStack> getItems()
     {
         return items;

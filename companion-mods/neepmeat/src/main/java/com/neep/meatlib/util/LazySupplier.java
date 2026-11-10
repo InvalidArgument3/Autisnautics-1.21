@@ -23,7 +23,6 @@ import java.util.function.Supplier;
  */
 public interface LazySupplier<T> extends Supplier<T>
 {
-    @Override
     @NotNull
     T get();
 

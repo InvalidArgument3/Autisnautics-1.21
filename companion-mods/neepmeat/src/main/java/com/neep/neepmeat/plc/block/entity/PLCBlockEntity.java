@@ -228,4 +228,23 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
         error = tag.getString("error");
         running = false;
     }
+
+    /** Screen properties synced through the menu data slots. */
+    public static final class PLCPropertyDelegate {
+        public enum Names {
+            EDIT_MODE,
+            RUNNING,
+            PROGRAM_COUNTER,
+            MAX_ARGUMENTS,
+            LANGUAGE,
+            ARGUMENT,
+            SELECTED_INSTRUCTION,
+            HAS_PROGRAM,
+            DEBUG_LINE
+        }
+
+        public static final int SIZE = Names.values().length;
+
+        private PLCPropertyDelegate() {}
+    }
 }

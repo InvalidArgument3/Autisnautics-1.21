@@ -102,6 +102,5 @@ public abstract class BigBlock2 extends BaseEntityBlock implements BlockPlacemen
         }
     }
 
-    @Override
     protected abstract MapCodec<? extends BaseEntityBlock> codec();
 }

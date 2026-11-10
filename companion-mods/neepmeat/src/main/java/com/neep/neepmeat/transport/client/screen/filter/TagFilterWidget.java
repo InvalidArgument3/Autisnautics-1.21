@@ -165,6 +165,7 @@ public class TagFilterWidget extends FilterEntryWidget<TagFilter>
             return super.renderUnselectedText(context, string, selectionWithin, textStart, m, col, j);
         }
 
+        @Override
         public String getPrefix()
         {
             return "#";

@@ -116,6 +116,7 @@ public class SmallTrommelBlock extends BaseHorFacingBlock implements EntityBlock
             this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
         }
 
+        @Override
         public ItemLike dropsLike()
         {
             return NMBlocks.SMALL_TROMMEL;

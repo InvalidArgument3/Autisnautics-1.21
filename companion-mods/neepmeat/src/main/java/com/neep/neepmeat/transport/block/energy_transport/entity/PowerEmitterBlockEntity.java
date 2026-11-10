@@ -29,11 +29,13 @@ public class PowerEmitterBlockEntity extends SyncableBlockEntity
 
     private final AbstractBloodAcceptor bloodAcceptor = new AbstractBloodAcceptor()
     {
+        @Override
         public Mode getMode()
         {
             return Mode.SOURCE;
         }
 
+        @Override
         public long getOutput()
         {
             return powerOutput;
@@ -46,14 +48,14 @@ public class PowerEmitterBlockEntity extends SyncableBlockEntity
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putInt("power", powerOutput);
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.powerOutput = nbt.getInt("power");

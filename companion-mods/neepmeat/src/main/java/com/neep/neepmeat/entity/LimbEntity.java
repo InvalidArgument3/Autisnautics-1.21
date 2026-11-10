@@ -80,15 +80,10 @@ public class LimbEntity extends SimpleEntity
         return super.saveWithoutId(nbt);
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
-    {
-        super.loadAdditional(nbt, registries);
-    }
-
     @Override
-    protected void readAdditionalSaveData(CompoundTag nbt)
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-
+        super.readAdditionalSaveData(nbt);
     }
 
     @Override

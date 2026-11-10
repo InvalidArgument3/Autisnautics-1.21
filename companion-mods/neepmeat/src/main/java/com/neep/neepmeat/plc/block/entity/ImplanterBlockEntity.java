@@ -64,6 +64,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
     {
         private final NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
 
+        @Override
         public NonNullList<ItemStack> getItems()
         {
             return items;
@@ -243,7 +244,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
     }
 
     @Override
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.putFloat("arm_x", x);
@@ -253,7 +254,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
     }
 
     @Override
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.x = nbt.getFloat("arm_x");
@@ -273,6 +274,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
         return worldPosition;
     }
 
+    @Override
     public void spawnItem(@Nullable ResourceAmount<ItemVariant> stored)
     {
         if (stored == null)
@@ -402,6 +404,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
         return this;
     }
 
+    @Override
     public void setStored(PLC plc, @Nullable ResourceAmount<ItemVariant> stored)
     {
         if (stored != null)
@@ -410,6 +413,7 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
             inventory.setItem(0, ItemStack.EMPTY);
     }
 
+    @Override
     public @Nullable ResourceAmount<ItemVariant> getStored(PLC plc)
     {
         return new ResourceAmount<>(ItemVariant.of(inventory.getItem(0)), inventory.getItem(0).getCount());

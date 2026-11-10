@@ -39,6 +39,7 @@ public class MeatRecipeProvider extends FabricRecipeProvider
         super(output);
     }
 
+    @Override
     public String getName()
     {
         return "MeatLib automatic recipes";

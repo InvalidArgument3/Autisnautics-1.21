@@ -62,23 +62,27 @@ public class WindowPipeBlockEntity extends FluidPipeBlockEntity<WindowPipeBlockE
         super(type, pos, state, constructor);
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void loadAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         fromClientTag(nbt);
     }
 
-    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void saveAdditional(CompoundTag nbt, net.minecraft.core.HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         toClientTag(nbt);
     }
 
+    @Override
     public Packet<ClientGamePacketListener> getUpdatePacket()
     {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
+    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         return saveWithoutMetadata();

@@ -22,9 +22,22 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 
 @SuppressWarnings("UnstableApiUsage")
-public interface MeatlibRecipe<C> extends Recipe<ImplementedRecipe.DummyInventory>
+public interface MeatlibRecipe<C> extends Recipe<ImplementedRecipe.DummyInventory>, RecipeContextMatch
 {
     boolean matches(C context);
+
+    @Override
+    @SuppressWarnings("unchecked")
+    default boolean matches(Object input, Level level) {
+        if (input == null) {
+            return false;
+        }
+        try {
+            return matches((C) input);
+        } catch (ClassCastException ignored) {
+            return false;
+        }
+    }
 
 //    RecipeSerializer<?> getSerialiser();
 

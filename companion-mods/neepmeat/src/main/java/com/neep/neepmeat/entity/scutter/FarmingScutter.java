@@ -109,13 +109,14 @@ public class FarmingScutter extends ScutterEntity
         return nbt;
     }
 
-    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt)
     {
-        super.loadAdditional(nbt, registries);
+        super.readAdditionalSaveData(nbt);
         inventory.readNbt(nbt);
-        this.homePos = NbtUtils.readBlockPos(nbt.getCompound("home"));
+        this.homePos = NbtUtils.readBlockPos(nbt, "home").orElse(net.minecraft.core.BlockPos.ZERO);
         if (nbt.contains("storage"))
-            this.storagePos = NbtUtils.readBlockPos(nbt.getCompound("storage"));
+            this.storagePos = NbtUtils.readBlockPos(nbt, "storage").orElse(net.minecraft.core.BlockPos.ZERO);
     }
 
     @Override

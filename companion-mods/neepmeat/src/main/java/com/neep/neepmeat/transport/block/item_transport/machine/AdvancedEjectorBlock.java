@@ -73,6 +73,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         super(ctx, itemSettings, settings);
     }
 
+    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction)
     {
         if (direction == state.getValue(FACING))
@@ -81,12 +82,14 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         return super.canConnect(world, pos, state, direction);
     }
 
+    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         var set = super.getConnections(state, forbidden);
         return set.with(state.getValue(FACING));
     }
 
+    @Override
     protected boolean canConnectToApi(Level world, BlockPos pos, BlockState state, BlockState hereState, Direction direction)
     {
         if (direction == hereState.getValue(FACING))
@@ -95,6 +98,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         return super.canConnectToApi(world, pos, state, hereState, direction);
     }
 
+    @Override
     public boolean canConnectTo(BlockState hereState, BlockState toState, Direction toFace, Level world, BlockPos toPos, boolean newConnection)
     {
         if (toFace.getOpposite() == hereState.getValue(FACING))
@@ -192,6 +196,7 @@ public class AdvancedEjectorBlock extends ItemPipeBlock implements Wrenchable
         return NMBlockEntities.ADVANCED_EJECTOR.create(pos, state);
     }
 
+    @Override
     public VoxelShape getShapeForState(BlockState state)
     {
         VoxelShape shape = getCentreShape();
