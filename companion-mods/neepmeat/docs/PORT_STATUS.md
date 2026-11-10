@@ -370,3 +370,11 @@ The twenty-two tests add crafting recursion (cobble becomes stone and arrives at
 `./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. After `pipe_sides` was dropped from the fluid-pipe blockstate, the only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. The main menu was not clicked through. A dedicated server boot was not repeated on this jar; the game-test server is the dedicated boot that ran the tests.
 
 Not tested: Java 25, a Prism/Pakku instance with the pack's 402 mods, Sodium/Iris together with this jar, crafting in a GUI, or multiplayer with the jar in `.pakku/overrides/mods`. The jar was not added there.
+
+## Living machines through jar 0.30.0-neoforge.24
+
+Upstream `machine/live_machine` is 69 Java files. This jar has 22 files in that package. The ones with upstream behaviour are the controller flood fill, machine block, motor port, stomach, metaboliser segment, lucky one, item ports, crusher segment, large compressor, extractor, silky extractor, and service port, plus the metaboliser, crusher, and large-compressor processes.
+
+Registered and tested: metaboliser (240 energy from four meat droplets), crusher (takes the input stack and adds the progress increment), compressor (400 droplets at full power). X and Z volumes exist. `vsc` removes `min(internal, desired)` from a blood network. A conduit calls `join` again from `onLoad`.
+
+Still not copied, about 47 upstream files: the other big machines (trommel, hopper, tree vacuum, ball mill, distributor, phage ray, stomach item), their processes, and the living-machine screens. The crusher does not run advanced-crushing recipes. The compressor is one block, not the upstream multiblock, and it counts droplets instead of inserting a compressed-air fluid variant. The VSC does not have the upstream screen or the source-side overflow path beyond the balancer formula. `TransferAmounts` is not what those uncopied classes import.

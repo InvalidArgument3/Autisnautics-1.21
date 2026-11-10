@@ -92,6 +92,29 @@ public class BloodNetworkGameTests {
         helper.succeed();
     }
 
+    @GameTest(template = "empty")
+    public static void voltageConverterTakesItsDesiredPower(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 5), VascularConduits.VSC.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
+        MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));
+        segment.setOutputEnergy(1000);
+        BloodNetworkManager.get(helper.getLevel()).tick();
+        VscBlock.VscBlockEntity converter = helper.getBlockEntity(new BlockPos(2, 1, 5));
+        helper.assertTrue(converter.powerToSource() == 400, "taken " + converter.powerToSource());
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void conduitRejoinsAfterReload(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), VascularConduits.CONDUIT.get().defaultBlockState());
+        VascularConduitBlockEntity conduit = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        conduit.onChunkUnloaded();
+        conduit.onLoad();
+        helper.assertTrue(conduit.network() != null && conduit.network().conduitCount() == 1, "did not rejoin");
+        helper.succeed();
+    }
+
     @SuppressWarnings("unused")
     private static Direction facing() {
         return Direction.EAST;

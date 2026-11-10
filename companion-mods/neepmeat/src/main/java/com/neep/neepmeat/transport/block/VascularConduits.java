@@ -31,6 +31,11 @@ public final class VascularConduits {
     public static final DeferredBlock<VascularConduitBlock> CONDUIT = CONTEXT.block("vascular_conduit", VascularConduitBlock::new);
     public static final DeferredItem<BlockItem> CONDUIT_ITEM = CONTEXT.item("vascular_conduit",
             () -> new BlockItem(CONDUIT.get(), new Item.Properties()));
+    public static final DeferredBlock<VscBlock> VSC = CONTEXT.block("vsc", VscBlock::new);
+    public static final DeferredItem<BlockItem> VSC_ITEM = CONTEXT.item("vsc",
+            () -> new BlockItem(VSC.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VscBlock.VscBlockEntity>> VSC_BE =
+            BLOCK_ENTITIES.register("vsc", () -> BlockEntityType.Builder.of(VscBlock.VscBlockEntity::new, VSC.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VascularConduitBlockEntity>> CONDUIT_BE =
             BLOCK_ENTITIES.register("vascular_conduit", () -> BlockEntityType.Builder
                     .of(VascularConduitBlockEntity::new, CONDUIT.get()).build(null));
@@ -47,6 +52,7 @@ public final class VascularConduits {
     private static void creative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == BuildingBlocks.TAB.getKey()) {
             event.accept(CONDUIT_ITEM.get());
+            event.accept(VSC_ITEM.get());
         }
     }
 }

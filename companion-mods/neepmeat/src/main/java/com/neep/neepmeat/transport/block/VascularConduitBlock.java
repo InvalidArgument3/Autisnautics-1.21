@@ -123,7 +123,7 @@ public class VascularConduitBlock extends BaseEntityBlock {
         super.onRemove(state, level, pos, newState, moved);
     }
 
-    private static void join(Level level, BlockPos pos) {
+    public static void join(Level level, BlockPos pos) {
         if (!(level.getBlockEntity(pos) instanceof VascularConduitBlockEntity self) || self.network() != null) {
             return;
         }

@@ -30,6 +30,14 @@ public class VascularConduitBlockEntity extends BlockEntity {
     }
 
     @Override
+    public void onLoad() {
+        super.onLoad();
+        if (level != null && !level.isClientSide && network == null) {
+            VascularConduitBlock.join(level, getBlockPos());
+        }
+    }
+
+    @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
         if (network != null) {
