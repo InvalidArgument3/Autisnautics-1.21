@@ -26,7 +26,8 @@ import com.neep.neepmeat.plc.instruction.Instruction;
 import com.neep.neepmeat.plc.processor.PLCMemory;
 import com.neep.neepmeat.plc.processor.VariableStack;
 import com.neep.neepmeat.plc.runtime.InstructionPlc;
-import com.neep.neepmeat.plc.screen.PLCMenu;
+import com.neep.neepmeat.network.plc.PLCErrorMessageS2C;
+import com.neep.neepmeat.plc.screen.PLCScreenHandler;
 import io.netty.buffer.Unpooled;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -362,7 +363,7 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new PLCMenu(id, this);
+        return new PLCScreenHandler(id, player, this, new net.minecraft.world.inventory.SimpleContainerData(PLCPropertyDelegate.SIZE), source());
     }
 
     @Override
@@ -422,6 +423,9 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
                 instructionBuilder.argument(argument);
             } catch (com.neep.neepmeat.api.plc.instruction.InstructionException exception) {
                 error = exception.getMessage();
+                if (getSurgeryRobot().getController() instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                    PLCErrorMessageS2C.send(serverPlayer, exception.getMessage());
+                }
             }
         }
 

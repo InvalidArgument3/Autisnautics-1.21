@@ -13,7 +13,6 @@
 package com.neep.neepmeat.network.plc;
 
 import com.neep.neepmeat.NeepMeat;
-import com.neep.neepmeat.client.screen.plc.PLCProgramScreen;
 import com.neep.neepmeat.init.NMSounds;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -53,11 +52,7 @@ public class PLCErrorMessageS2C
 
                 client.execute(() ->
                 {
-                    if (client.screen instanceof PLCProgramScreen programScreen)
-                    {
-                        programScreen.getInteractive().setError(Component.nullToEmpty(message));
-//                        client.player.sendMessage(Text.of(message)); // Will not be visible inside robot. Oh, well.
-                    }
+                    client.player.sendSystemMessage(Component.nullToEmpty(message));
                     client.getSoundManager().play(SimpleSoundInstance.forUI(NMSounds.ERROR.get(), 1.0f));
                 });
             });

@@ -53,7 +53,7 @@ public class FilterItemPipeBlock extends ItemPipeBlock {
     }
 
     @Override
-    protected MapCodec<? extends net.minecraft.world.level.block.BaseEntityBlock> codec() {
+    protected MapCodec<? extends net.minecraft.world.level.block.Block> codec() {
         return CODEC;
     }
 

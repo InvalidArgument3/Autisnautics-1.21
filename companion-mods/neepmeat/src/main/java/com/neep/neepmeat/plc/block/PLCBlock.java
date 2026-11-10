@@ -85,7 +85,7 @@ public class PLCBlock extends BaseEntityBlock {
             server.openMenu(plc, buf -> {
                 buf.writeBlockPos(pos);
                 buf.writeUtf(plc.source());
-                buf.writeUtf(plc.error());
+                buf.writeInt(0);
             });
         }
         return InteractionResult.sidedSuccess(level.isClientSide);

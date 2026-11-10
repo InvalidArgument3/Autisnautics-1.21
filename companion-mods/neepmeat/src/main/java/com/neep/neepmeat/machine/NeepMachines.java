@@ -26,7 +26,7 @@ import com.neep.neepmeat.plc.block.entity.BuilderBlockEntity;
 import com.neep.neepmeat.plc.block.entity.ExecutorBlockEntity;
 import com.neep.neepmeat.plc.block.entity.PLCBlockEntity;
 import com.neep.neepmeat.plc.block.entity.PLCRedstoneInterfaceBlockEntity;
-import com.neep.neepmeat.plc.screen.PLCMenu;
+import com.neep.neepmeat.plc.screen.PLCScreenHandler;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
 import com.neep.neepmeat.machine.transport.BasicTankBlock;
@@ -97,14 +97,8 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> PLC_ITEM = CONTEXT.item("plc", () -> new BlockItem(PLC.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PLCBlockEntity>> PLC_BE = BLOCK_ENTITIES.register("plc",
             () -> BlockEntityType.Builder.of(PLCBlockEntity::new, PLC.get()).build(null));
-    public static final DeferredHolder<MenuType<?>, MenuType<PLCMenu>> PLC_MENU = MENUS.register("plc",
-            () -> IMenuTypeExtension.create((id, inventory, buf) -> {
-                BlockPos pos = buf.readBlockPos();
-                String source = buf.readUtf();
-                String error = buf.readUtf();
-                PLCBlockEntity plc = inventory.player.level().getBlockEntity(pos) instanceof PLCBlockEntity entity ? entity : null;
-                return new PLCMenu(id, pos, source, error, plc);
-            }));
+    public static final DeferredHolder<MenuType<?>, MenuType<PLCScreenHandler>> PLC_MENU = MENUS.register("plc",
+            () -> IMenuTypeExtension.create(PLCScreenHandler::new));
 
     public static final DeferredBlock<ExecutorBlock> EXECUTOR = CONTEXT.block("executor", ExecutorBlock::new);
     public static final DeferredItem<BlockItem> EXECUTOR_ITEM = CONTEXT.item("executor", () -> new BlockItem(EXECUTOR.get(), new Item.Properties()));

@@ -1008,7 +1008,6 @@ com/neep/neepmeat/mixin/villager_fear_player/VillagerHostilesSensorMixin.java
 com/neep/neepmeat/network/NEEPSpeakSayS2C.java
 com/neep/neepmeat/network/NarratorSayS2C.java
 com/neep/neepmeat/network/WormSpawnS2CPacket.java
-com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java
 com/neep/neepmeat/plc/block/PLCNeepBusInterfaceBlock.java
 com/neep/neepmeat/plc/block/ProcessorBlock.java
 com/neep/neepmeat/plc/processor/PLCProgramResolver.java

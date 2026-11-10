@@ -32,7 +32,7 @@ public class StorageBusBlock extends ItemPipeBlock {
     public static final MapCodec<StorageBusBlock> CODEC = simpleCodec(properties -> new StorageBusBlock());
 
     @Override
-    protected MapCodec<? extends net.minecraft.world.level.block.BaseEntityBlock> codec() {
+    protected MapCodec<? extends net.minecraft.world.level.block.Block> codec() {
         return CODEC;
     }
 }

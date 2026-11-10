@@ -13,18 +13,18 @@ package com.neep.neepmeat.client.screen.plc;
 import com.neep.meatlib.client.screen.NMTextField;
 import com.neep.meatlib.client.screen.button.NMButtonWidget;
 import com.neep.neepmeat.plc.block.entity.PLCBlockEntity;
-import com.neep.neepmeat.plc.screen.PLCMenu;
+import com.neep.neepmeat.plc.screen.PLCScreenHandler;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class PLCScreen extends AbstractContainerScreen<PLCMenu> {
+public class PLCScreen extends AbstractContainerScreen<PLCScreenHandler> {
     private NMTextField field;
     private final String initialSource;
     private final String initialError;
 
-    public PLCScreen(PLCMenu menu, Inventory inventory, Component title) {
+    public PLCScreen(PLCScreenHandler menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
         this.imageWidth = 220;
         this.imageHeight = 120;

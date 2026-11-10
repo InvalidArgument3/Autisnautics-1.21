@@ -196,6 +196,17 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
         return stack.getCount();
     }
 
+    public void dropStored() {
+        if (level == null) {
+            items.clear();
+            return;
+        }
+        for (TravellingItem item : items) {
+            net.minecraft.world.Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 0.5, worldPosition.getZ() + 0.5, item.stack.copy());
+        }
+        items.clear();
+    }
+
     public void serverTick() {
         if (level == null) {
             return;
@@ -223,6 +234,8 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
         if (!(state.getBlock() instanceof ItemPipeBlock block)) {
             return;
         }
+        block.joinComponent(level, worldPosition);
+        state = getBlockState();
         vertex.clear();
         PipeGraph.eraseHiddenFromNeighbours(level, worldPosition, state, vertex, ItemPipeBlockEntity::findPipe);
         int connections = vertex.countConnections(state);
@@ -351,7 +364,7 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
         public PipeConnectionsC getConnections(BlockState state) {
             PipeConnections connections = new PipeConnections();
             for (Direction direction : Direction.values()) {
-                if (state.getValue(PipeProperties.of(direction)) == ConnectionType.SIDE) {
+                if (connected(state, direction)) {
                     connections.set(direction);
                 }
             }
@@ -363,7 +376,14 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
 
         @Override
         public boolean isConnected(BlockGetter level, BlockPos pos, BlockState state, Direction direction) {
-            return state.getValue(PipeProperties.of(direction)).connected();
+            return connected(state, direction);
+        }
+
+        private boolean connected(BlockState state, Direction direction) {
+            if (state.getBlock() instanceof com.neep.neepmeat.transport.api.pipe.PrecisePipeBlock pipe) {
+                return pipe.getConnection(state, direction).isConnected();
+            }
+            return state.hasProperty(PipeProperties.of(direction)) && state.getValue(PipeProperties.of(direction)) == ConnectionType.SIDE;
         }
 
         @Override

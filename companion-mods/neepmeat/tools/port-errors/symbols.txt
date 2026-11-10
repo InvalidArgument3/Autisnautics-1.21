@@ -1,9 +1,9 @@
-start 1982
-end 1919
+start 1919
+end 1889
 plc 143
 
- 985 cannot find symbol
- 179 method does not override or implement a method from a supertype
+ 966 cannot find symbol
+ 170 method does not override or implement a method from a supertype
   18 invalid method reference
   12 incompatible types: invalid method reference
   12 method stonecutterResultFromBase in class RecipeProvider cannot be applied to given types;
@@ -22,11 +22,6 @@ plc 143
    7 no suitable method found for of(Item,CompoundTag)
    7 method of in record FluidVariant cannot be applied to given types;
    6 Serialiser is not abstract and does not override abstract method codec() in RecipeSerializ
-   6 codec() in Serialiser cannot implement codec() in RecipeSerializer
-   6 incompatible types: Multimap<Attribute,AttributeModifier> cannot be converted to Multimap<
-   5 method getOrThrow in interface DataResult<R> cannot be applied to given types;
-   5 method mouseScrolled in interface ContainerEventHandler cannot be applied to given types;
-   5 float cannot be dereferenced
 
   13 symbol:   method getId()
    9 symbol:   method getStorage(<null>)
@@ -48,8 +43,3 @@ plc 143
    6 symbol:   method singleVariantInteract(Player,InteractionHand,WritableStackStorage)
    6 symbol:   variable clientX
    6 symbol:   variable clientY
-   6 symbol:   variable clientZ
-   6 symbol:   variable BiomeModifications
-   5 symbol:   class Result
-   5 symbol:   method hasCustomHoverName()
-   5 symbol:   method setResult(int,ItemStack)

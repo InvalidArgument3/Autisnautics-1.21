@@ -51,13 +51,12 @@ public class MergePipeBlock extends ItemPipeBlock {
     }
 
     @Override
-    protected MapCodec<? extends net.minecraft.world.level.block.BaseEntityBlock> codec() {
+    protected MapCodec<? extends net.minecraft.world.level.block.Block> codec() {
         return CODEC;
     }
 
-    @Override
-    protected BlockState completeDefault(BlockState state) {
-        return state.setValue(FACING, Direction.NORTH);
+    {
+        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
     @Override

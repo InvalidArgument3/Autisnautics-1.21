@@ -41,6 +41,23 @@ import java.util.List;
 @GameTestHolder(NeepMeat.ID)
 @PrefixGameTestTemplate(false)
 public class PipeGraphGameTests {
+    @GameTest(template = "empty", timeoutTicks = 40)
+    public static void plainPipeCarriesAnItemBetweenChests(GameTestHelper helper) {
+        BlockPos west = new BlockPos(1, 1, 1);
+        BlockPos pipePos = new BlockPos(2, 1, 1);
+        BlockPos east = new BlockPos(3, 1, 1);
+        helper.setBlock(west, Blocks.CHEST.defaultBlockState());
+        helper.setBlock(pipePos, NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(east, Blocks.CHEST.defaultBlockState());
+        ItemPipeBlockEntity pipe = helper.getBlockEntity(pipePos);
+        helper.assertTrue(pipe.insert(new ItemStack(Items.COBBLESTONE), Direction.WEST) == 1, "the pipe refused the cobble");
+        helper.runAfterDelay(15, () -> {
+            ChestBlockEntity chest = helper.getBlockEntity(east);
+            helper.assertTrue(chest.getItem(0).is(Items.COBBLESTONE) && chest.getItem(0).getCount() == 1, "arrived " + chest.getItem(0));
+            helper.succeed();
+        });
+    }
+
     @GameTest(template = "empty")
     public static void junctionsLinkAcrossAStraightPipe(GameTestHelper helper) {
         helper.setBlock(new BlockPos(0, 1, 0), NeepMachines.ITEM_PIPE.get().defaultBlockState());

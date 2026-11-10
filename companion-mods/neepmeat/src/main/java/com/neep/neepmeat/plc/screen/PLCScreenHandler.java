@@ -28,6 +28,7 @@ import com.neep.neepmeat.plc.instruction.InstructionProvider;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import java.util.function.Consumer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -69,7 +70,7 @@ public class PLCScreenHandler extends AbstractContainerMenu
     // Server
     public PLCScreenHandler(int syncId, Player player, PLCBlockEntity plc, ContainerData delegate, String source)
     {
-        super(NMScreenHandlers.PLC, syncId);
+        super(com.neep.neepmeat.machine.NeepMachines.PLC_MENU.get(), syncId);
         this.plc = plc;
         this.delegate = delegate;
         this.initialText = source;
@@ -142,6 +143,18 @@ public class PLCScreenHandler extends AbstractContainerMenu
     public PLCBlockEntity getPlc()
     {
         return plc;
+    }
+
+    public BlockPos pos() {
+        return plc == null ? BlockPos.ZERO : plc.getBlockPos();
+    }
+
+    public String source() {
+        return initialText == null ? "" : initialText;
+    }
+
+    public String error() {
+        return plc == null ? "" : plc.error();
     }
 
     public RecordMode getMode()

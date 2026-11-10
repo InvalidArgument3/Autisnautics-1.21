@@ -1,3 +1,17 @@
+## Item pipe API and the PLC menu, jar 0.30.0-neoforge.71
+
+Combined-tree errors **1919 → 1889**. That is 30 this run, not 400, and not 1,519. The PLC closure is **143**. `exclude.txt` is **1230**.
+
+`ItemPipeBlock` again extends `PrecisePipeBlock` and implements `ItemPipe`. It declares the six-argument `canConnectTo`, `insert`, `isConnected`, and uses `DIR_TO_CONNECTION`. `getOutputDirection` is the upstream default. A neighbour that is an item pipe is treated as a new connection, because `setBlock` does not run `getStateForPlacement`. `rebuildGraph` joins that component first. Game test `plainPipeCarriesAnItemBetweenChests` puts cobblestone through one plain pipe into the east chest. All **83** tests passed.
+
+The registered `plc` menu is `PLCScreenHandler`. `PLCMenu` extends it and is not constructed. A failed recorder argument calls `PLCErrorMessageS2C.send`. The excluded program screen is not the client receiver; the packet tells the player with a system message and plays the error sound. The live client screen is still `PLCScreen`, now typed to `PLCScreenHandler`.
+
+`ItemTransport` stays excluded. Restoring the pipe API took `AdvancedEjectorBlock` from 20 errors to 2 (`openHandledScreen` and `serverTick(Level, BlockPos, BlockState)`). The item-transport block entities still have **83** errors, so including `ItemTransport` does not compile. A second pass joined the pipes for the existing graph test rather than forcing those entities in.
+
+`getId()` is still 13. Those call sites hold the recipe, not a `RecipeHolder`, and 1.21 does not store the id on the recipe. No substitute id was invented.
+
+Opcodes that still run as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM.
+
 ## Thord editor, recipe bounds, jar 0.30.0-neoforge.70
 
 Combined-tree errors **1982 → 1919**. That is 63 this run, not 400, and not 1,582. The PLC closure is **143**. `exclude.txt` is **1231**.

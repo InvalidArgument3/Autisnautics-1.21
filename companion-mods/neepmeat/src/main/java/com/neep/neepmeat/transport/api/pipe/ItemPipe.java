@@ -115,6 +115,19 @@ public interface ItemPipe extends ConnectablePipe {
         return true;
     }
 
+    /** Upstream picks a connected face, preferring the item's route. */
+    default Direction getOutputDirection(com.neep.neepmeat.transport.item_network.ItemInPipe item, BlockPos pos, BlockState state, Level world, Direction in, @Nullable net.minecraft.world.level.block.entity.BlockEntity be, boolean overridePathNode, com.neep.meatlib.transfer.TransactionContext transaction) {
+        PipeConnections connections = getConnections(state, in);
+        Direction out = item.getPreferredOutputDirection(state, in, this, overridePathNode);
+        if (out != null && connections.contains(out)) {
+            return out;
+        }
+        if (!connections.isEmpty()) {
+            return connections.get(world.getRandom().nextInt(connections.size()));
+        }
+        return in;
+    }
+
     default boolean prioritise() {
         return false;
     }
