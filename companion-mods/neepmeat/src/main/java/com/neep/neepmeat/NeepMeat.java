@@ -24,6 +24,7 @@ package com.neep.neepmeat;
 
 import com.mojang.logging.LogUtils;
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.fluid.BloodFluids;
 import com.neep.neepmeat.item.MaterialItems;
 import com.neep.neepmeat.machine.NeepMachines;
 import net.minecraft.core.registries.Registries;
@@ -50,6 +51,7 @@ public final class NeepMeat {
         BuildingBlocks.bootstrap();
         NeepMachines.register(bus);
         MaterialItems.register(bus);
+        BloodFluids.register(bus);
         BLOCKS.register(bus);
         ITEMS.register(bus);
         TABS.register(bus);
@@ -57,6 +59,7 @@ public final class NeepMeat {
             bus.addListener(NeepMeatClient::onBlockColors);
             bus.addListener(NeepMeatClient::onItemColors);
             bus.addListener(NeepMeatClient::onScreens);
+            bus.addListener(NeepMeatClient::onClientExtensions);
         }
         ModList.get().getModContainerById("geckolib").ifPresentOrElse(
                 mod -> LOG.info("NeepMeat {} loaded with GeckoLib {}", container.getModInfo().getVersion(), mod.getModInfo().getVersion()),

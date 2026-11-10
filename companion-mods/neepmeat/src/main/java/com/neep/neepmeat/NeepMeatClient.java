@@ -23,10 +23,14 @@
 package com.neep.neepmeat;
 
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.fluid.BloodFluids;
 import com.neep.neepmeat.machine.NeepMachines;
 import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
 import com.neep.neepmeat.machine.transport.FilterPipeScreen;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
 public final class NeepMeatClient {
@@ -37,6 +41,25 @@ public final class NeepMeatClient {
             int rgb = tint.color().getFireworkColor();
             event.register((state, level, pos, index) -> rgb, tint.block().get());
         }
+    }
+
+    public static void onClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public ResourceLocation getStillTexture() {
+                return ResourceLocation.withDefaultNamespace("block/water_still");
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return ResourceLocation.withDefaultNamespace("block/water_flow");
+            }
+
+            @Override
+            public int getTintColor() {
+                return 0xFF5A0A14;
+            }
+        }, BloodFluids.BLOOD_TYPE.get());
     }
 
     public static void onScreens(RegisterMenuScreensEvent event) {
