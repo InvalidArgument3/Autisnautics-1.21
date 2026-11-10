@@ -1,11 +1,7 @@
 com/neep/meatlib/api/EntityStorage.java
 com/neep/meatlib/api/network/ParamCodecs.java
-com/neep/meatlib/block/BaseBuildingBlock.java
 com/neep/meatlib/block/BaseCropBlock.java
 com/neep/meatlib/client/MeatLibClient.java
-com/neep/meatlib/datagen/BlockTagProvider.java
-com/neep/meatlib/datagen/MeatRecipeProvider.java
-com/neep/meatlib/datagen/loot/BlockLootTableProvider.java
 com/neep/meatlib/entity/MobKillUtil.java
 com/neep/meatlib/entity/player/DelegatePlayerInventory.java
 com/neep/meatlib/entity/player/FakePlayerEntity.java
@@ -29,7 +25,6 @@ com/neep/meatlib/recipe/ingredient/RecipeOutputImpl.java
 com/neep/meatlib/recipe/ingredient/RecipeOutputs.java
 com/neep/meatlib/recipe/ingredient/RegistryRecipeInput.java
 com/neep/meatlib/recipe/ingredient/entity/EntityRecipeInput.java
-com/neep/meatlib/registry/BlockRegistry.java
 com/neep/meatlib/screen/ScreenReady.java
 com/neep/meatlib/transfer/SingleEntityStorage.java
 com/neep/meatlib/util/PlayerVelocity.java
@@ -69,7 +64,6 @@ com/neep/meatweapons/client/screen/meatgun/TreePane.java
 com/neep/meatweapons/component/AssaultDrillComponent.java
 com/neep/meatweapons/component/GunTickHandler.java
 com/neep/meatweapons/component/MeatgunComponentImpl.java
-com/neep/meatweapons/datagen/MWRecipeGenerator.java
 com/neep/meatweapons/enchantment/MWEnchantments.java
 com/neep/meatweapons/entity/AbstractVehicleEntity.java
 com/neep/meatweapons/entity/BounceGrenadeEntity.java
@@ -219,7 +213,6 @@ com/neep/neepmeat/client/NMClientComponents.java
 com/neep/neepmeat/client/NMVisuals.java
 com/neep/neepmeat/client/NeepMeatClient.java
 com/neep/neepmeat/client/NeepMeatModelProvider.java
-com/neep/neepmeat/client/datagen/NMModelProvider.java
 com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java
 com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java
 com/neep/neepmeat/client/fluid/MeatAttribtuteHandler.java
@@ -342,12 +335,6 @@ com/neep/neepmeat/component/ItemIdentityComponentImpl.java
 com/neep/neepmeat/component/ItemPressureWasherComponent.java
 com/neep/neepmeat/component/PlayerCompressedAirComponent.java
 com/neep/neepmeat/component/ProgramStorageComponent.java
-com/neep/neepmeat/datagen/NMAdvancements.java
-com/neep/neepmeat/datagen/NMBlockTagProvider.java
-com/neep/neepmeat/datagen/NMDataGen.java
-com/neep/neepmeat/datagen/NMItemTagProvider.java
-com/neep/neepmeat/datagen/NMRecipeGenerator.java
-com/neep/neepmeat/datagen/tag/NMTags.java
 com/neep/neepmeat/documentation/DocumentationReloadListener.java
 com/neep/neepmeat/enlightenment/EnlightenmentEventManager.java
 com/neep/neepmeat/enlightenment/EnlightenmentManager.java
@@ -839,7 +826,6 @@ com/neep/neepmeat/util/FilterUtils.java
 com/neep/neepmeat/util/NMVec2f.java
 com/neep/neepmeat/util/TagSuggestions.java
 com/neep/neepmeat/util/WrenchUtil.java
-com/neep/neepmeat/world/NMFeatures.java
 com/neep/meatlib/client/GlobalClientChannelReceiver.java
 com/neep/meatlib/client/ScrollableItemsClient.java
 com/neep/meatlib/larkdown/command/LarkdownCommand.java
@@ -1359,11 +1345,8 @@ com/neep/neepmeat/thord/token/ThordToken.java
 com/neep/neepmeat/thord/token/LexerContext.java
 com/neep/meatlib/util/RedstoneMode.java
 com/neep/meatlib/item/BaseSwordItem.java
-com/neep/meatlib/datagen/MeatlibItemTagProvider.java
-com/neep/meatlib/datagen/MeatLibDataGen.java
 com/neep/meatlib/network/screen/ScreenChannel.java
 com/neep/meatlib/storage/MeatlibStorageUtil.java
-com/neep/meatlib/client/screen/REIScreenSupport.java
 com/neep/meatlib/client/flw/MeatModels.java
 com/neep/meatlib/client/MeatlibFluidRendering.java
 com/neep/meatlib/recipe/ImplementedRecipe.java
@@ -1383,7 +1366,17 @@ com/neep/meatlib/config/ConfigUtil.java
 com/neep/meatlib/network/BlockEntitySync.java
 com/neep/meatlib/client/renderer/DebugRenderUtil.java
 com/neep/meatlib/recipe/ingredient/MatchingStorageView.java
-com/neep/meatlib/util/ValkyrienSkiesUtil.java
 com/neep/meatlib/mixin/BlockMixin.java
 com/neep/meatlib/transfer/EntityVariant.java
 com/neep/meatlib/mixin/RecipeManagerAccessor.java
+com/neep/meatlib/datagen/MeatRecipeProvider.java
+com/neep/meatweapons/datagen/MWRecipeGenerator.java
+com/neep/neepmeat/client/datagen/NMModelProvider.java
+com/neep/neepmeat/datagen/NMAdvancements.java
+com/neep/neepmeat/datagen/NMBlockTagProvider.java
+com/neep/neepmeat/datagen/NMRecipeGenerator.java
+com/neep/neepmeat/datagen/tag/NMTags.java
+com/neep/neepmeat/world/NMFeatures.java
+com/neep/meatlib/block/BaseBuildingBlock.java
+com/neep/neepmeat/datagen/NMDataGen.java
+com/neep/neepmeat/datagen/NMItemTagProvider.java

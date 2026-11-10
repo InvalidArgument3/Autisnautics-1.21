@@ -19,7 +19,7 @@ import com.neep.neepmeat.datagen.tag.NMTags;
 import com.neep.neepmeat.init.NMBlocks;
 import com.neep.neepmeat.init.NMItems;
 import com.neep.neepmeat.transport.FluidTransport;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import com.neep.meatlib.datagen.FabricDataOutput;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;

@@ -19,6 +19,18 @@ public interface MeatlibBlock {
         return (BlockItem) net.minecraft.world.item.Item.BY_BLOCK.get(this);
     }
 
+    default boolean autoGenDrop() {
+        return true;
+    }
+
+    default net.minecraft.world.level.storage.loot.LootTable.Builder genLoot(Object provider) {
+        return null;
+    }
+
+    default net.minecraft.world.level.ItemLike dropsLike() {
+        return this instanceof net.minecraft.world.level.ItemLike item ? item : null;
+    }
+
     static String structure(String path) {
         return path + "_structure";
     }

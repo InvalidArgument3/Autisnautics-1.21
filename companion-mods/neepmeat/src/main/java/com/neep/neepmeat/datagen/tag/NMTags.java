@@ -15,7 +15,6 @@ package com.neep.neepmeat.datagen.tag;
 import com.neep.meatweapons.meatgun.module.MeatgunModule;
 import com.neep.meatweapons.meatgun.module.MeatgunModules;
 import com.neep.neepmeat.NeepMeat;
-import net.fabricmc.fabric.api.event.registry.DynamicRegistries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

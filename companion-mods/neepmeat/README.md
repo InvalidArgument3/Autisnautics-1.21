@@ -16,13 +16,13 @@ From this directory, with Java 21:
 ./gradlew build
 ```
 
-The jar is `build/libs/neepmeat-0.30.0-neoforge.50.jar`. A sources jar is written beside it. `build/`, `run/`, and `.gradle/` are not part of the pack.
+The jar is `build/libs/neepmeat-0.30.0-neoforge.51.jar`. A sources jar is written beside it. `build/`, `run/`, and `.gradle/` are not part of the pack.
 
 `./gradlew test` runs the NEEPSpeak parser unit test. `./gradlew runGameTestServer` boots a headless NeoForge server and runs the three in-mod game tests. `./gradlew runClient` and `./gradlew runServer` are the dev client and dedicated server.
 
 ## Where the jar goes
 
-This repository does not install the jar. Local pack mods that are not on Modrinth or CurseForge are stored with Git LFS at `.pakku/overrides/mods/` and marked both-sides, the same place as `fluidlimiter-1.0.0-local.jar` and `noheighttemp-1.0.0-local.jar`. Pakku copies that folder into the instance `mods/` directory for the client and the server. Drop `neepmeat-0.30.0-neoforge.50.jar` there when a later phase is actually playable. Do not put it in the gitignored top-level `mods/` folder of a player instance as the way the pack is distributed.
+This repository does not install the jar. Local pack mods that are not on Modrinth or CurseForge are stored with Git LFS at `.pakku/overrides/mods/` and marked both-sides, the same place as `fluidlimiter-1.0.0-local.jar` and `noheighttemp-1.0.0-local.jar`. Pakku copies that folder into the instance `mods/` directory for the client and the server. Drop `neepmeat-0.30.0-neoforge.51.jar` there when a later phase is actually playable. Do not put it in the gitignored top-level `mods/` folder of a player instance as the way the pack is distributed.
 
 The mod has to be on the server and the client once blocks exist, which they do. GeckoLib 4.9.3 (already in the pack) is a required dependency. JEI and EMI are optional.
 

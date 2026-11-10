@@ -70,6 +70,25 @@ public final class MeatlibBlockSettings {
         return this;
     }
 
+    public MeatlibBlockSettings sound(SoundType sound) {
+        return sounds(sound);
+    }
+
+    public MeatlibBlockSettings isValidSpawn(net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate<net.minecraft.world.entity.EntityType<?>> predicate) {
+        properties.isValidSpawn(predicate);
+        return this;
+    }
+
+    public MeatlibBlockSettings isSuffocating(net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate predicate) {
+        properties.isSuffocating(predicate);
+        return this;
+    }
+
+    public MeatlibBlockSettings isViewBlocking(net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate predicate) {
+        properties.isViewBlocking(predicate);
+        return this;
+    }
+
     public MeatlibBlockSettings sounds(SoundType sound) {
         properties.sound(sound);
         return this;

@@ -20,7 +20,7 @@ import com.neep.meatlib.datagen.loot.BlockLootTableProvider;
 import com.neep.meatweapons.datagen.MWRecipeGenerator;
 import com.neep.neepmeat.client.datagen.NMModelProvider;
 import com.neep.neepmeat.world.NMFeatures;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import com.neep.meatlib.datagen.FabricDataGenerator;
 
 public class NMDataGen extends MeatLibDataGen
 {

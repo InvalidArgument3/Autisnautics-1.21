@@ -13,9 +13,10 @@
 package com.neep.meatlib.datagen.loot;
 
 import com.neep.meatlib.block.MeatlibBlock;
+import com.neep.meatlib.block.MeatlibBlockExtension;
 import com.neep.meatlib.registry.BlockRegistry;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import com.neep.meatlib.datagen.FabricDataOutput;
+import com.neep.meatlib.datagen.FabricBlockLootTableProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -57,10 +58,10 @@ public class BlockLootTableProvider extends FabricBlockLootTableProvider
                     }
                 }
             }
-            else
+                else if (entry instanceof MeatlibBlockExtension extension)
             {
                 // The default behaviour injected into Item delegates to MeatlibItemSettings if applicable.
-                ItemLike drop = entry.neepmeat$simpleDrop();
+                ItemLike drop = extension.neepmeat$simpleDrop();
                 if (drop != null)
                 {
                     this.dropOther(entry, drop);

@@ -17,10 +17,10 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.datagen.tag.NMTags;
 import com.neep.neepmeat.init.NMBlocks;
 import com.neep.neepmeat.init.NMItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBlockTags;
-import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
+import com.neep.meatlib.datagen.FabricDataOutput;
+import com.neep.meatlib.datagen.FabricTagProvider;
+import com.neep.meatlib.datagen.ConventionalTags.ConventionalBlockTags;
+import com.neep.meatlib.datagen.ConventionalTags.ConventionalItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -50,9 +50,14 @@ public class NMItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .addOptionalTag(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("chestcavity", "salvageable_human_organ_meat")))
                 .addOptionalTag(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("chestcavity", "salvageable_animal_organ_meat")))
                 .addOptionalTag(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("chestcavity", "salvageable_rotten_flesh")))
-                .add(Items.BONE, Items.SPIDER_EYE, Items.FERMENTED_SPIDER_EYE, Items.EGG, Items.TURTLE_EGG, Items.FROGSPAWN)
-                .add(NMItems.ASSORTED_BIOMASS)
-                .add(Items.SNIFFER_EGG)
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.BONE).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.SPIDER_EYE).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.FERMENTED_SPIDER_EYE).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.EGG).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.TURTLE_EGG).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.FROGSPAWN).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(NMItems.ASSORTED_BIOMASS).orElseThrow())
+                .add(BuiltInRegistries.ITEM.getResourceKey(Items.SNIFFER_EGG).orElseThrow())
         ;
 
         tag(NMTags.BLOCK_CRUSHING_OUTPUTS)

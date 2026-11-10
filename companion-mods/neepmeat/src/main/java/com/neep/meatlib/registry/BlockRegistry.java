@@ -17,7 +17,6 @@ import com.neep.meatlib.block.BaseLeavesBlock;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.item.TooltipSupplier;
-import net.fabricmc.fabric.api.mininglevel.v1.FabricMineableTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -96,21 +95,20 @@ public class BlockRegistry
 
     public static BaseColumnBlock createLogBlock(RegistrationContext ctx, TooltipSupplier tooltipSupplier)
     {
-        return new BaseColumnBlock(ctx, ItemSettings.block(), MeatlibBlockSettings.of().tags(BlockTags.MINEABLE_WITH_AXE, BlockTags.LOGS).strength(2.0f).sound(SoundType.WOOD));
+        return new BaseColumnBlock(ctx, ItemSettings.block(), MeatlibBlockSettings.of().tags(BlockTags.MINEABLE_WITH_AXE, BlockTags.LOGS).strength(2.0f).sound(SoundType.WOOD).properties());
     }
 
     public static BaseLeavesBlock createLeavesBlock(RegistrationContext ctx, SoundType soundGroup)
     {
         return new BaseLeavesBlock(ctx, MeatlibBlockSettings.of()
-                .tags(FabricMineableTags.SHEARS_MINEABLE, BlockTags.LEAVES)
+                .tags(BlockTags.MINEABLE_WITH_HOE, BlockTags.LEAVES)
                 .strength(0.2f)
                 .randomTicks()
                 .sound(soundGroup)
                 .noOcclusion()
                 .isValidSpawn((p1, p2, p3, p4) -> false)
-                .isSuffocating((p1, p2, p3) -> false).isViewBlocking(((state, world, pos) -> false)))
+                .isSuffocating((p1, p2, p3) -> false).isViewBlocking(((state, world, pos) -> false)).properties())
         {
-            @Override
             public ItemLike dropsLike()
             {
                 return null;

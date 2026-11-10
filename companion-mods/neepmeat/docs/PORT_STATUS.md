@@ -1,4 +1,20 @@
-## Leaf clusters, jar 0.30.0-neoforge.49
+## External families, jar 0.30.0-neoforge.51
+
+Combined-tree errors before this run: **4403**. After the family shims: **4264**.
+
+Missing-package counts before, then after:
+
+| Package family | Before | After |
+| --- | ---: | ---: |
+| Fabric datagen (`api.datagen.v1` and `.provider`) | 23 | 0 |
+| Architectury | 2 | 0 |
+| Kotlin (`kotlin.jvm.functions`) | 2 | 0 |
+
+The datagen entry points now live in `com.neep.meatlib.datagen` (`FabricDataOutput`, `FabricDataGenerator`, `FabricTagProvider`, `FabricRecipeProvider`, `FabricBlockLootTableProvider`, `FabricModelProvider`, `FabricAdvancementProvider`, `FabricDynamicRegistryProvider`). Block and item tag providers extend NeoForge `BlockTagsProvider` and vanilla `IntrinsicHolderTagsProvider`. `REIScreenSupport` listens to `ContainerScreenEvent` instead of Architectury. `ValkyrienSkiesUtil` is plain Java. Ship matrices return null because Valkyrien Skies is not on the compile classpath and was not added as a dependency.
+
+`BlockTagProvider`, `MeatLibDataGen`, `MeatlibItemTagProvider`, `BlockLootTableProvider`, `BlockRegistry`, `REIScreenSupport`, and `ValkyrienSkiesUtil` left `exclude.txt`. The other datagen files still name excluded neighbours (`NMTags`, meatgun modules, `MWItems`) and went back. `exclude.txt` is **1382**. `FabricDataGenerator.addProvider` records nothing into `GatherDataEvent` yet.
+
+## Leaf clusters, jar 0.30.0-neoforge.50
 
 Excluded files form 837 strongly connected components. The largest has 402 files (entities, scutters, the surgery robot). The rest are mostly single files. Leaves are compiled first.
 

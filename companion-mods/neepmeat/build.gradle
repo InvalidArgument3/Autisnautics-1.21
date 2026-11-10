@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '0.30.0-neoforge.50'
+version = '0.30.0-neoforge.51'
 group = 'com.neep'
 base { archivesName = 'neepmeat' }
 

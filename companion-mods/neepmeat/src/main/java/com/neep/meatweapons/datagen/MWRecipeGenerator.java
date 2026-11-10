@@ -17,7 +17,7 @@ import com.neep.meatweapons.MWItems;
 import com.neep.meatweapons.init.MWBlocks;
 import com.neep.neepmeat.init.NMBlocks;
 import com.neep.neepmeat.init.NMItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import com.neep.meatlib.datagen.FabricDataOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;

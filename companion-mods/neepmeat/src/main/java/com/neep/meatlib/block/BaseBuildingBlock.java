@@ -37,12 +37,12 @@ public class BaseBuildingBlock extends Block implements MeatlibBlock
 
     public BaseBuildingBlock(RegistrationContext ctx, boolean makeWall, ItemSettings itemSettings, MeatlibBlockSettings settings)
     {
-        super(settings);
+        super(settings.properties());
 
         this.stairs = new BaseStairsBlock(ctx, this.defaultBlockState(), ItemSettings.block(), settings);
         ctx.append(this, stairs, s -> s + "_stairs");
 
-        this.slab = new BaseSlabBlock(ctx, this.defaultBlockState(), ItemSettings.block(), settings);
+        this.slab = new BaseSlabBlock(ctx, this.defaultBlockState(), ItemSettings.block(), settings.properties());
         ctx.append(this, slab, s -> s + "_slab");
 
         if (makeWall)
@@ -62,13 +62,10 @@ public class BaseBuildingBlock extends Block implements MeatlibBlock
     public void generateRecipes(RecipeOutput exporter)
     {
         MeatRecipeProvider.slab(exporter, RecipeCategory.BUILDING_BLOCKS, this.slab, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, this.slab, this, 2);
         MeatRecipeProvider.offerStairsRecipe(exporter, this.stairs, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, this.stairs, this);
-        if (wall != null)
+        if (wall instanceof net.minecraft.world.level.ItemLike item)
         {
-            MeatRecipeProvider.wall(exporter, RecipeCategory.BUILDING_BLOCKS, this.wall, this);
-            RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, this.wall, this);
+            MeatRecipeProvider.wall(exporter, RecipeCategory.BUILDING_BLOCKS, item, this);
         }
     }
 }

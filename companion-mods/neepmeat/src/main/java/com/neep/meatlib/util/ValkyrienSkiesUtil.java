@@ -8,133 +8,85 @@
  * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * Plain Java. Valkyrien Skies is not a compile dependency, so ship transforms are identity
+ * and "no ship" until that mod is on the classpath.
  */
 
 package com.neep.meatlib.util;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import kotlin.jvm.functions.Function0;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.fml.ModList;
 import org.joml.Matrix4dc;
 import org.joml.Quaterniondc;
 import org.joml.Vector3d;
-import org.valkyrienskies.mod.common.PlayerUtil;
-import org.valkyrienskies.mod.common.VSClientGameUtils;
-import org.valkyrienskies.mod.common.VSGameUtilsKt;
 
-/**
- * This class should never be initialized if VS2 is not present. It exists to serve as a buffer such that things don't explode if VS2 isn't present, that
- * way it is not a hard dependency.
- */
+import java.util.function.Supplier;
+
 public class ValkyrienSkiesUtil {
 
     @OnlyIn(Dist.CLIENT)
     public Client CLIENT;
 
     public ValkyrienSkiesUtil() {
-        if (!FabricLoader.getInstance().isModLoaded("valkyrienskies")) {
+        if (!ModList.get().isLoaded("valkyrienskies")) {
             throw new IllegalStateException("This class should never be initialized if VS2 is not present.");
         }
     }
 
-    /**
-     * Gets the transformation matrix from Shipspace to Worldspace. Returns null if there is no ship at that position.
-     * @param pos Position
-     * @param level Clientlevel or Serverlevel
-     * @return The Matrix, or Null
-     * @see ValkyrienSkiesUtil#getWorldToShipMatrix(Vector3d, Level)
-     */
     public Matrix4dc getShipToWorldMatrix(Vector3d pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getShipToWorld();
+        return null;
     }
 
     public Matrix4dc getShipToWorldMatrix(BlockPos pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getShipToWorld();
+        return null;
     }
 
-    /**
-     * Inverse of [getShipToWorldMatrix]
-     * @param pos Position
-     * @param level Clientlevel or Serverlevel
-     * @return The Matrix, or Null
-     * @see ValkyrienSkiesUtil#getShipToWorldMatrix(Vector3d, Level)
-     */
     public Matrix4dc getWorldToShipMatrix(Vector3d pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getWorldToShip();
+        return null;
     }
 
     public Matrix4dc getWorldToShipMatrix(BlockPos pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getWorldToShip();
+        return null;
     }
 
-    /**
-     * Checks if a ship exists at a given position.
-     * @param pos Position
-     * @param level Clientlevel or Serverlevel
-     * @return True if a ship exists at the position.
-     */
     public boolean hasShipAtPosition(Vector3d pos, Level level) {
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos) != null;
+        return false;
     }
 
     public boolean hasShipAtPosition(Vec3 pos, Level level) {
-        Vector3d realPos = new Vector3d(pos.x, pos.y, pos.z);
-        return VSGameUtilsKt.getShipObjectManagingPos(level, realPos) != null;
+        return false;
     }
 
     public boolean hasShipAtPosition(BlockPos pos, Level level) {
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos) != null;
+        return false;
     }
 
     public Quaterniondc getShipToWorldRotation(Vector3d pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getTransform().getShipToWorldRotation();
+        return null;
     }
 
     public Quaterniondc getShipToWorldRotation(Vec3 pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        Vector3d realPos = new Vector3d(pos.x, pos.y, pos.z);
-        return VSGameUtilsKt.getShipObjectManagingPos(level, realPos).getTransform().getShipToWorldRotation();
+        return null;
     }
 
     public Quaterniondc getShipToWorldRotation(BlockPos pos, Level level) {
-        if (!hasShipAtPosition(pos, level)) {
-            return null;
-        }
-        return VSGameUtilsKt.getShipObjectManagingPos(level, pos).getTransform().getShipToWorldRotation();
+        return null;
     }
 
-    public <T> T transformPlayerTemporarily(Player player, Level world, BlockPos blockInShip, Function0<T> inside)
-    {
-        return PlayerUtil.transformPlayerTemporarily(player, world, blockInShip, inside);
+    public <T> T transformPlayerTemporarily(Player player, Level world, BlockPos blockInShip, Supplier<T> inside) {
+        return inside.get();
     }
 
-    @Environment(net.neoforged.api.distmarker.Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client {
         public void transformRenderIfOnShip(PoseStack matrixStack, Vector3d renderOffset) {
-            VSClientGameUtils.transformRenderIfInShipyard(matrixStack, renderOffset.x, renderOffset.y, renderOffset.z);
         }
     }
 }

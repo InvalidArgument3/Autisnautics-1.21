@@ -20,6 +20,9 @@ import net.minecraft.world.level.block.LeavesBlock;
 
 public class BaseLeavesBlock extends LeavesBlock implements MeatlibBlock
 {
+    public net.minecraft.world.level.ItemLike dropsLike() {
+        return this;
+    }
     protected BlockItem blockItem;
 
     public BaseLeavesBlock(RegistrationContext ctx, Properties settings)

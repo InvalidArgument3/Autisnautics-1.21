@@ -13,8 +13,8 @@
 package com.neep.meatlib.datagen;
 
 import com.google.common.collect.Sets;
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import com.neep.meatlib.datagen.DataGeneratorEntrypoint;
+import com.neep.meatlib.datagen.FabricDataGenerator;
 import net.minecraft.data.DataProvider;
 
 import java.util.Set;
