@@ -10,5 +10,7 @@
 package com.neep.meatlib.item;
 
 public interface MeatlibItem {
-    TooltipSupplier meatlibTooltip();
+    default TooltipSupplier meatlibTooltip() {
+        return TooltipSupplier.BLANK;
+    }
 }

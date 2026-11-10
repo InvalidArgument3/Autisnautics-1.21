@@ -14,6 +14,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -45,25 +46,43 @@ public final class BuiltinItemRendererRegistry {
 
         @SubscribeEvent
         public static void onExtensions(RegisterClientExtensionsEvent event) {
-            for (var entry : DynamicItemRenderer.REGISTERED.entrySet()) {
-                DynamicItemRenderer renderer = entry.getValue();
-                event.registerItem(new IClientItemExtensions() {
-                    private BlockEntityWithoutLevelRenderer bewlr;
+            for (Item item : BuiltInRegistries.ITEM) {
+                var id = BuiltInRegistries.ITEM.getKey(item);
+                if (id == null || !(id.getNamespace().equals("neepmeat") || id.getNamespace().equals("meatweapons") || id.getNamespace().equals("meatlib"))) {
+                    continue;
+                }
+                event.registerItem(new LazyExtensions(item), item);
+            }
+        }
 
-                    @Override
-                    public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                        if (bewlr == null) {
-                            Minecraft minecraft = Minecraft.getInstance();
-                            bewlr = new BlockEntityWithoutLevelRenderer(minecraft.getBlockEntityRenderDispatcher(), minecraft.getEntityModels()) {
-                                @Override
-                                public void renderByItem(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource buffers, int light, int overlay) {
-                                    renderer.render(stack, mode, matrices, buffers, light, overlay);
-                                }
-                            };
+        /** Looks up the Fabric renderer when the item is drawn, not when the event fires. */
+        private static final class LazyExtensions implements IClientItemExtensions {
+            private final Item item;
+            private BlockEntityWithoutLevelRenderer bewlr;
+
+            private LazyExtensions(Item item) {
+                this.item = item;
+            }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                DynamicItemRenderer renderer = DynamicItemRenderer.REGISTERED.get(item);
+                if (renderer == null) {
+                    return IClientItemExtensions.super.getCustomRenderer();
+                }
+                if (bewlr == null) {
+                    Minecraft minecraft = Minecraft.getInstance();
+                    bewlr = new BlockEntityWithoutLevelRenderer(minecraft.getBlockEntityRenderDispatcher(), minecraft.getEntityModels()) {
+                        @Override
+                        public void renderByItem(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource buffers, int light, int overlay) {
+                            DynamicItemRenderer current = DynamicItemRenderer.REGISTERED.get(item);
+                            if (current != null) {
+                                current.render(stack, mode, matrices, buffers, light, overlay);
+                            }
                         }
-                        return bewlr;
-                    }
-                }, entry.getKey());
+                    };
+                }
+                return bewlr;
             }
         }
     }

@@ -28,6 +28,7 @@ import org.slf4j.Logger;
 @Mod(MeatLib.ID)
 public final class MeatLib {
     public static final String ID = "meatlib";
+    public static final String NAMESPACE = ID;
     public static final Logger LOG = LogUtils.getLogger();
     /** Loom sources call {@code LOGGER}. */
     public static final Logger LOGGER = LOG;

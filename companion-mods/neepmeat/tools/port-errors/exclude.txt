@@ -1,25 +1,7 @@
-com/neep/meatlib/MeatLibRegistration.java
 com/neep/meatlib/api/EntityStorage.java
-com/neep/meatlib/api/event/DataPackEvents.java
-com/neep/meatlib/api/event/DataPackPostProcess.java
-com/neep/meatlib/api/event/EntityNbtEvents.java
-com/neep/meatlib/api/event/InitialTicks.java
-com/neep/meatlib/api/event/PlayerInventoryTickEvents.java
 com/neep/meatlib/api/network/ParamCodecs.java
 com/neep/meatlib/block/BaseBuildingBlock.java
-com/neep/meatlib/block/BaseColumnBlock.java
 com/neep/meatlib/block/BaseCropBlock.java
-com/neep/meatlib/block/BaseGlassBlock.java
-com/neep/meatlib/block/BaseLeavesBlock.java
-com/neep/meatlib/block/BaseLightBlock.java
-com/neep/meatlib/block/BasePaneBlock.java
-com/neep/meatlib/block/BaseSaplingBlock.java
-com/neep/meatlib/block/BaseSlabBlock.java
-com/neep/meatlib/block/BaseStairsBlock.java
-com/neep/meatlib/block/BaseTrapdoorBlock.java
-com/neep/meatlib/block/BaseWallBlock.java
-com/neep/meatlib/block/PaintedBlockCollection.java
-com/neep/meatlib/client/ClientChannelReceiver.java
 com/neep/meatlib/client/MeatLibClient.java
 com/neep/meatlib/client/MeatlibFluidRendering.java
 com/neep/meatlib/client/event/AppendPlayerFeatureRenderers.java
@@ -31,7 +13,6 @@ com/neep/meatlib/client/event/ScrollEvents.java
 com/neep/meatlib/client/event/UseAttackCallback.java
 com/neep/meatlib/client/flw/MeatModels.java
 com/neep/meatlib/client/renderer/DebugRenderUtil.java
-com/neep/meatlib/client/screen/REIScreenSupport.java
 com/neep/meatlib/config/ConfigUtil.java
 com/neep/meatlib/datagen/BlockTagProvider.java
 com/neep/meatlib/datagen/MeatLibDataGen.java
@@ -46,7 +27,6 @@ com/neep/meatlib/graphics/GraphicsEffects.java
 com/neep/meatlib/graphics/SyncEffect.java
 com/neep/meatlib/graphics/client/GraphicsEffectClient.java
 com/neep/meatlib/item/BaseBucketItem.java
-com/neep/meatlib/item/BaseSeedsItem.java
 com/neep/meatlib/item/BaseSwordItem.java
 com/neep/meatlib/item/ScrollableItems.java
 com/neep/meatlib/larkdown/LarkdownParser.java
@@ -61,7 +41,6 @@ com/neep/meatlib/network/GlobalChannelManager.java
 com/neep/meatlib/network/ServerChannelReceiver.java
 com/neep/meatlib/network/SyncMeatRecipesS2CPacket.java
 com/neep/meatlib/network/screen/ScreenChannel.java
-com/neep/meatlib/recipe/ImplementedRecipe.java
 com/neep/meatlib/recipe/MeatRecipeReloadListener.java
 com/neep/meatlib/recipe/MeatRecipeSerialiser.java
 com/neep/meatlib/recipe/MeatlibRecipe.java
@@ -80,7 +59,6 @@ com/neep/meatlib/screen/FloatListConfigHandler.java
 com/neep/meatlib/screen/ScreenHandlerRegistry.java
 com/neep/meatlib/screen/ScreenReady.java
 com/neep/meatlib/storage/MeatlibStorageUtil.java
-com/neep/meatlib/transfer/EntityVariant.java
 com/neep/meatlib/transfer/SingleEntityStorage.java
 com/neep/meatlib/util/MeatLibCodecs.java
 com/neep/meatlib/util/MeatlibItemGroups.java
@@ -1411,3 +1389,8 @@ com/neep/neepmeat/thord/token/ScopeEndToken.java
 com/neep/neepmeat/thord/token/SignatureToken.java
 com/neep/neepmeat/thord/token/ThordToken.java
 com/neep/neepmeat/thord/token/LexerContext.java
+com/neep/meatlib/MeatLibRegistration.java
+com/neep/meatlib/transfer/EntityVariant.java
+com/neep/meatlib/client/ClientChannelReceiver.java
+com/neep/meatlib/client/screen/REIScreenSupport.java
+com/neep/meatlib/recipe/ImplementedRecipe.java

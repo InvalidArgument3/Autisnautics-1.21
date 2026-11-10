@@ -18,6 +18,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.LootTable;
 import org.jetbrains.annotations.Nullable;
 
 public class BaseSlabBlock extends SlabBlock implements MeatlibBlock
@@ -30,9 +31,8 @@ public class BaseSlabBlock extends SlabBlock implements MeatlibBlock
         this.blockItem = itemSettings.create(this, ctx);
     }
 
-    @Override
     public LootTable.@Nullable Builder genLoot(BlockLootSubProvider generator)
     {
-        return generator.createSlabItemTable(this);
+        return null;
     }
 }

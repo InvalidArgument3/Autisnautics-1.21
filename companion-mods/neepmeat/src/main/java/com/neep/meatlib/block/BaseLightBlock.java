@@ -56,7 +56,7 @@ public class BaseLightBlock extends BaseBlock
         if (player.isShiftKeyDown())
         {
             world.setBlockAndUpdate(pos, state.cycle(LIT));
-            world.playSound(null, pos, MeatlibSounds.CLICK, SoundSource.BLOCKS, 0.5f, 1);
+            world.playSound(null, pos, MeatlibSounds.CLICK.value(), SoundSource.BLOCKS, 0.5f, 1);
             return InteractionResult.SUCCESS;
         }
         return super.useWithoutItem(state, world, pos, player, hit);

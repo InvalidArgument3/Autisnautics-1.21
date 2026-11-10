@@ -19,14 +19,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.AbstractTreeGrower;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BaseSaplingBlock extends SaplingBlock implements MeatlibBlock
 {
     protected BlockItem blockItem;
 
-    public BaseSaplingBlock(RegistrationContext ctx, AbstractTreeGrower generator, ItemSettings itemSettings, Properties settings)
+    public BaseSaplingBlock(RegistrationContext ctx, TreeGrower generator, ItemSettings itemSettings, Properties settings)
     {
         super(generator, settings);
         this.blockItem = itemSettings.create(this, ctx);

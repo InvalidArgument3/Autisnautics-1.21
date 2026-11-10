@@ -15,9 +15,9 @@ package com.neep.meatlib.block;
 import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.registry.RegistrationContext;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.AbstractGlassBlock;
+import net.minecraft.world.level.block.TransparentBlock;
 
-public class BaseGlassBlock extends AbstractGlassBlock implements MeatlibBlock
+public class BaseGlassBlock extends TransparentBlock implements MeatlibBlock
 {
     public BlockItem blockItem;
     private String registryName;

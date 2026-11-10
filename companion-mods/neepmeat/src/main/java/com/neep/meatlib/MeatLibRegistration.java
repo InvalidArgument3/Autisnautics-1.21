@@ -40,12 +40,12 @@ public class MeatLibRegistration
         {
             var pair = it.next();
 
-            Class<?> clazz = pair.key();
+            Class<?> clazz = pair.left();
             @Nullable RegisterMe annotation = clazz.getAnnotation(RegisterMe.class);
             if (annotation == null)
                 MeatLib.LOGGER.warn(String.format("Class %s is not annotated with %s", clazz, RegisterMe.class.getSimpleName()));
 
-            RegistrationContext ctx = pair.value();
+            RegistrationContext ctx = pair.right();
             String namespace = annotation.value();
 
             Arrays.stream(clazz.getDeclaredFields())
@@ -60,7 +60,7 @@ public class MeatLibRegistration
             }
             catch (Exception e)
             {
-                MeatLib.LOGGER.error(e);
+                MeatLib.LOGGER.error("registration failed for {}", clazz.getName(), e);
             }
             finally
             {

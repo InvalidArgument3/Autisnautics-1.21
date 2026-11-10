@@ -27,7 +27,7 @@ public class BaseStairsBlock extends StairBlock implements MeatlibBlock
 
     public BaseStairsBlock(RegistrationContext ctx, BlockState baseBlockState, ItemSettings itemSettings, MeatlibBlockSettings settings)
     {
-        super(baseBlockState, settings.addTags(BlockTags.STAIRS));
+        super(baseBlockState, settings.addTags(BlockTags.STAIRS).properties());
 //        System.out.println(this.hashCode() + ", " + baseBlockState.getBlock().getClass());
         this.baseBlock = baseBlockState.getBlock();
         this.blockItem = itemSettings.create(this, ctx);

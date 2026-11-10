@@ -104,6 +104,14 @@ public final class MeatlibBlockSettings {
         return this;
     }
 
+    @SafeVarargs
+    public final MeatlibBlockSettings addTags(TagKey<Block>... extra) {
+        for (TagKey<Block> tag : extra) {
+            tags.add(tag);
+        }
+        return this;
+    }
+
     public MeatlibBlockSettings addTag(TagKey<Block> tag) {
         tags.add(tag);
         return this;

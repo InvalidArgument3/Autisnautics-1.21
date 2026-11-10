@@ -54,8 +54,11 @@ public final class InitialTicks
 
         ServerTickEvents.START_WORLD_TICK.register(world ->
         {
-            InitialTicks instance = getInstance(world);
-            instance.tick();
+            if (world instanceof net.minecraft.server.level.ServerLevel serverWorld)
+            {
+                InitialTicks instance = getInstance(serverWorld);
+                instance.tick();
+            }
         });
     }
 

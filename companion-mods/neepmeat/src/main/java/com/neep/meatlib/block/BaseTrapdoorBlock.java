@@ -41,7 +41,7 @@ public class BaseTrapdoorBlock extends TrapDoorBlock implements MeatlibBlock
 
     public BaseTrapdoorBlock(RegistrationContext ctx, ItemSettings itemSettings, Properties settings, BlockSetType blockSetType, boolean manual)
     {
-        super(settings, blockSetType);
+        super(blockSetType, settings);
         this.manual = manual;
         this.blockItem = new BaseBlockItem(this, ctx, itemSettings);
     }

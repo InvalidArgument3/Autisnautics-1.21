@@ -71,6 +71,14 @@ public final class RegistrationContext {
         return namespace;
     }
 
+    public net.minecraft.world.item.CreativeModeTab getDefaultGroup() {
+        return null;
+    }
+
+    public <T> T addParent(ResourceLocation id, T entry) {
+        return append(null, entry, id.getPath());
+    }
+
     public void register(IEventBus bus) {
         blocks.register(bus);
         items.register(bus);

@@ -1,3 +1,11 @@
+## Leaf clusters, jar 0.30.0-neoforge.49
+
+Excluded files form 837 strongly connected components. The largest has 402 files (entities, scutters, the surgery robot). The rest are mostly single files. Leaves are compiled first.
+
+This batch is the meatlib building-block leaves: stairs, slab, wall, leaves, column, pane, glass, light, sapling, trapdoor, painted collection, seeds, plus the datapack tick events. `MeatlibBlock.blockItem()` and `MeatlibItem.meatlibTooltip()` now have defaults, so those classes compile. Slab `genLoot` returns null because `createSlabItemTable` is protected. Glass extends `TransparentBlock`. Saplings take `TreeGrower`. Trapdoors pass the block-set type first. Item renderers are registered for every neepmeat, meatweapons, and meatlib item, and the BEWLR looks up the Fabric renderer when the item is drawn.
+
+`MeatLibRegistration`, `EntityVariant`, `ClientChannelReceiver`, `REIScreenSupport`, and `ImplementedRecipe` stayed excluded.
+
 ## File grind, jar 0.30.0-neoforge.48
 
 `FinishedRecipe` is gone from the datagen signatures. Those methods take `net.minecraft.data.recipes.RecipeOutput`. No class was added under `net.minecraft`.

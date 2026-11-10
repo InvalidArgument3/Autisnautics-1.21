@@ -15,7 +15,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 
 public interface MeatlibBlock {
-    BlockItem blockItem();
+    default BlockItem blockItem() {
+        return (BlockItem) net.minecraft.world.item.Item.BY_BLOCK.get(this);
+    }
 
     static String structure(String path) {
         return path + "_structure";
