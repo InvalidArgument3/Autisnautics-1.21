@@ -11,6 +11,8 @@ package com.neep.neepmeat.machine.live_machine;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
+import com.neep.neepmeat.machine.live_machine.process.CrusherProcess;
+import com.neep.neepmeat.machine.live_machine.process.LargeCompressorProcess;
 import com.neep.neepmeat.machine.live_machine.process.MetaboliserProcess;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,6 +37,8 @@ public final class Processes {
         }
         INSTANCE.initialised = true;
         INSTANCE.register(new MetaboliserProcess());
+        INSTANCE.register(new LargeCompressorProcess());
+        INSTANCE.register(new CrusherProcess());
     }
 
     public void register(Process process) {

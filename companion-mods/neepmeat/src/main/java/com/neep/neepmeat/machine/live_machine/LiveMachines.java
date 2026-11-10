@@ -71,6 +71,24 @@ public final class LiveMachines {
             BLOCK_ENTITIES.register("lucky_one", () -> BlockEntityType.Builder
                     .of(com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity::new, LUCKY_ONE.get()).build(null));
 
+    public static final DeferredBlock<ComponentMachineBlock> EXTRACTOR = CONTEXT.block("extractor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.EXTRACTOR));
+    public static final DeferredBlock<ComponentMachineBlock> SILKY_EXTRACTOR = CONTEXT.block("silky_extractor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.SILKY));
+    public static final DeferredBlock<ComponentMachineBlock> SERVICE_PORT = CONTEXT.block("service_port", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.SERVICE));
+    public static final DeferredBlock<ComponentMachineBlock> ITEM_INPUT = CONTEXT.block("item_input_port", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.INPUT));
+    public static final DeferredBlock<ComponentMachineBlock> ITEM_OUTPUT = CONTEXT.block("item_output_port", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.OUTPUT));
+    public static final DeferredBlock<ComponentMachineBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.CRUSHER));
+    public static final DeferredBlock<ComponentMachineBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.COMPRESSOR));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.MarkerBlockEntity>> MARKER_BE =
+            BLOCK_ENTITIES.register("living_marker", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.MarkerBlockEntity::new,
+                    EXTRACTOR.get(), SILKY_EXTRACTOR.get(), SERVICE_PORT.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity>> ITEM_PORT_BE =
+            BLOCK_ENTITIES.register("item_port", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity::new,
+                    ITEM_INPUT.get(), ITEM_OUTPUT.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity>> CRUSHER_BE =
+            BLOCK_ENTITIES.register("crusher_segment", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity::new, CRUSHER.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity>> COMPRESSOR_BE =
+            BLOCK_ENTITIES.register("large_compressor", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity::new, COMPRESSOR.get()).build(null));
+
     static {
         LivingMachineComponents.MOTOR_PORT.getBitIdx();
     }

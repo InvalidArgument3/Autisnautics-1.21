@@ -82,6 +82,10 @@ public class LivingMachineControllerBlockEntity extends BlockEntity {
         return power;
     }
 
+    public float getProgressIncrement() {
+        return power * (float) (1 - Math.pow(degradation.getDegradation(), 4));
+    }
+
     public float getHealth() {
         return 1 - degradation.getDegradation();
     }

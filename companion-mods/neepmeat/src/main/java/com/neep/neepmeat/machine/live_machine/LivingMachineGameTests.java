@@ -100,4 +100,39 @@ public class LivingMachineGameTests {
         helper.assertTrue(helper.getBlockState(origin.east()).isAir(), "x slab reached east");
         helper.succeed();
     }
+
+    @GameTest(template = "empty")
+    public static void compressorMakes400Droplets(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LiveMachines.MOTOR_PORT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 0, 1), LiveMachines.COMPRESSOR.get().defaultBlockState());
+        MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        port.setInputPower(1.0F);
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        controller.serverTick();
+        com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity compressor = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.LargeCompressorProcess, "process");
+        helper.assertTrue(compressor.droplets() == 400, "droplets " + compressor.droplets());
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void crusherTakesTheInputStack(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LiveMachines.MOTOR_PORT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 0, 1), LiveMachines.ITEM_INPUT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(4, 0, 1), LiveMachines.CRUSHER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(5, 0, 1), LiveMachines.ITEM_OUTPUT.get().defaultBlockState());
+        MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        port.setInputPower(1.0F);
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        input.setStack(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.COBBLESTONE, 3));
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        controller.serverTick();
+        com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity crusher = helper.getBlockEntity(new BlockPos(4, 0, 1));
+        helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.CrusherProcess, "process");
+        helper.assertTrue(crusher.stack().is(net.minecraft.world.item.Items.COBBLESTONE) && crusher.stack().getCount() == 3, "stack " + crusher.stack());
+        helper.assertTrue(Math.abs(crusher.progress() - 1.0f) < 0.001f, "progress " + crusher.progress());
+        helper.succeed();
+    }
 }
