@@ -54,15 +54,24 @@ public final class NeepRecipes {
             () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "fat_trommel")));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<com.neep.neepmeat.recipe.NormalTrommelRecipe>> FAT_TROMMEL_SERIALIZER =
             SERIALIZERS.register("fat_trommel", () -> new RecipeSerializer<>() {
+                private com.neep.neepmeat.recipe.NormalTrommelRecipe shared;
+
+                private com.neep.neepmeat.recipe.NormalTrommelRecipe shared() {
+                    if (shared == null) {
+                        com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f, java.util.Optional.empty());
+                        shared = new com.neep.neepmeat.recipe.NormalTrommelRecipe(none, none, null, FAT_TROMMEL.get(), this);
+                    }
+                    return shared;
+                }
+
                 @Override
                 public com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> codec() {
-                    com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f, java.util.Optional.empty());
-                    return com.mojang.serialization.MapCodec.unit(new com.neep.neepmeat.recipe.NormalTrommelRecipe(none, none, null, FAT_TROMMEL.get(), this));
+                    return com.mojang.serialization.MapCodec.unit(shared());
                 }
 
                 @Override
                 public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, com.neep.neepmeat.recipe.NormalTrommelRecipe> streamCodec() {
-                    return net.minecraft.network.codec.StreamCodec.unit(codec().codec().parse(com.mojang.serialization.JsonOps.INSTANCE, com.google.gson.JsonParser.parseString("{}")).getOrThrow());
+                    return net.minecraft.network.codec.StreamCodec.unit(shared());
                 }
             });
 

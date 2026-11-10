@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '0.30.0-neoforge.67'
+version = '0.30.0-neoforge.68'
 group = 'com.neep'
 base { archivesName = 'neepmeat' }
 
@@ -36,10 +36,20 @@ neoForge {
     runs {
         client {
             client()
+            def quickPlay = findProperty('quickPlaySingleplayer')
+            if (quickPlay) {
+                programArgument '--quickPlaySingleplayer'
+                programArgument quickPlay.toString()
+            }
         }
         server {
             server()
             programArgument '--nogui'
+            def smokeLevel = findProperty('smokeLevel')
+            if (smokeLevel) {
+                programArgument '--world'
+                programArgument smokeLevel.toString()
+            }
         }
         gameTestServer {
             type = 'gameTestServer'

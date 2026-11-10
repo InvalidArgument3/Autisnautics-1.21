@@ -1,3 +1,11 @@
+## World-join smoke, jar 0.30.0-neoforge.68
+
+Combined-tree errors stay **2038**. This run did not take 400 off that count. The PLC closure is **164**. `exclude.txt` is **1274**.
+
+`tools/smoke/client_world.sh` generates a throwaway world named `smoke` with the dedicated server (`--world smoke`), copies it to `run/saves/smoke`, and launches the client under xvfb with `--quickPlaySingleplayer smoke`. It waits until `logged in with entity id`, then 15 seconds, and fails if the log after that line has an internal exception. `vblank_mode=0` keeps the software framebuffer from stalling the first frame. The world stays in `run/` and is not a copied player world.
+
+The first join was kicked by `update_recipes`: the fat-trommel serializer built a new `StreamCodec.unit` instance on every call, so the packet could not encode the registered recipe. The codec and the stream codec now share one recipe instance. A later client tick crashed mod loading by resolving `NMComponents` after the attachment registry had frozen, which also duplicated `compressed_air`. The tick reads `SyncedComponents.ENLIGHTENMENT` instead, which is registered with the other attachments during mod construction.
+
 ## Client tick, HUD, and dosimeter, jar 0.30.0-neoforge.67
 
 Combined-tree errors: **2045** at the start of this run, **2038** at the end. That is 7, not 400, and not at 1,645. The PLC closure was **164** and is **164**. `exclude.txt` is **1274**. `tools/port-errors/symbols.txt` is the end histogram.

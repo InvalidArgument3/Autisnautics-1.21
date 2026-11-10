@@ -100,9 +100,8 @@ public class DosimeterItem extends BaseItem
             if (stack != null)
             {
                 PlayerEnlightenmentManager manager = new PlayerEnlightenmentManager(client.player);
-                var attachment = NMComponents.ENLIGHTENMENT_MANAGER.attachmentType();
-                if (attachment != null) {
-                    manager.readFromNbt(client.player.getData(attachment));
+                if (client.player.hasData(com.neep.neepmeat.component.SyncedComponents.ENLIGHTENMENT)) {
+                    manager.readFromNbt(client.player.getData(com.neep.neepmeat.component.SyncedComponents.ENLIGHTENMENT));
                 }
                 int width = client.getWindow().getGuiScaledWidth();
                 int height = client.getWindow().getGuiScaledHeight();

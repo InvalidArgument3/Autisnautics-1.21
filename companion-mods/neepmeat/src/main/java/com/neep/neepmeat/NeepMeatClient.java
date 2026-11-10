@@ -35,8 +35,6 @@ import com.neep.neepmeat.client.hud.HUDOverlays;
 import com.neep.neepmeat.client.world.NMDimensionEffects;
 import com.neep.neepmeat.enlightenment.PlayerEnlightenmentManager;
 import com.neep.neepmeat.item.DosimeterItem;
-import net.minecraft.nbt.CompoundTag;
-import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
@@ -138,22 +136,11 @@ public final class NeepMeatClient {
         if (client.player == null || client.level == null) {
             return;
         }
-        AttachmentType<CompoundTag> type = enlightenmentAttachment();
-        if (type == null) {
-            return;
-        }
         PlayerEnlightenmentManager manager = new PlayerEnlightenmentManager(client.player);
-        CompoundTag tag = client.player.getData(type);
-        if (tag != null) {
-            manager.readFromNbt(tag);
+        if (client.player.hasData(com.neep.neepmeat.component.SyncedComponents.ENLIGHTENMENT)) {
+            manager.readFromNbt(client.player.getData(com.neep.neepmeat.component.SyncedComponents.ENLIGHTENMENT));
         }
         manager.clientTick();
-    }
-
-    @SuppressWarnings("unchecked")
-    private static AttachmentType<CompoundTag> enlightenmentAttachment() {
-        var attachment = com.neep.neepmeat.init.NMComponents.ENLIGHTENMENT_MANAGER.attachmentType();
-        return attachment instanceof AttachmentType<?> ? (AttachmentType<CompoundTag>) attachment : null;
     }
 
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {

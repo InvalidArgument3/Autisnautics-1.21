@@ -27,6 +27,13 @@ public final class SyncedComponents {
 
     private SyncedComponents() {}
 
+    public static final DeferredHolder<AttachmentType<?>, AttachmentType<CompoundTag>> ENLIGHTENMENT =
+            ATTACHMENTS.register("enlightenment_manager", () ->
+                    AttachmentType.<CompoundTag>builder(() -> new CompoundTag())
+                            .serialize(CompoundTag.CODEC)
+                            .sync(ByteBufCodecs.COMPOUND_TAG)
+                            .build());
+
     public static void register(IEventBus bus) {
         ATTACHMENTS.register(bus);
     }
