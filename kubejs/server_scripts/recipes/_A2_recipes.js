@@ -654,8 +654,9 @@ ServerEvents.recipes(event => {
         "timeModifier": 1.0
     })
 
-    // remove redundant "rose quartz" for polished rose quartz
-    event.replaceOutput({}, "create:rose_quartz", "create:polished_rose_quartz")// jaopca only
+    // JAOPCA only. An empty filter also rewrites Create's own rose quartz, so quest
+    // 1861E583C9DAA0BA can never see a plain create:rose_quartz.
+    event.replaceOutput({ id: /^jaopca:/ }, "create:rose_quartz", "create:polished_rose_quartz")
     // event.replaceInput({}, "create:rose_quartz", "create:polished_rose_quartz")// jaopca, cosmetic stonecutting block, rock candy
 
     // remove bugged melting recipe for "raw tungsten" which doesn't exist
