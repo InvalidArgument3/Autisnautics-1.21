@@ -6,6 +6,8 @@ This batch is the meatlib building-block leaves: stairs, slab, wall, leaves, col
 
 `MeatLibRegistration`, `EntityVariant`, `ClientChannelReceiver`, `REIScreenSupport`, and `ImplementedRecipe` stayed excluded.
 
+The next leaf cluster that compiled is the client input events (`KeyboardEvents`, `UseAttackCallback`, `ScrollEvents`, `AppendTooltipEvent`, `AppendPlayerFeatureRenderers`, `CrosshairRenderEvent`) and `BaseBucketItem`. The following thirty-file leaf batches all still error, mostly on Fabric datagen, Architectury, and Kotlin packages. The 402-file component that holds `WormEntity`, `FarmingScutter`, and `SurgicalRobot` cannot come out until every file in it compiles.
+
 ## File grind, jar 0.30.0-neoforge.48
 
 `FinishedRecipe` is gone from the datagen signatures. Those methods take `net.minecraft.data.recipes.RecipeOutput`. No class was added under `net.minecraft`.
