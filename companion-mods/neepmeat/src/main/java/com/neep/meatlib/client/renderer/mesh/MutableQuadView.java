@@ -8,6 +8,8 @@
 
 package com.neep.meatlib.client.renderer.mesh;
 
+import net.minecraft.core.Direction;
+
 public interface MutableQuadView {
     int BAKE_ROTATE_NONE = 0;
     int BAKE_ROTATE_90 = 1;
@@ -17,4 +19,8 @@ public interface MutableQuadView {
     int BAKE_FLIP_U = 8;
     int BAKE_FLIP_V = 16;
     int BAKE_NORMALIZED = 32;
+
+    default Direction nominalFace() {
+        return Direction.NORTH;
+    }
 }

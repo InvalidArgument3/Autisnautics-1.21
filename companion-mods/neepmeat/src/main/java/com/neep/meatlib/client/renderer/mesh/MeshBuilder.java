@@ -16,7 +16,7 @@ public final class MeshBuilder {
     }
 
     public Mesh build() {
-        Mesh mesh = new Mesh(emitter.baked());
+        Mesh mesh = new Mesh(emitter.baked(), emitter.snapshots());
         emitter.clearBaked();
         return mesh;
     }

@@ -20,6 +20,7 @@ import java.util.List;
 
 public class QuadEmitter implements MutableQuadView {
     private final List<BakedQuad> quads = new ArrayList<>();
+    private final List<QuadSnapshot> snapshots = new ArrayList<>();
     private final float[] x = new float[4];
     private final float[] y = new float[4];
     private final float[] z = new float[4];
@@ -171,7 +172,13 @@ public class QuadEmitter implements MutableQuadView {
             consumer.setNormal(nx[i], ny[i], nz[i]);
         }
         quads.add(consumer.bakeQuad());
+        snapshots.add(QuadSnapshot.capture(face, sprite, x, y, z, u, v, color, nx, ny, nz));
         return this;
+    }
+
+    @Override
+    public Direction nominalFace() {
+        return face;
     }
 
     public BakedQuad toBakedQuad(TextureAtlasSprite sprite) {
@@ -189,8 +196,13 @@ public class QuadEmitter implements MutableQuadView {
         return List.copyOf(quads);
     }
 
+    public List<QuadSnapshot> snapshots() {
+        return List.copyOf(snapshots);
+    }
+
     public void clearBaked() {
         quads.clear();
+        snapshots.clear();
     }
 
     public void addBaked(List<BakedQuad> baked) {

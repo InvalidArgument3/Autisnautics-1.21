@@ -132,6 +132,7 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
     {
         if (blockView == null || pos == null || state == null)
         {
+            emitItemShape(context, randomSupplier.get());
             return;
         }
         for (Direction direction : Direction.values())
@@ -154,7 +155,23 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
     @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
+        emitItemShape(context, randomSupplier.get());
+    }
 
+    /** Same default as the fluid pipe item: the two axial arms. */
+    private void emitItemShape(RenderContext context, RandomSource random)
+    {
+        emitArm(context, Direction.NORTH, random);
+        emitArm(context, Direction.SOUTH, random);
+    }
+
+    private void emitArm(RenderContext context, Direction direction, RandomSource random)
+    {
+        Triple<BakedModel, Float, Float> part = connectors[direction.get3DDataValue()];
+        if (part != null)
+        {
+            com.neep.meatlib.client.renderer.render.CollectingRenderContext.emitModel(context, part.getLeft(), random);
+        }
     }
 
     /* BakedModel */

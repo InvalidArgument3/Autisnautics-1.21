@@ -54,18 +54,20 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
 {
     private static final ResourceLocation SIDE_ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/rusty_pipe/pipe_side_up");
     private static final ResourceLocation STRAIGHT_ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/rusty_pipe/pipe_straight_up");
+    private static final ResourceLocation CENTRE_ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/rusty_pipe/pipe_centre");
 
     private static final Material PARTICLE_SPRITE_ID = new Material(InventoryMenu.BLOCK_ATLAS, ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/rusty_pipe/rusty_pipe_centre"));
     private static TextureAtlasSprite PARTICLE_SPRITE;
 
     private final Triple<BakedModel, Float, Float>[] straight = (Triple<BakedModel, Float, Float>[]) Array.newInstance(Triple.class, 6);
     private final Triple<BakedModel, Float, Float>[] connectors = (Triple<BakedModel, Float, Float>[]) Array.newInstance(Triple.class, 6);
+    private BakedModel centre;
 
     /* UnbakedModel */
     @Override
     public Collection<ResourceLocation> getDependencies()
     {
-        return List.of(SIDE_ID, STRAIGHT_ID);
+        return List.of(SIDE_ID, STRAIGHT_ID, CENTRE_ID);
     }
 
 //    @Override
@@ -86,6 +88,8 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     {
         ResourceLocation modelId = null;
         PARTICLE_SPRITE = textureGetter.apply(PARTICLE_SPRITE_ID);
+        UnbakedModel centreModel = loader.getModel(ModelResourceLocation.standalone(CENTRE_ID));
+        this.centre = centreModel.bake(loader, textureGetter, rotationContainer, CENTRE_ID);
 
 //        Arrays.stream(CENTRE_IDS).forEach(id ->
 //        {
@@ -132,6 +136,7 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     {
         if (blockView == null || pos == null || state == null)
         {
+            emitItemShape(context, randomSupplier.get());
             return;
         }
         for (Direction direction : Direction.values())
@@ -154,7 +159,24 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     @Override
     public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
+        emitItemShape(context, randomSupplier.get());
+    }
 
+    /** Item json is a centre cube plus the north and south arms. */
+    private void emitItemShape(RenderContext context, RandomSource random)
+    {
+        com.neep.meatlib.client.renderer.render.CollectingRenderContext.emitModel(context, centre, random);
+        emitArm(context, Direction.NORTH, random);
+        emitArm(context, Direction.SOUTH, random);
+    }
+
+    private void emitArm(RenderContext context, Direction direction, RandomSource random)
+    {
+        Triple<BakedModel, Float, Float> part = connectors[direction.get3DDataValue()];
+        if (part != null)
+        {
+            com.neep.meatlib.client.renderer.render.CollectingRenderContext.emitModel(context, part.getLeft(), random);
+        }
     }
 
     /* BakedModel */

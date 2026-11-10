@@ -14,13 +14,23 @@ import java.util.List;
 
 public final class Mesh {
     private final List<BakedQuad> quads;
+    private final List<QuadSnapshot> snapshots;
 
     public Mesh(List<BakedQuad> quads) {
+        this(quads, List.of());
+    }
+
+    public Mesh(List<BakedQuad> quads, List<QuadSnapshot> snapshots) {
         this.quads = List.copyOf(quads);
+        this.snapshots = List.copyOf(snapshots);
     }
 
     public List<BakedQuad> quads() {
         return quads;
+    }
+
+    public List<QuadSnapshot> snapshots() {
+        return snapshots;
     }
 
     public void outputTo(QuadEmitter emitter) {

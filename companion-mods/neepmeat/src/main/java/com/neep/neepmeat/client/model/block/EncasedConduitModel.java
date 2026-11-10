@@ -98,6 +98,7 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
     {
         if (blockView == null || pos == null)
         {
+            com.neep.meatlib.client.renderer.render.CollectingRenderContext.emitModel(context, frame, randomSupplier.get());
             return;
         }
         if (blockView.getBlockEntity(pos) instanceof EncasedBlockEntity entity)

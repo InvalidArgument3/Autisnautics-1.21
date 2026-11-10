@@ -42,6 +42,24 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 @PrefixGameTestTemplate(false)
 public class PlcOpcodeGameTests {
     @GameTest(template = "empty")
+    public static void shiftLeftThenRightRestoresTheValue(GameTestHelper helper) {
+        try {
+            PLCProgram program = compile(helper, """
+                    push 3
+                    shl 1
+                    shr 1
+                    """);
+            InstructionPlc plc = new InstructionPlc(program, idle());
+            run(plc, 8);
+            helper.assertTrue(plc.error() == null, "error " + plc.error());
+            helper.assertTrue(plc.dataStack().pop().getAsInt() == 3, "shifted value");
+            helper.succeed();
+        } catch (NeepASM.ProgramBuildException | NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+        }
+    }
+
+    @GameTest(template = "empty")
     public static void memoryStoreThenFetch(GameTestHelper helper) {
         try {
             PLCProgram program = compile(helper, """

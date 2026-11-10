@@ -38,6 +38,33 @@ public final class NMMaths {
         return new Vec3(sinYaw * cosPitch, -sinPitch, cosYaw * cosPitch);
     }
 
+    public static float wrapRadians(float radians) {
+        float tau = (float) (Math.PI * 2);
+        return radians - tau * (float) Math.floor((radians + Math.PI) / tau);
+    }
+
+    public static float moveTowards(float current, float target, float speed) {
+        float difference = target - current;
+        if (Math.abs(difference) > 0) {
+            return current + Math.signum(difference) * Math.min(speed, Math.abs(difference));
+        }
+        return target;
+    }
+
+    public static float deltaAngle(float radians1, float radians2) {
+        float tau = (float) (Math.PI * 2);
+        float diff = (radians2 - radians1 + (float) Math.PI) % tau - (float) Math.PI;
+        return diff < -(float) Math.PI ? diff + tau : diff;
+    }
+
+    public static float moveTowardsAngle(float current, float target, float speed) {
+        float difference = deltaAngle(current, target);
+        if (Math.abs(difference) > 1.0e-5f) {
+            return current + Math.signum(difference) * Math.min(speed, Math.abs(difference));
+        }
+        return target;
+    }
+
     public static float log10(float value) {
         return (float) Math.log10(value);
     }

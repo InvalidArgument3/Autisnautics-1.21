@@ -16,7 +16,11 @@ import java.util.function.Consumer;
 public interface RenderContext {
     QuadEmitter getEmitter();
 
-    default void pushTransform(Object transform) {}
+    /**
+     * Pushes a transform applied to each quad a later {@link #meshConsumer()} accepts.
+     * A false return discards that quad. {@link #popTransform()} removes the newest one.
+     */
+    default void pushTransform(QuadTransform transform) {}
 
     default void popTransform() {}
 

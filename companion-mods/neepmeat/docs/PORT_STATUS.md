@@ -1,3 +1,17 @@
+## Scaffold transforms and seven real opcodes, jar 0.30.0-neoforge.63
+
+Combined-tree errors: **2148** at the start of this run, **2141** at the end. That is 7, not 400. The PLC closure was **181** and is **175**. `exclude.txt` is **1315**. Seven instruction classes left it because they already typechecked: `DelayInstruction`, `ExtFetchInstruction`, `ExtStoreInstruction`, `RisingEdgeInstruction`, `SayInstruction`, `SHLInstruction`, and `SHRInstruction`. `tools/port-errors/symbols.txt` is the end histogram.
+
+`pushTransform` and `popTransform` keep a stack of quad transforms. Each mesh quad is copied, the stack runs, and a false return drops the quad. Edits to positions, UVs, colours, and normals are baked again. Emissive flags are still not stored. Vanilla baked parts only expose their face to the transform, so a transform cannot move those vertices.
+
+With no world, a fluid pipe emits `pipe_centre` plus the north and south arms, which is the item model's core and two arms. A vascular conduit emits those two arms. An encased conduit emits its frame.
+
+`PlcOpcodeGameTests.shiftLeftThenRightRestoresTheValue` compiles `push 3`, `shl 1`, `shr 1` and checks the stack is 3 again.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DYCALL, DYLOC, EXEC, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, ROBOT, ROUTE, SELITEM, STOCK, WAIT_REDSTONE. `END` is the real end opcode. DELAY, EXTFETCH, EXTSTORE, RISING_EDGE, SAY, SHL, and SHR are real providers.
+
+Pulling COUNT, FINDSLOT, and IHANDLER into the included compile failed. A second try that also included `LazyBlockApiCache`, `AutoInvalidatingLazyBlockApiCache`, `InterruptEmitter`, and `InterruptReceiver` still failed, so those files went back on `exclude.txt`. `RoutingNetworkImpl` still typechecks and stays excluded with the rest of the closure. Stairs and slab fields are still reached by a cast.
+
 ## Copied item tags and baked meshes, jar 0.30.0-neoforge.62
 
 Combined-tree errors: **2229** at the start of this run, **2148** at the end. That is 81, not 400. The PLC closure (`com/neep/neepmeat/plc/` plus `RoutingNetworkImpl`) was **223** errors and is **181**. `exclude.txt` is still **1322**. `RoutingNetworkImpl` itself has no errors left, and it stays excluded until the rest of that closure does too. `tools/port-errors/symbols.txt` is the end histogram.
