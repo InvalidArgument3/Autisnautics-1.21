@@ -25,7 +25,6 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.enlightenment.EnlightenmentManager;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.FriendlyByteBuf;

@@ -36,7 +36,7 @@ import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockE
 import com.neep.neepmeat.transport.block.fluid_transport.machine.TankType;
 import com.neep.neepmeat.transport.fluid_network.FluidPipeVertex;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import com.neep.meatlib.resource.FabricResources.ResourceManagerHelper;
 import com.neep.meatlib.transfer.FluidConstants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

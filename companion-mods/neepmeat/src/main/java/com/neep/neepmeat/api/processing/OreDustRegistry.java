@@ -25,7 +25,7 @@ import com.neep.meatlib.util.StringTokenView;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.init.NMItems;
 import net.neoforged.api.distmarker.Dist;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import com.neep.meatlib.transfer.ItemVariant;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;

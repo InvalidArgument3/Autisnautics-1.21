@@ -33,7 +33,6 @@ import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.ItemModelShaper;
 import net.minecraft.client.renderer.LightTexture;
@@ -389,7 +388,7 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
         matrixStack.scale(10.0f, 10.0f, 10.0f);
         RenderSystem.applyModelViewMatrix();
         MultiBufferSource.BufferSource immediate = Minecraft.getInstance().renderBuffers().bufferSource();
-//        renderer.renderItem(stack, ModelTransformation.Mode.GUI, false, matrixStack2, immediate, LightmapTextureManager.MAX_LIGHT_COORDINATE, OverlayTexture.DEFAULT_UV, bakedModel);
+//        renderer.renderItem(stack, ModelTransformation.Mode.GUI, false, matrixStack2, immediate, LightTexture.MAX_LIGHT_COORDINATE, OverlayTexture.DEFAULT_UV, bakedModel);
         renderItem(stack, matrices, vertexConsumers, light, overlay, bakedModel);
         immediate.endBatch();
         RenderSystem.enableDepthTest();

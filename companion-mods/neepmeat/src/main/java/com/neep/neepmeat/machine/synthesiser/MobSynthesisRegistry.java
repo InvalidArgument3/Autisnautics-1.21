@@ -16,7 +16,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.*;
 import com.neep.neepmeat.NeepMeat;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import com.neep.meatlib.transfer.FluidConstants;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

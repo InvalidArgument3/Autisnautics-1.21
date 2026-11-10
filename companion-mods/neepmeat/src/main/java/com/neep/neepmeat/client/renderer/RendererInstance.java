@@ -17,8 +17,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.apache.commons.collections4.map.AbstractReferenceMap;
-import org.apache.commons.collections4.map.ReferenceMap;
+import com.google.common.cache.CacheBuilder;
 import org.checkerframework.checker.units.qual.C;
 import org.jetbrains.annotations.Nullable;
 
@@ -29,7 +28,7 @@ import java.util.function.Supplier;
 @OnlyIn(Dist.CLIENT)
 public interface RendererInstance
 {
-    Map<Long, RendererInstance> INSTANCES = new ReferenceMap<>(AbstractReferenceMap.ReferenceStrength.WEAK, AbstractReferenceMap.ReferenceStrength.SOFT, true);
+    Map<Long, RendererInstance> INSTANCES = CacheBuilder.newBuilder().weakKeys().softValues().build().asMap();
     Map<Item, Supplier<RendererInstance>> FACTORIES = new IdentityHashMap<>();
 
     static void register(Item item, Supplier<RendererInstance> factory)

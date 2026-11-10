@@ -16,7 +16,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.neep.neepmeat.NeepMeat;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import com.neep.meatlib.transfer.FluidConstants;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;

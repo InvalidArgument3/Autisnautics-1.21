@@ -1,3 +1,19 @@
+## Yarn client names, jar 0.30.0-neoforge.53
+
+Combined-tree errors: **3854** before, **3773** after.
+
+| Family | Before | After |
+| --- | ---: | ---: |
+| Yarn `net.minecraft.client.render` | 12 | 0 |
+| Fabric resource API | 11 | 0 |
+| Apache `AbstractReferenceMap` | 10 | 0 |
+| meatlib transfer leftovers | 8 | 0 |
+| Fabric networking leftovers | 10 | 2 |
+
+The eighteen files that still imported `net.minecraft.client.render` had already been through a partial Mojmap rewrite. The leftover star imports were removed and the remaining Yarn names (`SpriteIdentifier`, `Identifier`, `RenderLayer`, `LightmapTextureManager`, `Vec3d`, `MathHelper`) were renamed on word boundaries. Fabric reload listeners are `com.neep.meatlib.resource.FabricResources` and are registered on `AddReloadListenerEvent` and `RegisterClientReloadListenersEvent`. Soft/hard `ReferenceMap`s are Guava caches with soft values. `FluidVariantAttributeHandler` and `CombinedSlottedStorage` cover the last transfer symbols. `PacketSender` replies on `neepmeat:raw`.
+
+Taking ten whole packages whose files were clean in the full compile (52 files) failed: 36 files in those packages still named types outside the package, so the packages went back onto `exclude.txt`. `exclude.txt` stays **1358**.
+
 ## Transfer and renderer shims, jar 0.30.0-neoforge.52
 
 Combined-tree errors: **4264** before, **3854** after. Fabric transfer, Fabric renderer, and Fabric fluid-rendering packages dropped out of `tools/port-errors/packages.txt`. The next missing packages are yarn `net.minecraft.client.render`, Fabric resource and networking, and `AbstractReferenceMap`.

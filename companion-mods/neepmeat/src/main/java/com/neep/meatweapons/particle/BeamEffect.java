@@ -24,7 +24,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.Util;
 import net.minecraft.client.Camera;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
@@ -65,7 +64,7 @@ public class BeamEffect extends BeamGraphicsEffect
     {
         matrices.pushPose();
         VertexConsumer consumer = consumers.getBuffer(Client.BEAM_FUNC.apply(Client.BEAM_TEXTURE));
-//        Vec3d beam = (end.subtract(start));
+//        Vec3 beam = (end.subtract(start));
         float x = Math.max(0, maxTime - time - tickDelta) / (float) maxTime;
 //        float x = 1;
         BeamRenderer.renderBeam(matrices, consumer, camera.getPosition(),

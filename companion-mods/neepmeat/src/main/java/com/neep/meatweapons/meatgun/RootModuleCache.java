@@ -18,8 +18,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import org.apache.commons.collections4.map.AbstractReferenceMap;
-import org.apache.commons.collections4.map.ReferenceMap;
+import com.google.common.cache.CacheBuilder;
 
 import java.util.Map;
 import java.util.UUID;
@@ -28,8 +27,8 @@ public class RootModuleCache
 {
     // Caching allows the module tree to outlive the item component which is replaced each time the ItemStack syncs.
     // This means that non-persistent values such as cooldowns do not have to be saved to NBT.
-    private final Map<UUID, RootModuleHolder> serverMap = new ReferenceMap<>(AbstractReferenceMap.ReferenceStrength.HARD, AbstractReferenceMap.ReferenceStrength.SOFT, true);
-    private final Map<UUID, RootModuleHolder> clientMap = new ReferenceMap<>(AbstractReferenceMap.ReferenceStrength.HARD, AbstractReferenceMap.ReferenceStrength.SOFT, true);
+    private final Map<UUID, RootModuleHolder> serverMap = CacheBuilder.newBuilder().softValues().build().asMap();
+    private final Map<UUID, RootModuleHolder> clientMap = CacheBuilder.newBuilder().softValues().build().asMap();
 
     public RootModuleHolder getOrCreate(UUID uuid, Meatgun meatgun, boolean isServer)
     {

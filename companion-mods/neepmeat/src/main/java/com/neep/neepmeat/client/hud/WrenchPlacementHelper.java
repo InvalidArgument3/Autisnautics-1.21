@@ -27,7 +27,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
-import net.minecraft.util.math.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
@@ -87,7 +86,7 @@ public class WrenchPlacementHelper
         });
     }
 
-//    private static void drawSquare(VertexConsumerProvider vcp, Matrix4f matrix4f, float f, float g, float h, float i, float j, float k)
+//    private static void drawSquare(MultiBufferSource vcp, Matrix4f matrix4f, float f, float g, float h, float i, float j, float k)
     // f j h; f j k; i j h; i j k
     private static void drawOutline(MultiBufferSource vcp, Matrix4f matrix4f, Matrix3f normal, Matrix4f local)
     {
@@ -100,7 +99,7 @@ public class WrenchPlacementHelper
 
         VoxelShape shape = PrecisePipeBlock.box(4, 13, 4, 12, 19, 12);
 
-        // Can't apply an arbitrary transform to a MatrixStack's normal as well as position.
+        // Can't apply an arbitrary transform to a PoseStack's normal as well as position.
         matrix4f.mul(local);
         normal.rotate(local.getNormalizedRotation(new Quaternionf()));
 

@@ -11,6 +11,8 @@
  */
 
 package com.neep.neepmeat.client.screen.plc;
+import net.minecraft.util.Mth;
+
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;
@@ -21,7 +23,6 @@ import com.mojang.blaze3d.vertex.Tesselator;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.neep.neepmeat.NeepMeat;
 import net.minecraft.client.StringSplitter;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.FormattedText;
@@ -163,7 +164,7 @@ public class MonoTextRenderer
     public int getWidth(String text)
     {
         return text.length() * charStride();
-//        return MathHelper.ceil(this.handler.getWidth(text));
+//        return Mth.ceil(this.handler.getWidth(text));
     }
 
     public int charWidth()

@@ -30,7 +30,7 @@ import com.neep.neepmeat.datagen.tag.NMTags;
 import com.neep.neepmeat.fluid.ore_fat.OreFatFluidFactory;
 import com.neep.neepmeat.init.NMFluids;
 import com.neep.neepmeat.item.AbstractOreDustItem;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.ItemVariant;
 import net.minecraft.core.registries.BuiltInRegistries;

@@ -1,21 +1,18 @@
-# missing packages
+# missing packages after the Yarn, resource, and reference-map pass
 
-Before the transfer, fluid, and renderer shims the combined tree had 4264 errors.
-After those shims it has 3854.
+Combined-tree errors: 3854 before, 3773 after.
 
-## After
+0	net.minecraft.client.render
+0	net.fabricmc.fabric.api.resource
+0	org.apache.commons.collections4.map
+0	com.neep.meatlib.transfer
+2	net.fabricmc.fabric.api.networking.v1
 
-12	net.minecraft.client.render
-11	net.fabricmc.fabric.api.resource
-10	net.fabricmc.fabric.api.networking.v1
 10	net.fabricmc.fabric.api.event.registry
-10	AbstractReferenceMap
-8	org.apache.commons.collections4.map
-7	net.minecraft.util.math
 6	net.fabricmc.api
 6	net.fabricmc.fabric.api.registry
-6	net.minecraft.client.render.model
 6	net.fabricmc.fabric.api.object.builder.v1.block
 6	net.fabricmc.fabric.api.object.builder.v1.block.entity
-
-Fabric transfer, Fabric renderer, and Fabric fluid-rendering packages are no longer in this list.
+5	net.fabricmc.loader.api
+5	FuelRegistry
+4	software.bernie.geckolib.animatable.client

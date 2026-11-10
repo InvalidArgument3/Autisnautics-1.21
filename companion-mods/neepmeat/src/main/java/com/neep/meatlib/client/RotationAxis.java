@@ -43,7 +43,6 @@ public interface RotationAxis
 //?} else {
 
 /*import net.minecraft.util.math.Quaternion;
-import net.minecraft.util.math.Vec3f;
 
 public interface RotationAxis
 {

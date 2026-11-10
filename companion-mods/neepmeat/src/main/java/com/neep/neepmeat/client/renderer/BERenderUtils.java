@@ -30,7 +30,6 @@ import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.FluidVariantAttributes;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;

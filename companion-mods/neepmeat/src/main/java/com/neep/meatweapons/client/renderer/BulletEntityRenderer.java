@@ -18,7 +18,6 @@ import com.mojang.math.Axis;
 import com.neep.meatweapons.MeatWeapons;
 import com.neep.meatweapons.entity.BulletEntity;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.culling.Frustum;
@@ -69,7 +68,7 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
         double ez = Mth.lerp(tickDelta, entity.zOld, entity.getZ());
         Minecraft client = Minecraft.getInstance();
         float dist = (float) Math.sqrt(client.gameRenderer.getMainCamera().getPosition().distanceToSqr(ex, ey, ez));
-//        float alpha = (float) MathHelper.clamp(((double) entity.age + tickDelta) / 2f, 0., 1.);
+//        float alpha = (float) Mth.clamp(((double) entity.age + tickDelta) / 2f, 0., 1.);
         float alpha = Mth.clamp(Mth.lerp((dist - 1) / 1, 0f, 1f), 0, 1);
 
         if (alpha > 0.1f)

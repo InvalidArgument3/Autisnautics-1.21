@@ -11,6 +11,8 @@
  */
 
 package com.neep.neepmeat.client.renderer.entity;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -18,7 +20,6 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.entity.smudge.SmudgeEntity;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -115,7 +116,7 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
 
         // This crashes when Sodium/Indium aren't installed.
         // No idea why.
-        // ZapEntityRenderer uses the same RenderLayer in the same way and is fine.
+        // ZapEntityRenderer uses the same RenderType in the same way and is fine.
 //        vertexConsumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
 //                .setColor(col)
 //                .texture(u1, v1)

@@ -19,7 +19,6 @@ import com.neep.meatweapons.MeatWeapons;
 import com.neep.meatweapons.client.FullBeamRenderer;
 import com.neep.neepmeat.NeepMeat;
 import net.minecraft.client.Camera;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -64,10 +63,10 @@ public class LongBulletTrailEffect extends BeamGraphicsEffect
         float x = Math.max(0, (maxTime - time + 2 - tickDelta) / (float) maxTime);
 
         // Baseline
-//        VertexConsumer consumer = consumers.getBuffer(RenderLayer.getEntityTranslucentCull(TRAIL_TEXTURE));
+//        VertexConsumer consumer = consumers.getBuffer(RenderType.getEntityTranslucentCull(TRAIL_TEXTURE));
 //        FullBeamRenderer.renderBeamSquare(matrices, consumer, camera.getPos(),
 //                start, end, 0, (int) col.x, (int) col.y, (int) col.z,
-//                maxTime > 0 ? (int) (255 * x) : 255, scale, LightmapTextureManager.MAX_LIGHT_COORDINATE);
+//                maxTime > 0 ? (int) (255 * x) : 255, scale, LightTexture.MAX_LIGHT_COORDINATE);
 
         // Using a custom core shader - will probably fail with iris
 //        VertexConsumer consumer = consumers.getBuffer(MWShaders.BRIGHT_BEAM);

@@ -21,7 +21,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import com.neep.meatlib.client.renderer.model.FabricBakedModel;
 import com.neep.meatlib.client.renderer.render.RenderContext;
-import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -70,11 +69,11 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
     }
 
 //    @Override
-//    public Collection<SpriteIdentifier> getTextureDependencies(Function<Identifier, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
+//    public Collection<Material> getTextureDependencies(Function<ResourceLocation, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
 //    {
 //        return List.of(PARTICLE_SPRITE_ID,
-//                new SpriteIdentifier(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE, new Identifier(NeepMeat.NAMESPACE, "block/vascular_conduit/pipe_side")),
-//                new SpriteIdentifier(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE, new Identifier(NeepMeat.NAMESPACE, "block/vascular_conduit/pipe_centre"))
+//                new Material(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE, new ResourceLocation(NeepMeat.NAMESPACE, "block/vascular_conduit/pipe_side")),
+//                new Material(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE, new ResourceLocation(NeepMeat.NAMESPACE, "block/vascular_conduit/pipe_centre"))
 //        );
 //    }
 

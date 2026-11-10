@@ -21,7 +21,6 @@ import com.neep.meatlib.client.renderer.mesh.MutableQuadView;
 import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
 import com.neep.meatlib.client.renderer.model.FabricBakedModel;
 import com.neep.meatlib.client.renderer.render.RenderContext;
-import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;

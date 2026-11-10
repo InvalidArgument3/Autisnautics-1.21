@@ -20,7 +20,6 @@ import com.neep.meatlib.client.renderer.mesh.MutableQuadView;
 import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
 import com.neep.meatlib.client.renderer.model.FabricBakedModel;
 import com.neep.meatlib.client.renderer.render.RenderContext;
-import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -66,7 +65,7 @@ public class FlexTankModel implements UnbakedModel, BakedModel, FabricBakedModel
     }
 
 //    @Override
-//    public Collection<SpriteIdentifier> getTextureDependencies(Function<Identifier, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
+//    public Collection<Material> getTextureDependencies(Function<ResourceLocation, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
 //    {
 //        return Arrays.asList(SPRITE_IDS);
 //    }

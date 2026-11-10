@@ -21,7 +21,6 @@ import com.neep.meatlib.client.renderer.RendererAccess;
 import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
 import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariant;
-import net.minecraft.client.render.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;

@@ -25,7 +25,7 @@ import com.neep.neepmeat.guide.article.Article;
 import com.neep.neepmeat.thord.documentation.CategoryCommand;
 import com.neep.neepmeat.thord.documentation.CategoryLarkdownContent;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;

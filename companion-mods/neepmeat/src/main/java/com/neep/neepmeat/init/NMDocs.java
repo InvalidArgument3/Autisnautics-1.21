@@ -17,7 +17,7 @@ import com.neep.neepmeat.guide.GuideReloadEvent;
 import com.neep.neepmeat.plc.instruction.gui.InstructionAttributes;
 import com.neep.neepmeat.thord.documentation.ThordWordArticle;
 import com.neep.neepmeat.thord.documentation.WordAttributes;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import com.neep.meatlib.resource.FabricResources.ResourceManagerHelper;
 import net.minecraft.server.packs.PackType;
 
 public class NMDocs

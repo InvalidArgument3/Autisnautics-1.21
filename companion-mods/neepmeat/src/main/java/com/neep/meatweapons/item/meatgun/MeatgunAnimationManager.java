@@ -17,8 +17,7 @@ import com.neep.meatweapons.component.MeatgunComponent;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.network.FriendlyByteBuf;
-import org.apache.commons.collections4.map.AbstractReferenceMap;
-import org.apache.commons.collections4.map.ReferenceMap;
+import com.google.common.cache.CacheBuilder;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -28,7 +27,7 @@ import java.util.UUID;
 @OnlyIn(Dist.CLIENT)
 public class MeatgunAnimationManager
 {
-    private static final Map<UUID, MeatgunAnimationManager> INSTANCES = new ReferenceMap<>(AbstractReferenceMap.ReferenceStrength.HARD, AbstractReferenceMap.ReferenceStrength.SOFT, true);
+    private static final Map<UUID, MeatgunAnimationManager> INSTANCES = CacheBuilder.newBuilder().softValues().build().asMap();
 
     public static MeatgunAnimationManager getOrCreate(UUID uuid, Meatgun meatgun)
     {

@@ -21,7 +21,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import com.neep.meatlib.client.renderer.model.FabricBakedModel;
 import com.neep.meatlib.client.renderer.render.RenderContext;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -71,7 +70,7 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
     }
 
     //    @Override
-//    public Collection<SpriteIdentifier> getTextureDependencies(Function<Identifier, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
+//    public Collection<Material> getTextureDependencies(Function<ResourceLocation, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
 //    {
 //        return List.of(particleSpriteId, frameTextureId);
 //    }

@@ -27,7 +27,7 @@ import com.neep.neepmeat.guide.larkdown.ColumnsLarkdownContent;
 import com.neep.neepmeat.guide.larkdown.GraphLarkdownContent;
 import com.neep.neepmeat.guide.larkdown.GuideLarkdownVisitor;
 import com.neep.neepmeat.guide.larkdown.ItemRenderLarkdownContent;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import com.neep.meatlib.resource.FabricResources.SimpleSynchronousResourceReloadListener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;

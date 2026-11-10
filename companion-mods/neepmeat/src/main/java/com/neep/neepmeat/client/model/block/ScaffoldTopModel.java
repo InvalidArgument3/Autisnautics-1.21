@@ -22,7 +22,6 @@ import com.neep.meatlib.client.renderer.mesh.MutableQuadView;
 import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
 import com.neep.meatlib.client.renderer.model.FabricBakedModel;
 import com.neep.meatlib.client.renderer.render.RenderContext;
-import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
@@ -58,8 +57,8 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
     private final Material[] SPRITE_IDS = new Material[2];
     private final TextureAtlasSprite[] SPRITES = new TextureAtlasSprite[2];
 //            {
-//            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier(NeepMeat.NAMESPACE, "block/scaffold_side")),
-//            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier(NeepMeat.NAMESPACE, "block/scaffold_top")),
+//            new Material(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new ResourceLocation(NeepMeat.NAMESPACE, "block/scaffold_side")),
+//            new Material(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new ResourceLocation(NeepMeat.NAMESPACE, "block/scaffold_top")),
 //    };
     private final Mesh[] SIDES = new Mesh[6];
     private final Mesh[] SIDES_INV = new Mesh[6];
@@ -98,7 +97,7 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
     }
 
 //    @Override
-//    public Collection<SpriteIdentifier> getTextureDependencies(Function<Identifier, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
+//    public Collection<Material> getTextureDependencies(Function<ResourceLocation, UnbakedModel> unbakedModelGetter, Set<Pair<String, String>> unresolvedTextureReferences)
 //    {
 //        return Arrays.asList(SPRITE_IDS);
 //    }

@@ -15,8 +15,7 @@ package com.neep.meatweapons.client.meatgun;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.neep.meatlib.client.AnimationTicks;
 import com.neep.meatweapons.network.MeatgunNetwork;
-import org.apache.commons.collections4.map.AbstractReferenceMap;
-import org.apache.commons.collections4.map.ReferenceMap;
+import com.google.common.cache.CacheBuilder;
 
 import java.util.Map;
 import java.util.UUID;
@@ -25,7 +24,7 @@ import net.minecraft.util.Mth;
 
 public class RecoilManager
 {
-    private static final Map<UUID, RecoilManager> INSTANCES = new ReferenceMap<>(AbstractReferenceMap.ReferenceStrength.HARD, AbstractReferenceMap.ReferenceStrength.SOFT, true);
+    private static final Map<UUID, RecoilManager> INSTANCES = CacheBuilder.newBuilder().softValues().build().asMap();
 
     public MeatgunNetwork.RecoilDirection direction;
 
