@@ -348,6 +348,14 @@
         },
         "xaeros-world-map": {
             "redistributable": true
+        },
+        "emf-compat-core": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
+        "shatterbyte-lib": {
+            "update_strategy": "NONE",
+            "redistributable": true
         }
     },
     "export_server_side_projects_to_client": true
