@@ -10,7 +10,7 @@
     "max_exclusive": 128,
     "when_in_range": {
       "type": "minecraft:range_choice",
-      "input": "autisnautics:rift/effective_mask_1_2",
+      "input": "autisnautics:rift/effective_mask_3_4",
       "min_inclusive": 0.25,
       "max_exclusive": 2,
       "when_in_range": 1,
@@ -28,7 +28,7 @@
     "max_exclusive": 25,
     "when_in_range": {
       "type": "minecraft:range_choice",
-      "input": "autisnautics:rift/effective_mask_2_3",
+      "input": "autisnautics:rift/effective_mask_4_5",
       "min_inclusive": 0.25,
       "max_exclusive": 2,
       "when_in_range": 1,

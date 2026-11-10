@@ -5122,6 +5122,647 @@
           }
         ]
       }
+,
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_16",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": 319
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:rift_clean_row_17",
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "type": "minecraft:constant",
+              "value": {
+                "absolute": -64
+              }
+            }
+          },
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      }
     ],
     "placement_type": "never_cancel"
   }

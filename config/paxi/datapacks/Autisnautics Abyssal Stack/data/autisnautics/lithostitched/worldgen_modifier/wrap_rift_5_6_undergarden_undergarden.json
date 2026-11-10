@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 2000,
+  "dimension": "undergarden:undergarden",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_5_6_undergarden_undergarden"
+}

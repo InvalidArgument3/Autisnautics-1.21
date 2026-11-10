@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 2000,
+  "dimension": "minecraft:the_end",
+  "target": "final_density",
+  "wrapper_function": "autisnautics:rift/wrap_rift_8_9_minecraft_the_end"
+}

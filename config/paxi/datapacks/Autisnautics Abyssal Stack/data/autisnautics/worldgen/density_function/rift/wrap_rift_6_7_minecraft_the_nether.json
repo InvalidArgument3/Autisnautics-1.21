@@ -4,14 +4,14 @@
     "type": "lithostitched:axis",
     "axis": "y"
   },
-  "min_inclusive": 0,
-  "max_exclusive": 25,
+  "min_inclusive": 231,
+  "max_exclusive": 256,
   "when_in_range": {
     "type": "minecraft:range_choice",
     "input": "autisnautics:rift/effective_mask_6_7",
     "min_inclusive": 0.25,
     "max_exclusive": 2,
-    "when_in_range": -2012,
+    "when_in_range": -2011,
     "when_out_of_range": {
       "type": "minecraft:add",
       "argument1": {
@@ -27,15 +27,15 @@
             "type": "minecraft:min",
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
-              "from_y": 0,
-              "to_y": 18,
+              "from_y": 180,
+              "to_y": 198,
               "from_value": 0,
               "to_value": 1
             },
             "argument2": {
               "type": "minecraft:y_clamped_gradient",
-              "from_y": 62,
-              "to_y": 80,
+              "from_y": 238,
+              "to_y": 256,
               "from_value": 1,
               "to_value": 0
             }

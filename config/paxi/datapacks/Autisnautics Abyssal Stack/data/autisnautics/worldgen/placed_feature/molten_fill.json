@@ -1,0 +1,14 @@
+{
+  "feature": "autisnautics:molten_fill",
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:constant",
+        "value": {
+          "absolute": -38
+        }
+      }
+    }
+  ]
+}

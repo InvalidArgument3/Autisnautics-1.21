@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "autisnautics:molten_depths",
+  "features": "autisnautics:molten_fill",
+  "step": "lakes"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "lithostitched:wrap_noise_router",
+  "priority": 4005,
+  "dimension": "autisnautics:molten_depths",
+  "target": "initial_density_without_jaggedness",
+  "wrapper_function": "autisnautics:rift/dry_surface_autisnautics_molten_depths"
+}
