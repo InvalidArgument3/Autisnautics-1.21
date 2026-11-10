@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Loom tree in the repo, jar 0.30.0-neoforge.29
+
+The Loom output is checked in at `tools/loom-migrated/`. NeepMeat is `neepmeat/com` (1,888 files) and meatlib is `meatlib/com` (310 files). That tree stays on the 1.20.1 Mojmap API. `tools/loom-migrated/apply_121_drift.py` rewrites `saveAdditional`/`loadAdditional(CompoundTag, HolderLookup.Provider)` and `ResourceLocation` factories onto a copy.
+
+Compiling all 69 living-machine files from that tree, after the transfer import rewrite and the drift script, is 323 error lines. Before the drift script the same 69 were 334. The regex scratch tree was 1,511. The 323 left are still missing project types (`LivingMachineBlockEntity`, `BigBlock`, `init`, `transport.worm`, screen handlers), not Yarn names. Those 69 files are not in the mod jar. The package in the jar is still 29 files.
+
 ## Loom migrateMappings, jar 0.30.0-neoforge.28
 
 Path A worked. On a scratch copy of upstream commit `0d36776` (`1.20/dev`), `./gradlew migrateMappings --mappings "net.minecraft:mappings:1.20.1"` with Loom 1.9.2 finished in about three minutes. NeepMeat sources are in `remappedSrc` (1,888 files) and meatlib in `subprojects/meatlib/remappedSrc` (310 files). All 69 living-machine files are in that output. Overrides are renamed: `newBlockEntity`, `createBlockStateDefinition`, `getBlockPos`.

@@ -1,0 +1,133 @@
+/*
+ * Copyright (c) MeatWheeze 2025.
+ *
+ * This file is part of NEEPMeat.
+ *
+ * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package com.neep.neepmeat.transport.block.fluid_transport.entity;
+
+import com.neep.meatlib.blockentity.BlockEntityClientSerializable;
+import com.neep.meatlib.util.NbtSerialisable;
+import com.neep.neepmeat.transport.block.EncasedBlockEntity;
+import com.neep.neepmeat.transport.block.fluid_transport.EncasedFluidPipeBlock;
+import com.neep.neepmeat.transport.fluid_network.FluidPipeVertex;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
+import org.jetbrains.annotations.Nullable;
+
+public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialisable> extends FluidPipeBlockEntity<T> implements EncasedBlockEntity, BlockEntityClientSerializable
+{
+    private BlockState camoState = Blocks.AIR.defaultBlockState();
+    @Nullable private VoxelShape cachedShape;
+
+    public EncasedFluidPipeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, PipeConstructor<T> constructor)
+    {
+        super(type, pos, state, constructor);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag()
+    {
+        var nbt = super.getUpdateTag();
+        saveAdditional(nbt);
+        return nbt;
+    }
+
+    @Override
+    public void tick()
+    {
+        super.tick();
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag nbt)
+    {
+        super.saveAdditional(nbt);
+        nbt.put("camo_state", NbtUtils.writeBlockState(camoState));
+    }
+
+    @Override
+    public void load(CompoundTag nbt)
+    {
+        super.load(nbt);
+        BlockState camoState = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("camo_state"));
+        if (camoState != this.camoState)
+        {
+            this.camoState = camoState;
+            this.cachedShape = null;
+        }
+    }
+
+    @Override
+    public BlockState getCamoState()
+    {
+        return camoState;
+    }
+
+    @Override
+    public void setCamoState(BlockState camoState)
+    {
+        this.camoState = camoState;
+        this.cachedShape = null;
+        sync();
+    }
+
+    @Override
+    public VoxelShape getCamoShape()
+    {
+        if (cachedShape == null)
+        {
+            cachedShape = Shapes.block();
+            if (getCamoState().is(getBlockState().getBlock()) || getCamoState().isAir())
+            {
+                return cachedShape;
+            }
+            else
+            {
+                if (getBlockState().getBlock() instanceof EncasedFluidPipeBlock block)
+                {
+                    cachedShape = block.getPipeOutlineShape(getBlockState(), level, getBlockPos());
+                }
+
+                VoxelShape camoShape = camoState.getShape(level, worldPosition);
+                cachedShape = Shapes.join(Shapes.or(camoShape, cachedShape), Shapes.block(), BooleanOp.AND);
+            }
+        }
+        return cachedShape;
+    }
+
+
+    @Override
+    public void toClientTag(CompoundTag nbt)
+    {
+        saveAdditional(nbt);
+    }
+
+    @Override
+    public void fromClientTag(CompoundTag nbt)
+    {
+        load(nbt);
+    }
+
+    @Override
+    public void onReceiveNbt(CompoundTag nbt)
+    {
+        level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_IMMEDIATE);
+    }
+}

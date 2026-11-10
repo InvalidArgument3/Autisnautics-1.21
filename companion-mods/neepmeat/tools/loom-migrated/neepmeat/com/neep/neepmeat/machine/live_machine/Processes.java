@@ -1,0 +1,91 @@
+/*
+ * Copyright (c) MeatWheeze 2025.
+ *
+ * This file is part of NEEPMeat.
+ *
+ * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package com.neep.neepmeat.machine.live_machine;
+
+import com.neep.neepmeat.api.live_machine.ComponentType;
+import com.neep.neepmeat.api.live_machine.Process;
+import com.neep.neepmeat.machine.live_machine.process.*;
+import it.unimi.dsi.fastutil.Pair;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.*;
+
+public class Processes
+{
+    private static final Processes INSTANCE = new Processes();
+
+    public static Processes getInstance()
+    {
+        return INSTANCE;
+    }
+
+    private final List<Pair<BitSet, Process>> entries = new ObjectArrayList<>();
+
+    public List<Pair<BitSet, Process>> getEntries()
+    {
+        return entries;
+    }
+
+    public void register(Process process)
+    {
+        register(process, process.getRequired().toArray(new ComponentType<?>[0]));
+    }
+
+    public void register(BitSet bitSet, Process process)
+    {
+        entries.add(Pair.of(bitSet, process));
+//        entries.put(bitSet, process);
+    }
+
+    public void register(Process process, ComponentType<?>... types)
+    {
+        BitSet bitSet = new BitSet();
+        for (ComponentType<?> type : types)
+        {
+            bitSet.set(type.getBitIdx());
+        }
+        register(bitSet, process);
+    }
+
+    @Nullable
+    public Process getFirstMatch(BitSet bits)
+    {
+        for (var pair : entries)
+        {
+            BitSet copy = (BitSet) pair.key().clone();
+            copy.and(bits);
+            if (copy.cardinality() == pair.key().cardinality())
+            {
+                return pair.value();
+            }
+        }
+        return null;
+    }
+
+    public static void init()
+    {
+        getInstance().register(new CrusherProcess());
+        getInstance().register(new PhageRayProcess());
+        getInstance().register(new LargeTrommelProcess());
+        getInstance().register(new TreeVacuumProcess());
+        getInstance().register(new CharnelPumpProcess());
+        getInstance().register(new LargeCompressorProcess());
+//        getInstance().register(new BioreactorProcess());
+        getInstance().register(new DisruptorProcess());
+        getInstance().register(new MetaboliserProcess());
+        getInstance().register(new DistributorPointProcess());
+        getInstance().register(new PressurisedDigesterProcess());
+        getInstance().register(new BallMillProcess());
+    }
+}
