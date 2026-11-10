@@ -1336,7 +1336,7 @@
             ]
         },
         {
-            "pakku_id": "ruQS5d3LSvodCK7v",
+            "pakku_id": "pnA6l4VlHf6DtW9N",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3113,7 +3113,7 @@
             "pakku_id": "7awb59YlkPKhVq3Y",
             "pakku_links": [
                 "Bw3du7OPq0PcQKDa",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "CLIENT",
@@ -3653,7 +3653,7 @@
             "pakku_id": "nnwA8Zb5iS0oduxM",
             "pakku_links": [
                 "ZJl887d1g6bFstcm",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -4022,7 +4022,7 @@
             "pakku_links": [
                 "F9OUhskWxYr63coj",
                 "laIVhKy2PMSU0h1j",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -4068,7 +4068,7 @@
         {
             "pakku_id": "laIVhKy2PMSU0h1j",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -7527,7 +7527,7 @@
             "pakku_id": "a6IuO7JUQ7vWobPV",
             "pakku_links": [
                 "F9OUhskWxYr63coj",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -8571,6 +8571,9 @@
         },
         {
             "pakku_id": "jTSbBhMDmP4aY9fO",
+            "pakku_links": [
+                "WXzh7fzt3JK2uBe6"
+            ],
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -8611,79 +8614,10 @@
             ]
         },
         {
-            "pakku_id": "Mppv8RJhWcOuhViu",
-            "pakku_links": [
-                "riI4ABzzBZnodmie"
-            ],
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "curseforge": "emf-compat-core",
-                "modrinth": "emf-compat-core"
-            },
-            "name": {
-                "curseforge": "EMF Compat: Core",
-                "modrinth": "EMF Compat: Core"
-            },
-            "id": {
-                "curseforge": "1605113",
-                "modrinth": "hbGct5uU"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "emf_compat_core_neoforge_1.21.1_2.4.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hbGct5uU/versions/upzqIWB0/emf_compat_core_neoforge_1.21.1_2.4.0.jar",
-                    "id": "upzqIWB0",
-                    "parent_id": "hbGct5uU",
-                    "hashes": {
-                        "sha512": "08928236e3bb873a2c2857f0eca950198c9a85ecaf7f6a44c93042bbb2911fcd15dcc38f6ab7a769bf32a8dec342448532be8ffd5e3eda60ca6beae744999393",
-                        "sha1": "7aa9e6e1e36e4af8666ffe7141fac8e9c6c8e193"
-                    },
-                    "required_dependencies": [
-                        "4I1XuqiY"
-                    ],
-                    "size": 188553,
-                    "date_published": "2026-11-09T11:18:49.270333Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "emf_compat_core_neoforge_1.21.1_2.4.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9524/632/emf_compat_core_neoforge_1.21.1_2.4.0.jar",
-                    "id": "9524632",
-                    "parent_id": "1605113",
-                    "hashes": {
-                        "sha1": "7aa9e6e1e36e4af8666ffe7141fac8e9c6c8e193",
-                        "md5": "a6d864c75be7a526e0854e0648a732c0"
-                    },
-                    "required_dependencies": [
-                        "844662"
-                    ],
-                    "size": 188553,
-                    "date_published": "2026-11-09T10:40:05.820Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "qIC8jb5Gt7BdI2UE",
             "pakku_links": [
-                "riI4ABzzBZnodmie",
-                "Mppv8RJhWcOuhViu",
-                "wDY1fwqOdyH3Ec3d"
+                "wDY1fwqOdyH3Ec3d",
+                "WXzh7fzt3JK2uBe6"
             ],
             "type": "MOD",
             "side": "CLIENT",
@@ -9499,7 +9433,7 @@
             "pakku_id": "UgRuZ0mqRCUtJ9g6",
             "pakku_links": [
                 "yS9aBudVdBzG4pGV",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -10039,7 +9973,7 @@
             "pakku_id": "W5YbX7n9Nsoj25rt",
             "pakku_links": [
                 "utxrjNJdJTXmKalD",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -10081,7 +10015,7 @@
         {
             "pakku_id": "gwJ41Ijfpe7TKZ47",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -10163,7 +10097,7 @@
         {
             "pakku_id": "utxrjNJdJTXmKalD",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -10205,7 +10139,7 @@
             "pakku_id": "Bw3du7OPq0PcQKDa",
             "pakku_links": [
                 "kKqQfK3rwC6omqTu",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -10311,7 +10245,7 @@
         {
             "pakku_id": "kKqQfK3rwC6omqTu",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -10353,7 +10287,7 @@
         {
             "pakku_id": "NY46U5wtgRq1ZDkh",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -13118,7 +13052,7 @@
         {
             "pakku_id": "ShD8CqfYwet6wH7T",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -14815,7 +14749,7 @@
         {
             "pakku_id": "lSJSeLNxJPszDh64",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -16437,9 +16371,6 @@
         },
         {
             "pakku_id": "qnlPlfpE36ebMoqZ",
-            "pakku_links": [
-                "SQNUC7X50cMT7m0w"
-            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -16665,7 +16596,7 @@
             "pakku_id": "o6Ta1Dc4AJ9bKNDm",
             "pakku_links": [
                 "ZJl887d1g6bFstcm",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -17755,7 +17686,7 @@
         {
             "pakku_id": "Rm1PtfW8oS80lRHK",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "slug": {
@@ -17928,7 +17859,7 @@
         {
             "pakku_id": "y9HmZBgEJFmZxKqo",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -19291,75 +19222,9 @@
             ]
         },
         {
-            "pakku_id": "SQNUC7X50cMT7m0w",
-            "pakku_links": [
-                "ruQS5d3LSvodCK7v"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "curseforge": "octo-lib",
-                "modrinth": "octo-lib"
-            },
-            "name": {
-                "curseforge": "ShatterLib | OctoLib",
-                "modrinth": "ShatterLib | OctoLib"
-            },
-            "id": {
-                "curseforge": "916747",
-                "modrinth": "RH2KUdKJ"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "OctoLib-NEOFORGE-0.6.1+1.21.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/AbiyvpxR/OctoLib-NEOFORGE-0.6.1+1.21.jar",
-                    "id": "AbiyvpxR",
-                    "parent_id": "RH2KUdKJ",
-                    "hashes": {
-                        "sha512": "6e0194da00ae7cc1e67f0033b97965acc460edaa86e204e5f8498ea83be94a2019cb5a3254e07b59562e66297f12f3ea2262f9f0005a52c12b9a680b6f218c4d",
-                        "sha1": "052b71b4897b3a76b4b10afda4d9342e66fb19f1"
-                    },
-                    "required_dependencies": [],
-                    "size": 540285,
-                    "date_published": "2026-03-07T12:08:46.225750Z"
-                },
-                {
-                    "type": "curseforge",
-                    "file_name": "OctoLib-NEOFORGE-0.6.1+1.21.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7724/6/OctoLib-NEOFORGE-0.6.1+1.21.jar",
-                    "id": "7724006",
-                    "parent_id": "916747",
-                    "hashes": {
-                        "sha1": "052b71b4897b3a76b4b10afda4d9342e66fb19f1",
-                        "md5": "53c6cec036a9670c72da4de560bb8984"
-                    },
-                    "required_dependencies": [
-                        "419699"
-                    ],
-                    "size": 540285,
-                    "date_published": "2026-03-07T12:08:19.807Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "ZQF3Oqda7hereW3O",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "CLIENT",
@@ -19562,7 +19427,7 @@
             "pakku_id": "1NyYeLS1yL9mFWwl",
             "pakku_links": [
                 "PtaKzcPvou5WmnDz",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -19634,7 +19499,7 @@
         {
             "pakku_id": "PtaKzcPvou5WmnDz",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "CLIENT",
@@ -20616,7 +20481,7 @@
             "pakku_id": "2vP2Kd9m9R8huFGV",
             "pakku_links": [
                 "y9HmZBgEJFmZxKqo",
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -21053,7 +20918,7 @@
         {
             "pakku_id": "xgaUigAQO9jWIvc9",
             "pakku_links": [
-                "ruQS5d3LSvodCK7v"
+                "pnA6l4VlHf6DtW9N"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -21685,8 +21550,7 @@
         {
             "pakku_id": "E1Lm5OEfjdtP2H9b",
             "pakku_links": [
-                "riI4ABzzBZnodmie",
-                "Mppv8RJhWcOuhViu"
+                "WXzh7fzt3JK2uBe6"
             ],
             "type": "MOD",
             "slug": {
@@ -23147,7 +23011,7 @@
             ]
         },
         {
-            "pakku_id": "riI4ABzzBZnodmie",
+            "pakku_id": "WXzh7fzt3JK2uBe6",
             "pakku_links": [
                 "AiMQNvvG6t3xlV4p"
             ],

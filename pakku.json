@@ -145,9 +145,6 @@
         "entity-texture-features-fabric": {
             "side": "CLIENT"
         },
-        "emf-compat-core": {
-            "side": "CLIENT"
-        },
         "fresh-animations": {
             "side": "CLIENT"
         },
@@ -305,9 +302,6 @@
             "redistributable": true
         },
         "passive-shield": {
-            "redistributable": true
-        },
-        "octo-lib": {
             "redistributable": true
         },
         "simple-voice-chat": {
