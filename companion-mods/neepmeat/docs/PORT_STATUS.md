@@ -388,6 +388,27 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## BigBlock and worm routing, jar 0.30.0-neoforge.34
+
+`BigBlock` places its volume from `BigBlockPattern` and clears it when the origin breaks. The reprocessor is that multiblock. A game test places the volume and breaks the origin. Structure block entities are queued during the block register event and registered on the block-entity event. `BlockPlacementPreview` does not include the client particle preview. API lookups on the pattern are string ids, which is what the metaboliser already used.
+
+`transport.worm` has routes, parcels, locks, and `DistributorRouting`. The routing object is a per-level map rather than a Cardinal Components attachment, and it does not spawn a skyworm. A game test acquires a route lock and releases it. `DistributorPointBlockEntity` is only the mode enum so far.
+
+`large_trommel`, `ball_mill`, and the compressor are still one block. The compressor and those two machines were not switched onto `BigBlock` in this jar.
+
+`fat_trommel`'s upstream file is only `{"type":"neepmeat:fat_trommel"}`. The serializer is an empty recipe that does not match.
+
+These recipe files were left out because an item they name is not registered:
+
+- `grinding/active_waste.json` needs `neepmeat:active_waste`
+- `grinding/dye/yellow_dye_whisper_wheat.json` needs `neepmeat:whisper_wheat_seeds`
+- `grinding/whisper_flour.json` needs `neepmeat:whisper_wheat` and `neepmeat:whisper_flour` (both items exist; the file was skipped before that was checked)
+- `grinding/meat_steel_ball.json` needs `neepmeat:meat_steel_component`, `neepmeat:meat_steel_ball`, and `neepmeat:meat_scrap` (those items exist)
+- `grinding/dye/brown_dye_packed_browne.json` needs `neepmeat:packed_browne` (that item exists)
+- `advanced_crushing/whisper_flour.json` needs `neepmeat:whisper_wheat` and `neepmeat:whisper_flour`
+- `ball_mill/asbestos_dust.json` needs `neepmeat:asbestos`
+- `ball_mill/browne_ore_dust.json` needs `neepmeat:crushed_browne_ore` and `neepmeat:browne_ore_dust` (both items exist)
+
 ## Recipe registry, jar 0.30.0-neoforge.33
 
 `MeatlibRecipes` reads the server recipe manager. `CrushingRecipe`, `NormalTrommelRecipe`, and `BallMillRecipe` use `MapCodec` and `StreamCodec` and are registered on the recipe `DeferredRegister`. Upstream JSON for grinding, advanced crushing, trommel, and the ball mill is in `data/neepmeat/recipe/`. Eight grinding files that name items this jar does not register were left out. `ResourceSpec` is the 1.21 form of the upstream resource-or-tag amount. Ball-mill `data` components are not decoded. The `fat_trommel` file is only `{"type":"neepmeat:fat_trommel"}`, so its serializer is an empty recipe that does not match.

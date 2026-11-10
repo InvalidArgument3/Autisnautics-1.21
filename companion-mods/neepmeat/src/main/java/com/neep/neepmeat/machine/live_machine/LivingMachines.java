@@ -31,6 +31,7 @@ import com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEn
 import com.neep.neepmeat.machine.live_machine.block.entity.FluidOutputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.ReprocessorBlock;
 import com.neep.neepmeat.machine.live_machine.block.entity.ReprocessorBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ServicePortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.SilkyExtractorBlockEntity;
@@ -103,7 +104,7 @@ public final class LivingMachines {
             () -> new ItemInputPortBlock(CONTEXT, ItemSettings.block(), ItemInputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<ItemOutputPortBlock> ITEM_OUTPUT = CONTEXT.block("item_output_port",
             () -> new ItemOutputPortBlock(CONTEXT, ItemSettings.block(), ItemOutputPortBlockEntity::new, portSettings()));
-    public static final DeferredBlock<ComponentMachineBlock> REPROCESSOR = CONTEXT.block("reprocessor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.REPROCESSOR));
+    public static final DeferredBlock<ReprocessorBlock> REPROCESSOR = CONTEXT.block("reprocessor", () -> new ReprocessorBlock(CONTEXT, portSettings()));
     public static final DeferredBlock<FluidPortBlock<FluidInputPortBlockEntity>> FLUID_INPUT = CONTEXT.block("fluid_input_port",
             () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidInputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<FluidPortBlock<FluidOutputPortBlockEntity>> FLUID_OUTPUT = CONTEXT.block("fluid_output_port",

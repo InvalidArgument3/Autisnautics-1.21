@@ -234,12 +234,36 @@ public class LivingMachineGameTests {
         helper.setBlock(new BlockPos(2, 0, 1), LivingMachines.SILKY_EXTRACTOR.get().defaultBlockState());
         helper.setBlock(new BlockPos(3, 0, 1), LivingMachines.SERVICE_PORT.get().defaultBlockState());
         helper.setBlock(new BlockPos(4, 0, 1), LivingMachines.FLUID_INPUT.get().defaultBlockState());
-        helper.setBlock(new BlockPos(5, 0, 1), LivingMachines.REPROCESSOR.get().defaultBlockState());
         helper.assertTrue(helper.getBlockEntity(new BlockPos(1, 0, 1)) instanceof com.neep.neepmeat.machine.live_machine.block.entity.ExtractorBlockEntity, "extractor");
         helper.assertTrue(helper.getBlockEntity(new BlockPos(2, 0, 1)) instanceof com.neep.neepmeat.machine.live_machine.block.entity.SilkyExtractorBlockEntity, "silky");
         helper.assertTrue(helper.getBlockEntity(new BlockPos(3, 0, 1)) instanceof com.neep.neepmeat.machine.live_machine.block.entity.ServicePortBlockEntity, "service");
         helper.assertTrue(helper.getBlockEntity(new BlockPos(4, 0, 1)) instanceof com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEntity, "fluid");
-        helper.assertTrue(helper.getBlockEntity(new BlockPos(5, 0, 1)) instanceof com.neep.neepmeat.machine.live_machine.block.entity.ReprocessorBlockEntity, "reprocessor");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void reprocessorPlacesAndBreaksItsVolume(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(4, 2, 4);
+        com.neep.neepmeat.machine.live_machine.block.ReprocessorBlock block = LivingMachines.REPROCESSOR.get();
+        net.minecraft.world.level.block.state.BlockState state = block.defaultBlockState();
+        helper.setBlock(origin, state);
+        block.setPlacedBy(helper.getLevel(), helper.absolutePos(origin), helper.getBlockState(origin), null, net.minecraft.world.item.ItemStack.EMPTY);
+        helper.assertTrue(helper.getBlockState(origin.offset(1, 0, 0)).is(block.getStructure()), "east structure missing");
+        helper.assertTrue(helper.getBlockState(origin.offset(0, 2, 0)).is(block.getStructure()), "top structure missing");
+        helper.getLevel().destroyBlock(helper.absolutePos(origin), false);
+        helper.assertTrue(helper.getBlockState(origin.offset(1, 0, 0)).isAir(), "east structure remained");
+        helper.assertTrue(helper.getBlockState(origin).isAir(), "origin remained");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void distributorRouteLockBlocksTheDestination(GameTestHelper helper) {
+        net.minecraft.core.BlockPos destination = new net.minecraft.core.BlockPos(2, 1, 2);
+        com.neep.neepmeat.transport.worm.DistributorRouting routing = com.neep.neepmeat.transport.worm.DistributorRouting.get(helper.getLevel());
+        com.neep.neepmeat.transport.worm.RouteLock lock = routing.acquireRoute(helper.absolutePos(destination));
+        helper.assertTrue(routing.isBlocked(helper.absolutePos(destination)), "route was not blocked");
+        lock.release(helper.getLevel().getServer());
+        helper.assertTrue(!routing.isBlocked(helper.absolutePos(destination)), "route stayed blocked");
         helper.succeed();
     }
 }
