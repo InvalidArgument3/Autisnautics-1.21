@@ -22,16 +22,19 @@
 
 package com.neep.neepmeat.compat;
 
+import com.neep.neepmeat.compat.emi.NeepEmiClient;
 import dev.emi.emi.api.EmiEntrypoint;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
+import net.neoforged.fml.loading.FMLEnvironment;
 
-/**
- * EMI is also in the pack (client). Same phase-1 stance as the JEI plugin: present, empty.
- */
+/** EMI shows the same alloy recipes as JEI. Registration is client-only. */
 @EmiEntrypoint
 public class NeepMeatEmiPlugin implements EmiPlugin {
     @Override
     public void register(EmiRegistry registry) {
+        if (FMLEnvironment.dist.isClient()) {
+            NeepEmiClient.register(registry);
+        }
     }
 }

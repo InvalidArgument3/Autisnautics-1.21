@@ -24,6 +24,7 @@ package com.neep.neepmeat;
 
 import com.mojang.logging.LogUtils;
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.machine.NeepMachines;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.api.distmarker.Dist;
@@ -46,12 +47,14 @@ public final class NeepMeat {
     public NeepMeat(ModContainer container, Dist dist) {
         IEventBus bus = container.getEventBus();
         BuildingBlocks.bootstrap();
+        NeepMachines.register(bus);
         BLOCKS.register(bus);
         ITEMS.register(bus);
         TABS.register(bus);
         if (dist.isClient()) {
             bus.addListener(NeepMeatClient::onBlockColors);
             bus.addListener(NeepMeatClient::onItemColors);
+            bus.addListener(NeepMeatClient::onScreens);
         }
         ModList.get().getModContainerById("geckolib").ifPresentOrElse(
                 mod -> LOG.info("NeepMeat {} loaded with GeckoLib {}", container.getModInfo().getVersion(), mod.getModInfo().getVersion()),

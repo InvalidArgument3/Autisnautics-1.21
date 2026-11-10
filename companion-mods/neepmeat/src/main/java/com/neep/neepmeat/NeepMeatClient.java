@@ -23,7 +23,10 @@
 package com.neep.neepmeat;
 
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.machine.NeepMachines;
+import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
 public final class NeepMeatClient {
     private NeepMeatClient() {}
@@ -33,6 +36,10 @@ public final class NeepMeatClient {
             int rgb = tint.color().getFireworkColor();
             event.register((state, level, pos, index) -> rgb, tint.block().get());
         }
+    }
+
+    public static void onScreens(RegisterMenuScreensEvent event) {
+        event.register(NeepMachines.ALLOY_MENU.get(), AlloyKilnScreen::new);
     }
 
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {

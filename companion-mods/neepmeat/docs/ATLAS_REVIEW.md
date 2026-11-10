@@ -39,6 +39,23 @@ These are upstream recipes, called out so they are not a surprise:
 - `neepmeat:blood_bubble_planks` is in `#minecraft:planks`, so vanilla stick and wood recipes accept it. That matches the upstream block settings (`PLANKS`). Say if that tag should come off until the tree exists
 - bloody bricks and bloody tiles reference `neepmeat:blood_bubble`, which is not registered, so those recipes were not copied
 
+## Alloy kiln, for Atlas review
+
+Shipped, because every ingredient already exists:
+
+- `neepmeat:alloy_brick_from_asbestos` is the upstream alloy recipe: one `neepmeat:asbestos` plus one sand becomes one bricks, 200 ticks, in the alloy kiln. It is not a new ratio.
+
+Not shipped, because an item is missing:
+
+- `meat_steel_ingot` needs `neepmeat:raw_meat_brick` and outputs `neepmeat:meat_steel_ingot`.
+- `whisper_brass_ingot` needs `neepmeat:whisper_flour` and outputs `neepmeat:whisper_brass_ingot`.
+
+The upstream crafting recipe for the kiln itself uses `neepmeat:refractory_brick`, which is not registered, so the kiln has no crafting recipe. Do not treat that as a balance change. When refractory bricks exist, the upstream pattern (sandy bricks, blast furnace, refractory bricks) should come back unchanged unless Atlas says otherwise.
+
+Item pipes, fluid pipes, and the 8000 mB tank have no recipes. They are placeable from creative mode for the game tests.
+
+The program board does not run programs and has no recipe.
+
 ## Not in this phase
 
-No meat, no weapons, no mob drops, no ore nodes, no worldgen, no enlightenment, no PLC programs. There is nothing to price yet.
+No meat items, no weapons, no mob drops, no ore nodes, no worldgen, no enlightenment, no PLC execution. There is nothing new to price beyond the one asbestos alloy recipe above.

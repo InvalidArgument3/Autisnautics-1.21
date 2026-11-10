@@ -42,6 +42,27 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## Phase 2b checkpoint: one machine, pipes, a program board
+
+Jar `0.30.0-neoforge.3`. This is a working slice, not the rest of the mod.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Alloy kiln | ported | Facing + lit, four slots (fuel, two inputs, output), vanilla fuel burn time, menu and a plain screen. Recipe type `neepmeat:alloy_smelting`. The only shipped recipe is upstream `brick_from_asbestos` (asbestos + sand → bricks) because the other two need unported items. |
+| Item pipe | ported, visual stub | Pulls one item from the block behind `facing` and pushes it forward, one stack buffer, every 5 ticks. Cube model. Upstream connected meshes, filters, and routing are not ported. |
+| Fluid pipe | ported, visual stub | Pulls up to 250 mB from behind and pushes forward. Cube model. No valves, pumps, or blood network. |
+| Fluid tank | ported, visual stub | 8000 mB `FluidTank`, bucket interaction. Cube model. Not the upstream multi-tank. |
+| Program board | stubbed | Stores one string. Right-click with an item copies that item's hover name; otherwise it prints the stored text. No assembler, robot arm, NEEPASM execution, or interrupts. |
+| JEI | ported for alloy smelting | Category `neepmeat:alloy_smelting`. Recipes are read from the client recipe manager when a world or connection exists. |
+| EMI | ported for alloy smelting | Same recipes and the kiln as the workstation. Client only. |
+| Other machines | missing | Grinder, mixer, crusher, living machines, reactor, motor, heater, and the rest. |
+| Other pipes | missing | Chutes, routers, filters, vascular conduits, blood network. |
+| PLC executor | blocked | Needs the instruction set, robot arm, and screen kit. The board only stores text. NEEPSpeak is still in the jar and unused by the board. |
+| Weapons, entities, blood fluid | missing | No meatgun, no mobs, no `neepmeat:blood` fluid. Tanks hold any NeoForge fluid, tested with water. |
+| Screen widget kit | missing | The kiln screen is a flat `AbstractContainerScreen`, not GUIUtil. |
+| Mixins | none added | |
+| Flywheel / Myron | not used | No renderer needs them yet. |
+
 ## Phase 1 (still true)
 
 Legend: **ported** means it registers and has the upstream model and, where the ingredients exist, the upstream recipe. **stubbed** means the id exists but behaviour is thinner than upstream. **missing** means the id is not registered. **blocked** means the next step needs a subsystem that is not ported yet.
@@ -124,24 +145,27 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` (headless) on JDK 21, jar `0.30.0-neoforge.2`:
+`./gradlew runGameTestServer` and `./gradlew test` on JDK 21, jar `0.30.0-neoforge.3`:
 
 ```
-meatlib 0.30.0-neoforge.2 loaded
-NeepMeat 0.30.0-neoforge.2 loaded with GeckoLib 4.9.3
-All 6 required tests passed :)
+meatlib 0.30.0-neoforge.3 loaded
+NeepMeat 0.30.0-neoforge.3 loaded with GeckoLib 4.9.3
+All 10 required tests passed :)
+BUILD SUCCESSFUL
 ```
 
-The six tests are the original three (place `neepmeat:polished_metal`, its recipe, NEEPSpeak parser) plus the meatlib probe block, a `MultiFluidBuffer` fill of 1500 mB of water and a drain of 1000 mB, and a `ChannelFormat.INT` round trip of the value 42.
+The ten tests are the earlier six plus alloy kiln (asbestos + sand + coal → bricks), item pipe (dirt from chest to chest), fluid pipe (water from tank to tank), and program-board text.
 
 `./gradlew runServer`:
 
 ```
-meatlib 0.30.0-neoforge.2 loaded
-NeepMeat 0.30.0-neoforge.2 loaded with GeckoLib 4.9.3
-Done (0.300s)! For help, type "help"
+meatlib 0.30.0-neoforge.3 loaded
+NeepMeat 0.30.0-neoforge.3 loaded with GeckoLib 4.9.3
+Done (0.301s)! For help, type "help"
 ```
 
-`./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5`, loaded both mods, and logged `meatlib client screen hook ready`. The only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. No missing model and no missing subtitle. The main menu was not clicked through. No world was joined on the client.
+No `ERROR` lines on that server boot.
+
+`./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. The only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. No missing model and no missing subtitle. The main menu was not clicked through. JEI and EMI categories were not clicked.
 
 Not tested: Java 25, a Prism/Pakku instance with the pack's 402 mods, Sodium/Iris together with this jar, crafting in a GUI, or multiplayer with the jar in `.pakku/overrides/mods`. The jar was not added there.

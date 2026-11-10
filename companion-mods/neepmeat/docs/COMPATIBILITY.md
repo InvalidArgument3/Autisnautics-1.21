@@ -41,10 +41,10 @@ NeepMeat's own large flywheel block is commented out in upstream `NMBlocks`. Fly
 
 Both are in the pack:
 
-- JEI `jei-1.21.1-neoforge-19.64.0.455.jar`, side BOTH. Required by the port brief. The dev runtime uses this version. `NeepMeatJeiPlugin` loads and registers no categories.
+- JEI `jei-1.21.1-neoforge-19.64.0.455.jar`, side BOTH. The client plugin registers category `neepmeat:alloy_smelting`. The dedicated server only publishes the plugin id.
 - EMI `emi-1.1.24+1.21.1+neoforge.jar`, side CLIENT, plus EMI addons. `NeepMeatEmiPlugin` (`@EmiEntrypoint`) loads and registers nothing.
 
-Upstream's EMI and REI plugins (33 and 23 classes) target custom recipe types that do not exist yet. They were not ported. JEI is the viewer that must gain categories first. EMI can follow once the recipe types exist. The dev game-test server loaded both jars; EMI's datapack is marked incompatible on a dedicated server in the crash-report datapack line from the first failed boot, and the successful boot still loaded EMI because it is on the dev runtime classpath. The dedicated server also reached "Done" with EMI on that classpath. Shipping EMI only on the client, as the lock file does, is the right pack layout.
+EMI registers the same alloy recipes and the kiln workstation, client only. The rest of the upstream EMI and REI category code is still unported. No mixins were added. The dev game-test server loaded both jars; EMI's datapack is marked incompatible on a dedicated server in the crash-report datapack line from the first failed boot, and the successful boot still loaded EMI because it is on the dev runtime classpath. The dedicated server also reached "Done" with EMI on that classpath. Shipping EMI only on the client, as the lock file does, is the right pack layout.
 
 ## GeckoLib
 

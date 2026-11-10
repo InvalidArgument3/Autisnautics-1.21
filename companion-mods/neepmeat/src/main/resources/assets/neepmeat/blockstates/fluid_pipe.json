@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "neepmeat:block/fluid_pipe"
+    },
+    "facing=south": {
+      "model": "neepmeat:block/fluid_pipe"
+    },
+    "facing=east": {
+      "model": "neepmeat:block/fluid_pipe"
+    },
+    "facing=west": {
+      "model": "neepmeat:block/fluid_pipe"
+    },
+    "facing=up": {
+      "model": "neepmeat:block/fluid_pipe"
+    },
+    "facing=down": {
+      "model": "neepmeat:block/fluid_pipe"
+    }
+  }
+}

@@ -23,18 +23,36 @@
 package com.neep.neepmeat.compat;
 
 import com.neep.neepmeat.NeepMeat;
+import com.neep.neepmeat.compat.jei.NeepJeiClient;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.registration.IRecipeCategoryRegistration;
+import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.fml.loading.FMLEnvironment;
 
 /**
- * JEI is in the pack on both sides. Phase 1 has no custom recipe types, so this plugin
- * only advertises the mod. Machine categories stay unregistered until those machines exist.
+ * JEI category for alloy smelting. Recipe lookup touches the client, so the dedicated
+ * server only publishes the plugin id.
  */
 @JeiPlugin
 public class NeepMeatJeiPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "jei");
+    }
+
+    @Override
+    public void registerCategories(IRecipeCategoryRegistration registration) {
+        if (FMLEnvironment.dist.isClient()) {
+            NeepJeiClient.registerCategories(registration);
+        }
+    }
+
+    @Override
+    public void registerRecipes(IRecipeRegistration registration) {
+        if (FMLEnvironment.dist.isClient()) {
+            NeepJeiClient.registerRecipes(registration);
+        }
     }
 }
