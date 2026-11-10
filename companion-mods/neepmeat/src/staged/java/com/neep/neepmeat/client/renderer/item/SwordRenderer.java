@@ -22,7 +22,7 @@ import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class SwordRenderer<T extends AnimatedSword> extends GeoItemRenderer<T>
 {
     public SwordRenderer(GeoModel<T> modelProvider)

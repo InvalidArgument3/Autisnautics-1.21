@@ -1,7 +1,2 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:15: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:16: error: package dev.onyxstudios.cca.api.v3.component.sync does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:17: error: package dev.onyxstudios.cca.api.v3.component.tick does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:18: error: package dev.onyxstudios.cca.api.v3.entity does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:58: error: cannot find symbol

@@ -82,6 +82,7 @@ public class HeaterBlock extends BaseFacingBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand) || VascularConduitBlock.matches(player.getItemInHand(hand)))
             return InteractionResult.PASS;
 

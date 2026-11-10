@@ -48,7 +48,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBakedModel
 {
     private static final ResourceLocation SIDE_ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/vascular_conduit/pipe_side_up");
@@ -200,7 +200,7 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
         return null;
     }
 
-//    @Environment(value= Dist.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
 //    public static class Builder
 //    {
 //        private final List<Pair<Predicate<BlockState>, BakedModel>> components = Lists.newArrayList();

@@ -39,6 +39,7 @@ public class BottlerBlock extends BaseHorFacingBlock implements EntityBlock, Ite
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof BottlerBlockEntity be)
         {
             if (ItemUtil.singleVariantInteract(player, hand, be.getItemStorage(null)))
@@ -53,6 +54,7 @@ public class BottlerBlock extends BaseHorFacingBlock implements EntityBlock, Ite
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         return NMBlockEntities.BOTTLER.create(pos, state);
     }
 }

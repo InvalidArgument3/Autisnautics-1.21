@@ -22,7 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class AlloyKilnScreen extends AbstractContainerScreen<AlloyKilnScreenHandler>
 {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/gui/alloy_kiln.png");

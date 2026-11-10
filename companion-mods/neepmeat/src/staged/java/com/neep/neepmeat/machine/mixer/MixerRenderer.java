@@ -29,7 +29,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 @SuppressWarnings("UnstableApiUsage")
 public class MixerRenderer implements BlockEntityRenderer<MixerBlockEntity>
 {

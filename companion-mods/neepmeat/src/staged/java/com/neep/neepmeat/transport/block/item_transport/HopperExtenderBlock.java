@@ -120,6 +120,7 @@ public class HopperExtenderBlock extends AbstractPipeBlock implements EntityBloc
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
 //        ItemStack handStack = player.getStackInHand(hand);
 //        ((BaseBlock) (NMBlocks.ITEM_DUCT)).getBlockItem();
         return InteractionResult.PASS;

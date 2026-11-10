@@ -2,7 +2,6 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:20: error: package net.fabricmc.fabric.api.renderer.v1.model does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:21: error: package net.fabricmc.fabric.api.renderer.v1.render does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:52: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:51: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:129: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:149: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:22: error: package net.minecraft.client.render.model does not exist

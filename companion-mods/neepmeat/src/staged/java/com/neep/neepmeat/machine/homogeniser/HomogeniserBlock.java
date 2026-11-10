@@ -55,6 +55,7 @@ public class HomogeniserBlock extends BaseHorFacingBlock implements EntityBlock,
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         var be = world.getBlockEntity(pos, NMBlockEntities.HOMOGENISER).orElse(null);
         if (be != null)
         {
@@ -67,6 +68,7 @@ public class HomogeniserBlock extends BaseHorFacingBlock implements EntityBlock,
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         return SHAPE;
     }
 

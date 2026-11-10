@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBakedModel
 {
     private final ResourceLocation frameId = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/encased_frame");

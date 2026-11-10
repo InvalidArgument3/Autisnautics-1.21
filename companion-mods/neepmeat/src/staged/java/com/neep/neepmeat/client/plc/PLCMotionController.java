@@ -17,7 +17,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.util.Mth;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class PLCMotionController
 {
     private final SurgicalRobot robot;

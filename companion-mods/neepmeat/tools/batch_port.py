@@ -233,6 +233,15 @@ def promote(copied):
     for name, targets in copied.items():
         if name in failed:
             continue
+        imported = set()
+        for target in targets:
+            for match in IMP_RE.finditer(target.read_text(errors="replace")):
+                imp = match.group(1)
+                if imp.startswith("com.neep.neepmeat."):
+                    imported.add(package_of(imp, "com.neep.neepmeat."))
+        if any(dep in failed for dep in imported):
+            failed.add(name)
+            continue
         for target in targets:
             relative = target.relative_to(STAGE)
             destination = SRC / relative

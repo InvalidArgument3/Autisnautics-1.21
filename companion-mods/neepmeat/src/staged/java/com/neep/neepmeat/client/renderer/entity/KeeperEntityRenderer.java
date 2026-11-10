@@ -23,7 +23,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class KeeperEntityRenderer extends HumanoidMobRenderer<KeeperEntity, KeeperEntityModel>
 {
     protected static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/entity/keeper/keeper.png");

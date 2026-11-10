@@ -58,6 +58,7 @@ public class CrusherBlock extends BaseHorFacingBlock implements EntityBlock, Wre
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof CrusherBlockEntity be)
         {
             if (player.isShiftKeyDown() && player.getMainHandItem().isEmpty())

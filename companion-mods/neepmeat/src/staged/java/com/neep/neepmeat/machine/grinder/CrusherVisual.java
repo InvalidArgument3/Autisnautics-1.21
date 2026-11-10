@@ -31,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class CrusherVisual extends AbstractBlockEntityVisual<CrusherBlockEntity> implements SimpleDynamicVisual
 {
     private final TransformedInstance jawModel;

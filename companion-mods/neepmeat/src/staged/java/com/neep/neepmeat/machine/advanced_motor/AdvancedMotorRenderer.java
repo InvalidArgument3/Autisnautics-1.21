@@ -26,7 +26,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class AdvancedMotorRenderer implements BlockEntityRenderer<AdvancedMotorBlockEntity>
 {
     public AdvancedMotorRenderer(BlockEntityRendererProvider.Context ctx)

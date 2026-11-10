@@ -437,7 +437,7 @@ public class SurgicalRobot implements PLCRobot, NbtSerialisable
         STATE_DOCKING
     }
 
-    @Environment(value = Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         private final SurgicalRobot robot;

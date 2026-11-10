@@ -22,7 +22,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.util.Mth;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class SynthesiserRenderer implements BlockEntityRenderer<SynthesiserBlockEntity>
 {
     public SynthesiserRenderer(BlockEntityRendererProvider.Context ctx)

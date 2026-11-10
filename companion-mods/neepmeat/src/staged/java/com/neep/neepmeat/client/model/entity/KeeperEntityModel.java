@@ -23,7 +23,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.HumanoidArm;
 
-@Environment(value=Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class KeeperEntityModel
 extends HumanoidModel<com.neep.neepmeat.entity.keeper.KeeperEntity>
 {

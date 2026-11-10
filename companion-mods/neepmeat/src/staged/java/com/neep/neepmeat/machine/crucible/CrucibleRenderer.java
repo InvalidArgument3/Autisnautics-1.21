@@ -31,7 +31,7 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 @SuppressWarnings("UnstableApiUsage")
 public class CrucibleRenderer implements BlockEntityRenderer<CrucibleBlockEntity>
 {

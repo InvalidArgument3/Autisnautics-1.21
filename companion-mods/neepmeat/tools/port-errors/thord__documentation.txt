@@ -1,1 +1,2 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/documentation/ThordWordArticle.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/documentation/ThordWordArticle.java:55: error: package NMDocs does not exist

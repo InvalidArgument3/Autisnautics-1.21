@@ -4,7 +4,6 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:24: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:25: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:26: error: package net.fabricmc.fabric.api.transfer.v1.client.fluid does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:37: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:38: error: type argument WindowPipeBlockEntity is not within bounds of type-variable T
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:47: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/renderer/WindowPipeRenderer.java:54: error: cannot find symbol

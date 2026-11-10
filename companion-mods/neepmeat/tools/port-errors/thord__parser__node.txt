@@ -2,3 +2,14 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:18: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:46: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:22: error: visit(RootNode) in ThordTreeVisitor clashes with visit(StringToken) in ThordTreeVisitor
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:24: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:26: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:28: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:30: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:32: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:34: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:36: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:38: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:40: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:42: error: name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither overrides the other

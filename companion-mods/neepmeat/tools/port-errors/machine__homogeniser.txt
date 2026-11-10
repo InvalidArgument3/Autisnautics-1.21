@@ -1,9 +1,3 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:16: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:17: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:80: error: package NMFluids does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:87: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:89: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:89: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:92: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:92: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:95: error: method of in record FluidVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/HomogeniserBlock.java:49: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/HomogeniserBlock.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/HomogeniserBlock.java:86: error: cannot find symbol

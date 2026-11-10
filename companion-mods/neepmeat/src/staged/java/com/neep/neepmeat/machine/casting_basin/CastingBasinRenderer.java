@@ -38,7 +38,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 @SuppressWarnings("UnstableApiUsage")
 public class CastingBasinRenderer implements BlockEntityRenderer<CastingBasinBlockEntity>
 {

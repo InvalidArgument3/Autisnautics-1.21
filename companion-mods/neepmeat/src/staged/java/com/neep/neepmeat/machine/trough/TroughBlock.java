@@ -58,6 +58,7 @@ public class TroughBlock extends BaseHorFacingBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof TroughBlockEntity be
                 && be.handleInteract(world, player, hand))
         {
@@ -70,6 +71,7 @@ public class TroughBlock extends BaseHorFacingBlock implements EntityBlock
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         return NMBlockEntities.FEEDING_TROUGH.create(pos, state);
     }
 

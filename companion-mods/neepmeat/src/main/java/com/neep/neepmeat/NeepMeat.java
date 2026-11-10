@@ -71,6 +71,9 @@ public final class NeepMeat {
         com.neep.neepmeat.machine.EffectMachines.register(bus);
         com.neep.neepmeat.entity.NeepEntities.register(bus);
         com.neep.neepmeat.init.NMSounds.SOUNDS.register(bus);
+        bus.addListener((net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent event) -> com.neep.neepmeat.init.NMBlockEntities.bind());
+        com.neep.neepmeat.component.NMAttachments.ATTACHMENTS.register(bus);
+        bus.addListener(com.neep.neepmeat.network.RawPayload::register);
         com.neep.neepmeat.advancement.NMCriteria.TRIGGERS.register(bus);
         com.neep.neepmeat.init.NMScreenHandlers.register(bus);
         com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();

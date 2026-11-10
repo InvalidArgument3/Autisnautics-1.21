@@ -34,7 +34,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class BuilderVisual extends AbstractBlockEntityVisual<BuilderBlockEntity> implements SimpleDynamicVisual
 {
     private final TransformedInstance robotModel;

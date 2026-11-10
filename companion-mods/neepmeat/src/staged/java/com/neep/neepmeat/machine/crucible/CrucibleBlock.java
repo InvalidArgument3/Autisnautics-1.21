@@ -51,6 +51,7 @@ public class CrucibleBlock extends BaseBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof CrucibleBlockEntity be && !world.isClientSide)
         {
             WritableSingleFluidStorage.handleInteract(be.getStorage().fluidStorage, world, player, hand);

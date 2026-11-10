@@ -229,6 +229,7 @@ public class VascularConduitBlock extends PrecisePipeBlock implements EntityBloc
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
 //        return super.onUse(state, world, pos, player, hand, hit);
         if (player.getItemInHand(hand).is(Items.STICK))
         {

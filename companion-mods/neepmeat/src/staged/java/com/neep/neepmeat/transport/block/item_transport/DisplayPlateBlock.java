@@ -69,6 +69,7 @@ public class DisplayPlateBlock extends BaseBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (player.isShiftKeyDown()
                 && player.getMainHandItem().isEmpty()
                 && world.getBlockEntity(pos) instanceof MenuProvider factory)

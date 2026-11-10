@@ -26,7 +26,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class BottlerRenderer implements BlockEntityRenderer<BottlerBlockEntity>
 {
     public BottlerRenderer(BlockEntityRendererProvider.Context ctx)

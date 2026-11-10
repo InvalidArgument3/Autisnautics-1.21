@@ -1,4 +1,3 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:44: error: package NMComponents does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:70: error: package NMComponents does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:70: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/upgrade_manager/ImplantManagerBlockEntity.java:75: error: cannot find symbol

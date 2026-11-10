@@ -84,6 +84,7 @@ public class EncasedFluidPipeBlock extends FluidPipeBlock implements EncasedBloc
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (replaceUse(state, world, pos, player, hand, hit))
         {
             return InteractionResult.SUCCESS;

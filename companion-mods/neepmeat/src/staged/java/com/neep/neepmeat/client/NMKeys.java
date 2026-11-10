@@ -22,7 +22,7 @@ import org.lwjgl.glfw.GLFW;
 
 import static com.neep.meatweapons.client.MWKeys.registerKeyBinding;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class NMKeys
 {
     public static KeyMapping TOOL_TRANSFORM;

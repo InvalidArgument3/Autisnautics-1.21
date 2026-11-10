@@ -60,7 +60,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class GuideListPane extends ContentPane implements Renderable, GuiEventListener, NarratableEntry
 {
     // Currently available entries

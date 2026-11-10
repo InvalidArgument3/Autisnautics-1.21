@@ -78,6 +78,7 @@ public class FluidRationerBlock extends BaseFacingBlock implements EntityBlock, 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand))
             return InteractionResult.PASS;
 
@@ -103,6 +104,7 @@ public class FluidRationerBlock extends BaseFacingBlock implements EntityBlock, 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         super.createBlockStateDefinition(builder);
         builder.add(ACTIVE, MODE);
     }

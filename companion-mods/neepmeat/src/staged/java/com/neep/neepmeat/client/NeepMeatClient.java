@@ -111,7 +111,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class NeepMeatClient implements ClientModInitializer
 {
     public static final ModelLayerLocation MODEL_GLASS_TANK_LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "glass_tank"), "main");

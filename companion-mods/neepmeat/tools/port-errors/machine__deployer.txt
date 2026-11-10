@@ -1,7 +1,5 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:19: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:21: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:22: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:58: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:66: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:82: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:91: error: package NMBlockEntities does not exist

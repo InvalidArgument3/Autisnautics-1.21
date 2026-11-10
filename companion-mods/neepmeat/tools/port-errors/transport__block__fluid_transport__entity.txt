@@ -1,8 +1,6 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:18: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:20: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:21: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:45: error: package FluidBuffer does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:52: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:66: error: method does not override or implement a method from a supertype
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:83: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/fluid_transport/entity/FluidDrainBlockEntity.java:90: error: method pickupBlock in interface BucketPickup cannot be applied to given types;

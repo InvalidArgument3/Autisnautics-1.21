@@ -24,7 +24,7 @@ import net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariantAttributes;
 import net.minecraft.resources.ResourceLocation;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class NMFluidsClient
 {
     public static final ResourceLocation BLOOD_FLOWING = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/blood_flowing");

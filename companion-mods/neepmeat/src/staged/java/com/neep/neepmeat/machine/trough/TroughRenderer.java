@@ -22,7 +22,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.util.Mth;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 @SuppressWarnings("UnstableApiUsage")
 public class TroughRenderer implements BlockEntityRenderer<TroughBlockEntity>
 {

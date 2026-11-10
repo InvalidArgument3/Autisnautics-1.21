@@ -37,7 +37,7 @@ import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import java.util.List;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class LimiterValveScreen extends AbstractContainerScreen<LimiterValveScreenHandler>
 {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/gui/limiter_valve.png");

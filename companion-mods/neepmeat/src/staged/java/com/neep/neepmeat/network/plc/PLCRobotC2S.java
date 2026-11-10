@@ -81,7 +81,7 @@ public class PLCRobotC2S
         });
     }
 
-    @Environment(value = Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         public static void send(PLCBlockEntity be)

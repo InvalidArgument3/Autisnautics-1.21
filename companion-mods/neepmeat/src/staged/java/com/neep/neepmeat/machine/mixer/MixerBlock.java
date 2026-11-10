@@ -46,6 +46,7 @@ public class MixerBlock extends TallBlock implements EntityBlock
             @Override
             protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
             {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
                 if (ItemUtil.playerHoldingPipe(player, hand))
                     return super.useWithoutItem(state, world, pos, player, hit);
 
@@ -60,6 +61,7 @@ public class MixerBlock extends TallBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand))
             return super.useWithoutItem(state, world, pos, player, hit);
 
@@ -72,6 +74,7 @@ public class MixerBlock extends TallBlock implements EntityBlock
     @Override
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         super.setPlacedBy(world, pos, state, placer, itemStack);
     }
 

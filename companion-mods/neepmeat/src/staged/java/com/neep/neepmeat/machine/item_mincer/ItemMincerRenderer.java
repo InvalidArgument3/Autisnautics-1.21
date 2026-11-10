@@ -28,7 +28,7 @@ import static com.neep.neepmeat.machine.grinder.CrusherRenderer.renderItems;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class ItemMincerRenderer implements BlockEntityRenderer<ItemMincerBlockEntity>
 {
     private final ItemRenderer itemRenderer;

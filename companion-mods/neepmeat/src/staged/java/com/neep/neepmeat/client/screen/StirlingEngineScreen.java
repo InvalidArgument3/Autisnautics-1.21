@@ -36,7 +36,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import java.util.function.Supplier;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class StirlingEngineScreen extends BetterHandledScreen<StirlingEngineScreenHandler>
 {
     private final StirlingEngineScreenHandler handler;

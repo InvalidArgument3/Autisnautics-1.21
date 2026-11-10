@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class PylonVisual extends AbstractBlockEntityVisual<PylonBlockEntity> implements SimpleDynamicVisual
 {
     private final PoseStack matrices = new PoseStack();

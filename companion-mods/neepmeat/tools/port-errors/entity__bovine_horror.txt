@@ -1,3 +1,5 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:15: error: package com.neep.meatweapons.particle does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:17: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:19: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/bovine_horror/BHPhaseActionGoal.java:60: error: cannot find symbol

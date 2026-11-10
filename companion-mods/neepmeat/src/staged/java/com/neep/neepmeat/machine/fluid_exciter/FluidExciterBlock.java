@@ -56,6 +56,7 @@ public class FluidExciterBlock extends TallBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand))
             return InteractionResult.PASS;
 
@@ -122,6 +123,7 @@ public class FluidExciterBlock extends TallBlock implements EntityBlock
         @Override
         protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
         {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
             if (!VascularConduitBlock.matches(player.getItemInHand(hand)))
             {
                 if (!world.isClientSide() && world.getBlockEntity(pos.below()) instanceof FluidExciterBlockEntity be)
@@ -137,6 +139,7 @@ public class FluidExciterBlock extends TallBlock implements EntityBlock
         @Override
         public void updatePosition(Level world, BlockPos pos, BlockState state, VascularConduitEntity.UpdateReason reason)
         {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
             VascularConduit.super.updatePosition(world, pos, state, reason);
         }
 

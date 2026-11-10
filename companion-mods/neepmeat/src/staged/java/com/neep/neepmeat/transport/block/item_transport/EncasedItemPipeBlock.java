@@ -88,6 +88,7 @@ public class EncasedItemPipeBlock extends ItemPipeBlock implements EncasedBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (replaceUse(state, world, pos, player, hand, hit))
         {
             return InteractionResult.SUCCESS;
@@ -98,6 +99,7 @@ public class EncasedItemPipeBlock extends ItemPipeBlock implements EncasedBlock
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         return NMBlockEntities.ENCASED_PNEUMATIC_PIPE.create(pos, state);
     }
 

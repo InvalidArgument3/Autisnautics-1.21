@@ -51,11 +51,13 @@ public class ItemMincerBlock extends BaseHorFacingBlock implements EntityBlock, 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand))
             return super.useWithoutItem(state, world, pos, player, hit);
 
         if (world.getBlockEntity(pos) instanceof ItemMincerBlockEntity be)
         {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
             return InteractionResult.sidedSuccess(ItemUtil.singleVariantInteract(player, hand, be.storage.inputStorage));
         }
         return super.useWithoutItem(state, world, pos, player, hit);
@@ -64,6 +66,7 @@ public class ItemMincerBlock extends BaseHorFacingBlock implements EntityBlock, 
     @Override
     protected void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (!newState.is(this) && world.getBlockEntity(pos) instanceof ItemMincerBlockEntity be)
         {
             Containers.dropItemStack(world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, be.storage.inputStorage.getAsStack());

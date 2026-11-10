@@ -48,7 +48,7 @@ public class EnlightenmentEventPacket
         return byteBuf;
     }
 
-    @Environment(value= Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         public static void init()

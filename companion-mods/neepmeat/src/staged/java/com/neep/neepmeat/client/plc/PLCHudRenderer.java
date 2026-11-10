@@ -45,7 +45,7 @@ import org.joml.Matrix4f;
 import org.joml.Vector3d;
 import org.lwjgl.glfw.GLFW;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class PLCHudRenderer
 {
     @Nullable

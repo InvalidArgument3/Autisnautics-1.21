@@ -57,7 +57,7 @@ public class PLCRobotEnterS2C
         S2CSender.send(player, ID, buf);
     }
 
-    @Environment(value = Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         public static void registerReceiver()

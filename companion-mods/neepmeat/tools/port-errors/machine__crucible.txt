@@ -1,2 +1,2 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/FatCollectorBlock.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/FatCollectorBlock.java:58: error: package NMBlockEntities does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/AlembicBlockEntity.java:38: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/AlembicBlockEntity.java:60: error: cannot find symbol

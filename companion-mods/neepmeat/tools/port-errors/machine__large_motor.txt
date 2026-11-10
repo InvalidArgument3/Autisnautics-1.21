@@ -1,36 +1,5 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:17: error: package com.neep.meatlib.client.flw does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:20: error: package dev.engine_room.flywheel.api.instance does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:21: error: package dev.engine_room.flywheel.api.visual does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:22: error: package dev.engine_room.flywheel.api.visualization does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:23: error: package dev.engine_room.flywheel.lib.instance does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:24: error: package dev.engine_room.flywheel.lib.instance does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:25: error: package dev.engine_room.flywheel.lib.visual does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:26: error: package dev.engine_room.flywheel.lib.visual does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:34: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:34: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:38: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:40: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:56: error: package DynamicVisual does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:82: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:43: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:43: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:43: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:44: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:44: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:45: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:49: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:55: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:59: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:61: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:62: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:62: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:62: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:63: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:63: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:63: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:65: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:67: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:75: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:78: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorVisual.java:81: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:48: error: LargeMotorBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:80: error: incompatible types: MeatlibBlockSettings cannot be converted to Properties
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:87: error: incompatible types: possible lossy conversion from float to int
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:110: error: incompatible types: invalid method reference
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:149: error: cannot find symbol

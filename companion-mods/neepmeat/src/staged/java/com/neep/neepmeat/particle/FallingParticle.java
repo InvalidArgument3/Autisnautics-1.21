@@ -19,7 +19,7 @@ import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
 import org.jetbrains.annotations.Nullable;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class FallingParticle extends TextureSheetParticle
 {
     public FallingParticle(ClientLevel clientWorld, double d, double e, double f, double g, double h, double i, float gravityStrength)

@@ -57,6 +57,7 @@ public class FilterPipeBlock extends AbstractAxialFluidPipe implements EntityBlo
 
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         FilterPipeBlockEntity be = world.getBlockEntity(pos, NMBlockEntities.FILTER_PIPE).orElse(null);
         if (be == null)
         {
@@ -131,7 +132,7 @@ public class FilterPipeBlock extends AbstractAxialFluidPipe implements EntityBlo
         }
     }
 
-    @Environment(value=Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static int getTint(BlockState state, BlockAndTintGetter world, BlockPos pos, int index)
     {
         if (world.getBlockEntity(pos) instanceof FilterPipeBlockEntity be)

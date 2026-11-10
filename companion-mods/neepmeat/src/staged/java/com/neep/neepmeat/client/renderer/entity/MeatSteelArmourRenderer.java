@@ -18,7 +18,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class MeatSteelArmourRenderer extends GeoArmorRenderer<MeatSteelArmourItem>
 {
     public MeatSteelArmourRenderer(GeoModel<MeatSteelArmourItem> modelProvider)

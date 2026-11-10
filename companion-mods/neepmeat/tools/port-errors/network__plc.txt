@@ -1,5 +1,2 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:16: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:20: error: package net.fabricmc.fabric.api.client.networking.v1 does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:21: error: package net.fabricmc.fabric.api.networking.v1 does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:22: error: package net.fabricmc.fabric.api.networking.v1 does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/network/plc/PLCErrorMessageS2C.java:56: error: cannot find symbol

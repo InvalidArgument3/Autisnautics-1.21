@@ -43,6 +43,7 @@ public class LimiterValveBlock extends FluidPipeBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (player.getItemInHand(hand).is(NMTags.WRENCH))
             return super.useWithoutItem(state, world, pos, player, hit);
 
@@ -51,6 +52,7 @@ public class LimiterValveBlock extends FluidPipeBlock implements EntityBlock
 
         if (!world.isClientSide())
         {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
             world.getBlockEntity(pos, NMBlockEntities.LIMITER_VALVE).ifPresent(be ->
             {
                 player.openMenu((SimpleScreenHandlerFactory) (s, i, p) ->

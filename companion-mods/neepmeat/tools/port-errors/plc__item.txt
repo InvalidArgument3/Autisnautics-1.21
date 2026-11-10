@@ -1,14 +1,15 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:9: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:11: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:31: error: constructor BaseItem in class BaseItem cannot be applied to given types;
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:41: error: package NMComponents does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:41: error: incompatible types: CAP#1 cannot be converted to ProgramStorageComponent
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:47: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:55: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:58: error: incompatible types: DeferredHolder<SoundEvent,SoundEvent> cannot be converted to SoundEvent
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:67: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:78: error: package NMComponents does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:78: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:82: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:91: error: package NMComponents does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:92: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:95: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:102: error: method does not override or implement a method from a supertype
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:105: error: incompatible types: Level cannot be converted to TooltipContext
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:110: error: package NMComponents does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:111: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/item/ProgramCardItem.java:113: error: cannot find symbol

@@ -24,7 +24,7 @@ import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import org.lwjgl.glfw.GLFW;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class GuideArticlePane extends ContentPane implements Renderable, GuiEventListener, NarratableEntry
 {
     private final ArticleTextWidget articleWidget;

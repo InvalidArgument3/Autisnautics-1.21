@@ -33,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class StirlingEngineVisual extends AbstractBlockEntityVisual<StirlingEngineBlockEntity> implements SimpleDynamicVisual
 {
     private final PoseStack matrices = new PoseStack();

@@ -17,7 +17,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.world.phys.Vec3;
 
-@Environment(value= Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class DuatDimensionEffects extends DimensionSpecialEffects
 {
     public DuatDimensionEffects()

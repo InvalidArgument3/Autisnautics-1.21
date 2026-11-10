@@ -79,6 +79,7 @@ public class EncasedVascularConduitBlock extends VascularConduitBlock implements
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (replaceUse(state, world, pos, player, hand, hit))
         {
             return InteractionResult.SUCCESS;
@@ -89,6 +90,7 @@ public class EncasedVascularConduitBlock extends VascularConduitBlock implements
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         return NMBlockEntities.ENCASED_VASCULAR_CONDUIT.create(pos, state);
     }
 

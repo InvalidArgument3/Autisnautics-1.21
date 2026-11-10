@@ -50,6 +50,7 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof PLCBlockEntity be && !player.isHolding(PLCBlocks.PROGRAM_CARD))
         {
             if (player.isShiftKeyDown())

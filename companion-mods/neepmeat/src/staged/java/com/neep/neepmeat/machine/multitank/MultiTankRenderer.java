@@ -21,7 +21,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class MultiTankRenderer implements BlockEntityRenderer<MultiTankBlockEntity>
 {
     public MultiTankRenderer(BlockEntityRendererProvider.Context ctx)

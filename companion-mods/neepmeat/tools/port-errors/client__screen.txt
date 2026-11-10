@@ -1,6 +1,1 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:27: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:39: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:40: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:44: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/StirlingEngineScreen.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/CyclingButtonWidget.java:66: error: cannot find symbol

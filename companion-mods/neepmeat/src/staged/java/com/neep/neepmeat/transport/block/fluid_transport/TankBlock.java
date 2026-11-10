@@ -182,6 +182,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (ItemUtil.playerHoldingPipe(player, hand))
             return InteractionResult.PASS;
 

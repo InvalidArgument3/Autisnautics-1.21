@@ -1,11 +1,1 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:16: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:17: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:19: error: package dev.onyxstudios.cca.api.v3.component.sync does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:20: error: package dev.onyxstudios.cca.api.v3.component.tick does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:21: error: package dev.onyxstudios.cca.api.v3.component.tick does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:22: error: package dev.onyxstudios.cca.api.v3.entity does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/PlayerEnlightenmentManager.java:261: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/EnlightenmentManager.java:23: error: cannot find symbol

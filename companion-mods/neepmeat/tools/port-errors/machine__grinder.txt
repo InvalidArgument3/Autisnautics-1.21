@@ -1,1 +1,2 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/grinder/CrusherBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/grinder/CrusherBlock.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/grinder/CrusherBlock.java:87: error: cannot find symbol

@@ -188,6 +188,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         ItemStack stack = player.getItemInHand(hand);
         if (stack.is(Items.STICK))
         {
@@ -226,6 +227,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
     @Override
     protected boolean adjacentAutoConnect(Level world, BlockPos adjPos, BlockState adjState, BlockState hereState, Direction direction)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (adjState.getBlock() instanceof FluidPipe pipe
                 && canConnectTo(hereState, adjState, direction.getOpposite(), world, adjPos, true))
         {
@@ -285,7 +287,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
         return MiscUtil.checkType(type, NMBlockEntities.FLUID_PIPE, ((world1, pos, state1, blockEntity) -> blockEntity.tick()), null, world);
     }
 
-    @Environment(value= Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static int getTint(BlockState state, BlockAndTintGetter world, BlockPos pos, int index)
     {
         if (index == 1 && state.getBlock() instanceof FluidPipeBlock fluidPipeBlock)
@@ -306,7 +308,7 @@ public class FluidPipeBlock extends PrecisePipeBlock implements EntityBlock, Flu
         return 0xFFFFFF;
     }
 
-    @Environment(value= Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static int getItemTint(ItemStack stack, int i)
     {
         if (stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof FluidPipeBlock fluidPipeBlock)

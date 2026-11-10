@@ -24,6 +24,9 @@ public final class NeepJeiClient {
     public static void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new AlloyKilnCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new ManufactureCategory(registration.getJeiHelpers().getGuiHelper()));
+        for (String id : com.neep.neepmeat.compat.emi.NeepEmiClient.DROPPED_REI) {
+            registration.addRecipeCategories(new DroppedReiCategory(registration.getJeiHelpers().getGuiHelper(), id));
+        }
     }
 
     public static void registerRecipes(IRecipeRegistration registration) {

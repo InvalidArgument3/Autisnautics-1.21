@@ -1,5 +1,3 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlockEntity.java:21: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlockEntity.java:32: error: package net.minecraft.util.math does not exist
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlockEntity.java:74: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlockEntity.java:175: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlockEntity.java:187: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlock.java:41: error: LinearOscillatorBlock is not abstract and does not override abstract method isConnected(Level,BlockPos,BlockState,Direction) in ItemPipe
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlock.java:103: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/breaker/LinearOscillatorBlock.java:115: error: method does not override or implement a method from a supertype

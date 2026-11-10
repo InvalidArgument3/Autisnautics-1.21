@@ -8,6 +8,16 @@ Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak,
 
 Deviations: no GeckoLib hatch animation, no cosmic beam particles, no encased data cable, and no whisper-flour feeding. Blood is stored in milli-buckets. The advanced integrator counts its own ticks.
 
+## Registries, attachments, and no REI, jar 0.30.0-neoforge.43
+
+`NMBlocks`, `NMBlockEntities`, `NMItems`, `NMFluids`, and `NMComponents` expose the upstream field names. They are not a second registration. `NMBlockEntities.bind` copies the holders that already exist (integrator, pedestal, advanced integrator, motor, alloy kiln). The other fields stay unset until that block class is in the main tree.
+
+REI is not ported. The pack has no REI. Its staged sources were deleted. JEI and EMI already show alloy smelting and manufacture, and they now also register the other REI category ids (`advanced_crushing`, `block_crushing`, `compacting`, `heating`, `item_manufacture`, `mixing`, `pressing`, `entity_to_item`, `grinding`, `transforming_tool`, `vivisection`, `enlightening`, `trommel`). Those extra categories have no recipe widgets yet.
+
+Cardinal Components call sites still implement the old interfaces. Those interfaces are a thin adapter. Player compressed air is a real `AttachmentType<Long>` with a codec and `copyOnDeath`. Fabric `ServerPlayNetworking`, `ClientPlayNetworking`, `PacketByteBufs`, and `PlayerLookup` are shims over one `CustomPacketPayload` (`neepmeat:raw`) registered in `RegisterPayloadHandlersEvent`.
+
+Flywheel visuals stay staged. `getVisualPosition` and `PartialModel` do not match a drop-in compileOnly jar, and the classes are client-only.
+
 ## Staging source set, jar 0.30.0-neoforge.42
 
 `src/staged/java` is a source set excluded from the mod compile. `tools/batch_port.py --stage-missing --promote` copies every missing Loom package there, rewrites it, and moves a package into `src/main` only when none of its files appear in the staged javac log. A failed compile that does not name a staged file promotes nothing.
@@ -54,7 +64,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `api/processing` | 1 | 9 | partial |
 | `api/processing/ball_mill` | 0 | 3 | missing |
 | `api/processing/random_ores` | 0 | 8 | missing |
-| `api/storage` | 2 | 11 | partial |
+| `api/storage` | 3 | 11 | partial |
 | `api/theme` | 1 | 1 | files present |
 | `block` | 2 | 34 | partial |
 | `block/entity` | 0 | 12 | missing |
@@ -104,7 +114,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `compat/rei` | 0 | 4 | missing |
 | `compat/rei/category` | 0 | 15 | missing |
 | `compat/rei/display` | 0 | 14 | missing |
-| `component` | 0 | 9 | missing |
+| `component` | 1 | 9 | partial |
 | `config` | 0 | 1 | missing |
 | `datagen` | 0 | 5 | missing |
 | `datagen/tag` | 0 | 1 | missing |
@@ -135,7 +145,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `implant/config` | 0 | 5 | missing |
 | `implant/entity` | 0 | 20 | missing |
 | `implant/item` | 0 | 7 | missing |
-| `init` | 3 | 21 | partial |
+| `init` | 8 | 21 | partial |
 | `interfaces` | 3 | 3 | files present |
 | `inventory` | 1 | 1 | files present |
 | `item` | 1 | 49 | partial |
@@ -216,7 +226,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `neepasm/compiler/variable` | 3 | 3 | files present |
 | `neepasm/program` | 3 | 3 | files present |
 | `neepasm/vm` | 6 | 6 | files present |
-| `network` | 2 | 13 | partial |
+| `network` | 3 | 13 | partial |
 | `network/plc` | 0 | 4 | missing |
 | `particle` | 0 | 5 | missing |
 | `plc` | 3 | 5 | partial |
@@ -254,7 +264,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `transport` | 5 | 5 | files present |
 | `transport/api` | 0 | 4 | missing |
 | `transport/api/item_network` | 0 | 7 | missing |
-| `transport/api/pipe` | 4 | 15 | partial |
+| `transport/api/pipe` | 5 | 15 | partial |
 | `transport/block` | 5 | 4 | files present |
 | `transport/block/energy_transport` | 0 | 6 | missing |
 | `transport/block/energy_transport/entity` | 0 | 5 | missing |
@@ -286,7 +296,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `world` | 0 | 1 | missing |
 | `world/feature_configu` | 1 | 1 | files present |
 
-Upstream packages: 257. Missing 161, partial 50, files present 46.
+Upstream packages: 257. Missing 160, partial 51, files present 46.
 
 ## Phase 2 milestone: meatlib
 

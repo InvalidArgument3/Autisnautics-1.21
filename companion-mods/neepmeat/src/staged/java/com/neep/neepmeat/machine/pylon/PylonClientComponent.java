@@ -20,7 +20,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.client.Minecraft;
 import net.minecraft.sounds.SoundSource;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class PylonClientComponent implements ClientComponent
 {
     private final PylonBlockEntity be;

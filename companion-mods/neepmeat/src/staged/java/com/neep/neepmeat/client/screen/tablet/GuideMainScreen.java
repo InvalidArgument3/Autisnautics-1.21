@@ -39,7 +39,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 // Inherits from HandledScreen so that EMI allows you to return to the guide from a recipe view
 public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler> implements GuideScreen
 {

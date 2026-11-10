@@ -23,7 +23,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
-@Environment(value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class CyclingButtonWidget extends NMButtonWidget implements Rectangle.Mutable
 {
     private final int du;
@@ -37,7 +37,7 @@ public class CyclingButtonWidget extends NMButtonWidget implements Rectangle.Mut
     protected final int maxIndex;
     protected int index;
 
-    @Environment(value= Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public CyclingButtonWidget(int x, int y, int width, int height, int u, int v, int du, int dv, int vOffset, int maxIndex, ResourceLocation texture, int tw, int th, Component message, OnPress onPress)
     {
         super(x, y, width, height, message, onPress);

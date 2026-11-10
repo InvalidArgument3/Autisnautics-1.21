@@ -95,6 +95,7 @@ public class DumperBlock extends BaseBlock implements EntityBlock
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof DumperBlockEntity be && !world.isClientSide)
         {
             ItemUtil.singleVariantInteract(player, hand, be.getStorage(null));

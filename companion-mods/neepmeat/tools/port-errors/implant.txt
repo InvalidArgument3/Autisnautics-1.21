@@ -1,2 +1,9 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:20: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:46: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:47: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:48: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:49: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:50: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:51: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:53: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:54: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/NMImplants.java:55: error: no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocation,Item)

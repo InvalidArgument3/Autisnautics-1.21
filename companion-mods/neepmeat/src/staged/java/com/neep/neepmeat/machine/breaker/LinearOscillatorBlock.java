@@ -76,6 +76,7 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof LinearOscillatorBlockEntity be && be.onUse(player, hand))
         {
             return InteractionResult.SUCCESS;

@@ -26,6 +26,12 @@ public final class NeepEmiClient {
     public static final EmiRecipeCategory ALLOY = new EmiRecipeCategory(
             ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "alloy_smelting"),
             EmiStack.of(new ItemStack(NeepMachines.ALLOY_KILN_ITEM.get())));
+    /** Ids that REI used. The pack has no REI, so EMI owns these names. */
+    public static final String[] DROPPED_REI = {
+            "advanced_crushing", "block_crushing", "compacting", "heating", "item_manufacture",
+            "mixing", "pressing", "entity_to_item", "grinding", "transforming_tool",
+            "vivisection", "enlightening", "trommel"
+    };
 
     private NeepEmiClient() {}
 
@@ -34,6 +40,10 @@ public final class NeepEmiClient {
         registry.addWorkstation(ALLOY, EmiStack.of(new ItemStack(NeepMachines.ALLOY_KILN_ITEM.get())));
         registry.addCategory(MANUFACTURE);
         registry.addWorkstation(MANUFACTURE, EmiStack.of(new ItemStack(NeepMachines.BUILDER_ITEM.get())));
+        for (String id : DROPPED_REI) {
+            registry.addCategory(new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, id),
+                    EmiStack.of(new ItemStack(NeepMachines.BUILDER_ITEM.get()))));
+        }
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.level == null) {
             return;

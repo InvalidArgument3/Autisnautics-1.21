@@ -61,6 +61,7 @@ public class StopValveBlock extends FluidPipeBlock implements EntityBlock, Wrenc
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
     {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (player.getItemInHand(hand).is(NMTags.WRENCH))
             return super.useWithoutItem(state, world, pos, player, hit);
 
@@ -69,6 +70,7 @@ public class StopValveBlock extends FluidPipeBlock implements EntityBlock, Wrenc
 
         if (!world.isClientSide())
         {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
             world.setBlockAndUpdate(pos, state.cycle(OPEN));
         }
 

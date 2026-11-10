@@ -2,7 +2,6 @@
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:19: error: package net.fabricmc.fabric.api.client.event.lifecycle.v1 does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:23: error: package com.neep.meatweapons.client does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:23: error: static import only from classes and interfaces
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:25: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:32: error: cannot find symbol
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:34: error: package ClientTickEvents does not exist
 /workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/NMKeys.java:38: error: package ToolTransformPacket does not exist

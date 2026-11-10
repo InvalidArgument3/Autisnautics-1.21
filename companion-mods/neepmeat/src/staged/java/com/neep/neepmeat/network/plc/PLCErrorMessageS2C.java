@@ -39,7 +39,7 @@ public class PLCErrorMessageS2C
         ServerPlayNetworking.send(player, ID, buf);
     }
 
-    @Environment(value = Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         public static void init()

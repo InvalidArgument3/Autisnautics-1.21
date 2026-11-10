@@ -1,1 +1,3 @@
-/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/ThordTest.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/ThordWords.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/ThordWords.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/ThordWords.java:61: error: cannot find symbol
