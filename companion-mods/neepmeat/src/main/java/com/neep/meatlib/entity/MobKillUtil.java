@@ -37,7 +37,7 @@ public class MobKillUtil
             fakePlayer.lootingLevel = looting; // Jank
         }
 
-        ResourceLocation identifier = entity.getLootTable();
+        ResourceLocation identifier = entity.getLootTable().location();
         LootTable lootTable = world.getServer().getLootData().getLootTable(identifier);
         LootParams.Builder builder = (new LootParams.Builder(world))
                 .withParameter(LootContextParams.THIS_ENTITY, entity)

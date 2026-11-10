@@ -31,9 +31,34 @@ public final class NMScreenHandlers {
 
     private NMScreenHandlers() {}
 
+    public static final DeferredHolder<MenuType<?>, MenuType<com.neep.neepmeat.screen_handler.BufferScreenHandler>> BUFFER_TYPE = MENUS.register("buffer_screen",
+            () -> IMenuTypeExtension.create((id, inventory, buffer) -> new com.neep.neepmeat.screen_handler.BufferScreenHandler(id, inventory)));
+    public static final DeferredHolder<MenuType<?>, MenuType<com.neep.neepmeat.screen_handler.GuideScreenHandler>> GUIDE_TYPE = MENUS.register("guide",
+            () -> IMenuTypeExtension.create((id, inventory, buffer) -> new com.neep.neepmeat.screen_handler.GuideScreenHandler(id, inventory)));
+    public static final DeferredHolder<MenuType<?>, MenuType<com.neep.neepmeat.screen_handler.RouterScreenHandler>> ROUTER_TYPE = MENUS.register("router",
+            () -> IMenuTypeExtension.create((id, inventory, buffer) -> new com.neep.neepmeat.screen_handler.RouterScreenHandler(id, inventory)));
+    public static final DeferredHolder<MenuType<?>, MenuType<com.neep.neepmeat.machine.small_compressor.SmallCompressorScreenHandler>> SMALL_COMPRESSOR_TYPE = MENUS.register("small_compressor",
+            () -> IMenuTypeExtension.create((id, inventory, buffer) -> new com.neep.neepmeat.machine.small_compressor.SmallCompressorScreenHandler(id, inventory)));
+    public static final DeferredHolder<MenuType<?>, MenuType<com.neep.neepmeat.screen_handler.StirlingEngineScreenHandler>> STIRLING_ENGINE_TYPE = MENUS.register("stirling_engine",
+            () -> IMenuTypeExtension.create((id, inventory, buffer) -> new com.neep.neepmeat.screen_handler.StirlingEngineScreenHandler(id, inventory)));
+
     public static void register(IEventBus bus) {
         MENUS.register(bus);
+        bus.addListener(NMScreenHandlers::bind);
     }
+
+    private static void bind(net.neoforged.neoforge.registries.RegisterEvent event) {
+        if (event.getRegistryKey() != Registries.MENU) {
+            return;
+        }
+        ALLOY_KILN = com.neep.neepmeat.machine.NeepMachines.ALLOY_MENU.get();
+        BUFFER_SCREEN_HANDLER = BUFFER_TYPE.get();
+        GUIDE = GUIDE_TYPE.get();
+        ROUTER = ROUTER_TYPE.get();
+        SMALL_COMPRESSOR = SMALL_COMPRESSOR_TYPE.get();
+        STIRLING_ENGINE = STIRLING_ENGINE_TYPE.get();
+    }
+
     @SuppressWarnings("rawtypes")
     public static net.minecraft.world.inventory.MenuType ADVANCED_ROUTER;
     @SuppressWarnings("rawtypes")

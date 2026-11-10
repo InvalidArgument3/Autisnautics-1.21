@@ -20,8 +20,7 @@ import net.minecraft.world.inventory.MenuType;
 public final class HandledScreens {
     private HandledScreens() {}
 
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    public static void register(MenuType type, MenuScreens.ScreenConstructor constructor) {
+    public static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void register(MenuType<M> type, MenuScreens.ScreenConstructor<M, U> constructor) {
         FabricClientEvents.screen(type, constructor);
     }
 }

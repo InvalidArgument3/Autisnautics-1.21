@@ -12,17 +12,15 @@
 
 package com.neep.meatlib.registry;
 
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.codec.StreamCodec;
-import net.fabricmc.fabric.api.client.particle.v1.FabricSpriteProvider;
-import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
+
 import java.util.function.Function;
 
 public class ParticleRegistry
@@ -32,26 +30,29 @@ public class ParticleRegistry
         return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), particleType);
     }
 
-    public static <T extends ParticleOptions> ParticleType<T> register(String namespace, String id, ParticleOptions.Deserializer<T> factory, final Function<ParticleType<T>, Codec<T>> function)
+    /**
+     * 1.21 particle types carry a map codec and a stream codec. The stream codec is what the
+     * client receives, so it has to write every field the options hold.
+     */
+    public static <T extends ParticleOptions> ParticleType<T> register(
+            String namespace,
+            String id,
+            Function<ParticleType<T>, MapCodec<T>> codec,
+            Function<ParticleType<T>, StreamCodec<? super RegistryFriendlyByteBuf, T>> stream)
     {
-        return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new ParticleType<T>(false, factory)
+        return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new ParticleType<T>(false)
         {
             @Override
             public MapCodec<T> codec()
             {
-                return MapCodec.assumeMapUnsafe(function.apply(this));
+                return codec.apply(this);
             }
 
             @Override
             public StreamCodec<? super RegistryFriendlyByteBuf, T> streamCodec()
             {
-                return StreamCodec.of((buf, value) -> {}, buf -> null);
+                return stream.apply(this);
             }
         });
-    }
-
-    public static <T extends ParticleOptions> ParticleProvider<T> emptyFactory(FabricSpriteProvider provider)
-    {
-        return (parameters, world1, x, y, z, velocityX, velocityY, velocityZ) -> null;
     }
 }

@@ -210,7 +210,7 @@ public abstract class MeatgunItem extends BaseItem implements Meatgun, WeakTwoHa
         }
 
         Item item = cursorStack.getItem();
-        FoodProperties food = item.getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null);
+        FoodProperties food = cursorStack.getFoodProperties(player);
         if (item instanceof FoodCartonItem || food != null)
         {
             int amount = clickType == ClickAction.PRIMARY ? cursorStack.getCount() : 1;

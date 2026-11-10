@@ -34,7 +34,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 
 public class NMParticles
 {
-    public static final ParticleType<SwirlingParticleEffect> BLOCK_SWIRL = ParticleRegistry.register(NeepMeat.NAMESPACE, "block_swirl", SwirlingParticleEffect.PARAMETERS_FACTORY, SwirlingParticleEffect::createCodec);
+    public static final ParticleType<SwirlingParticleEffect> BLOCK_SWIRL = ParticleRegistry.register(NeepMeat.NAMESPACE, "block_swirl", SwirlingParticleEffect::createMapCodec, SwirlingParticleEffect::streamCodec);
 
     public static SimpleParticleType MEAT_SPLASH = FabricParticleTypes.simple();
     public static SimpleParticleType MEAT_FOUNTAIN = FabricParticleTypes.simple();
@@ -48,12 +48,18 @@ public class NMParticles
     public static ParticleType<BlockParticleOption> FLUID_BITS = FabricParticleTypes.complex(BlockParticleOption.DESERIALIZER);
     public static PressureWashParticleType FLUID_DRIP = new PressureWashParticleType(true);
 
-    public static ParticleType<ItemParticleOption> COLOURED_ITEM = new ParticleType<>(false, ItemParticleOption.DESERIALIZER)
+    public static ParticleType<ItemParticleOption> COLOURED_ITEM = new ParticleType<>(false)
     {
         @Override
-        public Codec<ItemParticleOption> codec()
+        public com.mojang.serialization.MapCodec<ItemParticleOption> codec()
         {
             return ItemParticleOption.codec(COLOURED_ITEM);
+        }
+
+        @Override
+        public net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, ItemParticleOption> streamCodec()
+        {
+            return ItemParticleOption.streamCodec(COLOURED_ITEM);
         }
     };
 

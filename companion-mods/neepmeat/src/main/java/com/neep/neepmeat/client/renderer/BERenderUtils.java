@@ -362,8 +362,14 @@ public class BERenderUtils
                 float m = byteBuffer.getFloat(16);
                 float n = byteBuffer.getFloat(20);
                 Vector4f vector4f = matrix4f.transform(new Vector4f(f, g, h, 1.0F));
-                consumer.addVertex(vector4f.x(), vector4f.y(), vector4f.z(), o, p, q, s, m, n, OverlayTexture.NO_OVERLAY, light, vector3f.x(), vector3f.y(), vector3f.z());
+                addVertex(consumer, vector4f.x(), vector4f.y(), vector4f.z(), o, p, q, s, m, n, OverlayTexture.NO_OVERLAY, light, vector3f.x(), vector3f.y(), vector3f.z());
             }
         }
+    }
+
+    /** The 1.20 {@code VertexConsumer.vertex} that took position, colour, uv, overlay, light, and normal together. */
+    public static void addVertex(VertexConsumer consumer, float x, float y, float z, float r, float g, float b, float a, float u, float v, int overlay, int light, float nx, float ny, float nz)
+    {
+        consumer.addVertex(x, y, z).setColor(r, g, b, a).setUv(u, v).setOverlay(overlay).setLight(light).setNormal(nx, ny, nz);
     }
 }

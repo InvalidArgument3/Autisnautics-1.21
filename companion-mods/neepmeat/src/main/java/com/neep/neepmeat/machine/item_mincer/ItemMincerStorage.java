@@ -41,7 +41,7 @@ public class ItemMincerStorage implements NbtSerialisable
             @Override
             protected boolean canInsert(ItemVariant variant)
             {
-                FoodProperties food = variant.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null);
+                FoodProperties food = variant.toStack().getFoodProperties(null);
                 return food != null;
             }
         };

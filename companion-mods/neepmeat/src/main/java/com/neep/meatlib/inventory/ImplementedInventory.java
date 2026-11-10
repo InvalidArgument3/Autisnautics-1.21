@@ -40,9 +40,11 @@ public interface ImplementedInventory extends Container, NbtSerialisable {
         return of(NonNullList.withSize(size, ItemStack.EMPTY), onChange);
     }
 
-    default NonNullList<ItemStack> items() {
-        return getItems();
-    }
+    /**
+     * Compiling implementors override this name. {@link #getItems()} is the upstream name and
+     * returns the same list.
+     */
+    NonNullList<ItemStack> items();
 
     default NonNullList<ItemStack> getItems() {
         return items();

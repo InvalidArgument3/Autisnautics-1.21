@@ -41,7 +41,7 @@ public class MetaboliserSegmentBlockEntity extends BlockEntity implements Living
     }
 
     @Override
-    public Mode mode() {
+    public Mode getMode() {
         return Mode.SOURCE;
     }
 

@@ -16,7 +16,10 @@ import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import com.neep.meatlib.api.network.ParamCodec;
 import com.neep.meatlib.api.network.ParamCodecs;
 import com.neep.meatlib.api.network.RecordParamCodec;
@@ -30,18 +33,23 @@ import net.minecraft.world.level.material.Fluids;
 
 public class PressureWashParticleType extends ParticleType<PressureWashParticleType.Parameters>
 {
-    private final Codec<Parameters> codec;
+    private final MapCodec<Parameters> codec;
     private final ParamCodec<Parameters> paramCodec;
 
-    public static Codec<Parameters> createCodec(PressureWashParticleType type)
+    public static MapCodec<Parameters> createMapCodec(PressureWashParticleType type)
     {
-        return RecordCodecBuilder.create(instance ->
+        return RecordCodecBuilder.mapCodec(instance ->
             instance.group(
                 Codec.FLOAT.fieldOf("gravity").forGetter(Parameters::gravity),
                 Codec.INT.fieldOf("col").forGetter(Parameters::col),
                 BuiltInRegistries.FLUID.byNameCodec().fieldOf("fluid").forGetter(Parameters::fluid)
             ).apply(instance, (gravity, col, fluid) -> new Parameters(type, gravity, col, fluid))
         );
+    }
+
+    public static Codec<Parameters> createCodec(PressureWashParticleType type)
+    {
+        return createMapCodec(type).codec();
     }
 
     public static ParamCodec<Parameters> createParamCodec(PressureWashParticleType type)
@@ -54,32 +62,23 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
                 .build();
     }
 
-    public static final ParticleOptions.Deserializer<Parameters> PARAMETER_FACTORY = new ParticleOptions.Deserializer<>()
-    {
-        @Override
-        public Parameters fromCommand(ParticleType<Parameters> type, StringReader reader) throws CommandSyntaxException
-        {
-            throw new CommandSyntaxException(new SimpleCommandExceptionType(Component.nullToEmpty("not supported")), Component.nullToEmpty("not supported"));
-        }
-
-        @Override
-        public Parameters fromNetwork(ParticleType<Parameters> type, FriendlyByteBuf buf)
-        {
-            return ((PressureWashParticleType) type).paramCodec.decode(buf);
-        }
-    };
-
     public PressureWashParticleType(boolean alwaysShow)
     {
-        super(alwaysShow, PARAMETER_FACTORY);
-        this.codec = createCodec(this);
+        super(alwaysShow);
+        this.codec = createMapCodec(this);
         paramCodec = createParamCodec(this);
     }
 
     @Override
-    public Codec<Parameters> codec()
+    public MapCodec<Parameters> codec()
     {
         return codec;
+    }
+
+    @Override
+    public StreamCodec<? super RegistryFriendlyByteBuf, Parameters> streamCodec()
+    {
+        return StreamCodec.of((buf, value) -> paramCodec.encode(value, buf), paramCodec::decode);
     }
 
     public record Parameters(PressureWashParticleType type, float gravity, int col, Fluid fluid) implements ParticleOptions
@@ -95,13 +94,11 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
             return type;
         }
 
-        @Override
         public void writeToNetwork(FriendlyByteBuf buf)
         {
             type.paramCodec.encode(this, buf);
         }
 
-        @Override
         public String writeToString()
         {
             return "???";

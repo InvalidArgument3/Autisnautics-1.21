@@ -63,7 +63,6 @@ public record ColumnContent(List<Article.Content> left, List<Article.Content> ri
         return h;
     }
 
-    @Override
     private static float height(float width, ArticleTextWidget parent, List<Article.Content> contents)
     {
         return (float) contents.stream().mapToDouble(c -> c.height(width, parent)).sum();

@@ -55,7 +55,6 @@ public record ModuleLootCondition(TagKey<MeatgunModule.Type<? extends MeatgunMod
         return test(lootContext.getParamOrNull(LootContextParams.TOOL), tagKey);
     }
 
-    @Override
     public static boolean test(@Nullable ItemStack tool, TagKey<MeatgunModule.Type<? extends MeatgunModule>> tag)
     {
         return test(tool, m ->
@@ -68,7 +67,6 @@ public record ModuleLootCondition(TagKey<MeatgunModule.Type<? extends MeatgunMod
         });
     }
 
-    @Override
     public static boolean test(@Nullable ItemStack tool, Predicate<MeatgunModule.Type<? extends MeatgunModule>> predicate)
     {
         if (tool != null)

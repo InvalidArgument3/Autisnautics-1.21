@@ -15,7 +15,10 @@ package com.neep.meatweapons.particle;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import java.util.UUID;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
@@ -32,9 +35,9 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
                     Codec.LONG.fieldOf("lsb").forGetter(UUID::getLeastSignificantBits)
             ).apply(instance, UUID::new));
 
-    public static Codec<MuzzleFlashParticleEffect> createCodec(ParticleType<MuzzleFlashParticleEffect> type)
+    public static MapCodec<MuzzleFlashParticleEffect> createMapCodec(ParticleType<MuzzleFlashParticleEffect> type)
     {
-        return RecordCodecBuilder.create(
+        return RecordCodecBuilder.mapCodec(
                 instance -> instance.group(
                                 UUID_CODEC.fieldOf("uuid").forGetter(e -> e.playerUUID),
                                 Codec.DOUBLE.fieldOf("dx").forGetter(e -> e.dx),
@@ -48,41 +51,39 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
         );
     }
 
-    private final Codec<MuzzleFlashParticleEffect> codec;
-
-    public static final ParticleOptions.Deserializer<MuzzleFlashParticleEffect> PARAMETER_FACTORY = new ParticleOptions.Deserializer<>()
+    public static Codec<MuzzleFlashParticleEffect> createCodec(ParticleType<MuzzleFlashParticleEffect> type)
     {
-        @Override
-        public MuzzleFlashParticleEffect fromCommand(ParticleType<MuzzleFlashParticleEffect> type, StringReader reader) throws CommandSyntaxException
-        {
-            reader.expect(' ');
-            String s = reader.readString();
-            UUID uuid = UUID.fromString(s);
-            double dx = 0;
-            double dy = 0;
-            double dz = 0;
-            float scale = 1;
-            return new MuzzleFlashParticleEffect(MWParticles.LONG_BOI_MUZZLE_FLASH, uuid, dx, dy, dz, scale, 1, InteractionHand.MAIN_HAND);
-        }
+        return createMapCodec(type).codec();
+    }
 
-        @Override
-        public MuzzleFlashParticleEffect fromNetwork(ParticleType<MuzzleFlashParticleEffect> type, FriendlyByteBuf buf)
-        {
-            ParticleType<MuzzleFlashParticleEffect> type1 = (ParticleType<MuzzleFlashParticleEffect>) buf.readById(BuiltInRegistries.PARTICLE_TYPE::byId);
-            return new MuzzleFlashParticleEffect(type1, buf.readUUID(), buf.readDouble(), buf.readDouble(), buf.readDouble(), buf.readFloat(), buf.readInt(), buf.readEnum(InteractionHand.class));
-        }
-    };
+    private final MapCodec<MuzzleFlashParticleEffect> codec;
 
     protected MuzzleFlashParticleType(boolean alwaysShow, Codec<MuzzleFlashParticleEffect> codec)
     {
-        super(alwaysShow, PARAMETER_FACTORY);
-        this.codec = codec;
+        super(alwaysShow);
+        this.codec = MapCodec.assumeMapUnsafe(codec);
     }
 
     @Override
-    public Codec<MuzzleFlashParticleEffect> codec()
+    public MapCodec<MuzzleFlashParticleEffect> codec()
     {
         return codec;
+    }
+
+    @Override
+    public StreamCodec<? super RegistryFriendlyByteBuf, MuzzleFlashParticleEffect> streamCodec()
+    {
+        return StreamCodec.of(
+                (buf, effect) -> {
+                    buf.writeUUID(effect.playerUUID);
+                    buf.writeDouble(effect.dx);
+                    buf.writeDouble(effect.dy);
+                    buf.writeDouble(effect.dz);
+                    buf.writeFloat(effect.scale);
+                    buf.writeInt(effect.maxAge);
+                    buf.writeEnum(effect.hand);
+                },
+                buf -> new MuzzleFlashParticleEffect(this, buf.readUUID(), buf.readDouble(), buf.readDouble(), buf.readDouble(), buf.readFloat(), buf.readInt(), buf.readEnum(InteractionHand.class)));
     }
 
     public static class MuzzleFlashParticleEffect implements ParticleOptions
@@ -117,7 +118,6 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
             return type;
         }
 
-        @Override
         public void writeToNetwork(FriendlyByteBuf buf)
         {
             buf.writeById(BuiltInRegistries.PARTICLE_TYPE::getId, getType());
@@ -135,7 +135,6 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
             return playerUUID;
         }
 
-        @Override
         public String writeToString()
         {
             return BuiltInRegistries.PARTICLE_TYPE.getKey(getType()).toString();

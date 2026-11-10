@@ -129,7 +129,7 @@ public class ItemMincerBlockEntity extends SyncableBlockEntity implements Motori
     {
         if (!storage.inputStorage.isEmpty())
         {
-            FoodProperties food = storage.inputStorage.getResource().getObject().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null);
+            FoodProperties food = storage.inputStorage.getResource().toStack().getFoodProperties(null);
             return food != null ? food.isFastFood() ? 8 : 16 : 0;
         }
         return 0;
@@ -141,7 +141,7 @@ public class ItemMincerBlockEntity extends SyncableBlockEntity implements Motori
         {
             try (Transaction inner = context.openNested())
             {
-                FoodProperties food = storage.inputStorage.getResource().getObject().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null);
+                FoodProperties food = storage.inputStorage.getResource().toStack().getFoodProperties(null);
                 FluidVariant outputVariant = MeatFluidUtil.getVariant(food);
                 storage.outputStorage.insert(outputVariant, FluidConstants.INGOT, inner);
                 storage.inputStorage.extract(storage.inputStorage.getResource(), 1, inner);

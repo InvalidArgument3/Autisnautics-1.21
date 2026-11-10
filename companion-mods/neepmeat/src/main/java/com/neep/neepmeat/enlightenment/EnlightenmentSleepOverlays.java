@@ -35,7 +35,6 @@ public class EnlightenmentSleepOverlays
     @Nullable private static SleepOverlay ACTIVE = null;
     private static final RandomSource RANDOM = RandomSource.create();
 
-    @Override
     public static void render(GuiGraphics context, float tickDelta)
     {
         LocalPlayer player = CLIENT.player;

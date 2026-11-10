@@ -33,18 +33,18 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class NMLootTables
 {
-    private static final ResourceLocation ZOMBIE = EntityType.ZOMBIE.getDefaultLootTable();
-    private static final ResourceLocation HUSK = EntityType.HUSK.getDefaultLootTable();
-    private static final ResourceLocation DROWNED = EntityType.DROWNED.getDefaultLootTable();
-    private static final ResourceLocation ELDER_GUARDIAN = EntityType.ELDER_GUARDIAN.getDefaultLootTable();
-    private static final ResourceLocation DUNGEON = BuiltInLootTables.SIMPLE_DUNGEON;
-    private static final ResourceLocation DESERT_TEMPLE = BuiltInLootTables.DESERT_PYRAMID;
-    private static final ResourceLocation JUNGLE_TEMPLE = BuiltInLootTables.JUNGLE_TEMPLE;
-    private static final ResourceLocation ARMORER_CHEST = BuiltInLootTables.VILLAGE_ARMORER;
-    private static final ResourceLocation BUTCHER_CHEST = BuiltInLootTables.VILLAGE_BUTCHER;
-    private static final ResourceLocation GRASS = Blocks.GRASS.getLootTable();
-    private static final ResourceLocation TALL_GRASS = Blocks.TALL_GRASS.getLootTable();
-    private static final ResourceLocation POTATOES = Blocks.POTATOES.getLootTable();
+    private static final ResourceLocation ZOMBIE = EntityType.ZOMBIE.getDefaultLootTable().location();
+    private static final ResourceLocation HUSK = EntityType.HUSK.getDefaultLootTable().location();
+    private static final ResourceLocation DROWNED = EntityType.DROWNED.getDefaultLootTable().location();
+    private static final ResourceLocation ELDER_GUARDIAN = EntityType.ELDER_GUARDIAN.getDefaultLootTable().location();
+    private static final ResourceLocation DUNGEON = BuiltInLootTables.SIMPLE_DUNGEON.location();
+    private static final ResourceLocation DESERT_TEMPLE = BuiltInLootTables.DESERT_PYRAMID.location();
+    private static final ResourceLocation JUNGLE_TEMPLE = BuiltInLootTables.JUNGLE_TEMPLE.location();
+    private static final ResourceLocation ARMORER_CHEST = BuiltInLootTables.VILLAGE_ARMORER.location();
+    private static final ResourceLocation BUTCHER_CHEST = BuiltInLootTables.VILLAGE_BUTCHER.location();
+    private static final ResourceLocation GRASS = Blocks.GRASS.getLootTable().location();
+    private static final ResourceLocation TALL_GRASS = Blocks.TALL_GRASS.getLootTable().location();
+    private static final ResourceLocation POTATOES = Blocks.POTATOES.getLootTable().location();
 
     public static void init()
     {

@@ -66,7 +66,7 @@ public class NMFluidsClient
     public static final ResourceLocation SMOOTH_WATER_STILL = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/fluid/smooth_water_still");
     public static final ResourceLocation SMOOTH_WATER_FLOWING = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "block/fluid/smooth_water_flow");
 
-    public static void registerFluidHandler(BuiltFluid<?, ?> builtFluid, FluidRenderHandler handler)
+    public static void registerFluidHandler(net.minecraft.world.level.material.Fluid builtFluid, FluidRenderHandler handler)
     {
         FluidRenderHandlerRegistry.INSTANCE.register(com.neep.neepmeat.fluid.FluidForms.still(builtFluid), com.neep.neepmeat.fluid.FluidForms.flowing(builtFluid), handler);
     }

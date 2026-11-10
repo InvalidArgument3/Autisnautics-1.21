@@ -12,13 +12,22 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 
 public interface TransferVariant<T> {
-    TransferVariant<?> BLANK = () -> true;
+    /** A blank variant has no object. Item and fluid variants return their real value. */
+    TransferVariant<?> BLANK = new TransferVariant<Object>() {
+        @Override
+        public boolean isBlank() {
+            return true;
+        }
+
+        @Override
+        public Object getObject() {
+            return null;
+        }
+    };
 
     boolean isBlank();
 
-    default T getObject() {
-        return null;
-    }
+    T getObject();
 
     default CompoundTag toNbt() {
         return new CompoundTag();

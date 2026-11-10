@@ -15,7 +15,10 @@ package com.neep.neepmeat.particle;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.commands.arguments.blocks.BlockStateParser;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
@@ -26,26 +29,17 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class SwirlingParticleEffect implements ParticleOptions
 {
-    public static final ParticleOptions.Deserializer<SwirlingParticleEffect> PARAMETERS_FACTORY = new ParticleOptions.Deserializer<>()
+    /** Command form kept for the old particle argument. 1.21 sends the effect through {@link #streamCodec}. */
+    public static SwirlingParticleEffect fromCommand(ParticleType<SwirlingParticleEffect> particleType, StringReader stringReader) throws CommandSyntaxException
     {
-        @Override
-        public SwirlingParticleEffect fromCommand(ParticleType<SwirlingParticleEffect> particleType, StringReader stringReader) throws CommandSyntaxException
-        {
-            stringReader.expect(' ');
-            BlockState state = (BlockStateParser.parseForBlock(BuiltInRegistries.BLOCK.asLookup(), stringReader, false)).blockState();
-            stringReader.expect(' ');
-            double radius = stringReader.readDouble();
-            stringReader.expect(' ');
-            double speed = stringReader.readDouble();
-            return new SwirlingParticleEffect(particleType, state, radius, speed);
-        }
-
-        @Override
-        public SwirlingParticleEffect fromNetwork(ParticleType<SwirlingParticleEffect> particleType, FriendlyByteBuf packetByteBuf)
-        {
-            return new SwirlingParticleEffect(particleType, Block.BLOCK_STATE_REGISTRY.byId(packetByteBuf.readVarInt()), packetByteBuf.readDouble(), packetByteBuf.readDouble());
-        }
-    };
+        stringReader.expect(' ');
+        BlockState state = (BlockStateParser.parseForBlock(BuiltInRegistries.BLOCK.asLookup(), stringReader, false)).blockState();
+        stringReader.expect(' ');
+        double radius = stringReader.readDouble();
+        stringReader.expect(' ');
+        double speed = stringReader.readDouble();
+        return new SwirlingParticleEffect(particleType, state, radius, speed);
+    }
 
     private final ParticleType<SwirlingParticleEffect> type;
     private final BlockState blockState;
@@ -60,16 +54,30 @@ public class SwirlingParticleEffect implements ParticleOptions
         this.speed = angularSpeed;
     }
 
-    public static Codec<SwirlingParticleEffect> createCodec(ParticleType<SwirlingParticleEffect> type)
+    public static MapCodec<SwirlingParticleEffect> createMapCodec(ParticleType<SwirlingParticleEffect> type)
     {
-        return RecordCodecBuilder.create(instance -> instance.group(
+        return RecordCodecBuilder.mapCodec(instance -> instance.group(
                         (BlockState.CODEC.fieldOf("blockstate")).forGetter(effect -> effect.blockState),
                         (Codec.DOUBLE.fieldOf("radius")).forGetter(effect -> effect.radius),
                         (Codec.DOUBLE.fieldOf("speed")).forGetter(effect -> effect.speed)
                         ).apply(instance, (state, radius, speed) -> new SwirlingParticleEffect(type, state, radius, speed)));
+    }
 
-//        return BlockState.CODEC.xmap((state) -> new SwirlingParticleEffect(type, state, radius), effect -> effect.blockState);
-//        return BlockState.createCodec
+    public static Codec<SwirlingParticleEffect> createCodec(ParticleType<SwirlingParticleEffect> type)
+    {
+        return createMapCodec(type).codec();
+    }
+
+    /** Block state, radius, and angular speed. The 1.20 writer dropped the two doubles that the reader consumed. */
+    public static StreamCodec<RegistryFriendlyByteBuf, SwirlingParticleEffect> streamCodec(ParticleType<SwirlingParticleEffect> type)
+    {
+        return StreamCodec.of(
+                (buf, effect) -> {
+                    buf.writeVarInt(Block.BLOCK_STATE_REGISTRY.getId(effect.blockState));
+                    buf.writeDouble(effect.radius);
+                    buf.writeDouble(effect.speed);
+                },
+                buf -> new SwirlingParticleEffect(type, Block.BLOCK_STATE_REGISTRY.byId(buf.readVarInt()), buf.readDouble(), buf.readDouble()));
     }
 
     @Override
@@ -78,13 +86,13 @@ public class SwirlingParticleEffect implements ParticleOptions
         return type;
     }
 
-    @Override
     public void writeToNetwork(FriendlyByteBuf buf)
     {
         buf.writeVarInt(Block.BLOCK_STATE_REGISTRY.getId(this.blockState));
+        buf.writeDouble(this.radius);
+        buf.writeDouble(this.speed);
     }
 
-    @Override
     public String writeToString()
     {
         return BuiltInRegistries.PARTICLE_TYPE.getKey(this.getType()) + " " + BlockStateParser.serialize(this.blockState);

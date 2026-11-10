@@ -46,6 +46,8 @@ public final class BlockApiLookup<A, C> {
 
     public void registerForBlocks(BlockApiProvider<A, C> provider, Block... blocks) {}
 
+    public void registerForBlockEntity(BlockEntityApiProvider<A, C> provider, BlockEntityType<?> type) {}
+
     public void registerForBlockEntities(BlockEntityApiProvider<A, C> provider, BlockEntityType<?>... types) {}
 
     public void registerFallback(BlockApiProvider<A, C> provider) {}

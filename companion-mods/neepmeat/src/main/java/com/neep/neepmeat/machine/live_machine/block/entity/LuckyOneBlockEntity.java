@@ -67,7 +67,7 @@ public class LuckyOneBlockEntity extends BlockEntity implements LivingMachineCom
     }
 
     @Override
-    public Mode mode() {
+    public Mode getMode() {
         return Mode.SINK;
     }
 

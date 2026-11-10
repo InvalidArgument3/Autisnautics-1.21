@@ -38,7 +38,7 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
-public class FluidPipeBlockEntity extends BlockEntity {
+public class FluidPipeBlockEntity<V> extends BlockEntity {
     /** {@code data/neepmeat/transport/fluid_transport.json} basic_pipe_throughput, converted from droplets. */
     public static final int THROUGHPUT_MB = 125;
 

@@ -16,6 +16,7 @@ package com.neep.neepmeat.transport.api.pipe;
 import com.neep.meatlib.util.graph.PipeVertex;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.TransactionContext;
+import com.neep.neepmeat.transport.item_network.ItemInPipe;
 import com.neep.meatlib.util.PipeConnections;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,6 +31,9 @@ import org.jetbrains.annotations.Nullable;
 public interface ItemPipe {
     boolean isConnected(Level world, BlockPos pos, BlockState state, Direction direction);
 
+    /** Upstream leaves insertion abstract. The item and its removal callback live on {@link ItemInPipe} and {@code PipeItemMemory}. */
+    long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction);
+
     static boolean isConnectedIn(Level world, BlockPos pos, BlockState state, Direction direction) {
         return state.getBlock() instanceof ItemPipe pipe && pipe.isConnected(world, pos, state, direction);
     }
@@ -38,28 +42,40 @@ public interface ItemPipe {
         return world instanceof Level level && isConnected(level, pos, state, direction);
     }
 
+    /** Upstream connects unless a pipe overrides this. */
     default boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction direction) {
-        return false;
+        return true;
     }
 
+    /** Upstream admits an item only through a connected face. */
     default boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed) {
-        return true;
+        return isConnectedIn(world, pos, state, inFace);
     }
 
+    /** Upstream lets an item leave only through a connected face. */
     default boolean canItemLeave(com.neep.meatlib.transfer.ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace) {
-        return true;
+        return isConnectedIn(world, pos, state, outFace);
     }
 
+    /**
+     * Upstream returns {@code ItemPipeVertex.NULL}. That class is still excluded, so a pipe that
+     * does not override this has no vertex until the network class compiles.
+     */
     default PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state) {
         return null;
     }
 
+    /**
+     * Upstream walks {@code PrecisePipeBlock} connection properties. That class is excluded, so
+     * this default is the upstream result for every block that is not a precise pipe.
+     */
     default PipeConnections getConnections(BlockState state, @Nullable Direction forbidden) {
         return new PipeConnections();
     }
 
+    /** Upstream treats a plain pipe end as a routing vertex. */
     default boolean endPoint() {
-        return false;
+        return true;
     }
 
     default boolean supportsRouting() {
@@ -70,8 +86,9 @@ public interface ItemPipe {
         return false;
     }
 
+    /** Upstream pipes have one output unless a router overrides this. */
     default boolean singleOutput() {
-        return false;
+        return true;
     }
 
     default boolean prioritise() {

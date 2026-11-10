@@ -123,9 +123,9 @@ public class FoodCartonItem extends BaseItem
             float sat = MeatFluidUtil.getSaturation(nbt);
             return new Entry(food, sat);
         }
-        else if (variant.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null) != null)
+        else if (variant.toStack().getFoodProperties(null) != null)
         {
-            return new Entry(variant.getItem().getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null));
+            return new Entry(variant.toStack().getFoodProperties(null));
         }
         else
         {
@@ -138,7 +138,7 @@ public class FoodCartonItem extends BaseItem
         Item item = stack.getItem();
         if (item.isEdible())
         {
-            List<Pair<MobEffectInstance, Float>> list = item.getFoodProperties(net.minecraft.world.item.ItemStack.EMPTY, null).getEffects();
+            List<Pair<MobEffectInstance, Float>> list = stack.getFoodProperties(user).getEffects();
             for (Pair<MobEffectInstance, Float> pair : list)
             {
                 if (world.isClientSide || pair.getFirst() == null || !(world.random.nextFloat() < pair.getSecond())) continue;

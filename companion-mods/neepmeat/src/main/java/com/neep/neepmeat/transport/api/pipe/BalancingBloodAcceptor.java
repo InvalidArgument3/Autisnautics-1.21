@@ -15,7 +15,7 @@ public interface BalancingBloodAcceptor extends BloodAcceptor {
     int priority();
 
     @Override
-    default Mode mode() {
+    default Mode getMode() {
         return Mode.BALANCE;
     }
 }

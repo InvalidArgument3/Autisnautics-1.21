@@ -385,7 +385,6 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             return getResource(context.getItemVariant());
         }
 
-        @Override
         public static FluidVariant getResource(ItemVariant stack)
         {
             return NMComponents.PRESSURE_WASHER.get(stack.toStack()).getFluid();
@@ -406,7 +405,6 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             return getAmount(context.getItemVariant());
         }
 
-        @Override
         public static long getAmount(ItemVariant stack)
         {
             return NMComponents.PRESSURE_WASHER.get(stack.toStack()).getAmount();

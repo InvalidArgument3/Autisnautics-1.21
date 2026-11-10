@@ -27,8 +27,11 @@ import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEnti
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
+import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.transport.ItemRoute;
+import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -41,6 +44,8 @@ import java.util.Set;
 
 public final class RoutingNetwork {
     public static final int MAX_DEPTH = 30;
+    public static final BlockApiLookup<RoutingNetwork, Void> LOOKUP = BlockApiLookup.get(
+            ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "routing_network"), RoutingNetwork.class, Void.class);
 
     private RoutingNetwork() {}
 

@@ -56,12 +56,21 @@ public final class MiscUtil {
         return best;
     }
 
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    public static BlockEntityTicker checkType(BlockEntityType given, BlockEntityType expected, BlockEntityTicker ticker, Object unused, Level world) {
-        if (given != expected || ticker == null) {
+    @SuppressWarnings("unchecked")
+    public static <T extends BlockEntity, E extends BlockEntity> BlockEntityTicker<T> checkType(
+            BlockEntityType<T> given,
+            BlockEntityType<E> expected,
+            BlockEntityTicker<? super E> server,
+            BlockEntityTicker<? super E> client,
+            Level world) {
+        if (given != expected) {
             return null;
         }
-        return ticker;
+        BlockEntityTicker<? super E> chosen = world.isClientSide() ? client : server;
+        if (chosen == null) {
+            return null;
+        }
+        return (level, pos, state, blockEntity) -> chosen.tick(level, pos, state, (E) blockEntity);
     }
 
     @SuppressWarnings("unchecked")

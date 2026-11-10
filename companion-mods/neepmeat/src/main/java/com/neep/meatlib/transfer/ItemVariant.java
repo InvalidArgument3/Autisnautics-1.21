@@ -33,6 +33,11 @@ public record ItemVariant(Item item, DataComponentPatch components) implements T
         return item;
     }
 
+    @Override
+    public Item getObject() {
+        return item;
+    }
+
     public net.minecraft.nbt.CompoundTag toNbt() {
         net.minecraft.nbt.CompoundTag tag = new net.minecraft.nbt.CompoundTag();
         tag.putString("id", net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).toString());

@@ -288,7 +288,6 @@ public abstract class AbstractPipeBlock extends BaseBlock implements SimpleWater
 
     private static final Direction[] HORIZONTAL = new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
-    @Override
     private static BlockState rotate(BlockState oldState, int offset)
     {
         BlockState newState = oldState;

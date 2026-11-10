@@ -176,7 +176,6 @@ public class PipetteItem extends BaseItem
             this.capacity = FluidConstants.BUCKET;
         }
 
-        @Override
         public static FluidVariant getResource(ItemVariant stack)
         {
             CompoundTag nbt = stack.copyOrCreateNbt();
@@ -186,7 +185,6 @@ public class PipetteItem extends BaseItem
             return FluidVariant.fromNbt(root.getCompound(KEY_RESOURCE));
         }
 
-        @Override
         public static long getAmount(ItemVariant stack)
         {
             CompoundTag nbt = stack.copyOrCreateNbt();

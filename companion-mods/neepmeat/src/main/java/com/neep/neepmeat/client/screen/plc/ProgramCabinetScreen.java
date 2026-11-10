@@ -116,7 +116,6 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             setSlotPositions(x + 2, y + 2, slots, cols, rows);
         }
 
-        @Override
         protected static void setSlotPositions(int x, int y, List<MobileSlot> slots, int nx, int ny)
         {
             int dx = 20; // Usually 18

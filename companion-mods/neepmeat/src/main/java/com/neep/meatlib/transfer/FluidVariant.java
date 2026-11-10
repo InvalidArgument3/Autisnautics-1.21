@@ -47,4 +47,9 @@ public record FluidVariant(Fluid fluid) implements TransferVariant<Fluid> {
     public Fluid getFluid() {
         return fluid;
     }
+
+    @Override
+    public Fluid getObject() {
+        return fluid;
+    }
 }

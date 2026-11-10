@@ -34,9 +34,8 @@ public interface BloodAcceptor {
         return influx;
     }
 
-    default Mode getMode() {
-        return Mode.SINK;
-    }
+    /** Upstream leaves this abstract. {@link #mode()} is the name two block entities override. */
+    Mode getMode();
 
     default Mode mode() {
         return getMode();

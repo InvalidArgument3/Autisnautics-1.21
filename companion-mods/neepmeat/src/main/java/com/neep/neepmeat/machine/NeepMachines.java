@@ -52,6 +52,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEnti
 import com.neep.neepmeat.recipe.AlloyKilnRecipe;
 import com.neep.neepmeat.recipe.NeepRecipes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
@@ -171,12 +172,12 @@ public final class NeepMachines {
         }
     }
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidPipeBlockEntity>> FLUID_PIPE_BE = BLOCK_ENTITIES.register("fluid_pipe", () -> {
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidPipeBlockEntity<net.minecraft.world.level.material.Fluid>>> FLUID_PIPE_BE = BLOCK_ENTITIES.register("fluid_pipe", () -> {
         Block[] extra = COLORED_FLUID_PIPES.values().stream().map(DeferredBlock::get).toArray(Block[]::new);
         Block[] blocks = new Block[extra.length + 1];
         blocks[0] = FLUID_PIPE.get();
         System.arraycopy(extra, 0, blocks, 1, extra.length);
-        return BlockEntityType.Builder.of(FluidPipeBlockEntity::new, blocks).build(null);
+        return BlockEntityType.Builder.of((BlockPos pos, BlockState state) -> new FluidPipeBlockEntity<net.minecraft.world.level.material.Fluid>(pos, state), blocks).build(null);
     });
 
     public static final DeferredBlock<PumpBlock> PUMP = CONTEXT.block("pump", PumpBlock::new);

@@ -1,3 +1,38 @@
+## Real codecs, fluids, and menus, jar 0.30.0-neoforge.58
+
+Combined-tree errors: **2671** at the start of this run, **2483** at the end. That is 188, not 400. `exclude.txt` is **1350**. Eight files that now compile left it: `ItemInPipe`, `PipeItemMemory`, and the screen handlers for the alloy kiln, buffer, guide, router, small compressor, and Stirling engine. `tools/port-errors/symbols.txt` is the end histogram.
+
+Top: does not override 294, invalid method reference 26, `serverTick` 17, invalid method reference 16, `extract` 14, `getId` 14, `setVisualizer` 13, `register` 13, `addListener` 12, `floatValue` 11, `ImplantManager` capture 11, inference bounds 11, `getStorage` 11, `Block` to `Properties` 11. Constructor references, raw `FluidPipeBlockEntity`, `BuiltFluid`, `putBulkData`, `has(Item)`, loot `ResourceKey`, and `LOOKUP` left the top twenty.
+
+`FluidPipeBlockEntity` is generic again. `NeepMachines` builds it with an explicit `FluidPipeBlockEntity<Fluid>` so the deferred-register inference has a concrete argument. The first attempt, an unbounded `FluidPipeBlockEntity<?>`, inferred `FluidPipeBlockEntity<Object>` and did not compile.
+
+Particle types that carry data now have a `MapCodec` and a `StreamCodec` that write the fields. `SwirlingParticleEffect` writes the block state, radius, and speed. `MuzzleFlashParticleEffect` writes the player id, offset, scale, age, and hand. `PressureWashParticleType` writes through its existing parameter codec. `ItemParticleOption` uses the vanilla item stack codec. The 1.20 `ParticleOptions.Deserializer` type is gone, so `@Override` sits on `codec()` and `streamCodec()`.
+
+`ItemVariant.getObject()` returns the item. `FluidVariant.getObject()` returns the fluid. The blank transfer variant still has no object. Food reads `ItemStack.getFoodProperties`, which uses the stack's food component.
+
+`ItemPipe.insert` is abstract again. `PipeItemMemory` and `ItemInPipe` compile, so the memory is not a stub. Connection defaults match upstream: `canConnect` is true, items enter and leave only through a connected face, `singleOutput` and `endPoint` are true. `getPipeVertex` still returns null because `ItemPipeVertex` is excluded; upstream returns `ItemPipeVertex.NULL`. `getConnections` returns an empty set because `PrecisePipeBlock` is excluded; upstream walks that block's connection properties. A grep of the included sources found no class that implements `ItemPipe` without `insert`.
+
+`BloodAcceptor.getMode()` is abstract, as upstream. `BalancingBloodAcceptor`, the lucky-one block, and the metaboliser segment implement it. `mode()` calls `getMode()`. `ImplementedInventory.items()` is abstract. `getItems()` returns that list. The included inventories that implement the interface override `items()`.
+
+The nine fluids upstream built with `FluidBuilder` are registered as NeoForge fluids with the same ids, tick rates, and level decrease: patina treatment, eldritch enzymes, pasteurised milk, animal feed, pinkdrink, sludge, fat, liquid clay, and oil of brome. Animal feed uses the sand place and sand break sounds. Sludge has no bucket. They are `BaseFlowingFluid` values on `NMFluids`, not `BuiltFluid`, because `BuiltFluid` is still excluded. Sludge's block is a normal liquid block; the excluded `SludgeFluidBlock` is the one that dries and contaminates.
+
+Menu types that compile are registered with the same ids as upstream and assigned on the menu registry event: buffer, guide, router, small compressor, and Stirling engine, plus the item input and output types that were already registered. `ALLOY_KILN` points at the existing `AlloyKilnMenu` registration, because that id is already taken by the machine that runs. The other eighteen menu fields stay null. Un-excluding every handler at once did not compile (`FilterList` and the PLC handler's missing types). Registering only the handlers that compile is what stayed. A second `alloy_kiln` menu crashed registry loading and was removed.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. Their instruction classes are still on `exclude.txt`. `END` is the real end opcode.
+
+Deviations that remain:
+
+- `SwirlingParticleEffect`'s 1.20 writer stored only the block state. The stream codec also stores radius and speed, which the reader already consumed.
+- `getPipeVertex` returns null until `ItemPipeVertex` compiles. `getConnections` is empty until `PrecisePipeBlock` compiles.
+- `ItemPipe.getShapeForState` still returns a full cube. Upstream has no such method.
+- The nine catalogue fluids are source fluids, not `BuiltFluid`. Sludge does not use `SludgeFluidBlock`.
+- Eighteen menu types stay null until their screen handlers compile.
+- `TransferVariant.BLANK.getObject()` is null.
+- `RecipeContextMatch` on `MeatlibRecipe` catches `ClassCastException` when the input is not `C`.
+- Synced component keys store a compound tag. `get` is not the original implant or workpiece object.
+- `QuadEmitter` still does not store edited vertex positions.
+- Static helpers that upstream does not annotate no longer carry `@Override`. The instance methods that do override keep it.
+
 ## Opcode debt and override bases, jar 0.30.0-neoforge.57
 
 Combined-tree errors: **2788** at the start of this run, **2671** at the end. That is 117, not 500. `exclude.txt` stays **1358**. `tools/port-errors/symbols.txt` is the end histogram.

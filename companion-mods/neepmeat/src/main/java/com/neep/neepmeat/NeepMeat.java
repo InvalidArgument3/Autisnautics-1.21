@@ -68,6 +68,7 @@ public final class NeepMeat {
         BloodFluids.register(bus);
         com.neep.neepmeat.fluid.EtherealFuel.register(bus);
         com.neep.neepmeat.fluid.FoodFluid.register(bus);
+        com.neep.neepmeat.fluid.CatalogueFluids.register(bus);
         com.neep.neepmeat.component.SyncedComponents.register(bus);
         com.neep.neepmeat.fluid.MeatFluid.register(bus);
         com.neep.neepmeat.fluid.TissueSlurry.bootstrap(bus);
