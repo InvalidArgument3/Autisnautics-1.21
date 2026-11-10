@@ -81,4 +81,12 @@ public class LivingMachineGameTests {
         helper.assertTrue(helper.getBlockState(origin.south()).isAir(), "south structure remained");
         helper.succeed();
     }
+
+    @GameTest(template = "empty")
+    public static void dropletsRoundDownToMillibuckets(GameTestHelper helper) {
+        helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.dropletsToMillibuckets(200) == 2, "millibuckets");
+        helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.leftoverDroplets(200) == 38, "remainder");
+        helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.millibucketsToDroplets(2) == 162, "back to droplets");
+        helper.succeed();
+    }
 }

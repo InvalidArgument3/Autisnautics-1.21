@@ -169,7 +169,11 @@ A controller, a machine block, a stomach, and one metaboliser segment select the
 
 Deviations: only the upright volumes are placed. Upstream also has X and Z orientations. The outline shape is a normal cube, not the union of the volume. Structure ids are `stomach_structure` and `metaboliser_segment_structure`.
 
-The worm's three segments are not separate entities. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
+The worm's three segments are not separate entities.
+
+## Transfer amounts, jar 0.30.0-neoforge.21
+
+`TransferAmounts` divides Fabric droplets by 81 to get millibuckets and drops the remainder. 200 droplets are 2 millibuckets with 38 droplets left over. Multiplying those 2 millibuckets back gives 162 droplets. Simulate and execute call `IFluidHandler.FluidAction` and `IItemHandler.extractItem`. The remaining living-machine classes still name the Fabric transfer types directly. They are not rewritten onto this adapter yet. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
 
 ## Blood network, jar 0.30.0-neoforge.19
 
