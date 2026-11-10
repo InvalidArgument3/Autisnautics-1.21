@@ -151,7 +151,15 @@ The fuel buffer is 200 droplets again, which is `basicMotorMaxPower / dropletEne
 
 NeoForge fluid handlers move whole millibuckets, and one millibucket is 81 droplets. A bucket fill therefore stores 162 droplets and leaves 38 droplets of capacity unused. The internal buffer is still 200. That is the trade-off, not a larger tank.
 
-The living-machine graph, the blood network, and vascular conduits are not ported. `BuilderRobot` and the full PLC shell are not replaced yet. The meatgun is still out.
+## Living machine graph, jar 0.30.0-neoforge.16
+
+A controller, one machine block, and a motor port form a machine. Max power averages to 300. Mass starts at the property default of 1 and adds 100, so the result is 101. A second controller in the flood fill clears the result, matching upstream. The search stops at 128 blocks.
+
+Component type ids follow upstream order. The accessor is `componentType()` because Mojmap `BlockEntity.getType()` already exists.
+
+Registered so far: `living_machine_controller`, `machine_block`, `motor_port`. The other structure variants, ports, processes, degradation, and the machine worm are not ported. The blood network and vascular conduits are the next batch.
+
+`BuilderRobot` and the full PLC shell are not replaced yet. The meatgun is still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 
