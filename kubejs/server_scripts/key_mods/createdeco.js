@@ -1,9 +1,9 @@
 ServerEvents.recipes(event => {
-    // Create Deco 2.1 dropped cast iron items. These replaceInputs throw if the id is gone.
-    if (!Item.exists("createdeco:cast_iron_nugget")) return
-    // Recipes that don't use item tags when they should be
-    event.replaceInput({id: "createdeco:cast_iron_ingot"}, "createdeco:cast_iron_nugget","#forge:nuggets/cast_iron")
-    event.replaceInput({id: "createdeco:cast_iron_ingot_from_cast_iron_block"}, "createdeco:cast_iron_block","#forge:storage_blocks/cast_iron")
-    event.replaceInput([{id: "createdeco:cast_iron_block"}, {id: "createdeco:cast_iron_nugget_from_cast_iron_ingot"}], "createdeco:cast_iron_ingot","#forge:ingots/cast_iron")
-    event.replaceInput({id: "minecraft:pressing/cast_iron_sheet"}, "createdeco:cast_iron_ingot","#forge:ingots/cast_iron")
+    // Create Deco 2.1.3 renamed cast iron to industrial iron.
+    // The block is create:industrial_iron_block. Nugget, ingot, and sheet stay on createdeco.
+    if (!Item.exists("createdeco:industrial_iron_nugget")) return
+    event.replaceInput({ id: "createdeco:industrial_iron_ingot" }, "createdeco:industrial_iron_nugget", "#c:nuggets/industrial_iron")
+    event.replaceInput({ id: "createdeco:industrial_iron_ingot_from_industrial_iron_block" }, "create:industrial_iron_block", "#c:storage_blocks/industrial_iron")
+    event.replaceInput([{ id: "createdeco:industrial_iron_block" }, { id: "createdeco:industrial_iron_nugget_from_industrial_iron_ingot" }], "createdeco:industrial_iron_ingot", "#c:ingots/industrial_iron")
+    event.replaceInput({ id: "createdeco:pressing/industrial_iron_sheet" }, "createdeco:industrial_iron_ingot", "#c:ingots/industrial_iron")
 })

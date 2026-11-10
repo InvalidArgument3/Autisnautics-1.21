@@ -7,10 +7,10 @@ ServerEvents.recipes(event => {
     event.remove({ id: "architects_palette:charcoal_block" })
     event.stonecutting("architects_palette:charcoal_block", "minecraft:charcoal")
     donutCraft(event, Item.of("architects_palette:plating_block", 8), "create:iron_sheet", "minecraft:stone")
-    // Tinkers is not installed; necrotic bone is not an item.
-    if (Platform.isLoaded("tconstruct")) {
-        event.replaceInput({ id: "architects_palette:wither_lamp" }, "architects_palette:withered_bone", "tconstruct:necrotic_bone")
-        event.replaceInput({ id: "architects_palette:withered_bone_block" }, "architects_palette:withered_bone", "tconstruct:necrotic_bone")
+    // The 1.21 port is Modern Foundry (mod id modernfoundry), not tconstruct.
+    if (Platform.isLoaded("modernfoundry") && Item.exists("modernfoundry:necrotic_bone")) {
+        event.replaceInput({ id: "architects_palette:wither_lamp" }, "architects_palette:withered_bone", "modernfoundry:necrotic_bone")
+        event.replaceInput({ id: "architects_palette:withered_bone_block" }, "architects_palette:withered_bone", "modernfoundry:necrotic_bone")
     }
     event.remove({ id: "architects_palette:withered_bone" })
 })

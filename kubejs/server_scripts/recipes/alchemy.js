@@ -13,7 +13,12 @@ ServerEvents.recipes(event => {
         }
     }
 
-    // CABIN color substrates (substrate_red and the rest of this chain) are not registered in generate.js.
+    // The color chain (substrate_red, herbal, fluix, certus, and the rest) is the old CABIN
+    // transmutation. generate.js registers a different reagent grid, and several of those
+    // ids are the same kubejs:substrate_* items (granite, scoria, blaze, quartz, sulfur,
+    // copper, gold, iron, and others). Registering the color set would crash startup on
+    // the duplicates. Remapping the color names onto the live reagents would scramble the
+    // graph. The chain stays off unless substrate_red is already registered.
     if (Item.exists("kubejs:substrate_red")) {
         alchemy_mix("red", "herbal", "diorite", "andesite")
         alchemy_mix("orange", "herbal", "granite", "diorite")

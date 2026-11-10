@@ -19,7 +19,15 @@ ServerEvents.recipes(event => {
         if (sized) body = sized[2]
         // Pack-defined forge:chisels holds chisel:iron_chisel, diamond_chisel, and hitech_chisel.
         // Other forge: item tags in this pack are empty; the items live under c:.
-        if (body.startsWith("#forge:") && !body.startsWith("#forge:chisels")) body = "#c:" + body.slice("#forge:".length)
+        if (body.startsWith("#forge:") && !body.startsWith("#forge:chisels")) {
+            let name = body.slice("#forge:".length)
+            if (name === "slimeballs") name = "slime_balls"
+            else if (name === "dough") name = "foods/dough"
+            else if (name === "glass") name = "glass_blocks"
+            else if (name === "glazed_terracotta") name = "glazed_terracottas"
+            else if (name.startsWith("sand/")) name = "sands/" + name.slice("sand/".length)
+            body = "#c:" + name
+        }
         let base = body.startsWith("#") ? { tag: body.slice(1) } : { item: body }
         // Create 6 processing recipes store plain ingredients, not stack counts.
         return base
@@ -143,11 +151,11 @@ ServerEvents.recipes(event => {
 
     // get all our slags in one place
     if (hasThermal) {
-        event.replaceInput({}, "thermal:slag", "#forge:slag")
+        event.replaceInput({}, "thermal:slag", "#c:slag")
         event.replaceOutput({}, "immersiveengineering:slag", "thermal:slag")// IE might still give IE slag
     }
-    // event.replaceInput({}, "tfmg:slag", "#forge:slag")
-    event.replaceInput({}, "immersiveengineering:slag", "#forge:slag")
+    // event.replaceInput({}, "tfmg:slag", "#c:slag")
+    event.replaceInput({}, "immersiveengineering:slag", "#c:slag")
     // event.replaceOutput({}, "thermal:slag", "tfmg:slag")
     // isn't almostunified supposed to do this?
 
@@ -163,10 +171,10 @@ ServerEvents.recipes(event => {
     // unify sawdusts
     event.remove({ output: "jaopca:storage_blocks.wood" })
     event.remove({ input: "jaopca:storage_blocks.wood" })
-    event.replaceInput({}, "immersiveengineering:dust_wood", "#forge:dusts/wood")
-    if (Item.exists("nuclearcraft:sawdust")) event.replaceInput({}, "nuclearcraft:sawdust", "#forge:dusts/wood")
+    event.replaceInput({}, "immersiveengineering:dust_wood", "#c:dusts/wood")
+    if (Item.exists("nuclearcraft:sawdust")) event.replaceInput({}, "nuclearcraft:sawdust", "#c:dusts/wood")
     if (hasThermal) {
-        event.replaceInput({}, "thermal:sawdust", "#forge:dusts/wood")
+        event.replaceInput({}, "thermal:sawdust", "#c:dusts/wood")
         event.replaceOutput({}, "immersiveengineering:dust_wood", "thermal:sawdust")// IE might still give IE sawdust
         if (Item.exists("nuclearcraft:sawdust")) event.replaceOutput({}, "nuclearcraft:sawdust", "thermal:sawdust")
     }
@@ -216,16 +224,16 @@ ServerEvents.recipes(event => {
     // modify aquatic entangler recipe so it's easier to get
     if (hasThermal) {
         event.replaceInput({ output: "thermal:device_fisher" }, "thermal:redstone_servo", "minecraft:barrel")
-        event.replaceInput({ output: "thermal:junk_net" }, "minecraft:iron_nugget", "#forge:ingots/lead")
+        event.replaceInput({ output: "thermal:junk_net" }, "minecraft:iron_nugget", "#c:ingots/lead")
         if (Item.exists("rats:garbage_pile")) event.replaceInput({ output: "thermal:junk_net" }, "minecraft:stick", "rats:garbage_pile")
     }
 
     // tfmg/ie synthetic leathers and strings support
-    event.replaceInput({}, "minecraft:leather", "#forge:leathers")
-    // event.replaceInput({}, "minecraft:string", "#forge:string")
+    event.replaceInput({}, "minecraft:leather", "#c:leathers")
+    // event.replaceInput({}, "minecraft:string", "#c:string")
     // fix synthetic leather recipe collision with immersiveengineering:plate_duroplast
     // event.remove({ output: "tfmg:synthetic_leather" })
-    // event.recipes.create.deploying("tfmg:synthetic_leather", ["#forge:ingots/plastic", "minecraft:paper"])
+    // event.recipes.create.deploying("tfmg:synthetic_leather", ["#c:ingots/plastic", "minecraft:paper"])
 
     // make tome of alkahestry an endgame item
     event.remove({ type: "minecraft:crafting_shapeless", input: "reliquary:witch_hat", output: "reliquary:alkahestry_tome" })
@@ -319,7 +327,7 @@ ServerEvents.recipes(event => {
 
     // might as well fix this createbigcannons shit while i'm at it
     event.remove({ id: "createbigcannons/cutting/autocannon_cartridge_sheet_copper" })// duplicate
-    event.replaceInput({ output: "createbigcannons:spring_wire" }, "#forge:plates/iron", "#forge:plates/lead")// another ingredient+type with multiple outputs
+    event.replaceInput({ output: "createbigcannons:spring_wire" }, "#c:plates/iron", "#c:plates/lead")// another ingredient+type with multiple outputs
 
     // //Chapter 2B: Lead Machines replacement
     // replacing the chassis with the lead machine
@@ -438,7 +446,7 @@ ServerEvents.recipes(event => {
         "inputFluids": [
             {
                 "amount": 250,
-                "tag": "forge:radaway"
+                "tag": "c:radaway"
             }
         ],
         "outputFluids": [
@@ -465,7 +473,7 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded("rats")) {
         event.remove({ output: "rats:raw_plastic" })
         event.remove({ input: "rats:plastic_waste" })
-        event.replaceInput({}, "rats:raw_plastic", "#forge:ingots/plastic")
+        event.replaceInput({}, "rats:raw_plastic", "#c:ingots/plastic")
 
         // converting plastic waste to liquid plastic by "recycling", now with kubejs:liquid_plastic
         event.recipes.create.mixing([Fluid.of("kubejs:liquid_plastic", 10), "quark:dirty_shard"], [Item.of("rats:plastic_waste", 9), Fluid.of("minecraft:water", 1000)]).heated()
@@ -495,7 +503,7 @@ ServerEvents.recipes(event => {
             "input": [
                 {
                     "count": 1,
-                    "tag": "forge:ingots/plastic"
+                    "tag": "c:ingots/plastic"
                 }
             ],
             "outputFluids": [
@@ -536,7 +544,7 @@ ServerEvents.recipes(event => {
         "type": "tconstruct:casting_table",
         "cast": { "tag": "tconstruct:casts/multi_use/plate" },
         "cast_consumed": false,
-        "fluid": { "tag": "forge:liquid_plastic", "amount": 90 },// one ingot
+        "fluid": { "tag": "c:liquid_plastic", "amount": 90 },// one ingot
         "result": { "item": "nuclearcraft:bioplastic" },
         "cooling_time": 100
     })
@@ -544,7 +552,7 @@ ServerEvents.recipes(event => {
         "type": "tconstruct:casting_table",
         "cast": { "tag": "tconstruct:casts/single_use/plate" },
         "cast_consumed": true,
-        "fluid": { "tag": "forge:liquid_plastic", "amount": 90 },
+        "fluid": { "tag": "c:liquid_plastic", "amount": 90 },
         "result": { "item": "nuclearcraft:bioplastic" },
         "cooling_time": 100
     })
@@ -554,7 +562,7 @@ ServerEvents.recipes(event => {
         "inputFluids": [
             {
                 "amount": 90,
-                "tag": "forge:liquid_plastic"
+                "tag": "c:liquid_plastic"
             }
         ],
         "output": [
@@ -610,13 +618,13 @@ ServerEvents.recipes(event => {
         "inputFluids": [
             {
                 "amount": 250,
-                "tag": "forge:radaway"
+                "tag": "c:radaway"
             }
         ],
         "input": [
             {
                 "count": 1,
-                "tag": "forge:ingots/plastic"
+                "tag": "c:ingots/plastic"
             }
         ],
         "output": [
@@ -634,13 +642,13 @@ ServerEvents.recipes(event => {
         "inputFluids": [
             {
                 "amount": 250,
-                "tag": "forge:radaway_slow"
+                "tag": "c:radaway_slow"
             }
         ],
         "input": [
             {
                 "count": 1,
-                "tag": "forge:ingots/plastic"
+                "tag": "c:ingots/plastic"
             }
         ],
         "output": [
@@ -671,8 +679,8 @@ ServerEvents.recipes(event => {
     // event.remove({ output: "tfmg:lignite" })
 
     // alexscaves limestone integration
-    event.replaceInput({}, "alexscaves:limestone", "#forge:stone/limestone")
-    event.replaceInput({}, "create:limestone", "#forge:stone/limestone")
+    event.replaceInput({}, "alexscaves:limestone", "#c:stone/limestone")
+    event.replaceInput({}, "create:limestone", "#c:stone/limestone")
 
     // .withChance() throws on 1.21. Drop outputs whose items are not installed.
     let chanceCrush = (input, time, pairs) => {
@@ -714,11 +722,11 @@ ServerEvents.recipes(event => {
         "input": [
             {
                 "count": 1,
-                "tag": "forge:dusts/neodymium"
+                "tag": "c:dusts/neodymium"
             },
             {
                 "count": 1,
-                "tag": "forge:gems/cinnabar"
+                "tag": "c:gems/cinnabar"
             }
         ],
         "output": [
@@ -736,11 +744,11 @@ ServerEvents.recipes(event => {
         "input": [
             {
                 "count": 1,
-                "tag": "forge:dusts/neodymium"
+                "tag": "c:dusts/neodymium"
             },
             {
                 "count": 1,
-                "tag": "forge:gems/lapis"
+                "tag": "c:gems/lapis"
             }
         ],
         "output": [
@@ -796,7 +804,7 @@ ServerEvents.recipes(event => {
 
     // //createdeco
     // zinc sheets unification
-    event.replaceInput({}, "createdeco:zinc_sheet", "#forge:plates/zinc")
+    event.replaceInput({}, "createdeco:zinc_sheet", "#c:plates/zinc")
     // remove useless netherite sheet
     if (Item.exists("createdeco:netherite_sheet")) event.remove({ output: "createdeco:netherite_sheet" })
     // no counterfeiting
@@ -834,19 +842,19 @@ ServerEvents.recipes(event => {
     // event.remove({ id: "tfmg:crafting/coal_coke_from_block" })
     event.remove({ id: "immersiveengineering:crafting/coke_to_coal_coke" })
     // event.remove({ output: "tfmg:coal_coke_block" })
-    if (hasThermal) event.shapeless("thermal:coal_coke_block", ["9x #forge:coal_coke"])
+    if (hasThermal) event.shapeless("thermal:coal_coke_block", ["9x #c:coal_coke"])
 
     // //creosote unification - have to use IE because it's hardcoded
     // tfmg hardened wood block = treated wood block + 125mb more creosote
     // event.remove({ id: "tfmg:filling/hardened_wood_creosote" })
-    // event.recipes.create.filling("tfmg:hardened_planks", ["#forge:treated_wood", Fluid.of("immersiveengineering:creosote", 125)])
+    // event.recipes.create.filling("tfmg:hardened_planks", ["#c:treated_wood", Fluid.of("immersiveengineering:creosote", 125)])
 
     // //powergrid integration
     // replace conductive casing recipes with zinc machine
     // event.replaceInput({}, "powergrid:conductive_casing", "kubejs:zinc_machine")
     // it's now a cosmetic block so make it cheaper
     // event.remove({ output: "powergrid:conductive_casing" })
-    // event.shapeless(Item.of("powergrid:conductive_casing", 8), ["#forge:ingots/zinc", "create:andesite_casing"])
+    // event.shapeless(Item.of("powergrid:conductive_casing", 8), ["#c:ingots/zinc", "create:andesite_casing"])
     // various junctions, connectors, etc. are now from stonecutting zinc machine 8:1
     if (Platform.isLoaded("powergrid")) {
         let powergridWidgets = ["cord_junction", "lv_switch", "lv_button", "light_fixture", "device_connector", "socket", "fuse_holder"]
@@ -953,7 +961,7 @@ ServerEvents.recipes(event => {
         event.shapeless("createaddition:barbed_wire", ["#c:wires/iron", "#c:wires/iron", "#c:wires/iron"])
             .id("kubejs:createaddition_barbed_wire")
     }
-    deploy("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#forge:wires/steel"])
+    deploy("immersiveengineering:razor_wire", ["immersiveengineering:treated_fence", "#c:wires/steel"])
 
 
     // //chisel integration
@@ -967,7 +975,7 @@ ServerEvents.recipes(event => {
         "MM",
         "MM"
     ], {
-        M: "#forge:stone/marble"
+        M: "#c:stone/marble"
     })
     // delete diabase (pointless clone of basalt)
     event.remove({ output: /chisel:diabase.*/ })

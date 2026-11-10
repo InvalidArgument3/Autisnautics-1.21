@@ -5,10 +5,10 @@ ServerEvents.recipes(event => {
     event.remove({ id: "farmersdelight:iron_knife" })
     event.remove({ id: "farmersdelight:golden_knife" })
     event.remove({ id: "farmersdelight:diamond_knife" })
-    event.shaped("farmersdelight:flint_knife", ["S ", " M"], { M: "minecraft:flint", S: "#forge:rods/wooden" })
-    event.shaped("farmersdelight:iron_knife", ["S ", " M"], { M: "minecraft:iron_ingot", S: "#forge:rods/wooden" })
-    event.shaped("farmersdelight:golden_knife", ["S ", " M"], { M: "minecraft:gold_ingot", S: "#forge:rods/wooden" })
-    event.shaped("farmersdelight:diamond_knife", ["S ", " M"], { M: "minecraft:diamond", S: "#forge:rods/wooden" })
+    event.shaped("farmersdelight:flint_knife", ["S ", " M"], { M: "minecraft:flint", S: "#c:rods/wooden" })
+    event.shaped("farmersdelight:iron_knife", ["S ", " M"], { M: "minecraft:iron_ingot", S: "#c:rods/wooden" })
+    event.shaped("farmersdelight:golden_knife", ["S ", " M"], { M: "minecraft:gold_ingot", S: "#c:rods/wooden" })
+    event.shaped("farmersdelight:diamond_knife", ["S ", " M"], { M: "minecraft:diamond", S: "#c:rods/wooden" })
 
     // Modify farmer's delight log stripping
     event.remove({ input: "#minecraft:logs", type: "farmersdelight:cutting" })

@@ -4,9 +4,9 @@ WorldgenEvents.remove(autisnautics => {
   autisnautics.removeOres(props => {
     props.worldgenLayer = 'underground_ores';
     props.blocks = [
-      //"#forge:ores",
+      //"#c:ores",
       //"vs_clockwork:wanderlite_deepslate_ore",
-      //"vs_clockwork:wanderlite_end_ore"// they didnt have the forge:ores tag so gotta remove them manually rip
+      //"vs_clockwork:wanderlite_end_ore"// they didnt have the c:ores tag so gotta remove them manually rip
 
 
       //"railcraft:lead_ore",

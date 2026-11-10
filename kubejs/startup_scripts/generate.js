@@ -114,7 +114,7 @@ StartupEvents.registry("item", event => {
     event.create("circuit_scrap").texture("cabin:item/circuit_scrap").displayName("Circuit Scrap")
     // event.create('charged_calculator').texture("cabin:item/charged_calculator").displayName('Calculator').maxDamage(64)
     event.create("missingno").texture("cabin:item/missingno").displayName("∄")
-    event.create("zinc_dust").texture("cabin:item/zinc_dust").displayName("Zinc Dust").tag("forge:dusts/zinc").tag("forge:dusts")
+    event.create("zinc_dust").texture("cabin:item/zinc_dust").displayName("Zinc Dust").tag("c:dusts/zinc").tag("c:dusts")
     // event.create('creosote_pellet').texture("cabin:item/creosote_pellet").displayName('Creosote Pellet')
     event.create("sand_ball").texture("cabin:item/sand_ball").displayName("Ball of Sand").unstackable()
     event.create("rough_sand").texture("cabin:item/rough_sand").displayName("Sand Chunks")

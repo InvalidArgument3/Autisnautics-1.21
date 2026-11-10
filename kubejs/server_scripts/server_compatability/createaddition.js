@@ -13,11 +13,11 @@ if (Platform.isLoaded("createaddition")) {
         */
 
         /*
-        event.replaceOutput({}, "#forge:nuggets/electrum", "createaddition:electrum_nugget")
-        event.replaceOutput({}, "#forge:ingots/electrum", "createaddition:electrum_ingot")
-        event.replaceOutput({}, "#forge:plates/electrum", "createaddition:electrum_sheet")
-        event.replaceOutput({}, "#forge:storage_blocks/electrum", "createaddition:electrum_block")
-        event.replaceOutput({}, "#forge:dusts/diamond", "createaddition:diamond_grit")
+        event.replaceOutput({}, "#c:nuggets/electrum", "createaddition:electrum_nugget")
+        event.replaceOutput({}, "#c:ingots/electrum", "createaddition:electrum_ingot")
+        event.replaceOutput({}, "#c:plates/electrum", "createaddition:electrum_sheet")
+        event.replaceOutput({}, "#c:storage_blocks/electrum", "createaddition:electrum_block")
+        event.replaceOutput({}, "#c:dusts/diamond", "createaddition:diamond_grit")
         */
 
         // event.replaceOutput({ id: "kubejs:machines/smelter/electrum_ingot" }, "thermal:electrum_ingot", "createaddition:electrum_ingot")
@@ -56,8 +56,8 @@ if (Platform.isLoaded("createaddition")) {
             [Item.of("createaddition:connector", 4)],
             "create:andesite_alloy",
             [
-                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#forge:rods/copper"]),
-                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#forge:plates/iron"]),
+                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#c:rods/copper"]),
+                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#c:plates/iron"]),
                 event.recipes.create.pressing("kubejs:incomplete_connector", "kubejs:incomplete_connector")
             ]
         ).transitionalItem("kubejs:incomplete_connector").loops(1)
@@ -66,10 +66,10 @@ if (Platform.isLoaded("createaddition")) {
             [Item.of("createaddition:large_connector", 1)],
             "create:andesite_alloy",
             [
-                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#forge:rods/gold"]),
-                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#forge:plates/iron"]),
+                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#c:rods/gold"]),
+                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#c:plates/iron"]),
                 event.recipes.create.pressing("kubejs:incomplete_connector", "kubejs:incomplete_connector"),
-                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#forge:plates/iron"]),
+                event.recipes.create.deploying("kubejs:incomplete_connector", ["kubejs:incomplete_connector", "#c:plates/iron"]),
                 event.recipes.create.pressing("kubejs:incomplete_connector", "kubejs:incomplete_connector")
             ]
         ).transitionalItem("kubejs:incomplete_large_connector").loops(1)
@@ -87,7 +87,7 @@ if (Platform.isLoaded("createaddition")) {
             .add("create_central_kitchen:chocolate_cake_slice")
             .add("create_central_kitchen:honey_cake_slice")
 
-        event.add("forge:storage_blocks/electrum", "createaddition:electrum_block")
+        event.add("c:storage_blocks/electrum", "createaddition:electrum_block")
         event.add("tconstruct:anvil_metal", "createaddition:electrum_block")
     })
     ServerEvents.tags("block", event => {
