@@ -12,8 +12,8 @@
 
 package com.neep.meatlib.blockentity;
 
-import com.neep.meatlib.network.BlockEntitySync;
 import java.util.List;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -43,7 +43,9 @@ public interface BlockEntityClientSerializable
     {
         if (this instanceof BlockEntity blockEntity)
         {
-            return blockEntity.getUpdateTag();
+            HolderLookup.Provider registries = blockEntity.getLevel() != null
+                    ? blockEntity.getLevel().registryAccess() : net.minecraft.core.RegistryAccess.EMPTY;
+            return blockEntity.getUpdateTag(registries);
         }
         return new CompoundTag();
     }
@@ -57,7 +59,7 @@ public interface BlockEntityClientSerializable
     {
         if (this instanceof BlockEntity be)
         {
-            BlockEntitySync.send(players, be);
+            // The packet is ClientboundBlockEntityDataPacket from SyncableBlockEntity.sync.
         }
     }
 }

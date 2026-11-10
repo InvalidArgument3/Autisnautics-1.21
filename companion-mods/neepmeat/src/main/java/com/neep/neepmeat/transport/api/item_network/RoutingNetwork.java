@@ -3,313 +3,249 @@
  *
  * This file is part of NEEPMeat.
  *
- * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ * Supply, crafting recursion (depth 30), and deferred callbacks. A request that
+ * cannot be filled from storage recurses into a network crafter's ingredients.
+ * The driver keeps the request until the destination holds the stack.
  */
 
 package com.neep.neepmeat.transport.api.item_network;
+import com.neep.neepmeat.machine.transport.ConnectedPipeBlock;
+import com.neep.neepmeat.machine.transport.DeferredRequest;
+import com.neep.neepmeat.machine.transport.FilterEntry;
+import com.neep.neepmeat.machine.transport.FilterPipeMenu;
+import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
+import com.neep.neepmeat.machine.transport.StorageBusBlock;
+import com.neep.neepmeat.transport.block.fluid_transport.FluidPipeBlock;
+import com.neep.neepmeat.transport.block.fluid_transport.PumpBlock;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.PumpBlockEntity;
+import com.neep.neepmeat.transport.block.item_transport.FilterItemPipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.ItemPipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.MergePipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.PipeDriverBlock;
+import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEntity;
+import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
+import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
-import com.google.common.collect.Streams;
-import com.neep.meatlib.api.network.CompositeParamCodec;
-import com.neep.meatlib.api.network.ParamCodec;
-import com.neep.meatlib.api.network.ParamCodecs;
-import com.neep.meatlib.api.network.RecordParamCodec;
-import com.neep.neepmeat.NeepMeat;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
-import com.neep.meatlib.transfer.ItemVariant;
-import com.neep.meatlib.transfer.ResourceAmount;
-import com.neep.meatlib.transfer.TransactionContext;
+import com.neep.neepmeat.transport.ItemRoute;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtUtils;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.items.IItemHandler;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Set;
 
-public interface RoutingNetwork
-{
-    BlockApiLookup<RoutingNetwork, Void> LOOKUP = BlockApiLookup.get(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "routing_network"), RoutingNetwork.class, Void.class);
+public final class RoutingNetwork {
+    public static final int MAX_DEPTH = 30;
 
-    Stream<ResourceAmount<ItemVariant>> getAllAvailable(Predicate<ItemVariant> predicate, TransactionContext transaction);
+    private RoutingNetwork() {}
 
-    Stream<Craftable> getAllCraftable(Predicate<ItemVariant> predicate, TransactionContext transaction);
-
-    default List<Entry> listAllAvailable(Predicate<ItemVariant> predicate, TransactionContext transaction)
-    {
-        return Streams.concat(
-                getAllAvailable(predicate, transaction)
-                        .map(Entry::new),
-                getAllCraftable(predicate, transaction)
-                    .map(Entry::new))
-                .collect(Collectors.collectingAndThen(
-                    Collectors.toMap(
-                            Entry::resource, Function.identity(),
-                            RoutingNetwork::combine), m -> new ObjectArrayList<>(m.values()))
-                );
-    }
-
-    static Entry combine(Entry am1, Entry am2)
-    {
-        // Discard the craftable amount if a different entry has a real amount
-        long amount;
-        if (am1.craftable() && am2.craftable())
-            amount = 0;
-        else if (am1.craftable())
-            amount = am2.amount();
-        else if (am2.craftable())
-            amount = am1.amount();
-        else
-            amount = am1.amount() + am2.amount();
-
-        return new Entry(am1.resource(), amount,
-                am1.craftable() || am2.craftable(),
-                am1.real() || am2.real()
-        );
-    }
-
-    /**
-     * Transferring items into pipes requires outer transaction callbacks. To prevent duping, only commit the outer transaction if all nested operations were successful.
-     */
-    boolean route(Predicate<ItemVariant> predicate, long amount, BlockPos inPos, Direction inDir, BlockPos outPos, Direction outDir, RequestType type, TransactionContext transaction);
-
-//    default boolean route(ResourceAmount<ItemVariant> stack, BlockPos inPos, Direction inDir, BlockPos outPos, Direction outDir, RequestType type, TransactionContext transaction)
-//    {
-//        return route()
-//    }
-
-    /**
-     * Transferring items into pipes requires outer transaction callbacks. To prevent duping, only commit the outer transaction if all nested operations were successful.
-     */
-    default boolean request(ResourceAmount<ItemVariant> stack, BlockPos pos, Direction outDir, RequestType type, RequestContext context, TransactionContext transaction)
-    {
-        return request(v -> v.equals(stack.resource()), stack.amount(), pos, outDir, type, context, transaction);
-    }
-
-    boolean request(Predicate<ItemVariant> predicate, long amount, BlockPos pos, Direction outDir, RequestType type, RequestContext context, TransactionContext transaction);
-
-    /// @param inPos Position to eject from.
-    /// @param inFace Direction to eject from relative to inPos
-    long store(ItemVariant variant, long amount, BlockPos inPos, Direction inFace, TransactionContext transaction);
-
-    void invalidate();
-
-    boolean needsUpdate();
-
-    void update();
-
-    long getVersion();
-
-    boolean isValid();
-
-    void serverTick();
-
-    RoutingNetwork DEFAULT = new RoutingNetwork()
-    {
-        @Override
-        public Stream<ResourceAmount<ItemVariant>> getAllAvailable(Predicate<ItemVariant> predicate, TransactionContext transaction) { return Stream.empty(); }
-
-        @Override
-        public Stream<Craftable> getAllCraftable(Predicate<ItemVariant> predicate, TransactionContext transaction)
-        {
-            return Stream.empty();
+    public static boolean request(Level level, BlockPos destination, ItemStack wanted) {
+        boolean started = request(level, destination, wanted, 0);
+        if (started) {
+            PipeDriverBlockEntity driver = findDriver(level, destination);
+            if (driver != null) {
+                driver.defer(destination, wanted);
+            }
         }
+        return started;
+    }
 
-        @Override
-        public boolean route(Predicate<ItemVariant> predicate, long amount, BlockPos inPos, Direction inDir, BlockPos outPos, Direction outDir, RequestType type, TransactionContext transaction)
-        {
+    private static boolean request(Level level, BlockPos destination, ItemStack wanted, int depth) {
+        if (wanted.isEmpty() || depth > MAX_DEPTH) {
             return false;
         }
-
-        @Override
-        public boolean request(Predicate<ItemVariant> predicate, long amount, BlockPos pos, Direction outDir, RequestType type, RequestContext context, TransactionContext transaction) { return false; }
-
-        @Override
-        public long store(ItemVariant variant, long amount, BlockPos inPos, Direction inFace, TransactionContext transaction)
-        {
-            return 0;
-        }
-
-        @Override
-        public void invalidate() {}
-
-        @Override
-        public boolean needsUpdate() { return false; }
-
-        @Override
-        public void update() {}
-
-        @Override
-        public long getVersion() { return 0;}
-
-        @Override
-        public boolean isValid()
-        {
+        if (supply(level, destination, wanted)) {
             return true;
         }
-
-        @Override
-        public void serverTick()
-        {
-
+        NetworkCrafterBlockEntity crafter = findCrafter(level, destination, wanted);
+        if (crafter == null) {
+            return false;
         }
-    };
-
-    /// A structure passed through each request to prevent infinite recursion.
-    /// Based on the assumption that a recipe should never
-    class RequestContext
-    {
-        public int recursionDepth;
-//        Set<RoutablePipe> visitedPipes = new HashSet<>();
-//
-//        public boolean notVisited(RoutablePipe routable)
-//        {
-//            return !visitedPipes.contains(routable);
-//        }
-//
-//        public void visit(
-    }
-
-    enum RequestType
-    {
-        ANY_AMOUNT(false),
-        EXACT_AMOUNT(true);
-
-        private final boolean matchExact;
-
-        RequestType(boolean matchExact)
-        {
-            this.matchExact = matchExact;
-        }
-
-        public boolean satisfied(long requested, long found)
-        {
-            return requested == found && matchExact || found >= requested && !matchExact;
-        }
-    }
-
-    // TODO: add timeout duration
-    final class DeferredRequest
-    {
-        private final BlockPos sourcePos;
-        public final BlockPos requesterPos;
-        public final Direction requesterFace;
-        private final ItemVariant itemVariant;
-
-        private final long requested;
-
-        @Nullable private RoutablePipe pipe;
-
-        public static final ParamCodec<DeferredRequest> PARAM_CODEC = CompositeParamCodec.builder(DeferredRequest.class)
-                .param(o -> o.sourcePos, ParamCodecs.BLOCK_POS)
-                .param(o -> o.requesterPos, ParamCodecs.BLOCK_POS)
-                .param(o -> o.requesterFace, ParamCodec.ofEnum(Direction.class))
-                .param(o -> o.requested, ParamCodec.LONG)
-                .param(o -> o.itemVariant, ParamCodecs.ITEM_VARIANT)
-                .build();
-
-        public DeferredRequest(BlockPos sourcePos, BlockPos requesterPos, Direction requesterFace, long requested, ItemVariant itemVariant)
-        {
-            this.sourcePos = sourcePos;
-            this.requesterPos = requesterPos;
-            this.requesterFace = requesterFace;
-            this.itemVariant = itemVariant;
-            this.requested = requested;
-        }
-
-        public long getRequested()
-        {
-            return requested;
-        }
-
-        public ItemVariant getItemVariant()
-        {
-            return itemVariant;
-        }
-
-        public RoutablePipe getPipe(Level world)
-        {
-            if (pipe == null)
-            {
-                if (world.getBlockEntity(sourcePos) instanceof RoutablePipe routablePipe)
-                    this.pipe = routablePipe;
+        for (var ingredient : crafter.ingredients()) {
+            if (crafter.has(ingredient)) {
+                continue;
             }
-
-            return pipe;
+            if (!request(level, crafter.getBlockPos(), new ItemStack(ingredient), depth + 1)) {
+                return false;
+            }
         }
-
-        @Override
-        public String toString()
-        {
-            return "Request{" +
-                    "requested=" + requested +
-                    ", itemVariant=" + itemVariant +
-                    ", requesterPos=" + requesterPos +
-                    ", sourcePos=" + sourcePos +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object o)
-        {
-            if (!(o instanceof DeferredRequest that)) return false;
-            return requested == that.requested && Objects.equals(sourcePos, that.sourcePos) && Objects.equals(requesterPos, that.requesterPos) && requesterFace == that.requesterFace && Objects.equals(itemVariant, that.itemVariant);
-        }
-
-        @Override
-        public int hashCode()
-        {
-            return Objects.hash(sourcePos, requesterPos, requesterFace, itemVariant, requested);
-        }
-
-        public CompoundTag toNbt()
-        {
-            CompoundTag nbt = new CompoundTag();
-
-            nbt.put("pos", NbtUtils.writeBlockPos(sourcePos));
-            nbt.put("requester_pos", NbtUtils.writeBlockPos(requesterPos));
-            nbt.putInt("requester_face", requesterFace.ordinal());
-            nbt.put("item", itemVariant.toNbt());
-            nbt.putLong("amount", requested);
-            return nbt;
-        }
-
-        public static DeferredRequest fromNbt(CompoundTag nbt)
-        {
-            return new DeferredRequest(
-                    NbtUtils.readBlockPos(nbt.getCompound("pos")),
-                    NbtUtils.readBlockPos(nbt.getCompound("requester_pos")),
-                    Direction.values()[nbt.getInt("requester_face")],
-                    nbt.getLong("amount"),
-                    ItemVariant.fromNbt(nbt.getCompound("item"))
-                    );
-        }
+        return true;
     }
 
-    record Entry(ItemVariant resource, long amount, boolean craftable, boolean real)
-    {
-        public static final ParamCodec<Entry> PARAM_CODEC = RecordParamCodec.builder(Entry.class)
-                .param(ParamCodecs.ITEM_VARIANT).param(ParamCodec.LONG).param(ParamCodec.BOOLEAN).param(ParamCodec.BOOLEAN).build();
+    public static void finishCrafts(Level level) {
+        // Crafted outputs are routed by the driver once the crafter tick has filled them.
+    }
 
-        public Entry(Craftable craftable)
-        {
-            this(craftable.result().resource(), craftable.result().amount(), true, false);
+    public static boolean deliverCrafted(Level level, BlockPos destination, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(destination);
+        seen.add(destination);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof NetworkCrafterBlockEntity crafter
+                        && ItemStack.isSameItem(crafter.crafted(), wanted)) {
+                    ItemStack stack = crafter.extractItem(4, 1, true);
+                    BlockPos pipePos = adjacentPipe(level, next);
+                    if (pipePos == null || !(level.getBlockEntity(pipePos) instanceof ItemPipeBlockEntity pipe)) {
+                        return false;
+                    }
+                    Direction fromCrafter = directionBetween(next, pipePos);
+                    ItemRoute route = PipeRouteFinder.find(level, pipePos, fromCrafter.getOpposite(), stack);
+                    if (route.isEmpty()) {
+                        return false;
+                    }
+                    if (pipe.insert(stack, fromCrafter.getOpposite(), route) == stack.getCount()) {
+                        crafter.extractItem(4, 1, false);
+                        return true;
+                    }
+                    return false;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
         }
+        return false;
+    }
 
-        public Entry(ResourceAmount<ItemVariant> ra)
-        {
-            this(ra.resource(), ra.amount(), false, true);
+    public static boolean inTransit(Level level, BlockPos origin, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next) || !(level.getBlockEntity(next) instanceof ItemPipeBlockEntity pipe)) {
+                    continue;
+                }
+                queue.add(next);
+                if (pipe.carrying(wanted)) {
+                    return true;
+                }
+            }
         }
+        return false;
+    }
+
+    private static boolean supply(Level level, BlockPos destination, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(destination);
+        seen.add(destination);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next) || !(level.getBlockEntity(next) instanceof ItemPipeBlockEntity pipe)) {
+                    continue;
+                }
+                queue.add(next);
+                if (pipe.getBlockState().getBlock() instanceof StorageBusBlock
+                        && take(level, next, direction.getOpposite(), wanted)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean take(Level level, BlockPos bus, Direction enteredFromNetwork, ItemStack wanted) {
+        for (Direction direction : Direction.values()) {
+            if (direction == enteredFromNetwork) {
+                continue;
+            }
+            IItemHandler handler = level.getCapability(Capabilities.ItemHandler.BLOCK, bus.relative(direction), direction.getOpposite());
+            if (handler == null) {
+                continue;
+            }
+            for (int slot = 0; slot < handler.getSlots(); slot++) {
+                ItemStack simulated = handler.extractItem(slot, 1, true);
+                if (!ItemStack.isSameItem(simulated, wanted)) {
+                    continue;
+                }
+                ItemRoute route = PipeRouteFinder.find(level, bus, direction, simulated);
+                if (route.isEmpty()) {
+                    continue;
+                }
+                ItemPipeBlockEntity pipe = (ItemPipeBlockEntity) level.getBlockEntity(bus);
+                if (pipe != null && pipe.insert(simulated, direction, route) == simulated.getCount()) {
+                    handler.extractItem(slot, 1, false);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static NetworkCrafterBlockEntity findCrafter(Level level, BlockPos origin, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof NetworkCrafterBlockEntity crafter && crafter.result() == wanted.getItem()) {
+                    return crafter;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
+        }
+        return null;
+    }
+
+    private static PipeDriverBlockEntity findDriver(Level level, BlockPos origin) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof PipeDriverBlockEntity driver) {
+                    return driver;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
+        }
+        return null;
+    }
+
+    private static BlockPos adjacentPipe(Level level, BlockPos pos) {
+        for (Direction direction : Direction.values()) {
+            if (level.getBlockState(pos.relative(direction)).getBlock() instanceof ItemPipeBlock) {
+                return pos.relative(direction);
+            }
+        }
+        return null;
+    }
+
+    private static Direction directionBetween(BlockPos from, BlockPos to) {
+        return Direction.getNearest(to.getX() - from.getX(), to.getY() - from.getY(), to.getZ() - from.getZ());
     }
 }

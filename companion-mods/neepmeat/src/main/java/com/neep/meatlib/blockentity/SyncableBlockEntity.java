@@ -29,7 +29,7 @@ import java.util.List;
  * Separates saved NBT from the tag sent to clients. Replaces the Fabric
  * {@code BlockEntityClientSerializable} helper upstream wrapped.
  */
-public abstract class SyncableBlockEntity extends BlockEntity {
+public abstract class SyncableBlockEntity extends BlockEntity implements BlockEntityClientSerializable {
     private final List<Runnable> invalidate = new ArrayList<>();
 
     public SyncableBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
@@ -61,13 +61,28 @@ public abstract class SyncableBlockEntity extends BlockEntity {
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag tag = super.getUpdateTag(registries);
-        writeClient(tag, registries);
+        toClientTag(tag);
         return tag;
     }
 
     @Override
     public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
-        readClient(tag, registries);
+        fromClientTag(tag);
+    }
+
+    /** Fabric client sync. Subclasses keep this name; the packet calls it. */
+    @Override
+    public void toClientTag(CompoundTag nbt) {
+        writeClient(nbt, registries());
+    }
+
+    @Override
+    public void fromClientTag(CompoundTag nbt) {
+        readClient(nbt, registries());
+    }
+
+    private HolderLookup.Provider registries() {
+        return level != null ? level.registryAccess() : net.minecraft.core.RegistryAccess.EMPTY;
     }
 
     @Override

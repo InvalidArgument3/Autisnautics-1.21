@@ -9,17 +9,17 @@
 package com.neep.neepmeat.machine;
 
 import com.neep.neepmeat.NeepMeat;
-import com.neep.neepmeat.machine.transport.FluidPipeBlockEntity;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidTankBlockEntity;
-import com.neep.neepmeat.machine.transport.ItemPipeBlockEntity;
+import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.DeferredRequest;
 import com.neep.neepmeat.machine.transport.ItemRequesterBlockEntity;
 import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
-import com.neep.neepmeat.machine.transport.PipeDriverBlockEntity;
-import com.neep.neepmeat.machine.transport.RoutingNetwork;
-import com.neep.neepmeat.machine.transport.MergePipeBlock;
-import com.neep.neepmeat.machine.transport.PipeRouteFinder;
-import com.neep.neepmeat.machine.transport.PumpBlockEntity;
+import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
+import com.neep.neepmeat.transport.block.item_transport.MergePipeBlock;
+import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.PumpBlockEntity;
 import com.neep.neepmeat.transport.ItemRoute;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -175,7 +175,7 @@ public class PipeGraphGameTests {
     @GameTest(template = "empty", timeoutTicks = 40)
     public static void pumpMovesOneThroughput(GameTestHelper helper) {
         helper.setBlock(new BlockPos(0, 1, 1), NeepMachines.FLUID_TANK.get().defaultBlockState());
-        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PUMP.get().defaultBlockState().setValue(com.neep.neepmeat.machine.transport.PumpBlock.FACING, Direction.EAST));
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PUMP.get().defaultBlockState().setValue(com.neep.neepmeat.transport.block.fluid_transport.PumpBlock.FACING, Direction.EAST));
         helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.FLUID_TANK.get().defaultBlockState());
         FluidTankBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
         source.tank().fill(new FluidStack(Fluids.WATER, 1000), IFluidHandler.FluidAction.EXECUTE);
@@ -206,7 +206,7 @@ public class PipeGraphGameTests {
     @GameTest(template = "empty", timeoutTicks = 20)
     public static void idlePumpKeepsItsBufferUntilActive(GameTestHelper helper) {
         helper.setBlock(new BlockPos(0, 1, 1), NeepMachines.FLUID_TANK.get().defaultBlockState());
-        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PUMP.get().defaultBlockState().setValue(com.neep.neepmeat.machine.transport.PumpBlock.FACING, Direction.EAST));
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PUMP.get().defaultBlockState().setValue(com.neep.neepmeat.transport.block.fluid_transport.PumpBlock.FACING, Direction.EAST));
         FluidTankBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
         source.tank().fill(new FluidStack(Fluids.WATER, 1000), IFluidHandler.FluidAction.EXECUTE);
         PumpBlockEntity pump = helper.getBlockEntity(new BlockPos(1, 1, 1));

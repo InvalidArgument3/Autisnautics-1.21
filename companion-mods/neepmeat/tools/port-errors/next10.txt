@@ -1,0 +1,12 @@
+# next 10 error kinds after the pipe move and client-tag adapter
+
+3401	cannot find symbol
+711	does not override
+34	incompatible types: ResourceLocation cannot be converted to ModelResourceLo
+32	package net.fabricmc.fabric.api.client.rendering.v1 does not exist
+29	package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+28	package net.fabricmc.fabric.api.transfer.v1.item does not exist
+27	package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+27	invalid method reference
+26	package net.fabricmc.fabric.api.event does not exist
+24	package net.fabricmc.fabric.api.renderer.v1 does not exist

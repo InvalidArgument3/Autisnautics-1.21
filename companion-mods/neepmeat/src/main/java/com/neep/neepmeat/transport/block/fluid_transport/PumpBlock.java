@@ -3,141 +3,109 @@
  *
  * This file is part of NEEPMeat.
  *
- * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ * Moves one basic-pipe throughput (125 mB) per ten ticks from the back of FACING
+ * to the front. Simulate runs before execute.
  */
 
 package com.neep.neepmeat.transport.block.fluid_transport;
-
-import com.neep.meatlib.block.BaseFacingBlock;
-import com.neep.meatlib.init.MeatlibSounds;
-import com.neep.meatlib.item.ItemSettings;
-import com.neep.meatlib.registry.RegistrationContext;
-import com.neep.neepmeat.init.NMBlockEntities;
-import com.neep.neepmeat.item.FluidComponentItem;
+import com.neep.neepmeat.machine.transport.ConnectedPipeBlock;
+import com.neep.neepmeat.machine.transport.DeferredRequest;
+import com.neep.neepmeat.machine.transport.FilterEntry;
+import com.neep.neepmeat.machine.transport.FilterPipeMenu;
+import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
+import com.neep.neepmeat.machine.transport.StorageBusBlock;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
+import com.neep.neepmeat.transport.block.fluid_transport.FluidPipeBlock;
+import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
 import com.neep.neepmeat.transport.block.fluid_transport.machine.PumpBlockEntity;
-import com.neep.neepmeat.transport.block.fluid_transport.machine.TankBlockEntity;
-import com.neep.neepmeat.util.ItemUtil;
+import com.neep.neepmeat.transport.block.item_transport.FilterItemPipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.ItemPipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.MergePipeBlock;
+import com.neep.neepmeat.transport.block.item_transport.PipeDriverBlock;
+import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEntity;
+import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
+import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
+
+import com.mojang.serialization.MapCodec;
+import com.neep.meatlib.block.MeatlibBlockSettings;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import com.neep.meatlib.util.MiscUtil;
-import com.neep.meatlib.util.Wrenchable;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.Nullable;
 
-public class PumpBlock extends BaseFacingBlock implements EntityBlock, Wrenchable
-{
+public class PumpBlock extends BaseEntityBlock {
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
+    public static final MapCodec<PumpBlock> CODEC = simpleCodec(properties -> new PumpBlock());
 
-    public PumpBlock(RegistrationContext ctx, ItemSettings itemSettings, Properties settings)
-    {
-        super(ctx, itemSettings.factory(FluidComponentItem::new), settings.noOcclusion());
+    public PumpBlock() {
+        super(MeatlibBlockSettings.create().strength(1.5F).properties());
+        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH).setValue(ACTIVE, false));
     }
 
     @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext context)
-    {
-        return Shapes.box(0f, 0f, 0f, 1f, 1.0f, 1f);
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
-    protected void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
-    {
-        super.neighborChanged(state, world, pos, block, fromPos, notify);
-        if (world.getBlockEntity(pos) instanceof PumpBlockEntity be)
-        {
-            boolean powered = world.hasNeighborSignal(pos);
-            be.updatePowered(powered);
-            be.updateCache();
-//            world.updateNeighbors(pos, this);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, ACTIVE);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
+    }
+
+    @Override
+    protected void neighborChanged(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+        super.neighborChanged(state, level, pos, block, fromPos, isMoving);
+        if (!level.isClientSide && level.getBlockEntity(pos) instanceof PumpBlockEntity pump) {
+            pump.updatePowered(level.hasNeighborSignal(pos));
         }
     }
 
     @Override
-    public void onPlace(BlockState state, Level world, BlockPos pos, BlockState oldState, boolean notify)
-    {
-        super.onPlace(state, world, pos, oldState, notify);
-        if (!world.isClientSide() && world.getBlockEntity(pos) instanceof PumpBlockEntity be)
-        {
-            be.updateCache();
-            be.updatePowered(world.hasNeighborSignal(pos));
+    protected net.minecraft.world.InteractionResult useWithoutItem(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.BlockHitResult hit) {
+        if (!level.isClientSide && level.getBlockEntity(pos) instanceof PumpBlockEntity pump) {
+            pump.changeMode();
         }
+        return net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new PumpBlockEntity(pos, state);
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 
     @Nullable
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
-    {
-        return NMBlockEntities.PUMP.create(pos, state);
-    }
-
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit)
-    {
-        InteractionHand hand = InteractionHand.MAIN_HAND;
-        if (ItemUtil.playerHoldingPipe(player, hand))
-            return InteractionResult.PASS;
-
-        if (!world.isClientSide() && world.getBlockEntity(pos) instanceof PumpBlockEntity be)
-        {
-            if (player.isShiftKeyDown())
-            {
-                be.changeMode();
-                world.playSound(null, pos, MeatlibSounds.CLICK, SoundSource.BLOCKS, 1, 1);
-            }
-            else
-            {
-                TankBlockEntity.showContents((ServerPlayer) player, world, pos, be.getBuffer(null));
-            }
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        if (level.isClientSide) {
+            return null;
         }
-        return InteractionResult.SUCCESS;
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
-    {
-        super.createBlockStateDefinition(builder);
-        builder.add(ACTIVE);
-    }
-
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
-    {
-        return MiscUtil.checkType(type, NMBlockEntities.PUMP, (world1, pos, state1, blockEntity) -> blockEntity.tick(), null, world);
-    }
-
-    @Override
-    public boolean onWrench(Level world, BlockPos pos, BlockState state, Player player, InteractionHand hand, BlockHitResult hitResult, ItemStack stack)
-    {
-        BlockState newState = rotate(state, hitResult);
-
-        if (world.getBlockEntity(pos) instanceof PumpBlockEntity be)
-            be.setBlockState(newState);
-
-        world.setBlock(pos, newState, Block.UPDATE_ALL);
-        playWrenchSound(world, pos);
-
-        return true;
+        return (lvl, pos, blockState, blockEntity) -> {
+            if (blockEntity instanceof PumpBlockEntity pump) {
+                pump.serverTick();
+            }
+        };
     }
 }

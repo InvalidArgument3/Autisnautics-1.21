@@ -1,3 +1,11 @@
+## Pipes collapsed, jar 0.30.0-neoforge.46
+
+The hand-ported item pipe, fluid pipe, pump, filter pipe, merge pipe, pipe driver, route finder, and routing network now live at the upstream packages (`transport/block/...`, `transport/item_network`, `transport/api/item_network`). The `machine/transport` copies of those classes are gone. Tanks, the storage bus, and filter entries stay in `machine/transport` because upstream has no second copy of them. `SyncableBlockEntity` implements `BlockEntityClientSerializable`: `getUpdateTag` calls `toClientTag` and `handleUpdateTag` calls `fromClientTag`.
+
+Combined-tree errors after that: **5633**. `exclude.txt` is 1452 files. The next ten kinds are in `tools/port-errors/next10.txt`.
+
+Pairs that are both present upstream (mixins in neepmeat and meatweapons, the egg integrator and the neepbus integrator, vat and living-machine fluid ports) are different classes and were left in place.
+
 ## Overrides restored, jar 0.30.0-neoforge.45
 
 The bulk deletion of `@Override` is reversed. `apply_121_drift.py` now rewrites signatures and keeps the annotation: `appendHoverText` takes `Item.TooltipContext`, `getUseDuration` takes a `LivingEntity`, `mouseScrolled` takes the extra scroll axis, `isPathfindable` drops the world and position, and `neighborChanged`, `onRemove`, `getShape`, `updateShape`, and `useWithoutItem` are protected. `SingleVariantStorage.canInsert` is the method Fabric storages overrode.
