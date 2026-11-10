@@ -38,15 +38,18 @@ public class LivingMachineGameTests {
 
     @GameTest(template = "empty")
     public static void metaboliserConsumesMeat(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 0, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 0, 2), LiveMachines.STOMACH.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 1), LiveMachines.METABOLISER.get().defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity stomach = helper.getBlockEntity(new BlockPos(2, 0, 2));
+        helper.setBlock(new BlockPos(6, 2, 1), LiveMachines.STOMACH.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 4, 1), LiveMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 2, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 3, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 2, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 2, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
+        helper.setBlock(new BlockPos(4, 2, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
+        com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity stomach = helper.getBlockEntity(new BlockPos(6, 2, 1));
         stomach.store(com.neep.neepmeat.fluid.MeatFluid.STILL.get(), 4);
-        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 2, 1));
         controller.serverTick();
-        com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 1));
+        com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(1, 4, 1));
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.MetaboliserProcess, "process " + controller.process());
         helper.assertTrue(segment.energy() == 240, "energy " + segment.energy());
         helper.assertTrue(stomach.droplets() == 0, "meat left " + stomach.droplets());
@@ -64,6 +67,18 @@ public class LivingMachineGameTests {
         helper.assertTrue(helper.getBlockState(new BlockPos(1, 0, 1)).isAir(), "controller remained");
         helper.assertTrue(!helper.getLevel().getEntitiesOfClass(com.neep.neepmeat.entity.MachineWormEntity.class,
                 new net.minecraft.world.phys.AABB(helper.absolutePos(new BlockPos(1, 0, 1))).inflate(1)).isEmpty(), "no worm");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void stomachPlacesAndBreaksAsABigBlock(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(4, 2, 4);
+        helper.setBlock(origin, LiveMachines.STOMACH.get().defaultBlockState());
+        helper.assertTrue(helper.getBlockState(origin.north()).is(LiveMachines.STOMACH_STRUCTURE.get()), "north structure missing");
+        helper.assertTrue(helper.getBlockState(origin.above()).is(LiveMachines.STOMACH_STRUCTURE.get()), "above structure missing");
+        helper.setBlock(origin.north(), net.minecraft.world.level.block.Blocks.AIR.defaultBlockState());
+        helper.assertTrue(helper.getBlockState(origin).isAir(), "origin remained");
+        helper.assertTrue(helper.getBlockState(origin.south()).isAir(), "south structure remained");
         helper.succeed();
     }
 }

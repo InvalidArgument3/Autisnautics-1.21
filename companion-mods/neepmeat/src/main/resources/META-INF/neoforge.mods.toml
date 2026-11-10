@@ -4,7 +4,7 @@ license="LGPL-3.0"
 
 [[mods]]
 modId="neepmeat"
-version="0.30.0-neoforge.19"
+version="0.30.0-neoforge.20"
 displayName="NEEPMeat"
 authors="MeatWheeze"
 logoFile="icon.png"
@@ -12,7 +12,7 @@ description='''Rusty machinery and meat. NeoForge 1.21.1 port of MeatWheeze's Ne
 
 [[mods]]
 modId="meatlib"
-version="0.30.0-neoforge.19"
+version="0.30.0-neoforge.20"
 displayName="meatlib"
 authors="MeatWheeze"
 description='''Library written for NEEPMeat, rewritten for NeoForge 1.21.1. Same jar as neepmeat.'''
@@ -37,7 +37,7 @@ file="META-INF/accesstransformer.cfg"
 [[dependencies.neepmeat]]
 modId="meatlib"
 type="required"
-versionRange="[0.30.0-neoforge.19,)"
+versionRange="[0.30.0-neoforge.20,)"
 ordering="AFTER"
 side="BOTH"
 

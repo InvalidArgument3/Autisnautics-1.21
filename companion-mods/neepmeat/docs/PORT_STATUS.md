@@ -163,7 +163,13 @@ Registered so far: `living_machine_controller`, `machine_block`, `motor_port`. T
 
 A controller, a machine block, a stomach, and one metaboliser segment select the metaboliser process. Four droplets of `neepmeat:meat` become 240 energy on the segment: 40 energy per droplet, times 1.5. More than six segments would produce nothing. The degradation formula matches upstream. A controller loaded at full degradation is replaced by a `machine_worm`.
 
-Deviations: the stomach and the metaboliser segment are single blocks. Upstream builds them as big blocks. The worm's three segments are not separate entities. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
+## Big blocks, jar 0.30.0-neoforge.20
+
+`BigBlock2` places the upright stomach cylinder (radius 1, one below to one above) and the metaboliser disc (radius 1). Breaking a structure block removes the origin and the rest of the volume. The metaboliser's four cardinal faces delegate blood to the origin. 43 game tests passed.
+
+Deviations: only the upright volumes are placed. Upstream also has X and Z orientations. The outline shape is a normal cube, not the union of the volume. Structure ids are `stomach_structure` and `metaboliser_segment_structure`.
+
+The worm's three segments are not separate entities. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
 
 ## Blood network, jar 0.30.0-neoforge.19
 

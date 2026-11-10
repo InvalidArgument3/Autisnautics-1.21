@@ -1,1 +1,1 @@
-{ "variants": { "": { "model": "minecraft:block/red_terracotta" } } }
+{ "multipart": [ { "apply": { "model": "minecraft:block/red_terracotta" } } ] }

@@ -27,18 +27,19 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 public class BloodNetworkGameTests {
     @GameTest(template = "empty")
     public static void bloodFlowsFromMetaboliserToLuckyOne(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.METABOLISER.get().defaultBlockState());
-        helper.setBlock(new BlockPos(4, 0, 1), LiveMachines.LUCKY_ONE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 0, 1), VascularConduits.CONDUIT.get().defaultBlockState());
-        helper.setBlock(new BlockPos(3, 0, 1), VascularConduits.CONDUIT.get().defaultBlockState());
-        MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 6), LiveMachines.LUCKY_ONE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 5), VascularConduits.CONDUIT.get().defaultBlockState());
+        MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));
         segment.setOutputEnergy(1000);
-        VascularConduitBlockEntity first = helper.getBlockEntity(new BlockPos(2, 0, 1));
-        VascularConduitBlockEntity second = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        VascularConduitBlockEntity first = helper.getBlockEntity(new BlockPos(2, 1, 4));
+        VascularConduitBlockEntity second = helper.getBlockEntity(new BlockPos(2, 1, 5));
         helper.assertTrue(first.network() != null && first.network() == second.network(), "conduits did not join");
-        helper.assertTrue(helper.getBlockState(new BlockPos(2, 0, 1)).getValue(VascularConduitBlock.EAST) == ConnectionType.SIDE, "east face open");
+        helper.assertTrue(helper.getBlockState(new BlockPos(2, 1, 4)).getValue(VascularConduitBlock.NORTH) == ConnectionType.SIDE
+                || helper.getBlockState(new BlockPos(2, 1, 4)).getValue(VascularConduitBlock.SOUTH) == ConnectionType.SIDE, "face open");
         BloodNetworkManager.get(helper.getLevel()).tick();
-        LuckyOneBlockEntity lucky = helper.getBlockEntity(new BlockPos(4, 0, 1));
+        LuckyOneBlockEntity lucky = helper.getBlockEntity(new BlockPos(2, 1, 6));
         helper.assertTrue(Math.abs(lucky.influx() - 0.05f) < 0.001f, "influx " + lucky.influx());
         helper.succeed();
     }
@@ -58,12 +59,12 @@ public class BloodNetworkGameTests {
 
     @GameTest(template = "empty")
     public static void balancerTakesEnergyBeforeTheSink(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.METABOLISER.get().defaultBlockState());
-        helper.setBlock(new BlockPos(3, 0, 1), LiveMachines.LUCKY_ONE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 0, 1), VascularConduits.CONDUIT.get().defaultBlockState());
-        MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 6), LiveMachines.LUCKY_ONE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
+        MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));
         segment.setOutputEnergy(1000);
-        VascularConduitBlockEntity conduit = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        VascularConduitBlockEntity conduit = helper.getBlockEntity(new BlockPos(2, 1, 4));
         conduit.network().include(new BalancingBloodAcceptor() {
             @Override
             public long update(long internal) {
@@ -76,7 +77,7 @@ public class BloodNetworkGameTests {
             }
         });
         BloodNetworkManager.get(helper.getLevel()).tick();
-        LuckyOneBlockEntity lucky = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        LuckyOneBlockEntity lucky = helper.getBlockEntity(new BlockPos(2, 1, 6));
         helper.assertTrue(lucky.influx() == 0, "sink still received " + lucky.influx());
         helper.succeed();
     }

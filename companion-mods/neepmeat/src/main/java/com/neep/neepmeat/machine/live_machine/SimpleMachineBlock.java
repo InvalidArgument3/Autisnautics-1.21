@@ -41,15 +41,11 @@ public class SimpleMachineBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (kind) {
-            case STOMACH -> new StomachBlockEntity(pos, state);
-            case METABOLISER -> new MetaboliserSegmentBlockEntity(pos, state);
             case LUCKY_ONE -> new com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity(pos, state);
         };
     }
 
     public enum Kind {
-        STOMACH,
-        METABOLISER,
         LUCKY_ONE
     }
 }

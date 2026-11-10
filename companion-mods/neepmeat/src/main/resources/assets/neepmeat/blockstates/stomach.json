@@ -1,1 +1,1 @@
-{ "variants": { "": { "model": "minecraft:block/nether_wart_block" } } }
+{ "multipart": [ { "apply": { "model": "minecraft:block/nether_wart_block" } } ] }

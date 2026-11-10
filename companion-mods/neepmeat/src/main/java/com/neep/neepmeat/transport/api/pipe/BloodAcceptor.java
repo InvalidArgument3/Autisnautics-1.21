@@ -16,7 +16,13 @@ import org.jetbrains.annotations.Nullable;
 public interface BloodAcceptor {
     static @Nullable BloodAcceptor find(Level level, BlockPos pos) {
         BlockEntity entity = level.getBlockEntity(pos);
-        return entity instanceof BloodAcceptor acceptor ? acceptor : null;
+        if (entity instanceof BloodAcceptor acceptor) {
+            return acceptor;
+        }
+        if (level.getBlockState(pos).getBlock() instanceof com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock structure) {
+            return structure.blood(level, pos);
+        }
+        return null;
     }
 
     /** Upstream name is {@code getResultItem}. */

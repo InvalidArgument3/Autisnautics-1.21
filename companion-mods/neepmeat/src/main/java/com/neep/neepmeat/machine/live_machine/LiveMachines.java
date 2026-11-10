@@ -46,14 +46,18 @@ public final class LiveMachines {
             BLOCK_ENTITIES.register("motor_port", () -> BlockEntityType.Builder
                     .of(MotorPortBlockEntity::new, MOTOR_PORT.get()).build(null));
 
-    public static final DeferredBlock<SimpleMachineBlock> STOMACH = CONTEXT.block("stomach", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.STOMACH));
+    public static final DeferredBlock<StomachBlock> STOMACH = CONTEXT.block("stomach", StomachBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock> STOMACH_STRUCTURE =
+            CONTEXT.block("stomach_structure", () -> new com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock(STOMACH, false));
     public static final DeferredItem<BlockItem> STOMACH_ITEM = CONTEXT.item("stomach",
             () -> new BlockItem(STOMACH.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity>> STOMACH_BE =
             BLOCK_ENTITIES.register("stomach", () -> BlockEntityType.Builder
                     .of(com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity::new, STOMACH.get()).build(null));
 
-    public static final DeferredBlock<SimpleMachineBlock> METABOLISER = CONTEXT.block("metaboliser_segment", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.METABOLISER));
+    public static final DeferredBlock<MetaboliserSegmentBlock> METABOLISER = CONTEXT.block("metaboliser_segment", MetaboliserSegmentBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock> METABOLISER_STRUCTURE =
+            CONTEXT.block("metaboliser_segment_structure", () -> new com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock(METABOLISER, true));
     public static final DeferredItem<BlockItem> METABOLISER_ITEM = CONTEXT.item("metaboliser_segment",
             () -> new BlockItem(METABOLISER.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity>> METABOLISER_BE =
