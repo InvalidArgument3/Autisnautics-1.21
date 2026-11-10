@@ -1,0 +1,8 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:15: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:16: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:17: error: package net.fabricmc.yarn.constants does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:22: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:26: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:26: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/module/MiningMeatgunModuleType.java:26: error: package MeatgunModule does not exist

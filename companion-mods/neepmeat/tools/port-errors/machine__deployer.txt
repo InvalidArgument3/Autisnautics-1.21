@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/deployer/DeployerBlock.java:22: error: cannot find symbol

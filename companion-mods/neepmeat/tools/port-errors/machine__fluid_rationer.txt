@@ -1,0 +1,20 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:18: error: package com.neep.neepbus.block.entity does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:19: error: package com.neep.neepbus.util does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:20: error: package com.neep.neepbus.util does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:21: error: package com.neep.neepbus.util does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:26: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:27: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:31: error: package net.fabricmc.fabric.api.screenhandler.v1 does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:33: error: package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:262: error: cannot find symbol

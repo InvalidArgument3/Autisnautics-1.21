@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/util/Border.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/util/Border.java:55: error: cannot find symbol

@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:19: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:28: error: cannot find symbol

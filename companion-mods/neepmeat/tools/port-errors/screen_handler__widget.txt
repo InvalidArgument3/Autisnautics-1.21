@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/screen_handler/widget/VascularCondenserWidgetHandler.java:17: error: cannot find symbol

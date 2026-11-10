@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/multiblock2/Multiblock2BlockEntity.java:16: error: package net.fabricmc.fabric.api.lookup.v1.block does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/multiblock2/Multiblock2BlockEntity.java:25: error: cannot find symbol

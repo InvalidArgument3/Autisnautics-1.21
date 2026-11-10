@@ -8,6 +8,12 @@ Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak,
 
 Deviations: no GeckoLib hatch animation, no cosmic beam particles, no encased data cable, and no whisper-flour feeding. Blood is stored in milli-buckets. The advanced integrator counts its own ticks.
 
+## Batch driver, jar 0.30.0-neoforge.41
+
+`tools/batch_port.py` copies a Loom package, runs `apply_121_drift.py` (transfer imports, `ResourceLocation`, save/load, `useWithoutItem`, `EnvType` to `OnlyIn`, entity `defineSynchedData`), and compiles. A package is deleted again if any of its files fail, and the javac lines stay in `tools/port-errors/`.
+
+Two selections were tried. The closed set that only needed the transfer rewrite kept 11 packages. A second pass of every remaining leaf (no missing NeepMeat dependency, no mixin, renderer, or datagen) compiled none of them: the failures are per-file 1.21 API changes (`SimpleCriterionTrigger`, `AbstractTreeGrower`, `TallBlock`, yarn `net.minecraft.block.*`, missing sound constants), not one more repeated rewrite. Dropping a failed package inside a dependency chain then failed its dependents, so that wider batch was not kept.
+
 ## Package coverage, jar 0.30.0-neoforge.40
 
 Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file in that package is ported. **Partial** means some files are present. **Files present** means every upstream filename in that package exists here. A present file can still be a shorter port; the living-machine section below is the line-by-line check.
@@ -22,8 +28,8 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `api/block` | 0 | 2 | missing |
 | `api/data` | 1 | 1 | files present |
 | `api/enlightenment` | 0 | 3 | missing |
-| `api/implant` | 0 | 1 | missing |
-| `api/item` | 0 | 1 | missing |
+| `api/implant` | 1 | 1 | files present |
+| `api/item` | 1 | 1 | files present |
 | `api/live_machine` | 11 | 16 | partial |
 | `api/live_machine/metrics` | 0 | 3 | missing |
 | `api/machine` | 1 | 1 | files present |
@@ -41,7 +47,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `api/processing/ball_mill` | 0 | 3 | missing |
 | `api/processing/random_ores` | 0 | 8 | missing |
 | `api/storage` | 2 | 11 | partial |
-| `api/theme` | 0 | 1 | missing |
+| `api/theme` | 1 | 1 | files present |
 | `block` | 2 | 34 | partial |
 | `block/entity` | 0 | 12 | missing |
 | `block/entity/machine` | 0 | 2 | missing |
@@ -100,16 +106,16 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `entity` | 2 | 10 | partial |
 | `entity/bovine_horror` | 0 | 8 | missing |
 | `entity/compressor_scutter` | 0 | 3 | missing |
-| `entity/effect` | 0 | 2 | missing |
+| `entity/effect` | 2 | 2 | files present |
 | `entity/follower` | 0 | 4 | missing |
-| `entity/goal` | 0 | 2 | missing |
+| `entity/goal` | 2 | 2 | files present |
 | `entity/hound` | 0 | 3 | missing |
 | `entity/keeper` | 0 | 6 | missing |
 | `entity/path_legion` | 0 | 1 | missing |
 | `entity/repeater` | 0 | 2 | missing |
 | `entity/scutter` | 0 | 7 | missing |
 | `entity/skyworm` | 2 | 5 | partial |
-| `entity/smudge` | 0 | 1 | missing |
+| `entity/smudge` | 1 | 1 | files present |
 | `entity/weapon_switching` | 0 | 7 | missing |
 | `entity/worm` | 0 | 9 | missing |
 | `fluid` | 7 | 7 | files present |
@@ -122,8 +128,8 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `implant/entity` | 0 | 20 | missing |
 | `implant/item` | 0 | 7 | missing |
 | `init` | 2 | 21 | partial |
-| `interfaces` | 0 | 3 | missing |
-| `inventory` | 0 | 1 | missing |
+| `interfaces` | 3 | 3 | files present |
+| `inventory` | 1 | 1 | files present |
 | `item` | 1 | 49 | partial |
 | `item/filter` | 0 | 5 | missing |
 | `item/util` | 0 | 3 | missing |
@@ -174,7 +180,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `machine/reactor/disruptor` | 3 | 4 | partial |
 | `machine/reservoir` | 0 | 2 | missing |
 | `machine/separator` | 0 | 5 | missing |
-| `machine/sifter` | 0 | 1 | missing |
+| `machine/sifter` | 1 | 1 | files present |
 | `machine/small_compressor` | 0 | 6 | missing |
 | `machine/small_trommel` | 2 | 6 | partial |
 | `machine/solidity_detector` | 0 | 2 | missing |
@@ -228,7 +234,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `potion` | 0 | 1 | missing |
 | `recipe` | 14 | 21 | partial |
 | `screen_handler` | 3 | 21 | partial |
-| `screen_handler/slot` | 0 | 1 | missing |
+| `screen_handler/slot` | 1 | 1 | files present |
 | `screen_handler/widget` | 0 | 3 | missing |
 | `thord` | 0 | 3 | missing |
 | `thord/compiler` | 0 | 1 | missing |
@@ -270,9 +276,9 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `transport/worm` | 6 | 8 | partial |
 | `util` | 2 | 18 | partial |
 | `world` | 0 | 1 | missing |
-| `world/feature_configu` | 0 | 1 | missing |
+| `world/feature_configu` | 1 | 1 | files present |
 
-Upstream packages: 257. Missing 179, partial 50, files present 28.
+Upstream packages: 257. Missing 168, partial 50, files present 39.
 
 ## Phase 2 milestone: meatlib
 

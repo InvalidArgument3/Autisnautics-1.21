@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/item/filter/ItemFilter.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/item/filter/ItemFilter.java:56: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/item/filter/ItemFilter.java:101: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/item/filter/ItemFilter.java:102: error: cannot find symbol

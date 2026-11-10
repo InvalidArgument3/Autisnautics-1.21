@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/separator/SeparatorBlock.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/separator/SeparatorBlock.java:20: error: cannot find symbol

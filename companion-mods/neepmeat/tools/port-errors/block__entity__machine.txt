@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:31: error: package net.fabricmc.fabric.api.transfer.v1.storage does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:258: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:285: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:286: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:287: error: cannot find symbol

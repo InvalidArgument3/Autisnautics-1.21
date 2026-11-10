@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:30: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:32: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:55: error: package TallBlock does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/reservoir/ReservoirBlock.java:57: error: cannot find symbol

@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:17: error: cannot find symbol

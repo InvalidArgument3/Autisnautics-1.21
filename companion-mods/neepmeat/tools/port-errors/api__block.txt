@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/block/PressureWashable.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/block/PressureWashable.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/block/PressureWashable.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/block/PressureWashable.java:20: error: package net.minecraft.block does not exist

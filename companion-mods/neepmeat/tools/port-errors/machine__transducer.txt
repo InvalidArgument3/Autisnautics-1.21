@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/transducer/TransducerBlock.java:15: error: package com.neep.meatlib.api.block does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/transducer/TransducerBlock.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/transducer/TransducerBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/transducer/TransducerBlock.java:33: error: cannot find symbol

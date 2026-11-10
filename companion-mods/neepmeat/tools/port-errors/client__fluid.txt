@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java:18: error: package net.fabricmc.fabric.api.client.render.fluid.v1 does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java:19: error: package net.fabricmc.fabric.api.client.render.fluid.v1 does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java:20: error: package net.fabricmc.fabric.api.transfer.v1.client.fluid does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/fluid/CoarseMeatVariantRenderHandler.java:33: error: cannot find symbol

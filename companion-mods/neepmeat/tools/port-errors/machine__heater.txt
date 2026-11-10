@@ -1,0 +1,10 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:20: error: package com.neep.neepmeat.client.screen.tablet.graph does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:26: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:199: error: cannot find symbol

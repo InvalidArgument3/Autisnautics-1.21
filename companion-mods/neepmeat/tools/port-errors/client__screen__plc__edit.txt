@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/plc/edit/EditBoxWidget.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/plc/edit/EditBoxWidget.java:47: error: cannot find symbol

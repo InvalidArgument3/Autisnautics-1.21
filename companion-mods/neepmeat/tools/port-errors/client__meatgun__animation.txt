@@ -1,0 +1,14 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:17: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:18: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:19: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:20: error: package com.neep.meatweapons.component does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:21: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:22: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:23: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:123: error: cannot find symbol
