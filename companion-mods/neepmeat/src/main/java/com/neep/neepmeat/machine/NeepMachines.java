@@ -16,6 +16,8 @@ import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
 import com.neep.neepmeat.plc.arm.RoboticArmBlock;
 import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
+import com.neep.neepmeat.plc.block.PLCRedstoneInterfaceBlock;
+import com.neep.neepmeat.plc.block.entity.PLCRedstoneInterfaceBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
 import com.neep.neepmeat.machine.transport.BasicTankBlock;
@@ -75,6 +77,11 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> ROBOTIC_ARM_ITEM = CONTEXT.item("robotic_arm", () -> new BlockItem(ROBOTIC_ARM.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RoboticArmBlockEntity>> ROBOTIC_ARM_BE = BLOCK_ENTITIES.register("robotic_arm",
             () -> BlockEntityType.Builder.of(RoboticArmBlockEntity::new, ROBOTIC_ARM.get()).build(null));
+
+    public static final DeferredBlock<PLCRedstoneInterfaceBlock> REDSTONE_INTERFACE = CONTEXT.block("redstone_interface", PLCRedstoneInterfaceBlock::new);
+    public static final DeferredItem<BlockItem> REDSTONE_INTERFACE_ITEM = CONTEXT.item("redstone_interface", () -> new BlockItem(REDSTONE_INTERFACE.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PLCRedstoneInterfaceBlockEntity>> REDSTONE_INTERFACE_BE = BLOCK_ENTITIES.register("redstone_interface",
+            () -> BlockEntityType.Builder.of(PLCRedstoneInterfaceBlockEntity::new, REDSTONE_INTERFACE.get()).build(null));
 
     public static final DeferredHolder<MenuType<?>, MenuType<AlloyKilnMenu>> ALLOY_MENU = MENUS.register("alloy_kiln",
             () -> IMenuTypeExtension.create((id, inventory, buf) -> {
@@ -172,6 +179,7 @@ public final class NeepMachines {
         if (event.getTabKey() == BuildingBlocks.TAB.getKey()) {
             event.accept(ALLOY_KILN_ITEM.get());
             event.accept(ROBOTIC_ARM_ITEM.get());
+            event.accept(REDSTONE_INTERFACE_ITEM.get());
             event.accept(ITEM_PIPE_ITEM.get());
             event.accept(FILTER_ITEM_PIPE_ITEM.get());
             event.accept(MERGE_PIPE_ITEM.get());

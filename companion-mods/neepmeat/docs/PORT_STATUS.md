@@ -88,7 +88,19 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | Held stacks | ported shape | `PlcInstruction.writeItem` and `writeFluid` store an item id and count, or a fluid id and amount. That replaces `ResourceAmount<ItemVariant>`. |
 | Game test | ported | `push 2` / `push 3` / `add` compiles and leaves 5 on the stack. 24 tests passed on `0.30.0-neoforge.8`. |
 
-The PLC block, executor, assembler, living machines, and the meatgun are still the next batches.
+## Opcodes, jar 0.30.0-neoforge.9
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.9` and passed all 28 tests.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Memory | ported | `store`, `fetch`, `allot`, `free`, `fill`, and `PLCMemory`. A program allots one cell, stores 42, and fetches it. |
+| Item | ported | `move` extracts and inserts through `IItemHandler`. `takeItem` and `giveItem` replace Fabric item transfer. The arm carries one cobblestone from one chest to another. |
+| Fluid | ported | `inject` takes one bucket (1000 mB) through `IFluidHandler`, moves the arm, and returns the fluid when the destination is not a workpiece. Workpiece mutation lands with manufacture. |
+| Redstone | ported | `redstone_interface`, `rread`, and `remit`. The block emits the stored strength and records the best neighbour signal. |
+| Block | partial | `moveto` aims the actuator. `bplace` and `bbreak` need the builder entity, which arrives with the assembler. |
+
+The PLC block, executor, assembler, motor, living machines, and the meatgun are still the next batches.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

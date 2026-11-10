@@ -13,6 +13,7 @@ package com.neep.neepmeat.plc;
 import com.neep.meatlib.neepasm.NeepASM;
 import com.neep.meatlib.util.NeepAsmTokenView;
 import com.neep.neepmeat.api.plc.instruction.CallInstruction;
+import com.neep.neepmeat.api.plc.instruction.SimpleInstructionProvider;
 import com.neep.neepmeat.api.plc.instruction.SimplerInstructionProvider;
 import com.neep.neepmeat.neepasm.compiler.NeepAsmParser;
 import com.neep.neepmeat.neepasm.compiler.parser.CallInstructionParser;
@@ -22,17 +23,40 @@ import com.neep.neepmeat.neepasm.compiler.parser.ParsedInstruction;
 import com.neep.neepmeat.neepasm.program.Label;
 import com.neep.neepmeat.plc.instruction.BIFInstruction;
 import com.neep.neepmeat.plc.instruction.BITInstruction;
+import com.neep.neepmeat.plc.instruction.Argument;
+import com.neep.neepmeat.plc.instruction.EmitRedstoneInstruction;
+import com.neep.neepmeat.plc.instruction.FreeInstruction;
+import com.neep.neepmeat.plc.instruction.InjectInstruction;
 import com.neep.neepmeat.plc.instruction.Instruction;
+import com.neep.neepmeat.plc.instruction.MoveInstruction;
+import com.neep.neepmeat.plc.instruction.ReadRedstoneInstruction;
+import com.neep.neepmeat.plc.instruction.block.MoveToInstruction;
+import com.neep.neepmeat.plc.instruction.memory.AllotInstruction;
+import com.neep.neepmeat.plc.instruction.memory.FetchInstruction;
+import com.neep.neepmeat.plc.instruction.memory.FillInstruction;
+import com.neep.neepmeat.plc.instruction.memory.StoreInstruction;
 import com.neep.neepmeat.plc.instruction.InstructionProvider;
 import com.neep.neepmeat.plc.instruction.JumpInstruction;
 import com.neep.neepmeat.plc.instruction.PushInstruction;
 import com.neep.neepmeat.plc.instruction.ReturnInstruction;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.function.Supplier;
+import java.util.regex.Pattern;
 
 public class Instructions {
     public static final Map<String, InstructionProvider> REGISTRY = new HashMap<>();
@@ -88,6 +112,18 @@ public class Instructions {
     public static final SimplerInstructionProvider BIT = register(new SimplerInstructionProvider((world, nbt) -> new BITInstruction(nbt), new JumpInstructionParser(BITInstruction::new), "BIT"));
     public static final SimplerInstructionProvider BIF = register(new SimplerInstructionProvider((world, nbt) -> new BIFInstruction(nbt), new JumpInstructionParser(BIFInstruction::new), "BIF"));
 
+    public static final InstructionProvider FREE = createTrivialBlock("free", new FreeInstruction());
+    public static final InstructionProvider STORE = createTrivialBlock("store", new StoreInstruction());
+    public static final InstructionProvider ALLOT = createTrivialBlock("allot", new AllotInstruction());
+    public static final InstructionProvider FETCH = createTrivialBlock("fetch", new FetchInstruction());
+    public static final InstructionProvider FILL = createTrivialBlock("fill", new FillInstruction());
+
+    public static final InstructionProvider MOVE = register(new SimplerInstructionProvider(MoveInstruction::new, (view, parser, scope) -> MoveInstruction.parser(view, parser), "MOVE"));
+    public static final InstructionProvider INJECT = register(new SimpleInstructionProvider(InjectInstruction::new, InjectInstruction::new, 2, "INJECT"));
+    public static final InstructionProvider MOVETO = createTrivialBlock("moveto", new MoveToInstruction());
+    public static final InstructionProvider READ_REDSTONE = register(new SimplerInstructionProvider(ReadRedstoneInstruction::new, ReadRedstoneInstruction::parser, "RREAD"));
+    public static final InstructionProvider EMIT_REDSTONE = register(new SimplerInstructionProvider(EmitRedstoneInstruction::new, EmitRedstoneInstruction::parser, "REMIT"));
+
     private static <T extends InstructionProvider> T register(T provider) {
         REGISTRY.put(provider.getParseName(), provider);
         return provider;
@@ -116,5 +152,90 @@ public class Instructions {
 
     public static Label labelFromNbt(CompoundTag nbt) {
         return new Label(nbt.getString("name"), nbt.getInt("index"));
+    }
+
+    public static ItemStack takeItem(Argument target, Supplier<Level> world, int count, Pattern pattern) {
+        IItemHandler handler = itemHandler(world.get(), target);
+        if (handler == null) {
+            return ItemStack.EMPTY;
+        }
+        for (int slot = 0; slot < handler.getSlots(); slot++) {
+            ItemStack stack = handler.getStackInSlot(slot);
+            if (stack.isEmpty() || !match(pattern, stack.getItem())) {
+                continue;
+            }
+            ItemStack extracted = handler.extractItem(slot, Math.min(count, stack.getCount()), false);
+            if (!extracted.isEmpty()) {
+                return extracted;
+            }
+        }
+        return ItemStack.EMPTY;
+    }
+
+    public static int giveItem(Argument target, Supplier<Level> world, ItemStack stack) {
+        IItemHandler handler = itemHandler(world.get(), target);
+        if (handler == null || stack.isEmpty()) {
+            return 0;
+        }
+        ItemStack remaining = stack.copy();
+        for (int slot = 0; slot < handler.getSlots() && !remaining.isEmpty(); slot++) {
+            remaining = handler.insertItem(slot, remaining, false);
+        }
+        return stack.getCount() - remaining.getCount();
+    }
+
+    public static FluidStack takeFluid(Argument target, Supplier<Level> world, int amount) {
+        IFluidHandler handler = fluidHandler(world.get(), target);
+        if (handler == null) {
+            return FluidStack.EMPTY;
+        }
+        FluidStack simulated = handler.drain(amount, IFluidHandler.FluidAction.SIMULATE);
+        if (simulated.getAmount() != amount) {
+            return FluidStack.EMPTY;
+        }
+        return handler.drain(amount, IFluidHandler.FluidAction.EXECUTE);
+    }
+
+    public static int giveFluid(Argument target, Supplier<Level> world, FluidStack stack) {
+        IFluidHandler handler = fluidHandler(world.get(), target);
+        if (handler == null || stack == null || stack.isEmpty()) {
+            return 0;
+        }
+        return handler.fill(stack, IFluidHandler.FluidAction.EXECUTE);
+    }
+
+    private static IItemHandler itemHandler(Level level, Argument target) {
+        return level.getCapability(Capabilities.ItemHandler.BLOCK, target.pos(), target.face());
+    }
+
+    private static IFluidHandler fluidHandler(Level level, Argument target) {
+        return level.getCapability(Capabilities.FluidHandler.BLOCK, target.pos(), target.face());
+    }
+
+    public static boolean match(Pattern pattern, Item item) {
+        return pattern.asMatchPredicate().test(BuiltInRegistries.ITEM.getKey(item).toString());
+    }
+
+    public static <T> String parseRegistryGlob(NeepAsmTokenView view, Registry<T> registry, String type, boolean allowNone) throws NeepASM.ParseException {
+        return NeepAsmParser.convertToRegex(parseRegistryGlob1(view, registry, type, allowNone));
+    }
+
+    public static <T> String parseRegistryGlob1(NeepAsmTokenView view, Registry<T> registry, String type, boolean allowNone) throws NeepASM.ParseException {
+        view.fastForward();
+        if (allowNone && view.last() == '_') {
+            view.next();
+            return "";
+        }
+        String notGlob = view.nextString();
+        if (notGlob == null) {
+            throw new NeepASM.ParseException("expected %s ID string (minecraft:stone)".formatted(type));
+        }
+        if (NeepAsmParser.isSimplePattern(notGlob)) {
+            ResourceLocation id = ResourceLocation.tryParse(notGlob);
+            if (id == null || registry.getOptional(id).isEmpty()) {
+                throw new NeepASM.ParseException("%s '%s' not known".formatted(type, notGlob));
+            }
+        }
+        return notGlob;
     }
 }
