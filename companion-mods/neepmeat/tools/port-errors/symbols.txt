@@ -1,9 +1,9 @@
-start 1919
-end 1889
+start 1889
+end 1863
 plc 143
 
- 966 cannot find symbol
- 170 method does not override or implement a method from a supertype
+ 947 cannot find symbol
+ 169 method does not override or implement a method from a supertype
   18 invalid method reference
   12 incompatible types: invalid method reference
   12 method stonecutterResultFromBase in class RecipeProvider cannot be applied to given types;
@@ -17,13 +17,7 @@ plc 143
    7 method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
    7 method addClosable in class BasicScreenHandler cannot be applied to given types;
    7 incompatible types: DeferredHolder<SoundEvent,SoundEvent> cannot be converted to SoundEven
-   7 method translationKey in class NeepMeat cannot be applied to given types;
-   7 no suitable method found for playSound(<null>,BlockPos,DeferredHolder<SoundEvent,SoundEven
-   7 no suitable method found for of(Item,CompoundTag)
-   7 method of in record FluidVariant cannot be applied to given types;
-   6 Serialiser is not abstract and does not override abstract method codec() in RecipeSerializ
 
-  13 symbol:   method getId()
    9 symbol:   method getStorage(<null>)
    8 symbol:   class RenderProvider
    8 symbol:   variable animationTicks
@@ -43,3 +37,4 @@ plc 143
    6 symbol:   method singleVariantInteract(Player,InteractionHand,WritableStackStorage)
    6 symbol:   variable clientX
    6 symbol:   variable clientY
+   6 symbol:   variable clientZ

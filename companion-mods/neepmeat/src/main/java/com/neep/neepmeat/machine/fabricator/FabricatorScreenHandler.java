@@ -187,9 +187,9 @@ public class FabricatorScreenHandler extends BasicScreenHandler
 
         if (ready && sync || !be.getStorage().getBufferedStack().equals(prevBufferedStack))
         {
-            CraftingRecipe recipe = be.getCurrentRecipe();
+            net.minecraft.world.item.crafting.RecipeHolder<?> recipe = be.getStorage().recipeHolder();
 
-            syncRecipe.emitter().apply(recipe != null ? recipe.getId() : null, be.getStorage().getBufferedStack(),
+            syncRecipe.emitter().apply(recipe != null ? recipe.id() : null, be.getStorage().getBufferedStack(),
                     be.useExternal, be.useInternalForBOM);
 
             // Some utter jank

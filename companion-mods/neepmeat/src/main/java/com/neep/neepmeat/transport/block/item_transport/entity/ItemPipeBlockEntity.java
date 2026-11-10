@@ -207,6 +207,10 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
         items.clear();
     }
 
+    public void serverTick(Level world, BlockPos pos, BlockState state) {
+        serverTick();
+    }
+
     public void serverTick() {
         if (level == null) {
             return;
@@ -231,11 +235,9 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
 
     public void rebuildGraph(ServerLevel level) {
         BlockState state = getBlockState();
-        if (!(state.getBlock() instanceof ItemPipeBlock block)) {
+        if (!(state.getBlock() instanceof ItemPipeBlock)) {
             return;
         }
-        block.joinComponent(level, worldPosition);
-        state = getBlockState();
         vertex.clear();
         PipeGraph.eraseHiddenFromNeighbours(level, worldPosition, state, vertex, ItemPipeBlockEntity::findPipe);
         int connections = vertex.countConnections(state);

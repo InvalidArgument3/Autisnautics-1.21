@@ -161,18 +161,16 @@ public class NMEmiPlugin implements EmiPlugin
 
         MeatlibRecipes instance = MeatlibRecipes.getInstance();
 
-        instance.getAllValuesOfType(NMrecipeTypes.ALLOY_SMELTING)
-                .map(AlloySmeltingEmiRecipe::new)
+        instance.holdersOfType(NMrecipeTypes.ALLOY_SMELTING)
+                .map(holder -> new AlloySmeltingEmiRecipe((net.minecraft.world.item.crafting.RecipeHolder) holder))
                 .forEach(registry::addRecipe);
-        instance.getAllValuesOfType(NMrecipeTypes.GRINDING)
-                .filter(r -> !r.destroy())
-                .filter(r -> !(r instanceof BlockCrushingRecipe))
-                .map(r -> new GrindingEmiRecipe(GRINDING, r))
+        instance.holdersOfType(NMrecipeTypes.GRINDING)
+                .filter(holder -> holder.value() instanceof com.neep.neepmeat.recipe.CrushingRecipe recipe && !recipe.destroy() && !(recipe instanceof BlockCrushingRecipe))
+                .map(holder -> new GrindingEmiRecipe(GRINDING, (net.minecraft.world.item.crafting.RecipeHolder) holder))
                 .forEach(registry::addRecipe);
-        instance.getAllValuesOfType(NMrecipeTypes.ADVANCED_CRUSHING)
-                .filter(r -> !r.destroy())
-                .filter(r -> !(r instanceof BlockCrushingRecipe))
-                .map(r -> new GrindingEmiRecipe(ADVANCED_CRUSHING, r))
+        instance.holdersOfType(NMrecipeTypes.ADVANCED_CRUSHING)
+                .filter(holder -> holder.value() instanceof com.neep.neepmeat.recipe.CrushingRecipe recipe && !recipe.destroy() && !(recipe instanceof BlockCrushingRecipe))
+                .map(holder -> new GrindingEmiRecipe(ADVANCED_CRUSHING, (net.minecraft.world.item.crafting.RecipeHolder) holder))
                 .forEach(registry::addRecipe);
         instance.getAllValuesOfType(NMrecipeTypes.HEATING)
                 .map(HeatingEmiRecipe::new)
@@ -193,8 +191,8 @@ public class NMEmiPlugin implements EmiPlugin
         instance.getAllValuesOfType(PLCRecipes.ENTITY_TO_ITEM)
                 .map(EntityToItemManufactureEmiRecipe::new)
                 .forEach(registry::addRecipe);
-        instance.getAllValuesOfType(NMrecipeTypes.TROMMEL)
-                .map(TrommelEmiRecipe::new)
+        instance.holdersOfType(NMrecipeTypes.TROMMEL)
+                .map(holder -> new TrommelEmiRecipe((net.minecraft.world.item.crafting.RecipeHolder) holder))
                 .forEach(registry::addRecipe);
 //        instance.getAllValuesOfType(NMrecipeTypes.BIOREACTOR)
 //                .map(BioreactorEmiRecipe::new)
@@ -225,13 +223,10 @@ public class NMEmiPlugin implements EmiPlugin
 
         registry.addDeferredRecipes(consumer ->
         {
-            @Nullable BlockCrushingRecipe crushingRecipe = BlockCrushingRecipe.INSTANCE;
-            if (crushingRecipe != null)
-                addBlockCrushingRecipes(crushingRecipe, GRINDING, BlockCrushingRegistry.INSTANCE.getBasicEntries(), consumer);
-
-            @Nullable AdvancedBlockCrushingRecipe advancedCrushingRecipe = AdvancedBlockCrushingRecipe.INSTANCE;
-            if (advancedCrushingRecipe != null)
-                addBlockCrushingRecipes(advancedCrushingRecipe, ADVANCED_CRUSHING, BlockCrushingRegistry.INSTANCE.getAdvancedEntries(), consumer);
+            MeatlibRecipes.getInstance().holdersOfType(NMrecipeTypes.BLOCK_CRUSHING).forEach(holder ->
+                    addBlockCrushingRecipes((net.minecraft.world.item.crafting.RecipeHolder) holder, GRINDING, BlockCrushingRegistry.INSTANCE.getBasicEntries(), consumer));
+            MeatlibRecipes.getInstance().holdersOfType(NMrecipeTypes.ADVANCED_BLOCK_CRUSHING).forEach(holder ->
+                    addBlockCrushingRecipes((net.minecraft.world.item.crafting.RecipeHolder) holder, ADVANCED_CRUSHING, BlockCrushingRegistry.INSTANCE.getAdvancedEntries(), consumer));
 
             addOreFatRecipes(ORE_FAT, consumer);
         });
@@ -258,12 +253,12 @@ public class NMEmiPlugin implements EmiPlugin
         }
     }
 
-    private static void addBlockCrushingRecipes(BlockCrushingRecipe recipe, EmiRecipeCategory category, Collection<BlockCrushingRegistry.Entry> entries, Consumer<? super EmiRecipe> consumer)
+    private static void addBlockCrushingRecipes(net.minecraft.world.item.crafting.RecipeHolder<? extends BlockCrushingRecipe> holder, EmiRecipeCategory category, Collection<BlockCrushingRegistry.Entry> entries, Consumer<? super EmiRecipe> consumer)
     {
         int index = 0;
         for (var entry : entries)
         {
-            consumer.accept(new BlockCrushingEmiRecipe(index, category, recipe, entry));
+            consumer.accept(new BlockCrushingEmiRecipe(index, category, holder, entry));
             index++;
         }
     }

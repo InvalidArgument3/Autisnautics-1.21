@@ -38,9 +38,10 @@ public class BioreactorEmiRecipe implements EmiRecipe
     private final float processTime;
     private final ResourceLocation id;
 
-    public BioreactorEmiRecipe(BioreactorRecipe recipe)
+    public BioreactorEmiRecipe(net.minecraft.world.item.crafting.RecipeHolder<BioreactorRecipe> holder)
     {
-        this.id = recipe.getId();
+        BioreactorRecipe recipe = holder.value();
+        this.id = holder.id();
         this.processTime = recipe.getProcessTime();
         this.inputs = Stream.concat(recipe.getItemInputs().stream(), recipe.getFluidInputs().stream())
                 .map(EmiIngredientHelper::inputToIngredient)

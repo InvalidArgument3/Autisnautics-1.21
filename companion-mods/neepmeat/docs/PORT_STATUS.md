@@ -1,3 +1,15 @@
+## Placement path and recipe holders, jar 0.30.0-neoforge.72
+
+Combined-tree errors **1889 → 1863**. That is 26 this run, not 400, and not 1,489. The PLC closure is **143**. `exclude.txt` is **1230**.
+
+`rebuildGraph` no longer changes block states. Upstream's graph walk is `ItemPipeGraphHelperImpl.updateHiddenConnections` (the method that clears edges, then links when there are two connections or finds adjacent vertices when there are more). It reads connections that are already on the state. Those connections are made by `PrecisePipeBlock.getStateForPlacement` / `getConnectedState`, and a further face by `PrecisePipeBlock.connect`, which `useWithoutItem` calls. The junction test places pipes with `ServerPlayer.gameMode.useItemOn` and turns the cross arms with `connect`. `ItemPipeBlock.updateShape` again uses the upstream rule: `canConnectTo` is passed whether that face is already connected.
+
+Recipe `getId()` call sites that failed now carry `RecipeHolder.id()` from `getRecipeFor`, `getFirstHolder`, or `holdersOfType`. `BlockCrushingRecipe.INSTANCE` is no longer given a made-up EMI id. The component `NMComponents.UNIQUE_ID.get(stack).getId()` is not a recipe lookup and is unchanged.
+
+`MiscUtil.openHandledScreen` opens a `SimpleMenuProvider`. `ItemPipeBlockEntity.serverTick(Level, BlockPos, BlockState)` delegates to the no-argument tick. `ItemTransport` still does not compile when it is the only file taken off the exclude list: its imports are the excluded dumper, requester, and process-card types. The item-transport block entities still have **78** errors. No ejector test was added, because that block is not in the jar.
+
+Opcodes that still run as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM.
+
 ## Item pipe API and the PLC menu, jar 0.30.0-neoforge.71
 
 Combined-tree errors **1919 → 1889**. That is 30 this run, not 400, and not 1,519. The PLC closure is **143**. `exclude.txt` is **1230**.

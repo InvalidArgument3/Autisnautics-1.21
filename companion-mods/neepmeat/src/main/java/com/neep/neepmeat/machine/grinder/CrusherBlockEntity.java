@@ -80,10 +80,10 @@ public class CrusherBlockEntity extends MotorisedMachineBlockEntity
         return currentRecipe;
     }
 
-    public void setCurrentRecipe(@Nullable CrushingRecipe recipe)
+    public void setCurrentRecipe(@Nullable CrushingRecipe recipe, @Nullable ResourceLocation id)
     {
         this.currentRecipe = recipe;
-        this.currentRecipeId = recipe != null ? recipe.getId() : null;
+        this.currentRecipeId = id;
     }
 
     public void readCurrentRecipe()
@@ -111,8 +111,8 @@ public class CrusherBlockEntity extends MotorisedMachineBlockEntity
         nbt.putInt("process_length", processLength);
         nbt.putFloat("progress_increment", progressIncrement);
 
-        if (currentRecipe != null)
-            nbt.putString("current_recipe", currentRecipe.getId().toString());
+        if (currentRecipeId != null)
+            nbt.putString("current_recipe", currentRecipeId.toString());
     }
 
     @Override
@@ -177,13 +177,14 @@ public class CrusherBlockEntity extends MotorisedMachineBlockEntity
     {
         if (currentRecipe == null && storage.outputStorage.isEmpty() && !storage.inputStorage.isEmpty())
         {
-            CrushingRecipe recipe = MeatlibRecipes.getInstance().getFirstMatch(NMrecipeTypes.GRINDING, storage).orElse(null);
+            net.minecraft.world.item.crafting.RecipeHolder<?> holder = MeatlibRecipes.getInstance().getFirstHolder(NMrecipeTypes.GRINDING, storage).orElse(null);
+            CrushingRecipe recipe = holder == null ? null : (CrushingRecipe) holder.value();
 
             try (Transaction transaction = Transaction.openOuter())
             {
                 if (recipe != null && recipe.ejectOutputs(storage, transaction))
                 {
-                    setCurrentRecipe(recipe);
+                    setCurrentRecipe(recipe, holder.id());
                     this.processLength = recipe.getTime();
                     sync();
                 }
@@ -207,7 +208,7 @@ public class CrusherBlockEntity extends MotorisedMachineBlockEntity
                 }
                 else transaction.abort();
             }
-            this.setCurrentRecipe(null);
+            this.setCurrentRecipe(null, null);
         }
         sync();
     }

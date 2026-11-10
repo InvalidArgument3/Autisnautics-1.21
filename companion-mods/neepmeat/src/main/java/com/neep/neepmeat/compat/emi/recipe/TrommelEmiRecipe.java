@@ -24,8 +24,9 @@ public class TrommelEmiRecipe implements EmiRecipe {
     private final EmiIngredient input;
     private final List<EmiStack> output;
 
-    public TrommelEmiRecipe(NormalTrommelRecipe recipe) {
-        this.id = recipe.getId();
+    public TrommelEmiRecipe(net.minecraft.world.item.crafting.RecipeHolder<NormalTrommelRecipe> holder) {
+        NormalTrommelRecipe recipe = holder.value();
+        this.id = holder.id();
         this.input = EmiIngredientHelper.inputToIngredient(recipe.getFluidInput());
 
         List<EmiStack> output = new ArrayList<>();

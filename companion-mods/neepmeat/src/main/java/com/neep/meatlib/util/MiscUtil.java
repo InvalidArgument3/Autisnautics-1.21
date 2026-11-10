@@ -31,6 +31,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class MiscUtil {
+    /** Upstream opened the screen through a player mixin. NeoForge's menu provider is the same call. */
+    public static void openHandledScreen(Player player, net.minecraft.world.inventory.MenuConstructor factory) {
+        if (player instanceof net.minecraft.server.level.ServerPlayer server && factory != null) {
+            server.openMenu(new net.minecraft.world.SimpleMenuProvider(factory, net.minecraft.network.chat.Component.empty()));
+        }
+    }
+
     /**
      * Fabric transfer used 81 droplets per milli-bucket. NeoForge fluid stacks are already milli-buckets
      * ({@link FluidType#BUCKET_VOLUME} is 1000). Callers ported from Fabric should divide by 81.

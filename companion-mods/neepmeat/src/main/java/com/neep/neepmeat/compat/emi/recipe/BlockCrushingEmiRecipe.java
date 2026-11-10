@@ -41,10 +41,11 @@ public class BlockCrushingEmiRecipe implements EmiRecipe
     private final EmiStack extraOutput;
     private final int processTime;
 
-    public BlockCrushingEmiRecipe(int index, EmiRecipeCategory category, BlockCrushingRecipe recipe, BlockCrushingRegistry.Entry entry)
+    public BlockCrushingEmiRecipe(int index, EmiRecipeCategory category, net.minecraft.world.item.crafting.RecipeHolder<? extends BlockCrushingRecipe> holder, BlockCrushingRegistry.Entry entry)
     {
+        BlockCrushingRecipe recipe = holder.value();
         this.category = category;
-        this.id = ResourceLocation.fromNamespaceAndPath(recipe.getId().getNamespace(), "/" + recipe.getId().getPath() + "_" + index);
+        this.id = ResourceLocation.fromNamespaceAndPath(holder.id().getNamespace(), holder.id().getPath() + "_" + index);
         this.processTime = recipe.getTime();
         this.input = EmiIngredientHelper.inputToIngredient(entry.input());
         this.recipeOutput = entry.output();

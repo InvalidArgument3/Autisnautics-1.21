@@ -54,6 +54,7 @@ public class AlloyKilnBlockEntity extends SyncableBlockEntity implements Heatabl
     protected int cookTimeTotal;
 
     protected AlloyKilnRecipe currentRecipe;
+    protected @org.jetbrains.annotations.Nullable ResourceLocation currentRecipeId;
 
     protected AlloyKilnStorage storage;
 
@@ -123,8 +124,10 @@ public class AlloyKilnBlockEntity extends SyncableBlockEntity implements Heatabl
 
         if (updateRecipe)
         {
-            AlloyKilnRecipe recipe = MeatlibRecipes.getInstance().getFirstMatch(NMrecipeTypes.ALLOY_SMELTING, storage).orElse(null);
+            net.minecraft.world.item.crafting.RecipeHolder<?> holder = MeatlibRecipes.getInstance().getFirstHolder(NMrecipeTypes.ALLOY_SMELTING, storage).orElse(null);
+            AlloyKilnRecipe recipe = holder == null ? null : (AlloyKilnRecipe) holder.value();
             this.currentRecipe = recipe;
+            this.currentRecipeId = holder == null ? null : holder.id();
             if (currentRecipe == null)
             {
                 cookTimeTotal = -1;
@@ -221,6 +224,7 @@ public class AlloyKilnBlockEntity extends SyncableBlockEntity implements Heatabl
         }
 
         this.currentRecipe = null;
+        this.currentRecipeId = null;
         this.cookTimeTotal = -1;
         this.cookTime = 0;
     }
@@ -282,8 +286,8 @@ public class AlloyKilnBlockEntity extends SyncableBlockEntity implements Heatabl
 
         storage.writeNbt(nbt);
 
-        if (currentRecipe != null)
-            nbt.putString("current_recipe", currentRecipe.getId().toString());
+        if (currentRecipeId != null)
+            nbt.putString("current_recipe", currentRecipeId.toString());
     }
 
     @Override
@@ -297,8 +301,8 @@ public class AlloyKilnBlockEntity extends SyncableBlockEntity implements Heatabl
 
         storage.readNbt(nbt);
 
-        this.currentRecipe = MiscUtil.ifPresentOrNull(nbt, "current_recipe",
-                s -> (AlloyKilnRecipe) MeatlibRecipes.getInstance().get((ResourceLocation.tryParse(s))).orElse(null));
+        this.currentRecipeId = nbt.contains("current_recipe") ? ResourceLocation.tryParse(nbt.getString("current_recipe")) : null;
+        this.currentRecipe = currentRecipeId == null ? null : (AlloyKilnRecipe) MeatlibRecipes.getInstance().get(currentRecipeId).orElse(null);
     }
 
     public AlloyKilnStorage getStorage()

@@ -90,17 +90,22 @@ public final class MeatlibRecipes {
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <T> Optional<T> getFirstMatch(RecipeType<?> type, Object input) {
+    public Optional<RecipeHolder<?>> getFirstHolder(RecipeType<?> type, Object input) {
         if (manager == null || type == null) {
             return Optional.empty();
         }
         for (Object holderObj : manager.getAllRecipesFor((RecipeType) type)) {
             RecipeHolder<?> holder = (RecipeHolder<?>) holderObj;
             if (holder.value() instanceof RecipeContextMatch match && match.matches(input, null)) {
-                return Optional.of((T) holder.value());
+                return Optional.of(holder);
             }
         }
         return Optional.empty();
+    }
+
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public <T> Optional<T> getFirstMatch(RecipeType<?> type, Object input) {
+        return getFirstHolder(type, input).map(holder -> (T) holder.value());
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
@@ -114,6 +119,18 @@ public final class MeatlibRecipes {
             values.add((T) holder.value());
         }
         return values;
+    }
+
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public java.util.stream.Stream<RecipeHolder<?>> holdersOfType(RecipeType<?> type) {
+        if (manager == null || type == null) {
+            return java.util.stream.Stream.empty();
+        }
+        java.util.List<RecipeHolder<?>> holders = new java.util.ArrayList<>();
+        for (Object holderObj : manager.getAllRecipesFor((RecipeType) type)) {
+            holders.add((RecipeHolder<?>) holderObj);
+        }
+        return holders.stream();
     }
 
     public Optional<?> get(ResourceLocation id) {

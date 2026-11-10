@@ -27,10 +27,11 @@ public class EnlighteningEmiRecipe implements EmiRecipe {
 
     private final long data;
 
-    public EnlighteningEmiRecipe(EnlighteningRecipe recipe) {
+    public EnlighteningEmiRecipe(net.minecraft.world.item.crafting.RecipeHolder<EnlighteningRecipe> holder) {
+        EnlighteningRecipe recipe = holder.value();
         this.data = recipe.getData();
 
-        this.id = recipe.getId();
+        this.id = holder.id();
         this.input = EmiIngredientHelper.inputToIngredient(recipe.getItemInput());
         this.output = List.of(EmiIngredientHelper.outputToStack(recipe.getItemOutput()));
     }

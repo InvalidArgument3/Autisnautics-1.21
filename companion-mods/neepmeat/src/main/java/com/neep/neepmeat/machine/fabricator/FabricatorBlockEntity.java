@@ -619,7 +619,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
     {
         private boolean needsLoading = true;
 
-        private @Nullable CraftingRecipe recipe;
+        private @Nullable net.minecraft.world.item.crafting.RecipeHolder<CraftingRecipe> recipe;
 
         private ItemStack bufferedStack = ItemStack.EMPTY; // Always real items produced from crafting.
         private ItemStack previewStack = ItemStack.EMPTY; // Always a preview of the craft.
@@ -630,7 +630,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
 
             if (recipe != null)
             {
-                previewStack = recipe.getResultItem(level.registryAccess()).copy();
+                previewStack = recipe.value().getResultItem(level.registryAccess()).copy();
             }
         }
 
@@ -639,6 +639,13 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
         {
             load();
 
+            return recipe == null ? null : recipe.value();
+        }
+
+        @Nullable
+        public net.minecraft.world.item.crafting.RecipeHolder<CraftingRecipe> recipeHolder()
+        {
+            load();
             return recipe;
         }
 
@@ -827,7 +834,7 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
         public CompoundTag writeNbt(CompoundTag nbt)
         {
             if (recipe != null)
-                nbt.putString("recipe", recipe.getId().toString());
+                nbt.putString("recipe", recipe.id().toString());
 
             nbt.put("buffered", bufferedStack.save(new CompoundTag()));
 

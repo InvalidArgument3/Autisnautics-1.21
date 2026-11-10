@@ -60,48 +60,6 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
         return CODEC;
     }
 
-    /** Joins every adjacent item pipe. {@code setBlock} does not run placement, so graphs refresh this themselves. */
-    public void joinComponent(Level level, BlockPos origin) {
-        java.util.ArrayDeque<BlockPos> queue = new java.util.ArrayDeque<>();
-        java.util.HashSet<BlockPos> seen = new java.util.HashSet<>();
-        queue.add(origin);
-        seen.add(origin);
-        while (!queue.isEmpty()) {
-            BlockPos pos = queue.poll();
-            if (!(level.getBlockState(pos).getBlock() instanceof ItemPipeBlock)) {
-                continue;
-            }
-            joinNeighbours(level, pos);
-            for (Direction direction : Direction.values()) {
-                BlockPos next = pos.relative(direction);
-                if (seen.add(next) && level.getBlockState(next).getBlock() instanceof ItemPipeBlock) {
-                    queue.add(next);
-                }
-            }
-        }
-    }
-
-    public void joinNeighbours(Level level, BlockPos pos) {
-        BlockState state = level.getBlockState(pos);
-        for (Direction direction : Direction.values()) {
-            BlockPos neighbourPos = pos.relative(direction);
-            BlockState neighbour = level.getBlockState(neighbourPos);
-            if (!canConnectTo(state, neighbour, direction.getOpposite(), level, neighbourPos, true)) {
-                continue;
-            }
-            state = state.setValue(getConnection(direction), ConnectionType.SIDE);
-            if (neighbour.getBlock() instanceof ItemPipeBlock neighbourPipe) {
-                BlockState joined = neighbour.setValue(neighbourPipe.getConnection(direction.getOpposite()), ConnectionType.SIDE);
-                if (!joined.equals(neighbour)) {
-                    level.setBlock(neighbourPos, joined, Block.UPDATE_CLIENTS);
-                }
-            }
-        }
-        if (!state.equals(level.getBlockState(pos))) {
-            level.setBlock(pos, state, Block.UPDATE_CLIENTS);
-        }
-    }
-
     @Override
     public boolean canConnectTo(BlockState hereState, BlockState toState, Direction toFace, Level world, BlockPos toPos, boolean newConnection) {
         if (toState.getBlock() instanceof ItemPipe otherPipe) {
@@ -135,10 +93,7 @@ public class ItemPipeBlock extends PrecisePipeBlock implements EntityBlock, Item
             world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
         }
         boolean alreadyConnected = getConnection(state, direction).isConnected();
-        // Game tests place pipes with setBlock, which does not run getStateForPlacement.
-        // A neighbouring item pipe is treated as a new connection so the line still joins.
-        boolean connectAsNew = alreadyConnected || neighborState.getBlock() instanceof ItemPipe;
-        boolean canConnect = world instanceof Level level && canConnectTo(state, neighborState, direction.getOpposite(), level, neighborPos, connectAsNew);
+        boolean canConnect = world instanceof Level level && canConnectTo(state, neighborState, direction.getOpposite(), level, neighborPos, alreadyConnected);
         boolean otherIsPipe = neighborState.getBlock() instanceof ItemPipeBlock neighborPipe;
         boolean otherConnected = otherIsPipe
                 ? ((ItemPipeBlock) neighborState.getBlock()).getConnection(neighborState, direction.getOpposite()).isConnected()

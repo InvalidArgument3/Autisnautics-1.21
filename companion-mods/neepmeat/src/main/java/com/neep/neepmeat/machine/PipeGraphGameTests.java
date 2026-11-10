@@ -28,6 +28,14 @@ import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.material.Fluids;
@@ -60,13 +68,21 @@ public class PipeGraphGameTests {
 
     @GameTest(template = "empty")
     public static void junctionsLinkAcrossAStraightPipe(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(0, 1, 0), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(0, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(0, 1, 2), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 0), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 2), NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        // Upstream connects in PrecisePipeBlock.getStateForPlacement (the clicked face, then adjacentAutoConnect when the player is not sneaking).
+        ServerPlayer player = helper.makeMockServerPlayerInLevel();
+        ItemStack pipe = new ItemStack(NeepMachines.ITEM_PIPE_ITEM.get());
+        // A straight run auto-connects. A third arm is the wrench path: PrecisePipeBlock.connect.
+        placePipe(helper, player, pipe, new BlockPos(0, 1, 1));
+        placePipe(helper, player, pipe, new BlockPos(1, 1, 1));
+        placePipe(helper, player, pipe, new BlockPos(2, 1, 1));
+        placePipe(helper, player, pipe, new BlockPos(0, 1, 0));
+        placePipe(helper, player, pipe, new BlockPos(0, 1, 2));
+        placePipe(helper, player, pipe, new BlockPos(2, 1, 0));
+        placePipe(helper, player, pipe, new BlockPos(2, 1, 2));
+        wrench(helper, player, new BlockPos(0, 1, 1), Direction.NORTH);
+        wrench(helper, player, new BlockPos(0, 1, 1), Direction.SOUTH);
+        wrench(helper, player, new BlockPos(2, 1, 1), Direction.NORTH);
+        wrench(helper, player, new BlockPos(2, 1, 1), Direction.SOUTH);
         helper.runAfterDelay(1, () -> {
             ItemPipeBlockEntity left = helper.getBlockEntity(new BlockPos(0, 1, 1));
             ItemPipeBlockEntity right = helper.getBlockEntity(new BlockPos(2, 1, 1));
@@ -75,6 +91,27 @@ public class PipeGraphGameTests {
             helper.assertTrue(left.vertex().adjacent(Direction.EAST) == right.vertex(), "junctions did not link");
             helper.succeed();
         });
+    }
+
+    private static void placePipe(GameTestHelper helper, ServerPlayer player, ItemStack pipe, BlockPos relative) {
+        helper.setBlock(relative.below(), Blocks.STONE.defaultBlockState());
+        BlockPos stone = helper.absolutePos(relative.below());
+        player.setPos(Vec3.atCenterOf(stone).add(3, 1.2, 0));
+        player.setItemInHand(InteractionHand.MAIN_HAND, pipe.copy());
+        BlockHitResult hit = new BlockHitResult(Vec3.atCenterOf(stone).add(0, 0.5, 0), Direction.UP, stone, false);
+        net.minecraft.world.InteractionResult result = player.gameMode.useItemOn(player, helper.getLevel(), player.getMainHandItem(), InteractionHand.MAIN_HAND, hit);
+        BlockPos absolute = helper.absolutePos(relative);
+        if (!(helper.getLevel().getBlockState(absolute).getBlock() instanceof com.neep.neepmeat.transport.block.item_transport.ItemPipeBlock)) {
+            helper.fail("play placement did not put a pipe at " + relative + " found " + helper.getLevel().getBlockState(absolute) + " result " + result);
+        }
+    }
+
+    private static void wrench(GameTestHelper helper, ServerPlayer player, BlockPos relative, Direction face) {
+        BlockPos absolute = helper.absolutePos(relative);
+        BlockState state = helper.getLevel().getBlockState(absolute);
+        if (state.getBlock() instanceof com.neep.neepmeat.transport.api.pipe.PrecisePipeBlock pipe) {
+            pipe.connect(helper.getLevel(), absolute, state, player, face, com.neep.neepmeat.transport.fluid_network.ConnectionType.SIDE);
+        }
     }
 
     @GameTest(template = "empty", timeoutTicks = 40)

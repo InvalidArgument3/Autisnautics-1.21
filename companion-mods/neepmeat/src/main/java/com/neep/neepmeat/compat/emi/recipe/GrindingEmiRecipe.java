@@ -26,11 +26,11 @@ public class GrindingEmiRecipe implements EmiRecipe {
     private final EmiRecipeCategory category;
     private final CrushingRecipe recipe;
 
-    public GrindingEmiRecipe(EmiRecipeCategory category, CrushingRecipe recipe) {
+    public GrindingEmiRecipe(EmiRecipeCategory category, net.minecraft.world.item.crafting.RecipeHolder<CrushingRecipe> holder) {
         this.category = category;
-        this.recipe = recipe;
+        this.recipe = holder.value();
 
-        this.id = recipe.getId();
+        this.id = holder.id();
 //        this.input = List.of(EmiIngredient.of(recipe.getItemInput().getAll().stream().map(Ingredient::ofItems).map(EmiIngredient::of).toList(), recipe.getItemInput().amount()));
         this.input = EmiIngredientHelper.inputToIngredient(recipe.getItemInput());
 

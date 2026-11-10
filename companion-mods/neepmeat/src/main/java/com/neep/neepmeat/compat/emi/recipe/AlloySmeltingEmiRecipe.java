@@ -24,10 +24,11 @@ public class AlloySmeltingEmiRecipe implements EmiRecipe {
 
     private final int processTime;
 
-    public AlloySmeltingEmiRecipe(AlloyKilnRecipe recipe) {
+    public AlloySmeltingEmiRecipe(net.minecraft.world.item.crafting.RecipeHolder<AlloyKilnRecipe> holder) {
+        AlloyKilnRecipe recipe = holder.value();
         this.processTime = recipe.getProcessTime();
 
-        this.id = recipe.getId();
+        this.id = holder.id();
         this.input = List.of(
                 EmiIngredient.of(recipe.getItemInput1().getAll().stream().map(Ingredient::of).map(EmiIngredient::of).toList(), recipe.getItemInput1().amount()),
                 EmiIngredient.of(recipe.getItemInput2().getAll().stream().map(Ingredient::of).map(EmiIngredient::of).toList(), recipe.getItemInput2().amount())
