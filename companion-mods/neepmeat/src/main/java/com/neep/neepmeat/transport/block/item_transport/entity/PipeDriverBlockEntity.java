@@ -42,6 +42,13 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PipeDriverBlockEntity extends BlockEntity {
+    /**
+     * The live {@code RoutingNetworkImpl} stays excluded until {@code ItemTransport} and
+     * {@code PipeCacheImpl} compile. Stock reads zero when this is null.
+     */
+    public RoutingNetwork getNetwork(Void ignored) {
+        return null;
+    }
     private final List<DeferredRequest> deferred = new ArrayList<>();
     private int cooldown;
 

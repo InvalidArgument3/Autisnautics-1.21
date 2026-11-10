@@ -10,6 +10,9 @@ package com.neep.neepmeat.plc.runtime;
 
 import com.neep.meatlib.neepasm.NeepASM;
 import com.neep.neepmeat.api.plc.PLC;
+import com.neep.neepmeat.api.plc.interrupt.InterruptEmitter;
+import com.neep.neepmeat.api.plc.interrupt.InterruptReceiver;
+import com.neep.neepmeat.plc.robot.InterruptManager;
 import com.neep.neepmeat.api.plc.memory.MemoryManager;
 import com.neep.neepmeat.api.plc.program.PLCProgram;
 import com.neep.neepmeat.api.plc.robot.RobotAction;
@@ -24,13 +27,14 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import org.jetbrains.annotations.Nullable;
 
-public final class InstructionPlc implements PLC {
+public final class InstructionPlc implements InterruptReceiver {
     private final PLCProgram program;
     private final VariableStack data = new VariableStack(32, "data");
     private final VariableStack returns = new VariableStack(32, "return");
     private final PLCMemory memory = new PLCMemory(data);
     private final CompoundTag volatileStorage = new CompoundTag();
     private final PLCActuator actuator;
+    private final InterruptManager interrupts = new InterruptManager(() -> null, this, () -> {});
     private int counter;
     private @Nullable RobotAction action;
     private @Nullable PLCConsumer callback;
@@ -96,6 +100,21 @@ public final class InstructionPlc implements PLC {
     @Override
     public PLCActuator getActuator() {
         return actuator;
+    }
+
+    @Override
+    public InterruptManager getInterrupts() {
+        return interrupts;
+    }
+
+    @Override
+    public void interrupt(BlockPos pos, InterruptEmitter emitter) {
+        interrupts.interrupt(pos, emitter);
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        interrupts.setEnabled(enabled);
     }
 
     @Override

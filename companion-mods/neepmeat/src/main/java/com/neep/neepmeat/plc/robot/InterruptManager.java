@@ -175,6 +175,10 @@ public class InterruptManager implements NbtSerialisable
         return enabled && !interruptQueue.isEmpty();
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
     public void setEnabled(boolean enabled)
     {
         // Prevents interrupt spam but causes events to be left unhandled
@@ -186,11 +190,4 @@ public class InterruptManager implements NbtSerialisable
 
         this.enabled = enabled;
     }
-
-    public boolean isEnabled()
-    {
-        return enabled;
-    }
-
-
 }

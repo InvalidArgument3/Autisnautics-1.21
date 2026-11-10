@@ -161,8 +161,6 @@ com/neep/neepmeat/api/processing/ball_mill/BallMillRecipeGenerator.java
 com/neep/neepmeat/api/processing/ball_mill/DistinctBallMillRecipe.java
 com/neep/neepmeat/api/processing/random_ores/RandomOreProvider.java
 com/neep/neepmeat/api/processing/random_ores/RandomOres.java
-com/neep/neepmeat/api/storage/DynamicLazyBlockApiCache.java
-com/neep/neepmeat/api/storage/LazyBlockApiCacheImpl.java
 com/neep/neepmeat/api/storage/MultiItemBuffer.java
 com/neep/neepmeat/api/storage/MultiTypedFluidBuffer.java
 com/neep/neepmeat/api/storage/TypedFluidBuffer.java
@@ -591,11 +589,6 @@ com/neep/neepmeat/plc/instruction/ImplantInstruction.java
 com/neep/neepmeat/plc/instruction/NeepBusReadInstruction.java
 com/neep/neepmeat/plc/instruction/NeepBusWriteInstruction.java
 com/neep/neepmeat/plc/instruction/RemoveInstruction.java
-com/neep/neepmeat/plc/instruction/RequestItemInstruction.java
-com/neep/neepmeat/plc/instruction/RobotInstruction.java
-com/neep/neepmeat/plc/instruction/RouteItemInstruction.java
-com/neep/neepmeat/plc/instruction/StockInstruction.java
-com/neep/neepmeat/plc/instruction/WaitForInterruptInstruction.java
 com/neep/neepmeat/plc/instruction/WaitRedstoneInstruction.java
 com/neep/neepmeat/plc/instruction/block/Area3Instruction.java
 com/neep/neepmeat/plc/instruction/block/SelItemInstruction.java
@@ -615,7 +608,6 @@ com/neep/neepmeat/plc/recipe/ItemWorkpiece.java
 com/neep/neepmeat/plc/recipe/PLCRecipes.java
 com/neep/neepmeat/plc/recipe/PlayerWorkpiece.java
 com/neep/neepmeat/plc/recipe/TransformingToolRecipe.java
-com/neep/neepmeat/plc/robot/InterruptManager.java
 com/neep/neepmeat/plc/screen/BuilderScreenHandler.java
 com/neep/neepmeat/plc/screen/PLCScreenHandler.java
 com/neep/neepmeat/plc/screen/ProgramCabinetScreenHandler.java
@@ -704,7 +696,6 @@ com/neep/neepmeat/transport/block/item_transport/ManualRequesterBlock.java
 com/neep/neepmeat/transport/block/item_transport/OpaqueItemPipeBlock.java
 com/neep/neepmeat/transport/block/item_transport/RequesterBlock.java
 com/neep/neepmeat/transport/block/item_transport/RouterBlock.java
-com/neep/neepmeat/transport/block/item_transport/RoutingNetworkImpl.java
 com/neep/neepmeat/transport/block/item_transport/SpeedItemPipeBlock.java
 com/neep/neepmeat/transport/block/item_transport/StorageDriverBlock.java
 com/neep/neepmeat/transport/block/item_transport/WoodenHopperBlock.java
@@ -1306,10 +1297,4 @@ com/neep/neepmeat/thord/word/FunctionWord.java
 com/neep/neepmeat/thord/word/ImmediateWord.java
 com/neep/neepmeat/thord/word/VariableWord.java
 com/neep/neepmeat/thord/word/Word.java
-com/neep/neepmeat/api/storage/LazyBlockApiCache.java
-com/neep/neepmeat/api/storage/AutoInvalidatingLazyBlockApiCache.java
-com/neep/neepmeat/api/plc/interrupt/InterruptEmitter.java
-com/neep/neepmeat/api/plc/interrupt/InterruptReceiver.java
-com/neep/neepmeat/plc/instruction/CountInstruction.java
-com/neep/neepmeat/plc/instruction/InterruptHandlerInstruction.java
-com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java
+com/neep/neepmeat/transport/block/item_transport/RoutingNetworkImpl.java

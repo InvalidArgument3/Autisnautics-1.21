@@ -1,3 +1,17 @@
+## Cached block lookups and more opcodes, jar 0.30.0-neoforge.64
+
+Combined-tree errors: **2141** at the start of this run, **2132** at the end. That is 9, not 400. The PLC closure was **175** and is **172**. `exclude.txt` is **1300**. `tools/port-errors/symbols.txt` is the end histogram.
+
+`BlockApiCache` caches a position. `neepmeat:item_storage` and `neepmeat:fluid_storage` read `BlockCapabilityCache` for the item and fluid capabilities and adapt them to `Storage`. Other lookups still call `BlockApiLookup.find`. Capability insert and extract ignore the Fabric transaction. Fluid amounts are millibuckets.
+
+`LazyBlockApiCache`, `DynamicLazyBlockApiCache`, `AutoInvalidatingLazyBlockApiCache`, `InterruptEmitter`, `InterruptReceiver`, and `InterruptManager` compile and are off `exclude.txt`. COUNT, FINDSLOT, IHANDLER, ICLEAR, IDISABLE, IENABLE, IWAIT, REQUEST, ROUTE, ROBOT, and STOCK are real providers, with the seven from the previous jar.
+
+`PlcOpcodeGameTests.countCobblestoneInAChest` counts four cobblestone through the item capability. `disableInterruptsClearsTheFlag` runs `idisable` and checks the flag. All 77 tests passed on this tree before the version string was bumped, and again on `0.30.0-neoforge.64`.
+
+`PipeDriverBlockEntity.getNetwork` returns null. `RoutingNetworkImpl` still needs `ItemTransport` (12 errors) and `PipeCacheImpl` (10 errors), so it stays excluded. Stock reads zero from a driver until that network is live.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, DYCALL, DYLOC, EXEC, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM, WAIT_REDSTONE. `END` is the real end opcode.
+
 ## Scaffold transforms and seven real opcodes, jar 0.30.0-neoforge.63
 
 Combined-tree errors: **2148** at the start of this run, **2141** at the end. That is 7, not 400. The PLC closure was **181** and is **175**. `exclude.txt` is **1315**. Seven instruction classes left it because they already typechecked: `DelayInstruction`, `ExtFetchInstruction`, `ExtStoreInstruction`, `RisingEdgeInstruction`, `SayInstruction`, `SHLInstruction`, and `SHRInstruction`. `tools/port-errors/symbols.txt` is the end histogram.

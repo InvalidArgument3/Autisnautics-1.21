@@ -19,6 +19,7 @@ import com.neep.neepmeat.neepasm.compiler.NeepAsmParser;
 import com.neep.neepmeat.neepasm.compiler.parser.PlcParsedInstruction;
 import com.neep.neepmeat.neepasm.vm.DataStack;
 import com.neep.neepmeat.plc.Instructions;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.ResourceAmount;
@@ -72,12 +73,9 @@ public class StockInstruction implements PlcInstruction
             try (Transaction transaction = Transaction.openOuter())
             {
                 Predicate<ItemVariant> predicate = v -> Instructions.match(pattern, v.getItem());
-                stack.push(
-                        Math.toIntExact(be.getNetwork(null)
-                                .getAllAvailable(predicate, transaction)
-                                .mapToLong(ResourceAmount::amount)
-                                .sum())
-                );
+                RoutingNetwork network = be.getNetwork(null);
+                long found = network == null ? 0 : network.getAllAvailable(predicate, transaction).mapToLong(ResourceAmount::amount).sum();
+                stack.push(Math.toIntExact(found));
 
                 transaction.abort();
             }

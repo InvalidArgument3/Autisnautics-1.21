@@ -42,6 +42,40 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 @PrefixGameTestTemplate(false)
 public class PlcOpcodeGameTests {
     @GameTest(template = "empty")
+    public static void countCobblestoneInAChest(GameTestHelper helper) {
+        BlockPos chest = new BlockPos(1, 0, 1);
+        helper.setBlock(chest, Blocks.CHEST.defaultBlockState());
+        ChestBlockEntity blockEntity = helper.getBlockEntity(chest);
+        blockEntity.setItem(0, new ItemStack(Items.COBBLESTONE, 4));
+        BlockPos absolute = helper.absolutePos(chest);
+        try {
+            PLCProgram program = compile(helper, "count @(" + absolute.getX() + " " + absolute.getY() + " " + absolute.getZ() + " north) item \"minecraft:cobblestone\"\n");
+            InstructionPlc plc = new InstructionPlc(program, idle());
+            run(plc, 8);
+            helper.assertTrue(plc.error() == null, "error " + plc.error());
+            helper.assertTrue(plc.dataStack().pop().getAsInt() == 4, "counted cobblestone");
+            helper.succeed();
+        } catch (NeepASM.ProgramBuildException | NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+        }
+    }
+
+    @GameTest(template = "empty")
+    public static void disableInterruptsClearsTheFlag(GameTestHelper helper) {
+        try {
+            PLCProgram program = compile(helper, "idisable\n");
+            InstructionPlc plc = new InstructionPlc(program, idle());
+            helper.assertTrue(plc.getInterrupts().isEnabled(), "interrupts start enabled");
+            run(plc, 4);
+            helper.assertTrue(plc.error() == null, "error " + plc.error());
+            helper.assertTrue(!plc.getInterrupts().isEnabled(), "idisable left interrupts on");
+            helper.succeed();
+        } catch (NeepASM.ProgramBuildException exception) {
+            helper.fail(exception.getMessage());
+        }
+    }
+
+    @GameTest(template = "empty")
     public static void shiftLeftThenRightRestoresTheValue(GameTestHelper helper) {
         try {
             PLCProgram program = compile(helper, """

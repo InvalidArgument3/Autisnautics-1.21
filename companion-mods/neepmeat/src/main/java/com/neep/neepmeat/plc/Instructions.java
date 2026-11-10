@@ -26,12 +26,20 @@ import com.neep.neepmeat.plc.instruction.BITInstruction;
 import com.neep.neepmeat.plc.instruction.Argument;
 import com.neep.neepmeat.plc.instruction.EmitRedstoneInstruction;
 import com.neep.neepmeat.plc.instruction.FreeInstruction;
+import com.neep.neepmeat.plc.instruction.CountInstruction;
 import com.neep.neepmeat.plc.instruction.DelayInstruction;
+import com.neep.neepmeat.plc.instruction.InterruptHandlerInstruction;
+import com.neep.neepmeat.plc.instruction.WaitForInterruptInstruction;
+import com.neep.neepmeat.plc.instruction.inventory.FindSlotInstruction;
 import com.neep.neepmeat.plc.instruction.InjectInstruction;
+import com.neep.neepmeat.plc.instruction.RequestItemInstruction;
 import com.neep.neepmeat.plc.instruction.RisingEdgeInstruction;
+import com.neep.neepmeat.plc.instruction.RobotInstruction;
+import com.neep.neepmeat.plc.instruction.RouteItemInstruction;
 import com.neep.neepmeat.plc.instruction.SHLInstruction;
 import com.neep.neepmeat.plc.instruction.SHRInstruction;
 import com.neep.neepmeat.plc.instruction.SayInstruction;
+import com.neep.neepmeat.plc.instruction.StockInstruction;
 import com.neep.neepmeat.plc.instruction.memory.ExtFetchInstruction;
 import com.neep.neepmeat.plc.instruction.memory.ExtStoreInstruction;
 import com.neep.neepmeat.plc.instruction.Instruction;
@@ -136,6 +144,20 @@ public class Instructions {
     public static final InstructionProvider SELSLOT = createTrivialBlock("selslot", new SelSlotInstruction());
     public static final InstructionProvider READ_REDSTONE = register(new SimplerInstructionProvider(ReadRedstoneInstruction::new, ReadRedstoneInstruction::parser, "RREAD"));
     public static final InstructionProvider EMIT_REDSTONE = register(new SimplerInstructionProvider(EmitRedstoneInstruction::new, EmitRedstoneInstruction::parser, "REMIT"));
+
+    private static Instruction interruptCall(java.util.function.Consumer<com.neep.neepmeat.api.plc.PLC> call, String name) {
+        return new Instruction() {
+            @Override
+            public void start(com.neep.neepmeat.neepasm.vm.VM plc) {
+                call.accept((com.neep.neepmeat.api.plc.PLC) plc);
+            }
+
+            @Override
+            public @org.jetbrains.annotations.NotNull InstructionProvider getOpcode() {
+                return REGISTRY.get(name);
+            }
+        };
+    }
 
     private static <T extends InstructionProvider> T register(T provider) {
         REGISTRY.put(provider.getParseName(), provider);
@@ -253,31 +275,31 @@ public class Instructions {
     }
     public static final InstructionProvider AREA3 = createTrivialBlock("area3", Instruction.end());
     public static final InstructionProvider COMBINE = createTrivialBlock("combine", Instruction.end());
-    public static final InstructionProvider COUNT = createTrivialBlock("count", Instruction.end());
+    public static final InstructionProvider COUNT = register(new SimplerInstructionProvider(CountInstruction::new, (view, parser, scope) -> CountInstruction.parser(view, parser), "COUNT"));
     public static final InstructionProvider DELAY = register(new SimplerInstructionProvider(DelayInstruction::new, DelayInstruction::parse, "DELAY"));
     public static final InstructionProvider DYCALL = createTrivialBlock("dycall", Instruction.end());
     public static final InstructionProvider DYLOC = createTrivialBlock("dyloc", Instruction.end());
     public static final InstructionProvider EXEC = createTrivialBlock("exec", Instruction.end());
     public static final InstructionProvider EXTFETCH = register(new SimplerInstructionProvider(ExtFetchInstruction::new, ExtFetchInstruction::parser, "EXTFETCH"));
     public static final InstructionProvider EXTSTORE = register(new SimplerInstructionProvider(ExtStoreInstruction::new, ExtStoreInstruction::parser, "EXTSTORE"));
-    public static final InstructionProvider FINDSLOT = createTrivialBlock("findslot", Instruction.end());
-    public static final InstructionProvider ICLEAR = createTrivialBlock("iclear", Instruction.end());
-    public static final InstructionProvider IDISABLE = createTrivialBlock("idisable", Instruction.end());
-    public static final InstructionProvider IENABLE = createTrivialBlock("ienable", Instruction.end());
-    public static final InstructionProvider IHANDLER = createTrivialBlock("ihandler", Instruction.end());
+    public static final InstructionProvider FINDSLOT = register(new SimplerInstructionProvider((world, nbt) -> new FindSlotInstruction(nbt), FindSlotInstruction::parser, "FINDSLOT"));
+    public static final InstructionProvider ICLEAR = createTrivialBlock("iclear", interruptCall(WaitForInterruptInstruction::clearInterrupts, "iclear"));
+    public static final InstructionProvider IDISABLE = createTrivialBlock("idisable", interruptCall(WaitForInterruptInstruction::disableInterrupts, "idisable"));
+    public static final InstructionProvider IENABLE = createTrivialBlock("ienable", interruptCall(WaitForInterruptInstruction::enableInterrupts, "ienable"));
+    public static final InstructionProvider IHANDLER = register(new SimplerInstructionProvider(InterruptHandlerInstruction::new, InterruptHandlerInstruction::parser, "IHANDLER"));
     public static final InstructionProvider IMPLANT = createTrivialBlock("implant", Instruction.end());
-    public static final InstructionProvider IWAIT = createTrivialBlock("iwait", Instruction.end());
+    public static final InstructionProvider IWAIT = createTrivialBlock("iwait", WaitForInterruptInstruction.INSTANCE);
     public static final InstructionProvider NEEPBUS_READ = createTrivialBlock("neepbus_read", Instruction.end());
     public static final InstructionProvider NEEPBUS_WRITE = createTrivialBlock("neepbus_write", Instruction.end());
     public static final InstructionProvider REMOVE = createTrivialBlock("remove", Instruction.end());
-    public static final InstructionProvider REQUEST = createTrivialBlock("request", Instruction.end());
+    public static final InstructionProvider REQUEST = register(new SimplerInstructionProvider(RequestItemInstruction::new, (view, parser, scope) -> RequestItemInstruction.parser(view, parser), "REQUEST"));
     public static final InstructionProvider RISING_EDGE = register(new SimplerInstructionProvider((world, nbt) -> new RisingEdgeInstruction(nbt), RisingEdgeInstruction::parser, "RISING_EDGE"));
-    public static final InstructionProvider ROBOT = createTrivialBlock("robot", Instruction.end());
-    public static final InstructionProvider ROUTE = createTrivialBlock("route", Instruction.end());
+    public static final InstructionProvider ROBOT = register(new SimpleInstructionProvider(RobotInstruction::new, RobotInstruction::new, 1, "ROBOT"));
+    public static final InstructionProvider ROUTE = register(new SimplerInstructionProvider(RouteItemInstruction::new, (view, parser, scope) -> RouteItemInstruction.parser(view, parser), "ROUTE"));
     public static final InstructionProvider SAY = register(new SimplerInstructionProvider((world, nbt) -> new SayInstruction(nbt), new SayInstruction.Parser(), "SAY"));
     public static final InstructionProvider SELITEM = createTrivialBlock("selitem", Instruction.end());
     public static final InstructionProvider SHL = register(new SimplerInstructionProvider(SHLInstruction::new, SHLInstruction::parser, "SHL"));
     public static final InstructionProvider SHR = register(new SimplerInstructionProvider(SHRInstruction::new, SHRInstruction::parser, "SHR"));
-    public static final InstructionProvider STOCK = createTrivialBlock("stock", Instruction.end());
+    public static final InstructionProvider STOCK = register(new SimplerInstructionProvider(StockInstruction::new, StockInstruction::parser, "STOCK"));
     public static final InstructionProvider WAIT_REDSTONE = createTrivialBlock("wait_redstone", Instruction.end());
 }
