@@ -100,7 +100,7 @@ public class ReciprocatingDrillHeadModule extends AbstractMiningMeatgunModule
 
         if (miner instanceof Player playerEntity && new MeatgunCore(listener.getHolder()).getResource() == AmmunitionType.METABOLIC)
         {
-            listener.getHolder().getAmmoOrReload(AmmunitionType.METABOLIC, METAB_PER_BLOCK, playerEntity.inventory, playerEntity, hand).commit();
+            listener.getHolder().getAmmoOrReload(AmmunitionType.METABOLIC, METAB_PER_BLOCK, playerEntity.getInventory(), playerEntity, hand).commit();
         }
     }
 }

@@ -161,7 +161,7 @@ public class Graph
         m.rotateAroundLocal(RotationAxis.POSITIVE_Z.rotationDegrees(-90), cen.x0(), cen.y0(), 0);
         m.scaleAroundLocal(s, s, 1, cen.x0(), cen.y0(), 0);
         m.translate(cen.x0(), cen.y0(), 0);
-        matrices.mulPoseMatrix(m);
+        matrices.mulPose(m);
 
         renderLabel(c, data.yLabel());
         matrices.popPose();
@@ -175,7 +175,7 @@ public class Graph
         m.identity();
         m.scaleAroundLocal(s, s, 1, cen.x0(), cen.y0(), 0);
         m.translate(cen.x0(), cen.y0(), 0);
-        matrices.mulPoseMatrix(m);
+        matrices.mulPose(m);
         renderLabel(c, data.xLabel());
         matrices.popPose();
     }

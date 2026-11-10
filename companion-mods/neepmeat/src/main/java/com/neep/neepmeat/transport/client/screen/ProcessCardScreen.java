@@ -158,7 +158,7 @@ public class ProcessCardScreen extends BetterHandledScreen<ProcessCardScreenHand
         }
 
         @Override
-        protected void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
+        protected void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
             GUIUtil.renderBorderInner(context, x0(), y0(), 18, 18, PLCCols.BORDER.col, 0);
             GUIUtil.renderBorderInner(context, x0(), y0(), 18, 18, PLCCols.TRANSPARENT.col, -1);

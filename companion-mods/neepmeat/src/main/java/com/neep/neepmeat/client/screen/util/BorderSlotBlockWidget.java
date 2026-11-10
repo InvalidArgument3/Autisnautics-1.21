@@ -34,7 +34,6 @@ public class BorderSlotBlockWidget extends SimpleSlotBlockWidget
         super.render(context, mouseX, mouseY, delta);
     }
 
-    @Override
     protected void drawSlot(GuiGraphics context, MobileSlot mobileSlot)
     {
 //        GUIUtil.drawTexture(GUIUtil.SCREEN_BORDER, context, mobileSlot.x() - 2, mobileSlot.y() - 2, 0, 236, 20, 20);

@@ -52,7 +52,6 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
 
     public static final ParticleOptions.Deserializer<MuzzleFlashParticleEffect> PARAMETER_FACTORY = new ParticleOptions.Deserializer<>()
     {
-        @Override
         public MuzzleFlashParticleEffect fromCommand(ParticleType<MuzzleFlashParticleEffect> type, StringReader reader) throws CommandSyntaxException
         {
             reader.expect(' ');
@@ -65,10 +64,9 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
             return new MuzzleFlashParticleEffect(MWParticles.LONG_BOI_MUZZLE_FLASH, uuid, dx, dy, dz, scale, 1, InteractionHand.MAIN_HAND);
         }
 
-        @Override
         public MuzzleFlashParticleEffect fromNetwork(ParticleType<MuzzleFlashParticleEffect> type, FriendlyByteBuf buf)
         {
-            ParticleType<MuzzleFlashParticleEffect> type1 = (ParticleType<MuzzleFlashParticleEffect>) buf.readById(BuiltInRegistries.PARTICLE_TYPE);
+            ParticleType<MuzzleFlashParticleEffect> type1 = (ParticleType<MuzzleFlashParticleEffect>) buf.readById(BuiltInRegistries.PARTICLE_TYPE::byId);
             return new MuzzleFlashParticleEffect(type1, buf.readUUID(), buf.readDouble(), buf.readDouble(), buf.readDouble(), buf.readFloat(), buf.readInt(), buf.readEnum(InteractionHand.class));
         }
     };
@@ -79,7 +77,6 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
         this.codec = codec;
     }
 
-    @Override
     public Codec<MuzzleFlashParticleEffect> codec()
     {
         return codec;
@@ -117,10 +114,9 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
             return type;
         }
 
-        @Override
         public void writeToNetwork(FriendlyByteBuf buf)
         {
-            buf.writeId(BuiltInRegistries.PARTICLE_TYPE, getType());
+            buf.writeById(BuiltInRegistries.PARTICLE_TYPE::getId, getType());
             buf.writeUUID(playerUUID);
             buf.writeDouble(dx);
             buf.writeDouble(dy);
@@ -135,7 +131,6 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
             return playerUUID;
         }
 
-        @Override
         public String writeToString()
         {
             return BuiltInRegistries.PARTICLE_TYPE.getKey(getType()).toString();

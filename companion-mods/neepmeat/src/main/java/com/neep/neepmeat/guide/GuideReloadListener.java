@@ -112,7 +112,6 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
         };
     }
 
-    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         root = null;

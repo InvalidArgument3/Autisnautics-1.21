@@ -42,10 +42,10 @@ public interface RenderItemGuiEvent
     {
         RenderSystem.setShader(GameRenderer::getPositionColorShader);
         buffer.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
-        buffer.vertex(x + 0, y + 0, 0.0).setColor(red, green, blue, alpha);
-        buffer.vertex(x + 0, y + height, 0.0).setColor(red, green, blue, alpha);
-        buffer.vertex(x + width, y + height, 0.0).setColor(red, green, blue, alpha);
-        buffer.vertex(x + width, y + 0, 0.0).setColor(red, green, blue, alpha);
+        buffer.addVertex(x + 0, y + 0, 0.0).setColor(red, green, blue, alpha);
+        buffer.addVertex(x + 0, y + height, 0.0).setColor(red, green, blue, alpha);
+        buffer.addVertex(x + width, y + height, 0.0).setColor(red, green, blue, alpha);
+        buffer.addVertex(x + width, y + 0, 0.0).setColor(red, green, blue, alpha);
         var built = buffer.end();
         BufferUploader.drawWithShader(built);
     }

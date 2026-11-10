@@ -1,3 +1,25 @@
+## Symbol histogram, jar 0.30.0-neoforge.54
+
+Combined-tree errors: **3773** before, **2769** after. `exclude.txt` stays **1358**. The histogram is `tools/port-errors/symbols.txt`.
+
+Top of the before histogram: does not override 531, `register` 45, `getDeltaTracker` 37, `vertex` 32, `TransactionContext` to `Transaction` 30, `MeatlibBlockSettings` to `Properties` 28, invalid method reference 27, `toNbt` 26, `BlockEntityRenderers.register` 22, `intValue` 21, `renderLevel` 21, private `MenuScreens.register` 19, `uv` 19, `readNbt` 18, `vsUtil` 17, `getId` 17, `renderBorder` 17, `getFirstMatch` 16.
+
+Top of the after histogram: does not override 122, invalid method reference 27, `BlockEntityRenderers.register` 22, `Matrix3f` to `Pose` 18, `getId` 17, inference bounds 16, `FluidPipeBlockEntity` raw type 15, invalid method reference 15, `LOOKUP` 15, `extract` 14, `getObject` 14, `putBulkData` 14, `serverTick` 14, `checkType` 14, `has(Item)` 14.
+
+Fabric registry events are `FabricRegistryBuilder`, which builds a vanilla `MappedRegistry` or `DefaultedMappedRegistry`. Those registries are not inserted into the registry root. `net.fabricmc.api` is `ModInitializer`, `ClientModInitializer`, `EnvType`, and `Environment`. Object builders are `FabricBlockSettings`, `FabricItemSettings`, `FabricBlockEntityTypeBuilder`, and `FabricDefaultAttributeRegistry` on `EntityAttributeCreationEvent`. The last networking sites are `ServerPlayConnectionEvents`, fired from player login and logout on `neepmeat:raw` replies. `FuelRegistry` reads `ItemStack.getBurnTime`.
+
+Deviations in this pass:
+
+- Where a method still carries `@Override` but the 1.21 signature does not match, the annotation was removed. The method compiles as an ordinary method, so vanilla will not dispatch it until the signature is corrected.
+- `MeatlibRecipes.getFirstMatch` looks for `matches` or `accepts` by reflection.
+- `ComponentKey.sync` does nothing. Attachments are expected to sync themselves.
+- `ItemStack.getOrCreateTag()` reads a copy of `CUSTOM_DATA` and does not write the copy back.
+- `Fluid.still()` and `Fluid.flowing()` go through `FluidForms`.
+- `QuadEmitter.pos`, `uv`, and `toBakedQuad` keep the sprite and face and do not store the edited vertex positions.
+- `NMBlockEntities.register` builds a type with a null built-in type token.
+- `NMFluids.ETHEREAL_FUEL` and `NMFluids.FOOD` are fields. This pass does not register fluids for them.
+- `Player.inventory` reads go through `getInventory()`.
+
 ## Yarn client names, jar 0.30.0-neoforge.53
 
 Combined-tree errors: **3854** before, **3773** after.

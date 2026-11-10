@@ -137,7 +137,6 @@ public class FlexTankBlockEntity extends FlexStorageBlockEntity<FlexTankBlockEnt
             return Collections.emptyIterator();
         }
 
-        @Override
         protected long getCapacity(FluidVariant variant)
         {
             return children.size() * FlexTankBlockEntity.this.capacity;

@@ -77,7 +77,7 @@ public class FoodAdditives
         @Override
         public boolean canApply(FluidVariant variant)
         {
-            return variant.isOf(NMFluids.FOOD.still());
+            return variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD));
         }
 
         @Override

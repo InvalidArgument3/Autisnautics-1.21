@@ -114,7 +114,7 @@ public abstract class MultiBlockStructure<T extends BigBlockStructureEntity> ext
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+    public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
     {
         return parent.getCloneItemStack(world, pos, state);
     }

@@ -60,7 +60,7 @@ public class TransformingToolRecipe implements ManufactureRecipe<MutateInPlace<I
                 boolean b0 = workpiece.getSteps().get(0) instanceof CombineStep;
                 boolean b1 = workpiece.getSteps().get(1) instanceof CombineStep;
                 boolean b2 = workpiece.getSteps().get(2) instanceof InjectStep inject
-                        && inject.fluid().getObject().isSame(NMFluids.WORK_FLUID.still());
+                        && inject.fluid().getObject().isSame(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.WORK_FLUID));
 
                 return (b0 && b1 && b2);
             }

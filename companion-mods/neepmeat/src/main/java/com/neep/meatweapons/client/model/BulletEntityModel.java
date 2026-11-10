@@ -34,12 +34,11 @@ public class BulletEntityModel extends EntityModel<BulletEntity>
     }
 
     @Override
-    public void setAngles(BulletEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
+    public void setupAnim(BulletEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
     {
 
     }
 
-    @Override
     public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
     {
         // translate model down

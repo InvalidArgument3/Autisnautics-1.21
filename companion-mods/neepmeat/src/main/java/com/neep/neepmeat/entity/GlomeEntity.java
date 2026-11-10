@@ -81,7 +81,7 @@ public class GlomeEntity extends FlyingMob
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this);
     }

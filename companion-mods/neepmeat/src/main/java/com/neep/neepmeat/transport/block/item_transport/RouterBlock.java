@@ -86,7 +86,6 @@ public class RouterBlock extends BaseBlock implements EntityBlock, ItemPipe
         super.onRemove(state, world, pos, newState, moved);
     }
 
-    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         if (world.getBlockEntity(pos) instanceof RouterBlockEntity be)
@@ -97,7 +96,6 @@ public class RouterBlock extends BaseBlock implements EntityBlock, ItemPipe
         return false;
     }
 
-    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         if (world.getBlockEntity(pos) instanceof RouterBlockEntity be)
@@ -117,31 +115,26 @@ public class RouterBlock extends BaseBlock implements EntityBlock, ItemPipe
         return true;
     }
 
-    @Override
     public boolean singleOutput()
     {
         return false;
     }
 
-    @Override
     public PipeConnections getConnections(BlockState state, @Nullable Direction forbidden)
     {
         return PipeConnections.ALL.with(forbidden, false);
     }
 
-    @Override
     public boolean prioritise()
     {
         return true;
     }
 
-    @Override
     public boolean alwaysAutoConnect(BlockState state, Direction face)
     {
         return true;
     }
 
-    @Override
     public boolean endPoint()
     {
         return false;
@@ -154,7 +147,6 @@ public class RouterBlock extends BaseBlock implements EntityBlock, ItemPipe
         return new RouterBlockEntity(pos, state);
     }
 
-    @Override
     public PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state)
     {
         if (world.getBlockEntity(pos) instanceof RouterBlockEntity be)

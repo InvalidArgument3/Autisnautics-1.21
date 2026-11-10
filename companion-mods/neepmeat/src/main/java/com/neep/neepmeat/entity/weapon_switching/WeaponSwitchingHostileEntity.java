@@ -33,7 +33,6 @@ public abstract class WeaponSwitchingHostileEntity extends Monster implements Ra
         super(entityType, world);
     }
 
-    @Override
     protected void dropCustomDeathLoot(DamageSource source, int lootingMultiplier, boolean allowDrops)
     {
         super.dropCustomDeathLoot(source, lootingMultiplier, allowDrops);

@@ -90,7 +90,7 @@ public abstract class EntityRecipeInput implements RecipeInput<EntityType<?>, En
             // the horror
             if (id == 0)
             {
-                EntityType<?> type = buf.readById(BuiltInRegistries.ENTITY_TYPE);
+                EntityType<?> type = buf.readById(BuiltInRegistries.ENTITY_TYPE::byId);
                 return new TypeEntityInput(type);
             }
             else if (id == 1)
@@ -115,7 +115,7 @@ public abstract class EntityRecipeInput implements RecipeInput<EntityType<?>, En
             if (input instanceof TypeEntityInput typeEntityInput)
             {
                 buf.writeInt(0);
-                buf.writeId(BuiltInRegistries.ENTITY_TYPE, typeEntityInput.getEntityType());
+                buf.writeById(BuiltInRegistries.ENTITY_TYPE::getId, typeEntityInput.getEntityType());
             }
             else if (input instanceof TypeFilterEntityInput filterEntityInput)
             {

@@ -58,7 +58,7 @@ import java.util.stream.Collectors;
 
 public class TroughBlockEntity extends SyncableBlockEntity implements MotorisedBlock
 {
-    public static final FluidVariant RESOURCE = FluidVariant.of(NMFluids.ANIMAL_FEED.still());
+    public static final FluidVariant RESOURCE = FluidVariant.of(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ANIMAL_FEED));
 
     private final TroughStorage storage = new TroughStorage(2 * FluidConstants.BUCKET, this::sync);
 

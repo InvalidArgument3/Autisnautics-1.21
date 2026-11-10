@@ -67,7 +67,7 @@ public class FakePlayerEntity extends ServerPlayer
         this.connection = new FakePlayerEntityNetworkHandler(server, this);
 
         // Hehehehhe get access widened n00b
-        this.inventory = fakeInventory;
+        this.getInventory() = fakeInventory;
     }
 
     @Override
@@ -128,7 +128,6 @@ public class FakePlayerEntity extends ServerPlayer
     }
 
     @Nullable
-    @Override
     public Team getTeam() {
         // Scoreboard team is checked using the gameprofile name by default, which we don't want.
         return null;

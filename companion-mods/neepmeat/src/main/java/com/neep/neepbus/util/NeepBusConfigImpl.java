@@ -292,7 +292,6 @@ public class NeepBusConfigImpl implements NeepBusConfig
             return this;
         }
 
-        @Override
         public Builder applyChanges(BlockEntity be)
         {
             applyChanges = () ->

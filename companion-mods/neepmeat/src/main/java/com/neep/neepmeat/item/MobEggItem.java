@@ -82,7 +82,7 @@ public class MobEggItem extends Item implements MeatlibItem
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag context)
     {
         super.appendHoverText(stack, world, tooltip, context);
         this.tooltip.apply(stack, tooltip);

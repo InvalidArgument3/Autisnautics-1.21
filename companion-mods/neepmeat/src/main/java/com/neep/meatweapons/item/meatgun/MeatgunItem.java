@@ -74,7 +74,6 @@ public abstract class MeatgunItem extends BaseItem implements Meatgun, WeakTwoHa
                 .withStyle(ChatFormatting.GRAY));
     };
 
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;

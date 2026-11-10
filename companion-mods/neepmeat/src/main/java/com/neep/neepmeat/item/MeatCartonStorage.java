@@ -41,7 +41,6 @@ public class MeatCartonStorage implements InsertionOnlyStorage<FluidVariant>
         this.insertableAmount = insertableAmount;
     }
 
-    @Override
     public long insert(FluidVariant resource, long maxAmount, TransactionContext transaction)
     {
         StoragePreconditions.notBlankNotNegative(resource, maxAmount);

@@ -108,7 +108,6 @@ public class NMFeatures extends FabricDynamicRegistryProvider
         return modifiers(RarityFilter.onAverageOnceEvery(chance), heightModifier);
     }
 
-    @Override
     protected void configure(HolderLookup.Provider registries, Entries entries)
     {
 //        final RegistryWrapper.Impl<Biome> biomeRegistry = registries.getWrapperOrThrow(RegistryKeys.BIOME);
@@ -186,7 +185,6 @@ public class NMFeatures extends FabricDynamicRegistryProvider
         return FeatureUtils.simpleRandomPatchConfiguration(tries, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(block)));
     }
 
-    @Override
     public String getName()
     {
         return NeepMeat.NAMESPACE + " features";

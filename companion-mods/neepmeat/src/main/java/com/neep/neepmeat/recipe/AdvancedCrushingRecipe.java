@@ -57,13 +57,11 @@ public class AdvancedCrushingRecipe extends CrushingRecipe
             return true;
         }
 
-        @Override
         public boolean matches(CrusherRecipeContext inventory)
         {
             return false;
         }
 
-        @Override
         public boolean takeInputs(CrusherRecipeContext storage, TransactionContext transaction)
         {
             var it = storage.getInputStorage().nonEmptyIterator();
@@ -76,7 +74,6 @@ public class AdvancedCrushingRecipe extends CrushingRecipe
             return false;
         }
 
-        @Override
         public boolean ejectOutputs(CrusherRecipeContext context, TransactionContext transaction)
         {
             return true;

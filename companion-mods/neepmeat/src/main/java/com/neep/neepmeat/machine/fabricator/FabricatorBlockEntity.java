@@ -653,7 +653,6 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
             return 0;
         }
 
-        @Override
         public IngredientResult request(Predicate<ItemVariant> predicate, boolean recursive, long maxAmount, TransactionContext transaction)
         {
             if (!bufferedStack.isEmpty() && predicate.test(ItemVariant.of(bufferedStack)) || predicate.test(ItemVariant.of(previewStack)))
@@ -752,7 +751,6 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
                 bufferedStack = newBuffered; // This will overwrite the buffer if it can't combine with the new stack, but it will probably be fine.
         }
 
-        @Override
         public boolean supportsInsertion()
         {
             return false;
@@ -813,7 +811,6 @@ public class FabricatorBlockEntity extends SyncableBlockEntity implements Motori
             return Iterators.singletonIterator(this);
         }
 
-        @Override
         private void load()
         {
             if (needsLoading)

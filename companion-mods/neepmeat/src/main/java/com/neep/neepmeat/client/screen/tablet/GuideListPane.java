@@ -325,7 +325,7 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
         }
 
         @Override
-        public void renderButton(GuiGraphics matrices, int mouseX, int mouseY, float delta)
+        public void renderWidget(GuiGraphics matrices, int mouseX, int mouseY, float delta)
         {
             // Delay animation by 16 ticks if the screen has been opened for fewer than 32 ticks.
             if (parent.getAnimationTicks() < (animationTicks <= 32 ? 16 : 0) + entryAnimationStart + index) return;

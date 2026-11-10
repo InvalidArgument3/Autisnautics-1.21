@@ -88,7 +88,7 @@ public interface MeatgunItemRenderer
         if (mode.firstPerson())
         {
             matrices.pushPose();
-            matrices.mulPoseMatrix(modelTransform);
+            matrices.mulPose(modelTransform);
             Camera camera = Minecraft.getInstance().gameRenderer.getMainCamera();
             matrices.translate(0.5, 0, 1); // No idea why this transform is necessary, but this puts (0,0,0) at (8,0,16) in model coords.
 
@@ -139,7 +139,7 @@ public interface MeatgunItemRenderer
             matrices.pushPose();
             matrices.translate(0.5, 0, 1);
             Matrix4f matrix4f = child.transform(tickDelta);
-            matrices.mulPoseMatrix(matrix4f);
+            matrices.mulPose(matrix4f);
             matrices.translate(-0.5, 0, -1);
             renderRecursive(matrices, child.get(), stack, component, mode, vcp, time, tickDelta, light, overlay);
             matrices.popPose();

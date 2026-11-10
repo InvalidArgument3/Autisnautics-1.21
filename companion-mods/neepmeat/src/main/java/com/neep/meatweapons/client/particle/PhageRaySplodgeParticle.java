@@ -102,7 +102,6 @@ public class PhageRaySplodgeParticle extends TextureSheetParticle
             return particle;
         }
 
-        @Override
         public PhageRaySplodgeParticle createParticle(ClientLevel world, PhageRayProcess.PhageRay phageRay)
         {
             var particle = new PhageRaySplodgeParticle(world, 0, 0, 0, provider, phageRay);

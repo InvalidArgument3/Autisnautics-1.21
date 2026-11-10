@@ -60,6 +60,20 @@ public class WritableStackStorage extends SingleVariantStorage<ItemVariant> {
         return variant == null ? ItemStack.EMPTY : variant.toStack((int) amount);
     }
 
+    public void writeNbt(net.minecraft.nbt.CompoundTag tag) {
+        net.minecraft.world.item.Item item = variant == null ? net.minecraft.world.item.Items.AIR : variant.getItem();
+        tag.putString("item", net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).toString());
+        tag.putLong("amount", amount);
+    }
+
+    public void readNbt(net.minecraft.nbt.CompoundTag tag) {
+        amount = tag.getLong("amount");
+        net.minecraft.resources.ResourceLocation id = net.minecraft.resources.ResourceLocation.tryParse(tag.getString("item"));
+        if (id != null) {
+            variant = ItemVariant.of(new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.get(id), (int) Math.max(1, amount)));
+        }
+    }
+
     public boolean isEmpty() {
         return amount <= 0 || variant == null || variant.isBlank();
     }

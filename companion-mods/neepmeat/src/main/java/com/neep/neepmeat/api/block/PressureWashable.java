@@ -138,7 +138,7 @@ public interface PressureWashable
         {
             if (power > 0)
             {
-                if (fluidVariant.isOf(NMFluids.PATINA_TREATMENT.still()))
+                if (fluidVariant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.PATINA_TREATMENT)))
                 {
                     var result = oxidizable.getNext(state);
                     if (result.isPresent())
@@ -166,7 +166,7 @@ public interface PressureWashable
         @Override
         public int wash(Level world, BlockPos pos, BlockState state, Vec3 velocity, int power, FluidVariant fluidVariant)
         {
-            if (power > 1 && fluidVariant.isOf(NMFluids.COMPRESSED_AIR.still()))
+            if (power > 1 && fluidVariant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.COMPRESSED_AIR)))
             {
                 world.destroyBlock(pos, true);
                 return 1;

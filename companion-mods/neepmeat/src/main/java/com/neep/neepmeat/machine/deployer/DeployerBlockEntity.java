@@ -79,7 +79,7 @@ public class DeployerBlockEntity extends SyncableBlockEntity implements Motorise
         this.roundRobin = nbt.getBoolean("round_robin");
         this.interactBlock = nbt.getBoolean("interact_block");
         this.roundRobinIndex = nbt.getInt("round_index");
-        this.inventory.readNbt(nbt.getCompound("inventory"));
+        this.getInventory().readNbt(nbt.getCompound("inventory"));
     }
 
     @Override
@@ -164,7 +164,7 @@ public class DeployerBlockEntity extends SyncableBlockEntity implements Motorise
         player.setYRot(yaw(facing));
 
         // Temporarily transfer the stack to the player's inventory
-        player.inventory.setItem(player.inventory.selected, stack.isEmpty() ? ItemStack.EMPTY : stack);
+        player.getInventory().setItem(player.getInventory().selected, stack.isEmpty() ? ItemStack.EMPTY : stack);
 
         BlockPos targetPos = worldPosition.relative(facing);
 
@@ -186,7 +186,7 @@ public class DeployerBlockEntity extends SyncableBlockEntity implements Motorise
         }
 
         // Move the item and all produced items back to this inventory
-        ItemStack removed = player.inventory.removeItemNoUpdate(player.inventory.selected);
+        ItemStack removed = player.getInventory().removeItemNoUpdate(player.getInventory().selected);
         inventory.setItem(slot, removed);
         Inventory playerInventory = player.getInventory();
         if (!playerInventory.isEmpty())

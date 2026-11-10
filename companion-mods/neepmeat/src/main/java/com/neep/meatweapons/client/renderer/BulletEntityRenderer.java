@@ -37,7 +37,7 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
     }
 
     @Override
-    public ResourceLocation getTexture(BulletEntity entity)
+    public ResourceLocation getTextureLocation(BulletEntity entity)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/bullet.png");
     }
@@ -142,9 +142,9 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
     {
         vertexConsumer.addVertex(positionMatrix, x, y, z)
                 .setColor(r, g, b, alpha)
-                .uv(u, v)
-                .overlayCoords(OverlayTexture.NO_OVERLAY)
-                .uv2(light)
+                .setUv(u, v)
+                .setOverlay(OverlayTexture.NO_OVERLAY)
+                .setLight(light)
                 .setNormal(normalMatrix, (float) normalX, (float) normalY, (float) normalZ)
                 ;
     }

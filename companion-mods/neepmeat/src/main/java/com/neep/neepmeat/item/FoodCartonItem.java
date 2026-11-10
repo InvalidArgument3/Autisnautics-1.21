@@ -46,7 +46,6 @@ public class FoodCartonItem extends BaseItem
         super(tooltip, settings);
     }
 
-    @Override
     public boolean isEdible()
     {
         return true;
@@ -158,7 +157,6 @@ public class FoodCartonItem extends BaseItem
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
     }
 
-    @Override
     public @Nullable FoodProperties getFoodProperties()
     {
         // This method is not stack-aware, so we can't do anything.

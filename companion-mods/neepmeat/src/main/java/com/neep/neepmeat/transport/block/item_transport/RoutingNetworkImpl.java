@@ -109,20 +109,17 @@ public class RoutingNetworkImpl implements RoutingNetwork
         return new ResourceAmount<>(view.getResource(), view.getAmount());
     }
 
-    @Override
     public void invalidate()
     {
         needsUpdate = true;
         ++version;
     }
 
-    @Override
     public boolean needsUpdate()
     {
         return needsUpdate;
     }
 
-    @Override
     public void update()
     {
         needsUpdate = false;
@@ -177,19 +174,16 @@ public class RoutingNetworkImpl implements RoutingNetwork
         return Integer.compare(y, x);
     }
 
-    @Override
     public long getVersion()
     {
         return version;
     }
 
-    @Override
     public boolean isValid()
     {
         return valid;
     }
 
-    @Override
     public void serverTick()
     {
         // Requester makes a request
@@ -226,7 +220,6 @@ public class RoutingNetworkImpl implements RoutingNetwork
         }
     }
 
-    @Override
     public Stream<ResourceAmount<ItemVariant>> getAllAvailable(Predicate<ItemVariant> predicate, TransactionContext transaction)
     {
         return routePipes.stream()
@@ -235,7 +228,6 @@ public class RoutingNetworkImpl implements RoutingNetwork
                 .map(RoutingNetworkImpl::viewToAmount);
     }
 
-    @Override
     public Stream<Craftable> getAllCraftable(Predicate<ItemVariant> predicate, TransactionContext transaction)
     {
         return routePipes.stream().flatMap(p -> p.getCraftable(transaction));
@@ -249,7 +241,6 @@ public class RoutingNetworkImpl implements RoutingNetwork
                         .map(v -> new Craftable.ProvisionContext.View(v.getResource(), v.getAmount(), p, false)));
     }
 
-    @Override
     public boolean route(Predicate<ItemVariant> predicate, long amount, BlockPos inPos, Direction inDir, BlockPos outPos, Direction outDir, RequestType type, TransactionContext transaction)
     {
         amount = Math.max(0, amount);
@@ -276,7 +267,6 @@ public class RoutingNetworkImpl implements RoutingNetwork
         return false;
     }
 
-    @Override
     public boolean request(Predicate<ItemVariant> predicate, long amount, BlockPos pos, Direction outDir, RequestType type, RequestContext context, TransactionContext transaction)
     {
         if (context.recursionDepth > 30)

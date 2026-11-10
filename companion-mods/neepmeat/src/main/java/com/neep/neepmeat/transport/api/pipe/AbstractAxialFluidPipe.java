@@ -54,7 +54,6 @@ public abstract class AbstractAxialFluidPipe extends BaseFacingBlock implements 
         super(ctx, itemSettings, settings);
     }
 
-    @Override
     protected VoxelShape getShape(BlockState state)
     {
         Direction facing = state.getValue(FACING);

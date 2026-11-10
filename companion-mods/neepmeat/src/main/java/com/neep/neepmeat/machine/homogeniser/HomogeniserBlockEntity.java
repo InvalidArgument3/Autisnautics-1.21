@@ -91,7 +91,7 @@ public class HomogeniserBlockEntity extends SyncableBlockEntity implements Motor
                     Storage<FluidVariant> inputFluidStorage = storage.getInputFluidStorage();
 
                     ResourceAmount<FluidVariant> inputVariant =
-                            StorageUtil.findExtractableContent(inputFluidStorage, v -> v.isOf(NMFluids.FOOD.still()), test);
+                            StorageUtil.findExtractableContent(inputFluidStorage, v -> v.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD)), test);
 
                     if (inputVariant != null
                             && entry.canApply(inputVariant.resource())
@@ -123,7 +123,7 @@ public class HomogeniserBlockEntity extends SyncableBlockEntity implements Motor
                     Storage<FluidVariant> outputFluidStorage = storage.getOutputStorage();
 
                     ResourceAmount<FluidVariant> inputVariant =
-                            StorageUtil.findExtractableContent(inputFluidStorage, v -> v.isOf(NMFluids.FOOD.still()), inner);
+                            StorageUtil.findExtractableContent(inputFluidStorage, v -> v.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD)), inner);
 
                     if (inputVariant != null
                             && entry.canApply(inputVariant.resource())

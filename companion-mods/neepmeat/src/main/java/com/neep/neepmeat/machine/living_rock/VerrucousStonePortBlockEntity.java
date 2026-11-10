@@ -46,7 +46,7 @@ public class VerrucousStonePortBlockEntity extends SyncableBlockEntity
         @Override
         protected boolean canInsert(FluidVariant variant)
         {
-            return variant.isOf(NMFluids.ETHEREAL_FUEL.still());
+            return variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL));
         }
     };
     private final FluidPump pump = FluidPump.of(-1, () -> AcceptorModes.PUSH);
@@ -79,10 +79,10 @@ public class VerrucousStonePortBlockEntity extends SyncableBlockEntity
             int passivePower = NeepMeat.CONFIG.verrucousStone.passiveCoefficient.getRealValue() * structures
                     / Math.max(1, ports); // Don't think it can ever be zero, but I want to be sure.
 
-            long passiveAmount = PowerUtil.absToAmount(NMFluids.ETHEREAL_FUEL.still(), passivePower);
+            long passiveAmount = PowerUtil.absToAmount(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL), passivePower);
             if (passiveAmount > 0)
             {
-                storage.insert(FluidVariant.of(NMFluids.ETHEREAL_FUEL.still()), passiveAmount, transaction);
+                storage.insert(FluidVariant.of(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL)), passiveAmount, transaction);
                 transaction.commit();
             }
         }

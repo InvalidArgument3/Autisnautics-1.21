@@ -47,9 +47,9 @@ public abstract class ScutterEntity extends PathfinderMob implements FollowingSc
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
-        return super.getAddEntityPacket();
+        return super.getAddEntityPacket(entity);
     }
 
     @Override

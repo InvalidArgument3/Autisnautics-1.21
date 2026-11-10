@@ -45,7 +45,7 @@ public class KeeperEntityRenderer extends HumanoidMobRenderer<KeeperEntity, Keep
     }
 
     @Override
-    public ResourceLocation getTexture(KeeperEntity mobEntity)
+    public ResourceLocation getTextureLocation(KeeperEntity mobEntity)
     {
         return TEXTURE;
     }

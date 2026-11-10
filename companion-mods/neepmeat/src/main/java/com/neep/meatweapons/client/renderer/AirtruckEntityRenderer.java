@@ -100,7 +100,6 @@ public class AirtruckEntityRenderer extends GeoEntityRenderer<AirtruckEntity>
         return RenderType.entityCutout(texture);
     }
 
-    @Override
     public void actuallyRender(PoseStack matrices, AirtruckEntity entity, BakedGeoModel model, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer vcp, boolean isReRender, float tickDelta, int packedLight, int packedOverlay, float red, float green, float blue, float alpha)
     {
         matrices.pushPose();

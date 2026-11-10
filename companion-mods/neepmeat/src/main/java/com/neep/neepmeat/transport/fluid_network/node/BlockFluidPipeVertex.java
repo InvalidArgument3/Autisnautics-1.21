@@ -64,7 +64,6 @@ public class BlockFluidPipeVertex extends SimpleFluidPipeVertex implements NbtSe
         canSimplify = null;
     }
 
-    @Override
     public boolean canSimplify(FluidPipe pipe, BlockState state)
     {
         return super.canSimplify() && numNodes() == 0 && pipe.countConnections(state) <= 2;

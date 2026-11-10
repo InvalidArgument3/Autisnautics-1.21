@@ -75,7 +75,7 @@ public class OreFatFluidFactory
 
     public Block registerBlock()
     {
-        block = Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(namespace, baseName), new LiquidBlock(still, MeatlibBlockSettings.copyOf(Blocks.WATER)){});
+        block = Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(namespace, baseName), new LiquidBlock(still, MeatlibBlockSettings.copyOf(Blocks.WATER).properties()){});
         return block;
     }
 

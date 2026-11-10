@@ -84,7 +84,6 @@ public class AdvancedEjectorBlockEntity extends ItemPipeBlockEntity implements I
         super(type, pos, state, Vertex::new);
     }
 
-    @Override
     public void serverTick(Level world, BlockPos pos, BlockState state)
     {
         if (counter <= 0 && active)

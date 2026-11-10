@@ -38,7 +38,7 @@ public class BloodDripParticleFactory implements ParticleProvider<SimpleParticle
 
     public Particle createParticle(SimpleParticleType defaultParticleType, ClientLevel clientWorld, double d, double e, double f, double g, double h, double i)
     {
-        BloodDripParticle drip = new BloodDripParticle(clientWorld, d, e, f, NMFluids.BLOOD.still());
+        BloodDripParticle drip = new BloodDripParticle(clientWorld, d, e, f, com.neep.neepmeat.fluid.FluidForms.still(NMFluids.BLOOD));
         drip.pickSprite(this.spriteProvider);
         return drip;
     }

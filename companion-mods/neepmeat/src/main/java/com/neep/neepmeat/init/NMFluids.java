@@ -17,6 +17,8 @@ package com.neep.neepmeat.init;
 import net.minecraft.world.level.material.Fluid;
 
 public final class NMFluids {
+    public static Fluid ETHEREAL_FUEL;
+    public static Fluid FOOD;
     public static Fluid FLOWING_DIRTY_ORE_FAT;
     public static Fluid STILL_DIRTY_ORE_FAT;
     public static Fluid DIRTY_ORE_FAT;

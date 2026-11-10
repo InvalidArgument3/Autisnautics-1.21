@@ -27,7 +27,6 @@ public class NeepBusComponents implements ItemComponentInitializer
                     ResourceLocation.fromNamespaceAndPath(NeepBus.REGISTRY_NAMESPACE, "networking_tool"),
                     NetworkingToolComponent.class);
 
-    @Override
     public void registerItemComponentFactories(@NotNull ItemComponentFactoryRegistry registry)
     {
         registry.register(NeepBus.NETWORKING_TOOL, NETWORKING_TOOL, NetworkingToolComponent::new);

@@ -77,7 +77,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
         @Override
         protected boolean canInsert(FluidVariant variant)
         {
-            return variant.isOf(NMFluids.ETHEREAL_FUEL.still());
+            return variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL));
         }
     };
 
@@ -97,13 +97,13 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
      */
     public static FoodEnergyEntry foodEnergy(FluidVariant fluid)
     {
-        if (fluid.isOf(NMFluids.MEAT.still()))
+        if (fluid.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.MEAT)))
             return MEAT;
 
-        if (fluid.isOf(NMFluids.ANIMAL_FEED.still()))
+        if (fluid.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ANIMAL_FEED)))
             return FEED;
 
-        if (fluid.isOf(NMFluids.FOOD.still()))
+        if (fluid.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD)))
         {
             return new FoodEnergyEntry(1 + (int) Math.ceil(MeatFluidUtil.getHunger(fluid)), 1);
         }
@@ -131,7 +131,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
 
                 long foodExtracted = foodStorage.extract(foodStorage.variant, foodDroplets, transaction);
 
-                outputAmount += PowerUtil.absToAmount(NMFluids.ETHEREAL_FUEL.still(), foodExtracted * food.energy);
+                outputAmount += PowerUtil.absToAmount(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL), foodExtracted * food.energy);
             }
 
             if (topPanels > 0)
@@ -140,7 +140,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
                 int passivePower = NeepMeat.CONFIG.powerFlower.solarCoefficient.getRealValue() * topPanels;
 
                 // Calculate consume of fluid to be produced from current power output
-                long passiveAmount = PowerUtil.absToAmount(NMFluids.ETHEREAL_FUEL.still(), passivePower);
+                long passiveAmount = PowerUtil.absToAmount(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL), passivePower);
 
                 // Extract from water tank
                 long extracted = waterStorage.extract(INPUT_VARIANT, passiveAmount, transaction);
@@ -149,7 +149,7 @@ public class PowerFlowerControllerBlockEntity extends SyncableBlockEntity
                 outputAmount += Math.min(passiveAmount, extracted);
             }
 
-            long inserted = outputStorage.insert(FluidVariant.of(NMFluids.ETHEREAL_FUEL.still()), outputAmount, transaction);
+            long inserted = outputStorage.insert(FluidVariant.of(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL)), outputAmount, transaction);
 
             if (inserted == outputAmount)
                 transaction.commit();

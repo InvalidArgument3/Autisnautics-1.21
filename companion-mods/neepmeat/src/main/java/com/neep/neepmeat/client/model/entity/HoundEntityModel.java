@@ -60,7 +60,7 @@ public class HoundEntityModel extends HierarchicalModel<HoundEntity>
     }
 
     @Override
-    public void setAngles(HoundEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
+    public void setupAnim(HoundEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
     {
 
     }

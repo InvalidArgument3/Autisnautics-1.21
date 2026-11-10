@@ -53,7 +53,7 @@ public class RecoilManager
     public void step(Minecraft client)
     {
         // Recoil
-        float lastFrame = !client.isPaused() ? client.getDeltaTracker().getGameTimeDeltaPartialTick(true) : 0;
+        float lastFrame = !client.isPaused() ? client.getTimer().getGameTimeDeltaPartialTick(true) : 0;
 
         float prevHorAmount = horAmount;
         horAmount = horAmount - Math.signum(horAmount) * horReturnSpeed * lastFrame;

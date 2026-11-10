@@ -59,7 +59,7 @@ public class CrusherVisual extends AbstractBlockEntityVisual<CrusherBlockEntity>
     @Override
     public void beginFrame(DynamicVisual.Context context)
     {
-        float tickDelta = Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks();
+        float tickDelta = Minecraft.getInstance().getTimer().getRealtimeDeltaTicks();
 //        double sinTime = Math.sin(blockEntity.getWorld().getTime()) * Math.cos(tickDelta) + Math.cos(blockEntity.getWorld().getTime()) * Math.sin(tickDelta);
 
         matrixStack.pushPose();

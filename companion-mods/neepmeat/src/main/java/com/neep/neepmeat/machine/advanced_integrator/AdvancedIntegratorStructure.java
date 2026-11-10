@@ -38,7 +38,6 @@ public class AdvancedIntegratorStructure extends BigBlockStructure<AdvancedInteg
         super(parent, settings);
     }
 
-    @Override
     protected BlockEntityType<AdvancedIntegratorStructureBlockEntity> registerBlockEntity()
     {
         return Registry.register(

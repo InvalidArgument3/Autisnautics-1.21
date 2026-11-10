@@ -44,13 +44,11 @@ public class TypedFluidBuffer extends WritableSingleFluidStorage implements Stor
         return true;
     }
 
-    @Override
     protected FluidVariant getBlankVariant()
     {
         return FluidVariant.BLANK;
     }
 
-    @Override
     protected long getCapacity(FluidVariant variant)
     {
         return capacity;
@@ -138,7 +136,6 @@ public class TypedFluidBuffer extends WritableSingleFluidStorage implements Stor
         return mode.canInsert();
     }
 
-    @Override
     public boolean supportsExtraction()
     {
         return mode.canExtract();

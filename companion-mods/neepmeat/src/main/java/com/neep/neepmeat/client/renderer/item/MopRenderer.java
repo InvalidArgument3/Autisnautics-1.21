@@ -50,7 +50,7 @@ public class MopRenderer implements BuiltinItemRendererRegistry.DynamicItemRende
         if (client.player != null && mode == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || mode == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
         {
             boolean leftHanded = mode == ItemDisplayContext.FIRST_PERSON_LEFT_HAND;
-            float swingProgress = client.player.getAttackAnim(client.getDeltaTracker().getRealtimeDeltaTicks());
+            float swingProgress = client.player.getAttackAnim(client.getTimer().getRealtimeDeltaTicks());
 
             // Remove all the other transformations including the equip animation and display settings.
             matrices.popPose();

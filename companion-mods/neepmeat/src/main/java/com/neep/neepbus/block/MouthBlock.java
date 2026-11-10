@@ -87,7 +87,7 @@ public class MouthBlock extends BaseBlock implements DataCable, NeepBusProvider,
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof MouthBlockEntity be)
         {
@@ -95,6 +95,8 @@ public class MouthBlock extends BaseBlock implements DataCable, NeepBusProvider,
                 MiscUtil.dropBlockWithNbt(world, this, pos, be, this::processDroppedStack);
         }
         super.playerWillDestroy(world, pos, state, player);
+    
+        return state;
     }
 
     private void processDroppedStack(ItemStack stack)

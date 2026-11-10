@@ -23,6 +23,6 @@ public class MWScreens
 {
     public static void init()
     {
-        MenuScreens.register(MWScreenHandlers.MEATGUN, TinkerTableScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(MWScreenHandlers.MEATGUN, TinkerTableScreen::new);
     }
 }

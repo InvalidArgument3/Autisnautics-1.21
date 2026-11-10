@@ -51,7 +51,6 @@ public class NEEPSpeakSoundInstance extends AbstractSoundInstance
         return Attenuation.LINEAR;
     }
 
-    @Override
     public CompletableFuture<AudioStream> getAudioStream(SoundBufferLibrary loader, ResourceLocation id, boolean repeatInstantly)
     {
         return CompletableFuture.completedFuture(stream);

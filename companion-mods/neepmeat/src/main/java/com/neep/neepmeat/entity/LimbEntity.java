@@ -80,7 +80,6 @@ public class LimbEntity extends SimpleEntity
         return super.saveWithoutId(nbt);
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -115,7 +114,7 @@ public class LimbEntity extends SimpleEntity
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this);
     }

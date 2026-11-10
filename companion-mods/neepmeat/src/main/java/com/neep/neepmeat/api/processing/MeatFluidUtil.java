@@ -150,7 +150,7 @@ public class MeatFluidUtil
         nbt.putFloat(KEY_SATURATION, food.getSaturationModifier());
         CompoundTag root = new CompoundTag();
         root.put(KEY_ROOT, nbt);
-        return FluidVariant.of(NMFluids.FOOD.flowing(), root);
+        return FluidVariant.of(com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.FOOD), root);
     }
 
     private static float floor(float f, int n)

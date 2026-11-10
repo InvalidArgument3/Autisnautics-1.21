@@ -117,28 +117,28 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
         // This crashes when Sodium/Indium aren't installed.
         // No idea why.
         // ZapEntityRenderer uses the same RenderType in the same way and is fine.
-//        vertexConsumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
+//        vertexConsumer.addVertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
 //                .setColor(col)
 //                .texture(u1, v1)
 //                .overlay(OverlayTexture.DEFAULT_UV)
 //                .light(light)
 //                .setNormal(normal, 0, 1, 0)
 //                .next();
-//        vertexConsumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
+//        vertexConsumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
 //                .texture(u1, v0)
 //                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
 //                .setNormal(normal, 0, 1, 0)
 //                .next();
-//        vertexConsumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
+//        vertexConsumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
 //                .texture(u0, v0)
 //                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
 //                .setNormal(normal, 0, 1, 0)
 //                .next();
-//        vertexConsumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
+//        vertexConsumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
 //                .texture(u0, v1)
 //                .setColor(col)
 //                .light(light)
@@ -148,7 +148,7 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
     }
 
     @Override
-    public ResourceLocation getTexture(SmudgeEntity entity)
+    public ResourceLocation getTextureLocation(SmudgeEntity entity)
     {
         return TEXTURE;
     }

@@ -117,7 +117,6 @@ public class AssaultDrillItem extends Item implements MeatlibItem, PoweredItem, 
         tooltip.add(Component.translatable("item." + MeatWeapons.NAMESPACE + "." + "assault_drill" + ".damage_per_tick", getDamage(itemStack, null) / 2f).withStyle(ChatFormatting.BLUE));
     }
 
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -229,7 +228,6 @@ public class AssaultDrillItem extends Item implements MeatlibItem, PoweredItem, 
         return state.is(this.effectiveBlocks) ? this.miningSpeed * 4 : 1;
     }
 
-    @Override
     public boolean isCorrectToolForDrops(BlockState state)
     {
         return state.is(this.effectiveBlocks);
@@ -247,7 +245,6 @@ public class AssaultDrillItem extends Item implements MeatlibItem, PoweredItem, 
         return true;
     }
 
-    @Override
     public boolean canBeDepleted()
     {
         return false;

@@ -119,6 +119,10 @@ public final class NMBlockEntities {
     public static BlockEntityType<?> REACTION_CORE;
     private NMBlockEntities() {}
 
+    public static <T extends net.minecraft.world.level.block.entity.BlockEntity> BlockEntityType<T> register(String id, BlockEntityType.BlockEntitySupplier<T> supplier, net.minecraft.world.level.block.Block... blocks) {
+        return BlockEntityType.Builder.of(supplier, blocks).build(null);
+    }
+
     /** Copies holders that are already registered elsewhere. Does not register them again. */
     public static void bind() {
         INTEGRATOR = com.neep.neepmeat.machine.StageMachines.INTEGRATOR_BE.get();

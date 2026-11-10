@@ -50,7 +50,6 @@ public class NMParticles
 
     public static ParticleType<ItemParticleOption> COLOURED_ITEM = new ParticleType<>(false, ItemParticleOption.DESERIALIZER)
     {
-        @Override
         public Codec<ItemParticleOption> codec()
         {
             return ItemParticleOption.codec(COLOURED_ITEM);

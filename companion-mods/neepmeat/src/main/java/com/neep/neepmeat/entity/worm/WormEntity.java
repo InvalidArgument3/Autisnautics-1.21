@@ -142,7 +142,6 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         return nbt;
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -151,7 +150,7 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this);
     }
@@ -395,7 +394,7 @@ public class WormEntity extends AbstractWormPart implements MultiPartEntity<Worm
         }
 
         @Override
-        public Packet<ClientGamePacketListener> getAddEntityPacket()
+        public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
         {
             throw new UnsupportedOperationException();
 //            return new EntitySpawnS2CPacket(this);

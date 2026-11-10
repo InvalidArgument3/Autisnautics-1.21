@@ -92,6 +92,11 @@ public final class FluidClient {
             return com.neep.meatlib.transfer.FluidVariantAttributes.getColor(variant);
         }
 
+        public static TextureAtlasSprite getSprite(FluidVariant variant) {
+            TextureAtlasSprite[] sprites = getSprites(variant);
+            return sprites.length == 0 ? null : sprites[0];
+        }
+
         public static TextureAtlasSprite[] getSprites(FluidVariant variant) {
             return new TextureAtlasSprite[2];
         }

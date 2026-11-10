@@ -85,8 +85,9 @@ public class VascularConduitModel implements UnbakedModel, BakedModel, FabricBak
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
+        ResourceLocation modelId = null;
         PARTICLE_SPRITE = textureGetter.apply(PARTICLE_SPRITE_ID);
 
         try

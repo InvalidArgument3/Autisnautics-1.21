@@ -197,7 +197,7 @@ public class MeatgunClient
     {
         var client = Minecraft.getInstance();
 
-        float p = client.player.getComponent(MWComponents.GUN_TICK_HANDLER).getAds().getProgress(client.getDeltaTracker().getRealtimeDeltaTicks());
+        float p = client.player.getComponent(MWComponents.GUN_TICK_HANDLER).getAds().getProgress(client.getTimer().getRealtimeDeltaTicks());
 
         return prevValue - p * 0.1f;
     }

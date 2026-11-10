@@ -62,10 +62,10 @@ public class MonoTextRenderer
     {
         BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        bufferBuilder.vertex(matrix, x0, y1, z).uv(u0, v1);
-        bufferBuilder.vertex(matrix, x1, y1, z).uv(u1, v1);
-        bufferBuilder.vertex(matrix, x1, y0, z).uv(u1, v0);
-        bufferBuilder.vertex(matrix, x0, y0, z).uv(u0, v0);
+        bufferBuilder.addVertex(matrix, x0, y1, z).setUv(u0, v1);
+        bufferBuilder.addVertex(matrix, x1, y1, z).setUv(u1, v1);
+        bufferBuilder.addVertex(matrix, x1, y0, z).setUv(u1, v0);
+        bufferBuilder.addVertex(matrix, x0, y0, z).setUv(u0, v0);
     }
 
     public int fontHeight()
@@ -155,10 +155,10 @@ public class MonoTextRenderer
         float m = italic ? 1.0F - 0.25F * h : 0.0F;
         float n = italic ? 1.0F - 0.25F * j : 0.0F;
 
-        builder.vertex(matrix, x0, y1, 0).setColor(red, green, blue, alpha).uv(u1, v2);
-        builder.vertex(matrix, x1, y1, 0).setColor(red, green, blue, alpha).uv(u2, v2);
-        builder.vertex(matrix, x1, y0, 0).setColor(red, green, blue, alpha).uv(u2, v1);
-        builder.vertex(matrix, x0, y0, 0).setColor(red, green, blue, alpha).uv(u1, v1);
+        builder.addVertex(matrix, x0, y1, 0).setColor(red, green, blue, alpha).setUv(u1, v2);
+        builder.addVertex(matrix, x1, y1, 0).setColor(red, green, blue, alpha).setUv(u2, v2);
+        builder.addVertex(matrix, x1, y0, 0).setColor(red, green, blue, alpha).setUv(u2, v1);
+        builder.addVertex(matrix, x0, y0, 0).setColor(red, green, blue, alpha).setUv(u1, v1);
     }
 
     public int getWidth(String text)

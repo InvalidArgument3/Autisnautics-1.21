@@ -70,7 +70,6 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
             return super.canInsert(variant) && variant.isOf(Fluids.WATER) && (!recipeControlled || (recipeState == 0 && hasRecipe()));
         }
 
-        @Override
         protected boolean canExtract(FluidVariant variant)
         {
             return super.canExtract(variant) && variant.isOf(Fluids.WATER) && (!recipeControlled || recipeState == 2);
@@ -123,7 +122,6 @@ public class HydraulicPressBlockEntity extends SyncableBlockEntity
         }
     }
 
-    @Override
     protected void finishRecipe()
     {
         if (level.getBlockEntity(worldPosition.below()) instanceof CastingBasinBlockEntity basin)

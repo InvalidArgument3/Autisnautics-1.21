@@ -46,10 +46,10 @@ public class BulletEntity extends MeatgunProjectileEntity
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
 //        return ProjectileSpawnPacket.create(this, MWNetwork.SPAWN_ID);
-        return super.getAddEntityPacket();
+        return super.getAddEntityPacket(entity);
     }
 
     @Override

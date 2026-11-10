@@ -64,7 +64,6 @@ public class LimiterValveBlockEntity extends FluidPipeBlockEntity<LimiterValveBl
         super(type, pos, state, constructor);
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -72,7 +71,6 @@ public class LimiterValveBlockEntity extends FluidPipeBlockEntity<LimiterValveBl
         this.mode = FluidUnit.values()[nbt.getInt("mbMode")];
     }
 
-    @Override
     public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
@@ -80,13 +78,11 @@ public class LimiterValveBlockEntity extends FluidPipeBlockEntity<LimiterValveBl
         nbt.putInt("mbMode", mode.ordinal());
     }
 
-    @Override
     public Packet<ClientGamePacketListener> getUpdatePacket()
     {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         return saveWithoutMetadata();

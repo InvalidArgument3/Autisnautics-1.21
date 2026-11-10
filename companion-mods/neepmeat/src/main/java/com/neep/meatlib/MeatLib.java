@@ -34,6 +34,12 @@ public final class MeatLib {
     public static final Logger LOGGER = LOG;
     public static final com.neep.meatlib.config.MeatlibConfig CONFIG = new com.neep.meatlib.config.MeatlibConfig();
     public static final String[] METRIC_PREFIXES = {"f", "p", "n", "µ", "m", "", "k", "M", "G", "T"};
+    /** Valkyrien Skies is not a pack dependency. The field stays so client hooks compile. */
+    public static com.neep.meatlib.util.ValkyrienSkiesUtil vsUtil;
+
+    public static boolean isClient() {
+        return net.neoforged.fml.loading.FMLEnvironment.dist.isClient();
+    }
 
     public MeatLib(ModContainer container, Dist dist) {
         IEventBus bus = container.getEventBus();

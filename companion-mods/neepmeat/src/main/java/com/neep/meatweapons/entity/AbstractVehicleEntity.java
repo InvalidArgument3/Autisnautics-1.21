@@ -97,7 +97,6 @@ extends Entity {
 
     public abstract SoundEvent getDamageSound();
 
-    @Override
     protected float getEyeHeight(Pose pose, EntityDimensions dimensions)
     {
         return dimensions.height;
@@ -142,7 +141,6 @@ extends Entity {
         return LivingEntity.resetForwardDirectionOfRelativePortalPosition(super.getRelativePortalPosition(portalAxis, portalRect));
     }
 
-    @Override
     public double getPassengersRidingOffset()
     {
         return 0.2;
@@ -197,7 +195,6 @@ extends Entity {
         return !this.isRemoved();
     }
 
-    @Override
     public void lerpTo(double x, double y, double z, float yaw, float pitch, int interpolationSteps, boolean interpolate) {
         this.x = x;
         this.y = y;
@@ -510,7 +507,7 @@ extends Entity {
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this);
     }

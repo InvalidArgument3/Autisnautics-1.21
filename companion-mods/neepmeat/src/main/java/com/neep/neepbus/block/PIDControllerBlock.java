@@ -92,7 +92,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);
         CompoundTag nbt = BlockItem.getBlockEntityData(stack);
@@ -133,12 +133,11 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+    public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
     {
         return new ItemStack(this);
     }
 
-    @Override
     public ItemStack getPickedStack(BlockState state, BlockGetter view, BlockPos pos, Player player, HitResult result)
     {
         if (view.getBlockEntity(pos) instanceof PIDControllerBlockEntity be)

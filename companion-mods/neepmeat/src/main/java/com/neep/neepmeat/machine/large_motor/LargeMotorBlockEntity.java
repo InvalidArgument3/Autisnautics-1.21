@@ -41,7 +41,6 @@ public class LargeMotorBlockEntity extends SyncableBlockEntity implements MotorE
 
     protected AbstractBloodAcceptor acceptor = new AbstractBloodAcceptor()
     {
-        @Override
         public Mode getMode()
         {
             return Mode.SINK;

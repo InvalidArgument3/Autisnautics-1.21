@@ -344,7 +344,6 @@ public class SpiderLegsImplant implements EntityImplant
             }
         }
 
-        @Override
         public void tick()
         {
             Level world = player.level();

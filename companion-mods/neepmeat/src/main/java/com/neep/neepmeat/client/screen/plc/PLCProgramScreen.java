@@ -242,10 +242,10 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         RenderSystem.enableBlend();
         BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        bufferBuilder.vertex(matrix, x0, y1, z).setColor(light, light, light, 1).uv(u0, v1);
-        bufferBuilder.vertex(matrix, x1, y1, z).setColor(light, light, light, 1).uv(u1, v1);
-        bufferBuilder.vertex(matrix, x1, y0, z).setColor(light, light, light, 1).uv(u1, v0);
-        bufferBuilder.vertex(matrix, x0, y0, z).setColor(light, light, light, 1).uv(u0, v0);
+        bufferBuilder.addVertex(matrix, x0, y1, z).setColor(light, light, light, 1).setUv(u0, v1);
+        bufferBuilder.addVertex(matrix, x1, y1, z).setColor(light, light, light, 1).setUv(u1, v1);
+        bufferBuilder.addVertex(matrix, x1, y0, z).setColor(light, light, light, 1).setUv(u1, v0);
+        bufferBuilder.addVertex(matrix, x0, y0, z).setColor(light, light, light, 1).setUv(u0, v0);
         BufferUploader.drawWithShader(bufferBuilder.end());
     }
 
@@ -263,10 +263,10 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         float o = sprite.getV1();
         Matrix4f matrix4f = matrices.last().pose();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
-        bufferBuilder.vertex(matrix4f, x0, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(m, o);
-        bufferBuilder.vertex(matrix4f, (float) width, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(l, o);
-        bufferBuilder.vertex(matrix4f, (float) width, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(l, n);
-        bufferBuilder.vertex(matrix4f, x0, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(m, n);
+        bufferBuilder.addVertex(matrix4f, x0, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(m, o);
+        bufferBuilder.addVertex(matrix4f, (float) width, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(l, o);
+        bufferBuilder.addVertex(matrix4f, (float) width, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(l, n);
+        bufferBuilder.addVertex(matrix4f, x0, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(m, n);
         BufferUploader.drawWithShader(bufferBuilder.end());
     }
 
@@ -507,9 +507,9 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         }
 
         @Override
-        public void renderButton(GuiGraphics matrices, int mouseX, int mouseY, float delta)
+        public void renderWidget(GuiGraphics matrices, int mouseX, int mouseY, float delta)
         {
-            super.renderButton(matrices, mouseX, mouseY, delta);
+            super.renderWidget(matrices, mouseX, mouseY, delta);
 
             GUIUtil.drawCenteredText(matrices,
                     font,

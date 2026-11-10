@@ -18,7 +18,6 @@ import com.neep.meatlib.transfer.TransactionContext;
 
 public record MatchingStorageView<T extends TransferVariant<?>>(T variant, long amount) implements StorageView<T>
 {
-    @Override
     public long extract(T resource, long maxAmount, TransactionContext transaction)
     {
         return 0;

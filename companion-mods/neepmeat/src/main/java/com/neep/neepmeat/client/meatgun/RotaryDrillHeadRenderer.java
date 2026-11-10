@@ -62,7 +62,7 @@ public class RotaryDrillHeadRenderer implements MeatgunModuleRenderer<RotaryDril
         float delta = using ? 0.1f : 0.05f;
         float targetSpeed = using ? 16 : 0;
         currentSpeed = (Mth.lerp(delta, currentSpeed, targetSpeed));
-        angle = Mth.wrapDegrees(angle + currentSpeed * Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true));
+        angle = Mth.wrapDegrees(angle + currentSpeed * Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true));
 
         module.angle = angle;
         module.currentSpeed = currentSpeed;

@@ -36,7 +36,7 @@ public class CheeseCleaverItem extends BaseSwordItem
 
     public static void writeCharged(ItemStack stack, boolean charged)
     {
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         nbt.putBoolean("charged", charged);
         stack.save(nbt);
     }
@@ -46,7 +46,7 @@ public class CheeseCleaverItem extends BaseSwordItem
     {
         super.hurtEnemy(stack, target, attacker);
 
-        if (stack.getOrCreateTag().getBoolean("charged"))
+        if (stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().getBoolean("charged"))
         {
             target.push(0, 0.4, 0);
             writeCharged(stack, false);
@@ -64,7 +64,7 @@ public class CheeseCleaverItem extends BaseSwordItem
     @Override
     public UseAnim getUseAnimation(ItemStack stack)
     {
-        if (stack.getOrCreateTag().getBoolean("charged"))
+        if (stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().getBoolean("charged"))
         {
             return UseAnim.NONE;
         }

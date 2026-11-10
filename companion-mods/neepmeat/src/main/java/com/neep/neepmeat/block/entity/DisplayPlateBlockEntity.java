@@ -64,7 +64,6 @@ public class DisplayPlateBlockEntity extends SyncableBlockEntity implements Exte
                 super.onFinalCommit();
             }
 
-            @Override
             protected long getCapacity(ItemVariant variant)
             {
                 if (!variant.isBlank())
@@ -160,19 +159,16 @@ public class DisplayPlateBlockEntity extends SyncableBlockEntity implements Exte
             storage.setStack(stack);
         }
 
-        @Override
         public BlockPos getOutputPos()
         {
             return getBlockState().getValue(DisplayPlateBlock.TOP) ? worldPosition.above() : worldPosition;
         }
 
-        @Override
         public Level getWorld()
         {
             return level;
         }
 
-        @Override
         public void setResult(int consumed, ItemStack stack)
         {
             // Handle >1 count

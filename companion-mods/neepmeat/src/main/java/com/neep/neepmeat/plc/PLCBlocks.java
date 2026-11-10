@@ -52,16 +52,16 @@ public class PLCBlocks
 
     public static final Item PROGRAM_CARD = new ProgramCardItem(TooltipSupplier.hidden(1), new MeatlibItemSettings().group(NMItemGroups.GENERAL));
 
-    @Path("robotic_arm") public static final Block ROBOTIC_ARM = new RoboticArmBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.hidden(1)).requiresMotor().plcActuator(), MeatlibBlockSettings.of().destroyTime(3));
-    public static final Block IMPLANTER = new ImplanterBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.hidden(1)).plcActuator(), MeatlibBlockSettings.of().destroyTime(3));
-    @Path("redstone_interface") public static final Block REDSTONE_INTERFACE = new PLCRedstoneInterface(C, MeatlibBlockSettings.of().destroyTime(2));
-    @Path("executor") public static final Block EXECUTOR = new ExecutorBlock(C, ItemSettings.block().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.of().noOcclusion().destroyTime(2));
-    @Path("plc") public static final Block PLC = new PLCBlock(C, NMBlocks.block().retainsInv().neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block BUILDER = new BuilderBlock(C, NMBlocks.block().plcActuator().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(PLC));
-    public static final Block PROCESSOR = new ProcessorBlock(C, NMBlocks.block().neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block PROGRAM_CABINET = new ProgramCabinetBlock(C, NMBlocks.block().retainsInv().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    @Path("plc_neepbus_interface") public static final Block NEEPBUS_INTERFACE = new PLCNeepBusInterfaceBlock(C, NMBlocks.block().neepbus().plcInterrupt().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-//    public static final Block SMALL_MEMORY = new MemoryBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
+    @Path("robotic_arm") public static final Block ROBOTIC_ARM = new RoboticArmBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.hidden(1)).requiresMotor().plcActuator(), MeatlibBlockSettings.of().destroyTime(3).properties());
+    public static final Block IMPLANTER = new ImplanterBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.hidden(1)).plcActuator(), MeatlibBlockSettings.of().destroyTime(3).properties());
+    @Path("redstone_interface") public static final Block REDSTONE_INTERFACE = new PLCRedstoneInterface(C, MeatlibBlockSettings.of().destroyTime(2).properties());
+    @Path("executor") public static final Block EXECUTOR = new ExecutorBlock(C, ItemSettings.block().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.of().noOcclusion().destroyTime(2).properties());
+    @Path("plc") public static final Block PLC = new PLCBlock(C, NMBlocks.block().retainsInv().neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block BUILDER = new BuilderBlock(C, NMBlocks.block().plcActuator().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(PLC).properties());
+    public static final Block PROCESSOR = new ProcessorBlock(C, NMBlocks.block().neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block PROGRAM_CABINET = new ProgramCabinetBlock(C, NMBlocks.block().retainsInv().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    @Path("plc_neepbus_interface") public static final Block NEEPBUS_INTERFACE = new PLCNeepBusInterfaceBlock(C, NMBlocks.block().neepbus().plcInterrupt().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+//    public static final Block SMALL_MEMORY = new MemoryBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
 
     public static void init()
     {

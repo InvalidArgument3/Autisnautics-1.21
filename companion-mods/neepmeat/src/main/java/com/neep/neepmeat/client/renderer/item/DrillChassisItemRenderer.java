@@ -89,7 +89,7 @@ public class DrillChassisItemRenderer implements BuiltinItemRendererRegistry.Dyn
     @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vcp, int light, int overlay)
     {
-        float tickDelta = client.getDeltaTracker().getRealtimeDeltaTicks();
+        float tickDelta = client.getTimer().getRealtimeDeltaTicks();
 
         MeatgunComponent component = MWComponents.MEATGUN.get(stack);
 
@@ -179,7 +179,7 @@ public class DrillChassisItemRenderer implements BuiltinItemRendererRegistry.Dyn
         MeatgunModule root = component.getRootHolder().root;
         renderRecursive(matrices, root, stack, component, mode, vcp,
                 Minecraft.getInstance().level.getGameTime(),
-                Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
+                Minecraft.getInstance().getTimer().getRealtimeDeltaTicks(), light, overlay);
 
         matrices.popPose();
     }

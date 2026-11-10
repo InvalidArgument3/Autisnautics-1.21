@@ -140,7 +140,7 @@ public class CompoundInjectorItem extends BaseItem
 
     public static void setHealsRemaining(ItemStack stack, int heals)
     {
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         nbt.putInt("Heals", heals);
     }
 
@@ -155,7 +155,6 @@ public class CompoundInjectorItem extends BaseItem
         return healsFor;
     }
 
-    @Override
     private void use(ItemStack stack, Player player)
     {
         if (hasUses(stack))

@@ -58,7 +58,7 @@ public class ShortBromeBlock extends CropBlock
         Block block = NMBlocks.GRAVE_BROME;
 
         // 50% chance if the player was not carrying brome
-        if (random.nextBoolean() && contains(playerEntity.inventory, block.asItem()))
+        if (random.nextBoolean() && contains(playerEntity.getInventory(), block.asItem()))
         {
             BlockPos pos = playerEntity.blockPosition();
             BlockPos.randomInCube(random, 2, pos, 1).forEach(p ->
@@ -107,7 +107,7 @@ public class ShortBromeBlock extends CropBlock
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         super.playerWillDestroy(world, pos, state, player);
         if (!world.isClientSide())
@@ -129,10 +129,12 @@ public class ShortBromeBlock extends CropBlock
                 }
             }
         }
+    
+        return state;
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+    public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
     {
         return asItem().getDefaultInstance();
     }

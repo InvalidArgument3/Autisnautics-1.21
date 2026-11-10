@@ -74,7 +74,7 @@ public class LargeFanBlock extends BigBlock<LargeFanBlock.LargeFanStructureBlock
     @Override
     protected LargeFanStructureBlock registerStructureBlock(RegistrationContext ctx)
     {
-        return ctx.append(this, new LargeFanStructureBlock(this, MeatlibBlockSettings.copyOf(this)), "large_fan_structure");
+        return ctx.append(this, new LargeFanStructureBlock(this, MeatlibBlockSettings.copyOf(this).properties()), "large_fan_structure");
     }
 
     @Override
@@ -104,7 +104,6 @@ public class LargeFanBlock extends BigBlock<LargeFanBlock.LargeFanStructureBlock
             super(parent, settings);
         }
 
-        @Override
         protected BlockEntityType<LargeFanStructureEntity> registerBlockEntity()
         {
             return Registry.register(

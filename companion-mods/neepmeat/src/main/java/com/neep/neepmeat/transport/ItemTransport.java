@@ -55,7 +55,7 @@ public class ItemTransport
     public static final RegistrationContext C = new RegistrationContext(NeepMeat.NAMESPACE, () -> NMItemGroups.GENERAL);
 
     public static final int BFS_MAX_DEPTH = 800;
-    public static final Block PROCESS_INTERFACE = new ProcessInterfaceBlock(C, NMBlocks.block().plcInterrupt(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
+    public static final Block PROCESS_INTERFACE = new ProcessInterfaceBlock(C, NMBlocks.block().plcInterrupt(), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
 
     public static BlockApiLookup<ItemPipe, Direction> ITEM_PIPE_LOOKUP = BlockApiLookup.get(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "item_pipe"), ItemPipe.class, Direction.class);
     public static BlockEntityType<PipeDriverBlockEntity> PIPE_DRIVER_BE;
@@ -63,29 +63,29 @@ public class ItemTransport
     public static BlockEntityType<ManualRequesterBlockEntity> ITEM_REQUESTER_BE;
     public static BlockEntityType<RequesterBlockEntity> REQUESTER_BE;
 
-    public static final Block WOODEN_HOPPER = new WoodenHopperBlock(C, NMItemSettings.block(), MeatlibBlockSettings.of().simpleDrop(ItemRegistry::getMatchingItem).strength(1f).tags(MINEABLE_WITH_AXE).sound(SoundType.WOOD));
-    @Path("item_duct") public static Block HOPPER_EXTENDER = new HopperExtenderBlock(C, NMBlocks.block(), MeatlibBlockSettings.copyOf(WOODEN_HOPPER).strength(0.5f));
+    public static final Block WOODEN_HOPPER = new WoodenHopperBlock(C, NMItemSettings.block(), MeatlibBlockSettings.of().simpleDrop(ItemRegistry::getMatchingItem).strength(1f).tags(MINEABLE_WITH_AXE).sound(SoundType.WOOD).properties());
+    @Path("item_duct") public static Block HOPPER_EXTENDER = new HopperExtenderBlock(C, NMBlocks.block(), MeatlibBlockSettings.copyOf(WOODEN_HOPPER).strength(0.5f).properties());
 
-    public static final Block PIPE_DRIVER = new PipeDriverBlock(C, NMItemSettings.block().plcActuator().tooltip(TooltipSupplier.hidden(2)), MeatlibBlockSettings.of().strength(1f).sound(SoundType.METAL));
-    public static final Block STORAGE_BUS = new StorageDriverBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.of().strength(0.3f).sound(SoundType.METAL));
-    public static final Block ITEM_REQUESTER = new ManualRequesterBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.of().strength(0.3f).sound(SoundType.METAL));
-    public static final Block ITEM_PIPE = new ItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS));
-    public static final Block FILTER_ITEM_PIPE = new FilterItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS));
-    public static final Block SPEED_ITEM_PIPE = new SpeedItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS));
-    public static final Block OPAQUE_ITEM_PIPE = new OpaqueItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(ITEM_PIPE));
-    public static final Block ENCASED_ITEM_PIPE = new EncasedItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS));
-    public static final Block MERGE_ITEM_PIPE = new MergePipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS));
-    public static final Block ITEM_PUMP = new ItemPumpBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block EJECTOR = new EjectorBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block FILTERED_EJECTOR = new FilteredEjectorBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(EJECTOR));
-    public static final Block ADVANCED_EJECTOR = new AdvancedEjectorBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block TRANSPOSER = new TransposerBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block ITEM_INTERFACE = new ItemInterfaceBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block ROUTER = new RouterBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block ADVANCED_ROUTER = new AdvancedRouterBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(ROUTER));
-    public static final Block BUFFER = new BufferBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(Blocks.CHEST).tags(MINEABLE_WITH_AXE));
-    public static final Block DUMPER = new DumperBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(Blocks.OAK_WOOD).tags(MINEABLE_WITH_AXE));
-    public static final Block REQUESTER = new RequesterBlock(C, NMBlocks.block().neepbus().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(EJECTOR));
+    public static final Block PIPE_DRIVER = new PipeDriverBlock(C, NMItemSettings.block().plcActuator().tooltip(TooltipSupplier.hidden(2)), MeatlibBlockSettings.of().strength(1f).sound(SoundType.METAL).properties());
+    public static final Block STORAGE_BUS = new StorageDriverBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.of().strength(0.3f).sound(SoundType.METAL).properties());
+    public static final Block ITEM_REQUESTER = new ManualRequesterBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.of().strength(0.3f).sound(SoundType.METAL).properties());
+    public static final Block ITEM_PIPE = new ItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS).properties());
+    public static final Block FILTER_ITEM_PIPE = new FilterItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS).properties());
+    public static final Block SPEED_ITEM_PIPE = new SpeedItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS).properties());
+    public static final Block OPAQUE_ITEM_PIPE = new OpaqueItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(ITEM_PIPE).properties());
+    public static final Block ENCASED_ITEM_PIPE = new EncasedItemPipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS).properties());
+    public static final Block MERGE_ITEM_PIPE = new MergePipeBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.ITEM_PIPE_SETTINGS).properties());
+    public static final Block ITEM_PUMP = new ItemPumpBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block EJECTOR = new EjectorBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block FILTERED_EJECTOR = new FilteredEjectorBlock(C, NMItemSettings.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(EJECTOR).properties());
+    public static final Block ADVANCED_EJECTOR = new AdvancedEjectorBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block TRANSPOSER = new TransposerBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block ITEM_INTERFACE = new ItemInterfaceBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block ROUTER = new RouterBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block ADVANCED_ROUTER = new AdvancedRouterBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(ROUTER).properties());
+    public static final Block BUFFER = new BufferBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(Blocks.CHEST).tags(MINEABLE_WITH_AXE).properties());
+    public static final Block DUMPER = new DumperBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), MeatlibBlockSettings.copyOf(Blocks.OAK_WOOD).tags(MINEABLE_WITH_AXE).properties());
+    public static final Block REQUESTER = new RequesterBlock(C, NMBlocks.block().neepbus().tooltip(TooltipSupplier.hidden(1)), MeatlibBlockSettings.copyOf(EJECTOR).properties());
 
     public static final FlexSiloBlock FLEX_SILO = new FlexSiloBlock(C, NMBlocks.block().tooltip(TooltipSupplier.simple(1)), FluidTransport.FLEX_TANK_SETTINGS, () -> NMBlockEntities.FLEX_SILO);
 

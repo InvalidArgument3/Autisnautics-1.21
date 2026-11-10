@@ -19,10 +19,10 @@ public interface TransactionContext {
     void abort();
 
     /** Fabric nested transaction. {@link Transaction} already opens one. */
-    default TransactionContext openNested() {
+    default Transaction openNested() {
         if (this instanceof Transaction transaction) {
             return transaction.openNested();
         }
-        return this;
+        return Transaction.openOuter();
     }
 }

@@ -86,7 +86,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
         transformation.apply(leftHanded, matrices);
         matrices.translate(-0.5F, -0.5F, -0.5F);
 
-        renderInner(stack, player, playerEntityRenderer, mode, matrices, vcp, true, mainHand, leftHanded, client.getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
+        renderInner(stack, player, playerEntityRenderer, mode, matrices, vcp, true, mainHand, leftHanded, client.getTimer().getRealtimeDeltaTicks(), light, overlay);
     }
 
     private ItemStack getItemInOtherHand(ItemInHandRenderer renderer, boolean mainHand)
@@ -129,13 +129,13 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
 
         matrices.pushPose();
         if (mode.firstPerson())
-            matrices.mulPoseMatrix(firstPersonModelTransform);
+            matrices.mulPose(firstPersonModelTransform);
 
         // Recursive module rendering
         MeatgunModule root = component.getRootHolder().root;
         renderRecursive(matrices, root, stack, component, mode, vcp,
                 Minecraft.getInstance().level.getGameTime(),
-                Minecraft.getInstance().getDeltaTracker().getRealtimeDeltaTicks(), light, overlay);
+                Minecraft.getInstance().getTimer().getRealtimeDeltaTicks(), light, overlay);
 
         renderScreen(client, matrices, mode, vcp, component.getRootHolder(), tickDelta, leftHanded);
 
@@ -206,7 +206,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
                 .translate(ox / 16f / armScale, oy / 16f / armScale, oz / 16f / armScale)
                 ;
 
-        matrices.mulPoseMatrix(t);
+        matrices.mulPose(t);
 
         if (mode.firstPerson())
         {
@@ -247,7 +247,7 @@ public class MeatgunLongGunRenderer implements BuiltinItemRendererRegistry.Dynam
                 .translate(ox / 16f / armScale, oy / 16f / armScale, oz / 16f / armScale)
                 ;
 
-        matrices.mulPoseMatrix(t);
+        matrices.mulPose(t);
 
         if (mode.firstPerson())
         {

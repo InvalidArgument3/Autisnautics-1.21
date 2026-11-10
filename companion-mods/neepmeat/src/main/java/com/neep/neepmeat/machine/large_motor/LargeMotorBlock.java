@@ -77,7 +77,7 @@ public class LargeMotorBlock extends BigBlock<LargeMotorStructureBlock> implemen
     @Override
     protected LargeMotorStructureBlock registerStructureBlock(RegistrationContext ctx)
     {
-        return ctx.append(this, new LargeMotorStructureBlock(this, MeatlibBlockSettings.copyOf(this)), "large_motor_structure");
+        return ctx.append(this, new LargeMotorStructureBlock(this, MeatlibBlockSettings.copyOf(this).properties()), "large_motor_structure");
     }
 
     @Override

@@ -47,19 +47,16 @@ public class FatTrommelRecipe implements TrommelRecipe
         return resource.isOf(NMFluids.STILL_DIRTY_ORE_FAT) && OreFatRegistry.getFromVariant(storage.getResource()) != null;
     }
 
-    @Override
     public ResourceLocation getId()
     {
         return id;
     }
 
-    @Override
     public MeatRecipeType<?> getType()
     {
         return NMrecipeTypes.FAT_TROMMEL;
     }
 
-    @Override
     public MeatRecipeSerialiser<?> getSerializer()
     {
         return NMrecipeTypes.FAT_TROMMEL_SERIALIZER;

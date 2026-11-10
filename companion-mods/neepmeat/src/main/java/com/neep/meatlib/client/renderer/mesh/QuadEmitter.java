@@ -59,6 +59,24 @@ public class QuadEmitter implements MutableQuadView {
         return this;
     }
 
+    public QuadEmitter pos(int index, org.joml.Vector3f position) {
+        return this;
+    }
+
+    public QuadEmitter uv(int index, float u, float v) {
+        return this;
+    }
+
+    public BakedQuad toBakedQuad(TextureAtlasSprite sprite) {
+        this.sprite = sprite;
+        emit();
+        return quads.isEmpty() ? new BakedQuad(new int[0], 0, face, sprite, false) : quads.get(quads.size() - 1);
+    }
+
+    public BakedQuad toBakedQuad(int spriteIndex, TextureAtlasSprite sprite, boolean shade) {
+        return toBakedQuad(sprite);
+    }
+
     public List<BakedQuad> baked() {
         return List.copyOf(quads);
     }

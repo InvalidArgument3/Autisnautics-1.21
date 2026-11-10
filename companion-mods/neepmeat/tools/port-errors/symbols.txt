@@ -1,52 +1,54 @@
-# top 50 cannot-find-symbol, grouped by symbol and location type
+# symbol histogram, combined tree, jar 0.30.0-neoforge.54
+# before this run: 3773
+# after this run: 2769
 
-82	method vertex | variable
-61	method getNullable | variable
-56	class TrackedValue | class
-49	method value | class
-48	method setLeft | class
-46	method block | class
-43	method checkType | class
-42	class Comment | class
-41	method getSurgeryRobot | variable
-36	method toNbt | variable
-34	method register | class
-31	variable FluidVariantRendering | class
-31	method openNested | variable
-31	method hidden | interface
-29	class TransferVariant | class
-29	variable LOGGER | class
-29	variable StorageUtil | class
-29	method peek | variable
-27	variable EntityRendererRegistry | class
-27	variable FabricEntityTypeBuilder | class
-26	class BlockApiCache | class
-26	variable CONFIG | class
-25	method define | variable
-23	class StorageUtil | package
-23	method getNbt | variable
-23	variable BlockApiCache | class
-23	variable ParticleFactoryRegistry | class
-22	class ExtendedScreenHandlerFactory | class
-21	class BlockApiCache | package
-21	variable renderLevel | variable
-20	class Event | interface
-20	class FinishedRecipe | class
-20	variable EventFactory | interface
-20	method fromNbt | class
-20	variable ItemStorage | class
-19	variable FluidVariantAttributes | class
-18	class ContainerItemContext | class
-17	variable vsUtil | class
-17	variable NAMESPACE | class
-17	method tag | class
-17	method renderBorder | interface
-17	class SimpleFluidRenderHandler | class
-17	method readNbt | variable
-16	method getFirstMatch | class
-15	class QuadEmitter | class
-15	method of | class
-15	variable FluidStorage | class
-15	variable EntityModelLayerRegistry | class
-14	class SerializedName | class
-14	method getId | variable
+122	does not override
+27	other	invalid method reference
+22	other	method register in class BlockEntityRenderers cannot be applied to given types;
+18	other	incompatible types: Matrix3f cannot be converted to Pose
+17	cannot find symbol	method getId
+16	other	incompatible types: inference variable T has incompatible bounds
+15	other	type FluidPipeBlockEntity does not take parameters
+15	other	incompatible types: invalid method reference
+15	cannot find symbol	variable LOOKUP
+14	cannot find symbol	method extract
+14	cannot find symbol	method getObject
+14	other	no suitable method found for putBulkData(Pose,BakedQuad,float,float,float,int,in
+14	cannot find symbol	method serverTick
+14	other	no suitable method found for checkType(BlockEntityType<T>,BlockEntityType<CAP#1>
+14	other	no suitable method found for has(Item)
+13	other	incompatible types: ResourceKey<LootTable> cannot be converted to ResourceLocati
+13	cannot find symbol	variable super
+13	cannot find symbol	method register
+12	cannot find symbol	variable PLCPropertyDelegate
+12	cannot find symbol	method wrapLines
+12	cannot find symbol	method addListener
+12	cannot find symbol	method loadAdditional
+12	cannot find symbol	method addVertex
+11	cannot find symbol	method map
+11	cannot find symbol	method getItems
+11	other	method readBlockPos in class NbtUtils cannot be applied to given types;
+11	cannot find symbol	method floatValue
+11	other	incompatible types: CAP#1 cannot be converted to ImplantManager
+11	other	static methods cannot be annotated with @Override
+11	cannot find symbol	method getStorage
+11	other	method getFoodProperties in interface IItemExtension cannot be applied to given 
+11	cannot find symbol	method getBlockState
+11	other	incompatible types: Block cannot be converted to Properties
+10	cannot find symbol	class RequestContext
+10	cannot find symbol	class DeferredRequest
+10	other	Node has private access in PipeRouteFinder
+10	cannot find symbol	method getCompound
+10	cannot find symbol	variable RequestType
+10	cannot find symbol	method getTexture
+10	cannot find symbol	method getComponent
+10	cannot find symbol	variable builder
+10	other	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEnt
+10	cannot find symbol	method getAmount
+10	cannot find symbol	method saturationMod
+9	other	no interface expected here
+9	cannot find symbol	class RequestType
+9	cannot find symbol	class Serializer
+9	cannot find symbol	class Entry
+9	cannot find symbol	method getTag
+9	other	no suitable method found for register(MappedRegistry<EntityImplantInstaller>,Res

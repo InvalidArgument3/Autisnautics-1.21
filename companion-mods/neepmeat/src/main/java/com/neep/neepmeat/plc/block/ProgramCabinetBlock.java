@@ -100,12 +100,14 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof ProgramCabinetBlockEntity be)
             handleBroken(world, player, be);
 
         super.playerWillDestroy(world, pos, state, player);
+    
+        return state;
     }
 
     @Override
@@ -173,14 +175,16 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
                     }
 
                     @Override
-                    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+                    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
                     {
         InteractionHand hand = InteractionHand.MAIN_HAND;
                         if (world.getBlockEntity(pos.below()) instanceof ProgramCabinetBlockEntity be)
                             handleBroken(world, player, be);
 
                         super.playerWillDestroy(world, pos, state, player);
-                    }
+                    
+        return state;
+    }
                 }, MeatlibBlock::structure);
     }
 
@@ -199,7 +203,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);
 

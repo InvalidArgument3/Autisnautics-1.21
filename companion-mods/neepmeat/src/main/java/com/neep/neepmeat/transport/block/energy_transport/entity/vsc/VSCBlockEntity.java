@@ -293,7 +293,6 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
     // Represents the sink with respect to this block - the side that absorbs power
     private class NormalSinkAcceptor extends AbstractBloodAcceptor
     {
-        @Override
         public Mode getMode()
         {
             return Mode.ACTIVE_SINK;
@@ -321,13 +320,11 @@ public class VSCBlockEntity extends SyncableBlockEntity implements ExtendedScree
 
     private class NormalSourceAcceptor implements BloodAcceptor
     {
-        @Override
         public Mode getMode()
         {
             return Mode.SOURCE;
         }
 
-        @Override
         public long getOutput()
         {
             return powerToSource;

@@ -84,7 +84,6 @@ public class PathSoldierEntity extends WeaponSwitchingHostileEntity implements P
 //            System.out.println(goalSelector.getRunningGoals().map(g -> g.getGoal().toString() + ", ").collect(Collectors.joining()));
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -154,7 +153,6 @@ public class PathSoldierEntity extends WeaponSwitchingHostileEntity implements P
         return EnlightenmentManager.get(nearestPlayer).getTotal() > 10;
     }
 
-    @Override
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData entityData, @Nullable CompoundTag entityNbt)
     {
         var data = super.finalizeSpawn(world, difficulty, spawnReason, entityData, entityNbt);

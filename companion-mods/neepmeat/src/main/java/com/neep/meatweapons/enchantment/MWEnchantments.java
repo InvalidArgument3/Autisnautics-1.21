@@ -50,7 +50,6 @@ public class MWEnchantments
             this.maxLevel = maxLevel;
         }
 
-        @Override
         public float getDamageBonus(int level, MobType group)
         {
             return Math.max(0f, level) * 0.5f;

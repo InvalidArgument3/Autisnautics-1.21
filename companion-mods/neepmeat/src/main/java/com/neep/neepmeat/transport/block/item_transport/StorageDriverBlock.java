@@ -80,7 +80,6 @@ public class StorageDriverBlock extends ItemPipeBlock implements ItemPipe
         }
     }
 
-    @Override
     protected boolean adjacentAutoConnect(Level world, BlockPos adjPos, BlockState adjState, BlockState hereState, Direction direction)
     {
         if (canConnectTo(hereState, adjState, direction.getOpposite(), world, adjPos, true))
@@ -100,7 +99,6 @@ public class StorageDriverBlock extends ItemPipeBlock implements ItemPipe
         return false;
     }
 
-    @Override
     public boolean canConnectTo(BlockState hereState, BlockState toState, Direction toFace, Level world, BlockPos toPos, boolean newConnection)
     {
         // Always connect to storage APIs

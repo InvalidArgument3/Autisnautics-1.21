@@ -91,9 +91,9 @@ public class ItemToEntityRecipe extends AbstractItemManufactureRecipe
         @Override
         public ItemToEntityRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf)
         {
-            Item base = buf.readById(BuiltInRegistries.ITEM);
+            Item base = buf.readById(BuiltInRegistries.ITEM::byId);
             List<ManufactureStep<?>> steps = ItemManufactureRecipe.Serialiser.readSteps(buf);
-            EntityType<?> output = buf.readById(BuiltInRegistries.ENTITY_TYPE);
+            EntityType<?> output = buf.readById(BuiltInRegistries.ENTITY_TYPE::byId);
 
             return new ItemToEntityRecipe(id, base, output, steps);
         }
@@ -101,9 +101,9 @@ public class ItemToEntityRecipe extends AbstractItemManufactureRecipe
         @Override
         public void write(FriendlyByteBuf buf, ItemToEntityRecipe recipe)
         {
-            buf.writeId(BuiltInRegistries.ITEM, recipe.base);
+            buf.writeById(BuiltInRegistries.ITEM::getId, recipe.base);
             ItemManufactureRecipe.Serialiser.writeSteps(recipe.steps, buf);
-            buf.writeId(BuiltInRegistries.ENTITY_TYPE, recipe.output);
+            buf.writeById(BuiltInRegistries.ENTITY_TYPE::getId, recipe.output);
         }
     }
 }

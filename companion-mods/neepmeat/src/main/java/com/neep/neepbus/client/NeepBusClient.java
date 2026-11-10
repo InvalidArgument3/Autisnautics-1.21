@@ -74,16 +74,16 @@ public class NeepBusClient implements ClientModInitializer
 
         // IDE says this ↓ is unnecessary, but the compiler disagrees.
         MenuScreens.<NeepBusConfigScreenHandler, NeepBusConfigScreen<NeepBusConfigScreenHandler>>register(NeepBusScreenHandlers.NEEPBUS_CONFIG, NeepBusConfigScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.NEEPBUS_RANGE_CONFIG, NeepBusRangeConfigScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.SLIDER, SliderScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.MOVEMENT_CONTROL, MovementControllerScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.GAUGE, GaugeConfigScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.PID_CONTROLLER, PIDControllerScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.DELAY, DelayScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.BUFFER, NeepBusBufferScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.BUTTON_CONFIG, ButtonConfigScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.INTEGRATOR, IntegratorScreen::new);
-        MenuScreens.register(NeepBusScreenHandlers.MOUTH, MouthScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.NEEPBUS_RANGE_CONFIG, NeepBusRangeConfigScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.SLIDER, SliderScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.MOVEMENT_CONTROL, MovementControllerScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.GAUGE, GaugeConfigScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.PID_CONTROLLER, PIDControllerScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.DELAY, DelayScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.BUFFER, NeepBusBufferScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.BUTTON_CONFIG, ButtonConfigScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.INTEGRATOR, IntegratorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NeepBusScreenHandlers.MOUTH, MouthScreen::new);
 
         InputInterceptorsClient.register(MovementControlBlockEntity.ID, MovementControlHandler::new);
     }

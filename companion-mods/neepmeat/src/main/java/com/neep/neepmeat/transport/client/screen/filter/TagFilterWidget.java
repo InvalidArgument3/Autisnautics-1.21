@@ -135,9 +135,9 @@ public class TagFilterWidget extends FilterEntryWidget<TagFilter>
         }
 
         @Override
-        public void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
+        public void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
-            super.renderButton(context, mouseX, mouseY, delta);
+            super.renderWidget(context, mouseX, mouseY, delta);
 
             int maxSuggestions = 5;
             if (!suggestions.isEmpty() && isActive())
@@ -165,7 +165,6 @@ public class TagFilterWidget extends FilterEntryWidget<TagFilter>
             return super.renderUnselectedText(context, string, selectionWithin, textStart, m, col, j);
         }
 
-        @Override
         public String getPrefix()
         {
             return "#";

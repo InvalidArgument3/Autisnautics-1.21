@@ -79,7 +79,7 @@ public class FlexTankModel implements UnbakedModel, BakedModel, FabricBakedModel
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);
 

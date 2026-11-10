@@ -41,7 +41,7 @@ public record ItemRenderContent(ItemRenderLarkdownContent content) implements Ar
 
         var model = renderer.getItemModelShaper().getItemModel(content.stack());
         Lighting.setupForFlatItems();
-        matrices.mulPoseMatrix(new Matrix4f().scaling(1, -1, 1));
+        matrices.mulPose(new Matrix4f().scaling(1, -1, 1));
         renderer.render(content.stack(),
                 ItemDisplayContext.GUI,
                 false,

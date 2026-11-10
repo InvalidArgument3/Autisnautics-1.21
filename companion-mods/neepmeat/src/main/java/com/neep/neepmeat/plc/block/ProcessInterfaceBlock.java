@@ -104,7 +104,7 @@ public class ProcessInterfaceBlock extends BaseFacingBlock implements EntityBloc
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof ProcessInterfaceBlockEntity be)
         {
@@ -114,5 +114,7 @@ public class ProcessInterfaceBlock extends BaseFacingBlock implements EntityBloc
             }
         }
         super.playerWillDestroy(world, pos, state, player);
+    
+        return state;
     }
 }

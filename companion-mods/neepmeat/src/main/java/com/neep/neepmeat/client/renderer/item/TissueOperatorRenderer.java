@@ -95,7 +95,7 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
             if (!client.isPaused())
             {
                 endRotSpeed = (float) Mth.lerp(0.2f, endRotSpeed, Easing.easeOutCubic(filteredSwing));
-                endAngle += endRotSpeed * client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
+                endAngle += endRotSpeed * client.getTimer().getGameTimeDeltaPartialTick(true);
             }
 
             // Local transformations for the wheel
@@ -105,7 +105,7 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
             wheelLocal.rotateZ(endAngle);
             wheelLocal.translate(0, -2 / 16f, 0);
             matrices.translate(0.5, 0, 1);
-            matrices.mulPoseMatrix(wheelLocal);
+            matrices.mulPose(wheelLocal);
             matrices.translate(-0.5, 0, -1);
             renderItem(stack, mode, matrices, vertexConsumers, light, overlay, wheel, true, false);
             matrices.popPose();
@@ -117,7 +117,7 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
             endLocal.rotateZ(endAngle);
             endLocal.translate(0, -2 / 16f, translation);
             matrices.translate(0.5, 0, 1);
-            matrices.mulPoseMatrix(endLocal);
+            matrices.mulPose(endLocal);
             matrices.translate(-0.5, 0, -1);
 
             renderItem(stack, mode, matrices, vertexConsumers, light, overlay, end, true, false);
@@ -151,7 +151,7 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
     private void increaseSwing(float max)
     {
         if (!client.isPaused())
-            filteredSwing = Math.min(max, filteredSwing + 0.05f * client.getDeltaTracker().getGameTimeDeltaPartialTick(true));
+            filteredSwing = Math.min(max, filteredSwing + 0.05f * client.getTimer().getGameTimeDeltaPartialTick(true));
     }
 
     public static boolean isHolding(ItemStack stack)

@@ -115,13 +115,12 @@ public class AddressConfigWidget extends GeneralPanel
         }
 
         @Override
-        public void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
+        public void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
-            super.renderButton(context, mouseX, mouseY, delta);
+            super.renderWidget(context, mouseX, mouseY, delta);
             GUIUtil.drawText(context, textRenderer, Component.nullToEmpty(entry.get().name() + ": "), x0() + 2, this.y0(), PLCCols.TEXT.col, false);
         }
 
-        @Override
         protected String getPrefix()
         {
             return "→";
@@ -151,7 +150,6 @@ public class AddressConfigWidget extends GeneralPanel
             return super.keyPressed(keyCode, scanCode, modifiers);
         }
 
-        @Override
         public void appendClickableNarrations(NarrationElementOutput builder)
         {
 

@@ -154,7 +154,6 @@ public class DrillChassisItem extends MeatgunItem implements OverrideSwingItem, 
     }
 
 
-    @Override
     public boolean isSuitableFor(ItemStack stack, BlockState state)
     {
         if (getHead(stack) instanceof MiningMeatgunModule mining)
@@ -203,7 +202,7 @@ public class DrillChassisItem extends MeatgunItem implements OverrideSwingItem, 
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag context)
     {
         if (NMComponents.IMPLANT_MANAGER.getNullable(stack) instanceof ItemImplantManager manager)
         {

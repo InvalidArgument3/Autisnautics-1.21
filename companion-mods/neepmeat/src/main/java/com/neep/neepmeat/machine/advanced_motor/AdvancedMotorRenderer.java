@@ -39,7 +39,7 @@ public class AdvancedMotorRenderer implements BlockEntityRenderer<AdvancedMotorB
         matrices.pushPose();
         Direction facing = be.getBlockState().getValue(BaseFacingBlock.FACING);
 
-        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
+        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true);
         be.currentSpeed = (float) (be.rotorSpeed * Mth.lerp(0.1, be.currentSpeed, be.getSpeed()));
         be.angle = Mth.wrapDegrees(be.angle + be.currentSpeed * delta);
 

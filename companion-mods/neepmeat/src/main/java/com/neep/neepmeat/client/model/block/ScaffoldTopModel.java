@@ -110,7 +110,7 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
         // Get the sprites
         for (int i = 0; i < 2; ++i)

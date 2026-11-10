@@ -61,20 +61,18 @@ public class GogglesItem extends ArmorItem implements MeatlibItem, GeoItem
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag context)
     {
         this.tooltip.apply(stack, tooltip);
         super.appendHoverText(stack, world, tooltip, context);
     }
 
-    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()
         {
             private GeoArmorRenderer<?> renderer;
 
-            @Override
             public HumanoidModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<LivingEntity> original)
             {
                 if (this.renderer == null) // Important that we do this. If we just instantiate  it directly in the field it can cause incompatibilities with some mods.

@@ -74,6 +74,18 @@ public interface ThordData
 
     String stringValue();
     int getAsInt() throws NeepASM.RuntimeException;
+
+    default int intValue() {
+        try {
+            return getAsInt();
+        } catch (NeepASM.RuntimeException exception) {
+            throw new IllegalStateException(exception);
+        }
+    }
+
+    default float floatValue() {
+        return intValue();
+    }
     boolean boolValue();
     int pointerValue() throws NeepASM.RuntimeException;
     default Argument worldTargetValue() throws NeepASM.RuntimeException

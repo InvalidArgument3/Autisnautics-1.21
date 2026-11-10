@@ -50,7 +50,6 @@ public class AlloyKilnStorage implements NbtSerialisable
         {
             final NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
 
-            @Override
             public NonNullList<ItemStack> getItems()
             {
                 return items;

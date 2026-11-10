@@ -44,10 +44,10 @@ public class ParamCodecs
     {
         return ParamCodec.of(clazz, (o, b) ->
         {
-            b.writeId(registry, o);
+            b.writeById(registry::getId, o);
         }, b ->
         {
-            return b.readById(registry);
+            return b.readById(registry::byId);
         });
     }
 

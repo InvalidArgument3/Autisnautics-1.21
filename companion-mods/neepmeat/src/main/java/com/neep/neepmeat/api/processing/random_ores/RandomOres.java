@@ -65,7 +65,6 @@ public class RandomOres implements SimpleSynchronousResourceReloadListener
         return new RandomOreProvider(world, pos, random, entries);
     }
 
-    @Override
     public Collection<ResourceLocation> getFabricDependencies()
     {
         return List.of(
@@ -123,7 +122,6 @@ public class RandomOres implements SimpleSynchronousResourceReloadListener
         return ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "random_ores");
     }
 
-    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         stateToTempEntry.clear();

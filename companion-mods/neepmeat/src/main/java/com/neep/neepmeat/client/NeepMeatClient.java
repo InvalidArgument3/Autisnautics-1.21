@@ -344,44 +344,44 @@ public class NeepMeatClient implements ClientModInitializer
 
     public static void registerScreens()
     {
-        MenuScreens.register(NMScreenHandlers.BUFFER_SCREEN_HANDLER, BufferScreen::new);
-        MenuScreens.register(NMScreenHandlers.CONTENT_DETECTOR_SCREEN_HANDLER, ContentDetectorScreen::new);
-        MenuScreens.register(NMScreenHandlers.ROUTER, RouterScreen::new);
-        MenuScreens.register(NMScreenHandlers.ADVANCED_ROUTER, AdvancedRouterScreen::new);
-        MenuScreens.register(NMScreenHandlers.STIRLING_ENGINE, StirlingEngineScreen::new);
-        MenuScreens.register(NMScreenHandlers.ALLOY_KILN, AlloyKilnScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.BUFFER_SCREEN_HANDLER, BufferScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.CONTENT_DETECTOR_SCREEN_HANDLER, ContentDetectorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.ROUTER, RouterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.ADVANCED_ROUTER, AdvancedRouterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.STIRLING_ENGINE, StirlingEngineScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.ALLOY_KILN, AlloyKilnScreen::new);
 //        HandledScreens.register(ScreenHandlerInit.GUIDE, GuideMainScreen::new);
-        MenuScreens.register(NMScreenHandlers.FLUID_RATIONER, FluidRationerScreen::new);
-        MenuScreens.register(NMScreenHandlers.SEPARATOR, SeparatorScreen::new);
-        MenuScreens.register(NMScreenHandlers.UPGRADE_MANAGER, ImplantManagerScreen::new);
-        MenuScreens.register(NMScreenHandlers.DISPLAY_PLATE, DisplayPlateScreen::new);
-        MenuScreens.register(NMScreenHandlers.FABRICATOR, FabricatorScreen::new);
-        MenuScreens.register(NMScreenHandlers.SMALL_COMPRESSOR, SmallCompressorScreen::new);
-        MenuScreens.register(NMScreenHandlers.FILTER, FilterScreen::new);
-        MenuScreens.register(NMScreenHandlers.DEPLOYER, DeployerScreen::new);
-        MenuScreens.register(NMScreenHandlers.VASCULAR_CONDENSER, VascularCondenserScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.FLUID_RATIONER, FluidRationerScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.SEPARATOR, SeparatorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.UPGRADE_MANAGER, ImplantManagerScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.DISPLAY_PLATE, DisplayPlateScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.FABRICATOR, FabricatorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.SMALL_COMPRESSOR, SmallCompressorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.FILTER, FilterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.DEPLOYER, DeployerScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.VASCULAR_CONDENSER, VascularCondenserScreen::new);
 
-        MenuScreens.register(NMScreenHandlers.LIVING_MACHINE, LivingMachineScreen::new);
-        MenuScreens.register(NMScreenHandlers.ITEM_INPUT, ItemInputPortScreen::new);
-        MenuScreens.register(NMScreenHandlers.ITEM_OUTPUT, ItemOutputPortScreen::new);
-        MenuScreens.register(NMScreenHandlers.DISTRIBUTOR_POINT, DistributorPointScreen::new);
-        MenuScreens.register(NMScreenHandlers.PHAGE_RAY, PhageRayScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.LIVING_MACHINE, LivingMachineScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.ITEM_INPUT, ItemInputPortScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.ITEM_OUTPUT, ItemOutputPortScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.DISTRIBUTOR_POINT, DistributorPointScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.PHAGE_RAY, PhageRayScreen::new);
 
-        MenuScreens.register(NMScreenHandlers.PLC, PLCProgramScreen::new);
-        MenuScreens.register(NMScreenHandlers.PROGRAM_CABINET, ProgramCabinetScreen::new);
-        MenuScreens.register(NMScreenHandlers.PROGRAM_CARD, ProgramCardScreen::new);
-        MenuScreens.register(NMScreenHandlers.BUILDER, BuilderScreen::new);
-        MenuScreens.register(NMScreenHandlers.IMPLANTER, ImplanterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.PLC, PLCProgramScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.PROGRAM_CABINET, ProgramCabinetScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.PROGRAM_CARD, ProgramCardScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.BUILDER, BuilderScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(NMScreenHandlers.IMPLANTER, ImplanterScreen::new);
         InputInterceptorsClient.register(ImplanterBlockEntity.ID, ImplanterInterceptorHandler::new);
     }
 
     public static void registerLayers()
     {
         // Fluids
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), NMFluids.BLOOD.still(), NMFluids.BLOOD.flowing());
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), NMFluids.PATINA_TREATMENT.still(), NMFluids.PATINA_TREATMENT.flowing());
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), com.neep.neepmeat.fluid.FluidForms.still(NMFluids.BLOOD), com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.BLOOD));
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), com.neep.neepmeat.fluid.FluidForms.still(NMFluids.PATINA_TREATMENT), com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.PATINA_TREATMENT));
 //        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), NMFluids.STILL_ENRICHED_BLOOD, NMFluids.FLOWING_ENRICHED_BLOOD);
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), NMFluids.ELDRITCH_ENZYMES.still(), NMFluids.ELDRITCH_ENZYMES.flowing());
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderType.translucent(), com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ELDRITCH_ENZYMES), com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.ELDRITCH_ENZYMES));
 
         // Other blocks
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), FluidTransport.BASIC_GLASS_TANK);

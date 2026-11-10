@@ -53,7 +53,6 @@ public class MopItem extends BaseItem implements WeakTwoHanded
         return false;
     }
 
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;

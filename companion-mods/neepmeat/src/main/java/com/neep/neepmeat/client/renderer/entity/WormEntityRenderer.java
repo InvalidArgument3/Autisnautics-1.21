@@ -158,7 +158,7 @@ public class WormEntityRenderer extends GeoEntityRenderer<WormEntity>
 //    }
 
     @Override
-    public ResourceLocation getTexture(WormEntity entity)
+    public ResourceLocation getTextureLocation(WormEntity entity)
     {
         return TEXTURE;
     }

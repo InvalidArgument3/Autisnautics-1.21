@@ -99,7 +99,6 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
             super(0, 0, rows, cols, slots, handler);
         }
 
-        @Override
         protected void drawSlot(GuiGraphics context, MobileSlot mobileSlot)
         {
             ResourceLocation tex = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "textures/gui/plc/program_cabinet.png");
@@ -156,9 +155,9 @@ public class ProgramCabinetScreen extends BetterHandledScreen<ProgramCabinetScre
         }
 
         @Override
-        public void renderButton(GuiGraphics context, int mouseX, int mouseY, float delta)
+        public void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta)
         {
-            super.renderButton(context, mouseX, mouseY, delta);
+            super.renderWidget(context, mouseX, mouseY, delta);
 
             int prefixStart = x0() + (drawFancyBackground ? 4 : 2);
             int start = getTextStart(prefixStart) + textRenderer.width(this.text()) + 3;

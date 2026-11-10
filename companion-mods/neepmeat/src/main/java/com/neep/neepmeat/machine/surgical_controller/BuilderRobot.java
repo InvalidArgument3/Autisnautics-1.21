@@ -397,7 +397,6 @@ public class BuilderRobot implements PLCRobot, NbtSerialisable
         }
     }
 
-    @Override
     public void setStored(PLC plc, @Nullable ResourceAmount<ItemVariant> stored)
     {
         this.stored = stored;
@@ -409,7 +408,6 @@ public class BuilderRobot implements PLCRobot, NbtSerialisable
         return parent.getBlockPos();
     }
 
-    @Override
     public @Nullable ResourceAmount<ItemVariant> getStored(PLC plc)
     {
         return stored;

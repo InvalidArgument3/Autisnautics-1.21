@@ -64,7 +64,6 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
     {
         private final NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
 
-        @Override
         public NonNullList<ItemStack> getItems()
         {
             return items;
@@ -274,7 +273,6 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
         return worldPosition;
     }
 
-    @Override
     public void spawnItem(@Nullable ResourceAmount<ItemVariant> stored)
     {
         if (stored == null)
@@ -404,7 +402,6 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
         return this;
     }
 
-    @Override
     public void setStored(PLC plc, @Nullable ResourceAmount<ItemVariant> stored)
     {
         if (stored != null)
@@ -413,7 +410,6 @@ public class ImplanterBlockEntity extends SyncableBlockEntity implements PLCActu
             inventory.setItem(0, ItemStack.EMPTY);
     }
 
-    @Override
     public @Nullable ResourceAmount<ItemVariant> getStored(PLC plc)
     {
         return new ResourceAmount<>(ItemVariant.of(inventory.getItem(0)), inventory.getItem(0).getCount());

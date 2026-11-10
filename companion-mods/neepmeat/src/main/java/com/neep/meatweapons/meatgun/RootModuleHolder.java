@@ -70,7 +70,6 @@ public class RootModuleHolder
         this.component = component;
     }
 
-    @Override
     public void markDirty(Reason reason)
     {
         if (component != null)

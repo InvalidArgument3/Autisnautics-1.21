@@ -60,7 +60,6 @@ public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialis
         super(type, pos, state, constructor);
     }
 
-    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         var nbt = super.getUpdateTag(registries);
@@ -68,20 +67,17 @@ public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialis
         return nbt;
     }
 
-    @Override
     public void tick()
     {
         super.tick();
     }
 
-    @Override
     public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
         nbt.put("camo_state", NbtUtils.writeBlockState(camoState));
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);

@@ -73,8 +73,8 @@ class DisplayPane extends TinkerTableScreen.PaneWidget
         PoseStack matrices = context.pose();
         matrices.pushPose();
         matrices.translate(cx, cy, 150);
-        matrices.mulPoseMatrix(modelTransform);
-        matrices.mulPoseMatrix((new Matrix4f()).scaling(1.0F, -1.0F, 1.0F));
+        matrices.mulPose(modelTransform);
+        matrices.mulPose((new Matrix4f()).scaling(1.0F, -1.0F, 1.0F));
         matrices.scale(16.0F, 16.0F, 16.0F);
         context.enableScissor(x0() + 2, y0() + 2, x0() + nw() - 2, y0() + nh() - 2);
         itemRenderer.renderStatic(stack, ItemDisplayContext.NONE,

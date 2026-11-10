@@ -104,7 +104,6 @@ public abstract class BaseGunItem extends Item implements MeatlibItem, GunItem, 
         }
     }
 
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -329,14 +328,12 @@ public abstract class BaseGunItem extends Item implements MeatlibItem, GunItem, 
         return renderProvider;
     }
 
-    @Override
     public void createRenderer(Consumer<Object> consumer)
     {
         consumer.accept(new RenderProvider()
         {
             private BaseGunRenderer<? extends BaseGunItem> renderer;
 
-            @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer()
             {
                 if (renderer == null)

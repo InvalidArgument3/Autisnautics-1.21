@@ -191,7 +191,6 @@ public class MeatgunComponentImpl extends ItemComponent implements MeatgunCompon
     }
 
 
-    @Override
     public void onTagInvalidated()
     {
         super.onTagInvalidated();

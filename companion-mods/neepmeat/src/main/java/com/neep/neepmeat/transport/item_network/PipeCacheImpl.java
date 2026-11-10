@@ -69,7 +69,6 @@ public class PipeCacheImpl implements PipeCache
                 .amount();
     }
 
-    @Override
     public long route(BlockPos from, Direction fromFace, ItemRoute route, ItemVariant variant, long amount, TransactionContext transaction)
     {
         ItemInPipe item = new ItemInPipe(null, null, variant, (int) amount, world.getGameTime());

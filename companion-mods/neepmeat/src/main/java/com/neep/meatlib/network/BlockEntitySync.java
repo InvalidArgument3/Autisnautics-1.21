@@ -45,7 +45,7 @@ public class BlockEntitySync
         CompoundTag nbt = ((BlockEntityClientSerializable) be).createSyncNbt();
 
         buf.writeBlockPos(be.getBlockPos());
-        buf.writeId(BuiltInRegistries.BLOCK_ENTITY_TYPE, be.getType());
+        buf.writeById(BuiltInRegistries.BLOCK_ENTITY_TYPE::getId, be.getType());
         buf.writeNbt(nbt);
 
         players.forEach(p -> ServerPlayNetworking.send(p, CHANNEL_ID, buf));
@@ -62,7 +62,7 @@ public class BlockEntitySync
         private static void receive(Minecraft client, ClientPacketListener handler, FriendlyByteBuf buf, PacketSender responseSender)
         {
             BlockPos blockPos = buf.readBlockPos();
-            BlockEntityType<?> type = buf.readById(BuiltInRegistries.BLOCK_ENTITY_TYPE);
+            BlockEntityType<?> type = buf.readById(BuiltInRegistries.BLOCK_ENTITY_TYPE::byId);
             @Nullable CompoundTag nbt = buf.readNbt();
 
             client.execute(() ->

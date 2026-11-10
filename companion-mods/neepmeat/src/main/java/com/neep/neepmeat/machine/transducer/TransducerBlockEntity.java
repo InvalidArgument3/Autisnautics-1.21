@@ -113,7 +113,7 @@ public class TransducerBlockEntity extends SyncableBlockEntity
             try (Transaction transaction = Transaction.openOuter())
             {
                 // Calculate amount of fluid to be produced from current power output
-                long produceAmount = PowerUtil.absToAmount(NMFluids.ETHEREAL_FUEL.still(), outputPower);
+                long produceAmount = PowerUtil.absToAmount(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL), outputPower);
 
                 // Extract from water tank
                 FluidVariant inputVariant = StorageUtil.findStoredResource(inputStorage, v -> v.isOf(Fluids.WATER));
@@ -122,7 +122,7 @@ public class TransducerBlockEntity extends SyncableBlockEntity
                     long extracted = inputStorage.extract(inputVariant, produceAmount, transaction);
 
                     // Insert output fluid into internal buffer
-                    long inserted = storage.insert(FluidVariant.of(NMFluids.ETHEREAL_FUEL.still()), Math.min(produceAmount, extracted), transaction);
+                    long inserted = storage.insert(FluidVariant.of(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ETHEREAL_FUEL)), Math.min(produceAmount, extracted), transaction);
 
                     if (inserted == produceAmount)
                     {

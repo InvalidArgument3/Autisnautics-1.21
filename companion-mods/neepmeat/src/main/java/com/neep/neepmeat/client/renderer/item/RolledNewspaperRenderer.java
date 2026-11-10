@@ -68,7 +68,7 @@ public class RolledNewspaperRenderer implements BuiltinItemRendererRegistry.Dyna
     {
         BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(NMExtraModels.ROLLED_NEWSPAPER));
 
-        swing = Math.max(0, swing - 0.1f * client.getDeltaTracker().getGameTimeDeltaPartialTick(true));
+        swing = Math.max(0, swing - 0.1f * client.getTimer().getGameTimeDeltaPartialTick(true));
 
         if (mode == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || mode == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
         {

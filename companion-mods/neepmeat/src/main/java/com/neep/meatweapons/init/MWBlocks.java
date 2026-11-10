@@ -27,7 +27,7 @@ public class MWBlocks
 {
     public static final RegistrationContext C = new RegistrationContext(MeatWeapons.NAMESPACE, () -> MeatWeapons.WEAPONS);
 
-    public static final Block TINKER_TABLE = new TinkerTableBlock(C ,ItemSettings.block(), MeatlibBlockSettings.copyOf(NMBlocks.RUSTY_METAL_BLOCK));
+    public static final Block TINKER_TABLE = new TinkerTableBlock(C ,ItemSettings.block(), MeatlibBlockSettings.copyOf(NMBlocks.RUSTY_METAL_BLOCK).properties());
 
     public static void init()
     {

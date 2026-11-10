@@ -121,7 +121,7 @@ public class VivisectionRecipe implements MeatlibRecipe<VivisectionRecipe.Vivise
         @Override
         public VivisectionRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf)
         {
-            EntityType<?> type = buf.readById(BuiltInRegistries.ENTITY_TYPE);
+            EntityType<?> type = buf.readById(BuiltInRegistries.ENTITY_TYPE::byId);
             int maxHealth = buf.readVarInt();
             List<RecipeOutput<Item>> output = RecipeOutputImpl.readList(BuiltInRegistries.ITEM, buf);
             return new VivisectionRecipe(id, type, maxHealth, output);
@@ -130,7 +130,7 @@ public class VivisectionRecipe implements MeatlibRecipe<VivisectionRecipe.Vivise
         @Override
         public void write(FriendlyByteBuf buf, VivisectionRecipe recipe)
         {
-            buf.writeId(BuiltInRegistries.ENTITY_TYPE, recipe.entityType);
+            buf.writeById(BuiltInRegistries.ENTITY_TYPE::getId, recipe.entityType);
             buf.writeVarInt(recipe.maxHealth);
             RecipeOutputImpl.writeList(BuiltInRegistries.ITEM, recipe.output, buf);
         }

@@ -46,7 +46,16 @@ public class WritableSingleFluidStorage extends SingleVariantStorage<FluidVarian
 
     @Override
     protected void onFinalCommit() {
+        renderLevel = capacity <= 0 ? 0 : (float) amount / (float) capacity;
         callback.run();
+    }
+
+    /** Renderer reads this as a 0–1 fill. Updated when the tank commits. */
+    public float renderLevel;
+
+    public CompoundTag toNbt(CompoundTag tag) {
+        writeNbt(tag);
+        return tag;
     }
 
     public Storage<FluidVariant> asStorage() {

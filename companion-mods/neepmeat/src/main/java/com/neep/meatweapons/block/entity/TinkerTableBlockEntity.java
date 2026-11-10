@@ -42,7 +42,6 @@ public class TinkerTableBlockEntity extends SyncableBlockEntity implements MenuP
     {
         private NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
 
-        @Override
         public NonNullList<ItemStack> getItems()
         {
             return items;

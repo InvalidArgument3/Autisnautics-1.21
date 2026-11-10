@@ -52,7 +52,7 @@ public class AssaultDrillItemRenderer implements BuiltinItemRendererRegistry.Dyn
         BakedModel part3 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_3));
         BakedModel part4 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_4));
 
-        float timeDegrees = client.level.getGameTime() % 360 + client.getDeltaTracker().getRealtimeDeltaTicks();
+        float timeDegrees = client.level.getGameTime() % 360 + client.getTimer().getRealtimeDeltaTicks();
 
         AssaultDrillComponent component = MWComponents.ASSAULT_DRILL.getNullable(stack);
 
@@ -74,7 +74,7 @@ public class AssaultDrillItemRenderer implements BuiltinItemRendererRegistry.Dyn
 
             thrust = Mth.lerp(0.1f, thrust, targetThrust);
             currentSpeed = (Mth.lerp(delta, currentSpeed, targetSpeed));
-            angle = Mth.wrapDegrees(angle + currentSpeed * Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true));
+            angle = Mth.wrapDegrees(angle + currentSpeed * Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true));
 
             instance.thrust = thrust;
             instance.currentSpeed = currentSpeed;

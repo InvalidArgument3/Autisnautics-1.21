@@ -45,7 +45,7 @@ public class GrenadeEntityRenderer extends EntityRenderer<BounceGrenadeEntity>
     }
 
     @Override
-    public ResourceLocation getTexture(BounceGrenadeEntity entity)
+    public ResourceLocation getTextureLocation(BounceGrenadeEntity entity)
     {
         // TODO: change
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/explosive_shell.png");

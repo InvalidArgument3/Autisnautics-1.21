@@ -82,8 +82,9 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
+        ResourceLocation modelId = null;
         PARTICLE_SPRITE = textureGetter.apply(PARTICLE_SPRITE_ID);
 
 //        Arrays.stream(CENTRE_IDS).forEach(id ->

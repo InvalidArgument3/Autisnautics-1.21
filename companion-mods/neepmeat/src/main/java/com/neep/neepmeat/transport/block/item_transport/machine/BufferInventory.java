@@ -50,7 +50,6 @@ public class BufferInventory implements ImplementedInventory
         markDirty.run();
     }
 
-    @Override
     public NonNullList<ItemStack> getItems()
     {
         return items;

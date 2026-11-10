@@ -32,7 +32,6 @@ import java.util.List;
 @OnlyIn(Dist.CLIENT)
 public class CoarseMeatVariantRenderHandler implements FluidVariantRenderHandler
 {
-    @Override
     public void appendTooltip(FluidVariant fluidVariant, List<Component> tooltip, TooltipFlag tooltipContext)
     {
     }

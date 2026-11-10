@@ -33,7 +33,6 @@ public class BeigeResultSlotWidget extends SimpleSlotBlockWidget
         super.render(context, mouseX, mouseY, delta);
     }
 
-    @Override
     protected void drawSlot(GuiGraphics context, MobileSlot mobileSlot)
     {
         GUIUtil.drawTexture(GUIUtil.SCREEN_BORDER, context, x0(), y0(), 20, 228, nw(), nh());

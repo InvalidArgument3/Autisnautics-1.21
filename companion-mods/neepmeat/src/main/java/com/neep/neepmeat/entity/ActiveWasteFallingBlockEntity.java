@@ -334,7 +334,7 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this, Block.getId(this.getBlockState()));
     }

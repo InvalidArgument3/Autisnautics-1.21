@@ -105,7 +105,7 @@ public class MeatgunModuleItem extends Item
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag context)
     {
 //        if (Screen.hasShiftDown())
 //        {
@@ -120,7 +120,6 @@ public class MeatgunModuleItem extends Item
     }
 
     // TODO: Why is this necessary? This item should do nothing.
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;

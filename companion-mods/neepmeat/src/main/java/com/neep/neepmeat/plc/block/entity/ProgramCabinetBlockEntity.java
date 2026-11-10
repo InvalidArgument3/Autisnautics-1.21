@@ -144,7 +144,6 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
         return programMap.getOrDefault(name, PLCProgram.EMPTY);
     }
 
-    @Override
     public Instruction getInstruction(int segment, int address)
     {
         updatePrograms();
@@ -162,7 +161,6 @@ public class ProgramCabinetBlockEntity extends SyncableBlockEntity implements Pr
        return symbolToAddress.getOrDefault(symbol, -1);
     }
 
-    @Override
     public void saveToItem(ItemStack stack)
     {
         CompoundTag createdNbt = saveWithoutMetadata();

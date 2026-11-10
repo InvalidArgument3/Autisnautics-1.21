@@ -100,7 +100,6 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
         return new LinearOscillatorBlockEntity(pos, state);
     }
 
-    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         return 0;
@@ -112,7 +111,6 @@ public class LinearOscillatorBlock extends BaseFacingBlock implements EntityBloc
         return face == state.getValue(FACING).getOpposite();
     }
 
-    @Override
     public boolean canConnect(BlockGetter world, BlockPos pos, BlockState state, Direction face)
     {
         return face == state.getValue(FACING).getOpposite();

@@ -64,9 +64,9 @@ public class FusionBlastEntity extends AbstractArrow
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
-        return super.getAddEntityPacket();
+        return super.getAddEntityPacket(entity);
     }
 
     @Override

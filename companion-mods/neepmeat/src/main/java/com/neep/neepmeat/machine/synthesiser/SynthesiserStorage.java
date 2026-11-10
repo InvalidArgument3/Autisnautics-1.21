@@ -52,7 +52,7 @@ public class SynthesiserStorage implements NbtSerialisable
             @Override
             protected boolean canInsert(FluidVariant variant)
             {
-                return variant.isOf(NMFluids.MEAT.still());
+                return variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.MEAT));
             }
         };
 

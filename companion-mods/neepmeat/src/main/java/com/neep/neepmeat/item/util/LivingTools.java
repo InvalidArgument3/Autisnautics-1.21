@@ -75,15 +75,15 @@ public class LivingTools
     /// @return -1 if invalid.
     public static int getFluidForDurability(FluidVariant variant)
     {
-        if (variant.isOf(NMFluids.ANIMAL_FEED.still()))
+        if (variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.ANIMAL_FEED)))
         {
             return 162; // 500 durability for 1 bucket
         }
-        else if (variant.isOf(NMFluids.MEAT.still()))
+        else if (variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.MEAT)))
         {
             return 108; // 750 durability for 1 bucket
         }
-        else if (variant.isOf(NMFluids.FOOD.still()))
+        else if (variant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD)))
         {
             CompoundTag nbt = variant.getNbt();
             if (nbt != null)

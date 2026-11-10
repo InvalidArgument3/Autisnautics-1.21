@@ -32,7 +32,6 @@ public class MeatRecipeReloadListener implements SimpleSynchronousResourceReload
         return ResourceLocation.fromNamespaceAndPath(MeatLib.NAMESPACE, "recipe");
     }
 
-    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         for(ResourceLocation id : manager.listResources("recipes", path -> path.getPath().endsWith(".json")).keySet())

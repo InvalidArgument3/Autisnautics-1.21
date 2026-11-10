@@ -79,7 +79,6 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
         return false;
     }
 
-    @Override
     public boolean allowNbtUpdateAnimation(Player player, InteractionHand hand, ItemStack oldStack, ItemStack newStack)
     {
         return false;
@@ -130,7 +129,7 @@ public class PressureWasherItem extends BaseItem implements GunItem, WeakTwoHand
             CursorSlotWrapper wrapper = CursorSlotWrapper.get(player.containerMenu);
             var slotStack = slot.getItem();
             var storage = FluidStorage.ITEM.find(otherStack, ContainerItemContext.ofSingleSlot(wrapper));
-            var inventory = InventoryStorage.of(player.inventory, Direction.UP);
+            var inventory = InventoryStorage.of(player.getInventory(), Direction.UP);
             var inventorySlot = inventory.getSlot(slot.getContainerSlot());
             var washerStorage = getStorage(stack, ContainerItemContext.ofPlayerSlot(player, inventorySlot));
 

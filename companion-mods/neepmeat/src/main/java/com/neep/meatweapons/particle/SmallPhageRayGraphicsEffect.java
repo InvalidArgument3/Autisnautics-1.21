@@ -195,7 +195,7 @@ public class SmallPhageRayGraphicsEffect extends PhageRayGraphicsEffect
         @Override
         public Vec3 getBeamOrigin()
         {
-            float tickDelta = client.getDeltaTracker().getRealtimeDeltaTicks();
+            float tickDelta = client.getTimer().getRealtimeDeltaTicks();
 //            Vector4f v = new Vector4f(
 //                    0,
 //                    ((Meatgun) component.getStack().getItem()).getWorldHeightOffset(),
@@ -226,7 +226,7 @@ public class SmallPhageRayGraphicsEffect extends PhageRayGraphicsEffect
 //            transform.scale(1, 1, 0.01f);
             transform.transform(v);
 
-            Vec3 pos = player.getPosition(client.getDeltaTracker().getRealtimeDeltaTicks()).add(0, player.getEyeHeight(), 0);
+            Vec3 pos = player.getPosition(client.getTimer().getRealtimeDeltaTicks()).add(0, player.getEyeHeight(), 0);
             return new Vec3(pos.x + v.x, pos.y + v.y, pos.z + v.z);
         }
 
@@ -234,7 +234,7 @@ public class SmallPhageRayGraphicsEffect extends PhageRayGraphicsEffect
         public Vec3 getClientBeamEnd(Vec3 start, float tickDelta)
         {
             // Pont on the plane
-            Vec3 direct = player.pick(ShortPhageRayModule.DISTANCE, client.getDeltaTracker().getRealtimeDeltaTicks(), false).getLocation();
+            Vec3 direct = player.pick(ShortPhageRayModule.DISTANCE, client.getTimer().getRealtimeDeltaTicks(), false).getLocation();
             Vec3 facing = player.getViewVector(tickDelta); // Normal to the plane
 
             // Project onto the plane

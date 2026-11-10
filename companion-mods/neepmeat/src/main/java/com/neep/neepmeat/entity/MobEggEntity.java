@@ -165,7 +165,7 @@ public class MobEggEntity extends SimpleEntity
     public boolean canGrow()
     {
         FluidState state = level().getFluidState(blockPosition());
-        return state.getType() == NMFluids.BLOOD.still() || state.getType() == NMFluids.BLOOD.flowing();
+        return state.getType() == com.neep.neepmeat.fluid.FluidForms.still(NMFluids.BLOOD) || state.getType() == com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.BLOOD);
     }
 
     @Override
@@ -176,7 +176,6 @@ public class MobEggEntity extends SimpleEntity
         return nbt;
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
@@ -226,7 +225,7 @@ public class MobEggEntity extends SimpleEntity
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket()
+    public Packet<ClientGamePacketListener> getAddEntityPacket(net.minecraft.server.level.ServerEntity entity)
     {
         return new ClientboundAddEntityPacket(this);
     }

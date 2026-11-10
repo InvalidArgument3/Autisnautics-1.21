@@ -37,6 +37,10 @@ public interface ParamCodec<T> {
     ParamCodec<UUID> UUID = of(UUID.class, (value, buf) -> buf.writeUUID(value), buf -> buf.readUUID());
     ParamCodec<CompoundTag> NBT = of(CompoundTag.class, (value, buf) -> buf.writeNbt(value), buf -> buf.readNbt());
 
+    static <T extends Enum<T>> ParamCodec<T> ofEnum(Class<T> clazz) {
+        return of(clazz, (value, buf) -> buf.writeEnum(value), buf -> buf.readEnum(clazz));
+    }
+
     static <T> ParamCodec<T> of(Class<T> clazz, BiConsumer<T, FriendlyByteBuf> encode, Function<FriendlyByteBuf, T> decode) {
         return new ParamCodec<>() {
             @Override

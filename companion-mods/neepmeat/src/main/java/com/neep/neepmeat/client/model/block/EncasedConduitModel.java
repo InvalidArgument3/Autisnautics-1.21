@@ -77,7 +77,7 @@ public class EncasedConduitModel implements UnbakedModel, BakedModel, FabricBake
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker baker, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
         particleSprite = textureGetter.apply(particleSpriteId);
 

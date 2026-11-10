@@ -105,7 +105,6 @@ public class BigBlock2Structure extends BaseDummyBlock
         return parent.getDescriptionId();
     }
 
-    @Override
     public ItemLike dropsLike()
     {
         return parent;
@@ -119,7 +118,7 @@ public class BigBlock2Structure extends BaseDummyBlock
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+    public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
     {
         return parent.getCloneItemStack(world, pos, state);
     }

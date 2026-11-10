@@ -81,7 +81,7 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
+    public net.minecraft.world.level.block.state.BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player)
     {
         if (world.getBlockEntity(pos) instanceof PLCBlockEntity be)
         {
@@ -90,6 +90,8 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
         }
 
         super.playerWillDestroy(world, pos, state, player);
+    
+        return state;
     }
 
     @Override

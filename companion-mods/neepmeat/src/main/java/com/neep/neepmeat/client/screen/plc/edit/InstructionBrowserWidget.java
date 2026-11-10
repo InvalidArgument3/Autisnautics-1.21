@@ -73,7 +73,6 @@ public class InstructionBrowserWidget extends Panel
 
     }
 
-    @Override
     public void init(int screenWidth, int screenHeight)
     {
         this.width = 100;
@@ -245,7 +244,6 @@ public class InstructionBrowserWidget extends Panel
             this.operationWidgets = operationWidgets;
         }
 
-        @Override
         public float render(GuiGraphics context, int x, int y, double mouseX, double mouseY, float delta)
         {
             prevX = x;
@@ -269,7 +267,6 @@ public class InstructionBrowserWidget extends Panel
             return yOffset;
         }
 
-        @Override
         private boolean isMouseOver(int x, int y, double mouseX, double mouseY)
         {
             return x <= mouseX && y <= mouseY && x + this.width >= mouseX && y + headerHeight >= mouseY;
@@ -324,7 +321,6 @@ public class InstructionBrowserWidget extends Panel
             this.action = action;
         }
 
-        @Override
         public void render(GuiGraphics context, int x, int y, double mouseX, double mouseY, float delta)
         {
             this.prevX = x;
@@ -337,7 +333,6 @@ public class InstructionBrowserWidget extends Panel
             context.drawString(textRenderer, message, x + 2, y + 2, col, false);
         }
 
-        @Override
         private boolean isMouseOver(double mouseX, double mouseY)
         {
             return InstructionBrowserWidget.this.isMouseOver(mouseX, mouseY) &&

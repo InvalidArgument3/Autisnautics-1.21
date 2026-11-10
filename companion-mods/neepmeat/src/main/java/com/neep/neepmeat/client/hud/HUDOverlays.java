@@ -64,7 +64,7 @@ public class HUDOverlays
             }
         }
 
-        float f = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
+        float f = client.getTimer().getGameTimeDeltaPartialTick(true);
 
         if (vignetteState == 1)
         {
@@ -95,7 +95,7 @@ public class HUDOverlays
     protected static void pylonVignette(float tickDelta)
     {
         // LPF
-        pylonVignetteEnvelope = Mth.lerp(0.04f * Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true),
+        pylonVignetteEnvelope = Mth.lerp(0.04f * Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true),
                 pylonVignetteEnvelope,
                 pylonVignetteState == 1 ? 1 : 0);
 
@@ -144,10 +144,10 @@ public class HUDOverlays
         BufferBuilder bufferBuilder = tessellator.getBuilder();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
 
-        bufferBuilder.vertex(x1, y1, -90.0D).uv(0.0F, 1.0F);
-        bufferBuilder.vertex(x2, y1, -90.0D).uv(1.0F, 1.0F);
-        bufferBuilder.vertex(x3, y3, -90.0D).uv(1.0F, 0.0F);
-        bufferBuilder.vertex(x4, y3, -90.0D).uv(0.0F, 0.0F);
+        bufferBuilder.addVertex(x1, y1, -90.0D).setUv(0.0F, 1.0F);
+        bufferBuilder.addVertex(x2, y1, -90.0D).setUv(1.0F, 1.0F);
+        bufferBuilder.addVertex(x3, y3, -90.0D).setUv(1.0F, 0.0F);
+        bufferBuilder.addVertex(x4, y3, -90.0D).setUv(0.0F, 0.0F);
 
         tessellator.end();
         RenderSystem.depthMask(true);

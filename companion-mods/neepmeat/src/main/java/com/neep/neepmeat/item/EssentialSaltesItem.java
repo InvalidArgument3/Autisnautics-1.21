@@ -58,7 +58,7 @@ public class EssentialSaltesItem extends BaseItem
         if (!stack.hasTag())
             return super.getName(stack);
 
-        String id = stack.getOrCreateTag().getString("id");
+        String id = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().getString("id");
         if (id != null)
         {
             return Component.translatable(this.getDescriptionId(), BuiltInRegistries.ENTITY_TYPE.get(ResourceLocation.parse(id)).getDescription());
@@ -134,7 +134,7 @@ public class EssentialSaltesItem extends BaseItem
     {
         CompoundTag entityCompound = new CompoundTag();
         entity.saveWithoutId(entityCompound);
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         nbt.put("entity_data", entityCompound);
         nbt.putString("id", BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString());
         stack.setTag(nbt);
@@ -142,7 +142,7 @@ public class EssentialSaltesItem extends BaseItem
 
     public static Entity createEntity(ItemStack stack, Level world, boolean exactCopy)
     {
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         String id = nbt.getString("id");
         CompoundTag entityCompound = nbt.getCompound("entity_data");
         if (id != null && entityCompound != null)
@@ -164,7 +164,7 @@ public class EssentialSaltesItem extends BaseItem
 
     public static void putEntityType(ItemStack stack, EntityType<?> type)
     {
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         nbt.putString("id", BuiltInRegistries.ENTITY_TYPE.getKey(type).toString());
         stack.setTag(nbt);
     }
@@ -175,7 +175,7 @@ public class EssentialSaltesItem extends BaseItem
         if (!stack.hasTag())
             return null;
 
-        CompoundTag nbt = stack.getOrCreateTag();
+        CompoundTag nbt = stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag();
         String id = nbt.getString("id");
         if (id != null)
         {

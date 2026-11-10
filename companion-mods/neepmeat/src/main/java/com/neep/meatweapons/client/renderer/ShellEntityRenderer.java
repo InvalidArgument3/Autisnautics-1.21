@@ -48,7 +48,7 @@ public class ShellEntityRenderer<T extends ExplodingShellEntity> extends EntityR
     }
 
     @Override
-    public ResourceLocation getTexture(T entity)
+    public ResourceLocation getTextureLocation(T entity)
     {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/explosive_shell.png");
     }

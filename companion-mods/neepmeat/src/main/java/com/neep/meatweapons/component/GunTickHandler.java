@@ -63,7 +63,6 @@ public class GunTickHandler implements Component, CommonTickingComponent
         return 0;
     }
 
-    @Override
     public void tick()
     {
         ads.tick();
@@ -140,7 +139,7 @@ public class GunTickHandler implements Component, CommonTickingComponent
             HudRenderCallback.EVENT.register((drawContext, tickDelta) ->
             {
                 Minecraft client = Minecraft.getInstance();
-                float dt = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
+                float dt = client.getTimer().getGameTimeDeltaPartialTick(true);
 
                 if (!client.isPaused())
                 {

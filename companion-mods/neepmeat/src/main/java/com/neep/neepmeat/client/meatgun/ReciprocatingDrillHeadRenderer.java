@@ -51,7 +51,7 @@ public class ReciprocatingDrillHeadRenderer implements MeatgunModuleRenderer<Rec
         // Drill head model is too far forwards as it wasn't always a meatgun part
         matrices.translate(0, 0, 18 / 16f);
         if (using)
-            matrices.translate(0, 0, 3 / 16f * (1 + NMMaths.sin(client.level.getGameTime(), client.getDeltaTracker().getRealtimeDeltaTicks(), 10)));
+            matrices.translate(0, 0, 3 / 16f * (1 + NMMaths.sin(client.level.getGameTime(), client.getTimer().getRealtimeDeltaTicks(), 10)));
 
         renderItem(stack, mode, false, matrices, vertexConsumers, light, overlay, rod);
     }

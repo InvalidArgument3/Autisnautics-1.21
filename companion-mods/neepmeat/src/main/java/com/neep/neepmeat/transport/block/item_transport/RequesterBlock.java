@@ -125,7 +125,6 @@ public class RequesterBlock extends BaseFacingBlock implements EntityBlock, Neep
 
     }
 
-    @Override
     public boolean canItemEnter(ItemVariant variant, long amount, Level world, BlockPos pos, BlockState state, Direction inFace, boolean routed)
     {
         if (inFace != state.getValue(FACING))
@@ -140,13 +139,11 @@ public class RequesterBlock extends BaseFacingBlock implements EntityBlock, Neep
         return false;
     }
 
-    @Override
     public boolean canItemLeave(ResourceAmount<ItemVariant> item, Level world, BlockPos pos, BlockState state, Direction outFace, boolean routed)
     {
         return false; // This will hopefully prevent unrelated routes from being created involving this block
     }
 
-    @Override
     public long insert(Level world, BlockPos pos, BlockState state, Direction direction, ItemInPipe item, TransactionContext transaction)
     {
         Direction facing = state.getValue(FACING);
@@ -164,7 +161,6 @@ public class RequesterBlock extends BaseFacingBlock implements EntityBlock, Neep
         return 0;
     }
 
-    @Override
     public PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state)
     {
         if (world.getBlockEntity(pos) instanceof RequesterBlockEntity be)
@@ -175,13 +171,11 @@ public class RequesterBlock extends BaseFacingBlock implements EntityBlock, Neep
         return ItemPipe.super.getPipeVertex(world, pos, state);
     }
 
-    @Override
     public boolean endPoint()
     {
         return false;
     }
 
-    @Override
     public boolean supportsRouting()
     {
         return true;
@@ -193,7 +187,6 @@ public class RequesterBlock extends BaseFacingBlock implements EntityBlock, Neep
         return true;
     }
 
-    @Override
     public boolean alwaysAutoConnect(BlockState state, Direction face)
     {
         return true;

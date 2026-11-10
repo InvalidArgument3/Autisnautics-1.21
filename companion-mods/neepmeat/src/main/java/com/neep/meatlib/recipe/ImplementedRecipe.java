@@ -23,7 +23,6 @@ import net.minecraft.world.item.crafting.Recipe;
  */
 public abstract class ImplementedRecipe<T extends ImplementedRecipe.DummyInventory> implements Recipe<T>
 {
-    @Override
     public ItemStack craft(T inventory, RegistryAccess registryManager)
     {
         return ItemStack.EMPTY;
@@ -35,7 +34,6 @@ public abstract class ImplementedRecipe<T extends ImplementedRecipe.DummyInvento
         return false;
     }
 
-    @Override
     public ItemStack getResultItem(RegistryAccess dynamicRegistryManager)
     {
         return ItemStack.EMPTY;

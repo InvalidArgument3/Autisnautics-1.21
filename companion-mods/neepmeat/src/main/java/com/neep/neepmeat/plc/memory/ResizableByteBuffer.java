@@ -122,7 +122,6 @@ public class ResizableByteBuffer
         return size;
     }
 
-    @Override
     public void erase(int offset, int size)
     {
         Arrays.fill(bb.array(), offset, offset + size, (byte) 0);
@@ -171,7 +170,6 @@ public class ResizableByteBuffer
             return value;
         }
 
-        @Override
         public abstract void erase();
     }
 
@@ -183,7 +181,6 @@ public class ResizableByteBuffer
             bb.putFloat(offset, value);
         }
 
-        @Override
         public float floatValue()
         {
             return bb.getFloat(offset);
@@ -222,14 +219,12 @@ public class ResizableByteBuffer
             bb.putInt(offset, value);
         }
 
-        @Override
         public int intValue()
         {
             return bb.getInt(offset);
         }
 
 
-        @Override
         public float floatValue()
         {
             return intValue();
@@ -271,7 +266,6 @@ public class ResizableByteBuffer
             bb.putString(offset, s);
         }
 
-        @Override
         public float floatValue()
         {
             return DataVariant.toFloat(stringValue());

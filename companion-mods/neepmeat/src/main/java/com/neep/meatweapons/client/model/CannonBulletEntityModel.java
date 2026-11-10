@@ -40,12 +40,11 @@ public class CannonBulletEntityModel extends EntityModel<CannonBulletEntity>
 	}
 
 	@Override
-	public void setAngles(CannonBulletEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
+	public void setupAnim(CannonBulletEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch)
 	{
 
 	}
 
-	@Override
 	public void renderToBuffer(PoseStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha)
 	{
 		bb_main.render(matrices, vertices, light, overlay);

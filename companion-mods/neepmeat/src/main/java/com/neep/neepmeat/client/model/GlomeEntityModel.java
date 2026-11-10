@@ -39,11 +39,10 @@ public class GlomeEntityModel extends EntityModel<GlomeEntity>
 	}
 
 	@Override
-	public void setAngles(GlomeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch)
+	public void setupAnim(GlomeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch)
 	{
 	}
 
-	@Override
 	public void renderToBuffer(PoseStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		bb_main.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}

@@ -70,7 +70,7 @@ public class CandleCronenCakeBlock extends CandleCakeBlock implements MeatlibBlo
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+    public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
     {
         return NMBlocks.CRONENCAKE.getCloneItemStack(world, pos, state);
     }

@@ -42,21 +42,21 @@ public class IntrusionReactor
 {
     public static final RegistrationContext C = new RegistrationContext(NeepMeat.NAMESPACE, () -> NMItemGroups.GENERAL);
 
-    public static final FabricBlockSettings FLESH_SETTINGS = MeatlibBlockSettings.of().sound(SoundType.MUDDY_MANGROVE_ROOTS);
+    public static final FabricBlockSettings FLESH_SETTINGS = MeatlibBlockSettings.of().sound(SoundType.MUDDY_MANGROVE_ROOTS).properties();
 
     // --- Reactor ---
     public static final Block NERVOUS_TISSUE = new ReceiverOrganismBlock(C, Map.of(
             ReceiverOrganismStructure.Property.ORGANISATION, new PropertyValue(PropertyValue.Function.ADD, 10f)
-    ), MeatlibBlockSettings.copyOf(FLESH_SETTINGS));
+    ), MeatlibBlockSettings.copyOf(FLESH_SETTINGS).properties());
 
-    public static final Block DISRUPTOR_NEEDLE = new DisruptorNeedleBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS));
-    public static final Block REACTION_CORE = new ReactionCoreBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS));
-    public static final Block CORE_SENSOR = new CoreSensorBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS));
-    public static final Block ACTIVE_WASTE = new ActiveWasteBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS));
+    public static final Block DISRUPTOR_NEEDLE = new DisruptorNeedleBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties());
+    public static final Block REACTION_CORE = new ReactionCoreBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS).properties());
+    public static final Block CORE_SENSOR = new CoreSensorBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS).properties());
+    public static final Block ACTIVE_WASTE = new ActiveWasteBlock(C, MeatlibBlockSettings.copyOf(FLESH_SETTINGS).properties());
 
-    public static final Block DISRUPTOR_SEGMENT = new DisruptorSegmentBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS),
+    public static final Block DISRUPTOR_SEGMENT = new DisruptorSegmentBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties(),
             ItemSettings.block().tooltip(LivingMachineComponents.tooltip(LivingMachineComponents.DISRUPTOR_SEGMENT)));
-    public static final Block DISRUPTOR_PORT = new DisruptorPortBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS),
+    public static final Block DISRUPTOR_PORT = new DisruptorPortBlock(C, MeatlibBlockSettings.copyOf(NMBlocks.MACHINE_SETTINGS).properties(),
             ItemSettings.block().tooltip(LivingMachineComponents.tooltip(LivingMachineComponents.DISRUPTOR_PORT)));
 
     public static BlockEntityType<DisruptorSegmentBlockEntity> DISRUPTOR_SEGMENT_BE;

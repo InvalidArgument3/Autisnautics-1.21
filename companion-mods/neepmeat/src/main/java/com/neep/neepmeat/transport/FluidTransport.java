@@ -62,8 +62,8 @@ public class FluidTransport
     public static final List<FluidPipeBlock> FLUID_PIPES = new ObjectArrayList<>();
 
     public static final BlockBehaviour.Properties TANK = MeatlibBlockSettings.create(BlockTags.MINEABLE_WITH_PICKAXE).forceSolidOn().strength(0.8f).sound(NMSoundGroups.TANK);
-    public static final BlockBehaviour.Properties PORTABLE_TANK = MeatlibBlockSettings.copyOf(TANK).noOcclusion();
-    public static final BlockBehaviour.Properties FLEX_TANK_SETTINGS = MeatlibBlockSettings.copyOf(TANK).strength(1.4f);
+    public static final BlockBehaviour.Properties PORTABLE_TANK = MeatlibBlockSettings.copyOf(TANK).noOcclusion().properties();
+    public static final BlockBehaviour.Properties FLEX_TANK_SETTINGS = MeatlibBlockSettings.copyOf(TANK).strength(1.4f).properties();
 
     // --- Fluid Pipes ---
     public static Block FLUID_PIPE = new FluidPipeBlock(C, FluidPipe.PipeCol.ANY, NMBlocks.block().factory(FluidComponentItem::new), NMBlocks.FLUID_PIPE_SETTINGS);
@@ -115,7 +115,7 @@ public class FluidTransport
             NMBlocks.block().tooltip(TooltipSupplier.simple(1)), NMBlocks.FLUID_MACHINE_SETTINGS);
     public static Block ITEM_GAUGE = new FluidGaugeBlock<>(C, () -> NMBlockEntities.ITEM_GAUGE,
             NMBlocks.block().tooltip(TooltipSupplier.simple(1)), NMBlocks.FLUID_MACHINE_SETTINGS);
-    public static Block FLUID_RATIONER = new FluidRationerBlock(C, NMBlocks.block().tooltip(TooltipSupplier.hidden(2)).neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.FLUID_MACHINE_SETTINGS).noOcclusion());
+    public static Block FLUID_RATIONER = new FluidRationerBlock(C, NMBlocks.block().tooltip(TooltipSupplier.hidden(2)).neepbus(), MeatlibBlockSettings.copyOf(NMBlocks.FLUID_MACHINE_SETTINGS).noOcclusion().properties());
 
     public static void init()
     {

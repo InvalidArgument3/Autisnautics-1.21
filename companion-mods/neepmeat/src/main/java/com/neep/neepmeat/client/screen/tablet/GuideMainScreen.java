@@ -61,7 +61,7 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
 
     public GuideMainScreen()
     {
-        super(new DummyScreenHandler(), Minecraft.getInstance().player.inventory, Component.empty());
+        super(new DummyScreenHandler(), Minecraft.getInstance().player.getInventory(), Component.empty());
 
         this.leftPane = new GuideListPane(this);
         this.rightPane = new GuideArticlePane(this, Article.EMPTY);

@@ -54,7 +54,6 @@ public class BlockCrushingRecipe extends AdvancedCrushingRecipe
         return BlockCrushingRegistry.INSTANCE.getFromInputBasic(input);
     }
 
-    @Override
     public boolean matches(CrusherRecipeContext storage)
     {
         for (var view : storage.getInputStorage())
@@ -65,7 +64,6 @@ public class BlockCrushingRecipe extends AdvancedCrushingRecipe
         return super.matches(storage);
     }
 
-    @Override
     public boolean takeInputs(CrusherRecipeContext storage, TransactionContext transaction)
     {
         for (var view : storage.getInputStorage())
@@ -104,7 +102,6 @@ public class BlockCrushingRecipe extends AdvancedCrushingRecipe
         return NMrecipeTypes.GRINDING;
     }
 
-    @Override
     public boolean ejectOutputs(CrusherRecipeContext storage, TransactionContext transaction)
     {
         for (var view : storage.getInputStorage())

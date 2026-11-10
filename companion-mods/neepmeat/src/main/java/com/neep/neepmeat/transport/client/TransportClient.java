@@ -26,16 +26,16 @@ public class TransportClient
 {
     public static void init()
     {
-        MenuScreens.register(TransportScreenHandlers.ITEM_REQUESTER_HANDLER, ManualRequesterScreen::new);
-        MenuScreens.register(TransportScreenHandlers.LIMITER_VALVE, LimiterValveScreen::new);
-        MenuScreens.register(TransportScreenHandlers.VSC, VSCScreen::new);
-        MenuScreens.register(TransportScreenHandlers.PIPE_PRIORITY, PipePriorityScreen::new);
-        MenuScreens.register(TransportScreenHandlers.ADVANCED_EJECTOR, AdvancedEjectorScreen::new);
-        MenuScreens.register(TransportScreenHandlers.POWER_EMITTER, PowerEmitterScreen::new);
-        MenuScreens.register(TransportScreenHandlers.PIPE_DRIVER, PipeDriverScreen::new);
-        MenuScreens.register(TransportScreenHandlers.REQUESTER, RequesterScreen::new);
-        MenuScreens.register(TransportScreenHandlers.ITEM_REQUEST_LISTENER, ProcessInterfaceScreen::new);
-        MenuScreens.register(TransportScreenHandlers.PROCESS_CARD, ProcessCardScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.ITEM_REQUESTER_HANDLER, ManualRequesterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.LIMITER_VALVE, LimiterValveScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.VSC, VSCScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.PIPE_PRIORITY, PipePriorityScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.ADVANCED_EJECTOR, AdvancedEjectorScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.POWER_EMITTER, PowerEmitterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.PIPE_DRIVER, PipeDriverScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.REQUESTER, RequesterScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.ITEM_REQUEST_LISTENER, ProcessInterfaceScreen::new);
+        net.fabricmc.fabric.api.client.screenhandler.v1.HandledScreens.register(TransportScreenHandlers.PROCESS_CARD, ProcessCardScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), ItemTransport.ITEM_REQUESTER);
         BlockEntityRenderers.register(ItemTransport.ITEM_REQUESTER_BE, ItemPipeRenderer::new);

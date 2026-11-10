@@ -117,7 +117,6 @@ public class OreDustRegistry implements SimpleSynchronousResourceReloadListener
 
     /// Responsible for reading overrides from the data pack.
     /// Further entries are created as requested during {@link DataPackPostProcess#AFTER_DATA_PACK_LOAD}.
-    @Override
     public void onResourceManagerReload(ResourceManager manager)
     {
         dustMap.clear();

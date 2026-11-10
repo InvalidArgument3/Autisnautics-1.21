@@ -64,7 +64,6 @@ public class LargeMotorStructureEntity extends BigBlockStructureEntity
 
     private class AcceptorWrapper implements BloodAcceptor
     {
-        @Override
         public Mode getMode()
         {
             return Mode.SINK;

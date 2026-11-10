@@ -116,6 +116,11 @@ public interface GUIUtil
         renderFrameGradient(context, rectangle.x0(), rectangle.y0(), rectangle.nw() - 1, rectangle.nh() - 1, col, offset);
     }
 
+    static void renderBorder(GuiGraphics context, int x, int y, int dx, int dy, int col, int offset)
+    {
+        renderBorderInner(context, x, y, dx, dy, col, offset);
+    }
+
     static void renderBorderInner(GuiGraphics context, int x, int y, int dx, int dy, int col, int offset)
     {
         renderFrameGradient(context, x, y, dx - 1, dy - 1, col, offset);

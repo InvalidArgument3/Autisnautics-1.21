@@ -54,7 +54,7 @@ public class PylonVisual extends AbstractBlockEntityVisual<PylonBlockEntity> imp
         float renderTimt = Minecraft.getInstance().getFrameTimeNs();
         float xOff = blockEntity.isUnstable() ? 0.5f + 0.05f * Mth.sin(renderTimt) : 0.5f;
         matrices.translate(xOff, 0.5, 0.5);
-        float delta = !Minecraft.getInstance().isPaused() ? Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true) : 0;
+        float delta = !Minecraft.getInstance().isPaused() ? Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true) : 0;
         blockEntity.angle = Mth.wrapDegrees(blockEntity.angle + delta * blockEntity.getSpeed());
         matrices.mulPose(Axis.YP.rotationDegrees(blockEntity.angle));
         matrices.translate(-xOff, -0.5, -0.5);

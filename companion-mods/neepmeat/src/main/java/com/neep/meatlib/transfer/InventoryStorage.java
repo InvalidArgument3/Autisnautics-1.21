@@ -26,6 +26,10 @@ public final class InventoryStorage implements Storage<ItemVariant> {
         this.inventory = inventory;
     }
 
+    public Storage<ItemVariant> getSlot(int slot) {
+        return new OneSlot(slot);
+    }
+
     public static InventoryStorage of(Container inventory, @Nullable Direction side) {
         return new InventoryStorage(inventory);
     }
@@ -113,6 +117,30 @@ public final class InventoryStorage implements Storage<ItemVariant> {
             views.add(new SlotView(ItemVariant.of(stack), stack.getCount(), stack.getMaxStackSize()));
         }
         return views.iterator();
+    }
+
+    private final class OneSlot implements Storage<ItemVariant> {
+        private final int slot;
+
+        private OneSlot(int slot) {
+            this.slot = slot;
+        }
+
+        @Override
+        public long insert(ItemVariant resource, long maxAmount, TransactionContext transaction) {
+            return InventoryStorage.this.insert(resource, maxAmount, transaction);
+        }
+
+        @Override
+        public long extract(ItemVariant resource, long maxAmount, TransactionContext transaction) {
+            return InventoryStorage.this.extract(resource, maxAmount, transaction);
+        }
+
+        @Override
+        public Iterator<StorageView<ItemVariant>> iterator() {
+            ItemStack stack = inventory.getItem(slot);
+            return List.<StorageView<ItemVariant>>of(new SlotView(ItemVariant.of(stack), stack.getCount(), stack.getMaxStackSize())).iterator();
+        }
     }
 
     private record SlotView(ItemVariant resource, long amount, long capacity) implements StorageView<ItemVariant> {

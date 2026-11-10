@@ -439,10 +439,10 @@ public class EditBoxWidget extends AbstractScrollWidget
         RenderSystem.enableColorLogicOp();
         RenderSystem.logicOp(LogicOp.OR_REVERSE);
         bufferBuilder.begin(Mode.QUADS, DefaultVertexFormat.POSITION);
-        bufferBuilder.vertex(matrix4f, (float) left, (float) bottom, 0.0F);
-        bufferBuilder.vertex(matrix4f, (float) right, (float) bottom, 0.0F);
-        bufferBuilder.vertex(matrix4f, (float) right, (float) top, 0.0F);
-        bufferBuilder.vertex(matrix4f, (float) left, (float) top, 0.0F);
+        bufferBuilder.addVertex(matrix4f, (float) left, (float) bottom, 0.0F);
+        bufferBuilder.addVertex(matrix4f, (float) right, (float) bottom, 0.0F);
+        bufferBuilder.addVertex(matrix4f, (float) right, (float) top, 0.0F);
+        bufferBuilder.addVertex(matrix4f, (float) left, (float) top, 0.0F);
         tessellator.end();
 //        int col = selCol();
 //        RenderSystem.setShaderColor(((col >> 24) & 0xFF) / 255f, ((col >> 16) & 0xFF) / 255f, ((col >> 8) & 0xFF) / 255f, (col & 0xFF) / 255f);

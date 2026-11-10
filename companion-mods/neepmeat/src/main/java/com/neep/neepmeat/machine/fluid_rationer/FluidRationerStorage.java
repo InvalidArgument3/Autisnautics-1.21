@@ -67,7 +67,6 @@ public class FluidRationerStorage extends WritableSingleFluidStorage
         return nbt;
     }
 
-    @Override
     public CompoundTag readNbt(CompoundTag nbt)
     {
         super.readNbt(nbt);

@@ -50,6 +50,10 @@ public record ItemVariant(Item item, DataComponentPatch components) implements T
         return null;
     }
 
+    public ItemStack toStack() {
+        return toStack(1);
+    }
+
     public ItemStack toStack(int count) {
         if (isBlank()) {
             return ItemStack.EMPTY;

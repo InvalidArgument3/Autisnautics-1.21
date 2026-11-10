@@ -88,7 +88,7 @@ public class ItemManufactureRecipe extends AbstractItemManufactureRecipe
             for (var step : steps)
             {
                 buf.writeNbt(step.toNbt());
-                buf.writeId(ManufactureStep.REGISTRY, ManufactureStep.REGISTRY.get(step.getId()));
+                buf.writeById(ManufactureStep.REGISTRY::getId, ManufactureStep.REGISTRY.get(step.getId()));
             }
         }
 
@@ -100,7 +100,7 @@ public class ItemManufactureRecipe extends AbstractItemManufactureRecipe
             {
                 CompoundTag data = buf.readNbt();
 
-                var step = buf.readById(ManufactureStep.REGISTRY).create(data);
+                var step = buf.readById(ManufactureStep.REGISTRY::byId).create(data);
                 steps.add(step);
             }
             return steps;
@@ -109,7 +109,7 @@ public class ItemManufactureRecipe extends AbstractItemManufactureRecipe
         @Override
         public ItemManufactureRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf)
         {
-            Item base = buf.readById(BuiltInRegistries.ITEM);
+            Item base = buf.readById(BuiltInRegistries.ITEM::byId);
 
             List<ManufactureStep<?>> steps = readSteps(buf);
 
@@ -121,7 +121,7 @@ public class ItemManufactureRecipe extends AbstractItemManufactureRecipe
         @Override
         public void write(FriendlyByteBuf buf, ItemManufactureRecipe recipe)
         {
-            buf.writeId(BuiltInRegistries.ITEM, recipe.base);
+            buf.writeById(BuiltInRegistries.ITEM::getId, recipe.base);
 
             writeSteps(recipe.getSteps(), buf);
 

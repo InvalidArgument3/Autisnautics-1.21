@@ -68,7 +68,7 @@ public class NMFluidsClient
 
     public static void registerFluidHandler(BuiltFluid<?, ?> builtFluid, FluidRenderHandler handler)
     {
-        FluidRenderHandlerRegistry.INSTANCE.register(builtFluid.still(), builtFluid.flowing(), handler);
+        FluidRenderHandlerRegistry.INSTANCE.register(com.neep.neepmeat.fluid.FluidForms.still(builtFluid), com.neep.neepmeat.fluid.FluidForms.flowing(builtFluid), handler);
     }
 
     public static void registerFluidRenderers()
@@ -135,10 +135,10 @@ public class NMFluidsClient
         FluidVariantAttributes.register(NMFluids.FLOWING_CLEAN_ORE_FAT, new OreFatAttributeHandler());
 
         // TODO: move all attribute handlers to common
-        FluidVariantRendering.register(NMFluids.FOOD.still(), new CoarseMeatVariantRenderHandler());
-        FluidVariantRendering.register(NMFluids.FOOD.flowing(), new CoarseMeatVariantRenderHandler());
-        FluidVariantAttributes.register(NMFluids.FOOD.still(), new MeatAttribtuteHandler());
-        FluidVariantAttributes.register(NMFluids.FOOD.flowing(), new MeatAttribtuteHandler());
+        FluidVariantRendering.register(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD), new CoarseMeatVariantRenderHandler());
+        FluidVariantRendering.register(com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.FOOD), new CoarseMeatVariantRenderHandler());
+        FluidVariantAttributes.register(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.FOOD), new MeatAttribtuteHandler());
+        FluidVariantAttributes.register(com.neep.neepmeat.fluid.FluidForms.flowing(NMFluids.FOOD), new MeatAttribtuteHandler());
 
         // 1.19
 //        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) ->

@@ -56,7 +56,7 @@ public class OpenMachineBlock extends BaseHorFacingBlock implements LivingMachin
     public OpenMachineBlock(RegistrationContext ctx, MachineBlock parent)
     {
         super(ctx, ItemSettings.block().factory(MachineBlock.MachineBlockItem::new),
-                MeatlibBlockSettings.copyOf(parent).randomTicks());
+                MeatlibBlockSettings.copyOf(parent).randomTicks().properties());
         this.parent = parent;
     }
 
@@ -118,7 +118,7 @@ public class OpenMachineBlock extends BaseHorFacingBlock implements LivingMachin
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter world, List<Component> tooltip, TooltipFlag options)
+    public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag options)
     {
         parent.appendHoverText(stack, world, tooltip, options);
     }
@@ -155,7 +155,7 @@ public class OpenMachineBlock extends BaseHorFacingBlock implements LivingMachin
     @Override
     public int wash(Level world, BlockPos pos, BlockState state, Vec3 velocity, int power, FluidVariant fluidVariant)
     {
-        if (power >= 3 && fluidVariant.isOf(NMFluids.WORK_FLUID.still()))
+        if (power >= 3 && fluidVariant.isOf(com.neep.neepmeat.fluid.FluidForms.still(NMFluids.WORK_FLUID)))
         {
             heal(world, pos, state);
 

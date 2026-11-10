@@ -116,7 +116,6 @@ public class SmallTrommelBlock extends BaseHorFacingBlock implements EntityBlock
             this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
         }
 
-        @Override
         public ItemLike dropsLike()
         {
             return NMBlocks.SMALL_TROMMEL;
@@ -160,7 +159,7 @@ public class SmallTrommelBlock extends BaseHorFacingBlock implements EntityBlock
         }
 
         @Override
-        public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state)
+        public ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader world, BlockPos pos, BlockState state)
         {
             return NMBlocks.SMALL_TROMMEL.getCloneItemStack(world, pos, state);
         }

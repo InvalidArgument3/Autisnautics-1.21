@@ -89,6 +89,59 @@ public final class MeatlibRecipes {
         return Optional.empty();
     }
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public <T> Optional<T> getFirstMatch(RecipeType<?> type, Object input) {
+        if (manager == null || type == null) {
+            return Optional.empty();
+        }
+        for (Object holderObj : manager.getAllRecipesFor((RecipeType) type)) {
+            RecipeHolder<?> holder = (RecipeHolder<?>) holderObj;
+            if (accepts(holder.value(), input)) {
+                return Optional.of((T) holder.value());
+            }
+        }
+        return Optional.empty();
+    }
+
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public <T> java.util.List<T> getAllValuesOfType(RecipeType<?> type) {
+        if (manager == null || type == null) {
+            return java.util.List.of();
+        }
+        java.util.List<T> values = new java.util.ArrayList<>();
+        for (Object holderObj : manager.getAllRecipesFor((RecipeType) type)) {
+            RecipeHolder<?> holder = (RecipeHolder<?>) holderObj;
+            values.add((T) holder.value());
+        }
+        return values;
+    }
+
+    private static boolean accepts(Object recipe, Object input) {
+        if (recipe == null || input == null) {
+            return false;
+        }
+        for (java.lang.reflect.Method method : recipe.getClass().getMethods()) {
+            if (method.getParameterCount() != 1) {
+                continue;
+            }
+            if (!method.getName().equals("matches") && !method.getName().equals("accepts")) {
+                continue;
+            }
+            if (!method.getParameterTypes()[0].isInstance(input)) {
+                continue;
+            }
+            try {
+                Object result = method.invoke(recipe, input);
+                if (result instanceof Boolean matched) {
+                    return matched;
+                }
+            } catch (ReflectiveOperationException ignored) {
+                return false;
+            }
+        }
+        return false;
+    }
+
     public Optional<?> get(ResourceLocation id) {
         if (manager == null || id == null) {
             return Optional.empty();

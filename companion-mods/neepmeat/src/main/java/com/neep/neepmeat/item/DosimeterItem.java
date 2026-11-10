@@ -59,7 +59,7 @@ public class DosimeterItem extends BaseItem
 
         public static void onTick(Minecraft client, Player player, PlayerEnlightenmentManager manager)
         {
-            boolean hasDosimeter = player.inventory.contains(NMTags.DOSIMETER);
+            boolean hasDosimeter = player.getInventory().contains(NMTags.DOSIMETER);
             boolean danger = manager.lastDose() > 1;
 
             if (hasDosimeter && danger)

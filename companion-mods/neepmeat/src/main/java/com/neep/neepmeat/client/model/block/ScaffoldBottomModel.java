@@ -75,7 +75,7 @@ public class ScaffoldBottomModel implements UnbakedModel, BakedModel, FabricBake
 
     @Nullable
     @Override
-    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer, ResourceLocation modelId)
+    public BakedModel bake(ModelBaker loader, Function<Material, TextureAtlasSprite> textureGetter, ModelState rotationContainer)
     {
 
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);

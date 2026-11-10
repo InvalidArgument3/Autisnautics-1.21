@@ -55,7 +55,7 @@ public class PlasmaEntityRenderer extends EntityRenderer<FusionBlastEntity>
     }
 
     @Override
-    public ResourceLocation getTexture(FusionBlastEntity entity) {
+    public ResourceLocation getTextureLocation(FusionBlastEntity entity) {
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/plasma.png");
     }
 }

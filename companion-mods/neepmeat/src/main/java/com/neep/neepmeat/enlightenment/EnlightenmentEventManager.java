@@ -68,7 +68,6 @@ public class EnlightenmentEventManager
         return ((IServerWorld) world).getEnlightenmentEventManager();
     }
 
-    @Override
     protected void tick(ServerLevel world)
     {
         ++counter;

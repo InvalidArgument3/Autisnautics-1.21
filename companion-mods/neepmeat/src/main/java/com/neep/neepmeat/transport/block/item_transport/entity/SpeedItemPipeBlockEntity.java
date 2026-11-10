@@ -47,7 +47,6 @@ public class SpeedItemPipeBlockEntity extends ItemPipeBlockEntity
         super(type, pos, state);
     }
 
-    @Override
     protected void insertItemCallback(ItemInPipe item, Direction in, Direction out, Level world)
     {
         item.speed = Math.min(item.speed + SPEED_INCREASE, MAX_SPEED);

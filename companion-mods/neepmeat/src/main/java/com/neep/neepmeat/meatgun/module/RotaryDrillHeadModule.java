@@ -96,7 +96,7 @@ public class RotaryDrillHeadModule extends AbstractMiningMeatgunModule
     {
         if (miner instanceof Player playerEntity && new MeatgunCore(listener.getHolder()).getResource() == AmmunitionType.METABOLIC)
         {
-            listener.getHolder().getAmmoOrReload(AmmunitionType.METABOLIC, 1, playerEntity.inventory, playerEntity, hand).commit();
+            listener.getHolder().getAmmoOrReload(AmmunitionType.METABOLIC, 1, playerEntity.getInventory(), playerEntity, hand).commit();
         }
     }
 }

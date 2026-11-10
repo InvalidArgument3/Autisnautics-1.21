@@ -17,6 +17,10 @@ public interface ContainerItemContext {
         return () -> player.getItemInHand(hand);
     }
 
+    static ContainerItemContext withConstant(ItemStack stack) {
+        return () -> stack;
+    }
+
     ItemStack getItemVariant();
 
     default <A> A find(Object lookup) {

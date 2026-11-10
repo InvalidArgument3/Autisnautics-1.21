@@ -56,14 +56,12 @@ public class FilterPipeBlockEntity extends FluidPipeBlockEntity<FilterPipeBlock.
         super(type, pos, state, constructor);
     }
 
-    @Override
     public void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.loadAdditional(nbt, registries);
         this.filterVariant = FluidVariant.fromNbt(nbt.getCompound("filterVariant"));
     }
 
-    @Override
     public void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries)
     {
         super.saveAdditional(nbt, registries);
@@ -81,7 +79,6 @@ public class FilterPipeBlockEntity extends FluidPipeBlockEntity<FilterPipeBlock.
         sync();
     }
 
-    @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries)
     {
         return saveWithoutMetadata();

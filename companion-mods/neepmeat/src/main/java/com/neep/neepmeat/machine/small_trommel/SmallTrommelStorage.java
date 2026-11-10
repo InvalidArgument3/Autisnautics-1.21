@@ -101,13 +101,11 @@ public class SmallTrommelStorage implements TrommelStorage, NbtSerialisable
 
     public static final SingleVariantStorage<FluidVariant> SINGLE_EMPTY = new SingleVariantStorage<>()
     {
-        @Override
         protected FluidVariant getBlankVariant()
         {
             return FluidVariant.BLANK;
         }
 
-        @Override
         protected long getCapacity(FluidVariant variant)
         {
             return 0;

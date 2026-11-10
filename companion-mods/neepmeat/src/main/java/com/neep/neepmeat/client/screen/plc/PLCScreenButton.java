@@ -36,7 +36,7 @@ public abstract class PLCScreenButton extends AbstractClickableWidget implements
     }
 
     @Override
-    public void renderButton(GuiGraphics matrices, int mouseX, int mouseY, float delta)
+    public void renderWidget(GuiGraphics matrices, int mouseX, int mouseY, float delta)
     {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderTexture(0, getTexture());
@@ -60,7 +60,7 @@ public abstract class PLCScreenButton extends AbstractClickableWidget implements
         soundManager.play(SimpleSoundInstance.forUI(MeatlibSounds.UI_BEEP, 1.0F));
     }
 
-    protected ResourceLocation getTexture()
+    protected ResourceLocation getTextureLocation()
     {
         return PLCProgramScreen.WIDGETS;
     }

@@ -55,7 +55,6 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
         this(context, 1.0F, false);
     }
 
-    @Override
     protected int getBlockLight(ShockStaffProjectileEntity entity, BlockPos pos)
     {
         return this.lit ? 15 : super.getBlockLightLevel(entity, pos);
@@ -110,30 +109,30 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
 
             consumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
                     .setColor(red, green, blue, alpha)
-                    .uv(k, m)
-                    .overlayCoords(overlay)
-                    .uv2(light)
+                    .setUv(k, m)
+                    .setOverlay(overlay)
+                    .setLight(light)
                     .setNormal(0, 1, 0)
                     ;
             consumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
                     .setColor(red, green, blue, alpha)
-                    .uv(l, m)
-                    .overlayCoords(overlay)
-                    .uv2(light)
+                    .setUv(l, m)
+                    .setOverlay(overlay)
+                    .setLight(light)
                     .setNormal(0, 1, 0)
                     ;
             consumer.addVertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
                     .setColor(red, green, blue, alpha)
-                    .uv(l, n)
-                    .overlayCoords(overlay)
-                    .uv2(light)
+                    .setUv(l, n)
+                    .setOverlay(overlay)
+                    .setLight(light)
                     .setNormal(0, 1, 0)
                     ;
             consumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
                     .setColor(red, green, blue, alpha)
-                    .uv(k, n)
-                    .overlayCoords(overlay)
-                    .uv2(light)
+                    .setUv(k, n)
+                    .setOverlay(overlay)
+                    .setLight(light)
                     .setNormal(0, 1, 0)
                     ;
 
@@ -143,7 +142,7 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
     }
 
     @Override
-    public ResourceLocation getTexture(ShockStaffProjectileEntity entity)
+    public ResourceLocation getTextureLocation(ShockStaffProjectileEntity entity)
     {
         return TEXTURE;
     }

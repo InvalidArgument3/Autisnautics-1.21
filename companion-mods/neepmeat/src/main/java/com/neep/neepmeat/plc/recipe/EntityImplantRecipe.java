@@ -133,7 +133,7 @@ public class EntityImplantRecipe extends EntityMutateRecipe
 
             List<ManufactureStep<?>> steps = ItemManufactureRecipe.Serialiser.readSteps(buf);
 
-            EntityImplantInstaller implant = buf.readById(EntityImplantInstaller.REGISTRY);
+            EntityImplantInstaller implant = buf.readById(EntityImplantInstaller.REGISTRY::byId);
 
             return new EntityImplantRecipe(id, base, steps, implant);
         }
@@ -146,7 +146,7 @@ public class EntityImplantRecipe extends EntityMutateRecipe
 
             ItemManufactureRecipe.Serialiser.writeSteps(recipe.getSteps(), buf);
 
-            buf.writeId(EntityImplantInstaller.REGISTRY, recipe.implant);
+            buf.writeById(EntityImplantInstaller.REGISTRY::getId, recipe.implant);
         }
     }
 }

@@ -47,7 +47,7 @@ public class CannonBulletEntityRenderer extends EntityRenderer<CannonBulletEntit
     }
 
     @Override
-    public ResourceLocation getTexture(CannonBulletEntity entity)
+    public ResourceLocation getTextureLocation(CannonBulletEntity entity)
     {
         // TODO: change
         return ResourceLocation.fromNamespaceAndPath(MeatWeapons.NAMESPACE, "textures/entity/explosive_shell.png");

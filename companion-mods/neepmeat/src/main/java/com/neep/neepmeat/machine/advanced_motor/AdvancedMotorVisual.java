@@ -71,7 +71,7 @@ public class AdvancedMotorVisual extends AbstractBlockEntityVisual<AdvancedMotor
         matrices.pushPose();
         Direction facing = blockEntity.getBlockState().getValue(BaseFacingBlock.FACING);
 
-        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(true);
+        float delta = Minecraft.getInstance().isPaused() ? 0 : Minecraft.getInstance().getTimer().getGameTimeDeltaPartialTick(true);
         blockEntity.currentSpeed = (float) (blockEntity.rotorSpeed * Mth.lerp(0.1, blockEntity.currentSpeed, blockEntity.getSpeed()));
         blockEntity.angle = Mth.wrapDegrees(blockEntity.angle + blockEntity.currentSpeed * delta);
 
