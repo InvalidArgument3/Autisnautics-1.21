@@ -119,7 +119,19 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | --- | --- | --- |
 | Motor | ported | `motor_unit` faces a `MotorisedBlock` and calls `motorTick(MotorEntity)` and `setInputPower(1)`. Fuel extraction from `LiquidFuelMachine` is not in this block, so the output is a constant one mechanical unit. A test powers the arm from the motor in front. |
 
-Manufacture recipes, living machines, and the meatgun are still the next batches.
+## Manufacture, jar 0.30.0-neoforge.12
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.12` and passed all 33 tests.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Serializer | ported | `neepmeat:manufacture` loads a base item, ordered steps, and a result. Shipped recipes are `contractile_actuator` (bone + internal components), `pipe_driver` (motor unit + control unit), and obsidian (cobblestone + lava + water). Recipes whose results are not registered are left out. |
+| Workpiece | ported | The `neepmeat:workpiece` component stores the steps on the stack. `ManufactureRecipe.apply` appends a step and replaces the stack when a recipe matches. |
+| MutateInPlace | ported for containers | `ITEM.find` wraps the first occupied slot of a container. A chest of bone plus internal components becomes a contractile actuator. Entity mutation still finds nothing. |
+| enlightened_brain | ported | Food: 6 hunger, 0.6 saturation, Night Vision for 30 seconds. The shaped control-unit recipe uses it. The `neepmeat:enlightening` recipe type is not registered. |
+| JEI and EMI | ported | Both show the manufacture category with the builder as the workstation. |
+
+The motor still uses a constant power output. `BuilderRobot` and the full PLC shell are not replaced yet. Living machines and the meatgun are still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

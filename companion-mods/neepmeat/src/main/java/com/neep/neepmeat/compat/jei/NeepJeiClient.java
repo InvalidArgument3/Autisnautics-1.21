@@ -9,6 +9,7 @@
 package com.neep.neepmeat.compat.jei;
 
 import com.neep.neepmeat.recipe.AlloyKilnRecipe;
+import com.neep.neepmeat.recipe.ManufactureRecipe;
 import com.neep.neepmeat.recipe.NeepRecipes;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
@@ -22,10 +23,12 @@ public final class NeepJeiClient {
 
     public static void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new AlloyKilnCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new ManufactureCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     public static void registerRecipes(IRecipeRegistration registration) {
         registration.addRecipes(AlloyKilnCategory.TYPE, current());
+        registration.addRecipes(ManufactureCategory.TYPE, manufacture());
     }
 
     private static List<RecipeHolder<AlloyKilnRecipe>> current() {
@@ -35,6 +38,17 @@ public final class NeepJeiClient {
         }
         if (minecraft.getConnection() != null) {
             return minecraft.getConnection().getRecipeManager().getAllRecipesFor(NeepRecipes.ALLOY.get());
+        }
+        return List.of();
+    }
+
+    private static List<RecipeHolder<ManufactureRecipe>> manufacture() {
+        Minecraft minecraft = Minecraft.getInstance();
+        if (minecraft.level != null) {
+            return minecraft.level.getRecipeManager().getAllRecipesFor(NeepRecipes.MANUFACTURE.get());
+        }
+        if (minecraft.getConnection() != null) {
+            return minecraft.getConnection().getRecipeManager().getAllRecipesFor(NeepRecipes.MANUFACTURE.get());
         }
         return List.of();
     }

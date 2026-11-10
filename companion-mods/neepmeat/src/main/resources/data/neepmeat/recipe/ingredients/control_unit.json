@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cpc",
+    "cec",
+    " b "
+  ],
+  "key": {
+    "p": { "item": "neepmeat:crushed_ender_pearl" },
+    "c": { "item": "neepmeat:copper_coil" },
+    "e": { "item": "neepmeat:enlightened_brain" },
+    "b": { "item": "neepmeat:internal_components" }
+  },
+  "result": {
+    "item": "neepmeat:control_unit",
+    "count": 1,
+    "id": "neepmeat:control_unit"
+  }
+}

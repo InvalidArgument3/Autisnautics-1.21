@@ -45,6 +45,9 @@ public final class MaterialItems {
     public static final DeferredItem<Item> INTERNAL_COMPONENTS = item("internal_components", new Item.Properties());
     public static final DeferredItem<Item> CONTRACTILE_ACTUATOR = item("contractile_actuator", new Item.Properties());
     public static final DeferredItem<Item> BRAIN_ROUGH = item("brain_rough", new Item.Properties());
+    public static final DeferredItem<Item> ENLIGHTENED_BRAIN = item("enlightened_brain", new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible()
+                    .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 1), 1f).build()));
     public static final DeferredItem<Item> OPEN_EYE = item("open_eye", new Item.Properties());
     public static final DeferredItem<Item> DIVINE_ORGAN = item("divine_organ", new Item.Properties());
     public static final DeferredItem<Item> HUNGRY_HETEROSTRUCTURE = item("hungry_heterostructure", new Item.Properties());

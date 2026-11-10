@@ -25,5 +25,10 @@ public final class NeepRecipes {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AlloyKilnRecipe>> ALLOY_SERIALIZER =
             SERIALIZERS.register("alloy_smelting", () -> AlloyKilnRecipe.SERIALIZER);
 
+    public static final DeferredHolder<RecipeType<?>, RecipeType<ManufactureRecipe>> MANUFACTURE = TYPES.register("manufacture",
+            () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "manufacture")));
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ManufactureRecipe>> MANUFACTURE_SERIALIZER =
+            SERIALIZERS.register("manufacture", () -> ManufactureRecipe.SERIALIZER);
+
     private NeepRecipes() {}
 }

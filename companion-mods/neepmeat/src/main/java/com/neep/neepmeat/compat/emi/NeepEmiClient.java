@@ -20,6 +20,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 public final class NeepEmiClient {
+    public static final EmiRecipeCategory MANUFACTURE = new EmiRecipeCategory(
+            ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "manufacture"),
+            EmiStack.of(new ItemStack(NeepMachines.BUILDER_ITEM.get())));
     public static final EmiRecipeCategory ALLOY = new EmiRecipeCategory(
             ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "alloy_smelting"),
             EmiStack.of(new ItemStack(NeepMachines.ALLOY_KILN_ITEM.get())));
@@ -29,12 +32,16 @@ public final class NeepEmiClient {
     public static void register(EmiRegistry registry) {
         registry.addCategory(ALLOY);
         registry.addWorkstation(ALLOY, EmiStack.of(new ItemStack(NeepMachines.ALLOY_KILN_ITEM.get())));
+        registry.addCategory(MANUFACTURE);
+        registry.addWorkstation(MANUFACTURE, EmiStack.of(new ItemStack(NeepMachines.BUILDER_ITEM.get())));
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.level == null) {
             return;
         }
         minecraft.level.getRecipeManager().getAllRecipesFor(NeepRecipes.ALLOY.get())
                 .forEach(holder -> registry.addRecipe(new AlloyEmiRecipe(holder)));
+        minecraft.level.getRecipeManager().getAllRecipesFor(NeepRecipes.MANUFACTURE.get())
+                .forEach(holder -> registry.addRecipe(new ManufactureEmiRecipe(holder)));
     }
 
     public static Component title() {
