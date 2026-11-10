@@ -14,8 +14,8 @@ RecipeViewerEvents.removeEntries("item", (event) => {
     // redundant
     // event.remove("nuclearcraft:ethanol_bucket")
     // event.remove("nuclearcraft:redstone_ethanol_bucket")
-    // duplicate
-    event.remove("jaopca:storage_blocks.sodium_chloride")
+    // duplicate. JAOPCA is in the pack; this storage block is not generated here.
+    if (Platform.isLoaded("jaopca") && Item.exists("jaopca:storage_blocks.sodium_chloride")) event.remove("jaopca:storage_blocks.sodium_chloride")
     // we redstone now
     // event.remove("thermal:cinnabar_dust")
     // no recipes
@@ -32,10 +32,10 @@ RecipeViewerEvents.removeEntries("item", (event) => {
     // event.remove("tfmg:block_mold")
     // event.remove("tfmg:ingot_mold")
     // removed
-    event.remove("jaopca:create_crushed.netherite_scrap")
-    event.remove("jaopca:dusts.netherite_scrap")
-    event.remove("jaopca:molten.netherite_scrap")
-    event.remove("jaopca:molten.coal")
+    if (Platform.isLoaded("jaopca") && Item.exists("jaopca:create_crushed.netherite_scrap")) event.remove("jaopca:create_crushed.netherite_scrap")
+    if (Platform.isLoaded("jaopca") && Item.exists("jaopca:dusts.netherite_scrap")) event.remove("jaopca:dusts.netherite_scrap")
+    if (Platform.isLoaded("jaopca") && Item.exists("jaopca:molten.netherite_scrap")) event.remove("jaopca:molten.netherite_scrap")
+    if (Platform.isLoaded("jaopca") && Item.exists("jaopca:molten.coal")) event.remove("jaopca:molten.coal")
     /*
     // coal coke unification - thermal
     // event.remove("tfmg:coal_coke")
