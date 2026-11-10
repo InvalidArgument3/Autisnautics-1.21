@@ -21818,6 +21818,7 @@
                 "zgxYkqv2D2We1Z5a"
             ],
             "type": "MOD",
+            "side": "CLIENT",
             "slug": {
                 "curseforge": "veil-bonk"
             },
