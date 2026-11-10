@@ -18,7 +18,6 @@ import com.neep.meatlib.block.BaseBlock;
 import com.neep.meatlib.init.MeatlibSounds;
 import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.registry.RegistrationContext;
-import com.neep.neepmeat.datagen.tag.NMTags;
 import com.neep.neepmeat.transport.fluid_network.ConnectionType;
 import com.neep.neepmeat.transport.fluid_network.SimplePipeProperties;
 import com.neep.meatlib.util.MiscUtil;
@@ -236,7 +235,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
         return hand != InteractionHand.OFF_HAND
                 && (stack.isEmpty()
-                    || stack.is(NMTags.WRENCH)
+                    || stack.is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "wrenches")))
         );
     }
 
@@ -342,7 +341,6 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     private static final Direction[] HORIZONTAL = new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
-    @Override
     private BlockState rotate(BlockState oldState, int offset)
     {
         BlockState newState = oldState;
@@ -411,7 +409,7 @@ public abstract class PrecisePipeBlock extends BaseBlock implements SimpleWaterl
 
     public SoundEvent connectionChangeSound(Level world, BlockState state, BlockPos pos)
     {
-        return MeatlibSounds.WRENCH_CLICK;
+        return MeatlibSounds.WRENCH_CLICK.get();
     }
 
     @Override

@@ -89,7 +89,7 @@ public final class PipeRouteFinder {
         return new ItemRoute(steps);
     }
 
-    private static final class Node {
+    public static final class Node {
         private final BlockPos pos;
         private final int cost;
         private final Node parent;

@@ -5,7 +5,6 @@ com/neep/meatlib/client/MeatLibClient.java
 com/neep/meatlib/entity/MobKillUtil.java
 com/neep/meatlib/entity/player/DelegatePlayerInventory.java
 com/neep/meatlib/entity/player/FakePlayerEntity.java
-com/neep/meatlib/fluid/BuiltFluid.java
 com/neep/meatlib/graphics/GraphicsEffects.java
 com/neep/meatlib/graphics/SyncEffect.java
 com/neep/meatlib/graphics/client/GraphicsEffectClient.java
@@ -138,12 +137,10 @@ com/neep/neepbus/screen/PIDConfigHandler.java
 com/neep/neepbus/screen/RangeConfigHandler.java
 com/neep/neepbus/util/NeepBusConfigImpl.java
 com/neep/neepmeat/NMItemGroups.java
-com/neep/neepmeat/api/ContaminationUtil.java
 com/neep/neepmeat/api/DataType.java
 com/neep/neepmeat/api/DataVariantImpl.java
 com/neep/neepmeat/api/big_block_2/BigBlock2Structure.java
 com/neep/neepmeat/api/big_block_2/PatternOffsetMap.java
-com/neep/neepmeat/api/block/PressureWashable.java
 com/neep/neepmeat/api/enlightenment/EnlightenmentUtil.java
 com/neep/neepmeat/api/live_machine/metrics/DataLog.java
 com/neep/neepmeat/api/multiblock/MultiBlock.java
@@ -359,10 +356,8 @@ com/neep/neepmeat/entity/weapon_switching/BetterMeleeGoal.java
 com/neep/neepmeat/entity/weapon_switching/WeaponSwitchingHostileEntity.java
 com/neep/neepmeat/entity/worm/WormBiteGoal.java
 com/neep/neepmeat/entity/worm/WormEntity.java
-com/neep/neepmeat/fluid/BuiltPersistentFluid.java
 com/neep/neepmeat/fluid/CompressedAirFluidVariantAttributeHandler.java
 com/neep/neepmeat/fluid/FluidFactory.java
-com/neep/neepmeat/fluid/PersistentFluid.java
 com/neep/neepmeat/fluid/ReconstitutedFoodBuiltFluid.java
 com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java
 com/neep/neepmeat/guide/GuideReloadListener.java
@@ -388,7 +383,6 @@ com/neep/neepmeat/init/NMEntities.java
 com/neep/neepmeat/init/NMGraphicsEffects.java
 com/neep/neepmeat/init/NMLootConditions.java
 com/neep/neepmeat/init/NMLootTables.java
-com/neep/neepmeat/init/NMParticles.java
 com/neep/neepmeat/init/NMToolMaterials.java
 com/neep/neepmeat/init/NMrecipeTypes.java
 com/neep/neepmeat/item/AdvancedIntegrationChargeItem.java
@@ -449,7 +443,6 @@ com/neep/neepmeat/machine/charnel_pump/CharnelPumpClient.java
 com/neep/neepmeat/machine/charnel_pump/CharnelPumpRenderer.java
 com/neep/neepmeat/machine/charnel_pump/CharnelPumpStructure.java
 com/neep/neepmeat/machine/charnel_pump/CharnelPumpVisual.java
-com/neep/neepmeat/machine/charnel_pump/ContaminatedGrassBlock.java
 com/neep/neepmeat/machine/charnel_pump/WrithingEarthSpoutBlock.java
 com/neep/neepmeat/machine/content_detector/InventoryDetector.java
 com/neep/neepmeat/machine/content_detector/InventoryDetectorBlock.java
@@ -578,7 +571,6 @@ com/neep/neepmeat/mixin/client/ParticleManagerMixin.java
 com/neep/neepmeat/network/BlockSoundPacket.java
 com/neep/neepmeat/network/MachineDiagnosticsRequest.java
 com/neep/neepmeat/network/NMTrackedData.java
-com/neep/neepmeat/network/ParticleSpawnS2C.java
 com/neep/neepmeat/network/ScreenPropertyC2SPacket.java
 com/neep/neepmeat/network/ToolTransformPacket.java
 com/neep/neepmeat/network/plc/PLCRobotC2S.java
@@ -688,7 +680,6 @@ com/neep/neepmeat/transport/api/item_network/StorageDriver.java
 com/neep/neepmeat/transport/api/pipe/AbstractAxialFluidPipe.java
 com/neep/neepmeat/transport/api/pipe/AbstractPipeBlock.java
 com/neep/neepmeat/transport/api/pipe/FluidPipe.java
-com/neep/neepmeat/transport/api/pipe/PrecisePipeBlock.java
 com/neep/neepmeat/transport/api/pipe/VascularConduit.java
 com/neep/neepmeat/transport/block/FlexStorageBlockEntity.java
 com/neep/neepmeat/transport/block/energy_transport/VSCBlock.java
@@ -782,9 +773,7 @@ com/neep/neepmeat/transport/fluid_network/node/FluidNode.java
 com/neep/neepmeat/transport/fluid_network/node/NodePos.java
 com/neep/neepmeat/transport/item/ProcessCardComponent.java
 com/neep/neepmeat/transport/item/ProcessCardItem.java
-com/neep/neepmeat/transport/item_network/ItemPipeGraphHelper.java
 com/neep/neepmeat/transport/item_network/ItemPipeGraphHelperImpl.java
-com/neep/neepmeat/transport/item_network/ItemPipeVertex.java
 com/neep/neepmeat/transport/item_network/ItemPipeVertexImpl.java
 com/neep/neepmeat/transport/item_network/PipeCacheImpl.java
 com/neep/neepmeat/transport/item_network/RetrievalTarget.java
@@ -803,7 +792,6 @@ com/neep/neepmeat/transport/screen/widget/RequesterConfigWidgetHandler.java
 com/neep/neepmeat/transport/util/PipePathfinding.java
 com/neep/neepmeat/transport/worm/GlobalDistributorRouting.java
 com/neep/neepmeat/util/FilterUtils.java
-com/neep/neepmeat/util/NMVec2f.java
 com/neep/neepmeat/util/TagSuggestions.java
 com/neep/neepmeat/util/WrenchUtil.java
 com/neep/meatlib/client/GlobalClientChannelReceiver.java
@@ -947,7 +935,6 @@ com/neep/neepmeat/api/plc/interrupt/InterruptReceiver.java
 com/neep/neepmeat/api/processing/ball_mill/BallMillRecipe.java
 com/neep/neepmeat/block/entity/BigLeverBlockEntity.java
 com/neep/neepmeat/block/entity/FurnaceBurnerImpl.java
-com/neep/neepmeat/block/fluid/SludgeFluidBlock.java
 com/neep/neepmeat/client/NMClientNetwork.java
 com/neep/neepmeat/client/NMFeatureRenderers.java
 com/neep/neepmeat/client/NMImplantsClient.java
@@ -1024,7 +1011,6 @@ com/neep/neepmeat/entity/keeper/KeeperCritGoal.java
 com/neep/neepmeat/entity/repeater/RepeaterEntity.java
 com/neep/neepmeat/entity/skyworm/SkywormAction.java
 com/neep/neepmeat/entity/weapon_switching/SwitchWeaponGoal.java
-com/neep/neepmeat/fluid/BuiltSludgeFluid.java
 com/neep/neepmeat/guide/GuideNode.java
 com/neep/neepmeat/guide/article/AbstractTextContent.java
 com/neep/neepmeat/guide/article/CenteredTextContent.java
@@ -1170,7 +1156,6 @@ com/neep/meatlib/network/ServerChannelReceiver.java
 com/neep/meatlib/util/MeatLibCodecs.java
 com/neep/meatlib/registry/ParticleRegistry.java
 com/neep/meatlib/client/event/RenderItemGuiEvent.java
-com/neep/meatlib/util/MeatlibItemGroups.java
 com/neep/meatlib/mixin/UnbreakingEnchantmentMixin.java
 com/neep/meatlib/mixin/InventoryStorageAccessor.java
 com/neep/meatlib/client/ClientChannelReceiver.java
@@ -1195,8 +1180,6 @@ com/neep/neepmeat/datagen/NMDataGen.java
 com/neep/neepmeat/datagen/NMItemTagProvider.java
 com/neep/meatlib/block/CorrugatedAsbestosBlock.java
 com/neep/meatlib/client/MeatlibItemColours.java
-com/neep/meatlib/fluid/FluidBuilder.java
-com/neep/meatlib/fluid/StandardBuiltFluid.java
 com/neep/meatlib/larkdown/LarkdownParserTest.java
 com/neep/meatlib/network/GlobalServerChannelReceiver.java
 com/neep/meatlib/recipe/MeatRecipeType.java
@@ -1348,3 +1331,5 @@ com/neep/neepmeat/thord/word/FunctionWord.java
 com/neep/neepmeat/thord/word/ImmediateWord.java
 com/neep/neepmeat/thord/word/VariableWord.java
 com/neep/neepmeat/thord/word/Word.java
+com/neep/neepmeat/init/NMParticles.java
+com/neep/neepmeat/network/ParticleSpawnS2C.java

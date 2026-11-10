@@ -42,7 +42,7 @@ public class CannonBulletEntityRenderer extends EntityRenderer<CannonBulletEntit
         matrixStack.pushPose();
         matrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(g, cannonBulletEntity.yRotO, cannonBulletEntity.getYRot()) - 90.0F));
         matrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(g, cannonBulletEntity.xRotO, cannonBulletEntity.getXRot())));
-        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTexture(cannonBulletEntity))), i, 1, 1.0F, 1.0F, 1.0F, 1F);
+        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTextureLocation(cannonBulletEntity))), i, 1, 1.0F, 1.0F, 1.0F, 1F);
         matrixStack.popPose();
     }
 

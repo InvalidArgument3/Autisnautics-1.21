@@ -23,6 +23,13 @@ public final class FluidVariantAttributes {
         return fluid == null ? Component.empty() : fluid.getFluidType().getDescription();
     }
 
+    public static int getTemperature(FluidVariant variant) {
+        if (variant == null || variant.isBlank() || variant.getFluid() == null) {
+            return 0;
+        }
+        return variant.getFluid().getFluidType().getTemperature();
+    }
+
     public static int getLuminance(FluidVariant variant) {
         return 0;
     }

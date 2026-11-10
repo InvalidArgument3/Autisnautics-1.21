@@ -13,10 +13,12 @@
  */
 package com.neep.neepmeat.transport.api.pipe;
 
+import com.neep.meatlib.util.graph.ConnectablePipe;
 import com.neep.meatlib.util.graph.PipeVertex;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.TransactionContext;
 import com.neep.neepmeat.transport.item_network.ItemInPipe;
+import com.neep.neepmeat.transport.item_network.ItemPipeVertex;
 import com.neep.meatlib.util.PipeConnections;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -28,7 +30,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public interface ItemPipe {
+public interface ItemPipe extends ConnectablePipe {
     boolean isConnected(Level world, BlockPos pos, BlockState state, Direction direction);
 
     /** Upstream leaves insertion abstract. The item and its removal callback live on {@link ItemInPipe} and {@code PipeItemMemory}. */
@@ -57,20 +59,28 @@ public interface ItemPipe {
         return isConnectedIn(world, pos, state, outFace);
     }
 
-    /**
-     * Upstream returns {@code ItemPipeVertex.NULL}. That class is still excluded, so a pipe that
-     * does not override this has no vertex until the network class compiles.
-     */
+    @Override
     default PipeVertex getPipeVertex(ServerLevel world, BlockPos pos, BlockState state) {
-        return null;
+        return ItemPipeVertex.NULL;
     }
 
-    /**
-     * Upstream walks {@code PrecisePipeBlock} connection properties. That class is excluded, so
-     * this default is the upstream result for every block that is not a precise pipe.
-     */
+    @Override
+    default PipeConnections getConnections(BlockState state) {
+        return getConnections(state, null);
+    }
+
+    /** Upstream walks connection properties on a precise pipe and returns an empty set otherwise. */
     default PipeConnections getConnections(BlockState state, @Nullable Direction forbidden) {
-        return new PipeConnections();
+        if (!(state.getBlock() instanceof PrecisePipeBlock)) {
+            return new PipeConnections();
+        }
+        PipeConnections set = new PipeConnections();
+        for (var entry : PrecisePipeBlock.DIR_TO_CONNECTION.entrySet()) {
+            if (state.getValue(entry.getValue()).isConnected() && entry.getKey() != forbidden) {
+                set.set(entry.getKey());
+            }
+        }
+        return set;
     }
 
     /** Upstream treats a plain pipe end as a routing vertex. */
@@ -100,6 +110,9 @@ public interface ItemPipe {
     }
 
     default VoxelShape getShapeForState(BlockState state) {
+        if (state.getBlock() instanceof PrecisePipeBlock pipe) {
+            return pipe.getShapeForState(state);
+        }
         return net.minecraft.world.phys.shapes.Shapes.block();
     }
 }

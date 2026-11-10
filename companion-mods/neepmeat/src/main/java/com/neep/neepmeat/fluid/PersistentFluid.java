@@ -13,7 +13,6 @@
 package com.neep.neepmeat.fluid;
 
 import com.neep.meatlib.fluid.BaseFluid;
-import com.neep.neepmeat.init.NMParticles;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectBooleanPair;
 import com.neep.meatlib.transfer.FluidConstants;
@@ -200,7 +199,7 @@ public abstract class PersistentFluid extends BaseFluid
         if (prevState.isAir() || prevState.is(state.getBlock()))
             world.setBlock(pos, state, Block.UPDATE_ALL);
         else if (world instanceof ServerLevel serverWorld)
-            serverWorld.sendParticles(new BlockParticleOption(NMParticles.FLUID_BITS, state),
+            serverWorld.sendParticles(new BlockParticleOption(net.minecraft.core.particles.ParticleTypes.BLOCK, state),
                     pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     10,
                     0.5, 0.5, 0.5, 0.1);
@@ -235,7 +234,7 @@ public abstract class PersistentFluid extends BaseFluid
         Block block = state.getBlock();
         if (block instanceof LiquidBlockContainer)
         {
-            return ((LiquidBlockContainer) block).canPlaceLiquid(world, pos, state, this);
+            return ((LiquidBlockContainer) block).canPlaceLiquid(null, world, pos, state, this);
         }
         else if (block instanceof DoorBlock
                 || state.is(BlockTags.SIGNS)
@@ -253,7 +252,7 @@ public abstract class PersistentFluid extends BaseFluid
         }
     }
 
-    public long getAmount(FluidState fluidState)
+    public long dropletAmount(FluidState fluidState)
     {
         return fluidState.getAmount() * FluidConstants.BLOCK / 8;
     }

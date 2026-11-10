@@ -14,9 +14,6 @@ package com.neep.meatlib.util;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
-import com.sun.jna.platform.win32.LMAccess;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -46,13 +43,11 @@ public class MeatlibItemGroups
 
     public static void init()
     {
-        ItemGroupEvents.MODIFY_ENTRIES_ALL.register((group, entries) ->
-                GROUPS.get(group).forEach(s -> entries.accept(s.get())));
     }
 
     public static class SpecialEntryCollector implements CreativeModeTab.DisplayItemsGenerator
     {
-        private final List<CreativeModeTab.DisplayItemsGenerator> extra = new ObjectArrayList<>();
+        private final List<CreativeModeTab.DisplayItemsGenerator> extra = new java.util.ArrayList<>();
 
         public void add(CreativeModeTab.DisplayItemsGenerator collector)
         {

@@ -61,7 +61,7 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
         matrixStack.scale(scale, scale, scale);
         matrixStack.translate(0F, 0.0F, 0.0F);
 
-        var texture = getTexture(entity);
+        var texture = getTextureLocation(entity);
 
         double ex = Mth.lerp(tickDelta, entity.xOld, entity.getX());
         double ey = Mth.lerp(tickDelta, entity.yOld, entity.getY());

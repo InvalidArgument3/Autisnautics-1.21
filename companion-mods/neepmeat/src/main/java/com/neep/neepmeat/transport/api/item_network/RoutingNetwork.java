@@ -27,11 +27,16 @@ import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEnti
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
+import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.transport.ItemRoute;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtUtils;
 import net.minecraft.resources.ResourceLocation;
+import org.jetbrains.annotations.Nullable;
+import java.util.Objects;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -252,5 +257,82 @@ public final class RoutingNetwork {
 
     private static Direction directionBetween(BlockPos from, BlockPos to) {
         return Direction.getNearest(to.getX() - from.getX(), to.getY() - from.getY(), to.getZ() - from.getZ());
+    }
+
+    /** Passed through a request so a recipe cannot recurse forever. */
+    public static final class RequestContext {
+        public int recursionDepth;
+    }
+
+    public enum RequestType {
+        ANY_AMOUNT(false),
+        EXACT_AMOUNT(true);
+
+        private final boolean matchExact;
+
+        RequestType(boolean matchExact) {
+            this.matchExact = matchExact;
+        }
+
+        public boolean satisfied(long requested, long found) {
+            return (requested == found && matchExact) || (found >= requested && !matchExact);
+        }
+    }
+
+    /** A request that stays open until the source pipe can fill it. */
+    public static final class DeferredRequest {
+        private final BlockPos sourcePos;
+        public final BlockPos requesterPos;
+        public final Direction requesterFace;
+        private final ItemVariant itemVariant;
+        private final long requested;
+
+        public DeferredRequest(BlockPos sourcePos, BlockPos requesterPos, Direction requesterFace, long requested, ItemVariant itemVariant) {
+            this.sourcePos = sourcePos;
+            this.requesterPos = requesterPos;
+            this.requesterFace = requesterFace;
+            this.itemVariant = itemVariant;
+            this.requested = requested;
+        }
+
+        public long getRequested() {
+            return requested;
+        }
+
+        public ItemVariant getItemVariant() {
+            return itemVariant;
+        }
+
+        public CompoundTag toNbt() {
+            CompoundTag nbt = new CompoundTag();
+            nbt.put("pos", NbtUtils.writeBlockPos(sourcePos));
+            nbt.put("requester_pos", NbtUtils.writeBlockPos(requesterPos));
+            nbt.putInt("requester_face", requesterFace.ordinal());
+            nbt.put("item", itemVariant.toNbt());
+            nbt.putLong("amount", requested);
+            return nbt;
+        }
+
+        public static DeferredRequest fromNbt(CompoundTag nbt) {
+            return new DeferredRequest(
+                    NbtUtils.readBlockPos(nbt, "pos").orElse(BlockPos.ZERO),
+                    NbtUtils.readBlockPos(nbt, "requester_pos").orElse(BlockPos.ZERO),
+                    Direction.values()[nbt.getInt("requester_face")],
+                    nbt.getLong("amount"),
+                    ItemVariant.fromNbt(nbt.getCompound("item")));
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (!(o instanceof DeferredRequest that)) {
+                return false;
+            }
+            return requested == that.requested && Objects.equals(sourcePos, that.sourcePos) && Objects.equals(requesterPos, that.requesterPos) && requesterFace == that.requesterFace && Objects.equals(itemVariant, that.itemVariant);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(sourcePos, requesterPos, requesterFace, itemVariant, requested);
+        }
     }
 }

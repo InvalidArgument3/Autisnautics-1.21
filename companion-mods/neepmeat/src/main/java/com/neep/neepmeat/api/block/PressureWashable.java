@@ -12,7 +12,6 @@
 
 package com.neep.neepmeat.api.block;
 
-import com.neep.neepmeat.block.WashableFire;
 import com.neep.neepmeat.init.NMFluids;
 import com.neep.meatlib.transfer.FluidConstants;
 import com.neep.meatlib.transfer.FluidVariant;
@@ -68,7 +67,7 @@ public interface PressureWashable
 
     static void initDefaults()
     {
-        registerFallback(Blocks.FIRE, new WashableFire());
+        registerFallback(Blocks.FIRE, new PressureWashable.Simple(0));
         registerFallback(Blocks.SCULK_VEIN, PressureWashable.SCULK_VEIN);
         registerFallback(Blocks.VINE, PressureWashable.VINE);
         registerFallback(Blocks.GLOW_LICHEN, PressureWashable.GLOW_LICHEN);

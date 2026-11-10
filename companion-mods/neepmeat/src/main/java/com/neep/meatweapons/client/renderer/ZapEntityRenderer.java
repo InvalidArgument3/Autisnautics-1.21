@@ -52,7 +52,7 @@ public class ZapEntityRenderer extends ArrowRenderer<ZapProjectileEntity>
         matrixStack.mulPose(Axis.XP.rotationDegrees(45.0f));
         matrixStack.scale(0.05625f, 0.05625f, 0.05625f);
         matrixStack.translate(-4.0, 0.0, 0.0);
-        VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderType.entityTranslucent(getTexture(entity)));
+        VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderType.entityTranslucent(getTextureLocation(entity)));
         PoseStack.Pose entry = matrixStack.last();
         Matrix4f matrix4f = entry.pose();
         Matrix3f matrix3f = entry.normal();

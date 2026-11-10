@@ -1,14 +1,14 @@
-# run 50 end
-# start 2671
-# end 2483
+# run 51 end
+# start 2483
+# end 2428
 
-294	does not override
+293	does not override
 26	invalid method reference
 17	cannot find symbol method serverTick
 16	incompatible types: invalid method reference
 14	cannot find symbol method extract
 14	cannot find symbol method getId
-13	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEntityVisuali
+13	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEntityVisua
 13	cannot find symbol method register
 12	cannot find symbol method addListener
 11	cannot find symbol method floatValue
@@ -16,9 +16,10 @@
 11	incompatible types: inference variable T has incompatible bounds
 11	cannot find symbol method getStorage
 11	incompatible types: Block cannot be converted to Properties
-10	cannot find symbol class RequestContext
-10	cannot find symbol class DeferredRequest
-10	Node has private access in PipeRouteFinder
 10	cannot find symbol method getCompound
-10	cannot find symbol variable RequestType
-10	cannot find symbol method getTexture
+10	cannot find symbol method getComponent
+10	cannot find symbol variable builder
+10	cannot find symbol method getAmount
+9	no interface expected here
+9	cannot find symbol class Serializer
+# end pending

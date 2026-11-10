@@ -47,10 +47,10 @@ public class ContaminationUtil
         if (prev.is(Blocks.GRASS_BLOCK) || prev.is(NMBlocks.CONTAMINATED_GRASS_BLOCK))
         {
             if (level == 1)
-                return NMBlocks.CONTAMINATED_GRASS_BLOCK.withLevel(1);
+                return ((ContaminatedGrassBlock) NMBlocks.CONTAMINATED_GRASS_BLOCK).withLevel(1);
 //            return random.nextFloat() > 0.3 ? NMBlocks.CONTAMINATED_GRASS_BLOCK.getDefaultState() : NMBlocks.CONTAMINATED_DIRT.getDefaultState();
             else if (level == 2)
-                return NMBlocks.CONTAMINATED_GRASS_BLOCK.withLevel(2);
+                return ((ContaminatedGrassBlock) NMBlocks.CONTAMINATED_GRASS_BLOCK).withLevel(2);
             else if (level == 3)
                 return NMBlocks.CONTAMINATED_DIRT.defaultBlockState();
             else

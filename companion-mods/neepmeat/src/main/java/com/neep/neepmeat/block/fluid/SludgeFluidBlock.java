@@ -14,9 +14,8 @@ package com.neep.neepmeat.block.fluid;
 
 import com.neep.neepmeat.api.ContaminationUtil;
 import com.neep.neepmeat.api.block.PressureWashable;
-import com.neep.neepmeat.init.NMParticles;
-import com.neep.neepmeat.network.ParticleSpawnS2C;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import com.neep.meatlib.transfer.FluidVariant;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -81,12 +80,8 @@ public class SludgeFluidBlock extends PersistentFluidBlock implements PressureWa
             {
                 Vec3 origin = Vec3.atCenterOf(pos);
                 var particleVelocity = velocity.scale(0.3);
-                PlayerLookup.around(serverWorld, pos, 13).forEach(p ->
-                {
-                    ParticleSpawnS2C.send(p, new BlockParticleOption(NMParticles.FLUID_BITS, state), origin,
-                            particleVelocity,
-                            new Vec3(0.5, 0.5, 0.5), 7);
-                });
+                serverWorld.sendParticles(new BlockParticleOption(net.minecraft.core.particles.ParticleTypes.BLOCK, state),
+                        origin.x, origin.y, origin.z, 7, 0.5, 0.5, 0.5, 0.1);
             }
         }
         return 1;

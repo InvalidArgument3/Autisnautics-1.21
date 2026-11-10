@@ -43,7 +43,7 @@ public class ShellEntityRenderer<T extends ExplodingShellEntity> extends EntityR
         matrixStack.pushPose();
         matrixStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(g, entity.yRotO, entity.getYRot()) - 90.0F));
         matrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(g, entity.xRotO, entity.getXRot())));
-        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTexture(entity))), 0, i, 1.0F, 1.0F, 1.0F, 1F);
+        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTextureLocation(entity))), 0, i, 1.0F, 1.0F, 1.0F, 1F);
         matrixStack.popPose();
     }
 

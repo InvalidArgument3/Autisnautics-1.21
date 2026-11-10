@@ -50,7 +50,7 @@ public class PlasmaEntityRenderer extends EntityRenderer<FusionBlastEntity>
         matrixStack.mulPose(Axis.XP.rotationDegrees(angle));
 //        matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(MathHelper.lerp(tickDelta, plasmaEntity.prevYaw, plasmaEntity.getYaw()) - 90.0F));
 //        matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(MathHelper.lerp(tickDelta, plasmaEntity.prevPitch, plasmaEntity.getPitch())));
-        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTexture(plasmaEntity))), light, 1, 1.0F, 1.0F, 1.0F, 0.5F);
+        model.renderToBuffer(matrixStack, vertexConsumerProvider.getBuffer(model.renderType(getTextureLocation(plasmaEntity))), light, 1, 1.0F, 1.0F, 1.0F, 0.5F);
         matrixStack.popPose();
     }
 

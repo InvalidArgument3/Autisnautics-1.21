@@ -27,7 +27,6 @@ public class ContaminatedGrassBlock extends GrassBlock implements ContaminationB
     public ContaminatedGrassBlock(RegistrationContext c, NMItemSettings itemSettings, Properties settings)
     {
         super(settings);
-        c.withItem(this, itemSettings);
     }
 
     @Override

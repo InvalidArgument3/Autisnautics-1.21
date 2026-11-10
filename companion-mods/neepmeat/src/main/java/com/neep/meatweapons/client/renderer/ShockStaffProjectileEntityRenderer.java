@@ -72,7 +72,7 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
             matrices.mulPose(Axis.YP.rotationDegrees(180.0F));
             matrices.mulPose(Axis.ZP.rotation((float) Minecraft.getInstance().getFrameTimeNs() / 2));
 
-            VertexConsumer consumer = vertexConsumers.getBuffer(RenderType.entityTranslucent(getTexture(entity)));
+            VertexConsumer consumer = vertexConsumers.getBuffer(RenderType.entityTranslucent(getTextureLocation(entity)));
             float f = 0;
             float g = 0;
             float h = 0;

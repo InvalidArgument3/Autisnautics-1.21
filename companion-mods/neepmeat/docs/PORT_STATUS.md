@@ -1,3 +1,30 @@
+## BuiltFluid and pipe vertices, jar 0.30.0-neoforge.59
+
+Combined-tree errors: **2483** at the start of this run, **2428** at the end. That is 55, not 400. `exclude.txt` is **1335**. Fifteen files that compile left it: `BuiltFluid`, `StandardBuiltFluid`, `FluidBuilder`, `BuiltPersistentFluid`, `PersistentFluid`, `BuiltSludgeFluid`, `SludgeFluidBlock`, `PrecisePipeBlock`, `ItemPipeVertex`, `ItemPipeGraphHelper`, `MeatlibItemGroups`, `NMVec2f`, `ContaminationUtil`, `PressureWashable`, and `ContaminatedGrassBlock`. `tools/port-errors/symbols.txt` is the end histogram.
+
+Top: does not override 293, invalid method reference 26, `serverTick` 17, invalid method reference 16, `extract` 14, `getId` 14, `setVisualizer` 13, `register` 13, `addListener` 12, `floatValue` 11, `ImplantManager` capture 11, inference bounds 11, `getStorage` 11, `Block` to `Properties` 11, `getCompound` 10. `RequestContext`, `DeferredRequest`, `RequestType`, and `PipeRouteFinder.Node` left the top twenty.
+
+The nine fluids are `BuiltFluid` again, with still and flowing variants. Sludge is a `BuiltSludgeFluid`, so its block is `SludgeFluidBlock`: it dries, contaminates the block below, and washes down one level. Patina treatment, eldritch enzymes, and pasteurised milk use tick 5 and level decrease 2, 2, and 1. Animal feed uses tick 5, level decrease 4, and the sand place sound. Pinkdrink, fat, liquid clay, and oil of brome use the builder defaults. Buckets are registered. `Registry.register` during the mod constructor hit a frozen registry. Construction and `RegisterEvent.register` during the fluid, block, and item events is what loads. `BaseBucketItem` does not implement `MeatlibItemExtension`, so the creative-tab cast is skipped.
+
+`ItemPipe.getPipeVertex` returns `ItemPipeVertex.NULL`. `getConnections` reads `PrecisePipeBlock` connection properties and is empty for every other block. `getShapeForState` uses the precise pipe's shape and a full cube otherwise. `ItemPipe` extends `ConnectablePipe`.
+
+`RoutingNetwork` again has `RequestContext`, `RequestType`, and `DeferredRequest`. `PipeRouteFinder.Node` is public. Projectile renderers call `getTextureLocation`.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. No instruction class left `exclude.txt` this run. `END` is the real end opcode.
+
+Deviations that remain:
+
+- Fluid bits and sludge wash particles are vanilla block particles. `NMParticles` and `ParticleSpawnS2C` still do not compile.
+- Catalogue buckets are not added to a creative tab. `NMItemGroups` is excluded, and `BaseBucketItem` is not a `MeatlibItemExtension`.
+- `MeatlibItemGroups.init` does not copy entries into tabs.
+- Fire's pressure-wash fallback is `PressureWashable.Simple`, not `WashableFire`.
+- `ContaminatedGrassBlock` does not call `RegistrationContext.withItem`. That method is not on the context.
+- `PersistentFluid.dropletAmount` is the old long `getAmount`. Vanilla `FlowingFluid.getAmount` returns `int`.
+- `RoutingNetwork.DeferredRequest` has no parameter codec, and `getPipe` is absent while `RoutablePipe` is excluded.
+- A pipe that is not a `PrecisePipeBlock` still reports a full-cube `getShapeForState`.
+- Eighteen menu types stay null. Their screen handlers still do not compile.
+- `TransferVariant.BLANK.getObject()` is null. Synced component keys store a compound tag. `QuadEmitter` still does not store edited vertices.
+
 ## Real codecs, fluids, and menus, jar 0.30.0-neoforge.58
 
 Combined-tree errors: **2671** at the start of this run, **2483** at the end. That is 188, not 400. `exclude.txt` is **1350**. Eight files that now compile left it: `ItemInPipe`, `PipeItemMemory`, and the screen handlers for the alloy kiln, buffer, guide, router, small compressor, and Stirling engine. `tools/port-errors/symbols.txt` is the end histogram.

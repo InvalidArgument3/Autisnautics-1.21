@@ -75,7 +75,7 @@ public class PipetteItem extends BaseItem
             FluidState fluidState = state.getFluidState();
             if (fluidState.getType() instanceof PersistentFluid fluid)
             {
-                long amount = fluid.getAmount(fluidState);
+                long amount = fluid.dropletAmount(fluidState);
                 FluidVariant variant = fluid.getVariant(fluidState);
                 if (amount > 0)
                 {

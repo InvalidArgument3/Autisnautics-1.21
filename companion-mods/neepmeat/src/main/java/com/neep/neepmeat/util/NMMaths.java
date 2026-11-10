@@ -12,6 +12,9 @@
 
 package com.neep.neepmeat.util;
 
+import net.minecraft.core.Direction;
+import net.minecraft.world.phys.Vec3;
+
 public final class NMMaths {
     private NMMaths() {}
 
@@ -21,5 +24,28 @@ public final class NMMaths {
         }
         int mod = index % size;
         return mod < 0 ? mod + size : mod;
+    }
+
+    public static boolean isWithin(float value, float target, float difference) {
+        return Math.abs(target - value) < difference;
+    }
+
+    public static NMVec2f removeAxis(Direction.Axis axis, Vec3 vec) {
+        return switch (axis) {
+            case X -> new NMVec2f((float) vec.y, (float) vec.z);
+            case Y -> new NMVec2f((float) vec.x, (float) vec.z);
+            case Z -> new NMVec2f((float) vec.x, (float) vec.y);
+        };
+    }
+
+    /** The wrench hit-box rotation upstream uses when the player clicks a horizontal face. */
+    public static Direction swapDirections(Direction direction) {
+        return switch (direction) {
+            case UP -> Direction.EAST;
+            case DOWN -> Direction.WEST;
+            case EAST -> Direction.DOWN;
+            case WEST -> Direction.UP;
+            default -> throw new IllegalStateException("Unable to get X-rotated facing of " + direction);
+        };
     }
 }

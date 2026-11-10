@@ -9,11 +9,20 @@
 
 package com.neep.neepmeat.fluid;
 
+import com.neep.meatlib.fluid.BuiltFluid;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 
 public final class FluidForms {
     private FluidForms() {}
+
+    public static Fluid still(BuiltFluid<?, ?> built) {
+        return built == null ? null : built.still();
+    }
+
+    public static Fluid flowing(BuiltFluid<?, ?> built) {
+        return built == null ? null : built.flowing();
+    }
 
     public static Fluid still(Fluid fluid) {
         return fluid instanceof FlowingFluid flowing ? flowing.getSource() : fluid;

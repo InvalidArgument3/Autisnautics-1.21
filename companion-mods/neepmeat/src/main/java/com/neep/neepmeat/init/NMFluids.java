@@ -14,6 +14,7 @@
 
 package com.neep.neepmeat.init;
 
+import com.neep.meatlib.fluid.BuiltFluid;
 import net.minecraft.world.level.material.Fluid;
 
 public final class NMFluids {
@@ -28,18 +29,18 @@ public final class NMFluids {
     public static Fluid CLEAN_ORE_FAT;
     public static Fluid CLEAN_ORE_FAT_FACTORY;
     private NMFluids() {}
-    public static net.minecraft.world.level.material.Fluid ANIMAL_FEED;
+    public static BuiltFluid<?, ?> ANIMAL_FEED;
     public static net.minecraft.world.level.material.Fluid BLOOD;
     public static net.minecraft.world.level.material.Fluid COMPRESSED_AIR;
-    public static net.minecraft.world.level.material.Fluid ELDRITCH_ENZYMES;
-    public static net.minecraft.world.level.material.Fluid FAT;
-    public static net.minecraft.world.level.material.Fluid LIQUID_CLAY;
+    public static BuiltFluid<?, ?> ELDRITCH_ENZYMES;
+    public static BuiltFluid<?, ?> FAT;
+    public static BuiltFluid<?, ?> LIQUID_CLAY;
     public static net.minecraft.world.level.material.Fluid MEAT;
-    public static net.minecraft.world.level.material.Fluid OIL_OF_BROME;
-    public static net.minecraft.world.level.material.Fluid PATINA_TREATMENT;
-    public static net.minecraft.world.level.material.Fluid PINKDRINK;
-    public static net.minecraft.world.level.material.Fluid P_MILK;
-    public static net.minecraft.world.level.material.Fluid SLUDGE;
+    public static BuiltFluid<?, ?> OIL_OF_BROME;
+    public static BuiltFluid<?, ?> PATINA_TREATMENT;
+    public static BuiltFluid<?, ?> PINKDRINK;
+    public static BuiltFluid<?, ?> P_MILK;
+    public static BuiltFluid<?, ?> SLUDGE;
     public static net.minecraft.world.level.material.Fluid TISSUE_SLURRY;
     public static net.minecraft.world.level.material.Fluid WORK_FLUID;
 }
