@@ -64,6 +64,8 @@ public final class MaterialItems {
     public static final DeferredItem<Item> BROWNE_ORE_DUST = item("browne_ore_dust", new Item.Properties());
     public static final DeferredItem<Item> PACKED_BROWNE = item("packed_browne", new Item.Properties());
     public static final DeferredItem<Item> BROWNE_INGOT = item("browne_ingot", new Item.Properties());
+    public static final DeferredItem<Item> CRUSHED_ORE = item("crushed_ore", new Item.Properties());
+    public static final DeferredItem<Item> ORE_DUST = item("ore_dust", new Item.Properties());
 
     private MaterialItems() {}
 

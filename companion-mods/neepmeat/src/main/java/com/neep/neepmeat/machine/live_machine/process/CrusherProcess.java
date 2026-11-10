@@ -6,7 +6,7 @@
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
  * More than four segments does nothing. Below 0.1 power does nothing.
  * An empty segment takes the input stack, then progress increases by the increment.
- * The advanced-crushing recipe that would replace the stack is not loaded.
+ * An empty segment takes one recipe's worth of input. Advanced crushing wins over grinding.
  */
 
 package com.neep.neepmeat.machine.live_machine.process;
@@ -21,7 +21,9 @@ import com.neep.meatlib.transfer.StorageView;
 import com.neep.meatlib.transfer.Transaction;
 import com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity;
 import com.neep.neepmeat.machine.live_machine.component.ItemInputComponent;
+import com.neep.meatlib.recipe.MeatlibRecipes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
@@ -63,13 +65,19 @@ public class CrusherProcess implements Process {
                 continue;
             }
             try (Transaction transaction = Transaction.openOuter()) {
-                long extracted = storage.extract(view.getResource(), view.getAmount(), transaction);
+                ItemStack offered = view.getResource().toStack((int) Math.min(view.getAmount(), Integer.MAX_VALUE));
+                var found = MeatlibRecipes.getInstance().matchCrushing(com.neep.neepmeat.recipe.NeepRecipes.ADVANCED_CRUSHING.get(), offered)
+                        .or(() -> MeatlibRecipes.getInstance().matchCrushing(com.neep.neepmeat.recipe.NeepRecipes.GRINDING.get(), offered));
+                if (found.isEmpty()) {
+                    continue;
+                }
+                long extracted = storage.extract(view.getResource(), found.get().inputAmount(), transaction);
                 if (extracted <= 0) {
                     continue;
                 }
-                transaction.onRename();
+                transaction.commit();
                 crusher.insert(view.getResource().toStack((int) extracted));
-                crusher.assignCobblestoneRecipe();
+                crusher.assignRecipe();
                 return;
             }
         }

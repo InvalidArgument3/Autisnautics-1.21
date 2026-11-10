@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:ender_pearl",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:crushed_ender_pearl",
+    "amount": 3
+  },
+  "experience": 0,
+  "processtime": 40
+}

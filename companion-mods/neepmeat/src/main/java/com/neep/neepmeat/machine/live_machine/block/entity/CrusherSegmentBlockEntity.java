@@ -5,7 +5,7 @@
  *
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
  * The slot accepts a stack and adds the machine's progress increment.
- * Advanced-crushing recipes are not loaded, so a finished stack is not replaced.
+ * Advanced crushing is tried first. Grinding is the fallback. The destroy recipe never matches.
  */
 
 package com.neep.neepmeat.machine.live_machine.block.entity;
@@ -14,15 +14,21 @@ import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
 import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
+import com.neep.meatlib.recipe.MeatlibRecipes;
+import com.neep.neepmeat.recipe.CrushingRecipe;
+import com.neep.neepmeat.recipe.NeepRecipes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.Nullable;
 
 public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMachineComponent {
     private ItemStack stack = ItemStack.EMPTY;
     private float progress;
     private int recipeTime;
+    private @Nullable CrushingRecipe recipe;
 
     public CrusherSegmentBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.CRUSHER_BE.get(), pos, state);
@@ -44,10 +50,11 @@ public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMach
         return progress;
     }
 
-    public void assignCobblestoneRecipe() {
-        if (stack.is(net.minecraft.world.item.Items.COBBLESTONE)) {
-            recipeTime = 1;
-        }
+    public void assignRecipe() {
+        recipe = MeatlibRecipes.getInstance().matchCrushing(NeepRecipes.ADVANCED_CRUSHING.get(), stack)
+                .or(() -> MeatlibRecipes.getInstance().matchCrushing(NeepRecipes.GRINDING.get(), stack))
+                .orElse(null);
+        recipeTime = recipe == null ? 0 : Math.max(1, recipe.time());
     }
 
     public boolean addProgress(float amount) {
@@ -62,7 +69,7 @@ public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMach
         stack = ItemStack.EMPTY;
         progress = 0;
         recipeTime = 0;
-        return new ItemStack(net.minecraft.world.item.Items.GRAVEL);
+        return recipe == null ? ItemStack.EMPTY : recipe.rollOutput(RandomSource.create());
     }
 
     @Override

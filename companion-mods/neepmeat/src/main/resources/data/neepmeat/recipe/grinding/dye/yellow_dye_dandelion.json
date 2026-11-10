@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:dandelion",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:yellow_dye",
+    "min": 1,
+    "max": 2
+  },
+  "processtime": 20
+}

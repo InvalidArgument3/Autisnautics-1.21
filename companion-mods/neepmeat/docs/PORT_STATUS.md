@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Recipe registry, jar 0.30.0-neoforge.33
+
+`MeatlibRecipes` reads the server recipe manager. `CrushingRecipe`, `NormalTrommelRecipe`, and `BallMillRecipe` use `MapCodec` and `StreamCodec` and are registered on the recipe `DeferredRegister`. Upstream JSON for grinding, advanced crushing, trommel, and the ball mill is in `data/neepmeat/recipe/`. Eight grinding files that name items this jar does not register were left out. `ResourceSpec` is the 1.21 form of the upstream resource-or-tag amount. Ball-mill `data` components are not decoded. The `fat_trommel` file is only `{"type":"neepmeat:fat_trommel"}`, so its serializer is an empty recipe that does not match.
+
+The crusher tries advanced crushing, then grinding. A blaze rod becomes 4 or 5 blaze powder. Cobblestone falls back to gravel. The trommel turns 9000 droplets of tissue slurry into 9000 droplets of meat. The ball mill turns `crushed_ore` into `ore_dust`. `large_trommel` and `ball_mill` are one block each until `BigBlock` is ported. `tissue_slurry` is registered so the trommel recipe resolves.
+
 ## Taller blocks, jar 0.30.0-neoforge.32
 
 `RegistrationContext.append` registers a child block. During static init it uses `DeferredRegister.register`. During the block `RegisterEvent` the deferred register is already frozen, which was confirmed by a failed boot (`Cannot register new entries to DeferredRegister after RegisterEvent has been fired`). The second path calls `RegisterEvent.register` while the parent supplier is running. `TallerBlock` places its structure above the origin. `lucky_one` is `LuckyOneBlock` and `ground_infuser` is `GroundInfuserBlock`. A game test checks the lucky-one upper block.

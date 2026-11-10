@@ -14,7 +14,9 @@ import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.live_machine.LivingMachineBlock;
 import com.neep.neepmeat.building.BuildingBlocks;
+import com.neep.neepmeat.machine.live_machine.block.BallMillBlock;
 import com.neep.neepmeat.machine.live_machine.block.ExtractorBlock;
+import com.neep.neepmeat.machine.live_machine.block.LargeTrommelBlock;
 import com.neep.neepmeat.machine.live_machine.block.LuckyOneBlock;
 import com.neep.neepmeat.machine.live_machine.block.FluidPortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ItemInputPortBlock;
@@ -22,7 +24,9 @@ import com.neep.neepmeat.machine.live_machine.block.ItemOutputPortBlock;
 import com.neep.neepmeat.machine.live_machine.block.PortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ServicePortBlock;
 import com.neep.neepmeat.machine.live_machine.block.SilkyExtractorBlock;
+import com.neep.neepmeat.machine.live_machine.block.entity.BallMillBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ExtractorBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.LargeTrommelBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.FluidOutputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity;
@@ -106,6 +110,8 @@ public final class LivingMachines {
             () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidOutputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<ComponentMachineBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.CRUSHER));
     public static final DeferredBlock<ComponentMachineBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.COMPRESSOR));
+    public static final DeferredBlock<LargeTrommelBlock> TROMMEL = CONTEXT.block("large_trommel", LargeTrommelBlock::new);
+    public static final DeferredBlock<BallMillBlock> BALL_MILL = CONTEXT.block("ball_mill", BallMillBlock::new);
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExtractorBlockEntity>> EXTRACTOR_BE =
             BLOCK_ENTITIES.register("extractor", () -> BlockEntityType.Builder.of(ExtractorBlockEntity::new, EXTRACTOR.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SilkyExtractorBlockEntity>> SILKY_EXTRACTOR_BE =
@@ -120,6 +126,10 @@ public final class LivingMachines {
             BLOCK_ENTITIES.register("fluid_input_port", () -> BlockEntityType.Builder.of(FluidInputPortBlockEntity::new, FLUID_INPUT.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemOutputPortBlockEntity>> ITEM_OUTPUT_BE =
             BLOCK_ENTITIES.register("item_output_port", () -> BlockEntityType.Builder.of(ItemOutputPortBlockEntity::new, ITEM_OUTPUT.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTrommelBlockEntity>> TROMMEL_BE =
+            BLOCK_ENTITIES.register("large_trommel", () -> BlockEntityType.Builder.of(LargeTrommelBlockEntity::new, TROMMEL.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BallMillBlockEntity>> BALL_MILL_BE =
+            BLOCK_ENTITIES.register("ball_mill", () -> BlockEntityType.Builder.of(BallMillBlockEntity::new, BALL_MILL.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidOutputPortBlockEntity>> FLUID_OUTPUT_BE =
             BLOCK_ENTITIES.register("fluid_output_port", () -> BlockEntityType.Builder.of(FluidOutputPortBlockEntity::new, FLUID_OUTPUT.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity>> CRUSHER_BE =

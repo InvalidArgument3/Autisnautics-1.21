@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:wither_rose",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:black_dye",
+    "min": 2,
+    "max": 3
+  },
+  "processtime": 20
+}

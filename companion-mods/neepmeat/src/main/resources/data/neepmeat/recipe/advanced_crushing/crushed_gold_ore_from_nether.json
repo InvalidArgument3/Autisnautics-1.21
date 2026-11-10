@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "resource": "minecraft:nether_gold_ore",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:crushed_ore",
+    "amount": 1
+  },
+  "extra": {
+    "resource": "neepmeat:crushed_ore",
+    "amount": 1,
+    "chance": 0.7
+  },
+  "experience": 0.7,
+  "processtime": 40
+}

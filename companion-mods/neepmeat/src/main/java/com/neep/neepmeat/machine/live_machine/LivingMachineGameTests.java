@@ -128,15 +128,92 @@ public class LivingMachineGameTests {
         MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
         port.setInputPower(1.0F);
         com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
-        input.getInventory().setItem(0, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.COBBLESTONE, 3));
+        input.getInventory().setItem(0, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.BLAZE_ROD));
         LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
-        controller.serverTick();
-        controller.serverTick();
+        for (int i = 0; i < 50; i++) {
+            controller.serverTick();
+        }
         com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity crusher = helper.getBlockEntity(new BlockPos(4, 0, 1));
         com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.CrusherProcess, "process");
         helper.assertTrue(crusher.stack().isEmpty(), "slot " + crusher.stack());
+        int count = output.getInventory().getItem(0).getCount();
+        helper.assertTrue(output.getInventory().getItem(0).is(net.minecraft.world.item.Items.BLAZE_POWDER) && count >= 4 && count <= 5,
+                "result " + output.getInventory().getItem(0));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void crusherFallsBackToGrinding(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LivingMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LivingMachines.MOTOR_PORT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 0, 1), LivingMachines.ITEM_INPUT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(4, 0, 1), LivingMachines.CRUSHER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(5, 0, 1), LivingMachines.ITEM_OUTPUT.get().defaultBlockState());
+        MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        port.setInputPower(1.0F);
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        input.getInventory().setItem(0, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.COBBLESTONE));
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        for (int i = 0; i < 50; i++) {
+            controller.serverTick();
+        }
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
         helper.assertTrue(output.getInventory().getItem(0).is(net.minecraft.world.item.Items.GRAVEL), "result " + output.getInventory().getItem(0));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void trommelTurnsSlurryIntoMeat(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LivingMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LivingMachines.MOTOR_PORT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 0, 1), LivingMachines.FLUID_INPUT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(4, 0, 1), LivingMachines.TROMMEL.get().defaultBlockState());
+        helper.setBlock(new BlockPos(5, 0, 1), LivingMachines.FLUID_OUTPUT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(6, 0, 1), LivingMachines.ITEM_OUTPUT.get().defaultBlockState());
+        MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        port.setInputPower(1.0F);
+        com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        try (com.neep.meatlib.transfer.Transaction transaction = com.neep.meatlib.transfer.Transaction.openOuter()) {
+            input.getStorage(null).insert(com.neep.meatlib.transfer.FluidVariant.of(com.neep.neepmeat.fluid.TissueSlurry.STILL.get()), 9000, transaction);
+            transaction.commit();
+        }
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        for (int i = 0; i < 40; i++) {
+            controller.serverTick();
+        }
+        helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.LargeTrommelProcess, "process");
+        com.neep.neepmeat.machine.live_machine.block.entity.FluidOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
+        var view = output.getStorage(null).iterator().next();
+        helper.assertTrue(view.getResource().fluid() == com.neep.neepmeat.fluid.MeatFluid.STILL.get() && view.getAmount() == 9000,
+                "meat fluid " + net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(view.getResource().fluid()) + " x" + view.getAmount());
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void ballMillMakesOreDust(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LivingMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LivingMachines.MOTOR_PORT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(3, 0, 1), LivingMachines.ITEM_INPUT.get().defaultBlockState());
+        helper.setBlock(new BlockPos(4, 0, 1), LivingMachines.BALL_MILL.get().defaultBlockState());
+        helper.setBlock(new BlockPos(5, 0, 1), LivingMachines.ITEM_OUTPUT.get().defaultBlockState());
+        MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
+        port.setInputPower(1.0F);
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
+        input.getInventory().setItem(0, new net.minecraft.world.item.ItemStack(com.neep.neepmeat.item.MaterialItems.CRUSHED_ORE.get()));
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        for (int i = 0; i < 30; i++) {
+            controller.serverTick();
+        }
+        helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.BallMillProcess, "process");
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
+        boolean dust = false;
+        for (int slot = 0; slot < output.getInventory().getContainerSize(); slot++) {
+            if (output.getInventory().getItem(slot).is(com.neep.neepmeat.item.MaterialItems.ORE_DUST.get())) {
+                dust = true;
+            }
+        }
+        helper.assertTrue(dust, "ore dust missing");
         helper.succeed();
     }
 
