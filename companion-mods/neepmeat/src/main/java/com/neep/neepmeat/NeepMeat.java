@@ -53,6 +53,7 @@ public final class NeepMeat {
         com.neep.neepmeat.recipe.NeepComponents.COMPONENTS.register(bus);
         MaterialItems.register(bus);
         BloodFluids.register(bus);
+        com.neep.neepmeat.fluid.EtherealFuel.register(bus);
         com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();
         BLOCKS.register(bus);
         ITEMS.register(bus);

@@ -131,7 +131,13 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | enlightened_brain | ported | Food: 6 hunger, 0.6 saturation, Night Vision for 30 seconds. The shaped control-unit recipe uses it. The `neepmeat:enlightening` recipe type is not registered. |
 | JEI and EMI | ported | Both show the manufacture category with the builder as the workstation. |
 
-The motor still uses a constant power output. `BuilderRobot` and the full PLC shell are not replaced yet. Living machines and the meatgun are still out.
+## Fuel motor, jar 0.30.0-neoforge.13
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.13` and passed all 33 tests.
+
+The motor burns ethereal fuel. Upstream stores two energy units per Fabric droplet. A millibucket is 81 droplets, so the registry stores 162 energy per millibucket. Each tick asks for 400 absolute units, drains 2 millibuckets, and gets 324 back, which is 0.324 per unit. Rotor speed is that power in watts divided by the load torque of 300. An empty motor supplies nothing. The tank holds 8000 millibuckets so a bucket fits. Upstream's buffer was 200 droplets.
+
+`BuilderRobot` and the full PLC shell are not replaced yet. Living machines and the meatgun are still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

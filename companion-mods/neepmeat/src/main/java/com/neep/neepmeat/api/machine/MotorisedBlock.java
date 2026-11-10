@@ -18,6 +18,10 @@ public interface MotorisedBlock {
 
     default void onMotorRemoved() {}
 
+    default float getLoadTorque() {
+        return com.neep.neepmeat.api.PowerUtil.MOTOR_TORQUE_LOSS;
+    }
+
     interface DiagnosticsProvider {
         Diagnostics getDiagnostics();
     }

@@ -208,7 +208,13 @@ public class PlcOpcodeGameTests {
         com.neep.neepmeat.machine.motor.MotorBlockEntity motor = helper.getBlockEntity(new BlockPos(1, 0, 2));
         motor.serverTick();
         RoboticArmBlockEntity arm = helper.getBlockEntity(new BlockPos(1, 0, 1));
-        helper.assertTrue(arm.power() == com.neep.neepmeat.machine.motor.MotorBlockEntity.OUTPUT, "arm power " + arm.power());
+        helper.assertTrue(arm.power() == 0, "empty motor powered the arm");
+        motor.tank().fill(new net.neoforged.neoforge.fluids.FluidStack(com.neep.neepmeat.fluid.EtherealFuel.STILL.get(), 500),
+                net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction.EXECUTE);
+        motor.serverTick();
+        // 400 absolute / 162 energy per millibucket burns 2 mB and returns 324, which is 0.324 per unit.
+        helper.assertTrue(Math.abs(arm.power() - 0.324f) < 0.001f, "fuel curve " + arm.power());
+        helper.assertTrue(motor.tank().getFluidAmount() == 498, "fuel left " + motor.tank().getFluidAmount());
         helper.succeed();
     }
 

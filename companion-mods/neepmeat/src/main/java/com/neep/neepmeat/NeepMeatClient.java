@@ -65,6 +65,22 @@ public final class NeepMeatClient {
                 return 0xFF5A0A14;
             }
         }, BloodFluids.BLOOD_TYPE.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public ResourceLocation getStillTexture() {
+                return ResourceLocation.withDefaultNamespace("block/water_still");
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return ResourceLocation.withDefaultNamespace("block/water_flow");
+            }
+
+            @Override
+            public int getTintColor() {
+                return 0xFF7EE0FF;
+            }
+        }, com.neep.neepmeat.fluid.EtherealFuel.TYPE.get());
     }
 
     public static void onScreens(RegisterMenuScreensEvent event) {

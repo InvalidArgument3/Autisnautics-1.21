@@ -208,6 +208,7 @@ public final class NeepMachines {
     private static void capabilities(RegisterCapabilitiesEvent event) {
         MeatlibCapabilities.itemHandler(event, ALLOY_KILN_BE.get(), (kiln, side) -> new net.neoforged.neoforge.items.wrapper.InvWrapper(kiln));
         MeatlibCapabilities.fluidHandler(event, FLUID_TANK_BE.get(), (tank, side) -> tank.tank());
+        MeatlibCapabilities.fluidHandler(event, MOTOR_BE.get(), (motor, side) -> motor.tank());
         event.registerBlockEntity(net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, ITEM_REQUESTER_BE.get(), (requester, side) -> requester);
         event.registerBlockEntity(net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, NETWORK_CRAFTER_BE.get(), (crafter, side) -> crafter);
     }
