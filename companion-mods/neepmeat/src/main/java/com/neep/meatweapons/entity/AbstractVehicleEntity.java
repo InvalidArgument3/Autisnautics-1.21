@@ -112,7 +112,7 @@ extends Entity {
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
-        this.builder.define(ROLL, 0f);
+        builder.define(ROLL, 0f);
     }
 
     @Override

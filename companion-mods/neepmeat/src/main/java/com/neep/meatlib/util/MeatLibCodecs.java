@@ -31,10 +31,10 @@ import net.minecraft.world.level.material.Fluids;
 public class MeatLibCodecs
 {
     public static final Codec<Item> CHECKED_ITEM = ResourceLocation.CODEC.comapFlatMap(
-            checkDefault(ResourceLocation.fromNamespaceAndPath("air"), Items.AIR, BuiltInRegistries.ITEM), BuiltInRegistries.ITEM::getKey);
+            checkDefault(ResourceLocation.fromNamespaceAndPath("minecraft", "air"), Items.AIR, BuiltInRegistries.ITEM), BuiltInRegistries.ITEM::getKey);
 
     public static final Codec<Fluid> CHECKED_FLUID = ResourceLocation.CODEC.comapFlatMap(
-            checkDefault(ResourceLocation.fromNamespaceAndPath("empty"), Fluids.EMPTY, BuiltInRegistries.FLUID), BuiltInRegistries.FLUID::getKey);
+            checkDefault(ResourceLocation.fromNamespaceAndPath("minecraft", "empty"), Fluids.EMPTY, BuiltInRegistries.FLUID), BuiltInRegistries.FLUID::getKey);
 
     // NbtCompound.CODEC causes information loss when writing to JSON. All numbers (shorts, ints, bytes) are converted to the JSON number type.
     // Reading the result discards the type of the tags.

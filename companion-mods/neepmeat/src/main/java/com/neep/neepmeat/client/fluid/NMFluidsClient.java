@@ -81,7 +81,7 @@ public class NMFluidsClient
         ));
 
         registerFluidHandler(NMFluids.PATINA_TREATMENT, new SimpleFluidRenderHandler(
-                ResourceLocation.fromNamespaceAndPath("minecraft:block/water_still"), ResourceLocation.parse("minecraft:block/water_flow"),
+                ResourceLocation.parse("minecraft:block/water_still"), ResourceLocation.parse("minecraft:block/water_flow"),
                 0x4db99a
         ));
 

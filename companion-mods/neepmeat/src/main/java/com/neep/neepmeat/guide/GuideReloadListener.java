@@ -236,7 +236,7 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
                 GsonHelper.getAsJsonArray(object, "entries").forEach(o -> nodes.add(processNode((JsonObject) o)));
             }
 
-            var menu = new GuideNode.MenuNode(id, ResourceLocation.fromNamespaceAndPath(icon), Component.nullToEmpty(text).copy().setStyle(Style.EMPTY.withFont(GuideCols.FONT)), nodes);
+            var menu = new GuideNode.MenuNode(id, ResourceLocation.parse(icon), Component.nullToEmpty(text).copy().setStyle(Style.EMPTY.withFont(GuideCols.FONT)), nodes);
             menuNodes.put(id, menu);
             return menu;
         }
@@ -256,7 +256,7 @@ public class GuideReloadListener implements SimpleSynchronousResourceReloadListe
             lookupItems.add(l);
         }
 
-        GuideNode.ArticleNode node = new GuideNode.ArticleNode(id, lookup, ResourceLocation.fromNamespaceAndPath(icon), Component.nullToEmpty(text).copy().setStyle(Style.EMPTY.withFont(GuideCols.FONT)));
+        GuideNode.ArticleNode node = new GuideNode.ArticleNode(id, lookup, ResourceLocation.parse(icon), Component.nullToEmpty(text).copy().setStyle(Style.EMPTY.withFont(GuideCols.FONT)));
         articleNodes.put(id, node);
         return node;
     }

@@ -85,7 +85,7 @@ public interface Article
                 float scale = 0.5f;
                 if (GsonHelper.isNumberValue(object, "scale"))
                     scale = GsonHelper.getAsFloat(object, "scale");
-                ResourceLocation image = ResourceLocation.fromNamespaceAndPath(GsonHelper.getAsString(object, "path"));
+                ResourceLocation image = ResourceLocation.parse(GsonHelper.getAsString(object, "path"));
                 return new ImageContent(width, height, scale, image);
             });
 

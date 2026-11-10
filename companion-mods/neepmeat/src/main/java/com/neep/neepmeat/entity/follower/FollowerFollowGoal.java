@@ -21,7 +21,7 @@ import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.pathfinder.PathType;
 
 public class FollowerFollowGoal extends Goal
 {
@@ -69,8 +69,8 @@ public class FollowerFollowGoal extends Goal
     public void start()
     {
         this.updateCountdownTicks = 0;
-        this.oldWaterPathFindingPenalty = this.mob.getPathfindingMalus(BlockPathTypes.WATER);
-        this.mob.setPathfindingMalus(BlockPathTypes.WATER, 0.0F);
+        this.oldWaterPathFindingPenalty = this.mob.getPathfindingMalus(PathType.WATER);
+        this.mob.setPathfindingMalus(PathType.WATER, 0.0F);
     }
 
     @Override
@@ -78,7 +78,7 @@ public class FollowerFollowGoal extends Goal
     {
         this.target = null;
         this.navigation.stop();
-        this.mob.setPathfindingMalus(BlockPathTypes.WATER, this.oldWaterPathFindingPenalty);
+        this.mob.setPathfindingMalus(PathType.WATER, this.oldWaterPathFindingPenalty);
     }
 
     @Override

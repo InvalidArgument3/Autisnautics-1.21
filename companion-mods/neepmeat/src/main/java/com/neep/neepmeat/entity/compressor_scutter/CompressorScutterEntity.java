@@ -58,7 +58,7 @@ public class CompressorScutterEntity extends ScutterEntity implements FollowingS
     {
         super.defineSynchedData(builder);
         builder.define(LIT, false);
-        this.builder.define(OWNER_UUID, Optional.empty());
+        builder.define(OWNER_UUID, Optional.empty());
     }
 
     private void updateBlockState(boolean b)

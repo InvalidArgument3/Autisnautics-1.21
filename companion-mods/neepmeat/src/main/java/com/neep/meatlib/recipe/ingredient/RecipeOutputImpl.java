@@ -111,7 +111,7 @@ public class RecipeOutputImpl<T> implements RecipeOutput<T>
     {
         if (json.has("type"))
         {
-            ResourceLocation typeId = ResourceLocation.fromNamespaceAndPath(GsonHelper.getAsString(json, "type"));
+            ResourceLocation typeId = ResourceLocation.parse(GsonHelper.getAsString(json, "type"));
             IngredientType<R> type = (IngredientType<R>) IngredientType.ALL_TYPES.get(typeId);
 
             return fromJson(type, json);

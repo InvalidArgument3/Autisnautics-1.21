@@ -54,24 +54,29 @@ public final class NeepRecipes {
             () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "fat_trommel")));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<com.neep.neepmeat.recipe.NormalTrommelRecipe>> FAT_TROMMEL_SERIALIZER =
             SERIALIZERS.register("fat_trommel", () -> new RecipeSerializer<>() {
-                private com.neep.neepmeat.recipe.NormalTrommelRecipe shared;
+                private com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> map;
+                private net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, com.neep.neepmeat.recipe.NormalTrommelRecipe> stream;
 
-                private com.neep.neepmeat.recipe.NormalTrommelRecipe shared() {
-                    if (shared == null) {
-                        com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f, java.util.Optional.empty());
-                        shared = new com.neep.neepmeat.recipe.NormalTrommelRecipe(none, none, null, FAT_TROMMEL.get(), this);
+                private void init() {
+                    if (map != null) {
+                        return;
                     }
-                    return shared;
+                    com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f, java.util.Optional.empty());
+                    com.neep.neepmeat.recipe.NormalTrommelRecipe shared = new com.neep.neepmeat.recipe.NormalTrommelRecipe(none, none, null, FAT_TROMMEL.get(), this);
+                    map = com.mojang.serialization.MapCodec.unit(shared);
+                    stream = net.minecraft.network.codec.StreamCodec.unit(shared);
                 }
 
                 @Override
                 public com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> codec() {
-                    return com.mojang.serialization.MapCodec.unit(shared());
+                    init();
+                    return map;
                 }
 
                 @Override
                 public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, com.neep.neepmeat.recipe.NormalTrommelRecipe> streamCodec() {
-                    return net.minecraft.network.codec.StreamCodec.unit(shared());
+                    init();
+                    return stream;
                 }
             });
 
@@ -89,42 +94,69 @@ public final class NeepRecipes {
 
     private static RecipeSerializer<CrushingRecipe> crushingSerializer(DeferredHolder<RecipeType<?>, RecipeType<CrushingRecipe>> type, int time) {
         return new RecipeSerializer<>() {
+            private com.mojang.serialization.MapCodec<CrushingRecipe> map;
+            private net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, CrushingRecipe> stream;
+
             @Override
             public com.mojang.serialization.MapCodec<CrushingRecipe> codec() {
-                return CrushingRecipe.codec(type.get(), this, time);
+                if (map == null) {
+                    map = CrushingRecipe.codec(type.get(), this, time);
+                }
+                return map;
             }
 
             @Override
             public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, CrushingRecipe> streamCodec() {
-                return CrushingRecipe.streamCodec(type.get(), this);
+                if (stream == null) {
+                    stream = CrushingRecipe.streamCodec(type.get(), this);
+                }
+                return stream;
             }
         };
     }
 
     private static RecipeSerializer<com.neep.neepmeat.recipe.NormalTrommelRecipe> trommelSerializer(DeferredHolder<RecipeType<?>, RecipeType<com.neep.neepmeat.recipe.NormalTrommelRecipe>> type) {
         return new RecipeSerializer<>() {
+            private com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> map;
+            private net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, com.neep.neepmeat.recipe.NormalTrommelRecipe> stream;
+
             @Override
             public com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> codec() {
-                return com.neep.neepmeat.recipe.NormalTrommelRecipe.codec(type.get(), this);
+                if (map == null) {
+                    map = com.neep.neepmeat.recipe.NormalTrommelRecipe.codec(type.get(), this);
+                }
+                return map;
             }
 
             @Override
             public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, com.neep.neepmeat.recipe.NormalTrommelRecipe> streamCodec() {
-                return com.neep.neepmeat.recipe.NormalTrommelRecipe.streamCodec(type.get(), this);
+                if (stream == null) {
+                    stream = com.neep.neepmeat.recipe.NormalTrommelRecipe.streamCodec(type.get(), this);
+                }
+                return stream;
             }
         };
     }
 
     private static RecipeSerializer<BallMillRecipe> ballMillSerializer(DeferredHolder<RecipeType<?>, RecipeType<BallMillRecipe>> type) {
         return new RecipeSerializer<>() {
+            private com.mojang.serialization.MapCodec<BallMillRecipe> map;
+            private net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, BallMillRecipe> stream;
+
             @Override
             public com.mojang.serialization.MapCodec<BallMillRecipe> codec() {
-                return BallMillRecipe.codec(type.get(), this);
+                if (map == null) {
+                    map = BallMillRecipe.codec(type.get(), this);
+                }
+                return map;
             }
 
             @Override
             public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, BallMillRecipe> streamCodec() {
-                return BallMillRecipe.streamCodec(type.get(), this);
+                if (stream == null) {
+                    stream = BallMillRecipe.streamCodec(type.get(), this);
+                }
+                return stream;
             }
         };
     }

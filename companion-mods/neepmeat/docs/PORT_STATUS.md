@@ -1,3 +1,19 @@
+## Three-minute smoke and static recipe codecs, jar 0.30.0-neoforge.69
+
+Combined-tree errors **2038 → 1982**. That is 56, not 400. The PLC closure is **163**. `exclude.txt` is **1274**.
+
+`tools/smoke/client_world.sh` waits three minutes after `logged in with entity id`. It fails if a line after the join is an ERROR or an exception whose logger or stack is `neepmeat` or `meatlib`. OpenAL and vanilla missing-subtitle lines are not those loggers.
+
+Recipe serializers that built a codec inside `codec()` or `streamCodec()` now keep one instance. Fat trommel builds `MapCodec.unit` and `StreamCodec.unit` once, on the same recipe object. Grinding, advanced crushing, trommel, and ball mill do the same for their composite codecs. Muzzle-flash, pressure-wash, and registry particle types cache the stream codec on the particle type. Alloy, bioreactor, enlightening, and manufacture codecs were already static fields. Block `MapCodec.unit(this)` stays, because `this` is the one block instance.
+
+`MeatRecipeSerialiser` now has one default `streamCodec()`. It writes `getId()` and then the 1.20 `write` payload, and reads them back through `fromNetwork`. The interface is still excluded, so this codec is not in the jar.
+
+`RoutingNetwork.Entry` is the upstream record. Its param codec writes the item id and not the component patch. `PLCBlockEntity.actionBlocksController()` returns false: the ported block entity does not store the running action, so it cannot yet report that an action blocks the controller. `overrideController()` reads the field, which nothing in the running jar sets. `SurgicalRobot` stores a `ResourceAmount` and crosses `PLCActuator` as an `ItemStack`. Entity data builders use the `SynchedEntityData.Builder` argument. Pathfinding uses `PathType`. One-argument recipe and guide ids use `ResourceLocation.parse`.
+
+Including `ProgramEditor`, `LanguageMode`, and `ThordCompilePipeline` failed: the editor calls excluded `PLCSyncAction`, and the Thord pipeline calls the excluded parser. A second pass left them excluded. The Thord sources are clean except `ThordLexer`, which needed `StringTokenView.mark()`. Pulling that tree in does not remove the recipe-bound errors that still dominate the count. `ItemTransport` itself has two errors; the block classes it constructs are still excluded and still broken.
+
+Opcodes still ending immediately: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM.
+
 ## World-join smoke, jar 0.30.0-neoforge.68
 
 Combined-tree errors stay **2038**. This run did not take 400 off that count. The PLC closure is **164**. `exclude.txt` is **1274**.

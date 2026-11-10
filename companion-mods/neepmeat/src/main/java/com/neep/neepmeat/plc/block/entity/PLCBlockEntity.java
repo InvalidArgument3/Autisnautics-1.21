@@ -44,7 +44,18 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
     private boolean running;
     private @Nullable InstructionPlc machine;
 
+    private boolean overrideController;
+
     private final SurgeryController surgeryRobot = new SurgeryController();
+
+    /** Upstream reads the running action. This block entity does not store that action yet. */
+    public boolean actionBlocksController() {
+        return false;
+    }
+
+    public boolean overrideController() {
+        return overrideController;
+    }
 
     public SurgeryController getSurgeryRobot() {
         return surgeryRobot;

@@ -60,7 +60,7 @@ public class FusionBlastEntity extends AbstractArrow
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
         super.defineSynchedData(builder);
-        this.builder.define(POWER, power);
+        builder.define(POWER, power);
     }
 
     @Override

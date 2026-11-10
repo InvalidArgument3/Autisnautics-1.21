@@ -17,6 +17,8 @@ import com.google.gson.JsonParseException;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.JsonOps;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
@@ -36,6 +38,20 @@ public interface MeatRecipeSerialiser<T extends MeatlibRecipe<?>> extends Recipe
     T fromNetwork(ResourceLocation id, FriendlyByteBuf buf);
 
     void write(FriendlyByteBuf buf, T recipe);
+
+    /**
+     * One codec per serializer. The 1.20 helpers still take the recipe id, so the
+     * id is written at the front of this payload and read back into {@link #fromNetwork}.
+     */
+    @Override
+    default StreamCodec<RegistryFriendlyByteBuf, T> streamCodec() {
+        return StreamCodec.of(
+                (buf, recipe) -> {
+                    buf.writeResourceLocation(recipe.getId());
+                    write(buf, recipe);
+                },
+                buf -> fromNetwork(buf.readResourceLocation(), buf));
+    }
 
     // For sooth(ish) transitions between 1.21 and 1.20
     // The ID parameter is removed past 1.21

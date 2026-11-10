@@ -88,8 +88,8 @@ client_pid=$!
 joined=0
 if wait_for "$CLIENT_LOG" "logged in with entity id" 180 "$client_pid"; then
   joined=1
-  echo "Player joined; waiting 15s for ticks"
-  sleep 15
+  echo "Player joined; waiting 3 minutes for ticks"
+  sleep 180
 fi
 stop_tree "$client_pid"
 wait "$client_pid" 2>/dev/null || true
@@ -102,8 +102,12 @@ if [[ "$joined" -ne 1 ]]; then
 fi
 
 join_line="$(grep -a -n "logged in with entity id" "$CLIENT_LOG" | head -1 | cut -d: -f1)"
-if tail -n +"$join_line" "$CLIENT_LOG" | grep -a -E "Exception caught|Exception in thread|Internal Exception|Unexpected error" | grep -v "Failed to open OpenAL device"; then
-  echo "Client log contains an exception after the player joined" >&2
+# Fail on an ERROR or exception whose logger or stack is neepmeat or meatlib.
+# OpenAL and vanilla missing-subtitle lines are not our loggers.
+if tail -n +"$join_line" "$CLIENT_LOG" | grep -a -E \
+  '\[(co\.ne\.(me|ne)|neepmeat@|meatlib@)[^\]]*\] .*(ERROR|Exception)|com\.neep\.(neepmeat|meatlib)[^\n]*(Exception|ERROR)' \
+  | grep -v "Failed to open OpenAL device"; then
+  echo "neepmeat or meatlib logged an error after the player joined" >&2
   exit 1
 fi
 

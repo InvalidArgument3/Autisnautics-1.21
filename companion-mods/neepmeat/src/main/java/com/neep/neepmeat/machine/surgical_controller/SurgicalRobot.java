@@ -372,26 +372,32 @@ public class SurgicalRobot implements PLCRobot, NbtSerialisable
         this.yaw = yaw;
     }
 
-    public void spawnItem(@Nullable ResourceAmount<ItemVariant> stored)
+    @Override
+    public void spawnItem(@Nullable net.minecraft.world.item.ItemStack stack)
     {
-        if (stored == null)
+        if (stack == null || stack.isEmpty())
             return;
-        Containers.dropItemStack(parent.getLevel(), x, y, z, stored.resource().toStack((int) stored.amount()));
+        Containers.dropItemStack(parent.getLevel(), x, y, z, stack.copy());
     }
 
     public void dumpStored(PLC plc)
     {
         if (stored != null)
         {
-            spawnItem(stored);
+            spawnItem(getStored(plc));
             stored = null;
         }
     }
 
     @Override
-    public void setStored(PLC plc, @Nullable ResourceAmount<ItemVariant> stored)
+    public void setStored(PLC plc, net.minecraft.world.item.ItemStack stack)
     {
-        this.stored = stored;
+        if (stack == null || stack.isEmpty())
+        {
+            this.stored = null;
+            return;
+        }
+        this.stored = new ResourceAmount<>(ItemVariant.of(stack), stack.getCount());
     }
 
     @Override
@@ -401,9 +407,11 @@ public class SurgicalRobot implements PLCRobot, NbtSerialisable
     }
 
     @Override
-    public @Nullable ResourceAmount<ItemVariant> getStored(PLC plc)
+    public @Nullable net.minecraft.world.item.ItemStack getStored(PLC plc)
     {
-        return stored;
+        if (stored == null)
+            return null;
+        return stored.resource().toStack((int) stored.amount());
     }
 
     public void syncPosition(ServerLevel serverWorld)

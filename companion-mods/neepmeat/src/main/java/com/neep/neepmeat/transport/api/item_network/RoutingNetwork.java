@@ -27,7 +27,10 @@ import com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEnti
 import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity;
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
+import com.neep.meatlib.api.network.ParamCodec;
+import com.neep.meatlib.api.network.RecordParamCodec;
 import com.neep.meatlib.transfer.ItemVariant;
+import com.neep.meatlib.transfer.ResourceAmount;
 import com.neep.neepmeat.transport.api.item_network.Craftable;
 import com.neep.neepmeat.transport.api.item_network.RoutablePipe;
 import com.neep.neepmeat.NeepMeat;
@@ -374,6 +377,23 @@ public interface RoutingNetwork {
         @Override
         public int hashCode() {
             return Objects.hash(sourcePos, requesterPos, requesterFace, itemVariant, requested);
+        }
+    }
+
+    record Entry(ItemVariant resource, long amount, boolean craftable, boolean real) {
+        public static final ParamCodec<Entry> PARAM_CODEC = RecordParamCodec.builder(Entry.class)
+                .param(ParamCodec.of(ItemVariant.class, (value, buf) -> buf.writeNbt(value.toNbt()), buf -> ItemVariant.fromNbt(buf.readNbt())))
+                .param(ParamCodec.LONG)
+                .param(ParamCodec.BOOLEAN)
+                .param(ParamCodec.BOOLEAN)
+                .build();
+
+        public Entry(Craftable craftable) {
+            this(craftable.result().resource(), craftable.result().amount(), true, false);
+        }
+
+        public Entry(ResourceAmount<ItemVariant> amount) {
+            this(amount.resource(), amount.amount(), false, true);
         }
     }
 }

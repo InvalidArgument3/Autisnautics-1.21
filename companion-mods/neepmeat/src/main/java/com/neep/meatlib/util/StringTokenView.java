@@ -218,9 +218,14 @@ public class StringTokenView extends TokenView
     }
 
 
-    public Mark markPosition()
+    public Mark mark()
     {
         return new Mark(offset, currentLine);
+    }
+
+    public Mark markPosition()
+    {
+        return mark();
     }
 
     public static boolean isDigit(char c)

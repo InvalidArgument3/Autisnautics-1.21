@@ -57,6 +57,7 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
     }
 
     private final MapCodec<MuzzleFlashParticleEffect> codec;
+    private StreamCodec<? super RegistryFriendlyByteBuf, MuzzleFlashParticleEffect> network;
 
     protected MuzzleFlashParticleType(boolean alwaysShow, Codec<MuzzleFlashParticleEffect> codec)
     {
@@ -73,7 +74,8 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
     @Override
     public StreamCodec<? super RegistryFriendlyByteBuf, MuzzleFlashParticleEffect> streamCodec()
     {
-        return StreamCodec.of(
+        if (network == null) {
+            network = StreamCodec.of(
                 (buf, effect) -> {
                     buf.writeUUID(effect.playerUUID);
                     buf.writeDouble(effect.dx);
@@ -84,6 +86,8 @@ public class MuzzleFlashParticleType extends ParticleType<MuzzleFlashParticleTyp
                     buf.writeEnum(effect.hand);
                 },
                 buf -> new MuzzleFlashParticleEffect(this, buf.readUUID(), buf.readDouble(), buf.readDouble(), buf.readDouble(), buf.readFloat(), buf.readInt(), buf.readEnum(InteractionHand.class)));
+        }
+        return network;
     }
 
     public static class MuzzleFlashParticleEffect implements ParticleOptions

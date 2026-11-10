@@ -31,6 +31,7 @@ import net.minecraft.world.level.material.Fluids;
 public class PressureWashParticleType extends ParticleType<PressureWashParticleType.Parameters>
 {
     private final MapCodec<Parameters> codec;
+    private StreamCodec<? super RegistryFriendlyByteBuf, Parameters> network;
 
     public static MapCodec<Parameters> createMapCodec(PressureWashParticleType type)
     {
@@ -63,13 +64,16 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
     @Override
     public StreamCodec<? super RegistryFriendlyByteBuf, Parameters> streamCodec()
     {
-        return StreamCodec.of(
+        if (network == null) {
+            network = StreamCodec.of(
                 (buf, value) -> {
                     buf.writeFloat(value.gravity());
                     buf.writeInt(value.col());
                     buf.writeById(BuiltInRegistries.FLUID::getId, value.fluid());
                 },
                 buf -> new Parameters(this, buf.readFloat(), buf.readInt(), buf.readById(BuiltInRegistries.FLUID::byId)));
+        }
+        return network;
     }
 
     public record Parameters(PressureWashParticleType type, float gravity, int col, Fluid fluid) implements ParticleOptions

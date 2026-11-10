@@ -97,7 +97,7 @@ public class RegistryRecipeInput<R> implements RecipeInput<R, StorageView<? exte
         Serialiser<?, ?, ?> serialiser;
         if (json.has("type"))
         {
-            type = ResourceLocation.fromNamespaceAndPath(GsonHelper.getAsString(json, "type"));
+            type = ResourceLocation.parse(GsonHelper.getAsString(json, "type"));
             serialiser = RecipeInputs.SERIALISERS.get(type);
         }
         else

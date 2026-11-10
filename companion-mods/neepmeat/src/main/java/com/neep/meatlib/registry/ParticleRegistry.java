@@ -42,16 +42,25 @@ public class ParticleRegistry
     {
         return Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new ParticleType<T>(false)
         {
+            private MapCodec<T> map;
+            private StreamCodec<? super RegistryFriendlyByteBuf, T> network;
+
             @Override
             public MapCodec<T> codec()
             {
-                return codec.apply(this);
+                if (map == null) {
+                    map = codec.apply(this);
+                }
+                return map;
             }
 
             @Override
             public StreamCodec<? super RegistryFriendlyByteBuf, T> streamCodec()
             {
-                return stream.apply(this);
+                if (network == null) {
+                    network = stream.apply(this);
+                }
+                return network;
             }
         });
     }
