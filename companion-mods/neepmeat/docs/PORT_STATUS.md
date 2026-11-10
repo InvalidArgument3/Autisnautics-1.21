@@ -42,6 +42,21 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## This run: requests finished, kiln screen, basic tank, blood
+
+Jar still `0.30.0-neoforge.6` plus the commits after that version string. The game-test server that included blood reported 22 passing tests.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Crafting requests | ported | A network crafter whose result is missing from storage pulls each ingredient with a nested request. Depth stops at 30, matching `RoutingNetworkImpl`. |
+| Deferred callbacks | ported | The driver keeps the request. SUCCESS when the destination holds the stack, PASS while a pipe is carrying it, FAIL after the wait with nothing moving. |
+| Kiln screen | ported | `GUIUtil.drawTexture` blits `textures/gui/alloy_kiln.png`, including the burn flame and the progress arrow. The rest of the 66-file widget kit is not ported. |
+| Basic tank | ported | `basic_tank`, upstream model, axis, 8-bucket (8000 mB) capacity, bucket click. The older `fluid_tank` cube remains for the earlier pipe tests. |
+| Blood | ported | Source, flowing fluid, liquid block, bucket. It does not make itself from flowing fluid, and it ticks every 5 ticks. Tag `neepmeat:blood`. The basic tank holds it. The blood network, vascular conduits, and the integrator's blood check are not ported. |
+| Remaining machines | missing | Blocked on the size of the machine tree (living machines alone are 69 classes) and Fabric transfer, screens, and world lookups those classes call. |
+| PLC, robot arm, executor, assembler | missing | Blocked. The instruction package is 4,853 lines. `Instruction.start` takes the NEEPASM `VM`, and most opcodes read the world or the robot arm. The parser also depends on that instruction registry. Porting them as Yarn sources does not compile. |
+| Weapons and entities | missing | Blocked on the same world and GeckoLib entity classes (meatgun, implants, mobs). |
+
 ## Phase 2b continued: requests, priority routes, filter screen, pump buffer
 
 Jar `0.30.0-neoforge.6`.
@@ -191,16 +206,16 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.6`:
+`./gradlew runGameTestServer` on JDK 21, after the blood fluid:
 
 ```
 meatlib 0.30.0-neoforge.6 loaded
 NeepMeat 0.30.0-neoforge.6 loaded with GeckoLib 4.9.3
-All 19 required tests passed :)
+All 22 required tests passed :)
 BUILD SUCCESSFUL
 ```
 
-The nineteen tests add a requester pulling dirt through a storage bus, the priority route preferring a filter pipe, tag and inverted filter entries, and an idle pump that fills its buffer only after the mode toggle.
+The twenty-two tests add crafting recursion (cobble becomes stone and arrives at the requester), recursion that stops at depth 30, and a basic tank holding 1000 mB of blood. The version string was still `0.30.0-neoforge.6` for that run.
 
 `./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. After `pipe_sides` was dropped from the fluid-pipe blockstate, the only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. The main menu was not clicked through. A dedicated server boot was not repeated on this jar; the game-test server is the dedicated boot that ran the tests.
 
