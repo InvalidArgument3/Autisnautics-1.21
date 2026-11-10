@@ -77,7 +77,18 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | Recipe | missing | The craft needs `contractile_actuator` and `control_unit`, which are not items yet. |
 | Game test | ported | An unpowered arm refuses a target. A powered arm moves toward one. The held cobblestone survives save and load. 23 tests passed on `0.30.0-neoforge.8`. |
 
-NEEPASM, the PLC, living machines, and the meatgun are still the next batches. The scratch rewrite is the source for those.
+## NEEPASM
+
+| System | State | Notes |
+| --- | --- | --- |
+| Data types | ported | `DataVariant`, `Argument`, `MemoryEntry`, `MemoryType`, `ThordData`, and `WorldTargetImpl`. Fabric `PlayerLookup` in `PLC.say` is a nearby-player scan on the server level. |
+| VM and stack | ported | `VM`, `DataStack`, and `VariableStack`. A direct stepper in the game test runs a compiled program. The processor block's own loop arrives with the PLC. |
+| Parser and compiler | ported | `NeepAsmParser`, `NeepAsmPLCCompiler`, and `PLCProgramImpl`. |
+| Instruction registry | partial | Stack, arithmetic, comparison, call, return, and jumps (`push`, `add`, `jmp`, `bit`, `bif`, and the rest of that group). Item, fluid, redstone, block, and memory opcodes are not registered yet. `takeItem` and `takeFluid` still use Fabric transfer and move to NeoForge handlers with those opcodes. |
+| Held stacks | ported shape | `PlcInstruction.writeItem` and `writeFluid` store an item id and count, or a fluid id and amount. That replaces `ResourceAmount<ItemVariant>`. |
+| Game test | ported | `push 2` / `push 3` / `add` compiles and leaves 5 on the stack. 24 tests passed on `0.30.0-neoforge.8`. |
+
+The PLC block, executor, assembler, living machines, and the meatgun are still the next batches.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 
