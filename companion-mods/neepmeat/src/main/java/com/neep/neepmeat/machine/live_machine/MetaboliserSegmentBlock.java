@@ -28,7 +28,19 @@ public class MetaboliserSegmentBlock extends BigBlock2 {
             .enableApi(1, 0, 0, BLOOD_API)
             .enableApi(0, 0, -1, BLOOD_API)
             .enableApi(0, 0, 1, BLOOD_API);
+    private static final BigBlockPattern X_PATTERN = BigBlockPattern.makeRange(0, -1, -1, 0, 1, 1, Blocks.AIR.defaultBlockState())
+            .enableApi(0, -1, 0, BLOOD_API)
+            .enableApi(0, 1, 0, BLOOD_API)
+            .enableApi(0, 0, -1, BLOOD_API)
+            .enableApi(0, 0, 1, BLOOD_API);
+    private static final BigBlockPattern Z_PATTERN = BigBlockPattern.makeRange(-1, -1, 0, 1, 1, 0, Blocks.AIR.defaultBlockState())
+            .enableApi(-1, 0, 0, BLOOD_API)
+            .enableApi(1, 0, 0, BLOOD_API)
+            .enableApi(0, -1, 0, BLOOD_API)
+            .enableApi(0, 1, 0, BLOOD_API);
     private static final Map<Integer, Vec3i> Y_OFFSETS = Y_PATTERN.encode();
+    private static final Map<Integer, Vec3i> X_OFFSETS = X_PATTERN.encode();
+    private static final Map<Integer, Vec3i> Z_OFFSETS = Z_PATTERN.encode();
     public static final MapCodec<MetaboliserSegmentBlock> CODEC = simpleCodec(properties -> new MetaboliserSegmentBlock());
 
     public MetaboliserSegmentBlock() {
@@ -37,12 +49,20 @@ public class MetaboliserSegmentBlock extends BigBlock2 {
 
     @Override
     public BigBlockPattern volume(BlockState state) {
-        return Y_PATTERN;
+        return switch (state.getValue(AXIS)) {
+            case X -> X_PATTERN;
+            case Z -> Z_PATTERN;
+            case Y -> Y_PATTERN;
+        };
     }
 
     @Override
     public Map<Integer, Vec3i> offsets(BlockState state) {
-        return Y_OFFSETS;
+        return switch (state.getValue(AXIS)) {
+            case X -> X_OFFSETS;
+            case Z -> Z_OFFSETS;
+            case Y -> Y_OFFSETS;
+        };
     }
 
     @Override

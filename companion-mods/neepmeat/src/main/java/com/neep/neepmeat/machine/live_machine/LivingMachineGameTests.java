@@ -9,6 +9,7 @@
 package com.neep.neepmeat.machine.live_machine;
 
 import com.neep.neepmeat.NeepMeat;
+import com.neep.neepmeat.api.big_block_2.BigBlock2;
 import com.neep.neepmeat.api.live_machine.StructureProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
@@ -87,6 +88,16 @@ public class LivingMachineGameTests {
         helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.dropletsToMillibuckets(200) == 2, "millibuckets");
         helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.leftoverDroplets(200) == 38, "remainder");
         helper.assertTrue(com.neep.neepmeat.transfer.TransferAmounts.millibucketsToDroplets(2) == 162, "back to droplets");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void metaboliserOnItsSideUsesTheXVolume(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(4, 2, 4);
+        helper.setBlock(origin, LiveMachines.METABOLISER.get().defaultBlockState().setValue(BigBlock2.AXIS, net.minecraft.core.Direction.Axis.X));
+        helper.assertTrue(helper.getBlockState(origin).getValue(BigBlock2.AXIS) == net.minecraft.core.Direction.Axis.X, "axis");
+        helper.assertTrue(helper.getBlockState(origin.below()).is(LiveMachines.METABOLISER_STRUCTURE.get()), "x slab missing below");
+        helper.assertTrue(helper.getBlockState(origin.east()).isAir(), "x slab reached east");
         helper.succeed();
     }
 }

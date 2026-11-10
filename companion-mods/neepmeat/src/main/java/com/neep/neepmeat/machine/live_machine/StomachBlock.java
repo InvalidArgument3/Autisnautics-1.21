@@ -26,7 +26,11 @@ import java.util.Map;
 
 public class StomachBlock extends BigBlock2 {
     private static final BigBlockPattern Y_PATTERN = BigBlockPattern.makeOddCylinder(1, -1, 1, Blocks.AIR.defaultBlockState());
+    private static final BigBlockPattern X_PATTERN = BigBlockPattern.makeRange(-1, -1, -1, 1, 1, 1, Blocks.AIR.defaultBlockState());
+    private static final BigBlockPattern Z_PATTERN = BigBlockPattern.makeRange(-1, -1, -1, 1, 1, 1, Blocks.AIR.defaultBlockState());
     private static final Map<Integer, Vec3i> Y_OFFSETS = Y_PATTERN.encode();
+    private static final Map<Integer, Vec3i> X_OFFSETS = X_PATTERN.encode();
+    private static final Map<Integer, Vec3i> Z_OFFSETS = Z_PATTERN.encode();
     public static final MapCodec<StomachBlock> CODEC = simpleCodec(properties -> new StomachBlock());
 
     public StomachBlock() {
@@ -35,12 +39,20 @@ public class StomachBlock extends BigBlock2 {
 
     @Override
     public BigBlockPattern volume(BlockState state) {
-        return Y_PATTERN;
+        return switch (state.getValue(AXIS)) {
+            case X -> X_PATTERN;
+            case Z -> Z_PATTERN;
+            case Y -> Y_PATTERN;
+        };
     }
 
     @Override
     public Map<Integer, Vec3i> offsets(BlockState state) {
-        return Y_OFFSETS;
+        return switch (state.getValue(AXIS)) {
+            case X -> X_OFFSETS;
+            case Z -> Z_OFFSETS;
+            case Y -> Y_OFFSETS;
+        };
     }
 
     @Override
