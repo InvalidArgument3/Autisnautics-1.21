@@ -1,7 +1,0 @@
-{
-  "type": "lithostitched:wrap_noise_router",
-  "priority": 2004,
-  "dimension": "deeperdarker:otherside",
-  "target": "final_density",
-  "wrapper_function": "autisnautics:rift/wrap_rift_2_3_deeperdarker_otherside"
-}

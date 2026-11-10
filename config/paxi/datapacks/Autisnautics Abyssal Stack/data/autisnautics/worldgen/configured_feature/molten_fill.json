@@ -1,0 +1,2823 @@
+{
+  "type": "lithostitched:composite",
+  "config": {
+    "features": [
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 0,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 1,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 2,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 3,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 4,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 5,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 6,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 7,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 8,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 9,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 10,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 11,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 12,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 13,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_interior",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 14,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 0
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 1
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 2
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 3
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 4
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 5
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 6
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 7
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 8
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 9
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 10
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 11
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 12
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 13
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 14
+          }
+        ]
+      },
+      {
+        "feature": "autisnautics:molten_column_wall",
+        "placement": [
+          {
+            "type": "lithostitched:offset",
+            "x_offset": 15,
+            "y_offset": 0,
+            "z_offset": 15
+          }
+        ]
+      }
+    ]
+  }
+}

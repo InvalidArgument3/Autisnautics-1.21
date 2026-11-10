@@ -43,24 +43,26 @@ public class RiftCalc {
     static final int WIDE = 100000;
 
     static final String[] BOUNDARY = {
-        "boundary 1  mask_0_1  overworld floor / infinite_abyss:first_layer ceiling",
-        "boundary 2  mask_1_2  infinite_abyss:first_layer floor / deeperdarker:otherside ceiling",
-        "boundary 3  mask_2_3  deeperdarker:otherside floor / oceanworld:deepsea ceiling",
-        "boundary 4  mask_3_4  oceanworld:deepsea floor / dimension_of_caves:cave ceiling",
-        "boundary 5  mask_4_5  dimension_of_caves:cave floor / infernalcross:dimension ceiling",
-        "boundary 6  mask_5_6  infernalcross:dimension floor / minecraft:the_nether ceiling",
-        "boundary 7  mask_6_7  minecraft:the_nether floor / undergarden:undergarden ceiling",
-        "boundary 8  mask_7_8  undergarden:undergarden floor / minecraft:the_end ceiling"
+        "boundary 1  mask_0_1  overworld floor / oceanworld:deepsea ceiling",
+        "boundary 2  mask_1_2  oceanworld:deepsea floor / dimension_of_caves:cave ceiling",
+        "boundary 3  mask_2_3  dimension_of_caves:cave floor / infinite_abyss:first_layer ceiling",
+        "boundary 4  mask_3_4  infinite_abyss:first_layer floor / deeperdarker:otherside ceiling",
+        "boundary 5  mask_4_5  deeperdarker:otherside floor / undergarden:undergarden ceiling",
+        "boundary 6  mask_5_6  undergarden:undergarden floor / infernalcross:dimension ceiling",
+        "boundary 7  mask_6_7  infernalcross:dimension floor / minecraft:the_nether ceiling",
+        "boundary 8  mask_7_8  minecraft:the_nether floor / autisnautics:molten_depths ceiling",
+        "boundary 9  mask_8_9  autisnautics:molten_depths floor / minecraft:the_end ceiling"
     };
     static final String[] YBAND = {
-        "floor overworld y=-64..22, ceiling infinite_abyss:first_layer y=103..127",
-        "floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127",
-        "floor deeperdarker:otherside y=0..24, ceiling oceanworld:deepsea y=275..319",
+        "floor overworld y=-64..22 (nominal -153..23, water to sea 188), ceiling oceanworld:deepsea y=275..319",
         "floor oceanworld:deepsea y=-64..-40, ceiling dimension_of_caves:cave y=103..127",
-        "floor dimension_of_caves:cave y=-48..-24, ceiling infernalcross:dimension y=39..63",
+        "floor dimension_of_caves:cave y=-48..-24, ceiling infinite_abyss:first_layer y=103..127",
+        "floor infinite_abyss:first_layer y=0..24, ceiling deeperdarker:otherside y=103..127",
+        "floor deeperdarker:otherside y=0..24, ceiling undergarden:undergarden y=103..127",
+        "floor undergarden:undergarden y=-64..-40, ceiling infernalcross:dimension y=39..63",
         "floor infernalcross:dimension y=-48..-24, ceiling minecraft:the_nether y=231..255",
-        "floor minecraft:the_nether y=0..24, ceiling undergarden:undergarden y=103..127",
-        "floor undergarden:undergarden y=-64..-40, ceiling minecraft:the_end y=359..383"
+        "floor minecraft:the_nether y=0..24, ceiling autisnautics:molten_depths y=295..319",
+        "floor autisnautics:molten_depths y=-64..-40, ceiling minecraft:the_end y=359..383"
     };
 
     static CellularDensityFunction distanceFn;
@@ -312,7 +314,7 @@ public class RiftCalc {
         long rasterOpen = 0;
         long rasterMismatch = 0;
 
-        for (int b = 0; b < 8; b++) {
+        for (int b = 0; b < BOUNDARY.length; b++) {
             HashMap<Long, Rift> map = enumerate(b, WIDE);
             checkPlaced(map, errors);
             if (!errors.isEmpty()) break;
@@ -357,10 +359,10 @@ public class RiftCalc {
         report.append(line("ALL boundaries"));
         report.append(line("  observed width min %d max %d (hard cap 256)", globalMin, globalMax));
         report.append(line("  minimum disc-edge gap %.2f blocks", globalGap));
-        report.append(line("  ±%d centers %d over 8 boundaries, mean per boundary %.2f, mean per 5,000,000 blocks %.4f",
-                SAMPLE, sampleCenters, sampleCenters / 8.0, (sampleCenters / 8.0) / sampleArea * 5_000_000.0));
-        report.append(line("  ±%d centers %d over 8 boundaries, mean per boundary %.2f, mean per 5,000,000 blocks %.4f",
-                WIDE, wideCenters, wideCenters / 8.0, (wideCenters / 8.0) / wideArea * 5_000_000.0));
+        report.append(line("  ±%d centers %d over %d boundaries, mean per boundary %.2f, mean per 5,000,000 blocks %.4f",
+                SAMPLE, sampleCenters, BOUNDARY.length, sampleCenters / (double) BOUNDARY.length, (sampleCenters / (double) BOUNDARY.length) / sampleArea * 5_000_000.0));
+        report.append(line("  ±%d centers %d over %d boundaries, mean per boundary %.2f, mean per 5,000,000 blocks %.4f",
+                WIDE, wideCenters, BOUNDARY.length, wideCenters / (double) BOUNDARY.length, (wideCenters / (double) BOUNDARY.length) / wideArea * 5_000_000.0));
         report.append(line("  raster points %d open %d distance mismatches %d", rasterPoints, rasterOpen, rasterMismatch));
         if (!errors.isEmpty()) report.append(line("ERRORS%n%s", errors));
 

@@ -3831,6 +3831,10 @@
     {
       "id": "minecraft:windswept_savanna",
       "required": false
+    },
+    {
+      "id": "autisnautics:molten_depths",
+      "required": true
     }
   ]
 }
