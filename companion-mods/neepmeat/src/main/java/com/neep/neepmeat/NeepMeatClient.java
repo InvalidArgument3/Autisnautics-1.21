@@ -25,6 +25,7 @@ package com.neep.neepmeat;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.fluid.BloodFluids;
 import com.neep.neepmeat.client.renderer.RoboticArmRenderer;
+import com.neep.neepmeat.client.screen.plc.PLCScreen;
 import com.neep.neepmeat.machine.NeepMachines;
 import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
 import com.neep.neepmeat.machine.transport.FilterPipeScreen;
@@ -69,6 +70,7 @@ public final class NeepMeatClient {
     public static void onScreens(RegisterMenuScreensEvent event) {
         event.register(NeepMachines.ALLOY_MENU.get(), AlloyKilnScreen::new);
         event.register(NeepMachines.FILTER_MENU.get(), FilterPipeScreen::new);
+        event.register(NeepMachines.PLC_MENU.get(), PLCScreen::new);
     }
 
     public static void onRenderers(EntityRenderersEvent.RegisterRenderers event) {

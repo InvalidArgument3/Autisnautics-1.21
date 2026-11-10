@@ -30,7 +30,10 @@ import com.neep.neepmeat.plc.instruction.InjectInstruction;
 import com.neep.neepmeat.plc.instruction.Instruction;
 import com.neep.neepmeat.plc.instruction.MoveInstruction;
 import com.neep.neepmeat.plc.instruction.ReadRedstoneInstruction;
+import com.neep.neepmeat.plc.instruction.block.BreakBlockInstruction;
 import com.neep.neepmeat.plc.instruction.block.MoveToInstruction;
+import com.neep.neepmeat.plc.instruction.block.PlaceBlockInstruction;
+import com.neep.neepmeat.plc.instruction.block.SelSlotInstruction;
 import com.neep.neepmeat.plc.instruction.memory.AllotInstruction;
 import com.neep.neepmeat.plc.instruction.memory.FetchInstruction;
 import com.neep.neepmeat.plc.instruction.memory.FillInstruction;
@@ -121,6 +124,9 @@ public class Instructions {
     public static final InstructionProvider MOVE = register(new SimplerInstructionProvider(MoveInstruction::new, (view, parser, scope) -> MoveInstruction.parser(view, parser), "MOVE"));
     public static final InstructionProvider INJECT = register(new SimpleInstructionProvider(InjectInstruction::new, InjectInstruction::new, 2, "INJECT"));
     public static final InstructionProvider MOVETO = createTrivialBlock("moveto", new MoveToInstruction());
+    public static final InstructionProvider BPLACE = createTrivialBlock("bplace", new PlaceBlockInstruction());
+    public static final InstructionProvider BBREAK = createTrivialBlock("bbreak", new BreakBlockInstruction());
+    public static final InstructionProvider SELSLOT = createTrivialBlock("selslot", new SelSlotInstruction());
     public static final InstructionProvider READ_REDSTONE = register(new SimplerInstructionProvider(ReadRedstoneInstruction::new, ReadRedstoneInstruction::parser, "RREAD"));
     public static final InstructionProvider EMIT_REDSTONE = register(new SimplerInstructionProvider(EmitRedstoneInstruction::new, EmitRedstoneInstruction::parser, "REMIT"));
 

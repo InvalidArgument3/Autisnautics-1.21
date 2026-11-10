@@ -18,8 +18,14 @@ import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
 import com.neep.neepmeat.plc.block.entity.PLCRedstoneInterfaceBlockEntity;
 import com.neep.neepmeat.plc.compiler.NeepAsmCompilePipeline;
 import com.neep.neepmeat.plc.robot.PLCActuator;
+import com.neep.neepmeat.neepasm.vm.WorldTargetImpl;
+import com.neep.neepmeat.plc.block.entity.BuilderBlockEntity;
+import com.neep.neepmeat.plc.block.entity.ExecutorBlockEntity;
+import com.neep.neepmeat.plc.block.entity.PLCBlockEntity;
+import com.neep.neepmeat.plc.instruction.PushInstruction;
 import com.neep.neepmeat.plc.runtime.InstructionPlc;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.server.level.ServerLevel;
@@ -134,6 +140,65 @@ public class PlcOpcodeGameTests {
         } catch (NeepASM.ProgramBuildException | NeepASM.RuntimeException exception) {
             helper.fail(exception.getMessage());
         }
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 200)
+    public static void builderPlacesAndBreaks(GameTestHelper helper) {
+        BlockPos plcPos = new BlockPos(1, 0, 1);
+        BlockPos builderPos = new BlockPos(1, 0, 0);
+        BlockPos placeAt = new BlockPos(2, 0, 1);
+        helper.setBlock(plcPos, NeepMachines.PLC.get().defaultBlockState());
+        helper.setBlock(builderPos, NeepMachines.BUILDER.get().defaultBlockState());
+        BuilderBlockEntity builder = helper.getBlockEntity(builderPos);
+        builder.inventory().setItem(0, new ItemStack(Items.COBBLESTONE));
+        PLCBlockEntity plc = helper.getBlockEntity(plcPos);
+        plc.setSource("bplace");
+        plc.start();
+        try {
+            plc.machine().dataStack().push(new WorldTargetImpl(helper.absolutePos(placeAt), Direction.UP));
+        } catch (NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+            return;
+        }
+        for (int tick = 0; tick < 30; tick++) {
+            plc.serverTick();
+        }
+        helper.assertTrue(helper.getBlockState(placeAt).is(Blocks.COBBLESTONE), "bplace did not place cobblestone");
+
+        helper.setBlock(placeAt, Blocks.DIRT.defaultBlockState());
+        plc.setSource("bbreak");
+        plc.start();
+        try {
+            plc.machine().dataStack().push(new WorldTargetImpl(helper.absolutePos(placeAt), Direction.UP));
+        } catch (NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+            return;
+        }
+        for (int tick = 0; tick < 30; tick++) {
+            plc.serverTick();
+        }
+        helper.assertTrue(helper.getBlockState(placeAt).isAir(), "bbreak left " + helper.getBlockState(placeAt));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void executorRunsAPush(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), NeepMachines.EXECUTOR.get().defaultBlockState());
+        ExecutorBlockEntity executor = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        try {
+            executor.receiveInstruction(new PushInstruction(4));
+        } catch (NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+            return;
+        }
+        executor.serverTick();
+        try {
+            helper.assertTrue(executor.stack().pop().getAsInt() == 4, "executor stack");
+        } catch (NeepASM.RuntimeException exception) {
+            helper.fail(exception.getMessage());
+            return;
+        }
+        helper.succeed();
     }
 
     private static PLCProgram compile(GameTestHelper helper, String source) throws NeepASM.ProgramBuildException {

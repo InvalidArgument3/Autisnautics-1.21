@@ -16,8 +16,15 @@ import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
 import com.neep.neepmeat.plc.arm.RoboticArmBlock;
 import com.neep.neepmeat.plc.arm.RoboticArmBlockEntity;
+import com.neep.neepmeat.plc.block.BuilderBlock;
+import com.neep.neepmeat.plc.block.ExecutorBlock;
+import com.neep.neepmeat.plc.block.PLCBlock;
 import com.neep.neepmeat.plc.block.PLCRedstoneInterfaceBlock;
+import com.neep.neepmeat.plc.block.entity.BuilderBlockEntity;
+import com.neep.neepmeat.plc.block.entity.ExecutorBlockEntity;
+import com.neep.neepmeat.plc.block.entity.PLCBlockEntity;
 import com.neep.neepmeat.plc.block.entity.PLCRedstoneInterfaceBlockEntity;
+import com.neep.neepmeat.plc.screen.PLCMenu;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
 import com.neep.neepmeat.machine.transport.BasicTankBlock;
@@ -82,6 +89,29 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> REDSTONE_INTERFACE_ITEM = CONTEXT.item("redstone_interface", () -> new BlockItem(REDSTONE_INTERFACE.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PLCRedstoneInterfaceBlockEntity>> REDSTONE_INTERFACE_BE = BLOCK_ENTITIES.register("redstone_interface",
             () -> BlockEntityType.Builder.of(PLCRedstoneInterfaceBlockEntity::new, REDSTONE_INTERFACE.get()).build(null));
+
+    public static final DeferredBlock<PLCBlock> PLC = CONTEXT.block("plc", PLCBlock::new);
+    public static final DeferredItem<BlockItem> PLC_ITEM = CONTEXT.item("plc", () -> new BlockItem(PLC.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PLCBlockEntity>> PLC_BE = BLOCK_ENTITIES.register("plc",
+            () -> BlockEntityType.Builder.of(PLCBlockEntity::new, PLC.get()).build(null));
+    public static final DeferredHolder<MenuType<?>, MenuType<PLCMenu>> PLC_MENU = MENUS.register("plc",
+            () -> IMenuTypeExtension.create((id, inventory, buf) -> {
+                BlockPos pos = buf.readBlockPos();
+                String source = buf.readUtf();
+                String error = buf.readUtf();
+                PLCBlockEntity plc = inventory.player.level().getBlockEntity(pos) instanceof PLCBlockEntity entity ? entity : null;
+                return new PLCMenu(id, pos, source, error, plc);
+            }));
+
+    public static final DeferredBlock<ExecutorBlock> EXECUTOR = CONTEXT.block("executor", ExecutorBlock::new);
+    public static final DeferredItem<BlockItem> EXECUTOR_ITEM = CONTEXT.item("executor", () -> new BlockItem(EXECUTOR.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExecutorBlockEntity>> EXECUTOR_BE = BLOCK_ENTITIES.register("executor",
+            () -> BlockEntityType.Builder.of(ExecutorBlockEntity::new, EXECUTOR.get()).build(null));
+
+    public static final DeferredBlock<BuilderBlock> BUILDER = CONTEXT.block("builder", BuilderBlock::new);
+    public static final DeferredItem<BlockItem> BUILDER_ITEM = CONTEXT.item("builder", () -> new BlockItem(BUILDER.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BuilderBlockEntity>> BUILDER_BE = BLOCK_ENTITIES.register("builder",
+            () -> BlockEntityType.Builder.of(BuilderBlockEntity::new, BUILDER.get()).build(null));
 
     public static final DeferredHolder<MenuType<?>, MenuType<AlloyKilnMenu>> ALLOY_MENU = MENUS.register("alloy_kiln",
             () -> IMenuTypeExtension.create((id, inventory, buf) -> {
@@ -180,6 +210,9 @@ public final class NeepMachines {
             event.accept(ALLOY_KILN_ITEM.get());
             event.accept(ROBOTIC_ARM_ITEM.get());
             event.accept(REDSTONE_INTERFACE_ITEM.get());
+            event.accept(PLC_ITEM.get());
+            event.accept(EXECUTOR_ITEM.get());
+            event.accept(BUILDER_ITEM.get());
             event.accept(ITEM_PIPE_ITEM.get());
             event.accept(FILTER_ITEM_PIPE_ITEM.get());
             event.accept(MERGE_PIPE_ITEM.get());

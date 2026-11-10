@@ -100,7 +100,18 @@ The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the scree
 | Redstone | ported | `redstone_interface`, `rread`, and `remit`. The block emits the stored strength and records the best neighbour signal. |
 | Block | partial | `moveto` aims the actuator. `bplace` and `bbreak` need the builder entity, which arrives with the assembler. |
 
-The PLC block, executor, assembler, motor, living machines, and the meatgun are still the next batches.
+## PLC, executor, and builder, jar 0.30.0-neoforge.10
+
+`./gradlew runGameTestServer` loaded `0.30.0-neoforge.10` and passed all 30 tests.
+
+| System | State | Notes |
+| --- | --- | --- |
+| PLC | ported | `plc` stores source, compiles it, and runs it against the actuator in front. Right-click opens a screen with the source field and Run and Stop. The Fabric shell, editor, and projector HUD are not in this screen. |
+| Executor | ported | `executor` accepts instructions through `PLCExecutor` and runs them against the actuator in front. A test pushes 4 onto its stack. |
+| Builder | ported | `builder` holds 27 slots, moves its tip, places the selected block item, and breaks blocks up to obsidian hardness into its inventory. `bplace` and `bbreak` use it. A test places cobblestone and breaks dirt. |
+| Screens | partial | `PLCScreen` edits and runs the stored source. The upstream 16-file shell is not copied. |
+
+The motor, manufacture recipes, living machines, and the meatgun are still the next batches.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 

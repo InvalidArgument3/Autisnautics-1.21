@@ -52,6 +52,7 @@ public final class NeepMeat {
         NeepMachines.register(bus);
         MaterialItems.register(bus);
         BloodFluids.register(bus);
+        com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();
         BLOCKS.register(bus);
         ITEMS.register(bus);
         TABS.register(bus);
