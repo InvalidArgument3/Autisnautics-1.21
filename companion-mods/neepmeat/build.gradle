@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '0.30.0-neoforge.7'
+version = '0.30.0-neoforge.8'
 group = 'com.neep'
 base { archivesName = 'neepmeat' }
 
@@ -34,6 +34,7 @@ neoForge {
     unitTest {
         enable()
     }
+    accessTransformers = files('src/main/resources/META-INF/accesstransformer.cfg')
 }
 
 repositories {

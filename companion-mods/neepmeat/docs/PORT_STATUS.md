@@ -44,24 +44,31 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 
 ## Version and Yarn remap
 
-Jar `0.30.0-neoforge.7`. `./gradlew runGameTestServer` on that string:
+Jar `0.30.0-neoforge.8`. `./gradlew runGameTestServer` on that string:
 
 ```
-meatlib 0.30.0-neoforge.7 loaded
-NeepMeat 0.30.0-neoforge.7 loaded with GeckoLib 4.9.3
+meatlib 0.30.0-neoforge.8 loaded
+NeepMeat 0.30.0-neoforge.8 loaded with GeckoLib 4.9.3
 All 22 required tests passed :)
 BUILD SUCCESSFUL
 ```
 
-`tools/yarn-to-mojmap/` builds a Yarn 1.20.1 to Mojmap 1.20.1 map (6,913 classes, 17,006 unambiguous method renames) from Yarn tiny, Fabric intermediary, and the 1.20.1 official client mappings, then rewrites sources. It was applied to the meatlib screen kit. That copy is not in the tree: after the remap, 1.21 still rejects it. Those are API moves, not a missing NeoForge library:
+The previous jar, `0.30.0-neoforge.7`, passed the same 22 tests before the screen kit.
 
-- `GuiEventListener`, `Renderable`, and `AbstractContainerEventHandler` live under `net.minecraft.client.gui.components`.
-- `mouseScrolled` takes four doubles.
-- `NarratableEntry` requires `narrationPriority()` and `updateNarration`.
-- `Font.draw` and the 1.20 `BufferBuilder.begin`/`vertex().next()` path are gone. `GuiGraphics.blit` and `drawString` replace them.
-- `REIScreenSupport` calls Architectury `ClientGuiEvent`. The pack does not ship Architectury. EMI is the optional viewer already on the classpath.
+`tools/yarn-to-mojmap/` builds a Yarn 1.20.1 to Mojmap 1.20.1 map (6,913 classes, 17,006 unambiguous method renames) from Yarn tiny, Fabric intermediary, and the 1.20.1 official client mappings, then rewrites sources. The whole upstream tree was rewritten into a scratch directory. The meatlib screen kit from that rewrite is now in the jar.
 
-The screen kit, robot arm, NEEPASM VM, living machines, and meatgun are still to be ported with this remap plus those 1.21 fixes. The branch compiles without the unfinished kit.
+## Screen kit, REI dropped
+
+| System | State | Notes |
+| --- | --- | --- |
+| Widget kit | ported | Panels, text fields, buttons, config widgets, slot blocks, `BetterHandledScreen`, and `GUIUtil`. 1.21 moves: component event types, four-argument `mouseScrolled`, `narrationPriority` / `updateNarration`, `GuiGraphics.blit` / `drawString`, and `BufferBuilder.addVertex` / `build`. |
+| Slot hit testing | ported | `AbstractContainerScreen.findSlot` is private in 1.21. One access transformer makes it public so the widget screen can override it. No mixin. |
+| Quick-craft ghost stack | partial | The 1.20 touch-drag fields and `recalculateQuickCraftRemaining` are private. The slot widget previews a split of the carried stack. The click itself is still vanilla. |
+| REI | dropped | `REIScreenSupport` called Architectury `ClientGuiEvent`. The pack ships JEI and EMI only, and does not ship Architectury. The file is not in this jar. |
+| EMI in widget screens | ported | `EMIScreenSupport` draws EMI's screen manager on the foreground listener, using EMI's public `EmiApi` plus the runtime classes already in the pack's EMI jar (`EmiDrawContext`, `EmiScreenManager`). |
+| PLC screens | missing | `PLCProgramScreen` and the other PLC screens import the PLC block entity, the compiler, and NEEPASM. They land with those systems. The widgets they extend are in. |
+
+Robot arm, NEEPASM, living machines, and the meatgun are still the next batches. The same scratch rewrite is the source for those.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 
@@ -203,7 +210,7 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 | System | Files (approx.) | State | Why |
 | --- | --- | --- | --- |
-| meatlib core (registries, caps, payloads, inventories, block entities, sounds) | see milestone above | ported | Screen widget kit, Flywheel helpers, larkdown, and mixins are not in this jar. |
+| meatlib core (registries, caps, payloads, inventories, block entities, sounds, screen kit) | see milestone above | ported | Flywheel helpers, larkdown, and mixins are not in this jar. REI is dropped. |
 | Machines (`machine/`, including living machines, reactor, crusher, mixer, kiln, mincer, press, power flower, phage ray, synthesiser, surgery, charnel pump, …) | 276+ | missing | Each block class extends meatlib blocks and uses Fabric transfer, block entities, and often Flywheel or GeckoLib. |
 | Item pipes, fluid pipes, blood network, tanks (`transport/`) | 238 | blocked | Fabric `FluidStorage` / `ItemStorage` and a custom graph. Needs NeoForge handlers. |
 | Client screens and renderers | 195 | missing | Follows the machines. |
@@ -214,7 +221,7 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 | Blocks that are not plain building blocks (doors, trapdoors, scaffolds, crops, logs, leaves, sinks, fans, tracks, cake) | 59 | missing | Doors and crops need block classes, not just a cube. Assets exist upstream and were not copied, so they cannot be placed under the old ids yet. |
 | Items (ingredients, tools, food, filters) | 57 | missing | Many carry NBT that has to become data components, and recipes that reference them were not copied. |
 | Meatweapons (meatgun modules, drill, implants, client) | ~200 | missing | Same component and renderer problem. Two upstream recipes (`pistol`, `iron_barrel`) were dropped because they reference `meatweapons:` items. |
-| REI plugin | 33 | missing | Pack uses JEI and EMI, not REI. |
+| REI plugin | 33 | dropped | Pack ships JEI and EMI only. `REIScreenSupport` needed Architectury `ClientGuiEvent`, which this pack does not ship. |
 | EMI plugin body | 23 | missing | The empty entrypoint is in. The recipe categories are not. |
 | Thord language | 50 | missing | In-game language for the guide. Not required to boot. |
 | Mixins | 92 | blocked | See `COMPATIBILITY.md`. |
