@@ -41,6 +41,11 @@ public class AlloyKilnBlockEntity extends BlockEntity implements ImplementedInve
     private int cookTime;
     private int cookTimeTotal;
 
+    public int burnTime() { return burnTime; }
+    public int fuelTime() { return fuelTime; }
+    public int cookTime() { return cookTime; }
+    public int cookTimeTotal() { return cookTimeTotal; }
+
     public AlloyKilnBlockEntity(BlockPos pos, BlockState state) {
         super(NeepMachines.ALLOY_KILN_BE.get(), pos, state);
     }

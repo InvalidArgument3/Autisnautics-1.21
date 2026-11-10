@@ -12,15 +12,47 @@ import com.neep.neepmeat.machine.NeepMachines;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
 public class AlloyKilnMenu extends AbstractContainerMenu {
     private final AlloyKilnBlockEntity kiln;
 
+    private final int[] synced = new int[4];
+
+    public int burnTime() { return synced[0]; }
+    public int fuelTime() { return synced[1]; }
+    public int cookTime() { return synced[2]; }
+    public int cookTimeTotal() { return synced[3]; }
+
     public AlloyKilnMenu(int id, Inventory inventory, AlloyKilnBlockEntity kiln) {
         super(NeepMachines.ALLOY_MENU.get(), id);
         this.kiln = kiln;
+        addDataSlots(new ContainerData() {
+            @Override
+            public int get(int index) {
+                int value = switch (index) {
+                    case 0 -> kiln.burnTime();
+                    case 1 -> kiln.fuelTime();
+                    case 2 -> kiln.cookTime();
+                    case 3 -> kiln.cookTimeTotal();
+                    default -> 0;
+                };
+                synced[index] = value;
+                return value;
+            }
+
+            @Override
+            public void set(int index, int value) {
+                synced[index] = value;
+            }
+
+            @Override
+            public int getCount() {
+                return 4;
+            }
+        });
         addSlot(new Slot(kiln, AlloyKilnBlockEntity.FUEL, 56, 53));
         addSlot(new Slot(kiln, AlloyKilnBlockEntity.INPUT_1, 47, 17));
         addSlot(new Slot(kiln, AlloyKilnBlockEntity.INPUT_2, 65, 17));

@@ -16,6 +16,7 @@ import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlock;
 import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
+import com.neep.neepmeat.machine.transport.BasicTankBlock;
 import com.neep.neepmeat.machine.transport.ColoredFluidPipeBlock;
 import com.neep.neepmeat.machine.transport.FilterItemPipeBlock;
 import com.neep.neepmeat.machine.transport.FilterPipeMenu;
@@ -134,8 +135,10 @@ public final class NeepMachines {
 
     public static final DeferredBlock<FluidTankBlock> FLUID_TANK = CONTEXT.block("fluid_tank", FluidTankBlock::new);
     public static final DeferredItem<BlockItem> FLUID_TANK_ITEM = CONTEXT.item("fluid_tank", () -> new BlockItem(FLUID_TANK.get(), new Item.Properties()));
+    public static final DeferredBlock<BasicTankBlock> BASIC_TANK = CONTEXT.block("basic_tank", BasicTankBlock::new);
+    public static final DeferredItem<BlockItem> BASIC_TANK_ITEM = CONTEXT.item("basic_tank", () -> new BlockItem(BASIC_TANK.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidTankBlockEntity>> FLUID_TANK_BE = BLOCK_ENTITIES.register("fluid_tank",
-            () -> BlockEntityType.Builder.of(FluidTankBlockEntity::new, FLUID_TANK.get()).build(null));
+            () -> BlockEntityType.Builder.of(FluidTankBlockEntity::new, FLUID_TANK.get(), BASIC_TANK.get()).build(null));
 
     public static final DeferredHolder<net.minecraft.world.item.crafting.RecipeType<?>, net.minecraft.world.item.crafting.RecipeType<AlloyKilnRecipe>> ALLOY_TYPE = NeepRecipes.ALLOY;
 
@@ -173,6 +176,7 @@ public final class NeepMachines {
             }
             event.accept(PUMP_ITEM.get());
             event.accept(FLUID_TANK_ITEM.get());
+            event.accept(BASIC_TANK_ITEM.get());
         }
     }
 }
