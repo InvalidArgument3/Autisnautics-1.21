@@ -63,7 +63,7 @@ public class PowerFlowerControllerBlock extends BaseBlock implements EntityBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.POWER_FLOWER_CONTROLLER, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.POWER_FLOWER_CONTROLLER, (world1, pos, state1, blockEntity) -> ((PowerFlowerControllerBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override

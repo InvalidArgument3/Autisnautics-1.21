@@ -31,7 +31,7 @@ public class FluidComponentItem extends BaseBlockItem
     public InteractionResult useOn(UseOnContext context)
     {
         InteractionResult actionResult = this.place(new BlockPlaceContext(context));
-        if (!actionResult.consumesAction() && this.isEdible())
+        if (!actionResult.consumesAction() && new net.minecraft.world.item.ItemStack(this).has(net.minecraft.core.component.DataComponents.FOOD))
         {
             InteractionResult actionResult2 = this.use(context.getLevel(), context.getPlayer(), context.getHand()).getResult();
             return actionResult2 == InteractionResult.CONSUME ? InteractionResult.CONSUME_PARTIAL : actionResult2;

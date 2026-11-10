@@ -87,7 +87,7 @@ public class AdvancedMotorBlock extends BaseFacingBlock implements EntityBlock, 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.ADVANCED_MOTOR, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.ADVANCED_MOTOR, (world1, pos, state1, blockEntity) -> ((AdvancedMotorBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Nullable

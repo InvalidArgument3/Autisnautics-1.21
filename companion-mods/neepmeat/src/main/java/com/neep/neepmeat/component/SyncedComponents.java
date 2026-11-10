@@ -80,6 +80,11 @@ public final class SyncedComponents {
         }
 
         @Override
+        public net.minecraft.resources.ResourceLocation getId() {
+            return holder.getId();
+        }
+
+        @Override
         public TagComponent get(Object provider) {
             if (provider instanceof IAttachmentHolder attachmentHolder) {
                 return new TagComponent(attachmentHolder.getData(attachmentType()));

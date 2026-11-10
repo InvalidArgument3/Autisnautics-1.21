@@ -162,7 +162,8 @@ public class MouthBlockEntity extends SyncableBlockEntity implements ConfigProvi
 
     public static String getMessage(ItemStack stack)
     {
-        String message = BlockItem.getBlockEntityData(stack).getString("message");
+        CompoundTag stored = com.neep.neepmeat.util.BlockEntityDataUtil.get(stack);
+        String message = stored == null ? "" : stored.getString("message");
 
         if (message.length() > 25)
             message = message.substring(0, 25) + "...";

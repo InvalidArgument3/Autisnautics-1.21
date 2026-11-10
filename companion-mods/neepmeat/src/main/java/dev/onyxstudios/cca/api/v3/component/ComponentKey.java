@@ -1,6 +1,7 @@
 package dev.onyxstudios.cca.api.v3.component;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.attachment.IAttachmentHolder;
 import org.jetbrains.annotations.Nullable;
@@ -17,6 +18,11 @@ public interface ComponentKey<T extends Component> {
     default Optional<T> maybeGet(Object provider) {
         T value = getNullable(provider);
         return value == null ? Optional.empty() : Optional.of(value);
+    }
+
+    /** Registry id of this key. Null when the key is not backed by an attachment. */
+    default @Nullable ResourceLocation getId() {
+        return null;
     }
 
     /** Synced compound attachment for this key, when one is registered. */

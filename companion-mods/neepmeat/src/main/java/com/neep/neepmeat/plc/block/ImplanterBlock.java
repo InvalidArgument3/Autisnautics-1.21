@@ -81,8 +81,8 @@ public class ImplanterBlock extends BaseBlock implements EntityBlock
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
         return MiscUtil.checkType(type, PLCBlocks.IMPLANTER_BE,
-                (world1, pos, state1, blockEntity) -> blockEntity.serverTick(),
-                (world1, pos, state1, blockEntity) -> blockEntity.clientTick(), world);
+                (world1, pos, state1, blockEntity) -> ((ImplanterBlockEntity) blockEntity).serverTick(),
+                (world1, pos, state1, blockEntity) -> ((ImplanterBlockEntity) blockEntity).clientTick(), world);
     }
 
     @Override

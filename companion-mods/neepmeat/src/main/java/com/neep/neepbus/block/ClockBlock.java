@@ -45,7 +45,7 @@ public class ClockBlock extends BaseBlock implements NeepBusProvider, DataCable,
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NeepBus.CLOCK_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NeepBus.CLOCK_BE, (world1, pos, state1, blockEntity) -> ((ClockBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override

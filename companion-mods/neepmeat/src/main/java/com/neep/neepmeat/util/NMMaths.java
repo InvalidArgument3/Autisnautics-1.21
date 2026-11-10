@@ -13,6 +13,7 @@
 package com.neep.neepmeat.util;
 
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 
 public final class NMMaths {
@@ -24,6 +25,21 @@ public final class NMMaths {
         }
         int mod = index % size;
         return mod < 0 ? mod + size : mod;
+    }
+
+    /** Upstream look vector. Pitch and yaw are radians. */
+    public static Vec3 getRotationVector(double pitchRad, double yawRad) {
+        float pitch = (float) pitchRad;
+        float yaw = (float) -yawRad;
+        float cosYaw = Mth.cos(yaw);
+        float sinYaw = Mth.sin(yaw);
+        float cosPitch = Mth.cos(pitch);
+        float sinPitch = Mth.sin(pitch);
+        return new Vec3(sinYaw * cosPitch, -sinPitch, cosYaw * cosPitch);
+    }
+
+    public static float log10(float value) {
+        return (float) Math.log10(value);
     }
 
     public static boolean isWithin(float value, float target, float difference) {

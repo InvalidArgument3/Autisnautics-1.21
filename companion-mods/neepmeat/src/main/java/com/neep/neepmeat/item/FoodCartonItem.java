@@ -73,7 +73,7 @@ public class FoodCartonItem extends BaseItem
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user)
     {
-        if (this.isEdible())
+        if (new net.minecraft.world.item.ItemStack(this).has(net.minecraft.core.component.DataComponents.FOOD))
         {
             return eatFood(user, world, stack);
         }
@@ -85,7 +85,7 @@ public class FoodCartonItem extends BaseItem
     public ItemStack eatFood(LivingEntity user, Level world, ItemStack stack)
     {
         ItemStack stackCopy = stack.copy();
-        if (stack.isEdible())
+        if (stack.has(net.minecraft.core.component.DataComponents.FOOD))
         {
             world.gameEvent(user, GameEvent.EAT, user.getEyePosition(0));
             world.playSound(null, user.getX(), user.getY(), user.getZ(), getEatingSound(), SoundSource.NEUTRAL, 1.0f, 1.0f + (world.random.nextFloat() - world.random.nextFloat()) * 0.4f);
@@ -136,7 +136,7 @@ public class FoodCartonItem extends BaseItem
     protected void applyFoodEffects(LivingEntity user, ItemStack stack, Level world)
     {
         Item item = stack.getItem();
-        if (item.isEdible())
+        if (new net.minecraft.world.item.ItemStack(item).has(net.minecraft.core.component.DataComponents.FOOD))
         {
             List<Pair<MobEffectInstance, Float>> list = stack.getFoodProperties(user).getEffects();
             for (Pair<MobEffectInstance, Float> pair : list)
@@ -150,7 +150,7 @@ public class FoodCartonItem extends BaseItem
     @Override
     public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
-        CompoundTag nbt = itemStack.getTag();
+        CompoundTag nbt = com.neep.meatlib.util.MiscUtil.itemTag(itemStack);
         float hunger = MeatFluidUtil.getHunger(nbt);
         float saturation = MeatFluidUtil.getSaturation(nbt);
         tooltip.add(Component.translatable("item." + NeepMeat.NAMESPACE + ".food_carton.hunger", hunger));
@@ -169,7 +169,7 @@ public class FoodCartonItem extends BaseItem
         if (index == 1)
         {
             int fullCol = MeatFluidUtil.FULL_COL;
-            CompoundTag nbt = stack.getTag();
+            CompoundTag nbt = com.neep.meatlib.util.MiscUtil.itemTag(stack);
             if (nbt != null)
             {
                 float hunger = MeatFluidUtil.getHunger(nbt);

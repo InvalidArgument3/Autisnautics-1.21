@@ -10,6 +10,11 @@
 package com.neep.meatlib.util;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
+import org.jetbrains.annotations.Nullable;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -34,6 +39,24 @@ public final class MiscUtil {
     public static final long FABRIC_DROPLETS_PER_MB = 81L;
 
     private MiscUtil() {}
+
+    /** {@code ItemStack.getTag()} stored custom data. Null when the stack has none. */
+    public static @Nullable CompoundTag itemTag(ItemStack stack) {
+        CustomData data = stack.get(DataComponents.CUSTOM_DATA);
+        if (data == null || data.isEmpty()) {
+            return null;
+        }
+        return data.copyTag();
+    }
+
+    /** {@code ItemStack.setTag(CompoundTag)}. */
+    public static void setItemTag(ItemStack stack, @Nullable CompoundTag tag) {
+        if (tag == null || tag.isEmpty()) {
+            stack.remove(DataComponents.CUSTOM_DATA);
+        } else {
+            CustomData.set(DataComponents.CUSTOM_DATA, stack, tag.copy());
+        }
+    }
 
     public static long dropletsToMb(long droplets) {
         return Math.floorDiv(droplets, FABRIC_DROPLETS_PER_MB);

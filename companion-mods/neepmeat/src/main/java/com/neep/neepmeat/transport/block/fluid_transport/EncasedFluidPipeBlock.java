@@ -119,7 +119,7 @@ public class EncasedFluidPipeBlock extends FluidPipeBlock implements EncasedBloc
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.ENCASED_FLUID_PIPE, (world1, pos, state1, blockEntity) -> blockEntity.tick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.ENCASED_FLUID_PIPE, (world1, pos, state1, blockEntity) -> ((FluidPipeBlockEntity<?>) blockEntity).serverTick(), null, world);
     }
 
     @Override

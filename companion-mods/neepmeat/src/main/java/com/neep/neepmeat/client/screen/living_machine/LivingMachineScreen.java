@@ -134,7 +134,7 @@ public class LivingMachineScreen extends BetterHandledScreen<LivingMachineScreen
         {
             this.border = new Border(this, 0, () -> PLCCols.BORDER.col);
             super.init();
-            clearChildren();
+            clearWidgets();
         }
 
         @Override

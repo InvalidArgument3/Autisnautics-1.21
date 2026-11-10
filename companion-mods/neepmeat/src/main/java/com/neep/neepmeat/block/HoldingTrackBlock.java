@@ -111,7 +111,7 @@ public class HoldingTrackBlock extends BaseRailBlock implements EntityBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.HOLDING_TRACK, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.HOLDING_TRACK, (world1, pos, state1, blockEntity) -> ((HoldingTrackBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     public static class HoldingTrackBlockEntity extends BlockEntity

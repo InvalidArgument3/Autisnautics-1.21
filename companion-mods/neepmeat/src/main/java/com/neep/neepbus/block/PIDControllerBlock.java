@@ -83,7 +83,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
         BlockEntity blockEntity = builder.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
         if (blockEntity instanceof PIDControllerBlockEntity be)
         {
-            stacks.forEach(be::saveToItem);
+            stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             return stacks;
         }
@@ -95,7 +95,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
     public void appendHoverText(ItemStack stack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag options)
     {
         super.appendHoverText(stack, world, tooltip, options);
-        CompoundTag nbt = BlockItem.getBlockEntityData(stack);
+        CompoundTag nbt = com.neep.neepmeat.util.BlockEntityDataUtil.get(stack);
         if (nbt != null)
         {
             int dt = nbt.getInt("dt");
@@ -129,7 +129,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NeepBus.PID_CONTROLLER_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NeepBus.PID_CONTROLLER_BE, (world1, pos, state1, blockEntity) -> ((PIDControllerBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override
@@ -160,7 +160,7 @@ public class PIDControllerBlock extends BaseFacingBlock implements DataCable, Ne
         @Override
         public Component getName(ItemStack stack)
         {
-            if (getBlockEntityData(stack) != null)
+            if (com.neep.neepmeat.util.BlockEntityDataUtil.get(stack) != null)
             {
                 return super.getName(stack).copy().append(" (Configured)");
             }

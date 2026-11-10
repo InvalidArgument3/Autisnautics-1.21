@@ -23,6 +23,12 @@ public interface ContainerItemContext {
 
     ItemStack getItemVariant();
 
+    /** Fabric's slot count. The port's variant is the stack itself. */
+    default long getAmount() {
+        ItemStack stack = getItemVariant();
+        return stack == null ? 0 : stack.getCount();
+    }
+
     default <A> A find(Object lookup) {
         return null;
     }

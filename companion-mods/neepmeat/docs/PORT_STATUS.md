@@ -1,3 +1,31 @@
+## Storage hooks, item components, and tick casts, jar 0.30.0-neoforge.61
+
+Combined-tree errors: **2418** at the start of this run, **2229** at the end. That is 189, not 400. `exclude.txt` is still **1322**. Nothing left it. `tools/port-errors/symbols.txt` is the end histogram.
+
+Top: does not override 196, invalid method reference 25, `of` 14, `getId` 13, invalid method reference 12, `register` 12, `ImplantManager` capture 11, inference bounds 11, `Block` to `Properties` 11, `checkType` 11, variable `builder` 10. `serverTick`, `setVisualizer`, `floatValue`, `getCompound`, `getTag`, and `meshConsumer` left the top twenty.
+
+The PLC subtree was not pulled out of `exclude.txt`. Including `com/neep/neepmeat/plc/` and `RoutingNetworkImpl` produced 626 errors in the included compile. Adding the eight recipe and manufacture types those files name, then `InterruptEmitter`, `MeatlibStorageUtil`, `AutoInvalidatingLazyBlockApiCache`, and `ItemImplantItem`, still left 408. Both sets were put back on `exclude.txt`. `RoutingNetworkImpl` is still excluded, so `RoutablePipe.store` still takes `RoutingNetwork.StoreRouter`.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. `END` is the real end opcode. Override errors went from 207 to 196. That is not 150 signature fixes. Eighteen menu types stay null.
+
+`SingleVariantStorage` again has `getCapacity(T)` and `getBlankVariant()`. Each defaults to the other hook (`capacity` / `blank`), so a subclass can override either name. `WritableStackStorage` and `WritableSingleFluidStorage` route `capacity()` through `getCapacity`, so an override of the Fabric name is the one `insert` uses.
+
+`ItemComponent` is an abstract class again. Its tag is the stack's `minecraft:custom_data`. `getOrCreateRootTag` returns a copy. The `put*` helpers write that copy back with `CustomData.update`. A key with an id stores the component under that id.
+
+`DataVariant.floatValue` is the upstream name. `intValue` rounds it. `NMMaths.log10` and `getRotationVector` match upstream. `ContainerItemContext.getAmount` is the stack count. Ticker lambdas that call `serverTick` cast the wildcard block entity. `saveToItem` receives the loot level's registry lookup. Step height is `Attributes.STEP_HEIGHT`.
+
+Deviations that remain:
+
+- `RenderContext.meshConsumer` discards the mesh. NeoForge does not run the Fabric renderer. Block and item models still draw through `getQuads`.
+- `BlockItem.getBlockEntityData` is `BlockEntityDataUtil.get`, which reads `DataComponents.BLOCK_ENTITY_DATA` and returns null when it is absent.
+- `ItemStack.getTag` and `setTag` go through `MiscUtil.itemTag` and `setItemTag`.
+- `Item.isEdible` and `ItemStack.isEdible` are `DataComponents.FOOD` on a stack.
+- `setMaxUpStep` is `Attributes.STEP_HEIGHT.setBaseValue`.
+- `GeneralPanel` and `VStackPanel` `clearChildren` call `clearWidgets`. `LivingMachineScreen` calls `clearWidgets`.
+- `NMVisuals.setBlockVisualizer` calls Flywheel with a raw `BlockEntityType`, because the fields are wildcards or `DeferredHolder`s.
+- `getOrCreateRootTag` returns a copy, so a caller that mutates the returned tag without a `put*` helper does not write it back.
+- Synced component keys still store a compound tag, not the live workpiece or implant. `QuadEmitter` still does not store edited vertices. Catalogue buckets are not `MeatlibItemExtension`s.
+
 ## Creative tabs and real particles, jar 0.30.0-neoforge.60
 
 Combined-tree errors: **2428** at the start of this run, **2418** at the end. That is 10, not 400. `exclude.txt` is **1322**. The files that compile and left it include `NMParticles`, `ParticleSpawnS2C`, `ParticleRegistry`, `SwirlingParticleEffect`, `SwirlingParticle`, `PressureWashParticleType`, the drip and pressure-wash factories, `RoutablePipe`, `NodePos`, `RecipeMatching`, and `Craftable`. `tools/port-errors/symbols.txt` is the end histogram.

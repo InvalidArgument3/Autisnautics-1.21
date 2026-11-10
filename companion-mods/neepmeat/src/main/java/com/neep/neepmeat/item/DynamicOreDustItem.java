@@ -43,7 +43,7 @@ public class DynamicOreDustItem extends AbstractOreDustItem
     {
         if (index == 1)
         {
-            CompoundTag nbt = stack.getTag();
+            CompoundTag nbt = com.neep.meatlib.util.MiscUtil.itemTag(stack);
             if (nbt != null)
             {
                 ResourceLocation entryId = ResourceLocation.tryParse(nbt.getString("ore_item"));
@@ -63,7 +63,7 @@ public class DynamicOreDustItem extends AbstractOreDustItem
     {
         if (stack.hasTag())
         {
-            ResourceLocation entryId = ResourceLocation.tryParse(stack.getTag().getString("ore_item"));
+            ResourceLocation entryId = ResourceLocation.tryParse(com.neep.meatlib.util.MiscUtil.itemTag(stack).getString("ore_item"));
             return BuiltInRegistries.ITEM.get(entryId);
         }
 

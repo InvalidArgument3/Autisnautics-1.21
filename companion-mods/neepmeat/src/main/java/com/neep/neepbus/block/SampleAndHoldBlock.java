@@ -12,6 +12,8 @@
 
 package com.neep.neepbus.block;
 
+import com.neep.neepbus.block.entity.IntegratorBlockEntity;
+
 import com.neep.meatlib.block.BaseBlock;
 import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.registry.RegistrationContext;
@@ -44,7 +46,7 @@ public class SampleAndHoldBlock extends BaseBlock implements NeepBusProvider, Da
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NeepBus.INTEGRATOR_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NeepBus.INTEGRATOR_BE, (world1, pos, state1, blockEntity) -> ((IntegratorBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override

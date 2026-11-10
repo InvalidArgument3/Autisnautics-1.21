@@ -71,7 +71,7 @@ public class EncasedFluidPipeBlockEntity<T extends FluidPipeVertex & NbtSerialis
     @Override
     public void tick()
     {
-        super.tick();
+        super.serverTick();
     }
 
     @Override

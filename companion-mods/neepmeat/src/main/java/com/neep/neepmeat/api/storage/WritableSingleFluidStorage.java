@@ -36,6 +36,10 @@ public class WritableSingleFluidStorage extends SingleVariantStorage<FluidVarian
 
     @Override
     protected long capacity(FluidVariant resource) {
+        return getCapacity(resource);
+    }
+
+    protected long getCapacity(FluidVariant resource) {
         return capacity;
     }
 

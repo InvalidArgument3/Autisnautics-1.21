@@ -78,7 +78,7 @@ public class ExtraMouthImplant implements EntityImplant
             ItemStack stack = inventory.getItem(i);
             if (
                     stack.getRarity() == Rarity.COMMON  // Avoid eating golden apples and expensive things
-                    && stack.getItem().isEdible()
+                    && stack.has(net.minecraft.core.component.DataComponents.FOOD)
                     && stack.getFoodProperties(null) != null
                     && filterList.matches(ItemVariant.of(stack)))
 

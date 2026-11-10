@@ -190,7 +190,7 @@ public class TankBlock extends BaseColumnBlock implements EntityBlock, BlockPick
         if (blockEntity instanceof TankBlockEntity be)
         {
             if (!be.getStorage(null).isResourceBlank())
-                stacks.forEach(be::saveToItem);
+                stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             return stacks;
         }

@@ -116,6 +116,6 @@ public class ItemPumpBlock extends EjectorBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.ITEM_PUMP, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.ITEM_PUMP, (world1, pos, state1, blockEntity) -> ((ItemPumpBlockEntity) blockEntity).serverTick(), null, world);
     }
 }

@@ -8,7 +8,10 @@
 
 package com.neep.meatlib.client.renderer.render;
 
+import com.neep.meatlib.client.renderer.mesh.Mesh;
 import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
+
+import java.util.function.Consumer;
 
 public interface RenderContext {
     QuadEmitter getEmitter();
@@ -16,4 +19,12 @@ public interface RenderContext {
     default void pushTransform(Object transform) {}
 
     default void popTransform() {}
+
+    /**
+     * Fabric's renderer is not running on NeoForge. Vanilla models still draw through {@code getQuads}.
+     * Nothing in this port consumes the mesh passed here.
+     */
+    default Consumer<Mesh> meshConsumer() {
+        return mesh -> {};
+    }
 }

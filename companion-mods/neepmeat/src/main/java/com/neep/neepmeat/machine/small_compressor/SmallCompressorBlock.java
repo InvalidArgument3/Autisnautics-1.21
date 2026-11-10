@@ -67,7 +67,7 @@ public class SmallCompressorBlock extends BaseHorFacingBlock implements EntityBl
         if (blockEntity instanceof SmallCompressorBlockEntity be)
         {
             if (!be.getInventory().isEmpty())
-                stacks.forEach(be::saveToItem);
+                stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             return stacks;
         }
@@ -102,6 +102,6 @@ public class SmallCompressorBlock extends BaseHorFacingBlock implements EntityBl
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.SMALL_COMPRESSOR, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), (world1, pos, state1, blockEntity) -> blockEntity.clientTick(), world);
+        return MiscUtil.checkType(type, NMBlockEntities.SMALL_COMPRESSOR, (world1, pos, state1, blockEntity) -> ((SmallCompressorBlockEntity) blockEntity).serverTick(), (world1, pos, state1, blockEntity) -> ((SmallCompressorBlockEntity) blockEntity).clientTick(), world);
     }
 }

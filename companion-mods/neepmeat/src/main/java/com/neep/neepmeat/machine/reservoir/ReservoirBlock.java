@@ -49,7 +49,7 @@ public class ReservoirBlock extends TallBlock implements EntityBlock
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.RESERVOIR, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.RESERVOIR, (world1, pos, state1, blockEntity) -> ((ReservoirBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     private class Structure1 extends TallBlock.Structure

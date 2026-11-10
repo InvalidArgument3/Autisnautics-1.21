@@ -73,7 +73,7 @@ public class PLCBlock extends BaseHorFacingBlock implements EntityBlock, DataCab
         BlockEntity blockEntity = builder.getParameter(LootContextParams.BLOCK_ENTITY);
         if (blockEntity instanceof PLCBlockEntity be)
         {
-            stacks.forEach(be::saveToItem);
+            stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             return stacks;
         }

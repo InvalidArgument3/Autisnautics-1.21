@@ -49,6 +49,8 @@ import dev.engine_room.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
 import dev.engine_room.flywheel.lib.visualization.SimpleEntityVisualizer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class NMVisuals
 {
@@ -57,48 +59,48 @@ public class NMVisuals
         // Flywheel
         boolean skipVanillaRender = !MeatLib.CONFIG.dontSkipVanillaRender.getRealValue();
 
-        VisualizerRegistry.setVisualizer(NMBlockEntities.CRUSHER, new SimpleBlockEntityVisualizer<>(CrusherVisual::new, t -> false));
+        setBlockVisualizer(NMBlockEntities.CRUSHER, new SimpleBlockEntityVisualizer<>(CrusherVisual::new, t -> false));
         net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(NMBlockEntities.CRUSHER, CrusherRenderer::new);
 
-        VisualizerRegistry.setVisualizer(LivingMachines.CRUSHER_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(CrusherSegmentVisual::new, t -> false));
+        setBlockVisualizer(LivingMachines.CRUSHER_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(CrusherSegmentVisual::new, t -> false));
 
-        VisualizerRegistry.setVisualizer(LivingMachines.LARGE_TROMMEL_BE, new SimpleBlockEntityVisualizer<>(LargeTrommelVisual::new, t -> false));
+        setBlockVisualizer(LivingMachines.LARGE_TROMMEL_BE, new SimpleBlockEntityVisualizer<>(LargeTrommelVisual::new, t -> false));
         net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.LARGE_TROMMEL_BE, LargeTrommelRenderer::new);
 
         net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.LARGEST_HOPPER_BE, LargestHopperRenderer::new);
 
-        VisualizerRegistry.setVisualizer(LivingMachines.LUCKY_ONE_BE, new SimpleBlockEntityVisualizer<>(LuckyOneVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(IntrusionReactor.DISRUPTOR_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(DisruptorSegmentVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.MOTOR, new SimpleBlockEntityVisualizer<>(MotorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.ADVANCED_MOTOR, new SimpleBlockEntityVisualizer<>(AdvancedMotorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.LARGE_MOTOR, new SimpleBlockEntityVisualizer<>(LargeMotorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.STIRLING_ENGINE, new SimpleBlockEntityVisualizer<>(StirlingEngineVisual::new, t -> skipVanillaRender));
-//        VisualizerRegistry.setVisualizer(NMBlockEntities.FLYWHEEL, new SimpleBlockEntityVisualizer<>(FlywheelVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.HYDRAULIC_PRESS, new SimpleBlockEntityVisualizer<>(HydraulicPressVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(LivingMachines.CHARNEL_PUMP_BE, new SimpleBlockEntityVisualizer<>(CharnelPumpVisual::new, t -> false));
-        VisualizerRegistry.setVisualizer(LivingMachines.BALL_MILL_BE, new SimpleBlockEntityVisualizer<>(BallMillVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(LivingMachines.LUCKY_ONE_BE, new SimpleBlockEntityVisualizer<>(LuckyOneVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(IntrusionReactor.DISRUPTOR_SEGMENT_BE, new SimpleBlockEntityVisualizer<>(DisruptorSegmentVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.MOTOR, new SimpleBlockEntityVisualizer<>(MotorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.ADVANCED_MOTOR, new SimpleBlockEntityVisualizer<>(AdvancedMotorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.LARGE_MOTOR, new SimpleBlockEntityVisualizer<>(LargeMotorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.STIRLING_ENGINE, new SimpleBlockEntityVisualizer<>(StirlingEngineVisual::new, t -> skipVanillaRender));
+//        setBlockVisualizer(NMBlockEntities.FLYWHEEL, new SimpleBlockEntityVisualizer<>(FlywheelVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.HYDRAULIC_PRESS, new SimpleBlockEntityVisualizer<>(HydraulicPressVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(LivingMachines.CHARNEL_PUMP_BE, new SimpleBlockEntityVisualizer<>(CharnelPumpVisual::new, t -> false));
+        setBlockVisualizer(LivingMachines.BALL_MILL_BE, new SimpleBlockEntityVisualizer<>(BallMillVisual::new, t -> skipVanillaRender));
 
-        VisualizerRegistry.setVisualizer(NMBlockEntities.FABRICATOR, new SimpleBlockEntityVisualizer<>(FabricatorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.FABRICATOR, new SimpleBlockEntityVisualizer<>(FabricatorVisual::new, t -> skipVanillaRender));
 
-        VisualizerRegistry.setVisualizer(PLCBlocks.ROBOTIC_ARM_ENTITY, new SimpleBlockEntityVisualizer<>(RoboticArmVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(PLCBlocks.IMPLANTER_BE, new SimpleBlockEntityVisualizer<>(ImplanterVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(PLCBlocks.ROBOTIC_ARM_ENTITY, new SimpleBlockEntityVisualizer<>(RoboticArmVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(PLCBlocks.IMPLANTER_BE, new SimpleBlockEntityVisualizer<>(ImplanterVisual::new, t -> skipVanillaRender));
 
-        VisualizerRegistry.setVisualizer(NMBlockEntities.PYLON, new SimpleBlockEntityVisualizer<>(PylonVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(PLCBlocks.PLC_ENTITY, new SimpleBlockEntityVisualizer<>(PLCVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(PLCBlocks.BUILDER_BE, new SimpleBlockEntityVisualizer<>(BuilderVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.LINEAR_OSCILLATOR, new SimpleBlockEntityVisualizer<>(LinearOscillatorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.EJECTOR, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NMBlockEntities.ITEM_PUMP, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(ItemTransport.FILTERED_EJECTOR_BE, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.PYLON, new SimpleBlockEntityVisualizer<>(PylonVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(PLCBlocks.PLC_ENTITY, new SimpleBlockEntityVisualizer<>(PLCVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(PLCBlocks.BUILDER_BE, new SimpleBlockEntityVisualizer<>(BuilderVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.LINEAR_OSCILLATOR, new SimpleBlockEntityVisualizer<>(LinearOscillatorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.EJECTOR, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.ITEM_PUMP, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(ItemTransport.FILTERED_EJECTOR_BE, new SimpleBlockEntityVisualizer<>(EjectorVisual::new, t -> skipVanillaRender));
 
-        VisualizerRegistry.setVisualizer(NMBlockEntities.LARGE_FAN, new SimpleBlockEntityVisualizer<>(LargeFanVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NMBlockEntities.LARGE_FAN, new SimpleBlockEntityVisualizer<>(LargeFanVisual::new, t -> skipVanillaRender));
 
-        VisualizerRegistry.setVisualizer(NeepBus.VERTICAL_GAUGE_BE, new SimpleBlockEntityVisualizer<>(VerticalGaugeVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(NeepBus.LINEAR_LEVER_BE, new SimpleBlockEntityVisualizer<>(LinearLeverVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NeepBus.VERTICAL_GAUGE_BE, new SimpleBlockEntityVisualizer<>(VerticalGaugeVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(NeepBus.LINEAR_LEVER_BE, new SimpleBlockEntityVisualizer<>(LinearLeverVisual::new, t -> skipVanillaRender));
 
 //        VisualizerRegistry.setVisualizer(NMEntities.PHAGE_RAY).skipVanillaRender(t -> skipVanillaRender).factory(PhageRayInstance::new).apply(true);
         VisualizerRegistry.setVisualizer(NMEntities.PHAGE_RAY, new SimpleEntityVisualizer<>(PhageRayVisual::new, t -> skipVanillaRender));
-        VisualizerRegistry.setVisualizer(LivingMachines.TREE_VACUUM_BE, new SimpleBlockEntityVisualizer<>(TreeVacuumVisual::new, t -> skipVanillaRender));
+        setBlockVisualizer(LivingMachines.TREE_VACUUM_BE, new SimpleBlockEntityVisualizer<>(TreeVacuumVisual::new, t -> skipVanillaRender));
 
         VisualizerRegistry.setVisualizer(NMEntities.FOLLOWER, new SimpleEntityVisualizer<>(FollowerVisual::new, t -> false));
 
@@ -151,5 +153,22 @@ public class NMVisuals
 
             net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry.register(LivingMachines.TREE_VACUUM_BE, DummyBlockEntityRenderer::new);
         }
+    }
+
+    /**
+     * Flywheel's registry is invariant in the block-entity type. The fields here are wildcards
+     * or deferred holders, so the call has to go through a raw type.
+     */
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    private static void setBlockVisualizer(Object type, SimpleBlockEntityVisualizer<?> visualizer) {
+        BlockEntityType resolved;
+        if (type instanceof BlockEntityType<?> blockType) {
+            resolved = blockType;
+        } else if (type instanceof DeferredHolder<?, ?> holder) {
+            resolved = (BlockEntityType) holder.get();
+        } else {
+            return;
+        }
+        VisualizerRegistry.setVisualizer(resolved, visualizer);
     }
 }

@@ -32,7 +32,7 @@ public class TransformingTools
 
     public static boolean isTransformingTool(ItemStack stack)
     {
-        CompoundTag nbt = stack.getTag();
+        CompoundTag nbt = com.neep.meatlib.util.MiscUtil.itemTag(stack);
         return nbt != null && nbt.contains(ROOT_ID);
     }
 

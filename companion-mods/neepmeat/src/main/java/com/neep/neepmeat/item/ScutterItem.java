@@ -98,7 +98,7 @@ public abstract class ScutterItem<T extends ScutterEntity> extends BaseItem
             entity.setCustomName(context.getItemInHand().getHoverName());
         }
 
-        if (stack.getTag() != null)
-            entity.readStackNbt(stack.getTag());
+        if (com.neep.meatlib.util.MiscUtil.itemTag(stack) != null)
+            entity.readStackNbt(com.neep.meatlib.util.MiscUtil.itemTag(stack));
     }
 }

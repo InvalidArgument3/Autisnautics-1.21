@@ -21,9 +21,28 @@ public abstract class SingleVariantStorage<T> implements Storage<T>, StorageView
         this.variant = blank;
     }
 
-    protected abstract T blank();
+    /**
+     * Fabric's hook was {@link #getBlankVariant()}. A subclass may override either name.
+     * The default of each calls the other, so one override is enough.
+     */
+    protected T blank() {
+        return getBlankVariant();
+    }
 
-    protected abstract long capacity(T resource);
+    protected T getBlankVariant() {
+        return blank();
+    }
+
+    /**
+     * Fabric's hook was {@link #getCapacity(Object)}. A subclass may override either name.
+     */
+    protected long capacity(T resource) {
+        return getCapacity(resource);
+    }
+
+    protected long getCapacity(T resource) {
+        return capacity(resource);
+    }
 
     protected abstract boolean matches(T stored, T offered);
 

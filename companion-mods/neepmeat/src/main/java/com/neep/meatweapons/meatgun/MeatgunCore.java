@@ -29,7 +29,7 @@ public record MeatgunCore(RootModuleHolder holder)
 {
     public long acceptResource(ItemVariant variant, long maxAmount, TransactionContext transaction)
     {
-        if (!variant.getItem().isEdible()) // TODO: fluid insertion
+        if (!variant.toStack().has(net.minecraft.core.component.DataComponents.FOOD)) // TODO: fluid insertion
             return 0;
 
         var entry = FoodCartonItem.getHungerSaturation(variant);

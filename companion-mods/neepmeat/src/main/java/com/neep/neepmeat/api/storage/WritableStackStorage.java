@@ -37,6 +37,10 @@ public class WritableStackStorage extends SingleVariantStorage<ItemVariant> {
 
     @Override
     protected long capacity(ItemVariant resource) {
+        return getCapacity(resource);
+    }
+
+    protected long getCapacity(ItemVariant resource) {
         if (resource != null && !resource.isBlank()) {
             return Math.min(resource.getItem().getDefaultMaxStackSize(), capacity);
         }

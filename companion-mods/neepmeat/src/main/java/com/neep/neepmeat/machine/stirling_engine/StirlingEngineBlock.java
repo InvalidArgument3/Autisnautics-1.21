@@ -93,7 +93,7 @@ public class StirlingEngineBlock extends BaseFacingBlock implements EntityBlock,
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.STIRLING_ENGINE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.STIRLING_ENGINE, (world1, pos, state1, blockEntity) -> ((StirlingEngineBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Nullable

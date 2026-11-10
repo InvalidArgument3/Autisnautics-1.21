@@ -54,6 +54,12 @@ public abstract class GeneralPanel extends Panel
         elements.clear();
     }
 
+    /** Yarn name for {@link #clearWidgets()}. */
+    public void clearChildren()
+    {
+        clearWidgets();
+    }
+
     public <T extends Renderable & Point.Mutable & Rectangle & GuiEventListener> T addChild(T widget)
     {
         children.add(widget);

@@ -140,7 +140,7 @@ public class SpiderLegsImplant implements EntityImplant
         {
             if (player.maxUpStep() < PoweredKneesImplant.ACTIVE_STEP_HEIGHT)
             {
-                player.setMaxUpStep(PoweredKneesImplant.ACTIVE_STEP_HEIGHT);
+                player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(PoweredKneesImplant.ACTIVE_STEP_HEIGHT);
             }
         }
 
@@ -206,7 +206,7 @@ public class SpiderLegsImplant implements EntityImplant
     public void onInstall()
     {
         if (player.maxUpStep() < PoweredKneesImplant.ACTIVE_STEP_HEIGHT)
-            player.setMaxUpStep(PoweredKneesImplant.ACTIVE_STEP_HEIGHT);
+            player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(PoweredKneesImplant.ACTIVE_STEP_HEIGHT);
     }
 
     @Override
@@ -216,7 +216,7 @@ public class SpiderLegsImplant implements EntityImplant
 
         // What are you doing step height?
         if (player.maxUpStep() == PoweredKneesImplant.ACTIVE_STEP_HEIGHT)
-            player.setMaxUpStep(0.6f);
+            player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(0.6f);
     }
 
     @Override

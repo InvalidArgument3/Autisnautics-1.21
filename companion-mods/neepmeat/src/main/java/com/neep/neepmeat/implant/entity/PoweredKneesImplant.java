@@ -59,7 +59,7 @@ public class PoweredKneesImplant implements EntityImplant
         {
             if (player.maxUpStep() < ACTIVE_STEP_HEIGHT)
             {
-                player.setMaxUpStep(ACTIVE_STEP_HEIGHT);
+                player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(ACTIVE_STEP_HEIGHT);
             }
         }
     }
@@ -71,7 +71,7 @@ public class PoweredKneesImplant implements EntityImplant
         {
             if (player.maxUpStep() < ACTIVE_STEP_HEIGHT)
             {
-                player.setMaxUpStep(ACTIVE_STEP_HEIGHT);
+                player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(ACTIVE_STEP_HEIGHT);
             }
         }
     }
@@ -80,14 +80,14 @@ public class PoweredKneesImplant implements EntityImplant
     public void onInstall()
     {
         if (player.maxUpStep() < ACTIVE_STEP_HEIGHT)
-            player.setMaxUpStep(ACTIVE_STEP_HEIGHT);
+            player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(ACTIVE_STEP_HEIGHT);
     }
 
     @Override
     public void onUninstall()
     {
         if (player.maxUpStep() == ACTIVE_STEP_HEIGHT)
-            player.setMaxUpStep(0.6f);
+            player.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.STEP_HEIGHT).setBaseValue(0.6f);
     }
 
     public float getJumpPower()

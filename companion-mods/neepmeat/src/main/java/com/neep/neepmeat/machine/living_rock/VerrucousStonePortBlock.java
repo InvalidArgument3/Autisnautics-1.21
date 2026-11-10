@@ -55,7 +55,7 @@ public class VerrucousStonePortBlock extends BaseFacingBlock implements EntityBl
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.VERRUCOUS_STONE_PORT, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.VERRUCOUS_STONE_PORT, (world1, pos, state1, blockEntity) -> ((VerrucousStonePortBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override

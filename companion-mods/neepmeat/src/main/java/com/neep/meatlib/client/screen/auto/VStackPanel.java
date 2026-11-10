@@ -164,4 +164,10 @@ public class VStackPanel extends Panel
         drawables.clear();
         elements.clear();
     }
+
+    /** Yarn name for {@link #clearWidgets()}. */
+    public void clearChildren()
+    {
+        clearWidgets();
+    }
 }

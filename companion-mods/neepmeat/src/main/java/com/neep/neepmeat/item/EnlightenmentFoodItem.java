@@ -29,7 +29,7 @@ public class EnlightenmentFoodItem extends BaseCraftingItem
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user)
     {
-        if (this.isEdible())
+        if (new net.minecraft.world.item.ItemStack(this).has(net.minecraft.core.component.DataComponents.FOOD))
         {
             var enlightenment = NMComponents.ENLIGHTENMENT_MANAGER.getNullable(user);
             if (enlightenment != null)

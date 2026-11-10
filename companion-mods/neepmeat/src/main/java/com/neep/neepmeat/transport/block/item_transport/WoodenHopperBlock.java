@@ -135,7 +135,7 @@ public class WoodenHopperBlock extends HopperBlock implements Wrenchable
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.WOODEN_HOPPER, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.WOODEN_HOPPER, (world1, pos, state1, blockEntity) -> ((WoodenHopperBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override

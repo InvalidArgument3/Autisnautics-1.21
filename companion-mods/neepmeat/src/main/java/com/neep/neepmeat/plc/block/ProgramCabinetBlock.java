@@ -73,7 +73,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
         BlockEntity blockEntity = builder.getParameter(LootContextParams.BLOCK_ENTITY);
         if (blockEntity instanceof ProgramCabinetBlockEntity be)
         {
-            stacks.forEach(be::saveToItem);
+            stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             return stacks;
         }
@@ -207,7 +207,7 @@ public class ProgramCabinetBlock extends TallBlock implements EntityBlock, Compu
     {
         super.appendHoverText(stack, world, tooltip, options);
 
-        CompoundTag blockNbt = BlockItem.getBlockEntityData(stack);
+        CompoundTag blockNbt = com.neep.neepmeat.util.BlockEntityDataUtil.get(stack);
         if (blockNbt == null)
             return;
 

@@ -12,6 +12,8 @@
 
 package com.neep.neepmeat.machine.reactor;
 
+import com.neep.neepmeat.machine.reactor.block.entity.ReactionCoreBlockEntity;
+
 import com.neep.meatlib.block.BaseBlock;
 import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.init.NMBlockEntities;
@@ -44,6 +46,6 @@ public class ReactionCoreBlock extends BaseBlock implements EntityBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, NMBlockEntities.REACTION_CORE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, NMBlockEntities.REACTION_CORE, (world1, pos, state1, blockEntity) -> ((ReactionCoreBlockEntity) blockEntity).serverTick(), null, world);
     }
 }

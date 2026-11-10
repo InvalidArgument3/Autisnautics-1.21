@@ -35,10 +35,14 @@ public interface DataVariant
 
     default int getAsInt()
     {
-        return Math.round(getAsFloat());
+        return Math.round(floatValue());
     }
 
-    float getAsFloat();
+    float floatValue();
+
+    default int intValue() {
+        return Math.round(floatValue());
+    }
     String stringValue();
     @Nullable WorldTargetImpl wtValue();
 
@@ -85,7 +89,7 @@ public interface DataVariant
     record FloatDataVariant(float f) implements DataVariant
     {
         @Override
-        public float getAsFloat()
+        public float floatValue()
         {
             return f;
         }
@@ -124,7 +128,7 @@ public interface DataVariant
     record StringDataVariant(String s) implements DataVariant
     {
         @Override
-        public float getAsFloat()
+        public float floatValue()
         {
             return DataVariant.unquantizeCoord(s);
         }

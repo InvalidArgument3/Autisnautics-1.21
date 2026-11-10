@@ -6,6 +6,6 @@
  * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
  */
 
-
 package net.fabricmc.fabric.api.renderer.v1.render;
+
 public interface RenderContext {}

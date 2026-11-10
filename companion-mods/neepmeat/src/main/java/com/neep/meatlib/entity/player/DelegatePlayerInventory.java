@@ -172,7 +172,7 @@ public class DelegatePlayerInventory extends FakePlayerEntity.FakePlayerInventor
             itemStack = new ItemStack(item, 0);
             if (stack.hasTag())
             {
-                itemStack.setTag(stack.getTag().copy());
+                com.neep.meatlib.util.MiscUtil.setItemTag(itemStack, com.neep.meatlib.util.MiscUtil.itemTag(stack).copy());
             }
 
             this.setItem(slot, itemStack);

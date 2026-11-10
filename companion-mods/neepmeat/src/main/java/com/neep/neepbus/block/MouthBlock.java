@@ -78,7 +78,7 @@ public class MouthBlock extends BaseBlock implements DataCable, NeepBusProvider,
         BlockEntity blockEntity = builder.getParameter(LootContextParams.BLOCK_ENTITY);
         if (blockEntity instanceof MouthBlockEntity be && !be.isEmpty())
         {
-            stacks.forEach(be::saveToItem);
+            stacks.forEach(stack -> be.saveToItem(stack, builder.getLevel().registryAccess()));
 
             stacks.forEach(this::processDroppedStack);
             return stacks;

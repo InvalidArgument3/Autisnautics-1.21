@@ -144,7 +144,7 @@ public class CompoundInjectorItem extends BaseItem
 
     public static int getHealsRemaining(ItemStack stack)
     {
-        CompoundTag nbt = stack.getTag();
+        CompoundTag nbt = com.neep.meatlib.util.MiscUtil.itemTag(stack);
         return nbt != null ? nbt.getInt("Heals") : 0;
     }
 

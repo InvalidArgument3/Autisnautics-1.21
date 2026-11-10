@@ -161,7 +161,7 @@ public abstract class AbstractAxialFluidPipe extends BaseFacingBlock implements 
         if (!world.isClientSide())
         {
             // TODO: jank
-            return ((world1, pos, state1, blockEntity) -> ((FluidPipeBlockEntity<?>) blockEntity).tick());
+            return ((world1, pos, state1, blockEntity) -> ((FluidPipeBlockEntity<?>) blockEntity).serverTick());
         }
         return null;
     }

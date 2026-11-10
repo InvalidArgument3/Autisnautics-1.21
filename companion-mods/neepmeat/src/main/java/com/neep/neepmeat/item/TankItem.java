@@ -51,7 +51,7 @@ public class TankItem extends FluidComponentItem
 
     public ResourceAmount<FluidVariant> getAmount(ItemStack stack)
     {
-        CompoundTag blockNbt = getBlockEntityData(stack);
+        CompoundTag blockNbt = com.neep.neepmeat.util.BlockEntityDataUtil.get(stack);
         if (blockNbt != null)
         {
             FluidVariant variant = FluidVariant.fromNbt(blockNbt.getCompound(WritableSingleFluidStorage.KEY_RESOURCE));
@@ -81,7 +81,7 @@ public class TankItem extends FluidComponentItem
     public void appendHoverText(ItemStack itemStack, Item.TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext)
     {
         super.appendHoverText(itemStack, world, tooltip, tooltipContext);
-        CompoundTag blockNbt = getBlockEntityData(itemStack);
+        CompoundTag blockNbt = com.neep.neepmeat.util.BlockEntityDataUtil.get(itemStack);
         if (blockNbt == null)
             return;
 
@@ -123,7 +123,7 @@ public class TankItem extends FluidComponentItem
     @Override
     public Component getName(ItemStack stack)
     {
-        CompoundTag blockNbt = getBlockEntityData(stack);
+        CompoundTag blockNbt = com.neep.neepmeat.util.BlockEntityDataUtil.get(stack);
         FluidVariant variant;
         if (blockNbt != null && !(variant = FluidVariant.fromNbt(blockNbt.getCompound(WritableSingleFluidStorage.KEY_RESOURCE))).isBlank())
         {

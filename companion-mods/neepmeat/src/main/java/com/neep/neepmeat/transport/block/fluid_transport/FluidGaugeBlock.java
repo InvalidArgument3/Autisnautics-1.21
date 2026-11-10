@@ -167,6 +167,6 @@ public class FluidGaugeBlock<T> extends BaseFacingBlock implements EntityBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, typeSupplier.get(), (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, typeSupplier.get(), (world1, pos, state1, blockEntity) -> ((FluidGaugeBlockEntity) blockEntity).serverTick(), null, world);
     }
 }

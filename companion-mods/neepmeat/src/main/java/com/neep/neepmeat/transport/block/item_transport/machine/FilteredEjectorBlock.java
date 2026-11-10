@@ -86,6 +86,6 @@ public class FilteredEjectorBlock extends EjectorBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, ItemTransport.FILTERED_EJECTOR_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, ItemTransport.FILTERED_EJECTOR_BE, (world1, pos, state1, blockEntity) -> ((FilteredEjectorBlockEntity) blockEntity).serverTick(), null, world);
     }
 }

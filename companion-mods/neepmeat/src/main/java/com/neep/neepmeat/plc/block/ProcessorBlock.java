@@ -33,7 +33,7 @@ public class ProcessorBlock extends BaseBlock implements EntityBlock, NeepBusPro
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type)
     {
-        return MiscUtil.checkType(type, PLCBlocks.PROCESSOR_BE, (world1, pos, state1, blockEntity) -> blockEntity.serverTick(), null, world);
+        return MiscUtil.checkType(type, PLCBlocks.PROCESSOR_BE, (world1, pos, state1, blockEntity) -> ((ProcessorBlockEntity) blockEntity).serverTick(), null, world);
     }
 
     @Override
