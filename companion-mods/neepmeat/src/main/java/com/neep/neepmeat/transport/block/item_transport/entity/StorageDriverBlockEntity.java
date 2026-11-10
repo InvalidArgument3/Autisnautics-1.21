@@ -43,7 +43,7 @@ import com.neep.neepmeat.transport.item_network.ItemRoute;
 import com.neep.neepmeat.transport.item_network.PipeCacheImpl;
 import com.neep.neepmeat.transport.item_network.RetrievalTarget;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiCache;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageView;

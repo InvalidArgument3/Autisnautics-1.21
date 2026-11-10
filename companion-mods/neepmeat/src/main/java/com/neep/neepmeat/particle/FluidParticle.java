@@ -12,7 +12,7 @@
 
 package com.neep.neepmeat.particle;
 
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import com.neep.meatlib.client.fluid.FluidClient.FluidRenderHandlerRegistry;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.BlockPos;

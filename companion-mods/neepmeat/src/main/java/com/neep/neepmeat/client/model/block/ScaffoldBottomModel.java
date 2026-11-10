@@ -13,14 +13,14 @@
 package com.neep.neepmeat.client.model.block;
 
 import com.mojang.datafixers.util.Pair;
-import net.fabricmc.fabric.api.renderer.v1.Renderer;
-import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
-import net.fabricmc.fabric.api.renderer.v1.mesh.Mesh;
-import net.fabricmc.fabric.api.renderer.v1.mesh.MeshBuilder;
-import net.fabricmc.fabric.api.renderer.v1.mesh.MutableQuadView;
-import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
-import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
-import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
+import com.neep.meatlib.client.renderer.Renderer;
+import com.neep.meatlib.client.renderer.RendererAccess;
+import com.neep.meatlib.client.renderer.mesh.Mesh;
+import com.neep.meatlib.client.renderer.mesh.MeshBuilder;
+import com.neep.meatlib.client.renderer.mesh.MutableQuadView;
+import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
+import com.neep.meatlib.client.renderer.model.FabricBakedModel;
+import com.neep.meatlib.client.renderer.render.RenderContext;
 import net.minecraft.client.render.model.*;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;

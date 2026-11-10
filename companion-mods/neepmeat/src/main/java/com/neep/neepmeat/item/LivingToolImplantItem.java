@@ -18,7 +18,7 @@ import com.neep.neepmeat.implant.entity.ImplantManager;
 import com.neep.neepmeat.implant.item.PneumaticMotorImplant;
 import com.neep.neepmeat.init.NMComponents;
 import com.neep.neepmeat.item.util.LivingItemStorage;
-import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
+import com.neep.meatlib.transfer.ContainerItemContext;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.resources.ResourceLocation;

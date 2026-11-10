@@ -14,7 +14,7 @@ package com.neep.neepmeat.item;
 
 import com.neep.meatlib.item.TooltipSupplier;
 import com.neep.neepmeat.entity.scutter.FarmingScutter;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;

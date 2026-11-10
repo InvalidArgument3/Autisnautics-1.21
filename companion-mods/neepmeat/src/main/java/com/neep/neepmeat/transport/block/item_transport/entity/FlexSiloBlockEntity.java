@@ -23,7 +23,7 @@ import net.minecraft.core.HolderLookup;
 import com.neep.meatlib.storage.MeatlibStorageUtil;
 import com.neep.neepmeat.transport.block.FlexStorageBlockEntity;
 import com.neep.neepmeat.transport.block.item_transport.FlexSiloBlock;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageView;

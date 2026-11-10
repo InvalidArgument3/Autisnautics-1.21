@@ -18,7 +18,7 @@ import com.neep.meatlib.blockentity.SyncableBlockEntity;
 import com.neep.meatlib.storage.MeatlibStorageUtil;
 import com.neep.neepmeat.api.storage.WritableStackStorage;
 import com.neep.neepmeat.init.NMBlockEntities;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.Transaction;

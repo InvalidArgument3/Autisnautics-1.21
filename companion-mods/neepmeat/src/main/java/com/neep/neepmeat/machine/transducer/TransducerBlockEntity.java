@@ -26,7 +26,7 @@ import com.neep.neepmeat.transport.fluid_network.node.AcceptorModes;
 import com.neep.neepmeat.transport.api.AutoEjector;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiCache;
 import com.neep.meatlib.transfer.FluidConstants;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageUtil;

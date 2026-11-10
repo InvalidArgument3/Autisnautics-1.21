@@ -23,7 +23,7 @@ import it.unimi.dsi.fastutil.longs.LongObjectPair;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.ResourceAmount;

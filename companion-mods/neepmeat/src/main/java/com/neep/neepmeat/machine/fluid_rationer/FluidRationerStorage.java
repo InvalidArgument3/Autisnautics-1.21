@@ -13,8 +13,8 @@
 package com.neep.neepmeat.machine.fluid_rationer;
 
 import com.neep.neepmeat.api.storage.WritableSingleFluidStorage;
-import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.ContainerItemContext;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageView;

@@ -13,13 +13,13 @@
 package com.neep.neepmeat.item.util;
 
 import com.google.common.collect.Iterators;
-import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
+import com.neep.meatlib.transfer.ContainerItemContext;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.StorageView;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.TransactionContext;
-import net.fabricmc.fabric.api.transfer.v1.transaction.base.SnapshotParticipant;
+import com.neep.meatlib.transfer.SnapshotParticipant;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 

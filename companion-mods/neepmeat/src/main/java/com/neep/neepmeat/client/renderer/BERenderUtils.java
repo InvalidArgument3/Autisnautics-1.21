@@ -5,7 +5,6 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
  * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
@@ -23,11 +22,11 @@ import com.neep.neepmeat.init.NMFluids;
 import com.neep.neepmeat.mixin.BlockModelRendererAccessor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import net.fabricmc.fabric.api.renderer.v1.Renderer;
-import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
-import net.fabricmc.fabric.api.renderer.v1.mesh.MutableQuadView;
-import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
-import net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering;
+import com.neep.meatlib.client.renderer.Renderer;
+import com.neep.meatlib.client.renderer.RendererAccess;
+import com.neep.meatlib.client.renderer.mesh.MutableQuadView;
+import com.neep.meatlib.client.renderer.mesh.QuadEmitter;
+import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.FluidVariantAttributes;
 import net.minecraft.client.Minecraft;

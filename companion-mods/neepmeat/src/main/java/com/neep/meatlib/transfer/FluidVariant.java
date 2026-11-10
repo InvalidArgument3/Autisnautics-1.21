@@ -12,7 +12,7 @@ package com.neep.meatlib.transfer;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 
-public record FluidVariant(Fluid fluid) {
+public record FluidVariant(Fluid fluid) implements TransferVariant<Fluid> {
     public static final FluidVariant BLANK = new FluidVariant(Fluids.EMPTY);
 
     public static FluidVariant of(Fluid fluid) {

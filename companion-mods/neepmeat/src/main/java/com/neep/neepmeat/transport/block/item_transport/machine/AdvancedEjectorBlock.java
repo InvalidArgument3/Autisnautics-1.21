@@ -40,7 +40,7 @@ import com.neep.neepmeat.transport.fluid_network.ConnectionType;
 import com.neep.neepmeat.transport.screen.AdvancedEjectorScreenHandler;
 import com.neep.meatlib.util.MiscUtil;
 import com.neep.meatlib.util.Wrenchable;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;

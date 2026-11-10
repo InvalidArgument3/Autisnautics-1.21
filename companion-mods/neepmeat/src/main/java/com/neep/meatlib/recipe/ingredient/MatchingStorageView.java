@@ -13,7 +13,7 @@
 package com.neep.meatlib.recipe.ingredient;
 
 import com.neep.meatlib.transfer.StorageView;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import com.neep.meatlib.transfer.TransactionContext;
 
 public record MatchingStorageView<T extends TransferVariant<?>>(T variant, long amount) implements StorageView<T>

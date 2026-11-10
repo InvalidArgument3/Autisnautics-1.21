@@ -19,7 +19,7 @@ import com.neep.neepmeat.init.NMSounds;
 import com.neep.meatlib.transfer.InventoryStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.base.CombinedSlottedStorage;
+import com.neep.meatlib.transfer.CombinedSlottedStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;

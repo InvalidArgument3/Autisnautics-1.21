@@ -15,7 +15,7 @@ package com.neep.neepmeat.api.multiblock;
 import com.neep.neepmeat.block.entity.machine.VatControllerBlockEntity;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageView;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import com.neep.meatlib.transfer.TransactionContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;

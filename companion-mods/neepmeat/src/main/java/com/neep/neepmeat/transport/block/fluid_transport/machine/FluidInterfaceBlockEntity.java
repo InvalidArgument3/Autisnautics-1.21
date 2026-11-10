@@ -37,7 +37,7 @@ import com.neep.neepmeat.api.storage.DynamicLazyBlockApiCache;
 import com.neep.neepmeat.api.storage.LazyBlockApiCache;
 import com.neep.neepmeat.init.NMBlockEntities;
 import com.neep.neepmeat.transport.block.fluid_transport.FluidInterfaceBlock;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.core.BlockPos;

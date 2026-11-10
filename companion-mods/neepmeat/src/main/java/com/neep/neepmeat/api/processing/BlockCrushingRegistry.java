@@ -30,7 +30,7 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import com.neep.meatlib.transfer.ItemVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;

@@ -19,7 +19,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.neep.meatlib.api.network.ParamCodec;
 import com.neep.meatlib.api.network.ParamCodecs;
 import com.neep.meatlib.transfer.StorageView;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;

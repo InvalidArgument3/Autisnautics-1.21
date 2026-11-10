@@ -14,7 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public record ItemVariant(Item item, DataComponentPatch components) {
+public record ItemVariant(Item item, DataComponentPatch components) implements TransferVariant<Item> {
     public static final ItemVariant BLANK = new ItemVariant(Items.AIR, DataComponentPatch.EMPTY);
 
     public static ItemVariant of(Item item) {

@@ -33,7 +33,7 @@ import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 import com.neep.meatlib.blockentity.SyncableBlockEntity;
 import com.neep.neepmeat.api.storage.DynamicLazyBlockApiCache;
 import com.neep.neepmeat.api.storage.LazyBlockApiCache;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.core.BlockPos;

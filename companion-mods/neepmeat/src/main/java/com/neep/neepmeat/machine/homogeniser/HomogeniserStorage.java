@@ -16,7 +16,7 @@ import com.neep.meatlib.util.LazySupplier;
 import com.neep.meatlib.util.NbtSerialisable;
 import com.neep.neepmeat.api.storage.WritableStackStorage;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiCache;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.core.Direction;

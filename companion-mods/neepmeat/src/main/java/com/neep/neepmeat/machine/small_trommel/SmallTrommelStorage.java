@@ -17,7 +17,7 @@ import com.neep.neepmeat.api.storage.LazyBlockApiCache;
 import com.neep.neepmeat.api.storage.WritableSingleFluidStorage;
 import com.neep.neepmeat.api.storage.WritableStackStorage;
 import com.neep.meatlib.transfer.FluidConstants;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.SingleVariantStorage;

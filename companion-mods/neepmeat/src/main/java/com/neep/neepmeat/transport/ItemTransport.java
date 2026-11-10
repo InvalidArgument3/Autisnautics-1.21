@@ -38,7 +38,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.StorageDriverBloc
 import com.neep.neepmeat.transport.block.item_transport.machine.*;
 import com.neep.neepmeat.transport.item.ProcessCardItem;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

@@ -16,7 +16,7 @@ import com.neep.meatlib.util.NbtSerialisable;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.TransactionContext;
-import net.fabricmc.fabric.api.transfer.v1.transaction.base.SnapshotParticipant;
+import com.neep.meatlib.transfer.SnapshotParticipant;
 import net.minecraft.nbt.CompoundTag;
 
 public interface CrusherRecipeContext

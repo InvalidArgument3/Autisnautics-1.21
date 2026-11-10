@@ -28,7 +28,7 @@ import com.neep.neepmeat.machine.phage_ray.PhageRayEntity;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import com.neep.meatlib.transfer.ItemVariant;
-import net.fabricmc.fabric.api.transfer.v1.item.PlayerInventoryStorage;
+import com.neep.meatlib.transfer.PlayerInventoryStorage;
 import com.neep.meatlib.transfer.Transaction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

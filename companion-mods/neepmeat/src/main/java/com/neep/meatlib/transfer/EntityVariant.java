@@ -12,7 +12,7 @@
 
 package com.neep.meatlib.transfer;
 
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.Entity;

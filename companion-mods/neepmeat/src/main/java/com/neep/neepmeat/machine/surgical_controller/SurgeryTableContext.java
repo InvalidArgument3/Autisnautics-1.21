@@ -18,7 +18,7 @@ import com.neep.neepmeat.plc.component.TableComponent;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiCache;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;

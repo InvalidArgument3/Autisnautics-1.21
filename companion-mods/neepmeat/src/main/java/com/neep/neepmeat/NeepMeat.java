@@ -78,6 +78,7 @@ public final class NeepMeat {
         bus.addListener((net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent event) -> com.neep.neepmeat.init.NMBlockEntities.bind());
         com.neep.neepmeat.component.NMAttachments.ATTACHMENTS.register(bus);
         bus.addListener(com.neep.neepmeat.network.RawPayload::register);
+        bus.addListener(com.neep.meatlib.datagen.FabricDataGenerator::onGatherData);
         com.neep.neepmeat.advancement.NMCriteria.TRIGGERS.register(bus);
         com.neep.neepmeat.init.NMScreenHandlers.register(bus);
         com.neep.neepmeat.plc.block.entity.PLCBlockEntity.registerNetwork();

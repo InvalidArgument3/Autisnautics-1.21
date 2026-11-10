@@ -19,7 +19,7 @@ import com.neep.meatlib.transfer.FluidConstants;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
+import com.neep.meatlib.transfer.SingleSlotStorage;
 import com.neep.meatlib.transfer.SingleVariantStorage;
 import com.neep.meatlib.transfer.Transaction;
 import com.neep.meatlib.transfer.TransactionContext;

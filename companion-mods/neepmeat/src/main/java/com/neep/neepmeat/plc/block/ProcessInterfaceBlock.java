@@ -21,7 +21,7 @@ import com.neep.neepmeat.transport.ItemTransport;
 import com.neep.neepmeat.transport.api.pipe.ItemPipeConnectable;
 import com.neep.neepmeat.transport.screen.ProcessInterfaceScreenHandler;
 import com.neep.meatlib.util.MiscUtil;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.core.BlockPos;

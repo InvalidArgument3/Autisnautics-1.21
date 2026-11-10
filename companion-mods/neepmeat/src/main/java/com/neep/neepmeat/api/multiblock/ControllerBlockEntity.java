@@ -13,7 +13,7 @@
 package com.neep.neepmeat.api.multiblock;
 
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import net.minecraft.server.level.ServerLevel;
 
 @SuppressWarnings("UnstableApiUsage")

@@ -1,3 +1,15 @@
+## Transfer and renderer shims, jar 0.30.0-neoforge.52
+
+Combined-tree errors: **4264** before, **3854** after. Fabric transfer, Fabric renderer, and Fabric fluid-rendering packages dropped out of `tools/port-errors/packages.txt`. The next missing packages are yarn `net.minecraft.client.render`, Fabric resource and networking, and `AbstractReferenceMap`.
+
+`com.neep.meatlib.transfer` now has the Fabric transfer types the sources import (`TransferVariant`, `ItemStorage`, `FluidStorage`, `SnapshotParticipant`, `SingleSlotStorage`, `ContainerItemContext`, `PlayerInventoryStorage`, `FilteringStorage`, `InsertionOnlyStorage`, `SingleVariantItemStorage`, `StoragePreconditions`, `FluidVariantAttributes`). Imports were rewritten onto that package. `ItemVariant` and `FluidVariant` implement `TransferVariant`.
+
+Fluid sprites and colours are `com.neep.meatlib.client.fluid.FluidClient`, and `FluidVariantRendering.registerClientExtensions` applies `IClientFluidTypeExtensions` on `RegisterClientExtensionsEvent`. The renderer types are `com.neep.meatlib.client.renderer`. `QuadEmitter.emit` bakes one axis-aligned quad through `QuadBakingVertexConsumer`. Emissive flags, colour indexes, and non-square geometry are dropped. `FabricBakedModel.emitBlockQuads` is not called by the vanilla baker.
+
+`FabricDataGenerator.addProvider` stores the provider and `GatherDataEvent` adds it when it implements `DataProvider`. `NMDataGen` is loaded by name when that class is on the classpath.
+
+The clean import closure was 147 files. Same-package references put most of them back. 24 stayed out, including `CrusherRecipeContext`, `FluidBuffer`, `ItemInterfaceBlock`, and several blocks and mixins. `exclude.txt` is **1358**.
+
 ## External families, jar 0.30.0-neoforge.51
 
 Combined-tree errors before this run: **4403**. After the family shims: **4264**.

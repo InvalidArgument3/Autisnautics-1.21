@@ -23,7 +23,7 @@ import com.neep.meatlib.MeatLib;
 import com.neep.meatlib.util.MeatLibCodecs;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import com.neep.meatlib.transfer.TransactionContext;
 import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;

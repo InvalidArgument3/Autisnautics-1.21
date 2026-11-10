@@ -18,7 +18,7 @@ import com.neep.meatlib.item.TooltipSupplier;
 import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.transport.block.item_transport.ItemPipeBlock;
 import com.neep.neepmeat.transport.fluid_network.ConnectionType;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.ChatFormatting;

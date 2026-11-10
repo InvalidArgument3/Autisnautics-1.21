@@ -16,7 +16,7 @@ import com.neep.neepmeat.transport.api.FluidTransportConstants;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.ResourceAmount;
 import com.neep.meatlib.transfer.TransactionContext;
-import net.fabricmc.fabric.api.transfer.v1.transaction.base.SnapshotParticipant;
+import com.neep.meatlib.transfer.SnapshotParticipant;
 import net.minecraft.server.level.ServerLevel;
 
 @SuppressWarnings("UnstableApiUsage")

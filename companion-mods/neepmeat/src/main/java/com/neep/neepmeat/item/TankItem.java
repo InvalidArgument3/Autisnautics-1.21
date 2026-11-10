@@ -19,7 +19,7 @@ import com.neep.meatlib.item.ItemSettings;
 import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.neepmeat.api.storage.WritableSingleFluidStorage;
 import com.neep.neepmeat.transport.block.fluid_transport.machine.TankType;
-import net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering;
+import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidConstants;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.FluidVariantAttributes;

@@ -12,9 +12,9 @@
 
 package com.neep.meatlib.transfer;
 
-import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
+import com.neep.meatlib.transfer.SingleSlotStorage;
 import com.neep.meatlib.transfer.TransactionContext;
-import net.fabricmc.fabric.api.transfer.v1.transaction.base.SnapshotParticipant;
+import com.neep.meatlib.transfer.SnapshotParticipant;
 import net.minecraft.world.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 

@@ -15,7 +15,7 @@ package com.neep.meatlib.api.network;
 import com.neep.meatlib.network.PacketBufUtil;
 import com.neep.meatlib.recipe.MeatlibRecipe;
 import com.neep.meatlib.transfer.ItemVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 import com.neep.meatlib.transfer.ResourceAmount;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;

@@ -17,10 +17,10 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.init.NMFluids;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
-import net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering;
+import com.neep.meatlib.client.fluid.FluidClient.FluidRenderHandler;
+import com.neep.meatlib.client.fluid.FluidClient.FluidRenderHandlerRegistry;
+import com.neep.meatlib.client.fluid.FluidClient.SimpleFluidRenderHandler;
+import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariantAttributes;
 import net.minecraft.resources.ResourceLocation;
 

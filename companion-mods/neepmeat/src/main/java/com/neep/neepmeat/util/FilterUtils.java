@@ -14,7 +14,7 @@ package com.neep.neepmeat.util;
 
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.StorageView;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
+import com.neep.meatlib.transfer.TransferVariant;
 
 import java.util.List;
 import java.util.function.Predicate;

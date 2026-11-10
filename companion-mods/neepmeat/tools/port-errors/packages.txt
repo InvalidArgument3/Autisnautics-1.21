@@ -1,42 +1,21 @@
-# missing packages in the 4403-error combined compile
+# missing packages
 
-18	com.neep.meatlib.transfer
-15	net.fabricmc.fabric.api.transfer.v1.client.fluid
-14	net.fabricmc.fabric.api.datagen.v1
-14	RendererAccess
-13	net.fabricmc.fabric.api.transfer.v1.context
+Before the transfer, fluid, and renderer shims the combined tree had 4264 errors.
+After those shims it has 3854.
+
+## After
+
 12	net.minecraft.client.render
-12	net.fabricmc.fabric.api.renderer.v1
-11	net.fabricmc.fabric.api.event.registry
 11	net.fabricmc.fabric.api.resource
 10	net.fabricmc.fabric.api.networking.v1
-10	net.fabricmc.fabric.api.transfer.v1.storage.base
+10	net.fabricmc.fabric.api.event.registry
 10	AbstractReferenceMap
-9	net.fabricmc.fabric.api.datagen.v1.provider
 8	org.apache.commons.collections4.map
 7	net.minecraft.util.math
-7	net.fabricmc.fabric.api.renderer.v1.mesh
 6	net.fabricmc.api
-6	net.fabricmc.loader.api
-6	net.fabricmc.fabric.api.transfer.v1.transaction.base
 6	net.fabricmc.fabric.api.registry
-6	net.fabricmc.fabric.api.renderer.v1.model
 6	net.minecraft.client.render.model
 6	net.fabricmc.fabric.api.object.builder.v1.block
 6	net.fabricmc.fabric.api.object.builder.v1.block.entity
-5	FuelRegistry
-4	FabricTagProvider
-4	software.bernie.geckolib.animatable.client
-4	net.fabricmc.fabric.api.biome.v1
-3	net.fabricmc.fabric.api.screenhandler.v1
-3	net.minecraft.world.item.enchantment
-3	net.fabricmc.fabric.api.itemgroup.v1
-3	org.valkyrienskies.mod.common
-3	net.fabricmc.fabric.api.client.rendering.v1
-3	WorldRenderContext
-3	net.fabricmc.fabric.api.lookup.v1.item
-3	net.fabricmc.fabric.api.client.model
-3	net.minecraft.world.level.storage.loot
-3	dev.onyxstudios.cca.api.v3.component
-3	net.fabricmc.fabric.api.tag.convention.v1
-3	ServerPlayConnectionEvents
+
+Fabric transfer, Fabric renderer, and Fabric fluid-rendering packages are no longer in this list.

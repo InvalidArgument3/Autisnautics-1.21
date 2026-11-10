@@ -13,7 +13,7 @@
 package com.neep.neepmeat.item;
 
 import com.neep.neepmeat.api.processing.MeatFluidUtil;
-import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
+import com.neep.meatlib.transfer.ContainerItemContext;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.StoragePreconditions;

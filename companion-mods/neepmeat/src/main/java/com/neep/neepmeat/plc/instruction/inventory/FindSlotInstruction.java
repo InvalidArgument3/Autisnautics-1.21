@@ -11,7 +11,7 @@ import com.neep.neepmeat.plc.Instructions;
 import com.neep.neepmeat.plc.instruction.InstructionProvider;
 import com.neep.neepmeat.plc.instruction.PlcInstruction;
 import com.neep.neepmeat.plc.instruction.StockInstruction;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.Transaction;

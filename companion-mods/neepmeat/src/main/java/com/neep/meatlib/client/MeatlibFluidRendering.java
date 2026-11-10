@@ -16,7 +16,7 @@ import com.mojang.blaze3d.platform.NativeImage;
 import com.neep.meatlib.mixin.client.SpriteContentsAccessor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering;
+import com.neep.meatlib.client.fluid.FluidClient.FluidVariantRendering;
 import com.neep.meatlib.transfer.FluidVariant;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import java.util.HashMap;

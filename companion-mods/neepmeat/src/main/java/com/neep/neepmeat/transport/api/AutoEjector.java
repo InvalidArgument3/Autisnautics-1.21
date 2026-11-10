@@ -17,7 +17,7 @@ import com.neep.neepmeat.api.FluidPump;
 import com.neep.neepmeat.api.storage.DynamicLazyBlockApiCache;
 import com.neep.neepmeat.api.storage.LazyBlockApiCache;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.StorageUtil;

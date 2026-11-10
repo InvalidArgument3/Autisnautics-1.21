@@ -14,7 +14,7 @@ package com.neep.neepmeat.api.storage;
 
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
-import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
+import com.neep.meatlib.transfer.SingleSlotStorage;
 import net.minecraft.core.Direction;
 
 // This may be slightly unnecessary

@@ -43,7 +43,7 @@ import com.neep.neepmeat.transport.item_network.ItemInPipe;
 import com.neep.neepmeat.transport.util.ItemPipeUtil;
 import com.neep.meatlib.util.MiscUtil;
 import com.neep.meatlib.transfer.InventoryStorage;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import com.neep.meatlib.transfer.ItemStorage;
 import com.neep.meatlib.transfer.ItemVariant;
 import com.neep.meatlib.transfer.Storage;
 import com.neep.meatlib.transfer.ResourceAmount;

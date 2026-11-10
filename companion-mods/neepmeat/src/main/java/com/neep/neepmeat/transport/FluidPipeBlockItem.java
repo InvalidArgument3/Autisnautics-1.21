@@ -20,7 +20,7 @@ import com.neep.neepmeat.item.FluidComponentItem;
 import com.neep.neepmeat.transport.block.fluid_transport.FluidPipeBlock;
 import com.neep.neepmeat.transport.fluid_network.ConnectionType;
 import com.neep.neepmeat.util.NMMaths;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import com.neep.meatlib.transfer.FluidStorage;
 import com.neep.meatlib.transfer.FluidVariant;
 import com.neep.meatlib.transfer.Storage;
 import net.minecraft.ChatFormatting;
