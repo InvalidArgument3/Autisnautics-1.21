@@ -539,8 +539,6 @@
   "block.neepmeat.grinder.lore_0": "§eUse with an empty hand while sneaking to eject XP.",
   "block.neepmeat.large_crusher": "Large Crusher",
   "block.neepmeat.alloy_kiln": "Alloy Kiln",
-  "block.neepmeat.robotic_arm": "PLC Robotic Arm",
-  "block.neepmeat.robotic_arm.lore_0": "A PLC actuator that can operate at high speed when given enough power.",
   "block.neepmeat.collector": "Fat Collector",
   "block.neepmeat.crucible": "Rendering Basin",
   "block.neepmeat.casting_basin": "Pressing Basin",

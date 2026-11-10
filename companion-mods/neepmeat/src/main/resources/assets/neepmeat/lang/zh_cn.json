@@ -526,8 +526,6 @@
   "block.neepmeat.grinder.lore_0": "§e潜行空手交互以提取经验。§f",
   "block.neepmeat.large_crusher": "大型粉碎机",
   "block.neepmeat.alloy_kiln": "合金窑",
-  "block.neepmeat.robotic_arm": "PLC机械臂",
-  "block.neepmeat.robotic_arm.lore_0": "PLC操作机构，功率足够时能高速运作。",
   "block.neepmeat.collector": "脂肪收集器",
   "block.neepmeat.crucible": "熬脂盆",
   "block.neepmeat.casting_basin": "液压盆",
