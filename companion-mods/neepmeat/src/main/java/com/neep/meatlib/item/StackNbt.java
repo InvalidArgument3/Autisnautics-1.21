@@ -19,6 +19,7 @@ import java.util.function.Consumer;
 public final class StackNbt {
     private StackNbt() {}
 
+    /** A detached copy of the stack's custom data. Mutating it does not write back. Use {@link #edit}. */
     public static CompoundTag read(ItemStack stack) {
         return stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
     }

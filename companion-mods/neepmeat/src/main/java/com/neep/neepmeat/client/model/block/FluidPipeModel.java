@@ -130,6 +130,10 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     @Override
     public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context)
     {
+        if (blockView == null || pos == null || state == null)
+        {
+            return;
+        }
         for (Direction direction : Direction.values())
         {
             boolean forward = FluidPipe.isConnectedIn(blockView, pos, state, direction);
@@ -157,7 +161,7 @@ public class FluidPipeModel implements UnbakedModel, BakedModel, FabricBakedMode
     @Override
     public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction face, RandomSource random)
     {
-        return Collections.emptyList();
+        return getQuads(state, face, random, net.neoforged.neoforge.client.model.data.ModelData.EMPTY, null);
     }
 
     @Override

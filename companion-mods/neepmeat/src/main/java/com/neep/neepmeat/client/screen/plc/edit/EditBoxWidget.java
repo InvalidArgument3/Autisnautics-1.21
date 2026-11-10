@@ -431,19 +431,17 @@ public class EditBoxWidget extends AbstractScrollWidget
         matrices.scale(scale, scale, 1);
 
         Matrix4f matrix4f = matrices.last().pose();
-        Tesselator tessellator = Tesselator.getInstance();
-        BufferBuilder bufferBuilder = tessellator.getBuilder();
         RenderSystem.setShader(GameRenderer::getPositionShader);
         RenderSystem.setShaderColor(0.0F, 0.0F, 1.0F, 1.0F);
 //        RenderSystem.disableTexture();
         RenderSystem.enableColorLogicOp();
         RenderSystem.logicOp(LogicOp.OR_REVERSE);
-        bufferBuilder.begin(Mode.QUADS, DefaultVertexFormat.POSITION);
+        BufferBuilder bufferBuilder = Tesselator.getInstance().begin(Mode.QUADS, DefaultVertexFormat.POSITION);
         bufferBuilder.addVertex(matrix4f, (float) left, (float) bottom, 0.0F);
         bufferBuilder.addVertex(matrix4f, (float) right, (float) bottom, 0.0F);
         bufferBuilder.addVertex(matrix4f, (float) right, (float) top, 0.0F);
         bufferBuilder.addVertex(matrix4f, (float) left, (float) top, 0.0F);
-        tessellator.end();
+        com.mojang.blaze3d.vertex.BufferUploader.drawWithShader(bufferBuilder.build());
 //        int col = selCol();
 //        RenderSystem.setShaderColor(((col >> 24) & 0xFF) / 255f, ((col >> 16) & 0xFF) / 255f, ((col >> 8) & 0xFF) / 255f, (col & 0xFF) / 255f);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

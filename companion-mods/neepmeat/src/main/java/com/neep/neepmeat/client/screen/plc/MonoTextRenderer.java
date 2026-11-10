@@ -60,8 +60,7 @@ public class MonoTextRenderer
 
     private static void drawTexturedQuad(Matrix4f matrix, float x0, float x1, float y0, float y1, float z, float u0, float u1, float v0, float v1)
     {
-        BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
-        bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+        BufferBuilder bufferBuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
         bufferBuilder.addVertex(matrix, x0, y1, z).setUv(u0, v1);
         bufferBuilder.addVertex(matrix, x1, y1, z).setUv(u1, v1);
         bufferBuilder.addVertex(matrix, x1, y0, z).setUv(u1, v0);
@@ -205,8 +204,7 @@ public class MonoTextRenderer
 
         public Drawer(float x, float y, int col, Matrix4f matrix)
         {
-            this.bufferBuilder = Tesselator.getInstance().getBuilder();
-            bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
+            this.bufferBuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
 
             this.x = x;
             this.y = y;
@@ -230,7 +228,7 @@ public class MonoTextRenderer
 
         public float draw()
         {
-            BufferUploader.drawWithShader(bufferBuilder.end());
+            BufferUploader.drawWithShader(bufferBuilder.build());
             return x + 1;
         }
     }

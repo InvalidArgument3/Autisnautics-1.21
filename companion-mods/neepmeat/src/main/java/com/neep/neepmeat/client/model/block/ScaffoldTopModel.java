@@ -219,7 +219,7 @@ public class ScaffoldTopModel implements UnbakedModel, BakedModel, FabricBakedMo
     @Override
     public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction face, RandomSource random)
     {
-        return Collections.emptyList();
+        return getQuads(state, face, random, net.neoforged.neoforge.client.model.data.ModelData.EMPTY, null);
     }
 
     @Override

@@ -11,12 +11,10 @@
  */
 
 package com.neep.neepmeat.transport.block.item_transport;
-import com.neep.neepmeat.machine.transport.ConnectedPipeBlock;
-import com.neep.neepmeat.machine.transport.DeferredRequest;
-import com.neep.neepmeat.machine.transport.FilterEntry;
-import com.neep.neepmeat.machine.transport.FilterPipeMenu;
-import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
-import com.neep.neepmeat.machine.transport.StorageBusBlock;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork.DeferredRequest;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork.RequestContext;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork.RequestType;
+import com.neep.neepmeat.transport.api.item_network.RoutingNetwork.StoreRouter;
 import com.neep.neepmeat.transport.block.fluid_transport.FluidPipeBlock;
 import com.neep.neepmeat.transport.block.fluid_transport.PumpBlock;
 import com.neep.neepmeat.transport.block.fluid_transport.machine.FluidPipeBlockEntity;
@@ -367,6 +365,7 @@ public class RoutingNetworkImpl implements RoutingNetwork
         return false;
     }
 
+    @Override
     public long store(ItemVariant variant, long amount, BlockPos inPos, Direction inFace, TransactionContext transaction)
     {
         // inPos corresponds to the block that is ejecting, so this is the first actual pipe.
@@ -548,12 +547,6 @@ public class RoutingNetworkImpl implements RoutingNetwork
             CompoundTag nbtCompound = list.getCompound(i);
             deferredRequests.add(i, DeferredRequest.fromNbt(nbtCompound));
         }
-    }
-
-    public interface StoreRouter
-    {
-        ItemRoute findPathTo(BlockPos toPos, Direction outDir, long amount);
-        long addOperation(ItemRoute route, ItemVariant variant, long maxAmount);
     }
 
     protected class GroupFinder extends BFSGroupFinder<BlockApiCache<RoutablePipe, Direction>>

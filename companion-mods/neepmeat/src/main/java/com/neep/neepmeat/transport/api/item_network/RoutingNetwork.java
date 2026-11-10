@@ -28,6 +28,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEn
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.neep.meatlib.transfer.ItemVariant;
+import com.neep.neepmeat.transport.api.item_network.Craftable;
 import com.neep.neepmeat.transport.api.item_network.RoutablePipe;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.transport.ItemRoute;
@@ -48,12 +49,10 @@ import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Set;
 
-public final class RoutingNetwork {
+public interface RoutingNetwork {
     public static final int MAX_DEPTH = 30;
     public static final BlockApiLookup<RoutingNetwork, Void> LOOKUP = BlockApiLookup.get(
             ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "routing_network"), RoutingNetwork.class, Void.class);
-
-    private RoutingNetwork() {}
 
     public static boolean request(Level level, BlockPos destination, ItemStack wanted) {
         boolean started = request(level, destination, wanted, 0);
@@ -260,9 +259,35 @@ public final class RoutingNetwork {
         return Direction.getNearest(to.getX() - from.getX(), to.getY() - from.getY(), to.getZ() - from.getZ());
     }
 
+    java.util.stream.Stream<com.neep.meatlib.transfer.ResourceAmount<com.neep.meatlib.transfer.ItemVariant>> getAllAvailable(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, com.neep.meatlib.transfer.TransactionContext transaction);
+
+    java.util.stream.Stream<Craftable> getAllCraftable(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, com.neep.meatlib.transfer.TransactionContext transaction);
+
+    boolean route(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, long amount, BlockPos inPos, Direction inDir, BlockPos outPos, Direction outDir, RequestType type, com.neep.meatlib.transfer.TransactionContext transaction);
+
+    boolean request(java.util.function.Predicate<com.neep.meatlib.transfer.ItemVariant> predicate, long amount, BlockPos pos, Direction outDir, RequestType type, RequestContext context, com.neep.meatlib.transfer.TransactionContext transaction);
+
+    long store(com.neep.meatlib.transfer.ItemVariant variant, long amount, BlockPos inPos, Direction inFace, com.neep.meatlib.transfer.TransactionContext transaction);
+
+    void invalidate();
+
+    boolean needsUpdate();
+
+    void update();
+
+    long getVersion();
+
+    boolean isValid();
+
+    void serverTick();
+
     /** Passed through a request so a recipe cannot recurse forever. */
     /** Routing callback used while a pipe stores a crafted stack. */
-    public interface StoreRouter {}
+    public interface StoreRouter {
+        com.neep.neepmeat.transport.item_network.ItemRoute findPathTo(BlockPos toPos, Direction outDir, long amount);
+
+        long addOperation(com.neep.neepmeat.transport.item_network.ItemRoute route, com.neep.meatlib.transfer.ItemVariant variant, long maxAmount);
+    }
 
     public static final class RequestContext {
         public int recursionDepth;

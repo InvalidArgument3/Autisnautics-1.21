@@ -41,12 +41,13 @@ public interface RenderItemGuiEvent
     static void renderGuiQuad(BufferBuilder buffer, int x, int y, int width, int height, int red, int green, int blue, int alpha)
     {
         RenderSystem.setShader(GameRenderer::getPositionColorShader);
-        buffer.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+        BufferBuilder begun = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+        buffer = begun;
         buffer.addVertex(x + 0, y + 0, 0.0).setColor(red, green, blue, alpha);
         buffer.addVertex(x + 0, y + height, 0.0).setColor(red, green, blue, alpha);
         buffer.addVertex(x + width, y + height, 0.0).setColor(red, green, blue, alpha);
         buffer.addVertex(x + width, y + 0, 0.0).setColor(red, green, blue, alpha);
-        var built = buffer.end();
+        var built = buffer.build();
         BufferUploader.drawWithShader(built);
     }
 }

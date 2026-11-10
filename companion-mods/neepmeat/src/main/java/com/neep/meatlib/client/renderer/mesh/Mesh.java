@@ -24,5 +24,8 @@ public final class Mesh {
     }
 
     public void outputTo(QuadEmitter emitter) {
+        if (emitter != null) {
+            emitter.addBaked(quads);
+        }
     }
 }

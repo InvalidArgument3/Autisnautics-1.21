@@ -21,8 +21,8 @@ public interface RenderContext {
     default void popTransform() {}
 
     /**
-     * Fabric's renderer is not running on NeoForge. Vanilla models still draw through {@code getQuads}.
-     * Nothing in this port consumes the mesh passed here.
+     * Receives a mesh whose quads were baked from stored vertex positions, UVs, colours, and normals.
+     * {@link CollectingRenderContext} keeps those quads for {@code getQuads}. Emissive flags are ignored.
      */
     default Consumer<Mesh> meshConsumer() {
         return mesh -> {};

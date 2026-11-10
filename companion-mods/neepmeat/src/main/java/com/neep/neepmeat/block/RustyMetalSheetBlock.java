@@ -23,8 +23,8 @@ public class RustyMetalSheetBlock extends BaseBuildingBlock
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.RUSTY_VENT, this);
 
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.RUSTY_METAL_BLOCK, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.RUSTY_METAL_BLOCK.stairs, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.RUSTY_METAL_BLOCK.slab, this, 2);
+        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_BLOCK).stairs, this);
+        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_BLOCK).slab, this, 2);
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.RUSTY_METAL_BLOCK.wall, this);
     }
 }

@@ -1,3 +1,17 @@
+## Copied item tags and baked meshes, jar 0.30.0-neoforge.62
+
+Combined-tree errors: **2229** at the start of this run, **2148** at the end. That is 81, not 400. The PLC closure (`com/neep/neepmeat/plc/` plus `RoutingNetworkImpl`) was **223** errors and is **181**. `exclude.txt` is still **1322**. `RoutingNetworkImpl` itself has no errors left, and it stays excluded until the rest of that closure does too. `tools/port-errors/symbols.txt` is the end histogram.
+
+Top: does not override 185, invalid method reference 25, `of` 14, `getId` 13, invalid method reference 12, `register` 12, `stonecutterResultFromBase` 12, `ImplantManager` capture 11, inference bounds 11, `Block` to `Properties` 11, `checkType` 11, variable `builder` 10.
+
+`copyRootTag` and `getOrCreateRootTag` return a detached copy. `editRootTag` and the `put*` helpers write it back with `CustomData.update`. `StackNbt.read` is also a copy; `StackNbt.edit` writes back. A grep of the files that are not in `exclude.txt` found no caller that mutates one of those copies. `MeatgunComponentImpl.markDirty` and its dirty tick use `editRootTag`.
+
+`QuadEmitter` stores the four vertex positions, UVs, colours, and normals, and `emit` bakes them. `FabricBakedModel` is an `IDynamicBakedModel`. Its `getQuads` runs `emitBlockQuads` into a `CollectingRenderContext`, and `meshConsumer` keeps the mesh's quads. Emissive lightmaps are not stored. `pushTransform` still does nothing, so scaffold face culling is not applied. Connection models return immediately when `getQuads` has no world.
+
+`RoutingNetwork` is an interface again, with `store`, `route`, `request`, and the update methods the implementation overrides. `StoreRouter` has `findPathTo` and `addOperation`. `ScreenHandlerRegistry.registerExtended` is `IMenuTypeExtension.create`, whose factory reads a `RegistryFriendlyByteBuf`. Scaffold and building-block stairs and slabs are reached by a cast, because the `NMBlocks` fields stay `Block` while those classes are excluded.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. `END` is the real end opcode. Eighteen menu types stay null.
+
 ## Storage hooks, item components, and tick casts, jar 0.30.0-neoforge.61
 
 Combined-tree errors: **2418** at the start of this run, **2229** at the end. That is 189, not 400. `exclude.txt` is still **1322**. Nothing left it. `tools/port-errors/symbols.txt` is the end histogram.

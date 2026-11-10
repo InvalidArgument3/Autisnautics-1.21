@@ -14,7 +14,6 @@ package com.neep.neepbus;
 
 import com.neep.neepbus.screen.*;
 import com.neep.neepmeat.NeepMeat;
-import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
 import net.minecraft.world.inventory.MenuType;
 
 import static com.neep.meatlib.screen.ScreenHandlerRegistry.register;
@@ -22,10 +21,10 @@ import static com.neep.meatlib.screen.ScreenHandlerRegistry.registerExtended;
 
 public class NeepBusScreenHandlers
 {
-    public static ExtendedScreenHandlerType<NeepBusConfigScreenHandler> NEEPBUS_CONFIG;
-    public static ExtendedScreenHandlerType<NeepBusRangeConfigScreenHandler> NEEPBUS_RANGE_CONFIG;
+    public static MenuType<NeepBusConfigScreenHandler> NEEPBUS_CONFIG;
+    public static MenuType<NeepBusRangeConfigScreenHandler> NEEPBUS_RANGE_CONFIG;
     public static MenuType<SliderScreenHandler> SLIDER;
-    public static ExtendedScreenHandlerType<MovementControllerScreenHandler> MOVEMENT_CONTROL;
+    public static MenuType<MovementControllerScreenHandler> MOVEMENT_CONTROL;
     public static MenuType<GaugeScreenHandler> GAUGE;
     public static MenuType<PIDControllerScreenHandler> PID_CONTROLLER;
     public static MenuType<DelayScreenHandler> DELAY;

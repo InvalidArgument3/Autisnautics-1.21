@@ -141,15 +141,14 @@ public class HUDOverlays
         RenderSystem.setShaderTexture(0, texture);
 
         Tesselator tessellator = Tesselator.getInstance();
-        BufferBuilder bufferBuilder = tessellator.getBuilder();
-        bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+        BufferBuilder bufferBuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
 
-        bufferBuilder.addVertex(x1, y1, -90.0D).setUv(0.0F, 1.0F);
-        bufferBuilder.addVertex(x2, y1, -90.0D).setUv(1.0F, 1.0F);
-        bufferBuilder.addVertex(x3, y3, -90.0D).setUv(1.0F, 0.0F);
-        bufferBuilder.addVertex(x4, y3, -90.0D).setUv(0.0F, 0.0F);
+        bufferBuilder.addVertex(x1, y1, -90.0F).setUv(0.0F, 1.0F);
+        bufferBuilder.addVertex(x2, y1, -90.0F).setUv(1.0F, 1.0F);
+        bufferBuilder.addVertex(x3, y3, -90.0F).setUv(1.0F, 0.0F);
+        bufferBuilder.addVertex(x4, y3, -90.0F).setUv(0.0F, 0.0F);
 
-        tessellator.end();
+        com.mojang.blaze3d.vertex.BufferUploader.drawWithShader(bufferBuilder.build());
         RenderSystem.depthMask(true);
         RenderSystem.enableDepthTest();
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

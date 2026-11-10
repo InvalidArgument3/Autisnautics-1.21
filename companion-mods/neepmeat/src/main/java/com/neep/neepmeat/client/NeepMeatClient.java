@@ -424,16 +424,16 @@ public class NeepMeatClient implements ClientModInitializer
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), NMBlocks.GRAVE_BROME);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), NMBlocks.SCAFFOLD_PLATFORM);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.SCAFFOLD_PLATFORM.stairs);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.SCAFFOLD_PLATFORM.slab);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.SCAFFOLD_PLATFORM).stairs);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.SCAFFOLD_PLATFORM).slab);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), NMBlocks.BLUE_SCAFFOLD);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.BLUE_SCAFFOLD.stairs);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.BLUE_SCAFFOLD.slab);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.BLUE_SCAFFOLD).stairs);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.BLUE_SCAFFOLD).slab);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), NMBlocks.YELLOW_SCAFFOLD);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.YELLOW_SCAFFOLD.stairs);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) NMBlocks.YELLOW_SCAFFOLD.slab);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.YELLOW_SCAFFOLD).stairs);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), (Block) ((com.neep.neepmeat.block.MetalScaffoldingBlock) NMBlocks.YELLOW_SCAFFOLD).slab);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), NMBlocks.POWER_FLOWER_SEEDS);
 

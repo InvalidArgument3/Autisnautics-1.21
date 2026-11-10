@@ -9,6 +9,12 @@
 package com.neep.meatlib.client.renderer.mesh;
 
 public interface MutableQuadView {
-    int BAKE_LOCK_UV = 0;
-    int BAKE_NORMALIZED = 1;
+    int BAKE_ROTATE_NONE = 0;
+    int BAKE_ROTATE_90 = 1;
+    int BAKE_ROTATE_180 = 2;
+    int BAKE_ROTATE_270 = 3;
+    int BAKE_LOCK_UV = 4;
+    int BAKE_FLIP_U = 8;
+    int BAKE_FLIP_V = 16;
+    int BAKE_NORMALIZED = 32;
 }

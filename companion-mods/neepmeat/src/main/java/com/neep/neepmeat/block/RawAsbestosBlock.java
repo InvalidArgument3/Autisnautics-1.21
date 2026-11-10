@@ -21,8 +21,8 @@ public class RawAsbestosBlock extends BaseBuildingBlock
     {
         super.generateRecipes(exporter);
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.ASBESTOS_TILE, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.ASBESTOS_TILE.stairs, this);
-        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.ASBESTOS_TILE.slab, this);
+        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.ASBESTOS_TILE).stairs, this);
+        RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.ASBESTOS_TILE).slab, this);
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.ASBESTOS_TILE.wall, this);
 
         RecipeProvider.stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, NMBlocks.CORRUGATED_ASBESTOS, this);

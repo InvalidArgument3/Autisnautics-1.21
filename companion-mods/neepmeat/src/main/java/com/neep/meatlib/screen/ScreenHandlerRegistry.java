@@ -12,13 +12,14 @@
 
 package com.neep.meatlib.screen;
 
-import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
+import net.neoforged.neoforge.network.IContainerFactory;
 
 public class ScreenHandlerRegistry
 {
@@ -27,8 +28,8 @@ public class ScreenHandlerRegistry
         return Registry.register(BuiltInRegistries.MENU, ResourceLocation.fromNamespaceAndPath(namespace, id), new MenuType<>(factory, FeatureFlags.VANILLA_SET));
     }
 
-    public static <T extends AbstractContainerMenu> ExtendedScreenHandlerType<T> registerExtended(String namespace, String id, ExtendedScreenHandlerType.ExtendedFactory<T> factory)
+    public static <T extends AbstractContainerMenu> MenuType<T> registerExtended(String namespace, String id, IContainerFactory<T> factory)
     {
-        return Registry.register(BuiltInRegistries.MENU, ResourceLocation.fromNamespaceAndPath(namespace, id), new ExtendedScreenHandlerType<>(factory));
+        return Registry.register(BuiltInRegistries.MENU, ResourceLocation.fromNamespaceAndPath(namespace, id), IMenuTypeExtension.create(factory));
     }
 }

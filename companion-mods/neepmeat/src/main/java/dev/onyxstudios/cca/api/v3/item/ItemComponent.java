@@ -42,7 +42,18 @@ public abstract class ItemComponent implements Component {
         return stack;
     }
 
-    /** A copy of this component's compound. Mutations persist only through the put helpers. */
+    /**
+     * Returns a detached copy of this component's compound. Mutating the returned tag does not
+     * change the stack. Persist edits with {@link #editRootTag} or the {@code put*} helpers,
+     * which write through {@link CustomData#update}.
+     */
+    public CompoundTag copyRootTag() {
+        return getOrCreateRootTag();
+    }
+
+    /**
+     * Same value as {@link #copyRootTag}: a detached copy. Mutating it does not write back.
+     */
     public CompoundTag getOrCreateRootTag() {
         CompoundTag root = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
         if (key == null || key.getId() == null) {
@@ -52,8 +63,14 @@ public abstract class ItemComponent implements Component {
         return root.contains(id, Tag.TAG_COMPOUND) ? root.getCompound(id) : new CompoundTag();
     }
 
+    /** A detached copy. Mutating it does not write back. Use {@link #editRootTag}. */
     public CompoundTag getRootTag() {
-        return getOrCreateRootTag();
+        return copyRootTag();
+    }
+
+    /** Applies {@code action} to this component's tag and writes it back with {@link CustomData#update}. */
+    public void editRootTag(java.util.function.Consumer<CompoundTag> action) {
+        edit(action);
     }
 
     public boolean contains(String name) {
@@ -108,11 +125,13 @@ public abstract class ItemComponent implements Component {
         edit(tag -> tag.put(name, value));
     }
 
+    /** A detached copy of the child compound. Mutating it does not write back; pass it to {@link #putCompound}. */
     public CompoundTag getCompound(String name) {
         CompoundTag root = getOrCreateRootTag();
         return root.contains(name, Tag.TAG_COMPOUND) ? root.getCompound(name) : new CompoundTag();
     }
 
+    /** A list from a detached copy. Adding to it does not write back; write the parent with {@link #editRootTag}. */
     public ListTag getList(String name, int type) {
         return getOrCreateRootTag().getList(name, type);
     }

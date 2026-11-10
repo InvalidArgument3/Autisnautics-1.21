@@ -85,10 +85,10 @@ public class NMBlockTagProvider extends FabricTagProvider.BlockTagProvider
         tag(NMTags.WORM_ALTAR)
                 .add(NMBlocks.RUSTY_METAL_BLOCK)
                 .add(NMBlocks.RUSTY_METAL_SHEET)
-                .add(NMBlocks.RUSTY_METAL_BLOCK.stairs)
-                .add(NMBlocks.RUSTY_METAL_SHEET.stairs)
-                .add(NMBlocks.RUSTY_METAL_BLOCK.slab)
-                .add(NMBlocks.RUSTY_METAL_SHEET.slab)
+                .add(((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_BLOCK).stairs)
+                .add(((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_SHEET).stairs)
+                .add(((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_BLOCK).slab)
+                .add(((com.neep.meatlib.block.BaseBuildingBlock) NMBlocks.RUSTY_METAL_SHEET).slab)
         ;
 
         tag(NMTags.TREE_VACUUM_HARVESTABLE)

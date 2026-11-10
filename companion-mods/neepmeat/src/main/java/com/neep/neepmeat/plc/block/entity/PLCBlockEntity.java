@@ -52,9 +52,9 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
 
     /** The controller the loom {@code SurgicalRobot} exposes. Movement stays in that excluded class. */
     public static final class SurgeryController {
-        private double x;
-        private double y;
-        private double z;
+        public double cameraX;
+        public double cameraY;
+        public double cameraZ;
         private float pitch;
         private float yaw;
         private @Nullable Player controller;
@@ -67,16 +67,16 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
             this.controller = player;
         }
 
-        public double getX() { return x; }
-        public double getY() { return y; }
-        public double getZ() { return z; }
+        public double getX() { return cameraX; }
+        public double getY() { return cameraY; }
+        public double getZ() { return cameraZ; }
         public float getPitch() { return pitch; }
         public float getYaw() { return yaw; }
 
         public void setPos(double x, double y, double z) {
-            this.x = x;
-            this.y = y;
-            this.z = z;
+            this.cameraX = x;
+            this.cameraY = y;
+            this.cameraZ = z;
         }
 
         public void setPitchYaw(float pitch, float yaw) {

@@ -240,13 +240,12 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         RenderSystem.setShaderTexture(0, texture);
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.enableBlend();
-        BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
-        bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+        BufferBuilder bufferBuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
         bufferBuilder.addVertex(matrix, x0, y1, z).setColor(light, light, light, 1).setUv(u0, v1);
         bufferBuilder.addVertex(matrix, x1, y1, z).setColor(light, light, light, 1).setUv(u1, v1);
         bufferBuilder.addVertex(matrix, x1, y0, z).setColor(light, light, light, 1).setUv(u1, v0);
         bufferBuilder.addVertex(matrix, x0, y0, z).setColor(light, light, light, 1).setUv(u0, v0);
-        BufferUploader.drawWithShader(bufferBuilder.end());
+        BufferUploader.drawWithShader(bufferBuilder.build());
     }
 
     public static void renderInWallOverlay(TextureAtlasSprite sprite, PoseStack matrices, int width, int height)
@@ -256,18 +255,17 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         float z = 0;
         RenderSystem.setShaderTexture(0, sprite.atlasLocation());
         RenderSystem.setShader(GameRenderer::getPositionColorTexShader);
-        BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
         float l = sprite.getU0();
         float m = sprite.getU1();
         float n = sprite.getV0();
         float o = sprite.getV1();
         Matrix4f matrix4f = matrices.last().pose();
-        bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
+        BufferBuilder bufferBuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
         bufferBuilder.addVertex(matrix4f, x0, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(m, o);
         bufferBuilder.addVertex(matrix4f, (float) width, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(l, o);
         bufferBuilder.addVertex(matrix4f, (float) width, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(l, n);
         bufferBuilder.addVertex(matrix4f, x0, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).setUv(m, n);
-        BufferUploader.drawWithShader(bufferBuilder.end());
+        BufferUploader.drawWithShader(bufferBuilder.build());
     }
 
     private void tickTooltip(double mouseX, double mouseY)

@@ -159,7 +159,7 @@ public class MeatgunComponentImpl extends ItemComponent implements MeatgunCompon
         {
             if (dirty)
             {
-                getOrCreateRootTag().put("root", holder.root.writeNbt(new CompoundTag()));
+                editRootTag(tag -> tag.put("root", holder.root.writeNbt(new CompoundTag())));
                 dirty = false;
             }
 
@@ -187,7 +187,7 @@ public class MeatgunComponentImpl extends ItemComponent implements MeatgunCompon
     @Override
     public void markDirty()
     {
-        getOrCreateRootTag().put("root", holder.root.writeNbt(new CompoundTag()));
+        editRootTag(tag -> tag.put("root", holder.root.writeNbt(new CompoundTag())));
     }
 
 
