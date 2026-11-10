@@ -93,11 +93,20 @@ public class FluidPipeBlockEntity extends BlockEntity {
             }
             BlockPos neighbour = worldPosition.relative(direction);
             BlockState state = level.getBlockState(neighbour);
-            if (state.getBlock() instanceof FluidPipeBlock
-                    || level.getCapability(Capabilities.FluidHandler.BLOCK, neighbour, direction.getOpposite()) != null) {
+            if (state.getBlock() instanceof FluidPipeBlock other && colorsMatch(other)) {
+                return direction;
+            }
+            if (level.getCapability(Capabilities.FluidHandler.BLOCK, neighbour, direction.getOpposite()) != null) {
                 return direction;
             }
         }
         return null;
+    }
+
+    private boolean colorsMatch(FluidPipeBlock other) {
+        if (!(getBlockState().getBlock() instanceof FluidPipeBlock self)) {
+            return true;
+        }
+        return self.color() == null || other.color() == null || self.color() == other.color();
     }
 }

@@ -42,6 +42,21 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## Phase 2b continued: pipe graph, filters, merge, driver, pump, colours
+
+Jar `0.30.0-neoforge.5`.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Pipe vertex graph | ported | `PipeVertex`, `ConnectablePipe`, `PipeConnections`, and `PipeGraph` follow upstream `PipeGraphUtil`: a pipe with two connections is hidden, and junctions link to each other across that run. |
+| Item routes | partial | `ItemRoute` is the upstream direction list. `PipeRouteFinder` is a breadth-first search that stops at the first inventory `insertItem(..., true)` accepts, then the pipe consumes the route. The upstream priority-queue `PipeRouteFinder.Operation` and `RoutingNetworkImpl` (requests, storage drivers, requesters) are not ported. |
+| Filter item pipe | partial | Empty filter matches every item, as `FilterList` does. Up to three item entries, matched by item identity. Tag filters, inverted entries, and the filter screen are not ported. The pipe is a vertex. |
+| Merge item pipe | ported | Without a route, output is `FACING` and items cannot enter from that side. With a route, the route wins. Upstream model. |
+| Pipe driver | partial | Every ten ticks it simulates an extraction, finds a route, and inserts one item. It does not host `RoutingNetworkImpl`. Blockstate `valid` matches the upstream property. |
+| Pump | partial | Moves 125 mB per ten ticks from the rear handler to the front, simulate then execute. That amount is upstream `basic_pipe_throughput`. Redstone modes and the internal buffer are not ported. `active` and `facing` match the blockstate. |
+| Coloured fluid pipes | ported | All sixteen `fluid_pipe_<color>` blocks. Two coloured pipes connect only when the colours match; either side may be the uncoloured pipe or a fluid handler. Item tag `neepmeat:fluid_pipes` lists them. Their multipart is the uncoloured one, because upstream's `rusty_pipe/pipe_sides` model is not in the git tree. |
+| Screen widget kit, upstream tank, blood, PLC, weapons | missing | Next chunk. |
+
 ## Phase 2b continued: materials and the real pipe meshes
 
 Jar `0.30.0-neoforge.4`.
@@ -164,16 +179,16 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.4`:
+`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.5`:
 
 ```
-meatlib 0.30.0-neoforge.4 loaded
-NeepMeat 0.30.0-neoforge.4 loaded with GeckoLib 4.9.3
-All 10 required tests passed :)
+meatlib 0.30.0-neoforge.5 loaded
+NeepMeat 0.30.0-neoforge.5 loaded with GeckoLib 4.9.3
+All 16 required tests passed :)
 BUILD SUCCESSFUL
 ```
 
-The ten tests are the earlier six plus the alloy kiln (asbestos + sand + coal → bricks), the three alloy recipes and the kiln crafting recipe loading, an item pushed into an item pipe arriving in the chest after the ten-tick crossing, and 125 mB pushed through a fluid pipe.
+The sixteen tests cover the earlier machine checks plus junction linking, the filter, the merge pipe, the driver, the pump (125 mB), and coloured pipes refusing a colour change.
 
 `./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. After `pipe_sides` was dropped from the fluid-pipe blockstate, the only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. The main menu was not clicked through. A dedicated server boot was not repeated on this jar; the game-test server is the dedicated boot that ran the tests.
 

@@ -39,14 +39,18 @@ public abstract class ConnectedPipeBlock extends BaseEntityBlock implements Simp
 
     protected ConnectedPipeBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        registerDefaultState(completeDefault(defaultBlockState()
                 .setValue(PipeProperties.NORTH, ConnectionType.NONE)
                 .setValue(PipeProperties.EAST, ConnectionType.NONE)
                 .setValue(PipeProperties.SOUTH, ConnectionType.NONE)
                 .setValue(PipeProperties.WEST, ConnectionType.NONE)
                 .setValue(PipeProperties.UP, ConnectionType.NONE)
                 .setValue(PipeProperties.DOWN, ConnectionType.NONE)
-                .setValue(BlockStateProperties.WATERLOGGED, false));
+                .setValue(BlockStateProperties.WATERLOGGED, false)));
+    }
+
+    protected BlockState completeDefault(BlockState state) {
+        return state;
     }
 
     protected abstract boolean connectsTo(LevelAccessor level, BlockPos neighbourPos, BlockState neighbour, Direction fromNeighbour);

@@ -51,6 +51,8 @@ The kiln's crafting recipe is the upstream one: sandy bricks, a blast furnace, a
 
 Other upstream crafting recipes were copied only when every item already exists. Recipes that need a block this port has not registered yet were left out rather than substituted. Nothing new was priced.
 
+Newly copied with the pipe blocks, still at the upstream ratios: merge pipe, pump (any `#neepmeat:fluid_pipes` plus redstone and a piston), cleaning a coloured pipe back to `fluid_pipe`, internal components, and blood-bubble planks from `#neepmeat:blood_bubble_logs`. The plank tag membership is unchanged.
+
 ## Not in this phase
 
 No meat items, no weapons, no mob drops, no ore nodes, no worldgen, no enlightenment, no PLC execution. There is nothing new to price beyond the one asbestos alloy recipe above.

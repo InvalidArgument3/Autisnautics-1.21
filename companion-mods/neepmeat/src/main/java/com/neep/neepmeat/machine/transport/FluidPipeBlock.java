@@ -12,6 +12,7 @@ package com.neep.neepmeat.machine.transport;
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -31,6 +32,10 @@ public class FluidPipeBlock extends ConnectedPipeBlock {
         super(MeatlibBlockSettings.create().strength(0.8F).nonOpaque().properties());
     }
 
+    public DyeColor color() {
+        return null;
+    }
+
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
@@ -38,8 +43,8 @@ public class FluidPipeBlock extends ConnectedPipeBlock {
 
     @Override
     protected boolean connectsTo(LevelAccessor level, BlockPos neighbourPos, BlockState neighbour, Direction fromNeighbour) {
-        if (neighbour.getBlock() instanceof FluidPipeBlock) {
-            return true;
+        if (neighbour.getBlock() instanceof FluidPipeBlock other) {
+            return color() == null || other.color() == null || color() == other.color();
         }
         return level instanceof Level real && real.getCapability(Capabilities.FluidHandler.BLOCK, neighbourPos, fromNeighbour) != null;
     }
