@@ -50,6 +50,8 @@ public final class NeepMeat {
 
     public NeepMeat(ModContainer container, Dist dist) {
         IEventBus bus = container.getEventBus();
+        bus.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, false, com.neep.meatlib.registry.RegistrationContext::capture);
+        bus.addListener(net.neoforged.bus.api.EventPriority.LOWEST, false, com.neep.meatlib.registry.RegistrationContext::finish);
         BuildingBlocks.bootstrap();
         NeepMachines.register(bus);
         com.neep.neepmeat.machine.StageMachines.register(bus);

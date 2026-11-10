@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Taller blocks, jar 0.30.0-neoforge.32
+
+`RegistrationContext.append` registers a child block. During static init it uses `DeferredRegister.register`. During the block `RegisterEvent` the deferred register is already frozen, which was confirmed by a failed boot (`Cannot register new entries to DeferredRegister after RegisterEvent has been fired`). The second path calls `RegisterEvent.register` while the parent supplier is running. `TallerBlock` places its structure above the origin. `lucky_one` is `LuckyOneBlock` and `ground_infuser` is `GroundInfuserBlock`. A game test checks the lucky-one upper block.
+
+`MeatlibBlockSettings.copyOf(Properties)` returns the same properties object, which is what the structure constructor mutates.
+
 ## Item and fluid ports, jar 0.30.0-neoforge.31
 
 `ItemInputPortBlock`, `ItemOutputPortBlock`, and `FluidPortBlock` are the upstream blocks. The item input opens `ItemInputScreenHandler` through `MenuType` (`IMenuTypeExtension`). The item output is the nine-slot upstream block entity. `FluidPortBlock` fills from a bucket and calls `TankBlockEntity.showContents`. `LivingMachineBlockEntity` is the controller base and implements `ComponentHolder`. `FluidPump.of` and `AcceptorModes` back the fluid output.

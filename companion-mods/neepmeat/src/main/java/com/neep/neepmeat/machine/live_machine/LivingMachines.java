@@ -15,6 +15,7 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.live_machine.LivingMachineBlock;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.live_machine.block.ExtractorBlock;
+import com.neep.neepmeat.machine.live_machine.block.LuckyOneBlock;
 import com.neep.neepmeat.machine.live_machine.block.FluidPortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ItemInputPortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ItemOutputPortBlock;
@@ -82,7 +83,8 @@ public final class LivingMachines {
             BLOCK_ENTITIES.register("metaboliser_segment", () -> BlockEntityType.Builder
                     .of(com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity::new, METABOLISER.get()).build(null));
 
-    public static final DeferredBlock<SimpleMachineBlock> LUCKY_ONE = CONTEXT.block("lucky_one", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.LUCKY_ONE));
+    public static final DeferredBlock<LuckyOneBlock> LUCKY_ONE = CONTEXT.block("lucky_one", () -> new LuckyOneBlock(CONTEXT, ItemSettings.block(), portSettings()));
+    public static final DeferredBlock<GroundInfuserBlock> GROUND_INFUSER = CONTEXT.block("ground_infuser", () -> new GroundInfuserBlock(CONTEXT, ItemSettings.block(), portSettings()));
     public static final DeferredItem<BlockItem> LUCKY_ONE_ITEM = CONTEXT.item("lucky_one",
             () -> new BlockItem(LUCKY_ONE.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity>> LUCKY_ONE_BE =

@@ -41,6 +41,11 @@ public final class MeatlibBlockSettings {
         return new MeatlibBlockSettings(BlockBehaviour.Properties.ofFullCopy(block));
     }
 
+    /** Upstream passes the parent {@link BlockBehaviour.Properties} into a structure block. */
+    public static BlockBehaviour.Properties copyOf(BlockBehaviour.Properties properties) {
+        return properties;
+    }
+
     public MeatlibBlockSettings strength(float strength) {
         properties.strength(strength);
         return this;

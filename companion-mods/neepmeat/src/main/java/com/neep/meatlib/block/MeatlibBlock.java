@@ -17,6 +17,10 @@ import net.minecraft.world.level.block.Block;
 public interface MeatlibBlock {
     BlockItem blockItem();
 
+    static String structure(String path) {
+        return path + "_structure";
+    }
+
     @FunctionalInterface
     interface ItemFactory {
         BlockItem create(Block block, RegistrationContext context, ItemSettings settings);

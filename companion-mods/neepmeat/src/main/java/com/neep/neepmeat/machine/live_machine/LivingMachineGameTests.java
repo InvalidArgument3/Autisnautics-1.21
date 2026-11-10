@@ -10,6 +10,7 @@ package com.neep.neepmeat.machine.live_machine;
 
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.big_block_2.BigBlock2;
+import com.neep.neepmeat.machine.live_machine.block.LuckyOneBlock;
 import com.neep.neepmeat.api.live_machine.StructureProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
@@ -136,6 +137,17 @@ public class LivingMachineGameTests {
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.CrusherProcess, "process");
         helper.assertTrue(crusher.stack().isEmpty(), "slot " + crusher.stack());
         helper.assertTrue(output.getInventory().getItem(0).is(net.minecraft.world.item.Items.GRAVEL), "result " + output.getInventory().getItem(0));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void luckyOnePlacesTheUpperStructure(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(2, 1, 2);
+        LuckyOneBlock block = (LuckyOneBlock) LivingMachines.LUCKY_ONE.get();
+        net.minecraft.world.level.block.state.BlockState state = block.defaultBlockState();
+        helper.setBlock(origin, state);
+        block.setPlacedBy(helper.getLevel(), helper.absolutePos(origin), helper.getBlockState(origin), null, net.minecraft.world.item.ItemStack.EMPTY);
+        helper.assertTrue(helper.getBlockState(origin.above()).is(block.getStructureBlock()), "upper structure missing");
         helper.succeed();
     }
 
