@@ -83,6 +83,14 @@ public abstract class SyncableBlockEntity extends BlockEntity {
         }
     }
 
+    public void markDirty() {
+        setChanged();
+    }
+
+    public void writeNbt(CompoundTag nbt) {}
+
+    public void readNbt(CompoundTag nbt) {}
+
     public void sync() {
         setChanged();
         Level level = getLevel();
@@ -91,9 +99,13 @@ public abstract class SyncableBlockEntity extends BlockEntity {
         }
     }
 
-    protected void writeSave(CompoundTag tag, HolderLookup.Provider registries) {}
+    protected void writeSave(CompoundTag tag, HolderLookup.Provider registries) {
+        writeNbt(tag);
+    }
 
-    protected void readSave(CompoundTag tag, HolderLookup.Provider registries) {}
+    protected void readSave(CompoundTag tag, HolderLookup.Provider registries) {
+        readNbt(tag);
+    }
 
     protected void writeClient(CompoundTag tag, HolderLookup.Provider registries) {
         writeSave(tag, registries);

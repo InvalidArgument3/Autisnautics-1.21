@@ -384,3 +384,6 @@ Still not copied, about 47 upstream files: the other big machines (trommel, hopp
 `com.neep.meatlib.transfer` has `Storage`, `StorageView`, `Transaction`, `ItemVariant`, `FluidVariant`, `SingleVariantStorage`, and `FluidConstants` (81000 droplets in a bucket). `onRename` commits, because the Yarn rewrite renamed Fabric's `commit`. Abort runs the snapshot callbacks. A pipe fill of 1 millibucket stores 81 droplets. The game test aborts 200 droplets back to zero, then commits them.
 
 The large compressor inserts 400 droplets of `compressed_air` through that storage. It is still one block, not the upstream multiblock. The crusher turns cobblestone into gravel after a second tick. That is one hardcoded result, not the advanced-crushing recipe map. `vsc` still has no screen. The 47 uncopied classes do not import this shim yet. The package still has 22 files against upstream's 69.
+
+
+The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.

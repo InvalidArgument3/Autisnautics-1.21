@@ -1,0 +1,360 @@
+## Unresolved symbols after the transfer-import rewrite
+
+Compiled the 59 living-machine files that were not already in the tree. After rewriting Fabric transfer imports onto `com.neep.meatlib.transfer`, 7 files compiled and are now in the tree: `StorageProvider`, `PoweredComponent`, `ItemInputComponent`, `ItemOutputComponent`, `FluidInputComponent`, `FluidOutputComponent`, `MetaboliserSegmentComponent`.
+
+The other 52 still fail. Unique missing symbols, grouped:
+
+### renamed or unqualified (226)
+- class BallMillRecipe
+- class BaseFacingBlock
+- class BigBlock
+- class BigBlock2Structure
+- class BigBlockStructure
+- class BigBlockStructureEntity
+- class Block
+- class BlockApiLookup
+- class BlockEntityRegisterererer
+- class BlockState
+- class CharnelPumpBlockEntity
+- class CollisionContext
+- class ConfigProvider
+- class ContaminationUtil
+- class CrucibleStorage
+- class DataCable
+- class DisruptorNeedle
+- class DisruptorPortBlockEntity
+- class DistributorDestination
+- class DistributorParcel
+- class DistributorPointScreenHandler
+- class EntityBlock
+- class ExtendedScreenHandlerFactory
+- class ExtractionOnlyStorage
+- class FluidPump
+- class GraphData
+- class InventoryStorage
+- class ItemInputScreenHandler
+- class ItemOutputScreenHandler
+- class ItemPipeConnectable
+- class LivingMachineBlockEntity
+- class LivingMachineScreenHandler
+- class Mutable
+- class NMItemGroups
+- class NeepBusConfig
+- class NeepBusProvider
+- class OpenMachineBlock
+- class OreFatRenderingRecipe
+- class PatternOffsetMap
+- class PhageRayBlockEntity
+- class PhageRayEntity
+- class ReactionCoreBlockEntity
+- class RegisterMe
+- class RenderShape
+- class RouteLock
+- class ScrollableItem
+- class Settings
+- class SimpleEntry
+- class SimplePipeProperties
+- class SimpleScreenHandlerFactory
+- class SkywormAnimationTimes
+- class SkywormCollectParcelAction
+- class Structure
+- class TallerBlock
+- class TrommelRecipe
+- class TrommelStorage
+- class WritableStackStorage
+- class WritePort
+- method append(CrusherSegmentBlock,CrusherSegmentStructureBlock,String)
+- method append(LargeCompressorBlock,Structure,String)
+- method append(LargeTrommelBlock,StructureBlock,String)
+- method append(LargestHopperBlock,StructureBlock,String)
+- method append(TreeVacuumBlock,Structure,String)
+- method appendProperties(Builder<Block,BlockState>)
+- method block()
+- method canInsert(FluidVariant)
+- method checkType(BlockEntityType<T>,BlockEntityType<BallMillBlockEntity>,<null>,(world1,po[...]ick(),Level)
+- method checkType(BlockEntityType<T>,BlockEntityType<CrusherSegmentBlockEntity>,<null>,(world1,po[...]ick(),Level)
+- method checkType(BlockEntityType<T>,BlockEntityType<TreeVacuumBlockEntity>,<null>,TreeVacuum[...]tTick,Level)
+- method combine(VoxelShape,VoxelShape,BooleanOp)
+- method cuboid(int,int,int,int,int,int)
+- method defaultBlockState()
+- method end(BigBlockPattern)
+- method expand(int,int,int)
+- method extract(ItemVariant,long,Transaction)
+- method flush()
+- method get(BooleanProperty)
+- method get(DirectionProperty)
+- method get(EnumProperty<Axis>)
+- method get(EnumProperty<AxisConnection>)
+- method get(Level,BlockPos)
+- method getAcceptor()
+- method getBlockEfficiency()
+- method getBlockPos()
+- method getBloodAcceptor()
+- method getConfig(Level,BlockPos,BlockState,<null>)
+- method getControllerBE(Class<LargeCompressorBlockEntity>)
+- method getControllerPos()
+- method getDegradationManager()
+- method getEnergy()
+- method getHitPos()
+- method getInputSignal()
+- method getOffsetX()
+- method getOffsetY()
+- method getOffsetZ()
+- method getOrigin(BlockPos,BlockState)
+- method getPlacementState(BlockPlaceContext)
+- method getRandom()
+- method getRatedPower()
+- method getRulHours()
+- method getSide()
+- method getStack()
+- method getStack(int)
+- method getStateDefinition()
+- method getStorage()
+- method getStructure()
+- method getTime()
+- method getType()
+- method getWorld()
+- method handleInteract(Storage<FluidVariant>,Level,Player,InteractionHand)
+- method insert(ItemVariant,long,Transaction)
+- method isEmpty()
+- method isOf(Block)
+- method isOf(LargestHopperBlock)
+- method isOf(PortBlock<T>)
+- method isOf(TestLivingMachineBlock)
+- method isOnGround()
+- method lowercaseVariant(Locale)
+- method oddCylinder(int,int,int,()->getStr[...]ate())
+- method of(String)
+- method of(String,Class<Axis>,Axis,Axis)
+- method of(String,Class<AxisConnection>)
+- method of(String,Class<Status>)
+- method of(String,int,int)
+- method onPlaced(Level,BlockPos,BlockState,@org.jetbrains.annotations.Nullable LivingEntity,ItemStack)
+- method openNested()
+- method pop()
+- method range(int,int,int,int,int,int,()->getStr[...]ate())
+- method readNbt(CompoundTag)
+- method referencePower()
+- method register(String,(p,s)->new[...]p, s),BallMillBlock)
+- method register(String,(p,s)->new[...]p, s),Block)
+- method register(String,(p,s)->new[...]p, s),DistributorPointBlock)
+- method register(String,(p,s)->new[...]p, s),LargeCompressorBlock)
+- method register(String,(p,s)->new[...]p, s),MetaboliserSegmentBlock)
+- method register(String,(p,s)->new[...]p, s),StomachBlock)
+- method removeStack(int)
+- method rotateShapeY(VoxelShape,int)
+- method setStack(int,ItemStack)
+- method setWorld(Level)
+- method size()
+- method spawnBreakParticles(Level,Player,BlockPos,BlockState)
+- method structure()
+- method syncIfPossible()
+- method toVoxelShape()
+- method tooltip(ComponentType<LivingMachineComponent>)
+- method translationKey(String,String)
+- method translationKey(String,String,String)
+- method union(VoxelShape,VoxelShape,VoxelShape)
+- method unwrap()
+- method unwrap(<null>)
+- method use(BlockState,Level,BlockPos,Player,InteractionHand,BlockHitResult)
+- method with(BooleanProperty,boolean)
+- method with(DirectionProperty,Direction)
+- method with(DirectionProperty,ctx.getPla[...]ite())
+- method with(EnumProperty<Axis>,Axis)
+- method with(EnumProperty<AxisConnection>,AxisConnection)
+- method withItem(TestLivingMachineBlock,ItemSettings)
+- method withStyle(float)
+- method writeNbt(CompoundTag)
+- method yRot(int)
+- static tooltip
+- variable AcceptorModes
+- variable BLOCK_NETHER_WOOD_DOOR_CLOSE
+- variable BLOCK_NETHER_WOOD_DOOR_OPEN
+- variable BigBlock2Structure
+- variable Block
+- variable CONFIG
+- variable ContaminationUtil
+- variable DistributorParcel
+- variable EMPTY
+- variable FACING
+- variable FabricBlockEntityTypeBuilder
+- variable FluidPump
+- variable FluidStorage
+- variable GlobalDistributorRouting
+- variable GraphData
+- variable ITEM_HONEYCOMB_WAX_ON
+- variable InventoryStorage
+- variable ItemUtil
+- variable IterateRandomly
+- variable KEEP_INVENTORY
+- variable LOOKUP
+- variable MACHINE_SETTINGS
+- variable MeatlibRecipes
+- variable MeatlibStorageUtil
+- variable MobKillUtil
+- variable NAMESPACE
+- variable NMBlockEntities
+- variable NMBlocks
+- variable NMDamageSources
+- variable NMItemGroups
+- variable NMItems
+- variable NMMaths
+- variable NMSounds
+- variable NMTags
+- variable NMrecipeTypes
+- variable NbtElement
+- variable NeepBusConfig
+- variable OPAQUE_MACHINE_SETTINGS
+- variable PacketByteBufs
+- variable PlayerLookup
+- variable RenderShape
+- variable RouteLock
+- variable SIDED
+- variable ScrollableItem
+- variable ServerPlayNetworking
+- variable SimplePipeProperties
+- variable SkywormEntity
+- variable StorageUtil
+- variable TankBlockEntity
+- variable Text
+- variable TrommelRecipe
+- variable VascularConduitBlock
+- variable age
+- variable apis
+- variable damageableStructures
+- variable parent
+- variable pos
+- variable settings
+- variable stateManager
+- variable structures
+- variable super
+- variable updateInterval
+- variable vsUtil
+- variable world
+
+### Other errors
+- AxisConnection is not abstract and does not override abstract method getSerializedName() in StringRepresentable
+- BallMillBlock is not abstract and does not override abstract method codec() in BigBlock2
+- BallMillBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- ChestComponent is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- CrusherSegmentBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- DistributorPointBlock is not abstract and does not override abstract method codec() in BigBlock2
+- DistributorPointBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineCompon
+- ExtractorBlock is not abstract and does not override abstract method newBlockEntity(BlockPos,BlockState) in EntityBlock
+- ExtractorBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- FluidInputPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponen
+- FluidOutputPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineCompone
+- HopperComponent is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- IntegrationPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineCompone
+- ItemInputPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- ItemOutputPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponen
+- ItemOutputPortBlockEntity.EjectPropertyDelegate is not abstract and does not override abstract method getCount() in Cont
+- LargeCompressorBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- LargeTrommelBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- LargeTrommelBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- LargestHopperBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- LargestHopperBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- LuckyOneBlock is not abstract and does not override abstract method newBlockEntity(BlockPos,BlockState) in EntityBlock
+- MetaboliserSegmentBlock is not abstract and does not override abstract method codec() in BigBlock2
+- MotorPortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- PortBlock is not abstract and does not override abstract method newBlockEntity(BlockPos,BlockState) in EntityBlock
+- ReprocessorBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- ServicePortBlock is not abstract and does not override abstract method newBlockEntity(BlockPos,BlockState) in EntityBloc
+- ServicePortBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- SilkyExtractorBlock is not abstract and does not override abstract method newBlockEntity(BlockPos,BlockState) in EntityB
+- SilkyExtractorBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponen
+- Status is not abstract and does not override abstract method getSerializedName() in StringRepresentable
+- StomachBlock is not abstract and does not override abstract method codec() in BigBlock2
+- TestLivingMachineBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- TreeVacuumBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+- TreeVacuumBlockEntity is not abstract and does not override abstract method componentType() in LivingMachineComponent
+- constructor ResourceLocation in class ResourceLocation cannot be applied to given types;
+- getType() in BallMillBlockEntity cannot override getType() in BlockEntity
+- getType() in DistributorPointBlockEntity cannot override getType() in BlockEntity
+- getType() in ExtractorBlockEntity cannot override getType() in BlockEntity
+- getType() in FluidInputPortBlockEntity cannot override getType() in BlockEntity
+- getType() in FluidOutputPortBlockEntity cannot override getType() in BlockEntity
+- getType() in IntegrationPortBlockEntity cannot override getType() in BlockEntity
+- getType() in ItemInputPortBlockEntity cannot override getType() in BlockEntity
+- getType() in ItemOutputPortBlockEntity cannot override getType() in BlockEntity
+- getType() in LargeTrommelBlockEntity cannot override getType() in BlockEntity
+- getType() in LargestHopperBlockEntity cannot override getType() in BlockEntity
+- getType() in MotorPortBlockEntity cannot override getType() in BlockEntity
+- getType() in ReprocessorBlockEntity cannot override getType() in BlockEntity
+- getType() in ServicePortBlockEntity cannot override getType() in BlockEntity
+- getType() in SilkyExtractorBlockEntity cannot override getType() in BlockEntity
+- getType() in TreeVacuumBlockEntity cannot override getType() in BlockEntity
+- incompatible types: Axis cannot be converted to long
+- incompatible types: Block cannot be converted to Structure
+- incompatible types: Block cannot be converted to TreeVacuumBlock
+- incompatible types: BlockEntity cannot be converted to LivingMachineControllerBlockEntity
+- incompatible types: BlockEntity cannot be converted to StructureBlockEntity
+- incompatible types: CrusherSegmentBlock cannot be converted to Block
+- incompatible types: Direction cannot be converted to long
+- incompatible types: IntegrationPortBlock cannot be converted to Block
+- incompatible types: ItemInputPortBlock cannot be converted to Block
+- incompatible types: ItemOutputPortBlock cannot be converted to Block
+- incompatible types: ItemOutputPortBlockEntity.ExtractionOnlyDelegate cannot be converted to Storage<ItemVariant>
+- incompatible types: LargeCompressorBlock cannot be converted to Block
+- incompatible types: LargeTrommelBlock cannot be converted to Block
+- incompatible types: LargestHopperBlock cannot be converted to Block
+- incompatible types: LivingMachineControllerBlockEntity cannot be converted to MenuProvider
+- incompatible types: Map<Integer,Vec3i> cannot be converted to Int2ObjectMap<Vec3i>
+- incompatible types: ReprocessorBlock cannot be converted to Block
+- incompatible types: TreeVacuumBlock cannot be converted to Block
+- invalid method reference
+- method does not override or implement a method from a supertype
+- non-static variable super cannot be referenced from a static context
+- package BallMillRecipe.BallMillContext does not exist
+- package BallMillRecipeGenerator does not exist
+- package BigBlockStructure does not exist
+- package Blocks does not exist
+- package FluidPump does not exist
+- package FluidStorage does not exist
+- package GraphData does not exist
+- package ItemPipeUtil does not exist
+- package ItemStorage does not exist
+- package NMFluids does not exist
+- package com.neep.meatlib.api.item does not exist
+- package com.neep.meatlib.block.multi does not exist
+- package com.neep.meatlib.entity does not exist
+- package com.neep.meatlib.recipe does not exist
+- package com.neep.meatlib.registry.annotation does not exist
+- package com.neep.meatlib.storage does not exist
+- package com.neep.neepbus.block does not exist
+- package com.neep.neepbus.block.entity does not exist
+- package com.neep.neepbus.util does not exist
+- package com.neep.neepmeat.api.processing.ball_mill does not exist
+- package com.neep.neepmeat.block does not exist
+- package com.neep.neepmeat.client.screen.tablet.graph does not exist
+- package com.neep.neepmeat.datagen.tag does not exist
+- package com.neep.neepmeat.entity.skyworm does not exist
+- package com.neep.neepmeat.init does not exist
+- package com.neep.neepmeat.machine.charnel_pump does not exist
+- package com.neep.neepmeat.machine.crucible does not exist
+- package com.neep.neepmeat.machine.phage_ray does not exist
+- package com.neep.neepmeat.machine.reactor.block.entity does not exist
+- package com.neep.neepmeat.machine.reactor.disruptor does not exist
+- package com.neep.neepmeat.machine.small_trommel does not exist
+- package com.neep.neepmeat.screen_handler does not exist
+- package com.neep.neepmeat.transport.block.energy_transport does not exist
+- package com.neep.neepmeat.transport.block.fluid_transport.machine does not exist
+- package com.neep.neepmeat.transport.fluid_network.node does not exist
+- package com.neep.neepmeat.transport.util does not exist
+- package com.neep.neepmeat.transport.worm does not exist
+- package com.neep.neepmeat.util does not exist
+- package net.fabricmc.fabric.api.lookup.v1.block does not exist
+- package net.fabricmc.fabric.api.networking.v1 does not exist
+- package net.fabricmc.fabric.api.object.builder.v1.block.entity does not exist
+- package net.fabricmc.fabric.api.screenhandler.v1 does not exist
+- package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+- package net.fabricmc.fabric.api.transfer.v1.item does not exist
+- package net.fabricmc.fabric.api.transfer.v1.storage does not exist
+- package net.fabricmc.fabric.api.transfer.v1.storage.base does not exist
+- package net.minecraft.block does not exist
+- readNbt(CompoundTag) in InputSlot cannot override readNbt(CompoundTag) in WritableSingleFluidStorage
+- static import only from classes and interfaces
+- structure has private access in BigBlock2
+- type argument CrusherSegmentStructureBlockEntity is not within bounds of type-variable T
+- type argument StructureBlockEntity is not within bounds of type-variable T
+- wrong number of type arguments; required 1

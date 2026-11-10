@@ -27,6 +27,15 @@ public class BaseBlock extends Block implements MeatlibBlock {
         super(settings.properties());
     }
 
+    /** Upstream constructed the block and registered it in one call. NeoForge registers through the context later. */
+    public BaseBlock(RegistrationContext ignored, ItemSettings ignoredItems, MeatlibBlockSettings settings) {
+        super(settings.properties());
+    }
+
+    public BaseBlock(RegistrationContext ignored, MeatlibBlockSettings settings) {
+        super(settings.properties());
+    }
+
     public static DeferredBlock<BaseBlock> register(RegistrationContext context, String path, MeatlibBlockSettings settings) {
         return register(context, path, settings, ItemSettings.block());
     }
