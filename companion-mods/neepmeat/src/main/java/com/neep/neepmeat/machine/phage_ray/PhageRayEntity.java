@@ -82,12 +82,25 @@ public class PhageRayEntity extends Entity {
     public void tickProcess(boolean canHarvest, boolean silkTouch, Storage<ItemVariant> output, TransactionContext transaction) {
         if (isRunning() && (trigger || externalTrigger)) {
             if (!level().isClientSide()) {
-                breakBlocks(canHarvest, output, transaction);
+                drawBeam();
+                breakBlocks(canHarvest, silkTouch, output, transaction);
             }
         }
     }
 
-    private void breakBlocks(boolean canHarvest, Storage<ItemVariant> output, TransactionContext transaction) {
+    private void drawBeam() {
+        if (!(level() instanceof ServerLevel server)) {
+            return;
+        }
+        Vec3 start = getBeamOrigin();
+        Vec3 end = getBeamEnd();
+        for (int step = 0; step <= 12; step++) {
+            Vec3 point = start.lerp(end, step / 12.0);
+            server.sendParticles(net.minecraft.core.particles.ParticleTypes.END_ROD, point.x, point.y, point.z, 1, 0, 0, 0, 0);
+        }
+    }
+
+    private void breakBlocks(boolean canHarvest, boolean silkTouch, Storage<ItemVariant> output, TransactionContext transaction) {
         if (level().getGameTime() % 2 == 0) {
             BlockHitResult hit = level().clip(new ClipContext(getBeamOrigin(), getBeamEnd(), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, this));
             targets.keySet().removeIf(pos -> hit.getType() != HitResult.Type.BLOCK || !pos.equals(hit.getBlockPos()));
@@ -96,6 +109,11 @@ public class PhageRayEntity extends Entity {
             }
         }
         ItemStack tool = new ItemStack(Items.NETHERITE_PICKAXE);
+        if (silkTouch && level() instanceof ServerLevel server) {
+            var silk = server.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT)
+                    .getOrThrow(net.minecraft.world.item.enchantment.Enchantments.SILK_TOUCH);
+            tool.enchant(silk, 1);
+        }
         Iterator<Map.Entry<BlockPos, Float>> iterator = targets.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<BlockPos, Float> target = iterator.next();

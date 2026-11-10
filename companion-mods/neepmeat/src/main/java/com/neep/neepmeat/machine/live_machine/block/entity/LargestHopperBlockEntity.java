@@ -26,11 +26,18 @@ import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.component.ItemInputComponent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class LargestHopperBlockEntity extends BlockEntity implements ItemInputComponent {
     private final ImplementedInventory inventory = ImplementedInventory.ofSize(4, this::setChanged);
@@ -67,6 +74,37 @@ public class LargestHopperBlockEntity extends BlockEntity implements ItemInputCo
 
     public ImplementedInventory inventory() {
         return inventory;
+    }
+
+    /** Upstream multiplies power by 20 and, on a killing blow, keeps the loot instead of dropping it. */
+    public void damageEntities(float power, List<ItemStack> resultStacks) {
+        if (level == null || level.getGameTime() % 10 != 0) {
+            return;
+        }
+        strike(power, resultStacks);
+    }
+
+    public void strike(float power, List<ItemStack> resultStacks) {
+        if (level == null) {
+            return;
+        }
+        AABB box = new AABB(worldPosition).inflate(1, 0, 1);
+        DamageSource source = level.damageSources().generic();
+        float damageAmount = power * 20f;
+        for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, box, candidate -> candidate.isAlive() && candidate.hurtTime == 0)) {
+            if (entity.getHealth() <= damageAmount) {
+                entity.captureDrops(new ArrayList<>());
+                entity.hurt(source, Float.MAX_VALUE);
+                Collection<ItemEntity> drops = entity.captureDrops(null);
+                if (drops != null) {
+                    for (ItemEntity drop : drops) {
+                        resultStacks.add(drop.getItem());
+                    }
+                }
+            } else {
+                entity.hurt(source, damageAmount);
+            }
+        }
     }
 
     @Override

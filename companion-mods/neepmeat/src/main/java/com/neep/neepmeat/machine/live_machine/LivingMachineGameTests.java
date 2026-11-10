@@ -11,6 +11,8 @@ package com.neep.neepmeat.machine.live_machine;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.big_block_2.BigBlock2;
 import com.neep.neepmeat.machine.live_machine.block.LuckyOneBlock;
+import com.neep.neepmeat.machine.live_machine.block.entity.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity;
 import com.neep.neepmeat.api.live_machine.StructureProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;

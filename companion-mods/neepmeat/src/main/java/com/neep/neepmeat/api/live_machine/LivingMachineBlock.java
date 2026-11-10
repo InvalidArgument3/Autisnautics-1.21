@@ -9,7 +9,7 @@
 package com.neep.neepmeat.api.live_machine;
 
 import com.neep.meatlib.block.MeatlibBlockSettings;
-import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.LivingMachineControllerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;

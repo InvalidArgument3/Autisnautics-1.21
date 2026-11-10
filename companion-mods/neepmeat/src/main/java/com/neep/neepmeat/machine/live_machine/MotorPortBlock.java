@@ -10,6 +10,7 @@ package com.neep.neepmeat.machine.live_machine;
 
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
+import com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;

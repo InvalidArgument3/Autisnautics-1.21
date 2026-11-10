@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Registered shells, jar 0.30.0-neoforge.37
+
+`block/StomachBlock`, `block/MetaboliserSegmentBlock`, `block/entity/LivingMachineControllerBlockEntity`, and `block/entity/MotorPortBlockEntity` are the classes that are registered. The previous parent copies are gone. `LivingMachines.CRUSHER` is `CrusherSegmentBlock`, a radius-1 disc. The largest hopper is that same disc and `strike` keeps a killed mob's drops. The phage beam is an end-rod particle line, and silk touch is applied to the harvest tool when a silky extractor is present. The tree vacuum sends `TreeVacuumAnimationPacket`, which sets `animationTicks` to 10 on the client.
+
+The five former shells are no longer wrappers. Nineteen files are still partial. `docs/PORT_STATUS.md` below still has the 0.36 table; the shell rows in that table are stale and are replaced by this section.
+
 ## Shell effects, jar 0.30.0-neoforge.36
 
 The phage ray breaks the block its beam points at and puts the drops in the item output. The charnel pump consumes compressed air and moves one bottle of work fluid into a well head. The disruptor writes its disruption into the reaction core, and the core's organisation falls by `disruption * 5`. The largest hopper swallows an item entity. The tree vacuum breaks the log two blocks in front of it and collects the drop. The integration port accepts one ingot of work fluid from an item and closes when the machine has power. The bioreactor turns 1000 droplets each of blood, meat, and work fluid into 3000 droplets of work fluid. The digester turns one raw iron and one ingot of blood into one ingot of meat.
@@ -402,7 +408,7 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `LivingMachines.java` | 189 / 241 | faithful |
 | `Processes.java` | 75 / 91 | faithful |
 | `block/BallMillBlock.java` | 61 / 241 | partial |
-| `block/CrusherSegmentBlock.java` | 41 / 104 | shell |
+| `block/CrusherSegmentBlock.java` | 41 / 104 | faithful |
 | `block/DistributorPointBlock.java` | 59 / 283 | partial |
 | `block/ExtractorBlock.java` | 38 / 38 | faithful |
 | `block/FluidPortBlock.java` | 82 / 77 | faithful |
@@ -413,12 +419,12 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `block/LargeTrommelBlock.java` | 92 / 165 | partial |
 | `block/LargestHopperBlock.java` | 62 / 156 | partial |
 | `block/LuckyOneBlock.java` | 98 / 98 | faithful |
-| `block/MetaboliserSegmentBlock.java` | 13 / 190 | shell |
+| `block/MetaboliserSegmentBlock.java` | 13 / 190 | faithful |
 | `block/PortBlock.java` | 78 / 88 | faithful |
 | `block/ReprocessorBlock.java` | 73 / 88 | faithful |
 | `block/ServicePortBlock.java` | 63 / 69 | faithful |
 | `block/SilkyExtractorBlock.java` | 38 / 38 | faithful |
-| `block/StomachBlock.java` | 13 / 225 | shell |
+| `block/StomachBlock.java` | 13 / 225 | faithful |
 | `block/TestLivingMachineBlock.java` | 42 / 121 | partial |
 | `block/TreeVacuumBlock.java` | 65 / 177 | partial |
 | `block/entity/BallMillBlockEntity.java` | 85 / 180 | partial |
@@ -434,10 +440,10 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `block/entity/LargeCompressorBlockEntity.java` | 53 / 67 | faithful |
 | `block/entity/LargeTrommelBlockEntity.java` | 112 / 171 | partial |
 | `block/entity/LargestHopperBlockEntity.java` | 86 / 169 | partial |
-| `block/entity/LivingMachineControllerBlockEntity.java` | 19 / 112 | shell |
+| `block/entity/LivingMachineControllerBlockEntity.java` | 19 / 112 | faithful |
 | `block/entity/LuckyOneBlockEntity.java` | 56 / 117 | partial |
 | `block/entity/MetaboliserSegmentBlockEntity.java` | 57 / 100 | faithful |
-| `block/entity/MotorPortBlockEntity.java` | 19 / 62 | shell |
+| `block/entity/MotorPortBlockEntity.java` | 19 / 62 | faithful |
 | `block/entity/ReprocessorBlockEntity.java` | 41 / 41 | faithful |
 | `block/entity/ServicePortBlockEntity.java` | 41 / 41 | faithful |
 | `block/entity/SilkyExtractorBlockEntity.java` | 41 / 41 | faithful |
@@ -465,7 +471,7 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `process/PhageRayProcess.java` | 65 / 119 | faithful |
 | `process/PressurisedDigesterProcess.java` | 80 / 113 | faithful |
 | `process/TreeVacuumProcess.java` | 129 / 227 | faithful |
-Counts: 45 faithful, 19 partial, 5 shell. The shells are: `block/StomachBlock`, `block/MetaboliserSegmentBlock`, `block/CrusherSegmentBlock`, `block/entity/LivingMachineControllerBlockEntity`, and `block/entity/MotorPortBlockEntity`. Those four wrappers only construct the class that actually runs, and the crusher segment block is not the block `LivingMachines.CRUSHER` registers.
+After 0.30.0-neoforge.37 the five shell rows above are the registered implementations, so the count is 50 faithful, 19 partial, 0 shell. The line counts in this table were measured on 0.36.
 
 Deviations in this batch: the phage beam does not render and silk touch is not applied. The charnel pump does not spawn spouts or grant enlightenment. The reaction core does not flood-fill a receiver organism. The digester does not build ore-fat fluids from smelting recipes; raw iron and blood become meat, and compressed air still halves the blood cost. The largest hopper does not damage mobs and is not the upstream cylinder. The tree vacuum has no client animation.
 

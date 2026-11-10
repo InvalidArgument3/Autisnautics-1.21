@@ -28,6 +28,7 @@ import com.neep.neepmeat.machine.live_machine.block.entity.IntegrationPortBlockE
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargestHopperBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.LivingMachineControllerBlockEntity;
 import com.neep.neepmeat.machine.phage_ray.PhageRayBlockEntity;
 import com.neep.neepmeat.machine.reactor.block.entity.DisruptorPortBlockEntity;
 import com.neep.neepmeat.machine.reactor.block.entity.ReactionCoreBlockEntity;
@@ -59,6 +60,13 @@ public class ShellEffectGameTests {
         LargestHopperBlockEntity hopper = helper.getBlockEntity(pos);
         helper.assertTrue(hopper.inventory().getItem(0).is(Items.DIRT), "dirt was not swallowed");
         helper.assertTrue(entity.isRemoved(), "item entity remained");
+        LivingMachines.HOPPER.get().setPlacedBy(helper.getLevel(), absolute, helper.getBlockState(pos), null, ItemStack.EMPTY);
+        helper.assertTrue(helper.getBlockState(pos.east()).is(LivingMachines.HOPPER.get().getStructure()), "hopper disc missing");
+        net.minecraft.world.entity.animal.Chicken chicken = helper.spawn(net.minecraft.world.entity.EntityType.CHICKEN, pos);
+        chicken.setHealth(1f);
+        java.util.List<ItemStack> loot = new java.util.ArrayList<>();
+        hopper.strike(1f, loot);
+        helper.assertTrue(!chicken.isAlive() || chicken.getHealth() < 1f, "chicken was not hurt");
         helper.succeed();
     }
 
@@ -83,7 +91,7 @@ public class ShellEffectGameTests {
         helper.setBlock(controller, LivingMachines.CONTROLLER.get().defaultBlockState());
         helper.setBlock(motor, LivingMachines.MOTOR_PORT.get().defaultBlockState());
         helper.setBlock(port, LivingMachines.INTEGRATION.get().defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.MotorPortBlockEntity motorEntity = helper.getBlockEntity(motor);
+        com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity motorEntity = helper.getBlockEntity(motor);
         motorEntity.setInputPower(1f);
         LivingMachineControllerBlockEntity machine = helper.getBlockEntity(controller);
         machine.serverTick();
@@ -102,7 +110,7 @@ public class ShellEffectGameTests {
         helper.setBlock(vacuum, LivingMachines.TREE_VACUUM.get().defaultBlockState());
         helper.setBlock(output, LivingMachines.ITEM_OUTPUT.get().defaultBlockState());
         helper.setBlock(vacuum.north(2), Blocks.OAK_LOG.defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.MotorPortBlockEntity motorEntity = helper.getBlockEntity(motor);
+        com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity motorEntity = helper.getBlockEntity(motor);
         motorEntity.setInputPower(1f);
         LivingMachineControllerBlockEntity machine = helper.getBlockEntity(controller);
         for (int i = 0; i < 8; i++) {
@@ -125,7 +133,7 @@ public class ShellEffectGameTests {
         helper.setBlock(new BlockPos(8, 4, 5), LivingMachines.FLUID_INPUT.get().defaultBlockState());
         helper.setBlock(new BlockPos(9, 4, 5), LivingMachines.FLUID_INPUT.get().defaultBlockState());
         helper.setBlock(new BlockPos(10, 4, 5), LivingMachines.FLUID_OUTPUT.get().defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(6, 4, 5));
+        com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(6, 4, 5));
         motor.setInputPower(1f);
         fill(helper, new BlockPos(7, 4, 5), BloodFluids.BLOOD.get(), 1000);
         fill(helper, new BlockPos(8, 4, 5), MeatFluid.STILL.get(), 1000);
@@ -169,7 +177,7 @@ public class ShellEffectGameTests {
         helper.setBlock(new BlockPos(4, 2, 2), LivingMachines.FLUID_INPUT.get().defaultBlockState());
         helper.setBlock(new BlockPos(5, 2, 2), LivingMachines.FLUID_INPUT.get().defaultBlockState());
         helper.setBlock(pump.north(), EffectMachines.WELL_HEAD.get().defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(2, 2, 2));
+        com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(2, 2, 2));
         motor.setInputPower(1f);
         fill(helper, new BlockPos(4, 2, 2), CompressedAir.STILL.get(), 1000);
         fill(helper, new BlockPos(5, 2, 2), WorkFluid.STILL.get(), FluidConstants.BOTTLE);
@@ -213,7 +221,7 @@ public class ShellEffectGameTests {
         helper.setBlock(new BlockPos(3, 2, 1), EffectMachines.DISRUPTOR_SEGMENT.get().defaultBlockState());
         helper.setBlock(new BlockPos(4, 2, 1), EffectMachines.DISRUPTOR_NEEDLE.get().defaultBlockState());
         helper.setBlock(corePos, EffectMachines.REACTION_CORE.get().defaultBlockState());
-        com.neep.neepmeat.machine.live_machine.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(1, 3, 1));
+        com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity motor = helper.getBlockEntity(new BlockPos(1, 3, 1));
         motor.setInputPower(1f);
         DisruptorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 2, 1));
         port.setDisruption(10);

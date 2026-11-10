@@ -25,6 +25,25 @@ public class TreeVacuumBlockEntity extends BlockEntity implements LivingMachineC
     public static final int MAX_PROGRESS = 5;
     public float progress;
     public boolean extended;
+    public int animationTicks;
+
+    public void syncAnimation(boolean playSound) {
+        extended = playSound;
+        animationTicks = playSound ? 10 : animationTicks;
+        if (level instanceof net.minecraft.server.level.ServerLevel server) {
+            net.neoforged.neoforge.network.PacketDistributor.sendToPlayersTrackingChunk(server, new net.minecraft.world.level.ChunkPos(worldPosition),
+                    new com.neep.neepmeat.network.TreeVacuumAnimationPacket(worldPosition, playSound));
+        }
+    }
+
+    public void startAnimation(boolean playSound) {
+        animationTicks = 10;
+        extended = playSound;
+    }
+
+    public void clientTick() {
+        animationTicks = Math.max(0, animationTicks - 1);
+    }
 
     public TreeVacuumBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.TREE_VACUUM_BE.get(), pos, state);

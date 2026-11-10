@@ -41,6 +41,13 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 public final class NeepMeatClient {
     private NeepMeatClient() {}
 
+    public static void showVacuum(com.neep.neepmeat.network.TreeVacuumAnimationPacket packet) {
+        net.minecraft.client.Minecraft minecraft = net.minecraft.client.Minecraft.getInstance();
+        if (minecraft.level != null && minecraft.level.getBlockEntity(packet.pos()) instanceof com.neep.neepmeat.machine.live_machine.block.entity.TreeVacuumBlockEntity vacuum) {
+            vacuum.startAnimation(packet.playSound());
+        }
+    }
+
     public static void showTank(com.neep.neepmeat.network.TankMessagePacket packet) {
         net.minecraft.client.Minecraft minecraft = net.minecraft.client.Minecraft.getInstance();
         if (minecraft.player != null) {

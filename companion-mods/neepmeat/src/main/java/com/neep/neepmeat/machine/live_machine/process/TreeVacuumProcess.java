@@ -68,7 +68,7 @@ public class TreeVacuumProcess implements Process {
             BlockPos trunk = vacuum.getBlockPos().relative(facing, 2);
             try (Transaction transaction = Transaction.openOuter()) {
                 vacuum.progress = 0;
-                vacuum.extended = traverseTree(be.getLevel(), trunk, 300, 7, be.getCombinedItemOutput(), transaction);
+                vacuum.syncAnimation(traverseTree(be.getLevel(), trunk, 300, 7, be.getCombinedItemOutput(), transaction));
                 transaction.commit();
             }
         });

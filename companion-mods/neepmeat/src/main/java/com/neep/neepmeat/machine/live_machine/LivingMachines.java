@@ -15,6 +15,9 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.api.live_machine.LivingMachineBlock;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.live_machine.block.BallMillBlock;
+import com.neep.neepmeat.machine.live_machine.block.CrusherSegmentBlock;
+import com.neep.neepmeat.machine.live_machine.block.MetaboliserSegmentBlock;
+import com.neep.neepmeat.machine.live_machine.block.StomachBlock;
 import com.neep.neepmeat.machine.live_machine.block.ExtractorBlock;
 import com.neep.neepmeat.machine.live_machine.block.LargeTrommelBlock;
 import com.neep.neepmeat.machine.live_machine.block.LuckyOneBlock;
@@ -25,6 +28,8 @@ import com.neep.neepmeat.machine.live_machine.block.PortBlock;
 import com.neep.neepmeat.machine.live_machine.block.ServicePortBlock;
 import com.neep.neepmeat.machine.live_machine.block.SilkyExtractorBlock;
 import com.neep.neepmeat.machine.live_machine.block.entity.BallMillBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.LivingMachineControllerBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.MotorPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ExtractorBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargeTrommelBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.FluidInputPortBlockEntity;
@@ -109,7 +114,7 @@ public final class LivingMachines {
             () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidInputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<FluidPortBlock<FluidOutputPortBlockEntity>> FLUID_OUTPUT = CONTEXT.block("fluid_output_port",
             () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidOutputPortBlockEntity::new, portSettings()));
-    public static final DeferredBlock<ComponentMachineBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.CRUSHER));
+    public static final DeferredBlock<CrusherSegmentBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new CrusherSegmentBlock(CONTEXT, portSettings()));
     public static final DeferredBlock<LargeCompressorBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new LargeCompressorBlock(CONTEXT, portSettings()));
     public static final DeferredBlock<com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock> BALL_MILL_STRUCTURE =
             CONTEXT.block("ball_mill_structure", () -> new com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock(ballMillBlock(), false));
@@ -118,7 +123,7 @@ public final class LivingMachines {
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.IntegrationPortBlock> INTEGRATION =
             CONTEXT.block("integration_port", com.neep.neepmeat.machine.live_machine.block.IntegrationPortBlock::new);
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.LargestHopperBlock> HOPPER =
-            CONTEXT.block("largest_hopper", com.neep.neepmeat.machine.live_machine.block.LargestHopperBlock::new);
+            CONTEXT.block("largest_hopper", () -> new com.neep.neepmeat.machine.live_machine.block.LargestHopperBlock(CONTEXT, portSettings()));
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock> TREE_VACUUM =
             CONTEXT.block("tree_vacuum", com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock::new);
     public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock> DISTRIBUTOR =

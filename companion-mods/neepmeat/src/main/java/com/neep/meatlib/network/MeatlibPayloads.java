@@ -28,6 +28,12 @@ public final class MeatlibPayloads {
 
     public static void register(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1");
+        registrar.playToClient(com.neep.neepmeat.network.TreeVacuumAnimationPacket.TYPE, com.neep.neepmeat.network.TreeVacuumAnimationPacket.STREAM_CODEC, (packet, context) ->
+                context.enqueueWork(() -> {
+                    if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
+                        com.neep.neepmeat.NeepMeatClient.showVacuum(packet);
+                    }
+                }));
         registrar.playToClient(com.neep.neepmeat.network.TankMessagePacket.TYPE, com.neep.neepmeat.network.TankMessagePacket.STREAM_CODEC, (packet, context) ->
                 context.enqueueWork(() -> {
                     if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
