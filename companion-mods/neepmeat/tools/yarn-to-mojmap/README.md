@@ -1,13 +1,14 @@
-Yarn 1.20.1 to Mojmap 1.20.1 source rewrite.
+Yarn 1.20.1 sources to Mojmap 1.20.1, using Mercury and tiny-remapper.
 
-Download into /tmp/remap, then:
+`prepare_tiny.py` writes two tiny v2 files from the Yarn tiny, the intermediary tiny, and Mojang's client mappings:
 
-1. yarn-1.20.1+build.10-v2.jar from maven.fabricmc.net, mappings/mappings.tiny as yarn.tiny
-2. intermediary-1.20.1-v2.jar, mappings/mappings.tiny as intermediary.tiny
-3. The 1.20.1 client mappings from the Mojang version manifest, as client-1.20.1.txt
+- `official-to-yarn.tiny` is not used for the client jar. The client jar is remapped with the original intermediary and Yarn tiny files, which do not have the merged-map conflicts.
+- `yarn-to-mojmap.tiny` is owner-aware: class, method descriptor, and field. 6,918 classes and 25,747 renamed methods.
 
-python3 build_maps.py
-python3 members.py
-python3 rewrite.py <yarn-source-dir> <output-dir>
+`remap.sh` downloads nothing. It expects `/tmp/remap` to already contain `yarn.tiny`, `intermediary.tiny`, `client-1.20.1.txt`, and `client-1.20.1.jar`, and `/tmp/mercury` to contain Mercury 0.6.0, tiny-remapper 0.11.0, and mapping-io 0.7.1.
 
-The rewrite changes Minecraft class names and method names that have one Mojmap target. It does not apply 1.20.1 to 1.21.1 API changes. Do not commit the Mojang mapping file.
+```
+bash tools/yarn-to-mojmap/remap.sh <yarn-source-root> <output-dir>
+```
+
+Put meatlib's `src/main/java` tree at `/tmp/meatlib-src` when the sources need it to resolve types. Mercury renames resolved members and imports. A full-tree run can throw an Eclipse null binding and stop. Method overrides such as `createBlockEntity` are not always renamed even when the mapping contains `newBlockEntity`. This pass does not apply 1.20.1 to 1.21.1 API drift. Do not commit Mojang's client jar or mapping file.

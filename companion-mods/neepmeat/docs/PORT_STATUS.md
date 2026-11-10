@@ -387,3 +387,7 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
+
+## Remapper, jar 0.30.0-neoforge.27
+
+`tools/yarn-to-mojmap` now builds an owner-aware tiny file (6,918 classes, 25,747 renamed methods) and runs Mercury 0.6.0 on a Yarn-named 1.20.1 client jar. Against the old regex scratch tree, Mercury renames resolved calls such as `getPos` to `getBlockPos` and `Block.Settings` to `Properties`. Compiling the 59 files that were not in the tree produced 1,511 error lines before this. Rewriting Fabric transfer imports, without Mercury, cut that to 1,209. Mercury does not yet rename every override (`createBlockEntity` stays, while `super.appendProperties` becomes `createBlockStateDefinition`), and a full-tree run stops on an Eclipse null binding. The living-machine package is still 29 files in the jar against 69 upstream. The 52-file gap is unchanged.
