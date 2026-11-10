@@ -176,6 +176,9 @@
             "side": "CLIENT",
             "update_strategy": "NONE"
         },
+        "emf-compat-irons-arms-n-artifice": {
+            "side": "CLIENT"
+        },
         "irons-lib": {
             "side": "BOTH",
             "update_strategy": "NONE",
