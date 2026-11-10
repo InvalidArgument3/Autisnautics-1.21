@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:dirty_red_tiles"
+  },
+  "result": {
+    "id": "neepmeat:dirty_red_tiles_wall",
+    "item": "neepmeat:dirty_red_tiles_wall",
+    "count": 1
+  }
+}

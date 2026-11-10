@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "neepmeat:block/asbestos_shingle",
+    "top": "neepmeat:block/asbestos_shingle",
+    "side": "neepmeat:block/asbestos_shingle"
+  }
+}

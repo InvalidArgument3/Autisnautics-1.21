@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:dirt"
+    },
+    "i": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 8,
+    "item": "neepmeat:dirty_white_tiles",
+    "id": "neepmeat:dirty_white_tiles"
+  },
+  "show_notification": true
+}

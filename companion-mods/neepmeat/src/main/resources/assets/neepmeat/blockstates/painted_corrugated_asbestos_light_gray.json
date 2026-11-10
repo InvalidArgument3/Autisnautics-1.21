@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "neepmeat:block/painted_corrugated_asbestos_light_gray",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "neepmeat:block/painted_corrugated_asbestos_light_gray"
+    },
+    "axis=z": {
+      "model": "neepmeat:block/painted_corrugated_asbestos_light_gray",
+      "x": 90
+    }
+  }
+}

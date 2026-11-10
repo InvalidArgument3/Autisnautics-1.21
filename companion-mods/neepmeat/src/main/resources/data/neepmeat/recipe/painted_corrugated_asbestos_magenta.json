@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:magenta_dye"
+    },
+    "i": {
+      "item": "neepmeat:corrugated_asbestos"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 8,
+    "item": "neepmeat:painted_corrugated_asbestos_magenta",
+    "id": "neepmeat:painted_corrugated_asbestos_magenta"
+  },
+  "show_notification": true
+}

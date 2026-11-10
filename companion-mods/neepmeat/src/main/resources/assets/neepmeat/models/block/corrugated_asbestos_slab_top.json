@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "neepmeat:block/corrugated_asbestos",
+    "top": "neepmeat:block/corrugated_asbestos",
+    "side": "neepmeat:block/corrugated_asbestos"
+  }
+}

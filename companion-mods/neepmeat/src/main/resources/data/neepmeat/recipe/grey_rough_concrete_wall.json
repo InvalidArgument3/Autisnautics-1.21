@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:grey_rough_concrete"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:grey_rough_concrete_wall",
+    "id": "neepmeat:grey_rough_concrete_wall"
+  },
+  "show_notification": true
+}

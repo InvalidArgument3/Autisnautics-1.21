@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "neepmeat:block/reinforced_glass_slab"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "neepmeat:block/reinforced_glass_slab"
+    },
+    "type=top,waterlogged=false": {
+      "model": "neepmeat:block/reinforced_glass_slab_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "neepmeat:block/reinforced_glass_slab_top"
+    },
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/reinforced_glass"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/reinforced_glass"
+    }
+  }
+}

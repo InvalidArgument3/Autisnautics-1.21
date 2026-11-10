@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "neepmeat:block/yellow_tiles",
+    "top": "neepmeat:block/yellow_tiles",
+    "side": "neepmeat:block/yellow_tiles"
+  }
+}

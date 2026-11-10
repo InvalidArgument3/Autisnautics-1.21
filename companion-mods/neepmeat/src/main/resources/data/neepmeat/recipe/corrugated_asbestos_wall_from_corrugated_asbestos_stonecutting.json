@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:corrugated_asbestos"
+  },
+  "result": {
+    "id": "neepmeat:corrugated_asbestos_wall",
+    "item": "neepmeat:corrugated_asbestos_wall",
+    "count": 1
+  }
+}

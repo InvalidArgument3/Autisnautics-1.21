@@ -1,0 +1,65 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = '0.30.0-neoforge.1'
+group = 'com.neep'
+base { archivesName = 'neepmeat' }
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    withSourcesJar()
+}
+
+neoForge {
+    version = '21.1.265'
+    mods {
+        neepmeat { sourceSet sourceSets.main }
+    }
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+        }
+    }
+    // Headless NeoForge game tests (./gradlew test). Plain JUnit still runs in that task.
+    unitTest {
+        enable()
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.blamejared.com' }
+    maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url = 'https://repo.sleeping.town/' }
+}
+
+dependencies {
+    // runtimeOnly is on the dev game classpath and is not packed into the mod jar.
+    // The pack already ships these jars.
+    compileOnly 'mezz.jei:jei-1.21.1-neoforge-api:19.64.0.455'
+    runtimeOnly 'mezz.jei:jei-1.21.1-neoforge:19.64.0.455'
+    compileOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
+    runtimeOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
+    runtimeOnly 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.9.3'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add('-proc:none')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab",
+        "weight": 5
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab",
+        "weight": 1
+      }
+    ],
+    "type=bottom,waterlogged=true": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab",
+        "weight": 5
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab",
+        "weight": 1
+      }
+    ],
+    "type=top,waterlogged=false": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab_top",
+        "weight": 5
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab_top_1",
+        "weight": 5
+      }
+    ],
+    "type=top,waterlogged=true": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab_top",
+        "weight": 5
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_slab_top_1",
+        "weight": 5
+      }
+    ],
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/corrugated_asbestos"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/corrugated_asbestos"
+    }
+  }
+}

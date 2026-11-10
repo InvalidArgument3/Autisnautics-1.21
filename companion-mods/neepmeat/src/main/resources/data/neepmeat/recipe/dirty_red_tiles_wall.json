@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:dirty_red_tiles"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:dirty_red_tiles_wall",
+    "id": "neepmeat:dirty_red_tiles_wall"
+  },
+  "show_notification": true
+}

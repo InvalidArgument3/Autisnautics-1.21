@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:corrugated_asbestos"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:corrugated_asbestos_wall",
+    "id": "neepmeat:corrugated_asbestos_wall"
+  },
+  "show_notification": true
+}

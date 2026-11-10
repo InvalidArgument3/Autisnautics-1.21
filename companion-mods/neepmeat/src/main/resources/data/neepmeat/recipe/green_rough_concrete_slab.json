@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:green_rough_concrete"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:green_rough_concrete_slab",
+    "id": "neepmeat:green_rough_concrete_slab"
+  },
+  "show_notification": true
+}
