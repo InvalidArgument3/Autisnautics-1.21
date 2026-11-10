@@ -3,9 +3,9 @@
  *
  * This file is part of NEEPMeat.
  *
- * Request path from RoutingNetworkImpl: find a storage bus that can supply the
- * stack, simulate the extract, build a priority route, then extract and insert.
- * Crafting requests and the deferred RoutablePipe callbacks are not included.
+ * Supply, crafting recursion (depth 30), and deferred callbacks. A request that
+ * cannot be filled from storage recurses into a network crafter's ingredients.
+ * The driver keeps the request until the destination holds the stack.
  */
 
 package com.neep.neepmeat.machine.transport;
@@ -23,12 +23,107 @@ import java.util.HashSet;
 import java.util.Set;
 
 public final class RoutingNetwork {
+    public static final int MAX_DEPTH = 30;
+
     private RoutingNetwork() {}
 
     public static boolean request(Level level, BlockPos destination, ItemStack wanted) {
-        if (wanted.isEmpty()) {
+        boolean started = request(level, destination, wanted, 0);
+        if (started) {
+            PipeDriverBlockEntity driver = findDriver(level, destination);
+            if (driver != null) {
+                driver.defer(destination, wanted);
+            }
+        }
+        return started;
+    }
+
+    private static boolean request(Level level, BlockPos destination, ItemStack wanted, int depth) {
+        if (wanted.isEmpty() || depth > MAX_DEPTH) {
             return false;
         }
+        if (supply(level, destination, wanted)) {
+            return true;
+        }
+        NetworkCrafterBlockEntity crafter = findCrafter(level, destination, wanted);
+        if (crafter == null) {
+            return false;
+        }
+        for (var ingredient : crafter.ingredients()) {
+            if (crafter.has(ingredient)) {
+                continue;
+            }
+            if (!request(level, crafter.getBlockPos(), new ItemStack(ingredient), depth + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void finishCrafts(Level level) {
+        // Crafted outputs are routed by the driver once the crafter tick has filled them.
+    }
+
+    static boolean deliverCrafted(Level level, BlockPos destination, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(destination);
+        seen.add(destination);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof NetworkCrafterBlockEntity crafter
+                        && ItemStack.isSameItem(crafter.crafted(), wanted)) {
+                    ItemStack stack = crafter.extractItem(4, 1, true);
+                    BlockPos pipePos = adjacentPipe(level, next);
+                    if (pipePos == null || !(level.getBlockEntity(pipePos) instanceof ItemPipeBlockEntity pipe)) {
+                        return false;
+                    }
+                    Direction fromCrafter = directionBetween(next, pipePos);
+                    ItemRoute route = PipeRouteFinder.find(level, pipePos, fromCrafter.getOpposite(), stack);
+                    if (route.isEmpty()) {
+                        return false;
+                    }
+                    if (pipe.insert(stack, fromCrafter.getOpposite(), route) == stack.getCount()) {
+                        crafter.extractItem(4, 1, false);
+                        return true;
+                    }
+                    return false;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
+        }
+        return false;
+    }
+
+    static boolean inTransit(Level level, BlockPos origin, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next) || !(level.getBlockEntity(next) instanceof ItemPipeBlockEntity pipe)) {
+                    continue;
+                }
+                queue.add(next);
+                if (pipe.carrying(wanted)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean supply(Level level, BlockPos destination, ItemStack wanted) {
         Set<BlockPos> seen = new HashSet<>();
         ArrayDeque<BlockPos> queue = new ArrayDeque<>();
         queue.add(destination);
@@ -41,10 +136,8 @@ public final class RoutingNetwork {
                     continue;
                 }
                 queue.add(next);
-                if (!(pipe.getBlockState().getBlock() instanceof StorageBusBlock)) {
-                    continue;
-                }
-                if (supply(level, next, direction.getOpposite(), wanted)) {
+                if (pipe.getBlockState().getBlock() instanceof StorageBusBlock
+                        && take(level, next, direction.getOpposite(), wanted)) {
                     return true;
                 }
             }
@@ -52,7 +145,7 @@ public final class RoutingNetwork {
         return false;
     }
 
-    private static boolean supply(Level level, BlockPos bus, Direction enteredFromNetwork, ItemStack wanted) {
+    private static boolean take(Level level, BlockPos bus, Direction enteredFromNetwork, ItemStack wanted) {
         for (Direction direction : Direction.values()) {
             if (direction == enteredFromNetwork) {
                 continue;
@@ -78,5 +171,64 @@ public final class RoutingNetwork {
             }
         }
         return false;
+    }
+
+    private static NetworkCrafterBlockEntity findCrafter(Level level, BlockPos origin, ItemStack wanted) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof NetworkCrafterBlockEntity crafter && crafter.result() == wanted.getItem()) {
+                    return crafter;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
+        }
+        return null;
+    }
+
+    private static PipeDriverBlockEntity findDriver(Level level, BlockPos origin) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        queue.add(origin);
+        seen.add(origin);
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.poll();
+            for (Direction direction : Direction.values()) {
+                BlockPos next = pos.relative(direction);
+                if (!seen.add(next)) {
+                    continue;
+                }
+                if (level.getBlockEntity(next) instanceof PipeDriverBlockEntity driver) {
+                    return driver;
+                }
+                if (level.getBlockEntity(next) instanceof ItemPipeBlockEntity) {
+                    queue.add(next);
+                }
+            }
+        }
+        return null;
+    }
+
+    private static BlockPos adjacentPipe(Level level, BlockPos pos) {
+        for (Direction direction : Direction.values()) {
+            if (level.getBlockState(pos.relative(direction)).getBlock() instanceof ItemPipeBlock) {
+                return pos.relative(direction);
+            }
+        }
+        return null;
+    }
+
+    private static Direction directionBetween(BlockPos from, BlockPos to) {
+        return Direction.getNearest(to.getX() - from.getX(), to.getY() - from.getY(), to.getZ() - from.getZ());
     }
 }

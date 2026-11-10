@@ -12,7 +12,11 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.machine.transport.FluidPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidTankBlockEntity;
 import com.neep.neepmeat.machine.transport.ItemPipeBlockEntity;
+import com.neep.neepmeat.machine.transport.DeferredRequest;
 import com.neep.neepmeat.machine.transport.ItemRequesterBlockEntity;
+import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
+import com.neep.neepmeat.machine.transport.PipeDriverBlockEntity;
+import com.neep.neepmeat.machine.transport.RoutingNetwork;
 import com.neep.neepmeat.machine.transport.MergePipeBlock;
 import com.neep.neepmeat.machine.transport.PipeRouteFinder;
 import com.neep.neepmeat.machine.transport.PumpBlockEntity;
@@ -31,6 +35,8 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+
+import java.util.List;
 
 @GameTestHolder(NeepMeat.ID)
 @PrefixGameTestTemplate(false)
@@ -100,8 +106,42 @@ public class PipeGraphGameTests {
         requester.request(new ItemStack(Items.DIRT));
         helper.runAfterDelay(40, () -> {
             helper.assertTrue(requester.output().is(Items.DIRT), "request did not arrive");
+            PipeDriverBlockEntity driver = helper.getBlockEntity(new BlockPos(2, 1, 0));
+            helper.assertTrue(driver.stateFor(helper.absolutePos(new BlockPos(2, 1, 2))) == DeferredRequest.State.SUCCESS, "deferred callback");
             helper.succeed();
         });
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 120)
+    public static void crafterRecursesForIngredients(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(0, 1, 1), Blocks.CHEST.defaultBlockState());
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.STORAGE_BUS.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 0), NeepMachines.NETWORK_CRAFTER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), NeepMachines.ITEM_REQUESTER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 1, 0), NeepMachines.PIPE_DRIVER.get().defaultBlockState());
+        ChestBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
+        source.setItem(0, new ItemStack(Items.COBBLESTONE));
+        NetworkCrafterBlockEntity crafter = helper.getBlockEntity(new BlockPos(2, 1, 0));
+        crafter.setRecipe(Items.STONE, List.of(Items.COBBLESTONE));
+        ItemRequesterBlockEntity requester = helper.getBlockEntity(new BlockPos(2, 1, 2));
+        requester.request(new ItemStack(Items.STONE));
+        helper.runAfterDelay(80, () -> {
+            helper.assertTrue(requester.output().is(Items.STONE), "crafted stone did not arrive");
+            helper.succeed();
+        });
+    }
+
+    @GameTest(template = "empty")
+    public static void craftingRecursionStopsAtThirty(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.NETWORK_CRAFTER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(0, 1, 1), NeepMachines.PIPE_DRIVER.get().defaultBlockState());
+        NetworkCrafterBlockEntity crafter = helper.getBlockEntity(new BlockPos(2, 1, 1));
+        crafter.setRecipe(Items.STONE, List.of(Items.STONE));
+        boolean started = RoutingNetwork.request(helper.getLevel(), helper.absolutePos(new BlockPos(1, 1, 1)), new ItemStack(Items.STONE));
+        helper.assertTrue(!started, "recursion did not stop");
+        helper.succeed();
     }
 
     @GameTest(template = "empty")

@@ -39,6 +39,7 @@ public class ItemRequesterBlockEntity extends BlockEntity implements Implemented
         }
         cooldown = 10;
         RoutingNetwork.request(level, worldPosition, requested);
+        requested = ItemStack.EMPTY;
     }
 
     @Override

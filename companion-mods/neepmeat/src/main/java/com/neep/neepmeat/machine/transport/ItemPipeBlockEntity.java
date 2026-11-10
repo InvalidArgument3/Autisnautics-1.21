@@ -237,6 +237,15 @@ public class ItemPipeBlockEntity extends BlockEntity {
         return level.getBlockEntity(pos) instanceof ItemPipeBlockEntity pipe ? pipe.vertex : null;
     }
 
+    public boolean carrying(ItemStack stack) {
+        for (TravellingItem item : items) {
+            if (ItemStack.isSameItem(item.stack, stack)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public final class PipeNode implements PipeVertex, ConnectablePipe {
         private final PipeVertex[] adjacent = new PipeVertex[6];
 

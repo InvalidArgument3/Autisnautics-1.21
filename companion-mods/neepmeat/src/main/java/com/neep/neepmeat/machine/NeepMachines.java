@@ -20,6 +20,8 @@ import com.neep.neepmeat.machine.transport.ColoredFluidPipeBlock;
 import com.neep.neepmeat.machine.transport.FilterItemPipeBlock;
 import com.neep.neepmeat.machine.transport.FilterPipeMenu;
 import com.neep.neepmeat.machine.transport.FluidPipeBlock;
+import com.neep.neepmeat.machine.transport.NetworkCrafterBlock;
+import com.neep.neepmeat.machine.transport.NetworkCrafterBlockEntity;
 import com.neep.neepmeat.machine.transport.ItemRequesterBlock;
 import com.neep.neepmeat.machine.transport.ItemRequesterBlockEntity;
 import com.neep.neepmeat.machine.transport.StorageBusBlock;
@@ -93,6 +95,10 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> ITEM_REQUESTER_ITEM = CONTEXT.item("item_requester", () -> new BlockItem(ITEM_REQUESTER.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemRequesterBlockEntity>> ITEM_REQUESTER_BE = BLOCK_ENTITIES.register("item_requester",
             () -> BlockEntityType.Builder.of(ItemRequesterBlockEntity::new, ITEM_REQUESTER.get()).build(null));
+    public static final DeferredBlock<NetworkCrafterBlock> NETWORK_CRAFTER = CONTEXT.block("network_crafter", NetworkCrafterBlock::new);
+    public static final DeferredItem<BlockItem> NETWORK_CRAFTER_ITEM = CONTEXT.item("network_crafter", () -> new BlockItem(NETWORK_CRAFTER.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<NetworkCrafterBlockEntity>> NETWORK_CRAFTER_BE = BLOCK_ENTITIES.register("network_crafter",
+            () -> BlockEntityType.Builder.of(NetworkCrafterBlockEntity::new, NETWORK_CRAFTER.get()).build(null));
 
     public static final DeferredBlock<PipeDriverBlock> PIPE_DRIVER = CONTEXT.block("pipe_driver", PipeDriverBlock::new);
     public static final DeferredItem<BlockItem> PIPE_DRIVER_ITEM = CONTEXT.item("pipe_driver", () -> new BlockItem(PIPE_DRIVER.get(), new Item.Properties()));
@@ -149,6 +155,7 @@ public final class NeepMachines {
         MeatlibCapabilities.itemHandler(event, ALLOY_KILN_BE.get(), (kiln, side) -> new net.neoforged.neoforge.items.wrapper.InvWrapper(kiln));
         MeatlibCapabilities.fluidHandler(event, FLUID_TANK_BE.get(), (tank, side) -> tank.tank());
         event.registerBlockEntity(net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, ITEM_REQUESTER_BE.get(), (requester, side) -> requester);
+        event.registerBlockEntity(net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, NETWORK_CRAFTER_BE.get(), (crafter, side) -> crafter);
     }
 
     private static void creative(BuildCreativeModeTabContentsEvent event) {
