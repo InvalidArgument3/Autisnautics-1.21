@@ -32,6 +32,17 @@ public interface TooltipSupplier {
         return BLANK;
     }
 
+    static TooltipSupplier hidden(int lines) {
+        return simple(lines);
+    }
+
+    static TooltipSupplier combine(TooltipSupplier first, TooltipSupplier second) {
+        if (first == null) {
+            return second == null ? BLANK : second;
+        }
+        return second == null ? first : first.append(second);
+    }
+
     static TooltipSupplier simple(int lines) {
         return (stack, tooltip) -> {
             for (int line = 0; line < lines; line++) {

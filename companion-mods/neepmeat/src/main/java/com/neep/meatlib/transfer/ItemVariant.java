@@ -33,6 +33,23 @@ public record ItemVariant(Item item, DataComponentPatch components) {
         return item;
     }
 
+    public net.minecraft.nbt.CompoundTag toNbt() {
+        net.minecraft.nbt.CompoundTag tag = new net.minecraft.nbt.CompoundTag();
+        tag.putString("id", net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).toString());
+        return tag;
+    }
+
+    public static ItemVariant fromNbt(net.minecraft.nbt.CompoundTag tag) {
+        if (tag == null) {
+            return BLANK;
+        }
+        return of(net.minecraft.core.registries.BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(tag.getString("id"))));
+    }
+
+    public net.minecraft.nbt.CompoundTag getNbt() {
+        return null;
+    }
+
     public ItemStack toStack(int count) {
         if (isBlank()) {
             return ItemStack.EMPTY;

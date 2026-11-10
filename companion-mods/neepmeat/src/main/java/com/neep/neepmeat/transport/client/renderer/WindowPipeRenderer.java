@@ -96,7 +96,7 @@ public class WindowPipeRenderer implements BlockEntityRenderer<WindowPipeBlockEn
             }
 
             emitter.spriteBake(sprite, MutableQuadView.BAKE_LOCK_UV);
-//            emitter.color(-1, -1, -1, -1);
+//            emitter.setColor(-1, -1, -1, -1);
             consumer.putBulkData(matrices.last(), emitter.toBakedQuad(sprite), r, g, b, light, OverlayTexture.NO_OVERLAY);
         }
     }
@@ -131,7 +131,7 @@ public class WindowPipeRenderer implements BlockEntityRenderer<WindowPipeBlockEn
             }
 
             emitter.spriteBake(sprite, MutableQuadView.BAKE_LOCK_UV);
-//            emitter.color(-1, -1, -1, 10);
+//            emitter.setColor(-1, -1, -1, 10);
             consumer.putBulkData(matrices.last(), emitter.toBakedQuad(sprite), r, g, b, light, OverlayTexture.NO_OVERLAY);
         }
     }

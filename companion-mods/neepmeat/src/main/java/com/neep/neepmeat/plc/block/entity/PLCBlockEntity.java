@@ -44,6 +44,19 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
     private boolean running;
     private @Nullable InstructionPlc machine;
 
+    public RobotHandle getSurgeryRobot() {
+        return RobotHandle.NONE;
+    }
+
+    /** The loom robot lives on the surgery table. This handle keeps the call sites. */
+    public static final class RobotHandle {
+        public static final RobotHandle NONE = new RobotHandle();
+
+        public @Nullable Player getController() {
+            return null;
+        }
+    }
+
     public PLCBlockEntity(BlockPos pos, BlockState state) {
         super(NeepMachines.PLC_BE.get(), pos, state);
     }

@@ -27,6 +27,23 @@ public record FluidVariant(Fluid fluid) {
         return fluid == other;
     }
 
+    public net.minecraft.nbt.CompoundTag toNbt() {
+        net.minecraft.nbt.CompoundTag tag = new net.minecraft.nbt.CompoundTag();
+        tag.putString("id", net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(fluid).toString());
+        return tag;
+    }
+
+    public static FluidVariant fromNbt(net.minecraft.nbt.CompoundTag tag) {
+        if (tag == null) {
+            return BLANK;
+        }
+        return of(net.minecraft.core.registries.BuiltInRegistries.FLUID.get(net.minecraft.resources.ResourceLocation.parse(tag.getString("id"))));
+    }
+
+    public net.minecraft.nbt.CompoundTag getNbt() {
+        return null;
+    }
+
     public Fluid getFluid() {
         return fluid;
     }

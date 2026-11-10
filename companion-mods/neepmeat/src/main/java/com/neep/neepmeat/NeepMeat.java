@@ -43,6 +43,9 @@ public final class NeepMeat {
     /** Loom sources use {@code NAMESPACE}. */
     public static final String NAMESPACE = ID;
     public static final Logger LOG = LogUtils.getLogger();
+    /** Loom sources call {@code LOGGER}. */
+    public static final Logger LOGGER = LOG;
+    public static final com.neep.neepmeat.config.NMConfig CONFIG = new com.neep.neepmeat.config.NMConfig();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ID);

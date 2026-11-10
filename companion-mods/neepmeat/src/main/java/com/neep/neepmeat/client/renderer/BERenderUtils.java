@@ -5,7 +5,8 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
@@ -63,7 +64,7 @@ public class BERenderUtils
     public static void renderModelSmooth(ResourceLocation model, PoseStack matrices, Level world, BlockPos pos, MultiBufferSource vertexConsumers)
     {
         ModelManager manager = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper().getModelManager();
-        BakedModel handle = manager.getModel(model);
+        BakedModel handle = manager.getModel(ModelResourceLocation.standalone(model));
         ModelBlockRenderer renderer = Minecraft.getInstance().getBlockRenderer().getModelRenderer();
 
         renderSmooth(renderer, world, handle, pos, matrices, vertexConsumers.getBuffer(RenderType.cutout()), RandomSource.create(), 0, 0);
@@ -99,7 +100,7 @@ public class BERenderUtils
     public static void renderModel(ResourceLocation model, PoseStack matrices, Level world, BlockPos pos, BlockState state, MultiBufferSource vertexConsumers)
     {
         ModelManager manager = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper().getModelManager();
-        BakedModel handle = manager.getModel(model);
+        BakedModel handle = manager.getModel(ModelResourceLocation.standalone(model));
         ModelBlockRenderer renderer = Minecraft.getInstance().getBlockRenderer().getModelRenderer();
 
         renderFlat(
@@ -361,7 +362,7 @@ public class BERenderUtils
                 float m = byteBuffer.getFloat(16);
                 float n = byteBuffer.getFloat(20);
                 Vector4f vector4f = matrix4f.transform(new Vector4f(f, g, h, 1.0F));
-                consumer.vertex(vector4f.x(), vector4f.y(), vector4f.z(), o, p, q, s, m, n, OverlayTexture.NO_OVERLAY, light, vector3f.x(), vector3f.y(), vector3f.z());
+                consumer.addVertex(vector4f.x(), vector4f.y(), vector4f.z(), o, p, q, s, m, n, OverlayTexture.NO_OVERLAY, light, vector3f.x(), vector3f.y(), vector3f.z());
             }
         }
     }

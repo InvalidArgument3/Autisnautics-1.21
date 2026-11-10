@@ -117,32 +117,32 @@ public class SmudgeEntityRenderer extends EntityRenderer<SmudgeEntity>
         // No idea why.
         // ZapEntityRenderer uses the same RenderLayer in the same way and is fine.
 //        vertexConsumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
-//                .color(col)
+//                .setColor(col)
 //                .texture(u1, v1)
 //                .overlay(OverlayTexture.DEFAULT_UV)
 //                .light(light)
-//                .normal(normal, 0, 1, 0)
+//                .setNormal(normal, 0, 1, 0)
 //                .next();
 //        vertexConsumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
 //                .texture(u1, v0)
-//                .color(col)
+//                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .normal(normal, 0, 1, 0)
+//                .setNormal(normal, 0, 1, 0)
 //                .next();
 //        vertexConsumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
 //                .texture(u0, v0)
-//                .color(col)
+//                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .normal(normal, 0, 1, 0)
+//                .setNormal(normal, 0, 1, 0)
 //                .next();
 //        vertexConsumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
 //                .texture(u0, v1)
-//                .color(col)
+//                .setColor(col)
 //                .light(light)
 //                .overlay(OverlayTexture.DEFAULT_UV)
-//                .normal(normal, 0, 1, 0)
+//                .setNormal(normal, 0, 1, 0)
 //                .next();
     }
 

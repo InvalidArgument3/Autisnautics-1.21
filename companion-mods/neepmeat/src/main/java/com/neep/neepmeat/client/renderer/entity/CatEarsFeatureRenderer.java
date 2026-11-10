@@ -129,7 +129,7 @@ public class CatEarsFeatureRenderer extends RenderLayer<AbstractClientPlayer, Pl
 
 //                Matrix3f normal = matrices.peek().getNormalMatrix();
 //                Matrix4f mat = matrices.peek().getPositionMatrix();
-//                vertexConsumer.vertex(mat, 0, 0, 0).color(1, 1, 1, 1).texture(0, 1).overlay(OverlayTexture.DEFAULT_UV).light(light).normal(normal, 0, 1, 0);
+//                vertexConsumer.vertex(mat, 0, 0, 0).setColor(1, 1, 1, 1).texture(0, 1).overlay(OverlayTexture.DEFAULT_UV).light(light).setNormal(normal, 0, 1, 0);
 //                vertexConsumer.vertex(0, 2, 0, 1, 1, 1, 1, 0, 0, OverlayTexture.DEFAULT_UV, light, 0, 1, 0);
 //                vertexConsumer.vertex(2, 2, 0, 1, 1, 1, 1, 1, 0, OverlayTexture.DEFAULT_UV, light, 0, 1, 0);
 //                vertexConsumer.vertex(2, 0, 0, 1, 1, 1, 1, 1, 1, OverlayTexture.DEFAULT_UV, light, 0, 1, 0);

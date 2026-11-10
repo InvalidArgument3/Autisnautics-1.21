@@ -37,7 +37,6 @@ com/neep/meatlib/client/flw/MeatModels.java
 com/neep/meatlib/client/renderer/DebugRenderUtil.java
 com/neep/meatlib/client/screen/REIScreenSupport.java
 com/neep/meatlib/config/ConfigUtil.java
-com/neep/meatlib/config/MeatlibConfig.java
 com/neep/meatlib/datagen/BlockTagProvider.java
 com/neep/meatlib/datagen/MeatLibDataGen.java
 com/neep/meatlib/datagen/MeatRecipeProvider.java
@@ -706,7 +705,6 @@ com/neep/neepmeat/component/ItemIdentityComponentImpl.java
 com/neep/neepmeat/component/ItemPressureWasherComponent.java
 com/neep/neepmeat/component/PlayerCompressedAirComponent.java
 com/neep/neepmeat/component/ProgramStorageComponent.java
-com/neep/neepmeat/config/NMConfig.java
 com/neep/neepmeat/datagen/NMAdvancements.java
 com/neep/neepmeat/datagen/NMBlockTagProvider.java
 com/neep/neepmeat/datagen/NMDataGen.java

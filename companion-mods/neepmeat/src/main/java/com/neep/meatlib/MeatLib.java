@@ -29,6 +29,9 @@ import org.slf4j.Logger;
 public final class MeatLib {
     public static final String ID = "meatlib";
     public static final Logger LOG = LogUtils.getLogger();
+    /** Loom sources call {@code LOGGER}. */
+    public static final Logger LOGGER = LOG;
+    public static final com.neep.meatlib.config.MeatlibConfig CONFIG = new com.neep.meatlib.config.MeatlibConfig();
     public static final String[] METRIC_PREFIXES = {"f", "p", "n", "µ", "m", "", "k", "M", "G", "T"};
 
     public MeatLib(ModContainer container, Dist dist) {

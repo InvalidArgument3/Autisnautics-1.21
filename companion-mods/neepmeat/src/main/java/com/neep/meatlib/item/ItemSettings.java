@@ -34,6 +34,13 @@ public class ItemSettings {
         return this;
     }
 
+    public ItemSettings retainsInv() { return this; }
+    public ItemSettings neepbus() { return this; }
+    public ItemSettings plcActuator() { return this; }
+    public ItemSettings plcInterrupt() { return this; }
+    public ItemSettings plc() { return this; }
+    public ItemSettings requiresMotor() { return this; }
+
     public ItemSettings tooltip(TooltipSupplier tooltip) {
         this.tooltip = this.tooltip.append(tooltip);
         return this;

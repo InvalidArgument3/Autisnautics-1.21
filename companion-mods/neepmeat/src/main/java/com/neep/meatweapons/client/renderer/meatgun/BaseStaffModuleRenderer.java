@@ -5,7 +5,8 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
@@ -37,7 +38,7 @@ public class BaseStaffModuleRenderer implements MeatgunModuleRenderer<BaseStaffM
     {
         matrices.pushPose();
         matrices.translate(0, -1, 0);
-        BakedModel base = itemRenderer.getItemModelShaper().getModelManager().getModel(MWExtraModels.STAFF_BASE);
+        BakedModel base = itemRenderer.getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.STAFF_BASE));
         renderItem(stack, mode, false, matrices, vertexConsumers, light, overlay, base);
         matrices.popPose();
     }

@@ -5,7 +5,8 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
@@ -396,7 +397,7 @@ public class GuideListPane extends ContentPane implements Renderable, GuiEventLi
 
 //        renderer.zOffset = bakedModel.hasDepth() ? zOffset + 50.0f + 0 : zOffset + 50.0f;
 //
-//        BakedModel model = renderer.getModels().getModel(stack);
+//        BakedModel model = renderer.getModels().getModel(ModelResourceLocation.standalone(stack));
 //        renderItem(stack, matrices, vertexConsumers, light, overlay, model);
     }
 

@@ -184,6 +184,20 @@ public class SplitPanel extends Panel
         return this;
     }
 
+    public SplitPanel setLeft(Object left) {
+        if (left instanceof ClickableWidget widget) {
+            this.left = widget;
+        }
+        return this;
+    }
+
+    public SplitPanel setRight(Object right) {
+        if (right instanceof ClickableWidget widget) {
+            this.right = widget;
+        }
+        return this;
+    }
+
     public SplitPanel setA(@Nullable ClickableWidget left)
     {
         this.left = left;

@@ -31,26 +31,26 @@ public class FullBeamRenderer
 
         float t1 = 1 * t;
 
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, -t / 2, 0, 0, 1); // p0
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, -t / 2, (float) beam.length(), 1, 1); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, t / 2, (float) beam.length(), 1, 0); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, t / 2, 0, 0, 0); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, -t / 2, 0, 0, 1); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, -t / 2, (float) beam.length(), 1, 1); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, t / 2, (float) beam.length(), 1, 0); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t1 / 2, t / 2, 0, 0, 0); // p0
 
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t / 2, 0, 0, 0); // p0
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, t / 2, (float) beam.length(), 1, 0); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, -t / 2, (float) beam.length(), 1, 1); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, -t / 2, 0, 0, 1); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t / 2, 0, 0, 0); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, t / 2, (float) beam.length(), 1, 0); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, -t / 2, (float) beam.length(), 1, 1); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t1 / 2, -t / 2, 0, 0, 1); // p0
 
 
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, -t1 / 2, 0, 0, 0); // p0
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, -t1 / 2, (float) beam.length(), 1, 0); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, -t1 / 2, (float) beam.length(), 1, 1); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, -t1 / 2, 0, 0, 1); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, -t1 / 2, 0, 0, 0); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, -t1 / 2, (float) beam.length(), 1, 0); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, -t1 / 2, (float) beam.length(), 1, 1); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, -t1 / 2, 0, 0, 1); // p0
 
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, t1 / 2, 0, 0, 1); // p0
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, t1 / 2, (float) beam.length(), 1, 1); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t1 / 2, (float) beam.length(), 1, 0); // p1
-        BeamRenderer.vertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t1 / 2, 0, 0, 0); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, t1 / 2, 0, 0, 1); // p0
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, -t / 2, t1 / 2, (float) beam.length(), 1, 1); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t1 / 2, (float) beam.length(), 1, 0); // p1
+        BeamRenderer.addVertex(vertexConsumer, model, normal, r, g, b, a, l, t / 2, t1 / 2, 0, 0, 0); // p0
 
         matrices.popPose();
     }
@@ -91,10 +91,10 @@ public class FullBeamRenderer
                 float z3 = xzLen2 * Mth.sin(yaw1);
                 float z4 = xzLen2* Mth.sin(yaw2);
 
-                consumer.vertex(top, x2, y1, z2).color(r, g, b, a).endVertex();
-                consumer.vertex(top, x1, y1, z1).color(r, g, b, a).endVertex();
-                consumer.vertex(top, x3, y2, z3).color(r, g, b, a).endVertex();
-                consumer.vertex(top, x4, y2, z4).color(r, g, b, a).endVertex();
+                consumer.addVertex(top, x2, y1, z2).setColor(r, g, b, a);
+                consumer.addVertex(top, x1, y1, z1).setColor(r, g, b, a);
+                consumer.addVertex(top, x3, y2, z3).setColor(r, g, b, a);
+                consumer.addVertex(top, x4, y2, z4).setColor(r, g, b, a);
             }
         }
 
@@ -116,10 +116,10 @@ public class FullBeamRenderer
             float z3 = radius * Mth.sin(yaw1);
             float z4 = radius * Mth.sin(yaw2);
 
-            consumer.vertex(top, x2, y1, z2).color(r, g, b, a).endVertex();
-            consumer.vertex(top, x1, y1, z1).color(r, g, b, a).endVertex();
-            consumer.vertex(top, x3, y2, z3).color(r, g, b, a).endVertex();
-            consumer.vertex(top, x4, y2, z4).color(r, g, b, a).endVertex();
+            consumer.addVertex(top, x2, y1, z2).setColor(r, g, b, a);
+            consumer.addVertex(top, x1, y1, z1).setColor(r, g, b, a);
+            consumer.addVertex(top, x3, y2, z3).setColor(r, g, b, a);
+            consumer.addVertex(top, x4, y2, z4).setColor(r, g, b, a);
         }
     }
 }

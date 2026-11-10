@@ -56,6 +56,18 @@ public final class MiscUtil {
         return best;
     }
 
+    public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(BlockEntityType<A> given, BlockEntityType<E> expected, BlockEntityTicker<? super E> ticker, Object unused, Level world) {
+        return checkType(given, expected, ticker);
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(BlockEntityType<A> given, BlockEntityType<E> expected, BlockEntityTicker<? super E> ticker) {
+        if (given != expected || ticker == null) {
+            return null;
+        }
+        return (level, pos, state, blockEntity) -> ticker.tick(level, pos, state, (E) blockEntity);
+    }
+
     public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> ticker(BlockEntityType<A> type, BlockEntityTicker<? super E> ticker) {
         return (level, pos, state, blockEntity) -> {
             if (blockEntity.getType() == type) {

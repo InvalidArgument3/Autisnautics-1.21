@@ -120,21 +120,21 @@ public class LongBulletTrailEffect extends BeamGraphicsEffect
         int o = OverlayTexture.NO_OVERLAY;
         int l = LightTexture.FULL_BRIGHT;
 
-        consumer.vertex(position, -d, 0, -d)
-                .color(1.0f, 1, 1, a)
+        consumer.addVertex(position, -d, 0, -d)
+                .setColor(1.0f, 1, 1, a)
                 .uv(0, 0)
-                .overlayCoords(o).uv2(l).normal(normal, 0, 1, 0).endVertex();
-        consumer.vertex(position, -d, 0, d)
-                .color(1.0f, 1, 1, a)
+                .overlayCoords(o).uv2(l).setNormal(normal, 0, 1, 0);
+        consumer.addVertex(position, -d, 0, d)
+                .setColor(1.0f, 1, 1, a)
                 .uv(0, 1)
-                .overlayCoords(o).uv2(l).normal(normal, 0, 1, 0).endVertex();
-        consumer.vertex(position, d, 0, d)
-                .color(1.0f, 1, 1, a)
+                .overlayCoords(o).uv2(l).setNormal(normal, 0, 1, 0);
+        consumer.addVertex(position, d, 0, d)
+                .setColor(1.0f, 1, 1, a)
                 .uv(1, 1)
-                .overlayCoords(o).uv2(l).normal(normal, 0, 1, 0).endVertex();
-        consumer.vertex(position, d, 0, -d)
-                .color(1.0f, 1, 1, a)
+                .overlayCoords(o).uv2(l).setNormal(normal, 0, 1, 0);
+        consumer.addVertex(position, d, 0, -d)
+                .setColor(1.0f, 1, 1, a)
                 .uv(1, 0)
-                .overlayCoords(o).uv2(l).normal(normal, 0, 1, 0).endVertex();
+                .overlayCoords(o).uv2(l).setNormal(normal, 0, 1, 0);
     }
 }

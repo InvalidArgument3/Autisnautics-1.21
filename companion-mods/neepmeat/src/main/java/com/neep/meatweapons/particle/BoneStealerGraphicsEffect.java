@@ -125,26 +125,26 @@ public class BoneStealerGraphicsEffect implements GraphicsEffect
         float a = 1;
 
 //        int o = this.getBrightness(tickDelta);
-        vertexConsumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
+        vertexConsumer.addVertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
 //                .texture(l, n)
-                .color(r, g, b, a)
+                .setColor(r, g, b, a)
 //                .light(o)
-                .endVertex();
-        vertexConsumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
+                ;
+        vertexConsumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
 //                .texture(l, m)
-                .color(r, g, b, a)
+                .setColor(r, g, b, a)
 //                .light(o)
-                .endVertex();
-        vertexConsumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
+                ;
+        vertexConsumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
 //                .texture(k, m)
-                .color(r, g, b, a)
+                .setColor(r, g, b, a)
 //                .light(o)
-                .endVertex();
-        vertexConsumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
+                ;
+        vertexConsumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
 //                .texture(k, n)
-                .color(r, g, b, a)
+                .setColor(r, g, b, a)
 //                .light(o)
-                .endVertex();
+                ;
     }
 
     @Override

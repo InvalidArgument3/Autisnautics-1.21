@@ -243,10 +243,10 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         RenderSystem.enableBlend();
         BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        bufferBuilder.vertex(matrix, x0, y1, z).color(light, light, light, 1).uv(u0, v1).endVertex();
-        bufferBuilder.vertex(matrix, x1, y1, z).color(light, light, light, 1).uv(u1, v1).endVertex();
-        bufferBuilder.vertex(matrix, x1, y0, z).color(light, light, light, 1).uv(u1, v0).endVertex();
-        bufferBuilder.vertex(matrix, x0, y0, z).color(light, light, light, 1).uv(u0, v0).endVertex();
+        bufferBuilder.vertex(matrix, x0, y1, z).setColor(light, light, light, 1).uv(u0, v1);
+        bufferBuilder.vertex(matrix, x1, y1, z).setColor(light, light, light, 1).uv(u1, v1);
+        bufferBuilder.vertex(matrix, x1, y0, z).setColor(light, light, light, 1).uv(u1, v0);
+        bufferBuilder.vertex(matrix, x0, y0, z).setColor(light, light, light, 1).uv(u0, v0);
         BufferUploader.drawWithShader(bufferBuilder.end());
     }
 
@@ -264,10 +264,10 @@ public class PLCProgramScreen extends Screen implements MenuAccess<PLCScreenHand
         float o = sprite.getV1();
         Matrix4f matrix4f = matrices.last().pose();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR_TEX);
-        bufferBuilder.vertex(matrix4f, x0, (float) height, z).color(0.1f, 0.1f, 0.1f, 1.0f).uv(m, o).endVertex();
-        bufferBuilder.vertex(matrix4f, (float) width, (float) height, z).color(0.1f, 0.1f, 0.1f, 1.0f).uv(l, o).endVertex();
-        bufferBuilder.vertex(matrix4f, (float) width, y0, z).color(0.1f, 0.1f, 0.1f, 1.0f).uv(l, n).endVertex();
-        bufferBuilder.vertex(matrix4f, x0, y0, z).color(0.1f, 0.1f, 0.1f, 1.0f).uv(m, n).endVertex();
+        bufferBuilder.vertex(matrix4f, x0, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(m, o);
+        bufferBuilder.vertex(matrix4f, (float) width, (float) height, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(l, o);
+        bufferBuilder.vertex(matrix4f, (float) width, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(l, n);
+        bufferBuilder.vertex(matrix4f, x0, y0, z).setColor(0.1f, 0.1f, 0.1f, 1.0f).uv(m, n);
         BufferUploader.drawWithShader(bufferBuilder.end());
     }
 

@@ -17,4 +17,12 @@ public interface TransactionContext {
     void onRename();
 
     void abort();
+
+    /** Fabric nested transaction. {@link Transaction} already opens one. */
+    default TransactionContext openNested() {
+        if (this instanceof Transaction transaction) {
+            return transaction.openNested();
+        }
+        return this;
+    }
 }

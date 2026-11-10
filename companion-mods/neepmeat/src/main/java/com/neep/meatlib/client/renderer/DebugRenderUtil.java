@@ -36,8 +36,8 @@ public class DebugRenderUtil
 
         PoseStack.Pose entry = matrices.last();
         var buffer = vcp.getBuffer(RenderType.lines());
-        buffer.vertex(entry.pose(), x0, y0, z0).color(r, g, b, 1).normal(entry.normal(), k, l, m).endVertex();
-        buffer.vertex(entry.pose(), x1, y1, z1).color(r, g, b, 1).normal(entry.normal(), k, l, m).endVertex();
+        buffer.addVertex(entry.pose(), x0, y0, z0).setColor(r, g, b, 1).setNormal(entry.normal(), k, l, m);
+        buffer.addVertex(entry.pose(), x1, y1, z1).setColor(r, g, b, 1).setNormal(entry.normal(), k, l, m);
     }
 
     public static void renderHCircle(PoseStack matrices, float x, float y, float z, float radius, float r, float g, float b, MultiBufferSource vcp)
@@ -72,8 +72,8 @@ public class DebugRenderUtil
             l /= n;
             m /= n;
 
-            buffer.vertex(entry.pose(), x + dx, y, z + dz).color(r, g, b, 1).normal(entry.normal(), k, l, m).endVertex();
-            buffer.vertex(entry.pose(), x + dx1, y, z + dz1).color(r, g, b, 1).normal(entry.normal(), k, l, m).endVertex();
+            buffer.addVertex(entry.pose(), x + dx, y, z + dz).setColor(r, g, b, 1).setNormal(entry.normal(), k, l, m);
+            buffer.addVertex(entry.pose(), x + dx1, y, z + dz1).setColor(r, g, b, 1).setNormal(entry.normal(), k, l, m);
         }
     }
 }

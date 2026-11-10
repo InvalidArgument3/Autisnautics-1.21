@@ -5,7 +5,8 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
@@ -52,9 +53,9 @@ public class TissueOperatorRenderer implements BuiltinItemRendererRegistry.Dynam
     @Override
     public void render(ItemStack stack, ItemDisplayContext mode, PoseStack matrices, MultiBufferSource vertexConsumers, int light, int overlay)
     {
-        BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.TISSUE_OPERATOR_MAIN);
-        BakedModel end = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.TISSUE_OPERATOR_FRONT);
-        BakedModel wheel = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(NMExtraModels.TISSUE_OPERATOR_WHEEL);
+        BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(NMExtraModels.TISSUE_OPERATOR_MAIN));
+        BakedModel end = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(NMExtraModels.TISSUE_OPERATOR_FRONT));
+        BakedModel wheel = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(NMExtraModels.TISSUE_OPERATOR_WHEEL));
 
         if (client.player.isUsingItem())
         {

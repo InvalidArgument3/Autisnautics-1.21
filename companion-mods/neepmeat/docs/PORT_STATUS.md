@@ -1,3 +1,22 @@
+## Histogram, jar 0.30.0-neoforge.47
+
+`tools/port-errors/symbols.txt` is the breakdown of the 3,401 missing symbols from the 5,633-error tree. The top of that list is not the Fabric packages. `vertex`, `getNullable`, `TrackedValue`, `setLeft`, and `block` each repeat dozens of times.
+
+Combined-tree errors, measured with the exclude list moved aside:
+
+| After | Errors |
+| --- | ---: |
+| Pipe move, start of this run | 5633 |
+| Fabric rendering and the event adapter | 5394 |
+| Transfer, config, lookup, and vertex rename | 4632 |
+| `setColor` / `setNormal` | 4612 |
+
+`FinishedRecipe` cannot live in `net.minecraft.data.recipes`. That splits the minecraft module and the game will not start. Those errors are back. The count above includes the class.
+
+`exclude.txt` has 1437 files. The next ten kinds are in `tools/port-errors/next10.txt`. The largest remaining symbol occurs 43 times, so another shim of the same kind does not cross 2,500.
+
+Deviations in this batch: Fabric `Event.register` forwards to the NeoForge bus, and the loot listener is called without a table builder. The Fabric item and fluid `Storage` types are shapes, separate from the meatlib records. `NMBlocks.block()` returns `ItemSettings` whose `retainsInv` and `neepbus` methods keep the call chain and do not add the tooltip lines. `PLCBlockEntity.getSurgeryRobot()` returns a handle whose controller is null. Kaleido `TrackedValue` stores the default and does not read a config file. `BuiltinItemRendererRegistry` records the renderer and does not draw it through `IClientItemExtensions` yet.
+
 ## Pipes collapsed, jar 0.30.0-neoforge.46
 
 The hand-ported item pipe, fluid pipe, pump, filter pipe, merge pipe, pipe driver, route finder, and routing network now live at the upstream packages (`transport/block/...`, `transport/item_network`, `transport/api/item_network`). The `machine/transport` copies of those classes are gone. Tanks, the storage bus, and filter entries stay in `machine/transport` because upstream has no second copy of them. `SyncableBlockEntity` implements `BlockEntityClientSerializable`: `getUpdateTag` calls `toClientTag` and `handleUpdateTag` calls `fromClientTag`.

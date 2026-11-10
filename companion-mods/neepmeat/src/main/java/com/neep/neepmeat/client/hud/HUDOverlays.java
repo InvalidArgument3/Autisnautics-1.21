@@ -145,10 +145,10 @@ public class HUDOverlays
         BufferBuilder bufferBuilder = tessellator.getBuilder();
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
 
-        bufferBuilder.vertex(x1, y1, -90.0D).uv(0.0F, 1.0F).endVertex();
-        bufferBuilder.vertex(x2, y1, -90.0D).uv(1.0F, 1.0F).endVertex();
-        bufferBuilder.vertex(x3, y3, -90.0D).uv(1.0F, 0.0F).endVertex();
-        bufferBuilder.vertex(x4, y3, -90.0D).uv(0.0F, 0.0F).endVertex();
+        bufferBuilder.vertex(x1, y1, -90.0D).uv(0.0F, 1.0F);
+        bufferBuilder.vertex(x2, y1, -90.0D).uv(1.0F, 1.0F);
+        bufferBuilder.vertex(x3, y3, -90.0D).uv(1.0F, 0.0F);
+        bufferBuilder.vertex(x4, y3, -90.0D).uv(0.0F, 0.0F);
 
         tessellator.end();
         RenderSystem.depthMask(true);

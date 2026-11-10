@@ -17,6 +17,10 @@ package com.neep.neepmeat.init;
 import net.minecraft.world.level.block.Block;
 
 public final class NMBlocks {
+    /** Loom registration uses {@code NMBlocks.block()} for the item settings. */
+    public static com.neep.meatlib.item.ItemSettings block() {
+        return com.neep.meatlib.item.ItemSettings.block();
+    }
     public static Block C;
     public static Block METAL;
     public static Block BRASS_BLOCKS;

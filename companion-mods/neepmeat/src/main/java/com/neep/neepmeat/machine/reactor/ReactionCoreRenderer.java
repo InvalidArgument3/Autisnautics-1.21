@@ -73,10 +73,10 @@ public class ReactionCoreRenderer implements BlockEntityRenderer<ReactionCoreBlo
                     float z3 = xzLen2 * Mth.sin(yaw1);
                     float z4 = xzLen2* Mth.sin(yaw2);
 
-                    consumer.vertex(top, x2, y1, z2).endVertex();
-                    consumer.vertex(top, x1, y1, z1).endVertex();
-                    consumer.vertex(top, x3, y2, z3).endVertex();
-                    consumer.vertex(top, x4, y2, z4).endVertex();
+                    consumer.addVertex(top, x2, y1, z2);
+                    consumer.addVertex(top, x1, y1, z1);
+                    consumer.addVertex(top, x3, y2, z3);
+                    consumer.addVertex(top, x4, y2, z4);
                 }
             }
         }

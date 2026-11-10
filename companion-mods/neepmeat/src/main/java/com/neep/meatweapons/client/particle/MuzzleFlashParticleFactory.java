@@ -171,34 +171,34 @@ public class MuzzleFlashParticleFactory implements ParticleProvider<MuzzleFlashP
             int o = this.getLightColor(tickDelta);
 
             // Vertices have to be in this order, which is different to the order in SpriteBillboardParticle. Don't ask me why.
-            consumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
-                    .color(this.rCol, this.gCol, this.bCol, this.alpha)
+            consumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
+                    .setColor(this.rCol, this.gCol, this.bCol, this.alpha)
                     .uv(k, m)
                     .overlayCoords(overlay)
                     .uv2(o)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
-                    .color(this.rCol, this.gCol, this.bCol, this.alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
+                    .setColor(this.rCol, this.gCol, this.bCol, this.alpha)
                     .uv(l, m)
                     .overlayCoords(overlay)
                     .uv2(o)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
-                    .color(this.rCol, this.gCol, this.bCol, this.alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
+                    .setColor(this.rCol, this.gCol, this.bCol, this.alpha)
                     .uv(l, n)
                     .overlayCoords(overlay)
                     .uv2(o)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
-                    .color(this.rCol, this.gCol, this.bCol, this.alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
+                    .setColor(this.rCol, this.gCol, this.bCol, this.alpha)
                     .uv(k, n)
                     .overlayCoords(overlay)
                     .uv2(o)
-                    .normal(0, 1, 0)
-                    .endVertex();
+                    .setNormal(0, 1, 0)
+                    ;
 
         }
 

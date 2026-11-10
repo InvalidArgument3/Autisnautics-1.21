@@ -108,34 +108,34 @@ public class ShockStaffProjectileEntityRenderer extends EntityRenderer<ShockStaf
 
             int overlay = OverlayTexture.NO_OVERLAY;
 
-            consumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
-                    .color(red, green, blue, alpha)
+            consumer.addVertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z())
+                    .setColor(red, green, blue, alpha)
                     .uv(k, m)
                     .overlayCoords(overlay)
                     .uv2(light)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
-                    .color(red, green, blue, alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z())
+                    .setColor(red, green, blue, alpha)
                     .uv(l, m)
                     .overlayCoords(overlay)
                     .uv2(light)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
-                    .color(red, green, blue, alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z())
+                    .setColor(red, green, blue, alpha)
                     .uv(l, n)
                     .overlayCoords(overlay)
                     .uv2(light)
-                    .normal(0, 1, 0)
-                    .endVertex();
-            consumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
-                    .color(red, green, blue, alpha)
+                    .setNormal(0, 1, 0)
+                    ;
+            consumer.addVertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z())
+                    .setColor(red, green, blue, alpha)
                     .uv(k, n)
                     .overlayCoords(overlay)
                     .uv2(light)
-                    .normal(0, 1, 0)
-                    .endVertex();
+                    .setNormal(0, 1, 0)
+                    ;
 
             matrices.popPose();
             super.render(entity, yaw, tickDelta, matrices, vertexConsumers, light);

@@ -109,10 +109,10 @@ public class HoundEntityRenderer extends LivingEntityRenderer<HoundEntity, Hound
             float z = radius * Mth.cos(i / 3f * Mth.PI * 2);
 
             Vector4f vector4f = matrix4f.transform(new Vector4f(x, 0, z, 1));
-            consumer.vertex(vector4f.x(), vector4f.y(), vector4f.z(), r, g, b, a, u, v, OverlayTexture.NO_OVERLAY, light, 0, 1, 0);
+            consumer.addVertex(vector4f.x(), vector4f.y(), vector4f.z(), r, g, b, a, u, v, OverlayTexture.NO_OVERLAY, light, 0, 1, 0);
         }
         Vector4f vector4f = matrix4f.transform(new Vector4f(1, 0.5f, 0, 1));
-        consumer.vertex(vector4f.x, vector4f.y, vector4f.z, r, g, b, a, 0, 0, OverlayTexture.NO_OVERLAY, light, 0, 1, 0);
+        consumer.addVertex(vector4f.x, vector4f.y, vector4f.z, r, g, b, a, 0, 0, OverlayTexture.NO_OVERLAY, light, 0, 1, 0);
     }
 
     private static float thing(float f)

@@ -141,13 +141,13 @@ public class BulletEntityRenderer extends ArrowRenderer<BulletEntity>
 
     public void vertex1(Matrix4f positionMatrix, Matrix3f normalMatrix, VertexConsumer vertexConsumer, float x, float y, float z, float u, float v, float r, float g, float b, float alpha, int normalX, int normalZ, int normalY, int light)
     {
-        vertexConsumer.vertex(positionMatrix, x, y, z)
-                .color(r, g, b, alpha)
+        vertexConsumer.addVertex(positionMatrix, x, y, z)
+                .setColor(r, g, b, alpha)
                 .uv(u, v)
                 .overlayCoords(OverlayTexture.NO_OVERLAY)
                 .uv2(light)
-                .normal(normalMatrix, (float) normalX, (float) normalY, (float) normalZ)
-                .endVertex();
+                .setNormal(normalMatrix, (float) normalX, (float) normalY, (float) normalZ)
+                ;
     }
 
     @Override

@@ -37,6 +37,11 @@ public final class MeatlibBlockSettings {
         return new MeatlibBlockSettings(BlockBehaviour.Properties.of());
     }
 
+    /** Loom sources call {@code of()}. */
+    public static MeatlibBlockSettings of() {
+        return create();
+    }
+
     public static MeatlibBlockSettings copyOf(Block block) {
         return new MeatlibBlockSettings(BlockBehaviour.Properties.ofFullCopy(block));
     }
@@ -44,6 +49,15 @@ public final class MeatlibBlockSettings {
     /** Upstream passes the parent {@link BlockBehaviour.Properties} into a structure block. */
     public static BlockBehaviour.Properties copyOf(BlockBehaviour.Properties properties) {
         return properties;
+    }
+
+    public MeatlibBlockSettings destroyTime(float destroyTime) {
+        properties.destroyTime(destroyTime);
+        return this;
+    }
+
+    public MeatlibBlockSettings noOcclusion() {
+        return nonOpaque();
     }
 
     public MeatlibBlockSettings strength(float strength) {

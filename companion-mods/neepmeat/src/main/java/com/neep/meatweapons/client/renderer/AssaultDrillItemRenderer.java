@@ -5,7 +5,8 @@
  *
  * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+import net.minecraft.client.resources.model.ModelResourceLocation; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
@@ -44,11 +45,11 @@ public class AssaultDrillItemRenderer implements BuiltinItemRendererRegistry.Dyn
             return;
 
         Minecraft client = Minecraft.getInstance();
-        BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(MWExtraModels.ASSAULT_DRILL_HANDLE);
-        BakedModel part1 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(MWExtraModels.ASSAULT_DRILL_PART_1);
-        BakedModel part2 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(MWExtraModels.ASSAULT_DRILL_PART_2);
-        BakedModel part3 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(MWExtraModels.ASSAULT_DRILL_PART_3);
-        BakedModel part4 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(MWExtraModels.ASSAULT_DRILL_PART_4);
+        BakedModel main = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_HANDLE));
+        BakedModel part1 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_1));
+        BakedModel part2 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_2));
+        BakedModel part3 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_3));
+        BakedModel part4 = client.getItemRenderer().getItemModelShaper().getModelManager().getModel(ModelResourceLocation.standalone(MWExtraModels.ASSAULT_DRILL_PART_4));
 
         float timeDegrees = client.level.getGameTime() % 360 + client.getFrameTime();
 

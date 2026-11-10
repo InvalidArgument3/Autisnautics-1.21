@@ -78,6 +78,14 @@ public class StringTokenView extends TokenView
         return next();
     }
 
+    public char peek() {
+        return last();
+    }
+
+    public char peek(int ahead) {
+        return last(ahead);
+    }
+
     public char peekThing()
     {
         fastForward();

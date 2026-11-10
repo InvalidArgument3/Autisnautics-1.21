@@ -95,10 +95,10 @@ public class ReminaGraphicsEffect implements GraphicsEffect
         BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
         RenderSystem.setShaderTexture(0, EYE);
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
-        bufferBuilder.vertex(matrix4f2, -k, y, -k).uv(0.0f, 0.0f).color(r, g, b, 1).endVertex();
-        bufferBuilder.vertex(matrix4f2, k, y, -k).uv(1.0f, 0.0f).color(r, g, b, 1).endVertex();
-        bufferBuilder.vertex(matrix4f2, k, y, k).uv(1.0f, 1.0f).color(r, g, b, 1).endVertex();
-        bufferBuilder.vertex(matrix4f2, -k, y, k).uv(0.0f, 1.0f).color(r, g, b, 1).endVertex();
+        bufferBuilder.vertex(matrix4f2, -k, y, -k).uv(0.0f, 0.0f).setColor(r, g, b, 1);
+        bufferBuilder.vertex(matrix4f2, k, y, -k).uv(1.0f, 0.0f).setColor(r, g, b, 1);
+        bufferBuilder.vertex(matrix4f2, k, y, k).uv(1.0f, 1.0f).setColor(r, g, b, 1);
+        bufferBuilder.vertex(matrix4f2, -k, y, k).uv(0.0f, 1.0f).setColor(r, g, b, 1);
         var built = bufferBuilder.end();
         BufferUploader.drawWithShader(built);
         matrices.popPose();

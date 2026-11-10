@@ -252,9 +252,9 @@ public class GraphPane extends LivingMachineScreen.PaneWidget
                 .rotateZ((float) angle);
 
         VertexConsumer vertexConsumer = context.bufferSource().getBuffer(RenderType.gui());
-        vertexConsumer.vertex(matrix4f, 0, - radius, z).color(g, h, j, f).endVertex();
-        vertexConsumer.vertex(matrix4f, 0, + radius, z).color(g, h, j, f).endVertex();
-        vertexConsumer.vertex(matrix4f, l, + radius, z).color(g, h, j, f).endVertex();
-        vertexConsumer.vertex(matrix4f, l, - radius, z).color(g, h, j, f).endVertex();
+        vertexConsumer.addVertex(matrix4f, 0, - radius, z).setColor(g, h, j, f);
+        vertexConsumer.addVertex(matrix4f, 0, + radius, z).setColor(g, h, j, f);
+        vertexConsumer.addVertex(matrix4f, l, + radius, z).setColor(g, h, j, f);
+        vertexConsumer.addVertex(matrix4f, l, - radius, z).setColor(g, h, j, f);
     }
 }
