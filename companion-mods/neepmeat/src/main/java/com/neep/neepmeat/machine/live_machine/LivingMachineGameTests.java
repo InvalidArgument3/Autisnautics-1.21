@@ -35,4 +35,35 @@ public class LivingMachineGameTests {
         helper.assertTrue(port.controller().equals(helper.absolutePos(new BlockPos(1, 0, 1))), "controller link");
         helper.succeed();
     }
+
+    @GameTest(template = "empty")
+    public static void metaboliserConsumesMeat(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 1), LiveMachines.MACHINE_BLOCK.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 0, 2), LiveMachines.STOMACH.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 1), LiveMachines.METABOLISER.get().defaultBlockState());
+        com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity stomach = helper.getBlockEntity(new BlockPos(2, 0, 2));
+        stomach.store(com.neep.neepmeat.fluid.MeatFluid.STILL.get(), 4);
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        controller.serverTick();
+        com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 1));
+        helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.MetaboliserProcess, "process " + controller.process());
+        helper.assertTrue(segment.energy() == 240, "energy " + segment.energy());
+        helper.assertTrue(stomach.droplets() == 0, "meat left " + stomach.droplets());
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void brokenMachineBecomesAWorm(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 0, 1), LiveMachines.CONTROLLER.get().defaultBlockState());
+        LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
+        net.minecraft.nbt.CompoundTag tag = new net.minecraft.nbt.CompoundTag();
+        tag.putDouble("degradation", 1);
+        controller.readDegradation(tag);
+        controller.serverTick();
+        helper.assertTrue(helper.getBlockState(new BlockPos(1, 0, 1)).isAir(), "controller remained");
+        helper.assertTrue(!helper.getLevel().getEntitiesOfClass(com.neep.neepmeat.entity.MachineWormEntity.class,
+                new net.minecraft.world.phys.AABB(helper.absolutePos(new BlockPos(1, 0, 1))).inflate(1)).isEmpty(), "no worm");
+        helper.succeed();
+    }
 }

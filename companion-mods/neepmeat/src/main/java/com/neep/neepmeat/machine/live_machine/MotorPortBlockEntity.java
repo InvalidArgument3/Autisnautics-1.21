@@ -10,13 +10,16 @@ package com.neep.neepmeat.machine.live_machine;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
+import com.neep.neepmeat.api.machine.MotorisedBlock;
+import com.neep.neepmeat.machine.motor.MotorEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class MotorPortBlockEntity extends BlockEntity implements LivingMachineComponent {
+public class MotorPortBlockEntity extends BlockEntity implements LivingMachineComponent, MotorisedBlock {
     private @Nullable BlockPos controller;
+    private float inputPower;
 
     public MotorPortBlockEntity(BlockPos pos, BlockState state) {
         super(LiveMachines.MOTOR_PORT_BE.get(), pos, state);
@@ -29,6 +32,20 @@ public class MotorPortBlockEntity extends BlockEntity implements LivingMachineCo
 
     public @Nullable BlockPos controller() {
         return controller;
+    }
+
+    public float getInputSignal() {
+        return inputPower;
+    }
+
+    @Override
+    public boolean motorTick(MotorEntity motor) {
+        return false;
+    }
+
+    @Override
+    public void setInputPower(float power) {
+        this.inputPower = power;
     }
 
     @Override

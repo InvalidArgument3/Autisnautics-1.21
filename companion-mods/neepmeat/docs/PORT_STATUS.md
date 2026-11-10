@@ -159,6 +159,12 @@ Component type ids follow upstream order. The accessor is `componentType()` beca
 
 Registered so far: `living_machine_controller`, `machine_block`, `motor_port`. The other structure variants, ports, processes, degradation, and the machine worm are not ported.
 
+## Metaboliser and machine worm, jar 0.30.0-neoforge.18
+
+A controller, a machine block, a stomach, and one metaboliser segment select the metaboliser process. Four droplets of `neepmeat:meat` become 240 energy on the segment: 40 energy per droplet, times 1.5. More than six segments would produce nothing. The degradation formula matches upstream. A controller loaded at full degradation is replaced by a `machine_worm`.
+
+Deviations: the stomach and the metaboliser segment are single blocks. Upstream builds them as big blocks. The worm's three segments are not separate entities. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
+
 ## Blood network, jar 0.30.0-neoforge.17
 
 Two vascular conduits between a source and a sink join one network. The source emits 1000 absolute units. That divides by the reference power of 1000, so the sink receives 1 per unit. The server ticks every network.

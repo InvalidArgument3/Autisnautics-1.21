@@ -46,6 +46,20 @@ public final class LiveMachines {
             BLOCK_ENTITIES.register("motor_port", () -> BlockEntityType.Builder
                     .of(MotorPortBlockEntity::new, MOTOR_PORT.get()).build(null));
 
+    public static final DeferredBlock<SimpleMachineBlock> STOMACH = CONTEXT.block("stomach", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.STOMACH));
+    public static final DeferredItem<BlockItem> STOMACH_ITEM = CONTEXT.item("stomach",
+            () -> new BlockItem(STOMACH.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity>> STOMACH_BE =
+            BLOCK_ENTITIES.register("stomach", () -> BlockEntityType.Builder
+                    .of(com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity::new, STOMACH.get()).build(null));
+
+    public static final DeferredBlock<SimpleMachineBlock> METABOLISER = CONTEXT.block("metaboliser_segment", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.METABOLISER));
+    public static final DeferredItem<BlockItem> METABOLISER_ITEM = CONTEXT.item("metaboliser_segment",
+            () -> new BlockItem(METABOLISER.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity>> METABOLISER_BE =
+            BLOCK_ENTITIES.register("metaboliser_segment", () -> BlockEntityType.Builder
+                    .of(com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity::new, METABOLISER.get()).build(null));
+
     static {
         LivingMachineComponents.MOTOR_PORT.getBitIdx();
     }
@@ -63,6 +77,8 @@ public final class LiveMachines {
             event.accept(CONTROLLER_ITEM.get());
             event.accept(MACHINE_BLOCK_ITEM.get());
             event.accept(MOTOR_PORT_ITEM.get());
+            event.accept(STOMACH_ITEM.get());
+            event.accept(METABOLISER_ITEM.get());
         }
     }
 }
