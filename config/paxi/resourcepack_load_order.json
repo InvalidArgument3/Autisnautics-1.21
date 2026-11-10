@@ -1,8 +1,6 @@
 {
   "loadOrder": [
-    "resourcepacks/FreshAnimations_v1.11.2_1.20+.zip",
     "resourcepacks/FA+Player-v1.1.zip",
-    "resourcepacks/FA+All_Extensions-v1.10.1.zip",
     "resourcepacks/Cobblemotion_v1.5.1.zip",
     "resourcepacks/Winterglide's Extra Animations [Cobblemon].zip"
   ]

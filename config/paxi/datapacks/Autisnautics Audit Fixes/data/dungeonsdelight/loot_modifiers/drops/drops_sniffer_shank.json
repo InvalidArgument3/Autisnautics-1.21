@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "#dungeonsdelight:drops_sniffer_shank",
+        "flags": {
+          "is_on_fire": false
+        }
+      }
+    },
+    {
+      "condition": "minecraft:killed_by_player",
+      "inverse": false
+    },
+    {
+      "condition": "minecraft:random_chance_with_enchanted_bonus",
+      "enchantment": "minecraft:looting",
+      "unenchanted_chance": 0.75,
+      "enchanted_chance": {
+        "type": "minecraft:linear",
+        "base": 0.95,
+        "per_level_above_first": 0.2
+      }
+    }
+  ],
+  "item": "dungeonsdelight:sniffer_shank"
+}

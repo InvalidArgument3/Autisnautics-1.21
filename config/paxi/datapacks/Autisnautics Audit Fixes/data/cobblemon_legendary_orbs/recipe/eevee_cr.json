@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "def",
+    "ghi"
+  ],
+  "key": {
+    "a": {
+      "item": "cobblemon:normal_gem"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    },
+    "c": {
+      "item": "cobblemon:normal_gem"
+    },
+    "d": {
+      "item": "cobblemon:normal_gem"
+    },
+    "e": {
+      "item": "cobblemon:life_orb"
+    },
+    "f": {
+      "item": "cobblemon:normal_gem"
+    },
+    "g": {
+      "item": "cobblemon:normal_gem"
+    },
+    "h": {
+      "item": "cobblemon:normal_gem"
+    },
+    "i": {
+      "item": "cobblemon:normal_gem"
+    }
+  },
+  "result": {
+    "id": "cobblemon_legendary_orbs:eevee_summon_orb",
+    "count": 1
+  }
+}

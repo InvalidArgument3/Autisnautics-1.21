@@ -1,0 +1,8 @@
+{
+  "_comment": "Autisnautics Audit Fixes: upstream cobblemon_industries 1.5.0 ships this file empty (0 bytes, same on Modrinth). Azure lids come from blue apricorn sequenced assembly; there is no deploying recipe for the filling to mirror, so this recipe is disabled.",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:false"
+    }
+  ]
+}
