@@ -1,3 +1,29 @@
+## Creative tabs and real particles, jar 0.30.0-neoforge.60
+
+Combined-tree errors: **2428** at the start of this run, **2418** at the end. That is 10, not 400. `exclude.txt` is **1322**. The files that compile and left it include `NMParticles`, `ParticleSpawnS2C`, `ParticleRegistry`, `SwirlingParticleEffect`, `SwirlingParticle`, `PressureWashParticleType`, the drip and pressure-wash factories, `RoutablePipe`, `NodePos`, `RecipeMatching`, and `Craftable`. `tools/port-errors/symbols.txt` is the end histogram.
+
+Top: does not override 294, invalid method reference 26, `serverTick` 17, invalid method reference 16, `getId` 14, `setVisualizer` 13, `register` 13, `extract` 12, `addListener` 12, `floatValue` 11, `ImplantManager` capture 11, inference bounds 11, `getStorage` 11, `Block` to `Properties` 11, `getCompound` 10.
+
+`NeepMeat.TABS` already registers `neepmeat:general`. Its `displayItems` now also accepts every `MeatlibItemGroups` entry whose id is in the `neepmeat` namespace, which includes the catalogue buckets. `MeatlibTabs.TABS` is a `DeferredRegister<CreativeModeTab>` for `meatlib:main`, filled the same way with the `meatlib` namespace. `BuiltFluid` adds each bucket to that list directly.
+
+`ContaminatedGrassBlock` calls `RegistrationContext.withItem` again. The context registers a block item from the `ItemSettings` factory under the block path.
+
+`NMParticles` registers during the particle registry event, because constructing a particle while that registry is frozen crashes. Fluid bits are a `BlockParticleOption` type. Sludge wash and persistent-fluid breaks send `NMParticles.FLUID_BITS` through `ParticleSpawnS2C`, which writes the particle's `StreamCodec` and sends it on `neepmeat:particle_spawn`.
+
+`RoutablePipe` compiles. `DeferredRequest.getPipe` returns the `RoutablePipe` block entity at the source. `STREAM_CODEC` writes the request NBT.
+
+Opcodes that still execute as `Instruction.end()`: AREA3, COMBINE, COUNT, DELAY, DYCALL, DYLOC, EXEC, EXTFETCH, EXTSTORE, FINDSLOT, ICLEAR, IDISABLE, IENABLE, IHANDLER, IMPLANT, IWAIT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, REQUEST, RISING_EDGE, ROBOT, ROUTE, SAY, SELITEM, SHL, SHR, STOCK, WAIT_REDSTONE. No instruction class left `exclude.txt` this run. `END` is the real end opcode. Eighteen menu types stay null.
+
+Deviations that remain:
+
+- Coloured-item particles use vanilla `BreakingItemParticle` instead of the ore-dust tint factory. `DynamicOreDustItem` and `OreDustRegistry` are still excluded.
+- Pressure-wash and fluid-drip colours come from `FluidVariantAttributes.getColor`. `MeatlibFluidRendering` is still excluded.
+- `DeferredRequest.STREAM_CODEC` writes the request NBT. The upstream `ParamCodec` builder is still excluded.
+- `RoutablePipe.store` takes `RoutingNetwork.StoreRouter`. `RoutingNetworkImpl` is still excluded.
+- `RecipeMatching` extracts only when the storage view is a `Storage`. The fabricator loop check looks for `RecipeMatching.FabricatorStorage`, which the block entity does not implement yet.
+- Crafting remainders use `getCraftingRemainingItem`.
+- `TransferVariant.BLANK.getObject()` is null. Synced component keys store a compound tag. `QuadEmitter` still does not store edited vertices. Catalogue buckets are not `MeatlibItemExtension`s; they are listed by `MeatlibItemGroups` instead.
+
 ## BuiltFluid and pipe vertices, jar 0.30.0-neoforge.59
 
 Combined-tree errors: **2483** at the start of this run, **2428** at the end. That is 55, not 400. `exclude.txt` is **1335**. Fifteen files that compile left it: `BuiltFluid`, `StandardBuiltFluid`, `FluidBuilder`, `BuiltPersistentFluid`, `PersistentFluid`, `BuiltSludgeFluid`, `SludgeFluidBlock`, `PrecisePipeBlock`, `ItemPipeVertex`, `ItemPipeGraphHelper`, `MeatlibItemGroups`, `NMVec2f`, `ContaminationUtil`, `PressureWashable`, and `ContaminatedGrassBlock`. `tools/port-errors/symbols.txt` is the end histogram.

@@ -13,7 +13,7 @@
 package com.neep.neepmeat.client.particle;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.neep.meatlib.client.MeatlibFluidRendering;
+import com.neep.meatlib.transfer.FluidVariantAttributes;
 import com.neep.neepmeat.api.block.PressureWashable;
 import com.neep.neepmeat.mixin.client.ParticleAccessor;
 import com.neep.neepmeat.particle.PressureWashParticleType;
@@ -101,7 +101,7 @@ public class PressureWashParticle extends RisingParticle
             int col = parameters.col();
             if (parameters.fluid() != Fluids.EMPTY)
             {
-                int fluidCol = MeatlibFluidRendering.getColor(FluidVariant.of(parameters.fluid()));
+                int fluidCol = FluidVariantAttributes.getColor(FluidVariant.of(parameters.fluid()));
                 if (col == 0xffffff)
                     col = fluidCol;
             }

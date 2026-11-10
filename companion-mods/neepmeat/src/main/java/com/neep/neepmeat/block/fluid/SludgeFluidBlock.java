@@ -80,8 +80,9 @@ public class SludgeFluidBlock extends PersistentFluidBlock implements PressureWa
             {
                 Vec3 origin = Vec3.atCenterOf(pos);
                 var particleVelocity = velocity.scale(0.3);
-                serverWorld.sendParticles(new BlockParticleOption(net.minecraft.core.particles.ParticleTypes.BLOCK, state),
-                        origin.x, origin.y, origin.z, 7, 0.5, 0.5, 0.5, 0.1);
+                com.neep.neepmeat.network.ParticleSpawnS2C.sendNearby(serverWorld, pos,
+                        new BlockParticleOption(com.neep.neepmeat.init.NMParticles.FLUID_BITS, state),
+                        origin, particleVelocity, new Vec3(0.5, 0.5, 0.5), 7);
             }
         }
         return 1;

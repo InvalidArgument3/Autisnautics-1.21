@@ -1,15 +1,15 @@
-# run 51 end
-# start 2483
-# end 2428
+# run 52 end
+# start 2428
+# end 2418
 
-293	does not override
+294	does not override
 26	invalid method reference
 17	cannot find symbol method serverTick
 16	incompatible types: invalid method reference
-14	cannot find symbol method extract
 14	cannot find symbol method getId
-13	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEntityVisua
+13	no suitable method found for setVisualizer
 13	cannot find symbol method register
+12	cannot find symbol method extract
 12	cannot find symbol method addListener
 11	cannot find symbol method floatValue
 11	incompatible types: CAP#1 cannot be converted to ImplantManager
@@ -22,4 +22,3 @@
 10	cannot find symbol method getAmount
 9	no interface expected here
 9	cannot find symbol class Serializer
-# end pending

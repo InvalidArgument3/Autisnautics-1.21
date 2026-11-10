@@ -75,13 +75,10 @@ public abstract class BuiltFluid<Still extends FlowingFluid, Flowing extends Flo
                     .craftRemainder(Items.BUCKET)
                     .group(itemGroup));
 
-            if (bucketItem instanceof MeatlibItemExtension extension)
+            MeatlibItemGroups.add(bucketItem);
+            if (bucketItem instanceof MeatlibItemExtension extension && extension.meatlib$getItemGroup() != null)
             {
-                CreativeModeTab group = extension.meatlib$getItemGroup();
-                if (group != null)
-                {
-                    MeatlibItemGroups.add(group, bucketItem);
-                }
+                MeatlibItemGroups.add(extension.meatlib$getItemGroup(), bucketItem);
             }
         }
         else

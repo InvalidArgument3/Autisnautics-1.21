@@ -44,6 +44,7 @@ public final class MeatLib {
     public MeatLib(ModContainer container, Dist dist) {
         IEventBus bus = container.getEventBus();
         MeatlibSounds.SOUNDS.register(bus);
+        com.neep.meatlib.item.MeatlibTabs.register(bus);
         MeatlibComponents.COMPONENTS.register(bus);
         MeatlibAttachments.ATTACHMENTS.register(bus);
         MeatlibMenus.MENUS.register(bus);

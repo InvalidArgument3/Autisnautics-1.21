@@ -90,13 +90,13 @@ public class RecipeMatching
                     if (residual.ingredient.test(extractedVariant.toStack()))
                     {
                         // Explicitly prevent loops and chains
-                        if (view instanceof FabricatorBlockEntity.FabricatorStorage fabricatorStorage)
+                        if (view instanceof FabricatorStorage fabricatorStorage)
                             throw new FabricatorLoopException();
 
-                        long extracted = view.extract(resource, residual.residual, transaction);
+                        long extracted = view instanceof Storage<?> itemStorage ? ((Storage<ItemVariant>) itemStorage).extract(resource, residual.residual, transaction) : 0;
                         if (extracted == residual.residual)
                         {
-                            ItemStack remainder = extractedVariant.getItem().getRecipeRemainder(extractedVariant.toStack(batchSize));
+                            ItemStack remainder = new ItemStack(extractedVariant.getItem().getCraftingRemainingItem());
 
                             if (extractedVariant.getItem().getCraftingRemainingItem() != null)
                                 storage.insert(ItemVariant.of(remainder), remainder.getCount(), transaction);
@@ -151,15 +151,15 @@ public class RecipeMatching
                     if (ingredient.test(extractedVariant.toStack()))
                     {
                         // Explicitly prevent loops and chains
-                        if (view instanceof FabricatorBlockEntity.FabricatorStorage fabricatorStorage)
+                        if (view instanceof FabricatorStorage fabricatorStorage)
                             throw new FabricatorLoopException();
 
                         // maxAmount = batchSize because crafting recipes only take 1 item for each ingredient.
-                        long extracted = view.extract(resource, 1, transaction);
+                        long extracted = view instanceof Storage<?> itemStorage ? ((Storage<ItemVariant>) itemStorage).extract(resource, 1, transaction) : 0;
                         if (extracted == 1)
                         {
                             takenResources.add(extractedVariant);
-                            ItemStack remainder = extractedVariant.getItem().getRecipeRemainder(extractedVariant.toStack(1));
+                            ItemStack remainder = new ItemStack(extractedVariant.getItem().getCraftingRemainingItem());
 
                             if (extractedVariant.getItem().getCraftingRemainingItem() != null)
                                 storage.insert(ItemVariant.of(remainder), remainder.getCount(), transaction);
@@ -174,6 +174,9 @@ public class RecipeMatching
         }
         return ingredients.isEmpty();
     }
+
+    /** Marker for the fabricator's own storage. The block entity implements this when it compiles. */
+    public interface FabricatorStorage {}
 
     static class FabricatorLoopException extends Exception
     {

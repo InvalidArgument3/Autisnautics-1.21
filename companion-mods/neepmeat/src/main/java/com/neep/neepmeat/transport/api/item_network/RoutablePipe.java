@@ -14,7 +14,6 @@ package com.neep.neepmeat.transport.api.item_network;
 
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.machine.fabricator.RecipeMatching;
-import com.neep.neepmeat.transport.block.item_transport.RoutingNetworkImpl;
 import com.neep.neepmeat.transport.fluid_network.node.NodePos;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
 import com.neep.meatlib.transfer.ItemVariant;
@@ -60,7 +59,7 @@ public interface RoutablePipe
         return DeferredResult.SUCCESS;
     }
 
-    default long store(ItemVariant variant, long maxAmount, RoutingNetworkImpl.StoreRouter router, TransactionContext transaction) { return 0; }
+    default long store(ItemVariant variant, long maxAmount, RoutingNetwork.StoreRouter router, TransactionContext transaction) { return 0; }
 
     /// @return A direction that the pipe will accept crafting ingredients from. Null if no valid face.
     @Nullable NodePos requestDestPosDir();

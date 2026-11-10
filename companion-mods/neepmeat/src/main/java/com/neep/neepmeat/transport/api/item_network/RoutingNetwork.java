@@ -28,6 +28,7 @@ import com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEn
 import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 
 import com.neep.meatlib.transfer.ItemVariant;
+import com.neep.neepmeat.transport.api.item_network.RoutablePipe;
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.transport.ItemRoute;
 import net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup;
@@ -260,6 +261,9 @@ public final class RoutingNetwork {
     }
 
     /** Passed through a request so a recipe cannot recurse forever. */
+    /** Routing callback used while a pipe stores a crafted stack. */
+    public interface StoreRouter {}
+
     public static final class RequestContext {
         public int recursionDepth;
     }
@@ -286,6 +290,7 @@ public final class RoutingNetwork {
         public final Direction requesterFace;
         private final ItemVariant itemVariant;
         private final long requested;
+        @Nullable private RoutablePipe pipe;
 
         public DeferredRequest(BlockPos sourcePos, BlockPos requesterPos, Direction requesterFace, long requested, ItemVariant itemVariant) {
             this.sourcePos = sourcePos;
@@ -302,6 +307,17 @@ public final class RoutingNetwork {
         public ItemVariant getItemVariant() {
             return itemVariant;
         }
+
+        public RoutablePipe getPipe(Level world) {
+            if (pipe == null && world.getBlockEntity(sourcePos) instanceof RoutablePipe routablePipe) {
+                pipe = routablePipe;
+            }
+            return pipe;
+        }
+
+        public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, DeferredRequest> STREAM_CODEC = net.minecraft.network.codec.StreamCodec.of(
+                (buf, value) -> buf.writeNbt(value.toNbt()),
+                buf -> fromNbt(buf.readNbt()));
 
         public CompoundTag toNbt() {
             CompoundTag nbt = new CompoundTag();

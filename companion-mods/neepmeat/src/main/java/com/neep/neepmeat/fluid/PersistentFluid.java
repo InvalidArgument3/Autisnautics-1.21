@@ -199,7 +199,7 @@ public abstract class PersistentFluid extends BaseFluid
         if (prevState.isAir() || prevState.is(state.getBlock()))
             world.setBlock(pos, state, Block.UPDATE_ALL);
         else if (world instanceof ServerLevel serverWorld)
-            serverWorld.sendParticles(new BlockParticleOption(net.minecraft.core.particles.ParticleTypes.BLOCK, state),
+            serverWorld.sendParticles(new BlockParticleOption(com.neep.neepmeat.init.NMParticles.FLUID_BITS, state),
                     pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     10,
                     0.5, 0.5, 0.5, 0.1);

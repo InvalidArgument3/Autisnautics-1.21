@@ -56,7 +56,10 @@ public final class BuildingBlocks {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = NeepMeat.TABS.register("general", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.neepmeat.general"))
             .icon(() -> new ItemStack(TAB_ITEMS.getFirst().get()))
-            .displayItems((params, output) -> TAB_ITEMS.forEach(item -> output.accept(item.get())))
+            .displayItems((params, output) -> {
+                TAB_ITEMS.forEach(item -> output.accept(item.get()));
+                com.neep.meatlib.util.MeatlibItemGroups.fillNamespace("neepmeat", output);
+            })
             .build());
 
     private BuildingBlocks() {}

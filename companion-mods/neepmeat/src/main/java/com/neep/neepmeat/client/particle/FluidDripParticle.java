@@ -12,7 +12,7 @@
 
 package com.neep.neepmeat.client.particle;
 
-import com.neep.meatlib.client.MeatlibFluidRendering;
+import com.neep.meatlib.transfer.FluidVariantAttributes;
 import com.neep.neepmeat.particle.PressureWashParticleType;
 import com.neep.meatlib.transfer.FluidVariant;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -46,7 +46,7 @@ public class FluidDripParticle extends DripParticle
             int col = parameters.col();
             if (parameters.fluid() != Fluids.EMPTY)
             {
-                int fluidCol = MeatlibFluidRendering.getColor(FluidVariant.of(parameters.fluid()));
+                int fluidCol = FluidVariantAttributes.getColor(FluidVariant.of(parameters.fluid()));
                 if (col == 0xffffff)
                     col = fluidCol;
             }

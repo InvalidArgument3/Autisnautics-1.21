@@ -14,21 +14,32 @@ package com.neep.meatlib.util;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class MeatlibItemGroups
 {
     private static final Multimap<CreativeModeTab, Supplier<ItemStack>> GROUPS = ArrayListMultimap.create();
+    private static final List<Item> NAMESPACE_ITEMS = new ArrayList<>();
+
+    public static void add(Item value)
+    {
+        if (value != null) {
+            NAMESPACE_ITEMS.add(value);
+        }
+    }
 
     public static void add(CreativeModeTab group, Item value)
     {
-        add(group, value.getDefaultInstance());
+        add(value);
+        if (group != null) {
+            add(group, value.getDefaultInstance());
+        }
     }
 
     public static void add(CreativeModeTab group, ItemStack value)
@@ -41,8 +52,14 @@ public class MeatlibItemGroups
         GROUPS.put(group, value);
     }
 
-    public static void init()
+    public static void fillNamespace(String namespace, CreativeModeTab.Output output)
     {
+        for (Item item : NAMESPACE_ITEMS) {
+            var id = BuiltInRegistries.ITEM.getKey(item);
+            if (id != null && namespace.equals(id.getNamespace())) {
+                output.accept(item);
+            }
+        }
     }
 
     public static class SpecialEntryCollector implements CreativeModeTab.DisplayItemsGenerator

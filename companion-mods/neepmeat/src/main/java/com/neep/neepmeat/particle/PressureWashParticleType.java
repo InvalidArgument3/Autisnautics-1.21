@@ -20,9 +20,6 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import com.neep.meatlib.api.network.ParamCodec;
-import com.neep.meatlib.api.network.ParamCodecs;
-import com.neep.meatlib.api.network.RecordParamCodec;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -34,7 +31,6 @@ import net.minecraft.world.level.material.Fluids;
 public class PressureWashParticleType extends ParticleType<PressureWashParticleType.Parameters>
 {
     private final MapCodec<Parameters> codec;
-    private final ParamCodec<Parameters> paramCodec;
 
     public static MapCodec<Parameters> createMapCodec(PressureWashParticleType type)
     {
@@ -52,21 +48,10 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
         return createMapCodec(type).codec();
     }
 
-    public static ParamCodec<Parameters> createParamCodec(PressureWashParticleType type)
-    {
-        return RecordParamCodec.builder(Parameters.class)
-                .param(ParamCodecs.constant(PressureWashParticleType.class, type))
-                .param(ParamCodec.FLOAT)
-                .param(ParamCodec.INT)
-                .param(ParamCodecs.registryValue(Fluid.class, BuiltInRegistries.FLUID))
-                .build();
-    }
-
     public PressureWashParticleType(boolean alwaysShow)
     {
         super(alwaysShow);
         this.codec = createMapCodec(this);
-        paramCodec = createParamCodec(this);
     }
 
     @Override
@@ -78,7 +63,13 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
     @Override
     public StreamCodec<? super RegistryFriendlyByteBuf, Parameters> streamCodec()
     {
-        return StreamCodec.of((buf, value) -> paramCodec.encode(value, buf), paramCodec::decode);
+        return StreamCodec.of(
+                (buf, value) -> {
+                    buf.writeFloat(value.gravity());
+                    buf.writeInt(value.col());
+                    buf.writeById(BuiltInRegistries.FLUID::getId, value.fluid());
+                },
+                buf -> new Parameters(this, buf.readFloat(), buf.readInt(), buf.readById(BuiltInRegistries.FLUID::byId)));
     }
 
     public record Parameters(PressureWashParticleType type, float gravity, int col, Fluid fluid) implements ParticleOptions
@@ -96,7 +87,9 @@ public class PressureWashParticleType extends ParticleType<PressureWashParticleT
 
         public void writeToNetwork(FriendlyByteBuf buf)
         {
-            type.paramCodec.encode(this, buf);
+            buf.writeFloat(gravity);
+            buf.writeInt(col);
+            buf.writeById(BuiltInRegistries.FLUID::getId, fluid);
         }
 
         public String writeToString()

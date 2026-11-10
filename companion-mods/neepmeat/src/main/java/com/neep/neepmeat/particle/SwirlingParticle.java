@@ -164,7 +164,7 @@ public class SwirlingParticle extends TextureSheetParticle
         return i;
     }
 
-    @Environment(value=Dist.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static class Factory implements ParticleProvider<SwirlingParticleEffect>
     {
         @Override

@@ -10,6 +10,7 @@
 package com.neep.meatlib.registry;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -128,6 +129,19 @@ public final class RegistrationContext {
             }
         }
         return entry;
+    }
+
+    /** Upstream registers a block item under the block's path while the block supplier is running. */
+    public <B extends Block> B withItem(B block, com.neep.meatlib.item.ItemSettings settings) {
+        String path = CURRENT_PATH.get() == null ? "block" : CURRENT_PATH.get();
+        items.register(path, () -> settings.create(block, this));
+        return block;
+    }
+
+    public <B extends Block> B withItem(B block, Item.Properties settings) {
+        String path = CURRENT_PATH.get() == null ? BuiltInRegistries.BLOCK.getKey(block).getPath() : CURRENT_PATH.get();
+        items.register(path, () -> new net.minecraft.world.item.BlockItem(block, settings));
+        return block;
     }
 
     public <I extends Item> DeferredItem<I> item(String path, Supplier<? extends I> factory) {

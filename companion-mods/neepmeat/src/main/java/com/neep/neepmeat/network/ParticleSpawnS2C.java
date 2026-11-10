@@ -12,65 +12,83 @@
 
 package com.neep.neepmeat.network;
 
-import com.neep.meatlib.api.network.ChannelFormat;
-import com.neep.meatlib.api.network.ParamCodec;
-import com.neep.meatlib.api.network.ParamCodecs;
-import com.neep.meatlib.network.GlobalChannelManager;
 import com.neep.neepmeat.NeepMeat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class ParticleSpawnS2C
 {
-    public static final GlobalChannelManager<SpawnParticle> CHANNEL = GlobalChannelManager.create(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "particle_spawn"),
-            ChannelFormat.builder(SpawnParticle.class)
-                    .param(ParamCodecs.VEC3D)
-                    .param(ParamCodecs.VEC3D)
-                    .param(ParamCodecs.VEC3D)
-                    .param(ParamCodec.INT)
-                    .param(ParamCodecs.registryValue(ParamCodecs.as(ParticleType.class), BuiltInRegistries.PARTICLE_TYPE))
-                    .param(ParamCodec.BUF)
-                    .build());
+    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "particle_spawn");
 
-    public static <T extends ParticleOptions> void sendNearby(ServerLevel world, BlockPos pos, T particleType, Vec3 origin, Vec3 velocity, Vec3 spread, int count)
+    public static <T extends ParticleOptions> void sendNearby(ServerLevel world, BlockPos pos, T particle, Vec3 origin, Vec3 velocity, Vec3 spread, int count)
     {
         for (ServerPlayer player : PlayerLookup.around(world, pos, 32))
         {
-            send(player, particleType, origin, velocity, spread, count);
+            send(player, particle, origin, velocity, spread, count);
         }
     }
 
     public static <T extends ParticleOptions> void send(ServerPlayer player, T particle, Vec3 origin, Vec3 velocity, Vec3 spread, int count)
     {
-        FriendlyByteBuf buf = PacketByteBufs.create();
-        particle.writeToNetwork(buf);
-        CHANNEL.emitter(player).apply(origin, velocity, spread, count, particle.getType(), buf);
+        RegistryFriendlyByteBuf payload = new RegistryFriendlyByteBuf(PacketByteBufs.create(), player.registryAccess());
+        payload.writeDouble(origin.x);
+        payload.writeDouble(origin.y);
+        payload.writeDouble(origin.z);
+        payload.writeDouble(velocity.x);
+        payload.writeDouble(velocity.y);
+        payload.writeDouble(velocity.z);
+        payload.writeDouble(spread.x);
+        payload.writeDouble(spread.y);
+        payload.writeDouble(spread.z);
+        payload.writeVarInt(count);
+        payload.writeById(BuiltInRegistries.PARTICLE_TYPE::getId, particle.getType());
+        writeOptions(payload, particle);
+        ServerPlayNetworking.send(player, ID, payload);
     }
 
-    @Environment(value=Dist.CLIENT)
+    @SuppressWarnings("unchecked")
+    private static <T extends ParticleOptions> void writeOptions(RegistryFriendlyByteBuf buf, T particle)
+    {
+        ((ParticleType<T>) particle.getType()).streamCodec().encode(buf, particle);
+    }
+
+    @OnlyIn(Dist.CLIENT)
     public static class Client
     {
         public static void registerReceiver()
         {
-            CHANNEL.receiver(Dist.CLIENT, (origin, velocity, spread, count, type, parameters) ->
+            ClientPlayNetworking.registerGlobalReceiver(ID, (client, handler, buf, responseSender) ->
             {
-                if (type != null)
+                RegistryFriendlyByteBuf payload = buf instanceof RegistryFriendlyByteBuf friendly
+                        ? friendly
+                        : new RegistryFriendlyByteBuf(buf, client.level.registryAccess());
+                Vec3 origin = new Vec3(payload.readDouble(), payload.readDouble(), payload.readDouble());
+                Vec3 velocity = new Vec3(payload.readDouble(), payload.readDouble(), payload.readDouble());
+                Vec3 spread = new Vec3(payload.readDouble(), payload.readDouble(), payload.readDouble());
+                int count = payload.readVarInt();
+                ParticleType<?> type = payload.readById(BuiltInRegistries.PARTICLE_TYPE::byId);
+                ParticleOptions effect = type == null ? null : readOptions(payload, type);
+                client.execute(() ->
                 {
-                    ParticleOptions effect = readParameters(type, parameters);
-                    Minecraft client = Minecraft.getInstance();
-
+                    if (effect == null || client.level == null)
+                    {
+                        return;
+                    }
                     for (int i = 0; i < count; ++i)
                     {
                         double px = origin.x + (Math.random() - 0.5) * 2 * spread.x;
@@ -78,18 +96,14 @@ public class ParticleSpawnS2C
                         double pz = origin.z + (Math.random() - 0.5) * 2 * spread.z;
                         client.level.addParticle(effect, px, py, pz, velocity.x, velocity.y, velocity.z);
                     }
-                }
+                });
             });
         }
 
-        private static <T extends ParticleOptions> T readParameters(ParticleType<T> type, FriendlyByteBuf buf)
+        @SuppressWarnings("unchecked")
+        private static <T extends ParticleOptions> T readOptions(RegistryFriendlyByteBuf buf, ParticleType<T> type)
         {
-            return type.getDeserializer().fromNetwork(type, buf);
+            return type.streamCodec().decode(buf);
         }
-    }
-
-    public interface SpawnParticle
-    {
-        void apply(Vec3 origin, Vec3 velocity, Vec3 spread, int count, ParticleType<?> type, FriendlyByteBuf parameters);
     }
 }
