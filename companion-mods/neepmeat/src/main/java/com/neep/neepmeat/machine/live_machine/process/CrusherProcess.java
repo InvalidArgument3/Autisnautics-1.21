@@ -39,8 +39,13 @@ public class CrusherProcess implements Process {
         for (CrusherSegmentBlockEntity crusher : crushers) {
             if (crusher.isEmpty() && !input.stack().isEmpty()) {
                 crusher.insert(input.removeStack());
+                crusher.assignCobblestoneRecipe();
+            } else if (crusher.addProgress(machine.getProgressIncrement())) {
+                List<ItemPortBlockEntity> outputs = machine.components(LivingMachineComponents.ITEM_OUTPUT);
+                if (!outputs.isEmpty()) {
+                    outputs.getFirst().setStack(crusher.takeResult());
+                }
             }
-            crusher.addProgress(machine.getProgressIncrement());
         }
     }
 

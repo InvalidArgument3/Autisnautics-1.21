@@ -9,8 +9,11 @@
 
 package com.neep.neepmeat.machine.live_machine.process;
 
+import com.neep.meatlib.transfer.FluidVariant;
+import com.neep.meatlib.transfer.Transaction;
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
+import com.neep.neepmeat.fluid.CompressedAir;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity;
@@ -30,7 +33,10 @@ public class LargeCompressorProcess implements Process {
             return;
         }
         long droplets = (long) (machine.getProgressIncrement() * LargeCompressorBlockEntity.POWER_TO_DROPLETS);
-        compressors.getFirst().insertDroplets(droplets);
+        try (Transaction transaction = Transaction.openOuter()) {
+            compressors.getFirst().output().insert(FluidVariant.of(CompressedAir.STILL.get()), droplets, transaction);
+            transaction.onRename();
+        }
     }
 
     @Override

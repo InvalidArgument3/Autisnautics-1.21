@@ -112,7 +112,8 @@ public class LivingMachineGameTests {
         controller.serverTick();
         com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity compressor = helper.getBlockEntity(new BlockPos(3, 0, 1));
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.LargeCompressorProcess, "process");
-        helper.assertTrue(compressor.droplets() == 400, "droplets " + compressor.droplets());
+        helper.assertTrue(compressor.droplets() == 400 && compressor.fluid().isOf(com.neep.neepmeat.fluid.CompressedAir.STILL.get()),
+                "air " + compressor.droplets() + " " + compressor.fluid());
         helper.succeed();
     }
 
@@ -129,10 +130,12 @@ public class LivingMachineGameTests {
         input.setStack(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.COBBLESTONE, 3));
         LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
         controller.serverTick();
+        controller.serverTick();
         com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity crusher = helper.getBlockEntity(new BlockPos(4, 0, 1));
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
         helper.assertTrue(controller.process() instanceof com.neep.neepmeat.machine.live_machine.process.CrusherProcess, "process");
-        helper.assertTrue(crusher.stack().is(net.minecraft.world.item.Items.COBBLESTONE) && crusher.stack().getCount() == 3, "stack " + crusher.stack());
-        helper.assertTrue(Math.abs(crusher.progress() - 1.0f) < 0.001f, "progress " + crusher.progress());
+        helper.assertTrue(crusher.stack().isEmpty(), "slot " + crusher.stack());
+        helper.assertTrue(output.stack().is(net.minecraft.world.item.Items.GRAVEL), "result " + output.stack());
         helper.succeed();
     }
 }

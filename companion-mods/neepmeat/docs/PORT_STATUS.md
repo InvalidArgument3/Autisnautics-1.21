@@ -377,4 +377,10 @@ Upstream `machine/live_machine` is 69 Java files. This jar has 22 files in that 
 
 Registered and tested: metaboliser (240 energy from four meat droplets), crusher (takes the input stack and adds the progress increment), compressor (400 droplets at full power). X and Z volumes exist. `vsc` removes `min(internal, desired)` from a blood network. A conduit calls `join` again from `onLoad`.
 
-Still not copied, about 47 upstream files: the other big machines (trommel, hopper, tree vacuum, ball mill, distributor, phage ray, stomach item), their processes, and the living-machine screens. The crusher does not run advanced-crushing recipes. The compressor is one block, not the upstream multiblock, and it counts droplets instead of inserting a compressed-air fluid variant. The VSC does not have the upstream screen or the source-side overflow path beyond the balancer formula. `TransferAmounts` is not what those uncopied classes import.
+Still not copied, about 47 upstream files: the other big machines (trommel, hopper, tree vacuum, ball mill, distributor, phage ray, stomach item), their processes, and the living-machine screens.
+
+## Transfer shim, jar 0.30.0-neoforge.25
+
+`com.neep.meatlib.transfer` has `Storage`, `StorageView`, `Transaction`, `ItemVariant`, `FluidVariant`, `SingleVariantStorage`, and `FluidConstants` (81000 droplets in a bucket). `onRename` commits, because the Yarn rewrite renamed Fabric's `commit`. Abort runs the snapshot callbacks. A pipe fill of 1 millibucket stores 81 droplets. The game test aborts 200 droplets back to zero, then commits them.
+
+The large compressor inserts 400 droplets of `compressed_air` through that storage. It is still one block, not the upstream multiblock. The crusher turns cobblestone into gravel after a second tick. That is one hardcoded result, not the advanced-crushing recipe map. `vsc` still has no screen. The 47 uncopied classes do not import this shim yet. The package still has 22 files against upstream's 69.

@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMachineComponent {
     private ItemStack stack = ItemStack.EMPTY;
     private float progress;
+    private int recipeTime;
 
     public CrusherSegmentBlockEntity(BlockPos pos, BlockState state) {
         super(LiveMachines.CRUSHER_BE.get(), pos, state);
@@ -43,10 +44,25 @@ public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMach
         return progress;
     }
 
-    public void addProgress(float amount) {
-        if (!stack.isEmpty()) {
-            progress += amount;
+    public void assignCobblestoneRecipe() {
+        if (stack.is(net.minecraft.world.item.Items.COBBLESTONE)) {
+            recipeTime = 1;
         }
+    }
+
+    public boolean addProgress(float amount) {
+        if (stack.isEmpty() || recipeTime <= 0) {
+            return false;
+        }
+        progress += amount;
+        return progress >= recipeTime;
+    }
+
+    public ItemStack takeResult() {
+        stack = ItemStack.EMPTY;
+        progress = 0;
+        recipeTime = 0;
+        return new ItemStack(net.minecraft.world.item.Items.GRAVEL);
     }
 
     @Override
