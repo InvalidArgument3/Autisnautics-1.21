@@ -31,6 +31,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import com.neep.meatlib.util.MiscUtil;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
@@ -41,6 +43,7 @@ import java.util.Map;
 public class LargeTrommelBlock extends BigBlock<BigBlockStructure.Simple<BigBlockStructureEntity>> implements MeatlibBlock, EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private final Map<Direction, BigBlockPattern> patterns;
+    private final Map<Direction, VoxelShape> shapes;
 
     public LargeTrommelBlock(RegistrationContext ctx, Properties settings) {
         super(ctx, settings.noOcclusion());
@@ -51,6 +54,12 @@ public class LargeTrommelBlock extends BigBlock<BigBlockStructure.Simple<BigBloc
                 Direction.EAST, volume.rotateY(90),
                 Direction.SOUTH, volume.rotateY(180),
                 Direction.WEST, volume.rotateY(270));
+        VoxelShape north = volume.toVoxelShape();
+        shapes = Map.of(
+                Direction.NORTH, MiscUtil.rotateShapeY(north, 0),
+                Direction.EAST, MiscUtil.rotateShapeY(north, 90),
+                Direction.SOUTH, MiscUtil.rotateShapeY(north, 180),
+                Direction.WEST, MiscUtil.rotateShapeY(north, 270));
     }
 
     @Override
@@ -71,7 +80,12 @@ public class LargeTrommelBlock extends BigBlock<BigBlockStructure.Simple<BigBloc
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return getVolume(state).toVoxelShape();
+        return shapes.get(state.getValue(FACING));
+    }
+
+    @Override
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return defaultBlockState().setValue(FACING, ctx.getHorizontalDirection());
     }
 
     @Override

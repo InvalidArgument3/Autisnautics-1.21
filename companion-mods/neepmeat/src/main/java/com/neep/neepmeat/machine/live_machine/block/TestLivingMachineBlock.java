@@ -12,11 +12,20 @@
 
 package com.neep.neepmeat.machine.live_machine.block;
 
+import com.neep.neepmeat.machine.live_machine.block.entity.LivingMachineControllerBlockEntity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.BlockHitResult;
+
+import java.text.DecimalFormat;
 
 public class TestLivingMachineBlock extends Block {
     public static final EnumProperty<Status> STATUS = EnumProperty.create("status", Status.class);
@@ -24,6 +33,17 @@ public class TestLivingMachineBlock extends Block {
     public TestLivingMachineBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(STATUS, Status.INVALID_STRUCTURE));
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!level.isClientSide() && level.getBlockEntity(pos) instanceof LivingMachineControllerBlockEntity controller) {
+            player.sendSystemMessage(Component.literal("Power: " + controller.getPower()));
+            player.sendSystemMessage(Component.literal("Efficiency: " + Math.round(controller.getHealth() * 100) + "%"));
+            player.sendSystemMessage(Component.literal("RUL: " + new DecimalFormat("###.##").format(controller.getHealth() * 100) + "hr"));
+            return InteractionResult.SUCCESS;
+        }
+        return super.useWithoutItem(state, level, pos, player, hit);
     }
 
     @Override

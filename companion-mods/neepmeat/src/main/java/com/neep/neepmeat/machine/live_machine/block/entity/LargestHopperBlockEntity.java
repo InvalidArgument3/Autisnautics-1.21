@@ -89,7 +89,7 @@ public class LargestHopperBlockEntity extends BlockEntity implements ItemInputCo
             return;
         }
         AABB box = new AABB(worldPosition).inflate(1, 0, 1);
-        DamageSource source = level.damageSources().generic();
+        DamageSource source = com.neep.neepmeat.init.NMDamageSources.crusher(level);
         float damageAmount = power * 20f;
         for (LivingEntity entity : level.getEntitiesOfClass(LivingEntity.class, box, candidate -> candidate.isAlive() && candidate.hurtTime == 0)) {
             if (entity.getHealth() <= damageAmount) {

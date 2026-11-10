@@ -17,8 +17,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.fluids.FluidType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public final class MiscUtil {
@@ -64,6 +68,39 @@ public final class MiscUtil {
 
     public static <T extends Enum<T>> T cycle(T value, T[] values) {
         return values[(value.ordinal() + 1) % values.length];
+    }
+
+    /** Rotates a shape around the block centre. Angle is degrees, matching upstream. */
+    public static VoxelShape rotateShapeY(VoxelShape shape, float angle) {
+        double sine = Math.sin(Math.toRadians(angle));
+        double cosine = Math.cos(Math.toRadians(angle));
+        List<VoxelShape> rotated = new ArrayList<>();
+        shape.forAllBoxes((x1, y1, z1, x2, y2, z2) -> {
+            double ax = x1 - 0.5;
+            double az = z1 - 0.5;
+            double bx = x2 - 0.5;
+            double bz = z2 - 0.5;
+            double nx1 = ax * cosine - az * sine + 0.5;
+            double nz1 = ax * sine + az * cosine + 0.5;
+            double nx2 = bx * cosine - bz * sine + 0.5;
+            double nz2 = bx * sine + bz * cosine + 0.5;
+            if (nx1 > nx2) {
+                double swap = nx1;
+                nx1 = nx2;
+                nx2 = swap;
+            }
+            if (nz1 > nz2) {
+                double swap = nz1;
+                nz1 = nz2;
+                nz2 = swap;
+            }
+            rotated.add(Shapes.box(nx1, y1, nz1, nx2, y2, nz2));
+        });
+        VoxelShape combined = Shapes.empty();
+        for (VoxelShape piece : rotated) {
+            combined = Shapes.join(combined, piece, BooleanOp.OR);
+        }
+        return combined;
     }
 
     public static void dropBlockEntity(Level level, BlockPos pos, BlockEntity blockEntity) {

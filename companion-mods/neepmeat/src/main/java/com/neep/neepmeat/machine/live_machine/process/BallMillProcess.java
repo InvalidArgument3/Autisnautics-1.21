@@ -25,7 +25,7 @@ public class BallMillProcess implements Process {
     @Override
     public void serverTick(LivingMachineBlockEntity be) {
         be.withComponents(LivingMachineComponents.BALL_MILL, LivingMachineComponents.ITEM_INPUT, LivingMachineComponents.ITEM_OUTPUT, LivingMachineComponents.MOTOR_PORT).ifPresent(result -> {
-            if (be.getPower() < 0.05f) {
+            if (result.t1().size() > 4 || be.getProgressIncrement() == 0f) {
                 return;
             }
             for (BallMillBlockEntity mill : result.t1()) {
@@ -41,6 +41,6 @@ public class BallMillProcess implements Process {
 
     @Override
     public Component getName() {
-        return Component.translatable("process.neepmeat.ball_mill");
+        return com.neep.neepmeat.NeepMeat.translationKey("process", "ball_mill");
     }
 }

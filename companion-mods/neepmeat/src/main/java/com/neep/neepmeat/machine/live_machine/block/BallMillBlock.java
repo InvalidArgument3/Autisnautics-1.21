@@ -20,9 +20,12 @@ import com.neep.neepmeat.machine.live_machine.block.entity.BallMillBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
@@ -41,6 +44,11 @@ public class BallMillBlock extends BigBlock2 {
     @Override
     public BigBlockPattern volume(BlockState state) {
         return state.getValue(AXIS) == Direction.Axis.Z ? Z_PATTERN : X_PATTERN;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        return volume(state).toVoxelShape();
     }
 
     @Override

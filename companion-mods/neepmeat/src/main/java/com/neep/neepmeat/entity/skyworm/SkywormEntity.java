@@ -53,7 +53,7 @@ public class SkywormEntity extends Entity {
         }
         entity.discard();
         if (world.getBlockState(pos).is(Blocks.LAVA)) {
-            world.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+            world.setBlockAndUpdate(pos, com.neep.neepmeat.block.RecipeBlocks.CONTAMINATED_RUBBLE.get().defaultBlockState());
         }
         Vec3 target = pos.getCenter().add(0, 4, 0);
         Vec3 start = target.add(0, 200, 0);

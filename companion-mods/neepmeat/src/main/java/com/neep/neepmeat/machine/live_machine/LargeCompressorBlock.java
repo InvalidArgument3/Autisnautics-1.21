@@ -34,7 +34,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import com.neep.meatlib.util.MiscUtil;
+import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
@@ -44,6 +47,7 @@ import java.util.Map;
 public class LargeCompressorBlock extends BigBlock<BigBlockStructure.Simple<BigBlockStructureEntity>> implements MeatlibBlock, EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private final Map<Direction, BigBlockPattern> patterns;
+    private final Map<Direction, VoxelShape> shapes;
 
     public LargeCompressorBlock(RegistrationContext ctx, Properties settings) {
         super(ctx, settings.noOcclusion());
@@ -54,6 +58,15 @@ public class LargeCompressorBlock extends BigBlock<BigBlockStructure.Simple<BigB
         patterns.put(Direction.EAST, volume.rotateY(90));
         patterns.put(Direction.SOUTH, volume.rotateY(180));
         patterns.put(Direction.WEST, volume.rotateY(270));
+        VoxelShape north = Shapes.join(Shapes.joinUnoptimized(
+                Block.box(-16, 35, -13, 0, 45, -3),
+                Block.box(-10, 0, -16, 26, 16, 32), BooleanOp.OR),
+                Block.box(-6, 16, -16, 22, 47, 32), BooleanOp.OR);
+        shapes = new EnumMap<>(Direction.class);
+        shapes.put(Direction.NORTH, north);
+        shapes.put(Direction.EAST, MiscUtil.rotateShapeY(north, 90));
+        shapes.put(Direction.SOUTH, MiscUtil.rotateShapeY(north, 180));
+        shapes.put(Direction.WEST, MiscUtil.rotateShapeY(north, 270));
     }
 
     @Override
@@ -74,7 +87,7 @@ public class LargeCompressorBlock extends BigBlock<BigBlockStructure.Simple<BigB
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return getVolume(state).toVoxelShape();
+        return shapes.get(state.getValue(FACING));
     }
 
     @Nullable

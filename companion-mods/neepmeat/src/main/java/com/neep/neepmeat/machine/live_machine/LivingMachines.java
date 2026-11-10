@@ -79,7 +79,7 @@ public final class LivingMachines {
     public static final DeferredBlock<com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock> STOMACH_STRUCTURE =
             CONTEXT.block("stomach_structure", () -> new com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock(STOMACH, false));
     public static final DeferredItem<BlockItem> STOMACH_ITEM = CONTEXT.item("stomach",
-            () -> new BlockItem(STOMACH.get(), new Item.Properties()));
+            () -> new com.neep.neepmeat.machine.live_machine.item.StomachBlockItem(STOMACH.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity>> STOMACH_BE =
             BLOCK_ENTITIES.register("stomach", () -> BlockEntityType.Builder
                     .of(com.neep.neepmeat.machine.live_machine.block.entity.StomachBlockEntity::new, STOMACH.get()).build(null));

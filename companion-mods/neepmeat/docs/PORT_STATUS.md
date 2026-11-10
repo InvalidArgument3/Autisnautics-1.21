@@ -388,6 +388,12 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Collision and the closed partials, jar 0.30.0-neoforge.39
+
+The compressor collision is the upstream three boxes, rotated around Y. The trommel collision is the volume shape rotated the same way. The ball mill collision is its disc. A machine with more than four ball mills, or with no progress, does not mill. The hopper's killing blow uses the `neepmeat:crusher` damage type. Active waste falls. Altar lava becomes `neepmeat:contaminated_rubble`. The lucky one stores its animation offset. The stomach item places through `modifyHitPos`. The test machine block reports power, efficiency, and a remaining-life estimate.
+
+The line-count table below is from 0.36. After this jar the partial rows that remain are the distributor block, its block entity, its process, and the ball-mill block entity. That is 65 faithful and 4 partial.
+
 ## Distributor, jar 0.30.0-neoforge.38
 
 `DistributorPointBlock` uses the upstream collision boxes and a radius-1 disc. `busWrite("Send")` sets `sendNext`. `busWrite("Set channel")` replaces the address. The receiver worm spawns only when `hasNearbyAlivePlayer` is true within 60 blocks. `DistributorPointProcess` extracts a parcel from the item and fluid inputs, locks a route, and inserts a received parcel into the outputs, dropping leftover items at the dump position. `SkywormEntity.spawnFromAltar` requires a player and a ring of `neepmeat:worm_altar`. The centre lava is cleared to air because `contaminated_rubble` is not registered. Data-cable connection properties are not on the structure block.
@@ -407,11 +413,11 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | File | Ours / Loom | Status |
 | --- | --- | --- |
 | `GroundInfuserBlock.java` | 70 / 70 | faithful |
-| `LargeCompressorBlock.java` | 104 / 204 | partial |
+| `LargeCompressorBlock.java` | 104 / 204 | faithful |
 | `LivingMachineComponents.java` | 54 / 110 | faithful |
 | `LivingMachines.java` | 189 / 241 | faithful |
 | `Processes.java` | 75 / 91 | faithful |
-| `block/BallMillBlock.java` | 61 / 241 | partial |
+| `block/BallMillBlock.java` | 61 / 241 | faithful |
 | `block/CrusherSegmentBlock.java` | 41 / 104 | faithful |
 | `block/DistributorPointBlock.java` | 59 / 283 | partial |
 | `block/ExtractorBlock.java` | 38 / 38 | faithful |
@@ -420,8 +426,8 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `block/ItemInputPortBlock.java` | 48 / 50 | faithful |
 | `block/ItemOutputPortBlock.java` | 43 / 43 | faithful |
 | `block/ItemPortBlockItem.java` | 54 / 54 | faithful |
-| `block/LargeTrommelBlock.java` | 92 / 165 | partial |
-| `block/LargestHopperBlock.java` | 62 / 156 | partial |
+| `block/LargeTrommelBlock.java` | 92 / 165 | faithful |
+| `block/LargestHopperBlock.java` | 62 / 156 | faithful |
 | `block/LuckyOneBlock.java` | 98 / 98 | faithful |
 | `block/MetaboliserSegmentBlock.java` | 13 / 190 | faithful |
 | `block/PortBlock.java` | 78 / 88 | faithful |
@@ -429,10 +435,10 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `block/ServicePortBlock.java` | 63 / 69 | faithful |
 | `block/SilkyExtractorBlock.java` | 38 / 38 | faithful |
 | `block/StomachBlock.java` | 13 / 225 | faithful |
-| `block/TestLivingMachineBlock.java` | 42 / 121 | partial |
-| `block/TreeVacuumBlock.java` | 65 / 177 | partial |
+| `block/TestLivingMachineBlock.java` | 42 / 121 | faithful |
+| `block/TreeVacuumBlock.java` | 65 / 177 | faithful |
 | `block/entity/BallMillBlockEntity.java` | 85 / 180 | partial |
-| `block/entity/CrusherSegmentBlockEntity.java` | 84 / 273 | partial |
+| `block/entity/CrusherSegmentBlockEntity.java` | 84 / 273 | faithful |
 | `block/entity/DistributorPoint.java` | 32 / 50 | faithful |
 | `block/entity/DistributorPointBlockEntity.java` | 172 / 310 | partial |
 | `block/entity/ExtractorBlockEntity.java` | 41 / 41 | faithful |
@@ -442,18 +448,18 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `block/entity/ItemInputPortBlockEntity.java` | 86 / 85 | faithful |
 | `block/entity/ItemOutputPortBlockEntity.java` | 245 / 241 | faithful |
 | `block/entity/LargeCompressorBlockEntity.java` | 53 / 67 | faithful |
-| `block/entity/LargeTrommelBlockEntity.java` | 112 / 171 | partial |
-| `block/entity/LargestHopperBlockEntity.java` | 86 / 169 | partial |
+| `block/entity/LargeTrommelBlockEntity.java` | 112 / 171 | faithful |
+| `block/entity/LargestHopperBlockEntity.java` | 86 / 169 | faithful |
 | `block/entity/LivingMachineControllerBlockEntity.java` | 19 / 112 | faithful |
-| `block/entity/LuckyOneBlockEntity.java` | 56 / 117 | partial |
+| `block/entity/LuckyOneBlockEntity.java` | 56 / 117 | faithful |
 | `block/entity/MetaboliserSegmentBlockEntity.java` | 57 / 100 | faithful |
 | `block/entity/MotorPortBlockEntity.java` | 19 / 62 | faithful |
 | `block/entity/ReprocessorBlockEntity.java` | 41 / 41 | faithful |
 | `block/entity/ServicePortBlockEntity.java` | 41 / 41 | faithful |
 | `block/entity/SilkyExtractorBlockEntity.java` | 41 / 41 | faithful |
-| `block/entity/StomachBlockEntity.java` | 95 / 141 | partial |
+| `block/entity/StomachBlockEntity.java` | 95 / 141 | faithful |
 | `block/entity/StorageProvider.java` | 22 / 22 | faithful |
-| `block/entity/TreeVacuumBlockEntity.java` | 42 / 82 | partial |
+| `block/entity/TreeVacuumBlockEntity.java` | 42 / 82 | faithful |
 | `component/ChestComponent.java` | 53 / 53 | faithful |
 | `component/FluidInputComponent.java` | 26 / 26 | faithful |
 | `component/FluidOutputComponent.java` | 26 / 26 | faithful |
@@ -462,11 +468,11 @@ The phage ray breaks the block its beam points at and puts the drops in the item
 | `component/ItemOutputComponent.java` | 25 / 24 | faithful |
 | `component/MetaboliserSegmentComponent.java` | 20 / 20 | faithful |
 | `component/PoweredComponent.java` | 37 / 37 | faithful |
-| `item/StomachBlockItem.java` | 23 / 44 | partial |
-| `process/BallMillProcess.java` | 46 / 108 | partial |
+| `item/StomachBlockItem.java` | 23 / 44 | faithful |
+| `process/BallMillProcess.java` | 46 / 108 | faithful |
 | `process/BioreactorProcess.java` | 60 / 77 | faithful |
 | `process/CharnelPumpProcess.java` | 63 / 103 | faithful |
-| `process/CrusherProcess.java` | 95 / 169 | partial |
+| `process/CrusherProcess.java` | 95 / 169 | faithful |
 | `process/DisruptorProcess.java` | 109 / 120 | faithful |
 | `process/DistributorPointProcess.java` | 45 / 195 | partial |
 | `process/LargeCompressorProcess.java` | 51 / 66 | faithful |

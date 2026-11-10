@@ -15,11 +15,15 @@ import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import com.neep.neepmeat.transport.api.pipe.BloodAcceptor;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class LuckyOneBlockEntity extends BlockEntity implements LivingMachineComponent, BloodAcceptor {
     private float influx;
+    public int animationOffset = -1;
 
     public LuckyOneBlockEntity(BlockPos pos, BlockState state) {
         super(LivingMachines.LUCKY_ONE_BE.get(), pos, state);
@@ -27,6 +31,29 @@ public class LuckyOneBlockEntity extends BlockEntity implements LivingMachineCom
 
     public float influx() {
         return influx;
+    }
+
+    @Override
+    public void setLevel(Level level) {
+        super.setLevel(level);
+        if (animationOffset == -1 && level != null) {
+            animationOffset = level.getRandom().nextInt(200);
+            setChanged();
+        }
+    }
+
+    @Override
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
+        tag.putFloat("influx", influx);
+        tag.putInt("start_time", animationOffset);
+    }
+
+    @Override
+    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
+        influx = tag.getFloat("influx");
+        animationOffset = tag.getInt("start_time");
     }
 
     @Override

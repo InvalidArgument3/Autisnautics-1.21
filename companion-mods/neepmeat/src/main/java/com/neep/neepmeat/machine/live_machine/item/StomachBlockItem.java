@@ -12,12 +12,25 @@
 
 package com.neep.neepmeat.machine.live_machine.item;
 
+import com.neep.neepmeat.api.big_block.BlockPlacementPreview;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class StomachBlockItem extends BlockItem {
-    public StomachBlockItem(Block block, Item.Properties properties) {
+    public StomachBlockItem(Block block, Properties properties) {
         super(block, properties);
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        if (!(getBlock() instanceof BlockPlacementPreview preview)) {
+            return super.useOn(context);
+        }
+        BlockHitResult hit = preview.modifyHitPos(new BlockHitResult(context.getClickLocation(), context.getClickedFace(), context.getClickedPos(), context.isInside()));
+        return place(new BlockPlaceContext(context.getLevel(), context.getPlayer(), context.getHand(), context.getItemInHand(), hit));
     }
 }
