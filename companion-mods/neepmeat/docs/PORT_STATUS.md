@@ -42,6 +42,27 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## Version and Yarn remap
+
+Jar `0.30.0-neoforge.7`. `./gradlew runGameTestServer` on that string:
+
+```
+meatlib 0.30.0-neoforge.7 loaded
+NeepMeat 0.30.0-neoforge.7 loaded with GeckoLib 4.9.3
+All 22 required tests passed :)
+BUILD SUCCESSFUL
+```
+
+`tools/yarn-to-mojmap/` builds a Yarn 1.20.1 to Mojmap 1.20.1 map (6,913 classes, 17,006 unambiguous method renames) from Yarn tiny, Fabric intermediary, and the 1.20.1 official client mappings, then rewrites sources. It was applied to the meatlib screen kit. That copy is not in the tree: after the remap, 1.21 still rejects it. Those are API moves, not a missing NeoForge library:
+
+- `GuiEventListener`, `Renderable`, and `AbstractContainerEventHandler` live under `net.minecraft.client.gui.components`.
+- `mouseScrolled` takes four doubles.
+- `NarratableEntry` requires `narrationPriority()` and `updateNarration`.
+- `Font.draw` and the 1.20 `BufferBuilder.begin`/`vertex().next()` path are gone. `GuiGraphics.blit` and `drawString` replace them.
+- `REIScreenSupport` calls Architectury `ClientGuiEvent`. The pack does not ship Architectury. EMI is the optional viewer already on the classpath.
+
+The screen kit, robot arm, NEEPASM VM, living machines, and meatgun are still to be ported with this remap plus those 1.21 fixes. The branch compiles without the unfinished kit.
+
 ## This run: requests finished, kiln screen, basic tank, blood
 
 Jar still `0.30.0-neoforge.6` plus the commits after that version string. The game-test server that included blood reported 22 passing tests.
