@@ -23,10 +23,7 @@ public interface LivingMachineComponent {
 
     boolean componentRemoved();
 
-    /**
-     * Upstream calls this {@code getType}. Mojmap {@code BlockEntity.getType} already returns the block entity type.
-     */
-    ComponentType<? extends LivingMachineComponent> componentType();
+    ComponentType<? extends LivingMachineComponent> getComponentType();
 
     default void exit() {
         setController(null);

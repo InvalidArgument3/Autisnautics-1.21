@@ -9,7 +9,7 @@
 package com.neep.neepmeat.transport.block;
 
 import com.neep.neepmeat.NeepMeat;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity;
 import com.neep.neepmeat.transport.api.pipe.BalancingBloodAcceptor;
@@ -27,8 +27,8 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 public class BloodNetworkGameTests {
     @GameTest(template = "empty")
     public static void bloodFlowsFromMetaboliserToLuckyOne(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 6), LiveMachines.LUCKY_ONE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), LivingMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 6), LivingMachines.LUCKY_ONE.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 5), VascularConduits.CONDUIT.get().defaultBlockState());
         MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));
@@ -59,8 +59,8 @@ public class BloodNetworkGameTests {
 
     @GameTest(template = "empty")
     public static void balancerTakesEnergyBeforeTheSink(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 6), LiveMachines.LUCKY_ONE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), LivingMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 6), LivingMachines.LUCKY_ONE.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
         MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));
         segment.setOutputEnergy(1000);
@@ -94,7 +94,7 @@ public class BloodNetworkGameTests {
 
     @GameTest(template = "empty")
     public static void voltageConverterTakesItsDesiredPower(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(2, 1, 2), LiveMachines.METABOLISER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), LivingMachines.METABOLISER.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 5), VascularConduits.VSC.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 4), VascularConduits.CONDUIT.get().defaultBlockState());
         MetaboliserSegmentBlockEntity segment = helper.getBlockEntity(new BlockPos(2, 1, 2));

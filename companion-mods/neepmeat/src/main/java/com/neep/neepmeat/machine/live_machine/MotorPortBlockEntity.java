@@ -22,7 +22,7 @@ public class MotorPortBlockEntity extends BlockEntity implements LivingMachineCo
     private float inputPower;
 
     public MotorPortBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.MOTOR_PORT_BE.get(), pos, state);
+        super(LivingMachines.MOTOR_PORT_BE.get(), pos, state);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class MotorPortBlockEntity extends BlockEntity implements LivingMachineCo
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
         return LivingMachineComponents.MOTOR_PORT;
     }
 }

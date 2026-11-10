@@ -23,7 +23,7 @@ public class ComponentMap {
     public final BitSet bits = new BitSet();
 
     public void add(LivingMachineComponent component) {
-        int idx = component.componentType().getBitIdx();
+        int idx = component.getComponentType().getBitIdx();
         if (componentMap[idx] == null) {
             componentMap[idx] = new HashSet<>();
         }

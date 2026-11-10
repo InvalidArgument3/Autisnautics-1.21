@@ -44,7 +44,7 @@ public class MetaboliserSegmentBlock extends BigBlock2 {
     public static final MapCodec<MetaboliserSegmentBlock> CODEC = simpleCodec(properties -> new MetaboliserSegmentBlock());
 
     public MetaboliserSegmentBlock() {
-        super(LiveMachines.METABOLISER_STRUCTURE);
+        super(LivingMachines.METABOLISER_STRUCTURE);
     }
 
     @Override

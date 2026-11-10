@@ -36,6 +36,15 @@ public class BaseBlock extends Block implements MeatlibBlock {
         super(settings.properties());
     }
 
+    /** Loom sources pass {@link BlockBehaviour.Properties}. The item is registered by the caller. */
+    public BaseBlock(RegistrationContext ignored, ItemSettings ignoredItems, net.minecraft.world.level.block.state.BlockBehaviour.Properties settings) {
+        super(settings);
+    }
+
+    public BaseBlock(RegistrationContext ignored, net.minecraft.world.level.block.state.BlockBehaviour.Properties settings) {
+        super(settings);
+    }
+
     public static DeferredBlock<BaseBlock> register(RegistrationContext context, String path, MeatlibBlockSettings settings) {
         return register(context, path, settings, ItemSettings.block());
     }

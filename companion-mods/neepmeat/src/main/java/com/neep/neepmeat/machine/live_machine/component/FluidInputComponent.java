@@ -22,5 +22,5 @@ import net.minecraft.core.Direction;
 public interface FluidInputComponent extends LivingMachineComponent, StorageProvider<FluidVariant>
 {
     @Override
-    Storage<FluidVariant> unwrap(Direction ctx);
+    Storage<FluidVariant> getStorage(Direction ctx);
 }

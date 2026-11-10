@@ -11,7 +11,7 @@ package com.neep.neepmeat.machine.live_machine.block.entity;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +22,7 @@ public class ItemPortBlockEntity extends BlockEntity implements LivingMachineCom
     private ItemStack stack = ItemStack.EMPTY;
 
     public ItemPortBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.ITEM_PORT_BE.get(), pos, state);
+        super(LivingMachines.ITEM_PORT_BE.get(), pos, state);
     }
 
     public ItemStack stack() {
@@ -45,8 +45,8 @@ public class ItemPortBlockEntity extends BlockEntity implements LivingMachineCom
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
-        return getBlockState().is(LiveMachines.ITEM_OUTPUT.get())
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
+        return getBlockState().is(LivingMachines.ITEM_OUTPUT.get())
                 ? LivingMachineComponents.ITEM_OUTPUT
                 : LivingMachineComponents.ITEM_INPUT;
     }

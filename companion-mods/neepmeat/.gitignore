@@ -1,5 +1,8 @@
 .gradle/
 build/
+# regenerate.sh writes these. Do not commit them.
+tools/loom-migrated/neepmeat/
+tools/loom-migrated/meatlib/
 run/
 runs/
 smoke-run/

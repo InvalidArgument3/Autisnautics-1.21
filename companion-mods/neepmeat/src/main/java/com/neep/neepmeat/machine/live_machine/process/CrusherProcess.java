@@ -15,8 +15,13 @@ import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.Process;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import com.neep.neepmeat.machine.live_machine.LivingMachineControllerBlockEntity;
+import com.neep.meatlib.transfer.ItemVariant;
+import com.neep.meatlib.transfer.Storage;
+import com.neep.meatlib.transfer.StorageView;
+import com.neep.meatlib.transfer.Transaction;
 import com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity;
+import com.neep.neepmeat.machine.live_machine.component.ItemInputComponent;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -31,20 +36,38 @@ public class CrusherProcess implements Process {
     @Override
     public void serverTick(LivingMachineControllerBlockEntity machine) {
         List<CrusherSegmentBlockEntity> crushers = machine.components(LivingMachineComponents.CRUSHER_SEGMENT);
-        List<ItemPortBlockEntity> inputs = machine.components(LivingMachineComponents.ITEM_INPUT);
+        List<ItemInputComponent> inputs = machine.components(LivingMachineComponents.ITEM_INPUT);
         if (crushers.isEmpty() || inputs.isEmpty() || crushers.size() > 4 || machine.power() < 0.1f) {
             return;
         }
-        ItemPortBlockEntity input = inputs.getFirst();
+        ItemInputComponent input = inputs.getFirst();
+        Storage<ItemVariant> storage = input.getStorage(null);
         for (CrusherSegmentBlockEntity crusher : crushers) {
-            if (crusher.isEmpty() && !input.stack().isEmpty()) {
-                crusher.insert(input.removeStack());
-                crusher.assignCobblestoneRecipe();
+            if (crusher.isEmpty()) {
+                takeInput(storage, crusher);
             } else if (crusher.addProgress(machine.getProgressIncrement())) {
                 List<ItemPortBlockEntity> outputs = machine.components(LivingMachineComponents.ITEM_OUTPUT);
                 if (!outputs.isEmpty()) {
                     outputs.getFirst().setStack(crusher.takeResult());
                 }
+            }
+        }
+    }
+
+    private static void takeInput(Storage<ItemVariant> storage, CrusherSegmentBlockEntity crusher) {
+        for (StorageView<ItemVariant> view : storage) {
+            if (view.getAmount() <= 0 || view.getResource().isBlank()) {
+                continue;
+            }
+            try (Transaction transaction = Transaction.openOuter()) {
+                long extracted = storage.extract(view.getResource(), view.getAmount(), transaction);
+                if (extracted <= 0) {
+                    continue;
+                }
+                transaction.onRename();
+                crusher.insert(view.getResource().toStack((int) extracted));
+                crusher.assignCobblestoneRecipe();
+                return;
             }
         }
     }

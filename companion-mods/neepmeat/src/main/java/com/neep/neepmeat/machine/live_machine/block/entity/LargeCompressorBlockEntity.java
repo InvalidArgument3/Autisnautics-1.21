@@ -15,7 +15,7 @@ import com.neep.meatlib.transfer.Storage;
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
 import com.neep.neepmeat.api.storage.WritableSingleFluidStorage;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -26,7 +26,7 @@ public class LargeCompressorBlockEntity extends BlockEntity implements LivingMac
     private final WritableSingleFluidStorage output = new WritableSingleFluidStorage(FluidConstants.BUCKET, this::setChanged);
 
     public LargeCompressorBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.COMPRESSOR_BE.get(), pos, state);
+        super(LivingMachines.COMPRESSOR_BE.get(), pos, state);
     }
 
     public Storage<FluidVariant> output() {
@@ -47,7 +47,7 @@ public class LargeCompressorBlockEntity extends BlockEntity implements LivingMac
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
         return LivingMachineComponents.LARGE_COMPRESSOR;
     }
 }

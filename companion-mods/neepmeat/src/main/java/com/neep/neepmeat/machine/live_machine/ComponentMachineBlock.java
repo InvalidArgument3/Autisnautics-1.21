@@ -11,9 +11,10 @@ package com.neep.neepmeat.machine.live_machine;
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ItemPortBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity;
-import com.neep.neepmeat.machine.live_machine.block.entity.MarkerBlockEntity;
+import com.neep.neepmeat.machine.live_machine.block.entity.ReprocessorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
@@ -43,14 +44,15 @@ public class ComponentMachineBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (kind) {
-            case INPUT, OUTPUT -> new ItemPortBlockEntity(pos, state);
+            case INPUT -> new ItemInputPortBlockEntity(pos, state);
+            case OUTPUT -> new ItemPortBlockEntity(pos, state);
             case CRUSHER -> new CrusherSegmentBlockEntity(pos, state);
             case COMPRESSOR -> new LargeCompressorBlockEntity(pos, state);
-            case EXTRACTOR, SILKY, SERVICE, REPROCESSOR -> new MarkerBlockEntity(pos, state);
+            case REPROCESSOR -> new ReprocessorBlockEntity(pos, state);
         };
     }
 
     public enum Kind {
-        EXTRACTOR, SILKY, SERVICE, REPROCESSOR, INPUT, OUTPUT, CRUSHER, COMPRESSOR
+        REPROCESSOR, INPUT, OUTPUT, CRUSHER, COMPRESSOR
     }
 }

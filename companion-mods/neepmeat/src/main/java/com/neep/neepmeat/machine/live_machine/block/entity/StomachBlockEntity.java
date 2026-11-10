@@ -11,7 +11,7 @@ package com.neep.neepmeat.machine.live_machine.block.entity;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -24,7 +24,7 @@ public class StomachBlockEntity extends BlockEntity implements LivingMachineComp
     private long droplets;
 
     public StomachBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.STOMACH_BE.get(), pos, state);
+        super(LivingMachines.STOMACH_BE.get(), pos, state);
     }
 
     public Fluid fluid() {
@@ -55,7 +55,7 @@ public class StomachBlockEntity extends BlockEntity implements LivingMachineComp
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
         return LivingMachineComponents.STOMACH;
     }
 }

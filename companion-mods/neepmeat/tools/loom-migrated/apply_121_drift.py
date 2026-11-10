@@ -25,6 +25,16 @@ REPLACEMENTS = [
      r"super.loadAdditional(\1, registries)"),
     (re.compile(r"\bgetUpdateTag\(\)"),
      r"getUpdateTag(registries)"),
+    (re.compile(r"(public|protected) void onRemove\("),
+     r"protected void onRemove("),
+    (re.compile(r"(public|protected) BlockState rotate\("),
+     r"protected BlockState rotate("),
+    (re.compile(r"(public|protected) BlockState mirror\("),
+     r"protected BlockState mirror("),
+    (re.compile(r"(public|protected) InteractionResult use\((.*?)InteractionHand \w+, (BlockHitResult \w+)\)"),
+     r"protected InteractionResult useWithoutItem(\2\3)"),
+    (re.compile(r"super\.use\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, ([^)]+)\)"),
+     r"super.useWithoutItem(\1, \2, \3, \4, \5)"),
 ]
 
 

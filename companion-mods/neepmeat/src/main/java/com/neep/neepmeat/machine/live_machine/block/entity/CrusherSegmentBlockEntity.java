@@ -12,7 +12,7 @@ package com.neep.neepmeat.machine.live_machine.block.entity;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
@@ -25,7 +25,7 @@ public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMach
     private int recipeTime;
 
     public CrusherSegmentBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.CRUSHER_BE.get(), pos, state);
+        super(LivingMachines.CRUSHER_BE.get(), pos, state);
     }
 
     public boolean isEmpty() {
@@ -71,7 +71,7 @@ public class CrusherSegmentBlockEntity extends BlockEntity implements LivingMach
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
         return LivingMachineComponents.CRUSHER_SEGMENT;
     }
 }

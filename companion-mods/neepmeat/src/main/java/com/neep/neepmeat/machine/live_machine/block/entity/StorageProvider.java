@@ -18,5 +18,5 @@ import org.jetbrains.annotations.Nullable;
 
 public interface StorageProvider<T>
 {
-    Storage<T> unwrap(@Nullable Direction direction);
+    Storage<T> getStorage(@Nullable Direction direction);
 }

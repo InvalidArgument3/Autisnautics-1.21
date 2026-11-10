@@ -388,6 +388,14 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Leaf living-machine types, jar 0.30.0-neoforge.30
+
+The 2,198-file Loom tree is no longer in git. `tools/loom-migrated/regenerate.sh` fetches commit `0d36776`, runs Loom 1.9.2 `migrateMappings`, and writes `tools/loom-migrated/neepmeat` and `meatlib`, both gitignored. `apply_121_drift.py` also rewrites `use` to `useWithoutItem` and makes `onRemove`, `rotate`, and `mirror` protected.
+
+`machine/live_machine` now has the upstream extractor, silky extractor, service port, item input port, fluid input port, and reprocessor block entities, plus `PortBlock`, `ServicePortBlock`, `ExtractorBlock`, `SilkyExtractorBlock`, `ChestComponent`, and `HopperComponent`. The registrar class is `LivingMachines`, matching upstream. `getComponentType()` and `StorageProvider.getStorage` match the Loom names.
+
+Deviations in this batch: block entities are constructed as `(BlockPos, BlockState)` because that is what NeoForge's block entity supplier is. `PortBlock` and `ServicePortBlock` take a `(BlockPos, BlockState)` factory because `DeferredHolder` has no `create`. The block item is not created inside `BaseFacingBlock`. The reprocessor block is still one block, not the upstream volume. The fluid input block is `PortBlock` until `FluidPortBlock` can call `TankBlockEntity`. The item input block is still `ComponentMachineBlock` until the screen handler exists. The crusher reads the input through `ItemInputComponent` and still writes gravel to the one-stack output port.
+
 ## Loom tree in the repo, jar 0.30.0-neoforge.29
 
 The Loom output is checked in at `tools/loom-migrated/`. NeepMeat is `neepmeat/com` (1,888 files) and meatlib is `meatlib/com` (310 files). That tree stays on the 1.20.1 Mojmap API. `tools/loom-migrated/apply_121_drift.py` rewrites `saveAdditional`/`loadAdditional(CompoundTag, HolderLookup.Provider)` and `ResourceLocation` factories onto a copy.

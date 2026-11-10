@@ -55,7 +55,7 @@ public class LivingMachineControllerBlockEntity extends BlockEntity {
     private @Nullable Process process;
 
     public LivingMachineControllerBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.CONTROLLER_BE.get(), pos, state);
+        super(LivingMachines.CONTROLLER_BE.get(), pos, state);
     }
 
     public void serverTick() {

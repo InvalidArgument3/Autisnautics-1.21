@@ -52,6 +52,11 @@ public class ItemSettings {
         return factory;
     }
 
+    /** Loom sources call {@code getFactory()}. */
+    public MeatlibBlock.ItemFactory getFactory() {
+        return factory;
+    }
+
     public BlockItem create(Block block, RegistrationContext context) {
         return factory.create(block, context, this);
     }

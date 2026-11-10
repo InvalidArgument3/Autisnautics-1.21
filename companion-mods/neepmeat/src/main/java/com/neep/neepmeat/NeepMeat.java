@@ -51,7 +51,7 @@ public final class NeepMeat {
         BuildingBlocks.bootstrap();
         NeepMachines.register(bus);
         com.neep.neepmeat.machine.StageMachines.register(bus);
-        com.neep.neepmeat.machine.live_machine.LiveMachines.register(bus);
+        com.neep.neepmeat.machine.live_machine.LivingMachines.register(bus);
         com.neep.neepmeat.transport.block.VascularConduits.register(bus);
         com.neep.neepmeat.recipe.NeepComponents.COMPONENTS.register(bus);
         MaterialItems.register(bus);

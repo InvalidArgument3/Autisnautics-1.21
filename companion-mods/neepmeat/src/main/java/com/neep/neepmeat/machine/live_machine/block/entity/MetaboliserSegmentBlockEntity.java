@@ -11,7 +11,7 @@ package com.neep.neepmeat.machine.live_machine.block.entity;
 
 import com.neep.neepmeat.api.live_machine.ComponentType;
 import com.neep.neepmeat.api.live_machine.LivingMachineComponent;
-import com.neep.neepmeat.machine.live_machine.LiveMachines;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.LivingMachineComponents;
 import com.neep.neepmeat.transport.api.pipe.BloodAcceptor;
 import net.minecraft.core.BlockPos;
@@ -22,7 +22,7 @@ public class MetaboliserSegmentBlockEntity extends BlockEntity implements Living
     private long energy;
 
     public MetaboliserSegmentBlockEntity(BlockPos pos, BlockState state) {
-        super(LiveMachines.METABOLISER_BE.get(), pos, state);
+        super(LivingMachines.METABOLISER_BE.get(), pos, state);
     }
 
     public long energy() {
@@ -51,7 +51,7 @@ public class MetaboliserSegmentBlockEntity extends BlockEntity implements Living
     }
 
     @Override
-    public ComponentType<? extends LivingMachineComponent> componentType() {
+    public ComponentType<? extends LivingMachineComponent> getComponentType() {
         return LivingMachineComponents.METABOLISER_SEGMENT;
     }
 }

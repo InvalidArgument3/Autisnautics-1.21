@@ -1,6 +1,8 @@
-Loom-migrated upstream sources. This is the source of truth for the port.
+Loom-migrated upstream sources. The generated tree is the source of truth for the port, and it is not committed.
 
-NeepMeat is under `neepmeat/com`. meatlib is under `meatlib/com`. Both are Mojmap 1.20.1 names produced by Fabric Loom 1.9.2:
+`regenerate.sh` fetches Codeberg commit `0d36776`, checks out meatlib, pins Fabric Loom to 1.9.2, and runs `migrateMappings`. It writes `neepmeat/` and `meatlib/` next to this file. Those directories are gitignored.
+
+Both outputs are Mojmap 1.20.1 names:
 
 ```
 ./gradlew migrateMappings --mappings "net.minecraft:mappings:1.20.1"

@@ -34,7 +34,7 @@ public class StomachBlock extends BigBlock2 {
     public static final MapCodec<StomachBlock> CODEC = simpleCodec(properties -> new StomachBlock());
 
     public StomachBlock() {
-        super(LiveMachines.STOMACH_STRUCTURE);
+        super(LivingMachines.STOMACH_STRUCTURE);
     }
 
     @Override

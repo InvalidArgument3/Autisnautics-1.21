@@ -19,5 +19,5 @@ import net.minecraft.core.Direction;
 
 public interface ItemInputComponent extends LivingMachineComponent
 {
-    Storage<ItemVariant> unwrap(Direction ctx);
+    Storage<ItemVariant> getStorage(Direction ctx);
 }
