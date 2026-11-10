@@ -18,7 +18,11 @@ import com.neep.neepmeat.machine.alloy.AlloyKilnBlockEntity;
 import com.neep.neepmeat.machine.alloy.AlloyKilnMenu;
 import com.neep.neepmeat.machine.transport.ColoredFluidPipeBlock;
 import com.neep.neepmeat.machine.transport.FilterItemPipeBlock;
+import com.neep.neepmeat.machine.transport.FilterPipeMenu;
 import com.neep.neepmeat.machine.transport.FluidPipeBlock;
+import com.neep.neepmeat.machine.transport.ItemRequesterBlock;
+import com.neep.neepmeat.machine.transport.ItemRequesterBlockEntity;
+import com.neep.neepmeat.machine.transport.StorageBusBlock;
 import com.neep.neepmeat.machine.transport.MergePipeBlock;
 import com.neep.neepmeat.machine.transport.PipeDriverBlock;
 import com.neep.neepmeat.machine.transport.PipeDriverBlockEntity;
@@ -75,8 +79,20 @@ public final class NeepMachines {
     public static final DeferredItem<BlockItem> FILTER_ITEM_PIPE_ITEM = CONTEXT.item("filter_item_pipe", () -> new BlockItem(FILTER_ITEM_PIPE.get(), new Item.Properties()));
     public static final DeferredBlock<MergePipeBlock> MERGE_PIPE = CONTEXT.block("merge_item_pipe", MergePipeBlock::new);
     public static final DeferredItem<BlockItem> MERGE_PIPE_ITEM = CONTEXT.item("merge_item_pipe", () -> new BlockItem(MERGE_PIPE.get(), new Item.Properties()));
+    public static final DeferredBlock<StorageBusBlock> STORAGE_BUS = CONTEXT.block("storage_bus", StorageBusBlock::new);
+    public static final DeferredItem<BlockItem> STORAGE_BUS_ITEM = CONTEXT.item("storage_bus", () -> new BlockItem(STORAGE_BUS.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemPipeBlockEntity>> ITEM_PIPE_BE = BLOCK_ENTITIES.register("item_pipe",
-            () -> BlockEntityType.Builder.of(ItemPipeBlockEntity::new, ITEM_PIPE.get(), FILTER_ITEM_PIPE.get(), MERGE_PIPE.get()).build(null));
+            () -> BlockEntityType.Builder.of(ItemPipeBlockEntity::new, ITEM_PIPE.get(), FILTER_ITEM_PIPE.get(), MERGE_PIPE.get(), STORAGE_BUS.get()).build(null));
+    public static final DeferredHolder<MenuType<?>, MenuType<FilterPipeMenu>> FILTER_MENU = MENUS.register("filter_item_pipe",
+            () -> IMenuTypeExtension.create((id, inventory, buf) -> {
+                BlockPos pos = buf.readBlockPos();
+                ItemPipeBlockEntity pipe = (ItemPipeBlockEntity) inventory.player.level().getBlockEntity(pos);
+                return new FilterPipeMenu(id, inventory, pipe);
+            }));
+    public static final DeferredBlock<ItemRequesterBlock> ITEM_REQUESTER = CONTEXT.block("item_requester", ItemRequesterBlock::new);
+    public static final DeferredItem<BlockItem> ITEM_REQUESTER_ITEM = CONTEXT.item("item_requester", () -> new BlockItem(ITEM_REQUESTER.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemRequesterBlockEntity>> ITEM_REQUESTER_BE = BLOCK_ENTITIES.register("item_requester",
+            () -> BlockEntityType.Builder.of(ItemRequesterBlockEntity::new, ITEM_REQUESTER.get()).build(null));
 
     public static final DeferredBlock<PipeDriverBlock> PIPE_DRIVER = CONTEXT.block("pipe_driver", PipeDriverBlock::new);
     public static final DeferredItem<BlockItem> PIPE_DRIVER_ITEM = CONTEXT.item("pipe_driver", () -> new BlockItem(PIPE_DRIVER.get(), new Item.Properties()));
@@ -132,6 +148,7 @@ public final class NeepMachines {
     private static void capabilities(RegisterCapabilitiesEvent event) {
         MeatlibCapabilities.itemHandler(event, ALLOY_KILN_BE.get(), (kiln, side) -> new net.neoforged.neoforge.items.wrapper.InvWrapper(kiln));
         MeatlibCapabilities.fluidHandler(event, FLUID_TANK_BE.get(), (tank, side) -> tank.tank());
+        event.registerBlockEntity(net.neoforged.neoforge.capabilities.Capabilities.ItemHandler.BLOCK, ITEM_REQUESTER_BE.get(), (requester, side) -> requester);
     }
 
     private static void creative(BuildCreativeModeTabContentsEvent event) {
@@ -141,6 +158,8 @@ public final class NeepMachines {
             event.accept(FILTER_ITEM_PIPE_ITEM.get());
             event.accept(MERGE_PIPE_ITEM.get());
             event.accept(PIPE_DRIVER_ITEM.get());
+            event.accept(STORAGE_BUS_ITEM.get());
+            event.accept(ITEM_REQUESTER_ITEM.get());
             event.accept(FLUID_PIPE_ITEM.get());
             for (DeferredItem<BlockItem> colored : COLORED_FLUID_PIPE_ITEMS) {
                 event.accept(colored.get());

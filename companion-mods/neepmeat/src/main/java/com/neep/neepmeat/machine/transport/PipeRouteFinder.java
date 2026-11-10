@@ -3,9 +3,9 @@
  *
  * This file is part of NEEPMeat.
  *
- * Breadth-first route from a pipe to the first inventory that can take the stack.
- * Filter pipes that reject the stack are not entered. Simulate is used before the
- * route is accepted.
+ * Priority-queue route search from upstream PipeRouteFinder. A filter pipe
+ * (prioritise) costs one less than a plain pipe, so it is expanded first.
+ * The first exit whose handler accepts the stack under simulate wins.
  */
 
 package com.neep.neepmeat.machine.transport;
@@ -20,44 +20,69 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
-import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Set;
 
 public final class PipeRouteFinder {
     private PipeRouteFinder() {}
 
     public static ItemRoute find(Level level, BlockPos start, Direction enteredFrom, ItemStack stack) {
-        record Step(BlockPos pos, List<Direction> route) {}
-        ArrayDeque<Step> queue = new ArrayDeque<>();
-        Set<BlockPos> seen = new HashSet<>();
-        queue.add(new Step(start, List.of()));
-        seen.add(start);
-        while (!queue.isEmpty()) {
-            Step step = queue.poll();
-            if (!(level.getBlockEntity(step.pos) instanceof ItemPipeBlockEntity pipe) || !pipe.allows(stack)) {
-                continue;
-            }
+        PriorityQueue<Node> frontier = new PriorityQueue<>(Comparator.comparingInt(node -> node.cost));
+        Set<BlockPos> visited = new HashSet<>();
+        Node startNode = new Node(start, 0, null, null);
+        frontier.add(startNode);
+        visited.add(start);
+        while (!frontier.isEmpty()) {
+            Node node = frontier.poll();
             for (Direction direction : Direction.values()) {
-                if (direction == enteredFrom && step.pos.equals(start)) {
+                if (node == startNode && direction == enteredFrom) {
                     continue;
                 }
-                BlockPos next = step.pos.relative(direction);
+                BlockPos next = node.pos.relative(direction);
                 BlockState state = level.getBlockState(next);
-                List<Direction> route = new java.util.ArrayList<>(step.route);
-                route.add(direction);
-                if (state.getBlock() instanceof ItemPipeBlock && seen.add(next)) {
-                    queue.add(new Step(next, route));
+                if (state.getBlock() instanceof ItemPipeBlock) {
+                    if (!(level.getBlockEntity(next) instanceof ItemPipeBlockEntity pipe) || !pipe.allows(stack) || !visited.add(next)) {
+                        continue;
+                    }
+                    int cost = node.cost + (pipe.prioritise() ? -1 : 1);
+                    frontier.add(new Node(next, cost, node, direction));
                     continue;
                 }
                 IItemHandler handler = level.getCapability(Capabilities.ItemHandler.BLOCK, next, direction.getOpposite());
                 if (handler != null && ItemHandlerHelper.insertItem(handler, stack.copy(), true).isEmpty()) {
-                    return new ItemRoute(route);
+                    return route(node, direction);
                 }
             }
-            enteredFrom = null;
         }
         return ItemRoute.EMPTY;
+    }
+
+    private static ItemRoute route(Node node, Direction last) {
+        List<Direction> steps = new ArrayList<>();
+        steps.add(last);
+        while (node.exit != null) {
+            steps.add(node.exit);
+            node = node.parent;
+        }
+        java.util.Collections.reverse(steps);
+        return new ItemRoute(steps);
+    }
+
+    private static final class Node {
+        private final BlockPos pos;
+        private final int cost;
+        private final Node parent;
+        private final Direction exit;
+
+        private Node(BlockPos pos, int cost, Node parent, Direction exit) {
+            this.pos = pos;
+            this.cost = cost;
+            this.parent = parent;
+            this.exit = exit;
+        }
     }
 }

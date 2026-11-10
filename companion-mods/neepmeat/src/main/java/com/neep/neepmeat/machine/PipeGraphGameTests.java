@@ -12,7 +12,11 @@ import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.machine.transport.FluidPipeBlockEntity;
 import com.neep.neepmeat.machine.transport.FluidTankBlockEntity;
 import com.neep.neepmeat.machine.transport.ItemPipeBlockEntity;
+import com.neep.neepmeat.machine.transport.ItemRequesterBlockEntity;
 import com.neep.neepmeat.machine.transport.MergePipeBlock;
+import com.neep.neepmeat.machine.transport.PipeRouteFinder;
+import com.neep.neepmeat.machine.transport.PumpBlockEntity;
+import com.neep.neepmeat.transport.ItemRoute;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.gametest.framework.GameTest;
@@ -84,18 +88,48 @@ public class PipeGraphGameTests {
     }
 
     @GameTest(template = "empty", timeoutTicks = 80)
-    public static void driverPushesAlongAFoundRoute(GameTestHelper helper) {
+    public static void requesterPullsThroughStorageBus(GameTestHelper helper) {
         helper.setBlock(new BlockPos(0, 1, 1), Blocks.CHEST.defaultBlockState());
-        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PIPE_DRIVER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.STORAGE_BUS.get().defaultBlockState());
         helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
-        helper.setBlock(new BlockPos(2, 1, 2), Blocks.CHEST.defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), NeepMachines.ITEM_REQUESTER.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 0), NeepMachines.PIPE_DRIVER.get().defaultBlockState());
         ChestBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
         source.setItem(0, new ItemStack(Items.DIRT));
+        ItemRequesterBlockEntity requester = helper.getBlockEntity(new BlockPos(2, 1, 2));
+        requester.request(new ItemStack(Items.DIRT));
         helper.runAfterDelay(40, () -> {
-            ChestBlockEntity destination = helper.getBlockEntity(new BlockPos(2, 1, 2));
-            helper.assertTrue(destination.getItem(0).is(Items.DIRT), "driver did not deliver");
+            helper.assertTrue(requester.output().is(Items.DIRT), "request did not arrive");
             helper.succeed();
         });
+    }
+
+    @GameTest(template = "empty")
+    public static void routeSearchPrefersFilterPipes(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 1, 2), NeepMachines.FILTER_ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(0, 1, 2), Blocks.CHEST.defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.ITEM_PIPE.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 2), Blocks.CHEST.defaultBlockState());
+        ItemRoute route = PipeRouteFinder.find(helper.getLevel(), helper.absolutePos(new BlockPos(1, 1, 1)), Direction.NORTH, new ItemStack(Items.DIRT));
+        helper.assertFalse(route.isEmpty(), "no route");
+        helper.assertTrue(route.get(0) == Direction.SOUTH, "first step " + route.get(0));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void filterTagAndInvertedEntries(GameTestHelper helper) {
+        BlockPos pos = new BlockPos(1, 1, 1);
+        helper.setBlock(pos, NeepMachines.FILTER_ITEM_PIPE.get().defaultBlockState());
+        ItemPipeBlockEntity pipe = helper.getBlockEntity(pos);
+        pipe.allowTag(net.minecraft.tags.ItemTags.PLANKS, false);
+        helper.assertTrue(pipe.allows(new ItemStack(Items.OAK_PLANKS)), "planks refused");
+        helper.assertTrue(!pipe.allows(new ItemStack(Items.DIRT)), "dirt matched planks");
+        pipe = helper.getBlockEntity(pos);
+        pipe.setEntry(0, com.neep.neepmeat.machine.transport.FilterEntry.tag(net.minecraft.tags.ItemTags.PLANKS, true));
+        helper.assertTrue(!pipe.allows(new ItemStack(Items.OAK_PLANKS)), "inverted tag allowed planks");
+        helper.assertTrue(pipe.allows(new ItemStack(Items.DIRT)), "inverted tag refused dirt");
+        helper.succeed();
     }
 
     @GameTest(template = "empty", timeoutTicks = 40)
@@ -105,6 +139,8 @@ public class PipeGraphGameTests {
         helper.setBlock(new BlockPos(2, 1, 1), NeepMachines.FLUID_TANK.get().defaultBlockState());
         FluidTankBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
         source.tank().fill(new FluidStack(Fluids.WATER, 1000), IFluidHandler.FluidAction.EXECUTE);
+        PumpBlockEntity pump = helper.getBlockEntity(new BlockPos(1, 1, 1));
+        pump.changeMode();
         helper.runAfterDelay(2, () -> {
             FluidTankBlockEntity destination = helper.getBlockEntity(new BlockPos(2, 1, 1));
             helper.assertTrue(destination.tank().getFluidAmount() == FluidPipeBlockEntity.THROUGHPUT_MB,
@@ -125,5 +161,22 @@ public class PipeGraphGameTests {
         taken = red.insert(new FluidStack(Fluids.WATER, 1000), Direction.WEST);
         helper.assertTrue(taken == FluidPipeBlockEntity.THROUGHPUT_MB, "matching colour refused fluid");
         helper.succeed();
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 20)
+    public static void idlePumpKeepsItsBufferUntilActive(GameTestHelper helper) {
+        helper.setBlock(new BlockPos(0, 1, 1), NeepMachines.FLUID_TANK.get().defaultBlockState());
+        helper.setBlock(new BlockPos(1, 1, 1), NeepMachines.PUMP.get().defaultBlockState().setValue(com.neep.neepmeat.machine.transport.PumpBlock.FACING, Direction.EAST));
+        FluidTankBlockEntity source = helper.getBlockEntity(new BlockPos(0, 1, 1));
+        source.tank().fill(new FluidStack(Fluids.WATER, 1000), IFluidHandler.FluidAction.EXECUTE);
+        PumpBlockEntity pump = helper.getBlockEntity(new BlockPos(1, 1, 1));
+        helper.runAfterDelay(2, () -> {
+            helper.assertTrue(pump.bufferAmount() == 0, "idle pump moved fluid");
+            pump.changeMode();
+            helper.runAfterDelay(2, () -> {
+                helper.assertTrue(pump.bufferAmount() == FluidPipeBlockEntity.THROUGHPUT_MB, "buffer " + pump.bufferAmount());
+                helper.succeed();
+            });
+        });
     }
 }

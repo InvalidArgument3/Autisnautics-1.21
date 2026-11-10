@@ -19,6 +19,8 @@ import com.neep.neepmeat.transport.ConnectionType;
 import com.neep.neepmeat.transport.ItemRoute;
 import com.neep.neepmeat.transport.PipeGraph;
 import com.neep.neepmeat.transport.PipeProperties;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import it.unimi.dsi.fastutil.Pair;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,6 +28,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -40,7 +43,7 @@ public class ItemPipeBlockEntity extends BlockEntity {
 
     private final List<TravellingItem> items = new ArrayList<>();
     private final PipeNode vertex = new PipeNode();
-    private final List<ItemStack> filters = new ArrayList<>();
+    private final List<FilterEntry> filters = new ArrayList<>();
     private int lastOutput;
 
     public ItemPipeBlockEntity(BlockPos pos, BlockState state) {
@@ -52,19 +55,40 @@ public class ItemPipeBlockEntity extends BlockEntity {
     }
 
     public void allow(ItemStack stack) {
-        if (filters.size() < 3 && !stack.isEmpty()) {
-            filters.add(stack.copyWithCount(1));
-            setChanged();
-        }
+        setEntry(filters.size(), FilterEntry.item(stack.getItem(), false));
     }
 
-    /** Upstream FilterList: an empty filter matches everything. */
+    public void allowTag(TagKey<Item> tag, boolean inverted) {
+        setEntry(filters.size(), FilterEntry.tag(tag, inverted));
+    }
+
+    public void setEntry(int index, FilterEntry entry) {
+        if (index < 0 || index >= 3 || entry == null) {
+            return;
+        }
+        while (filters.size() <= index) {
+            filters.add(null);
+        }
+        filters.set(index, entry);
+        filters.removeIf(candidate -> candidate == null);
+        setChanged();
+    }
+
+    public List<FilterEntry> entries() {
+        return List.copyOf(filters);
+    }
+
+    public boolean prioritise() {
+        return getBlockState().getBlock() instanceof FilterItemPipeBlock;
+    }
+
+    /** Upstream FilterList: an empty filter matches everything. Any entry may match. */
     public boolean allows(ItemStack stack) {
         if (!(getBlockState().getBlock() instanceof FilterItemPipeBlock) || filters.isEmpty()) {
             return true;
         }
-        for (ItemStack filter : filters) {
-            if (ItemStack.isSameItem(filter, stack)) {
+        for (FilterEntry entry : filters) {
+            if (entry.matches(stack)) {
                 return true;
             }
         }
@@ -218,8 +242,10 @@ public class ItemPipeBlockEntity extends BlockEntity {
 
         @Override
         public boolean canSimplify() {
-            return !(getBlockState().getBlock() instanceof FilterItemPipeBlock)
-                    && !(getBlockState().getBlock() instanceof MergePipeBlock);
+            Block block = getBlockState().getBlock();
+            return !(block instanceof FilterItemPipeBlock)
+                    && !(block instanceof MergePipeBlock)
+                    && !(block instanceof StorageBusBlock);
         }
 
         @Override

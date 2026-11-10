@@ -25,6 +25,7 @@ package com.neep.neepmeat;
 import com.neep.neepmeat.building.BuildingBlocks;
 import com.neep.neepmeat.machine.NeepMachines;
 import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
+import com.neep.neepmeat.machine.transport.FilterPipeScreen;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
@@ -40,6 +41,7 @@ public final class NeepMeatClient {
 
     public static void onScreens(RegisterMenuScreensEvent event) {
         event.register(NeepMachines.ALLOY_MENU.get(), AlloyKilnScreen::new);
+        event.register(NeepMachines.FILTER_MENU.get(), FilterPipeScreen::new);
     }
 
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {

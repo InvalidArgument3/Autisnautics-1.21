@@ -42,6 +42,18 @@ Boot evidence is below. Machines, pipes, the PLC, weapons, fluids-as-content, an
 7. Flywheel only as `compileOnly` against the jar Create 6.0.10 already requires. No bundling.
 8. Atlas still owns recipe changes. `blood_bubble_planks` stays in `#minecraft:planks`.
 
+## Phase 2b continued: requests, priority routes, filter screen, pump buffer
+
+Jar `0.30.0-neoforge.6`.
+
+| System | State | Notes |
+| --- | --- | --- |
+| Route search | ported | Priority queue. Entering a filter pipe costs one less than a plain pipe, so filters are expanded first. The first handler that accepts the stack under simulate is the route. |
+| Requests | partial | A storage bus exposes the inventory it touches. An item requester asks for one item every ten ticks. `RoutingNetwork.request` simulates the extract, builds the route, then extracts and inserts. Crafting requests, recursion through other requesters, and the deferred `RoutablePipe` callbacks from `RoutingNetworkImpl` are not ported. |
+| Filter entries | ported | Item entries, tag entries, and the inverted flag. An empty list still matches everything. Any one entry may match. The screen has three slots, Invert, and Tag (the item's first item tag). |
+| Pump | ported for modes and buffer | Active when redstone and `activeWithoutRedstone` differ. Right-click toggles that flag. While active, the back mode is PULL and the front mode is PUSH. Fluid moves through a 1000 mB buffer at 125 mB per ten ticks. |
+| Screen widget kit, upstream tank, blood, other machines, PLC, weapons | missing | Next. |
+
 ## Phase 2b continued: pipe graph, filters, merge, driver, pump, colours
 
 Jar `0.30.0-neoforge.5`.
@@ -179,16 +191,16 @@ Grouped by upstream package. Counts are Java files, from the 1.20.1 tree, so the
 
 ## What "boots" means
 
-`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.5`:
+`./gradlew runGameTestServer` on JDK 21, jar `0.30.0-neoforge.6`:
 
 ```
-meatlib 0.30.0-neoforge.5 loaded
-NeepMeat 0.30.0-neoforge.5 loaded with GeckoLib 4.9.3
-All 16 required tests passed :)
+meatlib 0.30.0-neoforge.6 loaded
+NeepMeat 0.30.0-neoforge.6 loaded with GeckoLib 4.9.3
+All 19 required tests passed :)
 BUILD SUCCESSFUL
 ```
 
-The sixteen tests cover the earlier machine checks plus junction linking, the filter, the merge pipe, the driver, the pump (125 mB), and coloured pipes refusing a colour change.
+The nineteen tests add a requester pulling dirt through a storage bus, the priority route preferring a filter pipe, tag and inverted filter entries, and an idle pump that fills its buffer only after the mode toggle.
 
 `./gradlew runClient` on `DISPLAY=:1` reached `Backend library: LWJGL version 3.3.3+5` and `meatlib client screen hook ready`. After `pipe_sides` was dropped from the fluid-pipe blockstate, the only `ERROR` was `Error starting SoundSystem` because this VM has no sound card. The main menu was not clicked through. A dedicated server boot was not repeated on this jar; the game-test server is the dedicated boot that ran the tests.
 

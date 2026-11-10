@@ -39,13 +39,13 @@ public class FilterItemPipeBlock extends ItemPipeBlock {
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!stack.isEmpty() && level.getBlockEntity(pos) instanceof ItemPipeBlockEntity pipe) {
-            if (!level.isClientSide) {
-                pipe.allow(stack);
-            }
-            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+    protected net.minecraft.world.InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!level.isClientSide && level.getBlockEntity(pos) instanceof ItemPipeBlockEntity pipe && player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+            serverPlayer.openMenu(new net.minecraft.world.SimpleMenuProvider(
+                    (id, inventory, unused) -> new FilterPipeMenu(id, inventory, pipe),
+                    net.minecraft.network.chat.Component.translatable("block.neepmeat.filter_item_pipe")),
+                    buf -> buf.writeBlockPos(pos));
         }
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        return net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide);
     }
 }

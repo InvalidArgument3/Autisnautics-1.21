@@ -54,6 +54,22 @@ public class PumpBlock extends BaseEntityBlock {
     }
 
     @Override
+    protected void neighborChanged(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+        super.neighborChanged(state, level, pos, block, fromPos, isMoving);
+        if (!level.isClientSide && level.getBlockEntity(pos) instanceof PumpBlockEntity pump) {
+            pump.updatePowered(level.hasNeighborSignal(pos));
+        }
+    }
+
+    @Override
+    protected net.minecraft.world.InteractionResult useWithoutItem(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.BlockHitResult hit) {
+        if (!level.isClientSide && level.getBlockEntity(pos) instanceof PumpBlockEntity pump) {
+            pump.changeMode();
+        }
+        return net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PumpBlockEntity(pos, state);
     }
