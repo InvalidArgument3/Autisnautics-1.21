@@ -43,6 +43,13 @@ public final class Processes {
         INSTANCE.register(new CrusherProcess());
         INSTANCE.register(new LargeTrommelProcess());
         INSTANCE.register(new BallMillProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.BioreactorProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.CharnelPumpProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.DisruptorProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.PhageRayProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.TreeVacuumProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.DistributorPointProcess());
+        INSTANCE.register(new com.neep.neepmeat.machine.live_machine.process.PressurisedDigesterProcess());
     }
 
     public void register(Process process) {

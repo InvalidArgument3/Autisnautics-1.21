@@ -60,6 +60,7 @@ public final class NeepMeat {
         com.neep.neepmeat.transport.block.VascularConduits.register(bus);
         com.neep.neepmeat.recipe.NeepComponents.COMPONENTS.register(bus);
         MaterialItems.register(bus);
+        com.neep.neepmeat.block.RecipeBlocks.register(bus);
         BloodFluids.register(bus);
         com.neep.neepmeat.fluid.EtherealFuel.register(bus);
         com.neep.neepmeat.fluid.MeatFluid.register(bus);
@@ -72,7 +73,10 @@ public final class NeepMeat {
         BLOCKS.register(bus);
         ITEMS.register(bus);
         TABS.register(bus);
+        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(com.neep.neepmeat.transport.worm.DistributorRouting::onLevelTick);
         if (dist.isClient()) {
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(com.neep.neepmeat.client.hud.BlockPlacementHelper::onClientTick);
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(com.neep.neepmeat.client.hud.BlockPlacementHelper::onHighlight);
             bus.addListener(NeepMeatClient::onBlockColors);
             bus.addListener(NeepMeatClient::onItemColors);
             bus.addListener(NeepMeatClient::onScreens);

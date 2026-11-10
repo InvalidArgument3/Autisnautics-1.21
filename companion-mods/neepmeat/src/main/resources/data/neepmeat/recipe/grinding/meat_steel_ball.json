@@ -1,0 +1,17 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "neepmeat:meat_steel_component",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:meat_steel_ball",
+    "amount": 1
+  },
+  "extra": {
+    "resource": "neepmeat:meat_scrap",
+    "amount": 1,
+    "chance": 0.25
+  },
+  "processtime": 40
+}

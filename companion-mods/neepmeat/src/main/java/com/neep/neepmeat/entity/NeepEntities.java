@@ -21,6 +21,8 @@ public final class NeepEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(Registries.ENTITY_TYPE, NeepMeat.ID);
     public static final DeferredHolder<EntityType<?>, EntityType<MachineWormEntity>> MACHINE_WORM = ENTITIES.register("machine_worm",
             () -> EntityType.Builder.of(MachineWormEntity::new, MobCategory.MONSTER).sized(1.0F, 1.0F).build("machine_worm"));
+    public static final DeferredHolder<EntityType<?>, EntityType<com.neep.neepmeat.entity.skyworm.SkywormEntity>> SKYWORM = ENTITIES.register("skyworm",
+            () -> EntityType.Builder.of(com.neep.neepmeat.entity.skyworm.SkywormEntity::new, MobCategory.MISC).sized(1.0F, 4.0F).build("skyworm"));
 
     private NeepEntities() {}
 

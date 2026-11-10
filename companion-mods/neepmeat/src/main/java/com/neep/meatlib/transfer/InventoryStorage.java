@@ -48,7 +48,7 @@ public final class InventoryStorage implements Storage<ItemVariant> {
                 rollback.add(() -> inventory.setItem(index, ItemStack.EMPTY));
                 left -= place;
                 moved += place;
-            } else if (stack.is(resource.getItem()) && stack.getCount() < stack.getMaxStackSize()) {
+            } else if (ItemStack.isSameItemSameComponents(stack, resource.toStack(1)) && stack.getCount() < stack.getMaxStackSize()) {
                 int place = Math.min(left, stack.getMaxStackSize() - stack.getCount());
                 stack.grow(place);
                 int index = slot;
@@ -78,7 +78,7 @@ public final class InventoryStorage implements Storage<ItemVariant> {
         List<Runnable> rollback = new ArrayList<>();
         for (int slot = 0; slot < inventory.getContainerSize() && left > 0; slot++) {
             ItemStack stack = inventory.getItem(slot);
-            if (stack.isEmpty() || !stack.is(resource.getItem())) {
+            if (stack.isEmpty() || !ItemStack.isSameItemSameComponents(stack, resource.toStack(1))) {
                 continue;
             }
             int take = Math.min(left, stack.getCount());

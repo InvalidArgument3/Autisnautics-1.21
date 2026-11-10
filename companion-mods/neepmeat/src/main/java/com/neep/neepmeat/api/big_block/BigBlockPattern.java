@@ -108,6 +108,26 @@ public class BigBlockPattern {
         });
     }
 
+    public BigBlockPattern rotateY(int degrees) {
+        BigBlockPattern rotated = new BigBlockPattern();
+        double radians = Math.toRadians(degrees);
+        double sine = Math.round(Math.sin(radians));
+        double cosine = Math.round(Math.cos(radians));
+        stateProviderMap.forEach((offset, state) -> {
+            int x = (int) Math.round(offset.getX() * cosine - offset.getZ() * sine);
+            int z = (int) Math.round(offset.getX() * sine + offset.getZ() * cosine);
+            rotated.set(x, offset.getY(), z, state);
+        });
+        apis.forEach((offset, names) -> {
+            int x = (int) Math.round(offset.getX() * cosine - offset.getZ() * sine);
+            int z = (int) Math.round(offset.getX() * sine + offset.getZ() * cosine);
+            for (String name : names) {
+                rotated.enableApi(x, offset.getY(), z, name);
+            }
+        });
+        return rotated;
+    }
+
     public VoxelShape toVoxelShape() {
         VoxelShape shape = Shapes.empty();
         for (Vec3i vec : iterable()) {

@@ -9,19 +9,20 @@
 
 package com.neep.meatlib.transfer;
 
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public record ItemVariant(Item item) {
-    public static final ItemVariant BLANK = new ItemVariant(Items.AIR);
+public record ItemVariant(Item item, DataComponentPatch components) {
+    public static final ItemVariant BLANK = new ItemVariant(Items.AIR, DataComponentPatch.EMPTY);
 
     public static ItemVariant of(Item item) {
-        return item == null || item == Items.AIR ? BLANK : new ItemVariant(item);
+        return item == null || item == Items.AIR ? BLANK : new ItemVariant(item, DataComponentPatch.EMPTY);
     }
 
     public static ItemVariant of(ItemStack stack) {
-        return stack.isEmpty() ? BLANK : new ItemVariant(stack.getItem());
+        return stack.isEmpty() ? BLANK : new ItemVariant(stack.getItem(), stack.getComponentsPatch());
     }
 
     public boolean isBlank() {
@@ -33,6 +34,11 @@ public record ItemVariant(Item item) {
     }
 
     public ItemStack toStack(int count) {
-        return isBlank() ? ItemStack.EMPTY : new ItemStack(item, count);
+        if (isBlank()) {
+            return ItemStack.EMPTY;
+        }
+        ItemStack stack = new ItemStack(item, count);
+        stack.applyComponents(components);
+        return stack;
     }
 }

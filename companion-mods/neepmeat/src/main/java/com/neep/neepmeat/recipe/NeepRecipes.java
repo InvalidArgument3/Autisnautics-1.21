@@ -56,7 +56,7 @@ public final class NeepRecipes {
             SERIALIZERS.register("fat_trommel", () -> new RecipeSerializer<>() {
                 @Override
                 public com.mojang.serialization.MapCodec<com.neep.neepmeat.recipe.NormalTrommelRecipe> codec() {
-                    com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f);
+                    com.neep.meatlib.recipe.ResourceSpec none = new com.neep.meatlib.recipe.ResourceSpec(java.util.Optional.empty(), java.util.Optional.empty(), Long.MAX_VALUE, -1, -1, 1f, java.util.Optional.empty());
                     return com.mojang.serialization.MapCodec.unit(new com.neep.neepmeat.recipe.NormalTrommelRecipe(none, none, null, FAT_TROMMEL.get(), this));
                 }
 

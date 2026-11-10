@@ -11,7 +11,6 @@ package com.neep.neepmeat.machine.live_machine;
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.neepmeat.machine.live_machine.block.entity.CrusherSegmentBlockEntity;
-import com.neep.neepmeat.machine.live_machine.block.entity.LargeCompressorBlockEntity;
 import com.neep.neepmeat.machine.live_machine.block.entity.ReprocessorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -43,12 +42,11 @@ public class ComponentMachineBlock extends BaseEntityBlock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (kind) {
             case CRUSHER -> new CrusherSegmentBlockEntity(pos, state);
-            case COMPRESSOR -> new LargeCompressorBlockEntity(pos, state);
             case REPROCESSOR -> new ReprocessorBlockEntity(pos, state);
         };
     }
 
     public enum Kind {
-        REPROCESSOR, CRUSHER, COMPRESSOR
+        REPROCESSOR, CRUSHER
     }
 }

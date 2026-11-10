@@ -27,4 +27,8 @@ public record SkywormAnimationTimes(int descend, int stay, int ascend, int inter
     public long total() {
         return (long) descend + stay + ascend + intermediate;
     }
+
+    public long receiverWormAppear() {
+        return (long) ascend + intermediate;
+    }
 }

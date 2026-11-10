@@ -6,10 +6,12 @@
   },
   "output": {
     "resource": "neepmeat:crushed_ore",
+    "data": { "ore_item": "minecraft:raw_gold" },
     "amount": 1
   },
   "extra": {
     "resource": "neepmeat:crushed_ore",
+    "data": { "ore_item": "minecraft:raw_gold" },
     "amount": 1,
     "chance": 0.7
   },

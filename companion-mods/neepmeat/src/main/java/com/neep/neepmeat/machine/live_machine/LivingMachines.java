@@ -110,9 +110,19 @@ public final class LivingMachines {
     public static final DeferredBlock<FluidPortBlock<FluidOutputPortBlockEntity>> FLUID_OUTPUT = CONTEXT.block("fluid_output_port",
             () -> new FluidPortBlock<>(CONTEXT, ItemSettings.block(), FluidOutputPortBlockEntity::new, portSettings()));
     public static final DeferredBlock<ComponentMachineBlock> CRUSHER = CONTEXT.block("crusher_segment", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.CRUSHER));
-    public static final DeferredBlock<ComponentMachineBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new ComponentMachineBlock(ComponentMachineBlock.Kind.COMPRESSOR));
-    public static final DeferredBlock<LargeTrommelBlock> TROMMEL = CONTEXT.block("large_trommel", LargeTrommelBlock::new);
+    public static final DeferredBlock<LargeCompressorBlock> COMPRESSOR = CONTEXT.block("large_compressor", () -> new LargeCompressorBlock(CONTEXT, portSettings()));
+    public static final DeferredBlock<com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock> BALL_MILL_STRUCTURE =
+            CONTEXT.block("ball_mill_structure", () -> new com.neep.neepmeat.api.big_block_2.BigBlockStructureBlock(ballMillBlock(), false));
+    public static final DeferredBlock<LargeTrommelBlock> TROMMEL = CONTEXT.block("large_trommel", () -> new LargeTrommelBlock(CONTEXT, portSettings()));
     public static final DeferredBlock<BallMillBlock> BALL_MILL = CONTEXT.block("ball_mill", BallMillBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.IntegrationPortBlock> INTEGRATION =
+            CONTEXT.block("integration_port", com.neep.neepmeat.machine.live_machine.block.IntegrationPortBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.LargestHopperBlock> HOPPER =
+            CONTEXT.block("largest_hopper", com.neep.neepmeat.machine.live_machine.block.LargestHopperBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock> TREE_VACUUM =
+            CONTEXT.block("tree_vacuum", com.neep.neepmeat.machine.live_machine.block.TreeVacuumBlock::new);
+    public static final DeferredBlock<com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock> DISTRIBUTOR =
+            CONTEXT.block("distributor_point", () -> new com.neep.neepmeat.machine.live_machine.block.DistributorPointBlock(portSettings()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExtractorBlockEntity>> EXTRACTOR_BE =
             BLOCK_ENTITIES.register("extractor", () -> BlockEntityType.Builder.of(ExtractorBlockEntity::new, EXTRACTOR.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SilkyExtractorBlockEntity>> SILKY_EXTRACTOR_BE =
@@ -129,6 +139,14 @@ public final class LivingMachines {
             BLOCK_ENTITIES.register("item_output_port", () -> BlockEntityType.Builder.of(ItemOutputPortBlockEntity::new, ITEM_OUTPUT.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTrommelBlockEntity>> TROMMEL_BE =
             BLOCK_ENTITIES.register("large_trommel", () -> BlockEntityType.Builder.of(LargeTrommelBlockEntity::new, TROMMEL.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.IntegrationPortBlockEntity>> INTEGRATION_BE =
+            BLOCK_ENTITIES.register("integration_port", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.IntegrationPortBlockEntity::new, INTEGRATION.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.LargestHopperBlockEntity>> HOPPER_BE =
+            BLOCK_ENTITIES.register("largest_hopper", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.LargestHopperBlockEntity::new, HOPPER.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity>> DISTRIBUTOR_BE =
+            BLOCK_ENTITIES.register("distributor_point", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity::new, DISTRIBUTOR.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.TreeVacuumBlockEntity>> TREE_VACUUM_BE =
+            BLOCK_ENTITIES.register("tree_vacuum", () -> BlockEntityType.Builder.of(com.neep.neepmeat.machine.live_machine.block.entity.TreeVacuumBlockEntity::new, TREE_VACUUM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BallMillBlockEntity>> BALL_MILL_BE =
             BLOCK_ENTITIES.register("ball_mill", () -> BlockEntityType.Builder.of(BallMillBlockEntity::new, BALL_MILL.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidOutputPortBlockEntity>> FLUID_OUTPUT_BE =
@@ -140,6 +158,10 @@ public final class LivingMachines {
 
     static {
         LivingMachineComponents.MOTOR_PORT.getBitIdx();
+    }
+
+    private static DeferredBlock<BallMillBlock> ballMillBlock() {
+        return BALL_MILL;
     }
 
     private static net.minecraft.world.level.block.state.BlockBehaviour.Properties portSettings() {

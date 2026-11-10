@@ -200,7 +200,9 @@ public class LivingMachineGameTests {
         MotorPortBlockEntity port = helper.getBlockEntity(new BlockPos(2, 0, 1));
         port.setInputPower(1.0F);
         com.neep.neepmeat.machine.live_machine.block.entity.ItemInputPortBlockEntity input = helper.getBlockEntity(new BlockPos(3, 0, 1));
-        input.getInventory().setItem(0, new net.minecraft.world.item.ItemStack(com.neep.neepmeat.item.MaterialItems.CRUSHED_ORE.get()));
+        net.minecraft.world.item.ItemStack crushed = new net.minecraft.world.item.ItemStack(com.neep.neepmeat.item.MaterialItems.CRUSHED_ORE.get());
+        crushed.set(com.neep.neepmeat.recipe.NeepComponents.ORE_ITEM.get(), net.minecraft.resources.ResourceLocation.withDefaultNamespace("raw_gold"));
+        input.getInventory().setItem(0, crushed);
         LivingMachineControllerBlockEntity controller = helper.getBlockEntity(new BlockPos(1, 0, 1));
         for (int i = 0; i < 30; i++) {
             controller.serverTick();
@@ -209,7 +211,9 @@ public class LivingMachineGameTests {
         com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(new BlockPos(5, 0, 1));
         boolean dust = false;
         for (int slot = 0; slot < output.getInventory().getContainerSize(); slot++) {
-            if (output.getInventory().getItem(slot).is(com.neep.neepmeat.item.MaterialItems.ORE_DUST.get())) {
+            net.minecraft.world.item.ItemStack result = output.getInventory().getItem(slot);
+            if (result.is(com.neep.neepmeat.item.MaterialItems.ORE_DUST.get())
+                    && net.minecraft.resources.ResourceLocation.withDefaultNamespace("raw_gold").equals(result.get(com.neep.neepmeat.recipe.NeepComponents.ORE_ITEM.get()))) {
                 dust = true;
             }
         }
@@ -254,6 +258,88 @@ public class LivingMachineGameTests {
         helper.assertTrue(helper.getBlockState(origin.offset(1, 0, 0)).isAir(), "east structure remained");
         helper.assertTrue(helper.getBlockState(origin).isAir(), "origin remained");
         helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void compressorVolumeClearsWhenTheOriginBreaks(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(6, 2, 6);
+        LargeCompressorBlock block = LivingMachines.COMPRESSOR.get();
+        net.minecraft.world.level.block.state.BlockState state = block.defaultBlockState();
+        helper.setBlock(origin, state);
+        block.setPlacedBy(helper.getLevel(), helper.absolutePos(origin), helper.getBlockState(origin), null, net.minecraft.world.item.ItemStack.EMPTY);
+        helper.assertTrue(helper.getBlockState(origin.above()).is(block.getStructure()), "compressor structure missing");
+        helper.getLevel().destroyBlock(helper.absolutePos(origin), false);
+        helper.assertTrue(helper.getBlockState(origin.above()).isAir(), "compressor structure remained");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void trommelVolumeClearsWhenTheOriginBreaks(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(8, 2, 8);
+        com.neep.neepmeat.machine.live_machine.block.LargeTrommelBlock block = LivingMachines.TROMMEL.get();
+        net.minecraft.world.level.block.state.BlockState state = block.defaultBlockState();
+        helper.setBlock(origin, state);
+        block.setPlacedBy(helper.getLevel(), helper.absolutePos(origin), helper.getBlockState(origin), null, net.minecraft.world.item.ItemStack.EMPTY);
+        helper.assertTrue(helper.getBlockState(origin.east()).is(block.getStructure()), "trommel structure missing");
+        helper.getLevel().destroyBlock(helper.absolutePos(origin), false);
+        helper.assertTrue(helper.getBlockState(origin.east()).isAir(), "trommel structure remained");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void ballMillVolumeClearsWhenTheOriginBreaks(GameTestHelper helper) {
+        BlockPos origin = new BlockPos(10, 2, 10);
+        helper.setBlock(origin, LivingMachines.BALL_MILL.get().defaultBlockState());
+        helper.assertTrue(helper.getBlockState(origin.above()).is(LivingMachines.BALL_MILL_STRUCTURE.get()), "ball mill structure missing");
+        helper.getLevel().destroyBlock(helper.absolutePos(origin), false);
+        helper.assertTrue(helper.getBlockState(origin.above()).isAir(), "ball mill structure remained");
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void outputPortEjectsIntoTheFacingChest(GameTestHelper helper) {
+        BlockPos port = new BlockPos(1, 2, 2);
+        BlockPos chest = port.north();
+        helper.setBlock(port, LivingMachines.ITEM_OUTPUT.get().defaultBlockState()
+                .setValue(com.neep.neepmeat.machine.live_machine.block.PortBlock.FACING, net.minecraft.core.Direction.NORTH)
+                .setValue(com.neep.neepmeat.machine.live_machine.block.ItemOutputPortBlock.AUTO_EJECT, true));
+        helper.setBlock(chest, net.minecraft.world.level.block.Blocks.CHEST.defaultBlockState());
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity output = helper.getBlockEntity(port);
+        try (com.neep.meatlib.transfer.Transaction transaction = com.neep.meatlib.transfer.Transaction.openOuter()) {
+            long moved = output.getInternalStorage().insert(com.neep.meatlib.transfer.ItemVariant.of(net.minecraft.world.item.Items.COBBLESTONE), 4, transaction);
+            helper.assertTrue(moved == 4, "eject moved " + moved);
+            transaction.commit();
+        }
+        com.neep.neepmeat.machine.live_machine.block.entity.ItemOutputPortBlockEntity stored = helper.getBlockEntity(port);
+        net.minecraft.world.level.block.entity.ChestBlockEntity chestEntity = helper.getBlockEntity(chest);
+        helper.assertTrue(chestEntity.getItem(0).is(net.minecraft.world.item.Items.COBBLESTONE),
+                "chest " + chestEntity.getItem(0) + " port " + helper.getBlockState(port) + " slot0 " + stored.getInventory().getItem(0));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void distributorDeliversAParcel(GameTestHelper helper) {
+        BlockPos sourcePos = new BlockPos(1, 2, 1);
+        BlockPos destPos = new BlockPos(4, 2, 1);
+        helper.setBlock(sourcePos, LivingMachines.DISTRIBUTOR.get().defaultBlockState());
+        helper.setBlock(destPos, LivingMachines.DISTRIBUTOR.get().defaultBlockState());
+        com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity source = helper.getBlockEntity(sourcePos);
+        com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity destination = helper.getBlockEntity(destPos);
+        source.setAddress("alpha");
+        source.setMode(com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity.Mode.SEND);
+        source.setPowered(true);
+        destination.setAddress("alpha");
+        destination.setMode(com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity.Mode.RECEIVE);
+        destination.setPowered(true);
+        com.neep.neepmeat.transport.worm.DistributorRouting routing = com.neep.neepmeat.transport.worm.DistributorRouting.get(helper.getLevel());
+        com.neep.neepmeat.transport.worm.DistributorParcel parcel = new com.neep.neepmeat.transport.worm.DistributorParcel(
+                java.util.List.of(new com.neep.meatlib.transfer.ResourceAmount<>(com.neep.meatlib.transfer.ItemVariant.of(net.minecraft.world.item.Items.COBBLESTONE), 1)),
+                java.util.List.of());
+        routing.send(parcel, new com.neep.neepmeat.transport.worm.DistributorDestination(destination), new com.neep.neepmeat.entity.skyworm.SkywormAnimationTimes(1, 1, 1, 1));
+        helper.succeedWhen(() -> {
+            helper.assertTrue(!destination.getQueuedParcels().isEmpty(), "parcel not delivered");
+            helper.assertTrue(routing.wormsSpawned() > 0, "skyworm was not spawned");
+        });
     }
 
     @GameTest(template = "empty")

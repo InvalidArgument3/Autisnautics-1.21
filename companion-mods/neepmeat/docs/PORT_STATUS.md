@@ -388,6 +388,20 @@ The large compressor inserts 400 droplets of `compressed_air` through that stora
 
 The grouped unresolved-symbol list from compiling the 59 not-yet-ported living-machine files is `docs/LIVING_MACHINE_UNRESOLVED.md`. Seven of those files compiled after the transfer import rewrite and are now in the tree. 52 did not.
 
+## Recipes, multiblocks, and distributor, jar 0.30.0-neoforge.35
+
+`machine/live_machine` matches all 69 upstream paths. The package has more files than that because of the port's tests and helpers. `./gradlew runGameTestServer` passed 62 tests on this jar.
+
+The eight recipes that were waiting on items are in `data/neepmeat/recipe/`. `active_waste` is a solid block (upstream it falls). `whisper_wheat_seeds` is a plain item. `asbestos` is the building-block family cube that was already registered, not `RawAsbestosBlock`. Ball-mill `data.ore_item` is the `neepmeat:ore_item` data component. `ItemVariant` keeps the component patch. The ball-mill test feeds `crushed_ore` with `minecraft:raw_gold` and checks the dust carries the same component. The iron and gold grinding and advanced-crushing crushed-ore recipes keep that field too.
+
+`large_trommel` and `large_compressor` extend `BigBlock`. `ball_mill` extends `BigBlock2`, which is what upstream does. Game tests place each volume and break the origin. Collision shapes are the block grid, not the upstream model boxes. `BigBlock` still places from `setPlacedBy`. `BigBlock2` places from `onPlace`.
+
+`DistributorPointBlockEntity` stores the address, mode, power flag, and parcel queue. `DistributorRouting` delivers the parcel after the animation total and spawns `SkywormEntity`. A game test checks both. The routing object is still a per-level map. The worm does not require a player within 60 blocks. NeepBus inputs and the altar spawn are not on these classes. The skyworm moves through descend, hold, and ascend and then discards.
+
+`ItemPipeUtil.EjectOperation` inserts into an adjacent container, item handler, or item pipe, or drops the stack into air. A game test auto-ejects cobblestone into the chest the port faces. Pipe filters and the memory key are not consulted. `playerHoldingPipe` is true for a `FluidPipeBlock` item. `TankMessagePacket` is a `CustomPacketPayload`; the client shows the amount on the action bar. `BlockPlacementHelper` draws the volume outline while a multiblock item is held, and it spawns break particles while the attack key is held. There is no particle mixin.
+
+The phage ray, charnel pump, and disruptor process classes are present and claim their components. They do not harvest, move fluid, or raise instability. `fat_trommel` is still the empty non-matching recipe.
+
 ## BigBlock and worm routing, jar 0.30.0-neoforge.34
 
 `BigBlock` places its volume from `BigBlockPattern` and clears it when the origin breaks. The reprocessor is that multiblock. A game test places the volume and breaks the origin. Structure block entities are queued during the block register event and registered on the block-entity event. `BlockPlacementPreview` does not include the client particle preview. API lookups on the pattern are string ids, which is what the metaboliser already used.

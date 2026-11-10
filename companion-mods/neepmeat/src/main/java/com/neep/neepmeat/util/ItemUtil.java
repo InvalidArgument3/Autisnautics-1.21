@@ -12,14 +12,17 @@
 
 package com.neep.neepmeat.util;
 
+import com.neep.neepmeat.machine.transport.FluidPipeBlock;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 
 public final class ItemUtil {
     private ItemUtil() {}
 
-    /** Item pipes are not ported, so a held pipe never suppresses the fluid port. */
+    /** A held fluid pipe passes the click through so the pipe can connect. */
     public static boolean playerHoldingPipe(Player player, InteractionHand hand) {
-        return false;
+        return player.getItemInHand(hand).getItem() instanceof BlockItem blockItem
+                && blockItem.getBlock() instanceof FluidPipeBlock;
     }
 }

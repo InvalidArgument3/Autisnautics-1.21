@@ -55,6 +55,7 @@ public final class MaterialItems {
     public static final DeferredItem<Item> INTEGRATION_CHARGE_CRUDE = item("integration_charge_crude", new Item.Properties());
     public static final DeferredItem<Item> BIOMASS = item("biomass", new Item.Properties());
     public static final DeferredItem<Item> WHISPER_WHEAT = item("whisper_wheat", new Item.Properties());
+    public static final DeferredItem<Item> WHISPER_WHEAT_SEEDS = item("whisper_wheat_seeds", new Item.Properties());
     public static final DeferredItem<Item> WHISPER_FLOUR = item("whisper_flour", new Item.Properties());
     public static final DeferredItem<Item> CARTON = item("carton", new Item.Properties());
     public static final DeferredItem<Item> TRANSFORMING_TOOL_BASE = item("transforming_tool_base", new Item.Properties());

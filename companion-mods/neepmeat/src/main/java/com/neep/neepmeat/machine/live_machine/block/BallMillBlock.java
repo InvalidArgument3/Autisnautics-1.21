@@ -3,40 +3,59 @@
  *
  * This file is part of NEEPMeat.
  *
- * NeoForge port. GPL-3.0-or-later headers, LGPL-3.0 LICENSE file. Not relicensed.
- * The upstream block is a BigBlock. This build places one block until BigBlock is ported.
+ * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 package com.neep.neepmeat.machine.live_machine.block;
 
 import com.mojang.serialization.MapCodec;
-import com.neep.meatlib.block.MeatlibBlockSettings;
+import com.neep.neepmeat.api.big_block.BigBlockPattern;
+import com.neep.neepmeat.api.big_block_2.BigBlock2;
+import com.neep.neepmeat.machine.live_machine.LivingMachines;
 import com.neep.neepmeat.machine.live_machine.block.entity.BallMillBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class BallMillBlock extends BaseEntityBlock {
+import java.util.Map;
+
+public class BallMillBlock extends BigBlock2 {
+    private static final BigBlockPattern X_PATTERN = BigBlockPattern.makeRange(0, -1, -1, 0, 1, 1, Blocks.AIR.defaultBlockState());
+    private static final BigBlockPattern Z_PATTERN = BigBlockPattern.makeRange(-1, -1, 0, 1, 1, 0, Blocks.AIR.defaultBlockState());
+    private static final Map<Integer, Vec3i> X_OFFSETS = X_PATTERN.encode();
+    private static final Map<Integer, Vec3i> Z_OFFSETS = Z_PATTERN.encode();
+
     public BallMillBlock() {
-        super(MeatlibBlockSettings.create().strength(2).properties());
+        super(LivingMachines.BALL_MILL_STRUCTURE);
+        registerDefaultState(defaultBlockState().setValue(AXIS, Direction.Axis.X));
     }
 
     @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
+    public BigBlockPattern volume(BlockState state) {
+        return state.getValue(AXIS) == Direction.Axis.Z ? Z_PATTERN : X_PATTERN;
+    }
+
+    @Override
+    public Map<Integer, Vec3i> offsets(BlockState state) {
+        return state.getValue(AXIS) == Direction.Axis.Z ? Z_OFFSETS : X_OFFSETS;
+    }
+
+    @Override
+    protected MapCodec<? extends net.minecraft.world.level.block.BaseEntityBlock> codec() {
         return MapCodec.unit(this);
-    }
-
-    @Override
-    public RenderShape getRenderShape(BlockState state) {
-        return RenderShape.MODEL;
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BallMillBlockEntity(pos, state);
+        return state.getValue(INDEX) == 0 ? new BallMillBlockEntity(pos, state) : null;
     }
 }

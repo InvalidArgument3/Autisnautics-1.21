@@ -13,6 +13,7 @@ package com.neep.neepmeat.api.big_block_2;
 import com.mojang.serialization.MapCodec;
 import com.neep.meatlib.block.MeatlibBlockSettings;
 import com.neep.neepmeat.api.big_block.BigBlockPattern;
+import com.neep.neepmeat.api.big_block.BlockPlacementPreview;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
@@ -29,7 +30,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.Map;
 
-public abstract class BigBlock2 extends BaseEntityBlock {
+public abstract class BigBlock2 extends BaseEntityBlock implements BlockPlacementPreview {
     public static final IntegerProperty INDEX = IntegerProperty.create("index", 0, 26);
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
     public static final String BLOOD_API = "blood";
@@ -43,6 +44,11 @@ public abstract class BigBlock2 extends BaseEntityBlock {
     }
 
     public abstract BigBlockPattern volume(BlockState state);
+
+    @Override
+    public BigBlockPattern getVolume(BlockState state) {
+        return volume(state);
+    }
 
     public abstract Map<Integer, Vec3i> offsets(BlockState state);
 

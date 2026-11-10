@@ -92,4 +92,8 @@ public abstract class BigBlock<T extends BigBlockStructure<?>> extends Block imp
     public T getStructure() {
         return structureBlock;
     }
+
+    public boolean survivesPreview(BlockState state, LevelReader world, BlockPos pos) {
+        return canSurvive(state, world, pos);
+    }
 }

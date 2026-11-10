@@ -28,6 +28,12 @@ public final class MeatlibPayloads {
 
     public static void register(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1");
+        registrar.playToClient(com.neep.neepmeat.network.TankMessagePacket.TYPE, com.neep.neepmeat.network.TankMessagePacket.STREAM_CODEC, (packet, context) ->
+                context.enqueueWork(() -> {
+                    if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
+                        com.neep.neepmeat.NeepMeatClient.showTank(packet);
+                    }
+                }));
         registrar.playBidirectional(ChannelMessage.TYPE, ChannelMessage.STREAM_CODEC, (message, context) -> {
             FriendlyByteBuf buf = new FriendlyByteBuf(Unpooled.wrappedBuffer(message.payload()));
             context.enqueueWork(() -> {

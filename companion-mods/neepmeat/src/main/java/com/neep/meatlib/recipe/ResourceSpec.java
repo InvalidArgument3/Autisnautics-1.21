@@ -14,6 +14,7 @@ package com.neep.meatlib.recipe;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.neep.neepmeat.recipe.NeepComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -34,36 +35,57 @@ import java.util.Optional;
  * Upstream {@code RegistryRecipeInput} / {@code RecipeOutput} shape: a resource or a tag,
  * an amount, and an optional min/max roll.
  */
-public record ResourceSpec(Optional<ResourceLocation> resource, Optional<String> tag, long amount, long min, long max, float chance) {
+public record ResourceSpec(Optional<ResourceLocation> resource, Optional<String> tag, long amount, long min, long max, float chance, Optional<ResourceLocation> oreItem) {
+    private static final Codec<Optional<ResourceLocation>> ORE_DATA = RecordCodecBuilder.create(instance -> instance.group(
+            ResourceLocation.CODEC.optionalFieldOf("ore_item").forGetter(value -> value)
+    ).apply(instance, value -> value));
+
     public static final Codec<ResourceSpec> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ResourceLocation.CODEC.optionalFieldOf("resource").forGetter(ResourceSpec::resource),
             Codec.STRING.optionalFieldOf("tag").forGetter(ResourceSpec::tag),
             Codec.LONG.optionalFieldOf("amount", 1L).forGetter(ResourceSpec::amount),
             Codec.LONG.optionalFieldOf("min", -1L).forGetter(ResourceSpec::min),
             Codec.LONG.optionalFieldOf("max", -1L).forGetter(ResourceSpec::max),
-            Codec.FLOAT.optionalFieldOf("chance", 1f).forGetter(ResourceSpec::chance)
+            Codec.FLOAT.optionalFieldOf("chance", 1f).forGetter(ResourceSpec::chance),
+            ORE_DATA.optionalFieldOf("data", Optional.empty()).forGetter(ResourceSpec::oreItem)
     ).apply(instance, ResourceSpec::new));
 
-    public static final StreamCodec<RegistryFriendlyByteBuf, ResourceSpec> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC), ResourceSpec::resource,
-            ByteBufCodecs.optional(ByteBufCodecs.STRING_UTF8), ResourceSpec::tag,
-            ByteBufCodecs.VAR_LONG, ResourceSpec::amount,
-            ByteBufCodecs.VAR_LONG, ResourceSpec::min,
-            ByteBufCodecs.VAR_LONG, ResourceSpec::max,
-            ByteBufCodecs.FLOAT, ResourceSpec::chance,
-            ResourceSpec::new);
+    public static final StreamCodec<RegistryFriendlyByteBuf, ResourceSpec> STREAM_CODEC = StreamCodec.of(
+            (buf, spec) -> {
+                ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC).encode(buf, spec.resource());
+                ByteBufCodecs.optional(ByteBufCodecs.STRING_UTF8).encode(buf, spec.tag());
+                ByteBufCodecs.VAR_LONG.encode(buf, spec.amount());
+                ByteBufCodecs.VAR_LONG.encode(buf, spec.min());
+                ByteBufCodecs.VAR_LONG.encode(buf, spec.max());
+                ByteBufCodecs.FLOAT.encode(buf, spec.chance());
+                ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC).encode(buf, spec.oreItem());
+            },
+            buf -> new ResourceSpec(
+                    ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC).decode(buf),
+                    ByteBufCodecs.optional(ByteBufCodecs.STRING_UTF8).decode(buf),
+                    ByteBufCodecs.VAR_LONG.decode(buf),
+                    ByteBufCodecs.VAR_LONG.decode(buf),
+                    ByteBufCodecs.VAR_LONG.decode(buf),
+                    ByteBufCodecs.FLOAT.decode(buf),
+                    ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC).decode(buf)));
 
     public boolean acceptsItem(ItemStack stack) {
         if (stack.isEmpty() || stack.getCount() < amount) {
             return false;
         }
+        boolean itemMatches = false;
         if (resource.isPresent()) {
-            return stack.is(BuiltInRegistries.ITEM.getOptional(resource.get()).orElse(Items.AIR));
+            itemMatches = stack.is(BuiltInRegistries.ITEM.getOptional(resource.get()).orElse(Items.AIR));
+        } else if (tag.isPresent()) {
+            itemMatches = stack.is(TagKey.create(Registries.ITEM, ResourceLocation.parse(tag.get())));
         }
-        if (tag.isPresent()) {
-            return stack.is(TagKey.create(Registries.ITEM, ResourceLocation.parse(tag.get())));
+        if (!itemMatches) {
+            return false;
         }
-        return false;
+        if (oreItem.isPresent()) {
+            return oreItem.get().equals(stack.get(NeepComponents.ORE_ITEM.get()));
+        }
+        return true;
     }
 
     public boolean acceptsFluid(Fluid fluid, long stored) {
@@ -81,7 +103,9 @@ public record ResourceSpec(Optional<ResourceLocation> resource, Optional<String>
 
     public ItemStack rollItem(RandomSource random) {
         Item item = resource.map(id -> BuiltInRegistries.ITEM.getOptional(id).orElse(Items.AIR)).orElse(Items.AIR);
-        return new ItemStack(item, (int) roll(random));
+        ItemStack stack = new ItemStack(item, (int) roll(random));
+        oreItem.ifPresent(id -> stack.set(NeepComponents.ORE_ITEM.get(), id));
+        return stack;
     }
 
     public Fluid fluid() {

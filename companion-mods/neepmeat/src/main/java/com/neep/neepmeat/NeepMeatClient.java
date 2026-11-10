@@ -41,6 +41,13 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 public final class NeepMeatClient {
     private NeepMeatClient() {}
 
+    public static void showTank(com.neep.neepmeat.network.TankMessagePacket packet) {
+        net.minecraft.client.Minecraft minecraft = net.minecraft.client.Minecraft.getInstance();
+        if (minecraft.player != null) {
+            minecraft.player.displayClientMessage(packet.contents(), true);
+        }
+    }
+
     public static void onBlockColors(RegisterColorHandlersEvent.Block event) {
         for (BuildingBlocks.Tint tint : BuildingBlocks.TINTS) {
             int rgb = tint.color().getFireworkColor();
