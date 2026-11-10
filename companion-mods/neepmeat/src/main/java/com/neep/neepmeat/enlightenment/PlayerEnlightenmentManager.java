@@ -13,7 +13,9 @@
 package com.neep.neepmeat.enlightenment;
 
 import com.neep.neepmeat.api.enlightenment.EnlightenmentEvent;
+import com.neep.neepmeat.client.hud.HUDOverlays;
 import com.neep.neepmeat.init.NMComponents;
+import com.neep.neepmeat.item.DosimeterItem;
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ClientTickingComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent;
@@ -184,12 +186,12 @@ public class PlayerEnlightenmentManager implements EnlightenmentManager, ClientT
         {
             if (lastDose() >= 0.3 && random.nextFloat() < 0.5f)
             {
-                throw new UnsupportedOperationException("TODO com.neep.neepmeat.client.hud.HUDOverlays");
+                HUDOverlays.startPylonVignette();
             }
 
-            if (client.level.getGameTime() % 4 == 0)
+            if (client.level != null && client.level.getGameTime() % 4 == 0)
             {
-                throw new UnsupportedOperationException("TODO com.neep.neepmeat.item.DosimeterItem");
+                DosimeterItem.Client.onTick(client, client.player, this);
             }
         }
     }

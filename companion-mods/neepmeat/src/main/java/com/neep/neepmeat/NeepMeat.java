@@ -99,6 +99,9 @@ public final class NeepMeat {
             bus.addListener(NeepMeatClient::onClientExtensions);
             bus.addListener(NeepMeatClient::onRenderers);
             bus.addListener(NeepMeatClient::onExtraModels);
+            bus.addListener(NeepMeatClient::onHud);
+            bus.addListener(NeepMeatClient::onDimensionEffects);
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(NeepMeatClient::onClientTick);
         }
         geckolibLog(container);
     }

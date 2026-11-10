@@ -1,3 +1,24 @@
+## Client tick, HUD, and dosimeter, jar 0.30.0-neoforge.67
+
+Combined-tree errors: **2045** at the start of this run, **2038** at the end. That is 7, not 400, and not at 1,645. The PLC closure was **164** and is **164**. `exclude.txt` is **1274**. `tools/port-errors/symbols.txt` is the end histogram.
+
+`PlayerEnlightenmentManager.clientTick` no longer throws. It calls `HUDOverlays.startPylonVignette` and `DosimeterItem.Client.onTick`. `NeepMeatClient.onClientTick` is registered on the client tick event and builds the manager from the synced attachment tag, because that attachment is a compound tag and not a live manager. `RegisterGuiLayersEvent` draws `HUDOverlays.renderVignettes` and the dosimeter text. Both return immediately when there is no player or level, so the title screen does not touch them. Duat dimension effects register through `RegisterDimensionSpecialEffectsEvent` instead of the mixin accessor.
+
+`HUDOverlays`, `DosimeterItem`, and `CompoundInjectorItem` compile and are off `exclude.txt`. The dosimeter tag id is `neepmeat:dosimeter`, declared next to the item because `NMTags` is still excluded.
+
+### UnsupportedOperationException audit
+
+Compiled code, after this run:
+
+- `PlayerEnlightenmentManager.clientTick` had two throws naming `HUDOverlays` and `DosimeterItem`. Those ran from the client tick once a player existed. They are removed. The tick calls the real methods.
+- `DimensionEffectsAccessor.getPropertiesMap` throws `"Accessor"`. Nothing in the compiled client calls it. Duat registration uses the NeoForge event. Not on a tick, render, or play path.
+- `ArrayWrapper` throws from `add`, `remove`, `addAll`, `removeAll`, `retainAll`, and `clear`. Nothing constructs an `ArrayWrapper`. The throws are the usual unmodifiable-collection contract, not a tick path.
+- `WormEntity.getAddEntityPacket` and `GuideNode.addChild` throw, and both files are still on `exclude.txt`, so they are not in the jar.
+
+### Client smoke
+
+`timeout 200 xvfb-run -a ./gradlew runClient` from `companion-mods/neepmeat`. The process stayed up until the timeout (exit 124). It loaded `NeepMeat 0.30.0-neoforge.67`, reloaded resources, built the texture atlases, and entered `Minecraft.runTick`. OpenAL failed with `Failed to open OpenAL device` and the game logged `Error starting SoundSystem. Turning off sounds & music`, then kept running. There was no crash. A singleplayer world was not created: nothing drives the title-screen buttons, and the log never shows a world join.
+
 ## Actuator, filters, drops, and the storage driver, jar 0.30.0-neoforge.66
 
 Combined-tree errors: **2073** at the start of this run, **2045** at the end. That is 28, not 400, and not at 1,673. The PLC closure was **167** and is **164**. `exclude.txt` is **1277**. `tools/port-errors/symbols.txt` is the end histogram.

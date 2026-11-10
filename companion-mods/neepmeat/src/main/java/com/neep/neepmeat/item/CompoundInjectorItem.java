@@ -45,7 +45,7 @@ public class CompoundInjectorItem extends BaseItem
 
     public CompoundInjectorItem(RegistrationContext ctx, FabricItemSettings settings)
     {
-        super((stack, tooltip) -> applyTooltip(stack, tooltip), settings.durability(3).defaultDurability(3));
+        super((stack, tooltip) -> applyTooltip(stack, tooltip), settings.durability(3));
     }
 
     @Override
@@ -113,7 +113,7 @@ public class CompoundInjectorItem extends BaseItem
 
     public boolean hasUses(ItemStack stack)
     {
-        return stack.getDamageValue() < this.getMaxDamage();
+        return stack.getDamageValue() < stack.getMaxDamage();
     }
 
 
@@ -153,7 +153,6 @@ public class CompoundInjectorItem extends BaseItem
         return healsFor;
     }
 
-    @Override
     private void use(ItemStack stack, Player player)
     {
         if (hasUses(stack))

@@ -17,7 +17,7 @@ import com.neep.meatlib.item.TooltipSupplier;
 import com.neep.meatlib.registry.RegistrationContext;
 import com.neep.meatlib.client.screen.GUIUtil;
 import com.neep.neepmeat.client.sound.LoopingEntityTrackingSoundInstance;
-import com.neep.neepmeat.datagen.tag.NMTags;
+import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.enlightenment.EnlightenmentManager;
 import com.neep.neepmeat.enlightenment.PlayerEnlightenmentManager;
 import com.neep.neepmeat.init.NMComponents;
@@ -28,6 +28,10 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.network.chat.Component;
@@ -49,17 +53,18 @@ public class DosimeterItem extends BaseItem
     public static class Client
     {
         private static final DecimalFormat DF = new DecimalFormat("###.#");
+        private static final TagKey<Item> DOSIMETER = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "dosimeter"));
         @Nullable static private SoundInstance alarmSound;
 
         public static void init()
         {
-            HudRenderCallback.EVENT.register(Client::renderOverlay);
+            HudRenderCallback.EVENT.register(Client::render);
 //            ClientTickEvents.START_CLIENT_TICK.
         }
 
         public static void onTick(Minecraft client, Player player, PlayerEnlightenmentManager manager)
         {
-            boolean hasDosimeter = player.getInventory().contains(NMTags.DOSIMETER);
+            boolean hasDosimeter = player.getInventory().contains(stack -> stack.is(DOSIMETER) || stack.is(NMItems.DOSIMETER));
             boolean danger = manager.lastDose() > 1;
 
             if (hasDosimeter && danger)
@@ -80,9 +85,11 @@ public class DosimeterItem extends BaseItem
             }
         }
 
-        private static void renderOverlay(GuiGraphics matrices, float tickDelta)
-        {
+        public static void render(GuiGraphics matrices, float tickDelta) {
             Minecraft client = Minecraft.getInstance();
+            if (client.player == null) {
+                return;
+            }
 
             ItemStack stack = null;
             if (client.player.getMainHandItem().is(NMItems.DOSIMETER))
@@ -92,7 +99,11 @@ public class DosimeterItem extends BaseItem
 
             if (stack != null)
             {
-                EnlightenmentManager manager = (EnlightenmentManager) NMComponents.ENLIGHTENMENT_MANAGER.get(client.player);
+                PlayerEnlightenmentManager manager = new PlayerEnlightenmentManager(client.player);
+                var attachment = NMComponents.ENLIGHTENMENT_MANAGER.attachmentType();
+                if (attachment != null) {
+                    manager.readFromNbt(client.player.getData(attachment));
+                }
                 int width = client.getWindow().getGuiScaledWidth();
                 int height = client.getWindow().getGuiScaledHeight();
 

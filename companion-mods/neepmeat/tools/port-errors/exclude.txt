@@ -263,7 +263,6 @@ com/neep/neepmeat/client/renderer/item/DrillChassisItemRenderer.java
 com/neep/neepmeat/client/renderer/item/MopRenderer.java
 com/neep/neepmeat/client/renderer/item/RolledNewspaperRenderer.java
 com/neep/neepmeat/client/renderer/item/TissueOperatorRenderer.java
-com/neep/neepmeat/client/hud/HUDOverlays.java
 com/neep/neepmeat/client/screen/CyclingButtonWidget.java
 com/neep/neepmeat/client/screen/DisplayPlateScreen.java
 com/neep/neepmeat/client/screen/FluidRationerScreen.java
@@ -379,8 +378,6 @@ com/neep/neepmeat/init/NMrecipeTypes.java
 com/neep/neepmeat/item/AdvancedIntegrationChargeItem.java
 com/neep/neepmeat/item/BaseMinecartItem.java
 com/neep/neepmeat/item/CheeseCleaverItem.java
-com/neep/neepmeat/item/DosimeterItem.java
-com/neep/neepmeat/item/CompoundInjectorItem.java
 com/neep/neepmeat/item/DrillChassisItem.java
 com/neep/neepmeat/item/DynamicOreDustItem.java
 com/neep/neepmeat/item/EnlightenmentChargeItem.java

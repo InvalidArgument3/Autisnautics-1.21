@@ -48,8 +48,11 @@ public class HUDOverlays
 
     public static void renderVignettes(float tickDelta)
     {
-        RenderSystem.setShader(GameRenderer::getPositionShader);
         Minecraft client = Minecraft.getInstance();
+        if (client.player == null || client.level == null) {
+            return;
+        }
+        RenderSystem.setShader(GameRenderer::getPositionShader);
         scaledWidth = client.getWindow().getGuiScaledWidth();
         scaledHeight = client.getWindow().getGuiScaledHeight();
         ItemStack itemStack1 = client.player.getMainHandItem();

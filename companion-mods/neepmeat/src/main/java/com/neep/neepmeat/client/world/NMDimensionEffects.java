@@ -13,7 +13,6 @@
 package com.neep.neepmeat.client.world;
 
 import com.neep.neepmeat.NeepMeat;
-import com.neep.neepmeat.mixin.client.DimensionEffectsAccessor;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.resources.ResourceLocation;
 
@@ -27,9 +26,13 @@ public class NMDimensionEffects
         register(DUAT_ID, DUAT);
     }
 
+    public static void onRegister(net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent event)
+    {
+        event.register(DUAT_ID, DUAT);
+    }
+
     public static DimensionSpecialEffects register(ResourceLocation id, DimensionSpecialEffects effects)
     {
-        DimensionEffectsAccessor.getPropertiesMap().put(id, effects);
         return effects;
     }
 }

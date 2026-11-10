@@ -43,6 +43,10 @@ public interface TooltipSupplier {
         return second == null ? first : first.append(second);
     }
 
+    static void shiftForInfo(List<Component> tooltip) {
+        tooltip.add(Component.translatable("tooltip.meatlib.shift_for_info").withStyle(ChatFormatting.GRAY));
+    }
+
     static void wrapLines(List<Component> tooltip, Component text) {
         if (tooltip != null && text != null) {
             tooltip.add(text);

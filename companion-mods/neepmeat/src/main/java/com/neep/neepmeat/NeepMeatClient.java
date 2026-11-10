@@ -31,7 +31,16 @@ import com.neep.neepmeat.machine.alloy.AlloyKilnScreen;
 import com.neep.neepmeat.machine.transport.FilterPipeScreen;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
+import com.neep.neepmeat.client.hud.HUDOverlays;
+import com.neep.neepmeat.client.world.NMDimensionEffects;
+import com.neep.neepmeat.enlightenment.PlayerEnlightenmentManager;
+import com.neep.neepmeat.item.DosimeterItem;
+import net.minecraft.nbt.CompoundTag;
+import net.neoforged.neoforge.attachment.AttachmentType;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
@@ -111,6 +120,40 @@ public final class NeepMeatClient {
         event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/spinny_bit")));
         event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/segment_1")));
         event.register(ModelResourceLocation.standalone(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "block/robotic_arm/segment_2")));
+    }
+
+    public static void onHud(RegisterGuiLayersEvent event) {
+        event.registerAboveAll(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "hud_overlays"), (graphics, delta) ->
+                HUDOverlays.renderVignettes(delta.getGameTimeDeltaPartialTick(false)));
+        event.registerAboveAll(ResourceLocation.fromNamespaceAndPath(NeepMeat.ID, "dosimeter"), (graphics, delta) ->
+                DosimeterItem.Client.render(graphics, delta.getGameTimeDeltaPartialTick(false)));
+    }
+
+    public static void onDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+        NMDimensionEffects.onRegister(event);
+    }
+
+    public static void onClientTick(ClientTickEvent.Post event) {
+        net.minecraft.client.Minecraft client = net.minecraft.client.Minecraft.getInstance();
+        if (client.player == null || client.level == null) {
+            return;
+        }
+        AttachmentType<CompoundTag> type = enlightenmentAttachment();
+        if (type == null) {
+            return;
+        }
+        PlayerEnlightenmentManager manager = new PlayerEnlightenmentManager(client.player);
+        CompoundTag tag = client.player.getData(type);
+        if (tag != null) {
+            manager.readFromNbt(tag);
+        }
+        manager.clientTick();
+    }
+
+    @SuppressWarnings("unchecked")
+    private static AttachmentType<CompoundTag> enlightenmentAttachment() {
+        var attachment = com.neep.neepmeat.init.NMComponents.ENLIGHTENMENT_MANAGER.attachmentType();
+        return attachment instanceof AttachmentType<?> ? (AttachmentType<CompoundTag>) attachment : null;
     }
 
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {
