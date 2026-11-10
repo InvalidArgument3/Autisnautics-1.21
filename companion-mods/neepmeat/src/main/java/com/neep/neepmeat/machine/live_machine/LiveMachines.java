@@ -60,6 +60,13 @@ public final class LiveMachines {
             BLOCK_ENTITIES.register("metaboliser_segment", () -> BlockEntityType.Builder
                     .of(com.neep.neepmeat.machine.live_machine.block.entity.MetaboliserSegmentBlockEntity::new, METABOLISER.get()).build(null));
 
+    public static final DeferredBlock<SimpleMachineBlock> LUCKY_ONE = CONTEXT.block("lucky_one", () -> new SimpleMachineBlock(SimpleMachineBlock.Kind.LUCKY_ONE));
+    public static final DeferredItem<BlockItem> LUCKY_ONE_ITEM = CONTEXT.item("lucky_one",
+            () -> new BlockItem(LUCKY_ONE.get(), new Item.Properties()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity>> LUCKY_ONE_BE =
+            BLOCK_ENTITIES.register("lucky_one", () -> BlockEntityType.Builder
+                    .of(com.neep.neepmeat.machine.live_machine.block.entity.LuckyOneBlockEntity::new, LUCKY_ONE.get()).build(null));
+
     static {
         LivingMachineComponents.MOTOR_PORT.getBitIdx();
     }
@@ -79,6 +86,7 @@ public final class LiveMachines {
             event.accept(MOTOR_PORT_ITEM.get());
             event.accept(STOMACH_ITEM.get());
             event.accept(METABOLISER_ITEM.get());
+            event.accept(LUCKY_ONE_ITEM.get());
         }
     }
 }

@@ -28,4 +28,13 @@ public class VascularConduitBlockEntity extends BlockEntity {
     public void setNetwork(@Nullable ConduitBloodNetwork network) {
         this.network = network;
     }
+
+    @Override
+    public void onChunkUnloaded() {
+        super.onChunkUnloaded();
+        if (network != null) {
+            network.unload(getBlockPos());
+            network = null;
+        }
+    }
 }

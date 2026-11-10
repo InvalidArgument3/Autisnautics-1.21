@@ -165,9 +165,13 @@ A controller, a machine block, a stomach, and one metaboliser segment select the
 
 Deviations: the stomach and the metaboliser segment are single blocks. Upstream builds them as big blocks. The worm's three segments are not separate entities. Hurt and death sounds are the iron golem and the generic explosion, because the upstream sound events are not registered. The other living-machine processes are not registered.
 
-## Blood network, jar 0.30.0-neoforge.17
+## Blood network, jar 0.30.0-neoforge.19
 
-Two vascular conduits between a source and a sink join one network. The source emits 1000 absolute units. That divides by the reference power of 1000, so the sink receives 1 per unit. The server ticks every network.
+A metaboliser segment emitting 1000 absolute units feeds a lucky one through two conduits. The lucky one stores 0.05 per unit, which is the upstream 50 eJ/t threshold, and consumes that amount. Each conduit face is `SIDE` or `NONE`. Breaking the middle conduit leaves the two ends on different networks. `onChunkUnloaded` drops the conduit from the network without splitting it. Balancers run before sinks, highest priority first. A balancer that returns the negation of the internal total leaves the lucky one at zero.
+
+`test_blood_source` and `test_blood_sink` are no longer registered.
+
+Deviations: the voltage-sensor block that owns the upstream balancer is not registered. The balancer test attaches an acceptor through `include`, which is the same list discovery uses. The conduit connection is a boolean face, not the full precise-pipe auto-connect rules. Chunk reload does not rejoin a conduit by itself.
 
 ## Deviations
 
