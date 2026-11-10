@@ -22,7 +22,7 @@ import com.neep.meatlib.recipe.MeatlibRecipes;
 import com.neep.meatlib.util.PlayerVelocity;
 import com.neep.meatlib.util.ValkyrienSkiesUtil;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.loader.api.FabricLoader;
+import net.neoforged.fml.ModList;
 import org.jetbrains.annotations.Nullable;
 
 public class MeatLibClient implements ClientModInitializer
@@ -44,12 +44,12 @@ public class MeatLibClient implements ClientModInitializer
         ScrollableItemsClient.init();
         PlayerVelocity.Client.init();
 
-        if (FabricLoader.getInstance().isModLoaded("emi"))
+        if (ModList.get().isLoaded("emi"))
         {
             EMI_UTIL = new EMIScreenSupport();
         }
 
-        if (FabricLoader.getInstance().isModLoaded("roughlyenoughitems"))
+        if (ModList.get().isLoaded("roughlyenoughitems"))
         {
             REI_UTIL = new REIScreenSupport();
         }

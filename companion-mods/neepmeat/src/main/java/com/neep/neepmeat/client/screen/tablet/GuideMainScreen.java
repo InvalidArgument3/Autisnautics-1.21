@@ -25,7 +25,7 @@ import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.registry.EmiExclusionAreas;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import net.fabricmc.loader.api.FabricLoader;
+import net.neoforged.fml.ModList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -273,8 +273,8 @@ public class GuideMainScreen extends AbstractContainerScreen<DummyScreenHandler>
         int logoWidth = 60;
         matrices.blit(LOGO_TEXTURE, leftPos, topPos + contentHeight - logoHeight + 1, 0, 0, logoWidth, logoHeight, logoWidth, 26);
 
-        String version = FabricLoader.getInstance().getModContainer(NeepMeat.NAMESPACE)
-                .map(m -> m.getMetadata().getVersion().getFriendlyString()).orElse("");
+        String version = ModList.get().getModContainerById(NeepMeat.NAMESPACE)
+                .map(container -> container.getModInfo().getVersion().toString()).orElse("");
         GUIUtil.drawText(
                 matrices, font, Component.nullToEmpty(version),
                 leftPos + logoWidth + 2, topPos + contentHeight - font.lineHeight + 2,

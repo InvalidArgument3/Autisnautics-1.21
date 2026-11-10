@@ -142,4 +142,34 @@ public final class CrushingRecipe implements Recipe<SingleRecipeInput>, com.neep
     public RecipeType<?> getType() {
         return type;
     }
+
+    /**
+     * The 1.20 serializer took separate normal and destroy factories. The destroy flag
+     * is now a field of this recipe, so one serializer reads both.
+     */
+    public static final class Serializer implements RecipeSerializer<CrushingRecipe> {
+        private final int time;
+        private MapCodec<CrushingRecipe> map;
+        private StreamCodec<RegistryFriendlyByteBuf, CrushingRecipe> stream;
+
+        public Serializer(int time) {
+            this.time = time;
+        }
+
+        @Override
+        public MapCodec<CrushingRecipe> codec() {
+            if (map == null) {
+                map = CrushingRecipe.codec(null, this, time);
+            }
+            return map;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, CrushingRecipe> streamCodec() {
+            if (stream == null) {
+                stream = CrushingRecipe.streamCodec(null, this);
+            }
+            return stream;
+        }
+    }
 }

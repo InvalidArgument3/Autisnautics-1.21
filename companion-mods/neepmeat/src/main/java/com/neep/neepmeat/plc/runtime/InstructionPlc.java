@@ -46,6 +46,10 @@ public final class InstructionPlc implements InterruptReceiver {
     }
 
     public void tick() {
+        tick(true);
+    }
+
+    public void tick(boolean advance) {
         if (actuator instanceof RoboticArmBlockEntity arm) {
             arm.serverTick();
         }
@@ -71,6 +75,9 @@ public final class InstructionPlc implements InterruptReceiver {
             }
             return;
         }
+        if (!advance) {
+            return;
+        }
         if (counter >= 0 && counter < program.size()) {
             try {
                 program.get(counter).start(this);
@@ -82,6 +89,10 @@ public final class InstructionPlc implements InterruptReceiver {
 
     public @Nullable String error() {
         return error;
+    }
+
+    public @Nullable RobotAction runningAction() {
+        return action;
     }
 
     @Override

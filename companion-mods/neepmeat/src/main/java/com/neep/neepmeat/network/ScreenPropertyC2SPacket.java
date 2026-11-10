@@ -17,7 +17,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -34,7 +33,7 @@ public class ScreenPropertyC2SPacket
         ServerPlayNetworking.registerGlobalReceiver(ID, ScreenPropertyC2SPacket::apply);
     }
 
-    private static void apply(MinecraftServer server, ServerPlayer player, ServerGamePacketListenerImpl networkHandler, FriendlyByteBuf buf, PacketSender sender)
+    private static void apply(MinecraftServer server, ServerPlayer player, ServerGamePacketListenerImpl networkHandler, FriendlyByteBuf buf, ServerPlayNetworking.PacketSender sender)
     {
         int id = buf.readVarInt();
         int value = buf.readVarInt();

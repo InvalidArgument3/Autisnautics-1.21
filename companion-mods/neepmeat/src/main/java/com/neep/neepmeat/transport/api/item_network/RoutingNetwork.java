@@ -382,7 +382,7 @@ public interface RoutingNetwork {
 
     record Entry(ItemVariant resource, long amount, boolean craftable, boolean real) {
         public static final ParamCodec<Entry> PARAM_CODEC = RecordParamCodec.builder(Entry.class)
-                .param(ParamCodec.of(ItemVariant.class, (value, buf) -> buf.writeNbt(value.toNbt()), buf -> ItemVariant.fromNbt(buf.readNbt())))
+                .param(ItemVariant.PARAM_CODEC)
                 .param(ParamCodec.LONG)
                 .param(ParamCodec.BOOLEAN)
                 .param(ParamCodec.BOOLEAN)

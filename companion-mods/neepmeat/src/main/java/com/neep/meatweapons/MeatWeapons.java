@@ -40,7 +40,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import com.neep.meatlib.transfer.FluidStorage;
-import net.fabricmc.loader.api.FabricLoader;
+import net.neoforged.fml.loading.FMLPaths;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -58,7 +58,7 @@ import static com.neep.meatweapons.meatgun.AmmunitionProvider.F;
 public class MeatWeapons implements ModInitializer
 {
     public static final String NAMESPACE = "meatweapons";
-    public static final MWConfig CONFIG = ConfigUtil.createDefaults(FabricLoader.getInstance().getConfigDir(), "neep", NAMESPACE, MWConfig.class);
+    public static final MWConfig CONFIG = ConfigUtil.createDefaults(FMLPaths.CONFIGDIR.get(), "neep", NAMESPACE, MWConfig.class);
 
     public static final CreativeModeTab WEAPONS = FabricItemGroup.builder()
             .title(Component.translatable("itemGroup." + NAMESPACE + ".weapons"))

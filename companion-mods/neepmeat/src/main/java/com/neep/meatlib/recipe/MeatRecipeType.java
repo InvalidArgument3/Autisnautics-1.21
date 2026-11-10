@@ -13,9 +13,10 @@
 package com.neep.meatlib.recipe;
 
 import java.util.Optional;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 
-public interface MeatRecipeType<T extends MeatlibRecipe<?>> extends RecipeType<T>
+public interface MeatRecipeType<T extends Recipe<?>> extends RecipeType<T>
 {
 //    static <T extends MeatRecipe<?>> MeatRecipeType<T> register(final String id)
 //    {

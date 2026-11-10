@@ -1,3 +1,19 @@
+## Thord editor, recipe bounds, jar 0.30.0-neoforge.70
+
+Combined-tree errors **1982 → 1919**. That is 63 this run, not 400, and not 1,582. The PLC closure is **143**. `exclude.txt` is **1231**.
+
+`RoutingNetwork.Entry` writes the item with `ItemStack.OPTIONAL_STREAM_CODEC` when the buffer is a `RegistryFriendlyByteBuf`, and with `ItemStack.OPTIONAL_CODEC` otherwise. Both keep the component patch. `PLCBlockEntity` stores the `InstructionPlc` action after each tick. `actionBlocksController()` is that action's `blocksController()`, and `overrideController()` follows it. Pause skips the next instruction and still ticks a running action.
+
+The Thord parser, token, word, and compiler packages, `PLCSyncAction`, `ProgramEditor`, `LanguageMode`, `ThordCompilePipeline`, and `PLCScreenHandler` are off `exclude.txt`. Thord documentation stays excluded: it needs the guide and tablet types. `ScreenPropertyC2SPacket` is included. Its receiver takes `ServerPlayNetworking.PacketSender`. The open PLC menu is still `PLCMenu`. `PLCSyncAction.sendCompileStatus` only reaches a `PLCScreenHandler`, so the live menu does not show that message. `getState()` is an editor state on the block entity. A failed argument stores the message on the block entity. It does not send `PLCErrorMessageS2C`. Language and record mode are saved by name.
+
+`MeatRecipeType` is `RecipeType` of any `Recipe`. Grinding uses one `CrushingRecipe.Serializer`. The destroy flag is a recipe field, not a second factory. Alloy, enlightening, and bioreactor registration fields point at the serializers those recipes already hold. `NMrecipeTypes` stays excluded, so those static registers do not run beside `NeepRecipes`.
+
+`FabricLoader` call sites use `ModList`, `FMLPaths.CONFIGDIR`, and `FMLEnvironment.dist`. Drill harvesting looks up the mojmap field `pools`.
+
+`ItemTransport` stays excluded. Its block classes override pipe methods the ported `ItemPipeBlock` does not declare (`canConnectTo` with the new-connection flag, `canConnectToApi`, `DIR_TO_CONNECTION`). Putting `implements ItemPipe` on the ejector would still leave those methods, and `ItemPipe` also requires `insert` and `isConnected`. That was the second look at the same set. It is not included.
+
+Opcodes that still run as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM.
+
 ## Three-minute smoke and static recipe codecs, jar 0.30.0-neoforge.69
 
 Combined-tree errors **2038 → 1982**. That is 56, not 400. The PLC closure is **163**. `exclude.txt` is **1274**.

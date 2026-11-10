@@ -9,7 +9,6 @@ import com.neep.neepmeat.meatgun.ModuleLootCondition;
 import com.neep.neepmeat.mixin.loot.CombinedEntryAccessor;
 import com.neep.neepmeat.mixin.loot.ItemEntryAccessor;
 import it.unimi.dsi.fastutil.Pair;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
@@ -41,7 +40,7 @@ public class DrillHarvesting
     {
         // LootTable: class_52
         // LootPool: class_55
-        FIELD_NAME = FabricLoader.getInstance().getMappingResolver().mapFieldName("intermediary", "net.minecraft.class_52", "field_943", "[Lnet/minecraft/class_55;");
+        FIELD_NAME = "pools";
 
         DataPackEvents.IMMEDIATELY_AFTER_RELOAD.register((server, registryManager) ->
         {

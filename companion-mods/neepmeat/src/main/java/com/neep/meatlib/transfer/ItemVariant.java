@@ -38,6 +38,28 @@ public record ItemVariant(Item item, DataComponentPatch components) implements T
         return item;
     }
 
+    /**
+     * Network form of this variant. Uses {@link ItemStack#OPTIONAL_STREAM_CODEC} when the
+     * buffer carries registries, and {@link ItemStack#OPTIONAL_CODEC} otherwise. Both keep
+     * the {@link DataComponentPatch}.
+     */
+    public static final com.neep.meatlib.api.network.ParamCodec<ItemVariant> PARAM_CODEC = com.neep.meatlib.api.network.ParamCodec.of(
+            ItemVariant.class,
+            (value, buf) -> {
+                ItemStack stack = value == null ? ItemStack.EMPTY : value.toStack();
+                if (buf instanceof net.minecraft.network.RegistryFriendlyByteBuf registry) {
+                    ItemStack.OPTIONAL_STREAM_CODEC.encode(registry, stack);
+                } else {
+                    buf.writeJsonWithCodec(ItemStack.OPTIONAL_CODEC, stack);
+                }
+            },
+            buf -> {
+                ItemStack stack = buf instanceof net.minecraft.network.RegistryFriendlyByteBuf registry
+                        ? ItemStack.OPTIONAL_STREAM_CODEC.decode(registry)
+                        : buf.readJsonWithCodec(ItemStack.OPTIONAL_CODEC);
+                return of(stack);
+            });
+
     public net.minecraft.nbt.CompoundTag toNbt() {
         net.minecraft.nbt.CompoundTag tag = new net.minecraft.nbt.CompoundTag();
         tag.putString("id", net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).toString());

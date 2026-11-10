@@ -9,6 +9,8 @@
 
 package com.neep.meatlib.api.network;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 
@@ -36,6 +38,16 @@ public interface ParamCodec<T> {
     ParamCodec<String> STRING = of(String.class, (value, buf) -> buf.writeUtf(value), FriendlyByteBuf::readUtf);
     ParamCodec<UUID> UUID = of(UUID.class, (value, buf) -> buf.writeUUID(value), buf -> buf.readUUID());
     ParamCodec<CompoundTag> NBT = of(CompoundTag.class, (value, buf) -> buf.writeNbt(value), buf -> buf.readNbt());
+    ParamCodec<ByteBuf> BYTE_BUF = of(ByteBuf.class, (value, buf) -> {
+        buf.writeVarInt(value.writerIndex());
+        buf.writeBytes(value);
+    }, buf -> {
+        int toRead = buf.readVarInt();
+        ByteBuf copy = Unpooled.buffer();
+        copy.capacity(toRead);
+        buf.readBytes(copy, toRead);
+        return copy;
+    });
 
     default <R> ParamCodec<R> map(Function<T, R> to, Function<R, T> from) {
         ParamCodec<T> self = this;

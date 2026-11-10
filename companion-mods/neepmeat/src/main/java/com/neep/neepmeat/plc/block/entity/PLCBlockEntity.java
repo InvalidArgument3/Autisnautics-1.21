@@ -16,6 +16,15 @@ import com.neep.neepmeat.machine.NeepMachines;
 import com.neep.neepmeat.plc.block.PLCBlock;
 import com.neep.neepmeat.plc.compiler.NeepAsmCompilePipeline;
 import com.neep.neepmeat.plc.robot.PLCActuator;
+import com.neep.neepmeat.api.plc.program.PLCProgram;
+import com.neep.neepmeat.api.plc.robot.RobotAction;
+import com.neep.neepmeat.client.screen.plc.LanguageMode;
+import com.neep.neepmeat.client.screen.plc.RecordMode;
+import com.neep.neepmeat.plc.PLCState;
+import com.neep.neepmeat.plc.editor.ProgramEditor;
+import com.neep.neepmeat.plc.instruction.Instruction;
+import com.neep.neepmeat.plc.processor.PLCMemory;
+import com.neep.neepmeat.plc.processor.VariableStack;
 import com.neep.neepmeat.plc.runtime.InstructionPlc;
 import com.neep.neepmeat.plc.screen.PLCMenu;
 import io.netty.buffer.Unpooled;
@@ -42,19 +51,143 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
     private String source = "";
     private String error = "";
     private boolean running;
+    private boolean paused;
     private @Nullable InstructionPlc machine;
 
     private boolean overrideController;
+    private @Nullable RobotAction currentAction;
+    private LanguageMode language = LanguageMode.NEEPASM;
+    private RecordMode mode = RecordMode.IMMEDIATE;
+    private final VariableStack dataStack = new VariableStack(32, "data");
+    private final PLCMemory memory = new PLCMemory(dataStack);
+    private @Nullable ProgramEditor editor;
+    private final EditorState editorState = new EditorState();
 
     private final SurgeryController surgeryRobot = new SurgeryController();
 
-    /** Upstream reads the running action. This block entity does not store that action yet. */
     public boolean actionBlocksController() {
-        return false;
+        return currentAction != null && currentAction.blocksController();
     }
 
     public boolean overrideController() {
         return overrideController;
+    }
+
+    public LanguageMode getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(LanguageMode value) {
+        language = value == null ? LanguageMode.NEEPASM : value;
+        setChanged();
+    }
+
+    public void setMode(RecordMode value) {
+        mode = value == null ? RecordMode.IMMEDIATE : value;
+        setChanged();
+    }
+
+    public ProgramEditor getProgramEditor() {
+        if (editor == null) {
+            editor = new ProgramEditor(this);
+        }
+        return editor;
+    }
+
+    public VariableStack getVariableStack() {
+        if (machine != null && machine.dataStack() instanceof VariableStack stack) {
+            return stack;
+        }
+        return dataStack;
+    }
+
+    public PLCMemory getMemory() {
+        if (machine != null && machine.getMemory() instanceof PLCMemory stored) {
+            return stored;
+        }
+        return memory;
+    }
+
+    public PLCState getState() {
+        return editorState;
+    }
+
+    public void resetError() {
+        error = "";
+    }
+
+    public boolean notExecuting() {
+        return !running || machine == null;
+    }
+
+    public void setCounter(int counter) {
+        if (machine != null) {
+            machine.setCounter(counter);
+        }
+    }
+
+    public void execute(Instruction instruction) {
+        if (instruction == null) {
+            return;
+        }
+        PLCActuator actuator = findActuator();
+        if (actuator == null) {
+            error = "No actuator in front";
+            return;
+        }
+        if (machine == null) {
+            machine = new InstructionPlc(PLCProgram.EMPTY, actuator);
+        }
+        try {
+            instruction.start(machine);
+            currentAction = machine.runningAction();
+            overrideController = currentAction != null && currentAction.blocksController();
+        } catch (NeepASM.RuntimeException exception) {
+            error = exception.getMessage();
+        }
+        setChanged();
+    }
+
+    public void runProgram(@Nullable PLCProgram program) {
+        if (program == null) {
+            return;
+        }
+        PLCActuator actuator = findActuator();
+        if (actuator == null) {
+            error = "No actuator in front";
+            running = false;
+            return;
+        }
+        error = "";
+        paused = false;
+        machine = new InstructionPlc(program, actuator);
+        running = true;
+        setChanged();
+    }
+
+    public void hardStop() {
+        machine = null;
+        stop();
+    }
+
+    public void pause() {
+        paused = true;
+        setChanged();
+    }
+
+    public void step() {
+        if (machine == null) {
+            getProgramEditor().compile(program -> {
+                runProgram(program);
+                pause();
+            });
+            return;
+        }
+        paused = true;
+        machine.tick(false);
+        currentAction = machine.runningAction();
+        overrideController = currentAction != null && currentAction.blocksController();
+        setChanged();
     }
 
     public SurgeryController getSurgeryRobot() {
@@ -177,21 +310,29 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
 
     public void stop() {
         running = false;
+        currentAction = null;
+        overrideController = false;
         setChanged();
     }
 
     public void serverTick() {
         if (!running || machine == null) {
+            currentAction = null;
+            overrideController = false;
             return;
         }
         PLCActuator actuator = machine.getActuator();
         if (actuator instanceof BuilderBlockEntity builder) {
             builder.serverTick();
         }
-        machine.tick();
+        machine.tick(!paused);
+        currentAction = machine.runningAction();
+        overrideController = currentAction != null && currentAction.blocksController();
         if (machine.error() != null) {
             error = machine.error();
             running = false;
+            currentAction = null;
+            overrideController = false;
         } else if (machine.counter() < 0) {
             running = false;
         }
@@ -230,6 +371,8 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
         tag.putString("source", source);
         tag.putString("error", error);
         tag.putBoolean("running", running);
+        tag.putString("language", language.name());
+        tag.putString("mode", mode.name());
     }
 
     @Override
@@ -238,6 +381,76 @@ public class PLCBlockEntity extends BlockEntity implements MenuProvider {
         source = tag.getString("source");
         error = tag.getString("error");
         running = false;
+        if (tag.contains("language")) {
+            try {
+                language = LanguageMode.valueOf(tag.getString("language"));
+            } catch (IllegalArgumentException ignored) {
+                language = LanguageMode.NEEPASM;
+            }
+        }
+        if (tag.contains("mode")) {
+            try {
+                mode = RecordMode.valueOf(tag.getString("mode"));
+            } catch (IllegalArgumentException ignored) {
+                mode = RecordMode.IMMEDIATE;
+            }
+        }
+    }
+
+    /**
+     * The recorder shell. Instruction errors stay on this block entity. The excluded
+     * packet that used to tell the open screen is not on this path.
+     */
+    private final class EditorState implements PLCState {
+        private com.neep.neepmeat.api.plc.instruction.InstructionBuilder instructionBuilder;
+        private com.neep.neepmeat.plc.instruction.InstructionProvider provider;
+
+        @Override
+        public void setInstructionBuilder(com.neep.neepmeat.plc.instruction.InstructionProvider provider) {
+            if (provider instanceof com.neep.neepmeat.api.plc.instruction.SimpleInstructionProvider simple && level instanceof ServerLevel server) {
+                instructionBuilder = simple.start(server, PLCBlockEntity.this::execute);
+            }
+            this.provider = provider;
+        }
+
+        @Override
+        public void argument(com.neep.neepmeat.plc.instruction.Argument argument) {
+            if (instructionBuilder == null) {
+                return;
+            }
+            try {
+                instructionBuilder.argument(argument);
+            } catch (com.neep.neepmeat.api.plc.instruction.InstructionException exception) {
+                error = exception.getMessage();
+            }
+        }
+
+        @Override
+        public RecordMode getMode() {
+            return mode;
+        }
+
+        @Override
+        public int getArgumentCount() {
+            return instructionBuilder == null ? 0 : instructionBuilder.argumentCount();
+        }
+
+        @Override
+        public int getMaxArguments() {
+            if (provider instanceof com.neep.neepmeat.api.plc.instruction.SimpleInstructionProvider simple) {
+                return simple.maxArguments();
+            }
+            return 0;
+        }
+
+        @Override
+        public CompoundTag writeNbt(CompoundTag nbt) {
+            return nbt;
+        }
+
+        @Override
+        public void readNbt(CompoundTag nbt) {
+        }
     }
 
     /** Screen properties synced through the menu data slots. */

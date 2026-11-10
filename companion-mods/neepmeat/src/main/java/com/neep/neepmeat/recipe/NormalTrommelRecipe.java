@@ -131,4 +131,25 @@ public final class NormalTrommelRecipe implements Recipe<SingleRecipeInput>, Tro
     public RecipeType<?> getType() {
         return type;
     }
+
+    public static final class NetworkSerializer implements RecipeSerializer<NormalTrommelRecipe> {
+        private MapCodec<NormalTrommelRecipe> map;
+        private StreamCodec<RegistryFriendlyByteBuf, NormalTrommelRecipe> stream;
+
+        @Override
+        public MapCodec<NormalTrommelRecipe> codec() {
+            if (map == null) {
+                map = NormalTrommelRecipe.codec(null, this);
+            }
+            return map;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, NormalTrommelRecipe> streamCodec() {
+            if (stream == null) {
+                stream = NormalTrommelRecipe.streamCodec(null, this);
+            }
+            return stream;
+        }
+    }
 }

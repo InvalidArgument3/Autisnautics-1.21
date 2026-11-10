@@ -37,7 +37,7 @@ public class RecipeRegistry
         });
     }
 
-    public static <T extends MeatlibRecipe<?>> MeatRecipeType<T> registerMeatlibType(final String namespace, final String id)
+    public static <T extends Recipe<?>> MeatRecipeType<T> registerMeatlibType(final String namespace, final String id)
     {
         return Registry.register(BuiltInRegistries.RECIPE_TYPE, ResourceLocation.fromNamespaceAndPath(namespace, id), new MeatRecipeType<T>()
         {
