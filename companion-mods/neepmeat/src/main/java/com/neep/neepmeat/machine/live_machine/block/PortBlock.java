@@ -11,6 +11,7 @@
  */
 
 package com.neep.neepmeat.machine.live_machine.block;
+import net.minecraft.world.InteractionHand;
 
 import com.neep.meatlib.block.BaseFacingBlock;
 import com.neep.meatlib.item.ItemSettings;
@@ -39,6 +40,7 @@ public class PortBlock<T extends BlockEntity> extends BaseFacingBlock implements
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        InteractionHand hand = InteractionHand.MAIN_HAND;
         if (world.getBlockEntity(pos) instanceof MenuProvider handlerFactory) {
             player.openMenu(handlerFactory);
             return InteractionResult.SUCCESS;

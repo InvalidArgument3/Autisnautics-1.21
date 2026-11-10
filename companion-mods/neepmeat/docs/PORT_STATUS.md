@@ -8,6 +8,24 @@ Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak,
 
 Deviations: no GeckoLib hatch animation, no cosmic beam particles, no encased data cable, and no whisper-flour feeding. Blood is stored in milli-buckets. The advanced integrator counts its own ticks.
 
+## One-tree compile, jar 0.30.0-neoforge.44
+
+Every staged file was moved into `src/main/java`, then every Loom file that was still absent was copied in. Flywheel `1.0.6` (Create `1.21.1-6.0.10`) is `compileOnly`. `compileJava` uses `-Xmaxerrs 100000`.
+
+Error count on that combined tree:
+
+| Pass | Errors | What changed |
+| --- | ---: | --- |
+| 0 | 5952 | Staged sources moved in, Flywheel on the classpath |
+| 1 | 5198 | Removed 687 `@Override` annotations 1.21 does not match. `BlockRenderLayerMap` writes NeoForge render layers |
+| 2 | 7119 | Copied the other 981 missing Loom files. A `super.use` rewrite was crossing newlines and was fixed |
+| 3 | 6342 | Removed 788 more stale `@Override` annotations |
+| 4 | 5419 | REI sources removed again. `@Environment` became `@OnlyIn`. `useWithoutItem` bodies that still say `hand` get a local |
+| 5 | 5174 | `BlockApiLookup` shim. GeckoLib is `compileOnly` |
+| 6 | 5044 | GeckoLib `core.animation` / `core.animatable` / `core.object` rewritten to the 4.9 packages |
+
+Half of 5952 is 2976. The combined tree is still at 5044. `tools/port-errors/exclude.txt` keeps those files out of `compileJava`, so the committed build and the game tests pass. The exclude list is 1452 files. It is not a claim that those files compile.
+
 ## Registries, attachments, and no REI, jar 0.30.0-neoforge.43
 
 `NMBlocks`, `NMBlockEntities`, `NMItems`, `NMFluids`, and `NMComponents` expose the upstream field names. They are not a second registration. `NMBlockEntities.bind` copies the holders that already exist (integrator, pedestal, advanced integrator, motor, alloy kiln). The other fields stay unset until that block class is in the main tree.
@@ -38,265 +56,265 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 
 | Package | Ported | Upstream | State |
 | --- | ---: | ---: | --- |
-| `(root)` | 3 | 2 | files present |
+| `(root)` | 4 | 2 | files present |
 | `advancement` | 2 | 1 | files present |
-| `api` | 3 | 9 | partial |
+| `api` | 9 | 9 | files present |
 | `api/big_block` | 6 | 5 | files present |
-| `api/big_block_2` | 2 | 3 | partial |
-| `api/block` | 0 | 2 | missing |
+| `api/big_block_2` | 4 | 3 | files present |
+| `api/block` | 2 | 2 | files present |
 | `api/data` | 1 | 1 | files present |
-| `api/enlightenment` | 0 | 3 | missing |
+| `api/enlightenment` | 3 | 3 | files present |
 | `api/implant` | 1 | 1 | files present |
 | `api/item` | 1 | 1 | files present |
-| `api/live_machine` | 11 | 16 | partial |
-| `api/live_machine/metrics` | 0 | 3 | missing |
+| `api/live_machine` | 16 | 16 | files present |
+| `api/live_machine/metrics` | 3 | 3 | files present |
 | `api/machine` | 1 | 1 | files present |
-| `api/multiblock` | 0 | 4 | missing |
-| `api/multiblock2` | 0 | 5 | missing |
-| `api/network` | 0 | 1 | missing |
+| `api/multiblock` | 4 | 4 | files present |
+| `api/multiblock2` | 5 | 5 | files present |
+| `api/network` | 1 | 1 | files present |
 | `api/plc` | 1 | 1 | files present |
-| `api/plc/instruction` | 5 | 9 | partial |
-| `api/plc/interrupt` | 0 | 2 | missing |
-| `api/plc/memory` | 1 | 2 | partial |
+| `api/plc/instruction` | 9 | 9 | files present |
+| `api/plc/interrupt` | 2 | 2 | files present |
+| `api/plc/memory` | 2 | 2 | files present |
 | `api/plc/program` | 2 | 2 | files present |
-| `api/plc/recipe` | 0 | 2 | missing |
-| `api/plc/robot` | 4 | 5 | partial |
-| `api/processing` | 1 | 9 | partial |
-| `api/processing/ball_mill` | 0 | 3 | missing |
-| `api/processing/random_ores` | 0 | 8 | missing |
-| `api/storage` | 3 | 11 | partial |
+| `api/plc/recipe` | 2 | 2 | files present |
+| `api/plc/robot` | 5 | 5 | files present |
+| `api/processing` | 9 | 9 | files present |
+| `api/processing/ball_mill` | 3 | 3 | files present |
+| `api/processing/random_ores` | 8 | 8 | files present |
+| `api/storage` | 11 | 11 | files present |
 | `api/theme` | 1 | 1 | files present |
-| `block` | 2 | 34 | partial |
-| `block/entity` | 0 | 12 | missing |
-| `block/entity/machine` | 0 | 2 | missing |
-| `block/fluid` | 0 | 2 | missing |
+| `block` | 35 | 34 | files present |
+| `block/entity` | 12 | 12 | files present |
+| `block/entity/machine` | 2 | 2 | files present |
+| `block/fluid` | 2 | 2 | files present |
 | `block/machine` | 1 | 1 | files present |
-| `block/redstone` | 0 | 1 | missing |
+| `block/redstone` | 1 | 1 | files present |
 | `block/sapling` | 1 | 1 | files present |
-| `block/vat` | 0 | 6 | missing |
-| `client` | 0 | 10 | missing |
-| `client/datagen` | 0 | 1 | missing |
-| `client/effect` | 0 | 1 | missing |
-| `client/fluid` | 0 | 5 | missing |
-| `client/hud` | 1 | 7 | partial |
-| `client/implant` | 0 | 6 | missing |
-| `client/input` | 0 | 1 | missing |
-| `client/instance` | 0 | 13 | missing |
-| `client/item` | 0 | 3 | missing |
-| `client/meatgun` | 0 | 3 | missing |
-| `client/meatgun/animation` | 0 | 1 | missing |
-| `client/model` | 0 | 3 | missing |
-| `client/model/block` | 0 | 5 | missing |
-| `client/model/entity` | 0 | 5 | missing |
-| `client/model/legs` | 0 | 1 | missing |
-| `client/particle` | 0 | 6 | missing |
-| `client/plc` | 0 | 3 | missing |
-| `client/renderer` | 1 | 23 | partial |
-| `client/renderer/block` | 0 | 4 | missing |
-| `client/renderer/entity` | 0 | 12 | missing |
-| `client/renderer/item` | 0 | 5 | missing |
-| `client/screen` | 0 | 16 | missing |
-| `client/screen/button` | 0 | 6 | missing |
-| `client/screen/living_machine` | 0 | 8 | missing |
-| `client/screen/living_machine/widget` | 0 | 2 | missing |
-| `client/screen/plc` | 1 | 13 | partial |
-| `client/screen/plc/edit` | 0 | 3 | missing |
-| `client/screen/tablet` | 0 | 7 | missing |
-| `client/screen/tablet/graph` | 0 | 3 | missing |
-| `client/screen/util` | 0 | 8 | missing |
-| `client/screen/widget` | 0 | 2 | missing |
-| `client/sound` | 0 | 7 | missing |
-| `client/world` | 0 | 2 | missing |
-| `compat/emi` | 3 | 2 | files present |
-| `compat/emi/helper` | 0 | 2 | missing |
-| `compat/emi/recipe` | 0 | 19 | missing |
-| `compat/forge` | 0 | 1 | missing |
+| `block/vat` | 6 | 6 | files present |
+| `client` | 10 | 10 | files present |
+| `client/datagen` | 1 | 1 | files present |
+| `client/effect` | 1 | 1 | files present |
+| `client/fluid` | 5 | 5 | files present |
+| `client/hud` | 7 | 7 | files present |
+| `client/implant` | 6 | 6 | files present |
+| `client/input` | 1 | 1 | files present |
+| `client/instance` | 13 | 13 | files present |
+| `client/item` | 3 | 3 | files present |
+| `client/meatgun` | 3 | 3 | files present |
+| `client/meatgun/animation` | 1 | 1 | files present |
+| `client/model` | 3 | 3 | files present |
+| `client/model/block` | 5 | 5 | files present |
+| `client/model/entity` | 5 | 5 | files present |
+| `client/model/legs` | 1 | 1 | files present |
+| `client/particle` | 6 | 6 | files present |
+| `client/plc` | 3 | 3 | files present |
+| `client/renderer` | 23 | 23 | files present |
+| `client/renderer/block` | 4 | 4 | files present |
+| `client/renderer/entity` | 12 | 12 | files present |
+| `client/renderer/item` | 5 | 5 | files present |
+| `client/screen` | 16 | 16 | files present |
+| `client/screen/button` | 6 | 6 | files present |
+| `client/screen/living_machine` | 8 | 8 | files present |
+| `client/screen/living_machine/widget` | 2 | 2 | files present |
+| `client/screen/plc` | 14 | 13 | files present |
+| `client/screen/plc/edit` | 3 | 3 | files present |
+| `client/screen/tablet` | 7 | 7 | files present |
+| `client/screen/tablet/graph` | 3 | 3 | files present |
+| `client/screen/util` | 8 | 8 | files present |
+| `client/screen/widget` | 2 | 2 | files present |
+| `client/sound` | 7 | 7 | files present |
+| `client/world` | 2 | 2 | files present |
+| `compat/emi` | 5 | 2 | files present |
+| `compat/emi/helper` | 2 | 2 | files present |
+| `compat/emi/recipe` | 19 | 19 | files present |
+| `compat/forge` | 1 | 1 | files present |
 | `compat/rei` | 0 | 4 | missing |
 | `compat/rei/category` | 0 | 15 | missing |
 | `compat/rei/display` | 0 | 14 | missing |
-| `component` | 1 | 9 | partial |
-| `config` | 0 | 1 | missing |
-| `datagen` | 0 | 5 | missing |
-| `datagen/tag` | 0 | 1 | missing |
-| `documentation` | 0 | 2 | missing |
-| `enlightenment` | 0 | 4 | missing |
-| `enlightenment/event` | 0 | 6 | missing |
-| `entity` | 2 | 10 | partial |
-| `entity/bovine_horror` | 0 | 8 | missing |
-| `entity/compressor_scutter` | 0 | 3 | missing |
+| `component` | 10 | 9 | files present |
+| `config` | 1 | 1 | files present |
+| `datagen` | 5 | 5 | files present |
+| `datagen/tag` | 1 | 1 | files present |
+| `documentation` | 2 | 2 | files present |
+| `enlightenment` | 4 | 4 | files present |
+| `enlightenment/event` | 6 | 6 | files present |
+| `entity` | 11 | 10 | files present |
+| `entity/bovine_horror` | 8 | 8 | files present |
+| `entity/compressor_scutter` | 3 | 3 | files present |
 | `entity/effect` | 2 | 2 | files present |
-| `entity/follower` | 0 | 4 | missing |
+| `entity/follower` | 4 | 4 | files present |
 | `entity/goal` | 2 | 2 | files present |
-| `entity/hound` | 0 | 3 | missing |
-| `entity/keeper` | 0 | 6 | missing |
-| `entity/path_legion` | 0 | 1 | missing |
-| `entity/repeater` | 0 | 2 | missing |
-| `entity/scutter` | 0 | 7 | missing |
-| `entity/skyworm` | 2 | 5 | partial |
+| `entity/hound` | 3 | 3 | files present |
+| `entity/keeper` | 6 | 6 | files present |
+| `entity/path_legion` | 1 | 1 | files present |
+| `entity/repeater` | 2 | 2 | files present |
+| `entity/scutter` | 7 | 7 | files present |
+| `entity/skyworm` | 5 | 5 | files present |
 | `entity/smudge` | 1 | 1 | files present |
-| `entity/weapon_switching` | 0 | 7 | missing |
-| `entity/worm` | 0 | 9 | missing |
-| `fluid` | 7 | 7 | files present |
-| `fluid/ore_fat` | 0 | 1 | missing |
-| `guide` | 0 | 3 | missing |
-| `guide/article` | 0 | 10 | missing |
-| `guide/larkdown` | 0 | 4 | missing |
-| `implant` | 0 | 1 | missing |
-| `implant/config` | 0 | 5 | missing |
-| `implant/entity` | 0 | 20 | missing |
-| `implant/item` | 0 | 7 | missing |
-| `init` | 8 | 21 | partial |
+| `entity/weapon_switching` | 7 | 7 | files present |
+| `entity/worm` | 9 | 9 | files present |
+| `fluid` | 14 | 7 | files present |
+| `fluid/ore_fat` | 1 | 1 | files present |
+| `guide` | 3 | 3 | files present |
+| `guide/article` | 10 | 10 | files present |
+| `guide/larkdown` | 4 | 4 | files present |
+| `implant` | 1 | 1 | files present |
+| `implant/config` | 5 | 5 | files present |
+| `implant/entity` | 20 | 20 | files present |
+| `implant/item` | 7 | 7 | files present |
+| `init` | 21 | 21 | files present |
 | `interfaces` | 3 | 3 | files present |
 | `inventory` | 1 | 1 | files present |
-| `item` | 1 | 49 | partial |
-| `item/filter` | 0 | 5 | missing |
-| `item/util` | 0 | 3 | missing |
-| `machine` | 5 | 2 | files present |
-| `machine/advanced_integrator` | 2 | 6 | partial |
-| `machine/advanced_motor` | 0 | 4 | missing |
-| `machine/alloy_kiln` | 0 | 3 | missing |
-| `machine/bottler` | 0 | 4 | missing |
-| `machine/breaker` | 0 | 2 | missing |
-| `machine/casting_basin` | 0 | 4 | missing |
-| `machine/charnel_compactor` | 0 | 2 | missing |
-| `machine/charnel_pump` | 2 | 12 | partial |
-| `machine/content_detector` | 0 | 3 | missing |
-| `machine/crucible` | 0 | 8 | missing |
-| `machine/death_blades` | 0 | 3 | missing |
-| `machine/deployer` | 0 | 2 | missing |
-| `machine/dumper` | 0 | 2 | missing |
-| `machine/fabricator` | 0 | 6 | missing |
-| `machine/fluid_exciter` | 0 | 3 | missing |
-| `machine/fluid_rationer` | 0 | 3 | missing |
-| `machine/flywheel` | 0 | 3 | missing |
-| `machine/grinder` | 0 | 6 | missing |
-| `machine/heater` | 0 | 2 | missing |
-| `machine/homogeniser` | 0 | 4 | missing |
-| `machine/hydraulic_press` | 0 | 4 | missing |
-| `machine/integrator` | 5 | 5 | files present |
-| `machine/item_mincer` | 0 | 4 | missing |
-| `machine/large_crusher` | 0 | 1 | missing |
-| `machine/large_motor` | 0 | 5 | missing |
+| `item` | 50 | 49 | files present |
+| `item/filter` | 5 | 5 | files present |
+| `item/util` | 3 | 3 | files present |
+| `machine` | 7 | 2 | files present |
+| `machine/advanced_integrator` | 6 | 6 | files present |
+| `machine/advanced_motor` | 4 | 4 | files present |
+| `machine/alloy_kiln` | 3 | 3 | files present |
+| `machine/bottler` | 4 | 4 | files present |
+| `machine/breaker` | 2 | 2 | files present |
+| `machine/casting_basin` | 4 | 4 | files present |
+| `machine/charnel_compactor` | 2 | 2 | files present |
+| `machine/charnel_pump` | 12 | 12 | files present |
+| `machine/content_detector` | 3 | 3 | files present |
+| `machine/crucible` | 8 | 8 | files present |
+| `machine/death_blades` | 3 | 3 | files present |
+| `machine/deployer` | 2 | 2 | files present |
+| `machine/dumper` | 2 | 2 | files present |
+| `machine/fabricator` | 6 | 6 | files present |
+| `machine/fluid_exciter` | 3 | 3 | files present |
+| `machine/fluid_rationer` | 3 | 3 | files present |
+| `machine/flywheel` | 3 | 3 | files present |
+| `machine/grinder` | 6 | 6 | files present |
+| `machine/heater` | 2 | 2 | files present |
+| `machine/homogeniser` | 4 | 4 | files present |
+| `machine/hydraulic_press` | 4 | 4 | files present |
+| `machine/integrator` | 7 | 5 | files present |
+| `machine/item_mincer` | 4 | 4 | files present |
+| `machine/large_crusher` | 1 | 1 | files present |
+| `machine/large_motor` | 5 | 5 | files present |
 | `machine/live_machine` | 11 | 5 | files present |
 | `machine/live_machine/block` | 20 | 20 | files present |
 | `machine/live_machine/block/entity` | 23 | 23 | files present |
 | `machine/live_machine/component` | 8 | 8 | files present |
 | `machine/live_machine/item` | 1 | 1 | files present |
 | `machine/live_machine/process` | 12 | 12 | files present |
-| `machine/living_rock` | 0 | 3 | missing |
-| `machine/mincer` | 0 | 2 | missing |
-| `machine/mixer` | 0 | 5 | missing |
-| `machine/motor` | 4 | 5 | partial |
-| `machine/multitank` | 0 | 3 | missing |
+| `machine/living_rock` | 3 | 3 | files present |
+| `machine/mincer` | 2 | 2 | files present |
+| `machine/mixer` | 5 | 5 | files present |
+| `machine/motor` | 5 | 5 | files present |
+| `machine/multitank` | 3 | 3 | files present |
 | `machine/pedestal` | 2 | 2 | files present |
-| `machine/phage_ray` | 3 | 5 | partial |
-| `machine/power_flower` | 0 | 6 | missing |
-| `machine/pylon` | 0 | 4 | missing |
-| `machine/reactor` | 1 | 7 | partial |
-| `machine/reactor/block` | 1 | 3 | partial |
-| `machine/reactor/block/entity` | 4 | 5 | partial |
-| `machine/reactor/disruptor` | 3 | 4 | partial |
-| `machine/reservoir` | 0 | 2 | missing |
-| `machine/separator` | 0 | 5 | missing |
+| `machine/phage_ray` | 5 | 5 | files present |
+| `machine/power_flower` | 6 | 6 | files present |
+| `machine/pylon` | 4 | 4 | files present |
+| `machine/reactor` | 7 | 7 | files present |
+| `machine/reactor/block` | 4 | 3 | files present |
+| `machine/reactor/block/entity` | 5 | 5 | files present |
+| `machine/reactor/disruptor` | 5 | 4 | files present |
+| `machine/reservoir` | 2 | 2 | files present |
+| `machine/separator` | 5 | 5 | files present |
 | `machine/sifter` | 1 | 1 | files present |
-| `machine/small_compressor` | 0 | 6 | missing |
-| `machine/small_trommel` | 2 | 6 | partial |
-| `machine/solidity_detector` | 0 | 2 | missing |
-| `machine/stirling_engine` | 0 | 4 | missing |
-| `machine/surgery_platform` | 0 | 2 | missing |
-| `machine/surgical_controller` | 0 | 6 | missing |
-| `machine/synthesiser` | 0 | 5 | missing |
-| `machine/transducer` | 0 | 2 | missing |
-| `machine/trough` | 0 | 3 | missing |
-| `machine/upgrade_manager` | 0 | 3 | missing |
-| `machine/well_head` | 2 | 3 | partial |
-| `meatgun` | 0 | 2 | missing |
-| `meatgun/module` | 0 | 6 | missing |
-| `mixin` | 0 | 19 | missing |
-| `mixin/client` | 0 | 16 | missing |
+| `machine/small_compressor` | 6 | 6 | files present |
+| `machine/small_trommel` | 6 | 6 | files present |
+| `machine/solidity_detector` | 2 | 2 | files present |
+| `machine/stirling_engine` | 4 | 4 | files present |
+| `machine/surgery_platform` | 2 | 2 | files present |
+| `machine/surgical_controller` | 6 | 6 | files present |
+| `machine/synthesiser` | 5 | 5 | files present |
+| `machine/transducer` | 2 | 2 | files present |
+| `machine/trough` | 3 | 3 | files present |
+| `machine/upgrade_manager` | 3 | 3 | files present |
+| `machine/well_head` | 3 | 3 | files present |
+| `meatgun` | 2 | 2 | files present |
+| `meatgun/module` | 6 | 6 | files present |
+| `mixin` | 19 | 19 | files present |
+| `mixin/client` | 16 | 16 | files present |
 | `mixin/control_drops` | 2 | 2 | files present |
 | `mixin/feature` | 1 | 1 | files present |
 | `mixin/inhibit_teleport` | 1 | 1 | files present |
-| `mixin/living_tools` | 0 | 2 | missing |
+| `mixin/living_tools` | 2 | 2 | files present |
 | `mixin/loot` | 7 | 7 | files present |
-| `mixin/villager_fear_player` | 0 | 1 | missing |
+| `mixin/villager_fear_player` | 1 | 1 | files present |
 | `neepasm/compiler` | 8 | 8 | files present |
 | `neepasm/compiler/alias` | 2 | 2 | files present |
 | `neepasm/compiler/parser` | 8 | 8 | files present |
 | `neepasm/compiler/variable` | 3 | 3 | files present |
 | `neepasm/program` | 3 | 3 | files present |
 | `neepasm/vm` | 6 | 6 | files present |
-| `network` | 3 | 13 | partial |
-| `network/plc` | 0 | 4 | missing |
-| `particle` | 0 | 5 | missing |
-| `plc` | 3 | 5 | partial |
+| `network` | 15 | 13 | files present |
+| `network/plc` | 4 | 4 | files present |
+| `particle` | 5 | 5 | files present |
+| `plc` | 6 | 5 | files present |
 | `plc/arm` | 2 | 2 | files present |
-| `plc/block` | 5 | 11 | partial |
-| `plc/block/entity` | 6 | 14 | partial |
-| `plc/compiler` | 2 | 3 | partial |
-| `plc/component` | 1 | 3 | partial |
-| `plc/editor` | 0 | 3 | missing |
-| `plc/instruction` | 29 | 48 | partial |
-| `plc/instruction/block` | 4 | 6 | partial |
-| `plc/instruction/gui` | 0 | 1 | missing |
-| `plc/instruction/inventory` | 0 | 1 | missing |
-| `plc/instruction/memory` | 4 | 6 | partial |
+| `plc/block` | 13 | 11 | files present |
+| `plc/block/entity` | 14 | 14 | files present |
+| `plc/compiler` | 3 | 3 | files present |
+| `plc/component` | 3 | 3 | files present |
+| `plc/editor` | 3 | 3 | files present |
+| `plc/instruction` | 48 | 48 | files present |
+| `plc/instruction/block` | 6 | 6 | files present |
+| `plc/instruction/gui` | 1 | 1 | files present |
+| `plc/instruction/inventory` | 1 | 1 | files present |
+| `plc/instruction/memory` | 6 | 6 | files present |
 | `plc/instruction/stack` | 6 | 6 | files present |
-| `plc/item` | 0 | 1 | missing |
-| `plc/memory` | 1 | 3 | partial |
-| `plc/processor` | 3 | 4 | partial |
+| `plc/item` | 1 | 1 | files present |
+| `plc/memory` | 3 | 3 | files present |
+| `plc/processor` | 4 | 4 | files present |
 | `plc/program` | 1 | 1 | files present |
-| `plc/recipe` | 0 | 15 | missing |
-| `plc/robot` | 2 | 4 | partial |
-| `plc/screen` | 1 | 5 | partial |
-| `potion` | 0 | 1 | missing |
-| `recipe` | 14 | 21 | partial |
-| `screen_handler` | 3 | 21 | partial |
+| `plc/recipe` | 15 | 15 | files present |
+| `plc/robot` | 4 | 4 | files present |
+| `plc/screen` | 6 | 5 | files present |
+| `potion` | 1 | 1 | files present |
+| `recipe` | 30 | 21 | files present |
+| `screen_handler` | 21 | 21 | files present |
 | `screen_handler/slot` | 1 | 1 | files present |
-| `screen_handler/widget` | 0 | 3 | missing |
-| `thord` | 0 | 3 | missing |
-| `thord/compiler` | 0 | 1 | missing |
-| `thord/documentation` | 0 | 4 | missing |
-| `thord/parser` | 0 | 9 | missing |
-| `thord/parser/node` | 0 | 15 | missing |
-| `thord/token` | 1 | 14 | partial |
-| `thord/word` | 0 | 4 | missing |
-| `transport` | 5 | 5 | files present |
-| `transport/api` | 0 | 4 | missing |
-| `transport/api/item_network` | 0 | 7 | missing |
-| `transport/api/pipe` | 5 | 15 | partial |
-| `transport/block` | 5 | 4 | files present |
-| `transport/block/energy_transport` | 0 | 6 | missing |
-| `transport/block/energy_transport/entity` | 0 | 5 | missing |
-| `transport/block/energy_transport/entity/vsc` | 0 | 2 | missing |
-| `transport/block/fluid_transport` | 0 | 20 | missing |
-| `transport/block/fluid_transport/entity` | 0 | 8 | missing |
-| `transport/block/fluid_transport/machine` | 1 | 7 | partial |
-| `transport/block/item_transport` | 0 | 17 | missing |
-| `transport/block/item_transport/entity` | 0 | 18 | missing |
-| `transport/block/item_transport/machine` | 0 | 19 | missing |
-| `transport/blood_network` | 2 | 9 | partial |
-| `transport/client` | 0 | 1 | missing |
-| `transport/client/model` | 0 | 1 | missing |
-| `transport/client/renderer` | 0 | 2 | missing |
-| `transport/client/screen` | 0 | 14 | missing |
-| `transport/client/screen/filter` | 0 | 10 | missing |
-| `transport/client/screen/widget` | 0 | 2 | missing |
-| `transport/event` | 0 | 1 | missing |
-| `transport/fluid_network` | 1 | 10 | partial |
-| `transport/fluid_network/node` | 1 | 4 | partial |
-| `transport/interfaces` | 0 | 1 | missing |
-| `transport/item` | 0 | 2 | missing |
-| `transport/item_network` | 0 | 13 | missing |
-| `transport/screen` | 0 | 15 | missing |
-| `transport/screen/widget` | 0 | 4 | missing |
-| `transport/util` | 1 | 4 | partial |
-| `transport/worm` | 6 | 8 | partial |
-| `util` | 2 | 18 | partial |
-| `world` | 0 | 1 | missing |
+| `screen_handler/widget` | 3 | 3 | files present |
+| `thord` | 3 | 3 | files present |
+| `thord/compiler` | 1 | 1 | files present |
+| `thord/documentation` | 4 | 4 | files present |
+| `thord/parser` | 9 | 9 | files present |
+| `thord/parser/node` | 15 | 15 | files present |
+| `thord/token` | 14 | 14 | files present |
+| `thord/word` | 4 | 4 | files present |
+| `transport` | 10 | 5 | files present |
+| `transport/api` | 4 | 4 | files present |
+| `transport/api/item_network` | 7 | 7 | files present |
+| `transport/api/pipe` | 15 | 15 | files present |
+| `transport/block` | 9 | 4 | files present |
+| `transport/block/energy_transport` | 6 | 6 | files present |
+| `transport/block/energy_transport/entity` | 5 | 5 | files present |
+| `transport/block/energy_transport/entity/vsc` | 2 | 2 | files present |
+| `transport/block/fluid_transport` | 20 | 20 | files present |
+| `transport/block/fluid_transport/entity` | 8 | 8 | files present |
+| `transport/block/fluid_transport/machine` | 7 | 7 | files present |
+| `transport/block/item_transport` | 17 | 17 | files present |
+| `transport/block/item_transport/entity` | 18 | 18 | files present |
+| `transport/block/item_transport/machine` | 19 | 19 | files present |
+| `transport/blood_network` | 9 | 9 | files present |
+| `transport/client` | 1 | 1 | files present |
+| `transport/client/model` | 1 | 1 | files present |
+| `transport/client/renderer` | 2 | 2 | files present |
+| `transport/client/screen` | 14 | 14 | files present |
+| `transport/client/screen/filter` | 10 | 10 | files present |
+| `transport/client/screen/widget` | 2 | 2 | files present |
+| `transport/event` | 1 | 1 | files present |
+| `transport/fluid_network` | 10 | 10 | files present |
+| `transport/fluid_network/node` | 4 | 4 | files present |
+| `transport/interfaces` | 1 | 1 | files present |
+| `transport/item` | 2 | 2 | files present |
+| `transport/item_network` | 13 | 13 | files present |
+| `transport/screen` | 15 | 15 | files present |
+| `transport/screen/widget` | 4 | 4 | files present |
+| `transport/util` | 4 | 4 | files present |
+| `transport/worm` | 8 | 8 | files present |
+| `util` | 18 | 18 | files present |
+| `world` | 1 | 1 | files present |
 | `world/feature_configu` | 1 | 1 | files present |
 
-Upstream packages: 257. Missing 160, partial 51, files present 46.
+Upstream packages: 257. Missing 3, partial 0, files present 254.
 
 ## Phase 2 milestone: meatlib
 

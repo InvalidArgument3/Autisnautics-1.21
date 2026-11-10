@@ -27,6 +27,9 @@ IMPORT_REWRITES = {
     "net.fabricmc.api.EnvType": "net.neoforged.api.distmarker.Dist",
     "net.fabricmc.api.Environment": "net.neoforged.api.distmarker.OnlyIn",
     "net.fabricmc.fabric.api.util.NbtType": "net.minecraft.nbt.Tag",
+    "software.bernie.geckolib.core.animation": "software.bernie.geckolib.animation",
+    "software.bernie.geckolib.core.animatable": "software.bernie.geckolib.animatable",
+    "software.bernie.geckolib.core.object": "software.bernie.geckolib.util",
 }
 
 REPLACEMENTS = [
@@ -54,9 +57,10 @@ REPLACEMENTS = [
      r"protected BlockState mirror("),
     (re.compile(r"(public|protected) InteractionResult use\((.*?)InteractionHand \w+, (BlockHitResult \w+)\)"),
      r"protected InteractionResult useWithoutItem(\2\3)"),
-    (re.compile(r"super\.use\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, ([^)]+)\)"),
+    (re.compile(r"super\.use\(([^,\n]+), ([^,\n]+), ([^,\n]+), ([^,\n]+), [^,\n]+, ([^)\n]+)\)"),
      r"super.useWithoutItem(\1, \2, \3, \4, \5)"),
     (re.compile(r"@Environment\(EnvType\.CLIENT\)"), "@OnlyIn(Dist.CLIENT)"),
+    (re.compile(r"@Environment\(value\s*=\s*Dist\.CLIENT\)"), "@OnlyIn(Dist.CLIENT)"),
     (re.compile(r"\bEnvType\.CLIENT\b"), "Dist.CLIENT"),
     (re.compile(r"\bEnvType\.SERVER\b"), "Dist.DEDICATED_SERVER"),
     (re.compile(r"\bNbtType\.COMPOUND\b"), "Tag.TAG_COMPOUND"),

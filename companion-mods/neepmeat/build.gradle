@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '0.30.0-neoforge.43'
+version = '0.30.0-neoforge.44'
 group = 'com.neep'
 base { archivesName = 'neepmeat' }
 
@@ -16,6 +16,14 @@ sourceSets {
     staged {
         java.srcDir 'src/staged/java'
         compileClasspath += sourceSets.main.compileClasspath + sourceSets.main.output
+    }
+    main {
+        java {
+            def excludeFile = file('tools/port-errors/exclude.txt')
+            if (excludeFile.exists()) {
+                exclude excludeFile.readLines().findAll { it && !it.startsWith('#') }
+            }
+        }
     }
 }
 
@@ -49,6 +57,7 @@ repositories {
     maven { url = 'https://maven.blamejared.com' }
     maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url = 'https://repo.sleeping.town/' }
+    maven { url = 'https://maven.createmod.net/' }
 }
 
 dependencies {
@@ -58,7 +67,10 @@ dependencies {
     runtimeOnly 'mezz.jei:jei-1.21.1-neoforge:19.64.0.455'
     compileOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
     runtimeOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
+    compileOnly 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.9.3'
     runtimeOnly 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.9.3'
+    // Create 1.21.1-6.0.10 pins flywheel 1.0.6 and does not jar it into NeepMeat.
+    compileOnly 'dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6'
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -66,7 +78,7 @@ dependencies {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-    options.compilerArgs.addAll(['-proc:none', '-Xmaxerrs', '8000'])
+    options.compilerArgs.addAll(['-proc:none', '-Xmaxerrs', '100000'])
 }
 
 tasks.named('compileStagedJava') {
