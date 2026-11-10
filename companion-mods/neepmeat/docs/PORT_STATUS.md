@@ -157,9 +157,20 @@ A controller, one machine block, and a motor port form a machine. Max power aver
 
 Component type ids follow upstream order. The accessor is `componentType()` because Mojmap `BlockEntity.getType()` already exists.
 
-Registered so far: `living_machine_controller`, `machine_block`, `motor_port`. The other structure variants, ports, processes, degradation, and the machine worm are not ported. The blood network and vascular conduits are the next batch.
+Registered so far: `living_machine_controller`, `machine_block`, `motor_port`. The other structure variants, ports, processes, degradation, and the machine worm are not ported.
 
-`BuilderRobot` and the full PLC shell are not replaced yet. The meatgun is still out.
+## Blood network, jar 0.30.0-neoforge.17
+
+Two vascular conduits between a source and a sink join one network. The source emits 1000 absolute units. That divides by the reference power of 1000, so the sink receives 1 per unit. The server ticks every network.
+
+## Deviations
+
+- The motor buffer is 200 droplets. A bucket fill stores 162, because NeoForge moves whole millibuckets and one millibucket is 81 droplets. The unused 38 droplets of capacity stay empty.
+- Living-machine component lookup is `componentType()`. Mojmap `BlockEntity.getType()` already returns the block entity type.
+- The flood fill, the 128 block cap, the second-controller clear, and the property math are upstream. Only the controller, the machine block, and the motor port are registered. The other 66 living-machine classes, processes, degradation, and the machine worm are not.
+- Blood flow uses the upstream split: sources are summed, divided by 1000, active sinks take first, and passive sinks share the rest. Balancers, chunk unload, and splitting a network when a conduit is removed are not implemented. The conduit connects on a face when the neighbour is a conduit or an acceptor. It does not use the upstream precise-pipe connection property. `test_blood_source` and `test_blood_sink` are the test ends, not upstream machines.
+
+`BuilderRobot`, the full PLC shell, the remaining machines, and the meatgun are still out.
 
 ## This run: requests finished, kiln screen, basic tank, blood
 
