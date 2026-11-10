@@ -20,7 +20,7 @@ public interface EnlightenmentManager extends Component
 {
     static PlayerEnlightenmentManager get(Player player)
     {
-        return (PlayerEnlightenmentManager) player.getComponent(NMComponents.ENLIGHTENMENT_MANAGER);
+        return (PlayerEnlightenmentManager) NMComponents.ENLIGHTENMENT_MANAGER.get(player);
     }
 
     int getTotal();

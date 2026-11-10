@@ -23,23 +23,40 @@ import java.util.EnumSet;
 public interface PLCActuator {
     BlockPos getBasePos();
 
-    void spawnItem(ItemStack stored);
+    void spawnItem(@Nullable ItemStack stored);
 
-    ItemStack getStored(PLC plc);
+    @Nullable
+    default ItemStack getStored(PLC plc) {
+        unsupported(plc);
+        return ItemStack.EMPTY;
+    }
 
-    void setStored(PLC plc, ItemStack stored);
+    default void setStored(PLC plc, ItemStack stored) {
+        unsupported(plc);
+    }
 
-    void dumpStored(PLC plc);
+    default void dumpStored(PLC plc) {
+        spawnItem(getStored(plc));
+    }
 
-    boolean reachedTarget(PLC plc);
+    default boolean reachedTarget(PLC plc) {
+        unsupported(plc);
+        return true;
+    }
 
-    void setTarget(PLC plc, @Nullable BlockPos target) throws NeepASM.RuntimeException;
+    default void setTarget(PLC plc, @Nullable BlockPos target) throws NeepASM.RuntimeException {
+        unsupported(plc);
+    }
 
-    double getX();
+    private void unsupported(PLC plc) {
+        if (plc != null) {
+            plc.raiseError(new PLC.Error("Actuator does not support action"));
+        }
+    }
 
-    double getY();
-
-    double getZ();
+    default double getX() { return 0; }
+    default double getY() { return 0; }
+    default double getZ() { return 0; }
 
     boolean actuatorRemoved();
 

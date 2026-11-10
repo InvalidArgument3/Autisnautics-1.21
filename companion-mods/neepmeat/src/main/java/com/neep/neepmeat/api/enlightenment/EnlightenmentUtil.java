@@ -41,13 +41,13 @@ public class EnlightenmentUtil
 
     public static float getEnlightenment(Player player)
     {
-        return NMComponents.ENLIGHTENMENT_MANAGER.get(player).getTotal();
+        return ((EnlightenmentManager) NMComponents.ENLIGHTENMENT_MANAGER.get(player)).getTotal();
 //        return player.getStatHandler().getStat(ENLIGHTENMENT);
     }
 
     public static void applyDose(ServerPlayer player, float baseAmount, double sqDistance, double split)
     {
-        EnlightenmentManager manager = NMComponents.ENLIGHTENMENT_MANAGER.get(player);
+        EnlightenmentManager manager = (EnlightenmentManager) NMComponents.ENLIGHTENMENT_MANAGER.get(player);
         manager.exposeDose(baseAmount, sqDistance, split);
     }
 

@@ -24,7 +24,6 @@ import com.neep.neepmeat.plc.block.RedstoneInterface;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
-import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
 
@@ -32,7 +31,7 @@ public class WaitRedstoneInstruction implements PlcInstruction
 {
     private final WaitAction action = new WaitAction();
     private final Supplier<Level> worldSupplier;
-    private final LazyBlockApiCache<RedstoneInterface, Direction> redstoneCache;
+    private final LazyBlockApiCache<RedstoneInterface, Void> redstoneCache;
 
     private final Argument target;
 
@@ -40,14 +39,14 @@ public class WaitRedstoneInstruction implements PlcInstruction
     {
         this.target = target;
         this.worldSupplier = worldSupplier;
-        this.redstoneCache = LazyBlockApiCache.of(RedstoneInterface.LOOKUP, worldSupplier, this.target);
+        this.redstoneCache = LazyBlockApiCache.of(RedstoneInterface.LOOKUP, target.pos(), worldSupplier, () -> null);
     }
 
     public WaitRedstoneInstruction(Supplier<Level> worldSupplier, CompoundTag nbt)
     {
         this.target = Argument.fromNbt(nbt.getCompound("target"));
         this.worldSupplier = worldSupplier;
-        this.redstoneCache = LazyBlockApiCache.of(RedstoneInterface.LOOKUP, worldSupplier, target);
+        this.redstoneCache = LazyBlockApiCache.of(RedstoneInterface.LOOKUP, target.pos(), worldSupplier, () -> null);
     }
 
     @Override

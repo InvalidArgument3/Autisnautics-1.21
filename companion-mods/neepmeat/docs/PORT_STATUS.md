@@ -1,3 +1,23 @@
+## Actuator, filters, drops, and the storage driver, jar 0.30.0-neoforge.66
+
+Combined-tree errors: **2073** at the start of this run, **2045** at the end. That is 28, not 400, and not at 1,673. The PLC closure was **167** and is **164**. `exclude.txt` is **1277**. `tools/port-errors/symbols.txt` is the end histogram.
+
+The pipe driver drops a stored stack from above the block, which is what upstream `spawnItem` does. `getStored`, `setStored`, `setTarget`, and `reachedTarget` raise "Actuator does not support action", which is the upstream default. The robotic arm still implements movement. `pipeDriverDropsItsStoredItem` checks the drop and that `setStored` is not silent.
+
+`pipeToAny` refuses an item a filter pipe does not allow before inserting it. `filteredPipeAcceptsOnlyTheMatchingItem` sends cobblestone through a filter into a chest and checks dirt does not follow.
+
+`simpleDrop` stores `Function<Block, ItemLike>`. `MeatlibBlockSettings.create` remembers it, and the block loot provider uses it. The wooden hopper is built that way. There is no mixin injecting the drop onto `Block`.
+
+`IServerWorld.getEnlightenmentEventManager` is back. `EnlightenmentEventManager`, `EnlightenmentManager`, `PlayerEnlightenmentManager`, `EnlightenmentUtil`, and `EnlightenmentEventPacket` compile. Without the server-world mixin applied, `EnlightenmentEventManager.get` keeps one manager per level. The player manager's client tick throws `UnsupportedOperationException` naming `HUDOverlays` and `DosimeterItem`, which still pull excluded client types.
+
+Ejector and item-pump constructors call `noOcclusion` and `isRedstoneConductor(InventoryDetectorBlock::never)` on the properties they pass upward.
+
+The storage bus block entity is `StorageDriverBlockEntity`. Stock still reads four cobblestone through it. `RetrievalTarget` and `StorageDriver` compile with it.
+
+`RWAIT` is the real wait-redstone provider. Opcodes that still execute as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM.
+
+`ItemTransport` was included and failed on the block classes it constructs. Those classes still have their own errors, so it went back on `exclude.txt`. The pipe lookup stays on `ItemPipeLookup`.
+
 ## Transaction-aware capabilities and a live item network, jar 0.30.0-neoforge.65
 
 Combined-tree errors: **2132** at the start of this run, **2073** at the end. That is 59, not 400, and not at 1,732. The PLC closure was **172** and is **167**. `exclude.txt` is **1286**. It lost the routing network, the pipe cache, and AREA3, EXEC, DYCALL, and DYLOC. `tools/port-errors/symbols.txt` is the end histogram.

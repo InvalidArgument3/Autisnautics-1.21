@@ -64,7 +64,9 @@ public class ItemTransport
     public static BlockEntityType<ManualRequesterBlockEntity> ITEM_REQUESTER_BE;
     public static BlockEntityType<RequesterBlockEntity> REQUESTER_BE;
 
-    public static final Block WOODEN_HOPPER = new WoodenHopperBlock(C, NMItemSettings.block(), MeatlibBlockSettings.of().simpleDrop(ItemRegistry::getMatchingItem).strength(1f).tags(MINEABLE_WITH_AXE).sound(SoundType.WOOD).properties());
+    public static final Block WOODEN_HOPPER = MeatlibBlockSettings.create(
+            MeatlibBlockSettings.of().simpleDrop(ItemRegistry::getMatchingItem).strength(1f).tags(MINEABLE_WITH_AXE).sound(SoundType.WOOD),
+            properties -> new WoodenHopperBlock(C, NMItemSettings.block(), properties));
     @Path("item_duct") public static Block HOPPER_EXTENDER = new HopperExtenderBlock(C, NMBlocks.block(), MeatlibBlockSettings.copyOf(WOODEN_HOPPER).strength(0.5f).properties());
 
     public static final Block PIPE_DRIVER = new PipeDriverBlock(C, NMItemSettings.block().plcActuator().tooltip(TooltipSupplier.hidden(2)), MeatlibBlockSettings.of().strength(1f).sound(SoundType.METAL).properties());

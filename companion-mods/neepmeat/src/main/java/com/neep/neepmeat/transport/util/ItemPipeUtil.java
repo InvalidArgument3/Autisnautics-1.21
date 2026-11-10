@@ -34,7 +34,8 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 /**
  * Moves a stack into the block the port faces: an item pipe, an item handler, or the world.
- * Pipe filters and the upstream memory key are not consulted.
+ * A filter pipe rejects an item before anything is inserted, matching an empty filter
+ * that allows every item and a populated filter that allows only its entries.
  */
 public final class ItemPipeUtil {
     private ItemPipeUtil() {}
@@ -66,6 +67,13 @@ public final class ItemPipeUtil {
         }
 
         public EjectOperation pipeToAny(com.neep.neepmeat.transport.item_network.ItemInPipe item, TransactionContext transaction) {
+            BlockPos offset = pos.relative(out);
+            BlockState state = world.getBlockState(offset);
+            if (state.getBlock() instanceof ItemPipeBlock && world.getBlockEntity(offset) instanceof ItemPipeBlockEntity pipe
+                    && !pipe.allows(item.resource().toStack((int) Math.min(item.amount(), Integer.MAX_VALUE)))) {
+                this.amount = 0;
+                return this;
+            }
             return stackToAny(item.resource(), item.amount(), transaction);
         }
 

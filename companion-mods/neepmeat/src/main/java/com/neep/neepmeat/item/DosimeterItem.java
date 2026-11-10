@@ -92,7 +92,7 @@ public class DosimeterItem extends BaseItem
 
             if (stack != null)
             {
-                EnlightenmentManager manager = NMComponents.ENLIGHTENMENT_MANAGER.get(client.player);
+                EnlightenmentManager manager = (EnlightenmentManager) NMComponents.ENLIGHTENMENT_MANAGER.get(client.player);
                 int width = client.getWindow().getGuiScaledWidth();
                 int height = client.getWindow().getGuiScaledHeight();
 

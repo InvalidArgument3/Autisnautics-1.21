@@ -11,15 +11,18 @@ package com.neep.meatlib.block;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Map;
 import java.util.Set;
-import java.util.function.Supplier;
+import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 /**
@@ -28,8 +31,11 @@ import java.util.function.ToIntFunction;
  * Tag membership is recorded for the next phase's datagen. It does not inject tags by itself.
  */
 public final class MeatlibBlockSettings {
+    private static final Map<Block, Function<Block, ItemLike>> DROPS = Collections.synchronizedMap(new IdentityHashMap<>());
+
     private final BlockBehaviour.Properties properties;
     private final Set<TagKey<Block>> tags = new HashSet<>();
+    private Function<Block, ItemLike> simpleDrop;
 
     private MeatlibBlockSettings(BlockBehaviour.Properties properties) {
         this.properties = properties;
@@ -133,8 +139,27 @@ public final class MeatlibBlockSettings {
         return this;
     }
 
-    public MeatlibBlockSettings simpleDrop(Supplier<Item> drop) {
+    public MeatlibBlockSettings simpleDrop(Function<Block, ItemLike> drop) {
+        this.simpleDrop = drop;
         return this;
+    }
+
+    public Function<Block, ItemLike> getSimpleDrop() {
+        return simpleDrop;
+    }
+
+    /** Associates the drop with the block the settings just built. Loot datagen reads it back. */
+    public static <B extends Block> B create(MeatlibBlockSettings settings, Function<BlockBehaviour.Properties, B> factory) {
+        B block = factory.apply(settings.properties());
+        if (settings.simpleDrop != null) {
+            DROPS.put(block, settings.simpleDrop);
+        }
+        return block;
+    }
+
+    public static ItemLike dropOf(Block block) {
+        Function<Block, ItemLike> drop = DROPS.get(block);
+        return drop == null ? null : drop.apply(block);
     }
 
     public MeatlibBlockSettings addTag(TagKey<Block> tag) {

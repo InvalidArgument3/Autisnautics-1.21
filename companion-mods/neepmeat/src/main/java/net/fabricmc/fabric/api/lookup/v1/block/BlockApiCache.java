@@ -62,6 +62,10 @@ public final class BlockApiCache<A, C> {
         return lookup.find(level, pos, context);
     }
 
+    public BlockPos getPos() {
+        return pos;
+    }
+
     public BlockEntity getBlockEntity() {
         return level.getBlockEntity(pos);
     }

@@ -58,10 +58,12 @@ public class BlockLootTableProvider extends FabricBlockLootTableProvider
                     }
                 }
             }
-                else if (entry instanceof MeatlibBlockExtension extension)
+                else
             {
-                // The default behaviour injected into Item delegates to MeatlibItemSettings if applicable.
-                ItemLike drop = extension.neepmeat$simpleDrop();
+                ItemLike drop = entry instanceof MeatlibBlockExtension extension ? extension.neepmeat$simpleDrop() : null;
+                if (drop == null) {
+                    drop = com.neep.meatlib.block.MeatlibBlockSettings.dropOf(entry);
+                }
                 if (drop != null)
                 {
                     this.dropOther(entry, drop);

@@ -49,6 +49,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -56,7 +57,7 @@ public class ItemPumpBlock extends EjectorBlock
 {
     public ItemPumpBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties settings)
     {
-        super(ctx, itemSettings, settings);
+        super(ctx, itemSettings, settings.noOcclusion().isRedstoneConductor(com.neep.neepmeat.machine.content_detector.InventoryDetectorBlock::never));
     }
 
     @Override

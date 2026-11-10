@@ -45,6 +45,7 @@ public class EnlightenmentEventManager
             ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "enlightenment_event"))).buildAndRegister();
 
 //    protected final List<EnlightenmentEvent> tickingEvents = new ArrayList<>(16);
+    private static final java.util.Map<ServerLevel, EnlightenmentEventManager> FALLBACK = java.util.Collections.synchronizedMap(new java.util.WeakHashMap<>());
     private final Random random;
 
 //    public static final EnlightenmentEvent.Factory TEST_EVENT = register(new TickingEnlightenmentEvent.Factory());
@@ -67,7 +68,15 @@ public class EnlightenmentEventManager
 
     public static EnlightenmentEventManager get(ServerLevel world)
     {
-        return ((IServerWorld) world).getEnlightenmentEventManager();
+        if (world instanceof IServerWorld server)
+        {
+            EnlightenmentEventManager manager = server.getEnlightenmentEventManager();
+            if (manager != null)
+            {
+                return manager;
+            }
+        }
+        return FALLBACK.computeIfAbsent(world, ignored -> new EnlightenmentEventManager());
     }
 
     protected void tick(ServerLevel world)

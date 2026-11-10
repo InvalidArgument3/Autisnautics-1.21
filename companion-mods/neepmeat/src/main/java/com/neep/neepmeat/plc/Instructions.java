@@ -301,5 +301,5 @@ public class Instructions {
     public static final InstructionProvider SHL = register(new SimplerInstructionProvider(SHLInstruction::new, SHLInstruction::parser, "SHL"));
     public static final InstructionProvider SHR = register(new SimplerInstructionProvider(SHRInstruction::new, SHRInstruction::parser, "SHR"));
     public static final InstructionProvider STOCK = register(new SimplerInstructionProvider(StockInstruction::new, StockInstruction::parser, "STOCK"));
-    public static final InstructionProvider WAIT_REDSTONE = createTrivialBlock("wait_redstone", Instruction.end());
+    public static final InstructionProvider WAIT_REDSTONE = register(new SimplerInstructionProvider((world, nbt) -> new com.neep.neepmeat.plc.instruction.WaitRedstoneInstruction(world, nbt), com.neep.neepmeat.plc.instruction.WaitRedstoneInstruction::parser, "RWAIT"));
 }

@@ -84,6 +84,68 @@ public class PlcOpcodeGameTests {
     }
 
     @GameTest(template = "empty")
+    public static void pipeDriverDropsItsStoredItem(GameTestHelper helper) {
+        BlockPos pos = new BlockPos(1, 1, 1);
+        helper.setBlock(pos, NeepMachines.PIPE_DRIVER.get().defaultBlockState());
+        com.neep.neepmeat.transport.block.item_transport.entity.PipeDriverBlockEntity driver = helper.getBlockEntity(pos);
+        driver.spawnItem(new ItemStack(Items.COBBLESTONE, 3));
+        net.minecraft.world.phys.AABB box = new net.minecraft.world.phys.AABB(helper.absolutePos(pos)).inflate(2);
+        int cobble = 0;
+        for (net.minecraft.world.entity.item.ItemEntity entity : helper.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, box)) {
+            if (entity.getItem().is(Items.COBBLESTONE)) {
+                cobble += entity.getItem().getCount();
+            }
+        }
+        helper.assertTrue(cobble == 3, "dropped " + cobble);
+        try {
+            PLCProgram program = compile(helper, "push 1\n");
+            InstructionPlc plc = new InstructionPlc(program, driver);
+            driver.setStored(plc, new ItemStack(Items.DIRT));
+            helper.assertTrue(plc.error() != null, "setStored was silent");
+        } catch (NeepASM.ProgramBuildException exception) {
+            helper.fail(exception.getMessage());
+            return;
+        }
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
+    public static void filteredPipeAcceptsOnlyTheMatchingItem(GameTestHelper helper) {
+        BlockPos from = new BlockPos(1, 1, 1);
+        BlockPos pipePos = new BlockPos(2, 1, 1);
+        BlockPos chestPos = new BlockPos(3, 1, 1);
+        helper.setBlock(chestPos, Blocks.CHEST.defaultBlockState());
+        helper.setBlock(pipePos, NeepMachines.FILTER_ITEM_PIPE.get().defaultBlockState());
+        com.neep.neepmeat.transport.block.item_transport.entity.ItemPipeBlockEntity pipe = helper.getBlockEntity(pipePos);
+        pipe.allow(new ItemStack(Items.COBBLESTONE));
+        net.minecraft.core.BlockPos absoluteFrom = helper.absolutePos(from);
+        try (com.neep.meatlib.transfer.Transaction transaction = com.neep.meatlib.transfer.Transaction.openOuter()) {
+            long moved = com.neep.neepmeat.transport.util.ItemPipeUtil.EjectOperation.of(helper.getLevel(), absoluteFrom, Direction.EAST)
+                    .pipeToAny(new com.neep.neepmeat.transport.item_network.ItemInPipe(com.neep.meatlib.transfer.ItemVariant.of(Items.COBBLESTONE), 1), transaction)
+                    .amount();
+            transaction.onRename();
+            helper.assertTrue(moved == 1, "cobble " + moved);
+        }
+        for (int tick = 0; tick < 12; tick++) {
+            pipe.serverTick();
+        }
+        ChestBlockEntity chest = helper.getBlockEntity(chestPos);
+        helper.assertTrue(chest.getItem(0).is(Items.COBBLESTONE) && chest.getItem(0).getCount() == 1, "chest " + chest.getItem(0));
+        try (com.neep.meatlib.transfer.Transaction transaction = com.neep.meatlib.transfer.Transaction.openOuter()) {
+            long moved = com.neep.neepmeat.transport.util.ItemPipeUtil.EjectOperation.of(helper.getLevel(), absoluteFrom, Direction.EAST)
+                    .pipeToAny(new com.neep.neepmeat.transport.item_network.ItemInPipe(com.neep.meatlib.transfer.ItemVariant.of(Items.DIRT), 1), transaction)
+                    .amount();
+            transaction.onRename();
+            helper.assertTrue(moved == 0, "dirt passed " + moved);
+        }
+        for (int tick = 0; tick < 12; tick++) {
+            pipe.serverTick();
+        }
+        helper.assertTrue(chest.getItem(0).getCount() == 1 && !chest.getItem(1).is(Items.DIRT), "dirt reached " + chest.getItem(1));
+        helper.succeed();
+    }
+
+    @GameTest(template = "empty")
     public static void disableInterruptsClearsTheFlag(GameTestHelper helper) {
         try {
             PLCProgram program = compile(helper, "idisable\n");

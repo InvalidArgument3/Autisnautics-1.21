@@ -58,6 +58,7 @@ import java.util.List;
 public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmeat.transport.api.item_network.RoutablePipe {
     public static final float SPEED = 0.1F;
 
+    protected final com.neep.neepmeat.transport.item_network.RoutingNetworkCache cache = new com.neep.neepmeat.transport.item_network.RoutingNetworkCache();
     private final List<TravellingItem> items = new ArrayList<>();
     private final PipeNode vertex = new PipeNode();
     private final List<FilterEntry> filters = new ArrayList<>();
@@ -66,7 +67,11 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
     private static boolean routableRegistered;
 
     public ItemPipeBlockEntity(BlockPos pos, BlockState state) {
-        super(NeepMachines.ITEM_PIPE_BE.get(), pos, state);
+        this(NeepMachines.ITEM_PIPE_BE.get(), pos, state);
+    }
+
+    public ItemPipeBlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
         if (!routableRegistered) {
             routableRegistered = true;
             com.neep.neepmeat.transport.api.item_network.RoutablePipe.LOOKUP.registerForBlockEntity(
@@ -114,6 +119,10 @@ public class ItemPipeBlockEntity extends BlockEntity implements com.neep.neepmea
     @Override
     public com.neep.neepmeat.transport.fluid_network.node.NodePos requestDestPosDir() {
         return null;
+    }
+
+    public com.neep.neepmeat.transport.item_network.RoutingNetworkCache getCache() {
+        return cache;
     }
 
     public PipeNode vertex() {

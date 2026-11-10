@@ -137,7 +137,9 @@ public final class NeepMachines {
     public static final DeferredBlock<StorageBusBlock> STORAGE_BUS = CONTEXT.block("storage_bus", StorageBusBlock::new);
     public static final DeferredItem<BlockItem> STORAGE_BUS_ITEM = CONTEXT.item("storage_bus", () -> new BlockItem(STORAGE_BUS.get(), new Item.Properties()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemPipeBlockEntity>> ITEM_PIPE_BE = BLOCK_ENTITIES.register("item_pipe",
-            () -> BlockEntityType.Builder.of(ItemPipeBlockEntity::new, ITEM_PIPE.get(), FILTER_ITEM_PIPE.get(), MERGE_PIPE.get(), STORAGE_BUS.get()).build(null));
+            () -> BlockEntityType.Builder.of((BlockPos pos, BlockState state) -> state.getBlock() instanceof com.neep.neepmeat.machine.transport.StorageBusBlock
+                    ? new com.neep.neepmeat.transport.block.item_transport.entity.StorageDriverBlockEntity(pos, state)
+                    : new ItemPipeBlockEntity(pos, state), ITEM_PIPE.get(), FILTER_ITEM_PIPE.get(), MERGE_PIPE.get(), STORAGE_BUS.get()).build(null));
     public static final DeferredHolder<MenuType<?>, MenuType<FilterPipeMenu>> FILTER_MENU = MENUS.register("filter_item_pipe",
             () -> IMenuTypeExtension.create((id, inventory, buf) -> {
                 BlockPos pos = buf.readBlockPos();

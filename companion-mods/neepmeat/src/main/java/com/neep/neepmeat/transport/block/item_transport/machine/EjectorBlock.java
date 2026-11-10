@@ -71,7 +71,7 @@ public class EjectorBlock extends BaseFacingBlock implements EntityBlock, ItemPi
 
     public EjectorBlock(RegistrationContext ctx, ItemSettings itemSettings, BlockBehaviour.Properties settings)
     {
-        super(ctx, itemSettings, settings);
+        super(ctx, itemSettings, settings.noOcclusion().isRedstoneConductor(com.neep.neepmeat.machine.content_detector.InventoryDetectorBlock::never));
         registerDefaultState(defaultBlockState().setValue(ACTIVE, false));
     }
 

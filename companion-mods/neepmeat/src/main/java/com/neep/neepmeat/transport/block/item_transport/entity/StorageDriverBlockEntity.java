@@ -32,7 +32,6 @@ import com.neep.neepmeat.transport.item_network.PipeRouteFinder;
 import net.minecraft.core.HolderLookup;
 
 import com.google.common.collect.Streams;
-import com.neep.neepmeat.transport.ItemTransport;
 import com.neep.neepmeat.transport.api.item_network.PriorityPipe;
 import com.neep.neepmeat.transport.api.item_network.RoutingNetwork;
 import com.neep.neepmeat.transport.api.item_network.StorageDriver;
@@ -75,7 +74,7 @@ public class StorageDriverBlockEntity extends ItemPipeBlockEntity implements Sto
 
     public StorageDriverBlockEntity(BlockPos pos, BlockState state)
     {
-        this(ItemTransport.STORAGE_BUS_BE, pos, state);
+        super(pos, state);
     }
 
     public StorageDriverBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state)

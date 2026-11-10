@@ -42,11 +42,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PipeDriverBlockEntity extends BlockEntity implements com.neep.neepmeat.plc.robot.PLCActuator {
-    /**
-     * The live {@code RoutingNetworkImpl} stays excluded until {@code ItemTransport} and
-     * {@code PipeCacheImpl} compile. Stock reads zero when this is null.
-     */
+public class PipeDriverBlockEntity extends BlockEntity implements com.neep.neepmeat.plc.robot.PLCActuator, com.neep.neepmeat.plc.robot.PLCActuator.Provider {
     private RoutingNetworkImpl network;
 
     public RoutingNetwork getNetwork(Void ignored) {
@@ -63,49 +59,21 @@ public class PipeDriverBlockEntity extends BlockEntity implements com.neep.neepm
     }
 
     @Override
+    public com.neep.neepmeat.plc.robot.PLCActuator getPlcActuator() {
+        return this;
+    }
+
+    @Override
     public BlockPos getBasePos() {
         return worldPosition;
     }
 
     @Override
     public void spawnItem(net.minecraft.world.item.ItemStack stored) {
-    }
-
-    @Override
-    public net.minecraft.world.item.ItemStack getStored(com.neep.neepmeat.api.plc.PLC plc) {
-        return net.minecraft.world.item.ItemStack.EMPTY;
-    }
-
-    @Override
-    public void setStored(com.neep.neepmeat.api.plc.PLC plc, net.minecraft.world.item.ItemStack stored) {
-    }
-
-    @Override
-    public void dumpStored(com.neep.neepmeat.api.plc.PLC plc) {
-    }
-
-    @Override
-    public boolean reachedTarget(com.neep.neepmeat.api.plc.PLC plc) {
-        return true;
-    }
-
-    @Override
-    public void setTarget(com.neep.neepmeat.api.plc.PLC plc, @org.jetbrains.annotations.Nullable BlockPos target) {
-    }
-
-    @Override
-    public double getX() {
-        return worldPosition.getX() + 0.5;
-    }
-
-    @Override
-    public double getY() {
-        return worldPosition.getY() + 0.5;
-    }
-
-    @Override
-    public double getZ() {
-        return worldPosition.getZ() + 0.5;
+        if (stored == null || stored.isEmpty() || level == null) {
+            return;
+        }
+        net.minecraft.world.Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1.25, worldPosition.getZ() + 0.5, stored.copy());
     }
 
     @Override
