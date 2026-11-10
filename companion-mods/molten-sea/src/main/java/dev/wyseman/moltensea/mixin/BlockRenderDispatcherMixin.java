@@ -2,6 +2,7 @@ package dev.wyseman.moltensea.mixin;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import dev.wyseman.moltensea.Config;
+import dev.wyseman.moltensea.compat.DeepSeasTags;
 import dev.wyseman.moltensea.DeepSeasBridge;
 import dev.wyseman.moltensea.MoltenFluids;
 import net.minecraft.client.Minecraft;
@@ -19,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class BlockRenderDispatcherMixin {
     @Inject(method = "renderLiquid", at = @At("HEAD"), cancellable = true, remap = false)
     private void moltensea$cullInsideHull(BlockPos pos, BlockAndTintGetter level, VertexConsumer consumer, BlockState blockState, FluidState fluidState, CallbackInfo ci) {
-        if (!Config.deepSeas() || !MoltenFluids.isSea(fluidState.getType())) {
+        if (!DeepSeasTags.DEEP_SEAS_PRESENT || !MoltenFluids.isSea(fluidState.getType()) || !Config.deepSeas()) {
             return;
         }
         Minecraft minecraft = Minecraft.getInstance();

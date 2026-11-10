@@ -12,11 +12,11 @@ From this directory, with Java 21:
 ./gradlew build
 ```
 
-The jar is `build/libs/moltensea-1.0.0.jar`. A sources jar is written beside it. `build/` and `.gradle/` are not part of the pack.
+The jar is `build/libs/moltensea-1.0.1.jar`. A sources jar is written beside it. `build/` and `.gradle/` are not part of the pack.
 
 ## Where the jar goes
 
-This repository does not install the jar. Local pack mods that are not on Modrinth or CurseForge are stored with Git LFS at `.pakku/overrides/mods/` and marked both-sides, the same place as `fluidlimiter-1.0.0-local.jar` and `noheighttemp-1.0.0-local.jar`. Pakku copies that folder into the instance `mods/` directory for the client and the server. Drop `moltensea-1.0.0.jar` there when you are ready to ship it. Do not put it in the gitignored top-level `mods/` folder of a player instance as the way the pack is distributed.
+This repository does not install the jar. Local pack mods that are not on Modrinth or CurseForge are stored with Git LFS at `.pakku/overrides/mods/` and marked both-sides, the same place as `fluidlimiter-1.0.0-local.jar` and `noheighttemp-1.0.0-local.jar`. Pakku copies that folder into the instance `mods/` directory for the client and the server. Drop `moltensea-1.0.1.jar` there when you are ready to ship it. Do not put it in the gitignored top-level `mods/` folder of a player instance as the way the pack is distributed.
 
 The mod has to be on the server and the client. The replacement mixin runs with the world, and the hull render and fog hooks run on the client.
 

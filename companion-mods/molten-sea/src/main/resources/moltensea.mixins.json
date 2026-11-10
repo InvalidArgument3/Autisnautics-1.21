@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "dev.wyseman.moltensea.mixin",
   "compatibilityLevel": "JAVA_21",
-  "plugin": "dev.wyseman.moltensea.mixin.MoltenSeaMixinPlugin",
+  "plugin": "dev.wyseman.moltensea.compat.MoltenSeaMixinPlugin",
   "mixins": [
     "BaseFlowingFluidMixin",
     "FlowingFluidCapMixin",

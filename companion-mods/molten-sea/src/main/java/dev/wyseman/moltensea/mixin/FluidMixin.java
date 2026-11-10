@@ -1,6 +1,7 @@
 package dev.wyseman.moltensea.mixin;
 
 import dev.wyseman.moltensea.Config;
+import dev.wyseman.moltensea.compat.DeepSeasTags;
 import dev.wyseman.moltensea.MoltenFluids;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.material.Fluid;
@@ -13,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class FluidMixin {
     @Inject(method = "is(Lnet/minecraft/tags/TagKey;)Z", at = @At("HEAD"), cancellable = true, remap = false)
     private void moltensea$asDeepSeasWater(TagKey<Fluid> tag, CallbackInfoReturnable<Boolean> cir) {
-        if (!Config.deepSeas() || !DeepSeasTags.isWater(tag)) {
+        if (!DeepSeasTags.DEEP_SEAS_PRESENT || !DeepSeasTags.isWater(tag) || !Config.deepSeas()) {
             return;
         }
         if (MoltenFluids.isSea((Fluid) (Object) this)) {

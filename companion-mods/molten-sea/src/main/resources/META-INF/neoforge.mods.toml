@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="moltensea"
-version="1.0.0"
+version="1.0.1"
 displayName="Molten Sea"
 authors="Autisnautics"
 description='''Keeps the autisnautics:molten_sea fluids from replacing each other, and teaches a running Create Deep Seas oxygen system to treat that sea like water.'''
@@ -30,13 +30,13 @@ side="BOTH"
 [[dependencies.moltensea]]
 modId="modernfoundry"
 type="optional"
-versionRange="[1.21.1-1.6.1,)"
+versionRange="[0,)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.moltensea]]
 modId="create_submarine"
 type="optional"
-versionRange="[3.4.7,)"
+versionRange="[0,)"
 ordering="AFTER"
 side="BOTH"

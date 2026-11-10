@@ -1,6 +1,7 @@
 package dev.wyseman.moltensea.mixin;
 
 import dev.wyseman.moltensea.Config;
+import dev.wyseman.moltensea.compat.DeepSeasTags;
 import dev.wyseman.moltensea.DeepSeasBridge;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -19,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class BurningLiquidBlockMixin {
     @Inject(method = "entityInside(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)V", at = @At("HEAD"), cancellable = true, remap = false)
     private void moltensea$skipSealedOccupant(BlockState state, Level level, BlockPos pos, Entity entity, CallbackInfo ci) {
-        if (!Config.deepSeas() || entity == null) {
+        if (!DeepSeasTags.DEEP_SEAS_PRESENT || entity == null || !Config.deepSeas()) {
             return;
         }
         if (DeepSeasBridge.sealed(level, entity.getEyePosition()) || DeepSeasBridge.sealed(level, entity.position())) {
