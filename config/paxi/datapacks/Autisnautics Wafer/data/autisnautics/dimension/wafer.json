@@ -12,7 +12,7 @@
           "height": 1
         }
       ],
-      "structure_overrides": []
+      "structure_overrides": ["autisnautics:wafer_maze"]
     }
   }
 }

@@ -2,13 +2,34 @@
 // Chapter 4 semiconductor line. States are items, not custom data, so Create filters can route them.
 
 ServerEvents.recipes(event => {
-    if (!Platform.isLoaded("refinedstorage") || !Platform.isLoaded("theurgy") || !Platform.isLoaded("create_enchantment_industry")) return
+    let storage = Platform.isLoaded("refinedstorage") ? "refinedstorage" : (Platform.isLoaded("ae2") ? "ae2" : "")
+    if (!storage || !Platform.isLoaded("theurgy") || !Platform.isLoaded("create_enchantment_industry")) return
 
-    event.remove({ id: "refinedstorage:raw_basic_processor" })
-    event.remove({ id: "refinedstorage:raw_improved_processor" })
-    event.remove({ id: "refinedstorage:raw_advanced_processor" })
+    // RS raw tiers: basic, improved, advanced. AE2 has no raw items. Printed calculation, logic, and engineering fill those slots.
+    let silicon = storage == "refinedstorage" ? "refinedstorage:silicon" : "ae2:silicon"
+    let tiers = storage == "refinedstorage"
+        ? {
+            basic: "refinedstorage:raw_basic_processor",
+            improved: "refinedstorage:raw_improved_processor",
+            advanced: "refinedstorage:raw_advanced_processor"
+        }
+        : {
+            basic: "ae2:printed_calculation_processor",
+            improved: "ae2:printed_logic_processor",
+            advanced: "ae2:printed_engineering_processor"
+        }
 
-    event.recipes.create.cutting(Item.of("kubejs:silicon_wafer", 6), "refinedstorage:silicon").id("kubejs:wafer_cut")
+    if (storage == "refinedstorage") {
+        event.remove({ id: "refinedstorage:raw_basic_processor" })
+        event.remove({ id: "refinedstorage:raw_improved_processor" })
+        event.remove({ id: "refinedstorage:raw_advanced_processor" })
+    } else {
+        event.remove({ id: "ae2:inscriber/calculation_processor_print" })
+        event.remove({ id: "ae2:inscriber/logic_processor_print" })
+        event.remove({ id: "ae2:inscriber/engineering_processor_print" })
+    }
+
+    event.recipes.create.cutting(Item.of("kubejs:silicon_wafer", 6), silicon).id("kubejs:wafer_cut")
 
     event.recipes.create.mixing(Item.of("kubejs:spirit_of_lithography", 8), [
         Ingredient.of("#theurgy:alchemical_sulfurs"),
@@ -53,28 +74,21 @@ ServerEvents.recipes(event => {
     }
 
     let bins = [
-        { id: "refinedstorage:raw_advanced_processor", chance: 4 },
-        { id: "refinedstorage:raw_improved_processor", chance: 18 },
-        { id: "refinedstorage:raw_basic_processor", chance: 48 },
+        { tier: "advanced", id: tiers.advanced, chance: 4 },
+        { tier: "improved", id: tiers.improved, chance: 18 },
+        { tier: "basic", id: tiers.basic, chance: 48 },
         { id: "kubejs:dram", chance: 16 }
     ]
     if (Platform.isLoaded("psi")) bins.push({ id: "psi:cad_core_basic", chance: 8 })
     if (Platform.isLoaded("farmersdelight")) bins.push({ id: "farmersdelight:cooked_bacon", chance: 6 })
 
-    let better = bins.map(bin => {
-        if (bin.id == "refinedstorage:raw_advanced_processor") return { id: bin.id, chance: 22 }
-        if (bin.id == "refinedstorage:raw_improved_processor") return { id: bin.id, chance: 28 }
-        if (bin.id == "refinedstorage:raw_basic_processor") return { id: bin.id, chance: 30 }
-        if (bin.id == "kubejs:dram") return { id: bin.id, chance: 8 }
+    let tune = table => bins.map(bin => {
+        if (bin.tier && table[bin.tier] != null) return { id: bin.id, chance: table[bin.tier] }
+        if (bin.id == "kubejs:dram") return { id: bin.id, chance: table.dram }
         return { id: bin.id, chance: Math.max(2, Math.floor(bin.chance / 2)) }
     })
-    let jackpot = bins.map(bin => {
-        if (bin.id == "refinedstorage:raw_advanced_processor") return { id: bin.id, chance: 40 }
-        if (bin.id == "refinedstorage:raw_improved_processor") return { id: bin.id, chance: 28 }
-        if (bin.id == "refinedstorage:raw_basic_processor") return { id: bin.id, chance: 16 }
-        if (bin.id == "kubejs:dram") return { id: bin.id, chance: 6 }
-        return { id: bin.id, chance: Math.max(2, Math.floor(bin.chance / 2)) }
-    })
+    let better = tune({ advanced: 22, improved: 28, basic: 30, dram: 8 })
+    let jackpot = tune({ advanced: 40, improved: 28, basic: 16, dram: 6 })
 
     let dice = (recipeId, input, results) => {
         event.custom({
@@ -100,7 +114,7 @@ ServerEvents.recipes(event => {
         "QSQ"
     ], {
         Q: "minecraft:quartz_block",
-        S: "refinedstorage:silicon",
+        S: silicon,
         C: "minecraft:crying_obsidian"
     }).id("kubejs:wafer_gate")
 })
