@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/item_network/CraftingPredicate.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/item_network/CraftingPredicate.java:39: error: method toStack in record ItemVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/item_network/CraftingPredicate.java:62: error: cannot find symbol

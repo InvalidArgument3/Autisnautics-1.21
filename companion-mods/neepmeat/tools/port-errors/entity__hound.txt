@@ -1,5 +1,2 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/entity/hound/HoundEntity.java:15: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/entity/hound/HoundEntity.java:16: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/entity/hound/HoundEntity.java:56: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/entity/hound/HoundEntity.java:96: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/entity/hound/HoundEntity.java:102: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/hound/HoundEntity.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/hound/HoundEntity.java:56: error: cannot find symbol

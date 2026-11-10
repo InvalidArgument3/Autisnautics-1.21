@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:15: error: package com.neep.neepbus.client.input does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:22: error: package net.fabricmc.fabric.api.client.rendering.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:36: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:70: error: package WorldRenderContext does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:45: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:51: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:57: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:63: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:69: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:99: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/input/ImplanterInterceptorHandler.java:105: error: cannot find symbol

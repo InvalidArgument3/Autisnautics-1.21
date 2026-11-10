@@ -67,6 +67,13 @@ REPLACEMENTS = [
     (re.compile(r"\bItemVariant\.blank\(\)"), "ItemVariant.BLANK"),
     (re.compile(r"protected void defineSynchedData\(\)"),
      "protected void defineSynchedData(SynchedEntityData.Builder builder)"),
+    (re.compile(r"import net\.minecraft\.block\.\*;"), "import net.minecraft.world.level.block.*;"),
+    (re.compile(r"import net\.minecraft\.block\.entity\.\*;"), "import net.minecraft.world.level.block.entity.*;"),
+    (re.compile(r"import net\.minecraft\.entity\.\*;"), "import net.minecraft.world.entity.*;"),
+    (re.compile(r"import net\.minecraft\.entity\.ai\.pathing\.\*;"), "import net.minecraft.world.entity.ai.navigation.*;"),
+    (re.compile(r"import net\.minecraft\.item\.\*;"), "import net.minecraft.world.item.*;"),
+    (re.compile(r"import net\.minecraft\.recipe\.\*;"), "import net.minecraft.world.item.crafting.*;"),
+    (re.compile(r"import net\.minecraft\.text\.\*;"), "import net.minecraft.network.chat.*;"),
 ]
 
 
@@ -75,6 +82,10 @@ def drift(text):
         text = text.replace(source, target)
     for pattern, repl in REPLACEMENTS:
         text = pattern.sub(repl, text)
+    holders = Path(__file__).resolve().parents[2].joinpath("tools/nmsound_holders.txt")
+    if holders.exists() and "NMSounds." in text and "class NMSounds" not in text:
+        names = "|".join(sorted(holders.read_text().split(), key=len, reverse=True))
+        text = re.sub(r"\bNMSounds\.(" + names + r")\b(?!\.get\()", r"NMSounds.\1.get()", text)
     if "HolderLookup" in text and "import net.minecraft.core.HolderLookup;" not in text:
         newline = text.find("\n", text.find("package "))
         text = text[:newline + 1] + "\nimport net.minecraft.core.HolderLookup;\n" + text[newline + 1:]

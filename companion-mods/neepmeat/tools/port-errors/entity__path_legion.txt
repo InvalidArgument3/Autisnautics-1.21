@@ -1,0 +1,10 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:5: error: package com.neep.meatlib.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:6: error: package com.neep.meatweapons does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:7: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:8: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:9: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:10: error: package com.neep.meatweapons.init does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:11: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:12: error: package com.neep.meatweapons.particle does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:17: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:51: error: cannot find symbol

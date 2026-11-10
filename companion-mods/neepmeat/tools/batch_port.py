@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Copy Loom packages into the NeoForge tree, rewrite them, and compile.
 
-A package is kept only when every copied file compiles. Failures are removed
-and their javac lines are written under tools/port-errors/.
+Packages that do not compile stay in src/staged/java, which is excluded from
+the main mod compile. Promote a package into src/main once none of its files
+error. Javac lines stay under tools/port-errors/.
 """
 import argparse
 import os
@@ -15,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LOOM = Path("/tmp/neep-loom/remappedSrc/com/neep/neepmeat")
 SRC = ROOT / "src/main/java/com/neep/neepmeat"
+STAGE = ROOT / "src/staged/java/com/neep/neepmeat"
 MEATLIB = ROOT / "src/main/java/com/neep/meatlib"
 ERRORS = ROOT / "tools/port-errors"
 sys.path.insert(0, str(ROOT / "tools/loom-migrated"))
@@ -79,27 +81,31 @@ def select_soft(files_by, present, meatlib_pkgs):
     return sorted(key for key in soft if info[key][1] <= soft)
 
 
-def copy_packages(names, files_by):
+def copy_packages(names, files_by, destination=SRC):
     copied = {}
     for name in names:
         targets = []
         for source in files_by[name]:
             relative = source.relative_to(LOOM)
-            target = SRC / relative
+            if (SRC / relative).exists():
+                continue
+            target = destination / relative
             if target.exists():
+                targets.append(target)
                 continue
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(drift(source.read_text(errors="replace")))
             targets.append(target)
-        copied[name] = targets
+        if targets:
+            copied[name] = targets
     return copied
 
 
-def compile_errors():
+def compile_errors(task="compileJava"):
     log = ERRORS / "compile.log"
     ERRORS.mkdir(parents=True, exist_ok=True)
     result = subprocess.run(
-        ["./gradlew", "compileJava", "--offline", "--console=plain"],
+        ["./gradlew", task, "--offline", "--console=plain"],
         cwd=ROOT, text=True, capture_output=True)
     log.write_text(result.stdout + "\n" + result.stderr)
     per_file = {}
@@ -204,6 +210,42 @@ def drop_until_clean(copied):
     return 1
 
 
+def stage_missing(files_by):
+    present = set(packages(SRC))
+    names = sorted(set(files_by) - present)
+    copied = copy_packages(names, files_by, STAGE)
+    print(f"staged {sum(len(v) for v in copied.values())} files in {len(copied)} packages")
+    return copied
+
+
+def promote(copied):
+    ok, per_file = compile_errors("compileStagedJava")
+    failed = set()
+    for path, lines in per_file.items():
+        for name, targets in copied.items():
+            if any(str(target) == path for target in targets):
+                failed.add(name)
+                (ERRORS / (name.replace("/", "__") + ".txt")).write_text("\n".join(lines) + "\n")
+    if not ok and not failed:
+        print("staged compile failed and no package was matched; nothing promoted")
+        return []
+    promoted = []
+    for name, targets in copied.items():
+        if name in failed:
+            continue
+        for target in targets:
+            relative = target.relative_to(STAGE)
+            destination = SRC / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(target), destination)
+        directory = STAGE / name
+        if directory.exists() and not any(directory.rglob("*.java")):
+            shutil.rmtree(directory, ignore_errors=True)
+        promoted.append(name)
+    print(f"promoted {len(promoted)} packages, staged failures {len(failed)}, compile {'clean' if ok else 'has errors'}")
+    return promoted
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--packages", nargs="*")
@@ -211,8 +253,15 @@ def main():
     parser.add_argument("--light", action="store_true")
     parser.add_argument("--leaves", action="store_true")
     parser.add_argument("--drop-failures", action="store_true")
+    parser.add_argument("--stage-missing", action="store_true")
+    parser.add_argument("--promote", action="store_true")
     args = parser.parse_args()
     files_by = packages(LOOM)
+    if args.stage_missing:
+        copied = stage_missing(files_by)
+        if args.promote:
+            promote(copied)
+        return 0
     present = set(packages(SRC))
     meatlib_pkgs = set(packages(MEATLIB))
     if args.packages:

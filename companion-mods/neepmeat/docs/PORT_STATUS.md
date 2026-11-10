@@ -8,6 +8,14 @@ Upstream is about 1,889 Java files in NeepMeat, 310 in meatlib, 38 in NEEPSpeak,
 
 Deviations: no GeckoLib hatch animation, no cosmic beam particles, no encased data cable, and no whisper-flour feeding. Blood is stored in milli-buckets. The advanced integrator counts its own ticks.
 
+## Staging source set, jar 0.30.0-neoforge.42
+
+`src/staged/java` is a source set excluded from the mod compile. `tools/batch_port.py --stage-missing --promote` copies every missing Loom package there, rewrites it, and moves a package into `src/main` only when none of its files appear in the staged javac log. A failed compile that does not name a staged file promotes nothing.
+
+Sounds are `DeferredRegister<SoundEvent>` on `NMSounds`, with `assets/neepmeat/sounds.json`. Meatweapons events are registered on `neepmeat`, and a repeated id gets the field name. Paths that contained a slash use an underscore. `VivisectionCriterion` is a codec `SimpleCriterionTrigger` on `DeferredRegister<CriterionTrigger>`. `BloodBubbleTreeGenerator` is a `TreeGrower` record. `TallBlock` and `BaseVertFacingBlock` are ported. Yarn star imports `net.minecraft.block.*`, `entity.*`, `item.*`, `recipe.*`, and `text.*` are rewritten to Mojmap.
+
+161 packages and 830 files remain staged. Their errors are the init registries (`NMBlocks`, `NMBlockEntities`), Flywheel, REI, Cardinal Components, and Fabric networking. A package that compiled only because a staged neighbour was present was moved back.
+
 ## Batch driver, jar 0.30.0-neoforge.41
 
 `tools/batch_port.py` copies a Loom package, runs `apply_121_drift.py` (transfer imports, `ResourceLocation`, save/load, `useWithoutItem`, `EnvType` to `OnlyIn`, entity `defineSynchedData`), and compiles. A package is deleted again if any of its files fail, and the javac lines stay in `tools/port-errors/`.
@@ -21,7 +29,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | Package | Ported | Upstream | State |
 | --- | ---: | ---: | --- |
 | `(root)` | 3 | 2 | files present |
-| `advancement` | 0 | 1 | missing |
+| `advancement` | 2 | 1 | files present |
 | `api` | 3 | 9 | partial |
 | `api/big_block` | 6 | 5 | files present |
 | `api/big_block_2` | 2 | 3 | partial |
@@ -52,9 +60,9 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `block/entity` | 0 | 12 | missing |
 | `block/entity/machine` | 0 | 2 | missing |
 | `block/fluid` | 0 | 2 | missing |
-| `block/machine` | 0 | 1 | missing |
+| `block/machine` | 1 | 1 | files present |
 | `block/redstone` | 0 | 1 | missing |
-| `block/sapling` | 0 | 1 | missing |
+| `block/sapling` | 1 | 1 | files present |
 | `block/vat` | 0 | 6 | missing |
 | `client` | 0 | 10 | missing |
 | `client/datagen` | 0 | 1 | missing |
@@ -127,7 +135,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `implant/config` | 0 | 5 | missing |
 | `implant/entity` | 0 | 20 | missing |
 | `implant/item` | 0 | 7 | missing |
-| `init` | 2 | 21 | partial |
+| `init` | 3 | 21 | partial |
 | `interfaces` | 3 | 3 | files present |
 | `inventory` | 1 | 1 | files present |
 | `item` | 1 | 49 | partial |
@@ -196,11 +204,11 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `meatgun/module` | 0 | 6 | missing |
 | `mixin` | 0 | 19 | missing |
 | `mixin/client` | 0 | 16 | missing |
-| `mixin/control_drops` | 0 | 2 | missing |
-| `mixin/feature` | 0 | 1 | missing |
-| `mixin/inhibit_teleport` | 0 | 1 | missing |
+| `mixin/control_drops` | 2 | 2 | files present |
+| `mixin/feature` | 1 | 1 | files present |
+| `mixin/inhibit_teleport` | 1 | 1 | files present |
 | `mixin/living_tools` | 0 | 2 | missing |
-| `mixin/loot` | 0 | 7 | missing |
+| `mixin/loot` | 7 | 7 | files present |
 | `mixin/villager_fear_player` | 0 | 1 | missing |
 | `neepasm/compiler` | 8 | 8 | files present |
 | `neepasm/compiler/alias` | 2 | 2 | files present |
@@ -278,7 +286,7 @@ Each row is one upstream `com.neep.neepmeat` package. **Missing** means no file 
 | `world` | 0 | 1 | missing |
 | `world/feature_configu` | 1 | 1 | files present |
 
-Upstream packages: 257. Missing 168, partial 50, files present 39.
+Upstream packages: 257. Missing 161, partial 50, files present 46.
 
 ## Phase 2 milestone: meatlib
 

@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/compressor_scutter/ScutterFollowOwnerGoal.java:24: error: cannot find symbol

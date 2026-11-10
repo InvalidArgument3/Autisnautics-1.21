@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/entity/SpiderLegsImplant.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/entity/SpiderLegsImplant.java:143: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/entity/SpiderLegsImplant.java:209: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/entity/SpiderLegsImplant.java:219: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/entity/SpiderLegsImplant.java:321: error: cannot find symbol

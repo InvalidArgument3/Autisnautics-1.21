@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/FatCollectorBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/crucible/FatCollectorBlock.java:58: error: package NMBlockEntities does not exist

@@ -1,6 +1,10 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:15: error: package net.fabricmc.fabric.api.event does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:16: error: package net.fabricmc.fabric.api.event does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:31: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:39: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:15: error: package net.fabricmc.fabric.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:16: error: package net.fabricmc.fabric.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:39: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:39: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/event/WorldChunkEvents.java:47: error: cannot find symbol

@@ -1,0 +1,16 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:56: error: constructor MultiFluidBuffer in class MultiFluidBuffer cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:61: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:84: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:99: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:106: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:115: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:121: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:144: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:162: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/multitank/MultiTankBlockEntity.java:162: error: cannot find symbol

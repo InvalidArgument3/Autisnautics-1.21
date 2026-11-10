@@ -1,0 +1,8 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:45: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:48: error: no suitable method found for fromJson(JsonElement)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:52: error: no suitable method found for fromJson(JsonObject)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:66: error: no suitable method found for fromJson(JsonElement)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:70: error: no suitable method found for fromJson(JsonObject)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:77: error: no suitable method found for fromJson(JsonObject)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/article/Article.java:88: error: method fromNamespaceAndPath in class ResourceLocation cannot be applied to given types;

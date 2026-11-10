@@ -1,2 +1,5 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:104: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:170: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:177: error: package NMBlockEntities does not exist

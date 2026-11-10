@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:16: error: package com.neep.meatweapons.implant does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:17: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:21: error: package dev.onyxstudios.cca.api.v3.item does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:87: error: cannot find symbol

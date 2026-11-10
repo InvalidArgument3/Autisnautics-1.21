@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/bottler/BottlerRenderer.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/bottler/BottlerRenderer.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/bottler/BottlerRenderer.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/bottler/BottlerRenderer.java:53: error: cannot find symbol

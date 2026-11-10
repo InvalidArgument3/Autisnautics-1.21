@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/mixin/LivingEntityMixin.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/mixin/LivingEntityMixin.java:23: error: cannot find symbol

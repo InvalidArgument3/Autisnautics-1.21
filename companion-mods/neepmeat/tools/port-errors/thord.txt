@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/ThordTest.java:23: error: cannot find symbol

@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/network/EnlightenmentEventPacket.java:20: error: package net.fabricmc.fabric.api.client.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/network/EnlightenmentEventPacket.java:21: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/network/EnlightenmentEventPacket.java:22: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/network/EnlightenmentEventPacket.java:51: error: cannot find symbol

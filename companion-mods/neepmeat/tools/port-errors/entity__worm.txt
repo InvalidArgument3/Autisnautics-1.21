@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:16: error: cannot find symbol

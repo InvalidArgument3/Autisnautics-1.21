@@ -1,2 +1,9 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:16: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:80: error: package NMFluids does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:87: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:92: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:92: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/homogeniser/FoodAdditives.java:95: error: method of in record FluidVariant cannot be applied to given types;

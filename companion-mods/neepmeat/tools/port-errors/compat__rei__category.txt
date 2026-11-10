@@ -1,0 +1,40 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:20: error: package me.shedaniel.math does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:21: error: package me.shedaniel.math does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:22: error: package me.shedaniel.rei.api.client.gui does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:23: error: package me.shedaniel.rei.api.client.gui.widgets does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:24: error: package me.shedaniel.rei.api.client.gui.widgets does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:25: error: package me.shedaniel.rei.api.client.registry.display does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:26: error: package me.shedaniel.rei.api.common.category does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:27: error: package me.shedaniel.rei.api.common.util does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:32: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:53: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:53: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:34: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:40: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:46: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:52: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:64: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:64: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/category/AlloyKilnCategory.java:77: error: method does not override or implement a method from a supertype

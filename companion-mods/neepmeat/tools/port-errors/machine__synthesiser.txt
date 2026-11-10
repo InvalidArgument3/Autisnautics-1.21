@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:20: error: package com.neep.meatlib.storage does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:60: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:94: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:110: error: package NMBlockEntities does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/synthesiser/SynthesiserBlock.java:143: error: cannot find symbol

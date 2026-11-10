@@ -1,1 +1,2 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/solidity_detector/SolidityDetectorBlockEntity.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/solidity_detector/SolidityDetectorBlockEntity.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/solidity_detector/SolidityDetectorBlockEntity.java:32: error: cannot find symbol

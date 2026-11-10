@@ -1,0 +1,22 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:15: error: package com.neep.meatlib.datagen does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:20: error: package net.fabricmc.fabric.api.datagen.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:21: error: package net.fabricmc.fabric.api.datagen.v1.provider does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:22: error: package net.fabricmc.fabric.api.tag.convention.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:23: error: package net.fabricmc.fabric.api.tag.convention.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:31: error: package FabricTagProvider does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:33: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:38: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:44: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:59: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:64: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:68: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:69: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/NMItemTagProvider.java:72: error: cannot find symbol

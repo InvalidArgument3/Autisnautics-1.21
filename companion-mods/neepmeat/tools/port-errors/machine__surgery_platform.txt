@@ -1,10 +1,10 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:16: error: package com.neep.meatlib.recipe.ingredient does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:17: error: package com.neep.meatlib.recipe.ingredient does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:21: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:54: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:54: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:44: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:57: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:16: error: package com.neep.meatlib.recipe.ingredient does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:17: error: package com.neep.meatlib.recipe.ingredient does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlockEntity.java:63: error: cannot find symbol

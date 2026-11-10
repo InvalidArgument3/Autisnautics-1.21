@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/potion/NMPotions.java:17: error: cannot find symbol

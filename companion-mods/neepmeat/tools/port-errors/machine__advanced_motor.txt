@@ -1,0 +1,37 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:18: error: package com.neep.meatlib.client.flw does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:21: error: package dev.engine_room.flywheel.api.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:22: error: package dev.engine_room.flywheel.api.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:23: error: package dev.engine_room.flywheel.api.visualization does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:24: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:25: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:26: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:27: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:66: error: package DynamicVisual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:53: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:59: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:65: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:80: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorVisual.java:90: error: method does not override or implement a method from a supertype

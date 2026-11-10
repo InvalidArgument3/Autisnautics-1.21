@@ -1,0 +1,14 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:40: error: package net.minecraft.util.math does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:62: error: package NMFluids does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:98: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:113: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:140: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:179: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:192: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:222: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/trough/TroughBlockEntity.java:227: error: cannot find symbol

@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/death_blades/DeathBladesBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/death_blades/DeathBladesBlock.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/death_blades/DeathBladesBlock.java:76: error: package NMBlockEntities does not exist

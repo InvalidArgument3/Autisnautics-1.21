@@ -1,6 +1,6 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:50: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:62: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:63: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:76: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:77: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/live_machine/metrics/DataLog.java:77: error: cannot find symbol

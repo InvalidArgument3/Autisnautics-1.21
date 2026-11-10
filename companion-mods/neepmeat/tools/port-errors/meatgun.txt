@@ -1,7 +1,16 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:15: error: package com.neep.meatweapons.meatgun does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:16: error: package com.neep.meatweapons.meatgun.module does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:17: error: package com.neep.meatweapons.meatgun.module does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:29: error: package com.neep.meatweapons.meatgun.module does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:29: error: static import only from classes and interfaces
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:33: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:15: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:16: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:17: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:29: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:29: error: static import only from classes and interfaces
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:33: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:36: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:33: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:59: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/NMMeatgunModules.java:58: error: cannot find symbol

@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:21: error: package com.neep.meatlib.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:25: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:26: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:48: error: cannot find symbol

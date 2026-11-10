@@ -1,22 +1,2 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:16: error: package com.neep.meatlib.fluid does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:82: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:66: error: no suitable method found for register(DefaultedRegistry<Fluid>,ResourceLocation,OreFatFluidFactory.Still)
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:72: error: no suitable method found for register(DefaultedRegistry<Fluid>,ResourceLocation,OreFatFluidFactory.Flowing)
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:78: error: incompatible types: MeatlibBlockSettings cannot be converted to Properties
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:78: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:84: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:90: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:96: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:102: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:108: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:111: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:114: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:120: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:129: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:135: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:144: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:147: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:148: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:151: error: method does not override or implement a method from a supertype
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:154: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:157: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:16: error: package com.neep.meatlib.fluid does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/fluid/ore_fat/OreFatFluidFactory.java:82: error: cannot find symbol

@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:18: error: package com.neep.neepbus.block does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:19: error: package com.neep.neepbus.screen does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:34: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:44: error: package NMBlockEntities does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/VascularSensorBlock.java:59: error: method does not override or implement a method from a supertype

@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:39: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:51: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:85: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:101: error: package NMBlockEntities does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:104: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/EncasedItemPipeBlock.java:107: error: cannot find symbol

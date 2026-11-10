@@ -1,11 +1,21 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:20: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:22: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:24: error: package net.fabricmc.fabric.api.lookup.v1.block does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:26: error: package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:42: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:48: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:148: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:24: error: package net.fabricmc.fabric.api.lookup.v1.block does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:26: error: package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:148: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:52: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:55: error: package NMFluids does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:71: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:77: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:84: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:96: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:86: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:95: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:98: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_exciter/FluidExciterBlockEntity.java:147: error: method does not override or implement a method from a supertype

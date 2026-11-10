@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/vsc/VSCMode.java:30: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/vsc/VSCMode.java:41: error: cannot find symbol

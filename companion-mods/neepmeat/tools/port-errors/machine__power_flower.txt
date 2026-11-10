@@ -1,2 +1,4 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/power_flower/PowerFlowerFluidPortBlock.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/power_flower/PowerFlowerFluidPortBlock.java:25: error: package net.fabricmc.fabric.api.lookup.v1.block does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/power_flower/PowerFlowerGrowthBlock.java:58: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/power_flower/PowerFlowerGrowthBlock.java:64: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/power_flower/PowerFlowerGrowthBlock.java:102: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/power_flower/PowerFlowerGrowthBlock.java:117: error: cannot find symbol

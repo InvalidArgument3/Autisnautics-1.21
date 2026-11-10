@@ -1,3 +1,1 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/vat/VatControllerBlock.java:18: error: package com.neep.neepmeat.api.multiblock does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/vat/VatControllerBlock.java:19: error: package com.neep.neepmeat.block.entity.machine does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/vat/VatControllerBlock.java:36: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/vat/VatControllerBlock.java:42: error: constructor BaseHorFacingBlock in class BaseHorFacingBlock cannot be applied to given types;

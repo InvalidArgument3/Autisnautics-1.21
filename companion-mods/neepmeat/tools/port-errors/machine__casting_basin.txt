@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:47: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:64: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:94: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/casting_basin/CastingBasinBlock.java:103: error: package NMBlockEntities does not exist

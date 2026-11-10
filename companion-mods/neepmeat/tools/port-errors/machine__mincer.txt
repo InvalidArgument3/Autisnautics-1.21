@@ -1,5 +1,4 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:17: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:20: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:38: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:43: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:49: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:71: error: package NMBlockEntities does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/mincer/MincerBlock.java:79: error: cannot find symbol

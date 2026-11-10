@@ -1,4 +1,4 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:17: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:46: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/node/ThordTreeVisitor.java:48: error: cannot find symbol

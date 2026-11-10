@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/RouterInventory.java:19: error: RouterInventory is not abstract and does not override abstract method items() in ImplementedInventory
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/RouterInventory.java:23: error: method does not override or implement a method from a supertype

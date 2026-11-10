@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/ItemPane.java:89: error: method toStack in record ItemVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/ItemPane.java:159: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/ItemPane.java:163: error: method mouseScrolled in interface GuiEventListener cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/ItemPane.java:178: error: method getMaxStackSize in interface IItemExtension cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/ItemPane.java:379: error: method translationKey in class NeepMeat cannot be applied to given types;

@@ -1,0 +1,32 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:17: error: package com.neep.meatlib.client.flw does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:20: error: package dev.engine_room.flywheel.api.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:21: error: package dev.engine_room.flywheel.api.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:22: error: package dev.engine_room.flywheel.api.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:23: error: package dev.engine_room.flywheel.api.visualization does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:24: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:25: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:26: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:27: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:28: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:37: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:47: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:66: error: package DynamicVisual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:120: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:53: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:59: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:65: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:90: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:94: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:112: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:115: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgical_controller/BuilderVisual.java:119: error: method does not override or implement a method from a supertype

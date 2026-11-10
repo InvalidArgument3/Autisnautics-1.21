@@ -1,2 +1,3 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/separator/SeparatorBlock.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/separator/SeparatorBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/separator/SeparatorBlockEntity.java:82: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/separator/SeparatorBlockEntity.java:84: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/separator/SeparatorBlockEntity.java:87: error: cannot find symbol

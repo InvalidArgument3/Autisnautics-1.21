@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/scutter/ScutterEntity.java:49: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/scutter/ScutterEntity.java:52: error: method getAddEntityPacket in class Entity cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/scutter/ScutterEntity.java:97: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/scutter/ScutterEntity.java:100: error: cannot find symbol

@@ -27,7 +27,12 @@ public class BaseHorFacingBlock extends Block implements MeatlibBlock, Wrenchabl
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public BaseHorFacingBlock(MeatlibBlockSettings settings) {
-        super(settings.properties());
+        this(null, null, settings.properties());
+    }
+
+    /** Loom blocks pass a registration context and raw block properties. */
+    public BaseHorFacingBlock(RegistrationContext ctx, ItemSettings itemSettings, Properties settings) {
+        super(settings);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 

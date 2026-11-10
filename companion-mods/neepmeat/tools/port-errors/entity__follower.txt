@@ -1,0 +1,10 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:15: error: package dev.engine_room.flywheel.api.task does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:16: error: package dev.engine_room.flywheel.api.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:17: error: package dev.engine_room.flywheel.api.visualization does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:18: error: package dev.engine_room.flywheel.lib.task does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:19: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:45: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/follower/FollowerVisual.java:45: error: cannot find symbol

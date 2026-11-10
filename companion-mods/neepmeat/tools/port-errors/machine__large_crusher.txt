@@ -1,0 +1,24 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:16: error: package com.neep.meatlib.client.flw does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:17: error: package com.neep.meatlib.client.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:21: error: package dev.engine_room.flywheel.api.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:22: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:23: error: package dev.engine_room.flywheel.api.visualization does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:24: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:25: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:33: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:49: error: package SimpleDynamicVisual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:66: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:72: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_crusher/CrusherSegmentVisual.java:78: error: method does not override or implement a method from a supertype

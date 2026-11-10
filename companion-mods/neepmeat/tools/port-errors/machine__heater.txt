@@ -1,10 +1,32 @@
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:18: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:19: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:20: error: package com.neep.neepmeat.client.screen.tablet.graph does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:21: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:22: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:23: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:26: error: package net.fabricmc.fabric.api.networking.v1 does not exist
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
-/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:199: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:26: error: package net.fabricmc.fabric.api.networking.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:44: error: HeaterBlockEntity is not abstract and does not override abstract method mode() in BloodAcceptor
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:54: error: type argument HeaterBlockEntity is not within bounds of type-variable T
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:56: error: constructor LiquidFuelMachine in class LiquidFuelMachine cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:57: error: invalid method reference
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:104: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:105: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:106: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:107: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:129: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:129: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:142: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:144: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:159: error: package NMFluids does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:169: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:186: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:204: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/heater/HeaterBlockEntity.java:206: error: cannot find symbol

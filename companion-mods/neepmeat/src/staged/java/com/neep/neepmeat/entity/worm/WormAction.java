@@ -1,0 +1,65 @@
+/*
+ * Copyright (c) MeatWheeze 2025.
+ *
+ * This file is part of NEEPMeat.
+ *
+ * NEEPMeat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * NEEPMeat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package com.neep.neepmeat.entity.worm;
+
+import com.neep.meatlib.util.NbtSerialisable;
+import com.neep.neepmeat.NeepMeat;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
+
+public interface WormAction extends NbtSerialisable
+{
+    default void init() {}
+
+    void tick();
+
+    @Override
+    default CompoundTag writeNbt(CompoundTag nbt) {return nbt;}
+
+    @Override
+    default void readNbt(CompoundTag nbt) {};
+
+    @FunctionalInterface
+    interface Sequence<T extends WormAction>
+    {
+        void tick(T parent, int counter);
+    }
+
+    class EmptyAction implements WormAction
+    {
+        public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(NeepMeat.NAMESPACE, "empty");
+
+        public EmptyAction(WormEntity entity)
+        {
+
+        }
+
+        @Override
+        public void tick()
+        {
+
+        }
+
+        @Override
+        public CompoundTag writeNbt(CompoundTag nbt)
+        {
+            return nbt;
+        }
+
+        @Override
+        public void readNbt(CompoundTag nbt)
+        {
+
+        }
+    }
+}
