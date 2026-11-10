@@ -112,7 +112,9 @@ public class EncasedConduitBlockEntity extends VascularConduitBlockEntity implem
     @Override
     public void fromClientTag(CompoundTag nbt)
     {
-        load(nbt);
+        if (level != null) {
+            loadAdditional(nbt, level.registryAccess());
+        }
     }
 
     @Override

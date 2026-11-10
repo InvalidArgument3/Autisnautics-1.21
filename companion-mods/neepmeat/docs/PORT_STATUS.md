@@ -1,3 +1,13 @@
+## Listeners, pump animation, and tag writes, jar 0.30.0-neoforge.73
+
+Combined-tree errors **1863 → 1828**. That is 35 this run, not 400, and not 1,463. The PLC closure is **143**. `exclude.txt` is **1230**.
+
+`ItemTransport` was taken off the exclude list by itself and put back. The compile stops on the excluded dumper, requester, and process-card types. The block entities still have 78 errors before the shared fixes below, and the file is not in the jar. No ejector test was added.
+
+`SyncableBlockEntity.addListener` keeps a cache and invalidates it when the block state changes, matching upstream. Charnel pump `animationTicks` follows the existing progress counter, and `progressIncrement()` is the power step capped at 1.9. Trommel and crushing recipes expose `getAuxOutput`. Client tag reload calls `loadAdditional` with the level's registry lookup. Fusion-cannon charge is a compound under `minecraft:custom_data`, and edits write back through `CustomData.update`.
+
+Opcodes that still run as `Instruction.end()`: COMBINE, IMPLANT, NEEPBUS_READ, NEEPBUS_WRITE, REMOVE, SELITEM. `PLCProgramScreen` stays excluded.
+
 ## Placement path and recipe holders, jar 0.30.0-neoforge.72
 
 Combined-tree errors **1889 → 1863**. That is 26 this run, not 400, and not 1,489. The PLC closure is **143**. `exclude.txt` is **1230**.

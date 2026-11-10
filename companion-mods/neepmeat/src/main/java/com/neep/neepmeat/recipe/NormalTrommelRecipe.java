@@ -117,6 +117,10 @@ public final class NormalTrommelRecipe implements Recipe<SingleRecipeInput>, Tro
         return true;
     }
 
+    public ResourceSpec getAuxOutput() {
+        return aux;
+    }
+
     @Override
     public ItemStack getResultItem(HolderLookup.Provider registries) {
         return aux == null ? ItemStack.EMPTY : aux.rollItem(RandomSource.create(1));

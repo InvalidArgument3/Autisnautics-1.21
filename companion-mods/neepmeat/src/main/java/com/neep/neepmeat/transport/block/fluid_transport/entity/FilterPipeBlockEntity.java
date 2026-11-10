@@ -90,7 +90,9 @@ public class FilterPipeBlockEntity extends FluidPipeBlockEntity<FilterPipeBlock.
     @Override
     public void fromClientTag(CompoundTag nbt)
     {
-        load(nbt);
+        if (level != null) {
+            loadAdditional(nbt, level.registryAccess());
+        }
     }
 
     @Override

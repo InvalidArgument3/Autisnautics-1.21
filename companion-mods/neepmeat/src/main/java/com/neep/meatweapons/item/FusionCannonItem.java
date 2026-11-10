@@ -70,6 +70,18 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
 
     protected static final String KEY_CHARGE = "charge";
 
+    private static CompoundTag chargeTag(ItemStack stack) {
+        return stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag().getCompound(KEY_CHARGE);
+    }
+
+    private static void editCharge(ItemStack stack, java.util.function.Consumer<CompoundTag> edit) {
+        net.minecraft.world.item.component.CustomData.update(net.minecraft.core.component.DataComponents.CUSTOM_DATA, stack, root -> {
+            CompoundTag nbt = root.getCompound(KEY_CHARGE);
+            edit.accept(nbt);
+            root.put(KEY_CHARGE, nbt);
+        });
+    }
+
     @Override
     public void trigger(Level world, Player player, ItemStack stack, int id, double pitch, double yaw, MWAttackC2SPacket.HandType handType, InteractionHand hand)
     {
@@ -97,9 +109,12 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
             }
 
             // Start charging secondary attack
-            CompoundTag nbt = stack.getOrCreateTagElement(KEY_CHARGE);
-            nbt.putInt("charge", 0);
-            nbt.putBoolean("charging", true);
+            net.minecraft.world.item.component.CustomData.update(net.minecraft.core.component.DataComponents.CUSTOM_DATA, stack, root -> {
+                CompoundTag nbt = root.getCompound(KEY_CHARGE);
+                nbt.putInt("charge", 0);
+                nbt.putBoolean("charging", true);
+                root.put(KEY_CHARGE, nbt);
+            });
 
             world.playSound(null, player, NMSounds.FUSION_BLAST_CHARGE.get(), SoundSource.PLAYERS, 1f, 1f);
         }
@@ -139,11 +154,11 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
         // Increase charge in the secondary attack
         if (id == MWAttackC2SPacket.TRIGGER_SECONDARY)
         {
-            CompoundTag nbt = stack.getOrCreateTagElement(KEY_CHARGE);
+            CompoundTag nbt = chargeTag(stack);
             if (nbt.getBoolean("charging"))
             {
                 int charge = nbt.getInt("charge");
-                nbt.putInt("charge", charge + 1);
+                editCharge(stack, tag -> tag.putInt("charge", charge + 1));
 
                 // Play a beep every second to indicate charge.
                 if (charge != 0 && charge % 20 == 0)
@@ -154,8 +169,10 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
                 {
                     world.explode(player, null, ExplodingShellEntity.KEEP_BEHAVIOUR, player.getX(), player.getY(), player.getZ(), 1, false, Level.ExplosionInteraction.MOB);
                     world.playSound(null, player, NMSounds.FUSION_BLAST_FIRE.get(), SoundSource.PLAYERS, 1f, 1f);
-                    nbt.putInt("charge", 0);
-                    nbt.putBoolean("charging", false);
+                    editCharge(stack, tag -> {
+                        tag.putInt("charge", 0);
+                        tag.putBoolean("charging", false);
+                    });
                 }
             }
         }
@@ -171,8 +188,7 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
             if (stack.getDamageValue() + 2 <= maxShots
                     && canFireBlast(stack))
             {
-                CompoundTag nbt = stack.getOrCreateTagElement(KEY_CHARGE);
-                int charge = nbt.getInt("charge");
+                int charge = chargeTag(stack).getInt("charge");
                 float power = charge;
 
                 fireShell(world, player, stack, 2, (world1, x, y, z, vx, vy, vz) -> new FusionBlastEntity(world1, x, y, z, vx, vy, vz, power));
@@ -180,7 +196,7 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
 
                 world.playSound(null, player, NMSounds.FUSION_BLAST_FIRE.get(), SoundSource.PLAYERS, 1f, 1f);
 
-                nbt.putBoolean("charging", false);
+                editCharge(stack, tag -> tag.putBoolean("charging", false));
             }
             else
             {
@@ -223,7 +239,7 @@ public class FusionCannonItem extends BaseGunItem implements WeakTwoHanded, Aima
 
     protected static boolean canFireBlast(ItemStack stack)
     {
-        return stack.getOrCreateTagElement(KEY_CHARGE).getInt("charge") > MIN_CHARGE_TIME;
+        return chargeTag(stack).getInt("charge") > MIN_CHARGE_TIME;
     }
 
 

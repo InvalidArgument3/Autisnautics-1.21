@@ -31,6 +31,7 @@ import java.util.List;
  */
 public abstract class SyncableBlockEntity extends BlockEntity implements BlockEntityClientSerializable {
     private final List<Runnable> invalidate = new ArrayList<>();
+    private final List<BlockEntityInvalidateListener> listeners = new ArrayList<>();
 
     public SyncableBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
@@ -40,10 +41,19 @@ public abstract class SyncableBlockEntity extends BlockEntity implements BlockEn
         invalidate.add(listener);
     }
 
+    /** Upstream drops the cache when the block state changes. */
+    protected <T extends BlockEntityInvalidateListener> T addListener(T listener) {
+        listeners.add(listener);
+        return listener;
+    }
+
     @Override
     public void setBlockState(BlockState state) {
         super.setBlockState(state);
         invalidate.forEach(Runnable::run);
+        for (BlockEntityInvalidateListener listener : listeners) {
+            listener.invalidate();
+        }
     }
 
     @Override

@@ -224,7 +224,9 @@ public class ActiveWasteFallingBlockEntity extends FallingBlockEntity
 
                                     try
                                     {
-                                        blockEntity.load(nbtCompound);
+                                        if (blockEntity.getLevel() != null) {
+                                            blockEntity.loadCustomOnly(nbtCompound, blockEntity.getLevel().registryAccess());
+                                        }
                                     }
                                     catch (Exception var15)
                                     {

@@ -79,6 +79,10 @@ public final class CrushingRecipe implements Recipe<SingleRecipeInput>, com.neep
         return destroy;
     }
 
+    public ResourceSpec getAuxOutput() {
+        return extra;
+    }
+
     public float experience() {
         return experience;
     }

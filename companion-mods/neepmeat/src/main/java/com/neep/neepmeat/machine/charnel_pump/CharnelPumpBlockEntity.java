@@ -34,7 +34,13 @@ import java.util.List;
 
 public class CharnelPumpBlockEntity extends BlockEntity implements LivingMachineComponent {
     public boolean hasAir;
+    public float animationTicks;
     private float progress;
+    private float progressIncrement;
+
+    public float progressIncrement() {
+        return progressIncrement;
+    }
 
     public CharnelPumpBlockEntity(BlockPos pos, BlockState state) {
         super(EffectMachines.CHARNEL_PUMP_BE.get(), pos, state);
@@ -54,7 +60,9 @@ public class CharnelPumpBlockEntity extends BlockEntity implements LivingMachine
         long bottle = CharnelPumpProcess.DISTRIBUTE_AMOUNT;
         boolean fluidAvailable = simulate(inputStorage, FluidVariant.of(WorkFluid.STILL.get()), bottle, transaction) == bottle;
         if (CharnelPumpProcess.canRun(puPower) && hasAir && fluidAvailable) {
+            progressIncrement = (float) Math.min(1.9, puPower);
             progress = (float) Math.max(0.0, progress - puPower);
+            animationTicks = progress;
             if (progress <= 0f) {
                 progress = 100f;
                 for (WellHeadBlockEntity well : wells) {
