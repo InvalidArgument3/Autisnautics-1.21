@@ -9,7 +9,7 @@
  *
  * You should have received a copy of the GNU General Public License along with NEEPMeat. If not, see <https://www.gnu.org/licenses/>.
  *
- * Collision is the upstream pair of boxes. Data-cable connections on the structure are not wired yet.
+ * Collision is the upstream pair of boxes. The structure is a data cable, so a search can pass through the disc.
  */
 
 package com.neep.neepmeat.machine.live_machine.block;
@@ -24,6 +24,7 @@ import com.neep.neepmeat.api.big_block.BigBlockStructure;
 import com.neep.neepmeat.api.big_block.BigBlockStructureEntity;
 import com.neep.neepmeat.api.big_block.StructureBlockEntities;
 import com.neep.neepmeat.machine.live_machine.block.entity.DistributorPointBlockEntity;
+import com.neep.neepmeat.transport.api.pipe.DataCable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
@@ -47,7 +48,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class DistributorPointBlock extends BigBlock<BigBlockStructure.Simple<BigBlockStructureEntity>> implements MeatlibBlock, EntityBlock {
+public class DistributorPointBlock extends BigBlock<BigBlockStructure.Simple<BigBlockStructureEntity>> implements MeatlibBlock, EntityBlock, DataCable {
     public static final DirectionProperty VERTICAL_DIRECTION = BlockStateProperties.VERTICAL_DIRECTION;
     private static final VoxelShape UP = Shapes.join(Block.box(-16, 0, -16, 32, 8, 32), Block.box(-8, 8, -8, 24, 16, 24), BooleanOp.OR);
     private static final VoxelShape DOWN = Shapes.join(Block.box(-16, 8, -16, 32, 16, 32), Block.box(-8, 0, -8, 24, 8, 24), BooleanOp.OR);
@@ -66,7 +67,7 @@ public class DistributorPointBlock extends BigBlock<BigBlockStructure.Simple<Big
             box[0] = BlockEntityType.Builder.of((pos, state) -> new BigBlockStructureEntity(box[0], pos, state), structure).build(null);
             return StructureBlockEntities.register("distributor_point_structure", box[0]);
         };
-        return ctx.append(this, new BigBlockStructure.Simple<>(this, MeatlibBlockSettings.copyOf(properties), register,
+        return ctx.append(this, new CableStructure(this, MeatlibBlockSettings.copyOf(properties), register,
                 (pos, state) -> new BigBlockStructureEntity(box[0], pos, state)), "distributor_point_structure");
     }
 
@@ -124,5 +125,12 @@ public class DistributorPointBlock extends BigBlock<BigBlockStructure.Simple<Big
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(VERTICAL_DIRECTION);
+    }
+
+    public static final class CableStructure extends BigBlockStructure.Simple<BigBlockStructureEntity> implements DataCable {
+        public CableStructure(BigBlock<?> parent, Properties settings, BlockEntityRegisterererer<BigBlockStructureEntity> register,
+                              java.util.function.BiFunction<BlockPos, BlockState, BigBlockStructureEntity> factory) {
+            super(parent, settings, register, factory);
+        }
     }
 }

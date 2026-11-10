@@ -10,7 +10,9 @@ package com.neep.neepmeat.machine.integrator;
 
 import com.neep.neepmeat.NeepMeat;
 import com.neep.neepmeat.item.MaterialItems;
+import com.neep.neepmeat.fluid.BloodFluids;
 import com.neep.neepmeat.machine.StageMachines;
+import com.neep.neepmeat.machine.pedestal.PedestalBlockEntity;
 import com.neep.neepmeat.plc.component.MutateInPlace;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
@@ -18,6 +20,7 @@ import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
@@ -26,13 +29,21 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 public class EnlighteningGameTests {
     @GameTest(template = "empty")
     public static void roughBrainBecomesEnlightened(GameTestHelper helper) {
-        helper.setBlock(new BlockPos(1, 0, 1), StageMachines.INTEGRATOR.get().defaultBlockState());
-        IntegratorBlockEntity integrator = helper.getBlockEntity(new BlockPos(1, 0, 1));
-        integrator.setStack(new ItemStack(MaterialItems.BRAIN_ROUGH.get()));
+        BlockPos integratorPos = new BlockPos(1, 1, 1);
+        BlockPos pedestalPos = new BlockPos(3, 1, 1);
+        helper.setBlock(integratorPos, StageMachines.INTEGRATOR.get().defaultBlockState());
+        helper.setBlock(new BlockPos(2, 1, 1), StageMachines.DATA_CABLE.get().defaultBlockState());
+        helper.setBlock(pedestalPos, StageMachines.PEDESTAL.get().defaultBlockState());
+        IntegratorBlockEntity integrator = helper.getBlockEntity(integratorPos);
+        integrator.insertBlood(BloodFluids.BLOOD.get(), FluidType.BUCKET_VOLUME);
+        integrator.setGrowthTimeRemaining(0);
+        integrator.grow();
         integrator.setData(1024);
-        integrator.serverTick();
-        helper.assertTrue(integrator.stack().is(MaterialItems.ENLIGHTENED_BRAIN.get()), "result " + integrator.stack());
-        helper.assertTrue(integrator.data() == 0, "data left " + integrator.data());
+        PedestalBlockEntity pedestal = helper.getBlockEntity(pedestalPos);
+        pedestal.setStack(new ItemStack(MaterialItems.BRAIN_ROUGH.get()));
+        pedestal.craft();
+        helper.assertTrue(pedestal.stack().is(MaterialItems.ENLIGHTENED_BRAIN.get()), "result " + pedestal.stack());
+        helper.assertTrue(integrator.getData(com.neep.neepmeat.api.DataResource.NORMAL) == 0, "data left");
         helper.succeed();
     }
 
