@@ -312,13 +312,6 @@
             lastLog=Date.now();stats=blankStats()
         }
     })
-    if (typeof global!=='undefined' && global) {
-        global.AutisnauticsRift={
-            spans:spans,
-            quiet:QUIET,
-            interior:function (density,x,y,z,sentinel) {
-                return Math.abs(density.compute(new Point(x,y,z))-sentinel)<=0.1
-            }
-        }
-    }
+    // global is not assignable from a server script on this KubeJS build.
+    // kubejs/startup_scripts/rift_api.js publishes the same spans for /autisnautics_rift.
 })()

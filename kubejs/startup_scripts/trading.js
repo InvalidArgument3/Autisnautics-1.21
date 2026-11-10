@@ -136,7 +136,7 @@ StartupEvents.registry("item", event => {
         { in: "64x tconstruct:blazewood", out: S(10) },
         { in: "64x create:ornate_iron_window", out: S(10) },
         { in: "64x minecraft:mossy_cobblestone", out: S(6) },
-        { in: "64x #forge:glazed_terracotta", out: S(6) },
+        { in: "64x #c:glazed_terracottas", out: S(6) },
         { in: "64x supplementaries:daub_brace", out: S(8) }
     ])
 

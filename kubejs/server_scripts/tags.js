@@ -1,20 +1,18 @@
 
 ServerEvents.tags("item", event => {
 
-    // clockwork wanderlite (and other ores that didnt get picked up in the forge:ores purge)
-    event.add("forge:ores", "vs_clockwork:wanderlite_deepslate_ore")
-    event.add("forge:ores", "vs_clockwork:wanderlite_end_ore")
+    // clockwork wanderlite (and other ores that didnt get picked up in the c:ores purge)
     event.add("c:ores", "vs_clockwork:wanderlite_deepslate_ore")
     event.add("c:ores", "vs_clockwork:wanderlite_end_ore")
 
-    event.add("forge:dusts/obsidian", "create:powdered_obsidian")
-    event.add("forge:dusts", "create:powdered_obsidian")
+    event.add("c:dusts/obsidian", "create:powdered_obsidian")
+    event.add("c:dusts", "create:powdered_obsidian")
 
     // Fixes copper dupe.
-    event.remove("forge:storage_blocks/copper", "minecraft:cut_copper");
+    event.remove("c:storage_blocks/copper", "minecraft:cut_copper");
 
     colours.forEach(element => {
-        event.get("forge:glazed_terracotta").add(`minecraft:${element}_glazed_terracotta`)
+        event.get("c:glazed_terracottas").add(`minecraft:${element}_glazed_terracotta`)
     });
 
     global.trades.forEach(element => {
@@ -26,10 +24,11 @@ ServerEvents.tags("item", event => {
     });
 
     unregistered_axes.forEach(axe => {
-        event.get("forge:tools/axes").add(axe)
+        // NeoForge has no c:tools/axes. Vanilla and Farmer's Delight read minecraft:axes.
+        event.get("minecraft:axes").add(axe)
     });
 
-    event.get("forge:vines").add("minecraft:vine")
+    // NeoForge has no c:vines, and nothing in this pack reads that tag.
 
     // These items aren't obtainable at the moment.
     // This tag lets these items be melted into iron using the smeltery
@@ -209,72 +208,70 @@ ServerEvents.tags("item", event => {
         .add("minecraft:blaze_powder")
 
     event.get("kubejs:ore_processing/metal/dusts")
-        .add("#forge:dusts/copper")
-        .add("#forge:dusts/iron")
-        .add("#forge:dusts/gold")
-        .add("#forge:dusts/zinc")
-        .add("#forge:dusts/lead")
-        .add("#forge:dusts/nickel")
+        .add("#c:dusts/copper")
+        .add("#c:dusts/iron")
+        .add("#c:dusts/gold")
+        .add("#c:dusts/zinc")
+        .add("#c:dusts/lead")
+        .add("#c:dusts/nickel")
 
     // This tag auto adds the beacon_payment_items tag which we don't want
     event.remove("create:create_ingots", "create:andesite_alloy")
 
     // A2
-    // event.add("forge:slag", "tfmg:slag")
+    // event.add("c:slag", "tfmg:slag")
     // immersiveengineering:dust_wood is the sawdust item. nuclearcraft:sawdust is not in nuclearcraftneohaul.
     event.add("c:dusts/wood", "immersiveengineering:dust_wood")
-    event.add("forge:dusts/wood", "immersiveengineering:dust_wood")
     if (Item.exists("nuclearcraftneohaul:bioplastic")) {
         event.add("c:ingots/plastic", "nuclearcraftneohaul:bioplastic")
-        event.add("forge:ingots/plastic", "nuclearcraftneohaul:bioplastic")
     }
     event.get("kubejs:saws")
         .add("projectred_exploration:gold_saw")
         .add("projectred_exploration:ruby_saw")
         .add("projectred_exploration:sapphire_saw")
         .add("projectred_exploration:peridot_saw")
-    event.add("forge:plates", "createdeco:zinc_sheet")
-    event.add("forge:plates/zinc", "createdeco:zinc_sheet")
+    event.add("c:plates", "createdeco:zinc_sheet")
+    event.add("c:plates/zinc", "createdeco:zinc_sheet")
 
     // coal coke unification
-    // event.add("forge:coal_coke", "tfmg:coal_coke")
-    // event.add("forge:storage_blocks/coal_coke", "tfmg:coal_coke_block")
+    // event.add("c:coal_coke", "tfmg:coal_coke")
+    // event.add("c:storage_blocks/coal_coke", "tfmg:coal_coke_block")
     // coal coke is not coal
-    event.remove("forge:coal", "immersiveengineering:coal_coke")
+    event.remove("c:coal", "immersiveengineering:coal_coke")
     event.remove("minecraft:coals", "immersiveengineering:coal_coke")
     event.remove("c:coal", "immersiveengineering:coal_coke")
 
     // scguns didn't bother with item tags
-    event.add("forge:ingots", "scguns:anthralite_ingot")
-    event.add("forge:ingots/anthralite", "scguns:anthralite_ingot")
-    event.add("forge:dusts", "scguns:anthralite_dust")
-    event.add("forge:dusts/anthralite", "scguns:anthralite_dust")
+    event.add("c:ingots", "scguns:anthralite_ingot")
+    event.add("c:ingots/anthralite", "scguns:anthralite_ingot")
+    event.add("c:dusts", "scguns:anthralite_dust")
+    event.add("c:dusts/anthralite", "scguns:anthralite_dust")
     event.add("create:crushed_raw_materials", "scguns:crushed_raw_anthralite")
     event.add("create:crushed_raw_materials/anthralite", "scguns:crushed_raw_anthralite")
-    event.add("forge:raw_materials", "scguns:raw_anthralite")
-    event.add("forge:raw_materials/anthralite", "scguns:raw_anthralite")
-    event.get("forge:ores")
+    event.add("c:raw_materials", "scguns:raw_anthralite")
+    event.add("c:raw_materials/anthralite", "scguns:raw_anthralite")
+    event.get("c:ores")
         .add("scguns:anthralite_ore")
         .add("scguns:deepslate_anthralite_ore")
         .add("scguns:sulfur_ore")
         .add("scguns:deepslate_sulfur_ore")
         .add("scguns:nether_sulfur_ore")
-    event.add("forge:ores/anthralite", "scguns:anthralite_ore")
-    event.add("forge:ores/anthralite", "scguns:deepslate_anthralite_ore")
-    event.get("forge:ores/sulfur")
+    event.add("c:ores/anthralite", "scguns:anthralite_ore")
+    event.add("c:ores/anthralite", "scguns:deepslate_anthralite_ore")
+    event.get("c:ores/sulfur")
         .add("scguns:sulfur_ore")
         .add("scguns:deepslate_sulfur_ore")
         .add("scguns:nether_sulfur_ore")
-    event.add("forge:storage_blocks/anthralite", "scguns:anthralite_block")
-    event.add("forge:storage_blocks/sulfur", "scguns:sulfur_block")
-    event.add("forge:storage_blocks/treated_iron", "scguns:treated_iron_block")
-    event.add("forge:storage_blocks", "scguns:treated_iron_block")
+    event.add("c:storage_blocks/anthralite", "scguns:anthralite_block")
+    event.add("c:storage_blocks/sulfur", "scguns:sulfur_block")
+    event.add("c:storage_blocks/treated_iron", "scguns:treated_iron_block")
+    event.add("c:storage_blocks", "scguns:treated_iron_block")
 
     // Plastic is nuclearcraftneohaul:bioplastic, tagged above. Milk stays here.
     event.get("kubejs:milk").add("minecraft:milk")
 
     // oredict simpleradios wire
-    event.add("forge:wires/copper", "simpleradio:copper_wire")
+    event.add("c:wires/copper", "simpleradio:copper_wire")
 
     // tagging all chisels with durability
     event.get("forge:chisels")
@@ -289,7 +286,7 @@ ServerEvents.tags("item", event => {
         .add(/alexscaves:limestone(?!_spear).*/)
         .add(/chisel:limestone.*/)
         .add(/v_slab_compat:.*limestone.*/)
-    event.get("forge:stone/limestone")// full blocks only
+    event.get("c:stone/limestone")// full blocks only
         .add(/create:.*limestone(?!.*wall|.*slab|.*stair).*/)
         .add(/alexscaves:.*limestone(?!.*wall|.*slab|.*stair|_spear).*/)
         .add(/chisel:limestone.*/)
@@ -297,7 +294,7 @@ ServerEvents.tags("item", event => {
         .add(/create:.*limestone(?!.*wall|.*slab|.*stair).*/)
         .add(/alexscaves:.*limestone(?!.*wall|.*slab|.*stair|_spear).*/)
     // marble
-    event.get("forge:stone/marble")// full blocks only
+    event.get("c:stone/marble")// full blocks only
         .add(/chisel:marble.*/)
     event.get("chisel:carving/marble")// full blocks only
         .add("projectred_exploration:marble")
@@ -343,7 +340,7 @@ ServerEvents.tags("block", event => {
     event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
 
     // Not sure if anything checks for this block tag but don't want to risk it.
-    event.remove("forge:storage_blocks/copper", "minecraft:cut_copper");
+    event.remove("c:storage_blocks/copper", "minecraft:cut_copper");
 
     // I don't know why this isn't wrenchable by default
     event.add("create:wrench_pickup", "minecraft:note_block")
@@ -404,11 +401,11 @@ ServerEvents.tags("block", event => {
         .add(/^ae2:smooth_sky_stone_chest$/)
 
     // why?
-    event.remove("forge:storage_blocks/iron", "scguns:treated_iron_block")
+    event.remove("c:storage_blocks/iron", "scguns:treated_iron_block")
 
     // meme stones (chisel, alexscaves, projectred_exploration)
     // limestone
-    event.get("forge:stone/limestone")// full blocks only
+    event.get("c:stone/limestone")// full blocks only
         .add(/create:.*limestone(?!.*wall|.*slab|.*stair).*/)
         .add(/alexscaves:.*limestone(?!.*wall|.*slab|.*stair|_spear).*/)
         .add(/chisel:limestone.*/)
@@ -416,7 +413,7 @@ ServerEvents.tags("block", event => {
         .add(/create:.*limestone(?!.*wall|.*slab|.*stair).*/)
         .add(/alexscaves:.*limestone(?!.*wall|.*slab|.*stair|_spear).*/)
     // marble
-    event.get("forge:stone/marble")// full blocks only
+    event.get("c:stone/marble")// full blocks only
         .add(/chisel:marble.*/)
     event.get("chisel:carving/marble")// full blocks only
         .add("projectred_exploration:marble")
@@ -452,8 +449,8 @@ ServerEvents.tags("fluid", event => {
 
     /*
     // kubejs molten anthralite
-    event.add("forge:molten_anthralite", "kubejs:molten_anthralite")
-    event.add("forge:anthralite", "kubejs:molten_anthralite")
+    event.add("c:molten_anthralite", "kubejs:molten_anthralite")
+    event.add("c:anthralite", "kubejs:molten_anthralite")
     event.add("tconstruct:molten_anthralite", "kubejs:molten_anthralite")
     */
 

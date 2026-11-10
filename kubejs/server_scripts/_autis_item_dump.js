@@ -7,9 +7,11 @@ const ALWAYS = false // touch kubejs/exported/.dump_now to dump on next ServerEv
 // KubeJS 2101 blocks java.nio.file.Files and has no Utils.fileExists.
 // JsonIO.read returns null when the flag is absent, and throws if the touched file is empty.
 function dumpFlagPresent() {
+    if (typeof JsonIO === "undefined" || !JsonIO.read) return false
     try {
         return JsonIO.read(FLAG) != null
     } catch (e) {
+        // JsonIO throws when the touched flag file is empty. That is the dump signal.
         return true
     }
 }

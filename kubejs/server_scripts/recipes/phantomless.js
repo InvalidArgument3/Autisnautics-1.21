@@ -5,32 +5,13 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling("railways:track_phantom", ["create:track", Fluid.of('create:potion[create:potion_fluid_bottle_type="regular",minecraft:potion_contents={potion:"minecraft:long_invisibility"}]', 50)])
     }
 
-    if (Platform.isLoaded("moreminecarts")) {
+    if (Platform.isLoaded("moreminecarts") && Platform.isLoaded("thermal") && Item.exists("thermal:blitz_powder")) {
         event.replaceInput({}, "minecraft:phantom_membrane", "thermal:blitz_powder")
-        if (Platform.isLoaded("thermal")) {
-            event.recipes.create.crushing([Item.of("moreminecarts:levitation_powder"), CreateItem.of("moreminecarts:levitation_powder", 0.5)], "thermal:blitz_powder")
-        }
+        event.recipes.create.crushing([Item.of("moreminecarts:levitation_powder"), CreateItem.of("moreminecarts:levitation_powder", 0.5)], "thermal:blitz_powder")
     }
-    // alternate double jump recipe. Tinkers is not installed.
-    if (Platform.isLoaded("tconstruct")) event.custom({
-        "type": "tconstruct:modifier",
-        "inputs": [
-            { "item": "minecraft:piston" },
-            { "item": "tconstruct:sky_slime" },
-            { "item": "minecraft:piston" },
-            { "item": "thermal:blitz_powder" },
-            { "item": "thermal:blitz_powder" }
-            // { "item": "trials:wind_charge" },
-            // { "item": "trials:wind_charge" }
-        ],
-        "result": "tconstruct:double_jump",
-        "slots": {
-            "abilities": 1
-        },
-        "tools": {
-            "tag": "tconstruct:modifiable/armor/boots"
-        }
-    }).id("tconstruct:tools/modifiers/ability/double_jump")
+    // Modern Foundry already registers modernfoundry:double_jump with phantom membranes.
+    // The old alternate used tconstruct:modifier and thermal:blitz_powder. Neither the
+    // recipe type nor the powder is in this pack, so that recipe is not submitted.
     // slow fall potion is in startup script potions.js
 })
 

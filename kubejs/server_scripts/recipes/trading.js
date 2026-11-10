@@ -1,6 +1,10 @@
 if (Platform.isLoaded("thermal")) {
     ServerEvents.recipes(event => {
-        event.remove({ input: "#forge:coins" })
+        // NeoForge has no c:coins tag. Thermal's own coins are the inputs this used to match.
+        event.remove({ input: "thermal:copper_coin" })
+        event.remove({ input: "thermal:silver_coin" })
+        event.remove({ input: "thermal:gold_coin" })
+        event.remove({ input: "thermal:netherite_coin" })
 
         event.recipes.thermal.numismatic_fuel("thermal:silver_coin", 100000)
         event.recipes.thermal.numismatic_fuel("thermal:gold_coin", 6400000)

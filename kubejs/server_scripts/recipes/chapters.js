@@ -15,8 +15,16 @@ function ifiniDeploying(event, output, input, tool) {
 
 ServerEvents.recipes(event => {
     const hasThermal = Platform.isLoaded("thermal")
-    // Rhino in this KubeJS build has no Proxy. Only touch thermal inside hasThermal.
-    const thermalRecipes = hasThermal ? event.recipes.thermal : null
+    // Rhino in this KubeJS build has no Proxy. A plain stub keeps a stray call from throwing.
+    const skipRecipe = { id() { return this } }
+    const skipCall = () => skipRecipe
+    const thermalRecipes = hasThermal ? event.recipes.thermal : {
+        pulverizer: skipCall,
+        smelter: skipCall,
+        pyrolyzer: skipCall,
+        bottler: skipCall,
+        chiller: skipCall
+    }
 
     /**
 	 * Used to store the name of an item when making sequenced assembly recipes
@@ -107,7 +115,7 @@ ServerEvents.recipes(event => {
     // Andesite machines — Autisnautics live path is recipes/chapters/chapter_1.js (kubejs drill/saw heads).
     // Keep Thermal CABIN machine unlocks only when Thermal is present.
     donutCraft(event, "kubejs:andesite_machine", "create:andesite_casing", "kubejs:kinetic_mechanism")
-    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#forge:plates/brass", "create:golden_sheet")
+    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#c:plates/brass", "create:golden_sheet")
     if (hasThermal) {
         event.remove({ output: "thermal:drill_head" })
         event.shaped("thermal:drill_head", [
@@ -592,7 +600,7 @@ ServerEvents.recipes(event => {
     // donutCraft(event, "kubejs:lead_machine", "kubejs:lead_casing", "kubejs:logistic_mechanism")
 
     /* A2: remove nu-create recipes
-    leadMachine(event, Item.of("create:package_frogport", 1), "#forge:slimeballs")
+    leadMachine(event, Item.of("create:package_frogport", 1), "#c:slime_balls")
     leadMachine(event, Item.of("create:packager", 1), "create:cardboard_block")
     leadMachine(event, Item.of("create:repackager", 1), "create:bound_cardboard_block")
     leadMachine(event, Item.of("create:redstone_requester", 1), "create:stock_link")
@@ -618,10 +626,10 @@ ServerEvents.recipes(event => {
     //     event.custom({
     //         "type": "farmersdelight:cutting",
     //         "ingredients": [{ "item": fern }],
-    //         "tool": { "tag": "forge:tools/knives" },
+    //         "tool": { "tag": "c:tools/knives" },
     //         "result": [Item.of(leaf, 2)]
     //     }).id(`kubejs:cutting/${type}_slime_fern_leaf`)
-    //     event.custom(ifiniDeploying(event, Item.of(leaf, 2), fern, "#forge:tools/knives")).id(`kubejs:deploying/${type}_slime_fern_leaf_using_deployer`)
+    //     event.custom(ifiniDeploying(event, Item.of(leaf, 2), fern, "#c:tools/knives")).id(`kubejs:deploying/${type}_slime_fern_leaf_using_deployer`)
     //     // event.custom({
     //     //     "type": "occultism:spirit_fire",
     //     //     "ingredient": { "item": leaf },
@@ -642,7 +650,7 @@ ServerEvents.recipes(event => {
     //     "AABAA",
     //     " AAA "
     // ], {
-    //     A: "#forge:cobblestone",
+    //     A: "#c:cobblestone",
     //     B: "minecraft:stick"
     // })
     // // Singularties
@@ -720,7 +728,7 @@ ServerEvents.recipes(event => {
     // Gold and Silver melting, might belong with market recipes
     event.custom({
         "type": "tconstruct:melting",
-        "ingredient": { "tag": "forge:coins/silver" },
+        "ingredient": { "tag": "c:coins/silver" },
         "result": {
             "fluid": "tconstruct:molten_silver",
             "amount": 10
@@ -730,7 +738,7 @@ ServerEvents.recipes(event => {
     })
     event.custom({ // worth it!
         "type": "tconstruct:melting",
-        "ingredient": { "tag": "forge:coins/gold" },
+        "ingredient": { "tag": "c:coins/gold" },
         "result": {
             "fluid": "tconstruct:molten_gold",
             "amount": 10
@@ -739,12 +747,12 @@ ServerEvents.recipes(event => {
         "time": 40
     })
     // Enderium Ingots
-    thermalRecipes.smelter("thermal:enderium_ingot", ["#forge:ingots/silver", "minecraft:chorus_fruit", "minecraft:ender_pearl"], 0, 10000)
-    thermalRecipes.smelter("thermal:enderium_ingot", ["#forge:ingots/silver", "minecraft:chorus_fruit", Item.of("ae2:ender_dust", 4)], 0, 10000)
+    thermalRecipes.smelter("thermal:enderium_ingot", ["#c:ingots/silver", "minecraft:chorus_fruit", "minecraft:ender_pearl"], 0, 10000)
+    thermalRecipes.smelter("thermal:enderium_ingot", ["#c:ingots/silver", "minecraft:chorus_fruit", Item.of("ae2:ender_dust", 4)], 0, 10000)
     // Abstruse Mechanisms
     thermalRecipes.smelter("kubejs:abstruse_mechanism", ["kubejs:inductive_mechanism", "thermal:enderium_ingot"], 0, 2000)
     // Ender Slime Ball?
-    event.recipes.create.mixing(["tconstruct:ender_slime_ball"], ["minecraft:chorus_fruit", "#forge:slimeballs"])
+    event.recipes.create.mixing(["tconstruct:ender_slime_ball"], ["minecraft:chorus_fruit", "#c:slime_balls"])
     // Enderium Machines
     donutCraft(event, "kubejs:enderium_machine", "kubejs:enderium_casing", "kubejs:abstruse_mechanism")
     // Machine Crafting
@@ -757,7 +765,7 @@ ServerEvents.recipes(event => {
     enderiumMachine(event, Item.of("kubejs:pipe_module_tier_3", 4))
 
     // Fluid Cells moved to enderium due to being able to transport fluids more efficiently than pipes
-    event.replaceInput({ id: "thermal:fluid_cell_frame" }, "#forge:glass", ["thermal:fluid_duct", "thermal:fluid_duct_windowed"])
+    event.replaceInput({ id: "thermal:fluid_cell_frame" }, "#c:glass_blocks", ["thermal:fluid_duct", "thermal:fluid_duct_windowed"])
     // Windowed fluiducts
     event.remove({ output: "thermal:fluid_duct_windowed" })
     event.shapeless("thermal:fluid_duct_windowed", ["thermal:fluid_duct"])
@@ -784,7 +792,7 @@ ServerEvents.recipes(event => {
 
     event.custom({
         "type": "create:sequenced_assembly",
-        "ingredient": { "tag": "c:coal_coke" }, // IE / NeoForge; forge:coal_coke remapped on 1.21
+        "ingredient": { "tag": "c:coal_coke" }, // IE / NeoForge; c:coal_coke remapped on 1.21
         "loops": 2,
         "results": [{ "id": "kubejs:coke_chunk" }],
         "sequence": [
@@ -810,7 +818,7 @@ ServerEvents.recipes(event => {
         CreateItem.of("kubejs:sand_ball", 0.125)
     ], "minecraft:sandstone")
     if (hasThermal) {
-        thermalRecipes.bottler("kubejs:sand_ball", [Fluid.of("minecraft:water", 50), "#forge:sand/colorless"], 0, 1000)
+        thermalRecipes.bottler("kubejs:sand_ball", [Fluid.of("minecraft:water", 50), "#c:sands/colorless"], 0, 1000)
     }
     event.recipes.create.emptying(["kubejs:rough_sand", Fluid.of("kubejs:fine_sand", 500)], "kubejs:sand_ball")
 
@@ -836,8 +844,8 @@ ServerEvents.recipes(event => {
         event.remove({ id: "thermal:machines/pulverizer/pulverizer_basalz_rod" })
         thermalRecipes.pulverizer([Item.of(blizz).withChance(2.5), Item.of("minecraft:snowball").withChance(0.25)], "thermal:blizz_rod", 0, 800).id("kubejs:machines/pulverizer/blizz_powder")
         thermalRecipes.pulverizer([Item.of(basalz).withChance(2.5), Item.of("thermal:slag").withChance(0.25)], "thermal:basalz_rod", 0, 800).id("kubejs:machines/pulverizer/basalz_powder")
-        event.recipes.create.crushing([Item.of(blizz, 1), Item.of(blizz, 1).withChance(.5)], "thermal:blizz_rod")
-        event.recipes.create.crushing([Item.of(basalz, 1), Item.of(basalz, 1).withChance(.5)], "thermal:basalz_rod")
+        event.recipes.create.crushing([Item.of(blizz, 1), CreateItem.of(blizz, 0.5)], "thermal:blizz_rod")
+        event.recipes.create.crushing([Item.of(basalz, 1), CreateItem.of(basalz, 0.5)], "thermal:basalz_rod")
         event.remove({ id: "thermal:ice_charge_3" })
         event.remove({ id: "thermal:earth_charge_3" })
         event.recipes.create.compacting("thermal:ice_charge", [blizz, blizz, blizz, blizz, blizz, blizz, blizz, blizz])
@@ -981,7 +989,7 @@ ServerEvents.recipes(event => {
         if (hasThermal) {
             thermalRecipes.smelter("ae2:quartz_glass", [["ae2:certus_quartz_dust", "thermal:quartz_dust"]])
             thermalRecipes.smelter(Item.of("ae2:fluix_crystal", 2), ["minecraft:quartz", "ae2:charged_certus_quartz_crystal", "minecraft:redstone"])
-            event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#forge:ingots/iron", "thermal:lead_plate")
+            event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#c:ingots/iron", "thermal:lead_plate")
         } else {
             event.recipes.create.mixing("ae2:quartz_glass", ["ae2:certus_quartz_dust", "minecraft:glass"]).heated()
         }
@@ -1169,7 +1177,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.mechanical_crafting("ad_astra:oxygen_sensor", ["AAA", "GSG", "AMA"], Object.assign(materials, { M: "minecraft:redstone_block" }))
 
         let pattern = [" A ", "GSG", " A "]
-        materials = { A: "kubejs:matter_plastics", G: "#forge:plates/gold", S: "minecraft:iron_chestplate" }
+        materials = { A: "kubejs:matter_plastics", G: "#c:plates/gold", S: "minecraft:iron_chestplate" }
         event.recipes.create.mechanical_crafting("ad_astra:space_suit", pattern, materials)
         materials.S = "minecraft:iron_helmet"
         event.recipes.create.mechanical_crafting("ad_astra:space_helmet", pattern, materials)
@@ -1178,9 +1186,9 @@ ServerEvents.recipes(event => {
         materials.S = "minecraft:iron_boots"
         event.recipes.create.mechanical_crafting("ad_astra:space_boots", pattern, materials)
 
-        materials = { A: "kubejs:matter_plastics", G: "#forge:plates/gold" }
+        materials = { A: "kubejs:matter_plastics", G: "#c:plates/gold" }
         event.recipes.create.mechanical_crafting("ad_astra:gas_tank", ["G", "A", "A"], materials)
-        materials.A = "#forge:ingots/invar"
+        materials.A = "#c:ingots/invar"
         materials.T = "ad_astra:gas_tank"
         event.recipes.create.mechanical_crafting("ad_astra:large_gas_tank", [" G ", "ATA", "ATA"], materials)
         materials.T = "ad_astra:large_gas_tank"
@@ -1229,7 +1237,7 @@ ServerEvents.recipes(event => {
         ], {
             I: "minecraft:iron_block",
             P: "create:iron_sheet",
-            G: "#forge:glass_panes/colorless",
+            G: "#c:glass_panes/colorless",
             N: "kubejs:navigation_computer",
             L: "kubejs:lander_deployer",
             C: "thermal:dynamo_compression"
@@ -1237,7 +1245,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.mechanical_crafting("ad_astra:solar_panel", ["CCC", "DMD", "DDD"], {
             C: "ad_astra:photovoltaic_etrium_cell",
             M: "ae2:controller",
-            D: "#forge:plates/desh"
+            D: "#c:plates/desh"
         })
         transitional = "kubejs:incomplete_gravity_normalizer"
         event.recipes.create.sequenced_assembly([
@@ -1245,9 +1253,9 @@ ServerEvents.recipes(event => {
         ], "kubejs:computation_matrix", [
             event.recipes.create.deploying(transitional, [transitional, "kubejs:enderium_machine"]),
             event.recipes.create.deploying(transitional, [transitional, "thermal:flux_capacitor"]),
-            event.recipes.create.deploying(transitional, [transitional, "#forge:plates/desh"]),
-            event.recipes.create.deploying(transitional, [transitional, "#forge:plates/desh"]),
-            event.recipes.create.deploying(transitional, [transitional, "#forge:plates/desh"])
+            event.recipes.create.deploying(transitional, [transitional, "#c:plates/desh"]),
+            event.recipes.create.deploying(transitional, [transitional, "#c:plates/desh"]),
+            event.recipes.create.deploying(transitional, [transitional, "#c:plates/desh"])
         ]).transitionalItem(transitional)
             .loops(1)
             .id("kubejs:gravity_normalizer")

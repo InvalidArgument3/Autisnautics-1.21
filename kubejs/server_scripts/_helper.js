@@ -228,12 +228,12 @@ let addTreeOutput = (event, trunk, leaf, fluid) => {
  * Also creates a chilling recipe for the ingot
  * This helper function requires all the items and fluids involved to be tagged correctly with the nugget/ingot/block tags
  * @param {RecipeEventJS} event recipe event
- * @param {string} metalName the name of the metal to create casting recipes (ex: "forge:ingots/{metalName}")
+ * @param {string} metalName the name of the metal to create casting recipes (ex: "c:ingots/{metalName}")
  * @param {number} castingTime the time it takes to cast a block in a casting table (nugget and ingot casting times will be calculated based on that)
  */
 let metalCasting = (event, metalName, castingTime) => {
-    let fluidTag = "forge:molten_" + metalName
-    let blockTag = "forge:storage_blocks/" + metalName
+    let fluidTag = "c:molten_" + metalName
+    let blockTag = "c:storage_blocks/" + metalName
 
     // block casting
     if (Ingredient.of(`#${blockTag}`).first && !Ingredient.of(`#${blockTag}`).first.isEmpty()) {
@@ -259,7 +259,7 @@ let metalCasting = (event, metalName, castingTime) => {
 
     // casting into casts
     castTypes.forEach(cast => {
-        let tag = `forge:${cast.name}s/${metalName}`
+        let tag = `c:${cast.name}s/${metalName}`
         if (Ingredient.of(`#${tag}`).first && !Ingredient.of(`#${tag}`).first.isEmpty()) {
             event.custom({
                 "type": "tconstruct:casting_table",
@@ -291,7 +291,7 @@ let metalCasting = (event, metalName, castingTime) => {
     })
 
     // ingot chilling
-    if (global.hasThermal && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
+    if (global.hasThermal && Ingredient.of(`#c:ingots/${metalName}`).first && !Ingredient.of(`#c:ingots/${metalName}`).first.isEmpty()) {
         event.custom({
             "type": "thermal:chiller",
             "ingredients": [{
@@ -301,7 +301,7 @@ let metalCasting = (event, metalName, castingTime) => {
                 "item": "thermal:chiller_ingot_cast"
             }],
             "result": [{
-                "item": getPreferredItemFromTag("forge:ingots/" + metalName),
+                "item": getPreferredItemFromTag("c:ingots/" + metalName),
                 "count": 1
             }],
             "energy": 5000
@@ -317,7 +317,7 @@ let metalCasting = (event, metalName, castingTime) => {
  * @param {number} temperature the temperature required to melt a block in the smeltery
  */
 let metalMelting = (event, metalName, outputFluid, meltingTime, temperature) => {
-    let blockTag = "forge:storage_blocks/" + metalName
+    let blockTag = "c:storage_blocks/" + metalName
 
     // block melting
     if (Ingredient.of(`#${blockTag}`).first && !Ingredient.of(`#${blockTag}`).first.isEmpty()) {
@@ -345,7 +345,7 @@ let metalMelting = (event, metalName, outputFluid, meltingTime, temperature) => 
 
     // melting cast shapes
     castTypes.forEach(cast => {
-        let tag = `forge:${cast.name}s/${metalName}`
+        let tag = `c:${cast.name}s/${metalName}`
         if (Ingredient.of(`#${tag}`).first && !Ingredient.of(`#${tag}`).first.isEmpty()) {
             event.custom({
                 "type": "tconstruct:melting",
@@ -361,11 +361,11 @@ let metalMelting = (event, metalName, outputFluid, meltingTime, temperature) => 
     })
 
     // ingot crucible melting
-    if (global.hasThermal && Ingredient.of(`#forge:ingots/${metalName}`).first && !Ingredient.of(`#forge:ingots/${metalName}`).first.isEmpty()) {
+    if (global.hasThermal && Ingredient.of(`#c:ingots/${metalName}`).first && !Ingredient.of(`#c:ingots/${metalName}`).first.isEmpty()) {
         event.custom({
             type: "thermal:crucible",
             ingredient: {
-                "tag": `forge:ingots/${metalName}`
+                "tag": `c:ingots/${metalName}`
             },
             result: [{
                 fluid: outputFluid,

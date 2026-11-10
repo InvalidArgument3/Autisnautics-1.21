@@ -5,7 +5,7 @@ if (Platform.isLoaded("createcasing")) {
         // Cleanup
         event.remove({ input: "minecraft:iron_block", mod: "createcasing" }) // Removes Presses
         event.remove({ input: "create:whisk", mod: "createcasing" }) // Removes Mixers
-        event.remove({ input: "#forge:stripped_logs", mod: "createcasing" }) // Removes Wooden Shafts
+        event.remove({ input: "#c:stripped_logs", mod: "createcasing" }) // Removes Wooden Shafts
         event.remove({ input: "create:brass_ingot", mod: "createcasing" }) // Removes Brass Shaft
         event.remove({ input: "minecraft:glass", mod: "createcasing" }) // Removes Glass Shaft
 
