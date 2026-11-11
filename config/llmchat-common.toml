@@ -1,0 +1,29 @@
+# LLM Chat config template -- copied into config/ on start when the file is missing
+# (pack deploys replace config/, so this keeps the server pointed at the right endpoint).
+# Deployed to: /opt/minecraft/local-mods/llmchat-common.toml
+
+[connection]
+	baseUrl = "https://api.deepseek.com/v1/chat/completions"
+	defaultModel = "deepseek-flash"
+	keyFile = "/etc/llmchat/api-key"
+
+[triggers]
+	triggerNames = ["bot", "ai"]
+	nameModelMap = []
+
+[behaviour]
+	aiDisplayName = "Bot"
+	systemPrompt = "You are a friendly helper living inside a Minecraft server running the Autisnautics modpack (Minecraft 1.21.1, NeoForge). Players talk to you through in-game chat. You know Minecraft well; when you are not sure about a specific mod's recipe, say so instead of guessing. Keep answers short and in plain text: no markdown, no lists with *, no code blocks. A couple of sentences is the right length unless someone asks for detail."
+	knowledgeFile = "config/llmchat-knowledge.md"
+	historySize = 24
+	maxTokens = 400
+	temperature = 0.7
+	timeoutSeconds = 45
+	maxReplyChars = 1200
+	showThinkingMessage = true
+
+[limits]
+	threadPoolSize = 1
+	cooldownSeconds = 15
+	splitLongMessages = true
+	splitThreshold = 220

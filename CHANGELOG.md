@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Server-side `llmchat` mod: type `@bot <question>` in chat and the answer is broadcast to everyone. Any OpenAI-compatible endpoint works; the stack currently points at DeepSeek `deepseek-flash`. Hand-shipped jar `.pakku/overrides/mods/llmchat-1.0.0.jar`, config `config/llmchat-common.toml`, notes in `docs/llmchat.md`. The API key is deliberately not in the pack: `config/llmchat-common.toml` has no key field at all. The mod reads `LLMCHAT_API_KEY` from the server environment (systemd `EnvironmentFile=/etc/llmchat/env`, mode 600) or a key file outside the server dir, warns if that file is world-readable or inside the server folder, and only logs the last four characters. Nothing key-shaped ships in this repo or the server pack
+
 ## [0.0.87]
 - New client compat mods: `emf-compat-irons-artifice-neoforge-1.21.1-1.0.0.jar` (+ EMF Compat Core) fixes third-person gun poses from Iron's Arms 'n Artifice; `veil_bonk-1.21.1-0.3.2-neoforge.jar` applies the open Veil 4.5.2 bugfix PRs as mixins; `iris_bonk-1.21.1-0.1.3-neoforge.jar` keeps custom core shaders visible under Iris shaderpacks. All three are client-side
 - Truly Modular (miapi + arsenal + archery + armory) now ships from our forks (`InvalidArgument3/Modular-Item-API`, `Arsenal`, `Archery`, `Armory`) through GitHub-release Pakku sources instead of Modrinth/CurseForge. The fork builds strip the pride skin sets and the supporter-only wizzard skin; summer skins stay. Fork builds are miapi 2.4.4, arsenal 2.4.2, archery/armory 2.2.2
