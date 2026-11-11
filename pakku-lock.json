@@ -8646,7 +8646,7 @@
      "release_type": "release",
      "url": "https://cdn.modrinth.com/data/hbGct5uU/versions/ai1LOVRO/emf_compat_core_neoforge_1.21.1_2.3.2.jar",
      "id": "KaQZblRC",
-     "parent_id": "ai1LOVRO",
+     "parent_id": "hbGct5uU",
      "hashes": {
       "sha512": "e0d264dd700380b9a17103fa023f76e9210ca818af1dd6bf20b48d2998324392a369c0ffd5ed131a249805555679ec8741e8c2d547ddc169d1fb33d2a7b51675",
       "sha1": "67e4a92e2df2a2b86a655cfc081d971a81f5a9f8"
@@ -21702,7 +21702,7 @@
      "release_type": "release",
      "url": "https://edge.forgecdn.net/files/9205/893/touch_n_motion_neoforge_1.21.1_1.0.4.jar",
      "id": "9205893",
-     "parent_id": "1653991",
+     "parent_id": "1734204",
      "hashes": {
       "sha512": "25f21447df5e52bf053f458084e140614b3b50a4cd114a272333c86f1cd1250d8305dbf7769bda67b6b91b8e8a6904d44933c01fb34d7e3ac4fe3bc70c95c469",
       "sha1": "b6fba9ca4d73d2e1eb4968fb48cb6eb0fcadca36"
