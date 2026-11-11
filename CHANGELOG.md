@@ -1,4 +1,11 @@
 # Changelog
+## [0.0.87]
+- New client compat mods: `emf-compat-irons-artifice-neoforge-1.21.1-1.0.0.jar` (+ EMF Compat Core) fixes third-person gun poses from Iron's Arms 'n Artifice; `veil_bonk-1.21.1-0.3.2-neoforge.jar` applies the open Veil 4.5.2 bugfix PRs as mixins; `iris_bonk-1.21.1-0.1.3-neoforge.jar` keeps custom core shaders visible under Iris shaderpacks. All three are client-side
+- Truly Modular (miapi + arsenal + archery + armory) now ships from our forks (`InvalidArgument3/Modular-Item-API`, `Arsenal`, `Archery`, `Armory`) through GitHub-release Pakku sources instead of Modrinth/CurseForge. The fork builds strip the pride skin sets and the supporter-only wizzard skin; summer skins stay. Fork builds are miapi 2.4.4, arsenal 2.4.2, archery/armory 2.2.2
+- Dependency pins so `pakku update` cannot re-break them: `emf_compat_core_neoforge_1.21.1_2.3.2.jar` (artifice pins it exactly), `OctoLib-NEOFORGE-0.6.3+1.21.jar` (nerb needs `>=0.6.2`, and the old `octo-lib` slug is stale), `touch_n_motion_neoforge_1.21.1_1.0.4.jar` (1.0.5 needs core `>=2.4.0`, which fights the artifice pin; 1.0.4's floor is 2.3.0). All three carry `update_strategy: NONE`
+- Pakku: ARR-licensed mods are marked `redistributable: true` in pakku.json so exports keep their jars (ars-nouveau, irons-spells-n-spellbooks, xaeros-minimap/world-map, cobblemotion, fresh-animations-extensions, fa-player-extension, yeetus-experimentus, client-tweaks, fusion-connected-textures, certain-questing-additions, sound, default-options among them)
+- Bulk mod updates across the pack (MiAPI 2.4.2, JEI 19.70, KubeJS 2101.7.2-build.381, ExtraQuests 2.0, Sophisticated Storage 1.6.16, Quark 488, Create-family fixes, Cobblemon extras, Dungeons Delight 1.5.2, Reliquary 2.0.84 and ~40 more)
+
 ## [0.0.86]
 - ServerCore mob categories use the Friends & Foes enum names `FRIENDSANDFOES_GLARES` and `FRIENDSANDFOES_RASCALS`. The Spore categories in that file already match `SPORE_INFECTED`, `SPORE_ORGANOIDS`, and `SPORE_EXPERIMENTS`
 - Paxi datapack `Autisnautics Compat Filters` hides Copycats+ `physics_block_properties/copycat_catwalk.json` (the catwalk item places `copycats:copycat_board`, which already has the same Sable mass and volume) and Truly Modular Armory's debug `miapi/material_extensions/test.json` (no `key`, so it cannot resolve a material)
