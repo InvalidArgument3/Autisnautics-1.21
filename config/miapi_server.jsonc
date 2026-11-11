@@ -123,10 +123,11 @@
     },
     "other": {
         /*
-        Whether the development mode of Miapi is enabled
+        Whether the development mode of Miapi is enabled.
+        supports "all","admin","none"
         DO NOT ENABLE IF U DO NOT KNOW WHAT IT DOES
         */
-        "development_mode": false,
+        "development_mode": "NONE",
         /*
         Truly Modular Logs more aggressively
         Helps with debugging

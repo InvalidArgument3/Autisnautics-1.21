@@ -14,6 +14,15 @@
 	quests: [
 		{
 			dependencies: ["1688D58F977334FB"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0F7D65050E1F7A6E"
 			rewards: [{
 				command: "/effect give @p minecraft:wither 12 0"
@@ -24,6 +33,17 @@
 			}]
 			tasks: [{
 				consume_items: false
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0FD161DEE23E1A60"
 				item: { count: 1, id: "minecraft:oak_log" }
 				only_from_crafting: false
@@ -34,6 +54,15 @@
 		}
 		{
 			dependencies: ["0F7D65050E1F7A6E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7C26B21C40608612"
 			rewards: [{
 				id: "687490A6EC37992D"
@@ -46,6 +75,17 @@
 			tasks: [{
 				consume_items: false
 				count: 24L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "51A6586CA1E383ED"
 				item: { count: 1, id: "minecraft:iron_ingot" }
 				only_from_crafting: false
@@ -56,6 +96,15 @@
 		}
 		{
 			dependencies: ["7C26B21C40608612"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "psi:cad"
 			}
@@ -68,21 +117,65 @@
 			}]
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1E67DE633C6B8F07"
 					item: { count: 1, id: "psi:cad_assembly_iron" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "54A5B8C79F2C0B1C"
 					item: { count: 1, id: "psi:cad_core_basic" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "48D6AAE0BF9B2133"
 					item: { count: 1, id: "psi:cad_socket_basic" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "43287745C9FE59C7"
 					item: { count: 1, id: "psi:cad_assembler" }
 					type: "item"
@@ -93,6 +186,15 @@
 		}
 		{
 			dependencies: ["3B448BBF4352E4AB"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "40923F4758A50D9C"
 			rewards: [{
 				id: "56812C32D7AB3581"
@@ -103,6 +205,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "300AF1A3FB945D33"
 				item: { count: 1, id: "psi:programmer" }
 				type: "item"
@@ -112,6 +225,15 @@
 		}
 		{
 			dependencies: ["0F7D65050E1F7A6E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "74F82F70F43DF148"
 			rewards: [{
 				id: "20D30B1E037751CC"
@@ -123,25 +245,80 @@
 			}]
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "470E0CD7F74CD178"
 					item: { count: 1, id: "minecraft:carved_pumpkin" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "3C6E096FEDFD469F"
 					item: { count: 1, id: "minecraft:leather_chestplate" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5B20672C0177AF55"
 					item: { count: 1, id: "minecraft:leather_leggings" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5F27F141221B7235"
 					type: "checkmark"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "6B5C673626AB7C92"
 					item: { count: 1, id: "minecraft:armor_stand" }
 					type: "item"
@@ -152,6 +329,15 @@
 		}
 		{
 			dependencies: ["7C26B21C40608612"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2F51EA6259AD6A44"
 			rewards: [{
 				count: 2
@@ -164,6 +350,17 @@
 			}]
 			tasks: [{
 				consume_items: false
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0D10A9483F91942D"
 				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
@@ -173,6 +370,15 @@
 		}
 		{
 			dependencies: ["1688D58F977334FB"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "451CB26EBDE58A25"
 			rewards: [{
 				command: "/power grant @p autisorigins:strong_flesh"
@@ -185,6 +391,17 @@
 			size: 1.5d
 			tasks: [{
 				dimension: "ad_astra:earth_orbit"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5F810A4B4280BA7D"
 				type: "dimension"
 			}]

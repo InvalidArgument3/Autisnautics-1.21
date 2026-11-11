@@ -11,6 +11,15 @@
 	quests: [
 		{
 			dependencies: ["22107772A91372B0"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_complete: true
 			id: "6CC8D9848625CC34"
 			rewards: [{
@@ -22,6 +31,17 @@
 			tasks: [{
 				advancement: "enigmaticlegacyplus:main/cursed_ring"
 				criterion: ""
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6CA3091C271D4FC1"
 				type: "advancement"
 			}]
@@ -33,6 +53,15 @@
 				"6CC8D9848625CC34"
 				"22107772A91372B0"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_complete: true
 			hide_until_deps_visible: false
 			id: "35F18B3DFEFEC5C6"
@@ -45,6 +74,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "429C4BFAA4818070"
 				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
@@ -54,6 +94,15 @@
 		}
 		{
 			dependencies: ["35F18B3DFEFEC5C6"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_visible: true
 			id: "21F77EA64E11A9AB"
 			rewards: [{
@@ -65,6 +114,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3C2BC85C3DE43B8D"
 				stat: "minecraft:mob_kills"
 				type: "stat"
@@ -75,6 +135,15 @@
 		}
 		{
 			dependencies: ["35F18B3DFEFEC5C6"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_visible: true
 			id: "3680C9F8751A9E5F"
 			rewards: [{
@@ -87,6 +156,17 @@
 			}]
 			tasks: [{
 				entity: "minecraft:enderman"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "04041B7DDE8154A4"
 				type: "kill"
 				value: 1L
@@ -96,6 +176,15 @@
 		}
 		{
 			dependencies: ["3680C9F8751A9E5F"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_visible: true
 			id: "14A12AAB5FD3F6C1"
 			rewards: [{
@@ -106,6 +195,17 @@
 			}]
 			tasks: [{
 				dimension: "minecraft:overworld"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7C28B9702199ED35"
 				ignore_dimension: false
 				position: [I;
@@ -128,6 +228,15 @@
 				"6CC8D9848625CC34"
 				"22107772A91372B0"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			hide_until_deps_complete: true
@@ -144,6 +253,17 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5673E521D5CC5CF2"
 				type: "checkmark"
 			}]

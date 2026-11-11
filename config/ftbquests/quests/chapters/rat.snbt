@@ -11,6 +11,15 @@
 	quests: [
 		{
 			dependencies: ["4FE493562DC11639"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_complete: true
 			id: "0BE1DA955F49FBD6"
 			rewards: [{
@@ -24,6 +33,17 @@
 			tasks: [{
 				consume_items: false
 				count: 16L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1F06E9D8DA8BE5C7"
 				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
@@ -33,6 +53,15 @@
 		}
 		{
 			dependencies: ["0BE1DA955F49FBD6"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3E391D4870926B8F"
 			rewards: [{
 				id: "3FC71D86A2129376"
@@ -47,6 +76,17 @@
 			}]
 			tasks: [{
 				consume_items: false
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "45A1BDEEA342429D"
 				item: { components: { "ftbquests:missing_item": "chiselsandbits:chisel_stone" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -56,6 +96,15 @@
 		}
 		{
 			dependencies: ["0BE1DA955F49FBD6"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6E3CD6919EAA9EE4"
 			rewards: [{
 				auto: "disabled"
@@ -68,12 +117,34 @@
 			tasks: [
 				{
 					consume_items: false
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5DA07794E31B6312"
 					item: { count: 1, id: "minecraft:oak_log" }
 					only_from_crafting: false
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2EDF71D7227FCDF9"
 					item: { count: 1, id: "farmersdelight:cutting_board" }
 					type: "item"
@@ -84,6 +155,15 @@
 		}
 		{
 			dependencies: ["6E3CD6919EAA9EE4"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1BAFDA330E991BEC"
 			rewards: [{
 				count: 2
@@ -97,6 +177,17 @@
 			tasks: [{
 				consume_items: false
 				count: 3L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "113C6DFF6DF803AF"
 				item: { count: 1, id: "vc_gliders:reinforced_paper" }
 				only_from_crafting: false
@@ -107,6 +198,15 @@
 		}
 		{
 			dependencies: ["1BAFDA330E991BEC"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "779266F2F19F839E"
 			rewards: [{
 				id: "61E770B1806D4DF7"
@@ -121,6 +221,17 @@
 			}]
 			tasks: [{
 				consume_items: false
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6CDEDC8CD68A9F15"
 				item: { count: 1, id: "vc_gliders:paraglider_wood" }
 				only_from_crafting: false
@@ -131,6 +242,15 @@
 		}
 		{
 			dependencies: ["4FE493562DC11639"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			id: "097BF458D48E4B46"
@@ -142,6 +262,17 @@
 			size: 1.5d
 			tasks: [{
 				dimension: "ad_astra:moon"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "59A000B55686AD38"
 				type: "dimension"
 			}]

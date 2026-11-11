@@ -55,3 +55,7 @@
 [ships]
 	#Rigs grip Sable Ships like world blocks. Ignored without Sable
 	grip = true
+
+[curios]
+	#A Rig in the Curios back slot works (Air, Reach, Rig Settings) but is not armor. Off: the back slot refuses Rigs and one already there does nothing. Ignored without Curios
+	backSlot = true

@@ -14,10 +14,30 @@
 	quests: [
 		{
 			can_repeat: false
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6AC1CED0D341150E"
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "214F623C75A92809"
 				type: "checkmark"
 			}]
@@ -26,6 +46,15 @@
 		}
 		{
 			dependencies: ["6AC1CED0D341150E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				components: {
 					"ftbquests:missing_item": "2x thermal:gold_coin"
@@ -46,6 +75,17 @@
 			}]
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "601161A1565C5161"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -56,6 +96,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1A27F6CC5196D116"
 			rewards: [{
 				id: "73B5632934CB5398"
@@ -71,6 +120,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4A756F231245382C"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -81,6 +141,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4C0F811C1D2495CC"
 			rewards: [{
 				id: "4D3AAC1C8DC9CEEF"
@@ -96,6 +165,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7903FA0C29DC6F93"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -106,6 +186,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6AE7090EB52A51B3"
 			rewards: [{
 				id: "092706A1932A2BC2"
@@ -121,6 +210,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "448F36640D57DAC1"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -131,6 +231,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0315668E30F2F6E5"
 			rewards: [{
 				id: "5DC9D20E6BC4A51C"
@@ -146,6 +255,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "20D919F64F7AFFEA"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -156,6 +276,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "36B5C3ECFD38670E"
 			rewards: [{
 				id: "5626AD1C3B237DBF"
@@ -171,6 +300,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "59D815E73906936E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -181,6 +321,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1509D36A982217C6"
 			rewards: [{
 				id: "5A7B73A55C927126"
@@ -196,6 +345,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "54CF59C637986EA6"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -206,6 +366,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1BA3EF0818CA7F64"
 			rewards: [{
 				id: "0D2D48CDD087D4FA"
@@ -221,6 +390,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7B7EAEB5685FF91B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -231,6 +411,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0DEFAE2746209F1A"
 			rewards: [{
 				id: "268F87140B2BE1A5"
@@ -246,6 +435,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "785F1754B3EF8BF5"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -256,6 +456,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2C10D18D55335B7E"
 			rewards: [{
 				id: "2E3F385127229261"
@@ -271,6 +480,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0E5FAE10E27E9366"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -281,6 +501,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5F0B4CBE299954C4"
 			rewards: [{
 				id: "17357E149CEB22EB"
@@ -296,6 +525,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1FABFC7817D97D70"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -306,6 +546,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "262F369CE9CA7C87"
 			rewards: [{
 				id: "57557C8A54D21B68"
@@ -321,6 +570,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "627C690F2F1F4141"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -331,6 +591,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "47FB0491BAB19B90"
 			rewards: [{
 				id: "798D923EE57A6442"
@@ -346,6 +615,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3562F12F71399D43"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -356,6 +636,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "41709386017FD959"
 			rewards: [{
 				id: "16054B2D679D6012"
@@ -371,6 +660,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6FCDF761279D7BD7"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -381,6 +681,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5D4F2FFCBD0B0F8E"
 			rewards: [{
 				id: "6EC8FA21CEFFBB20"
@@ -396,6 +705,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "09762E98E4ADFA54"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -406,6 +726,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "222EEB7DB1D98484"
 			rewards: [{
 				id: "203B1118E5E16C63"
@@ -421,6 +750,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4F6FBE56F7CDEFF4"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -431,6 +771,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5504C6597C74637B"
 			rewards: [{
 				id: "41B4166C32732193"
@@ -446,6 +795,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "33745C01EBE18522"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -456,6 +816,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "35F97137A46C1F3C"
 			rewards: [{
 				id: "153D65A8A0BB38FA"
@@ -471,6 +840,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4D91654331E04989"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -481,6 +861,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5923347D1827DA83"
 			rewards: [{
 				id: "795C72A7059A47C2"
@@ -496,6 +885,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0C089819C11CA13F"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -506,6 +906,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7F7ACF3B774E9D0E"
 			rewards: [{
 				id: "7A2F2E7AFBF5E2C0"
@@ -521,6 +930,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "47A66BF894211981"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -531,6 +951,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6C6A43E08FBC8D53"
 			rewards: [{
 				id: "32FB1ED239878B55"
@@ -546,6 +975,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "69933C609CBB5098"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -556,6 +996,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "585788A4494AC124"
 			rewards: [{
 				id: "1854BD659ABE0EC5"
@@ -571,6 +1020,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0720A203C27A544B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -581,6 +1041,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "24328C973480E4E8"
 			rewards: [{
 				id: "4DDDA8FE8957E1B3"
@@ -596,6 +1065,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "69B204994581EA5A"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -606,6 +1086,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "725FFE8BD6E45F96"
 			rewards: [{
 				id: "2EFE654C949DA5E2"
@@ -621,6 +1110,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6F0F7C5617BD6320"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -631,6 +1131,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "07081911727142C8"
 			rewards: [{
 				id: "04EFE1B1037D4425"
@@ -646,6 +1155,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "405D1EC31C5CEAF2"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -656,6 +1176,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "69B107895D3CA0B2"
 			rewards: [{
 				id: "5D700D1565692EE1"
@@ -671,6 +1200,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2C8F6A20A2DCAA10"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -681,6 +1221,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "74F96A8D400FD059"
 			rewards: [{
 				id: "5FDA4963F53EC5F5"
@@ -696,6 +1245,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "48683B20D7B4C40D"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -706,6 +1266,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6D8E4C9DCFFB2C90"
 			rewards: [{
 				id: "645226D860AF3F5E"
@@ -721,6 +1290,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2C1CD73C4F9A126E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -731,6 +1311,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3FC1029AF9BB245E"
 			rewards: [{
 				id: "5FB6D6D6595BFA31"
@@ -746,6 +1335,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "76679C31FB55AC99"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -756,6 +1356,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "417DD17A5C96CEE2"
 			rewards: [{
 				id: "5DF7A47F2DF28050"
@@ -771,6 +1380,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "21048ECCF870510E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -781,6 +1401,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7B5B7BB304E14C6D"
 			rewards: [{
 				id: "086F1AC96402FBDE"
@@ -796,6 +1425,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7106D948A6148F3F"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -806,6 +1446,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "01F3EDC327B63908"
 			rewards: [{
 				id: "7FDA0A2FE7C3CC29"
@@ -821,6 +1470,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "59D460B0062FCD02"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -831,6 +1491,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "040A0552921E1115"
 			rewards: [{
 				id: "5BBBE855F52ED029"
@@ -846,6 +1515,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3E8E8E4CD2EEBE0D"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -856,6 +1536,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2D022872F99F9907"
 			rewards: [{
 				id: "302C6F91CA94F1E1"
@@ -871,6 +1560,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3F49C93B2F9C8BC2"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -881,6 +1581,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0DA48CA15E17157D"
 			rewards: [{
 				id: "2EBABA88E1067F51"
@@ -896,6 +1605,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7813299A6F0A7923"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -906,6 +1626,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "70FDB8C2F2C4A825"
 			rewards: [{
 				id: "3E183FFAFED2D1D9"
@@ -921,6 +1650,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "48D1CF5666B6688C"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -931,6 +1671,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "78ECB6EB48347D08"
 			rewards: [{
 				id: "48E779E7241F8B64"
@@ -946,6 +1695,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "123B7FAF8F6E5495"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -956,6 +1716,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "21CC162C06BBFAE6"
 			rewards: [{
 				id: "288A91044CFC9BEA"
@@ -971,6 +1740,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "03EC6C3F9F8DE5E8"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -981,6 +1761,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "00EBF8DED4E51A4F"
 			rewards: [{
 				id: "703407B7CF1C8911"
@@ -996,6 +1785,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "629882CBD08A0F37"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1006,6 +1806,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "258C779897D1AEF0"
 			rewards: [{
 				id: "0351079CD0288700"
@@ -1021,6 +1830,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3E5A44DCA6B75DA4"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1031,6 +1851,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "38CD5CE18FE09D23"
 			rewards: [{
 				id: "14762B422E1D7D3B"
@@ -1046,6 +1875,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5697CD109E293D66"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1056,6 +1896,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1C104893F5481A58"
 			rewards: [{
 				id: "1F521871F7BF5D3B"
@@ -1071,6 +1920,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "32BD07B4D88AC933"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1081,6 +1941,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7509D8FA29C6AB31"
 			rewards: [{
 				id: "2FC89C2C89DA4253"
@@ -1096,6 +1965,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "51F48DD6F9E31312"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1106,6 +1986,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3A4A3B749FBDBEF1"
 			rewards: [{
 				id: "2064E44195ACEC5B"
@@ -1121,6 +2010,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6617D0134BAA4A51"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1131,6 +2031,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1D6150F2480B976E"
 			rewards: [{
 				id: "13C6D81EC3938304"
@@ -1146,6 +2055,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "377180FD5A34A04E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1156,6 +2076,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "48F72CFAB336FE73"
 			rewards: [{
 				id: "4DE00DE8BF5936C9"
@@ -1171,6 +2100,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7EC3509B8D1B3428"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1181,6 +2121,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4A678C0BE97177DB"
 			rewards: [{
 				id: "08DDDFEFD8A7C4D7"
@@ -1196,6 +2145,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7ADB304DD8E20DB3"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1206,6 +2166,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "488A4B4A3295CF10"
 			rewards: [{
 				id: "22DD9D3AF87567E2"
@@ -1221,6 +2190,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "78A09B6FA88E17EB"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1231,6 +2211,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "49634E835B948A4F"
 			rewards: [{
 				id: "4E2898367E1E0619"
@@ -1246,6 +2235,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5688E91CACD4D08A"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1256,6 +2256,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "20CB646041616191"
 			rewards: [{
 				id: "36A65ACB4695944E"
@@ -1271,6 +2280,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1FFA77921DE9C672"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1281,6 +2301,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "58E93229D6552D4B"
 			rewards: [{
 				id: "53B0394912B56DD3"
@@ -1296,6 +2325,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "51E4A954A6C1C680"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1306,6 +2346,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3C45250D863E65CB"
 			rewards: [{
 				id: "4CD2BDCF1A0AF73B"
@@ -1321,6 +2370,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7379A534933BBFC4"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1331,6 +2391,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7BDF86B9E3E607C5"
 			rewards: [{
 				id: "3A5740C10BBF0430"
@@ -1346,6 +2415,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "77D789870156E17E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1356,6 +2436,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "59EBD3DADD002D3A"
 			rewards: [{
 				id: "78B01F12E7EDFC53"
@@ -1371,6 +2460,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6E8F252330F9E3FF"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1381,6 +2481,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7F4D9F958EBDEAF8"
 			rewards: [{
 				id: "6056A6105CB0C763"
@@ -1396,6 +2505,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "04CB57B93A9A5543"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1406,6 +2526,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "737E670DC8AD5E19"
 			rewards: [{
 				id: "7B54EAB8073173F1"
@@ -1421,6 +2550,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "03282EA97256DD8E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1431,6 +2571,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1EF5AB1D7882167F"
 			rewards: [{
 				id: "3EE0DCF1E01DE583"
@@ -1446,6 +2595,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "74F041E80576D161"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1456,6 +2616,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "576E0B50F2015C9E"
 			rewards: [{
 				id: "05836F075B2DD93C"
@@ -1471,6 +2640,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "13F5F8B129D56A11"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1481,6 +2661,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3CA6DD7C5516A330"
 			rewards: [{
 				id: "5DF1491360FCF3FA"
@@ -1496,6 +2685,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4C36A02FD8FFB372"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1506,6 +2706,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6C6C1C2E7CA882BD"
 			rewards: [{
 				id: "07C4BD06D929D08A"
@@ -1521,6 +2730,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "422A86FE2BC106B8"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1531,6 +2751,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3E27961386364EDF"
 			rewards: [{
 				id: "1D32702F20FE8AAB"
@@ -1546,6 +2775,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4BB831132F4F2E5D"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1556,6 +2796,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "286C553AD3E15266"
 			rewards: [{
 				id: "0A9B1BF968F82301"
@@ -1571,6 +2820,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4C968D5E57EBEB29"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1581,6 +2841,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "70B164A5F22452CA"
 			rewards: [{
 				id: "1BD8FA059ED750C8"
@@ -1596,6 +2865,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3BEC13679ADA8951"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1606,6 +2886,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5BB058D52AA40751"
 			rewards: [{
 				id: "3D70673520E3563B"
@@ -1621,6 +2910,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2D4984407440CAE5"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1631,6 +2931,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4C068341DD17068B"
 			rewards: [{
 				id: "51D175FD782BBBB1"
@@ -1646,6 +2955,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6A9A583F2DAABF7A"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1656,6 +2976,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3A86EA1C2AD21C29"
 			rewards: [{
 				id: "1C92DCE87F116947"
@@ -1671,6 +3000,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "62575AE95965D328"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1681,6 +3021,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "33B5C951B4AE8322"
 			rewards: [{
 				id: "68F58624A48FD804"
@@ -1696,6 +3045,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3EED905996C2FA91"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1706,6 +3066,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "57CD030DE2CD7715"
 			rewards: [{
 				id: "10F61F3602889BF0"
@@ -1721,6 +3090,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7BD6E0DA086B43DF"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1731,6 +3111,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0726837174BCED3D"
 			rewards: [{
 				id: "24A86054AF92BE82"
@@ -1746,6 +3135,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "12FAABD2933127FF"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1756,6 +3156,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "091671443430B31B"
 			rewards: [{
 				id: "16A5440919178342"
@@ -1771,6 +3180,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5C5A382C41AACDCA"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1781,6 +3201,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7DFB9DD1A1BB63E4"
 			rewards: [{
 				id: "2944EA4C610DACB4"
@@ -1796,6 +3225,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "47933CF1CF318964"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1806,6 +3246,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1A2E4E06037E009A"
 			rewards: [{
 				id: "26925EEB466FCEBD"
@@ -1821,6 +3270,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3ADD4B2667FCE6BD"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1831,6 +3291,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "011F64B48766234B"
 			rewards: [{
 				id: "72F40F26027377A2"
@@ -1846,6 +3315,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1949FB8AB7C640DA"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1856,6 +3336,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2C9012E65F43EC72"
 			rewards: [{
 				id: "4F7BF38D3490B8C2"
@@ -1871,6 +3360,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "78C2B9BFB8F7AE79"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1881,6 +3381,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4202EDD798183934"
 			rewards: [{
 				id: "32A8DF7DE9B0A29A"
@@ -1896,6 +3405,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "27C97FE708B72325"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1906,6 +3426,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3D7AD3AF3857F7D9"
 			rewards: [{
 				id: "72E68D6D7A7E8F25"
@@ -1921,6 +3450,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "30362DDA0FA170B1"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1931,6 +3471,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1D4B76A3C724C40D"
 			rewards: [{
 				id: "22523CAC4C6C6970"
@@ -1946,6 +3495,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7566051D44BDCB05"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1956,6 +3516,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "01428232944D8BE9"
 			rewards: [{
 				id: "1E7F2B3B05EA97E2"
@@ -1971,6 +3540,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "29EBA4358AFF2C00"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -1981,6 +3561,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3A7A2C8D56500426"
 			rewards: [{
 				id: "50F49365A310C7AF"
@@ -1996,6 +3585,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0E882521462F6DD5"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2006,6 +3606,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "70EBB5E32545ACEC"
 			rewards: [{
 				id: "2212B9D7C3CE5596"
@@ -2021,6 +3630,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "32D4F20220FEF18B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2031,6 +3651,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "10D5B3EF6A77B918"
 			rewards: [{
 				id: "2D46F83411D1BE3E"
@@ -2046,6 +3675,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "630B8174C195B580"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2056,6 +3696,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6BC9B96B2C6684DC"
 			rewards: [{
 				id: "7902C2C3CA649D96"
@@ -2071,6 +3720,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6E441EDE63DA1C1E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2080,6 +3740,15 @@
 		}
 		{
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "44CDD45033A93614"
 			rewards: [{
 				id: "45FEF3A32F7766AD"
@@ -2095,6 +3764,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1F6B1DD8809CA135"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2105,6 +3785,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7B7A161B4BAB89AD"
 			rewards: [{
 				id: "2E705AE0E825C6B5"
@@ -2120,6 +3809,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "00217BF472607D30"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2130,6 +3830,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "522D9970B8C43046"
 			rewards: [{
 				id: "576ECF50EAF96452"
@@ -2145,6 +3854,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "185E704F9052555F"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2155,6 +3875,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "11B239EF3DAE4463"
 			rewards: [{
 				id: "7B223CF62CA3E5E3"
@@ -2170,6 +3899,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "77AD501F9C60CC9E"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2180,6 +3920,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "339BC75AD23B70D7"
 			rewards: [{
 				id: "1522E7E6CC270122"
@@ -2195,6 +3944,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "68258EE641051453"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2205,6 +3965,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "52CCFCE2733F76BC"
 			rewards: [{
 				id: "2A5CE406A8184B62"
@@ -2220,6 +3989,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1A41C3FF29DFB7E6"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2230,6 +4010,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "42F951B44FB2BFE3"
 			rewards: [{
 				id: "74F3E9B2AFC611AE"
@@ -2245,6 +4034,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2C76AAB77678430B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2255,6 +4055,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "108550230A95C7D4"
 			rewards: [{
 				id: "505F6AE0E7831D5A"
@@ -2270,6 +4079,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "59DFBA0B3B34FFE9"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2280,6 +4100,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1BF763E3FD8C2245"
 			rewards: [{
 				id: "4C973FACE23E9458"
@@ -2295,6 +4124,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5C3649EA4045CFA5"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2305,6 +4145,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1F05704C3B1FA528"
 			rewards: [{
 				id: "303058DFD6FFB21A"
@@ -2320,6 +4169,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "22B9CA1C44CE07C9"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2330,6 +4190,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0C6B2EEE280F7667"
 			rewards: [{
 				id: "27371A9101CF9D19"
@@ -2345,6 +4214,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "244AD24E7FF79516"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2355,6 +4235,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "46F150CC9BE2D856"
 			rewards: [{
 				id: "1F0E6C70D37E2509"
@@ -2370,6 +4259,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "69CC6A53FB1DA522"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2380,6 +4280,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "76287BDB2E9B7BC8"
 			rewards: [{
 				id: "7C5CB53B93CA20F6"
@@ -2395,6 +4304,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2AB8F75131B22386"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2405,6 +4325,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "685DD2A4DFF56193"
 			rewards: [{
 				id: "17E28B4A42E7977B"
@@ -2420,6 +4349,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "69AE01C37B987F2B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2430,6 +4370,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "433E103CD81712C1"
 			rewards: [{
 				id: "3AE918FEFE0A3CB9"
@@ -2445,6 +4394,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "48D9E5B847C5F29A"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2455,6 +4415,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "29696B4965010CED"
 			rewards: [{
 				id: "2D8C5A5E22AB7A9A"
@@ -2470,6 +4439,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "368A7CCA6ACF29AA"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2480,6 +4460,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7C7B81ABFC586379"
 			rewards: [{
 				id: "77F93921DB94E45A"
@@ -2495,6 +4484,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "18A713A7F617EE48"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2505,6 +4505,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4864E6BA6AE2B49B"
 			rewards: [{
 				id: "3BFE36CE8DEED04B"
@@ -2520,6 +4529,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "34280C5D1DE0A3D8"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2530,6 +4550,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2714FE0125D3E953"
 			rewards: [{
 				id: "2683AEBC65309590"
@@ -2545,6 +4574,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "531D4A7E38CB4119"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2555,6 +4595,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "395978A711E14931"
 			rewards: [{
 				id: "08D7DF6BC677E813"
@@ -2570,6 +4619,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6FD1B29245B5DA4D"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2580,6 +4640,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "23F9DB562ED7C2F6"
 			rewards: [{
 				id: "5B6DB6D9D5226D0E"
@@ -2595,6 +4664,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7F553FF9F6C2E75F"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2605,6 +4685,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4764EAB921EE1F19"
 			rewards: [{
 				id: "3045E27533693F14"
@@ -2620,6 +4709,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "251E8472CFA98D68"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2630,6 +4730,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2E10D7FE1BC4FDBB"
 			rewards: [{
 				id: "4F8FF287C3AC4EB4"
@@ -2645,6 +4754,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "168C97990B35982C"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2655,6 +4775,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "67B45D6767F8BFD9"
 			rewards: [{
 				id: "3DD074848EA13D6A"
@@ -2670,6 +4799,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4018899FC3C2DC63"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2680,6 +4820,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5491C5600D7F039A"
 			rewards: [{
 				id: "1F9F748792E58E29"
@@ -2695,6 +4844,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "123CD29AA111F555"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2705,6 +4865,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4BD2016AFC2A2035"
 			rewards: [{
 				id: "1DF2FEEF65D1FE87"
@@ -2720,6 +4889,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "50C8AD8844CB79E2"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2730,6 +4910,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "59474208A27099BF"
 			rewards: [{
 				id: "716125125B3BC02C"
@@ -2745,6 +4934,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1231C00010314495"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2755,6 +4955,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6FF65841E3EA0FCD"
 			rewards: [{
 				id: "70F1845989BF7E3D"
@@ -2770,6 +4979,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "706BA898C03C50DE"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2780,6 +5000,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0CF82AABD5E05A0D"
 			rewards: [{
 				id: "4AA8F100108F0558"
@@ -2795,6 +5024,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3AE6EC858CA6F1C3"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2805,6 +5045,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "73EEAE66CC2014E9"
 			rewards: [{
 				id: "327EA87B6F1EB3B3"
@@ -2820,6 +5069,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6471BE62CD7C0291"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2830,6 +5090,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "662583DB97721FE8"
 			rewards: [{
 				id: "138ED529F3D10981"
@@ -2845,6 +5114,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "58AA6D53BCBDE592"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2855,6 +5135,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "210A3F8C44AAD89A"
 			rewards: [{
 				id: "00ECC786C2F2BD74"
@@ -2870,6 +5159,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2E1F7F34C7142CAA"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2880,6 +5180,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3CEC6538990D89C3"
 			rewards: [{
 				id: "2523CFB9FE014C2B"
@@ -2895,6 +5204,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "13988AB128C86240"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2904,6 +5224,15 @@
 		}
 		{
 			dependencies: ["6AC1CED0D341150E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4DFE4FD3B504AF4B"
 			rewards: [
 				{
@@ -2932,6 +5261,17 @@
 			shape: "circle"
 			tasks: [{
 				count: 30L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3E2EAC7B2D274669"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2940,6 +5280,15 @@
 			y: 12.25d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "136DA2C41AD2EE31"
 			rewards: [{
 				id: "1B9ABC1FB22D5A5F"
@@ -2956,6 +5305,17 @@
 			tasks: [{
 				consume_items: true
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7040CEB8E0B25C4B"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2964,6 +5324,15 @@
 			y: 18.5d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3CD739455666E2A8"
 			rewards: [{
 				id: "392B8B372A0EFB42"
@@ -2979,6 +5348,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "229575A1F4440B37"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -2987,6 +5367,15 @@
 			y: 16.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1D4AA0F29FA698F2"
 			rewards: [
 				{
@@ -3009,6 +5398,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "37ADF61FC03B4C2A"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3017,6 +5417,15 @@
 			y: 17.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5D6C7D1C371A4D6E"
 			rewards: [{
 				id: "027915A405B20646"
@@ -3032,6 +5441,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "01C6C40FAA354934"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3040,6 +5460,15 @@
 			y: 17.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "2E692532C4C69001"
 			rewards: [{
 				id: "3734299704FB3F86"
@@ -3055,6 +5484,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0AB3ED0B9BDA13BC"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3063,6 +5503,15 @@
 			y: 17.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "12D18A30803D57D6"
 			rewards: [{
 				id: "17462E7C5F835004"
@@ -3078,6 +5527,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "034EC9523C7B1914"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3088,6 +5548,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7722ADDCAD9987BD"
 			rewards: [{
 				id: "4BC62D1FB35515D6"
@@ -3103,6 +5572,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2C547C8C3B1D4530"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3113,6 +5593,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "6E3216E644289961"
 			rewards: [
 				{
@@ -3135,6 +5624,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4141C439BFBDF1FD"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3143,6 +5643,15 @@
 			y: 1.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "53A0ED15395EE1C9"
 			rewards: [{
 				id: "7B2ED7C22E8D675B"
@@ -3158,6 +5667,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1F55B86BB2A2EB5F"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3168,6 +5688,15 @@
 		{
 			can_repeat: true
 			disable_toast: true
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "52C7EF47A0423CAB"
 			rewards: [{
 				id: "0F61EDD703FCC266"
@@ -3183,6 +5712,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "11D27390CC0F95A7"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3191,6 +5731,15 @@
 			y: 4.5d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "25D02F1FB231C466"
 			rewards: [{
 				id: "3C7C6226724A6520"
@@ -3206,6 +5755,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7F47D8C44B117CAD"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3214,6 +5774,15 @@
 			y: 17.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "3C79A7679BA1AA3C"
 			rewards: [{
 				id: "3A35385CDE57FC2D"
@@ -3229,6 +5798,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0A78CA8250889047"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -3237,6 +5817,15 @@
 			y: 17.0d
 		}
 		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "5F32791B5284E321"
 			rewards: [{
 				id: "068A1A1CEB5E7F76"
@@ -3252,6 +5841,17 @@
 			shape: "hexagon"
 			tasks: [{
 				count: 10L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "04FE0978D895D8FE"
 				item: { components: { "ftbquests:missing_item": "thermal:silver_coin" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"

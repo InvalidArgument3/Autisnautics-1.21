@@ -1,0 +1,19 @@
+{
+  "structures": false,
+  "trees": true,
+  "waterFeatures": true,
+  "foliage": true,
+  "detailByDistance": true,
+  "continuous": true,
+  "debug": false,
+  "serverGeneration": true,
+  "serverSeeds": {},
+  "realChunks": false,
+  "realChunkRadius": 32,
+  "renderDistance": 0,
+  "distantReach": 1874999,
+  "extendedDistance": false,
+  "coarseLevels": 11,
+  "fillRadius": 256,
+  "threads": 7
+}
