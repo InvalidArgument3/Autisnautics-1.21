@@ -7221,6 +7221,47 @@
    ]
   },
   {
+   "pakku_id": "FjbMC6cybxxqZNs9",
+   "pakku_links": [
+    "F9OUhskWxYr63coj"
+   ],
+   "type": "MOD",
+   "slug": {
+    "curseforge": "create-lightworks"
+   },
+   "name": {
+    "curseforge": "Create: Lightworks"
+   },
+   "id": {
+    "curseforge": "1785136"
+   },
+   "files": [
+    {
+     "type": "curseforge",
+     "file_name": "createlightworks-neoforge-1.21.1-1.0.1.jar",
+     "mc_versions": [
+      "1.21.1"
+     ],
+     "loaders": [
+      "neoforge"
+     ],
+     "release_type": "release",
+     "url": "https://edge.forgecdn.net/files/9556/713/createlightworks-neoforge-1.21.1-1.0.1.jar",
+     "id": "9556713",
+     "parent_id": "1785136",
+     "hashes": {
+      "sha1": "e5fb6646dd4ed2293414017bba0f2d128f5c2300",
+      "md5": "454d115e6ba99162511381514ea0ba62"
+     },
+     "required_dependencies": [
+      "328085"
+     ],
+     "size": 463532,
+     "date_published": "2026-11-11T12:08:49.587Z"
+    }
+   ]
+  },
+  {
    "pakku_id": "QVkZtdClqIM7FKmC",
    "pakku_links": [
     "3rCojiHB2k1ord1I"
