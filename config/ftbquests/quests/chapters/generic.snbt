@@ -458,7 +458,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "adhooks:spear_launcher"
+				id: "minecraft:sand"
 			}
 			id: "00565042E29AD1B1"
 			rewards: [{

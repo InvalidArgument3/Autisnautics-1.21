@@ -10,17 +10,17 @@
 	#Per-block values are stored in config/submarine_hull.json.
 	# Default: 400
 	# Range: 1 ~ 10000
-	globalMaxDepthCap = 400
+	globalMaxDepthCap = 10000
 	#Multiplier on every block's effective maxWaterDepth at runtime.
 	#Lower = more fragile hulls, higher = tougher hulls.
 	# Default: 1.0
 	# Range: 0.01 ~ 100.0
-	maxDepthMultiplier = 1.0
+	maxDepthMultiplier = 100.0
 	#Multiplier on every block's implosionChance at runtime.
 	#Lower = slower cracking, higher = faster cracking.
 	# Default: 1.0
 	# Range: 0.0 ~ 10.0
-	implosionChanceMultiplier = 1.0
+	implosionChanceMultiplier = 0.0
 	#HYBRID only: free width, in blocks, of a single-thickness wall that keeps exactly its block's maxWaterDepth.
 	#Wider panels hold less, narrower or thicker ones hold more.
 	# Default: 7
@@ -58,11 +58,11 @@
 	lavaBurnsHull = true
 	#Deep water hurts and finally crushes players swimming past their depth limit
 	#(120 m, or 280 m in the full Copper Diving Suit).
-	diverPressure = true
+	diverPressure = false
 
 [gameplay]
 	#Disable all hull implosion damage from pressure.
-	disableImplosion = false
+	disableImplosion = true
 	#Depth below the surface, in blocks, past which a hull block giving way to the pressure implodes the whole submarine.
 	#Above it, the block only bursts and the room floods through the hole.
 	#Past it, a submarine more than 30 blocks beyond its hull limit also seizes its pump controllers and shakes its crew.
