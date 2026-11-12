@@ -377,7 +377,7 @@
 	radiation_block_entities = true
 
 [misc]
-	give_guidebook = true
+	give_guidebook = false
 	ctrl_info = false
 	rare_drops = false
 	dungeon_loot = false

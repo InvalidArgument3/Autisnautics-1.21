@@ -6,5 +6,7 @@
 	"smartHeuristics": true,
 	"handleSystemMessages": true,
 	"drawShadow": true,
-	"nameAliases": { }
+	"nameAliases": {
+		"§7§oBot": "thinking...§r"
+	}
 }

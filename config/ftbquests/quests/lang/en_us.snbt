@@ -1,9 +1,7 @@
 {
 	chapter.052B4DEA706D3A24.title: "{cabin.chapter.052B4DEA706D3A24.title}"
-	chapter.0D0BC5B3F6623669.title: "{cabin.chapter.0D0BC5B3F6623669.title}"
 	chapter.0F40BB44472F412C.title: "FLAOT.jpg"
 	chapter.102E012616516E5D.title: "{cabin.chapter.102E012616516E5D.title}"
-	chapter.1B927DD15CF28E13.title: "{cabin.chapter.1B927DD15CF28E13.title}"
 	chapter.1F9517DCFB1DB297.title: "{cabin.chapter.1F9517DCFB1DB297.title}"
 	chapter.27A8EC11B6702416.title: "! Origin Selector"
 	chapter.2E3CEFA2473F96EE.title: "The Big Cheese"
@@ -58,7 +56,6 @@
 	chapter.7C67100AFA5B43EA.title: "Munitions Plant"
 	chapter_group.0BFB33D75F4EAD91.title: "&bOrigins"
 	chapter_group.331B6409EF6A7840.title: "{cabin.chapter_group.331B6409EF6A7840}"
-	chapter_group.3BE4B4DE6A6F6C40.title: "{cabin.chapter_group.3BE4B4DE6A6F6C40}"
 	chapter_group.79DBEF62FF5CD2D9.title: "Tutorial"
 	quest.00003FCBB33E62C4.quest_desc: [
 		"{cabin.quest.00003FCBB33E62C4.description1}"

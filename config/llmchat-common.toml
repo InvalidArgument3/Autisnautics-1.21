@@ -1,29 +1,81 @@
-# LLM Chat config template -- copied into config/ on start when the file is missing
-# (pack deploys replace config/, so this keeps the server pointed at the right endpoint).
-# Deployed to: /opt/minecraft/local-mods/llmchat-common.toml
-
+#LLM Chat -- connect in-game chat to an OpenAI-compatible LLM.
+#The API key is NOT stored here. Set the environment variable
+#LLMCHAT_API_KEY on the server process, or put the key in a root-only
+#file outside the server directory (default /etc/llmchat/api-key).
 [connection]
+	#Chat-completions endpoint. Any OpenAI-compatible server works:
+	#  https://openrouter.ai/api/v1/chat/completions
+	#  https://api.openai.com/v1/chat/completions
+	#  http://192.168.1.x:8080/v1/chat/completions   (local llama-server)
 	baseUrl = "https://api.deepseek.com/v1/chat/completions"
+	#Default model slug used when a trigger name has no specific override.
+	#Examples: x-ai/grok-4, openai/gpt-4o, anthropic/claude-sonnet-4.5,
+	#or the model name your local llama-server was started with.
 	defaultModel = "deepseek-flash"
+	#Optional path to a key file, used only when LLMCHAT_API_KEY and
+	#LLMCHAT_KEY_FILE are both unset. Defaults to /etc/llmchat/api-key.
+	#This field holds a PATH, never the key itself. Keep it outside the
+	#server directory so backups and pack exports never contain it.
 	keyFile = "/etc/llmchat/api-key"
 
+#Which @names players can mention to summon the AI.
 [triggers]
+	#Case-insensitive names that trigger the AI when mentioned with an @,
+	#e.g. typing:  @bot what kills a warden?
 	triggerNames = ["bot", "ai"]
+	#Optional: map a trigger name to a specific model.
+	#Format: "Name=model/slug". Unlisted names use defaultModel.
+	#Example: ["bot=openai/gpt-4o-mini", "grok=x-ai/grok-4"]
 	nameModelMap = []
 
+#How the AI behaves and how replies are shown.
 [behaviour]
+	#Name shown in chat in front of the AI's replies.
 	aiDisplayName = "Bot"
+	#System prompt sent on every request. Defines personality and rules.
+	#The knowledgeFile below is injected as a second system message.
 	systemPrompt = "You are a friendly helper living inside a Minecraft server running the Autisnautics modpack (Minecraft 1.21.1, NeoForge). Players talk to you through in-game chat. You know Minecraft well; when you are not sure about a specific mod's recipe, say so instead of guessing. Keep answers short and in plain text: no markdown, no lists with *, no code blocks. A couple of sentences is the right length unless someone asks for detail."
+	#Path to a text file injected as an extra system message (server rules,
+	#mod list quirks, recipes worth knowing). Empty disables it.
+	#/llmreload re-reads it without a restart.
 	knowledgeFile = "config/llmchat-knowledge.md"
+	#How many previous messages (shared by ALL players) to keep as context.
+	#0 = no memory. Each question+answer pair uses 2 slots.
+	# Default: 24
+	# Range: 0 ~ 500
 	historySize = 24
+	#Maximum tokens in a reply. If answers cut off mid-sentence, raise this.
+	# Default: 400
+	# Range: 1 ~ 16000
 	maxTokens = 400
+	#Sampling temperature (0.0 deterministic, ~1.0 creative).
+	# Default: 0.7
+	# Range: 0.0 ~ 2.0
 	temperature = 0.7
+	#How long to wait for the API before giving up.
+	# Default: 45
+	# Range: 5 ~ 300
 	timeoutSeconds = 45
+	#Hard cap on reply length posted to chat.
+	# Default: 1200
+	# Range: 100 ~ 20000
 	maxReplyChars = 1200
+	#Show a brief '<Bot> is thinking...' line while waiting.
 	showThinkingMessage = true
 
+#Rate limiting and threading.
 [limits]
+	#Background threads for API calls. 1 keeps conversation order intact.
+	# Default: 1
+	# Range: 1 ~ 16
 	threadPoolSize = 1
+	#Per-player cooldown between requests. 0 = no limit.
+	# Default: 15
+	# Range: 0 ~ 600
 	cooldownSeconds = 15
+	#Split long replies into several chat lines.
 	splitLongMessages = true
+	#Characters per chat line when splitting.
+	# Default: 220
+	# Range: 50 ~ 2000
 	splitThreshold = 220

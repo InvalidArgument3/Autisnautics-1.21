@@ -49,7 +49,7 @@
 	},
 	"journal": {
 		// Give players a fishing journal upon joining a world for the first time
-		"giveJournal": true,
+		"giveJournal": false,
 		// Shows a notification (toast) that appears when a new fish is discovered
 		"showToasts": true
 	},

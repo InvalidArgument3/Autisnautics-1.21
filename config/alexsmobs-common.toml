@@ -1,6 +1,6 @@
 [general]
 	#Whether all players should get an Animal Dictionary when joining the world for the first time.
-	giveBookOnStartup = true
+	giveBookOnStartup = false
 	#Lava Opacity for the Lava Vision Potion.
 	# Default: 0.65
 	# Range: 0.01 ~ 1.0
