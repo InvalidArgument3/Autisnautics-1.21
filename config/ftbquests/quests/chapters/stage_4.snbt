@@ -1655,7 +1655,7 @@
 			icon: {
 				id: "kubejs:silicon_wafer"
 			}
-			id: "02C5AA8E3E14EA0B"
+			id: "7A65109679CB08D7"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1668,7 +1668,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "17EE8226AEEAEB22"
+				id: "38FFBF6974F10B94"
 				item: { count: 1, id: "kubejs:silicon_wafer" }
 				type: "item"
 			}]
@@ -1690,7 +1690,7 @@
 			icon: {
 				id: "kubejs:spirit_of_lithography"
 			}
-			id: "45E49EDAE03A304D"
+			id: "2E9DE41FAC48B8A7"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1703,7 +1703,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "67CE8F219915548F"
+				id: "46F8F50743C40BA3"
 				item: { count: 1, id: "kubejs:spirit_of_lithography" }
 				type: "item"
 			}]
@@ -1723,7 +1723,7 @@
 			icon: {
 				id: "kubejs:latent_wafer"
 			}
-			id: "67BF0B24CA54A7B4"
+			id: "7C8C07525326B068"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1736,7 +1736,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "5DC35E89C5DE1146"
+				id: "21503F855DD9BD9B"
 				item: { count: 1, id: "kubejs:latent_wafer" }
 				type: "item"
 			}]
@@ -1756,7 +1756,7 @@
 			icon: {
 				id: "kubejs:annealed_wafer"
 			}
-			id: "2271FF4537DBDF87"
+			id: "682C6EDD7B131217"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1769,7 +1769,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "715078B4153DBDAC"
+				id: "1D51AB7EC6FB91B8"
 				item: { count: 1, id: "kubejs:annealed_wafer" }
 				type: "item"
 			}]
@@ -1789,7 +1789,7 @@
 			icon: {
 				id: "kubejs:washed_wafer"
 			}
-			id: "38BA0AED9CA7575D"
+			id: "27DFF2F1B447554C"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1802,7 +1802,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "5DC8B4D7ACB09C4E"
+				id: "151299518FDA590E"
 				item: { count: 1, id: "kubejs:washed_wafer" }
 				type: "item"
 			}]
@@ -1822,7 +1822,7 @@
 			icon: {
 				id: "kubejs:polished_wafer"
 			}
-			id: "1A7CE92F3F495421"
+			id: "375B60D0AA211DE5"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1835,7 +1835,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "0E33337607F870AB"
+				id: "6C07D4B3946ABE16"
 				item: { count: 1, id: "kubejs:polished_wafer" }
 				type: "item"
 			}]
@@ -1855,7 +1855,7 @@
 			icon: {
 				id: "kubejs:insulated_die"
 			}
-			id: "46275594323A17BB"
+			id: "057B683A7191B2C2"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1868,7 +1868,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "730FB9154B6CA83B"
+				id: "57694D0692E929FA"
 				item: { count: 1, id: "kubejs:insulated_die" }
 				type: "item"
 			}]
@@ -1888,7 +1888,7 @@
 			icon: {
 				id: "kubejs:ruined_wafer"
 			}
-			id: "2B19DB7983934A73"
+			id: "467B0625D2A4A184"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1901,7 +1901,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "7C6F168A4161C810"
+				id: "4654FA01DB507668"
 				item: { count: 1, id: "kubejs:ruined_wafer" }
 				type: "item"
 			}]
@@ -1921,7 +1921,7 @@
 			icon: {
 				id: "kubejs:dram"
 			}
-			id: "2EE009A934B3A615"
+			id: "40D97A07CDC07DB8"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1934,7 +1934,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "6831C810E39653C5"
+				id: "4728E6901EA968A8"
 				item: { count: 1, id: "kubejs:dram" }
 				type: "item"
 			}]
@@ -1954,7 +1954,7 @@
 			icon: {
 				id: "refinedstorage:raw_improved_processor"
 			}
-			id: "23BCAD9A12C9822F"
+			id: "1C253E3B9DA3597E"
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1967,7 +1967,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "71F415CFB65048D9"
+				id: "07B885F8256E49F0"
 				item: { count: 1, id: "refinedstorage:raw_improved_processor" }
 				type: "item"
 			}]

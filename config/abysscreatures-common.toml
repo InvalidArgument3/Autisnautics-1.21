@@ -1,0 +1,67 @@
+#Natural spawning runs only while a level's dimension id equals `dimension`.
+#oceanworld:deepsea is supplied by the Autisnautics Ocean datapack. If that level is not loaded, nothing is spawned.
+#Spawn eggs, commands, and dispensers ignore these rules.
+#Ocean biomes are not used as a spawn key because the same biomes exist outside Deepsea.
+naturalSpawning = true
+dimension = "oceanworld:deepsea"
+#Ticks between one attempt per player. 400 ticks is 20 seconds.
+# Default: 400
+# Range: 40 ~ 72000
+attemptIntervalTicks = 400
+#Block light maximum, matching the Deepsea monster light range 0..7. Sky light is ignored.
+# Default: 7
+# Range: 0 ~ 15
+maxBlockLight = 7
+#Random positions tried near one player per attempt. This is not a chunk scan.
+# Default: 4
+# Range: 1 ~ 8
+candidateTries = 4
+# Default: 8
+# Range: 0 ~ 100
+gloomfishWeight = 8
+# Default: 5
+# Range: 0 ~ 100
+lithoshrimpWeight = 5
+#Gnashers are the uncommon predator. Leaders are a further roll of gnasherLeaderChance.
+# Default: 2
+# Range: 0 ~ 100
+gnasherWeight = 2
+#Alive gloomfish allowed inside a 32-block box before a new one is refused.
+# Default: 8
+# Range: 0 ~ 32
+gloomfishLocalCap = 8
+# Default: 6
+# Range: 0 ~ 32
+lithoshrimpLocalCap = 6
+# Default: 4
+# Range: 0 ~ 16
+gnasherLocalCap = 4
+# Default: 0.1
+# Range: 0.0 ~ 1.0
+gnasherLeaderChance = 0.1
+#Vertical extra on the gnasher target box. The source used 4, which misses swimmers in a tall water column.
+# Default: 12
+# Range: 2 ~ 32
+gnasherVerticalAggro = 12
+#Larger creatures. Weights are in the same pool as the small fish. Caps are counts inside the search radius, which is wide for bosses.
+# Default: 3
+# Range: 0 ~ 100
+corpseAnglerWeight = 3
+# Default: 4
+# Range: 0 ~ 100
+necroshellWeight = 4
+# Default: 2
+# Range: 0 ~ 100
+fulgastraWeight = 2
+# Default: 1
+# Range: 0 ~ 100
+mutavoreWeight = 1
+# Default: 2
+# Range: 0 ~ 100
+spineWormWeight = 2
+# Default: 1
+# Range: 0 ~ 100
+siamserpentWeight = 1
+# Default: 1
+# Range: 0 ~ 100
+ghidruthWeight = 1

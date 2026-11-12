@@ -97,6 +97,21 @@ show_gui_button = true
 # Default: 100.0
 # Range: 0.0 ~ 100.0
 natural_temperature_influence = 100.0
+# Default: 9.0
+# Range: 1.0 ~ 100.0
+percentage_coverage_zone_10 = 9.0
+# Default: 5.0
+# Range: 1.0 ~ 100.0
+percentage_coverage_zone_11 = 5.0
+# Default: 8.0
+# Range: 1.0 ~ 100.0
+percentage_coverage_zone_12 = 8.0
+# Default: 0
+# Range: -100000000 ~ 100000000
+buttonXOffset = 0
+# Default: 0
+# Range: -100000000 ~ 100000000
+buttonYOffset = 0
 # Default: 1.0
 # Range: -6.0E12 ~ 6.0E12
 wave_frequency = 1.0
@@ -253,18 +268,3 @@ percentage_coverage_zone_8 = 9.0
 # Default: 10.0
 # Range: 1.0 ~ 100.0
 percentage_coverage_zone_9 = 10.0
-# Default: 9.0
-# Range: 1.0 ~ 100.0
-percentage_coverage_zone_10 = 9.0
-# Default: 5.0
-# Range: 1.0 ~ 100.0
-percentage_coverage_zone_11 = 5.0
-# Default: 8.0
-# Range: 1.0 ~ 100.0
-percentage_coverage_zone_12 = 8.0
-# Default: 0
-# Range: -100000000 ~ 100000000
-buttonXOffset = 0
-# Default: 0
-# Range: -100000000 ~ 100000000
-buttonYOffset = 0

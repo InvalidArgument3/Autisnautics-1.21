@@ -21,7 +21,8 @@
 		"soundEvent": "minecraft:block.note_block.chime"
 	},
 	"mentionKeywords": [
-		"@validpoint"
+		"@validpoint",
+		"@Phantomewzik"
 	],
 	"ignoreSystemChats": false,
 	"enableChatSoundCooldown": false,

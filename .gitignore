@@ -1,7 +1,7 @@
 # Minecraft
 local/
 saves/
-mods/
+/mods/
 logs/
 crash-reports/
 backups/
@@ -139,6 +139,27 @@ Distant_Horizons_server_data/*
 
 # LOGS
 *.log
+
+# Runtime/client state and backups
+config/NoChatReports/NCR-Client.json
+config/create_submarine_client_state.json
+config/create_radar_monitor_views.json
+config/miapi_server-backup-*.jsonc
+config/servercore/*.bak-*
+config/spark/*.hprof
+
+# Instance runtime data (not part of the pack)
+/.ip_aeronautics/
+/.pakku/shelf/
+/backup/
+/local-change-backups/
+/old/
+/justzoom_instance_data/
+/create_radar_debug/
+/docs/agent-work/
+/ponders_watched_azimuth.json
+/schematics/
+/cobblemon/
 
 # fancymainmenu
 !config/fancymenu/options.txt

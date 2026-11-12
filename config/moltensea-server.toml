@@ -1,0 +1,9 @@
+[sea]
+	#Refuse BaseFlowingFluid replacement when the existing fluid and the incoming fluid are both in autisnautics:molten_sea.
+	refuseSeaReplacement = true
+	#In autisnautics:molten_depths only, allow a tagged molten fluid to become a source when vanilla's two-neighbour rule would. Holes inside one metal can refill. A cell sitting on a different metal still cannot.
+	selfHealInMoltenDepths = true
+	#In autisnautics:molten_depths, refuse downward spread of a tagged molten fluid into Y<=-40 or Y>=295. That keeps the carved rift caps from filling. The sea itself is Y=-39 through Y=294.
+	holdRiftCaps = true
+	#When Create Deep Seas (create_submarine) is installed, treat autisnautics:molten_sea as create_submarine:water for its sea checks, hide those fluids inside an occluded hull, and skip molten contact damage and molten fog for a sealed occupant. Turn this off to leave Deep Seas water-only.
+	deepSeasIntegration = true

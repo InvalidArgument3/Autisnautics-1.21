@@ -1,6 +1,54 @@
 {
   "_README": "Per-block hull strength. Edit maxWaterDepth (int) and implosionChance (0..1). Keys starting with _ are ignored.",
   "_version": 3,
+  "abysscreatures:bone_bricks": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "abysscreatures:bone_fence": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "abysscreatures:bone_fence_gate": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "abysscreatures:bone_ladder": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "abysscreatures:bone_lever": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "abysscreatures:bone_pillar": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "abysscreatures:bone_slab": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "abysscreatures:bone_stairs": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "abysscreatures:bone_torch": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "abysscreatures:bone_wall_torch": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "abysscreatures:chiseled_bone_block": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
+  "abysscreatures:cracked_bone_block": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.39013878
+  },
   "advancedperipherals:block_reader": {
     "maxWaterDepth": 67,
     "implosionChance": 0.37082404
@@ -34304,6 +34352,42 @@
   "let_it_walk:walker_core": {
     "maxWaterDepth": 81,
     "implosionChance": 0.28040898
+  },
+  "lightworks:beam_light": {
+    "maxWaterDepth": 267,
+    "implosionChance": 0.05
+  },
+  "lightworks:edge_light": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "lightworks:floodlight": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "lightworks:headlight": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "lightworks:pan_tilt_head": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "lightworks:rotating_beacon": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "lightworks:searchlight": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "lightworks:tail_light": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "lightworks:warning_light": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
   },
   "linearbearing:andesite_lamp": {
     "maxWaterDepth": 24,

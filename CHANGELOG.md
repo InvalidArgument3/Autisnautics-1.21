@@ -4,6 +4,13 @@
 
 - The Remote Trading branch is gone from FTB Quests: the `market`, `professions` (Bulletin Board) and `shipments` chapters and the `Remote Trading` chapter group are deleted, along with their quest/task lang keys in `config/ftbquests/quests/lang/en_us.snbt` and the `cabin.*` keys in the six `kubejs/assets/ftbquests/lang/*.json` files. The dead commented gold-coin fortress-locator event at the top of `kubejs/server_scripts/quests.js` is removed too. No other chapter depended on the removed quests
 
+## [0.0.88]
+- **Octo Legs 0.7.5 hybrid** is the pack override (`.pakku/overrides/mods/octolegs-0.7.5+mc1.21.1.jar`). Terrain attitude is fitted from the plane through planted feet, ordinary hull support is contact-gated, and the gravity support polygon is disabled. Wall and steep-grade climbing keep grip through the crest; the step trigger and reach tolerance are 15% longer. The hybrid build also fixes stale leadership, empty-mount control clearing, swing completion, and thin-block footholds.
+- **Octo Legs goggles** are split by block: a leg mount shows only that leg's tentacle, reach, mass, speed, efficiency, stress, mode, and stride; the controller shows the combined lift pool, ship mass, powered legs, planted feet, load, and pool stress. The tooltip builder no longer accumulates lines.
+- **Octo Legs stress** is pool-based: every fitted leg contributes its mass capacity and stress impact; each mount reports `base stress × (ship mass / total lift capacity)` (capped at 4×), and the SU requirements are 8× the previous values.
+- **Pack config refresh**: new/updated Ars Nouveau, Iron's Spellbooks, JAOPCA, Create Radar, Create Controlling, Create Ultimine, FTB Ultimine, NERB, Molten Sea, NoLijium, Nowheel, Voxy seedgen, Chunky, and Cobblemon dimension datapack configs; quest, Immersive Portals, submarine hull, NuclearCraft, and client config updates.
+- **Repo hygiene**: runtime backups, heap dumps, and client state are ignored; the pack repo tracks only the pack overrides and configs
+
 ## [0.0.87]
 - New client compat mods: `emf-compat-irons-artifice-neoforge-1.21.1-1.0.0.jar` (+ EMF Compat Core) fixes third-person gun poses from Iron's Arms 'n Artifice; `veil_bonk-1.21.1-0.3.2-neoforge.jar` applies the open Veil 4.5.2 bugfix PRs as mixins; `iris_bonk-1.21.1-0.1.3-neoforge.jar` keeps custom core shaders visible under Iris shaderpacks. All three are client-side
 - Truly Modular (miapi + arsenal + archery + armory) now ships from our forks (`InvalidArgument3/Modular-Item-API`, `Arsenal`, `Archery`, `Armory`) through GitHub-release Pakku sources instead of Modrinth/CurseForge. The fork builds strip the pride skin sets and the supporter-only wizzard skin; summer skins stay. Fork builds are miapi 2.4.4, arsenal 2.4.2, archery/armory 2.2.2

@@ -1,0 +1,8 @@
+#Maximum number of elements on one control panel
+# Default: 64
+# Range: 1 ~ 256
+maxElementsPerPanel = 64
+#Maximum configurable button pulse length, in ticks
+# Default: 200
+# Range: 1 ~ 1200
+maxPulseTicks = 200
