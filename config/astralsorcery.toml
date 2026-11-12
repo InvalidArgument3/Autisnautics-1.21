@@ -4,7 +4,7 @@
 	# Range: 1000 ~ 400000
 	dayLength = 24000
 	#If set to 'true', the player will receive an AstralSorcery Tome when they join the server for the first time.
-	giveTomeOnJoin = true
+	giveTomeOnJoin = false
 
 [perks]
 	#Sets the max level for the perk tree levels.

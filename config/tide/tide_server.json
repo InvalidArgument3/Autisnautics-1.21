@@ -32,7 +32,7 @@
     "pocketWatchBlacklist": []
   },
   "journal": {
-    "giveJournal": true,
+    "giveJournal": false,
     "showToasts": true
   },
   "minigame": {
