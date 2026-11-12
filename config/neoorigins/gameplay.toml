@@ -100,8 +100,9 @@ config_version = 1
 #(Evolved → Ascended → Apex) by accumulating mob kills.
 #An Orb of Origin resets the player to base tier.
 [evolution]
-	#Enable the evolution system. When false, kills are not tracked
-	#and evolution prompts never appear.
+	#Enable the evolution system. When false, kills are not tracked,
+	#evolution prompts never appear, and the origin screens hide the
+	#Evolution Path section. Classic mode (content.toml) also turns it off.
 	enabled = true
 	#Mob kills required to reach Evolved (tier 1).
 	# Default: 1000
@@ -221,3 +222,13 @@ config_version = 1
 [skip_initial_selection]
 	#Spawn new players with no origin and no selection screen.
 	enabled = false
+
+#Who sees an origin upgrade's announcement message (the upgrade's
+#"announcement" field; %s in it becomes the player's name).
+#SERVER: broadcast to every player on the server.
+#PLAYER: only the upgraded player sees it (classic Origins behaviour).
+#OFF: never shown.
+[upgrade_announcements]
+	#Audience for origin upgrade announcements.
+	#Allowed Values: SERVER, PLAYER, OFF
+	mode = "SERVER"

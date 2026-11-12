@@ -8,6 +8,15 @@
 	order_index: 1
 	quest_links: [ ]
 	quests: [{
+		extraquests_calendar: {
+			active_quests: 3
+			enabled: 0b
+			pool: ""
+			reset_time: "06:00"
+			timezone: "UTC"
+			weekday: 1
+			weekly: 0b
+		}
 		id: "0937A1CC74795CF4"
 		rewards: [{
 			exclude_from_claim_all: true
@@ -18,6 +27,17 @@
 		shape: "gear"
 		size: 2.0d
 		tasks: [{
+			extraquests_options: {
+				aggregation: "AUTO"
+				duration: 600L
+				minimum_contribution: 0L
+				reset_damage: 0b
+				reset_death: 1b
+				reset_logout: 0b
+				shared: 0b
+				timer_enabled: 0b
+				timer_start: "FIRST_PROGRESS"
+			}
 			id: "122F9ED3858AD774"
 			type: "checkmark"
 		}]

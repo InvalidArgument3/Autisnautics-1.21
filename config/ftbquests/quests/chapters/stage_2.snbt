@@ -10,6 +10,15 @@
 	quests: [
 		{
 			dependencies: ["28C41C062843C2CA"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_complete: true
 			icon: {
 				id: "create:builders_tea"
@@ -26,6 +35,17 @@
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2B249158FB9D453B"
 				type: "checkmark"
 			}]
@@ -34,6 +54,15 @@
 		}
 		{
 			dependencies: ["727B43FD95C4A512"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "minecraft:sand"
@@ -41,6 +70,17 @@
 			id: "0AF5F19F5D9FB5C9"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4F4219EDA9C5F9F7"
 				item: { count: 1, id: "minecraft:sand" }
 				type: "item"
@@ -54,12 +94,32 @@
 				"2FFFE1C5366930BB"
 			]
 			dependency_requirement: "one_completed"
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:quartz"
 			}
 			id: "345B94F6D17605CD"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2E6AD53DE407260C"
 				item: { count: 1, id: "minecraft:quartz" }
 				type: "item"
@@ -69,9 +129,29 @@
 		}
 		{
 			dependencies: ["345B94F6D17605CD"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "34A1D176C78FB64E"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "28DDF51DB85DCF7D"
 				type: "checkmark"
 			}]
@@ -80,9 +160,29 @@
 		}
 		{
 			dependencies: ["34A1D176C78FB64E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "1642A27606A34984"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "30E8BB6958ED4A44"
 				type: "checkmark"
 			}]
@@ -91,17 +191,48 @@
 		}
 		{
 			dependencies: ["1642A27606A34984"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "create:rose_quartz"
 			}
 			id: "1861E583C9DAA0BA"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "68D808533C34AB5C"
 					item: { count: 1, id: "create:rose_quartz" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5143762A67B81B7E"
 					type: "checkmark"
 				}
@@ -111,6 +242,15 @@
 		}
 		{
 			dependencies: ["727B43FD95C4A512"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "minecraft:water_bucket"
@@ -118,11 +258,33 @@
 			id: "2FFFE1C5366930BB"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1A9DB3A538856229"
 					item: { count: 1, id: "minecraft:water_bucket" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2DC358D8174FC867"
 					type: "checkmark"
 				}
@@ -132,12 +294,32 @@
 		}
 		{
 			dependencies: ["727B43FD95C4A512"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "minecraft:redstone"
 			}
 			id: "4F95D5136E944ADB"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3C8D449468C6DD27"
 				type: "checkmark"
 			}]
@@ -149,11 +331,31 @@
 				"2FFFE1C5366930BB"
 				"4F95D5136E944ADB"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:water_bucket"
 			}
 			id: "1256352748B93449"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "1CB43671DBA7EBB6"
 				type: "checkmark"
 			}]
@@ -166,17 +368,48 @@
 				"24FFFE0FC9EAEF8D"
 			]
 			dependency_requirement: "one_completed"
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:redstone"
 			}
 			id: "619E34A7DE48B991"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5F47790124641B2D"
 					item: { count: 1, id: "minecraft:redstone" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "4B98217B670ECA57"
 					type: "checkmark"
 				}
@@ -186,11 +419,31 @@
 		}
 		{
 			dependencies: ["53735DC4231AB566"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:bucket"
 			}
 			id: "2167272204B6627B"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "75C982848F2CEA85"
 				type: "checkmark"
 			}]
@@ -202,17 +455,48 @@
 				"2167272204B6627B"
 				"06B061C0EE94BC90"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "create:electron_tube"
 			}
 			id: "5351AF6CA73CB8E0"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "163B1579092E6BD3"
 					item: { count: 1, id: "create:electron_tube" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1D7C84803766FD04"
 					type: "checkmark"
 				}
@@ -222,12 +506,32 @@
 		}
 		{
 			dependencies: ["1256352748B93449"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "minecraft:redstone_torch"
 			}
 			id: "24FFFE0FC9EAEF8D"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "56F78EAD35D1046E"
 				type: "checkmark"
 			}]
@@ -236,6 +540,15 @@
 		}
 		{
 			dependencies: ["727B43FD95C4A512"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "minecraft:cobblestone"
@@ -243,11 +556,33 @@
 			id: "0E46C1FCE5AEB1DF"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "7E68B8C4958FB0B5"
 					item: { count: 1, id: "minecraft:cobblestone" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5E676D2CC5975AEA"
 					type: "checkmark"
 				}
@@ -260,17 +595,48 @@
 				"5351AF6CA73CB8E0"
 				"6D8BB2D6A75ABB16"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "create:precision_mechanism"
 			}
 			id: "19715EBCBBA1B4AD"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "4DF52040884AB28D"
 					item: { count: 1, id: "create:precision_mechanism" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "002032AE65148DBD"
 					type: "checkmark"
 				}
@@ -280,6 +646,15 @@
 		}
 		{
 			dependencies: ["19715EBCBBA1B4AD"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "create:precision_mechanism"
 			}
@@ -316,6 +691,17 @@
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4C32A887DA89A75C"
 				item: { count: 1, id: "kubejs:brass_machine" }
 				type: "item"
@@ -325,17 +711,48 @@
 		}
 		{
 			dependencies: ["0E46C1FCE5AEB1DF"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:gravel"
 			}
 			id: "1139F2E4E6FCFE29"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "517441AE19EF30E2"
 					item: { count: 1, id: "minecraft:gravel" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "63F3877902E01590"
 					type: "checkmark"
 				}
@@ -345,17 +762,48 @@
 		}
 		{
 			dependencies: ["1139F2E4E6FCFE29"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:iron_nugget"
 			}
 			id: "53735DC4231AB566"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "591D709D1E4EE97A"
 					item: { count: 1, id: "minecraft:iron_nugget" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "64B405696E96FFCD"
 					type: "checkmark"
 				}
@@ -368,17 +816,48 @@
 				"1861E583C9DAA0BA"
 				"619E34A7DE48B991"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "create:polished_rose_quartz"
 			}
 			id: "06B061C0EE94BC90"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0AD0021818A0BB33"
 					item: { count: 1, id: "create:polished_rose_quartz" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0F6DB8FCC5C16A94"
 					type: "checkmark"
 				}
@@ -391,12 +870,32 @@
 				"239C64263B91350D"
 				"1D9D65FBD06DD481"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:infernal_mechanism"
 			}
 			id: "3C50B4556375178E"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "24070D354D67A3DF"
 				item: { count: 1, id: "kubejs:infernal_mechanism" }
 				type: "item"
@@ -409,6 +908,15 @@
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -417,11 +925,33 @@
 			id: "1D9D65FBD06DD481"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "4A9BF979E823D4CB"
 					item: { count: 1, id: "minecraft:lava_bucket" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "73BF4F3B488FBC83"
 					type: "checkmark"
 				}
@@ -435,6 +965,15 @@
 				"7E59B7DC239E621E"
 				"5DCF9C8212AA3BE3"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_visible: true
 			icon: {
 				id: "minecraft:soul_sand"
@@ -442,11 +981,33 @@
 			id: "239C64263B91350D"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "7BBC2AAED0A77FDC"
 					item: { count: 1, id: "minecraft:soul_sand" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "21C241D2335C67E4"
 					type: "checkmark"
 				}
@@ -459,6 +1020,15 @@
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -467,11 +1037,33 @@
 			id: "223BB57AD0239511"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "70EA8B8349BC13D1"
 					item: { count: 1, id: "minecraft:twisting_vines" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "6F7A49C7C377ABF1"
 					type: "checkmark"
 				}
@@ -484,6 +1076,15 @@
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -492,11 +1093,33 @@
 			id: "7E59B7DC239E621E"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "57EC8E4703FADF5E"
 					item: { count: 1, id: "minecraft:weeping_vines" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "6149AB838FC42C17"
 					type: "checkmark"
 				}
@@ -506,6 +1129,15 @@
 		}
 		{
 			dependencies: ["5351AF6CA73CB8E0"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon: {
 				id: "create:wrench"
@@ -513,6 +1145,17 @@
 			id: "6D8BB2D6A75ABB16"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7DF53EF0CF55B5D7"
 				item: { count: 1, id: "create:wrench" }
 				type: "item"
@@ -522,6 +1165,15 @@
 		}
 		{
 			dependencies: ["3C50B4556375178E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:infernal_mechanism"
 			}
@@ -558,6 +1210,17 @@
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5D828A5601F86224"
 				item: { count: 1, id: "kubejs:zinc_machine" }
 				type: "item"
@@ -567,10 +1230,30 @@
 		}
 		{
 			dependencies: ["727B43FD95C4A512"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: false
 			id: "174E3A810535CAAC"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4418A795B9FB076D"
 				type: "checkmark"
 			}]
@@ -583,6 +1266,15 @@
 				"21753CBB528EAADF"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -592,6 +1284,17 @@
 			min_required_dependencies: 2
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3BBAFB33D9E2BB24"
 				item: { count: 1, id: "create:blaze_burner" }
 				type: "item"
@@ -604,6 +1307,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -612,11 +1324,33 @@
 			id: "6C029983EE2035A5"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "521A61FF9969B19A"
 					item: { count: 1, id: "minecraft:nether_wart" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "703432E68A27988C"
 					type: "checkmark"
 				}
@@ -629,17 +1363,48 @@
 				"6C029983EE2035A5"
 				"4B891E9ED8DE6BB2"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:potion"
 			}
 			id: "2131996D22A87667"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "62442CDD0E1A7A52"
 					item: { count: 1, id: "minecraft:potion" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0BD3CEE8D36CA74E"
 					type: "checkmark"
 				}
@@ -652,6 +1417,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -660,11 +1434,33 @@
 			id: "4B891E9ED8DE6BB2"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2B6EEE26029DDB2A"
 					item: { count: 1, id: "minecraft:glow_berries" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "006A282CB1F28528"
 					type: "checkmark"
 				}
@@ -677,11 +1473,31 @@
 				"1A06FA866B74E75B"
 				"2131996D22A87667"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:logistic_mechanism"
 			}
 			id: "44540B11F341AE09"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "11E3919F63C8BAF9"
 				item: { count: 1, id: "kubejs:logistic_mechanism" }
 				type: "item"
@@ -694,6 +1510,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -702,11 +1527,33 @@
 			id: "1A06FA866B74E75B"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "46D9FB5D9254BA03"
 					item: { count: 1, id: "kubejs:liquid_pulp_bucket" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0F467B1E08CD7D16"
 					type: "checkmark"
 				}
@@ -716,6 +1563,15 @@
 		}
 		{
 			dependencies: ["44540B11F341AE09"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:logistic_mechanism"
 			}
@@ -752,6 +1608,17 @@
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "467FDE7905DFECE9"
 				item: { count: 1, id: "kubejs:lead_machine" }
 				type: "item"
@@ -764,6 +1631,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -772,11 +1648,33 @@
 			id: "4FFA0F65FA89D867"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "3AB4E06BD8DB2874"
 					item: { count: 1, id: "minecraft:nether_wart" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0408B3CFBA95E2D6"
 					type: "checkmark"
 				}
@@ -786,6 +1684,15 @@
 		}
 		{
 			dependencies: ["15978ED5A6E3DFFE"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:logistic_mechanism"
 			}
@@ -813,6 +1720,17 @@
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2402D45212D4CD6A"
 				item: { count: 1, id: "kubejs:lead_machine" }
 				type: "item"
@@ -826,12 +1744,32 @@
 				"319D13EA51472303"
 				"5943F8F91AA79D59"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "kubejs:logistic_mechanism"
 			}
 			id: "15978ED5A6E3DFFE"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "16BCC957A6178A32"
 				item: { count: 1, id: "kubejs:logistic_mechanism" }
 				type: "item"
@@ -844,17 +1782,48 @@
 				"4FFA0F65FA89D867"
 				"10E93BEB78219368"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "minecraft:potion"
 			}
 			id: "15368864A6946A93"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1FBF559810708A05"
 					item: { count: 1, id: "minecraft:potion" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "6EE69ADFC26E5948"
 					type: "checkmark"
 				}
@@ -867,6 +1836,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -875,11 +1853,33 @@
 			id: "10E93BEB78219368"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1B1BBF1FA5A20B4C"
 					item: { count: 1, id: "minecraft:glow_lichen" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "38ACBCB650804809"
 					type: "checkmark"
 				}
@@ -892,6 +1892,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -900,11 +1909,33 @@
 			id: "74D22D54CA80E7FD"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "7D941711FE9786C9"
 					item: { count: 1, id: "minecraft:brown_mushroom" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2FA5130D892A7C3B"
 					type: "checkmark"
 				}
@@ -919,6 +1950,15 @@
 				"5DCF9C8212AA3BE3"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_visible: true
 			icon: {
 				id: "nuclearcraftneohaul:radaway_bucket"
@@ -926,11 +1966,33 @@
 			id: "319D13EA51472303"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "79B213EBA35838B4"
 					item: { count: 1, id: "nuclearcraftneohaul:radaway_bucket" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "64713708298099CA"
 					type: "checkmark"
 				}
@@ -943,6 +2005,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -950,6 +2021,17 @@
 			}
 			id: "5943F8F91AA79D59"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "5BE7FCD9CA40366E"
 				item: { count: 1, id: "nuclearcraftneohaul:uranium_ingot" }
 				type: "item"
@@ -962,6 +2044,15 @@
 				"19715EBCBBA1B4AD"
 				"6EDA86E4BE0F096B"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -970,11 +2061,33 @@
 			id: "68A8C2CB135ECA87"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5708394524C3F225"
 					item: { count: 1, id: "create:crushed_raw_iron" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "5A26A34DF149B618"
 					type: "checkmark"
 				}
@@ -987,17 +2100,48 @@
 				"74D22D54CA80E7FD"
 				"15368864A6946A93"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "nuclearcraftneohaul:glowing_mushroom"
 			}
 			id: "02E41EDC1899468D"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2E047220154B72B7"
 					item: { count: 1, id: "nuclearcraftneohaul:glowing_mushroom" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "283ADD7E81BB311C"
 					type: "checkmark"
 				}
@@ -1010,6 +2154,15 @@
 				"6EDA86E4BE0F096B"
 				"19715EBCBBA1B4AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: {
@@ -1018,11 +2171,33 @@
 			id: "2F1B9FE2E9C2FFEC"
 			tasks: [
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "54FEF7F786C3D743"
 					item: { count: 1, id: "minecraft:milk_bucket" }
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "31F55AFB8BC96E4D"
 					type: "checkmark"
 				}
@@ -1032,6 +2207,15 @@
 		}
 		{
 			dependencies: ["3B930AA32F92246B"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_until_deps_complete: true
 			icon: {
 				id: "supplementaries:globe_sepia"
@@ -1039,6 +2223,17 @@
 			id: "6EE9AA6D2A8FE0AD"
 			shape: "circle"
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "64DA726B37D98050"
 				item: { count: 1, id: "supplementaries:globe_sepia" }
 				type: "item"
@@ -1048,6 +2243,15 @@
 		}
 		{
 			dependencies: ["6EE9AA6D2A8FE0AD"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "nuclearcraftneohaul:geiger_counter"
 			}
@@ -1064,6 +2268,17 @@
 			size: 1.5d
 			tasks: [{
 				dimension: "nuclearcraft:wasteland"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "78A8586BA98B22EF"
 				type: "dimension"
 			}]
@@ -1075,6 +2290,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1093,6 +2317,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1111,6 +2344,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1129,6 +2371,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1147,6 +2398,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1165,6 +2425,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1183,6 +2452,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1201,6 +2479,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1219,6 +2506,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1237,6 +2533,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1255,6 +2560,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -1273,6 +2587,15 @@
 				"2809AE02EA018BFA"
 				"6EE9AA6D2A8FE0AD"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true

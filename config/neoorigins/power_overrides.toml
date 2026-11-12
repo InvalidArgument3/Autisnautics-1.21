@@ -1,3 +1,8 @@
+#Internal: lets one-time fixes tell an old file from a new one. Do not edit.
+# Default: 1
+# Range: > 0
+config_version = 1
+
 #Per-power parameter overrides.
 #Edit any value below to override it. Only values changed from their default are applied.
 #20 ticks = 1 second. Overrides take effect on /reload or restart.
@@ -20,9 +25,9 @@
 		# Default: 400
 		# Range: 0 ~ 72000
 		cooldown_ticks = 400
-		# Default: 5
+		# Default: 4
 		# Range: 0 ~ 100
-		hunger_cost = 5
+		hunger_cost = 4
 		# Default: 18000
 		# Range: 0 ~ 1000000
 		despawn_ticks = 18000
@@ -104,7 +109,6 @@
 		# Default: 1.0
 		# Range: 0.0 ~ 100.0
 		damage_per_second = 1.0
-		ignite = false
 
 	[power_overrides.caveborn_mining_speed]
 		# Default: 2.0
@@ -398,12 +402,12 @@
 		multiplier = 1.5
 
 	[power_overrides.hiveling_sting]
-		# Default: 1.0
+		# Default: 1.8
 		# Range: 0.0 ~ 10.0
-		speed = 1.0
-		# Default: 100
+		speed = 1.8
+		# Default: 120
 		# Range: 0 ~ 72000
-		cooldown_ticks = 100
+		cooldown_ticks = 120
 
 	[power_overrides.hiveling_crop_growth]
 		# Default: 6
@@ -474,9 +478,9 @@
 		cooldown_ticks = 160
 
 	[power_overrides.kraken_ink_shot]
-		# Default: 1.2
+		# Default: 1.4
 		# Range: 0.0 ~ 10.0
-		speed = 1.2
+		speed = 1.4
 		# Default: 120
 		# Range: 0 ~ 72000
 		cooldown_ticks = 120
@@ -507,9 +511,9 @@
 		# Default: 400
 		# Range: 0 ~ 72000
 		cooldown_ticks = 400
-		# Default: 5
+		# Default: 4
 		# Range: 0 ~ 100
-		hunger_cost = 5
+		hunger_cost = 4
 		# Default: 18000
 		# Range: 0 ~ 1000000
 		despawn_ticks = 18000
@@ -561,9 +565,9 @@
 		# Default: 600
 		# Range: 0 ~ 72000
 		cooldown_ticks = 600
-		# Default: 6
+		# Default: 4
 		# Range: 0 ~ 100
-		hunger_cost = 6
+		hunger_cost = 4
 		# Default: 18000
 		# Range: 0 ~ 1000000
 		despawn_ticks = 18000
@@ -596,14 +600,14 @@
 		amount = 2.0
 
 	[power_overrides.piglin_soul_fire_damage]
-		# Default: 1.0
+		# Default: 0.5
 		# Range: 0.0 ~ 100.0
-		damage_per_second = 1.0
+		damage_per_second = 0.5
 
 	[power_overrides.revenant_active_bolt]
-		# Default: 1.2
+		# Default: 1.6
 		# Range: 0.0 ~ 10.0
-		speed = 1.2
+		speed = 1.6
 		# Default: 80
 		# Range: 0 ~ 72000
 		cooldown_ticks = 80
@@ -630,9 +634,9 @@
 		damage_per_second = 2.0
 
 	[power_overrides.sculkborn_sonic_bolt]
-		# Default: 1.5
+		# Default: 1.8
 		# Range: 0.0 ~ 10.0
-		speed = 1.5
+		speed = 1.8
 		# Default: 120
 		# Range: 0 ~ 72000
 		cooldown_ticks = 120
@@ -764,9 +768,9 @@
 		amount = -0.1
 
 	[power_overrides.stoneguard_no_mob_spawns]
-		# Default: 24
+		# Default: 36
 		# Range: 1 ~ 256
-		radius = 24
+		radius = 36
 
 	[power_overrides.strider_natural_armor]
 		# Default: 0
@@ -916,9 +920,9 @@
 		# Default: 80
 		# Range: 0 ~ 72000
 		cooldown_ticks = 80
-		# Default: 3
+		# Default: 0
 		# Range: 0 ~ 100
-		hunger_cost = 3
+		hunger_cost = 0
 
 	[power_overrides.voidwalker_water_damage]
 		# Default: 1.0
@@ -926,9 +930,9 @@
 		multiplier = 1.75
 
 	[power_overrides.warden_sonic_boom]
-		# Default: 1.0
+		# Default: 2.0
 		# Range: 0.0 ~ 10.0
-		speed = 1.0
+		speed = 2.0
 		# Default: 400
 		# Range: 0 ~ 72000
 		cooldown_ticks = 400
@@ -1008,9 +1012,9 @@
 		amount = 4.0
 
 	[power_overrides.class_sentinel_knockback_resist]
-		# Default: 0.2
+		# Default: 0.4
 		# Range: -1.0 ~ 1.0
-		amount = 0.2
+		amount = 0.4
 
 	[power_overrides.class_sentinel_thorns]
 		# Default: 0.25
@@ -1106,19 +1110,14 @@
 		multiplier = 2.0
 
 	[power_overrides.class_cook_food]
-		# Default: 0.4
+		# Default: 0.5
 		# Range: 0.0 ~ 10.0
-		saturation_bonus = 0.4
+		saturation_bonus = 0.5
 
 	[power_overrides.class_cook_smoker_xp]
 		# Default: 2.0
 		# Range: 0.0 ~ 100.0
 		multiplier = 2.0
-
-	[power_overrides.class_blacksmith_quality]
-		# Default: 1
-		# Range: 0 ~ 10
-		unbreaking_level = 1
 
 	[power_overrides.class_blacksmith_repairs]
 		# Default: 0.5
@@ -1258,9 +1257,9 @@
 		exhaustion_per_tick = 0.075
 
 	[power_overrides.wraith_daylight_damage]
-		# Default: 1.0
+		# Default: 2.0
 		# Range: 0.0 ~ 100.0
-		damage_per_second = 1.0
+		damage_per_second = 2.0
 
 	[power_overrides.wraith_hunger_drain]
 		# Default: 1.75
@@ -1326,30 +1325,8 @@
 
 	[power_overrides.class_paladin_beacon_regen]
 		# Default: 8.0
-		# Range: 0.0 ~ 128.0
+		# Range: 1.0 ~ 16.0
 		radius = 8.0
-
-	[power_overrides.mount]
-		# Default: 5.0
-		# Range: 1.0 ~ 64.0
-		range = 5.0
-		# Default: 100
-		# Range: 0 ~ 72000
-		cooldown_ticks = 100
-		# Default: 0
-		# Range: 0 ~ 100
-		hunger_cost = 0
-		allow_players = true
-		allow_mobs = true
-		block_bosses = true
-
-	[power_overrides.js_active]
-		# Default: 20
-		# Range: 0 ~ 72000
-		cooldown_ticks = 20
-		# Default: 0
-		# Range: 0 ~ 100
-		hunger_cost = 0
 
 	[power_overrides.necromancer_water_breathing]
 		enabled = true
@@ -1659,6 +1636,12 @@
 
 	[power_overrides.jianxian_riding_sword]
 		enabled = true
+		# Default: 1
+		# Range: 0 ~ 20
+		hunger_cost = 1
+		# Default: 60
+		# Range: 1 ~ 72000
+		upkeep_interval = 60
 
 	[power_overrides.jianxian_flickering_slash]
 		# Default: 2.5

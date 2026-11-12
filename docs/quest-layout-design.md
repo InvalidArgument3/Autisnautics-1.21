@@ -23,7 +23,7 @@ Tone: CABIN-style gated craftsmanship, Autisnautics fantasy (Aeronautics / Sable
 2. **Gates are craftable items we actually ship.** Prefer `kubejs:*_mechanism` / machines, then IE / Aeronautics / Stellaris items. No Thermal, Ad Astra, Tinkers, or Project Red IDs.
 3. **Each stage teaches one fantasy beat.** Kinetics → brass/AE seeds → power/oil → calculation → process industry → flight → space.
 4. **Origins are flavor, not progression.** Origin chapters give toys and identity. They do not unlock Stage N.
-5. **Retire dead economy.** Market / Shipments stay hidden until we pick a live currency (Numismatics or none).
+5. **Dead economy is gone.** The Remote Trading group (The Market, Bulletin Board/professions, Shipments) is deleted from the quest book. Re-add only if we pick a live currency (Numismatics or none).
 6. **Book mirrors recipes.** If a quest asks for X, KubeJS must craft X without missing mods.
 7. **Fewer chapters, denser pages.** Prefer rewriting Stage 1–5 over adding ten tiny Autis chapters.
 
@@ -40,7 +40,7 @@ Proposed groups in the quest sidebar:
 | **Sky & Space** | Taking Flight, Airship Core, Stellaris | Autis fantasy centerpiece |
 | **Branches** | Munitions, Ghost in the Machine, FLAOT | Optional power spikes |
 | **Origins** | Per-origin chapters that still have live mods | RP / bonuses |
-| **Hidden / retired** | Market, Shipments, CABIN Thermal/Ad Astra stubs | Not shown |
+| **Hidden / retired** | CABIN Thermal/Ad Astra stubs | Not shown |
 
 Overview sits first in **Main** and links stage completion quests only.
 
@@ -152,7 +152,7 @@ Do not add these back for quest convenience:
 - Project Red, Pretty Pipes
 - Occultism, Rats, Mana and Artifice (unless mod returns)
 - Biomes O’ Plenty quest refs (we use Regions Unexplored / Terralith / Aero)
-- Market + Shipments chapters (until currency decision)
+- Market / Bulletin Board / Shipments chapters (deleted)
 
 CABIN resourcepack / kubejs names (`andesite_machine`, mechanisms, etc.) may stay as **Autis craft items**; they are not permission to keep Thermal recipes.
 
@@ -175,7 +175,7 @@ Each overview node completes when its stage gate quest completes. No Ad Astra / 
 ## 8. Implementation order
 
 1. Freeze this doc’s spine (edit here if fantasy disagrees).
-2. Retire Market / Shipments / professions (hide chapters).
+2. Retire Market / Shipments / professions (chapters deleted).
 3. Fix Stage 1 rubber/sealed recipes + quests (unblocks everything).
 4. Remap Stage 3 to IE/IP; Stage 4b off Thermal.
 5. Rewrite Stage 5 + Taking Flight + new Airship / Stellaris pages.
@@ -197,7 +197,7 @@ Authoring: FTB Quests edit mode in-game (± Quest Enhance later). Bulk ID/text: 
 - [ ] How early may gliders / Immersive Aircraft appear (Stage 1 toy vs Stage 3)? Default lean: **Stage 3+** for aircraft, gliders can tease earlier.
 
 ### Done this pass
-- Hidden: `market`, `shipments`, `professions` (`always_invisible`)
+- Deleted: `market`, `professions` (Bulletin Board), `shipments` chapters and the `Remote Trading` chapter group, plus their lang keys and the dead locator-event block in `kubejs/server_scripts/quests.js`
 - Stage 1 Thermal rubber line → raw rubber / rubber / belt / sealed / copper machine
 - Stage 1 mechanism/machine tasks un-purpled; saw → CDG hammer
 - Stage 1 itemfilters tags → oak log/plank/slab/stripped + sand

@@ -11,6 +11,15 @@
 	quests: [
 		{
 			dependencies: ["4EAB29CE8895395E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "50766CC48FB21D85"
 			rewards: [{
 				id: "4A3D3ECB64559393"
@@ -21,6 +30,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "353BC6649BA6F008"
 				item: { count: 1, id: "minecraft:stick" }
 				type: "item"
@@ -30,6 +50,15 @@
 		}
 		{
 			dependencies: ["4EAB29CE8895395E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "11862F961F13287D"
 			rewards: [{
 				count: 4
@@ -45,6 +74,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "3D6016E23D774677"
 				points: false
 				type: "xp"
@@ -55,6 +95,15 @@
 		}
 		{
 			dependencies: ["11862F961F13287D"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "7A99056A697C4CEC"
 			rewards: [{
 				id: "1C837626FC2028A5"
@@ -69,6 +118,17 @@
 				type: "item"
 			}]
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "7E4CE81D5B3FDEFF"
 				item: { components: { "ftbquests:missing_item": "thermal:xp_crystal" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -78,6 +138,15 @@
 		}
 		{
 			dependencies: ["50766CC48FB21D85"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "240206E4C3855006"
 			rewards: [{
 				count: 3
@@ -94,6 +163,17 @@
 			tasks: [{
 				consume_items: true
 				count: 3L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "706138A036ECB00A"
 				item: { count: 1, id: "minecraft:gravel" }
 				type: "item"
@@ -103,6 +183,15 @@
 		}
 		{
 			dependencies: ["50766CC48FB21D85"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "13C43EFB6ED15325"
 			rewards: [{
 				id: "31A8E87272F65E18"
@@ -117,6 +206,17 @@
 			}]
 			tasks: [{
 				consume_items: true
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "2AFC82CBDDF880E7"
 				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
@@ -126,6 +226,15 @@
 		}
 		{
 			dependencies: ["50766CC48FB21D85"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon_scale: 2.0d
 			id: "3147E9D7F547137E"
 			rewards: [{
@@ -141,6 +250,17 @@
 			}]
 			tasks: [{
 				consume_items: false
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "6E593C7DE3DCAC6F"
 				item: { count: 1, id: "minecraft:blast_furnace" }
 				only_from_crafting: false
@@ -151,6 +271,15 @@
 		}
 		{
 			dependencies: ["50766CC48FB21D85"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "0B61F5DF33350C0A"
 			rewards: [{
 				id: "50190BD673F82762"
@@ -163,6 +292,17 @@
 			shape: "hexagon"
 			size: 1.1d
 			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "0874E1FD6B69A719"
 				structure: "minecraft:swamp_hut"
 				type: "structure"
@@ -172,6 +312,15 @@
 		}
 		{
 			dependencies: ["4EAB29CE8895395E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			icon_scale: 2.0d
 			id: "47DB705903F26597"
@@ -183,6 +332,17 @@
 			}]
 			tasks: [{
 				count: 2L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "38B27678B1B47426"
 				item: { components: { "ftbquests:missing_item": "minecraft:oak_log" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
@@ -195,6 +355,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -209,6 +378,15 @@
 		}
 		{
 			dependencies: ["3147E9D7F547137E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "4986F69A73BB122E"
 			rewards: [{
 				id: "653368009BCE3B7B"
@@ -221,6 +399,17 @@
 			tasks: [{
 				consume_items: false
 				count: 2L
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "53E5F9A58DB53F81"
 				item: { components: { "ftbquests:missing_item": "minecraft:slime_ball" }, count: 1, id: "ftbquests:missing_item" }
 				only_from_crafting: false
@@ -231,6 +420,15 @@
 		}
 		{
 			dependencies: ["3147E9D7F547137E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			id: "01C36D2B3E49D379"
 			rewards: [{
 				auto: "enabled"
@@ -245,12 +443,34 @@
 			tasks: [
 				{
 					consume_items: true
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "1474C861F59A094F"
 					item: { count: 1, id: "minecraft:oak_log" }
 					type: "item"
 				}
 				{
 					dimension: "minecraft:overworld"
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "0F798AC85175B193"
 					ignore_dimension: false
 					position: [I;
@@ -275,6 +495,15 @@
 				"47DB705903F26597"
 				"4986F69A73BB122E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				components: {
 					"ftbquests:missing_item": "minecraft:stick"
@@ -294,12 +523,34 @@
 			tasks: [
 				{
 					consume_items: false
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "2E3B993B55DC92A5"
 					item: { components: { "ftbquests:missing_item": "minecraft:stick" }, count: 1, id: "ftbquests:missing_item" }
 					only_from_crafting: false
 					type: "item"
 				}
 				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
 					id: "001545FF84357A11"
 					type: "checkmark"
 				}
@@ -312,6 +563,15 @@
 				"4EAB29CE8895395E"
 				"2809AE02EA018BFA"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -329,6 +589,15 @@
 				"4EAB29CE8895395E"
 				"2809AE02EA018BFA"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -346,6 +615,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -363,6 +641,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -380,6 +667,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -397,6 +693,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -414,6 +719,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -431,6 +745,15 @@
 				"2809AE02EA018BFA"
 				"4EAB29CE8895395E"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -450,6 +773,15 @@
 				"13C43EFB6ED15325"
 				"0B61F5DF33350C0A"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: false
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -469,6 +801,15 @@
 				"240206E4C3855006"
 				"0B61F5DF33350C0A"
 			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			hide_dependency_lines: false
 			hide_details_until_startable: true
 			hide_lock_icon: true
@@ -483,6 +824,15 @@
 		}
 		{
 			dependencies: ["4EAB29CE8895395E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
 			icon: {
 				id: "endrem:magical_eye"
 			}
@@ -498,6 +848,17 @@
 			size: 1.5d
 			tasks: [{
 				dimension: "minecraft:the_end"
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
 				id: "4AE661E33C20229D"
 				type: "dimension"
 			}]
