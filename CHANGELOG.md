@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Abyss Creatures 0.2.2** (private Deepsea adaptation of min01's Lovecraft: Beyond the Abyss creatures, GPL-3.0) restored to the pack via overrides (`.pakku/overrides/mods/abysscreatures-0.2.2-neoforge-1.21.1.jar`). Natural Ghidruth now despawn and free the dimension cap when no players are in Deepsea; summoned, egg, and name-tagged ones persist
+
 ## [0.0.90]
 - **Adventurer's Harness 1.2 and Create: Adventurer's Harness 1.1** are now Pakku-managed CurseForge projects (`adventurers-harness` 1780287, `create-adventurers-harness` 1780307) instead of hand-shipped LFS override jars, so `pakku update` keeps them current. The old override jars (`adventurers_harness-1.1-NeoForge-1.21.1.jar`, `create_adventurers_harness-1.0-NeoForge-1.21.1.jar`) are removed from `.pakku/overrides/mods/`; the lockfile carries both new projects (the Create addon pulls in the base mod as a dependency) and the serverpack ships `adventurers_harness-1.2-Sable-NeoForge-1.21.1.jar` plus `create_adventurers_harness-1.1-NeoForge-1.21.1.jar`
 - **Pakku updates (16)**: Collective 8.86, Corpse x Curios API Compat 4.2.1, Create Control Panels 0.2.4, CreativeCore 2.13.54, EMF Compat: Iron's Arms 'n Artifice 1.1.0, FancyMenu 3.10.0, JAOPCA 5.0.15.24, Let it Walk 0.1.5, Not Enough Recipe Book 0.6.2, Reliquary Reincarnations 2.0.85.1599, Sophisticated Core 1.5.33 / Storage 1.6.17, Starter Structure 6.0, TIS-3D 2.0.2, Titanium, Vista 5.6.8
