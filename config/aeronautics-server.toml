@@ -51,7 +51,7 @@
 	#kpg lifted per cubic meter of Hot Air
 	# Default: 1.5
 	# Range: 0.0 ~ 3.4028234663852886E38
-	hotAirStrength = 1.5
+	hotAirStrength = 3.0
 	#.
 	#kpg lifted per cubic meter of Steam
 	# Default: 1.5
