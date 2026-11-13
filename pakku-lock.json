@@ -5843,42 +5843,6 @@
             ]
         },
         {
-            "pakku_id": "joz3cy6N2qdyu6qd",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "create-aeronautics-custom-propellers"
-            },
-            "name": {
-                "curseforge": "Create Aeronautics: Custom propellers"
-            },
-            "id": {
-                "curseforge": "1718605"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "create_aeronautics_propellers_plus-0.0.61.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/9023/12/create_aeronautics_propellers_plus-0.0.61.jar",
-                    "id": "9023012",
-                    "parent_id": "1718605",
-                    "hashes": {
-                        "sha1": "7c46909f14bdfab8ac2e86b40f89b5a9242f1847",
-                        "md5": "a14d6b6ac214dc0a7f496468265d160a"
-                    },
-                    "required_dependencies": [],
-                    "size": 65667,
-                    "date_published": "2026-09-30T23:21:19.767Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "oDGyxAj0uU7g7A91",
             "pakku_links": [
                 "oHFg1lmyxBbni7px"
