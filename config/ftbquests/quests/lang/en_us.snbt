@@ -1756,4 +1756,662 @@
 	task.7F263AF0F6955616.title: "Hedgehog"
 	task.7F88BABEC9889C76.title: "{cabin.task.7F88BABEC9889C76}"
 	task.7FEEF6BED2C3F31B.title: "{cabin.task.7FEEF6BED2C3F31B}"
+	chapter_group.E1A0000000000001.title: "Mod Primers"
+	chapter.E501000000000000.title: "Create"
+	quest.E401000000000000.title: "A Wrench and Ponder"
+	quest.E401000000000000.quest_desc: [
+		"Create has no guidebook item. Hover a Create item and press the Ponder key (W by default) for the animated manual. JEI lists recipes."
+		"Claim this quest for a Wrench. The crafting recipe is gold sheets, a cogwheel, and a wooden rod, which you can make again once you have a cog. Fans, presses, mixers, drills, saws, and deployers are Andesite Machines in this pack: the crafting-table versions are removed."
+	]
+	quest.E401010000000000.title: "Sandpaper"
+	quest.E401010000000000.quest_desc: [
+		"Shapeless: paper and colorless sand. Ponder the sandpaper. It is the hand tool that later becomes the belt sander."
+	]
+	quest.E401020000000000.title: "Goggles"
+	quest.E401020000000000.quest_desc: [
+		"String, glass, and a gold sheet. JEI has the shape. Wear them to see kinetic stress. Ponder the goggles."
+	]
+	quest.E401030000000000.title: "Andesite Alloy"
+	quest.E401030000000000.quest_desc: [
+		"This pack removes the crafting-grid alloy and the zinc mixing recipe. Mix an Algal Brick with Andesite. The mix makes two alloy. JEI shows it."
+		"Algal Blend is clay with kelp or seagrass (Architect's Palette). Smelt the blend into the brick. The mixer itself is an Andesite Machine later in the factory chapters, which is the same loop those chapters already teach. Do not quest-skip ahead for the mixer."
+	]
+	quest.E401040000000000.title: "Shaft"
+	quest.E401040000000000.quest_desc: [
+		"Two Andesite Alloy, stacked, or cut one alloy on a saw. Ponder the shaft. It is the axle everything else turns on."
+	]
+	quest.E401050000000000.title: "Cogwheel"
+	quest.E401050000000000.quest_desc: [
+		"Shapeless: a shaft and any planks. Ponder the cogwheel for the gear ratios."
+	]
+	quest.E401060000000000.title: "Hand Crank"
+	quest.E401060000000000.quest_desc: [
+		"Planks and one Andesite Alloy. JEI has the shape. Ponder it. A hand crank spins a small machine before you have a water wheel."
+	]
+	quest.E401070000000000.title: "Water Wheel"
+	quest.E401070000000000.quest_desc: [
+		"Planks around a shaft. Place it in flowing water. Ponder the water wheel."
+		"A Basin is an alloy box. Andesite Casing is shapeless alloy plus any log, and this pack makes two casings. A Millstone is a cog, a casing, and stone. Both are in JEI. Stop here before the Andesite Machine line; that is the factory chapters."
+	]
+	chapter.E502000000000000.title: "Create Aeronautics"
+	quest.E402000000000000.title: "A White Envelope"
+	quest.E402000000000000.quest_desc: [
+		"Create Aeronautics ships inside the Create Aeronautics bundle. There is no guidebook. Ponder the envelope and the other airship parts, and use JEI."
+		"Claim this quest for a white envelope so you can Ponder it immediately. A spare is wool and sticks. JEI has the shape."
+	]
+	quest.E402010000000000.title: "Blue Envelope"
+	quest.E402010000000000.quest_desc: [
+		"Blue wool and sticks, the same pattern as the white envelope. JEI. The envelope is the balloon, not the engine."
+	]
+	quest.E402020000000000.title: "Steam Vent"
+	quest.E402020000000000.quest_desc: [
+		"A gold sheet on a copper block. JEI. Ponder the vent. It is the early lift part, before brass bearings."
+	]
+	quest.E402030000000000.title: "Aviator Goggles"
+	quest.E402030000000000.quest_desc: [
+		"Shapeless: leather and Create goggles. JEI. Ponder them."
+	]
+	quest.E402040000000000.title: "Adjustable Burner"
+	quest.E402040000000000.quest_desc: [
+		"This pack deletes the crafting-table burner. Apply a block of coal to an Andesite Machine (Create item application). JEI shows that recipe. Ponder the burner."
+		"The andesite propeller is the same kind of recipe: an Andesite Machine applied to an Immersive Aircraft propeller. The wooden propeller only crafts as a downgrade of the andesite one, so it is not a starter."
+	]
+	quest.E402050000000000.title: "Propeller Bearing"
+	quest.E402050000000000.quest_desc: [
+		"A wooden slab, an iron sheet, and a Create brass casing. JEI has the shape. The brass casing is why this waits. Ponder the bearing. It is the mount the propeller spins on."
+	]
+	chapter.E503000000000000.title: "Create Crafts & Additions"
+	quest.E403000000000000.title: "A Spool"
+	quest.E403000000000000.quest_desc: [
+		"Crafts & Additions has no guidebook. Ponder the spool, the connector, and the rolling mill. JEI lists the rest."
+		"Claim this quest for a spool. A spare is an iron sheet and an iron rod. JEI has the shape."
+	]
+	quest.E403010000000000.title: "Small Connector"
+	quest.E403010000000000.quest_desc: [
+		"Shapeless: a copper rod, Andesite Alloy, and a slimeball. JEI. Ponder the connector. It is the small wire terminal."
+	]
+	quest.E403020000000000.title: "Large Connector"
+	quest.E403020000000000.quest_desc: [
+		"Shapeless: a rod from the large-connector rod tag, two Andesite Alloy, and a slimeball. JEI. Ponder it."
+	]
+	quest.E403030000000000.title: "Rolling Mill"
+	quest.E403030000000000.quest_desc: [
+		"This pack removes the crafting-table Rolling Mill. Apply a Shaft to an Andesite Machine. JEI shows the item-application recipe. Ponder the mill."
+		"The mill rolls plates into wires. Copper wire and iron wire both come from that roll, not from a crafting grid."
+	]
+	quest.E403040000000000.title: "Barbed Wire"
+	quest.E403040000000000.quest_desc: [
+		"Roll an iron plate into iron wire, then craft barbed wire. JEI has the shape. The electric motor, alternator, and capacitor are removed in this pack, and the redstone relay needs an electron tube whose crafting recipe is also removed. Stop at wires."
+	]
+	chapter.E504000000000000.title: "Create Diesel Generators"
+	quest.E404000000000000.title: "The Hammer"
+	quest.E404000000000000.quest_desc: [
+		"No guidebook. Ponder the hammer. Claim this quest for one."
+		"A spare is two iron ingots and two wooden rods, in a pickaxe shape. JEI shows both mirrored shapes. This pack removed the andesite-and-iron hammer."
+	]
+	quest.E404010000000000.title: "Wood Chips"
+	quest.E404010000000000.quest_desc: [
+		"Cut wooden rods, or crush a boat. JEI lists both. The saw that does the cutting is an Andesite Machine in this pack. Wood chips are the early fuel item."
+	]
+	quest.E404020000000000.title: "Oil Barrel"
+	quest.E404020000000000.quest_desc: [
+		"A barrel and iron sheets. JEI. Ponder the barrel. It holds the oils the engines drink."
+	]
+	quest.E404030000000000.title: "Canister"
+	quest.E404030000000000.quest_desc: [
+		"Andesite Alloy, a barrel, and iron sheets. JEI. Ponder the canister. It is the portable tank."
+	]
+	quest.E404040000000000.title: "Lighter"
+	quest.E404040000000000.quest_desc: [
+		"Brass sheets, flint and steel, string, and Andesite Alloy. JEI. Brass is later than the hammer. Ponder the lighter. It lights the burners."
+	]
+	quest.E404050000000000.title: "Engine Silencer"
+	quest.E404050000000000.quest_desc: [
+		"Wool, iron sheets, Andesite Alloy, and a Create fluid pipe. JEI."
+		"The diesel engines, the pumpjack, and the distillation controller are Steel Machines in this pack. Their crafting-table recipes are removed. Ponder them when you reach steel, and follow JEI rather than an old guide."
+	]
+	chapter.E505000000000000.title: "Create Enchantment Industry"
+	quest.E405000000000000.title: "Blaze's Handbook"
+	quest.E405000000000000.quest_desc: [
+		"Claim this quest for Blaze's Enchanting Handbook. Read it, then Ponder the grindstone and the printer."
+		"The handbook's own craft is a blaze smithing template, sturdy sheets, bottles of experience, and magma. This pack removes recipes that use sturdy sheets, so the book is the reward instead of a starter craft."
+	]
+	quest.E405010000000000.title: "Mechanical Grindstone"
+	quest.E405010000000000.quest_desc: [
+		"Andesite Alloy around a shaft. JEI has the shape. This crafting recipe is still in the pack. Ponder the grindstone. It turns enchantments into liquid experience."
+	]
+	quest.E405020000000000.title: "Experience Cake Base"
+	quest.E405020000000000.quest_desc: [
+		"Compact an egg, sugar, and lapis in a Basin with a Mechanical Press above it. The handbook and JEI show the compacting recipe."
+		"This pack's Press is an iron block applied to an Andesite Machine, not the old crafting grid. The cake base waits until you have that press."
+	]
+	quest.E405030000000000.title: "Experience Cake"
+	quest.E405030000000000.quest_desc: [
+		"Fill the cake base with 1000 mB of liquid experience from the grindstone. JEI shows the spout filling. The handbook's experience pages cover the drain."
+	]
+	quest.E405040000000000.title: "Printer"
+	quest.E405040000000000.quest_desc: [
+		"A brass sheet, a spout, and an iron block. JEI. Brass is later than the grindstone. Ponder the printer."
+		"Pressing an Experience Block makes an Enchanting Template. The blaze enchanter and blaze forger are smithing recipes after that. The handbook is the walkthrough. The infuser needs a nixie tube and a spout, so it is past this primer."
+	]
+	chapter.E506000000000000.title: "Immersive Engineering"
+	quest.E406000000000000.title: "Engineer's Manual"
+	quest.E406000000000000.quest_desc: [
+		"Claim this quest for the Engineer's Manual. A spare is shapeless, a book plus the ingredients JEI lists. The Manual is the guidebook. Read the Tools and Coke Oven pages first."
+		"Light Engineering, Heavy Engineering, the dynamo, the waterwheel, and the windmill are removed or turned into Steel Machines in this pack. Follow the Manual and JEI, not those old crafting grids."
+	]
+	quest.E406010000000000.title: "Engineer's Hammer"
+	quest.E406010000000000.quest_desc: [
+		"Iron, string, and sticks. JEI has the shape. The Manual's Tools page shows what the hammer rotates and demolishes."
+	]
+	quest.E406020000000000.title: "Wire Cutters"
+	quest.E406020000000000.quest_desc: [
+		"An iron ingot and sticks. JEI has the shape. The Manual's Wiring page uses these to connect relays."
+	]
+	quest.E406030000000000.title: "Coke Brick"
+	quest.E406030000000000.quest_desc: [
+		"Clay, bricks, and sandstone. JEI. Build the Coke Oven from the Manual's multiblock page. Creosote from that oven treats wood."
+	]
+	quest.E406040000000000.title: "Basic Conveyor"
+	quest.E406040000000000.quest_desc: [
+		"Leather, iron, and redstone. JEI. The Manual's Conveyors page covers the belts."
+	]
+	quest.E406050000000000.title: "Iron Component"
+	quest.E406050000000000.quest_desc: [
+		"Not a crafting table. Craft it from the Engineer's Blueprint at the Engineer's Crafting Table: two iron plates and a copper ingot. The Manual's Components page has the blueprint."
+		"The crafting table itself wants treated wood from the coke oven. Vacuum tubes and the heavier components come after that."
+	]
+	chapter.E507000000000000.title: "Immersive Petroleum"
+	quest.E407000000000000.title: "Oil Can"
+	quest.E407000000000000.quest_desc: [
+		"Immersive Petroleum has no book of its own. The Engineer's Manual and JEI are the guide. Claim this quest for an oil can."
+		"A spare is a bucket, iron sheets, and red dye. JEI has the shape. The portable generator is removed in this pack. The flare stack needs a steel component, and the seismic survey and speedboat hull need Light Engineering, which this pack turns into a Steel Machine. Those wait."
+	]
+	quest.E407010000000000.title: "Rudder Upgrade"
+	quest.E407010000000000.quest_desc: [
+		"Iron sheets and iron rods. JEI. This is a boat part you can craft before steel. The Manual's petroleum pages cover the boat."
+	]
+	quest.E407020000000000.title: "Projector"
+	quest.E407020000000000.quest_desc: [
+		"Iron, an Engineer's Lantern, glass, and treated wood. JEI. Treated wood comes from the coke oven in the Engineering primer. The projector surveys chunks."
+	]
+	quest.E407030000000000.title: "Automatic Lubricator"
+	quest.E407030000000000.quest_desc: [
+		"Glass, an Engineer's fluid pipe, and treated wood. JEI. It drips lubricant onto Create machines. The Manual covers the fluid pipe."
+	]
+	quest.E407040000000000.title: "Paddle Upgrade"
+	quest.E407040000000000.quest_desc: [
+		"Treated wood and treated-wood rods. JEI. Pair it with the rudders. The steel hull and the icebreaker are later."
+	]
+	quest.E407050000000000.title: "Asphalt"
+	quest.E407050000000000.quest_desc: [
+		"Bitumen, sand, gravel, and water. JEI. Bitumen is a distillation product, so this waits until the distillation tower is running. The Manual's petroleum chapter is the multiblock. The quest is the paving block, not the tower."
+	]
+	chapter.E508000000000000.title: "NuclearCraft Neohaul"
+	quest.E408000000000000.title: "NuclearCraft Guide"
+	quest.E408000000000000.quest_desc: [
+		"Claim this quest for the NuclearCraft Guide. The pack config leaves give_guidebook off, and the crafting recipe wants a uranium ingot, so the quest gives the book."
+		"Open it and read Machines and Items. A GuideME copy of this book does not load: GuideME is not installed. The Geiger counter's recipe uses bioplastic, and this pack removes bioplastic, so the counter is not a starter craft."
+	]
+	quest.E408010000000000.title: "Copper Solenoid"
+	quest.E408010000000000.quest_desc: [
+		"Copper ingots and iron ingots. The craft makes two. JEI has the shape. The guide's Items page covers the solenoid. It is the coil in the early machines."
+	]
+	quest.E408020000000000.title: "Basic Plating"
+	quest.E408020000000000.quest_desc: [
+		"A lead ingot and graphite dust, two mirrored shapes, two plating each. JEI. The guide lists where graphite dust and lead come from. Lead is the Immersive Engineering ingot in this pack."
+	]
+	quest.E408030000000000.title: "Radiation Badge"
+	quest.E408030000000000.quest_desc: [
+		"Copper, string, redstone dust, and lead. JEI. The guide's radiation pages explain the badge. It is the early detector you can craft while the Geiger counter is unavailable."
+	]
+	quest.E408040000000000.title: "Manufactory"
+	quest.E408040000000000.quest_desc: [
+		"Lead, redstone, flint, a piston, and a copper solenoid. JEI. The guide's Machines page is the grinder. It is the first processor."
+	]
+	quest.E408050000000000.title: "Alloy Furnace"
+	quest.E408050000000000.quest_desc: [
+		"Basic plating, bricks, a furnace, redstone, and a copper solenoid. JEI. The guide's Alloys page starts here. Tough Alloy and the machine chassis need later metals, so they are past this primer."
+	]
+	chapter.E509000000000000.title: "Refined Storage"
+	quest.E409000000000000.title: "A Wrench"
+	quest.E409000000000000.quest_desc: [
+		"Refined Storage has no guidebook. JEI is the manual. Claim this quest for the wrench."
+		"The crafting-table wrench needs a Basic Processor. This pack removes the silicon craft and moves processors to the later factory chapters, so the wrench is a reward. The Controller, Grid, and Disk Drive are Fluix Machines here. Do not follow the old crafting grids for those three, or for the importer, exporter, detector, or external storage."
+	]
+	quest.E409010000000000.title: "Quartz Enriched Iron"
+	quest.E409010000000000.quest_desc: [
+		"Three iron and one quartz. JEI has the shape. This crafting recipe is still early. It is the metal for the casing and the housing."
+	]
+	quest.E409020000000000.title: "Quartz Enriched Copper"
+	quest.E409020000000000.quest_desc: [
+		"Three copper and one quartz. JEI. This is the metal for cables."
+	]
+	quest.E409030000000000.title: "Machine Casing"
+	quest.E409030000000000.quest_desc: [
+		"Quartz Enriched Iron around stone. JEI. The casing is the shell. The Controller that sits in one is a Fluix Machine, later."
+	]
+	quest.E409040000000000.title: "Cable"
+	quest.E409040000000000.quest_desc: [
+		"Quartz Enriched Copper, glass, and redstone. JEI. Cables carry the network. The wrench breaks them back into themselves."
+	]
+	quest.E409050000000000.title: "Storage Housing"
+	quest.E409050000000000.quest_desc: [
+		"Glass, redstone, and Quartz Enriched Iron. JEI. A housing is the empty disk shell. The 1k storage part wants a calculation mechanism in this pack, so leave the disks for the factory chapters."
+	]
+	chapter.E50A000000000000.title: "Sophisticated Storage"
+	quest.E40A000000000000.title: "A Chest"
+	quest.E40A000000000000.quest_desc: [
+		"Sophisticated Storage has no guidebook. JEI lists a chest and a barrel for every wood. Claim this quest for one chest."
+		"The Storage Tool opens the settings screen. Upgrades go in that screen, not in the crafting grid of the chest itself."
+	]
+	quest.E40A010000000000.title: "Barrel"
+	quest.E40A010000000000.quest_desc: [
+		"Any wood barrel recipe in JEI. Same idea as the chest, with a front that shows the contents."
+	]
+	quest.E40A020000000000.title: "Upgrade Base"
+	quest.E40A020000000000.quest_desc: [
+		"Iron and planks. JEI. Every upgrade starts from this blank plate."
+	]
+	quest.E40A030000000000.title: "Pickup Upgrade"
+	quest.E40A030000000000.quest_desc: [
+		"An upgrade base, a sticky piston, planks, and redstone. JEI. Put it in the chest's upgrade screen. It picks up drops."
+	]
+	quest.E40A040000000000.title: "Storage Tool"
+	quest.E40A040000000000.quest_desc: [
+		"An ender pearl, iron, a redstone torch, and sticks. JEI. Use it on a chest or barrel to open the settings the guidebook would have covered."
+	]
+	quest.E40A050000000000.title: "Hopper Upgrade"
+	quest.E40A050000000000.quest_desc: [
+		"An upgrade base, a hopper, iron, and redstone. JEI has the shape. The advanced hopper upgrade is a later tier and wants gold and diamonds. Stop at the basic one."
+	]
+	chapter.E50B000000000000.title: "Sophisticated Backpacks"
+	quest.E40B000000000000.title: "A Backpack"
+	quest.E40B000000000000.quest_desc: [
+		"No guidebook. JEI is the manual. Claim this quest for a backpack."
+		"A spare is string, leather, and a chest. JEI has the shape. Open the backpack and use the upgrade slot the same way Sophisticated Storage does."
+	]
+	quest.E40B010000000000.title: "Upgrade Base"
+	quest.E40B010000000000.quest_desc: [
+		"String, leather, and iron. JEI has the shape. Backpack upgrades and storage upgrades are different items. Use the backpack one."
+	]
+	quest.E40B020000000000.title: "Pickup Upgrade"
+	quest.E40B020000000000.quest_desc: [
+		"An upgrade base, string, a sticky piston, and redstone. JEI has the shape. It vacuums items while you wear the pack."
+	]
+	quest.E40B030000000000.title: "Crafting Upgrade"
+	quest.E40B030000000000.quest_desc: [
+		"An upgrade base, iron, a crafting table, and a chest. JEI has the shape. Install it and the backpack grows a crafting grid."
+	]
+	quest.E40B040000000000.title: "Filter Upgrade"
+	quest.E40B040000000000.quest_desc: [
+		"An upgrade base, string, and redstone. JEI has the shape. It lets the backpack ignore items you do not want picked up."
+	]
+	quest.E40B050000000000.title: "Smelting Upgrade"
+	quest.E40B050000000000.quest_desc: [
+		"An upgrade base, a furnace, iron, and redstone. JEI has the shape. The backpack smelts what you put in it. The feeding upgrade wants golden food, and the iron-block stack upgrade is a bigger pile of metal, so those stay out of this primer."
+	]
+	chapter.E50C000000000000.title: "Farmer's Delight"
+	quest.E40C000000000000.title: "Flint Knife"
+	quest.E40C000000000000.quest_desc: [
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are how you learn it. Claim this quest for a flint knife."
+		"This pack replaced the vertical knife. A spare is a wooden rod in the top-left and flint in the bottom-right. JEI shows that shape. Iron, gold, and diamond knives use the same shape."
+	]
+	quest.E40C010000000000.title: "Cutting Board"
+	quest.E40C010000000000.quest_desc: [
+		"Planks and sticks. JEI. Put it down and use the knife on it. That is the cutting recipe type JEI shows as a knife and a board."
+	]
+	quest.E40C020000000000.title: "Cooking Pot"
+	quest.E40C020000000000.quest_desc: [
+		"Bricks, a wooden shovel, a water bucket, and iron. JEI. The shovel and the bucket are ingredients, so they are used up. Heat the pot with a campfire or the stove."
+	]
+	quest.E40C030000000000.title: "Skillet"
+	quest.E40C030000000000.quest_desc: [
+		"Iron and a brick. JEI. It cooks one ingredient over heat and can be used as a pan."
+	]
+	quest.E40C040000000000.title: "Stove"
+	quest.E40C040000000000.quest_desc: [
+		"Iron, bricks, and a campfire. JEI. It is the block the pot and the skillet want underneath them."
+	]
+	quest.E40C050000000000.title: "Rope"
+	quest.E40C050000000000.quest_desc: [
+		"Two straw. JEI. Straw is not wheat: cut a rice panicle or a bamboo block with the knife. JEI lists those cutting recipes. Canvas is four straw, the same way."
+	]
+	chapter.E50D000000000000.title: "CC: Tweaked"
+	quest.E40D000000000000.title: "A Computer"
+	quest.E40D000000000000.quest_desc: [
+		"CC: Tweaked has no guidebook item. Place the computer, right-click it, and run help. Claim this quest for a normal computer."
+		"A spare is stone, redstone, and a glass pane. JEI has the shape. help, programs, and the lua prompt are the manual."
+	]
+	quest.E40D010000000000.title: "Monitor"
+	quest.E40D010000000000.quest_desc: [
+		"Stone and glass. JEI. Put it next to the computer. help monitor covers the commands once you turn the computer on."
+	]
+	quest.E40D020000000000.title: "Cable"
+	quest.E40D020000000000.quest_desc: [
+		"Stone and redstone. JEI. Cables join computers, monitors, and modems. Wired modems are in JEI when you want more than one block of network."
+	]
+	quest.E40D030000000000.title: "Disk Drive"
+	quest.E40D030000000000.quest_desc: [
+		"Stone and redstone. JEI. Put a floppy disk in it. Disks are paper and redstone dye. JEI lists the colors. list and help are the programs to run first."
+	]
+	quest.E40D040000000000.title: "Wireless Modem"
+	quest.E40D040000000000.quest_desc: [
+		"Stone and an ender pearl. JEI. help modem covers rednet. The ender modem is the same idea with an eye of ender, later."
+	]
+	quest.E40D050000000000.title: "Turtle"
+	quest.E40D050000000000.quest_desc: [
+		"Iron, a computer, and a chest. JEI. A turtle is a computer that moves. help turtle is the program list. Craft it after the computer so you already know help."
+	]
+	chapter.E50E000000000000.title: "Ars Nouveau"
+	quest.E40E000000000000.title: "Worn Notebook"
+	quest.E40E000000000000.quest_desc: [
+		"Claim this quest for the Worn Notebook. The pack config leaves spawnBook off. A spare is shapeless: a book and a lapis gem. JEI."
+		"Read the notebook before you spend gold on a chamber. It is the mod's book, not a Patchouli book."
+	]
+	quest.E40E010000000000.title: "Blue Archwood"
+	quest.E40E010000000000.quest_desc: [
+		"Find an archwood tree. There is no plain archwood log item, and sourceberries are not an item in this version. Blue is the log this quest asks for. Any color makes the same planks. The notebook's archwood pages describe the trees."
+	]
+	quest.E40E020000000000.title: "Archwood Planks"
+	quest.E40E020000000000.quest_desc: [
+		"Craft planks from any archwood log, the same way as oak. JEI. The chamber and the jar use these planks."
+	]
+	quest.E40E030000000000.title: "Imbuement Chamber"
+	quest.E40E030000000000.quest_desc: [
+		"Archwood planks and gold. JEI has the shape. The notebook's imbuement entry is the setup: the chamber stands alone for the first recipes, with pedestals added later."
+	]
+	quest.E40E040000000000.title: "Source Gem"
+	quest.E40E040000000000.quest_desc: [
+		"Not a crafting table. Put an amethyst shard in the Imbuement Chamber. It takes source and no pedestal items. The notebook lists the source cost. The gem is the dust of the mod."
+	]
+	quest.E40E050000000000.title: "Sourcestone"
+	quest.E40E050000000000.quest_desc: [
+		"Stone around a source gem. JEI. The block is sourcestone, not the old arcane stone name. The notebook's apparatus pages build with it."
+	]
+	quest.E40E060000000000.title: "Novice Spell Book"
+	quest.E40E060000000000.quest_desc: [
+		"Shapeless: a book plus an iron shovel, pickaxe, axe, and sword. Those four tools are consumed. JEI. The notebook's spell book page is the one to read first."
+		"A source jar is glass and archwood slabs, in JEI, when you want to store source. It is the next block after the book."
+	]
+	chapter.E50F000000000000.title: "Iron's Spells"
+	quest.E40F000000000000.title: "Iron's Guidebook"
+	quest.E40F000000000000.quest_desc: [
+		"Claim this quest for Iron's Guidebook. The crafting recipe is a book and arcane essence, which you will not have yet. The book is the Patchouli item, not a separate book item."
+		"Read the introduction. It names the inscription table, the inks, and the spell books."
+	]
+	quest.E40F010000000000.title: "Arcane Essence"
+	quest.E40F010000000000.quest_desc: [
+		"Wizards drop this. It has no crafting recipe. The guidebook's early pages say where wizards show up. You need a pile of it for cloth and ink."
+	]
+	quest.E40F020000000000.title: "Inscription Table"
+	quest.E40F020000000000.quest_desc: [
+		"A book, wooden slabs, and fences. JEI. This is the writing desk. The guidebook's inscription pages are the UI tour."
+	]
+	quest.E40F030000000000.title: "Iron Spell Book"
+	quest.E40F030000000000.quest_desc: [
+		"Chain, leather, and paper. JEI. It holds a few spells. Copper and the later books are upgrades of this one, in JEI, after you have used the iron book."
+	]
+	quest.E40F040000000000.title: "Magic Cloth"
+	quest.E40F040000000000.quest_desc: [
+		"Eight arcane essence around wool. JEI. The guidebook uses cloth for later gear. Blank runes are wiped off inscribed runes, not crafted from scratch, so they are not a starter quest."
+	]
+	chapter.E510000000000000.title: "Psi"
+	quest.E410000000000000.title: "Encyclopaedia Psionica"
+	quest.E410000000000000.quest_desc: [
+		"Claim this quest for the Encyclopaedia Psionica. Its own recipe is a spell trick, a book plus an iron CAD assembly, so the quest gives you the book."
+		"Read Basics, then the tutorials. The programmer, the spell bullet, and CAD parts are all in those pages. There is no separate Psi book item."
+	]
+	quest.E410010000000000.title: "Iron CAD Assembly"
+	quest.E410010000000000.quest_desc: [
+		"Four iron ingots. JEI. No psi dust. The encyclopaedia's CAD page shows the assembly. It is the empty shell."
+	]
+	quest.E410020000000000.title: "Psidust"
+	quest.E410020000000000.quest_desc: [
+		"The dust recipe is the trick in the encyclopaedia, cast at redstone. It is not a crafting-table recipe. Follow the tutorial that makes psidust. You need the dust for every part after the iron shell."
+	]
+	quest.E410030000000000.title: "Spell Bullet"
+	quest.E410030000000000.quest_desc: [
+		"Iron and psidust. JEI. The encyclopaedia's bullets page is the one that programs this. A bullet holds one spell."
+	]
+	quest.E410040000000000.title: "Spell Programmer"
+	quest.E410040000000000.quest_desc: [
+		"Iron and psidust. JEI. Place it and open it. The tutorials walk a first spell on this block."
+	]
+	quest.E410050000000000.title: "Basic CAD Battery"
+	quest.E410050000000000.quest_desc: [
+		"Iron, psidust, and gold. JEI. The basic core and the basic socket are the same trio of metals plus dust. JEI lists all three. The encyclopaedia's CAD page says which slot each one fills. Skip the assembled CAD item. It is built in the assembler, not as a plain craft."
+	]
+	chapter.E511000000000000.title: "Astral Sorcery"
+	quest.E411000000000000.title: "Astral Tome"
+	quest.E411000000000000.quest_desc: [
+		"Claim this quest for the Astral Tome. A spare is an aquamarine used on a book, once you have found a gem. The tome is the guidebook."
+		"The luminous altar, the wand, and the linking tool have no ordinary crafting recipe in this version. They are not in this primer. The tome's early pages and JEI cover the parchment, the lens, and the astrolabe."
+	]
+	quest.E411010000000000.title: "Aquamarine"
+	quest.E411010000000000.quest_desc: [
+		"Find aquamarine in the world. There is also a liquid-interaction recipe in JEI. The tome's gathering pages describe the shards. You need one for parchment and the lens."
+	]
+	quest.E411020000000000.title: "Rock Crystal"
+	quest.E411020000000000.quest_desc: [
+		"A worldgen crystal. No crafting recipe. The tome's crystal pages cover collecting it. It is the later lens material. This quest is only the raw crystal."
+	]
+	quest.E411030000000000.title: "Parchment"
+	quest.E411030000000000.quest_desc: [
+		"Aquamarine and paper. JEI. The tome uses parchment for constellation papers."
+	]
+	quest.E411040000000000.title: "Glass Lens"
+	quest.E411040000000000.quest_desc: [
+		"Aquamarine around a glass pane. JEI. The tome's lens page is the crafting one. It is the handheld lens, not the altar."
+	]
+	quest.E411050000000000.title: "Starmetal Ingot"
+	quest.E411050000000000.quest_desc: [
+		"Smelt starmetal ore or raw starmetal. JEI. The tome's ores page says where the ore generates."
+	]
+	quest.E411060000000000.title: "Astrolabe"
+	quest.E411060000000000.quest_desc: [
+		"Gold, aquamarine, a glass pane, and a spyglass. JEI. The tome's astrolabe page shows how to read it at night."
+	]
+	chapter.E512000000000000.title: "Theurgy"
+	quest.E412000000000000.title: "The Hermetica"
+	quest.E412000000000000.quest_desc: [
+		"Claim this quest for The Hermetica. A spare is a book and two sand. JEI. The book item is a Modonomicon, and the book id is theurgy:the_hermetica."
+		"Read the getting-started pages before you mine. They name the brazier, the oven, and the distiller."
+	]
+	quest.E412010000000000.title: "Pyromantic Brazier"
+	quest.E412010000000000.quest_desc: [
+		"Copper ingots and stone. JEI. The Hermetica's brazier page is the heat source for the first recipes."
+	]
+	quest.E412020000000000.title: "Calcination Oven"
+	quest.E412020000000000.quest_desc: [
+		"Iron and a copper block. JEI. The Hermetica's calcination page turns ores into salts. Alchemical salt is an oven output, not a crafting-table item."
+	]
+	quest.E412030000000000.title: "Distiller"
+	quest.E412030000000000.quest_desc: [
+		"Iron, a copper block, and stone. JEI. The Hermetica's distillation page is the mercury chapter."
+	]
+	quest.E412040000000000.title: "Sal Ammoniac Crystal"
+	quest.E412040000000000.quest_desc: [
+		"Mine it. The only simple recipe is emptying a bucket, which is the wrong direction. The Hermetica's sal ammoniac pages say where the ore is."
+	]
+	quest.E412050000000000.title: "Mercury Shard"
+	quest.E412050000000000.quest_desc: [
+		"A distillation output, not a crafting grid. Follow the Hermetica's mercury pages once the distiller is built. This quest is the shard itself."
+	]
+	chapter.E513000000000000.title: "Modern Foundry"
+	quest.E413000000000000.title: "Materials and You"
+	quest.E413000000000000.quest_desc: [
+		"The tinkers-named jar in this pack is Modern Foundry, not Tinkers' Construct. Claim this quest for Materials and You."
+		"Puny Smelting is a second book later in this chapter. The Encyclopedia is molten gold cast onto a book, which needs a smeltery, so it is not the starter. Read Materials and You for grout, bricks, and patterns."
+	]
+	quest.E413010000000000.title: "Pattern"
+	quest.E413010000000000.quest_desc: [
+		"Planks and sticks. JEI has the shape. Materials and You shows the pattern. You spend patterns in the Part Builder."
+	]
+	quest.E413020000000000.title: "Grout"
+	quest.E413020000000000.quest_desc: [
+		"Shapeless: a clay ball, sand, and gravel. JEI. There is also a clay-block batch. Materials and You and Puny Smelting both start here."
+	]
+	quest.E413030000000000.title: "Seared Brick"
+	quest.E413030000000000.quest_desc: [
+		"Smelt grout in a furnace, or blast it. JEI lists both. Puny Smelting shows the brick. The smeltery controller is a casting recipe after this, so it is past the primer."
+	]
+	quest.E413040000000000.title: "Part Builder"
+	quest.E413040000000000.quest_desc: [
+		"Patterns and planks. JEI. Materials and You has the picture. This is the table that cuts tool parts out of patterns."
+	]
+	quest.E413050000000000.title: "Tinker's Station"
+	quest.E413050000000000.quest_desc: [
+		"Patterns and planks. JEI. This is the tool station. Materials and You walks the first tool. Tool parts from the Part Builder are assembled here."
+	]
+	quest.E413060000000000.title: "Seared Faucet"
+	quest.E413060000000000.quest_desc: [
+		"Seared bricks. JEI. Puny Smelting shows the faucet. It pours once a seared tank exists. The tank recipes are in that book."
+	]
+	quest.E413070000000000.title: "Puny Smelting"
+	quest.E413070000000000.quest_desc: [
+		"Shapeless: a book and grout. JEI. Read it after Materials and You. It is the smeltery booklet: tanks, the faucet, and the first pours."
+	]
+	chapter.E514000000000000.title: "Cobblemon"
+	quest.E414000000000000.title: "Pokedex"
+	quest.E414000000000000.quest_desc: [
+		"Claim this quest for a red Pokedex. Other colors craft the same way. JEI lists them. The Pokedex is the guidebook."
+		"Use it to register what you catch. The healing machine wants a Max Revive, so it is not in this primer."
+	]
+	quest.E414010000000000.title: "Red Apricorn"
+	quest.E414010000000000.quest_desc: [
+		"No crafting recipe. Pick red apricorns from apricorn trees. The Pokedex and JEI do not grow them. You need four for a batch of Poke Balls."
+	]
+	quest.E414020000000000.title: "Apricorn Log"
+	quest.E414020000000000.quest_desc: [
+		"Chop an apricorn tree. The log has no craft. Planks come from it."
+	]
+	quest.E414030000000000.title: "Apricorn Planks"
+	quest.E414030000000000.quest_desc: [
+		"Shapeless, from any apricorn log. Four planks, like oak. JEI."
+	]
+	quest.E414040000000000.title: "Poke Ball"
+	quest.E414040000000000.quest_desc: [
+		"Four red apricorns around a copper ingot. The center is the tier-1 tag, which is copper ingots. The craft makes four balls. JEI has the shape."
+	]
+	quest.E414050000000000.title: "PC"
+	quest.E414050000000000.quest_desc: [
+		"Iron, glass, copper, and smooth stone. JEI has the shape. Place it to store Pokemon that are not in your party. The Pokedex pages cover the PC."
+	]
+	chapter.E515000000000000.title: "Alex's Mobs"
+	quest.E415000000000000.title: "Animal Dictionary"
+	quest.E415000000000000.quest_desc: [
+		"Claim this quest for the Animal Dictionary. The pack config leaves giveBookOnStartup off."
+		"A spare is shapeless: a book, green dye, and any item in the animal-dictionary ingredient tag. JEI lists the tag. Read a creature's page before you craft with its drop."
+	]
+	quest.E415010000000000.title: "Banana"
+	quest.E415010000000000.quest_desc: [
+		"No crafting recipe. Bananas drop from leaves. The dictionary's banana page says who eats them. This quest is just the fruit."
+	]
+	quest.E415020000000000.title: "Hummingbird Feeder"
+	quest.E415020000000000.quest_desc: [
+		"Copper, a glass bottle, and sunflowers. JEI. The dictionary's hummingbird page is the one to read. Fill it and hummingbirds visit."
+	]
+	quest.E415030000000000.title: "Fish Oil"
+	quest.E415030000000000.quest_desc: [
+		"A glass bottle and four blobfish. JEI. The dictionary's blobfish page covers the fish. Oil is the early craft that does not need a boss drop."
+	]
+	quest.E415040000000000.title: "Roadrunner Feather"
+	quest.E415040000000000.quest_desc: [
+		"A drop, not a craft. The dictionary's roadrunner page says what the feather is for. Pocket sand wants a guster eye and the squid grapple wants a lost tentacle, so those stay out of this primer."
+	]
+	quest.E415050000000000.title: "Falconry Glove"
+	quest.E415050000000000.quest_desc: [
+		"Leather and bear fur. JEI. The dictionary's grizzly page covers the fur. The glove is how falconry starts."
+	]
+	chapter.E516000000000000.title: "Alex's Caves"
+	quest.E416000000000000.title: "Cave Compendium"
+	quest.E416000000000000.quest_desc: [
+		"Claim this quest for the Cave Compendium. A spare is shapeless: a book, a cave tablet, and a gold nugget. The tablet is found, not crafted, so the quest gives you the book."
+		"Read a cave's chapter before you craft that cave's tools. The ingredients below are cave-biome items, not overworld crafts."
+	]
+	quest.E416010000000000.title: "Cave Tablet"
+	quest.E416010000000000.quest_desc: [
+		"Find one in a cave biome. No crafting recipe. The compendium tells you which tablets add which chapters. This quest is the tablet item."
+	]
+	quest.E416020000000000.title: "Limestone Spear"
+	quest.E416020000000000.quest_desc: [
+		"Limestone and sticks. JEI. Limestone is the magnetic-caves block. The compendium's magnetic chapter is the one to read. This is not an overworld craft."
+	]
+	quest.E416030000000000.title: "Primitive Club"
+	quest.E416030000000000.quest_desc: [
+		"A heavy bone and a cycad. JEI. Both are primordial-caves items. The compendium's primordial chapter covers them."
+	]
+	quest.E416040000000000.title: "Metal Swarf"
+	quest.E416040000000000.quest_desc: [
+		"A ferrouslime ball, raw iron, and gravel. JEI. Ferrouslime is the magnetic-caves drop. The compendium's magnetic chapter names it."
+	]
+	quest.E416050000000000.title: "Frostmint"
+	quest.E416050000000000.quest_desc: [
+		"Peppermint powder and blue ice. JEI. Peppermint is the candy-caves crop. The compendium's candy chapter is the page. Eat it or brew with it after you have read that chapter."
+	]
+	chapter.E517000000000000.title: "The Undergarden"
+	quest.E417000000000000.title: "Catalyst"
+	quest.E417000000000000.quest_desc: [
+		"The Undergarden has no guidebook. JEI is the list. Claim this quest for a Catalyst."
+		"A spare is copper ingots, an ender pearl, and stone. JEI has the shape. Build a rectangular frame of stone bricks (deepslate bricks and the brick blocks in the portal-frame tag also work) and right-click the inside with the Catalyst."
+	]
+	quest.E417010000000000.title: "Wigglewood Log"
+	quest.E417010000000000.quest_desc: [
+		"Chop a wigglewood tree on the far side of the portal. No crafting recipe. It is the dimension's first wood."
+	]
+	quest.E417020000000000.title: "Wigglewood Planks"
+	quest.E417020000000000.quest_desc: [
+		"Shapeless, from a wigglewood log. Four planks. JEI."
+	]
+	quest.E417030000000000.title: "Twistytwig"
+	quest.E417030000000000.quest_desc: [
+		"Two wigglewood planks, set on a diagonal. The craft makes four. JEI. Twigs are the sticks of the dimension."
+	]
+	quest.E417040000000000.title: "Depthrock"
+	quest.E417040000000000.quest_desc: [
+		"Mine it in the Undergarden. No crafting recipe. It is the stone. Cloggrum ore sits in it."
+	]
+	quest.E417050000000000.title: "Raw Cloggrum"
+	quest.E417050000000000.quest_desc: [
+		"Mine cloggrum ore. Raw cloggrum has no crafting recipe. Smelt it for the ingot."
+	]
+	quest.E417060000000000.title: "Cloggrum Ingot"
+	quest.E417060000000000.quest_desc: [
+		"Smelt raw cloggrum, or blast it. JEI. Cloggrum is the iron of the Undergarden."
+	]
+	quest.E417070000000000.title: "Cloggrum Pickaxe"
+	quest.E417070000000000.quest_desc: [
+		"Cloggrum ingots and a wooden rod, in the pickaxe shape. JEI. It mines the next ores. Forgotten metal is later. JEI and the ore names are the only guide."
+	]
+	chapter.E518000000000000.title: "Tide"
+	quest.E418000000000000.title: "Fishing Journal"
+	quest.E418000000000000.quest_desc: [
+		"Claim this quest for the Fishing Journal. The pack config leaves giveJournal off."
+		"A spare is shapeless: a book and any Tide fish. JEI. Read the journal before you upgrade the rod. It is the mod's book."
+	]
+	quest.E418010000000000.title: "Stone Fishing Rod"
+	quest.E418010000000000.quest_desc: [
+		"Cobblestone and string, in a rod shape. JEI. The journal's rods page starts here. There is no plain tide:fishing_rod item."
+	]
+	quest.E418020000000000.title: "Fishing Hook"
+	quest.E418020000000000.quest_desc: [
+		"Iron nuggets and cobblestone. JEI. Hooks are the bobber upgrade. The journal lists what each hook changes."
+	]
+	quest.E418030000000000.title: "Fishing Line"
+	quest.E418030000000000.quest_desc: [
+		"Three string, stacked. JEI. The journal's line page is the depth upgrade. The basic line is only string."
+	]
+	quest.E418040000000000.title: "Iron Line"
+	quest.E418040000000000.quest_desc: [
+		"Iron ingots and a fishing line. JEI. It is the next line up. The journal says what it casts."
+	]
+	quest.E418050000000000.title: "Bait"
+	quest.E418050000000000.quest_desc: [
+		"A bait plant, rotten flesh, seeds, and bone meal. The craft makes four. JEI lists the bait-plant tag. The journal's bait page covers which fish like it."
+	]
+	quest.E418060000000000.title: "Wooden Crate"
+	quest.E418060000000000.quest_desc: [
+		"Wooden slabs in a chest ring. JEI. Crates store fish and tackle. The journal mentions them with the cooler catches."
+	]
 }

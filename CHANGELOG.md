@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- FTB Quests: Mod Primers chapter group, one beginner chapter per major content mod. The first quest of each chapter gives that mod's guidebook, or the Ponder/JEI stand-in when the mod has no book. Starter-book configs stay off (Tide journal, Alex's Mobs giveBookOnStartup, Ars Nouveau spawnBook, NuclearCraft give_guidebook).
+
 ## [0.0.91]
 - **Abyss Creatures 0.2.2** (private Deepsea adaptation of min01's Lovecraft: Beyond the Abyss creatures, GPL-3.0) restored to the pack via overrides (`.pakku/overrides/mods/abysscreatures-0.2.2-neoforge-1.21.1.jar`). Natural Ghidruth now despawn and free the dimension cap when no players are in Deepsea; summoned, egg, and name-tagged ones persist
 
