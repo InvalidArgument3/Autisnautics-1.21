@@ -1,0 +1,284 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "primer_psi"
+	group: "E1A0000000000001"
+	id: "E510000000000000"
+	images: [ ]
+	order_index: 15
+	quest_links: [ ]
+	quests: [
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				components: {
+					"patchouli:book": "psi:encyclopaedia_psionica"
+				}
+				id: "patchouli:guide_book"
+			}
+			id: "E410000000000000"
+			rewards: [
+				{
+					id: "E310000000000000"
+					item: {
+						components: {
+							"patchouli:book": "psi:encyclopaedia_psionica"
+						}
+						count: 1
+						id: "patchouli:guide_book"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210000000000000"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["E410000000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_assembly_iron"
+			}
+			id: "E410010000000000"
+			rewards: [
+				{
+					id: "E310010000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210010000000000"
+				item: { count: 1, id: "psi:cad_assembly_iron" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["E410010000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:psidust"
+			}
+			id: "E410020000000000"
+			rewards: [
+				{
+					id: "E310020000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210020000000000"
+				item: { count: 1, id: "psi:psidust" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["E410020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:spell_bullet"
+			}
+			id: "E410030000000000"
+			rewards: [
+				{
+					id: "E310030000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210030000000000"
+				item: { count: 1, id: "psi:spell_bullet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["E410030000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:programmer"
+			}
+			id: "E410040000000000"
+			rewards: [
+				{
+					id: "E310040000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210040000000000"
+				item: { count: 1, id: "psi:programmer" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["E410040000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_battery_basic"
+			}
+			id: "E410050000000000"
+			rewards: [
+				{
+					id: "E310050000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E210050000000000"
+				item: { count: 1, id: "psi:cad_battery_basic" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+	]
+}

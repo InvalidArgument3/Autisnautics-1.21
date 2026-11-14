@@ -1,0 +1,278 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "primer_sophisticated_storage"
+	group: "E1A0000000000001"
+	id: "E50A000000000000"
+	images: [ ]
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:chest"
+			}
+			id: "E40A000000000000"
+			rewards: [
+				{
+					id: "E30A000000000000"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:chest"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A000000000000"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["E40A000000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:barrel"
+			}
+			id: "E40A010000000000"
+			rewards: [
+				{
+					id: "E30A010000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A010000000000"
+				item: { count: 1, id: "sophisticatedstorage:barrel" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["E40A010000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:upgrade_base"
+			}
+			id: "E40A020000000000"
+			rewards: [
+				{
+					id: "E30A020000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A020000000000"
+				item: { count: 1, id: "sophisticatedstorage:upgrade_base" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["E40A020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:pickup_upgrade"
+			}
+			id: "E40A030000000000"
+			rewards: [
+				{
+					id: "E30A030000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A030000000000"
+				item: { count: 1, id: "sophisticatedstorage:pickup_upgrade" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["E40A030000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:storage_tool"
+			}
+			id: "E40A040000000000"
+			rewards: [
+				{
+					id: "E30A040000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A040000000000"
+				item: { count: 1, id: "sophisticatedstorage:storage_tool" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["E40A040000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:hopper_upgrade"
+			}
+			id: "E40A050000000000"
+			rewards: [
+				{
+					id: "E30A050000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20A050000000000"
+				item: { count: 1, id: "sophisticatedstorage:hopper_upgrade" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+	]
+}

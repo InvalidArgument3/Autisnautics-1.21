@@ -1,0 +1,278 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "primer_computercraft"
+	group: "E1A0000000000001"
+	id: "E50D000000000000"
+	images: [ ]
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:computer_normal"
+			}
+			id: "E40D000000000000"
+			rewards: [
+				{
+					id: "E30D000000000000"
+					item: {
+						count: 1
+						id: "computercraft:computer_normal"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D000000000000"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["E40D000000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:monitor_normal"
+			}
+			id: "E40D010000000000"
+			rewards: [
+				{
+					id: "E30D010000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D010000000000"
+				item: { count: 1, id: "computercraft:monitor_normal" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["E40D010000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:cable"
+			}
+			id: "E40D020000000000"
+			rewards: [
+				{
+					id: "E30D020000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D020000000000"
+				item: { count: 1, id: "computercraft:cable" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["E40D020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:disk_drive"
+			}
+			id: "E40D030000000000"
+			rewards: [
+				{
+					id: "E30D030000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D030000000000"
+				item: { count: 1, id: "computercraft:disk_drive" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["E40D030000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:wireless_modem_normal"
+			}
+			id: "E40D040000000000"
+			rewards: [
+				{
+					id: "E30D040000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D040000000000"
+				item: { count: 1, id: "computercraft:wireless_modem_normal" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["E40D040000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:turtle_normal"
+			}
+			id: "E40D050000000000"
+			rewards: [
+				{
+					id: "E30D050000000000"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "E20D050000000000"
+				item: { count: 1, id: "computercraft:turtle_normal" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+	]
+}
