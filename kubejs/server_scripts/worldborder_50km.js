@@ -1,27 +1,64 @@
-// Autisnautics: enforce 50 km × 50 km Overworld worldborder (±25000 from 0,0).
-// Vanilla WorldBorder.setSize(50000) is the full diameter (min = center - size/2).
-// Silent Java API — no chat spam on /reload or server start.
-ServerEvents.loaded(event => {
-    const server = event.server
-    const level = server.getLevel('minecraft:overworld')
-    if (!level) return
+// Autisnautics: 50 km x 50 km worldborder in every loaded dimension.
+// Diameter 50000, center 0,0, in that dimension's own block coordinates (bounds ±25000).
+// Silent Java API. One log line per dimension per script load. /reload runs this again.
+//
+// Minecraft 1.21.1 WorldBorder scales only getCenterX/getCenterZ when the dimension
+// type's coordinate_scale is not 1. setCenter and setSize store raw values. getMinX is
+// the scaled center minus size/2, so center 0 and size 50000 is still ±25000 when the
+// Nether's scale is 8. Do not multiply the diameter by the scale.
+//
+// Levels created at startup other than the overworld get a one-way
+// DelegateBorderChangeListener on the overworld border. That listener copies the
+// overworld's raw size and raw center. DerivedLevelData.setWorldBorder is a no-op, so
+// those borders are not saved; the next boot copies the saved overworld border back
+// through the listeners. Dimensions created after startup are not in that listener
+// list, so each level is set directly as well.
 
-    const wb = level.worldBorder
-    const target = 50000.0
-    const cx = wb.centerX
-    const cz = wb.centerZ
-    const size = wb.size
+var targetDiameter = 50000.0
+var seen = {}
 
-    let changed = false
-    if (Math.abs(cx) > 0.01 || Math.abs(cz) > 0.01) {
-        wb.setCenter(0.0, 0.0)
-        changed = true
+function applyBorder(level) {
+    var id = String(level.dimension)
+    if (seen[id]) return
+    seen[id] = true
+
+    var wb = level.worldBorder
+    wb.setCenter(0.0, 0.0)
+    wb.setSize(targetDiameter)
+
+    var minX = wb.getMinX()
+    var maxX = wb.getMaxX()
+    var minZ = wb.getMinZ()
+    var maxZ = wb.getMaxZ()
+    var span = maxX - minX
+    if (Math.abs(span - targetDiameter) > 0.5 && Math.abs(span) > 0.5) {
+        wb.setSize(targetDiameter * (wb.getSize() / span))
+        minX = wb.getMinX()
+        maxX = wb.getMaxX()
+        minZ = wb.getMinZ()
+        maxZ = wb.getMaxZ()
+        span = maxX - minX
     }
-    if (Math.abs(size - target) > 0.5) {
-        wb.setSize(target)
-        changed = true
+
+    var scale = 1.0
+    try {
+        scale = level.dimensionType().coordinateScale()
+    } catch (error) {
+        scale = -1
     }
-    if (changed) {
-        console.info('[Autisnautics] Overworld worldborder set to 50000 (50 km × 50 km) centered at 0,0')
-    }
+
+    console.info('[Autisnautics] Worldborder ' + id
+        + ' diameter ' + span
+        + ' center ' + wb.getCenterX() + ',' + wb.getCenterZ()
+        + ' bounds x[' + minX + ',' + maxX + '] z[' + minZ + ',' + maxZ + ']'
+        + ' coordinate_scale ' + scale)
+}
+
+LevelEvents.loaded(function (event) {
+    applyBorder(event.level)
+})
+
+ServerEvents.loaded(function (event) {
+    var it = event.server.getAllLevels().iterator()
+    while (it.hasNext()) applyBorder(it.next())
 })

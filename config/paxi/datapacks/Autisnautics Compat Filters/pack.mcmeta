@@ -12,6 +12,14 @@
       {
         "namespace": "tm_armory",
         "path": "miapi/material_extensions/test\\.json"
+      },
+      {
+        "namespace": "blueprint",
+        "path": "data_maps/dimension/modded_biome_slice_sizes\\.json"
+      },
+      {
+        "namespace": "create_enchantment_industry",
+        "path": "data_maps/fluid/unit/experience\\.json"
       }
     ]
   }
