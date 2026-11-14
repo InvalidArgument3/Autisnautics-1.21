@@ -26,10 +26,18 @@
 			id: "4B80A801A5BE4A01"
 			rewards: [
 				{
+					id: "5200000000000402"
+					item: {
+						count: 6
+						id: "minecraft:wheat"
+					}
+					type: "item"
+				}
+				{
 					id: "52000000000000A7"
 					item: {
 						count: 4
-						id: "minecraft:white_terracotta"
+						id: "minecraft:sugar"
 					}
 					type: "item"
 				}
@@ -171,8 +179,8 @@
 				{
 					id: "52000000000000AA"
 					item: {
-						count: 3
-						id: "minecraft:white_wool"
+						count: 8
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -196,8 +204,8 @@
 				{
 					id: "1825E20FFD3BEBFF"
 					item: {
-						count: 1
-						id: "refinedstorage:quartz_enriched_iron"
+						count: 4
+						id: "minecraft:iron_ingot"
 					}
 					random_bonus: 4
 					type: "item"
@@ -264,8 +272,8 @@
 				{
 					id: "52000000000000AB"
 					item: {
-						count: 4
-						id: "minecraft:white_carpet"
+						count: 8
+						id: "minecraft:sand"
 					}
 					type: "item"
 				}
@@ -338,8 +346,8 @@
 				{
 					id: "52000000000000AC"
 					item: {
-						count: 4
-						id: "minecraft:white_concrete"
+						count: 2
+						id: "immersiveengineering:dust_saltpeter"
 					}
 					type: "item"
 				}
@@ -408,10 +416,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "520000000000030A"
+					item: {
+						count: 8
+						id: "minecraft:sand"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001A9"
 					item: {
 						count: 4
-						id: "minecraft:light_blue_carpet"
+						id: "minecraft:charcoal"
 					}
 					type: "item"
 				}
@@ -458,8 +474,8 @@
 				{
 					id: "52000000000000AD"
 					item: {
-						count: 2
-						id: "minecraft:white_candle"
+						count: 6
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -535,8 +551,8 @@
 				{
 					id: "52000000000000AE"
 					item: {
-						count: 4
-						id: "minecraft:white_dye"
+						count: 8
+						id: "minecraft:sand"
 					}
 					type: "item"
 				}
@@ -609,8 +625,8 @@
 				{
 					id: "52000000000000AF"
 					item: {
-						count: 3
-						id: "minecraft:orange_wool"
+						count: 6
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -683,8 +699,8 @@
 				{
 					id: "52000000000000B0"
 					item: {
-						count: 4
-						id: "minecraft:orange_carpet"
+						count: 6
+						id: "minecraft:charcoal"
 					}
 					type: "item"
 				}
@@ -754,6 +770,14 @@
 			}
 			id: "16F920C2AF2FA2E0"
 			rewards: [
+				{
+					id: "520000000000030B"
+					item: {
+						count: 4
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
 				{
 					id: "51000000000001B3"
 					item: {
@@ -828,7 +852,7 @@
 					id: "52000000000000B1"
 					item: {
 						count: 4
-						id: "minecraft:orange_terracotta"
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
@@ -898,6 +922,14 @@
 			}
 			id: "60A8B4C736CE3226"
 			rewards: [
+				{
+					id: "520000000000030C"
+					item: {
+						count: 4
+						id: "immersiveengineering:dust_sulfur"
+					}
+					type: "item"
+				}
 				{
 					id: "51000000000001B7"
 					item: {
@@ -1034,7 +1066,7 @@
 					id: "52000000000000B2"
 					item: {
 						count: 2
-						id: "minecraft:orange_candle"
+						id: "immersiveengineering:dust_silver"
 					}
 					type: "item"
 				}
@@ -1240,8 +1272,8 @@
 				{
 					id: "52000000000000B3"
 					item: {
-						count: 4
-						id: "minecraft:orange_concrete"
+						count: 8
+						id: "minecraft:sand"
 					}
 					type: "item"
 				}
@@ -1318,8 +1350,8 @@
 				{
 					id: "52000000000000B4"
 					item: {
-						count: 4
-						id: "minecraft:orange_dye"
+						count: 6
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -1391,10 +1423,18 @@
 			size: 1.5d
 			rewards: [
 				{
+					id: "520000000000030D"
+					item: {
+						count: 8
+						id: "minecraft:sand"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001C5"
 					item: {
-						count: 4
-						id: "minecraft:light_blue_terracotta"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -1439,10 +1479,18 @@
 			id: "6D26DAB7D0FF6E90"
 			rewards: [
 				{
-					id: "52000000000000B5"
+					id: "520000000000030E"
 					item: {
 						count: 4
-						id: "minecraft:light_blue_concrete"
+						id: "minecraft:quartz"
+					}
+					type: "item"
+				}
+				{
+					id: "52000000000000B5"
+					item: {
+						count: 2
+						id: "refinedstorage:silicon"
 					}
 					type: "item"
 				}
@@ -1500,8 +1548,8 @@
 				{
 					id: "52000000000000B6"
 					item: {
-						count: 3
-						id: "minecraft:magenta_wool"
+						count: 4
+						id: "minecraft:oak_log"
 					}
 					type: "item"
 				}
@@ -1576,8 +1624,8 @@
 				{
 					id: "52000000000000B7"
 					item: {
-						count: 4
-						id: "minecraft:magenta_carpet"
+						count: 2
+						id: "create:polished_rose_quartz"
 					}
 					type: "item"
 				}
@@ -1634,7 +1682,7 @@
 					id: "52000000000000B8"
 					item: {
 						count: 4
-						id: "minecraft:magenta_terracotta"
+						id: "minecraft:redstone_torch"
 					}
 					type: "item"
 				}
@@ -1703,10 +1751,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "520000000000030F"
+					item: {
+						count: 4
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001CE"
 					item: {
-						count: 2
-						id: "minecraft:light_blue_candle"
+						count: 8
+						id: "minecraft:coal"
 					}
 					type: "item"
 				}
@@ -1753,8 +1809,8 @@
 				{
 					id: "52000000000000B9"
 					item: {
-						count: 4
-						id: "minecraft:magenta_concrete"
+						count: 8
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -1842,10 +1898,26 @@
 			id: "2B8F1D804107EB8C"
 			rewards: [
 				{
+					id: "5200000000000403"
+					item: {
+						count: 2
+						id: "refinedstorage:silicon"
+					}
+					type: "item"
+				}
+				{
+					id: "5200000000000310"
+					item: {
+						count: 6
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001D2"
 					item: {
 						count: 4
-						id: "minecraft:light_blue_dye"
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
@@ -1923,10 +1995,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000311"
+					item: {
+						count: 1
+						id: "minecraft:milk_bucket"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001D4"
 					item: {
-						count: 2
-						id: "minecraft:yellow_candle"
+						count: 4
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
@@ -2073,8 +2153,8 @@
 				{
 					id: "52000000000000BA"
 					item: {
-						count: 2
-						id: "minecraft:magenta_candle"
+						count: 4
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
@@ -2130,8 +2210,8 @@
 				{
 					id: "52000000000000BB"
 					item: {
-						count: 3
-						id: "minecraft:light_blue_wool"
+						count: 4
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
@@ -2334,8 +2414,8 @@
 				{
 					id: "52000000000000BC"
 					item: {
-						count: 4
-						id: "minecraft:magenta_dye"
+						count: 3
+						id: "minecraft:blaze_powder"
 					}
 					type: "item"
 				}
@@ -2391,8 +2471,8 @@
 				{
 					id: "52000000000000BD"
 					item: {
-						count: 3
-						id: "minecraft:yellow_wool"
+						count: 4
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -2449,7 +2529,7 @@
 					id: "52000000000000BE"
 					item: {
 						count: 4
-						id: "minecraft:yellow_carpet"
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}

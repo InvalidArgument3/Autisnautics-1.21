@@ -85,7 +85,7 @@
 					id: "52000000000000ED"
 					item: {
 						count: 4
-						id: "minecraft:white_terracotta"
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
@@ -141,8 +141,8 @@
 				{
 					id: "52000000000000EE"
 					item: {
-						count: 4
-						id: "minecraft:white_concrete"
+						count: 2
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
@@ -198,8 +198,8 @@
 				{
 					id: "52000000000000EF"
 					item: {
-						count: 2
-						id: "minecraft:white_candle"
+						count: 4
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -255,8 +255,8 @@
 				{
 					id: "52000000000000F0"
 					item: {
-						count: 4
-						id: "minecraft:white_carpet"
+						count: 2
+						id: "create:shaft"
 					}
 					type: "item"
 				}
@@ -310,10 +310,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000322"
+					item: {
+						count: 2
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000294"
 					item: {
 						count: 4
-						id: "minecraft:pink_dye"
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
@@ -361,8 +369,8 @@
 				{
 					id: "52000000000000F1"
 					item: {
-						count: 4
-						id: "minecraft:white_dye"
+						count: 8
+						id: "minecraft:andesite"
 					}
 					type: "item"
 				}
@@ -418,8 +426,8 @@
 				{
 					id: "52000000000000F2"
 					item: {
-						count: 3
-						id: "minecraft:orange_wool"
+						count: 4
+						id: "minecraft:feather"
 					}
 					type: "item"
 				}
@@ -475,8 +483,8 @@
 				{
 					id: "52000000000000F3"
 					item: {
-						count: 3
-						id: "minecraft:white_wool"
+						count: 4
+						id: "minecraft:paper"
 					}
 					type: "item"
 				}
@@ -531,6 +539,14 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000323"
+					item: {
+						count: 4
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000029C"
 					item: {
 						count: 2
@@ -583,7 +599,7 @@
 					id: "52000000000000F5"
 					item: {
 						count: 4
-						id: "minecraft:orange_carpet"
+						id: "minecraft:paper"
 					}
 					type: "item"
 				}
@@ -648,10 +664,18 @@
 			id: "7650D7E4FE40E2C7"
 			rewards: [
 				{
-					id: "52000000000000F6"
+					id: "5200000000000409"
 					item: {
 						count: 4
-						id: "minecraft:orange_terracotta"
+						id: "minecraft:string"
+					}
+					type: "item"
+				}
+				{
+					id: "52000000000000F6"
+					item: {
+						count: 3
+						id: "minecraft:leather"
 					}
 					type: "item"
 				}

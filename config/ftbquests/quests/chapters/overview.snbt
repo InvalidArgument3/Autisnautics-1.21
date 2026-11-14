@@ -89,8 +89,8 @@
 				{
 					id: "5100000000000099"
 					item: {
-						count: 4
-						id: "create:brass_ingot"
+						count: 6
+						id: "create:crushed_raw_zinc"
 					}
 					type: "item"
 				}
@@ -258,8 +258,8 @@
 				{
 					id: "510000000000009F"
 					item: {
-						count: 2
-						id: "minecraft:white_candle"
+						count: 6
+						id: "minecraft:dried_kelp"
 					}
 					type: "item"
 				}
@@ -479,8 +479,8 @@
 				{
 					id: "5200000000000051"
 					item: {
-						count: 4
-						id: "minecraft:white_terracotta"
+						count: 3
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -601,8 +601,8 @@
 				{
 					id: "5200000000000053"
 					item: {
-						count: 3
-						id: "minecraft:white_wool"
+						count: 8
+						id: "minecraft:andesite"
 					}
 					type: "item"
 				}
@@ -658,16 +658,16 @@
 				{
 					id: "5200000000000054"
 					item: {
-						count: 4
-						id: "minecraft:white_carpet"
+						count: 8
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000AB"
 					item: {
-						count: 2
-						id: "create:brass_ingot"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
 				}
@@ -715,8 +715,8 @@
 				{
 					id: "5200000000000055"
 					item: {
-						count: 4
-						id: "minecraft:white_dye"
+						count: 6
+						id: "minecraft:dried_kelp"
 					}
 					type: "item"
 				}
@@ -773,7 +773,7 @@
 					id: "5200000000000056"
 					item: {
 						count: 4
-						id: "minecraft:white_concrete"
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -927,8 +927,8 @@
 				{
 					id: "5200000000000057"
 					item: {
-						count: 3
-						id: "minecraft:orange_wool"
+						count: 4
+						id: "minecraft:blaze_powder"
 					}
 					type: "item"
 				}
@@ -982,10 +982,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000410"
+					item: {
+						count: 4
+						id: "minecraft:magma_cream"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000B7"
 					item: {
 						count: 4
-						id: "minecraft:orange_carpet"
+						id: "minecraft:blaze_powder"
 					}
 					type: "item"
 				}

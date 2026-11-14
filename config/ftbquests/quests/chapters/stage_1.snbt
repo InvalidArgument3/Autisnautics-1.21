@@ -303,8 +303,8 @@
 				{
 					id: "51000000000000CC"
 					item: {
-						count: 4
-						id: "minecraft:white_dye"
+						count: 2
+						id: "create:cogwheel"
 					}
 					type: "item"
 				}
@@ -351,8 +351,8 @@
 				{
 					id: "520000000000005B"
 					item: {
-						count: 3
-						id: "minecraft:white_wool"
+						count: 4
+						id: "minecraft:clay"
 					}
 					type: "item"
 				}
@@ -428,8 +428,8 @@
 				{
 					id: "520000000000005C"
 					item: {
-						count: 4
-						id: "minecraft:white_carpet"
+						count: 6
+						id: "minecraft:seagrass"
 					}
 					type: "item"
 				}
@@ -785,8 +785,8 @@
 				{
 					id: "520000000000005F"
 					item: {
-						count: 4
-						id: "minecraft:white_terracotta"
+						count: 6
+						id: "minecraft:kelp"
 					}
 					type: "item"
 				}
@@ -863,8 +863,8 @@
 				{
 					id: "5200000000000060"
 					item: {
-						count: 4
-						id: "minecraft:white_concrete"
+						count: 6
+						id: "minecraft:diorite"
 					}
 					type: "item"
 				}
@@ -940,10 +940,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000400"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000DE"
 					item: {
 						count: 3
-						id: "minecraft:orange_wool"
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -1284,8 +1292,8 @@
 				{
 					id: "51000000000000E6"
 					item: {
-						count: 4
-						id: "minecraft:orange_terracotta"
+						count: 3
+						id: "kubejs:rubber"
 					}
 					type: "item"
 				}
@@ -1351,8 +1359,8 @@
 				{
 					id: "51000000000000E8"
 					item: {
-						count: 4
-						id: "minecraft:orange_concrete"
+						count: 2
+						id: "create:copper_sheet"
 					}
 					type: "item"
 				}
@@ -1477,8 +1485,8 @@
 				{
 					id: "51000000000000EB"
 					item: {
-						count: 2
-						id: "minecraft:orange_candle"
+						count: 1
+						id: "minecraft:milk_bucket"
 					}
 					type: "item"
 				}
@@ -1796,8 +1804,8 @@
 				{
 					id: "5200000000000068"
 					item: {
-						count: 2
-						id: "minecraft:white_candle"
+						count: 3
+						id: "minecraft:gold_ingot"
 					}
 					type: "item"
 				}

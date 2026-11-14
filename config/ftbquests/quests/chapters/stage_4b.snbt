@@ -85,10 +85,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000312"
+					item: {
+						count: 3
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001EB"
 					item: {
 						count: 4
-						id: "minecraft:yellow_dye"
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -171,8 +179,8 @@
 				{
 					id: "52000000000000C0"
 					item: {
-						count: 4
-						id: "minecraft:white_concrete"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -280,7 +288,7 @@
 					id: "52000000000000C1"
 					item: {
 						count: 3
-						id: "minecraft:white_wool"
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -337,8 +345,8 @@
 				{
 					id: "52000000000000C2"
 					item: {
-						count: 2
-						id: "minecraft:white_candle"
+						count: 4
+						id: "minecraft:nether_wart"
 					}
 					type: "item"
 				}
@@ -445,8 +453,8 @@
 				{
 					id: "52000000000000C3"
 					item: {
-						count: 4
-						id: "minecraft:white_carpet"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -501,10 +509,18 @@
 			id: "3978E4B39C9DB44D"
 			rewards: [
 				{
+					id: "5200000000000404"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001F9"
 					item: {
 						count: 4
-						id: "minecraft:red_dye"
+						id: "minecraft:poppy"
 					}
 					type: "item"
 				}
@@ -601,10 +617,18 @@
 			id: "1E856F69C03B1D75"
 			rewards: [
 				{
+					id: "5200000000000313"
+					item: {
+						count: 4
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000001FD"
 					item: {
-						count: 3
-						id: "minecraft:lime_wool"
+						count: 4
+						id: "minecraft:dandelion"
 					}
 					type: "item"
 				}
@@ -654,7 +678,7 @@
 					id: "52000000000000C4"
 					item: {
 						count: 4
-						id: "minecraft:green_dye"
+						id: "minecraft:paper"
 					}
 					type: "item"
 				}
@@ -767,10 +791,18 @@
 			id: "3377A2C391B6F03A"
 			rewards: [
 				{
+					id: "5200000000000314"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000203"
 					item: {
 						count: 4
-						id: "minecraft:lime_carpet"
+						id: "minecraft:allium"
 					}
 					type: "item"
 				}
@@ -819,8 +851,8 @@
 				{
 					id: "52000000000000C6"
 					item: {
-						count: 4
-						id: "minecraft:white_terracotta"
+						count: 8
+						id: "minecraft:netherrack"
 					}
 					type: "item"
 				}
@@ -877,8 +909,8 @@
 				{
 					id: "52000000000000C7"
 					item: {
-						count: 4
-						id: "minecraft:white_dye"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -982,6 +1014,14 @@
 			}
 			id: "20AA864C5201C638"
 			rewards: [
+				{
+					id: "5200000000000315"
+					item: {
+						count: 3
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
 				{
 					id: "510000000000020B"
 					item: {
@@ -1186,7 +1226,7 @@
 					id: "52000000000000C8"
 					item: {
 						count: 3
-						id: "minecraft:orange_wool"
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -1243,8 +1283,8 @@
 				{
 					id: "52000000000000C9"
 					item: {
-						count: 4
-						id: "minecraft:orange_carpet"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -1360,7 +1400,7 @@
 					id: "5100000000000219"
 					item: {
 						count: 8
-						id: "minecraft:nether_brick"
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -1410,7 +1450,7 @@
 					id: "52000000000000CB"
 					item: {
 						count: 2
-						id: "minecraft:orange_candle"
+						id: "minecraft:repeater"
 					}
 					type: "item"
 				}
@@ -1467,8 +1507,8 @@
 				{
 					id: "52000000000000CC"
 					item: {
-						count: 4
-						id: "minecraft:orange_terracotta"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -1775,8 +1815,8 @@
 				{
 					id: "52000000000000CD"
 					item: {
-						count: 4
-						id: "minecraft:orange_concrete"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -1834,7 +1874,7 @@
 					id: "52000000000000CE"
 					item: {
 						count: 4
-						id: "minecraft:orange_dye"
+						id: "minecraft:charcoal"
 					}
 					type: "item"
 				}
@@ -1891,8 +1931,8 @@
 				{
 					id: "52000000000000CF"
 					item: {
-						count: 3
-						id: "minecraft:magenta_wool"
+						count: 4
+						id: "minecraft:nether_wart"
 					}
 					type: "item"
 				}
@@ -1997,10 +2037,18 @@
 			id: "2FD7D312EE63EA53"
 			rewards: [
 				{
+					id: "5200000000000405"
+					item: {
+						count: 3
+						id: "minecraft:nether_wart"
+					}
+					type: "item"
+				}
+				{
 					id: "52000000000000D0"
 					item: {
-						count: 4
-						id: "minecraft:magenta_carpet"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2058,7 +2106,7 @@
 					id: "52000000000000D1"
 					item: {
 						count: 4
-						id: "minecraft:magenta_terracotta"
+						id: "minecraft:paper"
 					}
 					type: "item"
 				}
@@ -2124,7 +2172,7 @@
 					id: "52000000000000D2"
 					item: {
 						count: 4
-						id: "minecraft:magenta_concrete"
+						id: "minecraft:nether_wart"
 					}
 					type: "item"
 				}
@@ -2189,8 +2237,8 @@
 				{
 					id: "52000000000000D3"
 					item: {
-						count: 2
-						id: "minecraft:magenta_candle"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2253,10 +2301,18 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000406"
+					item: {
+						count: 2
+						id: "immersiveengineering:dust_silver"
+					}
+					type: "item"
+				}
+				{
 					id: "52000000000000D4"
 					item: {
-						count: 4
-						id: "minecraft:magenta_dye"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2321,8 +2377,8 @@
 				{
 					id: "52000000000000D5"
 					item: {
-						count: 3
-						id: "minecraft:light_blue_wool"
+						count: 4
+						id: "minecraft:nether_wart"
 					}
 					type: "item"
 				}
@@ -2387,8 +2443,8 @@
 				{
 					id: "52000000000000D6"
 					item: {
-						count: 4
-						id: "minecraft:light_blue_carpet"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2453,8 +2509,8 @@
 				{
 					id: "52000000000000D7"
 					item: {
-						count: 4
-						id: "minecraft:light_blue_terracotta"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2518,8 +2574,8 @@
 				{
 					id: "52000000000000D8"
 					item: {
-						count: 4
-						id: "minecraft:light_blue_concrete"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2576,8 +2632,8 @@
 				{
 					id: "52000000000000D9"
 					item: {
-						count: 2
-						id: "minecraft:light_blue_candle"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2628,10 +2684,18 @@
 			id: "1D1D1FEAF49C5E11"
 			rewards: [
 				{
+					id: "5200000000000316"
+					item: {
+						count: 3
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
 					id: "52000000000000DA"
 					item: {
-						count: 4
-						id: "minecraft:lime_terracotta"
+						count: 3
+						id: "minecraft:glowstone_dust"
 					}
 					type: "item"
 				}
@@ -2682,10 +2746,18 @@
 			id: "630DA0C83959E9D8"
 			rewards: [
 				{
+					id: "5200000000000317"
+					item: {
+						count: 8
+						id: "minecraft:netherrack"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000246"
 					item: {
-						count: 4
-						id: "minecraft:lime_concrete"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
@@ -2729,10 +2801,18 @@
 			size: 2.0d
 			rewards: [
 				{
+					id: "5200000000000318"
+					item: {
+						count: 4
+						id: "minecraft:soul_sand"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000248"
 					item: {
-						count: 2
-						id: "minecraft:lime_candle"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
