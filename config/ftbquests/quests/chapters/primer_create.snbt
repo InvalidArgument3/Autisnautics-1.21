@@ -121,11 +121,11 @@
 				item: { count: 1, id: "create:sand_paper" }
 				type: "item"
 			}]
-			x: -2.35d
-			y: -0.14d
+			x: -5.64d
+			y: -0.35d
 		}
 		{
-			dependencies: ["6401000000000000"]
+			dependencies: ["6600000000000101"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -171,8 +171,8 @@
 				item: { count: 1, id: "create:goggles" }
 				type: "item"
 			}]
-			x: -3.94d
-			y: -0.74d
+			x: 3.21d
+			y: -14.65d
 		}
 		{
 			dependencies: ["6401090000000001"]
@@ -221,8 +221,8 @@
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: 4.69d
-			y: 0.29d
+			x: 4.54d
+			y: -2.09d
 		}
 		{
 			dependencies: ["6401030000000000"]
@@ -271,8 +271,8 @@
 				item: { count: 1, id: "create:shaft" }
 				type: "item"
 			}]
-			x: 5.21d
-			y: 4.75d
+			x: -7.15d
+			y: -2.27d
 		}
 		{
 			dependencies: ["6401040000000000"]
@@ -321,11 +321,11 @@
 				item: { count: 1, id: "create:cogwheel" }
 				type: "item"
 			}]
-			x: 2.25d
-			y: -10.26d
+			x: -9.83d
+			y: -1.84d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: ["6401030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -379,8 +379,8 @@
 				item: { count: 1, id: "create:hand_crank" }
 				type: "item"
 			}]
-			x: 3.12d
-			y: -8.87d
+			x: -6.38d
+			y: -3.95d
 		}
 		{
 			dependencies: ["6401040000000000"]
@@ -431,8 +431,8 @@
 				item: { count: 1, id: "create:water_wheel" }
 				type: "item"
 			}]
-			x: 4.84d
-			y: -9.72d
+			x: -10.75d
+			y: -3.42d
 		}
 		{
 			extraquests_calendar: {
@@ -480,8 +480,8 @@
 					item: { count: 1, id: "architects_palette:algal_brick" }
 					type: "item"
 			}]
-			x: 2.35d
-			y: 0.14d
+			x: 2.27d
+			y: -1.04d
 		}
 
 		{
@@ -530,12 +530,12 @@
 					item: { count: 1, id: "create:andesite_casing" }
 					type: "item"
 			}]
-			x: -3.89d
-			y: -5.88d
+			x: 7.27d
+			y: -1.83d
 		}
 
 		{
-			dependencies: ["6401050000000000"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -588,11 +588,14 @@
 					item: { count: 1, id: "create:large_cogwheel" }
 					type: "item"
 				}]
-			x: 2.61d
-			y: -11.92d
+			x: -9.08d
+			y: -4.18d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: [
+				"64010A0000000001"
+				"6401050000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -645,11 +648,14 @@
 					item: { count: 1, id: "create:gearbox" }
 					type: "item"
 				}]
-			x: 5.19d
-			y: -7.84d
+			x: -0.43d
+			y: -13.96d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: [
+				"64010A0000000001"
+				"6401040000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -702,11 +708,14 @@
 					item: { count: 1, id: "create:clutch" }
 					type: "item"
 				}]
-			x: 6.83d
-			y: -7.98d
+			x: 0.31d
+			y: -10.00d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: [
+				"64010A0000000001"
+				"6401050000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -759,11 +768,11 @@
 					item: { count: 1, id: "create:gearshift" }
 					type: "item"
 				}]
-			x: 6.95d
-			y: -6.33d
+			x: -0.48d
+			y: -15.71d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -816,11 +825,14 @@
 					item: { count: 1, id: "create:encased_chain_drive" }
 					type: "item"
 				}]
-			x: 8.57d
-			y: -6.07d
+			x: -5.00d
+			y: -8.66d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: [
+				"64010A0000000001"
+				"6401050000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -873,11 +885,11 @@
 					item: { count: 1, id: "create:millstone" }
 					type: "item"
 				}]
-			x: 8.28d
-			y: -4.45d
+			x: -0.59d
+			y: -19.21d
 		}
 		{
-			dependencies: ["6401040000000000"]
+			dependencies: ["6401000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -930,8 +942,8 @@
 					item: { count: 1, id: "create:belt_connector" }
 					type: "item"
 				}]
-			x: 10.10d
-			y: -3.91d
+			x: -2.22d
+			y: 2.94d
 		}
 		{
 			dependencies: ["6401030000000000"]
@@ -987,11 +999,12 @@
 					item: { count: 1, id: "create:basin" }
 					type: "item"
 				}]
-			x: -6.93d
-			y: 1.30d
+			x: -3.75d
+			y: 6.50d
 		}
 		{
 			dependencies: [
+				"6600000000000109"
 				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
@@ -1041,8 +1054,8 @@
 					item: { count: 1, id: "create:encased_fan" }
 					type: "item"
 				}]
-			x: -8.96d
-			y: -2.85d
+			x: 10.49d
+			y: -15.82d
 		}
 		{
 			dependencies: [
@@ -1101,11 +1114,12 @@
 					item: { count: 1, id: "create:mechanical_press" }
 					type: "item"
 				}]
-			x: -9.80d
-			y: -4.51d
+			x: 9.53d
+			y: -3.03d
 		}
 		{
 			dependencies: [
+				"6600000000000108"
 				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
@@ -1153,11 +1167,12 @@
 					item: { count: 1, id: "create:mechanical_mixer" }
 					type: "item"
 				}]
-			x: -7.99d
-			y: -4.95d
+			x: 8.75d
+			y: -15.16d
 		}
 		{
 			dependencies: [
+				"660000000000010A"
 				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
@@ -1205,11 +1220,12 @@
 					item: { count: 1, id: "create:mechanical_drill" }
 					type: "item"
 				}]
-			x: -8.18d
-			y: -6.58d
+			x: 10.55d
+			y: -13.97d
 		}
 		{
 			dependencies: [
+				"660000000000010B"
 				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
@@ -1257,8 +1273,8 @@
 					item: { count: 1, id: "create:mechanical_saw" }
 					type: "item"
 				}]
-			x: -6.54d
-			y: -6.75d
+			x: 12.12d
+			y: -14.15d
 		}
 		{
 			dependencies: [
@@ -1317,8 +1333,8 @@
 					item: { count: 1, id: "create:andesite_funnel" }
 					type: "item"
 				}]
-			x: -6.33d
-			y: -8.38d
+			x: 2.14d
+			y: 9.77d
 		}
 		{
 			dependencies: [
@@ -1377,8 +1393,8 @@
 					item: { count: 1, id: "create:mechanical_harvester" }
 					type: "item"
 				}]
-			x: -4.70d
-			y: -8.14d
+			x: 1.01d
+			y: 10.86d
 		}
 		{
 			dependencies: [
@@ -1437,8 +1453,8 @@
 					item: { count: 1, id: "create:mechanical_plough" }
 					type: "item"
 				}]
-			x: -4.09d
-			y: -9.67d
+			x: -0.31d
+			y: 10.00d
 		}
 		{
 			dependencies: [
@@ -1489,8 +1505,8 @@
 					item: { count: 1, id: "create:contraption_controls" }
 					type: "item"
 				}]
-			x: -2.57d
-			y: -9.04d
+			x: -1.67d
+			y: 10.77d
 		}
 		{
 			dependencies: [
@@ -1541,12 +1557,12 @@
 					item: { count: 1, id: "create:cart_assembler" }
 					type: "item"
 				}]
-			x: -1.61d
-			y: -10.38d
+			x: -2.74d
+			y: 9.62d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000102"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1603,12 +1619,12 @@
 					item: { count: 1, id: "create:copper_backtank" }
 					type: "item"
 				}]
-			x: 9.12d
-			y: -2.29d
+			x: 13.22d
+			y: -7.10d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000102"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1663,12 +1679,12 @@
 					item: { count: 1, id: "create:spout" }
 					type: "item"
 				}]
-			x: 10.71d
-			y: -1.33d
+			x: 14.74d
+			y: 2.76d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000102"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1715,12 +1731,12 @@
 					item: { count: 1, id: "create:item_drain" }
 					type: "item"
 				}]
-			x: 9.40d
-			y: 0.00d
+			x: 9.76d
+			y: 11.39d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000102"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1775,12 +1791,12 @@
 					item: { count: 1, id: "create:hose_pulley" }
 					type: "item"
 				}]
-			x: 10.42d
-			y: 1.29d
+			x: 8.29d
+			y: 12.50d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000102"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1835,12 +1851,13 @@
 					item: { count: 1, id: "create:smart_fluid_pipe" }
 					type: "item"
 				}]
-			x: 9.12d
-			y: 2.29d
+			x: 6.69d
+			y: 13.43d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000106"
+				"660000000000010C"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -1897,12 +1914,13 @@
 					item: { count: 1, id: "create:controls" }
 					type: "item"
 				}]
-			x: 10.12d
-			y: 3.92d
+			x: 13.00d
+			y: -18.36d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000106"
+				"660000000000010C"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -1949,12 +1967,13 @@
 					item: { count: 1, id: "create:track_station" }
 					type: "item"
 				}]
-			x: 8.28d
-			y: 4.45d
+			x: 14.16d
+			y: -20.00d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000106"
+				"660000000000010C"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -2009,12 +2028,13 @@
 					item: { count: 1, id: "create:track_signal" }
 					type: "item"
 				}]
-			x: 8.57d
-			y: 6.07d
+			x: 15.17d
+			y: -21.43d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000106"
+				"660000000000010C"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -2069,13 +2089,13 @@
 					item: { count: 1, id: "create:schedule" }
 					type: "item"
 				}]
-			x: 6.95d
-			y: 6.33d
+			x: 16.18d
+			y: -22.85d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
-				"7FC4D1E69377271D"
+				"6600000000000101"
+				"6401030000000000"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2131,15 +2151,14 @@
 					item: { count: 1, id: "create:brass_hand" }
 					type: "item"
 				}]
-			x: 8.09d
-			y: 9.45d
+			x: 11.39d
+			y: -9.76d
 		}
 		{
 			dependencies: [
-				"64010A0000000001"
 				"660000000000004A"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
-				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2185,12 +2204,12 @@
 					item: { count: 1, id: "create:deployer" }
 					type: "item"
 				}]
-			x: 9.71d
-			y: -7.33d
+			x: 15.54d
+			y: -8.04d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2247,12 +2266,12 @@
 					item: { count: 1, id: "create:mechanical_crafter" }
 					type: "item"
 				}]
-			x: 6.00d
-			y: 9.05d
+			x: 22.41d
+			y: -8.68d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2307,12 +2326,12 @@
 					item: { count: 1, id: "create:steam_engine" }
 					type: "item"
 				}]
-			x: 4.19d
-			y: 8.41d
+			x: 21.82d
+			y: -5.49d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2367,12 +2386,12 @@
 					item: { count: 1, id: "create:rotation_speed_controller" }
 					type: "item"
 				}]
-			x: 3.49d
-			y: 9.91d
+			x: 22.33d
+			y: -2.76d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2427,12 +2446,12 @@
 					item: { count: 1, id: "create:sequenced_gearshift" }
 					type: "item"
 				}]
-			x: 2.01d
-			y: 9.18d
+			x: 22.50d
+			y: 0.00d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2487,12 +2506,12 @@
 					item: { count: 1, id: "create:brass_tunnel" }
 					type: "item"
 				}]
-			x: 0.97d
-			y: 10.46d
+			x: 22.33d
+			y: 2.76d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2547,12 +2566,12 @@
 					item: { count: 1, id: "create:smart_chute" }
 					type: "item"
 				}]
-			x: -0.29d
-			y: 9.40d
+			x: 21.82d
+			y: 5.49d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2607,12 +2626,12 @@
 					item: { count: 1, id: "create:clockwork_bearing" }
 					type: "item"
 				}]
-			x: -1.61d
-			y: 10.38d
+			x: 20.98d
+			y: 8.13d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2667,12 +2686,12 @@
 					item: { count: 1, id: "create:elevator_pulley" }
 					type: "item"
 				}]
-			x: -2.57d
-			y: 9.04d
+			x: 19.82d
+			y: 10.64d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2727,12 +2746,12 @@
 					item: { count: 1, id: "create:display_link" }
 					type: "item"
 				}]
-			x: -4.28d
-			y: 10.12d
+			x: 18.36d
+			y: 13.00d
 		}
 		{
 			dependencies: [
-				"6401040000000000"
+				"6600000000000105"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2789,14 +2808,14 @@
 					item: { count: 1, id: "create:mechanical_arm" }
 					type: "item"
 				}]
-			x: -4.70d
-			y: 8.14d
+			x: 16.63d
+			y: 15.16d
 		}
 
 		{
 			dependencies: [
+				"660000000000004B"
 				"6600000000000038"
-				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2850,8 +2869,8 @@
 					item: { count: 1, id: "create:track" }
 					type: "item"
 				}]
-			x: -11.35d
-			y: -5.22d
+			x: 18.48d
+			y: -7.65d
 		}
 		{
 			dependencies: [
@@ -2910,8 +2929,8 @@
 					item: { count: 1, id: "create:chain_conveyor" }
 					type: "item"
 				}]
-			x: -2.59d
-			y: -13.86d
+			x: 1.15d
+			y: -12.45d
 		}
 		{
 			dependencies: ["6401000000000000"]
@@ -2967,14 +2986,11 @@
 					item: { count: 1, id: "create:schematicannon" }
 					type: "item"
 				}]
-			x: -5.22d
-			y: 0.32d
+			x: -3.71d
+			y: 3.82d
 		}
 		{
-			dependencies: [
-				"6401040000000000"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3029,14 +3045,11 @@
 					item: { count: 1, id: "create:stock_link" }
 					type: "item"
 				}]
-			x: -6.90d
-			y: 8.05d
+			x: -5.58d
+			y: 3.95d
 		}
 		{
-			dependencies: [
-				"66000000000000D5"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["66000000000000D5"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3089,14 +3102,11 @@
 					item: { count: 1, id: "create:stock_ticker" }
 					type: "item"
 				}]
-			x: -7.45d
-			y: 9.86d
+			x: -6.82d
+			y: 5.49d
 		}
 		{
-			dependencies: [
-				"6401040000000000"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3143,14 +3153,11 @@
 					item: { count: 1, id: "create:factory_gauge" }
 					type: "item"
 				}]
-			x: -7.32d
-			y: 5.89d
+			x: -2.27d
+			y: 1.04d
 		}
 		{
-			dependencies: [
-				"6401040000000000"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3203,14 +3210,11 @@
 					item: { count: 1, id: "create:packager" }
 					type: "item"
 				}]
-			x: -9.17d
-			y: 5.68d
+			x: -7.36d
+			y: 2.34d
 		}
 		{
-			dependencies: [
-				"6401040000000000"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3263,14 +3267,11 @@
 					item: { count: 1, id: "create:repackager" }
 					type: "item"
 				}]
-			x: -8.54d
-			y: 3.93d
+			x: -6.16d
+			y: 1.15d
 		}
 		{
-			dependencies: [
-				"6401040000000000"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3323,13 +3324,12 @@
 					item: { count: 1, id: "create:package_frogport" }
 					type: "item"
 				}]
-			x: -10.01d
-			y: 3.18d
+			x: -4.03d
+			y: 0.25d
 		}
 		{
 			dependencies: [
 				"66000000000000D5"
-				"66000000000000D8"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3386,9 +3386,757 @@
 					item: { count: 1, id: "create:redstone_requester" }
 					type: "item"
 				}]
-			x: -9.12d
-			y: 7.81d
+			x: -8.77d
+			y: 5.43d
 		}
 
+		{
+			dependencies: ["6600000000000038"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:iron_sheet"
+			}
+			id: "6600000000000100"
+			rewards: [
+				{
+					id: "68000000000002AF"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B0"
+					item: {
+						count: 4
+						id: "minecraft:calcite"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B1"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000100"
+					item: { count: 1, id: "create:iron_sheet" }
+					type: "item"
+				}]
+			x: -1.15d
+			y: -12.45d
+		}
+		{
+			dependencies: ["6600000000000038"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:golden_sheet"
+			}
+			id: "6600000000000101"
+			rewards: [
+				{
+					id: "68000000000002B2"
+					item: {
+						count: 8
+						id: "minecraft:gold_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B3"
+					item: {
+						count: 4
+						id: "minecraft:deepslate"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B4"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000101"
+					item: { count: 1, id: "create:golden_sheet" }
+					type: "item"
+				}]
+			x: 6.90d
+			y: -10.42d
+		}
+		{
+			dependencies: ["6600000000000038"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:copper_sheet"
+			}
+			id: "6600000000000102"
+			rewards: [
+				{
+					id: "68000000000002B5"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B6"
+					item: {
+						count: 2
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B7"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000102"
+					item: { count: 1, id: "create:copper_sheet" }
+					type: "item"
+				}]
+			x: 11.91d
+			y: 3.79d
+		}
+		{
+			dependencies: [
+				"6600000000000038"
+				"6600000000000039"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:brass_sheet"
+			}
+			id: "6600000000000103"
+			rewards: [
+				{
+					id: "68000000000002B8"
+					item: {
+						count: 6
+						id: "create:zinc_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002B9"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000103"
+					item: { count: 1, id: "create:brass_sheet" }
+					type: "item"
+				}]
+			x: 15.58d
+			y: -12.54d
+		}
+		{
+			dependencies: ["6600000000000100"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:whisk"
+			}
+			id: "6600000000000108"
+			rewards: [
+				{
+					id: "68000000000002BA"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002BB"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002BC"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000108"
+					item: { count: 1, id: "create:whisk" }
+					type: "item"
+				}]
+			x: -4.10d
+			y: -14.43d
+		}
+		{
+			dependencies: ["6600000000000100"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:propeller"
+			}
+			id: "6600000000000109"
+			rewards: [
+				{
+					id: "68000000000002BD"
+					item: {
+						count: 3
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002BE"
+					item: {
+						count: 6
+						id: "minecraft:kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002BF"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000109"
+					item: { count: 1, id: "create:propeller" }
+					type: "item"
+				}]
+			x: -2.30d
+			y: -14.82d
+		}
+		{
+			dependencies: ["6600000000000100"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "kubejs:drill_head"
+			}
+			id: "660000000000010A"
+			rewards: [
+				{
+					id: "68000000000002C0"
+					item: {
+						count: 2
+						id: "immersiveengineering:ingot_lead"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C1"
+					item: {
+						count: 4
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C2"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670100000000010A"
+					item: { count: 1, id: "kubejs:drill_head" }
+					type: "item"
+				}]
+			x: -0.54d
+			y: -17.46d
+		}
+		{
+			dependencies: ["6600000000000100"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "kubejs:saw_blade"
+			}
+			id: "660000000000010B"
+			rewards: [
+				{
+					id: "68000000000002C3"
+					item: {
+						count: 1
+						id: "immersiveengineering:ingot_lead"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C4"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C5"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670100000000010B"
+					item: { count: 1, id: "kubejs:saw_blade" }
+					type: "item"
+				}]
+			x: 1.38d
+			y: -14.94d
+		}
+		{
+			dependencies: ["6600000000000101"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:railway_casing"
+			}
+			id: "6600000000000106"
+			rewards: [
+				{
+					id: "68000000000002C6"
+					item: {
+						count: 4
+						id: "minecraft:deepslate"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C7"
+					type: "xp"
+					xp: 34
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000106"
+					item: { count: 1, id: "create:railway_casing" }
+					type: "item"
+				}]
+			x: 11.59d
+			y: -11.95d
+		}
+		{
+			dependencies: ["6600000000000103"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:brass_casing"
+			}
+			id: "6600000000000107"
+			rewards: [
+				{
+					id: "68000000000002C8"
+					item: {
+						count: 4
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002C9"
+					item: {
+						count: 4
+						id: "create:zinc_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002CA"
+					type: "xp"
+					xp: 34
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000107"
+					item: { count: 1, id: "create:brass_casing" }
+					type: "item"
+				}]
+			x: 4.99d
+			y: 14.15d
+		}
+		{
+			dependencies: [
+				"6600000000000042"
+				"06B061C0EE94BC90"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:electron_tube"
+			}
+			id: "6600000000000104"
+			rewards: [
+				{
+					id: "68000000000002CB"
+					item: {
+						count: 4
+						id: "minecraft:quartz"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002CC"
+					item: {
+						count: 6
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002CD"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000104"
+					item: { count: 1, id: "create:electron_tube" }
+					type: "item"
+				}]
+			x: 17.20d
+			y: 3.22d
+		}
+		{
+			dependencies: [
+				"6600000000000104"
+				"660000000000004B"
+				"19715EBCBBA1B4AD"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:precision_mechanism"
+			}
+			id: "6600000000000105"
+			rewards: [
+				{
+					id: "68000000000002CE"
+					item: {
+						count: 6
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002CF"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002D0"
+					type: "xp"
+					xp: 52
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6701000000000105"
+					item: { count: 1, id: "create:precision_mechanism" }
+					type: "item"
+				}]
+			x: 19.79d
+			y: -2.92d
+		}
+		{
+			dependencies: [
+				"660000000000004B"
+				"6600000000000038"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "kubejs:reinforced_mechanism"
+			}
+			id: "660000000000010C"
+			rewards: [
+				{
+					id: "68000000000002D1"
+					item: {
+						count: 2
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002D2"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002D3"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670100000000010C"
+					item: { count: 1, id: "kubejs:reinforced_mechanism" }
+					type: "item"
+				}]
+			x: 20.33d
+			y: -8.42d
+		}
 	]
 }

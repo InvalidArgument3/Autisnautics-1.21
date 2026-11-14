@@ -67,10 +67,7 @@
 			y: 0.00d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -116,14 +113,11 @@
 				item: { count: 1, id: "createaddition:connector" }
 				type: "item"
 			}]
-			x: -2.21d
-			y: -0.80d
+			x: -2.38d
+			y: -0.77d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -169,12 +163,12 @@
 				item: { count: 1, id: "createaddition:large_connector" }
 				type: "item"
 			}]
-			x: -1.17d
-			y: -2.04d
+			x: -1.59d
+			y: -2.19d
 		}
 		{
 			dependencies: [
-				"6403000000000000"
+				"6401040000000000"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -222,8 +216,8 @@
 				item: { count: 1, id: "createaddition:rolling_mill" }
 				type: "item"
 			}]
-			x: 2.35d
-			y: 0.00d
+			x: 0.00d
+			y: -2.50d
 		}
 		{
 			dependencies: ["6403000000000000"]
@@ -282,14 +276,11 @@
 				item: { count: 1, id: "createaddition:barbed_wire" }
 				type: "item"
 			}]
-			x: 2.54d
-			y: 2.13d
+			x: 1.89d
+			y: -2.60d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -342,14 +333,11 @@
 					item: { count: 1, id: "createaddition:small_light_connector" }
 					type: "item"
 				}]
-			x: 0.41d
-			y: -2.31d
+			x: 2.38d
+			y: -0.77d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -402,8 +390,8 @@
 					item: { count: 1, id: "createaddition:redstone_relay" }
 					type: "item"
 				}]
-			x: 1.80d
-			y: -1.51d
+			x: 2.93d
+			y: 0.95d
 		}
 		{
 			dependencies: [
@@ -456,14 +444,11 @@
 					item: { count: 1, id: "createaddition:electric_motor" }
 					type: "item"
 				}]
-			x: 0.41d
-			y: 2.31d
+			x: 1.47d
+			y: 2.02d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -510,14 +495,11 @@
 					item: { count: 1, id: "createaddition:tesla_coil" }
 					type: "item"
 				}]
-			x: -1.62d
-			y: 2.81d
+			x: 0.00d
+			y: 3.57d
 		}
 		{
-			dependencies: [
-				"6403000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["047FD4E54147D8F7"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -570,14 +552,11 @@
 					item: { count: 1, id: "createaddition:portable_energy_interface" }
 					type: "item"
 				}]
-			x: -2.21d
-			y: 0.80d
+			x: -1.47d
+			y: 2.02d
 		}
 		{
-			dependencies: [
-				"6600000000000059"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["7FC4D1E69377271D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -632,8 +611,8 @@
 					item: { count: 1, id: "createaddition:modular_accumulator" }
 					type: "item"
 				}]
-			x: -2.79d
-			y: 4.83d
+			x: -3.23d
+			y: 1.05d
 		}
 
 	]

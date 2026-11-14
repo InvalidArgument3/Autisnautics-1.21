@@ -4990,4 +4990,95 @@
 		"It is craftable. The PC stores the result. The healing machine is the station beside the PC."
 		"This is the top ball in the jar. JEI."
 	]
+	quest.6600000000000100.title: "Iron Sheet"
+	quest.6600000000000100.quest_subtitle: "Press an ingot"
+	quest.6600000000000100.quest_desc: [
+		"Press an iron ingot. JEI lists it as pressing."
+		"The mechanical press is an Andesite Machine. Ponder it with W."
+		"Whisks, propellers, drill heads, and saw blades are built from this sheet."
+	]
+	quest.6600000000000101.title: "Golden Sheet"
+	quest.6600000000000101.quest_subtitle: "Press a gold ingot"
+	quest.6600000000000101.quest_desc: [
+		"Press a gold ingot. JEI."
+		"In this pack the goggles, the brass hand, and the railway casing all ask for this plate."
+		"Ponder the press with W."
+	]
+	quest.6600000000000102.title: "Copper Sheet"
+	quest.6600000000000102.quest_subtitle: "Press a copper ingot"
+	quest.6600000000000102.quest_desc: [
+		"Press a copper ingot. JEI."
+		"The copper casing is this sheet and any log, two casings. The Copper Machine is that casing around a sealed mechanism."
+		"Ponder the press with W."
+	]
+	quest.6600000000000103.title: "Brass Sheet"
+	quest.6600000000000103.quest_subtitle: "Press a brass ingot"
+	quest.6600000000000103.quest_desc: [
+		"Press a brass ingot. JEI."
+		"Brass is the heated mix of copper and zinc in the mixer. The unheated crafting mix is removed."
+		"The press is the machine. The mixer quest is the basin that makes the alloy."
+	]
+	quest.6600000000000108.title: "Whisk"
+	quest.6600000000000108.quest_subtitle: "Iron sheets on an alloy core"
+	quest.6600000000000108.quest_desc: [
+		"Andesite alloy and iron sheets. JEI."
+		"The mixer is an Andesite Machine applied onto this whisk."
+		"Ponder the mixer with W once you have it."
+	]
+	quest.6600000000000109.title: "Propeller"
+	quest.6600000000000109.quest_subtitle: "Iron sheets around alloy"
+	quest.6600000000000109.quest_desc: [
+		"Andesite alloy and iron sheets. JEI."
+		"The encased fan is an Andesite Machine applied onto this propeller."
+		"JEI."
+	]
+	quest.660000000000010A.title: "Drill Head"
+	quest.660000000000010A.quest_subtitle: "Sheets, nuggets, lead"
+	quest.660000000000010A.quest_desc: [
+		"Iron nuggets, iron sheets, and lead ingots. JEI."
+		"The mechanical drill is an Andesite Machine applied onto this head."
+		"JEI."
+	]
+	quest.660000000000010B.title: "Saw Blade"
+	quest.660000000000010B.quest_subtitle: "Sheets around a lead ingot"
+	quest.660000000000010B.quest_desc: [
+		"Iron nuggets, iron sheets, and a lead ingot. JEI."
+		"The mechanical saw is an Andesite Machine applied onto this blade."
+		"JEI."
+	]
+	quest.6600000000000106.title: "Railway Casing"
+	quest.6600000000000106.quest_subtitle: "Golden sheet and deepslate"
+	quest.6600000000000106.quest_desc: [
+		"Shapeless: a golden sheet and deepslate. It makes two casings."
+		"The old application of an obsidian plate onto a brass casing is replaced."
+		"The Gold Machine is this casing around a reinforced mechanism. JEI."
+	]
+	quest.6600000000000107.title: "Brass Casing"
+	quest.6600000000000107.quest_subtitle: "Brass sheet and a log"
+	quest.6600000000000107.quest_desc: [
+		"Shapeless: a brass sheet and any log. It makes two casings."
+		"The Brass Machine is this casing around a precision mechanism. That machine is the Factory Guide quest."
+		"JEI."
+	]
+	quest.6600000000000104.title: "Electron Tube"
+	quest.6600000000000104.quest_subtitle: "Spout molten iron on rose quartz"
+	quest.6600000000000104.quest_desc: [
+		"The crafting-table tube is removed. Spout 10 mB of molten iron onto polished rose quartz."
+		"The Factory Guide polished-rose-quartz quest is that gem. The spout is the Copper Machine that pours."
+		"Ponder the spout with W. JEI lists the filling."
+	]
+	quest.6600000000000105.title: "Precision Mechanism"
+	quest.6600000000000105.quest_subtitle: "Two tubes and the cutters"
+	quest.6600000000000105.quest_desc: [
+		"Sequenced assembly on a kinetic mechanism. Deploy an electron tube, deploy a second tube, then the wire cutters."
+		"The deployer does the deploying. The Factory Guide precision-mechanism quest is the gate."
+		"JEI. This is the mechanism inside a Brass Machine."
+	]
+	quest.660000000000010C.title: "Reinforced Mechanism"
+	quest.660000000000010C.quest_subtitle: "Obsidian on a kinetic mechanism"
+	quest.660000000000010C.quest_desc: [
+		"Sequenced assembly on a kinetic mechanism: deploy obsidian, deploy obsidian, then press. A shaped shortcut sets the mechanism between two obsidian."
+		"The deployer and the press are the machines. JEI."
+		"The Gold Machine is a railway casing around this mechanism."
+	]
 }

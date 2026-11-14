@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **FTB Quests: the Create primer follows the pack's recipes.** Sheets come from the press. Whisks, propellers, drill heads, and saw blades come from iron sheets. The fan, mixer, drill, and saw are Andesite Machines applied to those parts. The brass hand is a golden sheet, not a brass plate. Railway casings are a golden sheet and deepslate. Train controls, stations, signals, and schedules are Gold Machines and also wait on a reinforced mechanism, which is obsidian deployed and pressed onto a kinetic mechanism. Electron tubes are a spout of molten iron onto polished rose quartz. Precision mechanisms deploy two of those tubes. Brass machines wait on that mechanism and the Factory Guide brass machine. Logistics waits on the lead machine. Sturdy sheets stay out, because that recipe is removed. Crafts and Additions connectors depend on the zinc machine, and only the electric motor also needs the spool. The rolling mill needs a shaft and an Andesite Machine.
+
 ## [0.0.97]
 - **FTB Quests: primer chapters fan out instead of stacking in one line.** Dependencies follow the real branches (Create kinetics, machines, trains, and logistics; Refined Storage disks, autocrafting, and wireless; and the same idea in the other primers). Entry quests sit at the centre. Branched chapters are radial. Astral Sorcery, NuclearCraft, and the Undergarden, which stay mostly one path, spiral outward. Nodes stay at least a slot and a half apart.
 
