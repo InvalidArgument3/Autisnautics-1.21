@@ -24,6 +24,14 @@
 			id: "6414000000000000"
 			rewards: [
 				{
+					id: "520000000000000B"
+					item: {
+						count: 2
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
 					id: "6314000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000026"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,8 +85,8 @@
 				{
 					id: "6314010000000000"
 					item: {
-						count: 4
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:bone_meal"
 					}
 					type: "item"
 				}
@@ -86,7 +94,7 @@
 				{
 					id: "5100000000000027"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +135,8 @@
 				{
 					id: "6314020000000000"
 					item: {
-						count: 4
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "minecraft:jungle_sapling"
 					}
 					type: "item"
 				}
@@ -136,7 +144,7 @@
 				{
 					id: "5100000000000028"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +183,18 @@
 			id: "6414030000000000"
 			rewards: [
 				{
-					id: "6314030000000000"
+					id: "520000000000000C"
 					item: {
 						count: 4
-						id: "minecraft:copper_ingot"
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
+					id: "6314030000000000"
+					item: {
+						count: 6
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -186,7 +202,7 @@
 				{
 					id: "5100000000000029"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,9 +241,17 @@
 			id: "6414040000000000"
 			rewards: [
 				{
+					id: "520000000000000D"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6314040000000000"
 					item: {
-						count: 4
+						count: 1
 						id: "minecraft:copper_ingot"
 					}
 					type: "item"
@@ -236,7 +260,7 @@
 				{
 					id: "510000000000002A"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +301,8 @@
 				{
 					id: "6314050000000000"
 					item: {
-						count: 4
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:smooth_stone"
 					}
 					type: "item"
 				}
@@ -286,7 +310,7 @@
 				{
 					id: "510000000000002B"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

@@ -24,6 +24,14 @@
 			id: "6413000000000000"
 			rewards: [
 				{
+					id: "5200000000000024"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
 					id: "6313000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000005C"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "6413010000000000"
 			rewards: [
 				{
+					id: "5200000000000025"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "6313010000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 4
+						id: "minecraft:oak_planks"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "510000000000005D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +143,8 @@
 				{
 					id: "6313020000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 6
+						id: "minecraft:sand"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "510000000000005E"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +191,18 @@
 			id: "6413030000000000"
 			rewards: [
 				{
+					id: "5200000000000026"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6313030000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 4
+						id: "minecraft:gravel"
 					}
 					type: "item"
 				}
@@ -186,7 +210,7 @@
 				{
 					id: "510000000000005F"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +249,18 @@
 			id: "6413040000000000"
 			rewards: [
 				{
+					id: "5200000000000027"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "6313040000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 4
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -236,7 +268,7 @@
 				{
 					id: "5100000000000060"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -275,10 +307,18 @@
 			id: "6413050000000000"
 			rewards: [
 				{
+					id: "5200000000000028"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "6313050000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 2
+						id: "minecraft:oak_log"
 					}
 					type: "item"
 				}
@@ -286,7 +326,7 @@
 				{
 					id: "5100000000000061"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -327,8 +367,8 @@
 				{
 					id: "6313060000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 6
+						id: "minecraft:brick"
 					}
 					type: "item"
 				}
@@ -336,7 +376,7 @@
 				{
 					id: "5100000000000062"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -377,8 +417,8 @@
 				{
 					id: "6313070000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 1
+						id: "minecraft:book"
 					}
 					type: "item"
 				}
@@ -386,7 +426,7 @@
 				{
 					id: "5100000000000063"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

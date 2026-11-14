@@ -27,6 +27,14 @@
 			id: "640F000000000000"
 			rewards: [
 				{
+					id: "5200000000000022"
+					item: {
+						count: 2
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
 					id: "630F000000000000"
 					item: {
 						components: {
@@ -41,7 +49,7 @@
 				{
 					id: "5100000000000057"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -81,10 +89,18 @@
 			id: "640F010000000000"
 			rewards: [
 				{
+					id: "5200000000000023"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "630F010000000000"
 					item: {
-						count: 16
-						id: "minecraft:paper"
+						count: 3
+						id: "minecraft:amethyst_shard"
 					}
 					type: "item"
 				}
@@ -92,7 +108,7 @@
 				{
 					id: "5100000000000058"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -133,8 +149,8 @@
 				{
 					id: "630F020000000000"
 					item: {
-						count: 16
-						id: "minecraft:paper"
+						count: 4
+						id: "minecraft:white_terracotta"
 					}
 					type: "item"
 				}
@@ -142,7 +158,7 @@
 				{
 					id: "5100000000000059"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -183,8 +199,8 @@
 				{
 					id: "630F030000000000"
 					item: {
-						count: 16
-						id: "minecraft:paper"
+						count: 2
+						id: "minecraft:chain"
 					}
 					type: "item"
 				}
@@ -192,7 +208,7 @@
 				{
 					id: "510000000000005A"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -233,8 +249,8 @@
 				{
 					id: "630F040000000000"
 					item: {
-						count: 16
-						id: "minecraft:paper"
+						count: 4
+						id: "minecraft:white_concrete"
 					}
 					type: "item"
 				}
@@ -242,7 +258,7 @@
 				{
 					id: "510000000000005B"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

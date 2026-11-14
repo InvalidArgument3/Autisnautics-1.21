@@ -24,6 +24,14 @@
 			id: "640E000000000000"
 			rewards: [
 				{
+					id: "5200000000000005"
+					item: {
+						count: 2
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
 					id: "630E000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000013"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,8 +85,8 @@
 				{
 					id: "630E010000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 4
+						id: "minecraft:blue_dye"
 					}
 					type: "item"
 				}
@@ -86,7 +94,7 @@
 				{
 					id: "5100000000000014"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +133,18 @@
 			id: "640E020000000000"
 			rewards: [
 				{
+					id: "5200000000000006"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "630E020000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 2
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "5100000000000015"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +193,8 @@
 				{
 					id: "630E030000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 2
+						id: "minecraft:gold_ingot"
 					}
 					type: "item"
 				}
@@ -186,7 +202,7 @@
 				{
 					id: "5100000000000016"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +243,8 @@
 				{
 					id: "630E040000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 2
+						id: "minecraft:amethyst_shard"
 					}
 					type: "item"
 				}
@@ -236,7 +252,7 @@
 				{
 					id: "5100000000000017"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +293,8 @@
 				{
 					id: "630E050000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 6
+						id: "minecraft:stone"
 					}
 					type: "item"
 				}
@@ -286,7 +302,7 @@
 				{
 					id: "5100000000000018"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -327,8 +343,8 @@
 				{
 					id: "630E060000000000"
 					item: {
-						count: 8
-						id: "minecraft:gold_nugget"
+						count: 1
+						id: "minecraft:iron_sword"
 					}
 					type: "item"
 				}
@@ -336,7 +352,7 @@
 				{
 					id: "5100000000000019"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

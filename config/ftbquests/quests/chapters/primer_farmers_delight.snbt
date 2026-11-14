@@ -24,6 +24,14 @@
 			id: "640C000000000000"
 			rewards: [
 				{
+					id: "5200000000000018"
+					item: {
+						count: 2
+						id: "minecraft:flint"
+					}
+					type: "item"
+				}
+				{
 					id: "630C000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000045"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "640C010000000000"
 			rewards: [
 				{
+					id: "5200000000000019"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "630C010000000000"
 					item: {
-						count: 6
-						id: "minecraft:bread"
+						count: 4
+						id: "minecraft:oak_planks"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "5100000000000046"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -128,7 +144,7 @@
 					id: "630C020000000000"
 					item: {
 						count: 6
-						id: "minecraft:bread"
+						id: "minecraft:carrot"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "5100000000000047"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +191,18 @@
 			id: "640C030000000000"
 			rewards: [
 				{
+					id: "520000000000001A"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "630C030000000000"
 					item: {
-						count: 6
-						id: "minecraft:bread"
+						count: 3
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -186,7 +210,7 @@
 				{
 					id: "5100000000000048"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +251,8 @@
 				{
 					id: "630C040000000000"
 					item: {
-						count: 6
-						id: "minecraft:bread"
+						count: 1
+						id: "minecraft:campfire"
 					}
 					type: "item"
 				}
@@ -236,7 +260,7 @@
 				{
 					id: "5100000000000049"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +301,8 @@
 				{
 					id: "630C050000000000"
 					item: {
-						count: 6
-						id: "minecraft:bread"
+						count: 8
+						id: "minecraft:wheat"
 					}
 					type: "item"
 				}
@@ -286,7 +310,7 @@
 				{
 					id: "510000000000004A"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

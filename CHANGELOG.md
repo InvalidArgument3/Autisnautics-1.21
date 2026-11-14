@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **FTB Quests: rewards now follow the task.** The flat per-chapter stacks (16 andesite, 8 copper, 16 torches, and the rest) are replaced. Each primer and Factory Guide quest gives an ingredient, consumable, or complementary item for that task, with XP scaled by stage and whether the node is a hex. Books, tools, and builder's tea stay. No two of those quests share the same set of reward items. New rewards are not mechanisms, tier machines, processors, the Refined Storage controller, or a tesla coil.
+
 ## [0.0.95]
 - **FTB Quests: "Crafts & Additions" was showing as invalid formatting.** Quest text treats `&` as a format code, and `&` followed by a space throws `Invalid formatting! You must escape whitespace after & with \&!`. The chapter title and the spool, small-connector, and rolling-mill lines now store the ampersand as `\&`. The other primer and Factory Guide strings were checked for the same `&`, `{substitute}`, and JSON-looking pitfalls. Barbed wire's own text was already fine.
 

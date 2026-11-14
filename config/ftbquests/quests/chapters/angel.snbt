@@ -22,7 +22,16 @@
 				id: "aeronautics:andesite_propeller"
 			}
 			id: "687C0B1646405F66"
-			rewards: [{
+			rewards: [
+				{
+					id: "52000000000000EC"
+					item: {
+						count: 6
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+{
 				id: "776E2FF09E7453A2"
 				item: {
 					count: 1
@@ -73,17 +82,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000ED"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000028C"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 3
+						id: "minecraft:leather"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000028D"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -122,17 +139,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000EE"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000028E"
 					item: {
 						count: 8
-						id: "minecraft:white_wool"
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000028F"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -171,17 +196,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000EF"
+					item: {
+						count: 2
+						id: "minecraft:white_candle"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000290"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 4
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000291"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -220,17 +253,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000F0"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000292"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 4
+						id: "create:andesite_alloy"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000293"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -271,15 +312,15 @@
 				{
 					id: "5100000000000294"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 4
+						id: "minecraft:pink_dye"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000295"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -318,17 +359,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000F1"
+					item: {
+						count: 4
+						id: "minecraft:white_dye"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000296"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 6
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000297"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -367,17 +416,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000F2"
+					item: {
+						count: 3
+						id: "minecraft:orange_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000298"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 6
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000299"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -416,17 +473,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "52000000000000F3"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000029A"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 2
+						id: "create:shaft"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000029B"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -468,15 +533,15 @@
 				{
 					id: "510000000000029C"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 2
+						id: "create:copper_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000029D"
 					type: "xp"
-					xp: 30
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -513,7 +578,24 @@
 			}
 			id: "7D1250D39EDB5C02"
 			min_required_dependencies: 2
-			rewards: [{
+			rewards: [
+				{
+					id: "52000000000000F5"
+					item: {
+						count: 4
+						id: "minecraft:orange_carpet"
+					}
+					type: "item"
+				}
+				{
+					id: "52000000000000F4"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+{
 				count: 8
 				id: "3994DFDFA8924BAE"
 				item: {
@@ -566,10 +648,18 @@
 			id: "7650D7E4FE40E2C7"
 			rewards: [
 				{
+					id: "52000000000000F6"
+					item: {
+						count: 4
+						id: "minecraft:orange_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000029F"
 					item: {
-						count: 8
-						id: "minecraft:white_wool"
+						count: 6
+						id: "minecraft:feather"
 					}
 					type: "item"
 				}

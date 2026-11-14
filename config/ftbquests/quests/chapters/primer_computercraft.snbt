@@ -24,6 +24,14 @@
 			id: "640D000000000000"
 			rewards: [
 				{
+					id: "520000000000000E"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
 					id: "630D000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000002C"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "640D010000000000"
 			rewards: [
 				{
+					id: "520000000000000F"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "630D010000000000"
 					item: {
-						count: 16
-						id: "minecraft:redstone"
+						count: 6
+						id: "minecraft:glass_pane"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "510000000000002D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +141,18 @@
 			id: "640D020000000000"
 			rewards: [
 				{
+					id: "5200000000000010"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "630D020000000000"
 					item: {
-						count: 16
-						id: "minecraft:redstone"
+						count: 8
+						id: "minecraft:stone"
 					}
 					type: "item"
 				}
@@ -136,7 +160,7 @@
 				{
 					id: "510000000000002E"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +199,18 @@
 			id: "640D030000000000"
 			rewards: [
 				{
+					id: "5200000000000011"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "630D030000000000"
 					item: {
-						count: 16
-						id: "minecraft:redstone"
+						count: 3
+						id: "minecraft:paper"
 					}
 					type: "item"
 				}
@@ -186,7 +218,7 @@
 				{
 					id: "510000000000002F"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +259,8 @@
 				{
 					id: "630D040000000000"
 					item: {
-						count: 16
-						id: "minecraft:redstone"
+						count: 1
+						id: "minecraft:ender_pearl"
 					}
 					type: "item"
 				}
@@ -236,7 +268,7 @@
 				{
 					id: "5100000000000030"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +309,8 @@
 				{
 					id: "630D050000000000"
 					item: {
-						count: 16
-						id: "minecraft:redstone"
+						count: 1
+						id: "minecraft:chest"
 					}
 					type: "item"
 				}
@@ -286,7 +318,7 @@
 				{
 					id: "5100000000000031"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

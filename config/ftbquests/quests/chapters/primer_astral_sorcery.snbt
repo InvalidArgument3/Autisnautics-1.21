@@ -24,6 +24,14 @@
 			id: "6411000000000000"
 			rewards: [
 				{
+					id: "5200000000000007"
+					item: {
+						count: 1
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+				{
 					id: "6311000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000001A"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,7 +85,7 @@
 				{
 					id: "6311010000000000"
 					item: {
-						count: 8
+						count: 2
 						id: "minecraft:paper"
 					}
 					type: "item"
@@ -86,7 +94,7 @@
 				{
 					id: "510000000000001B"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +133,18 @@
 			id: "6411020000000000"
 			rewards: [
 				{
+					id: "5200000000000008"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6311020000000000"
 					item: {
-						count: 8
-						id: "minecraft:paper"
+						count: 1
+						id: "minecraft:amethyst_shard"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "510000000000001C"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +193,8 @@
 				{
 					id: "6311030000000000"
 					item: {
-						count: 8
-						id: "minecraft:paper"
+						count: 2
+						id: "minecraft:ink_sac"
 					}
 					type: "item"
 				}
@@ -186,7 +202,7 @@
 				{
 					id: "510000000000001D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +243,8 @@
 				{
 					id: "6311040000000000"
 					item: {
-						count: 8
-						id: "minecraft:paper"
+						count: 3
+						id: "minecraft:glass_pane"
 					}
 					type: "item"
 				}
@@ -236,7 +252,7 @@
 				{
 					id: "510000000000001E"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -275,10 +291,18 @@
 			id: "6411050000000000"
 			rewards: [
 				{
+					id: "5200000000000009"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "6311050000000000"
 					item: {
-						count: 8
-						id: "minecraft:paper"
+						count: 3
+						id: "minecraft:raw_iron"
 					}
 					type: "item"
 				}
@@ -286,7 +310,7 @@
 				{
 					id: "510000000000001F"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -327,8 +351,8 @@
 				{
 					id: "6311060000000000"
 					item: {
-						count: 8
-						id: "minecraft:paper"
+						count: 1
+						id: "minecraft:spyglass"
 					}
 					type: "item"
 				}
@@ -336,7 +360,7 @@
 				{
 					id: "5100000000000020"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

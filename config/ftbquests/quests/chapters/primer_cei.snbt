@@ -24,6 +24,14 @@
 			id: "6405000000000000"
 			rewards: [
 				{
+					id: "520000000000000A"
+					item: {
+						count: 4
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
 					id: "6305000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000021"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,8 +85,8 @@
 				{
 					id: "6305010000000000"
 					item: {
-						count: 8
-						id: "minecraft:lapis_lazuli"
+						count: 2
+						id: "create:shaft"
 					}
 					type: "item"
 				}
@@ -86,7 +94,7 @@
 				{
 					id: "5100000000000022"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +135,8 @@
 				{
 					id: "6305020000000000"
 					item: {
-						count: 8
-						id: "minecraft:lapis_lazuli"
+						count: 6
+						id: "minecraft:sugar"
 					}
 					type: "item"
 				}
@@ -136,7 +144,7 @@
 				{
 					id: "5100000000000023"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +185,8 @@
 				{
 					id: "6305030000000000"
 					item: {
-						count: 8
-						id: "minecraft:lapis_lazuli"
+						count: 3
+						id: "minecraft:experience_bottle"
 					}
 					type: "item"
 				}
@@ -186,7 +194,7 @@
 				{
 					id: "5100000000000024"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +235,8 @@
 				{
 					id: "6305040000000000"
 					item: {
-						count: 8
-						id: "minecraft:lapis_lazuli"
+						count: 1
+						id: "minecraft:lapis_block"
 					}
 					type: "item"
 				}
@@ -236,7 +244,7 @@
 				{
 					id: "5100000000000025"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

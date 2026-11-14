@@ -24,6 +24,14 @@
 			id: "640A000000000000"
 			rewards: [
 				{
+					id: "520000000000003A"
+					item: {
+						count: 4
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
 					id: "630A000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000007C"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "640A010000000000"
 			rewards: [
 				{
+					id: "520000000000003B"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "630A010000000000"
 					item: {
-						count: 4
-						id: "minecraft:iron_ingot"
+						count: 1
+						id: "minecraft:barrel"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "510000000000007D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +141,18 @@
 			id: "640A020000000000"
 			rewards: [
 				{
-					id: "630A020000000000"
+					id: "520000000000003C"
 					item: {
 						count: 4
-						id: "minecraft:iron_ingot"
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
+					id: "630A020000000000"
+					item: {
+						count: 6
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
@@ -136,7 +160,7 @@
 				{
 					id: "510000000000007E"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +199,18 @@
 			id: "640A030000000000"
 			rewards: [
 				{
-					id: "630A030000000000"
+					id: "520000000000003D"
 					item: {
 						count: 4
-						id: "minecraft:iron_ingot"
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
+					id: "630A030000000000"
+					item: {
+						count: 2
+						id: "minecraft:slime_ball"
 					}
 					type: "item"
 				}
@@ -186,7 +218,7 @@
 				{
 					id: "510000000000007F"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +257,18 @@
 			id: "640A040000000000"
 			rewards: [
 				{
-					id: "630A040000000000"
+					id: "520000000000003E"
 					item: {
 						count: 4
-						id: "minecraft:iron_ingot"
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
+					id: "630A040000000000"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
 					}
 					type: "item"
 				}
@@ -236,7 +276,7 @@
 				{
 					id: "5100000000000080"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +317,8 @@
 				{
 					id: "630A050000000000"
 					item: {
-						count: 4
-						id: "minecraft:iron_ingot"
+						count: 1
+						id: "minecraft:hopper"
 					}
 					type: "item"
 				}
@@ -286,7 +326,7 @@
 				{
 					id: "5100000000000081"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

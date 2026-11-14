@@ -34,15 +34,15 @@
 				{
 					id: "5100000000000097"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "create:andesite_alloy"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000098"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,15 +89,15 @@
 				{
 					id: "5100000000000099"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "create:brass_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000009A"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -144,15 +144,15 @@
 				{
 					id: "510000000000009B"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 6
+						id: "minecraft:glowstone_dust"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000009C"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -203,15 +203,15 @@
 				{
 					id: "510000000000009D"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 6
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000009E"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -258,15 +258,15 @@
 				{
 					id: "510000000000009F"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "minecraft:white_candle"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000A0"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -313,15 +313,15 @@
 				{
 					id: "51000000000000A1"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "minecraft:blaze_powder"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000A2"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -368,15 +368,15 @@
 				{
 					id: "51000000000000A3"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "create:zinc_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000A4"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -414,7 +414,16 @@
 				id: "minecraft:oak_log"
 			}
 			id: "75FB28B253B14876"
-			rewards: [{
+			rewards: [
+				{
+					id: "5200000000000050"
+					item: {
+						count: 4
+						id: "minecraft:oak_sapling"
+					}
+					type: "item"
+				}
+{
 				id: "619E1006A9C31AE1"
 				item: {
 					count: 1
@@ -425,7 +434,7 @@
 				{
 					id: "51000000000000A5"
 					type: "xp"
-					xp: 40
+					xp: 39
 				}
 			]
 			shape: "hexagon"
@@ -468,17 +477,25 @@
 			size: 1.5d
 			rewards: [
 				{
+					id: "5200000000000051"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000A6"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 6
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000A7"
 					type: "xp"
-					xp: 40
+					xp: 39
 				}
 			]
 			tasks: [{
@@ -517,7 +534,16 @@
 				id: "stellaris:rocket"
 			}
 			id: "4F7A70041B67A348"
-			rewards: [{
+			rewards: [
+				{
+					id: "5200000000000052"
+					item: {
+						count: 4
+						id: "minecraft:firework_rocket"
+					}
+					type: "item"
+				}
+{
 				id: "52F34D324E5E10E9"
 				item: {
 					count: 1
@@ -528,7 +554,7 @@
 				{
 					id: "51000000000000A8"
 					type: "xp"
-					xp: 60
+					xp: 39
 				}
 			]
 			shape: "hexagon"
@@ -573,17 +599,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000053"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000A9"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "create:andesite_alloy"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000AA"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -622,17 +656,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000054"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000AB"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "create:brass_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000AC"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -671,17 +713,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000055"
+					item: {
+						count: 4
+						id: "minecraft:white_dye"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000AD"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 6
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000AE"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -720,17 +770,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000056"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000AF"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000B0"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -771,15 +829,15 @@
 				{
 					id: "51000000000000B1"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "minecraft:quartz_block"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000B2"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -820,15 +878,15 @@
 				{
 					id: "51000000000000B3"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 1
+						id: "minecraft:dried_kelp_block"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000B4"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -867,17 +925,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000057"
+					item: {
+						count: 3
+						id: "minecraft:orange_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000B5"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 8
+						id: "minecraft:coal"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000B6"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -918,15 +984,15 @@
 				{
 					id: "51000000000000B7"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "minecraft:orange_carpet"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000B8"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -967,15 +1033,15 @@
 				{
 					id: "51000000000000B9"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 1
+						id: "minecraft:ender_eye"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000BA"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -1011,7 +1077,16 @@
 				id: "create:mechanical_press"
 			}
 			id: "7D6BC99CCCB29924"
-			rewards: [{
+			rewards: [
+				{
+					id: "5200000000000058"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+{
 				count: 3
 				id: "24DFC6E24F62D97A"
 				item: {
@@ -1023,7 +1098,7 @@
 				{
 					id: "51000000000000BB"
 					type: "xp"
-					xp: 15
+					xp: 32
 				}
 			]
 			shape: "circle"
@@ -1166,15 +1241,15 @@
 				{
 					id: "51000000000000BC"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 3
+						id: "create:golden_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000BD"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -1217,15 +1292,15 @@
 				{
 					id: "51000000000000BE"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 8
+						id: "minecraft:cobbled_deepslate"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000BF"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -1264,17 +1339,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000059"
+					item: {
+						count: 4
+						id: "minecraft:nether_wart"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000C0"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000C1"
 					type: "xp"
-					xp: 15
+					xp: 26
 				}
 			]
 			tasks: [{
@@ -1318,15 +1401,15 @@
 				{
 					id: "51000000000000C2"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "create:cardboard"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000C3"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 			]
 			tasks: [{

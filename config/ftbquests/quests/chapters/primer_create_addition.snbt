@@ -24,6 +24,14 @@
 			id: "6403000000000000"
 			rewards: [
 				{
+					id: "5200000000000015"
+					item: {
+						count: 6
+						id: "create:copper_sheet"
+					}
+					type: "item"
+				}
+				{
 					id: "6303000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000003A"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,7 +85,7 @@
 				{
 					id: "6303010000000000"
 					item: {
-						count: 8
+						count: 6
 						id: "minecraft:copper_ingot"
 					}
 					type: "item"
@@ -86,7 +94,7 @@
 				{
 					id: "510000000000003B"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +135,8 @@
 				{
 					id: "6303020000000000"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 3
+						id: "create:brass_sheet"
 					}
 					type: "item"
 				}
@@ -136,7 +144,7 @@
 				{
 					id: "510000000000003C"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +185,8 @@
 				{
 					id: "6303030000000000"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -186,7 +194,7 @@
 				{
 					id: "510000000000003D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +233,18 @@
 			id: "6403040000000000"
 			rewards: [
 				{
+					id: "5200000000000016"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6303040000000000"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
@@ -236,7 +252,7 @@
 				{
 					id: "510000000000003E"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

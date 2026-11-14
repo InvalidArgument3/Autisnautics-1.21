@@ -24,6 +24,14 @@
 			id: "6407000000000000"
 			rewards: [
 				{
+					id: "5200000000000020"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
 					id: "6307000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000051"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "6407010000000000"
 			rewards: [
 				{
+					id: "5200000000000021"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "6307010000000000"
 					item: {
-						count: 16
-						id: "minecraft:sand"
+						count: 2
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "5100000000000052"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +143,8 @@
 				{
 					id: "6307020000000000"
 					item: {
-						count: 16
-						id: "minecraft:sand"
+						count: 1
+						id: "minecraft:lantern"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "5100000000000053"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +193,8 @@
 				{
 					id: "6307030000000000"
 					item: {
-						count: 16
-						id: "minecraft:sand"
+						count: 3
+						id: "minecraft:glass"
 					}
 					type: "item"
 				}
@@ -186,7 +202,7 @@
 				{
 					id: "5100000000000054"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +243,8 @@
 				{
 					id: "6307040000000000"
 					item: {
-						count: 16
-						id: "minecraft:sand"
+						count: 3
+						id: "minecraft:white_wool"
 					}
 					type: "item"
 				}
@@ -236,7 +252,7 @@
 				{
 					id: "5100000000000055"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +293,8 @@
 				{
 					id: "6307050000000000"
 					item: {
-						count: 16
-						id: "minecraft:sand"
+						count: 8
+						id: "minecraft:gravel"
 					}
 					type: "item"
 				}
@@ -286,7 +302,7 @@
 				{
 					id: "5100000000000056"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

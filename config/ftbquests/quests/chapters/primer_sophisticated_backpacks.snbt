@@ -24,6 +24,14 @@
 			id: "640B000000000000"
 			rewards: [
 				{
+					id: "5200000000000037"
+					item: {
+						count: 3
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
 					id: "630B000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000076"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "640B010000000000"
 			rewards: [
 				{
+					id: "5200000000000038"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "630B010000000000"
 					item: {
-						count: 8
-						id: "minecraft:leather"
+						count: 3
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "5100000000000077"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +143,8 @@
 				{
 					id: "630B020000000000"
 					item: {
-						count: 8
-						id: "minecraft:leather"
+						count: 2
+						id: "minecraft:slime_ball"
 					}
 					type: "item"
 				}
@@ -136,7 +152,7 @@
 				{
 					id: "5100000000000078"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +193,8 @@
 				{
 					id: "630B030000000000"
 					item: {
-						count: 8
-						id: "minecraft:leather"
+						count: 1
+						id: "minecraft:crafting_table"
 					}
 					type: "item"
 				}
@@ -186,7 +202,7 @@
 				{
 					id: "5100000000000079"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +241,18 @@
 			id: "640B040000000000"
 			rewards: [
 				{
+					id: "5200000000000039"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "630B040000000000"
 					item: {
-						count: 8
-						id: "minecraft:leather"
+						count: 2
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -236,7 +260,7 @@
 				{
 					id: "510000000000007A"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -278,7 +302,7 @@
 					id: "630B050000000000"
 					item: {
 						count: 8
-						id: "minecraft:leather"
+						id: "minecraft:coal"
 					}
 					type: "item"
 				}
@@ -286,7 +310,7 @@
 				{
 					id: "510000000000007B"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

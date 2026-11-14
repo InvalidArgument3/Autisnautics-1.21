@@ -24,6 +24,14 @@
 			id: "6406000000000000"
 			rewards: [
 				{
+					id: "520000000000001B"
+					item: {
+						count: 1
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+				{
 					id: "6306000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000004B"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "6406010000000000"
 			rewards: [
 				{
+					id: "520000000000001C"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6306010000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 2
+						id: "minecraft:string"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "510000000000004C"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +141,18 @@
 			id: "6406020000000000"
 			rewards: [
 				{
+					id: "520000000000001D"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "6306020000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 2
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -136,7 +160,7 @@
 				{
 					id: "510000000000004D"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 				{
 					id: "6306030000000000"
 					item: {
-						count: 16
+						count: 8
 						id: "minecraft:clay_ball"
 					}
 					type: "item"
@@ -186,7 +210,7 @@
 				{
 					id: "510000000000004E"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +249,18 @@
 			id: "6406040000000000"
 			rewards: [
 				{
+					id: "520000000000001E"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "6306040000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 3
+						id: "minecraft:leather"
 					}
 					type: "item"
 				}
@@ -236,7 +268,7 @@
 				{
 					id: "510000000000004F"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -275,10 +307,18 @@
 			id: "6406050000000000"
 			rewards: [
 				{
+					id: "520000000000001F"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "6306050000000000"
 					item: {
-						count: 16
-						id: "minecraft:clay_ball"
+						count: 2
+						id: "create:iron_sheet"
 					}
 					type: "item"
 				}
@@ -286,7 +326,7 @@
 				{
 					id: "5100000000000050"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

@@ -24,6 +24,14 @@
 			id: "6409000000000000"
 			rewards: [
 				{
+					id: "5200000000000031"
+					item: {
+						count: 4
+						id: "minecraft:quartz"
+					}
+					type: "item"
+				}
+				{
 					id: "6309000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000070"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -75,10 +83,18 @@
 			id: "6409010000000000"
 			rewards: [
 				{
+					id: "5200000000000032"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "6309010000000000"
 					item: {
-						count: 8
-						id: "minecraft:quartz"
+						count: 3
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
@@ -86,7 +102,7 @@
 				{
 					id: "5100000000000071"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -125,10 +141,18 @@
 			id: "6409020000000000"
 			rewards: [
 				{
+					id: "5200000000000033"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "6309020000000000"
 					item: {
-						count: 8
-						id: "minecraft:quartz"
+						count: 3
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
 				}
@@ -136,7 +160,7 @@
 				{
 					id: "5100000000000072"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -175,10 +199,18 @@
 			id: "6409030000000000"
 			rewards: [
 				{
+					id: "5200000000000034"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "6309030000000000"
 					item: {
 						count: 8
-						id: "minecraft:quartz"
+						id: "minecraft:stone"
 					}
 					type: "item"
 				}
@@ -186,7 +218,7 @@
 				{
 					id: "5100000000000073"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -225,10 +257,18 @@
 			id: "6409040000000000"
 			rewards: [
 				{
+					id: "5200000000000035"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "6309040000000000"
 					item: {
-						count: 8
-						id: "minecraft:quartz"
+						count: 4
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
@@ -236,7 +276,7 @@
 				{
 					id: "5100000000000074"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -275,10 +315,18 @@
 			id: "6409050000000000"
 			rewards: [
 				{
+					id: "5200000000000036"
+					item: {
+						count: 2
+						id: "minecraft:white_candle"
+					}
+					type: "item"
+				}
+				{
 					id: "6309050000000000"
 					item: {
-						count: 8
-						id: "minecraft:quartz"
+						count: 4
+						id: "minecraft:glass"
 					}
 					type: "item"
 				}
@@ -286,7 +334,7 @@
 				{
 					id: "5100000000000075"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

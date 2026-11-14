@@ -24,7 +24,24 @@
 				id: "create:builders_tea"
 			}
 			id: "727B43FD95C4A512"
-			rewards: [{
+			rewards: [
+				{
+					id: "520000000000006A"
+					item: {
+						count: 3
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5200000000000069"
+					item: {
+						count: 1
+						id: "minecraft:milk_bucket"
+					}
+					type: "item"
+				}
+{
 				id: "05FBDFB7D5A9B322"
 				item: {
 					count: 1
@@ -35,7 +52,7 @@
 				{
 					id: "51000000000000F6"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"
@@ -77,17 +94,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "520000000000006B"
+					item: {
+						count: 8
+						id: "minecraft:sandstone"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000F7"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:gravel"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000F8"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -134,14 +159,14 @@
 					id: "51000000000000F9"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:nether_brick"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000FA"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -180,15 +205,15 @@
 				{
 					id: "51000000000000FB"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:orange_dye"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000FC"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -226,15 +251,15 @@
 				{
 					id: "51000000000000FD"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 3
+						id: "minecraft:magenta_wool"
 					}
 					type: "item"
 				}
 				{
 					id: "51000000000000FE"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -272,17 +297,25 @@
 			id: "1861E583C9DAA0BA"
 			rewards: [
 				{
+					id: "520000000000006C"
+					item: {
+						count: 4
+						id: "minecraft:white_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "51000000000000FF"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:redstone"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000100"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -339,17 +372,25 @@
 			id: "2FFFE1C5366930BB"
 			rewards: [
 				{
+					id: "520000000000006D"
+					item: {
+						count: 4
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000101"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 1
+						id: "minecraft:bucket"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000102"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -406,17 +447,25 @@
 			id: "4F95D5136E944ADB"
 			rewards: [
 				{
+					id: "520000000000006E"
+					item: {
+						count: 2
+						id: "minecraft:repeater"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000103"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:redstone_torch"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000104"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -457,17 +506,25 @@
 			id: "1256352748B93449"
 			rewards: [
 				{
+					id: "520000000000006F"
+					item: {
+						count: 4
+						id: "minecraft:white_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000105"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 1
+						id: "minecraft:bucket"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000106"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -509,17 +566,25 @@
 			id: "619E34A7DE48B991"
 			rewards: [
 				{
+					id: "5200000000000070"
+					item: {
+						count: 4
+						id: "minecraft:white_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000107"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:redstone_torch"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000108"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -577,15 +642,15 @@
 				{
 					id: "5100000000000109"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:magenta_carpet"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000010A"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -628,15 +693,15 @@
 				{
 					id: "510000000000010B"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "create:polished_rose_quartz"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000010C"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -695,15 +760,15 @@
 				{
 					id: "510000000000010D"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:magenta_terracotta"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000010E"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -745,14 +810,14 @@
 					id: "510000000000010F"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:cobblestone_slab"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000110"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -811,17 +876,25 @@
 			id: "19715EBCBBA1B4AD"
 			rewards: [
 				{
+					id: "5200000000000071"
+					item: {
+						count: 2
+						id: "minecraft:white_candle"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000111"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "create:brass_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000112"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -877,6 +950,22 @@
 			id: "7FC4D1E69377271D"
 			rewards: [
 				{
+					id: "5200000000000073"
+					item: {
+						count: 4
+						id: "minecraft:white_dye"
+					}
+					type: "item"
+				}
+				{
+					id: "5200000000000072"
+					item: {
+						count: 4
+						id: "create:brass_ingot"
+					}
+					type: "item"
+				}
+				{
 					count: 16
 					id: "54E81DC78E539FDD"
 					item: {
@@ -907,7 +996,7 @@
 				{
 					id: "5100000000000113"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"
@@ -948,17 +1037,25 @@
 			id: "1139F2E4E6FCFE29"
 			rewards: [
 				{
+					id: "5200000000000074"
+					item: {
+						count: 3
+						id: "minecraft:orange_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000114"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:flint"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000115"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1014,17 +1111,25 @@
 			id: "53735DC4231AB566"
 			rewards: [
 				{
+					id: "5200000000000075"
+					item: {
+						count: 4
+						id: "minecraft:orange_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000116"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:raw_iron"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000117"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1083,17 +1188,25 @@
 			id: "06B061C0EE94BC90"
 			rewards: [
 				{
+					id: "5200000000000076"
+					item: {
+						count: 4
+						id: "minecraft:orange_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000118"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:quartz"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000119"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1153,17 +1266,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000077"
+					item: {
+						count: 4
+						id: "minecraft:orange_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000011A"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:blaze_powder"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000011B"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -1207,17 +1328,25 @@
 			id: "1D9D65FBD06DD481"
 			rewards: [
 				{
+					id: "5200000000000078"
+					item: {
+						count: 2
+						id: "minecraft:orange_candle"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000011C"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 1
+						id: "minecraft:bucket"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000011D"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1280,15 +1409,15 @@
 				{
 					id: "510000000000011E"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:soul_soil"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000011F"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1351,15 +1480,15 @@
 				{
 					id: "5100000000000120"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:warped_fungus"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000121"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1422,15 +1551,15 @@
 				{
 					id: "5100000000000122"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:crimson_fungus"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000123"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1488,17 +1617,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000079"
+					item: {
+						count: 4
+						id: "minecraft:magenta_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000124"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "create:golden_sheet"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000125"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -1537,6 +1674,14 @@
 			id: "047FD4E54147D8F7"
 			rewards: [
 				{
+					id: "520000000000007A"
+					item: {
+						count: 4
+						id: "create:zinc_ingot"
+					}
+					type: "item"
+				}
+				{
 					count: 16
 					id: "5868F4AF0FBE0295"
 					item: {
@@ -1567,7 +1712,7 @@
 				{
 					id: "5100000000000126"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"
@@ -1609,15 +1754,15 @@
 				{
 					id: "5100000000000127"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "minecraft:magenta_candle"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000128"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -1663,17 +1808,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "520000000000007B"
+					item: {
+						count: 4
+						id: "minecraft:magenta_dye"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000129"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:coal"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000012A"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -1719,15 +1872,15 @@
 				{
 					id: "510000000000012B"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 1
+						id: "minecraft:nether_wart_block"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000012C"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1788,15 +1941,15 @@
 				{
 					id: "510000000000012D"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:nether_wart"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000012E"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1859,15 +2012,15 @@
 				{
 					id: "510000000000012F"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "minecraft:glow_ink_sac"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000130"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -1926,17 +2079,25 @@
 			id: "44540B11F341AE09"
 			rewards: [
 				{
+					id: "520000000000007C"
+					item: {
+						count: 3
+						id: "minecraft:light_blue_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000131"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "create:cardboard"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000132"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -1980,17 +2141,25 @@
 			id: "1A06FA866B74E75B"
 			rewards: [
 				{
+					id: "520000000000007D"
+					item: {
+						count: 4
+						id: "minecraft:light_blue_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000133"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:oak_log"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000134"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2046,6 +2215,14 @@
 			id: "7BE0F4512FE4936D"
 			rewards: [
 				{
+					id: "520000000000007E"
+					item: {
+						count: 3
+						id: "immersiveengineering:ingot_lead"
+					}
+					type: "item"
+				}
+				{
 					count: 16
 					id: "55A28F3C8BB4A98E"
 					item: {
@@ -2076,7 +2253,7 @@
 				{
 					id: "5100000000000135"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"
@@ -2124,15 +2301,15 @@
 				{
 					id: "5100000000000136"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:soul_sand"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000137"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2188,6 +2365,22 @@
 			id: "3B930AA32F92246B"
 			rewards: [
 				{
+					id: "5200000000000080"
+					item: {
+						count: 4
+						id: "minecraft:light_blue_terracotta"
+					}
+					type: "item"
+				}
+				{
+					id: "520000000000007F"
+					item: {
+						count: 3
+						id: "immersiveengineering:ingot_lead"
+					}
+					type: "item"
+				}
+				{
 					count: 16
 					id: "3C029AFF20C882D8"
 					item: {
@@ -2209,7 +2402,7 @@
 				{
 					id: "5100000000000138"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"
@@ -2255,17 +2448,25 @@
 			shape: "circle"
 			rewards: [
 				{
+					id: "5200000000000081"
+					item: {
+						count: 4
+						id: "minecraft:light_blue_concrete"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000139"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "create:cardboard"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000013A"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -2307,17 +2508,25 @@
 			id: "15368864A6946A93"
 			rewards: [
 				{
+					id: "5200000000000082"
+					item: {
+						count: 2
+						id: "minecraft:light_blue_candle"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000013B"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 3
+						id: "minecraft:glass_bottle"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000013C"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2378,17 +2587,25 @@
 			id: "10E93BEB78219368"
 			rewards: [
 				{
+					id: "5200000000000083"
+					item: {
+						count: 4
+						id: "minecraft:light_blue_dye"
+					}
+					type: "item"
+				}
+				{
 					id: "510000000000013D"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:glowstone_dust"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000013E"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2451,15 +2668,15 @@
 				{
 					id: "510000000000013F"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:red_mushroom"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000140"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2523,15 +2740,15 @@
 				{
 					id: "5100000000000141"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 2
+						id: "minecraft:glistering_melon_slice"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000142"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2592,17 +2809,25 @@
 			id: "5943F8F91AA79D59"
 			rewards: [
 				{
+					id: "5200000000000084"
+					item: {
+						count: 3
+						id: "minecraft:yellow_wool"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000143"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:coal"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000144"
 					type: "xp"
-					xp: 25
+					xp: 24
 				}
 			]
 			tasks: [{
@@ -2646,17 +2871,25 @@
 			id: "68A8C2CB135ECA87"
 			rewards: [
 				{
+					id: "5200000000000085"
+					item: {
+						count: 4
+						id: "minecraft:yellow_carpet"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000145"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 6
+						id: "minecraft:raw_iron"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000146"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2717,15 +2950,15 @@
 				{
 					id: "5100000000000147"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:brown_mushroom"
 					}
 					type: "item"
 				}
 				{
 					id: "5100000000000148"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2786,17 +3019,25 @@
 			id: "2F1B9FE2E9C2FFEC"
 			rewards: [
 				{
+					id: "5200000000000086"
+					item: {
+						count: 4
+						id: "minecraft:yellow_terracotta"
+					}
+					type: "item"
+				}
+				{
 					id: "5100000000000149"
 					item: {
 						count: 8
-						id: "minecraft:copper_ingot"
+						id: "minecraft:wheat"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000014A"
 					type: "xp"
-					xp: 25
+					xp: 26
 				}
 			]
 			tasks: [
@@ -2856,15 +3097,15 @@
 				{
 					id: "510000000000014B"
 					item: {
-						count: 8
-						id: "minecraft:copper_ingot"
+						count: 4
+						id: "minecraft:yellow_concrete"
 					}
 					type: "item"
 				}
 				{
 					id: "510000000000014C"
 					type: "xp"
-					xp: 25
+					xp: 31
 				}
 			]
 			tasks: [{
@@ -2901,7 +3142,16 @@
 				id: "nuclearcraftneohaul:geiger_counter"
 			}
 			id: "7A3C54CE8AD783D4"
-			rewards: [{
+			rewards: [
+				{
+					id: "5200000000000087"
+					item: {
+						count: 2
+						id: "minecraft:yellow_candle"
+					}
+					type: "item"
+				}
+{
 				id: "4B3FB9BB344E408F"
 				item: {
 					count: 1
@@ -2912,7 +3162,7 @@
 				{
 					id: "510000000000014D"
 					type: "xp"
-					xp: 60
+					xp: 48
 				}
 			]
 			shape: "hexagon"

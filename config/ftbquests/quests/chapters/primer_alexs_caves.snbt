@@ -24,6 +24,14 @@
 			id: "6416000000000000"
 			rewards: [
 				{
+					id: "5200000000000002"
+					item: {
+						count: 1
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+				{
 					id: "6316000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "5100000000000007"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,7 +85,7 @@
 				{
 					id: "6316010000000000"
 					item: {
-						count: 16
+						count: 8
 						id: "minecraft:torch"
 					}
 					type: "item"
@@ -86,7 +94,7 @@
 				{
 					id: "5100000000000008"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +135,8 @@
 				{
 					id: "6316020000000000"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
@@ -136,7 +144,7 @@
 				{
 					id: "5100000000000009"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +185,8 @@
 				{
 					id: "6316030000000000"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 4
+						id: "minecraft:bone"
 					}
 					type: "item"
 				}
@@ -186,7 +194,7 @@
 				{
 					id: "510000000000000A"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +235,8 @@
 				{
 					id: "6316040000000000"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 3
+						id: "minecraft:raw_iron"
 					}
 					type: "item"
 				}
@@ -236,7 +244,7 @@
 				{
 					id: "510000000000000B"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +285,8 @@
 				{
 					id: "6316050000000000"
 					item: {
-						count: 16
-						id: "minecraft:torch"
+						count: 2
+						id: "minecraft:blue_ice"
 					}
 					type: "item"
 				}
@@ -286,7 +294,7 @@
 				{
 					id: "510000000000000C"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"

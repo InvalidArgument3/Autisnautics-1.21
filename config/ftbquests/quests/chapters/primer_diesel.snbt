@@ -24,6 +24,14 @@
 			id: "6404000000000000"
 			rewards: [
 				{
+					id: "5200000000000017"
+					item: {
+						count: 6
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
 					id: "6304000000000000"
 					item: {
 						count: 1
@@ -35,7 +43,7 @@
 				{
 					id: "510000000000003F"
 					type: "xp"
-					xp: 40
+					xp: 20
 				}
 			]
 			shape: "gear"
@@ -77,8 +85,8 @@
 				{
 					id: "6304010000000000"
 					item: {
-						count: 16
-						id: "minecraft:charcoal"
+						count: 6
+						id: "minecraft:oak_slab"
 					}
 					type: "item"
 				}
@@ -86,7 +94,7 @@
 				{
 					id: "5100000000000040"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -127,8 +135,8 @@
 				{
 					id: "6304020000000000"
 					item: {
-						count: 16
-						id: "minecraft:charcoal"
+						count: 1
+						id: "minecraft:barrel"
 					}
 					type: "item"
 				}
@@ -136,7 +144,7 @@
 				{
 					id: "5100000000000041"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -177,8 +185,8 @@
 				{
 					id: "6304030000000000"
 					item: {
-						count: 16
-						id: "minecraft:charcoal"
+						count: 1
+						id: "minecraft:bucket"
 					}
 					type: "item"
 				}
@@ -186,7 +194,7 @@
 				{
 					id: "5100000000000042"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -227,8 +235,8 @@
 				{
 					id: "6304040000000000"
 					item: {
-						count: 16
-						id: "minecraft:charcoal"
+						count: 3
+						id: "minecraft:flint"
 					}
 					type: "item"
 				}
@@ -236,7 +244,7 @@
 				{
 					id: "5100000000000043"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 			]
 			tasks: [{
@@ -277,8 +285,8 @@
 				{
 					id: "6304050000000000"
 					item: {
-						count: 16
-						id: "minecraft:charcoal"
+						count: 4
+						id: "minecraft:light_gray_wool"
 					}
 					type: "item"
 				}
@@ -286,7 +294,7 @@
 				{
 					id: "5100000000000044"
 					type: "xp"
-					xp: 20
+					xp: 31
 				}
 			]
 			shape: "hexagon"
