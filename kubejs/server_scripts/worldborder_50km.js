@@ -14,23 +14,23 @@
 // through the listeners. Dimensions created after startup are not in that listener
 // list, so each level is set directly as well.
 
-var targetDiameter = 50000.0
-var seen = {}
+let targetDiameter = 50000.0
+let seen = {}
 
 function applyBorder(level) {
-    var id = String(level.dimension)
+    let id = String(level.dimension)
     if (seen[id]) return
     seen[id] = true
 
-    var wb = level.worldBorder
+    let wb = level.worldBorder
     wb.setCenter(0.0, 0.0)
     wb.setSize(targetDiameter)
 
-    var minX = wb.getMinX()
-    var maxX = wb.getMaxX()
-    var minZ = wb.getMinZ()
-    var maxZ = wb.getMaxZ()
-    var span = maxX - minX
+    let minX = wb.getMinX()
+    let maxX = wb.getMaxX()
+    let minZ = wb.getMinZ()
+    let maxZ = wb.getMaxZ()
+    let span = maxX - minX
     if (Math.abs(span - targetDiameter) > 0.5 && Math.abs(span) > 0.5) {
         wb.setSize(targetDiameter * (wb.getSize() / span))
         minX = wb.getMinX()
@@ -40,7 +40,7 @@ function applyBorder(level) {
         span = maxX - minX
     }
 
-    var scale = 1.0
+    let scale = 1.0
     try {
         scale = level.dimensionType().coordinateScale()
     } catch (error) {
@@ -59,6 +59,6 @@ LevelEvents.loaded(function (event) {
 })
 
 ServerEvents.loaded(function (event) {
-    var it = event.server.getAllLevels().iterator()
+    let it = event.server.getAllLevels().iterator()
     while (it.hasNext()) applyBorder(it.next())
 })
