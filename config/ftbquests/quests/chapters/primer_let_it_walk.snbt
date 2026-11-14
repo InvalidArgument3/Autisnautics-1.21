@@ -1,0 +1,1102 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "primer_let_it_walk"
+	group: "61A0000000000001"
+	id: "6519000000000000"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:walker_core"
+			}
+			id: "6419000000000000"
+			rewards: [
+				{
+					id: "6319000000000000"
+					item: {
+						count: 4
+						id: "minecraft:soul_sand"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000001"
+					item: {
+						count: 8
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000000"
+					type: "xp"
+					xp: 18
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000000"
+				type: "checkmark"
+			}]
+			x: 0.00d
+			y: 0.00d
+		},
+		{
+			dependencies: [
+				"6419000000000000"
+				"6600000000000039"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:klaxium_ingot"
+			}
+			id: "6419000000000001"
+			rewards: [
+				{
+					id: "6319000000000100"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000101"
+					item: {
+						count: 2
+						id: "minecraft:soul_sand"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000001"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000001"
+				item: { count: 1, id: "let_it_walk:klaxium_ingot" }
+				type: "item"
+			}]
+			x: 2.35d
+			y: 0.00d
+		},
+		{
+			dependencies: ["6419000000000001"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:klaxium_nugget"
+			}
+			id: "6419000000000002"
+			rewards: [
+				{
+					id: "6319000000000200"
+					item: {
+						count: 5
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000201"
+					item: {
+						count: 5
+						id: "minecraft:copper_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000002"
+					type: "xp"
+					xp: 12
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000002"
+				item: { count: 1, id: "let_it_walk:klaxium_nugget" }
+				type: "item"
+			}]
+			x: -4.54d
+			y: -1.22d
+		},
+		{
+			dependencies: [
+				"6419000000000001"
+				"6600000000000038"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:klaxium_sheet"
+			}
+			id: "6419000000000003"
+			rewards: [
+				{
+					id: "6319000000000300"
+					item: {
+						count: 4
+						id: "minecraft:stripped_oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000003"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000003"
+				item: { count: 1, id: "let_it_walk:klaxium_sheet" }
+				type: "item"
+			}]
+			x: 4.70d
+			y: 0.00d
+		},
+		{
+			dependencies: ["6419000000000003"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:klaxium_casing"
+			}
+			id: "6419000000000004"
+			rewards: [
+				{
+					id: "6319000000000400"
+					item: {
+						count: 4
+						id: "minecraft:stripped_spruce_log"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000004"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000004"
+				item: { count: 1, id: "let_it_walk:klaxium_casing" }
+				type: "item"
+			}]
+			x: -4.99d
+			y: -4.99d
+		},
+		{
+			dependencies: [
+				"6419000000000003"
+				"6401050000000000"
+				"660000000000004B"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:articulation_unit"
+			}
+			id: "6419000000000005"
+			rewards: [
+				{
+					id: "6319000000000500"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000501"
+					item: {
+						count: 1
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000005"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000005"
+				item: { count: 1, id: "let_it_walk:articulation_unit" }
+				type: "item"
+			}]
+			x: 8.10d
+			y: 0.00d
+		},
+		{
+			dependencies: ["6419000000000005"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:leg_hinge"
+			}
+			id: "6419000000000006"
+			rewards: [
+				{
+					id: "6319000000000600"
+					item: {
+						count: 8
+						id: "minecraft:smooth_stone"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000601"
+					item: {
+						count: 2
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000006"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000006"
+				item: { count: 1, id: "let_it_walk:leg_hinge" }
+				type: "item"
+			}]
+			x: -2.90d
+			y: -10.82d
+		},
+		{
+			dependencies: ["6419000000000005"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:leg_swivel"
+			}
+			id: "6419000000000007"
+			rewards: [
+				{
+					id: "6319000000000700"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000701"
+					item: {
+						count: 4
+						id: "minecraft:smooth_stone"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000007"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000007"
+				item: { count: 1, id: "let_it_walk:leg_swivel" }
+				type: "item"
+			}]
+			x: 2.68d
+			y: -10.01d
+		},
+		{
+			dependencies: ["6419000000000003"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:leg_foot"
+			}
+			id: "6419000000000008"
+			rewards: [
+				{
+					id: "6319000000000800"
+					item: {
+						count: 3
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000801"
+					item: {
+						count: 2
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000008"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000008"
+				item: { count: 1, id: "let_it_walk:leg_foot" }
+				type: "item"
+			}]
+			x: 6.11d
+			y: -3.52d
+		},
+		{
+			dependencies: [
+				"6419000000000001"
+				"660000000000003B"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:klaxium_spike"
+			}
+			id: "6419000000000009"
+			rewards: [
+				{
+					id: "6319000000000900"
+					item: {
+						count: 4
+						id: "minecraft:pointed_dripstone"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000009"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000009"
+				item: { count: 1, id: "let_it_walk:klaxium_spike" }
+				type: "item"
+			}]
+			x: 6.40d
+			y: 0.00d
+		},
+		{
+			dependencies: [
+				"6419000000000008"
+				"6419000000000009"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:climbing_foot"
+			}
+			id: "641900000000000A"
+			rewards: [
+				{
+					id: "6319000000000A00"
+					item: {
+						count: 6
+						id: "minecraft:flint"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000A01"
+					item: {
+						count: 4
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000A"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000A"
+				item: { count: 1, id: "let_it_walk:climbing_foot" }
+				type: "item"
+			}]
+			x: 9.08d
+			y: -2.43d
+		},
+		{
+			dependencies: [
+				"6419000000000003"
+				"6600000000000100"
+				"6600000000000042"
+				"660000000000004B"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:jet_nozzle"
+			}
+			id: "641900000000000B"
+			rewards: [
+				{
+					id: "6319000000000B00"
+					item: {
+						count: 1
+						id: "minecraft:lava_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000B01"
+					item: {
+						count: 2
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000B"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000B"
+				item: { count: 1, id: "let_it_walk:jet_nozzle" }
+				type: "item"
+			}]
+			x: 9.80d
+			y: 0.00d
+		},
+		{
+			dependencies: [
+				"6419000000000008"
+				"641900000000000B"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:jet_foot"
+			}
+			id: "641900000000000C"
+			rewards: [
+				{
+					id: "6319000000000C00"
+					item: {
+						count: 2
+						id: "minecraft:magma_block"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000C"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000C"
+				item: { count: 1, id: "let_it_walk:jet_foot" }
+				type: "item"
+			}]
+			x: 10.72d
+			y: -2.87d
+		},
+		{
+			dependencies: [
+				"6419000000000002"
+				"6419000000000003"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:jet_mount"
+			}
+			id: "641900000000000D"
+			rewards: [
+				{
+					id: "6319000000000D00"
+					item: {
+						count: 4
+						id: "minecraft:iron_bars"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000D01"
+					item: {
+						count: 2
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000D"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000D"
+				item: { count: 1, id: "let_it_walk:jet_mount" }
+				type: "item"
+			}]
+			x: 0.92d
+			y: -6.99d
+		},
+		{
+			dependencies: [
+				"6600000000000105"
+				"6419000000000002"
+				"6600000000000038"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:stabilization_module"
+			}
+			id: "641900000000000E"
+			rewards: [
+				{
+					id: "6319000000000E00"
+					item: {
+						count: 1
+						id: "minecraft:compass"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000E"
+					type: "xp"
+					xp: 48
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000E"
+				item: { count: 1, id: "let_it_walk:stabilization_module" }
+				type: "item"
+			}]
+			x: 1.46d
+			y: -11.09d
+		},
+		{
+			dependencies: [
+				"641900000000000E"
+				"6401040000000000"
+				"6419000000000004"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:walker_core"
+			}
+			id: "641900000000000F"
+			rewards: [
+				{
+					id: "6319000000000F00"
+					item: {
+						count: 32
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000000F01"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "511900000000000F"
+					type: "xp"
+					xp: 80
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "621900000000000F"
+				item: { count: 1, id: "let_it_walk:walker_core" }
+				type: "item"
+			}]
+			x: -3.02d
+			y: -8.90d
+		},
+		{
+			dependencies: [
+				"6600000000000104"
+				"6419000000000004"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:pilot_controls"
+			}
+			id: "6419000000000010"
+			rewards: [
+				{
+					id: "6319000000001000"
+					item: {
+						count: 2
+						id: "minecraft:lever"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000001001"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000010"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000010"
+				item: { count: 1, id: "let_it_walk:pilot_controls" }
+				type: "item"
+			}]
+			x: 3.60d
+			y: -8.68d
+		},
+		{
+			dependencies: [
+				"6419000000000003"
+				"6600000000000102"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:remote_pilot_controller"
+			}
+			id: "6419000000000011"
+			rewards: [
+				{
+					id: "6319000000001100"
+					item: {
+						count: 1
+						id: "minecraft:lightning_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000001101"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000011"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000011"
+				item: { count: 1, id: "let_it_walk:remote_pilot_controller" }
+				type: "item"
+			}]
+			x: 11.50d
+			y: 0.00d
+		},
+		{
+			dependencies: [
+				"6419000000000003"
+				"6419000000000002"
+				"6401040000000000"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "let_it_walk:leg_positioner"
+			}
+			id: "6419000000000012"
+			rewards: [
+				{
+					id: "6319000000001200"
+					item: {
+						count: 8
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6319000000001201"
+					item: {
+						count: 4
+						id: "minecraft:copper_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "5119000000000012"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "6219000000000012"
+				item: { count: 1, id: "let_it_walk:leg_positioner" }
+				type: "item"
+			}]
+			x: 1.14d
+			y: -8.68d
+		}
+	]
+}

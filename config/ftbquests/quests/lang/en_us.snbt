@@ -5081,4 +5081,141 @@
 		"The deployer and the press are the machines. JEI."
 		"The Gold Machine is a railway casing around this mechanism."
 	]
+	chapter.6519000000000000.title: "Let it Walk"
+	chapter.6519000000000000.chapter_subtitle: [
+		"Machines that walk"
+	]
+	quest.6419000000000000.title: "Let it Walk"
+	quest.6419000000000000.quest_subtitle: "Ponder, there is no book"
+	quest.6419000000000000.quest_desc: [
+		"Let it Walk has no page in the Akashic Tome. Ponder the Walker Core with W. The scenes cover the hull, the legs, the gears, and the feet."
+		"Every part is Klaxium. The alloy is an unheated mix, so the line starts once you have the Mechanical Mixer."
+		"JEI lists the crafts. The hull can be any blocks. The legs are what make it walk."
+	]
+	quest.6419000000000001.title: "Klaxium Alloy"
+	quest.6419000000000001.quest_subtitle: "Iron, copper, soul sand, lava"
+	quest.6419000000000001.quest_desc: [
+		"Mix one iron ingot, two copper ingots, two soul sand, and 100 mB of lava in a basin under the Mechanical Mixer. No heat setting. JEI shows the mix."
+		"The mixer is an Andesite Machine. This pack leaves the Klaxium recipe as the mod wrote it."
+		"Nine nuggets make an ingot again, if you need to go backwards."
+	]
+	quest.6419000000000002.title: "Klaxium Nugget"
+	quest.6419000000000002.quest_subtitle: "Nine from an ingot"
+	quest.6419000000000002.quest_desc: [
+		"Shapeless: one Klaxium ingot becomes nine nuggets. JEI."
+		"Mounts, the stabilization module, and the positioner all ask for nuggets."
+		"Nine nuggets craft back into an ingot."
+	]
+	quest.6419000000000003.title: "Klaxium Sheet"
+	quest.6419000000000003.quest_subtitle: "Press the ingot"
+	quest.6419000000000003.quest_desc: [
+		"Press a Klaxium ingot. The Mechanical Press is an iron block applied to an Andesite Machine."
+		"JEI. The sheet is the plate the other recipes mean when they ask for a Klaxium plate."
+		"A casing is this sheet applied to stripped wood."
+	]
+	quest.6419000000000004.title: "Klaxium Casing"
+	quest.6419000000000004.quest_subtitle: "A sheet on stripped wood"
+	quest.6419000000000004.quest_desc: [
+		"Apply a Klaxium sheet to a stripped log or stripped wood. Right-click, the same gesture Create uses for a casing. JEI lists both."
+		"The Walker Core and the Pilot Controls sit on this casing."
+		"Ponder the Walker Core once the casing exists. The rest of the hull can be any blocks."
+	]
+	quest.6419000000000005.title: "Articulation Unit"
+	quest.6419000000000005.quest_subtitle: "Cog, alloy, then the press"
+	quest.6419000000000005.quest_desc: [
+		"Sequenced assembly on a Klaxium sheet. Deploy a cogwheel, deploy Andesite Alloy, then press."
+		"The deployer places the parts. The press is already required by the sheet, so the sequence ends on a machine you have."
+		"JEI. Hinges and swivels are this unit between sheets."
+	]
+	quest.6419000000000006.title: "Leg Hinge"
+	quest.6419000000000006.quest_subtitle: "Bends in one plane"
+	quest.6419000000000006.quest_desc: [
+		"A Klaxium sheet, an articulation unit, and another sheet. The craft makes two hinges. JEI."
+		"A hinge bends the next segment in one plane, like a hip or a knee. Ponder the joints with W."
+		"The value panel on the side sets the chain to Arm. An arm keeps its pose and swings. It does not step."
+	]
+	quest.6419000000000007.title: "Leg Swivel"
+	quest.6419000000000007.quest_subtitle: "Turns about its facing"
+	quest.6419000000000007.quest_desc: [
+		"A Klaxium sheet, an articulation unit, and a shaft. The craft makes two swivels. JEI."
+		"A swivel turns everything beyond it about the way it faces. Under the hull it swings the leg sideways. Ponder the joints."
+		"Shift and right-click a joint with an empty hand to lock it to the block it hangs from."
+	]
+	quest.6419000000000008.title: "Leg Foot"
+	quest.6419000000000008.quest_subtitle: "Where the leg ends"
+	quest.6419000000000008.quest_desc: [
+		"One Klaxium ingot over three Klaxium sheets. JEI."
+		"Every walking leg ends in a foot. A chain of joints with no foot is an arm."
+		"Ponder the feet. The plain foot grips and lies flat on a slope. It does nothing else."
+	]
+	quest.6419000000000009.title: "Klaxium Spike"
+	quest.6419000000000009.quest_subtitle: "Saw an ingot into four"
+	quest.6419000000000009.quest_desc: [
+		"Cut a Klaxium ingot on the Mechanical Saw. One ingot becomes four spikes. JEI."
+		"The saw is an Andesite Machine. This pack does not replace the cutting recipe."
+		"Four spikes around a foot make the climbing foot."
+	]
+	quest.641900000000000A.title: "Spiked Foot"
+	quest.641900000000000A.quest_subtitle: "Four spikes on a foot"
+	quest.641900000000000A.quest_desc: [
+		"A leg foot with a Klaxium spike in each corner. JEI."
+		"With spiked feet on at least half the legs, the walker climbs walls and ceilings. G pulls the spikes in and lets them out."
+		"Ponder the feet. Spikes add stress, and they let go when the shaft stops."
+	]
+	quest.641900000000000B.title: "Jet Nozzle"
+	quest.641900000000000B.quest_subtitle: "Sheet, pipe, lava, then the press"
+	quest.641900000000000B.quest_desc: [
+		"Sequenced assembly on a Klaxium sheet. Deploy an iron sheet, deploy a fluid pipe, fill 250 mB of lava, then press."
+		"The pipe is a copper sheet and a copper ingot, and the spout is the Copper Machine that pours. The deployer places the sheet and the pipe."
+		"JEI. Water puts a jet out. Keep the feet dry."
+	]
+	quest.641900000000000C.title: "Jet Foot"
+	quest.641900000000000C.quest_subtitle: "A nozzle under a foot"
+	quest.641900000000000C.quest_desc: [
+		"A leg foot over a jet nozzle. JEI."
+		"With jet feet on at least half the legs, G lifts the walker. The jets burn lava from the Walker Core."
+		"Pump lava into the core through any face except the shaft, or set a fluid tank of lava against the core's back. Ponder the feet."
+	]
+	quest.641900000000000D.title: "Jet Mount"
+	quest.641900000000000D.quest_subtitle: "Nuggets and a sheet"
+	quest.641900000000000D.quest_desc: [
+		"Two Klaxium nuggets and a Klaxium sheet, in a row. JEI."
+		"Right-click the mount with a jet foot or a spiked foot to seat it. Shift and right-click with an empty hand takes it off."
+		"Up to three mounts side by side join into one platform. F fires a jet burst. R makes seated spikes grab. Ponder the mount."
+	]
+	quest.641900000000000E.title: "Stabilization Module"
+	quest.641900000000000E.quest_subtitle: "Precision, a tube, two nuggets"
+	quest.641900000000000E.quest_desc: [
+		"Sequenced assembly on a precision mechanism. Deploy an electron tube, deploy a Klaxium nugget, deploy a second nugget, then press."
+		"The precision mechanism is the Create primer quest, and that quest already waits on the Factory Guide. The deployer does the placing."
+		"JEI. The Walker Core will not craft without this module."
+	]
+	quest.641900000000000F.title: "Walker Core"
+	quest.641900000000000F.quest_subtitle: "The heart of the hull"
+	quest.641900000000000F.quest_desc: [
+		"A shaft, four Klaxium ingots, a stabilization module, and a Klaxium casing. JEI has the shape."
+		"Place it on a hull. Hang at least one leg off a hinge or a swivel and end the leg in a foot. Right-click the core with an empty hand to assemble."
+		"The front face needs a turning shaft. 16 RPM covers the first two gears, then 32, 64, and 128. Ponder the core and the gears. Right-click again to park it."
+	]
+	quest.6419000000000010.title: "Pilot Controls"
+	quest.6419000000000010.quest_subtitle: "Levers, a tube, a casing"
+	quest.6419000000000010.quest_desc: [
+		"Two analog levers, an electron tube, and a Klaxium casing. An analog lever is a stick on an Andesite Casing. JEI."
+		"Place the controls on the walker and right-click to pilot. W and S drive, A and D turn, the wheel shifts gears, Space charges a jump, Ctrl gallops, X and Z raise the hull, G flies or works the spikes. Shift leaves."
+		"Shift and right-click opens the menu for redstone link frequencies. Right-click a Walker Core with the controls to link them, and they steer from anywhere. Ponder the controls."
+	]
+	quest.6419000000000011.title: "Remote Pilot Controller"
+	quest.6419000000000011.quest_subtitle: "Levers, a transmitter, a sheet"
+	quest.6419000000000011.quest_desc: [
+		"Two analog levers, a transmitter, and a Klaxium sheet. The transmitter is a lightning rod, copper sheets, and redstone. JEI."
+		"Right-click a Walker Core with the remote to link it. It steers that walker from anywhere."
+		"There is no book for this. Ponder the pilot controls. The remote uses the same link."
+	]
+	quest.6419000000000012.title: "Positioner"
+	quest.6419000000000012.quest_subtitle: "Sheet, nugget, two shafts"
+	quest.6419000000000012.quest_desc: [
+		"A Klaxium sheet, a Klaxium nugget, and two shafts. JEI."
+		"Hold it and look at a hinge or a swivel. The rest angle shows at the bottom of the screen. The wheel turns it 5 degrees, or 1 degree with Ctrl."
+		"That pose is how the leg stands and how it walks. Ponder the positioner."
+	]
 }
