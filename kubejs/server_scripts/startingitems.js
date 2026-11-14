@@ -7,7 +7,8 @@ PlayerEvents.loggedIn(event => {
     let data = event.player.persistentData
     if (!data.getBoolean("received_starting_items")) {
         data.putBoolean("received_starting_items", true)
-        // Give quest book to player
+        // Quest book stays its own item. Mod guidebooks are the Akashic Tome
+        // from universal_tome.js, on a separate once-per-player flag.
         event.player.give("ftbquests:book")
     }
 })

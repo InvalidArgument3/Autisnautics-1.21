@@ -1,0 +1,162 @@
+{
+  "tome_name": "Autisnautics Guide",
+  "books": [
+    {
+      "mod": "ars_nouveau",
+      "name": "Tattered Tome",
+      "item": "ars_nouveau:worn_notebook"
+    },
+    {
+      "mod": "alexsmobs",
+      "name": "Animal Dictionary",
+      "item": "alexsmobs:animal_dictionary"
+    },
+    {
+      "mod": "alexscaves",
+      "name": "Cave Compendium",
+      "item": "alexscaves:cave_book"
+    },
+    {
+      "mod": "astralsorcery",
+      "name": "Astral Tome",
+      "item": "astralsorcery:tome"
+    },
+    {
+      "mod": "immersiveengineering",
+      "name": "Engineer's Manual",
+      "item": "immersiveengineering:manual"
+    },
+    {
+      "mod": "tide",
+      "name": "Fishing Journal",
+      "item": "tide:fishing_journal"
+    },
+    {
+      "mod": "nuclearcraftneohaul",
+      "name": "NuclearCraft Guide",
+      "item": "patchouli:guide_book",
+      "components": {
+        "patchouli:book": "nuclearcraftneohaul:guide"
+      }
+    },
+    {
+      "mod": "psi",
+      "name": "Encyclopaedia Psionica",
+      "item": "patchouli:guide_book",
+      "components": {
+        "patchouli:book": "psi:encyclopaedia_psionica"
+      }
+    },
+    {
+      "mod": "irons_spellbooks",
+      "name": "Iron's Guidebook",
+      "item": "patchouli:guide_book",
+      "components": {
+        "patchouli:book": "irons_spellbooks:iss_guide_book"
+      }
+    },
+    {
+      "mod": "theurgy",
+      "name": "The Hermetica",
+      "item": "modonomicon:modonomicon",
+      "components": {
+        "modonomicon:book_id": "theurgy:the_hermetica"
+      }
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Materials and You",
+      "item": "modernfoundry:materials_and_you"
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Encyclopedia of Crafting",
+      "item": "modernfoundry:encyclopedia"
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Puny Smelting",
+      "item": "modernfoundry:puny_smelting"
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Mighty Smelting",
+      "item": "modernfoundry:mighty_smelting"
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Modern Foundry's Gadgetry",
+      "item": "modernfoundry:tinkers_gadgetry"
+    },
+    {
+      "mod": "modernfoundry",
+      "name": "Fantastic Foundry",
+      "item": "modernfoundry:fantastic_foundry"
+    },
+    {
+      "mod": "advancedperipherals",
+      "name": "Advanced Peripherals Manual",
+      "item": "patchouli:guide_book",
+      "components": {
+        "patchouli:book": "advancedperipherals:manual"
+      }
+    },
+    {
+      "mod": "dimdungeons",
+      "name": "Dimensional Dungeons",
+      "item": "patchouli:guide_book",
+      "components": {
+        "patchouli:book": "dimdungeons:guide_book"
+      }
+    },
+    {
+      "mod": "enigmaticlegacyplus",
+      "name": "The Acknowledgment",
+      "item": "enigmaticlegacyplus:the_acknowledgment"
+    },
+    {
+      "mod": "tis3d",
+      "name": "TIS-3D Reference Manual",
+      "item": "tis3d:manual"
+    },
+    {
+      "mod": "stellaris",
+      "name": "Stellaris Tablet",
+      "item": "stellaris:tablet"
+    },
+    {
+      "mod": "cookingforblockheads",
+      "name": "Cooking for Blockheads I",
+      "item": "cookingforblockheads:recipe_book"
+    },
+    {
+      "mod": "cookingforblockheads",
+      "name": "Cooking for Blockheads II",
+      "item": "cookingforblockheads:crafting_book"
+    },
+    {
+      "mod": "cobblemon",
+      "name": "Pokedex",
+      "item": "cobblemon:pokedex_red"
+    }
+  ],
+  "excluded": [
+    {"id": "ftbquests:book", "reason": "Quest book stays a separate first-join item."},
+    {"id": "ars_nouveau spell books, annotated_codex, caster_tome, bookwyrm", "reason": "Spell storage and equipment. The documentation item is worn_notebook."},
+    {"id": "irons_spellbooks spell books, chronicle, ruined book", "reason": "Equipment and lore. The guide is the Patchouli pamphlet."},
+    {"id": "enigmaticlegacyplus animal_guidebook, hunter_guidebook, sanguinary_handbook, void_tome", "reason": "Cursed equipment. The guide is the_acknowledgment."},
+    {"id": "reliquary:alkahestry_tome", "reason": "Item duplicator, not a guide."},
+    {"id": "numismatics:banking_guide", "reason": "Converts a Blaze Burner into a banker."},
+    {"id": "create_enchantment_industry:blazes_enchanting_handbook", "reason": "Enchanting template item, no guide GUI."},
+    {"id": "quark:ancient_tome", "reason": "Enchantment loot."},
+    {"id": "simplyswords:runic_tablet", "reason": "Crafting material."},
+    {"id": "alexscaves:cave_codex, alexscaves:cave_tablet", "reason": "Discovery tokens. The book is cave_book."},
+    {"id": "citadel:citadel_book", "reason": "Library demo, not a pack guide."},
+    {"id": "apothic_attributes:apoth_chronicle", "reason": "Translations only. No book.json and no item."},
+    {"id": "tis3d:code_book", "reason": "Per-module program copy. The manual is tis3d:manual."},
+    {"id": "Create and addons", "reason": "Ponder is a GUI. No guidebook item."},
+    {"id": "CC: Tweaked", "reason": "In-game help. printed_book is player-printed."},
+    {"id": "Botania lexicon", "reason": "Botania is not in the pack. Leftover config is unused."},
+    {"id": "tconstruct:*", "reason": "Not in the pack. The port's mod id is modernfoundry."}
+  ]
+}
