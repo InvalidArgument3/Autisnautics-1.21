@@ -793,5 +793,454 @@
 			y: 19.5d
 		}
 
+		{
+			dependencies: ["660000000000002A"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:psimetal"
+			}
+			id: "66000000000000CA"
+			rewards: [
+				{
+					id: "6800000000000232"
+					item: {
+						count: 2
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000233"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000234"
+					type: "xp"
+					xp: 36
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CA"
+					item: { count: 1, id: "psi:psimetal" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["66000000000000CA"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:spell_drive"
+			}
+			id: "66000000000000CB"
+			rewards: [
+				{
+					id: "6800000000000235"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000236"
+					item: {
+						count: 4
+						id: "psi:psidust"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000237"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CB"
+					item: { count: 1, id: "psi:spell_drive" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+		{
+			dependencies: ["66000000000000CB"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_assembly_psimetal"
+			}
+			id: "66000000000000CC"
+			rewards: [
+				{
+					id: "6800000000000238"
+					item: {
+						count: 2
+						id: "psi:psimetal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000239"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CC"
+					item: { count: 1, id: "psi:cad_assembly_psimetal" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["66000000000000CC"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_core_hyperclocked"
+			}
+			id: "66000000000000CD"
+			rewards: [
+				{
+					id: "680000000000023A"
+					item: {
+						count: 1
+						id: "psi:psigem"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000023B"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CD"
+					item: { count: 1, id: "psi:cad_core_hyperclocked" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 25.5d
+		}
+		{
+			dependencies: ["66000000000000CD"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_battery_ultradense"
+			}
+			id: "66000000000000CE"
+			rewards: [
+				{
+					id: "680000000000023C"
+					item: {
+						count: 2
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000023D"
+					item: {
+						count: 4
+						id: "minecraft:brick"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000023E"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CE"
+					item: { count: 1, id: "psi:cad_battery_ultradense" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["66000000000000CE"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:cad_socket_transmissive"
+			}
+			id: "66000000000000CF"
+			rewards: [
+				{
+					id: "680000000000023F"
+					item: {
+						count: 1
+						id: "psi:psimetal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000240"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000241"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000CF"
+					item: { count: 1, id: "psi:cad_socket_transmissive" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 28.5d
+		}
+		{
+			dependencies: ["66000000000000CF"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:psimetal_exosuit_chestplate"
+			}
+			id: "66000000000000D0"
+			rewards: [
+				{
+					id: "6800000000000242"
+					item: {
+						count: 3
+						id: "psi:psimetal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000243"
+					item: {
+						count: 1
+						id: "psi:psigem"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000244"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D0"
+					item: { count: 1, id: "psi:psimetal_exosuit_chestplate" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["66000000000000D0"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "psi:exosuit_controller"
+			}
+			id: "66000000000000D1"
+			rewards: [
+				{
+					id: "6800000000000245"
+					item: {
+						count: 1
+						id: "psi:psigem"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000246"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000247"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D1"
+					item: { count: 1, id: "psi:exosuit_controller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 31.5d
+		}
+
 	]
 }

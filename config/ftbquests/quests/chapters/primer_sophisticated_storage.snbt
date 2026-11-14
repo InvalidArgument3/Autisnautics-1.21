@@ -805,5 +805,293 @@
 			y: 19.5d
 		}
 
+		{
+			dependencies: ["640A020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:stack_upgrade_tier_1"
+			}
+			id: "66000000000000BE"
+			rewards: [
+				{
+					id: "680000000000020E"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000020F"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000210"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000BE"
+					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_1" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["66000000000000BE"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:stack_upgrade_tier_5"
+			}
+			id: "66000000000000BF"
+			rewards: [
+				{
+					id: "6800000000000211"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000212"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000213"
+					type: "xp"
+					xp: 52
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000BF"
+					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_5" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+		{
+			dependencies: ["640A020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:feeding_upgrade"
+			}
+			id: "66000000000000C0"
+			rewards: [
+				{
+					id: "6800000000000214"
+					item: {
+						count: 4
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000215"
+					item: {
+						count: 4
+						id: "minecraft:carrot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000216"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000C0"
+					item: { count: 1, id: "sophisticatedstorage:feeding_upgrade" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 24.0d
+		}
+		{
+			dependencies: ["6600000000000012"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:compacting_upgrade"
+			}
+			id: "66000000000000C1"
+			rewards: [
+				{
+					id: "6800000000000217"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000218"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000219"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000C1"
+					item: { count: 1, id: "sophisticatedstorage:compacting_upgrade" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 25.5d
+		}
+		{
+			dependencies: ["640A020000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:void_upgrade"
+			}
+			id: "66000000000000C2"
+			rewards: [
+				{
+					id: "680000000000021A"
+					item: {
+						count: 1
+						id: "minecraft:lava_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000021B"
+					item: {
+						count: 1
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000021C"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000C2"
+					item: { count: 1, id: "sophisticatedstorage:void_upgrade" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 27.0d
+		}
+
 	]
 }

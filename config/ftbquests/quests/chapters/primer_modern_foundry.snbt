@@ -683,5 +683,230 @@
 			y: 16.5d
 		}
 
+		{
+			dependencies: ["6413050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "modernfoundry:crafting_station"
+			}
+			id: "66000000000000F0"
+			rewards: [
+				{
+					id: "680000000000029E"
+					item: {
+						count: 1
+						id: "modernfoundry:pattern"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000029F"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F0"
+					item: { count: 1, id: "modernfoundry:crafting_station" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["66000000000000F0"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "modernfoundry:modifier_worktable"
+			}
+			id: "66000000000000F1"
+			rewards: [
+				{
+					id: "68000000000002A0"
+					item: {
+						count: 2
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A1"
+					item: {
+						count: 6
+						id: "minecraft:brick"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A2"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F1"
+					item: { count: 1, id: "modernfoundry:modifier_worktable" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: ["66000000000000F1"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "modernfoundry:tinkers_anvil"
+			}
+			id: "66000000000000F2"
+			rewards: [
+				{
+					id: "68000000000002A3"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A4"
+					item: {
+						count: 6
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A5"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F2"
+					item: { count: 1, id: "modernfoundry:tinkers_anvil" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["66000000000000F2"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "modernfoundry:scorched_anvil"
+			}
+			id: "66000000000000F3"
+			rewards: [
+				{
+					id: "68000000000002A6"
+					item: {
+						count: 8
+						id: "minecraft:netherrack"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A7"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002A8"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F3"
+					item: { count: 1, id: "modernfoundry:scorched_anvil" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+
 	]
 }

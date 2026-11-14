@@ -4535,4 +4535,459 @@
 		"This is the end of the Undergarden metal line. The catalyst remains the dimension door from the first quest."
 		"JEI."
 	]
+	quest.66000000000000B6.title: "Starter Stack Upgrade"
+	quest.66000000000000B6.quest_subtitle: "More room in the same pack"
+	quest.66000000000000B6.quest_desc: [
+		"The starter stack upgrade. JEI. It uses the upgrade base you already craft."
+		"The omega stack upgrade and the inception upgrade are hidden in this pack. They are not the next tier."
+		"JEI. The upgrade tab inside the backpack is where it goes."
+	]
+	quest.66000000000000B7.title: "Stack Upgrade I"
+	quest.66000000000000B7.quest_subtitle: "The first numbered tier"
+	quest.66000000000000B7.quest_desc: [
+		"Stack upgrade tier 1. JEI shows the craft from the starter upgrade."
+		"Tiers 2, 3, and 4 follow the same ladder. Tier 4 is the top one this pack leaves visible."
+		"JEI."
+	]
+	quest.66000000000000B8.title: "Stack Upgrade IV"
+	quest.66000000000000B8.quest_subtitle: "The last visible stack upgrade"
+	quest.66000000000000B8.quest_desc: [
+		"Stack upgrade tier 4. JEI."
+		"The omega tier is hidden. Stop here."
+		"This is the backpack stack capstone. JEI."
+	]
+	quest.66000000000000B9.title: "Feeding Upgrade"
+	quest.66000000000000B9.quest_subtitle: "The pack eats for you"
+	quest.66000000000000B9.quest_desc: [
+		"The feeding upgrade. JEI. The upgrade base is the start."
+		"Advanced feeding is the upgrade of this one."
+		"JEI."
+	]
+	quest.66000000000000BA.title: "Advanced Feeding"
+	quest.66000000000000BA.quest_subtitle: "The last feeding upgrade"
+	quest.66000000000000BA.quest_desc: [
+		"Advanced feeding. JEI."
+		"It is the top feeding upgrade in the jar."
+		"JEI. The upgrade tab."
+	]
+	quest.66000000000000BB.title: "Magnet Upgrade"
+	quest.66000000000000BB.quest_subtitle: "Pull items in"
+	quest.66000000000000BB.quest_desc: [
+		"The magnet upgrade. JEI."
+		"Advanced magnet exists as a further craft. This is the first one."
+		"JEI."
+	]
+	quest.66000000000000BC.title: "Void Upgrade"
+	quest.66000000000000BC.quest_subtitle: "Throw away the rest"
+	quest.66000000000000BC.quest_desc: [
+		"The void upgrade. JEI."
+		"It deletes what the filter names. The filter upgrade is already a quest."
+		"JEI."
+	]
+	quest.66000000000000BD.title: "Tank Upgrade"
+	quest.66000000000000BD.quest_subtitle: "A fluid pocket"
+	quest.66000000000000BD.quest_desc: [
+		"The tank upgrade. JEI."
+		"It holds a fluid in the backpack. Buckets are the fill."
+		"JEI."
+	]
+	quest.66000000000000BE.title: "Storage Stack Upgrade I"
+	quest.66000000000000BE.quest_subtitle: "The chest holds more"
+	quest.66000000000000BE.quest_desc: [
+		"Storage stack upgrade tier 1. JEI. The upgrade base you already craft is the start."
+		"Tier 1 plus is hidden in this pack. The visible ladder is tier 1 through tier 5."
+		"JEI. Copper chests stay hidden. Use the iron chest and up."
+	]
+	quest.66000000000000BF.title: "Storage Stack Upgrade V"
+	quest.66000000000000BF.quest_subtitle: "The last stack upgrade"
+	quest.66000000000000BF.quest_desc: [
+		"Stack upgrade tier 5. JEI."
+		"This is the top storage stack upgrade the pack leaves in. The hidden tier 1 plus is not a step."
+		"JEI."
+	]
+	quest.66000000000000C0.title: "Storage Feeding"
+	quest.66000000000000C0.quest_subtitle: "The chest feeds you"
+	quest.66000000000000C0.quest_desc: [
+		"The storage feeding upgrade. JEI."
+		"Advanced feeding is the next craft of the same idea."
+		"JEI."
+	]
+	quest.66000000000000C1.title: "Compacting Upgrade"
+	quest.66000000000000C1.quest_subtitle: "Nuggets become blocks"
+	quest.66000000000000C1.quest_desc: [
+		"The compacting upgrade. JEI."
+		"It compacts and uncompacts inside the chest. The controller still links the chest."
+		"JEI."
+	]
+	quest.66000000000000C2.title: "Storage Void Upgrade"
+	quest.66000000000000C2.quest_subtitle: "Delete the overflow"
+	quest.66000000000000C2.quest_desc: [
+		"The storage void upgrade. JEI."
+		"Same idea as the backpack void upgrade, on a chest."
+		"JEI."
+	]
+	quest.66000000000000C3.title: "Iron Fishing Rod"
+	quest.66000000000000C3.quest_subtitle: "String is the smithing template"
+	quest.66000000000000C3.quest_desc: [
+		"Smithing table. The template is any string. The addition is an iron ingot. The base is the stone rod, or a vanilla fishing rod."
+		"JEI. The Fishing Journal in the Akashic Tome lists the rod. There is still no plain tide:fishing_rod item."
+		"The iron line you already craft is the line, not this rod."
+	]
+	quest.66000000000000C4.title: "Golden Fishing Rod"
+	quest.66000000000000C4.quest_subtitle: "Same smithing, gold ingot"
+	quest.66000000000000C4.quest_desc: [
+		"Smithing table. String as the template, a gold ingot as the addition, a lower rod as the base. JEI."
+		"The journal's rod page matches. The Midas rod is a later catch on this gold rod."
+		"JEI."
+	]
+	quest.66000000000000C5.title: "Diamond Fishing Rod"
+	quest.66000000000000C5.quest_subtitle: "String, a diamond, a rod"
+	quest.66000000000000C5.quest_desc: [
+		"Smithing table. String template, a diamond, and any of the lower rods including the crystal rod. JEI."
+		"Netherite smithing starts from this rod."
+		"The journal. JEI."
+	]
+	quest.66000000000000C6.title: "Crystal Fishing Rod"
+	quest.66000000000000C6.quest_subtitle: "An amethyst on the rod"
+	quest.66000000000000C6.quest_desc: [
+		"Smithing table. String template, an amethyst shard, and a stone, iron, or gold rod. JEI."
+		"It is a side rod, not the netherite path. The journal lists what it catches."
+		"JEI."
+	]
+	quest.66000000000000C7.title: "Diamond Line"
+	quest.66000000000000C7.quest_subtitle: "The deep line"
+	quest.66000000000000C7.quest_desc: [
+		"The diamond line. JEI. The journal's line page is the depth."
+		"Iron line is already a quest. This is the line that matches the diamond rod."
+		"JEI."
+	]
+	quest.66000000000000C8.title: "Netherite Fishing Rod"
+	quest.66000000000000C8.quest_subtitle: "The metal top"
+	quest.66000000000000C8.quest_desc: [
+		"Smithing table. A netherite upgrade template, a netherite ingot, and the diamond fishing rod. JEI."
+		"This is the top metal rod in the jar. The journal is still the book, in the Akashic Tome."
+		"JEI."
+	]
+	quest.66000000000000C9.title: "Midas Rod"
+	quest.66000000000000C9.quest_subtitle: "A fish, not an ingot"
+	quest.66000000000000C9.quest_desc: [
+		"Smithing table. String template, a Midas fish, and the golden fishing rod. JEI."
+		"The fish is a catch. The journal says where. This is the specialty rod beside the netherite one."
+		"JEI."
+	]
+	quest.66000000000000CA.title: "Psimetal"
+	quest.66000000000000CA.quest_subtitle: "A spell, not a furnace"
+	quest.66000000000000CA.quest_desc: [
+		"Psimetal is a CAD trick, trick_infusion, cast with an iron CAD assembly onto a gold ingot. The recipe is psi:trick_crafting."
+		"The Encyclopaedia Psionica, in the Akashic Tome, is the spell page. JEI shows the trick."
+		"The dust you already craft is the other ingredient of the line. This ingot is the metal."
+	]
+	quest.66000000000000CB.title: "Spell Drive"
+	quest.66000000000000CB.quest_subtitle: "Psimetal and redstone"
+	quest.66000000000000CB.quest_desc: [
+		"Psimetal, redstone dust, psimetal, in a column. JEI."
+		"The encyclopaedia's components page. It stores a spell beside the bullet."
+		"JEI."
+	]
+	quest.66000000000000CC.title: "Psimetal Assembly"
+	quest.66000000000000CC.quest_subtitle: "The top assembly"
+	quest.66000000000000CC.quest_desc: [
+		"The psimetal CAD assembly. JEI. Ivory and ebony assemblies are the coloured pair."
+		"The iron assembly quest is the first shell. This is the metal one."
+		"The encyclopaedia. JEI."
+	]
+	quest.66000000000000CD.title: "Hyperclocked Core"
+	quest.66000000000000CD.quest_subtitle: "The top core"
+	quest.66000000000000CD.quest_desc: [
+		"Psigem, redstone dust, and psimetal. JEI."
+		"Overclocked and radiative cores are the steps under this one. Hyperclocked is the top core in the jar."
+		"The encyclopaedia. JEI."
+	]
+	quest.66000000000000CE.title: "Ultradense Battery"
+	quest.66000000000000CE.quest_subtitle: "The top battery"
+	quest.66000000000000CE.quest_desc: [
+		"Iron, a psigem, and gold, in a column. JEI."
+		"The basic battery is already a quest. Extended sits between them. Ultradense is the top."
+		"JEI."
+	]
+	quest.66000000000000CF.title: "Transmissive Socket"
+	quest.66000000000000CF.quest_subtitle: "A top socket"
+	quest.66000000000000CF.quest_desc: [
+		"The transmissive socket. JEI. Huge and signaling sockets are the other late sockets."
+		"The basic socket quest is the first one. This holds more of the spell."
+		"The encyclopaedia. JEI."
+	]
+	quest.66000000000000D0.title: "Exosuit Chestplate"
+	quest.66000000000000D0.quest_subtitle: "Psimetal and psigem"
+	quest.66000000000000D0.quest_desc: [
+		"Psimetal and psigem in the chestplate shape. JEI. Helmet, leggings, and boots match it."
+		"The encyclopaedia's exosuit page. The suit is armor, not a CAD."
+		"JEI."
+	]
+	quest.66000000000000D1.title: "Exosuit Controller"
+	quest.66000000000000D1.quest_subtitle: "The last psi part"
+	quest.66000000000000D1.quest_desc: [
+		"The exosuit controller. JEI. Sensors for heat, light, stress, trigger, and water sit with it."
+		"With the hyperclocked core, the ultradense battery, and the chestplate, this is the end of the psi line."
+		"The Encyclopaedia Psionica is in the Akashic Tome."
+	]
+	quest.66000000000000D2.title: "Train Track"
+	quest.66000000000000D2.quest_subtitle: "Sleeper, nuggets, press"
+	quest.66000000000000D2.quest_desc: [
+		"Sequenced assembly. Start with a sleeper. Deploy iron or zinc nuggets twice, then press."
+		"JEI shows the sequence. Ponder a placed track with W."
+		"The press is an Andesite Machine, so that Factory Guide quest is the gate. Stations, signals, controls, and schedules are already on this page."
+	]
+	quest.66000000000000D3.title: "Chain Conveyor"
+	quest.66000000000000D3.quest_subtitle: "Andesite casing and a large cog"
+	quest.66000000000000D3.quest_desc: [
+		"Two chain conveyors from an andesite casing and a large cogwheel. JEI. This recipe is not replaced."
+		"Ponder with W. It carries items and a rider along the chain."
+		"The casing quest is the andesite step. No brass."
+	]
+	quest.66000000000000D4.title: "Schematicannon"
+	quest.66000000000000D4.quest_subtitle: "Print a saved building"
+	quest.66000000000000D4.quest_desc: [
+		"Iron blocks, logs, a dispenser, and smooth stone. JEI."
+		"The schematic table and the empty schematic are the pen. The cannon is the printer."
+		"Ponder with W. It does not need a Create machine."
+	]
+	quest.66000000000000D5.title: "Stock Link"
+	quest.66000000000000D5.quest_subtitle: "Lightning rod on a lead casing"
+	quest.66000000000000D5.quest_desc: [
+		"This pack replaced both inputs. The craft is a lightning rod on a lead casing, not an item vault and a transmitter."
+		"JEI. The Factory Guide lead-machine quest is the gate, because the casing is that line."
+		"The stock ticker and the factory gauge read this link."
+	]
+	quest.66000000000000D6.title: "Stock Ticker"
+	quest.66000000000000D6.quest_subtitle: "Glass, the link, gold"
+	quest.66000000000000D6.quest_desc: [
+		"A glass block, a stock link, and a gold ingot, stacked. JEI."
+		"Ponder with W. It is the screen for the stock network."
+		"The lead-machine quest stays the gate through the link."
+	]
+	quest.66000000000000D7.title: "Factory Gauge"
+	quest.66000000000000D7.quest_subtitle: "A Lead Machine stonecut"
+	quest.66000000000000D7.quest_desc: [
+		"Stonecut a Lead Machine. Two gauges. The old craft that used a precision mechanism is removed."
+		"Ponder with W. A gauge on an inventory tells the stock network what to keep."
+		"JEI. The Factory Guide lead-machine quest is the gate."
+	]
+	quest.66000000000000D8.title: "Packager"
+	quest.66000000000000D8.quest_subtitle: "Lead Machine, cardboard"
+	quest.66000000000000D8.quest_desc: [
+		"Item application: a Lead Machine plus a cardboard block. The crafting-table packager is removed."
+		"Ponder with W. It boxes items into packages."
+		"JEI, item application. The lead-machine quest is the gate."
+	]
+	quest.66000000000000D9.title: "Repackager"
+	quest.66000000000000D9.quest_subtitle: "Lead Machine, bound cardboard"
+	quest.66000000000000D9.quest_desc: [
+		"Item application: a Lead Machine plus a bound cardboard block."
+		"Ponder with W. It unpacks a package back into items."
+		"JEI. Same lead-machine gate."
+	]
+	quest.66000000000000DA.title: "Package Frogport"
+	quest.66000000000000DA.quest_subtitle: "Lead Machine, slimeball"
+	quest.66000000000000DA.quest_desc: [
+		"Item application: a Lead Machine plus a slimeball."
+		"Ponder with W. Frogports are the addresses packages travel between."
+		"JEI. The lead-machine quest is the gate."
+	]
+	quest.66000000000000DB.title: "Redstone Requester"
+	quest.66000000000000DB.quest_subtitle: "The logistics capstone"
+	quest.66000000000000DB.quest_desc: [
+		"Item application: a Lead Machine plus a stock link."
+		"Ponder with W. A redstone signal makes the network send the items the link is keeping."
+		"This is the large-scale automation capstone: gauge, packager, frogport, and this requester. JEI."
+	]
+	quest.66000000000000DC.title: "Steel Component"
+	quest.66000000000000DC.quest_subtitle: "A components blueprint"
+	quest.66000000000000DC.quest_desc: [
+		"Engineer's blueprint, components category. Two steel plates and a copper ingot. JEI."
+		"The blast furnace quest is where the steel comes from. The hammer and the manual, in the Akashic Tome, are the tools."
+		"The iron component quest is the earlier blueprint."
+	]
+	quest.66000000000000DD.title: "Graphite Electrode"
+	quest.66000000000000DD.quest_subtitle: "The arc furnace's rod"
+	quest.66000000000000DD.quest_desc: [
+		"The bottling machine turns the mold and the fluid into a graphite electrode and gives the mold back. JEI."
+		"The arc furnace consumes these. The manual's arc furnace page lists them."
+		"JEI."
+	]
+	quest.66000000000000DE.title: "Electronic Component"
+	quest.66000000000000DE.quest_subtitle: "The first circuit"
+	quest.66000000000000DE.quest_desc: [
+		"Components blueprint. A treated wood slab, quartz, redstone dust, and electrum wire. JEI."
+		"Light engineering is the gate. The manual's component page matches."
+		"JEI."
+	]
+	quest.66000000000000DF.title: "Advanced Electronic Component"
+	quest.66000000000000DF.quest_subtitle: "Plastic, tubes, aluminum wire"
+	quest.66000000000000DF.quest_desc: [
+		"Components blueprint. A plastic plate, two electron tubes, and aluminum wire. JEI."
+		"Electron tubes are the Create rose-quartz tube. Light engineering is the gate."
+		"This is the top component blueprint. The manual is in the Akashic Tome."
+	]
+	quest.66000000000000E0.title: "1k Storage Part"
+	quest.66000000000000E0.quest_subtitle: "A calculation mechanism, not redstone dust"
+	quest.66000000000000E0.quest_desc: [
+		"This pack replaced the redstone in the 1k part with a calculation mechanism. JEI."
+		"The Factory Guide controller quest is that mechanism's gate. Processors are still the wafer line."
+		"The housing you already craft turns the part into a disk."
+	]
+	quest.66000000000000E1.title: "1k Storage Disk"
+	quest.66000000000000E1.quest_subtitle: "Part, glass, enriched iron"
+	quest.66000000000000E1.quest_desc: [
+		"Glass, redstone dust, the 1k part, and quartz-enriched iron. JEI."
+		"Put it in the disk drive. This is the first disk, not the last."
+		"JEI."
+	]
+	quest.66000000000000E2.title: "4k Storage Part"
+	quest.66000000000000E2.quest_subtitle: "Basic processors around a 1k part"
+	quest.66000000000000E2.quest_desc: [
+		"Three basic processors, quartz-enriched iron, redstone, and a 1k part. JEI."
+		"Basic processors come from the wafer line. The Factory Guide processor quest is the gate."
+		"JEI. A processor is not the reward."
+	]
+	quest.66000000000000E3.title: "16k Storage Part"
+	quest.66000000000000E3.quest_subtitle: "Improved processors around a 4k"
+	quest.66000000000000E3.quest_desc: [
+		"The same shape as the 4k part, with improved processors and a 4k part. JEI."
+		"Improved processors are the wafer line. Same processor-quest gate."
+		"JEI."
+	]
+	quest.66000000000000E4.title: "64k Storage Part"
+	quest.66000000000000E4.quest_subtitle: "Advanced processors around a 16k"
+	quest.66000000000000E4.quest_desc: [
+		"Advanced processors, quartz-enriched iron, redstone, and a 16k part. JEI."
+		"This is the top storage part in the jar. The disk is the next craft."
+		"The processor quest is the gate."
+	]
+	quest.66000000000000E5.title: "64k Storage Disk"
+	quest.66000000000000E5.quest_subtitle: "The last disk"
+	quest.66000000000000E5.quest_desc: [
+		"Glass, redstone, the 64k part, and quartz-enriched iron. JEI."
+		"This is the top disk. It goes in the disk drive you already built."
+		"JEI."
+	]
+	quest.66000000000000E6.title: "Importer"
+	quest.66000000000000E6.quest_subtitle: "Cable, destruction core, improved processor"
+	quest.66000000000000E6.quest_desc: [
+		"Shapeless: cable, a destruction core, and an improved processor. JEI."
+		"The core is the controller application from the earlier quest. The processor is the wafer line."
+		"JEI. It pulls from an inventory into the network."
+	]
+	quest.66000000000000E7.title: "Exporter"
+	quest.66000000000000E7.quest_subtitle: "Cable, construction core, improved processor"
+	quest.66000000000000E7.quest_desc: [
+		"Shapeless: cable, a construction core, and an improved processor. JEI."
+		"It pushes from the network into an inventory. The pair with the importer."
+		"JEI. Same gates."
+	]
+	quest.66000000000000E8.title: "External Storage"
+	quest.66000000000000E8.quest_subtitle: "A chest on the network"
+	quest.66000000000000E8.quest_desc: [
+		"Construction core, destruction core, quartz-enriched iron, a chest, cable, and an improved processor. JEI."
+		"It exposes a chest or barrel to the network without moving the items onto a disk."
+		"JEI. Processor quest and controller quest are the gates."
+	]
+	quest.66000000000000E9.title: "Pattern Grid"
+	quest.66000000000000E9.quest_subtitle: "Grid, advanced processor, pattern"
+	quest.66000000000000E9.quest_desc: [
+		"Shapeless: a grid, an advanced processor, and a pattern. JEI."
+		"This is where autocrafting patterns are written. The pattern quest is the blank pattern."
+		"The processor quest is the gate."
+	]
+	quest.66000000000000EA.title: "Crafting Grid"
+	quest.66000000000000EA.quest_subtitle: "A grid that crafts"
+	quest.66000000000000EA.quest_desc: [
+		"Shapeless: a grid, an advanced processor, and a crafting table. JEI."
+		"It crafts from the network by hand. The autocrafter repeats a pattern."
+		"JEI."
+	]
+	quest.66000000000000EB.title: "Autocrafting Monitor"
+	quest.66000000000000EB.quest_subtitle: "Watch the pattern run"
+	quest.66000000000000EB.quest_desc: [
+		"Improved processors, patterns, glass, quartz-enriched iron, and a machine casing. JEI."
+		"It shows the autocrafter you already craft. It does not start a job by itself."
+		"JEI."
+	]
+	quest.66000000000000EC.title: "Autocrafter Manager"
+	quest.66000000000000EC.quest_subtitle: "Several crafters, one face"
+	quest.66000000000000EC.quest_desc: [
+		"Advanced processors, autocrafters, glass, quartz-enriched iron, and a machine casing. JEI."
+		"It groups autocrafters. The autocrafter quest is the single machine."
+		"JEI. The processor quest is the gate."
+	]
+	quest.66000000000000ED.title: "Disk Interface"
+	quest.66000000000000ED.quest_subtitle: "Move disks without the drive"
+	quest.66000000000000ED.quest_desc: [
+		"Quartz-enriched iron, storage housings, both cores, and a machine casing. JEI."
+		"It lets another inventory insert and pull disks."
+		"JEI. The controller quest covers the cores."
+	]
+	quest.66000000000000EE.title: "Detector"
+	quest.66000000000000EE.quest_subtitle: "A redstone face"
+	quest.66000000000000EE.quest_desc: [
+		"Quartz-enriched iron, comparators, a redstone torch, a machine casing, and an improved processor. JEI."
+		"It emits redstone when the network holds what the filter names."
+		"JEI."
+	]
+	quest.66000000000000EF.title: "Wireless Grid"
+	quest.66000000000000EF.quest_subtitle: "The last wireless piece"
+	quest.66000000000000EF.quest_desc: [
+		"Quartz-enriched iron, an ender pearl, a grid, and an advanced processor. JEI."
+		"The wireless transmitter you already craft is the block. This is the item you hold."
+		"This is the end of the Refined Storage line. JEI. The processor quest is the gate."
+	]
+	quest.66000000000000F0.title: "Crafting Station"
+	quest.66000000000000F0.quest_subtitle: "A pattern on a workbench"
+	quest.66000000000000F0.quest_desc: [
+		"A pattern on a workbench. JEI. Materials and You, in the Akashic Tome, is the book."
+		"The part builder and the tinker station are already quests. This station is the plain crafting table of the mod."
+		"JEI."
+	]
+	quest.66000000000000F1.title: "Modifier Worktable"
+	quest.66000000000000F1.quest_subtitle: "Where tools take modifiers"
+	quest.66000000000000F1.quest_desc: [
+		"Seared blocks and workstation rock, in the table shape. JEI."
+		"This is where a finished tool accepts a modifier. The tinker station builds the tool."
+		"The book. JEI."
+	]
+	quest.66000000000000F2.title: "Tinker's Anvil"
+	quest.66000000000000F2.quest_subtitle: "The tool forge"
+	quest.66000000000000F2.quest_desc: [
+		"There is no item named tool forge. This anvil is that station: anvil metal across the top, seared blocks under it. JEI."
+		"The book calls it the Tinker's Anvil. Tools that outgrow the tinker station are finished here."
+		"JEI."
+	]
+	quest.66000000000000F3.title: "Scorched Anvil"
+	quest.66000000000000F3.quest_subtitle: "The nether forge"
+	quest.66000000000000F3.quest_desc: [
+		"The same anvil shape on scorched blocks instead of seared. JEI."
+		"Scorched is the nether-tier foundry. This anvil is the top tool station in the jar."
+		"Materials and You is in the Akashic Tome. JEI."
+	]
+	quest.66000000000000F4.title: "Great Ball"
+	quest.66000000000000F4.quest_subtitle: "Blue and red apricorns"
+	quest.66000000000000F4.quest_desc: [
+		"Apricorns around a tier-2 material. JEI shows the blue and red apricorns and the tag in the middle."
+		"The poke ball quest is the first ball. The PC you already craft stores what these catch."
+		"JEI. There is no Cobblemon book in the tome."
+	]
+	quest.66000000000000F5.title: "Ultra Ball"
+	quest.66000000000000F5.quest_subtitle: "Black and yellow apricorns"
+	quest.66000000000000F5.quest_desc: [
+		"Black and yellow apricorns around a tier-3 material. JEI."
+		"The healing machine restores the team. The ultra ball is the catch before the master ball."
+		"JEI."
+	]
+	quest.66000000000000F6.title: "Master Ball"
+	quest.66000000000000F6.quest_subtitle: "Netherite, a shell, a star"
+	quest.66000000000000F6.quest_desc: [
+		"Two shulker shells, two netherite ingots, and a nether star, in the same apricorn pattern. JEI."
+		"It is craftable. The PC stores the result. The healing machine is the station beside the PC."
+		"This is the top ball in the jar. JEI."
+	]
 }

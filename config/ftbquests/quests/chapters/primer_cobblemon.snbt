@@ -500,5 +500,157 @@
 			y: 12.0d
 		}
 
+		{
+			dependencies: ["6414040000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:great_ball"
+			}
+			id: "66000000000000F4"
+			rewards: [
+				{
+					id: "68000000000002A9"
+					item: {
+						count: 2
+						id: "cobblemon:blue_apricorn"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002AA"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F4"
+					item: { count: 1, id: "cobblemon:great_ball" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["66000000000000F4"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:ultra_ball"
+			}
+			id: "66000000000000F5"
+			rewards: [
+				{
+					id: "68000000000002AB"
+					item: {
+						count: 2
+						id: "cobblemon:yellow_apricorn"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002AC"
+					type: "xp"
+					xp: 32
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F5"
+					item: { count: 1, id: "cobblemon:ultra_ball" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["66000000000000F5"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:master_ball"
+			}
+			id: "66000000000000F6"
+			rewards: [
+				{
+					id: "68000000000002AD"
+					item: {
+						count: 1
+						id: "minecraft:shulker_shell"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000002AE"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000F6"
+					item: { count: 1, id: "cobblemon:master_ball" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+
 	]
 }

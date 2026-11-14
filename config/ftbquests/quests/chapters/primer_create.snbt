@@ -2792,5 +2792,598 @@
 			y: 69.0d
 		}
 
+		{
+			dependencies: [
+				"6600000000000047"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:track"
+			}
+			id: "66000000000000D2"
+			rewards: [
+				{
+					id: "6800000000000248"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000249"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000024A"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D2"
+					item: { count: 1, id: "create:track" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 70.5d
+		}
+		{
+			dependencies: ["64010A0000000001"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:chain_conveyor"
+			}
+			id: "66000000000000D3"
+			rewards: [
+				{
+					id: "680000000000024B"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000024C"
+					item: {
+						count: 1
+						id: "create:large_cogwheel"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000024D"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D3"
+					item: { count: 1, id: "create:chain_conveyor" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 72.0d
+		}
+		{
+			dependencies: ["64010A0000000001"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:schematicannon"
+			}
+			id: "66000000000000D4"
+			rewards: [
+				{
+					id: "680000000000024E"
+					item: {
+						count: 1
+						id: "minecraft:dispenser"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000024F"
+					item: {
+						count: 4
+						id: "minecraft:smooth_stone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000250"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D4"
+					item: { count: 1, id: "create:schematicannon" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 73.5d
+		}
+		{
+			dependencies: [
+				"6600000000000055"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:stock_link"
+			}
+			id: "66000000000000D5"
+			rewards: [
+				{
+					id: "6800000000000251"
+					item: {
+						count: 1
+						id: "minecraft:lightning_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000252"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000253"
+					type: "xp"
+					xp: 44
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D5"
+					item: { count: 1, id: "create:stock_link" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 75.0d
+		}
+		{
+			dependencies: [
+				"66000000000000D5"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:stock_ticker"
+			}
+			id: "66000000000000D6"
+			rewards: [
+				{
+					id: "6800000000000254"
+					item: {
+						count: 2
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000255"
+					item: {
+						count: 3
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000256"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D6"
+					item: { count: 1, id: "create:stock_ticker" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 76.5d
+		}
+		{
+			dependencies: [
+				"66000000000000D6"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:factory_gauge"
+			}
+			id: "66000000000000D7"
+			rewards: [
+				{
+					id: "6800000000000257"
+					item: {
+						count: 1
+						id: "create:stock_link"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000258"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D7"
+					item: { count: 1, id: "create:factory_gauge" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 78.0d
+		}
+		{
+			dependencies: [
+				"66000000000000D7"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:packager"
+			}
+			id: "66000000000000D8"
+			rewards: [
+				{
+					id: "6800000000000259"
+					item: {
+						count: 4
+						id: "create:cardboard"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000025A"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000025B"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D8"
+					item: { count: 1, id: "create:packager" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 79.5d
+		}
+		{
+			dependencies: [
+				"66000000000000D8"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:repackager"
+			}
+			id: "66000000000000D9"
+			rewards: [
+				{
+					id: "680000000000025C"
+					item: {
+						count: 2
+						id: "create:cardboard"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000025D"
+					item: {
+						count: 4
+						id: "minecraft:string"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000025E"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000D9"
+					item: { count: 1, id: "create:repackager" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 81.0d
+		}
+		{
+			dependencies: [
+				"66000000000000D9"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:package_frogport"
+			}
+			id: "66000000000000DA"
+			rewards: [
+				{
+					id: "680000000000025F"
+					item: {
+						count: 4
+						id: "minecraft:slime_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000260"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000261"
+					type: "xp"
+					xp: 48
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000DA"
+					item: { count: 1, id: "create:package_frogport" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 82.5d
+		}
+		{
+			dependencies: [
+				"66000000000000DA"
+				"7BE0F4512FE4936D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:redstone_requester"
+			}
+			id: "66000000000000DB"
+			rewards: [
+				{
+					id: "6800000000000262"
+					item: {
+						count: 8
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000263"
+					item: {
+						count: 6
+						id: "minecraft:seagrass"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000264"
+					type: "xp"
+					xp: 64
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000DB"
+					item: { count: 1, id: "create:redstone_requester" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 84.0d
+		}
+
 	]
 }
