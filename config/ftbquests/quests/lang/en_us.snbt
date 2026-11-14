@@ -1838,14 +1838,14 @@
 		"A Gold Machine is railway casing around a reinforced mechanism, so this waits for that chapter. The bearing is the mount the propeller spins on."
 		"Wool, sticks, and the opinion that the ground was a suggestion. Ponder the bearing. The Akashic Tome has no Aeronautics book."
 	]
-	chapter.6503000000000000.title: "Create Crafts & Additions"
+	chapter.6503000000000000.title: "Create Crafts \\& Additions"
 	chapter.6503000000000000.chapter_subtitle: [
 		"Wires, after a Zinc Machine"
 	]
 	quest.6403000000000000.title: "A Spool"
 	quest.6403000000000000.quest_subtitle: "The copper spool"
 	quest.6403000000000000.quest_desc: [
-		"Crafts & Additions has no guidebook. Ponder the copper spool (W). JEI lists the rest."
+		"Crafts \\& Additions has no guidebook. Ponder the copper spool (W). JEI lists the rest."
 		"Claim this quest for a copper spool. A spare is the crafting recipe JEI shows. This pack did not move the spool onto a machine."
 		"The spool in this version is the copper spool."
 	]
@@ -1854,7 +1854,7 @@
 	quest.6403010000000000.quest_desc: [
 		"Stonecut a Zinc Machine. One cut makes eight small connectors. The slimeball, copper rod, and alloy shapeless recipe is gone."
 		"A Zinc Machine is a conductive casing around an infernal mechanism, in the factory chapters. This quest waits."
-		"Ponder the connector when you have one. The Akashic Tome has no Crafts & Additions book."
+		"Ponder the connector when you have one. The Akashic Tome has no Crafts \\& Additions book."
 	]
 	quest.6403020000000000.title: "Large Connector"
 	quest.6403020000000000.quest_subtitle: "Four from the same cut"
@@ -1868,7 +1868,7 @@
 	quest.6403030000000000.quest_desc: [
 		"This pack removes the crafting-table Rolling Mill. Apply a Shaft to an Andesite Machine. JEI shows the item-application recipe. Ponder the mill."
 		"The mill rolls plates into wires. Copper wire and iron wire both come from that roll, not from a crafting grid."
-		"Crafts & Additions has no book in the Akashic Tome. Ponder the part (W). JEI is the recipe list, including the Zinc Machine cuts."
+		"Crafts \\& Additions has no book in the Akashic Tome. Ponder the part (W). JEI is the recipe list, including the Zinc Machine cuts."
 	]
 	quest.6403040000000000.title: "Barbed Wire"
 	quest.6403040000000000.quest_subtitle: "Three iron wires"
