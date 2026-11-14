@@ -1,4 +1,7 @@
 # Changelog
+## [0.0.93]
+- **Akashic Tome no longer saves a book that contains itself.** `kubejs/server_scripts/universal_tome.js` drops a self-reference in `tool_content` and strips nested `tool_content` from stored books, on the player tick after a morph and when a tome is dropped. A cyclic stack was overflowing `ToolContentComponent.hashCode` and the player/slot encoder. A flat crafted or prefilled tome is left as it is.
+
 ## [0.0.92]
 - FTB Quests: Mod Primers chapter group, one beginner chapter per major content mod. The first quest of each chapter gives that mod's guidebook, or the Ponder/JEI stand-in when the mod has no book. Starter-book configs stay off (Tide journal, Alex's Mobs giveBookOnStartup, Ars Nouveau spawnBook, NuclearCraft give_guidebook).
 - **ServerCore mob scaling is on.** `dynamic`, `activation-range`, and `breeding-cap` are enabled in `config/servercore/config.yml`. Dynamic keeps the existing target of 35 MSPT and the existing ranges (chunk-tick and view/simulation 10 down to 2, mobcap percent 100 down to 30). Breeding caps stay at 32 villagers and 32 same-type animals within 64 blocks. Activation range stays horizontal (`use-vertical-range` remains false). Its exclusion list now names item frames, armor stands, boats, rafts, minecarts, rideable mobs, Create contraptions and seats, Aeronautics/Offroad/Simulated movers, Immersive Aircraft, Create Big Cannons carriages and pitch contraptions, and Cobblemon pokemon, boats, bobbers, and NPCs. Players were already exempt in ServerCore 1.5.19
