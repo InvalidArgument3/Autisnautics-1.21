@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.0.95]
 - **FTB Quests: "Crafts & Additions" was showing as invalid formatting.** Quest text treats `&` as a format code, and `&` followed by a space throws `Invalid formatting! You must escape whitespace after & with \&!`. The chapter title and the spool, small-connector, and rolling-mill lines now store the ampersand as `\&`. The other primer and Factory Guide strings were checked for the same `&`, `{substitute}`, and JSON-looking pitfalls. Barbed wire's own text was already fine.
 
 ## [0.0.94]
