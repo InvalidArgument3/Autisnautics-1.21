@@ -334,5 +334,171 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["6414050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:campfire_pot_red"
+			}
+			id: "66000000000000B0"
+			rewards: [
+				{
+					id: "68000000000001E8"
+					item: {
+						count: 1
+						id: "minecraft:campfire"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001E9"
+					item: {
+						count: 2
+						id: "cobblemon:red_apricorn"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001EA"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000B0"
+					item: { count: 1, id: "cobblemon:campfire_pot_red" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["66000000000000B0"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:pasture"
+			}
+			id: "66000000000000B1"
+			rewards: [
+				{
+					id: "68000000000001EB"
+					item: {
+						count: 8
+						id: "minecraft:oak_fence"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001EC"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000B1"
+					item: { count: 1, id: "cobblemon:pasture" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["66000000000000B1"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "cobblemon:healing_machine"
+			}
+			id: "66000000000000B2"
+			rewards: [
+				{
+					id: "68000000000001ED"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001EE"
+					item: {
+						count: 4
+						id: "cobblemon:red_apricorn"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001EF"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000B2"
+					item: { count: 1, id: "cobblemon:healing_machine" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+
 	]
 }

@@ -326,5 +326,238 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["6415050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "alexsmobs:capsid"
+			}
+			id: "66000000000000A8"
+			rewards: [
+				{
+					id: "68000000000001D2"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001D3"
+					item: {
+						count: 3
+						id: "minecraft:prismarine_crystals"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001D4"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000A8"
+					item: { count: 1, id: "alexsmobs:capsid" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["66000000000000A8"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "alexsmobs:gustmaker"
+			}
+			id: "66000000000000A9"
+			rewards: [
+				{
+					id: "68000000000001D5"
+					item: {
+						count: 6
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001D6"
+					item: {
+						count: 1
+						id: "minecraft:phantom_membrane"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001D7"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000A9"
+					item: { count: 1, id: "alexsmobs:gustmaker" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["66000000000000A9"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "alexsmobs:void_worm_effigy"
+			}
+			id: "66000000000000AA"
+			rewards: [
+				{
+					id: "68000000000001D8"
+					item: {
+						count: 1
+						id: "minecraft:ender_eye"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001D9"
+					item: {
+						count: 2
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001DA"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000AA"
+					item: { count: 1, id: "alexsmobs:void_worm_effigy" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["66000000000000AA"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "alexsmobs:transmutation_table"
+			}
+			id: "66000000000000AB"
+			rewards: [
+				{
+					id: "68000000000001DB"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001DC"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000001DD"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67000000000000AB"
+					item: { count: 1, id: "alexsmobs:transmutation_table" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+
 	]
 }

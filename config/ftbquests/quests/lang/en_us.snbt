@@ -4045,4 +4045,494 @@
 		"Ponder with W. With the gyroscopic bearing and pearlescent levitite, this is the end of the airship line."
 		"The steam vent you already craft is the Brass Machine stonecut that vents the boiler."
 	]
+	quest.6600000000000070.title: "Coke Oven"
+	quest.6600000000000070.quest_subtitle: "Bricks, then the oven"
+	quest.6600000000000070.quest_desc: [
+		"Build the coke oven from the coke bricks you already craft. The Engineer's Manual, in the Akashic Tome, has the structure."
+		"Coal coke and the coke block do not craft into each other in this pack. Both directions of that craft are removed."
+		"JEI for the brick. The manual for the multiblock."
+	]
+	quest.6600000000000071.title: "Blast Furnace"
+	quest.6600000000000071.quest_subtitle: "Steel starts here"
+	quest.6600000000000071.quest_desc: [
+		"The blast furnace is the steel multiblock. Blast bricks, then the manual's structure."
+		"The Engineer's Manual is in the Akashic Tome. JEI shows the brick."
+		"Creosote from the coke oven is the fluid this age runs on."
+	]
+	quest.6600000000000072.title: "Treated Wood"
+	quest.6600000000000072.quest_subtitle: "Creosote into the plank"
+	quest.6600000000000072.quest_desc: [
+		"Treated wood is planks soaked in creosote. JEI."
+		"The coke oven is where the creosote comes from. The manual's treated-wood page matches."
+		"JEI."
+	]
+	quest.6600000000000073.title: "Metal Press"
+	quest.6600000000000073.quest_subtitle: "Wires are pressed"
+	quest.6600000000000073.quest_desc: [
+		"The metal press makes plates and wires. JEI. Create sawing of Immersive Engineering wires is removed."
+		"The manual's press page lists the molds. A wire mold is the one the removed saw used to replace."
+		"JEI."
+	]
+	quest.6600000000000074.title: "LV Capacitor"
+	quest.6600000000000074.quest_subtitle: "The first battery"
+	quest.6600000000000074.quest_desc: [
+		"The LV capacitor is the first Immersive Engineering battery. JEI."
+		"The kinetic dynamo, water wheel, windmill, and thermoelectric generator are removed. They are not a power source in this pack."
+		"The Engineer's Manual. JEI."
+	]
+	quest.6600000000000075.title: "LV Coil"
+	quest.6600000000000075.quest_subtitle: "The first connector's heart"
+	quest.6600000000000075.quest_desc: [
+		"LV coils are the winding in the low-voltage connectors. JEI."
+		"The manual's wiring chapter is the distance and the loss."
+		"JEI. The wirecutter you already have is the tool that cuts the wire."
+	]
+	quest.6600000000000076.title: "Light Engineering"
+	quest.6600000000000076.quest_subtitle: "The stage 3 block"
+	quest.6600000000000076.quest_desc: [
+		"Light engineering is the Factory Guide's stage 3 engineering step. That quest is the gate."
+		"The Engineer's Manual shows where the block sits in machines. JEI shows the craft."
+		"Heavy engineering, the arc furnace, and the excavator come after this block."
+	]
+	quest.6600000000000077.title: "Heavy Engineering"
+	quest.6600000000000077.quest_subtitle: "The thick block"
+	quest.6600000000000077.quest_desc: [
+		"Heavy engineering. JEI. It waits on light engineering."
+		"The manual's machine chapters use this as the frame of the big multiblocks."
+		"JEI."
+	]
+	quest.6600000000000078.title: "MV Capacitor"
+	quest.6600000000000078.quest_subtitle: "The middle battery"
+	quest.6600000000000078.quest_desc: [
+		"The MV capacitor. JEI. It waits on light engineering."
+		"LV was the first battery. MV is the one the heavier machines expect."
+		"The manual. JEI."
+	]
+	quest.6600000000000079.title: "HV Capacitor"
+	quest.6600000000000079.quest_subtitle: "The last battery"
+	quest.6600000000000079.quest_desc: [
+		"The HV capacitor. JEI."
+		"This is the top Immersive Engineering battery. The removed thermoelectric generator is not a substitute."
+		"The manual. JEI."
+	]
+	quest.660000000000007A.title: "Diesel Generator"
+	quest.660000000000007A.quest_subtitle: "FE from diesel"
+	quest.660000000000007A.quest_desc: [
+		"The diesel generator multiblock. The manual has the structure. JEI has the blocks."
+		"Immersive Engineering's biodiesel refinery recipes are removed. Fuel this from the petroleum line, not from that refinery."
+		"Light engineering is the gate."
+	]
+	quest.660000000000007B.title: "Arc Furnace"
+	quest.660000000000007B.quest_subtitle: "The last furnace"
+	quest.660000000000007B.quest_desc: [
+		"The arc furnace is the end of Immersive Engineering's smelting. The manual has the multiblock."
+		"It waits on light engineering. JEI lists the blocks."
+		"The Engineer's Manual is in the Akashic Tome."
+	]
+	quest.660000000000007C.title: "Excavator"
+	quest.660000000000007C.quest_subtitle: "The last machine"
+	quest.660000000000007C.quest_desc: [
+		"The excavator and its bucket wheel are the mining multiblock. The manual has the structure."
+		"It waits on light engineering. JEI lists the pieces."
+		"With the arc furnace, this is the end of the Immersive Engineering line."
+	]
+	quest.660000000000007D.title: "Derrick"
+	quest.660000000000007D.quest_subtitle: "The tower over the well"
+	quest.660000000000007D.quest_desc: [
+		"The derrick is the survey tower. JEI."
+		"You already have the oil can, the projector, and the lubricator. This is the well."
+		"The portable gas generator is removed. Do not craft one."
+	]
+	quest.660000000000007E.title: "Pumpjack"
+	quest.660000000000007E.quest_subtitle: "The well that pumps"
+	quest.660000000000007E.quest_desc: [
+		"The pumpjack. JEI. The Engineer's Manual and the petroleum pages cover the well."
+		"It waits on light engineering, the same gate as the heavy Immersive Engineering machines."
+		"JEI."
+	]
+	quest.660000000000007F.title: "Oil Tank"
+	quest.660000000000007F.quest_subtitle: "Hold the crude"
+	quest.660000000000007F.quest_desc: [
+		"The oil tank stores what the pumpjack lifts. JEI."
+		"JEI. It is a tank, not a generator."
+		"The gas generator stays removed."
+	]
+	quest.6600000000000080.title: "Flarestack"
+	quest.6600000000000080.quest_subtitle: "Burn the gas"
+	quest.6600000000000080.quest_desc: [
+		"The flarestack burns excess gas. JEI."
+		"It is the safety valve on the well, not a power plant."
+		"JEI."
+	]
+	quest.6600000000000081.title: "Coker Unit"
+	quest.6600000000000081.quest_subtitle: "The heavy fraction"
+	quest.6600000000000081.quest_desc: [
+		"The coker unit. JEI."
+		"It is the heavy end of the barrel. The distillation tower is the split."
+		"JEI."
+	]
+	quest.6600000000000082.title: "Distillation Tower"
+	quest.6600000000000082.quest_subtitle: "The last petroleum machine"
+	quest.6600000000000082.quest_desc: [
+		"The distillation tower is the end of Immersive Petroleum. The manual has the multiblock. JEI has the blocks."
+		"It waits on light engineering. Biodiesel refining in Immersive Engineering is removed, so this tower is the split you actually run."
+		"The asphalt you already craft is a side product, not the tower."
+	]
+	quest.6600000000000083.title: "Fluix Casing"
+	quest.6600000000000083.quest_subtitle: "Two from a casing and enriched iron"
+	quest.6600000000000083.quest_desc: [
+		"Shapeless: quartz-enriched iron and a machine casing make two fluix casings. JEI."
+		"You already craft both ingredients. The silicon crafting recipe is removed. Do not look for a silicon grid craft."
+		"JEI. The controller is the next block, and it is gated."
+	]
+	quest.6600000000000084.title: "Controller"
+	quest.6600000000000084.quest_subtitle: "Casing around a calculation mechanism"
+	quest.6600000000000084.quest_desc: [
+		"The controller is a donut: fluix casings around a calculation mechanism. The crafting grid controller is removed."
+		"The Factory Guide controller quest is the gate. This primer does not open a second, earlier route."
+		"JEI. Processors are not part of this craft. They come from the wafer line."
+	]
+	quest.6600000000000085.title: "Construction Core"
+	quest.6600000000000085.quest_subtitle: "Apply the controller"
+	quest.6600000000000085.quest_desc: [
+		"A fluix machine: item-apply the controller onto glowstone dust. Four cores."
+		"JEI lists the application. The controller quest is the gate you already passed."
+		"JEI."
+	]
+	quest.6600000000000086.title: "Destruction Core"
+	quest.6600000000000086.quest_subtitle: "The other core"
+	quest.6600000000000086.quest_desc: [
+		"Item-apply the controller onto quartz. Four cores."
+		"JEI. Construction and destruction cores are the pair exporters and importers use."
+		"JEI."
+	]
+	quest.6600000000000087.title: "Pattern"
+	quest.6600000000000087.quest_subtitle: "A mechanism in the middle"
+	quest.6600000000000087.quest_desc: [
+		"The pattern craft wants a calculation mechanism, glass, redstone, and quartz-enriched iron. The old pattern recipe is removed."
+		"JEI. The Factory Guide controller quest is the gate, because that is the calculation-mechanism step."
+		"JEI."
+	]
+	quest.6600000000000088.title: "Grid"
+	quest.6600000000000088.quest_subtitle: "Improved processor, then the controller"
+	quest.6600000000000088.quest_desc: [
+		"A fluix machine: item-apply the controller onto an improved processor."
+		"Improved processors come from the wafer line, not the crafting grid. The Factory Guide processor quest is the gate."
+		"JEI. Do not expect a processor as a reward."
+	]
+	quest.6600000000000089.title: "Wireless Transmitter"
+	quest.6600000000000089.quest_subtitle: "The controller and an ender pearl"
+	quest.6600000000000089.quest_desc: [
+		"A fluix machine: item-apply the controller onto an ender pearl."
+		"JEI. This is the wireless face of the network."
+		"The controller quest is the gate."
+	]
+	quest.660000000000008A.title: "Autocrafter"
+	quest.660000000000008A.quest_subtitle: "Patterns, on the network"
+	quest.660000000000008A.quest_desc: [
+		"The autocrafter. JEI. It wants the patterns you just crafted."
+		"It waits on the processor quest so it does not show up before the wafer line."
+		"JEI."
+	]
+	quest.660000000000008B.title: "Disk Drive"
+	quest.660000000000008B.quest_subtitle: "The last storage machine"
+	quest.660000000000008B.quest_desc: [
+		"A fluix machine: item-apply the controller onto an advanced processor."
+		"Advanced processors are the wafer line. The Factory Guide processor quest is the gate."
+		"This is the end of Refined Storage. The 1k storage part also wants a calculation mechanism, which the controller quest already gated."
+	]
+	quest.660000000000008C.title: "Cobblestone Generator"
+	quest.660000000000008C.quest_subtitle: "A Zinc Machine"
+	quest.660000000000008C.quest_desc: [
+		"Item application: a Zinc Machine plus a piston. The compact and dense generators are removed."
+		"The Factory Guide zinc-machine quest is the gate. JEI."
+		"The basic voltaic pile is removed. It is worse than a Create accumulator, so it is not a step."
+	]
+	quest.660000000000008D.title: "Decay Generator"
+	quest.660000000000008D.quest_subtitle: "A small, slow current"
+	quest.660000000000008D.quest_desc: [
+		"The decay generator is left in. JEI. It wants uncommon materials and the output is small."
+		"The NuclearCraft guide is in the Akashic Tome."
+		"JEI. It is not a fission reactor."
+	]
+	quest.660000000000008E.title: "Fission Casing"
+	quest.660000000000008E.quest_subtitle: "The reactor's wall"
+	quest.660000000000008E.quest_desc: [
+		"Fission reactor casing. JEI. The guide's fission chapter is the structure."
+		"Light engineering is the gate used here. The reactor is not an andesite-age craft."
+		"The guide is in the Akashic Tome."
+	]
+	quest.660000000000008F.title: "Solid Fuel Fission Reactor"
+	quest.660000000000008F.quest_subtitle: "The reactor"
+	quest.660000000000008F.quest_desc: [
+		"The solid-fuel fission controller is the reactor. The guide has the multiblock. JEI has the blocks."
+		"It waits on light engineering. Radaway crafting is not the stock fluid-infuser loop in this pack."
+		"The guide is in the Akashic Tome."
+	]
+	quest.6600000000000090.title: "Turbine"
+	quest.6600000000000090.quest_subtitle: "The reactor's dynamo"
+	quest.6600000000000090.quest_desc: [
+		"The turbine controller is the machine that turns the reactor's heat into power. The guide has the multiblock."
+		"JEI. It waits on light engineering, with the reactor."
+		"This is the end of the NuclearCraft power line. The voltaic pile is not an earlier shortcut."
+	]
+	quest.6600000000000091.title: "Seared Heater"
+	quest.6600000000000091.quest_subtitle: "Heat under the tank"
+	quest.6600000000000091.quest_desc: [
+		"The seared heater. JEI. Materials and You, in the Akashic Tome, is the book."
+		"You already have grout, seared brick, the part builder, the tinker station, and the faucet."
+		"JEI."
+	]
+	quest.6600000000000092.title: "Seared Melter"
+	quest.6600000000000092.quest_subtitle: "The first melt"
+	quest.6600000000000092.quest_desc: [
+		"The seared melter. JEI."
+		"The faucet you already craft pours out of this. The book shows the pour."
+		"JEI."
+	]
+	quest.6600000000000093.title: "Smeltery Controller"
+	quest.6600000000000093.quest_subtitle: "The multiblock's face"
+	quest.6600000000000093.quest_desc: [
+		"The smeltery controller is the face of the smeltery. JEI. The book has the structure."
+		"Heater, melter, faucet, and controller are the foundry."
+		"Materials and You is in the Akashic Tome."
+	]
+	quest.6600000000000094.title: "Foundry Controller"
+	quest.6600000000000094.quest_subtitle: "The last foundry block"
+	quest.6600000000000094.quest_desc: [
+		"The foundry controller. JEI."
+		"This is the end of the Modern Foundry line past the smeltery. The book covers the tool station you already built."
+		"JEI. Puny Smelting, also in the tome, is the early book, not this controller."
+	]
+	quest.6600000000000095.title: "Magebloom"
+	quest.6600000000000095.quest_subtitle: "The source crop"
+	quest.6600000000000095.quest_desc: [
+		"Magebloom is the crop. JEI. The Worn Notebook, in the Akashic Tome, has the farming page."
+		"You already have archwood, the imbuement chamber, source gems, and the novice spell book."
+		"JEI."
+	]
+	quest.6600000000000096.title: "Source Jar"
+	quest.6600000000000096.quest_subtitle: "Hold the source"
+	quest.6600000000000096.quest_desc: [
+		"The source jar. JEI. The notebook's source chapter."
+		"The imbuement chamber you already have is the early machine. The jar is storage."
+		"JEI."
+	]
+	quest.6600000000000097.title: "Source Relay"
+	quest.6600000000000097.quest_subtitle: "Move source along"
+	quest.6600000000000097.quest_desc: [
+		"The relay moves source between jars. JEI."
+		"The notebook shows the range. JEI shows the craft."
+		"JEI."
+	]
+	quest.6600000000000098.title: "Enchanting Apparatus"
+	quest.6600000000000098.quest_subtitle: "The ritual table"
+	quest.6600000000000098.quest_desc: [
+		"The enchanting apparatus is the ritual crafting station. JEI. The notebook has the layout."
+		"This is the complex craft station of Ars Nouveau."
+		"The Worn Notebook is in the Akashic Tome."
+	]
+	quest.6600000000000099.title: "Mob Jar"
+	quest.6600000000000099.quest_subtitle: "A creature, contained"
+	quest.6600000000000099.quest_desc: [
+		"The mob jar. JEI."
+		"The notebook's jar page is the use. It is a side path off the apparatus."
+		"JEI."
+	]
+	quest.660000000000009A.title: "Spell Turret"
+	quest.660000000000009A.quest_subtitle: "The last spell machine"
+	quest.660000000000009A.quest_desc: [
+		"The spell turret casts a spell on its own. JEI. The notebook has the turret page."
+		"It is the end of the Ars line: the apparatus writes the spell, the turret repeats it."
+		"The Worn Notebook is in the Akashic Tome."
+	]
+	quest.660000000000009B.title: "Mithril Ore"
+	quest.660000000000009B.quest_subtitle: "The metal under the spells"
+	quest.660000000000009B.quest_desc: [
+		"Mithril ore. The Iron's guidebook, in the Akashic Tome, has the metal."
+		"You already have arcane essence, the inscription table, and a spell book."
+		"JEI for the ingot once the ore is in hand."
+	]
+	quest.660000000000009C.title: "Pedestal"
+	quest.660000000000009C.quest_subtitle: "A place to set a book"
+	quest.660000000000009C.quest_desc: [
+		"The pedestal. JEI."
+		"The guidebook shows it under the inscription setups."
+		"JEI."
+	]
+	quest.660000000000009D.title: "Scroll Forge"
+	quest.660000000000009D.quest_subtitle: "Inks and paper"
+	quest.660000000000009D.quest_desc: [
+		"The scroll forge. JEI. The guidebook's scroll chapter."
+		"The inscription table you already have writes the spell. The forge makes the scroll."
+		"JEI."
+	]
+	quest.660000000000009E.title: "Arcane Anvil"
+	quest.660000000000009E.quest_subtitle: "The last smithing"
+	quest.660000000000009E.quest_desc: [
+		"The arcane anvil is the end of the Iron's Spells line. JEI."
+		"The guidebook has the upgrades. Mithril is the metal. The anvil is the station."
+		"The guidebook is in the Akashic Tome."
+	]
+	quest.660000000000009F.title: "Digestion Vat"
+	quest.660000000000009F.quest_subtitle: "The next vessel"
+	quest.660000000000009F.quest_desc: [
+		"The digestion vat. JEI. The Hermetica, in the Akashic Tome, has the vessel order."
+		"You already have the brazier, the calcination oven, the distiller, sal ammoniac, and mercury."
+		"JEI."
+	]
+	quest.66000000000000A0.title: "Fermentation Vat"
+	quest.66000000000000A0.quest_subtitle: "The slow vessel"
+	quest.66000000000000A0.quest_desc: [
+		"The fermentation vat. JEI."
+		"The Hermetica's fermentation page. It sits after digestion."
+		"JEI."
+	]
+	quest.66000000000000A1.title: "Liquefaction Cauldron"
+	quest.66000000000000A1.quest_subtitle: "Melt the work"
+	quest.66000000000000A1.quest_desc: [
+		"The liquefaction cauldron. JEI."
+		"The Hermetica. It is the melt after the vats."
+		"JEI."
+	]
+	quest.66000000000000A2.title: "Reformation Pedestal"
+	quest.66000000000000A2.quest_subtitle: "The three pedestals"
+	quest.66000000000000A2.quest_desc: [
+		"The reformation target pedestal. JEI. Source and result pedestals match it."
+		"The Hermetica's reformation chapter is the triangle."
+		"JEI."
+	]
+	quest.66000000000000A3.title: "Incubator"
+	quest.66000000000000A3.quest_subtitle: "The last vessel"
+	quest.66000000000000A3.quest_desc: [
+		"The incubator is the end of the Theurgy line. JEI. The Hermetica has the vessels that sit on it."
+		"Sal ammoniac from the earlier quest is also what Stage 4 spouts onto an annealed wafer. Making the crystal does not skip that wafer."
+		"The Hermetica is in the Akashic Tome."
+	]
+	quest.66000000000000A4.title: "Cave Illuminator"
+	quest.66000000000000A4.quest_subtitle: "A light that follows you"
+	quest.66000000000000A4.quest_desc: [
+		"The cave illuminator. JEI. The Astral Tome, in the Akashic Tome, has the light page."
+		"You already have aquamarine, a rock crystal, parchment, a lens, starmetal, and the astrolabe."
+		"JEI."
+	]
+	quest.66000000000000A5.title: "Starlight Infuser"
+	quest.66000000000000A5.quest_subtitle: "Soak an item in the night"
+	quest.66000000000000A5.quest_desc: [
+		"The infuser. JEI. The tome's infusion page is the layout."
+		"It wants a clear view of the sky. The tome says so."
+		"JEI."
+	]
+	quest.66000000000000A6.title: "Attunement Altar"
+	quest.66000000000000A6.quest_subtitle: "The constellation table"
+	quest.66000000000000A6.quest_desc: [
+		"The attunement altar. JEI. The tome's attunement chapter is the ritual."
+		"This is the complex crafting station of Astral Sorcery."
+		"The Astral Tome is in the Akashic Tome."
+	]
+	quest.66000000000000A7.title: "Celestial Gateway"
+	quest.66000000000000A7.quest_subtitle: "The last altar"
+	quest.66000000000000A7.quest_desc: [
+		"The celestial gateway links two gateways. JEI. The tome has the structure."
+		"It is a paired teleport, not a new dimension. The rocket line is still the Factory Guide."
+		"This is the end of the Astral Sorcery line."
+	]
+	quest.66000000000000A8.title: "Capsid"
+	quest.66000000000000A8.quest_subtitle: "A shell from the end"
+	quest.66000000000000A8.quest_desc: [
+		"The capsid. JEI. The Animal Dictionary, in the Akashic Tome, has the creature."
+		"You already have the dictionary, the feeder, fish oil, and the falconry glove."
+		"JEI."
+	]
+	quest.66000000000000A9.title: "Gustmaker"
+	quest.66000000000000A9.quest_subtitle: "Wind in a block"
+	quest.66000000000000A9.quest_desc: [
+		"The gustmaker. JEI."
+		"The dictionary's page for the creature that drops the part is the source."
+		"JEI."
+	]
+	quest.66000000000000AA.title: "Void Worm Effigy"
+	quest.66000000000000AA.quest_subtitle: "The worm, remembered"
+	quest.66000000000000AA.quest_desc: [
+		"The void worm effigy. JEI. The dictionary has the worm."
+		"It is a late craft. The transmutation table is the station."
+		"JEI."
+	]
+	quest.66000000000000AB.title: "Transmutation Table"
+	quest.66000000000000AB.quest_subtitle: "The last altar"
+	quest.66000000000000AB.quest_desc: [
+		"The transmutation table is the end of the Alex's Mobs craft line. JEI."
+		"The Animal Dictionary is the book, and it is in the Akashic Tome."
+		"JEI. The table is the complex machine. The effigy is the trophy next to it."
+	]
+	quest.66000000000000AC.title: "Amber Monolith"
+	quest.66000000000000AC.quest_subtitle: "The primordial cave"
+	quest.66000000000000AC.quest_desc: [
+		"The amber monolith. JEI. The Cave Compendium, in the Akashic Tome, has the primordial chapter."
+		"You already have the compendium, the tablet, the spear, and the club."
+		"JEI."
+	]
+	quest.66000000000000AD.title: "Azure Neodymium"
+	quest.66000000000000AD.quest_subtitle: "The magnetic cave"
+	quest.66000000000000AD.quest_desc: [
+		"The azure neodymium node. JEI. The compendium's magnetic chapter."
+		"Scarlet is the other pole. The node is the ore block."
+		"JEI."
+	]
+	quest.66000000000000AE.title: "Abyssal Altar"
+	quest.66000000000000AE.quest_subtitle: "The ocean cave"
+	quest.66000000000000AE.quest_desc: [
+		"The abyssal altar. JEI. The compendium's abyss chapter."
+		"It is the deep craft of that cave."
+		"JEI."
+	]
+	quest.66000000000000AF.title: "Nuclear Furnace"
+	quest.66000000000000AF.quest_subtitle: "The last cave machine"
+	quest.66000000000000AF.quest_desc: [
+		"The nuclear furnace is the complex machine of the toxic caves. JEI."
+		"The Cave Compendium has the chapter. Gunpowder-from-sulfur from this mod is removed. The furnace is not that recipe."
+		"This is the end of the Alex's Caves craft line."
+	]
+	quest.66000000000000B0.title: "Campfire Pot"
+	quest.66000000000000B0.quest_subtitle: "Cook at the camp"
+	quest.66000000000000B0.quest_desc: [
+		"A campfire pot. JEI. The pokedex you already claimed is the index."
+		"Apricorns, the apricorn wood, the poke ball, and the PC are the earlier quests."
+		"JEI. There is no Cobblemon guidebook in the tome."
+	]
+	quest.66000000000000B1.title: "Pasture"
+	quest.66000000000000B1.quest_subtitle: "A field for the team"
+	quest.66000000000000B1.quest_desc: [
+		"The pasture block. JEI."
+		"It holds a party outside the PC you already craft."
+		"JEI."
+	]
+	quest.66000000000000B2.title: "Healing Machine"
+	quest.66000000000000B2.quest_subtitle: "The last station"
+	quest.66000000000000B2.quest_desc: [
+		"The healing machine is the end of the Cobblemon craft line. JEI."
+		"The PC stores. The pasture fields. This one restores."
+		"JEI. A master ball is not named in this pack's files, so it is not a quest."
+	]
+	quest.66000000000000B3.title: "Utherium Block"
+	quest.66000000000000B3.quest_subtitle: "The first deep metal"
+	quest.66000000000000B3.quest_desc: [
+		"Utherium, stored as a block. JEI. The ore is in depthrock."
+		"The catalyst quest at the start of this chapter is the door. These metals are on the other side of it."
+		"JEI. The quest does not hand you another catalyst."
+	]
+	quest.66000000000000B4.title: "Froststeel Block"
+	quest.66000000000000B4.quest_subtitle: "The cold metal"
+	quest.66000000000000B4.quest_desc: [
+		"Froststeel, stored as a block. JEI."
+		"It is the middle metal, after cloggrum and utherium."
+		"JEI."
+	]
+	quest.66000000000000B5.title: "Forgotten Block"
+	quest.66000000000000B5.quest_subtitle: "The last metal"
+	quest.66000000000000B5.quest_desc: [
+		"Forgotten metal, stored as a block. JEI."
+		"This is the end of the Undergarden metal line. The catalyst remains the dimension door from the first quest."
+		"JEI."
+	]
 }

@@ -356,5 +356,293 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: [
+				"6408050000000000"
+				"047FD4E54147D8F7"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "nuclearcraftneohaul:cobblestone_generator"
+			}
+			id: "660000000000008C"
+			rewards: [
+				{
+					id: "6800000000000186"
+					item: {
+						count: 1
+						id: "minecraft:piston"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000187"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000008C"
+					item: { count: 1, id: "nuclearcraftneohaul:cobblestone_generator" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["660000000000008C"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "nuclearcraftneohaul:decay_generator"
+			}
+			id: "660000000000008D"
+			rewards: [
+				{
+					id: "6800000000000188"
+					item: {
+						count: 8
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000189"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000018A"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000008D"
+					item: { count: 1, id: "nuclearcraftneohaul:decay_generator" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"660000000000008D"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "nuclearcraftneohaul:fission_reactor_casing"
+			}
+			id: "660000000000008E"
+			rewards: [
+				{
+					id: "680000000000018B"
+					item: {
+						count: 4
+						id: "immersiveengineering:plate_lead"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000018C"
+					type: "xp"
+					xp: 44
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000008E"
+					item: { count: 1, id: "nuclearcraftneohaul:fission_reactor_casing" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"660000000000008E"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "nuclearcraftneohaul:solid_fuel_fission_controller"
+			}
+			id: "660000000000008F"
+			rewards: [
+				{
+					id: "680000000000018D"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000018E"
+					item: {
+						count: 2
+						id: "immersiveengineering:plate_lead"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000018F"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000008F"
+					item: { count: 1, id: "nuclearcraftneohaul:solid_fuel_fission_controller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"660000000000008F"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "nuclearcraftneohaul:turbine_controller"
+			}
+			id: "6600000000000090"
+			rewards: [
+				{
+					id: "6800000000000190"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000191"
+					item: {
+						count: 4
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000192"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000090"
+					item: { count: 1, id: "nuclearcraftneohaul:turbine_controller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+
 	]
 }

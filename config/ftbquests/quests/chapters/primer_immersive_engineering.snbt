@@ -350,5 +350,776 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["6406050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:coke_oven"
+			}
+			id: "6600000000000070"
+			rewards: [
+				{
+					id: "6800000000000132"
+					item: {
+						count: 8
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000133"
+					item: {
+						count: 6
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000134"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000070"
+					item: { count: 1, id: "immersiveengineering:coke_oven" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6600000000000070"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:blast_furnace"
+			}
+			id: "6600000000000071"
+			rewards: [
+				{
+					id: "6800000000000135"
+					item: {
+						count: 6
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000136"
+					item: {
+						count: 4
+						id: "minecraft:clay"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000137"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000071"
+					item: { count: 1, id: "immersiveengineering:blast_furnace" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["6600000000000071"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:treated_wood_horizontal"
+			}
+			id: "6600000000000072"
+			rewards: [
+				{
+					id: "6800000000000138"
+					item: {
+						count: 8
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000139"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000013A"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000072"
+					item: { count: 1, id: "immersiveengineering:treated_wood_horizontal" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6600000000000072"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:metal_press"
+			}
+			id: "6600000000000073"
+			rewards: [
+				{
+					id: "680000000000013B"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000013C"
+					item: {
+						count: 1
+						id: "minecraft:piston"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000013D"
+					type: "xp"
+					xp: 28
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000073"
+					item: { count: 1, id: "immersiveengineering:metal_press" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["6600000000000073"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:capacitor_lv"
+			}
+			id: "6600000000000074"
+			rewards: [
+				{
+					id: "680000000000013E"
+					item: {
+						count: 6
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000013F"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000140"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000074"
+					item: { count: 1, id: "immersiveengineering:capacitor_lv" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6600000000000074"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:coil_lv"
+			}
+			id: "6600000000000075"
+			rewards: [
+				{
+					id: "6800000000000141"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000142"
+					item: {
+						count: 4
+						id: "minecraft:brick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000143"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000075"
+					item: { count: 1, id: "immersiveengineering:coil_lv" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: [
+				"6600000000000075"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:light_engineering"
+			}
+			id: "6600000000000076"
+			rewards: [
+				{
+					id: "6800000000000144"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000145"
+					item: {
+						count: 1
+						id: "immersiveengineering:component_iron"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000146"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000076"
+					item: { count: 1, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"6600000000000076"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:heavy_engineering"
+			}
+			id: "6600000000000077"
+			rewards: [
+				{
+					id: "6800000000000147"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000148"
+					item: {
+						count: 2
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000149"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000077"
+					item: { count: 1, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: [
+				"6600000000000077"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:capacitor_mv"
+			}
+			id: "6600000000000078"
+			rewards: [
+				{
+					id: "680000000000014A"
+					item: {
+						count: 4
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000014B"
+					item: {
+						count: 6
+						id: "minecraft:seagrass"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000014C"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000078"
+					item: { count: 1, id: "immersiveengineering:capacitor_mv" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: [
+				"6600000000000078"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:capacitor_hv"
+			}
+			id: "6600000000000079"
+			rewards: [
+				{
+					id: "680000000000014D"
+					item: {
+						count: 6
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000014E"
+					item: {
+						count: 1
+						id: "minecraft:redstone_block"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000014F"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000079"
+					item: { count: 1, id: "immersiveengineering:capacitor_hv" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+		{
+			dependencies: [
+				"6600000000000079"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:diesel_generator"
+			}
+			id: "660000000000007A"
+			rewards: [
+				{
+					id: "6800000000000150"
+					item: {
+						count: 4
+						id: "minecraft:blaze_powder"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000151"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000152"
+					type: "xp"
+					xp: 48
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000007A"
+					item: { count: 1, id: "immersiveengineering:diesel_generator" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"660000000000007A"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:arc_furnace"
+			}
+			id: "660000000000007B"
+			rewards: [
+				{
+					id: "6800000000000153"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000154"
+					item: {
+						count: 8
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000155"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000007B"
+					item: { count: 1, id: "immersiveengineering:arc_furnace" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 25.5d
+		}
+		{
+			dependencies: [
+				"6600000000000077"
+				"3A63A48662F352CB"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "immersiveengineering:excavator"
+			}
+			id: "660000000000007C"
+			rewards: [
+				{
+					id: "6800000000000156"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000157"
+					item: {
+						count: 4
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000158"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000007C"
+					item: { count: 1, id: "immersiveengineering:excavator" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 27.0d
+		}
+
 	]
 }
