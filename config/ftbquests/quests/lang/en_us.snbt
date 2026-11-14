@@ -82,9 +82,6 @@
 	]
 	quest.016864AD0C9247B9.quest_subtitle: "{cabin.quest.016864AD0C9247B9.subtitle}"
 	quest.016864AD0C9247B9.title: "Redstone Link"
-	quest.01B0A6236A5073D1.quest_desc: ["{cabin.quest.01B0A6236A5073D1.description1}"]
-	quest.01B0A6236A5073D1.quest_subtitle: "{cabin.quest.01B0A6236A5073D1.subtitle}"
-	quest.01B0A6236A5073D1.title: "Wind Charge"
 	quest.01BE1A7FCE79C63D.quest_desc: [
 		"{cabin.quest.01BE1A7FCE79C63D.description1}"
 		""
@@ -198,13 +195,6 @@
 	quest.09EB29F838620371.title: "Empty Schematic"
 	quest.0A295CF925D97618.title: "Purge the Undead"
 	quest.0AD8C8E5491278E1.title: "Lead Casing"
-	quest.0AE7FAEBD5F86D9C.quest_desc: [
-		"{cabin.quest.0AE7FAEBD5F86D9C.description1}"
-		""
-		"{cabin.quest.0AE7FAEBD5F86D9C.description2}"
-	]
-	quest.0AE7FAEBD5F86D9C.quest_subtitle: "{cabin.quest.0AE7FAEBD5F86D9C.subtitle}"
-	quest.0AE7FAEBD5F86D9C.title: "Breeze Rod"
 	quest.0AF5F19F5D9FB5C9.quest_desc: [
 		"{cabin.quest.0AF5F19F5D9FB5C9.description1}"
 		""
@@ -945,9 +935,6 @@
 		"{cabin.quest.472FB03D0E5A38D6.description3}"
 	]
 	quest.472FB03D0E5A38D6.title: "Redstone Link"
-	quest.4732465116D723EE.quest_desc: ["{cabin.quest.4732465116D723EE.description1}"]
-	quest.4732465116D723EE.quest_subtitle: "{cabin.quest.4732465116D723EE.subtitle}"
-	quest.4732465116D723EE.title: "Snowball"
 	quest.4761DAE59CDD93AF.quest_desc: [
 		"{cabin.quest.4761DAE59CDD93AF.description1}"
 		""
@@ -977,9 +964,6 @@
 	quest.4B19B6EAD511378D.quest_desc: ["{cabin.quest.4B19B6EAD511378D.description1}"]
 	quest.4B19B6EAD511378D.quest_subtitle: "{cabin.quest.4B19B6EAD511378D.subtitle}"
 	quest.4B19B6EAD511378D.title: "Silicon"
-	quest.4B34B52092BA32BE.quest_desc: ["{cabin.quest.4B34B52092BA32BE.description1}"]
-	quest.4B34B52092BA32BE.quest_subtitle: "{cabin.quest.4B34B52092BA32BE.subtitle}"
-	quest.4B34B52092BA32BE.title: "Snowball"
 	quest.4B80A801A5BE4A01.quest_desc: [
 		"{cabin.quest.4B80A801A5BE4A01.description1}"
 		""
@@ -1341,9 +1325,6 @@
 	quest.6CBA3D97CAD5DB63.title: "Inductive Mechanism"
 	quest.6CC8D9848625CC34.quest_desc: ["The path you've chosen is not for the faint of heart. If you're a bad enough dude to handle the Seven Curses, then put on the ring..."]
 	quest.6CC8D9848625CC34.title: "One Ring to Rule Them All"
-	quest.6D1519B746E032FB.quest_desc: ["The Entropy Manipulator was part of AE2, which this pack no longer has. Tick the checkmark to continue."]
-	quest.6D1519B746E032FB.quest_subtitle: "{cabin.quest.6D1519B746E032FB.subtitle}"
-	quest.6D1519B746E032FB.title: "Entropy Charger (removed)"
 	quest.6D26DAB7D0FF6E90.quest_desc: [
 		"{cabin.quest.6D26DAB7D0FF6E90.description1}"
 		""
@@ -1600,7 +1581,6 @@
 	task.17286271B0667AAA.title: "{cabin.task.0842082756DA73FE}"
 	task.175767726FBCAA8D.title: "{cabin.task.0842082756DA73FE}"
 	task.17B93B8634BC1C2D.title: "{cabin.task.17B93B8634BC1C2D}"
-	task.193D8F8FEC7F864B.title: "{cabin.task.0842082756DA73FE}"
 	task.1A63E51B0CF5C6DD.title: "{cabin.task.1A63E51B0CF5C6DD}"
 	task.1B0AEACBE2CEFD7A.title: "Khajiit"
 	task.1C7E4FFBCE0590D4.title: "[Check Em]"
@@ -1612,7 +1592,6 @@
 	task.21545C0F55D9D8C8.title: "{cabin.task.0842082756DA73FE}"
 	task.21753CBB528EAADF.title: "{cabin.task.21753CBB528EAADF}"
 	task.21C241D2335C67E4.title: "{cabin.task.0842082756DA73FE}"
-	task.220B89A9B897FA67.title: "{cabin.task.0842082756DA73FE}"
 	task.22BA80BF7E7BA0F1.title: "Rat"
 	task.23030B6D0072EBE8.title: "{cabin.task.23030B6D0072EBE8}"
 	task.23EC365CF994DD7C.title: "Angel"
@@ -1677,7 +1656,6 @@
 	task.48E1E9E83F77109F.title: "Welcome to Autisnautics II!"
 	task.4960B920CCF3C186.title: "{cabin.task.0842082756DA73FE}"
 	task.4963498277C8A578.title: "{cabin.task.0842082756DA73FE}"
-	task.49EAB67814570219.title: "{cabin.task.0842082756DA73FE}"
 	task.4ABDB667D9C32513.title: "Any Bed or Sleeping Bag"
 	task.4AE661E33C20229D.title: "get all the eyeballs and visit the new place :)"
 	task.4B4BDAA9DFB0518A.title: "{cabin.task.0842082756DA73FE}"
@@ -1687,7 +1665,6 @@
 	task.4DAD021C66AB2A27.title: "{cabin.task.0842082756DA73FE}"
 	task.4F0DC063E1D872BC.title: "{cabin.task.4F0DC063E1D872BC}"
 	task.5143762A67B81B7E.title: "{cabin.task.0842082756DA73FE}"
-	task.518D5675C9D1757D.title: "{cabin.task.0842082756DA73FE}"
 	task.5311FC1A857C5DE9.title: "Alchemist"
 	task.53728BDEA8F1938C.title: "{cabin.task.53728BDEA8F1938C}"
 	task.5521427D5BAF2771.title: "{cabin.task.0842082756DA73FE}"
@@ -1705,7 +1682,6 @@
 	task.5AC44C2F24E566BD.title: "Blobbian"
 	task.5B4F2E2F7BDEA6A0.title: "{cabin.task.5B4F2E2F7BDEA6A0}"
 	task.5BBF2E1143CD356E.title: "{cabin.task.0842082756DA73FE}"
-	task.5CA556BB4614DD06.title: "{cabin.task.0842082756DA73FE}"
 	task.5DA07794E31B6312.title: "Any Axe"
 	task.5DF206B1738D08A0.title: "{cabin.task.5DF206B1738D08A0}"
 	task.5E676D2CC5975AEA.title: "{cabin.task.0842082756DA73FE}"
