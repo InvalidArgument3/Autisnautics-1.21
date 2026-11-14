@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_alexs_mobs"
-	group: "E1A0000000000001"
-	id: "E515000000000000"
+	group: "61A0000000000001"
+	id: "6515000000000000"
 	images: [ ]
 	order_index: 20
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "alexsmobs:animal_dictionary"
 			}
-			id: "E415000000000000"
+			id: "6415000000000000"
 			rewards: [
 				{
-					id: "E315000000000000"
+					id: "6315000000000000"
 					item: {
 						count: 1
 						id: "alexsmobs:animal_dictionary"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000000D"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215000000000000"
+				id: "6215000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E415000000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "alexsmobs:banana"
 			}
-			id: "E415010000000000"
+			id: "6415010000000000"
 			rewards: [
 				{
-					id: "E315010000000000"
+					id: "6315010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 6
+						id: "minecraft:bread"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000000E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215010000000000"
+				id: "6215010000000000"
 				item: { count: 1, id: "alexsmobs:banana" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E415010000000000"]
+			dependencies: ["6415010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "alexsmobs:hummingbird_feeder"
 			}
-			id: "E415020000000000"
+			id: "6415020000000000"
 			rewards: [
 				{
-					id: "E315020000000000"
+					id: "6315020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 6
+						id: "minecraft:bread"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000000F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215020000000000"
+				id: "6215020000000000"
 				item: { count: 1, id: "alexsmobs:hummingbird_feeder" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E415020000000000"]
+			dependencies: ["6415020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "alexsmobs:fish_oil"
 			}
-			id: "E415030000000000"
+			id: "6415030000000000"
 			rewards: [
 				{
-					id: "E315030000000000"
+					id: "6315030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 6
+						id: "minecraft:bread"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000010"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215030000000000"
+				id: "6215030000000000"
 				item: { count: 1, id: "alexsmobs:fish_oil" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E415030000000000"]
+			dependencies: ["6415030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "alexsmobs:roadrunner_feather"
 			}
-			id: "E415040000000000"
+			id: "6415040000000000"
 			rewards: [
 				{
-					id: "E315040000000000"
+					id: "6315040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 6
+						id: "minecraft:bread"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000011"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215040000000000"
+				id: "6215040000000000"
 				item: { count: 1, id: "alexsmobs:roadrunner_feather" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E415040000000000"]
+			dependencies: ["6415040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "alexsmobs:falconry_glove"
 			}
-			id: "E415050000000000"
+			id: "6415050000000000"
 			rewards: [
 				{
-					id: "E315050000000000"
+					id: "6315050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 6
+						id: "minecraft:bread"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000012"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E215050000000000"
+				id: "6215050000000000"
 				item: { count: 1, id: "alexsmobs:falconry_glove" }
 				type: "item"
 			}]

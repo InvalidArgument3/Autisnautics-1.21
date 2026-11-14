@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_astral_sorcery"
-	group: "E1A0000000000001"
-	id: "E511000000000000"
+	group: "61A0000000000001"
+	id: "6511000000000000"
 	images: [ ]
 	order_index: 16
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "astralsorcery:tome"
 			}
-			id: "E411000000000000"
+			id: "6411000000000000"
 			rewards: [
 				{
-					id: "E311000000000000"
+					id: "6311000000000000"
 					item: {
 						count: 1
 						id: "astralsorcery:tome"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001A"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211000000000000"
+				id: "6211000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E411000000000000"]
+			dependencies: ["6411000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "astralsorcery:aquamarine"
 			}
-			id: "E411010000000000"
+			id: "6411010000000000"
 			rewards: [
 				{
-					id: "E311010000000000"
+					id: "6311010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211010000000000"
+				id: "6211010000000000"
 				item: { count: 1, id: "astralsorcery:aquamarine" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E411010000000000"]
+			dependencies: ["6411010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "astralsorcery:rock_crystal"
 			}
-			id: "E411020000000000"
+			id: "6411020000000000"
 			rewards: [
 				{
-					id: "E311020000000000"
+					id: "6311020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001C"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211020000000000"
+				id: "6211020000000000"
 				item: { count: 1, id: "astralsorcery:rock_crystal" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E411020000000000"]
+			dependencies: ["6411020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "astralsorcery:parchment"
 			}
-			id: "E411030000000000"
+			id: "6411030000000000"
 			rewards: [
 				{
-					id: "E311030000000000"
+					id: "6311030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211030000000000"
+				id: "6211030000000000"
 				item: { count: 1, id: "astralsorcery:parchment" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E411030000000000"]
+			dependencies: ["6411030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "astralsorcery:glass_lens"
 			}
-			id: "E411040000000000"
+			id: "6411040000000000"
 			rewards: [
 				{
-					id: "E311040000000000"
+					id: "6311040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211040000000000"
+				id: "6211040000000000"
 				item: { count: 1, id: "astralsorcery:glass_lens" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E411040000000000"]
+			dependencies: ["6411040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "astralsorcery:starmetal_ingot"
 			}
-			id: "E411050000000000"
+			id: "6411050000000000"
 			rewards: [
 				{
-					id: "E311050000000000"
+					id: "6311050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000001F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211050000000000"
+				id: "6211050000000000"
 				item: { count: 1, id: "astralsorcery:starmetal_ingot" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E411050000000000"]
+			dependencies: ["6411050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "astralsorcery:astrolabe"
 			}
-			id: "E411060000000000"
+			id: "6411060000000000"
 			rewards: [
 				{
-					id: "E311060000000000"
+					id: "6311060000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000020"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -311,7 +353,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E211060000000000"
+				id: "6211060000000000"
 				item: { count: 1, id: "astralsorcery:astrolabe" }
 				type: "item"
 			}]

@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_immersive_petroleum"
-	group: "E1A0000000000001"
-	id: "E507000000000000"
+	group: "61A0000000000001"
+	id: "6507000000000000"
 	images: [ ]
 	order_index: 6
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "immersivepetroleum:oil_can"
 			}
-			id: "E407000000000000"
+			id: "6407000000000000"
 			rewards: [
 				{
-					id: "E307000000000000"
+					id: "6307000000000000"
 					item: {
 						count: 1
 						id: "immersivepetroleum:oil_can"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000051"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207000000000000"
+				id: "6207000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E407000000000000"]
+			dependencies: ["6407000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "immersivepetroleum:upgrade_rudders"
 			}
-			id: "E407010000000000"
+			id: "6407010000000000"
 			rewards: [
 				{
-					id: "E307010000000000"
+					id: "6307010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:sand"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000052"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207010000000000"
+				id: "6207010000000000"
 				item: { count: 1, id: "immersivepetroleum:upgrade_rudders" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E407010000000000"]
+			dependencies: ["6407010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "immersivepetroleum:projector"
 			}
-			id: "E407020000000000"
+			id: "6407020000000000"
 			rewards: [
 				{
-					id: "E307020000000000"
+					id: "6307020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:sand"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000053"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207020000000000"
+				id: "6207020000000000"
 				item: { count: 1, id: "immersivepetroleum:projector" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E407020000000000"]
+			dependencies: ["6407020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "immersivepetroleum:auto_lubricator"
 			}
-			id: "E407030000000000"
+			id: "6407030000000000"
 			rewards: [
 				{
-					id: "E307030000000000"
+					id: "6307030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:sand"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000054"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207030000000000"
+				id: "6207030000000000"
 				item: { count: 1, id: "immersivepetroleum:auto_lubricator" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E407030000000000"]
+			dependencies: ["6407030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "immersivepetroleum:upgrade_paddles"
 			}
-			id: "E407040000000000"
+			id: "6407040000000000"
 			rewards: [
 				{
-					id: "E307040000000000"
+					id: "6307040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:sand"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000055"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207040000000000"
+				id: "6207040000000000"
 				item: { count: 1, id: "immersivepetroleum:upgrade_paddles" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E407040000000000"]
+			dependencies: ["6407040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "immersivepetroleum:asphalt"
 			}
-			id: "E407050000000000"
+			id: "6407050000000000"
 			rewards: [
 				{
-					id: "E307050000000000"
+					id: "6307050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:sand"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000056"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E207050000000000"
+				id: "6207050000000000"
 				item: { count: 1, id: "immersivepetroleum:asphalt" }
 				type: "item"
 			}]

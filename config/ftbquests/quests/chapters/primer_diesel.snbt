@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_diesel"
-	group: "E1A0000000000001"
-	id: "E504000000000000"
+	group: "61A0000000000001"
+	id: "6504000000000000"
 	images: [ ]
 	order_index: 3
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "createdieselgenerators:hammer"
 			}
-			id: "E404000000000000"
+			id: "6404000000000000"
 			rewards: [
 				{
-					id: "E304000000000000"
+					id: "6304000000000000"
 					item: {
 						count: 1
 						id: "createdieselgenerators:hammer"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003F"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204000000000000"
+				id: "6204000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E404000000000000"]
+			dependencies: ["6404000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "createdieselgenerators:wood_chip"
 			}
-			id: "E404010000000000"
+			id: "6404010000000000"
 			rewards: [
 				{
-					id: "E304010000000000"
+					id: "6304010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:charcoal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000040"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204010000000000"
+				id: "6204010000000000"
 				item: { count: 1, id: "createdieselgenerators:wood_chip" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E404010000000000"]
+			dependencies: ["6404010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "createdieselgenerators:oil_barrel"
 			}
-			id: "E404020000000000"
+			id: "6404020000000000"
 			rewards: [
 				{
-					id: "E304020000000000"
+					id: "6304020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:charcoal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000041"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204020000000000"
+				id: "6204020000000000"
 				item: { count: 1, id: "createdieselgenerators:oil_barrel" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E404020000000000"]
+			dependencies: ["6404020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "createdieselgenerators:canister"
 			}
-			id: "E404030000000000"
+			id: "6404030000000000"
 			rewards: [
 				{
-					id: "E304030000000000"
+					id: "6304030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:charcoal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000042"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204030000000000"
+				id: "6204030000000000"
 				item: { count: 1, id: "createdieselgenerators:canister" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E404030000000000"]
+			dependencies: ["6404030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "createdieselgenerators:lighter"
 			}
-			id: "E404040000000000"
+			id: "6404040000000000"
 			rewards: [
 				{
-					id: "E304040000000000"
+					id: "6304040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:charcoal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000043"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204040000000000"
+				id: "6204040000000000"
 				item: { count: 1, id: "createdieselgenerators:lighter" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E404040000000000"]
+			dependencies: ["6404040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "createdieselgenerators:engine_silencer"
 			}
-			id: "E404050000000000"
+			id: "6404050000000000"
 			rewards: [
 				{
-					id: "E304050000000000"
+					id: "6304050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:charcoal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000044"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E204050000000000"
+				id: "6204050000000000"
 				item: { count: 1, id: "createdieselgenerators:engine_silencer" }
 				type: "item"
 			}]

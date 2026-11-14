@@ -29,7 +29,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000028B"
+					type: "xp"
+					xp: 60
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -65,6 +71,21 @@
 			}
 			id: "44574DD7ED012C32"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000028C"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000028D"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -99,6 +120,21 @@
 			}
 			id: "7185578FE136832B"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000028E"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000028F"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -133,6 +169,21 @@
 			}
 			id: "7EA9F909DD9B538A"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000290"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000291"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -167,6 +218,21 @@
 			}
 			id: "77426DDB0F2283CA"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000292"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000293"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -201,6 +267,21 @@
 			}
 			id: "67DCC1E05E49C5D0"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000294"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000295"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -235,6 +316,21 @@
 			}
 			id: "1FBE189EB3E6A3C1"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000296"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000297"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -269,6 +365,21 @@
 			}
 			id: "3F57748D80359EF6"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000298"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000299"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -303,6 +414,21 @@
 			}
 			id: "4BE9B3642F8D9EB6"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000029A"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000029B"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -338,6 +464,21 @@
 			}
 			id: "044B37BCECAC6250"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000029C"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000029D"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -380,7 +521,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000029E"
+					type: "xp"
+					xp: 60
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -417,6 +564,21 @@
 				id: "reliquary:angelic_feather"
 			}
 			id: "7650D7E4FE40E2C7"
+			rewards: [
+				{
+					id: "510000000000029F"
+					item: {
+						count: 8
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000002A0"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"

@@ -31,7 +31,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000F6"
+					type: "xp"
+					xp: 60
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -69,6 +75,21 @@
 			}
 			id: "0AF5F19F5D9FB5C9"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000F7"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000F8"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -108,6 +129,21 @@
 			}
 			id: "345B94F6D17605CD"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000F9"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000FA"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -140,6 +176,21 @@
 			}
 			id: "34A1D176C78FB64E"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000FB"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000FC"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -171,6 +222,21 @@
 			}
 			id: "1642A27606A34984"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000FD"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000FE"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -204,6 +270,21 @@
 				id: "create:rose_quartz"
 			}
 			id: "1861E583C9DAA0BA"
+			rewards: [
+				{
+					id: "51000000000000FF"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000100"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -256,6 +337,21 @@
 				id: "minecraft:water_bucket"
 			}
 			id: "2FFFE1C5366930BB"
+			rewards: [
+				{
+					id: "5100000000000101"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000102"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -308,6 +404,21 @@
 				id: "minecraft:redstone"
 			}
 			id: "4F95D5136E944ADB"
+			rewards: [
+				{
+					id: "5100000000000103"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000104"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -344,6 +455,21 @@
 				id: "minecraft:water_bucket"
 			}
 			id: "1256352748B93449"
+			rewards: [
+				{
+					id: "5100000000000105"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000106"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -381,6 +507,21 @@
 				id: "minecraft:redstone"
 			}
 			id: "619E34A7DE48B991"
+			rewards: [
+				{
+					id: "5100000000000107"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000108"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -432,6 +573,21 @@
 				id: "minecraft:bucket"
 			}
 			id: "2167272204B6627B"
+			rewards: [
+				{
+					id: "5100000000000109"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000010A"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -468,6 +624,21 @@
 				id: "create:electron_tube"
 			}
 			id: "5351AF6CA73CB8E0"
+			rewards: [
+				{
+					id: "510000000000010B"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000010C"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -520,6 +691,21 @@
 				id: "minecraft:redstone_torch"
 			}
 			id: "24FFFE0FC9EAEF8D"
+			rewards: [
+				{
+					id: "510000000000010D"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000010E"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -554,6 +740,21 @@
 				id: "minecraft:cobblestone"
 			}
 			id: "0E46C1FCE5AEB1DF"
+			rewards: [
+				{
+					id: "510000000000010F"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000110"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -608,6 +809,21 @@
 				id: "create:precision_mechanism"
 			}
 			id: "19715EBCBBA1B4AD"
+			rewards: [
+				{
+					id: "5100000000000111"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000112"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -687,6 +903,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000113"
+					type: "xp"
+					xp: 60
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -724,6 +946,21 @@
 				id: "minecraft:gravel"
 			}
 			id: "1139F2E4E6FCFE29"
+			rewards: [
+				{
+					id: "5100000000000114"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000115"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -775,6 +1012,21 @@
 				id: "minecraft:iron_nugget"
 			}
 			id: "53735DC4231AB566"
+			rewards: [
+				{
+					id: "5100000000000116"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000117"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -829,6 +1081,21 @@
 				id: "create:polished_rose_quartz"
 			}
 			id: "06B061C0EE94BC90"
+			rewards: [
+				{
+					id: "5100000000000118"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000119"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -884,6 +1151,21 @@
 			}
 			id: "3C50B4556375178E"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000011A"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000011B"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -923,6 +1205,21 @@
 				id: "minecraft:lava_bucket"
 			}
 			id: "1D9D65FBD06DD481"
+			rewards: [
+				{
+					id: "510000000000011C"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000011D"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -979,6 +1276,21 @@
 				id: "minecraft:soul_sand"
 			}
 			id: "239C64263B91350D"
+			rewards: [
+				{
+					id: "510000000000011E"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000011F"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1035,6 +1347,21 @@
 				id: "minecraft:twisting_vines"
 			}
 			id: "223BB57AD0239511"
+			rewards: [
+				{
+					id: "5100000000000120"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000121"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1091,6 +1418,21 @@
 				id: "minecraft:weeping_vines"
 			}
 			id: "7E59B7DC239E621E"
+			rewards: [
+				{
+					id: "5100000000000122"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000123"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1144,6 +1486,21 @@
 			}
 			id: "6D8BB2D6A75ABB16"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000124"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000125"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1206,6 +1563,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000126"
+					type: "xp"
+					xp: 60
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -1242,6 +1605,21 @@
 			hide_dependency_lines: false
 			id: "174E3A810535CAAC"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000127"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000128"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1283,6 +1661,21 @@
 			id: "5DCF9C8212AA3BE3"
 			min_required_dependencies: 2
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000129"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000012A"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1322,6 +1715,21 @@
 				id: "minecraft:nether_wart"
 			}
 			id: "6C029983EE2035A5"
+			rewards: [
+				{
+					id: "510000000000012B"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000012C"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1376,6 +1784,21 @@
 				id: "minecraft:potion"
 			}
 			id: "2131996D22A87667"
+			rewards: [
+				{
+					id: "510000000000012D"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000012E"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1432,6 +1855,21 @@
 				id: "minecraft:glow_berries"
 			}
 			id: "4B891E9ED8DE6BB2"
+			rewards: [
+				{
+					id: "510000000000012F"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000130"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1486,6 +1924,21 @@
 				id: "kubejs:logistic_mechanism"
 			}
 			id: "44540B11F341AE09"
+			rewards: [
+				{
+					id: "5100000000000131"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000132"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1525,6 +1978,21 @@
 				id: "kubejs:liquid_pulp_bucket"
 			}
 			id: "1A06FA866B74E75B"
+			rewards: [
+				{
+					id: "5100000000000133"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000134"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1604,6 +2072,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000135"
+					type: "xp"
+					xp: 60
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -1646,6 +2120,21 @@
 				id: "minecraft:nether_wart"
 			}
 			id: "4FFA0F65FA89D867"
+			rewards: [
+				{
+					id: "5100000000000136"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000137"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1716,6 +2205,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000138"
+					type: "xp"
+					xp: 60
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -1758,6 +2253,21 @@
 			}
 			id: "15978ED5A6E3DFFE"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000139"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000013A"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1795,6 +2305,21 @@
 				id: "minecraft:potion"
 			}
 			id: "15368864A6946A93"
+			rewards: [
+				{
+					id: "510000000000013B"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000013C"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1851,6 +2376,21 @@
 				id: "minecraft:glow_lichen"
 			}
 			id: "10E93BEB78219368"
+			rewards: [
+				{
+					id: "510000000000013D"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000013E"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1907,6 +2447,21 @@
 				id: "minecraft:brown_mushroom"
 			}
 			id: "74D22D54CA80E7FD"
+			rewards: [
+				{
+					id: "510000000000013F"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000140"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1964,6 +2519,21 @@
 				id: "nuclearcraftneohaul:radaway_bucket"
 			}
 			id: "319D13EA51472303"
+			rewards: [
+				{
+					id: "5100000000000141"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000142"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -2020,6 +2590,21 @@
 				id: "nuclearcraftneohaul:uranium_ingot"
 			}
 			id: "5943F8F91AA79D59"
+			rewards: [
+				{
+					id: "5100000000000143"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000144"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -2059,6 +2644,21 @@
 				id: "create:crushed_raw_iron"
 			}
 			id: "68A8C2CB135ECA87"
+			rewards: [
+				{
+					id: "5100000000000145"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000146"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -2113,6 +2713,21 @@
 				id: "nuclearcraftneohaul:glowing_mushroom"
 			}
 			id: "02E41EDC1899468D"
+			rewards: [
+				{
+					id: "5100000000000147"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000148"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -2169,6 +2784,21 @@
 				id: "minecraft:milk_bucket"
 			}
 			id: "2F1B9FE2E9C2FFEC"
+			rewards: [
+				{
+					id: "5100000000000149"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000014A"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -2222,6 +2852,21 @@
 			}
 			id: "6EE9AA6D2A8FE0AD"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000014B"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000014C"
+					type: "xp"
+					xp: 25
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -2263,7 +2908,13 @@
 					id: "nuclearcraftneohaul:geiger_counter"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000014D"
+					type: "xp"
+					xp: 60
+				}
+			]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{

@@ -31,7 +31,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000024E"
+					type: "xp"
+					xp: 80
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -81,7 +87,13 @@
 					id: "minecraft:enchanted_golden_apple"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000024F"
+					type: "xp"
+					xp: 80
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -135,6 +147,21 @@
 			}
 			id: "69311E02A8B3451D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000250"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000251"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				count: 8L
 				extraquests_options: {
@@ -172,6 +199,21 @@
 			id: "70D563EF30E9CB97"
 			shape: "square"
 			size: 1.5d
+			rewards: [
+				{
+					id: "5100000000000252"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000253"
+					type: "xp"
+					xp: 80
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -223,6 +265,21 @@
 				id: "kubejs:three"
 			}
 			id: "5550A3E383EFEC90"
+			rewards: [
+				{
+					id: "5100000000000254"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000255"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -274,6 +331,21 @@
 				id: "kubejs:eight"
 			}
 			id: "3126DE83A6741671"
+			rewards: [
+				{
+					id: "5100000000000256"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000257"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -329,6 +401,21 @@
 				id: "kubejs:zero"
 			}
 			id: "2441491CB5D5E57D"
+			rewards: [
+				{
+					id: "5100000000000258"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000259"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -384,6 +471,21 @@
 				id: "kubejs:one"
 			}
 			id: "42B5C0102B22F389"
+			rewards: [
+				{
+					id: "510000000000025A"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000025B"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -439,6 +541,21 @@
 				id: "kubejs:two"
 			}
 			id: "5358E5F7FB59DD60"
+			rewards: [
+				{
+					id: "510000000000025C"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000025D"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -494,6 +611,21 @@
 				id: "kubejs:four"
 			}
 			id: "55F959A18E904D6C"
+			rewards: [
+				{
+					id: "510000000000025E"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000025F"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -549,6 +681,21 @@
 				id: "kubejs:five"
 			}
 			id: "7927B6162577FA7B"
+			rewards: [
+				{
+					id: "5100000000000260"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000261"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -604,6 +751,21 @@
 				id: "kubejs:six"
 			}
 			id: "1C6657984648B0D4"
+			rewards: [
+				{
+					id: "5100000000000262"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000263"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -659,6 +821,21 @@
 				id: "kubejs:seven"
 			}
 			id: "4A16CE3BC111280F"
+			rewards: [
+				{
+					id: "5100000000000264"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000265"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -714,6 +891,21 @@
 				id: "kubejs:nine"
 			}
 			id: "7D808F15BEDD7A7B"
+			rewards: [
+				{
+					id: "5100000000000266"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000267"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -766,6 +958,21 @@
 				id: "immersivepetroleum:paraffin_wax"
 			}
 			id: "3CBED6B591BCEDEA"
+			rewards: [
+				{
+					id: "5100000000000268"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000269"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -821,6 +1028,21 @@
 			}
 			id: "6A156D11D983661D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000026A"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000026B"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -857,6 +1079,21 @@
 			}
 			id: "4761DAE59CDD93AF"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000026C"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000026D"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -891,6 +1128,21 @@
 			}
 			id: "2BD76CB3F8BC215E"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000026E"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000026F"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -926,6 +1178,21 @@
 			}
 			id: "26DD1CA6A8D4E249"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000270"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000271"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -965,6 +1232,21 @@
 			}
 			id: "25B76A897D97C9F1"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000272"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000273"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1001,6 +1283,21 @@
 			}
 			id: "6F750A66D0A559DE"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000274"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000275"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1036,6 +1333,21 @@
 			}
 			id: "6BA9A176EDA001A3"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000276"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000277"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1121,6 +1433,21 @@
 			}
 			id: "3AD7553F3C8593F9"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000278"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000279"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1156,6 +1483,21 @@
 			}
 			id: "4800892E1E70648D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000027A"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000027B"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1190,6 +1532,21 @@
 				id: "kubejs:plus"
 			}
 			id: "4E85C8A2EEEB57C3"
+			rewards: [
+				{
+					id: "510000000000027C"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000027D"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1294,6 +1651,21 @@
 			}
 			id: "73473DC7269EC5B0"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000027E"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000027F"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1345,7 +1717,13 @@
 					id: "minecraft:grass_block"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "5100000000000280"
+					type: "xp"
+					xp: 80
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -1383,6 +1761,21 @@
 			invisible: true
 			invisible_until_tasks: 2
 			size: 0.066d
+			rewards: [
+				{
+					id: "5100000000000281"
+					item: {
+						count: 32
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000282"
+					type: "xp"
+					xp: 60
+				}
+			]
 			tasks: [{
 				dimension: "stellaris:earth_orbit"
 				extraquests_options: {
@@ -1417,6 +1810,21 @@
 			invisible: true
 			invisible_until_tasks: 2
 			size: 0.066d
+			rewards: [
+				{
+					id: "5100000000000283"
+					item: {
+						count: 32
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000284"
+					type: "xp"
+					xp: 60
+				}
+			]
 			tasks: [{
 				dimension: "stellaris:moon"
 				extraquests_options: {
@@ -1451,6 +1859,21 @@
 			invisible: true
 			invisible_until_tasks: 2
 			size: 0.066d
+			rewards: [
+				{
+					id: "5100000000000285"
+					item: {
+						count: 32
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000286"
+					type: "xp"
+					xp: 60
+				}
+			]
 			tasks: [{
 				dimension: "stellaris:mars_orbit"
 				extraquests_options: {
@@ -1485,6 +1908,21 @@
 			invisible: true
 			invisible_until_tasks: 2
 			size: 0.066d
+			rewards: [
+				{
+					id: "5100000000000287"
+					item: {
+						count: 32
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000288"
+					type: "xp"
+					xp: 60
+				}
+			]
 			tasks: [{
 				dimension: "stellaris:mercury_orbit"
 				extraquests_options: {
@@ -1519,6 +1957,21 @@
 			invisible: true
 			invisible_until_tasks: 2
 			size: 0.066d
+			rewards: [
+				{
+					id: "5100000000000289"
+					item: {
+						count: 32
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000028A"
+					type: "xp"
+					xp: 60
+				}
+			]
 			tasks: [{
 				dimension: "stellaris:venus_orbit"
 				extraquests_options: {

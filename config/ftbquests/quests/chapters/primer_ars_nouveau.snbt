@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_ars_nouveau"
-	group: "E1A0000000000001"
-	id: "E50E000000000000"
+	group: "61A0000000000001"
+	id: "650E000000000000"
 	images: [ ]
 	order_index: 13
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "ars_nouveau:worn_notebook"
 			}
-			id: "E40E000000000000"
+			id: "640E000000000000"
 			rewards: [
 				{
-					id: "E30E000000000000"
+					id: "630E000000000000"
 					item: {
 						count: 1
 						id: "ars_nouveau:worn_notebook"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000013"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E000000000000"
+				id: "620E000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E40E000000000000"]
+			dependencies: ["640E000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "ars_nouveau:blue_archwood_log"
 			}
-			id: "E40E010000000000"
+			id: "640E010000000000"
 			rewards: [
 				{
-					id: "E30E010000000000"
+					id: "630E010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000014"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E010000000000"
+				id: "620E010000000000"
 				item: { count: 1, id: "ars_nouveau:blue_archwood_log" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E40E010000000000"]
+			dependencies: ["640E010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "ars_nouveau:archwood_planks"
 			}
-			id: "E40E020000000000"
+			id: "640E020000000000"
 			rewards: [
 				{
-					id: "E30E020000000000"
+					id: "630E020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000015"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E020000000000"
+				id: "620E020000000000"
 				item: { count: 1, id: "ars_nouveau:archwood_planks" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E40E020000000000"]
+			dependencies: ["640E020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "ars_nouveau:imbuement_chamber"
 			}
-			id: "E40E030000000000"
+			id: "640E030000000000"
 			rewards: [
 				{
-					id: "E30E030000000000"
+					id: "630E030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000016"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E030000000000"
+				id: "620E030000000000"
 				item: { count: 1, id: "ars_nouveau:imbuement_chamber" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E40E030000000000"]
+			dependencies: ["640E030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "ars_nouveau:source_gem"
 			}
-			id: "E40E040000000000"
+			id: "640E040000000000"
 			rewards: [
 				{
-					id: "E30E040000000000"
+					id: "630E040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000017"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E040000000000"
+				id: "620E040000000000"
 				item: { count: 1, id: "ars_nouveau:source_gem" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E40E040000000000"]
+			dependencies: ["640E040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "ars_nouveau:sourcestone"
 			}
-			id: "E40E050000000000"
+			id: "640E050000000000"
 			rewards: [
 				{
-					id: "E30E050000000000"
+					id: "630E050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000018"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E050000000000"
+				id: "620E050000000000"
 				item: { count: 1, id: "ars_nouveau:sourcestone" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E40E050000000000"]
+			dependencies: ["640E050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "ars_nouveau:novice_spell_book"
 			}
-			id: "E40E060000000000"
+			id: "640E060000000000"
 			rewards: [
 				{
-					id: "E30E060000000000"
+					id: "630E060000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:gold_nugget"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000019"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -311,7 +353,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20E060000000000"
+				id: "620E060000000000"
 				item: { count: 1, id: "ars_nouveau:novice_spell_book" }
 				type: "item"
 			}]

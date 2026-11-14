@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_computercraft"
-	group: "E1A0000000000001"
-	id: "E50D000000000000"
+	group: "61A0000000000001"
+	id: "650D000000000000"
 	images: [ ]
 	order_index: 12
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "computercraft:computer_normal"
 			}
-			id: "E40D000000000000"
+			id: "640D000000000000"
 			rewards: [
 				{
-					id: "E30D000000000000"
+					id: "630D000000000000"
 					item: {
 						count: 1
 						id: "computercraft:computer_normal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000002C"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D000000000000"
+				id: "620D000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E40D000000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "computercraft:monitor_normal"
 			}
-			id: "E40D010000000000"
+			id: "640D010000000000"
 			rewards: [
 				{
-					id: "E30D010000000000"
+					id: "630D010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000002D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D010000000000"
+				id: "620D010000000000"
 				item: { count: 1, id: "computercraft:monitor_normal" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E40D010000000000"]
+			dependencies: ["640D010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "computercraft:cable"
 			}
-			id: "E40D020000000000"
+			id: "640D020000000000"
 			rewards: [
 				{
-					id: "E30D020000000000"
+					id: "630D020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000002E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D020000000000"
+				id: "620D020000000000"
 				item: { count: 1, id: "computercraft:cable" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E40D020000000000"]
+			dependencies: ["640D020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "computercraft:disk_drive"
 			}
-			id: "E40D030000000000"
+			id: "640D030000000000"
 			rewards: [
 				{
-					id: "E30D030000000000"
+					id: "630D030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000002F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D030000000000"
+				id: "620D030000000000"
 				item: { count: 1, id: "computercraft:disk_drive" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E40D030000000000"]
+			dependencies: ["640D030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "computercraft:wireless_modem_normal"
 			}
-			id: "E40D040000000000"
+			id: "640D040000000000"
 			rewards: [
 				{
-					id: "E30D040000000000"
+					id: "630D040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000030"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D040000000000"
+				id: "620D040000000000"
 				item: { count: 1, id: "computercraft:wireless_modem_normal" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E40D040000000000"]
+			dependencies: ["640D040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "computercraft:turtle_normal"
 			}
-			id: "E40D050000000000"
+			id: "640D050000000000"
 			rewards: [
 				{
-					id: "E30D050000000000"
+					id: "630D050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000031"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20D050000000000"
+				id: "620D050000000000"
 				item: { count: 1, id: "computercraft:turtle_normal" }
 				type: "item"
 			}]

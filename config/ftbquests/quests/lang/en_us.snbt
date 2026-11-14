@@ -217,9 +217,9 @@
 	quest.0C11EC34D5FA508B.quest_desc: ["{cabin.quest.0C11EC34D5FA508B.description1}"]
 	quest.0C11EC34D5FA508B.title: "End Stone"
 	quest.0CC92E94D10E681D.quest_desc: [
-		"{cabin.quest.0CC92E94D10E681D.description1}"
-		""
-		"{cabin.quest.0CC92E94D10E681D.description2}"
+		"Assemble a iron reagent (kubejs:substrate_iron). The jar ingredient is dust iron (immersiveengineering:dust_iron)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the wool row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.0CE88FEA070DC46C.quest_desc: ["{cabin.quest.0CE88FEA070DC46C.description1}"]
 	quest.0CE88FEA070DC46C.title: "Computer Advanced"
@@ -569,9 +569,9 @@
 	quest.29D37095C73B3DEC.title: "Belt Connector"
 	quest.29DABB5FDE6356E9.title: "{cabin.quest.29DABB5FDE6356E9.title}"
 	quest.2B195E5B195246F5.quest_desc: [
-		"{cabin.quest.2B195E5B195246F5.description1}"
-		""
-		"{cabin.quest.2B195E5B195246F5.description2}"
+		"Assemble a bonemeal reagent (kubejs:substrate_bonemeal). The jar ingredient is bone meal (minecraft:bone_meal)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the egg row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.2B8F1D804107EB8C.quest_desc: ["{cabin.quest.2B8F1D804107EB8C.description1}"]
 	quest.2B8F1D804107EB8C.quest_subtitle: "{cabin.quest.2B8F1D804107EB8C.subtitle}"
@@ -829,11 +829,9 @@
 	quest.3E391D4870926B8F.quest_desc: ["As a rat, your tough teeth let you mine stone without any tools. That should be useful for crafting a stone chisel, which you could use to carve pint-sized details."]
 	quest.3E391D4870926B8F.title: "Hidey Hole"
 	quest.3EB5CD9776DF0E63.quest_desc: [
-		"{cabin.quest.3EB5CD9776DF0E63.description1}"
-		""
-		"{cabin.quest.3EB5CD9776DF0E63.description2}"
-		""
-		"{cabin.quest.3EB5CD9776DF0E63.description3}"
+		"Assemble a scoria reagent (kubejs:substrate_scoria). The jar ingredient is scoria (create:scoria)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.3EEF098FB1D343AD.quest_desc: ["{image: width:100 height:100 align:center}"]
 	quest.3EF5F89DBD6959E3.quest_desc: ["Smelt or blast Raw Rubber into Rubber. Belts and Sealed Mechanisms use this."]
@@ -1026,9 +1024,9 @@
 	quest.5181318DC4AAD768.quest_subtitle: " If I met my creator, I'd punch him in the face"
 	quest.5181318DC4AAD768.title: "The Makers"
 	quest.5200AD3B32D219C6.quest_desc: [
-		"{cabin.quest.5200AD3B32D219C6.description1}"
-		""
-		"{cabin.quest.5200AD3B32D219C6.description2}"
+		"Assemble a emerald reagent (kubejs:substrate_emerald). The jar ingredient is emerald (minecraft:emerald)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.522065CE0A5CE9D2.quest_desc: [
 		"{cabin.quest.522065CE0A5CE9D2.description1}"
@@ -1054,9 +1052,9 @@
 		"You shouldn't be seeing this unless you're in edit mode."
 	]
 	quest.549D7F67A97CD2CE.quest_desc: [
-		"{cabin.quest.549D7F67A97CD2CE.description1}"
-		""
-		"{cabin.quest.549D7F67A97CD2CE.description2}"
+		"Assemble a quartz reagent (kubejs:substrate_quartz). The jar ingredient is quartz (minecraft:quartz)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.5550A3E383EFEC90.quest_desc: [
 		"{cabin.quest.5550A3E383EFEC90.description1}"
@@ -1066,7 +1064,11 @@
 	quest.5550A3E383EFEC90.quest_subtitle: "{cabin.quest.5550A3E383EFEC90.subtitle}"
 	quest.55F959A18E904D6C.quest_desc: ["{cabin.quest.55F959A18E904D6C.description1}"]
 	quest.55F959A18E904D6C.quest_subtitle: "{cabin.quest.55F959A18E904D6C.subtitle}"
-	quest.566E72AE7D580917.quest_desc: ["{cabin.quest.566E72AE7D580917.description1}"]
+	quest.566E72AE7D580917.quest_desc: [
+		"Have a silver reagent (kubejs:substrate_silver). It is not in the jar grid. Silicon and silver are the two reagents outside the seven rows."
+		"The Alchemical Laser's chaos pairing can produce them. Ponder the laser. NuclearCraft's extractor pulls silicon or silver dust back out of the reagent. That is the wrong direction for this quest."
+		"The Akashic Tome does not document this. JEI shows the extractor. The laser ponder is the setup."
+	]
 	quest.5799B4124EE20DB1.quest_desc: ["{cabin.quest.5799B4124EE20DB1.description1}"]
 	quest.5799B4124EE20DB1.quest_subtitle: "{cabin.quest.5799B4124EE20DB1.subtitle}"
 	quest.5799B4124EE20DB1.title: "Blaze Powder"
@@ -1202,9 +1204,9 @@
 	quest.626A7D9947D82B89.quest_subtitle: "{cabin.quest.626A7D9947D82B89.subtitle}"
 	quest.626A7D9947D82B89.title: "Radiant Coil"
 	quest.62EB94758A862091.quest_desc: [
-		"{cabin.quest.62EB94758A862091.description1}"
-		""
-		"{cabin.quest.62EB94758A862091.description2}"
+		"Assemble a blaze reagent (kubejs:substrate_blaze). The jar ingredient is blaze powder (minecraft:blaze_powder)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the egg row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
 	]
 	quest.630DA0C83959E9D8.quest_desc: [
 		"{cabin.quest.630DA0C83959E9D8.description1}"
@@ -1430,7 +1432,7 @@
 	quest.74F82F70F43DF148.title: "Silica Animus"
 	quest.75FB28B253B14876.quest_desc: ["{cabin.quest.75FB28B253B14876.description1}"]
 	quest.75FB28B253B14876.title: "Apple Cider"
-	quest.7650D7E4FE40E2C7.title: "placeholder :)"
+	quest.7650D7E4FE40E2C7.title: "Angelic Feather"
 	quest.7664FBB32FCC6BE6.quest_desc: [
 		"{cabin.quest.7664FBB32FCC6BE6.description1}"
 		""
@@ -1732,662 +1734,1538 @@
 	task.7F263AF0F6955616.title: "Hedgehog"
 	task.7F88BABEC9889C76.title: "{cabin.task.7F88BABEC9889C76}"
 	task.7FEEF6BED2C3F31B.title: "{cabin.task.7FEEF6BED2C3F31B}"
-	chapter_group.E1A0000000000001.title: "Mod Primers"
-	chapter.E501000000000000.title: "Create"
-	quest.E401000000000000.title: "A Wrench and Ponder"
-	quest.E401000000000000.quest_desc: [
+	chapter_group.61A0000000000001.title: "Mod Primers"
+	chapter.6501000000000000.title: "Create"
+	chapter.6501000000000000.chapter_subtitle: [
+		"Shafts, before the machines"
+	]
+	quest.6401000000000000.title: "A Wrench and Ponder"
+	quest.6401000000000000.quest_subtitle: "No book, press W"
+	quest.6401000000000000.quest_desc: [
 		"Create has no guidebook item. Hover a Create item and press the Ponder key (W by default) for the animated manual. JEI lists recipes."
 		"Claim this quest for a Wrench. The crafting recipe is gold sheets, a cogwheel, and a wooden rod, which you can make again once you have a cog. Fans, presses, mixers, drills, saws, and deployers are Andesite Machines in this pack: the crafting-table versions are removed."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401010000000000.title: "Sandpaper"
-	quest.E401010000000000.quest_desc: [
+	quest.6401010000000000.title: "Sandpaper"
+	quest.6401010000000000.quest_subtitle: "Paper and sand"
+	quest.6401010000000000.quest_desc: [
 		"Shapeless: paper and colorless sand. Ponder the sandpaper. It is the hand tool that later becomes the belt sander."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401020000000000.title: "Goggles"
-	quest.E401020000000000.quest_desc: [
+	quest.6401020000000000.title: "Goggles"
+	quest.6401020000000000.quest_subtitle: "See the stress"
+	quest.6401020000000000.quest_desc: [
 		"String, glass, and a gold sheet. JEI has the shape. Wear them to see kinetic stress. Ponder the goggles."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401030000000000.title: "Andesite Alloy"
-	quest.E401030000000000.quest_desc: [
-		"This pack removes the crafting-grid alloy and the zinc mixing recipe. Mix an Algal Brick with Andesite. The mix makes two alloy. JEI shows it."
-		"Algal Blend is clay with kelp or seagrass (Architect's Palette). Smelt the blend into the brick. The mixer itself is an Andesite Machine later in the factory chapters, which is the same loop those chapters already teach. Do not quest-skip ahead for the mixer."
+	quest.6401030000000000.title: "Andesite Alloy"
+	quest.6401030000000000.quest_subtitle: "Brick and andesite, 2x2"
+	quest.6401030000000000.quest_desc: [
+		"The vanilla iron-nugget and zinc-nugget alloy crafts are removed. So is the old mixing recipe."
+		"Craft it in a 2x2: two Algal Bricks and two Andesite, in either pairing. The craft makes two alloy. JEI shows both mirrors."
+		"The same pair also mixes in a basin, two alloy again, once you already have a mixer. The mixer is an Andesite Machine, and that machine needs alloy. Do the crafting grid first."
+		"Algal Blend is clay with kelp or seagrass. Smelt the blend into the brick. There is a leaf quest for the brick."
+		"Create has no book in the Akashic Tome. Ponder the alloy (W)."
 	]
-	quest.E401040000000000.title: "Shaft"
-	quest.E401040000000000.quest_desc: [
+	quest.6401040000000000.title: "Shaft"
+	quest.6401040000000000.quest_subtitle: "The axle"
+	quest.6401040000000000.quest_desc: [
 		"Two Andesite Alloy, stacked, or cut one alloy on a saw. Ponder the shaft. It is the axle everything else turns on."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401050000000000.title: "Cogwheel"
-	quest.E401050000000000.quest_desc: [
+	quest.6401050000000000.title: "Cogwheel"
+	quest.6401050000000000.quest_subtitle: "A shaft and planks"
+	quest.6401050000000000.quest_desc: [
 		"Shapeless: a shaft and any planks. Ponder the cogwheel for the gear ratios."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401060000000000.title: "Hand Crank"
-	quest.E401060000000000.quest_desc: [
+	quest.6401060000000000.title: "Hand Crank"
+	quest.6401060000000000.quest_subtitle: "Spin it yourself"
+	quest.6401060000000000.quest_desc: [
 		"Planks and one Andesite Alloy. JEI has the shape. Ponder it. A hand crank spins a small machine before you have a water wheel."
+		"Create has no book in the Akashic Tome. Hover the item and press W for Ponder. JEI lists the recipe this pack kept."
 	]
-	quest.E401070000000000.title: "Water Wheel"
-	quest.E401070000000000.quest_desc: [
-		"Planks around a shaft. Place it in flowing water. Ponder the water wheel."
-		"A Basin is an alloy box. Andesite Casing is shapeless alloy plus any log, and this pack makes two casings. A Millstone is a cog, a casing, and stone. Both are in JEI. Stop here before the Andesite Machine line; that is the factory chapters."
+	quest.6401070000000000.title: "Water Wheel"
+	quest.6401070000000000.quest_subtitle: "Flowing water"
+	quest.6401070000000000.quest_desc: [
+		"Planks around a shaft. Place the wheel in flowing water. Ponder it."
+		"A Basin is an alloy box. Andesite Casing is shapeless, one alloy and any log, and this pack makes two. A Millstone is a cog, a casing, and stone. Both are in JEI."
+		"Stop before the Andesite Machine line. Fans, presses, mixers, drills, saws, and deployers are those machines, and their crafting-table recipes are gone."
+		"The ocean you climbed out of is still down there. The wheel does not care. Ponder is the manual. The Akashic Tome has no Create book."
 	]
-	chapter.E502000000000000.title: "Create Aeronautics"
-	quest.E402000000000000.title: "A White Envelope"
-	quest.E402000000000000.quest_desc: [
+	chapter.6502000000000000.title: "Create Aeronautics"
+	chapter.6502000000000000.chapter_subtitle: [
+		"Wool, then a hull"
+	]
+	quest.6402000000000000.title: "A White Envelope"
+	quest.6402000000000000.quest_subtitle: "The balloon, not the engine"
+	quest.6402000000000000.quest_desc: [
 		"Create Aeronautics ships inside the Create Aeronautics bundle. There is no guidebook. Ponder the envelope and the other airship parts, and use JEI."
 		"Claim this quest for a white envelope so you can Ponder it immediately. A spare is wool and sticks. JEI has the shape."
+		"Aeronautics has no book in the Akashic Tome. Ponder the part (W) and check JEI. The tome will not grow a page for it."
 	]
-	quest.E402010000000000.title: "Blue Envelope"
-	quest.E402010000000000.quest_desc: [
+	quest.6402010000000000.title: "Blue Envelope"
+	quest.6402010000000000.quest_subtitle: "Same balloon, blue wool"
+	quest.6402010000000000.quest_desc: [
 		"Blue wool and sticks, the same pattern as the white envelope. JEI. The envelope is the balloon, not the engine."
+		"Aeronautics has no book in the Akashic Tome. Ponder the part (W) and check JEI. The tome will not grow a page for it."
 	]
-	quest.E402020000000000.title: "Steam Vent"
-	quest.E402020000000000.quest_desc: [
-		"A gold sheet on a copper block. JEI. Ponder the vent. It is the early lift part, before brass bearings."
+	quest.6402020000000000.title: "Steam Vent"
+	quest.6402020000000000.quest_subtitle: "A Brass Machine cut"
+	quest.6402020000000000.quest_desc: [
+		"Stonecut a Brass Machine. This pack removed the gold-sheet-on-copper craft."
+		"Brass Machines are a later factory chapter, so this quest waits. The vent is lift, not the propeller."
+		"Aeronautics has no book in the Akashic Tome. Ponder the vent (W) when you have one, and check JEI."
 	]
-	quest.E402030000000000.title: "Aviator Goggles"
-	quest.E402030000000000.quest_desc: [
+	quest.6402030000000000.title: "Aviator Goggles"
+	quest.6402030000000000.quest_subtitle: "Leather on the goggles"
+	quest.6402030000000000.quest_desc: [
 		"Shapeless: leather and Create goggles. JEI. Ponder them."
+		"Aeronautics has no book in the Akashic Tome. Ponder the part (W) and check JEI. The tome will not grow a page for it."
 	]
-	quest.E402040000000000.title: "Adjustable Burner"
-	quest.E402040000000000.quest_desc: [
-		"This pack deletes the crafting-table burner. Apply a block of coal to an Andesite Machine (Create item application). JEI shows that recipe. Ponder the burner."
-		"The andesite propeller is the same kind of recipe: an Andesite Machine applied to an Immersive Aircraft propeller. The wooden propeller only crafts as a downgrade of the andesite one, so it is not a starter."
+	quest.6402040000000000.title: "Adjustable Burner"
+	quest.6402040000000000.quest_subtitle: "Coal block on an Andesite Machine"
+	quest.6402040000000000.quest_desc: [
+		"This pack deletes the crafting-table burner. Apply a block of coal to an Andesite Machine. JEI shows that item application. Ponder the burner."
+		"The andesite propeller is the same kind of recipe: an Andesite Machine applied to an Immersive Aircraft propeller."
+		"A wooden propeller converts into an andesite propeller, shapeless, one for one. It is not a step backwards, and it is not a starter on its own."
+		"Aeronautics has no book in the Akashic Tome. Ponder (W) and JEI."
 	]
-	quest.E402050000000000.title: "Propeller Bearing"
-	quest.E402050000000000.quest_desc: [
-		"A wooden slab, an iron sheet, and a Create brass casing. JEI has the shape. The brass casing is why this waits. Ponder the bearing. It is the mount the propeller spins on."
+	quest.6402050000000000.title: "Propeller Bearing"
+	quest.6402050000000000.quest_subtitle: "A Gold Machine cut"
+	quest.6402050000000000.quest_desc: [
+		"Stonecut a Gold Machine. The cut makes two bearings. The slab, iron sheet, and brass casing craft is gone."
+		"A Gold Machine is railway casing around a reinforced mechanism, so this waits for that chapter. The bearing is the mount the propeller spins on."
+		"Wool, sticks, and the opinion that the ground was a suggestion. Ponder the bearing. The Akashic Tome has no Aeronautics book."
 	]
-	chapter.E503000000000000.title: "Create Crafts & Additions"
-	quest.E403000000000000.title: "A Spool"
-	quest.E403000000000000.quest_desc: [
-		"Crafts & Additions has no guidebook. Ponder the spool, the connector, and the rolling mill. JEI lists the rest."
-		"Claim this quest for a spool. A spare is an iron sheet and an iron rod. JEI has the shape."
+	chapter.6503000000000000.title: "Create Crafts & Additions"
+	chapter.6503000000000000.chapter_subtitle: [
+		"Wires, after a Zinc Machine"
 	]
-	quest.E403010000000000.title: "Small Connector"
-	quest.E403010000000000.quest_desc: [
-		"Shapeless: a copper rod, Andesite Alloy, and a slimeball. JEI. Ponder the connector. It is the small wire terminal."
+	quest.6403000000000000.title: "A Spool"
+	quest.6403000000000000.quest_subtitle: "The copper spool"
+	quest.6403000000000000.quest_desc: [
+		"Crafts & Additions has no guidebook. Ponder the copper spool (W). JEI lists the rest."
+		"Claim this quest for a copper spool. A spare is the crafting recipe JEI shows. This pack did not move the spool onto a machine."
+		"The spool in this version is the copper spool."
 	]
-	quest.E403020000000000.title: "Large Connector"
-	quest.E403020000000000.quest_desc: [
-		"Shapeless: a rod from the large-connector rod tag, two Andesite Alloy, and a slimeball. JEI. Ponder it."
+	quest.6403010000000000.title: "Small Connector"
+	quest.6403010000000000.quest_subtitle: "Eight from a Zinc Machine"
+	quest.6403010000000000.quest_desc: [
+		"Stonecut a Zinc Machine. One cut makes eight small connectors. The slimeball, copper rod, and alloy shapeless recipe is gone."
+		"A Zinc Machine is a conductive casing around an infernal mechanism, in the factory chapters. This quest waits."
+		"Ponder the connector when you have one. The Akashic Tome has no Crafts & Additions book."
 	]
-	quest.E403030000000000.title: "Rolling Mill"
-	quest.E403030000000000.quest_desc: [
+	quest.6403020000000000.title: "Large Connector"
+	quest.6403020000000000.quest_subtitle: "Four from the same cut"
+	quest.6403020000000000.quest_desc: [
+		"Stonecut a Zinc Machine. One cut makes four large connectors. Same wait as the small connector."
+		"The small light connector is a third cut, eight of them, and it wants an iron wire in the item application. JEI shows all three."
+		"Ponder the large connector. Do not follow an old guide that still says slimeballs."
+	]
+	quest.6403030000000000.title: "Rolling Mill"
+	quest.6403030000000000.quest_subtitle: "Shaft on an Andesite Machine"
+	quest.6403030000000000.quest_desc: [
 		"This pack removes the crafting-table Rolling Mill. Apply a Shaft to an Andesite Machine. JEI shows the item-application recipe. Ponder the mill."
 		"The mill rolls plates into wires. Copper wire and iron wire both come from that roll, not from a crafting grid."
+		"Crafts & Additions has no book in the Akashic Tome. Ponder the part (W). JEI is the recipe list, including the Zinc Machine cuts."
 	]
-	quest.E403040000000000.title: "Barbed Wire"
-	quest.E403040000000000.quest_desc: [
-		"Roll an iron plate into iron wire, then craft barbed wire. JEI has the shape. The electric motor, alternator, and capacitor are removed in this pack, and the redstone relay needs an electron tube whose crafting recipe is also removed. Stop at wires."
+	quest.6403040000000000.title: "Barbed Wire"
+	quest.6403040000000000.quest_subtitle: "Three iron wires"
+	quest.6403040000000000.quest_desc: [
+		"Roll an iron plate in the Rolling Mill. The mill is an Andesite Machine with a shaft applied to it, not a crafting table."
+		"Three iron wires, shapeless, make barbed wire. JEI has that craft."
+		"The electric motor is a Zinc Machine plus a copper spool. The alternator and the capacitor are removed. Stop at the wire."
 	]
-	chapter.E504000000000000.title: "Create Diesel Generators"
-	quest.E404000000000000.title: "The Hammer"
-	quest.E404000000000000.quest_desc: [
+	chapter.6504000000000000.title: "Create Diesel Generators"
+	chapter.6504000000000000.chapter_subtitle: [
+		"A hammer, then steel"
+	]
+	quest.6404000000000000.title: "The Hammer"
+	quest.6404000000000000.quest_subtitle: "Iron and two rods"
+	quest.6404000000000000.quest_desc: [
 		"No guidebook. Ponder the hammer. Claim this quest for one."
 		"A spare is two iron ingots and two wooden rods, in a pickaxe shape. JEI shows both mirrored shapes. This pack removed the andesite-and-iron hammer."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	quest.E404010000000000.title: "Wood Chips"
-	quest.E404010000000000.quest_desc: [
+	quest.6404010000000000.title: "Wood Chips"
+	quest.6404010000000000.quest_subtitle: "Cut wooden rods, or crush a boat"
+	quest.6404010000000000.quest_desc: [
 		"Cut wooden rods, or crush a boat. JEI lists both. The saw that does the cutting is an Andesite Machine in this pack. Wood chips are the early fuel item."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	quest.E404020000000000.title: "Oil Barrel"
-	quest.E404020000000000.quest_desc: [
+	quest.6404020000000000.title: "Oil Barrel"
+	quest.6404020000000000.quest_subtitle: "A barrel and iron sheets"
+	quest.6404020000000000.quest_desc: [
 		"A barrel and iron sheets. JEI. Ponder the barrel. It holds the oils the engines drink."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	quest.E404030000000000.title: "Canister"
-	quest.E404030000000000.quest_desc: [
+	quest.6404030000000000.title: "Canister"
+	quest.6404030000000000.quest_subtitle: "Andesite Alloy, a barrel, and iron sheets"
+	quest.6404030000000000.quest_desc: [
 		"Andesite Alloy, a barrel, and iron sheets. JEI. Ponder the canister. It is the portable tank."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	quest.E404040000000000.title: "Lighter"
-	quest.E404040000000000.quest_desc: [
+	quest.6404040000000000.title: "Lighter"
+	quest.6404040000000000.quest_subtitle: "Brass sheets, flint and steel, string, and"
+	quest.6404040000000000.quest_desc: [
 		"Brass sheets, flint and steel, string, and Andesite Alloy. JEI. Brass is later than the hammer. Ponder the lighter. It lights the burners."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	quest.E404050000000000.title: "Engine Silencer"
-	quest.E404050000000000.quest_desc: [
+	quest.6404050000000000.title: "Engine Silencer"
+	quest.6404050000000000.quest_subtitle: "Wool, iron sheets, Andesite Alloy, and a"
+	quest.6404050000000000.quest_desc: [
 		"Wool, iron sheets, Andesite Alloy, and a Create fluid pipe. JEI."
 		"The diesel engines, the pumpjack, and the distillation controller are Steel Machines in this pack. Their crafting-table recipes are removed. Ponder them when you reach steel, and follow JEI rather than an old guide."
+		"Create Diesel Generators has no book in the Akashic Tome. Ponder the tool (W) and use JEI. The engines themselves are Steel Machines, later."
 	]
-	chapter.E505000000000000.title: "Create Enchantment Industry"
-	quest.E405000000000000.title: "Blaze's Handbook"
-	quest.E405000000000000.quest_desc: [
-		"Claim this quest for Blaze's Enchanting Handbook. Read it, then Ponder the grindstone and the printer."
-		"The handbook's own craft is a blaze smithing template, sturdy sheets, bottles of experience, and magma. This pack removes recipes that use sturdy sheets, so the book is the reward instead of a starter craft."
+	chapter.6505000000000000.title: "Create Enchantment Industry"
+	chapter.6505000000000000.chapter_subtitle: [
+		"Liquid experience"
 	]
-	quest.E405010000000000.title: "Mechanical Grindstone"
-	quest.E405010000000000.quest_desc: [
+	quest.6405000000000000.title: "Blaze's Handbook"
+	quest.6405000000000000.quest_subtitle: "A template, not a book"
+	quest.6405000000000000.quest_desc: [
+		"Claim this quest for Blaze's Enchanting Handbook. It does not open. It is an enchanting template, which is why the Akashic Tome leaves it out."
+		"Its own craft, in JEI, swaps the old sturdy sheet for a Create schedule. This pack removed recipes that still ask for sturdy sheets, so the quest hands you the template."
+		"Ponder the grindstone (W). Liquid experience starts there, not in the template."
+	]
+	quest.6405010000000000.title: "Mechanical Grindstone"
+	quest.6405010000000000.quest_subtitle: "Andesite Alloy around a shaft"
+	quest.6405010000000000.quest_desc: [
 		"Andesite Alloy around a shaft. JEI has the shape. This crafting recipe is still in the pack. Ponder the grindstone. It turns enchantments into liquid experience."
+		"The blaze handbook is a template, not a book, so the Akashic Tome leaves it out. Ponder the grindstone (W) and use JEI."
 	]
-	quest.E405020000000000.title: "Experience Cake Base"
-	quest.E405020000000000.quest_desc: [
+	quest.6405020000000000.title: "Experience Cake Base"
+	quest.6405020000000000.quest_subtitle: "Compact an egg, sugar, and lapis in"
+	quest.6405020000000000.quest_desc: [
 		"Compact an egg, sugar, and lapis in a Basin with a Mechanical Press above it. The handbook and JEI show the compacting recipe."
 		"This pack's Press is an iron block applied to an Andesite Machine, not the old crafting grid. The cake base waits until you have that press."
+		"The blaze handbook is a template, not a book, so the Akashic Tome leaves it out. Ponder the grindstone (W) and use JEI."
 	]
-	quest.E405030000000000.title: "Experience Cake"
-	quest.E405030000000000.quest_desc: [
+	quest.6405030000000000.title: "Experience Cake"
+	quest.6405030000000000.quest_subtitle: "Fill the cake base with 1000 mB"
+	quest.6405030000000000.quest_desc: [
 		"Fill the cake base with 1000 mB of liquid experience from the grindstone. JEI shows the spout filling. The handbook's experience pages cover the drain."
+		"The blaze handbook is a template, not a book, so the Akashic Tome leaves it out. Ponder the grindstone (W) and use JEI."
 	]
-	quest.E405040000000000.title: "Printer"
-	quest.E405040000000000.quest_desc: [
-		"A brass sheet, a spout, and an iron block. JEI. Brass is later than the grindstone. Ponder the printer."
-		"Pressing an Experience Block makes an Enchanting Template. The blaze enchanter and blaze forger are smithing recipes after that. The handbook is the walkthrough. The infuser needs a nixie tube and a spout, so it is past this primer."
+	quest.6405040000000000.title: "Printer"
+	quest.6405040000000000.quest_subtitle: "Lapis on a machine"
+	quest.6405040000000000.quest_desc: [
+		"The crafting-table printer is gone. Apply a lapis block to a Zinc Machine or a Lead Machine. JEI shows whichever of those item applications this load kept."
+		"Both scripts add that recipe. If you only see one, use that one. Brass sheets and a spout are the old shape."
+		"The printer waits for that machine. Ponder it then. The handbook you were given is the template, not the walkthrough."
 	]
-	chapter.E506000000000000.title: "Immersive Engineering"
-	quest.E406000000000000.title: "Engineer's Manual"
-	quest.E406000000000000.quest_desc: [
-		"Claim this quest for the Engineer's Manual. A spare is shapeless, a book plus the ingredients JEI lists. The Manual is the guidebook. Read the Tools and Coke Oven pages first."
-		"Light Engineering, Heavy Engineering, the dynamo, the waterwheel, and the windmill are removed or turned into Steel Machines in this pack. Follow the Manual and JEI, not those old crafting grids."
+	chapter.6506000000000000.title: "Immersive Engineering"
+	chapter.6506000000000000.chapter_subtitle: [
+		"Coke, then steel"
 	]
-	quest.E406010000000000.title: "Engineer's Hammer"
-	quest.E406010000000000.quest_desc: [
+	quest.6406000000000000.title: "Engineer's Manual"
+	quest.6406000000000000.quest_subtitle: "Read the coke oven"
+	quest.6406000000000000.quest_desc: [
+		"Claim this quest for the Engineer's Manual. A spare is shapeless, a book plus the ingredients JEI lists. The Manual is also in the Akashic Tome. Read Tools and the Coke Oven first."
+		"Light Engineering, Heavy Engineering, the dynamo, the waterwheel, and the windmill are Steel Machines in this pack, or removed. Follow the Manual and JEI, not those old grids."
+	]
+	quest.6406010000000000.title: "Engineer's Hammer"
+	quest.6406010000000000.quest_subtitle: "Iron, string, and sticks"
+	quest.6406010000000000.quest_desc: [
 		"Iron, string, and sticks. JEI has the shape. The Manual's Tools page shows what the hammer rotates and demolishes."
+		"The Engineer's Manual is inside the Autisnautics Guide, the Akashic Tome from your first join. Read it, then confirm the craft in JEI."
 	]
-	quest.E406020000000000.title: "Wire Cutters"
-	quest.E406020000000000.quest_desc: [
+	quest.6406020000000000.title: "Wire Cutters"
+	quest.6406020000000000.quest_subtitle: "An iron ingot and sticks"
+	quest.6406020000000000.quest_desc: [
 		"An iron ingot and sticks. JEI has the shape. The Manual's Wiring page uses these to connect relays."
+		"The Engineer's Manual is inside the Autisnautics Guide, the Akashic Tome from your first join. Read it, then confirm the craft in JEI."
 	]
-	quest.E406030000000000.title: "Coke Brick"
-	quest.E406030000000000.quest_desc: [
+	quest.6406030000000000.title: "Coke Brick"
+	quest.6406030000000000.quest_subtitle: "Clay, bricks, and sandstone"
+	quest.6406030000000000.quest_desc: [
 		"Clay, bricks, and sandstone. JEI. Build the Coke Oven from the Manual's multiblock page. Creosote from that oven treats wood."
+		"The Engineer's Manual is inside the Autisnautics Guide, the Akashic Tome from your first join. Read it, then confirm the craft in JEI."
 	]
-	quest.E406040000000000.title: "Basic Conveyor"
-	quest.E406040000000000.quest_desc: [
+	quest.6406040000000000.title: "Basic Conveyor"
+	quest.6406040000000000.quest_subtitle: "Leather, iron, and redstone"
+	quest.6406040000000000.quest_desc: [
 		"Leather, iron, and redstone. JEI. The Manual's Conveyors page covers the belts."
+		"The Engineer's Manual is inside the Autisnautics Guide, the Akashic Tome from your first join. Read it, then confirm the craft in JEI."
 	]
-	quest.E406050000000000.title: "Iron Component"
-	quest.E406050000000000.quest_desc: [
+	quest.6406050000000000.title: "Iron Component"
+	quest.6406050000000000.quest_subtitle: "Craft it from the Engineer's Blueprint at"
+	quest.6406050000000000.quest_desc: [
 		"Not a crafting table. Craft it from the Engineer's Blueprint at the Engineer's Crafting Table: two iron plates and a copper ingot. The Manual's Components page has the blueprint."
 		"The crafting table itself wants treated wood from the coke oven. Vacuum tubes and the heavier components come after that."
+		"The Engineer's Manual is inside the Autisnautics Guide, the Akashic Tome from your first join. Read it, then confirm the craft in JEI."
 	]
-	chapter.E507000000000000.title: "Immersive Petroleum"
-	quest.E407000000000000.title: "Oil Can"
-	quest.E407000000000000.quest_desc: [
+	chapter.6507000000000000.title: "Immersive Petroleum"
+	chapter.6507000000000000.chapter_subtitle: [
+		"Oil, without the tower"
+	]
+	quest.6407000000000000.title: "Oil Can"
+	quest.6407000000000000.quest_subtitle: "Immersive Petroleum has no book of its"
+	quest.6407000000000000.quest_desc: [
 		"Immersive Petroleum has no book of its own. The Engineer's Manual and JEI are the guide. Claim this quest for an oil can."
 		"A spare is a bucket, iron sheets, and red dye. JEI has the shape. The portable generator is removed in this pack. The flare stack needs a steel component, and the seismic survey and speedboat hull need Light Engineering, which this pack turns into a Steel Machine. Those wait."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	quest.E407010000000000.title: "Rudder Upgrade"
-	quest.E407010000000000.quest_desc: [
+	quest.6407010000000000.title: "Rudder Upgrade"
+	quest.6407010000000000.quest_subtitle: "Iron sheets and iron rods"
+	quest.6407010000000000.quest_desc: [
 		"Iron sheets and iron rods. JEI. This is a boat part you can craft before steel. The Manual's petroleum pages cover the boat."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	quest.E407020000000000.title: "Projector"
-	quest.E407020000000000.quest_desc: [
+	quest.6407020000000000.title: "Projector"
+	quest.6407020000000000.quest_subtitle: "Iron, an Engineer's Lantern, glass, and treated"
+	quest.6407020000000000.quest_desc: [
 		"Iron, an Engineer's Lantern, glass, and treated wood. JEI. Treated wood comes from the coke oven in the Engineering primer. The projector surveys chunks."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	quest.E407030000000000.title: "Automatic Lubricator"
-	quest.E407030000000000.quest_desc: [
+	quest.6407030000000000.title: "Automatic Lubricator"
+	quest.6407030000000000.quest_subtitle: "Glass, an Engineer's fluid pipe, and treated"
+	quest.6407030000000000.quest_desc: [
 		"Glass, an Engineer's fluid pipe, and treated wood. JEI. It drips lubricant onto Create machines. The Manual covers the fluid pipe."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	quest.E407040000000000.title: "Paddle Upgrade"
-	quest.E407040000000000.quest_desc: [
+	quest.6407040000000000.title: "Paddle Upgrade"
+	quest.6407040000000000.quest_subtitle: "Treated wood and treated-wood rods"
+	quest.6407040000000000.quest_desc: [
 		"Treated wood and treated-wood rods. JEI. Pair it with the rudders. The steel hull and the icebreaker are later."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	quest.E407050000000000.title: "Asphalt"
-	quest.E407050000000000.quest_desc: [
+	quest.6407050000000000.title: "Asphalt"
+	quest.6407050000000000.quest_subtitle: "Bitumen, sand, gravel, and water"
+	quest.6407050000000000.quest_desc: [
 		"Bitumen, sand, gravel, and water. JEI. Bitumen is a distillation product, so this waits until the distillation tower is running. The Manual's petroleum chapter is the multiblock. The quest is the paving block, not the tower."
+		"Immersive Petroleum has no book of its own. Use the Engineer's Manual in the Akashic Tome, and JEI."
 	]
-	chapter.E508000000000000.title: "NuclearCraft Neohaul"
-	quest.E408000000000000.title: "NuclearCraft Guide"
-	quest.E408000000000000.quest_desc: [
+	chapter.6508000000000000.title: "NuclearCraft Neohaul"
+	chapter.6508000000000000.chapter_subtitle: [
+		"Coils, before the reactor"
+	]
+	quest.6408000000000000.title: "NuclearCraft Guide"
+	quest.6408000000000000.quest_subtitle: "the NuclearCraft Guide"
+	quest.6408000000000000.quest_desc: [
 		"Claim this quest for the NuclearCraft Guide. The pack config leaves give_guidebook off, and the crafting recipe wants a uranium ingot, so the quest gives the book."
 		"Open it and read Machines and Items. A GuideME copy of this book does not load: GuideME is not installed. The Geiger counter's recipe uses bioplastic, and this pack removes bioplastic, so the counter is not a starter craft."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	quest.E408010000000000.title: "Copper Solenoid"
-	quest.E408010000000000.quest_desc: [
+	quest.6408010000000000.title: "Copper Solenoid"
+	quest.6408010000000000.quest_subtitle: "Copper ingots and iron ingots"
+	quest.6408010000000000.quest_desc: [
 		"Copper ingots and iron ingots. The craft makes two. JEI has the shape. The guide's Items page covers the solenoid. It is the coil in the early machines."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	quest.E408020000000000.title: "Basic Plating"
-	quest.E408020000000000.quest_desc: [
+	quest.6408020000000000.title: "Basic Plating"
+	quest.6408020000000000.quest_subtitle: "A lead ingot and graphite dust, two"
+	quest.6408020000000000.quest_desc: [
 		"A lead ingot and graphite dust, two mirrored shapes, two plating each. JEI. The guide lists where graphite dust and lead come from. Lead is the Immersive Engineering ingot in this pack."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	quest.E408030000000000.title: "Radiation Badge"
-	quest.E408030000000000.quest_desc: [
+	quest.6408030000000000.title: "Radiation Badge"
+	quest.6408030000000000.quest_subtitle: "Copper, string, redstone dust, and lead"
+	quest.6408030000000000.quest_desc: [
 		"Copper, string, redstone dust, and lead. JEI. The guide's radiation pages explain the badge. It is the early detector you can craft while the Geiger counter is unavailable."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	quest.E408040000000000.title: "Manufactory"
-	quest.E408040000000000.quest_desc: [
+	quest.6408040000000000.title: "Manufactory"
+	quest.6408040000000000.quest_subtitle: "Lead, redstone, flint, a piston, and a"
+	quest.6408040000000000.quest_desc: [
 		"Lead, redstone, flint, a piston, and a copper solenoid. JEI. The guide's Machines page is the grinder. It is the first processor."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	quest.E408050000000000.title: "Alloy Furnace"
-	quest.E408050000000000.quest_desc: [
+	quest.6408050000000000.title: "Alloy Furnace"
+	quest.6408050000000000.quest_subtitle: "Basic plating, bricks, a furnace, redstone, and"
+	quest.6408050000000000.quest_desc: [
 		"Basic plating, bricks, a furnace, redstone, and a copper solenoid. JEI. The guide's Alloys page starts here. Tough Alloy and the machine chassis need later metals, so they are past this primer."
+		"The NuclearCraft Guide is in the Akashic Tome. A GuideME copy of it does not load. JEI has the shapes."
 	]
-	chapter.E509000000000000.title: "Refined Storage"
-	quest.E409000000000000.title: "A Wrench"
-	quest.E409000000000000.quest_desc: [
-		"Refined Storage has no guidebook. JEI is the manual. Claim this quest for the wrench."
-		"The crafting-table wrench needs a Basic Processor. This pack removes the silicon craft and moves processors to the later factory chapters, so the wrench is a reward. The Controller, Grid, and Disk Drive are Fluix Machines here. Do not follow the old crafting grids for those three, or for the importer, exporter, detector, or external storage."
+	chapter.6509000000000000.title: "Refined Storage"
+	chapter.6509000000000000.chapter_subtitle: [
+		"Cables, before the controller"
 	]
-	quest.E409010000000000.title: "Quartz Enriched Iron"
-	quest.E409010000000000.quest_desc: [
+	quest.6409000000000000.title: "A Wrench"
+	quest.6409000000000000.quest_subtitle: "The wrench is the reward"
+	quest.6409000000000000.quest_desc: [
+		"Refined Storage has no guidebook. JEI is the manual. The Akashic Tome will not contain one. Claim this quest for the wrench."
+		"The crafting-table wrench needs a Basic Processor. This pack removes the plain silicon craft and moves processors onto the wafer line, so the wrench is a reward."
+		"The Controller is a Fluix casing around a calculation mechanism. The Grid and the Disk Drive are Fluix Machines. Do not follow the old crafting grids for those, or for the importer, exporter, detector, or external storage."
+	]
+	quest.6409010000000000.title: "Quartz Enriched Iron"
+	quest.6409010000000000.quest_subtitle: "Three iron and one quartz"
+	quest.6409010000000000.quest_desc: [
 		"Three iron and one quartz. JEI has the shape. This crafting recipe is still early. It is the metal for the casing and the housing."
+		"Refined Storage has no guidebook. JEI is the manual. The Akashic Tome will not contain one. The Controller is a later Fluix Machine."
 	]
-	quest.E409020000000000.title: "Quartz Enriched Copper"
-	quest.E409020000000000.quest_desc: [
+	quest.6409020000000000.title: "Quartz Enriched Copper"
+	quest.6409020000000000.quest_subtitle: "Three copper and one quartz"
+	quest.6409020000000000.quest_desc: [
 		"Three copper and one quartz. JEI. This is the metal for cables."
+		"Refined Storage has no guidebook. JEI is the manual. The Akashic Tome will not contain one. The Controller is a later Fluix Machine."
 	]
-	quest.E409030000000000.title: "Machine Casing"
-	quest.E409030000000000.quest_desc: [
+	quest.6409030000000000.title: "Machine Casing"
+	quest.6409030000000000.quest_subtitle: "Quartz Enriched Iron around stone"
+	quest.6409030000000000.quest_desc: [
 		"Quartz Enriched Iron around stone. JEI. The casing is the shell. The Controller that sits in one is a Fluix Machine, later."
+		"Refined Storage has no guidebook. JEI is the manual. The Akashic Tome will not contain one. The Controller is a later Fluix Machine."
 	]
-	quest.E409040000000000.title: "Cable"
-	quest.E409040000000000.quest_desc: [
+	quest.6409040000000000.title: "Cable"
+	quest.6409040000000000.quest_subtitle: "Quartz Enriched Copper, glass, and redstone"
+	quest.6409040000000000.quest_desc: [
 		"Quartz Enriched Copper, glass, and redstone. JEI. Cables carry the network. The wrench breaks them back into themselves."
+		"Refined Storage has no guidebook. JEI is the manual. The Akashic Tome will not contain one. The Controller is a later Fluix Machine."
 	]
-	quest.E409050000000000.title: "Storage Housing"
-	quest.E409050000000000.quest_desc: [
-		"Glass, redstone, and Quartz Enriched Iron. JEI. A housing is the empty disk shell. The 1k storage part wants a calculation mechanism in this pack, so leave the disks for the factory chapters."
+	quest.6409050000000000.title: "Storage Housing"
+	quest.6409050000000000.quest_subtitle: "The shell, not the disk"
+	quest.6409050000000000.quest_desc: [
+		"Glass, redstone, and Quartz Enriched Iron. JEI. A housing is the empty disk shell."
+		"The 1k storage part wants a calculation mechanism in this pack, instead of redstone dust. Leave the disks for the factory chapters."
+		"The wrench breaks cables back into themselves. That is as far as this primer goes."
 	]
-	chapter.E50A000000000000.title: "Sophisticated Storage"
-	quest.E40A000000000000.title: "A Chest"
-	quest.E40A000000000000.quest_desc: [
+	chapter.650A000000000000.title: "Sophisticated Storage"
+	chapter.650A000000000000.chapter_subtitle: [
+		"Chests with a screen"
+	]
+	quest.640A000000000000.title: "A Chest"
+	quest.640A000000000000.quest_subtitle: "Sophisticated Storage has no guidebook"
+	quest.640A000000000000.quest_desc: [
 		"Sophisticated Storage has no guidebook. JEI lists a chest and a barrel for every wood. Claim this quest for one chest."
 		"The Storage Tool opens the settings screen. Upgrades go in that screen, not in the crafting grid of the chest itself."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	quest.E40A010000000000.title: "Barrel"
-	quest.E40A010000000000.quest_desc: [
+	quest.640A010000000000.title: "Barrel"
+	quest.640A010000000000.quest_subtitle: "Any wood barrel recipe in JEI"
+	quest.640A010000000000.quest_desc: [
 		"Any wood barrel recipe in JEI. Same idea as the chest, with a front that shows the contents."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	quest.E40A020000000000.title: "Upgrade Base"
-	quest.E40A020000000000.quest_desc: [
+	quest.640A020000000000.title: "Upgrade Base"
+	quest.640A020000000000.quest_subtitle: "Iron and planks"
+	quest.640A020000000000.quest_desc: [
 		"Iron and planks. JEI. Every upgrade starts from this blank plate."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	quest.E40A030000000000.title: "Pickup Upgrade"
-	quest.E40A030000000000.quest_desc: [
+	quest.640A030000000000.title: "Pickup Upgrade"
+	quest.640A030000000000.quest_subtitle: "An upgrade base, a sticky piston, planks,"
+	quest.640A030000000000.quest_desc: [
 		"An upgrade base, a sticky piston, planks, and redstone. JEI. Put it in the chest's upgrade screen. It picks up drops."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	quest.E40A040000000000.title: "Storage Tool"
-	quest.E40A040000000000.quest_desc: [
+	quest.640A040000000000.title: "Storage Tool"
+	quest.640A040000000000.quest_subtitle: "Opens the chest screen"
+	quest.640A040000000000.quest_desc: [
 		"An ender pearl, iron, a redstone torch, and sticks. JEI. Use it on a chest or barrel to open the settings the guidebook would have covered."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	quest.E40A050000000000.title: "Hopper Upgrade"
-	quest.E40A050000000000.quest_desc: [
+	quest.640A050000000000.title: "Hopper Upgrade"
+	quest.640A050000000000.quest_subtitle: "An upgrade base, a hopper, iron, and"
+	quest.640A050000000000.quest_desc: [
 		"An upgrade base, a hopper, iron, and redstone. JEI has the shape. The advanced hopper upgrade is a later tier and wants gold and diamonds. Stop at the basic one."
+		"Sophisticated Storage has no guidebook. The Storage Tool opens the screen a book would have. JEI lists the crafts."
 	]
-	chapter.E50B000000000000.title: "Sophisticated Backpacks"
-	quest.E40B000000000000.title: "A Backpack"
-	quest.E40B000000000000.quest_desc: [
+	chapter.650B000000000000.title: "Sophisticated Backpacks"
+	chapter.650B000000000000.chapter_subtitle: [
+		"The same idea, worn"
+	]
+	quest.640B000000000000.title: "A Backpack"
+	quest.640B000000000000.quest_subtitle: "No guidebook"
+	quest.640B000000000000.quest_desc: [
 		"No guidebook. JEI is the manual. Claim this quest for a backpack."
 		"A spare is string, leather, and a chest. JEI has the shape. Open the backpack and use the upgrade slot the same way Sophisticated Storage does."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	quest.E40B010000000000.title: "Upgrade Base"
-	quest.E40B010000000000.quest_desc: [
+	quest.640B010000000000.title: "Upgrade Base"
+	quest.640B010000000000.quest_subtitle: "String, leather, and iron"
+	quest.640B010000000000.quest_desc: [
 		"String, leather, and iron. JEI has the shape. Backpack upgrades and storage upgrades are different items. Use the backpack one."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	quest.E40B020000000000.title: "Pickup Upgrade"
-	quest.E40B020000000000.quest_desc: [
+	quest.640B020000000000.title: "Pickup Upgrade"
+	quest.640B020000000000.quest_subtitle: "An upgrade base, string, a sticky piston,"
+	quest.640B020000000000.quest_desc: [
 		"An upgrade base, string, a sticky piston, and redstone. JEI has the shape. It vacuums items while you wear the pack."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	quest.E40B030000000000.title: "Crafting Upgrade"
-	quest.E40B030000000000.quest_desc: [
+	quest.640B030000000000.title: "Crafting Upgrade"
+	quest.640B030000000000.quest_subtitle: "An upgrade base, iron, a crafting table,"
+	quest.640B030000000000.quest_desc: [
 		"An upgrade base, iron, a crafting table, and a chest. JEI has the shape. Install it and the backpack grows a crafting grid."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	quest.E40B040000000000.title: "Filter Upgrade"
-	quest.E40B040000000000.quest_desc: [
+	quest.640B040000000000.title: "Filter Upgrade"
+	quest.640B040000000000.quest_subtitle: "An upgrade base, string, and redstone"
+	quest.640B040000000000.quest_desc: [
 		"An upgrade base, string, and redstone. JEI has the shape. It lets the backpack ignore items you do not want picked up."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	quest.E40B050000000000.title: "Smelting Upgrade"
-	quest.E40B050000000000.quest_desc: [
+	quest.640B050000000000.title: "Smelting Upgrade"
+	quest.640B050000000000.quest_subtitle: "An upgrade base, a furnace, iron, and"
+	quest.640B050000000000.quest_desc: [
 		"An upgrade base, a furnace, iron, and redstone. JEI has the shape. The backpack smelts what you put in it. The feeding upgrade wants golden food, and the iron-block stack upgrade is a bigger pile of metal, so those stay out of this primer."
+		"Sophisticated Backpacks has no guidebook. JEI lists the upgrade. It is a different item from the storage upgrade with the same job."
 	]
-	chapter.E50C000000000000.title: "Farmer's Delight"
-	quest.E40C000000000000.title: "Flint Knife"
-	quest.E40C000000000000.quest_desc: [
+	chapter.650C000000000000.title: "Farmer's Delight"
+	chapter.650C000000000000.chapter_subtitle: [
+		"Knife, board, pot"
+	]
+	quest.640C000000000000.title: "Flint Knife"
+	quest.640C000000000000.quest_subtitle: "Farmer's Delight has no guidebook"
+	quest.640C000000000000.quest_desc: [
 		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are how you learn it. Claim this quest for a flint knife."
 		"This pack replaced the vertical knife. A spare is a wooden rod in the top-left and flint in the bottom-right. JEI shows that shape. Iron, gold, and diamond knives use the same shape."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	quest.E40C010000000000.title: "Cutting Board"
-	quest.E40C010000000000.quest_desc: [
+	quest.640C010000000000.title: "Cutting Board"
+	quest.640C010000000000.quest_subtitle: "Planks and sticks"
+	quest.640C010000000000.quest_desc: [
 		"Planks and sticks. JEI. Put it down and use the knife on it. That is the cutting recipe type JEI shows as a knife and a board."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	quest.E40C020000000000.title: "Cooking Pot"
-	quest.E40C020000000000.quest_desc: [
+	quest.640C020000000000.title: "Cooking Pot"
+	quest.640C020000000000.quest_subtitle: "Bricks, a wooden shovel, a water bucket,"
+	quest.640C020000000000.quest_desc: [
 		"Bricks, a wooden shovel, a water bucket, and iron. JEI. The shovel and the bucket are ingredients, so they are used up. Heat the pot with a campfire or the stove."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	quest.E40C030000000000.title: "Skillet"
-	quest.E40C030000000000.quest_desc: [
+	quest.640C030000000000.title: "Skillet"
+	quest.640C030000000000.quest_subtitle: "Iron and a brick"
+	quest.640C030000000000.quest_desc: [
 		"Iron and a brick. JEI. It cooks one ingredient over heat and can be used as a pan."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	quest.E40C040000000000.title: "Stove"
-	quest.E40C040000000000.quest_desc: [
+	quest.640C040000000000.title: "Stove"
+	quest.640C040000000000.quest_subtitle: "Iron, bricks, and a campfire"
+	quest.640C040000000000.quest_desc: [
 		"Iron, bricks, and a campfire. JEI. It is the block the pot and the skillet want underneath them."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	quest.E40C050000000000.title: "Rope"
-	quest.E40C050000000000.quest_desc: [
+	quest.640C050000000000.title: "Rope"
+	quest.640C050000000000.quest_subtitle: "Two straw"
+	quest.640C050000000000.quest_desc: [
 		"Two straw. JEI. Straw is not wheat: cut a rice panicle or a bamboo block with the knife. JEI lists those cutting recipes. Canvas is four straw, the same way."
+		"Straw, not wheat. The knife knows the difference, and so will the rope."
+		"Farmer's Delight has no guidebook. The knife, the cutting board, and JEI are the manual. Cooking for Blockheads, in the Akashic Tome, is a different mod."
 	]
-	chapter.E50D000000000000.title: "CC: Tweaked"
-	quest.E40D000000000000.title: "A Computer"
-	quest.E40D000000000000.quest_desc: [
+	chapter.650D000000000000.title: "CC: Tweaked"
+	chapter.650D000000000000.chapter_subtitle: [
+		"Type help"
+	]
+	quest.640D000000000000.title: "A Computer"
+	quest.640D000000000000.quest_subtitle: "Run help"
+	quest.640D000000000000.quest_desc: [
 		"CC: Tweaked has no guidebook item. Place the computer, right-click it, and run help. Claim this quest for a normal computer."
 		"A spare is stone, redstone, and a glass pane. JEI has the shape. help, programs, and the lua prompt are the manual."
+		"help is the manual. It is also the entire documentation department."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	quest.E40D010000000000.title: "Monitor"
-	quest.E40D010000000000.quest_desc: [
+	quest.640D010000000000.title: "Monitor"
+	quest.640D010000000000.quest_subtitle: "Stone and glass"
+	quest.640D010000000000.quest_desc: [
 		"Stone and glass. JEI. Put it next to the computer. help monitor covers the commands once you turn the computer on."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	quest.E40D020000000000.title: "Cable"
-	quest.E40D020000000000.quest_desc: [
+	quest.640D020000000000.title: "Cable"
+	quest.640D020000000000.quest_subtitle: "Stone and redstone"
+	quest.640D020000000000.quest_desc: [
 		"Stone and redstone. JEI. Cables join computers, monitors, and modems. Wired modems are in JEI when you want more than one block of network."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	quest.E40D030000000000.title: "Disk Drive"
-	quest.E40D030000000000.quest_desc: [
+	quest.640D030000000000.title: "Disk Drive"
+	quest.640D030000000000.quest_subtitle: "Stone and redstone"
+	quest.640D030000000000.quest_desc: [
 		"Stone and redstone. JEI. Put a floppy disk in it. Disks are paper and redstone dye. JEI lists the colors. list and help are the programs to run first."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	quest.E40D040000000000.title: "Wireless Modem"
-	quest.E40D040000000000.quest_desc: [
+	quest.640D040000000000.title: "Wireless Modem"
+	quest.640D040000000000.quest_subtitle: "Stone and an ender pearl"
+	quest.640D040000000000.quest_desc: [
 		"Stone and an ender pearl. JEI. help modem covers rednet. The ender modem is the same idea with an eye of ender, later."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	quest.E40D050000000000.title: "Turtle"
-	quest.E40D050000000000.quest_desc: [
+	quest.640D050000000000.title: "Turtle"
+	quest.640D050000000000.quest_subtitle: "Iron, a computer, and a chest"
+	quest.640D050000000000.quest_desc: [
 		"Iron, a computer, and a chest. JEI. A turtle is a computer that moves. help turtle is the program list. Craft it after the computer so you already know help."
+		"CC: Tweaked has no book in the Akashic Tome. Place the computer and run help. That prompt is the manual."
 	]
-	chapter.E50E000000000000.title: "Ars Nouveau"
-	quest.E40E000000000000.title: "Worn Notebook"
-	quest.E40E000000000000.quest_desc: [
+	chapter.650E000000000000.title: "Ars Nouveau"
+	chapter.650E000000000000.chapter_subtitle: [
+		"Archwood, then a notebook"
+	]
+	quest.640E000000000000.title: "Worn Notebook"
+	quest.640E000000000000.quest_subtitle: "the Worn Notebook"
+	quest.640E000000000000.quest_desc: [
 		"Claim this quest for the Worn Notebook. The pack config leaves spawnBook off. A spare is shapeless: a book and a lapis gem. JEI."
 		"Read the notebook before you spend gold on a chamber. It is the mod's book, not a Patchouli book."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E010000000000.title: "Blue Archwood"
-	quest.E40E010000000000.quest_desc: [
+	quest.640E010000000000.title: "Blue Archwood"
+	quest.640E010000000000.quest_subtitle: "Find an archwood tree"
+	quest.640E010000000000.quest_desc: [
 		"Find an archwood tree. There is no plain archwood log item, and sourceberries are not an item in this version. Blue is the log this quest asks for. Any color makes the same planks. The notebook's archwood pages describe the trees."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E020000000000.title: "Archwood Planks"
-	quest.E40E020000000000.quest_desc: [
+	quest.640E020000000000.title: "Archwood Planks"
+	quest.640E020000000000.quest_subtitle: "Craft planks from any archwood log, the"
+	quest.640E020000000000.quest_desc: [
 		"Craft planks from any archwood log, the same way as oak. JEI. The chamber and the jar use these planks."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E030000000000.title: "Imbuement Chamber"
-	quest.E40E030000000000.quest_desc: [
+	quest.640E030000000000.title: "Imbuement Chamber"
+	quest.640E030000000000.quest_subtitle: "Archwood planks and gold"
+	quest.640E030000000000.quest_desc: [
 		"Archwood planks and gold. JEI has the shape. The notebook's imbuement entry is the setup: the chamber stands alone for the first recipes, with pedestals added later."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E040000000000.title: "Source Gem"
-	quest.E40E040000000000.quest_desc: [
+	quest.640E040000000000.title: "Source Gem"
+	quest.640E040000000000.quest_subtitle: "Put an amethyst shard in the Imbuement"
+	quest.640E040000000000.quest_desc: [
 		"Not a crafting table. Put an amethyst shard in the Imbuement Chamber. It takes source and no pedestal items. The notebook lists the source cost. The gem is the dust of the mod."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E050000000000.title: "Sourcestone"
-	quest.E40E050000000000.quest_desc: [
+	quest.640E050000000000.title: "Sourcestone"
+	quest.640E050000000000.quest_subtitle: "Stone around a source gem"
+	quest.640E050000000000.quest_desc: [
 		"Stone around a source gem. JEI. The block is sourcestone, not the old arcane stone name. The notebook's apparatus pages build with it."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	quest.E40E060000000000.title: "Novice Spell Book"
-	quest.E40E060000000000.quest_desc: [
+	quest.640E060000000000.title: "Novice Spell Book"
+	quest.640E060000000000.quest_subtitle: "a book plus an iron shovel, pickaxe,"
+	quest.640E060000000000.quest_desc: [
 		"Shapeless: a book plus an iron shovel, pickaxe, axe, and sword. Those four tools are consumed. JEI. The notebook's spell book page is the one to read first."
 		"A source jar is glass and archwood slabs, in JEI, when you want to store source. It is the next block after the book."
+		"The Worn Notebook is in the Akashic Tome. Read it before you spend gold. It is not a Patchouli book."
 	]
-	chapter.E50F000000000000.title: "Iron's Spells"
-	quest.E40F000000000000.title: "Iron's Guidebook"
-	quest.E40F000000000000.quest_desc: [
+	chapter.650F000000000000.title: "Iron's Spells"
+	chapter.650F000000000000.chapter_subtitle: [
+		"Essence, then ink"
+	]
+	quest.640F000000000000.title: "Iron's Guidebook"
+	quest.640F000000000000.quest_subtitle: "Iron's Guidebook"
+	quest.640F000000000000.quest_desc: [
 		"Claim this quest for Iron's Guidebook. The crafting recipe is a book and arcane essence, which you will not have yet. The book is the Patchouli item, not a separate book item."
 		"Read the introduction. It names the inscription table, the inks, and the spell books."
+		"Iron's Guidebook is the Patchouli pamphlet in the Akashic Tome. Read the inscription pages before you spend essence."
 	]
-	quest.E40F010000000000.title: "Arcane Essence"
-	quest.E40F010000000000.quest_desc: [
+	quest.640F010000000000.title: "Arcane Essence"
+	quest.640F010000000000.quest_subtitle: "Wizards drop this"
+	quest.640F010000000000.quest_desc: [
 		"Wizards drop this. It has no crafting recipe. The guidebook's early pages say where wizards show up. You need a pile of it for cloth and ink."
+		"Iron's Guidebook is the Patchouli pamphlet in the Akashic Tome. Read the inscription pages before you spend essence."
 	]
-	quest.E40F020000000000.title: "Inscription Table"
-	quest.E40F020000000000.quest_desc: [
+	quest.640F020000000000.title: "Inscription Table"
+	quest.640F020000000000.quest_subtitle: "A book, wooden slabs, and fences"
+	quest.640F020000000000.quest_desc: [
 		"A book, wooden slabs, and fences. JEI. This is the writing desk. The guidebook's inscription pages are the UI tour."
+		"Iron's Guidebook is the Patchouli pamphlet in the Akashic Tome. Read the inscription pages before you spend essence."
 	]
-	quest.E40F030000000000.title: "Iron Spell Book"
-	quest.E40F030000000000.quest_desc: [
+	quest.640F030000000000.title: "Iron Spell Book"
+	quest.640F030000000000.quest_subtitle: "Chain, leather, and paper"
+	quest.640F030000000000.quest_desc: [
 		"Chain, leather, and paper. JEI. It holds a few spells. Copper and the later books are upgrades of this one, in JEI, after you have used the iron book."
+		"Iron's Guidebook is the Patchouli pamphlet in the Akashic Tome. Read the inscription pages before you spend essence."
 	]
-	quest.E40F040000000000.title: "Magic Cloth"
-	quest.E40F040000000000.quest_desc: [
+	quest.640F040000000000.title: "Magic Cloth"
+	quest.640F040000000000.quest_subtitle: "Eight arcane essence around wool"
+	quest.640F040000000000.quest_desc: [
 		"Eight arcane essence around wool. JEI. The guidebook uses cloth for later gear. Blank runes are wiped off inscribed runes, not crafted from scratch, so they are not a starter quest."
+		"Iron's Guidebook is the Patchouli pamphlet in the Akashic Tome. Read the inscription pages before you spend essence."
 	]
-	chapter.E510000000000000.title: "Psi"
-	quest.E410000000000000.title: "Encyclopaedia Psionica"
-	quest.E410000000000000.quest_desc: [
+	chapter.6510000000000000.title: "Psi"
+	chapter.6510000000000000.chapter_subtitle: [
+		"A spell, then a shell"
+	]
+	quest.6410000000000000.title: "Encyclopaedia Psionica"
+	quest.6410000000000000.quest_subtitle: "the Encyclopaedia Psionica"
+	quest.6410000000000000.quest_desc: [
 		"Claim this quest for the Encyclopaedia Psionica. Its own recipe is a spell trick, a book plus an iron CAD assembly, so the quest gives you the book."
 		"Read Basics, then the tutorials. The programmer, the spell bullet, and CAD parts are all in those pages. There is no separate Psi book item."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	quest.E410010000000000.title: "Iron CAD Assembly"
-	quest.E410010000000000.quest_desc: [
+	quest.6410010000000000.title: "Iron CAD Assembly"
+	quest.6410010000000000.quest_subtitle: "Four iron ingots"
+	quest.6410010000000000.quest_desc: [
 		"Four iron ingots. JEI. No psi dust. The encyclopaedia's CAD page shows the assembly. It is the empty shell."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	quest.E410020000000000.title: "Psidust"
-	quest.E410020000000000.quest_desc: [
+	quest.6410020000000000.title: "Psidust"
+	quest.6410020000000000.quest_subtitle: "The dust recipe is the trick in"
+	quest.6410020000000000.quest_desc: [
 		"The dust recipe is the trick in the encyclopaedia, cast at redstone. It is not a crafting-table recipe. Follow the tutorial that makes psidust. You need the dust for every part after the iron shell."
+		"Psidust is a spell you cast at redstone. The crafting grid will pretend it has never heard of you."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	quest.E410030000000000.title: "Spell Bullet"
-	quest.E410030000000000.quest_desc: [
+	quest.6410030000000000.title: "Spell Bullet"
+	quest.6410030000000000.quest_subtitle: "Iron and psidust"
+	quest.6410030000000000.quest_desc: [
 		"Iron and psidust. JEI. The encyclopaedia's bullets page is the one that programs this. A bullet holds one spell."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	quest.E410040000000000.title: "Spell Programmer"
-	quest.E410040000000000.quest_desc: [
+	quest.6410040000000000.title: "Spell Programmer"
+	quest.6410040000000000.quest_subtitle: "Iron and psidust"
+	quest.6410040000000000.quest_desc: [
 		"Iron and psidust. JEI. Place it and open it. The tutorials walk a first spell on this block."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	quest.E410050000000000.title: "Basic CAD Battery"
-	quest.E410050000000000.quest_desc: [
+	quest.6410050000000000.title: "Basic CAD Battery"
+	quest.6410050000000000.quest_subtitle: "Iron, psidust, and gold"
+	quest.6410050000000000.quest_desc: [
 		"Iron, psidust, and gold. JEI. The basic core and the basic socket are the same trio of metals plus dust. JEI lists all three. The encyclopaedia's CAD page says which slot each one fills. Skip the assembled CAD item. It is built in the assembler, not as a plain craft."
+		"The Encyclopaedia Psionica is in the Akashic Tome. Psidust is a spell in that book, not a crafting-grid recipe."
 	]
-	chapter.E511000000000000.title: "Astral Sorcery"
-	quest.E411000000000000.title: "Astral Tome"
-	quest.E411000000000000.quest_desc: [
+	chapter.6511000000000000.title: "Astral Sorcery"
+	chapter.6511000000000000.chapter_subtitle: [
+		"Read it at night"
+	]
+	quest.6411000000000000.title: "Astral Tome"
+	quest.6411000000000000.quest_subtitle: "the Astral Tome"
+	quest.6411000000000000.quest_desc: [
 		"Claim this quest for the Astral Tome. A spare is an aquamarine used on a book, once you have found a gem. The tome is the guidebook."
 		"The luminous altar, the wand, and the linking tool have no ordinary crafting recipe in this version. They are not in this primer. The tome's early pages and JEI cover the parchment, the lens, and the astrolabe."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411010000000000.title: "Aquamarine"
-	quest.E411010000000000.quest_desc: [
+	quest.6411010000000000.title: "Aquamarine"
+	quest.6411010000000000.quest_subtitle: "Find aquamarine in the world"
+	quest.6411010000000000.quest_desc: [
 		"Find aquamarine in the world. There is also a liquid-interaction recipe in JEI. The tome's gathering pages describe the shards. You need one for parchment and the lens."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411020000000000.title: "Rock Crystal"
-	quest.E411020000000000.quest_desc: [
+	quest.6411020000000000.title: "Rock Crystal"
+	quest.6411020000000000.quest_subtitle: "A worldgen crystal"
+	quest.6411020000000000.quest_desc: [
 		"A worldgen crystal. No crafting recipe. The tome's crystal pages cover collecting it. It is the later lens material. This quest is only the raw crystal."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411030000000000.title: "Parchment"
-	quest.E411030000000000.quest_desc: [
+	quest.6411030000000000.title: "Parchment"
+	quest.6411030000000000.quest_subtitle: "Aquamarine and paper"
+	quest.6411030000000000.quest_desc: [
 		"Aquamarine and paper. JEI. The tome uses parchment for constellation papers."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411040000000000.title: "Glass Lens"
-	quest.E411040000000000.quest_desc: [
+	quest.6411040000000000.title: "Glass Lens"
+	quest.6411040000000000.quest_subtitle: "Aquamarine around a glass pane"
+	quest.6411040000000000.quest_desc: [
 		"Aquamarine around a glass pane. JEI. The tome's lens page is the crafting one. It is the handheld lens, not the altar."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411050000000000.title: "Starmetal Ingot"
-	quest.E411050000000000.quest_desc: [
+	quest.6411050000000000.title: "Starmetal Ingot"
+	quest.6411050000000000.quest_subtitle: "Smelt starmetal ore or raw starmetal"
+	quest.6411050000000000.quest_desc: [
 		"Smelt starmetal ore or raw starmetal. JEI. The tome's ores page says where the ore generates."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	quest.E411060000000000.title: "Astrolabe"
-	quest.E411060000000000.quest_desc: [
+	quest.6411060000000000.title: "Astrolabe"
+	quest.6411060000000000.quest_subtitle: "Gold, aquamarine, a glass pane, and a"
+	quest.6411060000000000.quest_desc: [
 		"Gold, aquamarine, a glass pane, and a spyglass. JEI. The tome's astrolabe page shows how to read it at night."
+		"The Astral Tome is in the Akashic Tome. The luminous altar is not a starter craft in this version. Read the parchment pages."
 	]
-	chapter.E512000000000000.title: "Theurgy"
-	quest.E412000000000000.title: "The Hermetica"
-	quest.E412000000000000.quest_desc: [
+	chapter.6512000000000000.title: "Theurgy"
+	chapter.6512000000000000.chapter_subtitle: [
+		"Salt, then mercury"
+	]
+	quest.6412000000000000.title: "The Hermetica"
+	quest.6412000000000000.quest_subtitle: "The Hermetica"
+	quest.6412000000000000.quest_desc: [
 		"Claim this quest for The Hermetica. A spare is a book and two sand. JEI. The book item is a Modonomicon, and the book id is theurgy:the_hermetica."
 		"Read the getting-started pages before you mine. They name the brazier, the oven, and the distiller."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	quest.E412010000000000.title: "Pyromantic Brazier"
-	quest.E412010000000000.quest_desc: [
+	quest.6412010000000000.title: "Pyromantic Brazier"
+	quest.6412010000000000.quest_subtitle: "Copper ingots and stone"
+	quest.6412010000000000.quest_desc: [
 		"Copper ingots and stone. JEI. The Hermetica's brazier page is the heat source for the first recipes."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	quest.E412020000000000.title: "Calcination Oven"
-	quest.E412020000000000.quest_desc: [
+	quest.6412020000000000.title: "Calcination Oven"
+	quest.6412020000000000.quest_subtitle: "Iron and a copper block"
+	quest.6412020000000000.quest_desc: [
 		"Iron and a copper block. JEI. The Hermetica's calcination page turns ores into salts. Alchemical salt is an oven output, not a crafting-table item."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	quest.E412030000000000.title: "Distiller"
-	quest.E412030000000000.quest_desc: [
+	quest.6412030000000000.title: "Distiller"
+	quest.6412030000000000.quest_subtitle: "Iron, a copper block, and stone"
+	quest.6412030000000000.quest_desc: [
 		"Iron, a copper block, and stone. JEI. The Hermetica's distillation page is the mercury chapter."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	quest.E412040000000000.title: "Sal Ammoniac Crystal"
-	quest.E412040000000000.quest_desc: [
+	quest.6412040000000000.title: "Sal Ammoniac Crystal"
+	quest.6412040000000000.quest_subtitle: "Mine it"
+	quest.6412040000000000.quest_desc: [
 		"Mine it. The only simple recipe is emptying a bucket, which is the wrong direction. The Hermetica's sal ammoniac pages say where the ore is."
+		"Emptying a bucket is the wrong direction. The book will be polite about it. The ore will not."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	quest.E412050000000000.title: "Mercury Shard"
-	quest.E412050000000000.quest_desc: [
+	quest.6412050000000000.title: "Mercury Shard"
+	quest.6412050000000000.quest_subtitle: "A distillation output, not a crafting grid"
+	quest.6412050000000000.quest_desc: [
 		"A distillation output, not a crafting grid. Follow the Hermetica's mercury pages once the distiller is built. This quest is the shard itself."
+		"The Hermetica is in the Akashic Tome. Read the brazier and the oven before you mine."
 	]
-	chapter.E513000000000000.title: "Modern Foundry"
-	quest.E413000000000000.title: "Materials and You"
-	quest.E413000000000000.quest_desc: [
+	chapter.6513000000000000.title: "Modern Foundry"
+	chapter.6513000000000000.chapter_subtitle: [
+		"Grout, not the old tinkers jar"
+	]
+	quest.6413000000000000.title: "Materials and You"
+	quest.6413000000000000.quest_subtitle: "The tinkers-named jar in this pack is"
+	quest.6413000000000000.quest_desc: [
 		"The tinkers-named jar in this pack is Modern Foundry, not Tinkers' Construct. Claim this quest for Materials and You."
 		"Puny Smelting is a second book later in this chapter. The Encyclopedia is molten gold cast onto a book, which needs a smeltery, so it is not the starter. Read Materials and You for grout, bricks, and patterns."
+		"The tinkers-named jar is Modern Foundry. The old mod is not on this boat."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413010000000000.title: "Pattern"
-	quest.E413010000000000.quest_desc: [
+	quest.6413010000000000.title: "Pattern"
+	quest.6413010000000000.quest_subtitle: "Planks and sticks"
+	quest.6413010000000000.quest_desc: [
 		"Planks and sticks. JEI has the shape. Materials and You shows the pattern. You spend patterns in the Part Builder."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413020000000000.title: "Grout"
-	quest.E413020000000000.quest_desc: [
+	quest.6413020000000000.title: "Grout"
+	quest.6413020000000000.quest_subtitle: "a clay ball, sand, and gravel"
+	quest.6413020000000000.quest_desc: [
 		"Shapeless: a clay ball, sand, and gravel. JEI. There is also a clay-block batch. Materials and You and Puny Smelting both start here."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413030000000000.title: "Seared Brick"
-	quest.E413030000000000.quest_desc: [
+	quest.6413030000000000.title: "Seared Brick"
+	quest.6413030000000000.quest_subtitle: "Smelt grout in a furnace, or blast"
+	quest.6413030000000000.quest_desc: [
 		"Smelt grout in a furnace, or blast it. JEI lists both. Puny Smelting shows the brick. The smeltery controller is a casting recipe after this, so it is past the primer."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413040000000000.title: "Part Builder"
-	quest.E413040000000000.quest_desc: [
+	quest.6413040000000000.title: "Part Builder"
+	quest.6413040000000000.quest_subtitle: "Patterns and planks"
+	quest.6413040000000000.quest_desc: [
 		"Patterns and planks. JEI. Materials and You has the picture. This is the table that cuts tool parts out of patterns."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413050000000000.title: "Tinker's Station"
-	quest.E413050000000000.quest_desc: [
+	quest.6413050000000000.title: "Tinker's Station"
+	quest.6413050000000000.quest_subtitle: "Patterns and planks"
+	quest.6413050000000000.quest_desc: [
 		"Patterns and planks. JEI. This is the tool station. Materials and You walks the first tool. Tool parts from the Part Builder are assembled here."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413060000000000.title: "Seared Faucet"
-	quest.E413060000000000.quest_desc: [
+	quest.6413060000000000.title: "Seared Faucet"
+	quest.6413060000000000.quest_subtitle: "Seared bricks"
+	quest.6413060000000000.quest_desc: [
 		"Seared bricks. JEI. Puny Smelting shows the faucet. It pours once a seared tank exists. The tank recipes are in that book."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	quest.E413070000000000.title: "Puny Smelting"
-	quest.E413070000000000.quest_desc: [
+	quest.6413070000000000.title: "Puny Smelting"
+	quest.6413070000000000.quest_subtitle: "a book and grout"
+	quest.6413070000000000.quest_desc: [
 		"Shapeless: a book and grout. JEI. Read it after Materials and You. It is the smeltery booklet: tanks, the faucet, and the first pours."
+		"Materials and You, and Puny Smelting, are in the Akashic Tome. The mod id is modernfoundry, not tinkers."
 	]
-	chapter.E514000000000000.title: "Cobblemon"
-	quest.E414000000000000.title: "Pokedex"
-	quest.E414000000000000.quest_desc: [
+	chapter.6514000000000000.title: "Cobblemon"
+	chapter.6514000000000000.chapter_subtitle: [
+		"Apricorns, then a throw"
+	]
+	quest.6414000000000000.title: "Pokedex"
+	quest.6414000000000000.quest_subtitle: "a red Pokedex"
+	quest.6414000000000000.quest_desc: [
 		"Claim this quest for a red Pokedex. Other colors craft the same way. JEI lists them. The Pokedex is the guidebook."
 		"Use it to register what you catch. The healing machine wants a Max Revive, so it is not in this primer."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	quest.E414010000000000.title: "Red Apricorn"
-	quest.E414010000000000.quest_desc: [
+	quest.6414010000000000.title: "Red Apricorn"
+	quest.6414010000000000.quest_subtitle: "No crafting recipe"
+	quest.6414010000000000.quest_desc: [
 		"No crafting recipe. Pick red apricorns from apricorn trees. The Pokedex and JEI do not grow them. You need four for a batch of Poke Balls."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	quest.E414020000000000.title: "Apricorn Log"
-	quest.E414020000000000.quest_desc: [
+	quest.6414020000000000.title: "Apricorn Log"
+	quest.6414020000000000.quest_subtitle: "Chop an apricorn tree"
+	quest.6414020000000000.quest_desc: [
 		"Chop an apricorn tree. The log has no craft. Planks come from it."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	quest.E414030000000000.title: "Apricorn Planks"
-	quest.E414030000000000.quest_desc: [
+	quest.6414030000000000.title: "Apricorn Planks"
+	quest.6414030000000000.quest_subtitle: "Shapeless, from any apricorn log"
+	quest.6414030000000000.quest_desc: [
 		"Shapeless, from any apricorn log. Four planks, like oak. JEI."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	quest.E414040000000000.title: "Poke Ball"
-	quest.E414040000000000.quest_desc: [
+	quest.6414040000000000.title: "Poke Ball"
+	quest.6414040000000000.quest_subtitle: "Four red apricorns around a copper ingot"
+	quest.6414040000000000.quest_desc: [
 		"Four red apricorns around a copper ingot. The center is the tier-1 tag, which is copper ingots. The craft makes four balls. JEI has the shape."
+		"Four red apricorns and a copper ingot. The creature on the other end of the throw did not agree to the terms."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	quest.E414050000000000.title: "PC"
-	quest.E414050000000000.quest_desc: [
+	quest.6414050000000000.title: "PC"
+	quest.6414050000000000.quest_subtitle: "Iron, glass, copper, and smooth stone"
+	quest.6414050000000000.quest_desc: [
 		"Iron, glass, copper, and smooth stone. JEI has the shape. Place it to store Pokemon that are not in your party. The Pokedex pages cover the PC."
+		"The Pokedex is in the Akashic Tome. Use it to register what you catch."
 	]
-	chapter.E515000000000000.title: "Alex's Mobs"
-	quest.E415000000000000.title: "Animal Dictionary"
-	quest.E415000000000000.quest_desc: [
+	chapter.6515000000000000.title: "Alex's Mobs"
+	chapter.6515000000000000.chapter_subtitle: [
+		"A dictionary, then a drop"
+	]
+	quest.6415000000000000.title: "Animal Dictionary"
+	quest.6415000000000000.quest_subtitle: "the Animal Dictionary"
+	quest.6415000000000000.quest_desc: [
 		"Claim this quest for the Animal Dictionary. The pack config leaves giveBookOnStartup off."
 		"A spare is shapeless: a book, green dye, and any item in the animal-dictionary ingredient tag. JEI lists the tag. Read a creature's page before you craft with its drop."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	quest.E415010000000000.title: "Banana"
-	quest.E415010000000000.quest_desc: [
+	quest.6415010000000000.title: "Banana"
+	quest.6415010000000000.quest_subtitle: "No crafting recipe"
+	quest.6415010000000000.quest_desc: [
 		"No crafting recipe. Bananas drop from leaves. The dictionary's banana page says who eats them. This quest is just the fruit."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	quest.E415020000000000.title: "Hummingbird Feeder"
-	quest.E415020000000000.quest_desc: [
+	quest.6415020000000000.title: "Hummingbird Feeder"
+	quest.6415020000000000.quest_subtitle: "Copper, a glass bottle, and sunflowers"
+	quest.6415020000000000.quest_desc: [
 		"Copper, a glass bottle, and sunflowers. JEI. The dictionary's hummingbird page is the one to read. Fill it and hummingbirds visit."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	quest.E415030000000000.title: "Fish Oil"
-	quest.E415030000000000.quest_desc: [
+	quest.6415030000000000.title: "Fish Oil"
+	quest.6415030000000000.quest_subtitle: "A glass bottle and four blobfish"
+	quest.6415030000000000.quest_desc: [
 		"A glass bottle and four blobfish. JEI. The dictionary's blobfish page covers the fish. Oil is the early craft that does not need a boss drop."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	quest.E415040000000000.title: "Roadrunner Feather"
-	quest.E415040000000000.quest_desc: [
+	quest.6415040000000000.title: "Roadrunner Feather"
+	quest.6415040000000000.quest_subtitle: "A drop, not a craft"
+	quest.6415040000000000.quest_desc: [
 		"A drop, not a craft. The dictionary's roadrunner page says what the feather is for. Pocket sand wants a guster eye and the squid grapple wants a lost tentacle, so those stay out of this primer."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	quest.E415050000000000.title: "Falconry Glove"
-	quest.E415050000000000.quest_desc: [
+	quest.6415050000000000.title: "Falconry Glove"
+	quest.6415050000000000.quest_subtitle: "Leather and bear fur"
+	quest.6415050000000000.quest_desc: [
 		"Leather and bear fur. JEI. The dictionary's grizzly page covers the fur. The glove is how falconry starts."
+		"The Animal Dictionary is in the Akashic Tome. The pack does not give it to you at spawn."
 	]
-	chapter.E516000000000000.title: "Alex's Caves"
-	quest.E416000000000000.title: "Cave Compendium"
-	quest.E416000000000000.quest_desc: [
+	chapter.6516000000000000.title: "Alex's Caves"
+	chapter.6516000000000000.chapter_subtitle: [
+		"Ingredients from the caves"
+	]
+	quest.6416000000000000.title: "Cave Compendium"
+	quest.6416000000000000.quest_subtitle: "the Cave Compendium"
+	quest.6416000000000000.quest_desc: [
 		"Claim this quest for the Cave Compendium. A spare is shapeless: a book, a cave tablet, and a gold nugget. The tablet is found, not crafted, so the quest gives you the book."
 		"Read a cave's chapter before you craft that cave's tools. The ingredients below are cave-biome items, not overworld crafts."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	quest.E416010000000000.title: "Cave Tablet"
-	quest.E416010000000000.quest_desc: [
+	quest.6416010000000000.title: "Cave Tablet"
+	quest.6416010000000000.quest_subtitle: "Find one in a cave biome"
+	quest.6416010000000000.quest_desc: [
 		"Find one in a cave biome. No crafting recipe. The compendium tells you which tablets add which chapters. This quest is the tablet item."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	quest.E416020000000000.title: "Limestone Spear"
-	quest.E416020000000000.quest_desc: [
+	quest.6416020000000000.title: "Limestone Spear"
+	quest.6416020000000000.quest_subtitle: "Limestone and sticks"
+	quest.6416020000000000.quest_desc: [
 		"Limestone and sticks. JEI. Limestone is the magnetic-caves block. The compendium's magnetic chapter is the one to read. This is not an overworld craft."
+		"Limestone does not spawn in the overworld because you asked nicely."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	quest.E416030000000000.title: "Primitive Club"
-	quest.E416030000000000.quest_desc: [
+	quest.6416030000000000.title: "Primitive Club"
+	quest.6416030000000000.quest_subtitle: "A heavy bone and a cycad"
+	quest.6416030000000000.quest_desc: [
 		"A heavy bone and a cycad. JEI. Both are primordial-caves items. The compendium's primordial chapter covers them."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	quest.E416040000000000.title: "Metal Swarf"
-	quest.E416040000000000.quest_desc: [
+	quest.6416040000000000.title: "Metal Swarf"
+	quest.6416040000000000.quest_subtitle: "A ferrouslime ball, raw iron, and gravel"
+	quest.6416040000000000.quest_desc: [
 		"A ferrouslime ball, raw iron, and gravel. JEI. Ferrouslime is the magnetic-caves drop. The compendium's magnetic chapter names it."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	quest.E416050000000000.title: "Frostmint"
-	quest.E416050000000000.quest_desc: [
+	quest.6416050000000000.title: "Frostmint"
+	quest.6416050000000000.quest_subtitle: "Peppermint powder and blue ice"
+	quest.6416050000000000.quest_desc: [
 		"Peppermint powder and blue ice. JEI. Peppermint is the candy-caves crop. The compendium's candy chapter is the page. Eat it or brew with it after you have read that chapter."
+		"The Cave Compendium is in the Akashic Tome. Read the cave's chapter before you craft with that cave's drops."
 	]
-	chapter.E517000000000000.title: "The Undergarden"
-	quest.E417000000000000.title: "Catalyst"
-	quest.E417000000000000.quest_desc: [
+	chapter.6517000000000000.title: "The Undergarden"
+	chapter.6517000000000000.chapter_subtitle: [
+		"A rectangle of stone bricks"
+	]
+	quest.6417000000000000.title: "Catalyst"
+	quest.6417000000000000.quest_subtitle: "Right-click the inside"
+	quest.6417000000000000.quest_desc: [
 		"The Undergarden has no guidebook. JEI is the list. Claim this quest for a Catalyst."
 		"A spare is copper ingots, an ender pearl, and stone. JEI has the shape. Build a rectangular frame of stone bricks (deepslate bricks and the brick blocks in the portal-frame tag also work) and right-click the inside with the Catalyst."
+		"The frame is a rectangle. The dimension on the other side is not a suggestion."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417010000000000.title: "Wigglewood Log"
-	quest.E417010000000000.quest_desc: [
+	quest.6417010000000000.title: "Wigglewood Log"
+	quest.6417010000000000.quest_subtitle: "Chop a wigglewood tree on the far"
+	quest.6417010000000000.quest_desc: [
 		"Chop a wigglewood tree on the far side of the portal. No crafting recipe. It is the dimension's first wood."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417020000000000.title: "Wigglewood Planks"
-	quest.E417020000000000.quest_desc: [
+	quest.6417020000000000.title: "Wigglewood Planks"
+	quest.6417020000000000.quest_subtitle: "Shapeless, from a wigglewood log"
+	quest.6417020000000000.quest_desc: [
 		"Shapeless, from a wigglewood log. Four planks. JEI."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417030000000000.title: "Twistytwig"
-	quest.E417030000000000.quest_desc: [
+	quest.6417030000000000.title: "Twistytwig"
+	quest.6417030000000000.quest_subtitle: "Two wigglewood planks, set on a diagonal"
+	quest.6417030000000000.quest_desc: [
 		"Two wigglewood planks, set on a diagonal. The craft makes four. JEI. Twigs are the sticks of the dimension."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417040000000000.title: "Depthrock"
-	quest.E417040000000000.quest_desc: [
+	quest.6417040000000000.title: "Depthrock"
+	quest.6417040000000000.quest_subtitle: "Mine it in the Undergarden"
+	quest.6417040000000000.quest_desc: [
 		"Mine it in the Undergarden. No crafting recipe. It is the stone. Cloggrum ore sits in it."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417050000000000.title: "Raw Cloggrum"
-	quest.E417050000000000.quest_desc: [
+	quest.6417050000000000.title: "Raw Cloggrum"
+	quest.6417050000000000.quest_subtitle: "Mine cloggrum ore"
+	quest.6417050000000000.quest_desc: [
 		"Mine cloggrum ore. Raw cloggrum has no crafting recipe. Smelt it for the ingot."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417060000000000.title: "Cloggrum Ingot"
-	quest.E417060000000000.quest_desc: [
+	quest.6417060000000000.title: "Cloggrum Ingot"
+	quest.6417060000000000.quest_subtitle: "Smelt raw cloggrum, or blast it"
+	quest.6417060000000000.quest_desc: [
 		"Smelt raw cloggrum, or blast it. JEI. Cloggrum is the iron of the Undergarden."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	quest.E417070000000000.title: "Cloggrum Pickaxe"
-	quest.E417070000000000.quest_desc: [
+	quest.6417070000000000.title: "Cloggrum Pickaxe"
+	quest.6417070000000000.quest_subtitle: "Cloggrum ingots and a wooden rod, in"
+	quest.6417070000000000.quest_desc: [
 		"Cloggrum ingots and a wooden rod, in the pickaxe shape. JEI. It mines the next ores. Forgotten metal is later. JEI and the ore names are the only guide."
+		"The Undergarden has no guidebook. JEI is the list. The Akashic Tome will not grow a page for it."
 	]
-	chapter.E518000000000000.title: "Tide"
-	quest.E418000000000000.title: "Fishing Journal"
-	quest.E418000000000000.quest_desc: [
+	chapter.6518000000000000.title: "Tide"
+	chapter.6518000000000000.chapter_subtitle: [
+		"String, then a fish"
+	]
+	quest.6418000000000000.title: "Fishing Journal"
+	quest.6418000000000000.quest_subtitle: "In the tome, not at spawn"
+	quest.6418000000000000.quest_desc: [
 		"Claim this quest for the Fishing Journal. The pack config leaves giveJournal off."
 		"A spare is shapeless: a book and any Tide fish. JEI. Read the journal before you upgrade the rod. It is the mod's book."
+		"The journal is in the tome. The fish are not."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418010000000000.title: "Stone Fishing Rod"
-	quest.E418010000000000.quest_desc: [
+	quest.6418010000000000.title: "Stone Fishing Rod"
+	quest.6418010000000000.quest_subtitle: "Cobblestone and string, in a rod shape"
+	quest.6418010000000000.quest_desc: [
 		"Cobblestone and string, in a rod shape. JEI. The journal's rods page starts here. There is no plain tide:fishing_rod item."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418020000000000.title: "Fishing Hook"
-	quest.E418020000000000.quest_desc: [
+	quest.6418020000000000.title: "Fishing Hook"
+	quest.6418020000000000.quest_subtitle: "Iron nuggets and cobblestone"
+	quest.6418020000000000.quest_desc: [
 		"Iron nuggets and cobblestone. JEI. Hooks are the bobber upgrade. The journal lists what each hook changes."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418030000000000.title: "Fishing Line"
-	quest.E418030000000000.quest_desc: [
+	quest.6418030000000000.title: "Fishing Line"
+	quest.6418030000000000.quest_subtitle: "Three string, stacked"
+	quest.6418030000000000.quest_desc: [
 		"Three string, stacked. JEI. The journal's line page is the depth upgrade. The basic line is only string."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418040000000000.title: "Iron Line"
-	quest.E418040000000000.quest_desc: [
+	quest.6418040000000000.title: "Iron Line"
+	quest.6418040000000000.quest_subtitle: "Iron ingots and a fishing line"
+	quest.6418040000000000.quest_desc: [
 		"Iron ingots and a fishing line. JEI. It is the next line up. The journal says what it casts."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418050000000000.title: "Bait"
-	quest.E418050000000000.quest_desc: [
+	quest.6418050000000000.title: "Bait"
+	quest.6418050000000000.quest_subtitle: "A bait plant, rotten flesh, seeds, and"
+	quest.6418050000000000.quest_desc: [
 		"A bait plant, rotten flesh, seeds, and bone meal. The craft makes four. JEI lists the bait-plant tag. The journal's bait page covers which fish like it."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
 	]
-	quest.E418060000000000.title: "Wooden Crate"
-	quest.E418060000000000.quest_desc: [
+	quest.6418060000000000.title: "Wooden Crate"
+	quest.6418060000000000.quest_subtitle: "Wooden slabs in a chest ring"
+	quest.6418060000000000.quest_desc: [
 		"Wooden slabs in a chest ring. JEI. Crates store fish and tackle. The journal mentions them with the cooler catches."
+		"The Fishing Journal is in the Akashic Tome. The pack does not hand it to you at spawn."
+	]
+	quest.6401090000000001.title: "Algal Brick"
+	quest.6401090000000001.quest_subtitle: "Clay, kelp, a furnace"
+	quest.6401090000000001.quest_desc: [
+		"Andesite alloy starts here, not at the mixer."
+		"Algal Blend is a 2x2 of clay balls with kelp or seagrass. Smelt the blend into this brick. JEI shows the craft and the smelt."
+		"The alloy quest is a 2x2 of these bricks and andesite. The mixer that can also make alloy is an Andesite Machine, and that machine needs alloy. Do the grid first."
+		"There is no Create book in the Akashic Tome. JEI is the page."
+	]
+	quest.64010A0000000001.title: "Andesite Casing"
+	quest.64010A0000000001.quest_subtitle: "Alloy and any log"
+	quest.64010A0000000001.quest_desc: [
+		"Shapeless: one Andesite Alloy and any log. This pack makes two casings."
+		"The casing is the shell of an Andesite Machine. That machine is the factory chapters. This primer stops at the casing."
+		"Ponder the casing if you want the picture. JEI has the shapeless craft. The Akashic Tome has no Create book."
+	]
+	quest.7F08F344795D16E1.title: "Taking Flight"
+	quest.7F08F344795D16E1.quest_subtitle: "Leave the stack"
+	quest.7F08F344795D16E1.quest_desc: [
+		"This hex is the flight chapter, not a machine to craft."
+		"Finish Taking Flight: a glider, an Immersive Aircraft craft, or an Aeronautics ship. Moonshot, the rocket, comes after Skyworthy."
+		"The stack under the islands goes down through molten metal. Flight is how you stop treating the ground as the only exit."
+	]
+	quest.7A65109679CB08D7.title: "Silicon Wafer"
+	quest.7A65109679CB08D7.quest_subtitle: "Saw a silicon item"
+	quest.7A65109679CB08D7.quest_desc: [
+		"Cut Refined Storage silicon on a mechanical saw. The cut makes six wafers. The plain silicon craft is removed. Silicon comes from the heated compound this pack already uses."
+		"A blank wafer is the start of the line. Superheating a blank, or washing a blank, ruins it."
+		"JEI shows the cut. The Akashic Tome does not have a wafer chapter. This quest page is the guide."
+	]
+	quest.2E9DE41FAC48B8A7.title: "Lithography Spirit"
+	quest.2E9DE41FAC48B8A7.quest_subtitle: "Heated, with mercury"
+	quest.2E9DE41FAC48B8A7.quest_desc: [
+		"Heated mix: an alchemical sulfur from Theurgy, a mercury shard, redstone, and 250 mB of liquid experience from Create Enchantment Industry. The mix makes eight spirits."
+		"Deploy one spirit onto a silicon wafer to expose it. A second spirit on an exposed wafer ruins it."
+		"The Hermetica, for the sulfur and the shard, is in the Akashic Tome. The mix itself is in JEI."
+	]
+	quest.7C8C07525326B068.title: "Exposed Wafer"
+	quest.7C8C07525326B068.quest_subtitle: "One spirit, not two"
+	quest.7C8C07525326B068.quest_desc: [
+		"Deploy a lithography spirit onto a silicon wafer. That is the expose step."
+		"Deploying a second spirit onto this exposed wafer ruins it. So does washing it before it is annealed."
+		"JEI shows the deploy. Do not look for this in the Akashic Tome."
+	]
+	quest.682C6EDD7B131217.title: "Annealed Wafer"
+	quest.682C6EDD7B131217.quest_subtitle: "Superheat the exposed one"
+	quest.682C6EDD7B131217.quest_desc: [
+		"Superheated mix of one exposed wafer. A blank wafer superheated the same way comes out ruined."
+		"Annealing is what makes the wafer safe to wash."
+		"JEI shows the mix. The blaze burner under the basin has to be superheated, not just lit."
+	]
+	quest.27DFF2F1B447554C.title: "Washed Wafer"
+	quest.27DFF2F1B447554C.quest_subtitle: "Sal ammoniac, or sulfuric acid"
+	quest.27DFF2F1B447554C.quest_desc: [
+		"Spout 250 mB of Theurgy sal ammoniac, or NuclearCraft sulfuric acid, onto an annealed wafer."
+		"The same fluids ruin a blank wafer and ruin an exposed wafer that was never annealed. Wash only the annealed one."
+		"JEI lists both fills. Sal ammoniac is mined. The Hermetica in the Akashic Tome says where."
+	]
+	quest.375B60D0AA211DE5.title: "Polished Wafer"
+	quest.375B60D0AA211DE5.quest_subtitle: "Sandpaper on the washed wafer"
+	quest.375B60D0AA211DE5.quest_desc: [
+		"Deploy sandpaper onto a washed wafer."
+		"Polished wafers dice into a better spread than washed ones. The insulated die is better again."
+		"JEI shows the deploy. Sandpaper is the Create primer item, paper and sand."
+	]
+	quest.057B683A7191B2C2.title: "Insulated Die"
+	quest.057B683A7191B2C2.quest_subtitle: "Three washed wafers, one diamond"
+	quest.057B683A7191B2C2.quest_desc: [
+		"Mechanical craft: three washed wafers in a row over a diamond."
+		"Dicing an insulated die is the best roll on this line. It is still a roll. You can get a raw processor, a dram, or junk."
+		"JEI shows the mechanical craft. This does not skip the calculation mechanism gate. It feeds the processor prints."
+	]
+	quest.467B0625D2A4A184.title: "Ruined Wafer"
+	quest.467B0625D2A4A184.quest_subtitle: "Haunt it back"
+	quest.467B0625D2A4A184.quest_desc: [
+		"This is the failure item. Overexposing, superheating a blank, or washing the wrong state makes one."
+		"A Create haunting (soul fire, the way JEI shows haunting) turns a ruined wafer back into a silicon wafer. With NuclearCraft loaded, a 250 mB soul bath does the same."
+		"Keep the ruined ones. They are not trash. The wafer gate, the portal item, is a different craft and is not this quest."
+	]
+	quest.40D97A07CDC07DB8.title: "Dram"
+	quest.40D97A07CDC07DB8.quest_subtitle: "The junk face of the die"
+	quest.40D97A07CDC07DB8.quest_desc: [
+		"Dice a washed wafer, a polished wafer, or an insulated die. A dram is one of the weighted results, the leftover, not a processor."
+		"The dice is a sequenced assembly that presses the wafer once. JEI shows the odds. Better wafers shift the odds toward the higher processor tier."
+		"You do not craft a dram on purpose. You pick it out of the roll."
+	]
+	quest.1C253E3B9DA3597E.title: "Raw Improved Processor"
+	quest.1C253E3B9DA3597E.quest_subtitle: "A die roll, not the grid"
+	quest.1C253E3B9DA3597E.quest_desc: [
+		"The crafting-table raw processor recipes are removed. Dice a wafer. Washed is the common roll, polished is better, the insulated die is the best."
+		"The improved tier is the middle result. Basic is more common. Advanced is the rare face."
+		"This is not the calculation mechanism, and it is not the Refined Storage controller. Those stay on their own gates. JEI shows the sequenced assembly."
+	]
+	quest.36A2C5B3E20C28DF.title: "Stone Reagent"
+	quest.36A2C5B3E20C28DF.quest_subtitle: "Jar, ingredient, slab"
+	quest.36A2C5B3E20C28DF.quest_desc: [
+		"Assemble a stone reagent (kubejs:substrate_stone). The jar ingredient is stone (minecraft:stone)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the first row, with lapis, slime, ender, oil, and chocolate."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.60F7A50F984284F1.title: "Granite Reagent"
+	quest.60F7A50F984284F1.quest_subtitle: "Jar, ingredient, slab"
+	quest.60F7A50F984284F1.quest_desc: [
+		"Assemble a granite reagent (kubejs:substrate_granite). The jar ingredient is granite (minecraft:granite)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row, with quartz, copper, emerald, a hamburger, and prismarine."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.35406FED565B7EFF.title: "Granite Reagent"
+	quest.35406FED565B7EFF.quest_subtitle: "Jar, ingredient, slab"
+	quest.35406FED565B7EFF.quest_desc: [
+		"Assemble a granite reagent (kubejs:substrate_granite). The jar ingredient is granite (minecraft:granite)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row, with quartz, copper, emerald, a hamburger, and prismarine."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.6CBB7512CDFF4C2E.title: "Stone Reagent"
+	quest.6CBB7512CDFF4C2E.quest_subtitle: "Jar, ingredient, slab"
+	quest.6CBB7512CDFF4C2E.quest_desc: [
+		"Assemble a stone reagent (kubejs:substrate_stone). The jar ingredient is stone (minecraft:stone)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the first row, with lapis, slime, ender, oil, and chocolate."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.0F688EAF792BAE96.title: "Scoria Reagent"
+	quest.0F688EAF792BAE96.quest_subtitle: "Jar, ingredient, slab"
+	quest.0F688EAF792BAE96.quest_desc: [
+		"Assemble a scoria reagent (kubejs:substrate_scoria). The jar ingredient is scoria (create:scoria)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.560F2995CE2862D7.title: "Scoria Reagent"
+	quest.560F2995CE2862D7.quest_subtitle: "Jar, ingredient, slab"
+	quest.560F2995CE2862D7.quest_desc: [
+		"Assemble a scoria reagent (kubejs:substrate_scoria). The jar ingredient is scoria (create:scoria)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.3978E4B39C9DB44D.title: "Red Dye"
+	quest.3978E4B39C9DB44D.quest_subtitle: "The dye, not a reagent"
+	quest.3978E4B39C9DB44D.quest_desc: [
+		"Have one minecraft:red_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.122D3D6743D1DD04.title: "Orange Dye"
+	quest.122D3D6743D1DD04.quest_subtitle: "The dye, not a reagent"
+	quest.122D3D6743D1DD04.quest_desc: [
+		"Have one minecraft:orange_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.1E856F69C03B1D75.title: "Yellow Dye"
+	quest.1E856F69C03B1D75.quest_subtitle: "The dye, not a reagent"
+	quest.1E856F69C03B1D75.quest_desc: [
+		"Have one minecraft:yellow_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.49957428564E8101.title: "Green Dye"
+	quest.49957428564E8101.quest_subtitle: "The dye, not a reagent"
+	quest.49957428564E8101.quest_desc: [
+		"Have one minecraft:green_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.678C5FC6A898E988.title: "Blue Dye"
+	quest.678C5FC6A898E988.quest_subtitle: "The dye, not a reagent"
+	quest.678C5FC6A898E988.quest_desc: [
+		"Have one minecraft:blue_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.3377A2C391B6F03A.title: "Magenta Dye"
+	quest.3377A2C391B6F03A.quest_subtitle: "The dye, not a reagent"
+	quest.3377A2C391B6F03A.quest_desc: [
+		"Have one minecraft:magenta_dye. JEI lists every recipe. This pack did not invent a special one."
+		"It is not a substrate. The reagent grid is the jars. This node is only the dye."
+		"Do not stall the laser puzzle on a flower you can already craft."
+	]
+	quest.616D07DC2CE17BA4.title: "Blaze Reagent"
+	quest.616D07DC2CE17BA4.quest_subtitle: "Jar, ingredient, slab"
+	quest.616D07DC2CE17BA4.quest_desc: [
+		"Assemble a blaze reagent (kubejs:substrate_blaze). The jar ingredient is blaze powder (minecraft:blaze_powder)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the egg row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.758B836F53187B8C.title: "Slime Reagent"
+	quest.758B836F53187B8C.quest_subtitle: "Jar, ingredient, slab"
+	quest.758B836F53187B8C.quest_desc: [
+		"Assemble a slime reagent (kubejs:substrate_slime). The jar ingredient is slime ball (minecraft:slime_ball)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the first row, with stone and lapis."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.4E3B9AA2062424F4.title: "Netherrack Reagent"
+	quest.4E3B9AA2062424F4.quest_subtitle: "Jar, ingredient, slab"
+	quest.4E3B9AA2062424F4.quest_desc: [
+		"Assemble a netherrack reagent (kubejs:substrate_netherrack). The jar ingredient is netherrack (minecraft:netherrack)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row, with scoria, zinc, sulfur, niter, and a ghast tear."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.20AA864C5201C638.title: "Void Catalyst"
+	quest.20AA864C5201C638.quest_subtitle: "Laser, not a jar"
+	quest.20AA864C5201C638.quest_desc: [
+		"Have a void catalyst (kubejs:substrate_void). It is not jar-crafted. Four reagents from its row, in the Alchemical Laser, roll into it. The code is per world seed."
+		"Reagents are jar assemblies: an open jar, the ingredient JEI names, and a wooden slab for the lid. Catalysts are the laser puzzle, not this craft."
+		"Ponder the Alchemical Laser for the automated version. The Akashic Tome does not cover this grid. The old Igneous and Herbal names are not this pack's rows."
+	]
+	quest.35A6E3BBD80FB00F.title: "Sulfur Reagent"
+	quest.35A6E3BBD80FB00F.quest_subtitle: "Jar, ingredient, slab"
+	quest.35A6E3BBD80FB00F.quest_desc: [
+		"Assemble a sulfur reagent (kubejs:substrate_sulfur). The jar ingredient is dust sulfur (immersiveengineering:dust_sulfur)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.03DB1FCC30B7321C.title: "Prismarine Reagent"
+	quest.03DB1FCC30B7321C.quest_subtitle: "Jar, ingredient, slab"
+	quest.03DB1FCC30B7321C.quest_desc: [
+		"Assemble a prismarine reagent (kubejs:substrate_prismarine). The jar ingredient is prismarine crystals (minecraft:prismarine_crystals)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.421E285B7D642676.title: "Amethyst Shard"
+	quest.421E285B7D642676.quest_subtitle: "Have one"
+	quest.421E285B7D642676.quest_desc: [
+		"Have an amethyst shard. JEI lists the geode and any craft this pack left in. This node is the shard, not a reagent jar."
+		"JEI lists the recipe this pack actually uses. If the crafting grid is empty, the item moved onto a Create machine or a multiblock."
+		"Guidebooks live in the Autisnautics Guide, the Akashic Tome. Create and its addons use Ponder (W) instead of a book."
+	]
+	quest.6E154A8C81D8DD5F.title: "Quartz Reagent"
+	quest.6E154A8C81D8DD5F.quest_subtitle: "Jar, ingredient, slab"
+	quest.6E154A8C81D8DD5F.quest_desc: [
+		"Assemble a quartz reagent (kubejs:substrate_quartz). The jar ingredient is quartz (minecraft:quartz)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.58A0EA80BB3A3262.title: "Sulfur Reagent"
+	quest.58A0EA80BB3A3262.quest_subtitle: "Jar, ingredient, slab"
+	quest.58A0EA80BB3A3262.quest_desc: [
+		"Assemble a sulfur reagent (kubejs:substrate_sulfur). The jar ingredient is dust sulfur (immersiveengineering:dust_sulfur)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.2C6EE5BEB945F154.title: "Niter Reagent"
+	quest.2C6EE5BEB945F154.quest_subtitle: "Jar, ingredient, slab"
+	quest.2C6EE5BEB945F154.quest_desc: [
+		"Assemble a niter reagent (kubejs:substrate_niter). The jar ingredient is dust saltpeter (immersiveengineering:dust_saltpeter)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.7CA6AC3B07E07D81.title: "Quartz"
+	quest.7CA6AC3B07E07D81.quest_subtitle: "Have one"
+	quest.7CA6AC3B07E07D81.quest_desc: [
+		"Have nether quartz. JEI lists the ore and the crafts. This node is the gem, not the quartz reagent jar."
+		"JEI lists the recipe this pack actually uses. If the crafting grid is empty, the item moved onto a Create machine or a multiblock."
+		"Guidebooks live in the Autisnautics Guide, the Akashic Tome. Create and its addons use Ponder (W) instead of a book."
+	]
+	quest.40FDCF626F5EBB08.title: "Quartz Reagent"
+	quest.40FDCF626F5EBB08.quest_subtitle: "Jar, ingredient, slab"
+	quest.40FDCF626F5EBB08.quest_desc: [
+		"Assemble a quartz reagent (kubejs:substrate_quartz). The jar ingredient is quartz (minecraft:quartz)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.5C0CE1EDF9BF49C9.title: "Zinc Reagent"
+	quest.5C0CE1EDF9BF49C9.quest_subtitle: "Jar, ingredient, slab"
+	quest.5C0CE1EDF9BF49C9.quest_desc: [
+		"Assemble a zinc reagent (kubejs:substrate_zinc). The jar ingredient is zinc dust (kubejs:zinc_dust)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.5A957C9B5D8DE1A1.title: "Copper Reagent"
+	quest.5A957C9B5D8DE1A1.quest_subtitle: "Jar, ingredient, slab"
+	quest.5A957C9B5D8DE1A1.quest_desc: [
+		"Assemble a copper reagent (kubejs:substrate_copper). The jar ingredient is dust copper (immersiveengineering:dust_copper)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.2995ADCCB6496A22.title: "Iron Reagent"
+	quest.2995ADCCB6496A22.quest_subtitle: "Jar, ingredient, slab"
+	quest.2995ADCCB6496A22.quest_desc: [
+		"Assemble a iron reagent (kubejs:substrate_iron). The jar ingredient is dust iron (immersiveengineering:dust_iron)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the wool row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.285F815678D5F32A.title: "Nickel Reagent"
+	quest.285F815678D5F32A.quest_subtitle: "Jar, ingredient, slab"
+	quest.285F815678D5F32A.quest_desc: [
+		"Assemble a nickel reagent (kubejs:substrate_nickel). The jar ingredient is dust nickel (immersiveengineering:dust_nickel)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the calcite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.394A502BD8B5B1A0.title: "Lead Reagent"
+	quest.394A502BD8B5B1A0.quest_subtitle: "Jar, ingredient, slab"
+	quest.394A502BD8B5B1A0.quest_desc: [
+		"Assemble a lead reagent (kubejs:substrate_lead). The jar ingredient is dust lead (immersiveengineering:dust_lead)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the wool row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.22F0C935130ADCF4.title: "Gold Reagent"
+	quest.22F0C935130ADCF4.quest_subtitle: "Jar, ingredient, slab"
+	quest.22F0C935130ADCF4.quest_desc: [
+		"Assemble a gold reagent (kubejs:substrate_gold). The jar ingredient is dust gold (immersiveengineering:dust_gold)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the calcite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.235264EC150EDB4B.title: "Lapis Reagent"
+	quest.235264EC150EDB4B.quest_subtitle: "Jar, ingredient, slab"
+	quest.235264EC150EDB4B.quest_desc: [
+		"Assemble a lapis reagent (kubejs:substrate_lapis). The jar ingredient is lapis lazuli (minecraft:lapis_lazuli)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the first row, with stone, slime, ender, oil, and chocolate."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.33B3AB3394DD012A.title: "Sulfur Reagent"
+	quest.33B3AB3394DD012A.quest_subtitle: "Jar, ingredient, slab"
+	quest.33B3AB3394DD012A.quest_desc: [
+		"Assemble a sulfur reagent (kubejs:substrate_sulfur). The jar ingredient is dust sulfur (immersiveengineering:dust_sulfur)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the netherrack row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.58A6D5414035EEA1.title: "Lapis Reagent"
+	quest.58A6D5414035EEA1.quest_subtitle: "Jar, ingredient, slab"
+	quest.58A6D5414035EEA1.quest_desc: [
+		"Assemble a lapis reagent (kubejs:substrate_lapis). The jar ingredient is lapis lazuli (minecraft:lapis_lazuli)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the first row, with stone, slime, ender, oil, and chocolate."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.2EECFBC4E2BF1F37.title: "Emerald Reagent"
+	quest.2EECFBC4E2BF1F37.quest_subtitle: "Jar, ingredient, slab"
+	quest.2EECFBC4E2BF1F37.quest_desc: [
+		"Assemble a emerald reagent (kubejs:substrate_emerald). The jar ingredient is emerald (minecraft:emerald)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the granite row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.2FD7D312EE63EA53.title: "Blaze Reagent"
+	quest.2FD7D312EE63EA53.quest_subtitle: "Jar, ingredient, slab"
+	quest.2FD7D312EE63EA53.quest_desc: [
+		"Assemble a blaze reagent (kubejs:substrate_blaze). The jar ingredient is blaze powder (minecraft:blaze_powder)."
+		"The sequence is an open jar, that ingredient deployed in, then a wooden slab as the lid. It sits on the egg row."
+		"Four reagents from one row, in the Alchemical Laser, are the world's seed-rolled recipe for that row's catalyst. Ponder the laser. JEI has the jar. The tome does not."
+	]
+	quest.2644760FA76D5F30.title: "Diamond"
+	quest.2644760FA76D5F30.quest_subtitle: "Have one"
+	quest.2644760FA76D5F30.quest_desc: [
+		"Have a diamond. JEI lists the ore. This node is the gem, not a reagent jar, and it does not skip a machine gate."
+		"JEI lists the recipe this pack actually uses. If the crafting grid is empty, the item moved onto a Create machine or a multiblock."
+		"Guidebooks live in the Autisnautics Guide, the Akashic Tome. Create and its addons use Ponder (W) instead of a book."
+	]
+	quest.3EB5CD9776DF0E63.title: "Scoria Reagent"
+	quest.3EB5CD9776DF0E63.quest_subtitle: "Jar, ingredient, slab"
+	quest.2B195E5B195246F5.title: "Bonemeal Reagent"
+	quest.2B195E5B195246F5.quest_subtitle: "Jar, ingredient, slab"
+	quest.62EB94758A862091.title: "Blaze Reagent"
+	quest.62EB94758A862091.quest_subtitle: "Jar, ingredient, slab"
+	quest.549D7F67A97CD2CE.title: "Quartz Reagent"
+	quest.549D7F67A97CD2CE.quest_subtitle: "Jar, ingredient, slab"
+	quest.0CC92E94D10E681D.title: "Iron Reagent"
+	quest.0CC92E94D10E681D.quest_subtitle: "Jar, ingredient, slab"
+	quest.5200AD3B32D219C6.title: "Emerald Reagent"
+	quest.5200AD3B32D219C6.quest_subtitle: "Jar, ingredient, slab"
+	quest.566E72AE7D580917.title: "Silver Reagent"
+	quest.566E72AE7D580917.quest_subtitle: "A laser result, not a jar"
+	quest.5550A3E383EFEC90.title: "Three"
+	quest.3126DE83A6741671.title: "Eight"
+	quest.2441491CB5D5E57D.title: "Zero"
+	quest.42B5C0102B22F389.title: "One"
+	quest.5358E5F7FB59DD60.title: "Two"
+	quest.55F959A18E904D6C.title: "Four"
+	quest.7927B6162577FA7B.title: "Five"
+	quest.1C6657984648B0D4.title: "Six"
+	quest.4A16CE3BC111280F.title: "Seven"
+	quest.7D808F15BEDD7A7B.title: "Nine"
+	quest.29CF41B34D00FE4D.title: "Earth Orbit"
+	quest.29CF41B34D00FE4D.quest_subtitle: "Above the sky islands"
+	quest.29CF41B34D00FE4D.quest_desc: [
+		"Set foot in stellaris:earth_orbit. The quest completes on its own when you are there."
+		"The rocket, the pad, and the fuel are the other quests on this page. This marker is only the arrival."
+		"The Stellaris tablet is in the Akashic Tome. Read it before you treat orbit like another cave."
+	]
+	quest.6DC501212658D17B.title: "The Moon"
+	quest.6DC501212658D17B.quest_subtitle: "Past the rocket"
+	quest.6DC501212658D17B.quest_desc: [
+		"Set foot in stellaris:moon. The quest completes on its own when you are there."
+		"The rocket, the pad, and the fuel are the other quests on this page. This marker is only the arrival."
+		"The Stellaris tablet is in the Akashic Tome. Read it before you treat orbit like another cave."
+	]
+	quest.3F1B9487F515D609.title: "Mars Orbit"
+	quest.3F1B9487F515D609.quest_subtitle: "Further out"
+	quest.3F1B9487F515D609.quest_desc: [
+		"Set foot in stellaris:mars_orbit. The quest completes on its own when you are there."
+		"The rocket, the pad, and the fuel are the other quests on this page. This marker is only the arrival."
+		"The Stellaris tablet is in the Akashic Tome. Read it before you treat orbit like another cave."
+	]
+	quest.0DB6C5E3A6A8DCE0.title: "Mercury Orbit"
+	quest.0DB6C5E3A6A8DCE0.quest_subtitle: "Close to the star"
+	quest.0DB6C5E3A6A8DCE0.quest_desc: [
+		"Set foot in stellaris:mercury_orbit. The quest completes on its own when you are there."
+		"The rocket, the pad, and the fuel are the other quests on this page. This marker is only the arrival."
+		"The Stellaris tablet is in the Akashic Tome. Read it before you treat orbit like another cave."
+	]
+	quest.55DD1BA6C84857AE.title: "Venus Orbit"
+	quest.55DD1BA6C84857AE.quest_subtitle: "The long way around"
+	quest.55DD1BA6C84857AE.quest_desc: [
+		"Set foot in stellaris:venus_orbit. The quest completes on its own when you are there."
+		"The rocket, the pad, and the fuel are the other quests on this page. This marker is only the arrival."
+		"The Stellaris tablet is in the Akashic Tome. Read it before you treat orbit like another cave."
+	]
+	quest.687C0B1646405F66.title: "Clear for Takeoff"
+	quest.687C0B1646405F66.quest_subtitle: "The sky is a chapter"
+	quest.687C0B1646405F66.quest_desc: [
+		"This checkmark opens the flight page. Nothing to craft yet."
+		"The three branches are a paraglider, an Immersive Aircraft craft, and an Aeronautics ship. Two of them make you skyworthy. The rocket is after that, on the stage page."
+		"Create ships and the glider have no book in the Akashic Tome. Ponder Aeronautics parts. JEI has the crafts, including the ones this pack moved onto machines."
+	]
+	quest.44574DD7ED012C32.title: "Wooden Paraglider"
+	quest.44574DD7ED012C32.quest_subtitle: "Any wood, a first glide"
+	quest.44574DD7ED012C32.quest_desc: [
+		"Craft the wooden paraglider. Any wood works. JEI has the shape."
+		"It is the cheap branch of this page. Iron comes next if you want a longer glide between islands."
+		"There is no guidebook for the glider. JEI is the page."
+	]
+	quest.7185578FE136832B.title: "Iron Paraglider"
+	quest.7185578FE136832B.quest_subtitle: "A sturdier canopy"
+	quest.7185578FE136832B.quest_desc: [
+		"Craft the iron paraglider after the wooden one. JEI has the shape."
+		"Same flight, a tougher canopy, for the gaps between sky islands."
+		"JEI is the only guide. The Akashic Tome does not list it."
+	]
+	quest.7EA9F909DD9B538A.title: "Aircraft Propeller"
+	quest.7EA9F909DD9B538A.quest_subtitle: "Eight iron sheets"
+	quest.7EA9F909DD9B538A.quest_desc: [
+		"This pack adds a shaped craft: andesite alloy in the middle, iron sheets around it. JEI shows it."
+		"That propeller is also the item you apply to an Andesite Machine to make the Aeronautics andesite propeller. Make the aircraft one first if you want both."
+		"Immersive Aircraft has no book in the Akashic Tome."
+	]
+	quest.77426DDB0F2283CA.title: "Gyrodyne"
+	quest.77426DDB0F2283CA.quest_subtitle: "Kinetic mechanism, not precision"
+	quest.77426DDB0F2283CA.quest_desc: [
+		"Craft the gyrodyne. This pack swaps the precision mechanism in that recipe for a kinetic mechanism. JEI shows the substituted shape."
+		"It is the first powered personal aircraft on this page. The nether engine and the eco engine were moved onto a Zinc Machine and a Lead Machine. The plain engine craft is still the mod's."
+		"JEI is the guide. Hold onto the kinetic mechanism. It is a Stage 1 gate, and this quest should not be your first one."
+	]
+	quest.67DCC1E05E49C5D0.title: "Airship"
+	quest.67DCC1E05E49C5D0.quest_subtitle: "Sails, hull, a Gold Machine"
+	quest.67DCC1E05E49C5D0.quest_desc: [
+		"If VS Sails is loaded, the old airship craft is replaced: three sails, two VS ropes, an Immersive Aircraft hull, a Create propeller, and a Gold Machine."
+		"If that rope item is absent, JEI still has the mod's own airship craft. Check JEI before you hunt for a rope that is not in the pack."
+		"The Gold Machine is railway casing around a reinforced mechanism. This is a late branch of the page, not a starter."
+	]
+	quest.1FBE189EB3E6A3C1.title: "Andesite Propeller"
+	quest.1FBE189EB3E6A3C1.quest_subtitle: "Machine plus the aircraft prop"
+	quest.1FBE189EB3E6A3C1.quest_desc: [
+		"Apply an Immersive Aircraft propeller to an Andesite Machine. That is the Aeronautics andesite propeller."
+		"A wooden Aeronautics propeller also converts into this one, shapeless, one for one."
+		"Ponder it (W). Aeronautics has no book in the Akashic Tome."
+	]
+	quest.3F57748D80359EF6.title: "Gas Envelope"
+	quest.3F57748D80359EF6.quest_subtitle: "The balloon"
+	quest.3F57748D80359EF6.quest_desc: [
+		"Craft a white envelope. JEI has the wool and sticks. This pack did not move the envelope onto a machine."
+		"The envelope is the balloon. The burner, the vent, and the bearing are the other half, and those did move onto machines. See the Aeronautics primer."
+		"Ponder the envelope. The tome has no page for it."
+	]
+	quest.4BE9B3642F8D9EB6.title: "Propeller Bearing"
+	quest.4BE9B3642F8D9EB6.quest_subtitle: "Stonecut a Gold Machine"
+	quest.4BE9B3642F8D9EB6.quest_desc: [
+		"Stonecut a Gold Machine. The cut makes two bearings. The old slab and brass-casing craft is gone."
+		"This is the mount the Aeronautics propeller spins on. It waits for the Gold Machine."
+		"Ponder the bearing. JEI shows the cut."
+	]
+	quest.044B37BCECAC6250.title: "Create Jetpack"
+	quest.044B37BCECAC6250.quest_subtitle: "When a ship is too much"
+	quest.044B37BCECAC6250.quest_desc: [
+		"Craft the Create Jetpack. JEI has the shape this pack left in place. It was not moved onto a machine."
+		"Personal flight, for when the airship is more hull than you need."
+		"Ponder it if the item has a scene. Otherwise JEI is the whole guide."
+	]
+	quest.7D1250D39EDB5C02.title: "Skyworthy"
+	quest.7D1250D39EDB5C02.quest_subtitle: "Two ways off the ground"
+	quest.7D1250D39EDB5C02.quest_desc: [
+		"Complete any two flight branches on this page: the glider, Immersive Aircraft, or Aeronautics."
+		"This checkmark is the gate the overview and the rocket are waiting on. The rocket is the next chapter of the sky, not a third branch here."
+		"You can ignore the angelic feather. It is a Reliquary drop, not part of the count."
+	]
+	quest.7650D7E4FE40E2C7.quest_subtitle: "Optional, and not the gate"
+	quest.7650D7E4FE40E2C7.quest_desc: [
+		"A Reliquary drop. It is not crafted from the flight line, and it does not count toward Skyworthy."
+		"Have one if you find it. Do not stall the rocket on it."
+		"Reliquary's tome, if you want the charm pages, is not this feather. JEI shows what the feather actually does."
 	]
 }

@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_theurgy"
-	group: "E1A0000000000001"
-	id: "E512000000000000"
+	group: "61A0000000000001"
+	id: "6512000000000000"
 	images: [ ]
 	order_index: 17
 	quest_links: [ ]
@@ -24,10 +24,10 @@
 				}
 				id: "modonomicon:modonomicon"
 			}
-			id: "E412000000000000"
+			id: "6412000000000000"
 			rewards: [
 				{
-					id: "E312000000000000"
+					id: "6312000000000000"
 					item: {
 						components: {
 							"modonomicon:book_id": "theurgy:the_hermetica"
@@ -36,6 +36,12 @@
 						id: "modonomicon:modonomicon"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000082"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -52,14 +58,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212000000000000"
+				id: "6212000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E412000000000000"]
+			dependencies: ["6412000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -72,15 +78,21 @@
 			icon: {
 				id: "theurgy:pyromantic_brazier"
 			}
-			id: "E412010000000000"
+			id: "6412010000000000"
 			rewards: [
 				{
-					id: "E312010000000000"
+					id: "6312010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000083"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -95,7 +107,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212010000000000"
+				id: "6212010000000000"
 				item: { count: 1, id: "theurgy:pyromantic_brazier" }
 				type: "item"
 			}]
@@ -103,7 +115,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E412010000000000"]
+			dependencies: ["6412010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -116,15 +128,21 @@
 			icon: {
 				id: "theurgy:calcination_oven"
 			}
-			id: "E412020000000000"
+			id: "6412020000000000"
 			rewards: [
 				{
-					id: "E312020000000000"
+					id: "6312020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000084"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -139,7 +157,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212020000000000"
+				id: "6212020000000000"
 				item: { count: 1, id: "theurgy:calcination_oven" }
 				type: "item"
 			}]
@@ -147,7 +165,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E412020000000000"]
+			dependencies: ["6412020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -160,15 +178,21 @@
 			icon: {
 				id: "theurgy:distiller"
 			}
-			id: "E412030000000000"
+			id: "6412030000000000"
 			rewards: [
 				{
-					id: "E312030000000000"
+					id: "6312030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000085"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -183,7 +207,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212030000000000"
+				id: "6212030000000000"
 				item: { count: 1, id: "theurgy:distiller" }
 				type: "item"
 			}]
@@ -191,7 +215,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E412030000000000"]
+			dependencies: ["6412030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -204,15 +228,21 @@
 			icon: {
 				id: "theurgy:sal_ammoniac_crystal"
 			}
-			id: "E412040000000000"
+			id: "6412040000000000"
 			rewards: [
 				{
-					id: "E312040000000000"
+					id: "6312040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000086"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -227,7 +257,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212040000000000"
+				id: "6212040000000000"
 				item: { count: 1, id: "theurgy:sal_ammoniac_crystal" }
 				type: "item"
 			}]
@@ -235,7 +265,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E412040000000000"]
+			dependencies: ["6412040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -248,15 +278,21 @@
 			icon: {
 				id: "theurgy:mercury_shard"
 			}
-			id: "E412050000000000"
+			id: "6412050000000000"
 			rewards: [
 				{
-					id: "E312050000000000"
+					id: "6312050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 4
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000087"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -273,7 +309,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E212050000000000"
+				id: "6212050000000000"
 				item: { count: 1, id: "theurgy:mercury_shard" }
 				type: "item"
 			}]

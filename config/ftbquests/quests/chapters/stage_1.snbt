@@ -25,6 +25,21 @@
 			}
 			id: "2CB570195DA7E106"
 			shape: "square"
+			rewards: [
+				{
+					id: "51000000000000C4"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000C5"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					disable_toast: true
@@ -78,6 +93,21 @@
 				id: "minecraft:kelp"
 			}
 			id: "608BF7BE3CB666F3"
+			rewards: [
+				{
+					id: "51000000000000C6"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000C7"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -130,6 +160,21 @@
 				id: "minecraft:sand"
 			}
 			id: "4CC420A6B673176A"
+			rewards: [
+				{
+					id: "51000000000000C8"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000C9"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -182,6 +227,21 @@
 				id: "minecraft:andesite"
 			}
 			id: "106C6DFDCB97327C"
+			rewards: [
+				{
+					id: "51000000000000CA"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000CB"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -231,6 +291,21 @@
 			}
 			id: "6B7F0631060A9E62"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000CC"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000CD"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -264,6 +339,21 @@
 				id: "minecraft:clay_ball"
 			}
 			id: "729FB5DD07C234E8"
+			rewards: [
+				{
+					id: "51000000000000CE"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000CF"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -318,6 +408,21 @@
 				id: "architects_palette:algal_blend"
 			}
 			id: "72BE175C83834838"
+			rewards: [
+				{
+					id: "51000000000000D0"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000D1"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -369,6 +474,21 @@
 				id: "minecraft:oak_planks"
 			}
 			id: "532EFE32C3A515B5"
+			rewards: [
+				{
+					id: "51000000000000D2"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000D3"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -420,6 +540,21 @@
 				id: "minecraft:oak_slab"
 			}
 			id: "19921941321965A4"
+			rewards: [
+				{
+					id: "51000000000000D4"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000D5"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -471,6 +606,21 @@
 				id: "minecraft:stripped_oak_log"
 			}
 			id: "59E4A6163753BC12"
+			rewards: [
+				{
+					id: "51000000000000D6"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000D7"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -525,6 +675,21 @@
 				id: "create:andesite_alloy"
 			}
 			id: "73FCA432DEFC1DED"
+			rewards: [
+				{
+					id: "51000000000000D8"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000D9"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -576,6 +741,21 @@
 				id: "architects_palette:algal_brick"
 			}
 			id: "32786E9D145FFE25"
+			rewards: [
+				{
+					id: "51000000000000DA"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000DB"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -631,6 +811,21 @@
 				id: "kubejs:kinetic_mechanism"
 			}
 			id: "675C395B2074C24C"
+			rewards: [
+				{
+					id: "51000000000000DC"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000DD"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -687,6 +882,21 @@
 			}
 			id: "5A055D0421861318"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000DE"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000DF"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -729,7 +939,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000E0"
+					type: "xp"
+					xp: 50
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -793,6 +1009,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "51000000000000E1"
+					type: "xp"
+					xp: 50
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -835,6 +1057,21 @@
 			}
 			id: "3728DF562D6DCE3A"
 			shape: "square"
+			rewards: [
+				{
+					id: "51000000000000E2"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000E3"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					count: 4L
@@ -887,6 +1124,21 @@
 				id: "kubejs:rubber"
 			}
 			id: "3EF5F89DBD6959E3"
+			rewards: [
+				{
+					id: "51000000000000E4"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000E5"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -939,6 +1191,21 @@
 			}
 			id: "29D37095C73B3DEC"
 			shape: "square"
+			rewards: [
+				{
+					id: "51000000000000E6"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000E7"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -991,6 +1258,21 @@
 			}
 			id: "6545C3F427B12106"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000E8"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000E9"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1053,6 +1335,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "51000000000000EA"
+					type: "xp"
+					xp: 50
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -1088,6 +1376,21 @@
 			}
 			id: "6892AE55581393C6"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000EB"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000EC"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1125,6 +1428,21 @@
 				id: "minecraft:deepslate"
 			}
 			id: "5C4F6E63B02A25F0"
+			rewards: [
+				{
+					id: "51000000000000ED"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000EE"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1176,6 +1494,21 @@
 				id: "minecraft:magma_block"
 			}
 			id: "4D8972AE5B614FB3"
+			rewards: [
+				{
+					id: "51000000000000EF"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000F0"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1227,6 +1560,21 @@
 				id: "minecraft:obsidian"
 			}
 			id: "4064D448404CD639"
+			rewards: [
+				{
+					id: "51000000000000F1"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000F2"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1286,7 +1634,13 @@
 					id: "create:track"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000F3"
+					type: "xp"
+					xp: 50
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -1324,6 +1678,21 @@
 			}
 			id: "76706BE282ABAC31"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000F4"
+					item: {
+						count: 16
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000F5"
+					type: "xp"
+					xp: 20
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"

@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_cei"
-	group: "E1A0000000000001"
-	id: "E505000000000000"
+	group: "61A0000000000001"
+	id: "6505000000000000"
 	images: [ ]
 	order_index: 4
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "create_enchantment_industry:blazes_enchanting_handbook"
 			}
-			id: "E405000000000000"
+			id: "6405000000000000"
 			rewards: [
 				{
-					id: "E305000000000000"
+					id: "6305000000000000"
 					item: {
 						count: 1
 						id: "create_enchantment_industry:blazes_enchanting_handbook"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000021"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E205000000000000"
+				id: "6205000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E405000000000000"]
+			dependencies: ["6405000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "create_enchantment_industry:mechanical_grindstone"
 			}
-			id: "E405010000000000"
+			id: "6405010000000000"
 			rewards: [
 				{
-					id: "E305010000000000"
+					id: "6305010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:lapis_lazuli"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000022"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E205010000000000"
+				id: "6205010000000000"
 				item: { count: 1, id: "create_enchantment_industry:mechanical_grindstone" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E405010000000000"]
+			dependencies: ["6405010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "create_enchantment_industry:experience_cake_base"
 			}
-			id: "E405020000000000"
+			id: "6405020000000000"
 			rewards: [
 				{
-					id: "E305020000000000"
+					id: "6305020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:lapis_lazuli"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000023"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E205020000000000"
+				id: "6205020000000000"
 				item: { count: 1, id: "create_enchantment_industry:experience_cake_base" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E405020000000000"]
+			dependencies: ["6405020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "create_enchantment_industry:experience_cake"
 			}
-			id: "E405030000000000"
+			id: "6405030000000000"
 			rewards: [
 				{
-					id: "E305030000000000"
+					id: "6305030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:lapis_lazuli"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000024"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E205030000000000"
+				id: "6205030000000000"
 				item: { count: 1, id: "create_enchantment_industry:experience_cake" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E405030000000000"]
+			dependencies: ["6405030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "create_enchantment_industry:printer"
 			}
-			id: "E405040000000000"
+			id: "6405040000000000"
 			rewards: [
 				{
-					id: "E305040000000000"
+					id: "6305040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:lapis_lazuli"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000025"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -223,7 +253,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E205040000000000"
+				id: "6205040000000000"
 				item: { count: 1, id: "create_enchantment_industry:printer" }
 				type: "item"
 			}]

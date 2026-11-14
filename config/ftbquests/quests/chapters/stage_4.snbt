@@ -31,7 +31,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000001A1"
+					type: "xp"
+					xp: 80
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -70,6 +76,21 @@
 				id: "kubejs:calculation_mechanism"
 			}
 			id: "6824055533465010"
+			rewards: [
+				{
+					id: "51000000000001A2"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001A3"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -154,6 +175,12 @@
 					id: "0BFFA00BD71FC785"
 					type: "command"
 				}
+			
+				{
+					id: "51000000000001A4"
+					type: "xp"
+					xp: 80
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -192,6 +219,21 @@
 				id: "minecraft:sand"
 			}
 			id: "22202C87352242D6"
+			rewards: [
+				{
+					id: "51000000000001A5"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001A6"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -243,6 +285,21 @@
 				id: "kubejs:sand_ball"
 			}
 			id: "42F1A649D86DB86D"
+			rewards: [
+				{
+					id: "51000000000001A7"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001A8"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -292,6 +349,21 @@
 			}
 			id: "4412F3B2827606E4"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000001A9"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001AA"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -325,6 +397,21 @@
 				id: "kubejs:rough_sand"
 			}
 			id: "0F5AA5DF001DCDF5"
+			rewards: [
+				{
+					id: "51000000000001AB"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001AC"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -379,6 +466,21 @@
 				id: "kubejs:purified_sand"
 			}
 			id: "343050A40A3AB1F0"
+			rewards: [
+				{
+					id: "51000000000001AD"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001AE"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -430,6 +532,21 @@
 				id: "minecraft:charcoal"
 			}
 			id: "3249CD08992F2BCD"
+			rewards: [
+				{
+					id: "51000000000001AF"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001B0"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -481,6 +598,21 @@
 				id: "immersiveengineering:coal_coke"
 			}
 			id: "1A383F96B312D1B8"
+			rewards: [
+				{
+					id: "51000000000001B1"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001B2"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -532,6 +664,21 @@
 				id: "kubejs:coke_chunk"
 			}
 			id: "16F920C2AF2FA2E0"
+			rewards: [
+				{
+					id: "51000000000001B3"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001B4"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -587,6 +734,21 @@
 				id: "kubejs:silicon_compound"
 			}
 			id: "2268AFAF6E9AB5E2"
+			rewards: [
+				{
+					id: "51000000000001B5"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001B6"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -638,6 +800,21 @@
 				id: "minecraft:fire_charge"
 			}
 			id: "60A8B4C736CE3226"
+			rewards: [
+				{
+					id: "51000000000001B7"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001B8"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -689,6 +866,21 @@
 				id: "minecraft:blaze_powder"
 			}
 			id: "5799B4124EE20DB1"
+			rewards: [
+				{
+					id: "51000000000001B9"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001BA"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -740,6 +932,21 @@
 				id: "minecraft:blaze_rod"
 			}
 			id: "6C4CB8F616A9C3DF"
+			rewards: [
+				{
+					id: "51000000000001BB"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001BC"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -792,6 +999,21 @@
 				id: "minecraft:basalt"
 			}
 			id: "0B602ED47A0195A4"
+			rewards: [
+				{
+					id: "51000000000001BD"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001BE"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -843,6 +1065,21 @@
 				id: "minecraft:lodestone"
 			}
 			id: "58B534C4AEB4139D"
+			rewards: [
+				{
+					id: "51000000000001BF"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001C0"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -894,6 +1131,21 @@
 				id: "refinedstorage:silicon"
 			}
 			id: "067C5FDA4709F195"
+			rewards: [
+				{
+					id: "51000000000001C1"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001C2"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -949,6 +1201,21 @@
 				id: "refinedstorage:processor_binding"
 			}
 			id: "71D90A1E5D53FC0A"
+			rewards: [
+				{
+					id: "51000000000001C3"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001C4"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1001,6 +1268,21 @@
 			id: "0CE88FEA070DC46C"
 			shape: "hexagon"
 			size: 1.5d
+			rewards: [
+				{
+					id: "51000000000001C5"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001C6"
+					type: "xp"
+					xp: 80
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -1041,7 +1323,13 @@
 				}
 				id: "14F213F493035F9B"
 				type: "command"
-			}]
+			}
+				{
+					id: "51000000000001C7"
+					type: "xp"
+					xp: 40
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				extraquests_options: {
@@ -1078,6 +1366,21 @@
 			}
 			id: "46820FBDDDEE491E"
 			shape: "square"
+			rewards: [
+				{
+					id: "51000000000001C8"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001C9"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1131,6 +1434,21 @@
 			}
 			id: "1BF8F3CC8BEBB620"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000001CA"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001CB"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1165,6 +1483,21 @@
 				id: "refinedstorage:silicon"
 			}
 			id: "4B19B6EAD511378D"
+			rewards: [
+				{
+					id: "51000000000001CC"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001CD"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1214,6 +1547,21 @@
 			}
 			id: "33674138F4866C18"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000001CE"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001CF"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1247,6 +1595,21 @@
 				id: "refinedstorage:raw_basic_processor"
 			}
 			id: "24C48CFAAD71B230"
+			rewards: [
+				{
+					id: "51000000000001D0"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001D1"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1315,6 +1678,21 @@
 				id: "refinedstorage:basic_processor"
 			}
 			id: "2B8F1D804107EB8C"
+			rewards: [
+				{
+					id: "51000000000001D2"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001D3"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1381,6 +1759,21 @@
 			}
 			id: "13B197C90F9812C8"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000001D4"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001D5"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1415,6 +1808,21 @@
 				id: "kubejs:silicon_wafer"
 			}
 			id: "7A65109679CB08D7"
+			rewards: [
+				{
+					id: "51000000000001D6"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001D7"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1450,6 +1858,21 @@
 				id: "kubejs:spirit_of_lithography"
 			}
 			id: "2E9DE41FAC48B8A7"
+			rewards: [
+				{
+					id: "51000000000001D8"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001D9"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1484,6 +1907,21 @@
 				id: "kubejs:latent_wafer"
 			}
 			id: "7C8C07525326B068"
+			rewards: [
+				{
+					id: "51000000000001DA"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001DB"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1518,6 +1956,21 @@
 				id: "kubejs:annealed_wafer"
 			}
 			id: "682C6EDD7B131217"
+			rewards: [
+				{
+					id: "51000000000001DC"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001DD"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1552,6 +2005,21 @@
 				id: "kubejs:washed_wafer"
 			}
 			id: "27DFF2F1B447554C"
+			rewards: [
+				{
+					id: "51000000000001DE"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001DF"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1586,6 +2054,21 @@
 				id: "kubejs:polished_wafer"
 			}
 			id: "375B60D0AA211DE5"
+			rewards: [
+				{
+					id: "51000000000001E0"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001E1"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1620,6 +2103,21 @@
 				id: "kubejs:insulated_die"
 			}
 			id: "057B683A7191B2C2"
+			rewards: [
+				{
+					id: "51000000000001E2"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001E3"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1654,6 +2152,21 @@
 				id: "kubejs:ruined_wafer"
 			}
 			id: "467B0625D2A4A184"
+			rewards: [
+				{
+					id: "51000000000001E4"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001E5"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1688,6 +2201,21 @@
 				id: "kubejs:dram"
 			}
 			id: "40D97A07CDC07DB8"
+			rewards: [
+				{
+					id: "51000000000001E6"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001E7"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1722,6 +2250,21 @@
 				id: "refinedstorage:raw_improved_processor"
 			}
 			id: "1C253E3B9DA3597E"
+			rewards: [
+				{
+					id: "51000000000001E8"
+					item: {
+						count: 16
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001E9"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"

@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_create"
-	group: "E1A0000000000001"
-	id: "E501000000000000"
+	group: "61A0000000000001"
+	id: "6501000000000000"
 	images: [ ]
 	order_index: 0
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "create:wrench"
 			}
-			id: "E401000000000000"
+			id: "6401000000000000"
 			rewards: [
 				{
-					id: "E301000000000000"
+					id: "6301000000000000"
 					item: {
 						count: 1
 						id: "create:wrench"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000032"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201000000000000"
+				id: "6201000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E401000000000000"]
+			dependencies: ["6401000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "create:sand_paper"
 			}
-			id: "E401010000000000"
+			id: "6401010000000000"
 			rewards: [
 				{
-					id: "E301010000000000"
+					id: "6301010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000033"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201010000000000"
+				id: "6201010000000000"
 				item: { count: 1, id: "create:sand_paper" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E401010000000000"]
+			dependencies: ["6401010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "create:goggles"
 			}
-			id: "E401020000000000"
+			id: "6401020000000000"
 			rewards: [
 				{
-					id: "E301020000000000"
+					id: "6301020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000034"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201020000000000"
+				id: "6201020000000000"
 				item: { count: 1, id: "create:goggles" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E401020000000000"]
+			dependencies: ["6401020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "create:andesite_alloy"
 			}
-			id: "E401030000000000"
+			id: "6401030000000000"
 			rewards: [
 				{
-					id: "E301030000000000"
+					id: "6301030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000035"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201030000000000"
+				id: "6201030000000000"
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E401030000000000"]
+			dependencies: ["6401030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "create:shaft"
 			}
-			id: "E401040000000000"
+			id: "6401040000000000"
 			rewards: [
 				{
-					id: "E301040000000000"
+					id: "6301040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000036"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201040000000000"
+				id: "6201040000000000"
 				item: { count: 1, id: "create:shaft" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E401040000000000"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "create:cogwheel"
 			}
-			id: "E401050000000000"
+			id: "6401050000000000"
 			rewards: [
 				{
-					id: "E301050000000000"
+					id: "6301050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000037"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201050000000000"
+				id: "6201050000000000"
 				item: { count: 1, id: "create:cogwheel" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E401050000000000"]
+			dependencies: ["6401050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "create:hand_crank"
 			}
-			id: "E401060000000000"
+			id: "6401060000000000"
 			rewards: [
 				{
-					id: "E301060000000000"
+					id: "6301060000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000038"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -309,7 +351,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201060000000000"
+				id: "6201060000000000"
 				item: { count: 1, id: "create:hand_crank" }
 				type: "item"
 			}]
@@ -317,7 +359,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["E401060000000000"]
+			dependencies: ["6401060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -330,15 +372,21 @@
 			icon: {
 				id: "create:water_wheel"
 			}
-			id: "E401070000000000"
+			id: "6401070000000000"
 			rewards: [
 				{
-					id: "E301070000000000"
+					id: "6301070000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:andesite"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000039"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -355,12 +403,112 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E201070000000000"
+				id: "6201070000000000"
 				item: { count: 1, id: "create:water_wheel" }
 				type: "item"
 			}]
 			x: 0.0d
 			y: 10.5d
 		}
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			dependencies: ["6401020000000000"]
+			icon: {
+				id: "architects_palette:algal_brick"
+			}
+			id: "6401090000000001"
+			rewards: [
+				{
+					id: "6301090000000001"
+					item: {
+						count: 16
+						id: "minecraft:kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "6301090000000002"
+					type: "xp"
+					xp: 15
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6201090000000001"
+					item: { count: 1, id: "architects_palette:algal_brick" }
+					type: "item"
+			}]
+			x: 2.5d
+			y: 3.0d
+		}
+
+		{
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			dependencies: ["6401030000000000"]
+			icon: {
+				id: "create:andesite_casing"
+			}
+			id: "64010A0000000001"
+			rewards: [
+				{
+					id: "63010A0000000001"
+					item: {
+						count: 8
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "63010A0000000002"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "62010A0000000001"
+					item: { count: 1, id: "create:andesite_casing" }
+					type: "item"
+			}]
+			x: 2.5d
+			y: 4.5d
+		}
+
 	]
 }

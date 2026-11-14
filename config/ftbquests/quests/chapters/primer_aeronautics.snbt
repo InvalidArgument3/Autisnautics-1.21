@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_aeronautics"
-	group: "E1A0000000000001"
-	id: "E502000000000000"
+	group: "61A0000000000001"
+	id: "6502000000000000"
 	images: [ ]
 	order_index: 1
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "aeronautics:white_envelope"
 			}
-			id: "E402000000000000"
+			id: "6402000000000000"
 			rewards: [
 				{
-					id: "E302000000000000"
+					id: "6302000000000000"
 					item: {
 						count: 1
 						id: "aeronautics:white_envelope"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000001"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202000000000000"
+				id: "6202000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E402000000000000"]
+			dependencies: ["6402000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "aeronautics:blue_envelope"
 			}
-			id: "E402010000000000"
+			id: "6402010000000000"
 			rewards: [
 				{
-					id: "E302010000000000"
+					id: "6302010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:white_wool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000002"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202010000000000"
+				id: "6202010000000000"
 				item: { count: 1, id: "aeronautics:blue_envelope" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E402010000000000"]
+			dependencies: ["6402010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "aeronautics:steam_vent"
 			}
-			id: "E402020000000000"
+			id: "6402020000000000"
 			rewards: [
 				{
-					id: "E302020000000000"
+					id: "6302020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:white_wool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000003"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202020000000000"
+				id: "6202020000000000"
 				item: { count: 1, id: "aeronautics:steam_vent" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E402020000000000"]
+			dependencies: ["6402020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "aeronautics:aviators_goggles"
 			}
-			id: "E402030000000000"
+			id: "6402030000000000"
 			rewards: [
 				{
-					id: "E302030000000000"
+					id: "6302030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:white_wool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000004"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202030000000000"
+				id: "6202030000000000"
 				item: { count: 1, id: "aeronautics:aviators_goggles" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E402030000000000"]
+			dependencies: ["6402030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "aeronautics:adjustable_burner"
 			}
-			id: "E402040000000000"
+			id: "6402040000000000"
 			rewards: [
 				{
-					id: "E302040000000000"
+					id: "6302040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:white_wool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000005"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202040000000000"
+				id: "6202040000000000"
 				item: { count: 1, id: "aeronautics:adjustable_burner" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E402040000000000"]
+			dependencies: ["6402040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "aeronautics:propeller_bearing"
 			}
-			id: "E402050000000000"
+			id: "6402050000000000"
 			rewards: [
 				{
-					id: "E302050000000000"
+					id: "6302050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:white_wool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000006"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E202050000000000"
+				id: "6202050000000000"
 				item: { count: 1, id: "aeronautics:propeller_bearing" }
 				type: "item"
 			}]

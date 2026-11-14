@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_nuclearcraft"
-	group: "E1A0000000000001"
-	id: "E508000000000000"
+	group: "61A0000000000001"
+	id: "6508000000000000"
 	images: [ ]
 	order_index: 7
 	quest_links: [ ]
@@ -24,10 +24,10 @@
 				}
 				id: "patchouli:guide_book"
 			}
-			id: "E408000000000000"
+			id: "6408000000000000"
 			rewards: [
 				{
-					id: "E308000000000000"
+					id: "6308000000000000"
 					item: {
 						components: {
 							"patchouli:book": "nuclearcraftneohaul:guide"
@@ -36,6 +36,12 @@
 						id: "patchouli:guide_book"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000064"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -52,14 +58,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208000000000000"
+				id: "6208000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E408000000000000"]
+			dependencies: ["6408000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -72,15 +78,21 @@
 			icon: {
 				id: "nuclearcraftneohaul:copper_solenoid"
 			}
-			id: "E408010000000000"
+			id: "6408010000000000"
 			rewards: [
 				{
-					id: "E308010000000000"
+					id: "6308010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000065"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -95,7 +107,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208010000000000"
+				id: "6208010000000000"
 				item: { count: 1, id: "nuclearcraftneohaul:copper_solenoid" }
 				type: "item"
 			}]
@@ -103,7 +115,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E408010000000000"]
+			dependencies: ["6408010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -116,15 +128,21 @@
 			icon: {
 				id: "nuclearcraftneohaul:basic_plating"
 			}
-			id: "E408020000000000"
+			id: "6408020000000000"
 			rewards: [
 				{
-					id: "E308020000000000"
+					id: "6308020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000066"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -139,7 +157,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208020000000000"
+				id: "6208020000000000"
 				item: { count: 1, id: "nuclearcraftneohaul:basic_plating" }
 				type: "item"
 			}]
@@ -147,7 +165,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E408020000000000"]
+			dependencies: ["6408020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -160,15 +178,21 @@
 			icon: {
 				id: "nuclearcraftneohaul:radiation_badge"
 			}
-			id: "E408030000000000"
+			id: "6408030000000000"
 			rewards: [
 				{
-					id: "E308030000000000"
+					id: "6308030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000067"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -183,7 +207,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208030000000000"
+				id: "6208030000000000"
 				item: { count: 1, id: "nuclearcraftneohaul:radiation_badge" }
 				type: "item"
 			}]
@@ -191,7 +215,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E408030000000000"]
+			dependencies: ["6408030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -204,15 +228,21 @@
 			icon: {
 				id: "nuclearcraftneohaul:manufactory"
 			}
-			id: "E408040000000000"
+			id: "6408040000000000"
 			rewards: [
 				{
-					id: "E308040000000000"
+					id: "6308040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000068"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -227,7 +257,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208040000000000"
+				id: "6208040000000000"
 				item: { count: 1, id: "nuclearcraftneohaul:manufactory" }
 				type: "item"
 			}]
@@ -235,7 +265,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E408040000000000"]
+			dependencies: ["6408040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -248,15 +278,21 @@
 			icon: {
 				id: "nuclearcraftneohaul:alloy_furnace"
 			}
-			id: "E408050000000000"
+			id: "6408050000000000"
 			rewards: [
 				{
-					id: "E308050000000000"
+					id: "6308050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000069"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -273,7 +309,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E208050000000000"
+				id: "6208050000000000"
 				item: { count: 1, id: "nuclearcraftneohaul:alloy_furnace" }
 				type: "item"
 			}]

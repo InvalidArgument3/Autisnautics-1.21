@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_psi"
-	group: "E1A0000000000001"
-	id: "E510000000000000"
+	group: "61A0000000000001"
+	id: "6510000000000000"
 	images: [ ]
 	order_index: 15
 	quest_links: [ ]
@@ -24,10 +24,10 @@
 				}
 				id: "patchouli:guide_book"
 			}
-			id: "E410000000000000"
+			id: "6410000000000000"
 			rewards: [
 				{
-					id: "E310000000000000"
+					id: "6310000000000000"
 					item: {
 						components: {
 							"patchouli:book": "psi:encyclopaedia_psionica"
@@ -36,6 +36,12 @@
 						id: "patchouli:guide_book"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006A"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -52,14 +58,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210000000000000"
+				id: "6210000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E410000000000000"]
+			dependencies: ["6410000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -72,15 +78,21 @@
 			icon: {
 				id: "psi:cad_assembly_iron"
 			}
-			id: "E410010000000000"
+			id: "6410010000000000"
 			rewards: [
 				{
-					id: "E310010000000000"
+					id: "6310010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -95,7 +107,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210010000000000"
+				id: "6210010000000000"
 				item: { count: 1, id: "psi:cad_assembly_iron" }
 				type: "item"
 			}]
@@ -103,7 +115,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E410010000000000"]
+			dependencies: ["6410010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -116,15 +128,21 @@
 			icon: {
 				id: "psi:psidust"
 			}
-			id: "E410020000000000"
+			id: "6410020000000000"
 			rewards: [
 				{
-					id: "E310020000000000"
+					id: "6310020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006C"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -139,7 +157,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210020000000000"
+				id: "6210020000000000"
 				item: { count: 1, id: "psi:psidust" }
 				type: "item"
 			}]
@@ -147,7 +165,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E410020000000000"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -160,15 +178,21 @@
 			icon: {
 				id: "psi:spell_bullet"
 			}
-			id: "E410030000000000"
+			id: "6410030000000000"
 			rewards: [
 				{
-					id: "E310030000000000"
+					id: "6310030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -183,7 +207,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210030000000000"
+				id: "6210030000000000"
 				item: { count: 1, id: "psi:spell_bullet" }
 				type: "item"
 			}]
@@ -191,7 +215,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E410030000000000"]
+			dependencies: ["6410030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -204,15 +228,21 @@
 			icon: {
 				id: "psi:programmer"
 			}
-			id: "E410040000000000"
+			id: "6410040000000000"
 			rewards: [
 				{
-					id: "E310040000000000"
+					id: "6310040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -227,7 +257,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210040000000000"
+				id: "6210040000000000"
 				item: { count: 1, id: "psi:programmer" }
 				type: "item"
 			}]
@@ -235,7 +265,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E410040000000000"]
+			dependencies: ["6410040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -248,15 +278,21 @@
 			icon: {
 				id: "psi:cad_battery_basic"
 			}
-			id: "E410050000000000"
+			id: "6410050000000000"
 			rewards: [
 				{
-					id: "E310050000000000"
+					id: "6310050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:redstone"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000006F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -273,7 +309,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E210050000000000"
+				id: "6210050000000000"
 				item: { count: 1, id: "psi:cad_battery_basic" }
 				type: "item"
 			}]

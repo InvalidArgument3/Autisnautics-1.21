@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_sophisticated_backpacks"
-	group: "E1A0000000000001"
-	id: "E50B000000000000"
+	group: "61A0000000000001"
+	id: "650B000000000000"
 	images: [ ]
 	order_index: 10
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:backpack"
 			}
-			id: "E40B000000000000"
+			id: "640B000000000000"
 			rewards: [
 				{
-					id: "E30B000000000000"
+					id: "630B000000000000"
 					item: {
 						count: 1
 						id: "sophisticatedbackpacks:backpack"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000076"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B000000000000"
+				id: "620B000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E40B000000000000"]
+			dependencies: ["640B000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:upgrade_base"
 			}
-			id: "E40B010000000000"
+			id: "640B010000000000"
 			rewards: [
 				{
-					id: "E30B010000000000"
+					id: "630B010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:leather"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000077"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B010000000000"
+				id: "620B010000000000"
 				item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E40B010000000000"]
+			dependencies: ["640B010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:pickup_upgrade"
 			}
-			id: "E40B020000000000"
+			id: "640B020000000000"
 			rewards: [
 				{
-					id: "E30B020000000000"
+					id: "630B020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:leather"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000078"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B020000000000"
+				id: "620B020000000000"
 				item: { count: 1, id: "sophisticatedbackpacks:pickup_upgrade" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E40B020000000000"]
+			dependencies: ["640B020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:crafting_upgrade"
 			}
-			id: "E40B030000000000"
+			id: "640B030000000000"
 			rewards: [
 				{
-					id: "E30B030000000000"
+					id: "630B030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:leather"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000079"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B030000000000"
+				id: "620B030000000000"
 				item: { count: 1, id: "sophisticatedbackpacks:crafting_upgrade" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E40B030000000000"]
+			dependencies: ["640B030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:filter_upgrade"
 			}
-			id: "E40B040000000000"
+			id: "640B040000000000"
 			rewards: [
 				{
-					id: "E30B040000000000"
+					id: "630B040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:leather"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000007A"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B040000000000"
+				id: "620B040000000000"
 				item: { count: 1, id: "sophisticatedbackpacks:filter_upgrade" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E40B040000000000"]
+			dependencies: ["640B040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "sophisticatedbackpacks:smelting_upgrade"
 			}
-			id: "E40B050000000000"
+			id: "640B050000000000"
 			rewards: [
 				{
-					id: "E30B050000000000"
+					id: "630B050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:leather"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000007B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20B050000000000"
+				id: "620B050000000000"
 				item: { count: 1, id: "sophisticatedbackpacks:smelting_upgrade" }
 				type: "item"
 			}]

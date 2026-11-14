@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_create_addition"
-	group: "E1A0000000000001"
-	id: "E503000000000000"
+	group: "61A0000000000001"
+	id: "6503000000000000"
 	images: [ ]
 	order_index: 2
 	quest_links: [ ]
@@ -19,17 +19,23 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "createaddition:spool"
+				id: "createaddition:copper_spool"
 			}
-			id: "E403000000000000"
+			id: "6403000000000000"
 			rewards: [
 				{
-					id: "E303000000000000"
+					id: "6303000000000000"
 					item: {
 						count: 1
-						id: "createaddition:spool"
+						id: "createaddition:copper_spool"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003A"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E203000000000000"
+				id: "6203000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E403000000000000"]
+			dependencies: ["6403000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "createaddition:connector"
 			}
-			id: "E403010000000000"
+			id: "6403010000000000"
 			rewards: [
 				{
-					id: "E303010000000000"
+					id: "6303010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E203010000000000"
+				id: "6203010000000000"
 				item: { count: 1, id: "createaddition:connector" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E403010000000000"]
+			dependencies: ["6403010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "createaddition:large_connector"
 			}
-			id: "E403020000000000"
+			id: "6403020000000000"
 			rewards: [
 				{
-					id: "E303020000000000"
+					id: "6303020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003C"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E203020000000000"
+				id: "6203020000000000"
 				item: { count: 1, id: "createaddition:large_connector" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E403020000000000"]
+			dependencies: ["6403020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "createaddition:rolling_mill"
 			}
-			id: "E403030000000000"
+			id: "6403030000000000"
 			rewards: [
 				{
-					id: "E303030000000000"
+					id: "6303030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E203030000000000"
+				id: "6203030000000000"
 				item: { count: 1, id: "createaddition:rolling_mill" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E403030000000000"]
+			dependencies: ["6403030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "createaddition:barbed_wire"
 			}
-			id: "E403040000000000"
+			id: "6403040000000000"
 			rewards: [
 				{
-					id: "E303040000000000"
+					id: "6303040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000003E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -223,7 +253,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E203040000000000"
+				id: "6203040000000000"
 				item: { count: 1, id: "createaddition:barbed_wire" }
 				type: "item"
 			}]

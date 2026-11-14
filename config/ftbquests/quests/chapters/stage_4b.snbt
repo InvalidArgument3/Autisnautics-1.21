@@ -31,7 +31,13 @@
 					id: "farmersdelight:hot_cocoa"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000001EA"
+					type: "xp"
+					xp: 55
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -68,6 +74,21 @@
 			}
 			id: "42B615F7BECA6E58"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000001EB"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001EC"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -137,6 +158,21 @@
 				id: "kubejs:substrate_stone"
 			}
 			id: "36A2C5B3E20C28DF"
+			rewards: [
+				{
+					id: "51000000000001ED"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001EE"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -172,6 +208,21 @@
 				id: "kubejs:substrate_granite"
 			}
 			id: "60F7A50F984284F1"
+			rewards: [
+				{
+					id: "51000000000001EF"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001F0"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -207,6 +258,21 @@
 				id: "kubejs:substrate_granite"
 			}
 			id: "35406FED565B7EFF"
+			rewards: [
+				{
+					id: "51000000000001F1"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001F2"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -242,6 +308,21 @@
 				id: "kubejs:substrate_stone"
 			}
 			id: "6CBB7512CDFF4C2E"
+			rewards: [
+				{
+					id: "51000000000001F3"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001F4"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -277,6 +358,21 @@
 				id: "kubejs:substrate_scoria"
 			}
 			id: "0F688EAF792BAE96"
+			rewards: [
+				{
+					id: "51000000000001F5"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001F6"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -312,6 +408,21 @@
 				id: "kubejs:substrate_scoria"
 			}
 			id: "560F2995CE2862D7"
+			rewards: [
+				{
+					id: "51000000000001F7"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001F8"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -347,6 +458,21 @@
 				id: "minecraft:red_dye"
 			}
 			id: "3978E4B39C9DB44D"
+			rewards: [
+				{
+					id: "51000000000001F9"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001FA"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -382,6 +508,21 @@
 				id: "minecraft:orange_dye"
 			}
 			id: "122D3D6743D1DD04"
+			rewards: [
+				{
+					id: "51000000000001FB"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001FC"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -417,6 +558,21 @@
 				id: "minecraft:yellow_dye"
 			}
 			id: "1E856F69C03B1D75"
+			rewards: [
+				{
+					id: "51000000000001FD"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001FE"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -452,6 +608,21 @@
 				id: "minecraft:green_dye"
 			}
 			id: "49957428564E8101"
+			rewards: [
+				{
+					id: "51000000000001FF"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000200"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -487,6 +658,21 @@
 				id: "minecraft:blue_dye"
 			}
 			id: "678C5FC6A898E988"
+			rewards: [
+				{
+					id: "5100000000000201"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000202"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -522,6 +708,21 @@
 				id: "minecraft:magenta_dye"
 			}
 			id: "3377A2C391B6F03A"
+			rewards: [
+				{
+					id: "5100000000000203"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000204"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -557,6 +758,21 @@
 				id: "kubejs:substrate_blaze"
 			}
 			id: "616D07DC2CE17BA4"
+			rewards: [
+				{
+					id: "5100000000000205"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000206"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -592,6 +808,21 @@
 				id: "kubejs:substrate_slime"
 			}
 			id: "758B836F53187B8C"
+			rewards: [
+				{
+					id: "5100000000000207"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000208"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -627,6 +858,21 @@
 				id: "kubejs:substrate_netherrack"
 			}
 			id: "4E3B9AA2062424F4"
+			rewards: [
+				{
+					id: "5100000000000209"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000020A"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -662,6 +908,21 @@
 				id: "kubejs:substrate_void"
 			}
 			id: "20AA864C5201C638"
+			rewards: [
+				{
+					id: "510000000000020B"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000020C"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -697,6 +958,21 @@
 				id: "kubejs:substrate_sulfur"
 			}
 			id: "35A6E3BBD80FB00F"
+			rewards: [
+				{
+					id: "510000000000020D"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000020E"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -732,6 +1008,21 @@
 				id: "kubejs:substrate_prismarine"
 			}
 			id: "03DB1FCC30B7321C"
+			rewards: [
+				{
+					id: "510000000000020F"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000210"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -767,6 +1058,21 @@
 				id: "minecraft:amethyst_shard"
 			}
 			id: "421E285B7D642676"
+			rewards: [
+				{
+					id: "5100000000000211"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000212"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -802,6 +1108,21 @@
 				id: "kubejs:substrate_quartz"
 			}
 			id: "6E154A8C81D8DD5F"
+			rewards: [
+				{
+					id: "5100000000000213"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000214"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -837,6 +1158,21 @@
 				id: "kubejs:substrate_sulfur"
 			}
 			id: "58A0EA80BB3A3262"
+			rewards: [
+				{
+					id: "5100000000000215"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000216"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -872,6 +1208,21 @@
 				id: "kubejs:substrate_niter"
 			}
 			id: "2C6EE5BEB945F154"
+			rewards: [
+				{
+					id: "5100000000000217"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000218"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -907,6 +1258,21 @@
 				id: "minecraft:quartz"
 			}
 			id: "7CA6AC3B07E07D81"
+			rewards: [
+				{
+					id: "5100000000000219"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000021A"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -942,6 +1308,21 @@
 				id: "kubejs:substrate_quartz"
 			}
 			id: "40FDCF626F5EBB08"
+			rewards: [
+				{
+					id: "510000000000021B"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000021C"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -977,6 +1358,21 @@
 				id: "kubejs:substrate_zinc"
 			}
 			id: "5C0CE1EDF9BF49C9"
+			rewards: [
+				{
+					id: "510000000000021D"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000021E"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1012,6 +1408,21 @@
 				id: "kubejs:substrate_copper"
 			}
 			id: "5A957C9B5D8DE1A1"
+			rewards: [
+				{
+					id: "510000000000021F"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000220"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1047,6 +1458,21 @@
 				id: "kubejs:substrate_iron"
 			}
 			id: "2995ADCCB6496A22"
+			rewards: [
+				{
+					id: "5100000000000221"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000222"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1082,6 +1508,21 @@
 				id: "kubejs:substrate_nickel"
 			}
 			id: "285F815678D5F32A"
+			rewards: [
+				{
+					id: "5100000000000223"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000224"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1117,6 +1558,21 @@
 				id: "kubejs:substrate_lead"
 			}
 			id: "394A502BD8B5B1A0"
+			rewards: [
+				{
+					id: "5100000000000225"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000226"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1152,6 +1608,21 @@
 				id: "kubejs:substrate_gold"
 			}
 			id: "22F0C935130ADCF4"
+			rewards: [
+				{
+					id: "5100000000000227"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000228"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1187,6 +1658,21 @@
 				id: "kubejs:substrate_lapis"
 			}
 			id: "235264EC150EDB4B"
+			rewards: [
+				{
+					id: "5100000000000229"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000022A"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1222,6 +1708,21 @@
 				id: "kubejs:substrate_sulfur"
 			}
 			id: "33B3AB3394DD012A"
+			rewards: [
+				{
+					id: "510000000000022B"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000022C"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1257,6 +1758,21 @@
 				id: "kubejs:substrate_lapis"
 			}
 			id: "58A6D5414035EEA1"
+			rewards: [
+				{
+					id: "510000000000022D"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000022E"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1292,6 +1808,21 @@
 				id: "kubejs:substrate_emerald"
 			}
 			id: "2EECFBC4E2BF1F37"
+			rewards: [
+				{
+					id: "510000000000022F"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000230"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1327,6 +1858,21 @@
 				id: "kubejs:substrate_blaze"
 			}
 			id: "2FD7D312EE63EA53"
+			rewards: [
+				{
+					id: "5100000000000231"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000232"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1362,6 +1908,21 @@
 				id: "minecraft:diamond"
 			}
 			id: "2644760FA76D5F30"
+			rewards: [
+				{
+					id: "5100000000000233"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000234"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1405,6 +1966,21 @@
 			}
 			id: "3EB5CD9776DF0E63"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000235"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000236"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1448,6 +2024,21 @@
 			}
 			id: "2B195E5B195246F5"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000237"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000238"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1491,6 +2082,21 @@
 			}
 			id: "62EB94758A862091"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000239"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000023A"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1534,6 +2140,21 @@
 			}
 			id: "549D7F67A97CD2CE"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000023B"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000023C"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1577,6 +2198,21 @@
 			}
 			id: "0CC92E94D10E681D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000023D"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000023E"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1620,6 +2256,21 @@
 			}
 			id: "5200AD3B32D219C6"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000023F"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000240"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1662,6 +2313,21 @@
 			}
 			id: "7A9AA27029185035"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000241"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000242"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1697,6 +2363,21 @@
 			}
 			id: "6FDC8DA2FDED5FDD"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000243"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000244"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1735,7 +2416,13 @@
 				}
 				id: "5F8758212BE89602"
 				type: "command"
-			}]
+			}
+				{
+					id: "5100000000000245"
+					type: "xp"
+					xp: 55
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				extraquests_options: {
@@ -1767,6 +2454,21 @@
 				weekly: 0b
 			}
 			id: "630DA0C83959E9D8"
+			rewards: [
+				{
+					id: "5100000000000246"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000247"
+					type: "xp"
+					xp: 30
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1799,6 +2501,21 @@
 			id: "3B431AAADE8845FA"
 			shape: "hexagon"
 			size: 2.0d
+			rewards: [
+				{
+					id: "5100000000000248"
+					item: {
+						count: 16
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000249"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1835,6 +2552,21 @@
 			id: "1BCFB709E97A74FA"
 			optional: true
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000024A"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000024B"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1889,6 +2621,21 @@
 			}
 			id: "566E72AE7D580917"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000024C"
+					item: {
+						count: 16
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000024D"
+					type: "xp"
+					xp: 55
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"

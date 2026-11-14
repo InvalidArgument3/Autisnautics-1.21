@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_irons_spells"
-	group: "E1A0000000000001"
-	id: "E50F000000000000"
+	group: "61A0000000000001"
+	id: "650F000000000000"
 	images: [ ]
 	order_index: 14
 	quest_links: [ ]
@@ -24,10 +24,10 @@
 				}
 				id: "patchouli:guide_book"
 			}
-			id: "E40F000000000000"
+			id: "640F000000000000"
 			rewards: [
 				{
-					id: "E30F000000000000"
+					id: "630F000000000000"
 					item: {
 						components: {
 							"patchouli:book": "irons_spellbooks:iss_guide_book"
@@ -36,6 +36,12 @@
 						id: "patchouli:guide_book"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000057"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -52,14 +58,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20F000000000000"
+				id: "620F000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E40F000000000000"]
+			dependencies: ["640F000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -72,15 +78,21 @@
 			icon: {
 				id: "irons_spellbooks:arcane_essence"
 			}
-			id: "E40F010000000000"
+			id: "640F010000000000"
 			rewards: [
 				{
-					id: "E30F010000000000"
+					id: "630F010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000058"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -95,7 +107,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20F010000000000"
+				id: "620F010000000000"
 				item: { count: 1, id: "irons_spellbooks:arcane_essence" }
 				type: "item"
 			}]
@@ -103,7 +115,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E40F010000000000"]
+			dependencies: ["640F010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -116,15 +128,21 @@
 			icon: {
 				id: "irons_spellbooks:inscription_table"
 			}
-			id: "E40F020000000000"
+			id: "640F020000000000"
 			rewards: [
 				{
-					id: "E30F020000000000"
+					id: "630F020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000059"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -139,7 +157,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20F020000000000"
+				id: "620F020000000000"
 				item: { count: 1, id: "irons_spellbooks:inscription_table" }
 				type: "item"
 			}]
@@ -147,7 +165,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E40F020000000000"]
+			dependencies: ["640F020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -160,15 +178,21 @@
 			icon: {
 				id: "irons_spellbooks:iron_spell_book"
 			}
-			id: "E40F030000000000"
+			id: "640F030000000000"
 			rewards: [
 				{
-					id: "E30F030000000000"
+					id: "630F030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005A"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -183,7 +207,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20F030000000000"
+				id: "620F030000000000"
 				item: { count: 1, id: "irons_spellbooks:iron_spell_book" }
 				type: "item"
 			}]
@@ -191,7 +215,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E40F030000000000"]
+			dependencies: ["640F030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -204,15 +228,21 @@
 			icon: {
 				id: "irons_spellbooks:magic_cloth"
 			}
-			id: "E40F040000000000"
+			id: "640F040000000000"
 			rewards: [
 				{
-					id: "E30F040000000000"
+					id: "630F040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:paper"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -229,7 +259,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E20F040000000000"
+				id: "620F040000000000"
 				item: { count: 1, id: "irons_spellbooks:magic_cloth" }
 				type: "item"
 			}]

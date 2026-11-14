@@ -30,6 +30,21 @@
 			}
 			id: "0E98B4D2BBF55308"
 			shape: "square"
+			rewards: [
+				{
+					id: "5100000000000097"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000098"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -70,6 +85,21 @@
 				id: "kubejs:brass_machine"
 			}
 			id: "69275ECFC147E15B"
+			rewards: [
+				{
+					id: "5100000000000099"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000009A"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -110,6 +140,21 @@
 				id: "kubejs:radiant_coil"
 			}
 			id: "400CDC316DCDFE88"
+			rewards: [
+				{
+					id: "510000000000009B"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000009C"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -154,6 +199,21 @@
 			}
 			id: "08716DBF9C882623"
 			min_required_dependencies: 3
+			rewards: [
+				{
+					id: "510000000000009D"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000009E"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -194,6 +254,21 @@
 				id: "kubejs:sealed_mechanism"
 			}
 			id: "342BB6EF80EBFDCA"
+			rewards: [
+				{
+					id: "510000000000009F"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000A0"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -234,6 +309,21 @@
 				id: "kubejs:infernal_mechanism"
 			}
 			id: "2DC3AA8A89005C42"
+			rewards: [
+				{
+					id: "51000000000000A1"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000A2"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -274,6 +364,21 @@
 				id: "kubejs:zinc_machine"
 			}
 			id: "2F50046724A0DF9C"
+			rewards: [
+				{
+					id: "51000000000000A3"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000A4"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {
@@ -316,7 +421,13 @@
 					id: "farmersdelight:apple_cider"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000A5"
+					type: "xp"
+					xp: 40
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -355,6 +466,21 @@
 			id: "7F08F344795D16E1"
 			shape: "hexagon"
 			size: 1.5d
+			rewards: [
+				{
+					id: "51000000000000A6"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000A7"
+					type: "xp"
+					xp: 40
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -398,7 +524,13 @@
 					id: "stellaris:moon_stone"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000A8"
+					type: "xp"
+					xp: 60
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -439,6 +571,21 @@
 			}
 			id: "61147823CC87F711"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000A9"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000AA"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -473,6 +620,21 @@
 			}
 			id: "1E263994D4883A08"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000AB"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000AC"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -507,6 +669,21 @@
 			}
 			id: "780E8AE86250C73D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000AD"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000AE"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -541,6 +718,21 @@
 			}
 			id: "26173D4777F439B1"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000AF"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000B0"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -575,6 +767,21 @@
 			}
 			id: "5E62059675895213"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000B1"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000B2"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -609,6 +816,21 @@
 			}
 			id: "7D872F933F45809B"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000B3"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000B4"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -643,6 +865,21 @@
 			}
 			id: "7888F9129E9FE517"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000B5"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000B6"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -677,6 +914,21 @@
 			}
 			id: "2BB2C7B95E3C89AE"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000B7"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000B8"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -711,6 +963,21 @@
 			}
 			id: "3934AD57122B6FFE"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000B9"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000BA"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -752,7 +1019,13 @@
 					id: "create:crafting_blueprint"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "51000000000000BB"
+					type: "xp"
+					xp: 15
+				}
+			]
 			shape: "circle"
 			tasks: [
 				{
@@ -889,6 +1162,21 @@
 				id: "kubejs:gold_machine"
 			}
 			id: "11C36A243F5108DC"
+			rewards: [
+				{
+					id: "51000000000000BC"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000BD"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -925,6 +1213,21 @@
 			}
 			id: "7664FBB32FCC6BE6"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000BE"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000BF"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -959,6 +1262,21 @@
 			}
 			id: "6D7D2E63F1E35329"
 			shape: "circle"
+			rewards: [
+				{
+					id: "51000000000000C0"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000C1"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -996,6 +1314,21 @@
 				id: "kubejs:logistic_mechanism"
 			}
 			id: "68DF462185A9AF63"
+			rewards: [
+				{
+					id: "51000000000000C2"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000000C3"
+					type: "xp"
+					xp: 15
+				}
+			]
 			tasks: [{
 				disable_toast: true
 				extraquests_options: {

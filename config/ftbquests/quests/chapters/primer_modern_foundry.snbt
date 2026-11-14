@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_modern_foundry"
-	group: "E1A0000000000001"
-	id: "E513000000000000"
+	group: "61A0000000000001"
+	id: "6513000000000000"
 	images: [ ]
 	order_index: 18
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "modernfoundry:materials_and_you"
 			}
-			id: "E413000000000000"
+			id: "6413000000000000"
 			rewards: [
 				{
-					id: "E313000000000000"
+					id: "6313000000000000"
 					item: {
 						count: 1
 						id: "modernfoundry:materials_and_you"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005C"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213000000000000"
+				id: "6213000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E413000000000000"]
+			dependencies: ["6413000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "modernfoundry:pattern"
 			}
-			id: "E413010000000000"
+			id: "6413010000000000"
 			rewards: [
 				{
-					id: "E313010000000000"
+					id: "6313010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213010000000000"
+				id: "6213010000000000"
 				item: { count: 1, id: "modernfoundry:pattern" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E413010000000000"]
+			dependencies: ["6413010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "modernfoundry:grout"
 			}
-			id: "E413020000000000"
+			id: "6413020000000000"
 			rewards: [
 				{
-					id: "E313020000000000"
+					id: "6313020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213020000000000"
+				id: "6213020000000000"
 				item: { count: 1, id: "modernfoundry:grout" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E413020000000000"]
+			dependencies: ["6413020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "modernfoundry:seared_brick"
 			}
-			id: "E413030000000000"
+			id: "6413030000000000"
 			rewards: [
 				{
-					id: "E313030000000000"
+					id: "6313030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000005F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213030000000000"
+				id: "6213030000000000"
 				item: { count: 1, id: "modernfoundry:seared_brick" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E413030000000000"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "modernfoundry:part_builder"
 			}
-			id: "E413040000000000"
+			id: "6413040000000000"
 			rewards: [
 				{
-					id: "E313040000000000"
+					id: "6313040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000060"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213040000000000"
+				id: "6213040000000000"
 				item: { count: 1, id: "modernfoundry:part_builder" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E413040000000000"]
+			dependencies: ["6413040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "modernfoundry:tinker_station"
 			}
-			id: "E413050000000000"
+			id: "6413050000000000"
 			rewards: [
 				{
-					id: "E313050000000000"
+					id: "6313050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000061"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213050000000000"
+				id: "6213050000000000"
 				item: { count: 1, id: "modernfoundry:tinker_station" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E413050000000000"]
+			dependencies: ["6413050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "modernfoundry:seared_faucet"
 			}
-			id: "E413060000000000"
+			id: "6413060000000000"
 			rewards: [
 				{
-					id: "E313060000000000"
+					id: "6313060000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000062"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -309,7 +351,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213060000000000"
+				id: "6213060000000000"
 				item: { count: 1, id: "modernfoundry:seared_faucet" }
 				type: "item"
 			}]
@@ -317,7 +359,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["E413060000000000"]
+			dependencies: ["6413060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -330,15 +372,21 @@
 			icon: {
 				id: "modernfoundry:puny_smelting"
 			}
-			id: "E413070000000000"
+			id: "6413070000000000"
 			rewards: [
 				{
-					id: "E313070000000000"
+					id: "6313070000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000063"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -355,7 +403,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E213070000000000"
+				id: "6213070000000000"
 				item: { count: 1, id: "modernfoundry:puny_smelting" }
 				type: "item"
 			}]

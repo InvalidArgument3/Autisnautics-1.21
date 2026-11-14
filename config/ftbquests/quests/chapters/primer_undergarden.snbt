@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_undergarden"
-	group: "E1A0000000000001"
-	id: "E517000000000000"
+	group: "61A0000000000001"
+	id: "6517000000000000"
 	images: [ ]
 	order_index: 22
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "undergarden:catalyst"
 			}
-			id: "E417000000000000"
+			id: "6417000000000000"
 			rewards: [
 				{
-					id: "E317000000000000"
+					id: "6317000000000000"
 					item: {
 						count: 1
 						id: "undergarden:catalyst"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008F"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217000000000000"
+				id: "6217000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E417000000000000"]
+			dependencies: ["6417000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "undergarden:wigglewood_log"
 			}
-			id: "E417010000000000"
+			id: "6417010000000000"
 			rewards: [
 				{
-					id: "E317010000000000"
+					id: "6317010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000090"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217010000000000"
+				id: "6217010000000000"
 				item: { count: 1, id: "undergarden:wigglewood_log" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E417010000000000"]
+			dependencies: ["6417010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "undergarden:wigglewood_planks"
 			}
-			id: "E417020000000000"
+			id: "6417020000000000"
 			rewards: [
 				{
-					id: "E317020000000000"
+					id: "6317020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000091"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217020000000000"
+				id: "6217020000000000"
 				item: { count: 1, id: "undergarden:wigglewood_planks" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E417020000000000"]
+			dependencies: ["6417020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "undergarden:twistytwig"
 			}
-			id: "E417030000000000"
+			id: "6417030000000000"
 			rewards: [
 				{
-					id: "E317030000000000"
+					id: "6317030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000092"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217030000000000"
+				id: "6217030000000000"
 				item: { count: 1, id: "undergarden:twistytwig" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E417030000000000"]
+			dependencies: ["6417030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "undergarden:depthrock"
 			}
-			id: "E417040000000000"
+			id: "6417040000000000"
 			rewards: [
 				{
-					id: "E317040000000000"
+					id: "6317040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000093"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217040000000000"
+				id: "6217040000000000"
 				item: { count: 1, id: "undergarden:depthrock" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E417040000000000"]
+			dependencies: ["6417040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "undergarden:raw_cloggrum"
 			}
-			id: "E417050000000000"
+			id: "6417050000000000"
 			rewards: [
 				{
-					id: "E317050000000000"
+					id: "6317050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000094"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217050000000000"
+				id: "6217050000000000"
 				item: { count: 1, id: "undergarden:raw_cloggrum" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E417050000000000"]
+			dependencies: ["6417050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "undergarden:cloggrum_ingot"
 			}
-			id: "E417060000000000"
+			id: "6417060000000000"
 			rewards: [
 				{
-					id: "E317060000000000"
+					id: "6317060000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000095"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -309,7 +351,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217060000000000"
+				id: "6217060000000000"
 				item: { count: 1, id: "undergarden:cloggrum_ingot" }
 				type: "item"
 			}]
@@ -317,7 +359,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["E417060000000000"]
+			dependencies: ["6417060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -330,15 +372,21 @@
 			icon: {
 				id: "undergarden:cloggrum_pickaxe"
 			}
-			id: "E417070000000000"
+			id: "6417070000000000"
 			rewards: [
 				{
-					id: "E317070000000000"
+					id: "6317070000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:stone_bricks"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000096"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -355,7 +403,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E217070000000000"
+				id: "6217070000000000"
 				item: { count: 1, id: "undergarden:cloggrum_pickaxe" }
 				type: "item"
 			}]

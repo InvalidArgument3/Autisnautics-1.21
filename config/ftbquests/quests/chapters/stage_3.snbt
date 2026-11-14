@@ -31,7 +31,13 @@
 					id: "create:builders_tea"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000014E"
+					type: "xp"
+					xp: 70
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -66,6 +72,21 @@
 			hide_dependency_lines: true
 			id: "3025B5861FE17ADF"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000014F"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000150"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -99,6 +120,21 @@
 				id: "minecraft:sand"
 			}
 			id: "27C191346BB14D9D"
+			rewards: [
+				{
+					id: "5100000000000151"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000152"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -151,6 +187,21 @@
 			}
 			id: "3B421C8F7947E542"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000153"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000154"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -189,6 +240,21 @@
 			}
 			id: "381F8F373605BB97"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000155"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000156"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -227,6 +293,21 @@
 			}
 			id: "6A76E65324F0ACC0"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000157"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000158"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -265,6 +346,21 @@
 			}
 			id: "302FCD205CC2F708"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000159"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000015A"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -302,6 +398,21 @@
 				id: "minecraft:magenta_dye"
 			}
 			id: "3BE15AA5C237AB80"
+			rewards: [
+				{
+					id: "510000000000015B"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000015C"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -353,6 +464,21 @@
 				id: "create:chromatic_compound"
 			}
 			id: "7B23C933D76458BA"
+			rewards: [
+				{
+					id: "510000000000015D"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000015E"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -407,6 +533,21 @@
 				id: "create:refined_radiance"
 			}
 			id: "286510750C333C1F"
+			rewards: [
+				{
+					id: "510000000000015F"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000160"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -458,6 +599,21 @@
 				id: "kubejs:radiant_coil"
 			}
 			id: "626A7D9947D82B89"
+			rewards: [
+				{
+					id: "5100000000000161"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000162"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -510,6 +666,21 @@
 				id: "minecraft:oak_log"
 			}
 			id: "5C277D27606F64DA"
+			rewards: [
+				{
+					id: "5100000000000163"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000164"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -564,6 +735,21 @@
 				id: "kubejs:inductive_mechanism"
 			}
 			id: "6CBA3D97CAD5DB63"
+			rewards: [
+				{
+					id: "5100000000000165"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000166"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -643,6 +829,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000167"
+					type: "xp"
+					xp: 70
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -680,6 +872,21 @@
 				id: "refinedstorage:quartz_enriched_iron"
 			}
 			id: "2C81D358594C4352"
+			rewards: [
+				{
+					id: "5100000000000168"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000169"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -735,6 +942,21 @@
 				id: "minecraft:tnt"
 			}
 			id: "5A199B898D41A309"
+			rewards: [
+				{
+					id: "510000000000016A"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000016B"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -771,6 +993,21 @@
 				id: "minecraft:tnt"
 			}
 			id: "02B2E249421FAE58"
+			rewards: [
+				{
+					id: "510000000000016C"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000016D"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -826,6 +1063,21 @@
 				id: "minecraft:gunpowder"
 			}
 			id: "050A20198A80CF1A"
+			rewards: [
+				{
+					id: "510000000000016E"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000016F"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -878,6 +1130,21 @@
 				id: "minecraft:sand"
 			}
 			id: "5F9BA7BA46D2E5B8"
+			rewards: [
+				{
+					id: "5100000000000170"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000171"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -933,6 +1200,21 @@
 				id: "minecraft:ender_pearl"
 			}
 			id: "375C9A43FE5620B6"
+			rewards: [
+				{
+					id: "5100000000000172"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000173"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -987,6 +1269,21 @@
 				id: "kubejs:dye_entangled_singularity"
 			}
 			id: "2CCD84D55DE71EB2"
+			rewards: [
+				{
+					id: "5100000000000174"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000175"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1066,6 +1363,12 @@
 					random_bonus: 4
 					type: "item"
 				}
+			
+				{
+					id: "5100000000000176"
+					type: "xp"
+					xp: 70
+				}
 			]
 			shape: "hexagon"
 			size: 2.0d
@@ -1104,6 +1407,21 @@
 			}
 			id: "6DBEF7A11890ADF8"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000177"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000178"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1139,6 +1457,21 @@
 			}
 			id: "794B3C10C6110CB5"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000179"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000017A"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1181,7 +1514,13 @@
 					id: "minecraft:bone_meal"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000017B"
+					type: "xp"
+					xp: 35
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				extraquests_options: {
@@ -1222,6 +1561,21 @@
 			}
 			id: "7B080B5C87247EA1"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000017C"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000017D"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1262,6 +1616,21 @@
 			}
 			id: "38B063C8DE71E86D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000017E"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000017F"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1297,6 +1666,21 @@
 			}
 			id: "0C11EC34D5FA508B"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000180"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000181"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1336,6 +1720,21 @@
 			}
 			id: "05C7E580ED88B556"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000182"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000183"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1372,6 +1771,21 @@
 			}
 			id: "59D2104DB6AE93FD"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000184"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000185"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1407,6 +1821,21 @@
 				id: "minecraft:stick"
 			}
 			id: "194B973EAF17809C"
+			rewards: [
+				{
+					id: "5100000000000186"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000187"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1461,6 +1890,21 @@
 				id: "create:crushing_wheel"
 			}
 			id: "7AAE71F57FB89BCC"
+			rewards: [
+				{
+					id: "5100000000000188"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000189"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1510,6 +1954,21 @@
 			}
 			id: "2C40901DB42DD8F8"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000018A"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000018B"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1547,6 +2006,21 @@
 				id: "minecraft:bone_meal"
 			}
 			id: "402F89CABF6BCDA4"
+			rewards: [
+				{
+					id: "510000000000018C"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000018D"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1598,6 +2072,21 @@
 				id: "minecraft:slime_ball"
 			}
 			id: "3D1EEB596FDBE4E7"
+			rewards: [
+				{
+					id: "510000000000018E"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000018F"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1681,6 +2170,21 @@
 				id: "minecraft:slime_ball"
 			}
 			id: "38D19F4EC634F33B"
+			rewards: [
+				{
+					id: "5100000000000190"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000191"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1764,6 +2268,21 @@
 				id: "kubejs:radiant_sheet"
 			}
 			id: "410FF28B63E0FC0C"
+			rewards: [
+				{
+					id: "5100000000000192"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000193"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1816,6 +2335,21 @@
 			}
 			id: "0D146AD9FE774F8B"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000194"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000195"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1856,6 +2390,21 @@
 			}
 			id: "3BFC4DFCE765F3EA"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000196"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000197"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1892,6 +2441,21 @@
 			}
 			id: "01BE1A7FCE79C63D"
 			shape: "circle"
+			rewards: [
+				{
+					id: "5100000000000198"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "5100000000000199"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [
 				{
 					extraquests_options: {
@@ -1958,6 +2522,21 @@
 			}
 			id: "03B7909623F97843"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000019A"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000019B"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -1990,6 +2569,21 @@
 			hide_dependency_lines: true
 			id: "016864AD0C9247B9"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000019C"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "510000000000019D"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"
@@ -2031,7 +2625,13 @@
 					id: "create:redstone_link"
 				}
 				type: "item"
-			}]
+			}
+				{
+					id: "510000000000019E"
+					type: "xp"
+					xp: 35
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				extraquests_options: {
@@ -2065,6 +2665,21 @@
 			}
 			id: "26A1E68DA7ACB025"
 			shape: "circle"
+			rewards: [
+				{
+					id: "510000000000019F"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "51000000000001A0"
+					type: "xp"
+					xp: 35
+				}
+			]
 			tasks: [{
 				extraquests_options: {
 					aggregation: "AUTO"

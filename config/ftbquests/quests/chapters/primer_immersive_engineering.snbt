@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_immersive_engineering"
-	group: "E1A0000000000001"
-	id: "E506000000000000"
+	group: "61A0000000000001"
+	id: "6506000000000000"
 	images: [ ]
 	order_index: 5
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "immersiveengineering:manual"
 			}
-			id: "E406000000000000"
+			id: "6406000000000000"
 			rewards: [
 				{
-					id: "E306000000000000"
+					id: "6306000000000000"
 					item: {
 						count: 1
 						id: "immersiveengineering:manual"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000004B"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206000000000000"
+				id: "6206000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E406000000000000"]
+			dependencies: ["6406000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "immersiveengineering:hammer"
 			}
-			id: "E406010000000000"
+			id: "6406010000000000"
 			rewards: [
 				{
-					id: "E306010000000000"
+					id: "6306010000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000004C"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206010000000000"
+				id: "6206010000000000"
 				item: { count: 1, id: "immersiveengineering:hammer" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E406010000000000"]
+			dependencies: ["6406010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "immersiveengineering:wirecutter"
 			}
-			id: "E406020000000000"
+			id: "6406020000000000"
 			rewards: [
 				{
-					id: "E306020000000000"
+					id: "6306020000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000004D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206020000000000"
+				id: "6206020000000000"
 				item: { count: 1, id: "immersiveengineering:wirecutter" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E406020000000000"]
+			dependencies: ["6406020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "immersiveengineering:cokebrick"
 			}
-			id: "E406030000000000"
+			id: "6406030000000000"
 			rewards: [
 				{
-					id: "E306030000000000"
+					id: "6306030000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000004E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206030000000000"
+				id: "6206030000000000"
 				item: { count: 1, id: "immersiveengineering:cokebrick" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E406030000000000"]
+			dependencies: ["6406030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "immersiveengineering:conveyor_basic"
 			}
-			id: "E406040000000000"
+			id: "6406040000000000"
 			rewards: [
 				{
-					id: "E306040000000000"
+					id: "6306040000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000004F"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206040000000000"
+				id: "6206040000000000"
 				item: { count: 1, id: "immersiveengineering:conveyor_basic" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E406040000000000"]
+			dependencies: ["6406040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "immersiveengineering:component_iron"
 			}
-			id: "E406050000000000"
+			id: "6406050000000000"
 			rewards: [
 				{
-					id: "E306050000000000"
+					id: "6306050000000000"
 					item: {
-						count: 8
-						id: "minecraft:iron_nugget"
+						count: 16
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000050"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -267,7 +303,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E206050000000000"
+				id: "6206050000000000"
 				item: { count: 1, id: "immersiveengineering:component_iron" }
 				type: "item"
 			}]

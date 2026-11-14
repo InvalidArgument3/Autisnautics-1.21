@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "primer_tide"
-	group: "E1A0000000000001"
-	id: "E518000000000000"
+	group: "61A0000000000001"
+	id: "6518000000000000"
 	images: [ ]
 	order_index: 23
 	quest_links: [ ]
@@ -21,15 +21,21 @@
 			icon: {
 				id: "tide:fishing_journal"
 			}
-			id: "E418000000000000"
+			id: "6418000000000000"
 			rewards: [
 				{
-					id: "E318000000000000"
+					id: "6318000000000000"
 					item: {
 						count: 1
 						id: "tide:fishing_journal"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000088"
+					type: "xp"
+					xp: 40
 				}
 			]
 			shape: "gear"
@@ -46,14 +52,14 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218000000000000"
+				id: "6218000000000000"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["E418000000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -66,15 +72,21 @@
 			icon: {
 				id: "tide:stone_fishing_rod"
 			}
-			id: "E418010000000000"
+			id: "6418010000000000"
 			rewards: [
 				{
-					id: "E318010000000000"
+					id: "6318010000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "5100000000000089"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -89,7 +101,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218010000000000"
+				id: "6218010000000000"
 				item: { count: 1, id: "tide:stone_fishing_rod" }
 				type: "item"
 			}]
@@ -97,7 +109,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["E418010000000000"]
+			dependencies: ["6418010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -110,15 +122,21 @@
 			icon: {
 				id: "tide:fishing_hook"
 			}
-			id: "E418020000000000"
+			id: "6418020000000000"
 			rewards: [
 				{
-					id: "E318020000000000"
+					id: "6318020000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008A"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -133,7 +151,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218020000000000"
+				id: "6218020000000000"
 				item: { count: 1, id: "tide:fishing_hook" }
 				type: "item"
 			}]
@@ -141,7 +159,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["E418020000000000"]
+			dependencies: ["6418020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -154,15 +172,21 @@
 			icon: {
 				id: "tide:fishing_line"
 			}
-			id: "E418030000000000"
+			id: "6418030000000000"
 			rewards: [
 				{
-					id: "E318030000000000"
+					id: "6318030000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008B"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -177,7 +201,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218030000000000"
+				id: "6218030000000000"
 				item: { count: 1, id: "tide:fishing_line" }
 				type: "item"
 			}]
@@ -185,7 +209,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["E418030000000000"]
+			dependencies: ["6418030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -198,15 +222,21 @@
 			icon: {
 				id: "tide:iron_line"
 			}
-			id: "E418040000000000"
+			id: "6418040000000000"
 			rewards: [
 				{
-					id: "E318040000000000"
+					id: "6318040000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008C"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -221,7 +251,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218040000000000"
+				id: "6218040000000000"
 				item: { count: 1, id: "tide:iron_line" }
 				type: "item"
 			}]
@@ -229,7 +259,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["E418040000000000"]
+			dependencies: ["6418040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -242,15 +272,21 @@
 			icon: {
 				id: "tide:bait"
 			}
-			id: "E418050000000000"
+			id: "6418050000000000"
 			rewards: [
 				{
-					id: "E318050000000000"
+					id: "6318050000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008D"
+					type: "xp"
+					xp: 20
 				}
 			]
 			tasks: [{
@@ -265,7 +301,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218050000000000"
+				id: "6218050000000000"
 				item: { count: 1, id: "tide:bait" }
 				type: "item"
 			}]
@@ -273,7 +309,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["E418050000000000"]
+			dependencies: ["6418050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -286,15 +322,21 @@
 			icon: {
 				id: "tide:wooden_crate"
 			}
-			id: "E418060000000000"
+			id: "6418060000000000"
 			rewards: [
 				{
-					id: "E318060000000000"
+					id: "6318060000000000"
 					item: {
 						count: 8
-						id: "minecraft:iron_nugget"
+						id: "minecraft:string"
 					}
 					type: "item"
+				}
+			
+				{
+					id: "510000000000008E"
+					type: "xp"
+					xp: 20
 				}
 			]
 			shape: "hexagon"
@@ -311,7 +353,7 @@
 					timer_enabled: 0b
 					timer_start: "FIRST_PROGRESS"
 				}
-				id: "E218060000000000"
+				id: "6218060000000000"
 				item: { count: 1, id: "tide:wooden_crate" }
 				type: "item"
 			}]
