@@ -534,5 +534,2263 @@
 			y: 4.5d
 		}
 
+		{
+			dependencies: ["6401050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:large_cogwheel"
+			}
+			id: "660000000000002F"
+			rewards: [
+				{
+					id: "680000000000007D"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000007E"
+					item: {
+						count: 4
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000007F"
+					type: "xp"
+					xp: 16
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000002F"
+					item: { count: 1, id: "create:large_cogwheel" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["660000000000002F"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:gearbox"
+			}
+			id: "6600000000000030"
+			rewards: [
+				{
+					id: "6800000000000080"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000081"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000082"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000030"
+					item: { count: 1, id: "create:gearbox" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["6600000000000030"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:clutch"
+			}
+			id: "6600000000000031"
+			rewards: [
+				{
+					id: "6800000000000083"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000084"
+					item: {
+						count: 1
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000085"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000031"
+					item: { count: 1, id: "create:clutch" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6600000000000031"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:gearshift"
+			}
+			id: "6600000000000032"
+			rewards: [
+				{
+					id: "6800000000000086"
+					item: {
+						count: 6
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000087"
+					item: {
+						count: 1
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000088"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000032"
+					item: { count: 1, id: "create:gearshift" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["6600000000000032"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:encased_chain_drive"
+			}
+			id: "6600000000000033"
+			rewards: [
+				{
+					id: "6800000000000089"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000008A"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000008B"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000033"
+					item: { count: 1, id: "create:encased_chain_drive" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["6600000000000033"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:millstone"
+			}
+			id: "6600000000000034"
+			rewards: [
+				{
+					id: "680000000000008C"
+					item: {
+						count: 8
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000008D"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000008E"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000034"
+					item: { count: 1, id: "create:millstone" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: ["6600000000000034"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:belt_connector"
+			}
+			id: "6600000000000035"
+			rewards: [
+				{
+					id: "680000000000008F"
+					item: {
+						count: 3
+						id: "kubejs:rubber"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000090"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000091"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000035"
+					item: { count: 1, id: "create:belt_connector" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["6600000000000035"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:basin"
+			}
+			id: "6600000000000036"
+			rewards: [
+				{
+					id: "6800000000000092"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000093"
+					item: {
+						count: 2
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000094"
+					type: "xp"
+					xp: 16
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000036"
+					item: { count: 1, id: "create:basin" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+		{
+			dependencies: [
+				"64010A0000000001"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:encased_fan"
+			}
+			id: "6600000000000037"
+			rewards: [
+				{
+					id: "6800000000000095"
+					item: {
+						count: 1
+						id: "create:propeller"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000096"
+					type: "xp"
+					xp: 28
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000037"
+					item: { count: 1, id: "create:encased_fan" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"6600000000000037"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "6600000000000038"
+			rewards: [
+				{
+					id: "6800000000000097"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000098"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000099"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000038"
+					item: { count: 1, id: "create:mechanical_press" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 25.5d
+		}
+		{
+			dependencies: [
+				"6600000000000038"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_mixer"
+			}
+			id: "6600000000000039"
+			rewards: [
+				{
+					id: "680000000000009A"
+					item: {
+						count: 1
+						id: "create:whisk"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000009B"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000039"
+					item: { count: 1, id: "create:mechanical_mixer" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 27.0d
+		}
+		{
+			dependencies: [
+				"6600000000000039"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "660000000000003A"
+			rewards: [
+				{
+					id: "680000000000009C"
+					item: {
+						count: 1
+						id: "kubejs:drill_head"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000009D"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003A"
+					item: { count: 1, id: "create:mechanical_drill" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 28.5d
+		}
+		{
+			dependencies: [
+				"660000000000003A"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_saw"
+			}
+			id: "660000000000003B"
+			rewards: [
+				{
+					id: "680000000000009E"
+					item: {
+						count: 1
+						id: "kubejs:saw_blade"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000009F"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003B"
+					item: { count: 1, id: "create:mechanical_saw" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 30.0d
+		}
+		{
+			dependencies: [
+				"660000000000003B"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:andesite_funnel"
+			}
+			id: "660000000000003C"
+			rewards: [
+				{
+					id: "68000000000000A0"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A1"
+					item: {
+						count: 4
+						id: "minecraft:dried_kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A2"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003C"
+					item: { count: 1, id: "create:andesite_funnel" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 31.5d
+		}
+		{
+			dependencies: [
+				"660000000000003C"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_harvester"
+			}
+			id: "660000000000003D"
+			rewards: [
+				{
+					id: "68000000000000A3"
+					item: {
+						count: 8
+						id: "minecraft:wheat"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A4"
+					item: {
+						count: 6
+						id: "minecraft:wheat_seeds"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A5"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003D"
+					item: { count: 1, id: "create:mechanical_harvester" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 33.0d
+		}
+		{
+			dependencies: [
+				"660000000000003D"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_plough"
+			}
+			id: "660000000000003E"
+			rewards: [
+				{
+					id: "68000000000000A6"
+					item: {
+						count: 8
+						id: "minecraft:dirt"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A7"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000A8"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003E"
+					item: { count: 1, id: "create:mechanical_plough" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 34.5d
+		}
+		{
+			dependencies: [
+				"660000000000003E"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:contraption_controls"
+			}
+			id: "660000000000003F"
+			rewards: [
+				{
+					id: "68000000000000A9"
+					item: {
+						count: 1
+						id: "minecraft:lever"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000AA"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000003F"
+					item: { count: 1, id: "create:contraption_controls" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 36.0d
+		}
+		{
+			dependencies: [
+				"660000000000003F"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:cart_assembler"
+			}
+			id: "6600000000000040"
+			rewards: [
+				{
+					id: "68000000000000AB"
+					item: {
+						count: 1
+						id: "minecraft:minecart"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000AC"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000040"
+					item: { count: 1, id: "create:cart_assembler" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 37.5d
+		}
+		{
+			dependencies: [
+				"6600000000000040"
+				"0E0535849D8D9279"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:copper_backtank"
+			}
+			id: "6600000000000041"
+			rewards: [
+				{
+					id: "68000000000000AD"
+					item: {
+						count: 6
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000AE"
+					item: {
+						count: 1
+						id: "minecraft:copper_block"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000AF"
+					type: "xp"
+					xp: 30
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000041"
+					item: { count: 1, id: "create:copper_backtank" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 39.0d
+		}
+		{
+			dependencies: [
+				"6600000000000041"
+				"0E0535849D8D9279"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:spout"
+			}
+			id: "6600000000000042"
+			rewards: [
+				{
+					id: "68000000000000B0"
+					item: {
+						count: 1
+						id: "minecraft:hopper"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B1"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B2"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000042"
+					item: { count: 1, id: "create:spout" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 40.5d
+		}
+		{
+			dependencies: [
+				"6600000000000042"
+				"0E0535849D8D9279"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:item_drain"
+			}
+			id: "6600000000000043"
+			rewards: [
+				{
+					id: "68000000000000B3"
+					item: {
+						count: 4
+						id: "minecraft:iron_bars"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B4"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000043"
+					item: { count: 1, id: "create:item_drain" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 42.0d
+		}
+		{
+			dependencies: [
+				"6600000000000043"
+				"0E0535849D8D9279"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:hose_pulley"
+			}
+			id: "6600000000000044"
+			rewards: [
+				{
+					id: "68000000000000B5"
+					item: {
+						count: 6
+						id: "minecraft:dried_kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B6"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B7"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000044"
+					item: { count: 1, id: "create:hose_pulley" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 43.5d
+		}
+		{
+			dependencies: [
+				"6600000000000044"
+				"0E0535849D8D9279"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:smart_fluid_pipe"
+			}
+			id: "6600000000000045"
+			rewards: [
+				{
+					id: "68000000000000B8"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000B9"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000BA"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000045"
+					item: { count: 1, id: "create:smart_fluid_pipe" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 45.0d
+		}
+		{
+			dependencies: [
+				"6600000000000045"
+				"667F4F686A45EF3E"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:controls"
+			}
+			id: "6600000000000046"
+			rewards: [
+				{
+					id: "68000000000000BB"
+					item: {
+						count: 1
+						id: "minecraft:lever"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000BC"
+					item: {
+						count: 6
+						id: "minecraft:gold_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000BD"
+					type: "xp"
+					xp: 36
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000046"
+					item: { count: 1, id: "create:controls" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 46.5d
+		}
+		{
+			dependencies: [
+				"6600000000000046"
+				"667F4F686A45EF3E"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:track_station"
+			}
+			id: "6600000000000047"
+			rewards: [
+				{
+					id: "68000000000000BE"
+					item: {
+						count: 8
+						id: "minecraft:rail"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000BF"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000047"
+					item: { count: 1, id: "create:track_station" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 48.0d
+		}
+		{
+			dependencies: [
+				"6600000000000047"
+				"667F4F686A45EF3E"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:track_signal"
+			}
+			id: "6600000000000048"
+			rewards: [
+				{
+					id: "68000000000000C0"
+					item: {
+						count: 2
+						id: "minecraft:redstone_torch"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C1"
+					item: {
+						count: 4
+						id: "minecraft:rail"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C2"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000048"
+					item: { count: 1, id: "create:track_signal" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 49.5d
+		}
+		{
+			dependencies: [
+				"6600000000000048"
+				"667F4F686A45EF3E"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:schedule"
+			}
+			id: "6600000000000049"
+			rewards: [
+				{
+					id: "68000000000000C3"
+					item: {
+						count: 4
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C4"
+					item: {
+						count: 6
+						id: "minecraft:kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C5"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000049"
+					item: { count: 1, id: "create:schedule" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 51.0d
+		}
+		{
+			dependencies: [
+				"6600000000000049"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:brass_hand"
+			}
+			id: "660000000000004A"
+			rewards: [
+				{
+					id: "68000000000000C6"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C7"
+					item: {
+						count: 6
+						id: "create:zinc_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000C8"
+					type: "xp"
+					xp: 36
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004A"
+					item: { count: 1, id: "create:brass_hand" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 52.5d
+		}
+		{
+			dependencies: [
+				"660000000000004A"
+				"3F45DFEF31838A00"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:deployer"
+			}
+			id: "660000000000004B"
+			rewards: [
+				{
+					id: "68000000000000C9"
+					item: {
+						count: 1
+						id: "create:brass_hand"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000CA"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004B"
+					item: { count: 1, id: "create:deployer" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 54.0d
+		}
+		{
+			dependencies: [
+				"660000000000004B"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_crafter"
+			}
+			id: "660000000000004C"
+			rewards: [
+				{
+					id: "68000000000000CB"
+					item: {
+						count: 1
+						id: "minecraft:crafting_table"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000CC"
+					item: {
+						count: 2
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000CD"
+					type: "xp"
+					xp: 44
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004C"
+					item: { count: 1, id: "create:mechanical_crafter" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 55.5d
+		}
+		{
+			dependencies: [
+				"660000000000004C"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:steam_engine"
+			}
+			id: "660000000000004D"
+			rewards: [
+				{
+					id: "68000000000000CE"
+					item: {
+						count: 6
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000CF"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D0"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004D"
+					item: { count: 1, id: "create:steam_engine" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 57.0d
+		}
+		{
+			dependencies: [
+				"660000000000004D"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:rotation_speed_controller"
+			}
+			id: "660000000000004E"
+			rewards: [
+				{
+					id: "68000000000000D1"
+					item: {
+						count: 6
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D2"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D3"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004E"
+					item: { count: 1, id: "create:rotation_speed_controller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 58.5d
+		}
+		{
+			dependencies: [
+				"660000000000004E"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:sequenced_gearshift"
+			}
+			id: "660000000000004F"
+			rewards: [
+				{
+					id: "68000000000000D4"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D5"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D6"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000004F"
+					item: { count: 1, id: "create:sequenced_gearshift" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 60.0d
+		}
+		{
+			dependencies: [
+				"660000000000004F"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:brass_tunnel"
+			}
+			id: "6600000000000050"
+			rewards: [
+				{
+					id: "68000000000000D7"
+					item: {
+						count: 4
+						id: "minecraft:dried_kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D8"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000D9"
+					type: "xp"
+					xp: 34
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000050"
+					item: { count: 1, id: "create:brass_tunnel" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 61.5d
+		}
+		{
+			dependencies: [
+				"6600000000000050"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:smart_chute"
+			}
+			id: "6600000000000051"
+			rewards: [
+				{
+					id: "68000000000000DA"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000DB"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000DC"
+					type: "xp"
+					xp: 34
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000051"
+					item: { count: 1, id: "create:smart_chute" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 63.0d
+		}
+		{
+			dependencies: [
+				"6600000000000051"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:clockwork_bearing"
+			}
+			id: "6600000000000052"
+			rewards: [
+				{
+					id: "68000000000000DD"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000DE"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000DF"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000052"
+					item: { count: 1, id: "create:clockwork_bearing" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 64.5d
+		}
+		{
+			dependencies: [
+				"6600000000000052"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:elevator_pulley"
+			}
+			id: "6600000000000053"
+			rewards: [
+				{
+					id: "68000000000000E0"
+					item: {
+						count: 8
+						id: "minecraft:dried_kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E1"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E2"
+					type: "xp"
+					xp: 38
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000053"
+					item: { count: 1, id: "create:elevator_pulley" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 66.0d
+		}
+		{
+			dependencies: [
+				"6600000000000053"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:display_link"
+			}
+			id: "6600000000000054"
+			rewards: [
+				{
+					id: "68000000000000E3"
+					item: {
+						count: 2
+						id: "minecraft:redstone_torch"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E4"
+					item: {
+						count: 3
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E5"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000054"
+					item: { count: 1, id: "create:display_link" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 67.5d
+		}
+		{
+			dependencies: [
+				"6600000000000054"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:mechanical_arm"
+			}
+			id: "6600000000000055"
+			rewards: [
+				{
+					id: "68000000000000E6"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E7"
+					item: {
+						count: 4
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000E8"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000055"
+					item: { count: 1, id: "create:mechanical_arm" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 69.0d
+		}
+
 	]
 }

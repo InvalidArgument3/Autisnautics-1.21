@@ -268,5 +268,299 @@
 			x: 0.0d
 			y: 6.0d
 		}
+		{
+			dependencies: ["6405040000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create_enchantment_industry:grindstone_drain"
+			}
+			id: "6600000000000065"
+			rewards: [
+				{
+					id: "6800000000000114"
+					item: {
+						count: 3
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000115"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000116"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000065"
+					item: { count: 1, id: "create_enchantment_industry:grindstone_drain" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6600000000000065"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create_enchantment_industry:experience_hatch"
+			}
+			id: "6600000000000066"
+			rewards: [
+				{
+					id: "6800000000000117"
+					item: {
+						count: 3
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000118"
+					item: {
+						count: 3
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000119"
+					type: "xp"
+					xp: 26
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000066"
+					item: { count: 1, id: "create_enchantment_industry:experience_hatch" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6600000000000066"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create_enchantment_industry:experience_lantern"
+			}
+			id: "6600000000000067"
+			rewards: [
+				{
+					id: "680000000000011A"
+					item: {
+						count: 4
+						id: "minecraft:glowstone_dust"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000011B"
+					item: {
+						count: 2
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000011C"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000067"
+					item: { count: 1, id: "create_enchantment_industry:experience_lantern" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"6600000000000066"
+				"047FD4E54147D8F7"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create_enchantment_industry:blaze_forger"
+			}
+			id: "6600000000000068"
+			rewards: [
+				{
+					id: "680000000000011D"
+					item: {
+						count: 4
+						id: "minecraft:blaze_powder"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000011E"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000011F"
+					type: "xp"
+					xp: 40
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000068"
+					item: { count: 1, id: "create_enchantment_industry:blaze_forger" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"6600000000000068"
+				"047FD4E54147D8F7"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create_enchantment_industry:blaze_enchanter"
+			}
+			id: "6600000000000069"
+			rewards: [
+				{
+					id: "6800000000000120"
+					item: {
+						count: 1
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000121"
+					item: {
+						count: 6
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000122"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000069"
+					item: { count: 1, id: "create_enchantment_industry:blaze_enchanter" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+
 	]
 }

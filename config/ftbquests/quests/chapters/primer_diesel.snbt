@@ -318,5 +318,546 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["6404050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:bulk_fermenter"
+			}
+			id: "660000000000005C"
+			rewards: [
+				{
+					id: "68000000000000F9"
+					item: {
+						count: 8
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000FA"
+					item: {
+						count: 6
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000FB"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000005C"
+					item: { count: 1, id: "createdieselgenerators:bulk_fermenter" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["660000000000005C"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:burner"
+			}
+			id: "660000000000005D"
+			rewards: [
+				{
+					id: "68000000000000FC"
+					item: {
+						count: 8
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000FD"
+					item: {
+						count: 2
+						id: "minecraft:flint"
+					}
+					type: "item"
+				}
+				{
+					id: "68000000000000FE"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000005D"
+					item: { count: 1, id: "createdieselgenerators:burner" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"660000000000005D"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:diesel_engine"
+			}
+			id: "660000000000005E"
+			rewards: [
+				{
+					id: "68000000000000FF"
+					item: {
+						count: 6
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000100"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000101"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000005E"
+					item: { count: 1, id: "createdieselgenerators:diesel_engine" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"660000000000005E"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:large_diesel_engine"
+			}
+			id: "660000000000005F"
+			rewards: [
+				{
+					id: "6800000000000102"
+					item: {
+						count: 6
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000103"
+					item: {
+						count: 6
+						id: "minecraft:seagrass"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000104"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000005F"
+					item: { count: 1, id: "createdieselgenerators:large_diesel_engine" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"660000000000005F"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:distillation_tank"
+			}
+			id: "6600000000000060"
+			rewards: [
+				{
+					id: "6800000000000105"
+					item: {
+						count: 1
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000106"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000107"
+					type: "xp"
+					xp: 44
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000060"
+					item: { count: 1, id: "createdieselgenerators:distillation_tank" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"6600000000000060"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:pumpjack_hole"
+			}
+			id: "6600000000000061"
+			rewards: [
+				{
+					id: "6800000000000108"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000109"
+					item: {
+						count: 6
+						id: "minecraft:kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000010A"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000061"
+					item: { count: 1, id: "createdieselgenerators:pumpjack_hole" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: [
+				"6600000000000061"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:pumpjack_head"
+			}
+			id: "6600000000000062"
+			rewards: [
+				{
+					id: "680000000000010B"
+					item: {
+						count: 6
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000010C"
+					item: {
+						count: 6
+						id: "minecraft:seagrass"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000010D"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000062"
+					item: { count: 1, id: "createdieselgenerators:pumpjack_head" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"6600000000000062"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:pumpjack_crank"
+			}
+			id: "6600000000000063"
+			rewards: [
+				{
+					id: "680000000000010E"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000010F"
+					item: {
+						count: 8
+						id: "minecraft:iron_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000110"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000063"
+					item: { count: 1, id: "createdieselgenerators:pumpjack_crank" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: [
+				"6600000000000063"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createdieselgenerators:huge_diesel_engine"
+			}
+			id: "6600000000000064"
+			rewards: [
+				{
+					id: "6800000000000111"
+					item: {
+						count: 4
+						id: "minecraft:blaze_powder"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000112"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000113"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000064"
+					item: { count: 1, id: "createdieselgenerators:huge_diesel_engine" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+
 	]
 }

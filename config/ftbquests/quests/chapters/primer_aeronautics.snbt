@@ -318,5 +318,337 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["6402050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:levitite"
+			}
+			id: "660000000000006A"
+			rewards: [
+				{
+					id: "6800000000000123"
+					item: {
+						count: 1
+						id: "minecraft:iron_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000124"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006A"
+					item: { count: 1, id: "aeronautics:levitite" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["660000000000006A"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:levitite_blend"
+			}
+			id: "660000000000006B"
+			rewards: [
+				{
+					id: "6800000000000125"
+					item: {
+						count: 2
+						id: "aeronautics:levitite"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000126"
+					type: "xp"
+					xp: 30
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006B"
+					item: { count: 1, id: "aeronautics:levitite_blend" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["660000000000006B"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:pearlescent_levitite"
+			}
+			id: "660000000000006C"
+			rewards: [
+				{
+					id: "6800000000000127"
+					item: {
+						count: 2
+						id: "aeronautics:levitite_blend"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000128"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006C"
+					item: { count: 1, id: "aeronautics:pearlescent_levitite" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"660000000000006C"
+				"3F45DFEF31838A00"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:andesite_propeller"
+			}
+			id: "660000000000006D"
+			rewards: [
+				{
+					id: "6800000000000129"
+					item: {
+						count: 4
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000012A"
+					item: {
+						count: 4
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000012B"
+					type: "xp"
+					xp: 32
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006D"
+					item: { count: 1, id: "aeronautics:andesite_propeller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"660000000000006D"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "660000000000006E"
+			rewards: [
+				{
+					id: "680000000000012C"
+					item: {
+						count: 2
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000012D"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000012E"
+					type: "xp"
+					xp: 44
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006E"
+					item: { count: 1, id: "aeronautics:gyroscopic_propeller_bearing" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"660000000000006E"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics:smart_propeller"
+			}
+			id: "660000000000006F"
+			rewards: [
+				{
+					id: "680000000000012F"
+					item: {
+						count: 6
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000130"
+					item: {
+						count: 1
+						id: "aeronautics:levitite"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000131"
+					type: "xp"
+					xp: 56
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000006F"
+					item: { count: 1, id: "aeronautics:smart_propeller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+
 	]
 }

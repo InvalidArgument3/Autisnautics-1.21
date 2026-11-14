@@ -3590,4 +3590,459 @@
 		"With ivory, the assembler, and a built CAD, this is the end of the psi material line."
 		"The encyclopaedia is the rest of the spell list. JEI is the craft."
 	]
+	quest.660000000000002F.title: "Large Cogwheel"
+	quest.660000000000002F.quest_subtitle: "The slow gear"
+	quest.660000000000002F.quest_desc: [
+		"A large cogwheel meshes with a small one at right angles and halves the speed. JEI."
+		"Ponder it with W. Create has no guidebook. The Akashic Tome will not have a Create book."
+		"The small cogwheel quest is the other half of this pair."
+	]
+	quest.6600000000000030.title: "Gearbox"
+	quest.6600000000000030.quest_subtitle: "Turn the shaft"
+	quest.6600000000000030.quest_desc: [
+		"The gearbox sends a shaft's rotation out the other faces. JEI."
+		"Ponder with W. It is andesite alloy and shafts, not an Andesite Machine."
+		"JEI."
+	]
+	quest.6600000000000031.title: "Clutch"
+	quest.6600000000000031.quest_subtitle: "A redstone brake"
+	quest.6600000000000031.quest_desc: [
+		"The clutch stops a shaft when it gets a redstone signal. JEI."
+		"Ponder with W. It is the first redstone control on a kinetic line."
+		"JEI."
+	]
+	quest.6600000000000032.title: "Gearshift"
+	quest.6600000000000032.quest_subtitle: "Forward and back"
+	quest.6600000000000032.quest_desc: [
+		"The gearshift reverses a shaft. JEI."
+		"Ponder with W. A sequenced gearshift is later, and that one is a Brass Machine."
+		"JEI."
+	]
+	quest.6600000000000033.title: "Encased Chain Drive"
+	quest.6600000000000033.quest_subtitle: "Carry rotation along a line"
+	quest.6600000000000033.quest_desc: [
+		"Chain drives move rotation along a block face. JEI."
+		"Ponder with W. They are the long-distance link before a belt."
+		"JEI."
+	]
+	quest.6600000000000034.title: "Millstone"
+	quest.6600000000000034.quest_subtitle: "Grind by hand first"
+	quest.6600000000000034.quest_desc: [
+		"The millstone grinds on a shaft. JEI. A hand crank will turn it before you have a water wheel."
+		"Ponder with W. This is not an Andesite Machine. The press and the mixer are."
+		"JEI."
+	]
+	quest.6600000000000035.title: "Belt"
+	quest.6600000000000035.quest_subtitle: "Rubber, not dried kelp"
+	quest.6600000000000035.quest_desc: [
+		"This pack's belt connector is rubber, six pieces in a 2x3. JEI."
+		"The dried-kelp belt is not the craft. Rubber is the kelp line from the Factory Guide."
+		"Ponder a placed belt with W."
+	]
+	quest.6600000000000036.title: "Basin"
+	quest.6600000000000036.quest_subtitle: "The pot the machines share"
+	quest.6600000000000036.quest_desc: [
+		"The basin is the block a mixer, press, or spout sits on. JEI."
+		"Ponder with W. Fluids and items both land here."
+		"JEI."
+	]
+	quest.6600000000000037.title: "Encased Fan"
+	quest.6600000000000037.quest_subtitle: "An Andesite Machine"
+	quest.6600000000000037.quest_desc: [
+		"Item application: an Andesite Machine plus a propeller. The Factory Guide andesite-machine quest is the gate."
+		"Ponder with W. JEI lists it as item application, not the old crafting table."
+		"The original fan recipe is removed. The machine replaces it."
+	]
+	quest.6600000000000038.title: "Mechanical Press"
+	quest.6600000000000038.quest_subtitle: "Andesite Machine, iron block"
+	quest.6600000000000038.quest_desc: [
+		"Item application: Andesite Machine plus an iron block."
+		"Ponder with W. It presses on a basin. The Factory Guide andesite-machine quest is the gate."
+		"JEI, item application."
+	]
+	quest.6600000000000039.title: "Mechanical Mixer"
+	quest.6600000000000039.quest_subtitle: "Andesite Machine, whisk"
+	quest.6600000000000039.quest_desc: [
+		"Item application: Andesite Machine plus a whisk."
+		"The mixer can heat-mix brass later. It is not how you make the first andesite alloy. That alloy is the 2x2 of algal bricks and andesite."
+		"Ponder with W. JEI."
+	]
+	quest.660000000000003A.title: "Mechanical Drill"
+	quest.660000000000003A.quest_subtitle: "Andesite Machine, drill head"
+	quest.660000000000003A.quest_desc: [
+		"Item application: Andesite Machine plus a drill head."
+		"The drill head is the kubejs part JEI shows, not a vanilla iron pick."
+		"Ponder with W."
+	]
+	quest.660000000000003B.title: "Mechanical Saw"
+	quest.660000000000003B.quest_subtitle: "Andesite Machine, saw blade"
+	quest.660000000000003B.quest_desc: [
+		"Item application: Andesite Machine plus a saw blade."
+		"The saw blade is the kubejs part. Ponder with W."
+		"JEI, item application."
+	]
+	quest.660000000000003C.title: "Andesite Funnel"
+	quest.660000000000003C.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003C.quest_desc: [
+		"Stonecut an Andesite Machine. No extra part. You get several funnels."
+		"Ponder with W. The brass funnel is a later machine and waits on brass."
+		"JEI."
+	]
+	quest.660000000000003D.title: "Mechanical Harvester"
+	quest.660000000000003D.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003D.quest_desc: [
+		"Stonecut an Andesite Machine. Two harvesters."
+		"Ponder with W. It harvests a row when the contraption moves."
+		"JEI."
+	]
+	quest.660000000000003E.title: "Mechanical Plough"
+	quest.660000000000003E.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003E.quest_desc: [
+		"Stonecut an Andesite Machine. Two ploughs."
+		"Ponder with W. It tills and breaks the plants the harvester just took."
+		"JEI."
+	]
+	quest.660000000000003F.title: "Contraption Controls"
+	quest.660000000000003F.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003F.quest_desc: [
+		"Stonecut an Andesite Machine."
+		"Ponder with W. This is the redstone face you glue onto a contraption."
+		"JEI."
+	]
+	quest.6600000000000040.title: "Cart Assembler"
+	quest.6600000000000040.quest_subtitle: "Andesite Machine stonecut"
+	quest.6600000000000040.quest_desc: [
+		"Stonecut an Andesite Machine."
+		"Ponder with W. Minecart contraptions start here."
+		"JEI."
+	]
+	quest.6600000000000041.title: "Copper Backtank"
+	quest.6600000000000041.quest_subtitle: "A Copper Machine"
+	quest.6600000000000041.quest_desc: [
+		"Item application: a Copper Machine plus a copper block. The Factory Guide copper-machine quest is the gate."
+		"Ponder with W. It is air for diving and for the potato cannon, not a brass tank."
+		"JEI, item application."
+	]
+	quest.6600000000000042.title: "Spout"
+	quest.6600000000000042.quest_subtitle: "Copper Machine, hopper"
+	quest.6600000000000042.quest_desc: [
+		"Item application: Copper Machine plus a hopper."
+		"Ponder with W. It pours onto a basin or a depot."
+		"JEI."
+	]
+	quest.6600000000000043.title: "Item Drain"
+	quest.6600000000000043.quest_subtitle: "Copper Machine, iron bars"
+	quest.6600000000000043.quest_desc: [
+		"Item application: Copper Machine plus iron bars."
+		"Ponder with W. Items with a tank empty themselves here."
+		"JEI."
+	]
+	quest.6600000000000044.title: "Hose Pulley"
+	quest.6600000000000044.quest_subtitle: "Copper Machine stonecut"
+	quest.6600000000000044.quest_desc: [
+		"Stonecut a Copper Machine."
+		"Ponder with W. It pumps a body of fluid, or places one."
+		"JEI."
+	]
+	quest.6600000000000045.title: "Smart Fluid Pipe"
+	quest.6600000000000045.quest_subtitle: "Copper Machine stonecut"
+	quest.6600000000000045.quest_desc: [
+		"Stonecut a Copper Machine. Two pipes."
+		"Ponder with W. A filter in the pipe chooses the fluid."
+		"JEI."
+	]
+	quest.6600000000000046.title: "Train Controls"
+	quest.6600000000000046.quest_subtitle: "A Gold Machine"
+	quest.6600000000000046.quest_desc: [
+		"Item application: a Gold Machine plus a lever. The Factory Guide gold-machine quest is the gate."
+		"Ponder with W. This is how a train is driven."
+		"JEI, item application."
+	]
+	quest.6600000000000047.title: "Train Station"
+	quest.6600000000000047.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000047.quest_desc: [
+		"Stonecut a Gold Machine. Two stations."
+		"Ponder with W. Schedules name these stations."
+		"JEI."
+	]
+	quest.6600000000000048.title: "Train Signal"
+	quest.6600000000000048.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000048.quest_desc: [
+		"Stonecut a Gold Machine. Four signals."
+		"Ponder with W. Signals keep two trains off the same piece of track."
+		"JEI."
+	]
+	quest.6600000000000049.title: "Schedule"
+	quest.6600000000000049.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000049.quest_desc: [
+		"Stonecut a Gold Machine. Four schedules."
+		"This is also the item the Enchantment Industry handbook uses in place of a sturdy sheet."
+		"Ponder with W. JEI."
+	]
+	quest.660000000000004A.title: "Brass Hand"
+	quest.660000000000004A.quest_subtitle: "The deployer's glove"
+	quest.660000000000004A.quest_desc: [
+		"The brass hand is the part a deployer consumes. JEI."
+		"It wants brass. The Factory Guide brass-machine quest is the gate used here so the primer does not offer brass early."
+		"JEI. Do not expect brass ingots from a quest reward."
+	]
+	quest.660000000000004B.title: "Deployer"
+	quest.660000000000004B.quest_subtitle: "Andesite Machine, brass hand"
+	quest.660000000000004B.quest_desc: [
+		"Item application: an Andesite Machine plus the brass hand."
+		"Both gates apply: the andesite machine, and brass for the hand."
+		"Ponder with W. JEI, item application."
+	]
+	quest.660000000000004C.title: "Mechanical Crafter"
+	quest.660000000000004C.quest_subtitle: "Brass Machine, crafting table"
+	quest.660000000000004C.quest_desc: [
+		"Item application: a Brass Machine plus a crafting table. Three crafters."
+		"The Factory Guide brass-machine quest is the gate. Ponder with W."
+		"JEI, item application. This is the crafting-grid machine."
+	]
+	quest.660000000000004D.title: "Steam Engine"
+	quest.660000000000004D.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004D.quest_desc: [
+		"Stonecut a Brass Machine."
+		"Ponder with W. It turns a boiler's steam into rotation."
+		"JEI."
+	]
+	quest.660000000000004E.title: "Rotation Speed Controller"
+	quest.660000000000004E.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004E.quest_desc: [
+		"Stonecut a Brass Machine."
+		"Ponder with W. Scroll the value on the face to set the speed."
+		"JEI."
+	]
+	quest.660000000000004F.title: "Sequenced Gearshift"
+	quest.660000000000004F.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004F.quest_desc: [
+		"Stonecut a Brass Machine. Two of them."
+		"Ponder with W. Sequences are how a deployer line waits, moves, and waits."
+		"JEI."
+	]
+	quest.6600000000000050.title: "Brass Tunnel"
+	quest.6600000000000050.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000050.quest_desc: [
+		"Stonecut a Brass Machine. Four tunnels."
+		"Ponder with W. A filter splits a belt."
+		"JEI."
+	]
+	quest.6600000000000051.title: "Smart Chute"
+	quest.6600000000000051.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000051.quest_desc: [
+		"Stonecut a Brass Machine. Four chutes."
+		"Ponder with W. The filter holds back what you do not want to drop."
+		"JEI."
+	]
+	quest.6600000000000052.title: "Clockwork Bearing"
+	quest.6600000000000052.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000052.quest_desc: [
+		"Stonecut a Brass Machine. Two bearings."
+		"Ponder with W. It winds a contraption and then runs it."
+		"JEI."
+	]
+	quest.6600000000000053.title: "Elevator Pulley"
+	quest.6600000000000053.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000053.quest_desc: [
+		"Stonecut a Brass Machine."
+		"Ponder with W. Floors are marked with the pulley, not with rope."
+		"JEI."
+	]
+	quest.6600000000000054.title: "Display Link"
+	quest.6600000000000054.quest_subtitle: "Brass Machine, redstone torch"
+	quest.6600000000000054.quest_desc: [
+		"Item application: a Brass Machine plus a redstone torch."
+		"Ponder with W. It writes a value onto a display, a sign, or a nixie tube."
+		"JEI."
+	]
+	quest.6600000000000055.title: "Mechanical Arm"
+	quest.6600000000000055.quest_subtitle: "The last brass hand"
+	quest.6600000000000055.quest_desc: [
+		"Stonecut a Brass Machine."
+		"Ponder with W. The arm is the end of the Create machine list: it picks a filtered item off one inventory and sets it on another."
+		"JEI. The Factory Guide brass-machine quest is the gate."
+	]
+	quest.6600000000000056.title: "Small Light Connector"
+	quest.6600000000000056.quest_subtitle: "Zinc Machine, iron wire"
+	quest.6600000000000056.quest_desc: [
+		"Item application: a Zinc Machine plus an iron wire. Eight connectors."
+		"The Factory Guide zinc-machine quest is the gate. Ponder with W."
+		"The plain connector and the large connector are already on this page. JEI."
+	]
+	quest.6600000000000057.title: "Redstone Relay"
+	quest.6600000000000057.quest_subtitle: "Zinc Machine stonecut"
+	quest.6600000000000057.quest_desc: [
+		"Stonecut a Zinc Machine. Eight relays."
+		"This is the Crafts and Additions relay, not ComputerCraft's redstone relay."
+		"Ponder with W. JEI. The zinc-machine quest is the gate."
+	]
+	quest.6600000000000058.title: "Electric Motor"
+	quest.6600000000000058.quest_subtitle: "Zinc Machine, copper spool"
+	quest.6600000000000058.quest_desc: [
+		"Item application: a Zinc Machine plus the copper spool you already craft."
+		"Ponder with W. It turns FE into rotation."
+		"JEI. The zinc-machine quest is the gate."
+	]
+	quest.6600000000000059.title: "Tesla Coil"
+	quest.6600000000000059.quest_subtitle: "Zinc Machine, lightning rod"
+	quest.6600000000000059.quest_desc: [
+		"Item application: a Zinc Machine plus a lightning rod."
+		"This is the charger. Accumulators take their FE from this coil. It is not available before the zinc machine."
+		"Ponder with W. JEI. The alternator and the capacitor are removed."
+	]
+	quest.660000000000005A.title: "Portable Energy Interface"
+	quest.660000000000005A.quest_subtitle: "Zinc Machine stonecut"
+	quest.660000000000005A.quest_desc: [
+		"Stonecut a Zinc Machine. Two interfaces."
+		"Ponder with W. A contraption carries FE through this face."
+		"JEI. The zinc-machine quest is the gate."
+	]
+	quest.660000000000005B.title: "Modular Accumulator"
+	quest.660000000000005B.quest_subtitle: "Brass, batteries, no alternator"
+	quest.660000000000005B.quest_desc: [
+		"Mechanical crafting. Brass casings around powergrid batteries, with brass sheets. JEI."
+		"The crafting-table accumulator is removed. The alternator and the capacitor are removed. The Factory Guide brass-machine quest is the gate."
+		"Charge it from the tesla coil. This is the end of the Crafts and Additions line."
+	]
+	quest.660000000000005C.title: "Bulk Fermenter"
+	quest.660000000000005C.quest_subtitle: "The vat, not a lava tap"
+	quest.660000000000005C.quest_desc: [
+		"The bulk fermenter is the mod's vat. JEI shows the fluids it ferments."
+		"Lava fermenting is removed. Do not look for a lava recipe on this block."
+		"The pack's diesel compat script is commented out, so the vat itself is the mod's own craft. JEI."
+	]
+	quest.660000000000005D.title: "Burner"
+	quest.660000000000005D.quest_subtitle: "Heat for the vat"
+	quest.660000000000005D.quest_desc: [
+		"The burner is the heat block under a tank or a fermenter. JEI."
+		"You already have the lighter. This is the block that stays lit."
+		"JEI. No pack recipe replaces it."
+	]
+	quest.660000000000005E.title: "Diesel Engine"
+	quest.660000000000005E.quest_subtitle: "Brass-age, mod recipe"
+	quest.660000000000005E.quest_desc: [
+		"JEI shows the engine. This pack's diesel script is commented out, so the pattern is the mod's own."
+		"Treat it as a brass-age machine. The Factory Guide brass-machine quest is the gate so the primer does not open it early."
+		"Ponder with W if the engine has a scene."
+	]
+	quest.660000000000005F.title: "Large Diesel Engine"
+	quest.660000000000005F.quest_subtitle: "The middle engine"
+	quest.660000000000005F.quest_desc: [
+		"JEI. The commented pack script would have made this a Zinc Machine applied to a diesel engine. That script is not running."
+		"Craft the mod's recipe. The brass-machine quest stays the gate."
+		"JEI."
+	]
+	quest.6600000000000060.title: "Distillation Tank"
+	quest.6600000000000060.quest_subtitle: "Split the oil"
+	quest.6600000000000060.quest_desc: [
+		"The distillation tank splits a hot fluid into fractions. JEI."
+		"The pack's replacement distillation, which asked for thermal crude oil, is inside the commented script. The live recipe is the mod's."
+		"The brass-machine quest is the gate used here."
+	]
+	quest.6600000000000061.title: "Pumpjack Hole"
+	quest.6600000000000061.quest_subtitle: "The well head"
+	quest.6600000000000061.quest_desc: [
+		"The pumpjack hole is the block on the oil. JEI."
+		"The commented script would have made it a Copper Machine. That script is not running, so use the mod's craft."
+		"JEI."
+	]
+	quest.6600000000000062.title: "Pumpjack Head"
+	quest.6600000000000062.quest_subtitle: "The horse head"
+	quest.6600000000000062.quest_desc: [
+		"The pumpjack head. JEI. The crank and the bearing sit with it."
+		"No live pack recipe replaces this. The commented script's invar swap is not running."
+		"JEI."
+	]
+	quest.6600000000000063.title: "Pumpjack Crank"
+	quest.6600000000000063.quest_subtitle: "The wheel"
+	quest.6600000000000063.quest_desc: [
+		"The pumpjack crank. JEI."
+		"Hole, head, and crank are the well. The distillation tank is what you do with the oil."
+		"JEI."
+	]
+	quest.6600000000000064.title: "Huge Diesel Engine"
+	quest.6600000000000064.quest_subtitle: "The last engine"
+	quest.6600000000000064.quest_desc: [
+		"The huge engine is the top of the diesel line. JEI."
+		"The commented script would have made it an invar machine on a brass block. That script is not running."
+		"The brass-machine quest remains the gate. Ponder with W if it has a scene."
+	]
+	quest.6600000000000065.title: "Grindstone Drain"
+	quest.6600000000000065.quest_subtitle: "Experience out of the wheel"
+	quest.6600000000000065.quest_desc: [
+		"The drain under the mechanical grindstone. JEI."
+		"You already have the grindstone. This is the block that catches the experience."
+		"Ponder with W. JEI."
+	]
+	quest.6600000000000066.title: "Experience Hatch"
+	quest.6600000000000066.quest_subtitle: "A door for the fluid"
+	quest.6600000000000066.quest_desc: [
+		"The experience hatch. JEI."
+		"It is the port on a tank of experience. The cake you already craft is the other way to hold it."
+		"JEI."
+	]
+	quest.6600000000000067.title: "Experience Lantern"
+	quest.6600000000000067.quest_subtitle: "A light that eats levels"
+	quest.6600000000000067.quest_desc: [
+		"The experience lantern. JEI."
+		"Ponder with W. It is a sink for liquid experience, not a new enchantment."
+		"JEI."
+	]
+	quest.6600000000000068.title: "Blaze Forger"
+	quest.6600000000000068.quest_subtitle: "The anvil that burns"
+	quest.6600000000000068.quest_desc: [
+		"The blaze forger. JEI."
+		"Ponder with W. It is the fire side of the enchanting line, next to the enchanter."
+		"JEI. The printer quest's zinc machine is the earlier gate."
+	]
+	quest.6600000000000069.title: "Blaze Enchanter"
+	quest.6600000000000069.quest_subtitle: "The last enchanting machine"
+	quest.6600000000000069.quest_desc: [
+		"The blaze enchanter is the end of this mod's machines. JEI."
+		"Ponder with W. Liquid experience goes in. The book you want comes out."
+		"The handbook remains a template. The tome will not contain a readable CEI book."
+	]
+	quest.660000000000006A.title: "Levitite"
+	quest.660000000000006A.quest_subtitle: "An iron pick is enough"
+	quest.660000000000006A.quest_desc: [
+		"Levitite is mined with an iron pick in this pack. The diamond requirement is removed."
+		"JEI and the ponder scene, if the block has one. W."
+		"The blend and the pearlescent block are the crafts after the ore."
+	]
+	quest.660000000000006B.title: "Levitite Blend"
+	quest.660000000000006B.quest_subtitle: "The dust"
+	quest.660000000000006B.quest_desc: [
+		"The blend is the crushed step. JEI."
+		"No pack script replaces this craft."
+		"JEI."
+	]
+	quest.660000000000006C.title: "Pearlescent Levitite"
+	quest.660000000000006C.quest_subtitle: "The flight metal"
+	quest.660000000000006C.quest_desc: [
+		"Pearlescent levitite is the finished material. JEI."
+		"No pack script replaces the craft. The envelopes you already build are the cloth around it."
+		"JEI."
+	]
+	quest.660000000000006D.title: "Andesite Propeller"
+	quest.660000000000006D.quest_subtitle: "Andesite Machine, aircraft propeller"
+	quest.660000000000006D.quest_desc: [
+		"Item application: an Andesite Machine plus an Immersive Aircraft propeller."
+		"That propeller is eight iron sheets around andesite alloy. JEI. A wooden propeller also converts into an andesite propeller, and not the other way."
+		"The Factory Guide andesite-machine quest is the gate. Ponder with W."
+	]
+	quest.660000000000006E.title: "Gyroscopic Bearing"
+	quest.660000000000006E.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000006E.quest_desc: [
+		"Stonecut a Brass Machine. Two bearings."
+		"The ordinary propeller bearing is already a Gold Machine, and that quest is above. This one is the brass bearing."
+		"Ponder with W. The brass-machine quest is the gate."
+	]
+	quest.660000000000006F.title: "Smart Propeller"
+	quest.660000000000006F.quest_subtitle: "The last propeller"
+	quest.660000000000006F.quest_desc: [
+		"Item application: a Brass Machine plus an Immersive Aircraft propeller."
+		"Ponder with W. With the gyroscopic bearing and pearlescent levitite, this is the end of the airship line."
+		"The steam vent you already craft is the Brass Machine stonecut that vents the boiler."
+	]
 }
