@@ -157,6 +157,7 @@ function buildUniversalTome() {
     if (skipped.length) {
         console.warn(`[universal-tome] skipped ${skipped.length} missing book(s): ${skipped.join(', ')}`)
     }
+    repairTomeStack(tome)
     console.info(`[universal-tome] built tome with ${stored.length} book(s)`)
     return tome
 }
@@ -175,6 +176,61 @@ PlayerEvents.loggedIn(event => {
     if (!tome) return
 
     data.putBoolean(TOME_FLAG, true)
+    repairTomeStack(tome)
     event.player.give(tome)
     console.info(`[universal-tome] gave ${event.player.username} the guidebook tome`)
+})
+
+// Akashic Tome 1.8-30 ToolContentComponent.hashCode (ToolContentComponent.java:67)
+// hashes every stored stack's components. A stack that still contains itself
+// overflows that hash and the slot/player encoder (EncoderException). Stored
+// books are not supposed to carry tool_content; MorphingHandler removes it
+// before inserting the previous form. This drops a self-reference and strips
+// nested tool_content before the next inventory sync and player save.
+const TomeRegistries = Java.loadClass('vazkii.akashictome.Registries')
+const ToolContentComponent = Java.loadClass('vazkii.akashictome.data_components.ToolContentComponent')
+const IdentityHashMap = Java.loadClass('java.util.IdentityHashMap')
+const ArrayList = Java.loadClass('java.util.ArrayList')
+const JavaList = Java.loadClass('java.util.List')
+const PlayerTickPre = Java.loadClass('net.neoforged.neoforge.event.tick.PlayerTickEvent$Pre')
+
+function repairTomeStack(stack) {
+    if (stack == null || stack.isEmpty()) return
+    let contentType = TomeRegistries.TOOL_CONTENT.get()
+    if (!stack.has(contentType)) return
+    let seen = new IdentityHashMap()
+    seen.put(stack, true)
+    let items = stack.get(contentType).getItems()
+    let kept = new ArrayList()
+    let changed = false
+    for (let i = 0; i < items.size(); i++) {
+        let inner = items.get(i)
+        if (inner == null || inner.isEmpty() || seen.containsKey(inner)) {
+            changed = true
+            continue
+        }
+        if (inner.has(contentType)) {
+            inner.remove(contentType)
+            changed = true
+        }
+        kept.add(inner)
+    }
+    if (changed) stack.set(contentType, new ToolContentComponent(JavaList.copyOf(kept)))
+}
+
+function repairPlayerTomes(player) {
+    if (player == null) return
+    let inventory = player.inventory
+    for (let i = 0; i < inventory.getContainerSize(); i++) repairTomeStack(inventory.getItem(i))
+    repairTomeStack(player.containerMenu.getCarried())
+    let ender = player.getEnderChestInventory()
+    for (let i = 0; i < ender.getContainerSize(); i++) repairTomeStack(ender.getItem(i))
+}
+
+NativeEvents.onEvent(PlayerTickPre, event => {
+    repairPlayerTomes(event.entity)
+})
+
+ItemEvents.dropped(event => {
+    if (event.itemEntity != null) repairTomeStack(event.itemEntity.getItem())
 })
