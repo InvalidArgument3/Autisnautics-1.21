@@ -1,0 +1,6 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:90: error: method toStack in record ItemVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:96: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:99: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:151: error: method toStack in record ItemVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:158: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fabricator/RecipeMatching.java:162: error: cannot find symbol

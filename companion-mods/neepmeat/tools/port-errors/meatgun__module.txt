@@ -1,0 +1,41 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:15: error: package com.neep.meatweapons.implant does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:16: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:17: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:18: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:20: error: package com.neep.meatweapons.network does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:32: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:32: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:34: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:37: error: package RootModuleHolder does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:63: error: package MWAttackC2SPacket does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:69: error: package MWAttackC2SPacket does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:75: error: package MWAttackC2SPacket does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:88: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:88: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:93: error: package RootModuleHolder does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:118: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:165: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:19: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:45: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:62: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:68: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:74: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:80: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:83: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:84: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:84: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:87: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:100: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:103: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:108: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:114: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:123: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:129: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:133: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:136: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:142: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/meatgun/module/DrillChassisBaseModule.java:153: error: method does not override or implement a method from a supertype

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "neepmeat:fluid_pipes"
+    }
+  ],
+  "result": {
+    "item": "neepmeat:fluid_pipe",
+    "count": 1,
+    "id": "neepmeat:fluid_pipe"
+  }
+}

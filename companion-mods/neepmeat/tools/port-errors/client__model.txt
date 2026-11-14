@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/GlassTankModel.java:28: error: GlassTankModel is not abstract and does not override abstract method renderToBuffer(PoseStack,VertexConsumer,int,int,int) in Model
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/GlassTankModel.java:38: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/GlassTankModel.java:42: error: no suitable method found for render(PoseStack,VertexConsumer,int,int,float,float,float,float)

@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:sniffer_egg",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:netherite_scrap",
+    "amount": 1
+  },
+  "experience": 0,
+  "processtime": 40
+}

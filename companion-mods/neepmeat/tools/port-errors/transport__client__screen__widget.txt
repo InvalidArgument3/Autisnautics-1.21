@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:170: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:61: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:115: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:126: error: incompatible types: inference variable E has incompatible bounds
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:132: error: incompatible types: inference variable E has incompatible bounds
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:140: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:145: error: method translationKey in class NeepMeat cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:175: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:178: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:181: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:185: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/widget/RequestListWidget.java:191: error: method does not override or implement a method from a supertype

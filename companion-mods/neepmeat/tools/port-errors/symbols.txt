@@ -1,0 +1,37 @@
+start 1863
+end 1828
+plc 143
+
+ 911 cannot find symbol
+ 169 method does not override or implement a method from a supertype
+  18 invalid method reference
+  12 incompatible types: invalid method reference
+  12 method stonecutterResultFromBase in class RecipeProvider cannot be applied to gi
+  11 incompatible types: CAP#1 cannot be converted to ImplantManager
+  11 incompatible types: Block cannot be converted to Properties
+  11 no suitable method found for checkType(BlockEntityType<T#1>,BlockEntityType<CAP#
+   9 no suitable method found for register(MappedRegistry<EntityImplantInstaller>,Res
+   8 incompatible types: BuiltFluid<CAP#1,CAP#2> cannot be converted to Fluid
+   8 Serializer is not abstract and does not override abstract method codec() in Reci
+   8 codec() in Serializer cannot implement codec() in RecipeSerializer
+
+   9 symbol:   method getStorage(<null>)
+   8 symbol:   class RenderProvider
+   8 symbol:   method getAmount()
+   7 symbol:   method getSteps()
+   7 symbol:   method getItemOutput()
+   7 symbol:   variable LOOKUP
+   6 symbol:   class WorldRenderContext
+   6 symbol:   method extract(ItemVariant,long,Transaction)
+   6 symbol:   variable EMPTY
+   6 symbol:   variable SIDED
+   6 symbol:   method singleVariantInteract(Player,InteractionHand,WritableStackStorage)
+   6 symbol:   variable clientX
+   6 symbol:   variable clientY
+   6 symbol:   variable clientZ
+   6 symbol:   variable BiomeModifications
+   5 symbol:   class Result
+   5 symbol:   method hasCustomHoverName()
+   5 symbol:   method setResult(int,ItemStack)
+   5 symbol:   method variant()
+   5 symbol:   method tryUpdateComparators()

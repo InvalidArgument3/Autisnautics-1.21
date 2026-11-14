@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:gravel",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:sand",
+    "amount": 1
+  },
+  "extra": {
+    "resource": "minecraft:flint",
+    "amount": 1,
+    "chance": 0.25
+  },
+  "experience": 0,
+  "processtime": 40
+}

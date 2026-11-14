@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aq "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:andesite"
+    },
+    "q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "neepmeat:asbestos",
+    "count": 1,
+    "id": "neepmeat:asbestos"
+  }
+}

@@ -1,0 +1,15 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:23: error: package com.neep.meatlib.graphics does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:37: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:28: error: package net.minecraft.client.render does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:54: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:59: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:95: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:97: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:98: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:99: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:100: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:101: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:102: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:110: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:124: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/effect/ReminaGraphicsEffect.java:130: error: method does not override or implement a method from a supertype

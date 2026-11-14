@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/keeper/KeeperDodgeGoal.java:86: error: cannot find symbol

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "neepmeat:block/white_rough_concrete_slab"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "neepmeat:block/white_rough_concrete_slab"
+    },
+    "type=top,waterlogged=false": {
+      "model": "neepmeat:block/white_rough_concrete_slab_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "neepmeat:block/white_rough_concrete_slab_top"
+    },
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/white_rough_concrete"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/white_rough_concrete"
+    }
+  }
+}

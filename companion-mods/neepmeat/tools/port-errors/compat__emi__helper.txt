@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:3: error: package com.neep.meatlib.recipe.ingredient does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:4: error: package com.neep.meatlib.recipe.ingredient does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:5: error: package com.neep.meatlib.recipe.ingredient does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:6: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:56: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:73: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:32: error: package Ingredients does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:38: error: no suitable method found for of(Item,CompoundTag,long)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:43: error: package Ingredients does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/helper/EmiIngredientHelper.java:92: error: cannot find symbol

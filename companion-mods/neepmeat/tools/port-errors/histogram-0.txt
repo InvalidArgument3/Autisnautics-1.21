@@ -1,0 +1,390 @@
+errors 5952 files 608
+
+KINDS
+3904	cannot find symbol
+741	does not override
+104	incompatible types
+74	package BlockRenderLayerMap does not exist
+30	package com.neep.meatlib.client.flw does not exist
+25	package com.neep.meatlib.recipe.ingredient does not exist
+23	package net.fabricmc.fabric.api.lookup.v1.block does not exist
+22	package com.neep.meatweapons.meatgun.module does not exist
+22	package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+22	package com.neep.meatlib.larkdown does not exist
+21	package com.neep.meatlib.storage does not exist
+19	package LarkdownParser does not exist
+18	package net.fabricmc.fabric.api.transfer.v1.item does not exist
+16	package net.fabricmc.fabric.api.renderer.v1 does not exist
+16	method register in class BlockEntityRenderers cannot be applied to given types;
+15	package com.neep.meatweapons.meatgun does not exist
+15	package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+14	package net.fabricmc.fabric.api.client.rendering.v1 does not exist
+14	invalid method reference
+13	method renderBackground in class AbstractContainerScreen<T> cannot be applied to given typ
+12	package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+12	name clash: class TreeVisitorImpl has two methods with the same erasure, yet neither overr
+11	package software.bernie.geckolib.core.animation does not exist
+11	package com.neep.meatlib.larkdown.command does not exist
+11	method toStack in record ItemVariant cannot be applied to given types;
+10	package MeatgunModule does not exist
+10	package ColorProviderRegistry does not exist
+10	<M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScre
+10	package ItemTransport does not exist
+10	name clash: interface ThordTreeVisitor has two methods with the same erasure, yet neither 
+9	package RecipeInputs does not exist
+9	package RendererAccess does not exist
+9	no suitable method found for register(MappedRegistry<EntityImplantInstaller>,ResourceLocat
+8	package com.neep.neepbus.client.screen does not exist
+8	package RootModuleHolder does not exist
+8	package com.neep.neepbus.client.input does not exist
+8	package net.fabricmc.fabric.api.transfer.v1.client.fluid does not exist
+8	package net.fabricmc.fabric.api.client.render.fluid.v1 does not exist
+8	package VascularConduitEntity does not exist
+8	no suitable method found for setVisualizer(BlockEntityType<CAP#1>,SimpleBlockEntityVisuali
+8	package FluidStorage does not exist
+7	package net.fabricmc.fabric.api.datagen.v1 does not exist
+7	package BuiltinItemRendererRegistry does not exist
+7	package com.neep.meatlib.datagen does not exist
+7	inventory is not public in Player; cannot be accessed from outside package
+7	method readBlockPos in class NbtUtils cannot be applied to given types;
+7	package ItemStorage does not exist
+7	no suitable method found for playSound(<null>,BlockPos,DeferredHolder<SoundEvent,SoundEven
+6	package net.fabricmc.fabric.api.event.registry does not exist
+6	no interface expected here
+6	package com.neep.neepbus.block.entity does not exist
+6	package software.bernie.geckolib.model does not exist
+6	package net.fabricmc.fabric.api.renderer.v1.model does not exist
+6	package net.fabricmc.fabric.api.renderer.v1.render does not exist
+6	package net.minecraft.client.render.model does not exist
+6	package com.neep.meatweapons.particle does not exist
+6	package com.neep.neepbus.block does not exist
+6	package net.fabricmc.fabric.api.transfer.v1.storage does not exist
+6	package net.fabricmc.fabric.api.transfer.v1.context does not exist
+6	package net.fabricmc.fabric.api.resource does not exist
+6	package com.neep.meatlib.larkdown.parser does not exist
+6	method getFoodProperties in interface IItemExtension cannot be applied to given types;
+6	package FluidRenderHandlerRegistry does not exist
+5	package PhageRayScreenHandler.WidgetHandler does not exist
+5	package com.neep.meatweapons.client.renderer.meatgun does not exist
+5	package com.neep.meatweapons.init does not exist
+5	package net.minecraft.util.math does not exist
+5	package net.fabricmc.fabric.api.registry does not exist
+5	package com.neep.meatweapons does not exist
+5	package net.fabricmc.fabric.api.datagen.v1.provider does not exist
+5	package software.bernie.geckolib.renderer does not exist
+5	package net.fabricmc.fabric.api.screenhandler.v1 does not exist
+5	package net.fabricmc.fabric.api.transfer.v1.storage.base does not exist
+5	package PipePathfinding does not exist
+5	package OreFatRegistry does not exist
+5	method readById in class FriendlyByteBuf cannot be applied to given types;
+5	package RotationAxis does not exist
+5	float cannot be dereferenced
+5	cannot infer type arguments for SimpleEntityVisualizer<>
+4	package com.neep.meatlib.recipe.ingredient.entity does not exist
+4	package com.neep.meatweapons.component does not exist
+4	package net.fabricmc.fabric.api.client.model.loading.v1 does not exist
+4	static import only from classes and interfaces
+4	package software.bernie.geckolib.animatable does not exist
+4	package software.bernie.geckolib.core.object does not exist
+4	package com.neep.meatlib.mixin.client does not exist
+4	package net.fabricmc.fabric.api.object.builder.v1.block does not exist
+4	package net.fabricmc.fabric.api.event does not exist
+4	package net.fabricmc.fabric.api.transfer.v1.transaction.base does not exist
+4	package com.neep.neepbus.input does not exist
+4	method fromNamespaceAndPath in class ResourceLocation cannot be applied to given types;
+4	method translationKey in class NeepMeat cannot be applied to given types;
+4	no suitable method found for putBulkData(Pose,BakedQuad,float,float,float,int,int)
+4	package MWComponents does not exist
+4	package DrillChassisItem does not exist
+4	package FuelRegistry does not exist
+4	package FluidTransport does not exist
+4	method addClosable in class BasicScreenHandler cannot be applied to given types;
+4	no suitable method found for is(FlexSiloBlock)
+4	rotate(BlockState,BlockHitResult) in TankBlock cannot implement rotate(BlockState,BlockHit
+4	package LarkdownCommands does not exist
+3	package net.fabricmc.fabric.api.client.event.lifecycle.v1 does not exist
+3	package net.minecraft.client.render does not exist
+3	package com.neep.meatweapons.client.meatgun.animation does not exist
+3	package software.bernie.geckolib.core.animatable.instance does not exist
+3	package software.bernie.geckolib.util does not exist
+3	package AnimatableManager does not exist
+3	package com.neep.meatweapons.client does not exist
+3	package MWAttackC2SPacket does not exist
+3	package folk.sisby.kaleido.lib.quiltconfig.api.annotations does not exist
+3	package com.neep.neepbus.screen does not exist
+3	package com.neep.meatlib.larkdown.content does not exist
+3	package net.fabricmc.fabric.api.tag.convention.v1 does not exist
+3	package BlockCrushingRegistry does not exist
+3	package com.neep.meatweapons.entity does not exist
+3	package RecipeOutputs does not exist
+3	package ClientTickEvents does not exist
+3	method addChild in class GeneralPanel cannot be applied to given types;
+3	no suitable method found for fromJson(JsonObject)
+3	method mouseScrolled in interface GuiEventListener cannot be applied to given types;
+3	package NMEntities does not exist
+3	method getVisualPosition in class EscapedMachineVisual cannot be applied to given types;
+3	method defineSynchedData in class Mob cannot be applied to given types;
+3	method bake in interface UnbakedModel cannot be applied to given types;
+3	method finalizeSpawn in class Mob cannot be applied to given types;
+3	package UseAttackCallback does not exist
+3	no suitable method found for setVisualizer(DeferredHolder<BlockEntityType<?>,BlockEntityTy
+3	package MeatgunModules does not exist
+3	non-static variable super cannot be referenced from a static context
+3	method getTooltipLines in class ItemStack cannot be applied to given types;
+3	method mouseScrolled in interface ContainerEventHandler cannot be applied to given types;
+3	no suitable constructor found for PipeConnections(Direction)
+3	variable hand is already defined in method useWithoutItem(BlockState,Level,BlockPos,Player
+3	no suitable method found for parent(Advancement)
+3	package DataPackPostProcess does not exist
+2	package com.neep.meatlib.mixin does not exist
+2	package WorldRenderContext does not exist
+2	package net.fabricmc.loader.api does not exist
+2	package ClientComponents does not exist
+2	package com.neep.meatlib.client.visual does not exist
+2	package net.fabricmc.fabric.api.blockrenderlayer.v1 does not exist
+2	package com.neep.meatweapons.item does not exist
+2	package com.neep.meatlib.graphics does not exist
+2	package com.neep.neepbus.client.instance does not exist
+2	package com.neep.meatlib.fluid does not exist
+2	package com.neep.meatweapons.implant does not exist
+2	package com.neep.meatlib.api.block does not exist
+2	package FabricTagProvider does not exist
+2	package ImplementedRecipe does not exist
+2	package net.fabricmc.fabric.api.object.builder.v1.block.entity does not exist
+2	package net.fabricmc.fabric.api.biome.v1 does not exist
+2	package com.neep.meatlib.api.event does not exist
+2	package AnimationSyncable does not exist
+2	constructor BaseItem in class BaseItem cannot be applied to given types;
+2	package WorldRenderEvents does not exist
+2	package KeyboardEvents does not exist
+2	package MachineDiagnosticsRequest does not exist
+2	no suitable method found for fromJson(JsonElement)
+2	method mouseScrolled in class GeneralPanel cannot be applied to given types;
+2	method of in class EjectOperation cannot be applied to given types;
+2	method getAddEntityPacket in class Entity cannot be applied to given types;
+2	package ParticleSpawnS2C does not exist
+2	package DosimeterItem does not exist
+2	method register in class MenuScreens cannot be applied to given types;
+2	no suitable method found for render(PoseStack,VertexConsumer,int,int,float,float,float,flo
+2	package Bezier does not exist
+2	cannot infer type arguments for SimpleBlockEntityVisualizer<>
+2	method getMaxStackSize in interface IItemExtension cannot be applied to given types;
+2	method addChild in class VStackPanel cannot be applied to given types;
+2	package TagSuggestions does not exist
+2	method saveAdditional in class EncasedConduitBlockEntity cannot be applied to given types;
+2	type argument FlexSiloBlockEntity is not within bounds of type-variable T
+2	method saveAdditional in class EncasedItemPipeBlockEntity cannot be applied to given types
+2	package Ingredients does not exist
+2	package MetalBarrelBlock does not exist
+2	constructor MultiFluidBuffer in class MultiFluidBuffer cannot be applied to given types;
+2	method saveAdditional in class EncasedDataCableBlockEntity cannot be applied to given type
+2	method matches in class CrushingRecipe cannot be applied to given types;
+2	method createTag in class SimpleContainer cannot be applied to given types;
+2	method fromTag in class SimpleContainer cannot be applied to given types;
+2	package ServerPlayConnectionEvents does not exist
+2	no suitable method found for register(DefaultedRegistry<Fluid>,ResourceLocation,OreFatFlui
+1	package net.fabricmc.fabric.api.client.keybinding.v1 does not exist
+1	package net.fabricmc.fabric.api.client.item.v1 does not exist
+1	package ModelLoadingPlugin does not exist
+1	package net.fabricmc.yarn.constants does not exist
+1	package com.neep.meatlib.graphics.client does not exist
+1	package dev.monarkhes.myron_neepmeat.api does not exist
+1	package net.fabricmc.api does not exist
+1	package software.bernie.geckolib.core.animatable does not exist
+1	package com.neep.meatlib.api.entity does not exist
+1	type AnimationState does not take parameters
+1	package Easing does not exist
+1	package net.minecraft.data.client does not exist
+1	package com.neep.meatweapons.client.meatgun does not exist
+1	package com.neep.meatweapons.client.renderer does not exist
+1	package com.neep.meatweapons.mixin.client does not exist
+1	package com.neep.meatweapons.network does not exist
+1	package folk.sisby.kaleido.api does not exist
+1	package folk.sisby.kaleido.lib.quiltconfig.api.values does not exist
+1	package com.neep.neepbus.util does not exist
+1	method getItems() is already defined in class PersistentCraftingInventory
+1	package FluidPipe does not exist
+1	package net.fabricmc.fabric.api.block does not exist
+1	package net.fabricmc.fabric.api.lookup.v1.item does not exist
+1	package ItemApiLookup does not exist
+1	package FluidBuffer does not exist
+1	package net.fabricmc.fabric.api.event.lifecycle.v1 does not exist
+1	package com.neep.meatlib.datagen.loot does not exist
+1	package com.neep.meatweapons.datagen does not exist
+1	package net.fabricmc.fabric.impl.transfer.fluid does not exist
+1	method getItems() is already defined in class FabricatorBlockEntity.FabricatorInventory
+1	package com.neep.meatlib.entity.player does not exist
+1	package net.fabricmc.fabric.impl.transfer does not exist
+1	package net.minecraft.world.gen.feature does not exist
+1	package net.minecraft.world.gen.placementmodifier does not exist
+1	package com.neep.meatlib.entity does not exist
+1	package com.neep.meatweapons.damage does not exist
+1	AmbientOcclusionFace is not public in ModelBlockRenderer; cannot be accessed from outside 
+1	package MeatLibCodecs does not exist
+1	package ClientPlayConnectionEvents does not exist
+1	package ItemTooltipCallback does not exist
+1	package HudRenderCallback does not exist
+1	package ProjectorItem does not exist
+1	render(GuiGraphics,int,int,float) in ImplantManagerScreen.RemoveButton cannot override ren
+1	package ScreenPropertyC2SPacket does not exist
+1	package FilterUtils does not exist
+1	package MouthBlockEntity does not exist
+1	method saveWithoutMetadata in class BlockEntity cannot be applied to given types;
+1	method saveAdditional in class LargeFanBlockEntity cannot be applied to given types;
+1	package BlockSoundPacket does not exist
+1	package PlayerImplantStatusS2CPacket does not exist
+1	package EntityAnimationS2C does not exist
+1	package OreFatSyncData does not exist
+1	package NarratorSayS2C does not exist
+1	package NEEPSpeakSayS2C does not exist
+1	package NMParticles does not exist
+1	package PaintedBlockCollection does not exist
+1	getParts() in WormEntity cannot implement getParts() in IEntityExtension
+1	method defineSynchedData in class LivingEntity cannot be applied to given types;
+1	package AppendPlayerFeatureRenderers does not exist
+1	method renderEntityInInventory in class InventoryScreen cannot be applied to given types;
+1	codec() in PressureWashParticleType cannot override codec() in ParticleType
+1	constructor BreakingItemParticle in class BreakingItemParticle cannot be applied to given 
+1	no suitable method found for render(PoseStack,VertexConsumer,int,int,float,float,float,int
+1	method renderNameTag in class EntityRenderer<T#2> cannot be applied to given types;
+1	package ToolTransformPacket does not exist
+1	method addRenderableWidget in class Screen cannot be applied to given types;
+1	package ParamCodecs does not exist
+1	no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,CraftingContainer,Lev
+1	getItems() in ManualRequesterScreenHandler cannot override getItems() in AbstractContainer
+1	type argument WindowPipeBlockEntity is not within bounds of type-variable T
+1	package vertex does not exist
+1	incomparable types: Block and VascularConduitBlock
+1	lambda expression not expected here
+1	method checkType in class HopperExtenderBlock cannot be applied to given types;
+1	getItems() in Simple cannot override getItems() in SimpleContainer
+1	non-static variable items cannot be referenced from a static context
+1	method checkType in class FluidDrainBlock cannot be applied to given types;
+1	type argument FlexTankBlockEntity is not within bounds of type-variable T
+1	no suitable constructor found for ItemStack(TankBlock)
+1	method saveAdditional in class EncasedFluidPipeBlockEntity<T> cannot be applied to given t
+1	method saveAdditional in class FilterPipeBlockEntity cannot be applied to given types;
+1	method pickupBlock in interface BucketPickup cannot be applied to given types;
+1	package ServerTickEvents does not exist
+1	package BlockRegistry does not exist
+1	no suitable method found for of(Item,CompoundTag,long)
+1	package MeatLibClient does not exist
+1	no suitable method found for saveAllItems(CompoundTag,NonNullList<ItemStack>)
+1	method loadAllItems in class ContainerHelper cannot be applied to given types;
+1	createDoorTable(Block) has protected access in BlockLootSubProvider
+1	method spawnBeam in interface Integrator cannot be applied to given types;
+1	method pull in class LeverBlock cannot be applied to given types;
+1	no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,FabricatorBlockEntity
+1	method of in record FluidVariant cannot be applied to given types;
+1	playerWillDestroy(Level,BlockPos,BlockState,Player) in PLCBlock cannot override playerWill
+1	package PLCBlocks does not exist
+1	package Heatable does not exist
+1	method checkType in class HeaterBlock cannot be applied to given types;
+1	type argument HeaterBlockEntity is not within bounds of type-variable T
+1	constructor LiquidFuelMachine in class LiquidFuelMachine cannot be applied to given types;
+1	abstract method setChanged() in Container cannot be accessed directly
+1	constructor WritableSingleFluidStorage in class WritableSingleFluidStorage cannot be appli
+1	readNbt(CompoundTag) in FluidRationerStorage cannot override readNbt(CompoundTag) in Writa
+1	constructor BigBlockStructure in class BigBlockStructure<T> cannot be applied to given typ
+1	method copy in interface RespawnCopyStrategy<T> cannot be applied to given types;
+1	package GraphicsEffects does not exist
+1	incomparable types: ResourceLocation and ResourceKey<LootTable>
+1	no suitable method found for dispatch(String,WeightModi[...]Codec,Function<Object,Object>)
+1	no suitable method found for sendParticles(ParticleType<ColorParticleOption>,double,double
+1	package HitScan does not exist
+1	cannot assign a value to final variable goalSelector
+1	cannot assign a value to final variable targetSelector
+1	package AnimationController does not exist
+1	getGravity() in AcidSprayEntity cannot override getGravity() in Entity
+1	teleportTo(double,double,double) in FollowerEntity cannot override teleportTo(double,doubl
+1	no suitable method found for of(Item,CompoundTag)
+1	method toJson in class Serializer cannot be applied to given types;
+1	package NMDocs does not exist
+1	visit(RootNode) in ThordTreeVisitor clashes with visit(StringToken) in ThordTreeVisitor
+1	method addBlockBreakParticles in interface BlockPlacementPreview cannot be applied to give
+1	type argument Container is not within bounds of type-variable I
+1	method canBurn in class AbstractFurnaceBlockEntity cannot be applied to given types;
+1	constructor BloodNetworkManager in class BloodNetworkManager cannot be applied to given ty
+1	no suitable constructor found for MobEffectInstance(MobEffect,int)
+
+SYMBOLS
+53	variable super
+41	method getSurgeryRobot()
+40	variable MeatModels
+31	class ImplantManagerScreenHandler
+31	variable NMEntities
+30	variable MeatlibStorageUtil
+30	variable ItemTransport
+27	class Properties
+25	class MeatRecipeSerialiser
+25	class BlockApiCache
+25	class NodePos
+25	variable ParamCodecs
+24	class LazyBlockApiCache
+23	class RegistryRecipeInput
+23	class Comment
+22	class TrackedValue
+22	class RedstoneMode
+21	class LarkdownContent
+21	method toNbt(CompoundTag)
+21	variable NMrecipeTypes
+20	variable MeatLibCodecs
+20	variable BlockApiCache
+20	variable EntityRendererRegistry
+20	variable BERenderUtils
+19	class FluidPipeBlockEntity
+18	class RecipeOutput
+18	class ScreenReady
+18	variable ScreenReady
+18	variable StorageUtil
+18	variable FluidVariantRendering
+17	class SimpleFluidRenderHandler
+17	method readNbt(CompoundTag)
+16	class StorageUtil
+16	class AbstractBloodAcceptor
+16	method openNested()
+16	variable blockEntity
+16	variable NMParticles
+16	variable hand
+16	method checkType(BlockEntityType<T>,BlockEntityType<CAP#1>,(world1,po[...]ick(),
+15	class MeatRecipeType
+15	class ItemTransport
+15	class NMEmiPlugin
+15	variable CONFIG
+15	variable renderLevel
+14	class NeepBusConfig
+14	class FluidPipe
+14	method renderBorder(GuiGraphics,int,int,int,int,int,int)
+14	variable entity
+14	variable PLCBlocks
+14	variable LOGGER
+14	variable DIR_TO_CONNECTION
+14	method writeNbt(CompoundTag)
+14	variable NMEmiPlugin
+13	class MeatgunModule
+13	class BERenderUtils
+13	class NMParticles
+13	variable ItemStorage
+13	method fromNbt(CompoundTag)
+13	method toNbt()
+13	variable vsUtil
+13	variable Easing
+13	variable MeatRecipeProvider
+12	class EntityRecipeInput
+12	class RecipeFunction
+12	class RenderContext
+12	class EncasedBlockEntity
+12	class BlockFluidPipeVertex
+12	class NMrecipeTypes
+12	class SerializedName
+12	method getId()
+12	method vertex(Matrix4f,float,float,float)
+12	method getDeltaFrameTime()
+12	method getNbt()
+12	method value(int)
+11	class RecordParamCodec
+11	class LazySupplier
+11	class ParamCodecs
+11	variable RecordParamCodec
+11	variable InputInterceptorsClient
+11	variable ETHEREAL_FUEL

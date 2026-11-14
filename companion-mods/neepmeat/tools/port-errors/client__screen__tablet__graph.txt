@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/tablet/graph/GraphData.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/tablet/graph/GraphData.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/tablet/graph/GraphData.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/tablet/graph/GraphData.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/tablet/graph/GraphData.java:90: error: cannot find symbol

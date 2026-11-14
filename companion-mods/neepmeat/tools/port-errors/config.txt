@@ -1,0 +1,96 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:16: error: package folk.sisby.kaleido.api does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:17: error: package folk.sisby.kaleido.lib.quiltconfig.api.annotations does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:18: error: package folk.sisby.kaleido.lib.quiltconfig.api.annotations does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:19: error: package folk.sisby.kaleido.lib.quiltconfig.api.annotations does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:20: error: package folk.sisby.kaleido.lib.quiltconfig.api.values does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:28: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:40: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:54: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:64: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:76: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:88: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:99: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:108: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:116: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:124: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:135: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:146: error: package folk.sisby.kaleido.lib.quiltconfig.api.ReflectiveConfig does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:154: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:157: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:149: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:138: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:141: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:127: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:119: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:111: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:102: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:94: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:82: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:34: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:26: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:86: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:97: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:106: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:114: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:122: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:133: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:144: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:152: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:153: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:156: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:148: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:137: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:140: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:126: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:129: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:118: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:110: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:101: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:90: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:93: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:81: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:66: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:56: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:45: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:30: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:33: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:34: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:46: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:57: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:82: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:102: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:111: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:119: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:127: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:138: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:141: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:149: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:154: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/config/NMConfig.java:157: error: cannot find symbol

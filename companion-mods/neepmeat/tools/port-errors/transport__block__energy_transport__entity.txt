@@ -1,0 +1,8 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:26: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:41: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/entity/VascularConduitBlockEntity.java:47: error: method does not override or implement a method from a supertype

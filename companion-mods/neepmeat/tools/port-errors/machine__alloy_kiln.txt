@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:104: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/alloy_kiln/AlloyKilnBlock.java:170: error: cannot find symbol

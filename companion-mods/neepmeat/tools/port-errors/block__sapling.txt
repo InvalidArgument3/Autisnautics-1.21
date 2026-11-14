@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/sapling/BloodBubbleTreeGenerator.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/sapling/BloodBubbleTreeGenerator.java:22: error: cannot find symbol

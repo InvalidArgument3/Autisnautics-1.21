@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "neepmeat:polished_metal_bricks",
+    "neepmeat:polished_metal_bricks_stairs",
+    "neepmeat:polished_metal_bricks_slab",
+    "neepmeat:polished_metal_bricks_wall",
+    "neepmeat:polished_metal_small_bricks",
+    "neepmeat:polished_metal_small_bricks_stairs",
+    "neepmeat:polished_metal_small_bricks_slab",
+    "neepmeat:polished_metal_small_bricks_wall",
+    "neepmeat:polished_metal",
+    "neepmeat:polished_metal_stairs",
+    "neepmeat:polished_metal_slab",
+    "neepmeat:polished_metal_wall",
+    "neepmeat:blue_polished_metal",
+    "neepmeat:blue_polished_metal_stairs",
+    "neepmeat:blue_polished_metal_slab",
+    "neepmeat:blue_polished_metal_wall",
+    "neepmeat:rusty_metal",
+    "neepmeat:rusty_metal_stairs",
+    "neepmeat:rusty_metal_slab",
+    "neepmeat:rusty_metal_wall",
+    "neepmeat:rusty_metal_sheet",
+    "neepmeat:rusty_metal_sheet_stairs",
+    "neepmeat:rusty_metal_sheet_slab",
+    "neepmeat:rusty_metal_sheet_wall",
+    "neepmeat:browne_block",
+    "neepmeat:browne_block_stairs",
+    "neepmeat:browne_block_slab",
+    "neepmeat:browne_block_wall"
+  ]
+}

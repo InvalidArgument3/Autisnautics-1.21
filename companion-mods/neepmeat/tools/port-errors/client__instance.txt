@@ -1,0 +1,25 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:15: error: package com.neep.meatlib.client.flw does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:16: error: package com.neep.meatlib.client.flw does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:19: error: package dev.engine_room.flywheel.api.visualization does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:20: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:21: error: package dev.engine_room.flywheel.lib.instance does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:22: error: package dev.engine_room.flywheel.lib.visual does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:42: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:47: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:56: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:61: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:98: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:107: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/instance/SkywormVisual.java:110: error: cannot find symbol

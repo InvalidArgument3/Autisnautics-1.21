@@ -1,0 +1,28 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:5: error: package com.neep.meatlib.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:6: error: package com.neep.meatweapons does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:7: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:8: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:9: error: package com.neep.meatweapons.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:10: error: package com.neep.meatweapons.init does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:11: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:12: error: package com.neep.meatweapons.particle does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:87: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:90: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:151: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:157: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:160: error: method finalizeSpawn in class Mob cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:168: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:170: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:201: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:206: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:263: error: package HitScan does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:216: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:217: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:219: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:233: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:259: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:259: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:259: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:267: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/path_legion/PathSoldierEntity.java:273: error: cannot find symbol

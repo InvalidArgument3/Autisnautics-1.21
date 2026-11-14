@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/vat/VatControllerBlock.java:42: error: constructor BaseHorFacingBlock in class BaseHorFacingBlock cannot be applied to given types;

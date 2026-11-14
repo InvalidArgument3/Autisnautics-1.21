@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "cfi",
+    " o "
+  ],
+  "key": {
+    "o": {
+      "item": "neepmeat:copper_coil"
+    },
+    "c": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "neepmeat:integration_charge_crude"
+    },
+    "f": {
+      "tag": "neepmeat:charnel_substrate"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "neepmeat:internal_components",
+    "count": 4,
+    "id": "neepmeat:internal_components"
+  }
+}

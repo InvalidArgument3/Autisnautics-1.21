@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:37: error: TransposerBlock is not abstract and does not override abstract method isConnected(Level,BlockPos,BlockState,Direction) in ItemPipe
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:44: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:50: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:56: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:59: error: no suitable constructor found for PipeConnections(Direction)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:62: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/item_transport/machine/TransposerBlock.java:74: error: method does not override or implement a method from a supertype

@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/enlightenment/EnlightenmentUtil.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/enlightenment/EnlightenmentUtil.java:50: error: incompatible types: CAP#1 cannot be converted to EnlightenmentManager

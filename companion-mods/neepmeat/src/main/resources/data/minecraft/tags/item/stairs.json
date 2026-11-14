@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "neepmeat:polished_metal_bricks_stairs",
+    "neepmeat:polished_metal_small_bricks_stairs",
+    "neepmeat:polished_metal_stairs",
+    "neepmeat:blue_polished_metal_stairs",
+    "neepmeat:rusty_metal_stairs",
+    "neepmeat:rusty_metal_sheet_stairs",
+    "neepmeat:white_rough_concrete_stairs",
+    "neepmeat:grey_rough_concrete_stairs",
+    "neepmeat:yellow_rough_concrete_stairs",
+    "neepmeat:red_rough_concrete_stairs",
+    "neepmeat:blue_rough_concrete_stairs",
+    "neepmeat:green_rough_concrete_stairs",
+    "neepmeat:yellow_tiles_stairs",
+    "neepmeat:caution_block_stairs",
+    "neepmeat:dirty_red_tiles_stairs",
+    "neepmeat:dirty_white_tiles_stairs",
+    "neepmeat:sandy_bricks_stairs",
+    "neepmeat:meat_steel_block_stairs",
+    "neepmeat:asbestos_stairs",
+    "neepmeat:asbestos_tile_stairs",
+    "neepmeat:corrugated_asbestos_stairs",
+    "neepmeat:asbestos_shingle_stairs",
+    "neepmeat:bloody_bricks_stairs",
+    "neepmeat:bloody_tiles_stairs",
+    "neepmeat:reinforced_glass_stairs",
+    "neepmeat:browne_block_stairs",
+    "neepmeat:blood_bubble_planks_stairs"
+  ]
+}

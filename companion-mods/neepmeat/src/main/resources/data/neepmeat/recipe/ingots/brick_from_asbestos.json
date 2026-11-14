@@ -1,0 +1,16 @@
+{
+  "type": "neepmeat:alloy_smelting",
+  "input1": {
+    "resource": "neepmeat:asbestos",
+    "amount": 1
+  },
+  "input2": {
+    "resource": "minecraft:sand",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:bricks",
+    "amount": 1
+  },
+  "processtime": 200
+}

@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:16: error: package com.neep.meatweapons.implant does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:17: error: package com.neep.meatweapons.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:31: error: no interface expected here
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:87: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:31: error: ItemImplantManager is not abstract and does not override abstract method writeToNbt(CompoundTag) in Component
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:93: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/implant/item/ItemImplantManager.java:95: error: cannot find symbol

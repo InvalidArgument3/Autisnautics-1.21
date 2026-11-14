@@ -1,0 +1,32 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:18: error: package com.neep.neepbus.block.entity does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:21: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:27: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:31: error: package net.fabricmc.fabric.api.screenhandler.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:33: error: package net.fabricmc.fabric.api.transfer.v1.fluid does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:54: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:262: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:103: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:145: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:230: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:233: error: package FluidTransport does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:237: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:240: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:243: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:251: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:257: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/fluid_rationer/FluidRationerBlockEntity.java:261: error: method does not override or implement a method from a supertype

@@ -1,0 +1,36 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:17: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:18: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:19: error: package com.neep.meatweapons.client.meatgun.animation does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:20: error: package com.neep.meatweapons.component does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:21: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:22: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:23: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:31: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:123: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:38: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:37: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:54: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:59: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:69: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:73: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:82: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:86: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:114: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:117: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/animation/DrillPhageRayHoldMeatgunAnimation.java:122: error: method does not override or implement a method from a supertype

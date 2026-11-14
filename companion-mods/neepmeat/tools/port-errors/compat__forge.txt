@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/forge/GeoItemFabric.java:5: error: package net.fabricmc.loader.api does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/forge/GeoItemFabric.java:6: error: package software.bernie.geckolib.animatable does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/forge/GeoItemFabric.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/forge/GeoItemFabric.java:17: error: cannot find symbol

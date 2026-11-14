@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:sandy_bricks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "neepmeat:sandy_bricks_stairs",
+    "id": "neepmeat:sandy_bricks_stairs"
+  },
+  "show_notification": true
+}

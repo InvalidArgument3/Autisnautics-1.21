@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/block/energy_transport/PowerEmitterBlock.java:44: error: cannot find symbol

@@ -1,0 +1,32 @@
+{
+  "type": "neepmeat:ball_mill",
+  "input": {
+    "resource": "neepmeat:crushed_ore",
+    "amount": 1,
+    "data": {
+      "ore_item": "minecraft:raw_gold"
+    }
+  },
+  "output": [
+    {
+      "resource": "neepmeat:ore_dust",
+      "amount": 1,
+      "data": {
+        "ore_item": "minecraft:raw_gold"
+      }
+    },
+    {
+      "resource": "neepmeat:ore_dust",
+      "amount": 1,
+      "data": {
+        "ore_item": "minecraft:raw_gold"
+      },
+      "chance": 0.2
+    },
+    {
+      "resource": "minecraft:redstone",
+      "amount": 1,
+      "chance": 0.2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:56: error: incompatible types: CompoundTag cannot be converted to Provider
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:59: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:73: error: method toStack in record ItemVariant cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:77: error: incompatible types: CompoundTag cannot be converted to Provider
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:79: error: no suitable method found for of(Item,CompoundTag)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:106: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:110: error: method toJson in class Serializer cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:114: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/item/util/TransformingTools.java:116: error: cannot find symbol

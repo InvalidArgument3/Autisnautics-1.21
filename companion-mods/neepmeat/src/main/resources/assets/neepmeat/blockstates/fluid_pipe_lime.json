@@ -1,0 +1,68 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {"up": "true", "north": "true"},
+          {"up": "true", "east": "true"},
+          {"up": "true", "south": "true"},
+          {"up": "true", "west": "true"},
+
+          {"down": "true", "north": "true"},
+          {"down": "true", "east": "true"},
+          {"down": "true", "south": "true"},
+          {"down": "true", "west": "true"},
+
+          {"north": "true", "east": "true"},
+          {"north": "true", "west": "true"},
+
+          {"south": "true", "east": "true"},
+          {"south": "true", "west": "true"},
+
+          {"north": "false", "east": "false", "south": "false", "west": "false","up": "false", "down": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/rusty_pipe/pipe_centre"
+      }
+    },
+
+    {
+      "when": {
+        "OR": [
+          {"north": "true", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"},
+          {"north": "true", "south": "false", "up": "false", "down": "false", "east": "false", "west": "false"},
+          {"north": "false", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/rusty_pipe/pipe_centre_ns"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "true"},
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "false", "west": "true"},
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/rusty_pipe/pipe_centre_ew"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"north": "false", "south": "false", "up": "true", "down": "true", "east": "false", "west": "false"},
+          {"north": "false", "south": "false", "up": "true", "down": "false", "east": "false", "west": "false"},
+          {"north": "false", "south": "false", "up": "false", "down": "true", "east": "false", "west": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/rusty_pipe/pipe_centre_ns",
+        "x": 90
+      }
+    }
+  ]
+}

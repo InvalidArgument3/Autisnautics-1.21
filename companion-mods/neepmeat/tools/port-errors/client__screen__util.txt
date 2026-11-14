@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/util/BeigeResultSlotWidget.java:36: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/screen/util/BeigeResultSlotWidget.java:41: error: cannot find symbol

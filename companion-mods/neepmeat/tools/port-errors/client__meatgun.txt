@@ -1,0 +1,12 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:16: error: package com.neep.meatweapons.client.renderer.meatgun does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:17: error: package com.neep.meatweapons.component does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:40: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:43: error: incompatible types: ResourceLocation cannot be converted to ModelResourceLocation
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:46: error: package DrillChassisItem does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:47: error: incompatible types: ResourceLocation cannot be converted to ModelResourceLocation
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/meatgun/ReciprocatingDrillHeadRenderer.java:54: error: cannot find symbol

@@ -1,0 +1,32 @@
+{
+  "type": "neepmeat:ball_mill",
+  "input": {
+    "resource": "neepmeat:crushed_ore",
+    "amount": 1,
+    "data": {
+      "ore_item": "minecraft:raw_iron"
+    }
+  },
+  "output": [
+    {
+      "resource": "neepmeat:ore_dust",
+      "amount": 1,
+      "data": {
+        "ore_item": "minecraft:raw_iron"
+      }
+    },
+    {
+      "resource": "neepmeat:ore_dust",
+      "amount": 1,
+      "data": {
+        "ore_item": "minecraft:raw_iron"
+      },
+      "chance": 0.2
+    },
+    {
+      "resource": "minecraft:flint",
+      "amount": 1,
+      "chance": 0.1
+    }
+  ]
+}

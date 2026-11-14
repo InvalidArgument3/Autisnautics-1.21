@@ -1,0 +1,18 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:17: error: package me.shedaniel.rei.api.common.category does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:18: error: package me.shedaniel.rei.api.common.display.basic does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:19: error: package me.shedaniel.rei.api.common.entry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:20: error: package me.shedaniel.rei.api.common.util does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:44: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:49: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:37: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:37: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:37: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:54: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/display/EnlighteningDisplay.java:62: error: cannot find symbol

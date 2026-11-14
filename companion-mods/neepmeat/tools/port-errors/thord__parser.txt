@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/ThordMacro.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/ThordMacro.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/parser/ThordMacro.java:84: error: cannot find symbol

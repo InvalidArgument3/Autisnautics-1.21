@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:meat_steel_block"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:meat_steel_block_slab",
+    "id": "neepmeat:meat_steel_block_slab"
+  },
+  "show_notification": true
+}

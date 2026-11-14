@@ -1,0 +1,9 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:6: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:7: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:13: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:14: error: package net.fabricmc.fabric.api.transfer.v1.item does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:32: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:80: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/instruction/inventory/FindSlotInstruction.java:108: error: cannot find symbol

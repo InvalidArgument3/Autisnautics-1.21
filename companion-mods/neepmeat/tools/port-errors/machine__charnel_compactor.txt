@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/charnel_compactor/CharnelCompactorBlock.java:77: error: cannot find symbol

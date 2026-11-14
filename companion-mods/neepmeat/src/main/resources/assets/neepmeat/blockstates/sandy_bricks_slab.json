@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "neepmeat:block/sandy_bricks_slab"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "neepmeat:block/sandy_bricks_slab"
+    },
+    "type=top,waterlogged=false": {
+      "model": "neepmeat:block/sandy_bricks_slab_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "neepmeat:block/sandy_bricks_slab_top"
+    },
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/sandy_bricks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/sandy_bricks"
+    }
+  }
+}

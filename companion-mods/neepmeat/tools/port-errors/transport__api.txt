@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:19: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:64: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:70: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/api/FluidTransportConstants.java:93: error: cannot find symbol

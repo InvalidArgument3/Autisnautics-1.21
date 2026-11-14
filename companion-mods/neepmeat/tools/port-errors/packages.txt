@@ -1,0 +1,18 @@
+# missing packages after the Yarn, resource, and reference-map pass
+
+Combined-tree errors: 3854 before, 3773 after.
+
+0	net.minecraft.client.render
+0	net.fabricmc.fabric.api.resource
+0	org.apache.commons.collections4.map
+0	com.neep.meatlib.transfer
+2	net.fabricmc.fabric.api.networking.v1
+
+10	net.fabricmc.fabric.api.event.registry
+6	net.fabricmc.api
+6	net.fabricmc.fabric.api.registry
+6	net.fabricmc.fabric.api.object.builder.v1.block
+6	net.fabricmc.fabric.api.object.builder.v1.block.entity
+5	net.fabricmc.loader.api
+5	FuelRegistry
+4	software.bernie.geckolib.animatable.client

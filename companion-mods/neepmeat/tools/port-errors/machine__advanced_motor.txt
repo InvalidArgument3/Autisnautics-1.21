@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorBlock.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorBlock.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorBlock.java:75: error: incompatible types: invalid method reference
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorBlock.java:83: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/advanced_motor/AdvancedMotorBlock.java:89: error: cannot find symbol

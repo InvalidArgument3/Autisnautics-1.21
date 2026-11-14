@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:browne_block"
+  },
+  "result": {
+    "id": "neepmeat:browne_block_wall",
+    "item": "neepmeat:browne_block_wall",
+    "count": 1
+  }
+}

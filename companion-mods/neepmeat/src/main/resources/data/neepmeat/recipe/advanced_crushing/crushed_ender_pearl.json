@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "resource": "minecraft:ender_pearl",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:crushed_ender_pearl",
+    "amount": 4
+  },
+  "experience": 0,
+  "processtime": 40
+}

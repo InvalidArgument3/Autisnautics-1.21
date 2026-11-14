@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/plc/PLCClient.java:19: error: package net.fabricmc.fabric.api.client.item.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/plc/PLCClient.java:28: error: package ItemTooltipCallback does not exist

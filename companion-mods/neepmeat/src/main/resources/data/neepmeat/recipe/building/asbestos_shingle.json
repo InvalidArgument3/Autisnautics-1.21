@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aa ",
+    "aa "
+  ],
+  "key": {
+    "a": {
+      "item": "neepmeat:corrugated_asbestos"
+    }
+  },
+  "result": {
+    "item": "neepmeat:asbestos_shingle",
+    "count": 4,
+    "id": "neepmeat:asbestos_shingle"
+  }
+}

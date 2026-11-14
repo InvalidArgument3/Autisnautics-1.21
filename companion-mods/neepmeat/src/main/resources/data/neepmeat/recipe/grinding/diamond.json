@@ -1,0 +1,17 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "tag": "c:diamond_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:diamond",
+    "amount": 1
+  },
+  "extra": {
+    "resource": "minecraft:diamond",
+    "amount": 1
+  },
+  "experience": 5,
+  "processtime": 50
+}

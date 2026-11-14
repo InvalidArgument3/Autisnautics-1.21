@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "neepmeat:polished_metal"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "neepmeat:polished_metal"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "result": {
+    "item": "neepmeat:reinforced_glass",
+    "count": 4,
+    "id": "neepmeat:reinforced_glass"
+  }
+}

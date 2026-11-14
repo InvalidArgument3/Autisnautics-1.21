@@ -1,0 +1,30 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:15: error: package net.fabricmc.fabric.api.renderer.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:16: error: package net.fabricmc.fabric.api.renderer.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:17: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:18: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:19: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:20: error: package net.fabricmc.fabric.api.renderer.v1.mesh does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:21: error: package net.fabricmc.fabric.api.renderer.v1.model does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:22: error: package net.fabricmc.fabric.api.renderer.v1.render does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:66: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:83: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:166: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:213: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:23: error: package net.minecraft.client.render.model does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:52: error: ScaffoldTopModel is not abstract and does not override abstract method bake(ModelBaker,Function<Material,TextureAtlasSprite>,ModelState) in UnbakedModel
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:111: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:120: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:120: error: package RendererAccess does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:122: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:123: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:131: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:146: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:159: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:165: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/block/ScaffoldTopModel.java:212: error: method does not override or implement a method from a supertype

@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:rose_bush",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:red_dye",
+    "min": 3,
+    "max": 4
+  },
+  "processtime": 20
+}

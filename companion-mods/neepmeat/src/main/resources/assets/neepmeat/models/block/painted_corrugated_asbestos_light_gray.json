@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "neepmeat:block/painted_corrugated_asbestos_light_gray"
+  }
+}

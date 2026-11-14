@@ -1,0 +1,6 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:60: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:61: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:97: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/entity/worm/WormBiteGoal.java:98: error: cannot find symbol

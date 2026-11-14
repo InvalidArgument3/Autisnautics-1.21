@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/GuideReloadEvent.java:15: error: package net.fabricmc.fabric.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/GuideReloadEvent.java:16: error: package net.fabricmc.fabric.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/GuideReloadEvent.java:20: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/guide/GuideReloadEvent.java:20: error: cannot find symbol

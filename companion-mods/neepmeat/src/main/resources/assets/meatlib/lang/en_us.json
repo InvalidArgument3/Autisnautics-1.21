@@ -1,0 +1,10 @@
+{
+  "tooltip.meatlib.shift_for_info": "§7Hold §fSHIFT§7 for more info",
+
+  "subtitles.meatlib.ui_beep": "UI beep",
+  "subtitles.meatlib.wrench.click": "Wrench use",
+  "subtitles.meatlib.wrench_click": "Wrench Use",
+  "subtitles.meatlib.plc_select": "UI Beep 1",
+  "subtitles.meatlib.plc_select_block": "UI Beep 2",
+  "subtitles.meatlib.click": "Click"
+}

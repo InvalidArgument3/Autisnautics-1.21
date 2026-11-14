@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/component/PlayerCompressedAirComponent.java:58: error: cannot find symbol

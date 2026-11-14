@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:ball_mill",
+  "input": {
+    "resource": "neepmeat:asbestos",
+    "amount": 1
+  },
+  "output": [
+    {
+      "resource": "neepmeat:asbestos_dust",
+      "amount": 1
+    },
+    {
+      "resource": "neepmeat:asbestos_dust",
+      "amount": 1,
+      "chance": 0.25
+    }
+  ]
+}

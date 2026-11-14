@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:rusty_metal_sheet"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:rusty_metal_sheet_wall",
+    "id": "neepmeat:rusty_metal_sheet_wall"
+  },
+  "show_notification": true
+}

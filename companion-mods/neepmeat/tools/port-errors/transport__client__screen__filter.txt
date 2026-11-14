@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/filter/ItemFilterWidget.java:90: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/screen/filter/ItemFilterWidget.java:103: error: method getTooltipLines in class ItemStack cannot be applied to given types;
