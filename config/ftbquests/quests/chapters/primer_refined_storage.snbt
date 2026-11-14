@@ -63,8 +63,8 @@
 				id: "6209000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6409000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "refinedstorage:quartz_enriched_iron" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 2.30d
+			y: -0.46d
 		}
 		{
-			dependencies: ["6409010000000000"]
+			dependencies: ["6409000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -179,11 +179,11 @@
 				item: { count: 1, id: "refinedstorage:quartz_enriched_copper" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -2.30d
+			y: 0.46d
 		}
 		{
-			dependencies: ["6409020000000000"]
+			dependencies: ["6409010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -237,8 +237,8 @@
 				item: { count: 1, id: "refinedstorage:machine_casing" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -4.34d
+			y: -1.80d
 		}
 		{
 			dependencies: ["6409030000000000"]
@@ -295,11 +295,11 @@
 				item: { count: 1, id: "refinedstorage:cable" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -6.91d
+			y: -1.38d
 		}
 		{
-			dependencies: ["6409040000000000"]
+			dependencies: ["6409010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -355,11 +355,14 @@
 				item: { count: 1, id: "refinedstorage:storage_housing" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -0.92d
+			y: -4.61d
 		}
 		{
-			dependencies: ["6409050000000000"]
+			dependencies: [
+				"6409010000000000"
+				"6409030000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -412,8 +415,8 @@
 					item: { count: 1, id: "kubejs:fluix_casing" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 0.69d
+			y: -7.02d
 		}
 		{
 			dependencies: [
@@ -474,8 +477,8 @@
 					item: { count: 1, id: "refinedstorage:controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 4.99d
+			y: 4.99d
 		}
 		{
 			dependencies: [
@@ -534,12 +537,12 @@
 					item: { count: 1, id: "refinedstorage:construction_core" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 6.65d
+			y: -6.65d
 		}
 		{
 			dependencies: [
-				"6600000000000085"
+				"6600000000000084"
 				"28DAED70768C6A50"
 			]
 			extraquests_calendar: {
@@ -594,12 +597,12 @@
 					item: { count: 1, id: "refinedstorage:destruction_core" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 9.22d
+			y: -1.83d
 		}
 		{
 			dependencies: [
-				"6600000000000086"
+				"6600000000000084"
 				"28DAED70768C6A50"
 			]
 			extraquests_calendar: {
@@ -654,12 +657,12 @@
 					item: { count: 1, id: "refinedstorage:pattern" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 8.68d
+			y: 3.60d
 		}
 		{
 			dependencies: [
-				"6600000000000087"
+				"6600000000000084"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -717,12 +720,12 @@
 					item: { count: 1, id: "refinedstorage:grid" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 1.83d
+			y: 9.22d
 		}
 		{
 			dependencies: [
-				"6600000000000088"
+				"6600000000000084"
 				"28DAED70768C6A50"
 			]
 			extraquests_calendar: {
@@ -777,12 +780,12 @@
 					item: { count: 1, id: "refinedstorage:wireless_transmitter" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 18.0d
+			x: -7.82d
+			y: 5.22d
 		}
 		{
 			dependencies: [
-				"6600000000000088"
+				"6600000000000087"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -838,12 +841,12 @@
 					item: { count: 1, id: "refinedstorage:autocrafter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 10.86d
+			y: 4.50d
 		}
 		{
 			dependencies: [
-				"660000000000008A"
+				"6600000000000084"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -901,13 +904,13 @@
 					item: { count: 1, id: "refinedstorage:disk_drive" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: -5.22d
+			y: 7.82d
 		}
 
 		{
 			dependencies: [
-				"660000000000008B"
+				"6409050000000000"
 				"28DAED70768C6A50"
 			]
 			extraquests_calendar: {
@@ -962,8 +965,8 @@
 					item: { count: 1, id: "refinedstorage:1k_storage_part" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -2.70d
+			y: -6.51d
 		}
 		{
 			dependencies: [
@@ -1022,12 +1025,12 @@
 					item: { count: 1, id: "refinedstorage:1k_storage_disk" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: -5.22d
+			y: -7.82d
 		}
 		{
 			dependencies: [
-				"66000000000000E1"
+				"66000000000000E0"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1083,8 +1086,8 @@
 					item: { count: 1, id: "refinedstorage:4k_storage_part" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 25.5d
+			x: -1.83d
+			y: -9.22d
 		}
 		{
 			dependencies: [
@@ -1144,8 +1147,8 @@
 					item: { count: 1, id: "refinedstorage:16k_storage_part" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 27.0d
+			x: -2.29d
+			y: -11.52d
 		}
 		{
 			dependencies: [
@@ -1207,8 +1210,8 @@
 					item: { count: 1, id: "refinedstorage:64k_storage_part" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 28.5d
+			x: -2.75d
+			y: -13.83d
 		}
 		{
 			dependencies: [
@@ -1270,12 +1273,13 @@
 					item: { count: 1, id: "refinedstorage:64k_storage_disk" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 30.0d
+			x: -3.21d
+			y: -16.13d
 		}
 		{
 			dependencies: [
 				"6600000000000086"
+				"6409040000000000"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1323,12 +1327,13 @@
 					item: { count: 1, id: "refinedstorage:importer" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 31.5d
+			x: 0.00d
+			y: -11.75d
 		}
 		{
 			dependencies: [
-				"66000000000000E6"
+				"6600000000000085"
+				"6409040000000000"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1384,12 +1389,13 @@
 					item: { count: 1, id: "refinedstorage:exporter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 33.0d
+			x: -3.74d
+			y: -12.32d
 		}
 		{
 			dependencies: [
-				"66000000000000E7"
+				"6600000000000085"
+				"6600000000000086"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1445,11 +1451,12 @@
 					item: { count: 1, id: "refinedstorage:external_storage" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 34.5d
+			x: 10.36d
+			y: -5.54d
 		}
 		{
 			dependencies: [
+				"6600000000000088"
 				"6600000000000087"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
@@ -1508,12 +1515,12 @@
 					item: { count: 1, id: "refinedstorage:pattern_grid" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 36.0d
+			x: 7.45d
+			y: 9.08d
 		}
 		{
 			dependencies: [
-				"66000000000000E9"
+				"6600000000000088"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1569,8 +1576,8 @@
 					item: { count: 1, id: "refinedstorage:crafting_grid" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 37.5d
+			x: 2.29d
+			y: 11.52d
 		}
 		{
 			dependencies: [
@@ -1630,12 +1637,12 @@
 					item: { count: 1, id: "refinedstorage:autocrafting_monitor" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 39.0d
+			x: 13.83d
+			y: 2.75d
 		}
 		{
 			dependencies: [
-				"66000000000000EB"
+				"660000000000008A"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1691,12 +1698,14 @@
 					item: { count: 1, id: "refinedstorage:autocrafter_manager" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 40.5d
+			x: 11.72d
+			y: 7.83d
 		}
 		{
 			dependencies: [
-				"66000000000000EC"
+				"6409050000000000"
+				"6600000000000085"
+				"6600000000000086"
 				"28DAED70768C6A50"
 			]
 			extraquests_calendar: {
@@ -1743,12 +1752,12 @@
 					item: { count: 1, id: "refinedstorage:disk_interface" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 42.0d
+			x: 7.30d
+			y: -9.21d
 		}
 		{
 			dependencies: [
-				"66000000000000ED"
+				"6409030000000000"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1804,12 +1813,13 @@
 					item: { count: 1, id: "refinedstorage:detector" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 43.5d
+			x: -5.86d
+			y: -3.92d
 		}
 		{
 			dependencies: [
-				"66000000000000EE"
+				"6600000000000088"
+				"6600000000000089"
 				"28DAED70768C6A50"
 				"2B8F1D804107EB8C"
 			]
@@ -1867,8 +1877,8 @@
 					item: { count: 1, id: "refinedstorage:wireless_grid" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 45.0d
+			x: -4.50d
+			y: 10.86d
 		}
 
 	]

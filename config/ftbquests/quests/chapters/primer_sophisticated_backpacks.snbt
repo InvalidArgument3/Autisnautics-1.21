@@ -63,8 +63,8 @@
 				id: "620B000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640B000000000000"]
@@ -121,8 +121,8 @@
 				item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 2.21d
+			y: -0.80d
 		}
 		{
 			dependencies: ["640B010000000000"]
@@ -171,11 +171,11 @@
 				item: { count: 1, id: "sophisticatedbackpacks:pickup_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -4.42d
+			y: -1.61d
 		}
 		{
-			dependencies: ["640B020000000000"]
+			dependencies: ["640B010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -221,11 +221,11 @@
 				item: { count: 1, id: "sophisticatedbackpacks:crafting_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -2.35d
+			y: -4.07d
 		}
 		{
-			dependencies: ["640B030000000000"]
+			dependencies: ["640B010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -279,11 +279,11 @@
 				item: { count: 1, id: "sophisticatedbackpacks:filter_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 0.82d
+			y: -4.63d
 		}
 		{
-			dependencies: ["640B040000000000"]
+			dependencies: ["640B010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -331,11 +331,11 @@
 				item: { count: 1, id: "sophisticatedbackpacks:smelting_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 3.60d
+			y: -3.02d
 		}
 		{
-			dependencies: ["640B050000000000"]
+			dependencies: ["640B000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -388,8 +388,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:iron_backpack" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -2.21d
+			y: 0.80d
 		}
 		{
 			dependencies: ["660000000000000B"]
@@ -445,8 +445,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:gold_backpack" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -4.42d
+			y: 1.61d
 		}
 		{
 			dependencies: ["660000000000000C"]
@@ -504,8 +504,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:diamond_backpack" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -6.62d
+			y: 2.41d
 		}
 		{
 			dependencies: ["660000000000000D"]
@@ -555,8 +555,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:netherite_backpack" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -8.83d
+			y: 3.21d
 		}
 
 		{
@@ -613,8 +613,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:stack_upgrade_starter_tier" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 4.70d
+			y: 0.00d
 		}
 		{
 			dependencies: ["66000000000000B6"]
@@ -670,8 +670,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:stack_upgrade_tier_1" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 7.05d
+			y: 0.00d
 		}
 		{
 			dependencies: ["66000000000000B7"]
@@ -729,8 +729,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:stack_upgrade_tier_4" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 9.40d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640B010000000000"]
@@ -778,11 +778,11 @@
 					item: { count: 1, id: "sophisticatedbackpacks:feeding_upgrade" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 19.5d
+			x: 3.60d
+			y: 3.02d
 		}
 		{
-			dependencies: ["66000000000000B8"]
+			dependencies: ["66000000000000B9"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -829,8 +829,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:advanced_feeding_upgrade" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 5.40d
+			y: 4.53d
 		}
 		{
 			dependencies: ["640B010000000000"]
@@ -886,8 +886,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:magnet_upgrade" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 22.5d
+			x: 0.82d
+			y: 4.63d
 		}
 		{
 			dependencies: ["640B040000000000"]
@@ -935,8 +935,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:void_upgrade" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: 1.22d
+			y: -6.94d
 		}
 		{
 			dependencies: ["640B010000000000"]
@@ -992,8 +992,8 @@
 					item: { count: 1, id: "sophisticatedbackpacks:tank_upgrade" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 25.5d
+			x: -2.35d
+			y: 4.07d
 		}
 
 	]

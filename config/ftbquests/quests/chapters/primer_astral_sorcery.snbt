@@ -63,8 +63,8 @@
 				id: "6211000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6411000000000000"]
@@ -113,8 +113,8 @@
 				item: { count: 1, id: "astralsorcery:aquamarine" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.44d
+			y: 1.40d
 		}
 		{
 			dependencies: ["6411010000000000"]
@@ -171,8 +171,8 @@
 				item: { count: 1, id: "astralsorcery:rock_crystal" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -2.65d
+			y: 0.06d
 		}
 		{
 			dependencies: ["6411020000000000"]
@@ -221,8 +221,8 @@
 				item: { count: 1, id: "astralsorcery:parchment" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -2.65d
+			y: -1.73d
 		}
 		{
 			dependencies: ["6411030000000000"]
@@ -271,8 +271,8 @@
 				item: { count: 1, id: "astralsorcery:glass_lens" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -1.67d
+			y: -3.19d
 		}
 		{
 			dependencies: ["6411040000000000"]
@@ -329,8 +329,8 @@
 				item: { count: 1, id: "astralsorcery:starmetal_ingot" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -0.01d
+			y: -4.00d
 		}
 		{
 			dependencies: ["6411050000000000"]
@@ -381,11 +381,11 @@
 				item: { count: 1, id: "astralsorcery:astrolabe" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 2.03d
+			y: -3.92d
 		}
 		{
-			dependencies: ["6411060000000000"]
+			dependencies: ["6411000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -438,11 +438,11 @@
 					item: { count: 1, id: "astralsorcery:cave_illuminator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -4.50d
+			y: 0.00d
 		}
 		{
-			dependencies: ["66000000000000A4"]
+			dependencies: ["6411060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -489,8 +489,8 @@
 					item: { count: 1, id: "astralsorcery:infuser" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 4.04d
+			y: -2.67d
 		}
 		{
 			dependencies: ["66000000000000A5"]
@@ -540,8 +540,8 @@
 					item: { count: 1, id: "astralsorcery:attunement_altar" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 5.18d
+			y: -0.69d
 		}
 		{
 			dependencies: ["66000000000000A6"]
@@ -591,8 +591,8 @@
 					item: { count: 1, id: "astralsorcery:celestial_gateway" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 5.33d
+			y: 1.75d
 		}
 
 	]

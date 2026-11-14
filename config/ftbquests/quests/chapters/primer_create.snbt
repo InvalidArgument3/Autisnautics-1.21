@@ -63,8 +63,8 @@
 				id: "6201000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6401000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "create:sand_paper" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.35d
+			y: -0.14d
 		}
 		{
-			dependencies: ["6401010000000000"]
+			dependencies: ["6401000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -171,11 +171,11 @@
 				item: { count: 1, id: "create:goggles" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -3.94d
+			y: -0.74d
 		}
 		{
-			dependencies: ["6401020000000000"]
+			dependencies: ["6401090000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -221,8 +221,8 @@
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.69d
+			y: 0.29d
 		}
 		{
 			dependencies: ["6401030000000000"]
@@ -271,8 +271,8 @@
 				item: { count: 1, id: "create:shaft" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 5.21d
+			y: 4.75d
 		}
 		{
 			dependencies: ["6401040000000000"]
@@ -321,11 +321,11 @@
 				item: { count: 1, id: "create:cogwheel" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.25d
+			y: -10.26d
 		}
 		{
-			dependencies: ["6401050000000000"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -379,11 +379,11 @@
 				item: { count: 1, id: "create:hand_crank" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 3.12d
+			y: -8.87d
 		}
 		{
-			dependencies: ["6401060000000000"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -431,8 +431,8 @@
 				item: { count: 1, id: "create:water_wheel" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 10.5d
+			x: 4.84d
+			y: -9.72d
 		}
 		{
 			extraquests_calendar: {
@@ -444,7 +444,7 @@
 				weekday: 1
 				weekly: 0b
 			}
-			dependencies: ["6401020000000000"]
+			dependencies: ["6401000000000000"]
 			icon: {
 				id: "architects_palette:algal_brick"
 			}
@@ -480,8 +480,8 @@
 					item: { count: 1, id: "architects_palette:algal_brick" }
 					type: "item"
 			}]
-			x: 2.5d
-			y: 3.0d
+			x: 2.35d
+			y: 0.14d
 		}
 
 		{
@@ -530,8 +530,8 @@
 					item: { count: 1, id: "create:andesite_casing" }
 					type: "item"
 			}]
-			x: 2.5d
-			y: 4.5d
+			x: -3.89d
+			y: -5.88d
 		}
 
 		{
@@ -588,11 +588,11 @@
 					item: { count: 1, id: "create:large_cogwheel" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.61d
+			y: -11.92d
 		}
 		{
-			dependencies: ["660000000000002F"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -645,11 +645,11 @@
 					item: { count: 1, id: "create:gearbox" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 5.19d
+			y: -7.84d
 		}
 		{
-			dependencies: ["6600000000000030"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -702,11 +702,11 @@
 					item: { count: 1, id: "create:clutch" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 6.83d
+			y: -7.98d
 		}
 		{
-			dependencies: ["6600000000000031"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -759,11 +759,11 @@
 					item: { count: 1, id: "create:gearshift" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 6.95d
+			y: -6.33d
 		}
 		{
-			dependencies: ["6600000000000032"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -816,11 +816,11 @@
 					item: { count: 1, id: "create:encased_chain_drive" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 8.57d
+			y: -6.07d
 		}
 		{
-			dependencies: ["6600000000000033"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -873,11 +873,11 @@
 					item: { count: 1, id: "create:millstone" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 8.28d
+			y: -4.45d
 		}
 		{
-			dependencies: ["6600000000000034"]
+			dependencies: ["6401040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -930,11 +930,11 @@
 					item: { count: 1, id: "create:belt_connector" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 10.10d
+			y: -3.91d
 		}
 		{
-			dependencies: ["6600000000000035"]
+			dependencies: ["6401030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -987,8 +987,8 @@
 					item: { count: 1, id: "create:basin" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -6.93d
+			y: 1.30d
 		}
 		{
 			dependencies: [
@@ -1041,12 +1041,12 @@
 					item: { count: 1, id: "create:encased_fan" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: -8.96d
+			y: -2.85d
 		}
 		{
 			dependencies: [
-				"6600000000000037"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1101,12 +1101,12 @@
 					item: { count: 1, id: "create:mechanical_press" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 25.5d
+			x: -9.80d
+			y: -4.51d
 		}
 		{
 			dependencies: [
-				"6600000000000038"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1153,12 +1153,12 @@
 					item: { count: 1, id: "create:mechanical_mixer" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 27.0d
+			x: -7.99d
+			y: -4.95d
 		}
 		{
 			dependencies: [
-				"6600000000000039"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1205,12 +1205,12 @@
 					item: { count: 1, id: "create:mechanical_drill" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 28.5d
+			x: -8.18d
+			y: -6.58d
 		}
 		{
 			dependencies: [
-				"660000000000003A"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1257,12 +1257,12 @@
 					item: { count: 1, id: "create:mechanical_saw" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 30.0d
+			x: -6.54d
+			y: -6.75d
 		}
 		{
 			dependencies: [
-				"660000000000003B"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1317,12 +1317,12 @@
 					item: { count: 1, id: "create:andesite_funnel" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 31.5d
+			x: -6.33d
+			y: -8.38d
 		}
 		{
 			dependencies: [
-				"660000000000003C"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1377,12 +1377,12 @@
 					item: { count: 1, id: "create:mechanical_harvester" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 33.0d
+			x: -4.70d
+			y: -8.14d
 		}
 		{
 			dependencies: [
-				"660000000000003D"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1437,12 +1437,12 @@
 					item: { count: 1, id: "create:mechanical_plough" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 34.5d
+			x: -4.09d
+			y: -9.67d
 		}
 		{
 			dependencies: [
-				"660000000000003E"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1489,12 +1489,12 @@
 					item: { count: 1, id: "create:contraption_controls" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 36.0d
+			x: -2.57d
+			y: -9.04d
 		}
 		{
 			dependencies: [
-				"660000000000003F"
+				"64010A0000000001"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -1541,12 +1541,12 @@
 					item: { count: 1, id: "create:cart_assembler" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 37.5d
+			x: -1.61d
+			y: -10.38d
 		}
 		{
 			dependencies: [
-				"6600000000000040"
+				"6401040000000000"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1603,12 +1603,12 @@
 					item: { count: 1, id: "create:copper_backtank" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 39.0d
+			x: 9.12d
+			y: -2.29d
 		}
 		{
 			dependencies: [
-				"6600000000000041"
+				"6401040000000000"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1663,12 +1663,12 @@
 					item: { count: 1, id: "create:spout" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 40.5d
+			x: 10.71d
+			y: -1.33d
 		}
 		{
 			dependencies: [
-				"6600000000000042"
+				"6401040000000000"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1715,12 +1715,12 @@
 					item: { count: 1, id: "create:item_drain" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 42.0d
+			x: 9.40d
+			y: 0.00d
 		}
 		{
 			dependencies: [
-				"6600000000000043"
+				"6401040000000000"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1775,12 +1775,12 @@
 					item: { count: 1, id: "create:hose_pulley" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 43.5d
+			x: 10.42d
+			y: 1.29d
 		}
 		{
 			dependencies: [
-				"6600000000000044"
+				"6401040000000000"
 				"0E0535849D8D9279"
 			]
 			extraquests_calendar: {
@@ -1835,12 +1835,12 @@
 					item: { count: 1, id: "create:smart_fluid_pipe" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 45.0d
+			x: 9.12d
+			y: 2.29d
 		}
 		{
 			dependencies: [
-				"6600000000000045"
+				"6401040000000000"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -1897,12 +1897,12 @@
 					item: { count: 1, id: "create:controls" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 46.5d
+			x: 10.12d
+			y: 3.92d
 		}
 		{
 			dependencies: [
-				"6600000000000046"
+				"6401040000000000"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -1949,12 +1949,12 @@
 					item: { count: 1, id: "create:track_station" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 48.0d
+			x: 8.28d
+			y: 4.45d
 		}
 		{
 			dependencies: [
-				"6600000000000047"
+				"6401040000000000"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -2009,12 +2009,12 @@
 					item: { count: 1, id: "create:track_signal" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 49.5d
+			x: 8.57d
+			y: 6.07d
 		}
 		{
 			dependencies: [
-				"6600000000000048"
+				"6401040000000000"
 				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
@@ -2069,12 +2069,12 @@
 					item: { count: 1, id: "create:schedule" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 51.0d
+			x: 6.95d
+			y: 6.33d
 		}
 		{
 			dependencies: [
-				"6600000000000049"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2131,11 +2131,12 @@
 					item: { count: 1, id: "create:brass_hand" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 52.5d
+			x: 8.09d
+			y: 9.45d
 		}
 		{
 			dependencies: [
+				"64010A0000000001"
 				"660000000000004A"
 				"3F45DFEF31838A00"
 				"7FC4D1E69377271D"
@@ -2184,12 +2185,12 @@
 					item: { count: 1, id: "create:deployer" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 54.0d
+			x: 9.71d
+			y: -7.33d
 		}
 		{
 			dependencies: [
-				"660000000000004B"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2246,12 +2247,12 @@
 					item: { count: 1, id: "create:mechanical_crafter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 55.5d
+			x: 6.00d
+			y: 9.05d
 		}
 		{
 			dependencies: [
-				"660000000000004C"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2306,12 +2307,12 @@
 					item: { count: 1, id: "create:steam_engine" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 57.0d
+			x: 4.19d
+			y: 8.41d
 		}
 		{
 			dependencies: [
-				"660000000000004D"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2366,12 +2367,12 @@
 					item: { count: 1, id: "create:rotation_speed_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 58.5d
+			x: 3.49d
+			y: 9.91d
 		}
 		{
 			dependencies: [
-				"660000000000004E"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2426,12 +2427,12 @@
 					item: { count: 1, id: "create:sequenced_gearshift" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 60.0d
+			x: 2.01d
+			y: 9.18d
 		}
 		{
 			dependencies: [
-				"660000000000004F"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2486,12 +2487,12 @@
 					item: { count: 1, id: "create:brass_tunnel" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 61.5d
+			x: 0.97d
+			y: 10.46d
 		}
 		{
 			dependencies: [
-				"6600000000000050"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2546,12 +2547,12 @@
 					item: { count: 1, id: "create:smart_chute" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 63.0d
+			x: -0.29d
+			y: 9.40d
 		}
 		{
 			dependencies: [
-				"6600000000000051"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2606,12 +2607,12 @@
 					item: { count: 1, id: "create:clockwork_bearing" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 64.5d
+			x: -1.61d
+			y: 10.38d
 		}
 		{
 			dependencies: [
-				"6600000000000052"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2666,12 +2667,12 @@
 					item: { count: 1, id: "create:elevator_pulley" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 66.0d
+			x: -2.57d
+			y: 9.04d
 		}
 		{
 			dependencies: [
-				"6600000000000053"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2726,12 +2727,12 @@
 					item: { count: 1, id: "create:display_link" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 67.5d
+			x: -4.28d
+			y: 10.12d
 		}
 		{
 			dependencies: [
-				"6600000000000054"
+				"6401040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -2788,13 +2789,13 @@
 					item: { count: 1, id: "create:mechanical_arm" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 69.0d
+			x: -4.70d
+			y: 8.14d
 		}
 
 		{
 			dependencies: [
-				"6600000000000047"
+				"6600000000000038"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -2849,11 +2850,14 @@
 					item: { count: 1, id: "create:track" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 70.5d
+			x: -11.35d
+			y: -5.22d
 		}
 		{
-			dependencies: ["64010A0000000001"]
+			dependencies: [
+				"64010A0000000001"
+				"660000000000002F"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2906,11 +2910,11 @@
 					item: { count: 1, id: "create:chain_conveyor" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 72.0d
+			x: -2.59d
+			y: -13.86d
 		}
 		{
-			dependencies: ["64010A0000000001"]
+			dependencies: ["6401000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2963,12 +2967,12 @@
 					item: { count: 1, id: "create:schematicannon" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 73.5d
+			x: -5.22d
+			y: 0.32d
 		}
 		{
 			dependencies: [
-				"6600000000000055"
+				"6401040000000000"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3025,8 +3029,8 @@
 					item: { count: 1, id: "create:stock_link" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 75.0d
+			x: -6.90d
+			y: 8.05d
 		}
 		{
 			dependencies: [
@@ -3085,12 +3089,12 @@
 					item: { count: 1, id: "create:stock_ticker" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 76.5d
+			x: -7.45d
+			y: 9.86d
 		}
 		{
 			dependencies: [
-				"66000000000000D6"
+				"6401040000000000"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3139,12 +3143,12 @@
 					item: { count: 1, id: "create:factory_gauge" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 78.0d
+			x: -7.32d
+			y: 5.89d
 		}
 		{
 			dependencies: [
-				"66000000000000D7"
+				"6401040000000000"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3199,12 +3203,12 @@
 					item: { count: 1, id: "create:packager" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 79.5d
+			x: -9.17d
+			y: 5.68d
 		}
 		{
 			dependencies: [
-				"66000000000000D8"
+				"6401040000000000"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3259,12 +3263,12 @@
 					item: { count: 1, id: "create:repackager" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 81.0d
+			x: -8.54d
+			y: 3.93d
 		}
 		{
 			dependencies: [
-				"66000000000000D9"
+				"6401040000000000"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3319,12 +3323,13 @@
 					item: { count: 1, id: "create:package_frogport" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 82.5d
+			x: -10.01d
+			y: 3.18d
 		}
 		{
 			dependencies: [
-				"66000000000000DA"
+				"66000000000000D5"
+				"66000000000000D8"
 				"7BE0F4512FE4936D"
 			]
 			extraquests_calendar: {
@@ -3381,8 +3386,8 @@
 					item: { count: 1, id: "create:redstone_requester" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 84.0d
+			x: -9.12d
+			y: 7.81d
 		}
 
 	]

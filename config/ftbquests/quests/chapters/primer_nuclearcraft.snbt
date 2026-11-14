@@ -69,8 +69,8 @@
 				id: "6208000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6408000000000000"]
@@ -127,8 +127,8 @@
 				item: { count: 1, id: "nuclearcraftneohaul:copper_solenoid" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.44d
+			y: 1.40d
 		}
 		{
 			dependencies: ["6408010000000000"]
@@ -177,8 +177,8 @@
 				item: { count: 1, id: "nuclearcraftneohaul:basic_plating" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -2.65d
+			y: 0.06d
 		}
 		{
 			dependencies: ["6408020000000000"]
@@ -235,8 +235,8 @@
 				item: { count: 1, id: "nuclearcraftneohaul:radiation_badge" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -2.65d
+			y: -1.73d
 		}
 		{
 			dependencies: ["6408030000000000"]
@@ -293,8 +293,8 @@
 				item: { count: 1, id: "nuclearcraftneohaul:manufactory" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -1.67d
+			y: -3.19d
 		}
 		{
 			dependencies: ["6408040000000000"]
@@ -353,12 +353,12 @@
 				item: { count: 1, id: "nuclearcraftneohaul:alloy_furnace" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 0.23d
+			y: -4.05d
 		}
 		{
 			dependencies: [
-				"6408050000000000"
+				"6408000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -405,11 +405,11 @@
 					item: { count: 1, id: "nuclearcraftneohaul:cobblestone_generator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -4.50d
+			y: 0.00d
 		}
 		{
-			dependencies: ["660000000000008C"]
+			dependencies: ["6408000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -462,12 +462,12 @@
 					item: { count: 1, id: "nuclearcraftneohaul:decay_generator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -6.10d
+			y: 0.00d
 		}
 		{
 			dependencies: [
-				"660000000000008D"
+				"6408050000000000"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -516,8 +516,8 @@
 					item: { count: 1, id: "nuclearcraftneohaul:fission_reactor_casing" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.54d
+			y: -3.73d
 		}
 		{
 			dependencies: [
@@ -578,8 +578,8 @@
 					item: { count: 1, id: "nuclearcraftneohaul:solid_fuel_fission_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 4.43d
+			y: -2.21d
 		}
 		{
 			dependencies: [
@@ -640,8 +640,8 @@
 					item: { count: 1, id: "nuclearcraftneohaul:turbine_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 5.37d
+			y: 0.25d
 		}
 
 	]

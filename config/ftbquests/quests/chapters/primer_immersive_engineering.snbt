@@ -63,8 +63,8 @@
 				id: "6206000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6406000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "immersiveengineering:hammer" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 2.23d
+			y: -0.73d
 		}
 		{
-			dependencies: ["6406010000000000"]
+			dependencies: ["6406000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -179,11 +179,11 @@
 				item: { count: 1, id: "immersiveengineering:wirecutter" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -2.23d
+			y: 0.73d
 		}
 		{
-			dependencies: ["6406020000000000"]
+			dependencies: ["6406010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -229,11 +229,11 @@
 				item: { count: 1, id: "immersiveengineering:cokebrick" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 2.76d
+			y: -3.80d
 		}
 		{
-			dependencies: ["6406030000000000"]
+			dependencies: ["6600000000000072"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -287,11 +287,11 @@
 				item: { count: 1, id: "immersiveengineering:conveyor_basic" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -11.17d
+			y: -3.63d
 		}
 		{
-			dependencies: ["6406040000000000"]
+			dependencies: ["6406010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -347,11 +347,11 @@
 				item: { count: 1, id: "immersiveengineering:component_iron" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -2.76d
+			y: 3.80d
 		}
 		{
-			dependencies: ["6406050000000000"]
+			dependencies: ["6406030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -404,11 +404,11 @@
 					item: { count: 1, id: "immersiveengineering:coke_oven" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 4.14d
+			y: -5.70d
 		}
 		{
-			dependencies: ["6600000000000070"]
+			dependencies: ["6406010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -461,11 +461,11 @@
 					item: { count: 1, id: "immersiveengineering:blast_furnace" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.00d
+			y: 4.70d
 		}
 		{
-			dependencies: ["6600000000000071"]
+			dependencies: ["6600000000000070"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -518,8 +518,8 @@
 					item: { count: 1, id: "immersiveengineering:treated_wood_horizontal" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.90d
+			y: -8.94d
 		}
 		{
 			dependencies: ["6600000000000072"]
@@ -577,11 +577,11 @@
 					item: { count: 1, id: "immersiveengineering:metal_press" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 6.91d
+			y: -9.51d
 		}
 		{
-			dependencies: ["6600000000000073"]
+			dependencies: ["6600000000000075"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -634,11 +634,11 @@
 					item: { count: 1, id: "immersiveengineering:capacitor_lv" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 9.67d
+			y: -13.31d
 		}
 		{
-			dependencies: ["6600000000000074"]
+			dependencies: ["6600000000000073"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -691,12 +691,13 @@
 					item: { count: 1, id: "immersiveengineering:coil_lv" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 8.29d
+			y: -11.41d
 		}
 		{
 			dependencies: [
-				"6600000000000075"
+				"6600000000000074"
+				"6406050000000000"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -753,8 +754,8 @@
 					item: { count: 1, id: "immersiveengineering:light_engineering" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 18.80d
+			y: 0.00d
 		}
 		{
 			dependencies: [
@@ -813,12 +814,12 @@
 					item: { count: 1, id: "immersiveengineering:heavy_engineering" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 0.00d
+			y: -21.15d
 		}
 		{
 			dependencies: [
-				"6600000000000077"
+				"6600000000000076"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -873,8 +874,8 @@
 					item: { count: 1, id: "immersiveengineering:capacitor_mv" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 20.11d
+			y: -6.54d
 		}
 		{
 			dependencies: [
@@ -933,12 +934,12 @@
 					item: { count: 1, id: "immersiveengineering:capacitor_hv" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: 22.35d
+			y: -7.26d
 		}
 		{
 			dependencies: [
-				"6600000000000079"
+				"6600000000000077"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -993,12 +994,13 @@
 					item: { count: 1, id: "immersiveengineering:diesel_generator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: -13.81d
+			y: -19.01d
 		}
 		{
 			dependencies: [
-				"660000000000007A"
+				"6600000000000077"
+				"66000000000000DD"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -1055,8 +1057,8 @@
 					item: { count: 1, id: "immersiveengineering:arc_furnace" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 25.5d
+			x: 24.32d
+			y: -7.90d
 		}
 		{
 			dependencies: [
@@ -1117,8 +1119,8 @@
 					item: { count: 1, id: "immersiveengineering:excavator" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 27.0d
+			x: 13.81d
+			y: -19.01d
 		}
 
 		{
@@ -1167,11 +1169,11 @@
 					item: { count: 1, id: "immersiveengineering:component_steel" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 28.5d
+			x: 0.00d
+			y: 7.05d
 		}
 		{
-			dependencies: ["660000000000007B"]
+			dependencies: ["6600000000000070"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1224,8 +1226,8 @@
 					item: { count: 1, id: "immersiveengineering:graphite_electrode" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 30.0d
+			x: 5.53d
+			y: 7.60d
 		}
 		{
 			dependencies: [
@@ -1284,8 +1286,8 @@
 					item: { count: 1, id: "immersiveengineering:component_electronic" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 31.5d
+			x: 20.11d
+			y: 6.54d
 		}
 		{
 			dependencies: [
@@ -1346,8 +1348,8 @@
 					item: { count: 1, id: "immersiveengineering:component_electronic_adv" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 33.0d
+			x: 22.35d
+			y: 7.26d
 		}
 
 	]

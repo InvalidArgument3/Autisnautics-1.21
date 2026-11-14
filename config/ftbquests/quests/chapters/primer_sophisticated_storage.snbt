@@ -63,8 +63,8 @@
 				id: "620A000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640A000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "sophisticatedstorage:barrel" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.27d
+			y: -0.61d
 		}
 		{
-			dependencies: ["640A010000000000"]
+			dependencies: ["640A000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -179,8 +179,8 @@
 				item: { count: 1, id: "sophisticatedstorage:upgrade_base" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.00d
+			y: 2.35d
 		}
 		{
 			dependencies: ["640A020000000000"]
@@ -237,11 +237,11 @@
 				item: { count: 1, id: "sophisticatedstorage:pickup_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.54d
+			y: 1.22d
 		}
 		{
-			dependencies: ["640A030000000000"]
+			dependencies: ["640A020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -295,11 +295,11 @@
 				item: { count: 1, id: "sophisticatedstorage:storage_tool" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 3.32d
+			y: 3.32d
 		}
 		{
-			dependencies: ["640A040000000000"]
+			dependencies: ["640A020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -347,11 +347,11 @@
 				item: { count: 1, id: "sophisticatedstorage:hopper_upgrade" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 1.22d
+			y: 4.54d
 		}
 		{
-			dependencies: ["640A050000000000"]
+			dependencies: ["640A000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -404,8 +404,8 @@
 					item: { count: 1, id: "sophisticatedstorage:iron_chest" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 0.61d
+			y: -2.27d
 		}
 		{
 			dependencies: ["660000000000000F"]
@@ -461,8 +461,8 @@
 					item: { count: 1, id: "sophisticatedstorage:gold_chest" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -3.32d
+			y: -3.32d
 		}
 		{
 			dependencies: ["6600000000000010"]
@@ -520,11 +520,11 @@
 					item: { count: 1, id: "sophisticatedstorage:diamond_chest" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -4.99d
+			y: -4.99d
 		}
 		{
-			dependencies: ["6600000000000011"]
+			dependencies: ["660000000000000F"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -579,8 +579,8 @@
 					item: { count: 1, id: "sophisticatedstorage:controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 3.32d
+			y: -3.32d
 		}
 		{
 			dependencies: ["6600000000000012"]
@@ -636,8 +636,8 @@
 					item: { count: 1, id: "sophisticatedstorage:storage_link" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 1.82d
+			y: -6.81d
 		}
 		{
 			dependencies: ["6600000000000012"]
@@ -693,8 +693,8 @@
 					item: { count: 1, id: "sophisticatedstorage:storage_io" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 16.5d
+			x: 4.99d
+			y: -4.99d
 		}
 		{
 			dependencies: ["660000000000000F"]
@@ -750,8 +750,8 @@
 					item: { count: 1, id: "sophisticatedstorage:decoration_table" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 18.0d
+			x: -1.22d
+			y: -4.54d
 		}
 		{
 			dependencies: ["6600000000000011"]
@@ -801,8 +801,8 @@
 					item: { count: 1, id: "sophisticatedstorage:netherite_chest" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: -6.65d
+			y: -6.65d
 		}
 
 		{
@@ -859,8 +859,8 @@
 					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_1" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: -1.22d
+			y: 4.54d
 		}
 		{
 			dependencies: ["66000000000000BE"]
@@ -918,8 +918,8 @@
 					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_5" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -1.82d
+			y: 6.81d
 		}
 		{
 			dependencies: ["640A020000000000"]
@@ -975,8 +975,8 @@
 					item: { count: 1, id: "sophisticatedstorage:feeding_upgrade" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 24.0d
+			x: -3.32d
+			y: 3.32d
 		}
 		{
 			dependencies: ["6600000000000012"]
@@ -1032,8 +1032,8 @@
 					item: { count: 1, id: "sophisticatedstorage:compacting_upgrade" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 25.5d
+			x: 6.81d
+			y: -1.82d
 		}
 		{
 			dependencies: ["640A020000000000"]
@@ -1089,8 +1089,8 @@
 					item: { count: 1, id: "sophisticatedstorage:void_upgrade" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 27.0d
+			x: -4.54d
+			y: 1.22d
 		}
 
 	]

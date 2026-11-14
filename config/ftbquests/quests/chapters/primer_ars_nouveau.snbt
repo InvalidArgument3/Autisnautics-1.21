@@ -63,8 +63,8 @@
 				id: "620E000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640E000000000000"]
@@ -113,8 +113,8 @@
 				item: { count: 1, id: "ars_nouveau:blue_archwood_log" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 2.12d
+			y: -1.02d
 		}
 		{
 			dependencies: ["640E010000000000"]
@@ -171,11 +171,11 @@
 				item: { count: 1, id: "ars_nouveau:archwood_planks" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -4.23d
+			y: -2.04d
 		}
 		{
-			dependencies: ["640E020000000000"]
+			dependencies: ["640E010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -221,8 +221,8 @@
 				item: { count: 1, id: "ars_nouveau:imbuement_chamber" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.70d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640E030000000000"]
@@ -271,8 +271,8 @@
 				item: { count: 1, id: "ars_nouveau:source_gem" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 7.05d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640E040000000000"]
@@ -321,11 +321,11 @@
 				item: { count: 1, id: "ars_nouveau:sourcestone" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -2.09d
+			y: -9.16d
 		}
 		{
-			dependencies: ["640E050000000000"]
+			dependencies: ["640E040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -373,11 +373,11 @@
 				item: { count: 1, id: "ars_nouveau:novice_spell_book" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 5.86d
+			y: -7.35d
 		}
 		{
-			dependencies: ["640E060000000000"]
+			dependencies: ["640E000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -430,11 +430,11 @@
 					item: { count: 1, id: "ars_nouveau:magebloom_crop" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -2.12d
+			y: 1.02d
 		}
 		{
-			dependencies: ["6600000000000095"]
+			dependencies: ["640E040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -487,8 +487,8 @@
 					item: { count: 1, id: "ars_nouveau:source_jar" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 9.40d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6600000000000096"]
@@ -544,11 +544,14 @@
 					item: { count: 1, id: "ars_nouveau:relay" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 11.75d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6600000000000097"]
+			dependencies: [
+				"640E040000000000"
+				"640E050000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -603,11 +606,11 @@
 					item: { count: 1, id: "ars_nouveau:enchanting_apparatus" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 7.33d
+			y: -9.19d
 		}
 		{
-			dependencies: ["6600000000000098"]
+			dependencies: ["640E040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -660,11 +663,14 @@
 					item: { count: 1, id: "ars_nouveau:mob_jar" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 16.5d
+			x: -2.09d
+			y: 9.16d
 		}
 		{
-			dependencies: ["6600000000000098"]
+			dependencies: [
+				"640E060000000000"
+				"6600000000000098"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -711,8 +717,8 @@
 					item: { count: 1, id: "ars_nouveau:spell_turret" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 8.79d
+			y: -11.02d
 		}
 
 	]

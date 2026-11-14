@@ -63,8 +63,8 @@
 				id: "6207000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6407000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "immersivepetroleum:upgrade_rudders" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.21d
+			y: -0.80d
 		}
 		{
-			dependencies: ["6407010000000000"]
+			dependencies: ["6407000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -171,11 +171,11 @@
 				item: { count: 1, id: "immersivepetroleum:projector" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -1.17d
+			y: -2.04d
 		}
 		{
-			dependencies: ["6407020000000000"]
+			dependencies: ["6407000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -221,11 +221,11 @@
 				item: { count: 1, id: "immersivepetroleum:auto_lubricator" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 0.41d
+			y: -2.31d
 		}
 		{
-			dependencies: ["6407030000000000"]
+			dependencies: ["6407000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -271,11 +271,11 @@
 				item: { count: 1, id: "immersivepetroleum:upgrade_paddles" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 1.80d
+			y: -1.51d
 		}
 		{
-			dependencies: ["6407040000000000"]
+			dependencies: ["6407000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -323,12 +323,12 @@
 				item: { count: 1, id: "immersivepetroleum:asphalt" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.89d
+			y: 0.00d
 		}
 		{
 			dependencies: [
-				"6407050000000000"
+				"6407000000000000"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -383,8 +383,8 @@
 					item: { count: 1, id: "immersivepetroleum:derrick" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -0.41d
+			y: 2.31d
 		}
 		{
 			dependencies: [
@@ -443,8 +443,8 @@
 					item: { count: 1, id: "immersivepetroleum:pumpjack" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -0.82d
+			y: 4.63d
 		}
 		{
 			dependencies: [
@@ -503,12 +503,12 @@
 					item: { count: 1, id: "immersivepetroleum:oiltank" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 5.40d
+			y: 4.53d
 		}
 		{
 			dependencies: [
-				"660000000000007F"
+				"660000000000007E"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -563,12 +563,12 @@
 					item: { count: 1, id: "immersivepetroleum:flarestack" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 13.5d
+			x: 1.22d
+			y: 6.94d
 		}
 		{
 			dependencies: [
-				"660000000000007F"
+				"660000000000007E"
 				"3A63A48662F352CB"
 			]
 			extraquests_calendar: {
@@ -623,11 +623,12 @@
 					item: { count: 1, id: "immersivepetroleum:coker_unit" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -3.52d
+			y: 6.11d
 		}
 		{
 			dependencies: [
+				"660000000000007E"
 				"6600000000000081"
 				"3A63A48662F352CB"
 			]
@@ -685,8 +686,8 @@
 					item: { count: 1, id: "immersivepetroleum:distillation_tower" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: -3.21d
+			y: 8.83d
 		}
 
 	]

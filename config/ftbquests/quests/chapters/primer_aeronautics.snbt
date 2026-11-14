@@ -63,8 +63,8 @@
 				id: "6202000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6402000000000000"]
@@ -113,11 +113,14 @@
 				item: { count: 1, id: "aeronautics:blue_envelope" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.17d
+			y: -0.90d
 		}
 		{
-			dependencies: ["6402010000000000"]
+			dependencies: [
+				"6402000000000000"
+				"7FC4D1E69377271D"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,11 +166,11 @@
 				item: { count: 1, id: "aeronautics:steam_vent" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 2.17d
+			y: 0.90d
 		}
 		{
-			dependencies: ["6402020000000000"]
+			dependencies: ["6402000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -213,11 +216,14 @@
 				item: { count: 1, id: "aeronautics:aviators_goggles" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -0.90d
+			y: -2.17d
 		}
 		{
-			dependencies: ["6402030000000000"]
+			dependencies: [
+				"6402000000000000"
+				"3F45DFEF31838A00"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -263,11 +269,14 @@
 				item: { count: 1, id: "aeronautics:adjustable_burner" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.17d
+			y: -0.90d
 		}
 		{
-			dependencies: ["6402040000000000"]
+			dependencies: [
+				"6402000000000000"
+				"667F4F686A45EF3E"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -315,11 +324,11 @@
 				item: { count: 1, id: "aeronautics:propeller_bearing" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 0.96d
+			y: 2.31d
 		}
 		{
-			dependencies: ["6402050000000000"]
+			dependencies: ["6402000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -364,8 +373,8 @@
 					item: { count: 1, id: "aeronautics:levitite" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 0.90d
+			y: -2.17d
 		}
 		{
 			dependencies: ["660000000000006A"]
@@ -413,8 +422,8 @@
 					item: { count: 1, id: "aeronautics:levitite_blend" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 1.80d
+			y: -4.34d
 		}
 		{
 			dependencies: ["660000000000006B"]
@@ -464,12 +473,12 @@
 					item: { count: 1, id: "aeronautics:pearlescent_levitite" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.70d
+			y: -6.51d
 		}
 		{
 			dependencies: [
-				"660000000000006C"
+				"6402000000000000"
 				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
@@ -524,12 +533,12 @@
 					item: { count: 1, id: "aeronautics:andesite_propeller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -0.90d
+			y: 2.17d
 		}
 		{
 			dependencies: [
-				"660000000000006D"
+				"6402000000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -584,11 +593,12 @@
 					item: { count: 1, id: "aeronautics:gyroscopic_propeller_bearing" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -2.17d
+			y: 0.90d
 		}
 		{
 			dependencies: [
+				"660000000000006D"
 				"660000000000006E"
 				"7FC4D1E69377271D"
 			]
@@ -646,8 +656,8 @@
 					item: { count: 1, id: "aeronautics:smart_propeller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: -3.32d
+			y: 3.32d
 		}
 
 	]

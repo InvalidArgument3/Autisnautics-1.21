@@ -63,8 +63,8 @@
 				id: "6217000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6417000000000000"]
@@ -121,8 +121,8 @@
 				item: { count: 1, id: "undergarden:wigglewood_log" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -4.50d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6417010000000000"]
@@ -179,8 +179,8 @@
 				item: { count: 1, id: "undergarden:wigglewood_planks" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 5.18d
+			y: -0.69d
 		}
 		{
 			dependencies: ["6417020000000000"]
@@ -237,11 +237,11 @@
 				item: { count: 1, id: "undergarden:twistytwig" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 7.01d
+			y: -0.94d
 		}
 		{
-			dependencies: ["6417030000000000"]
+			dependencies: ["6417000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -287,8 +287,8 @@
 				item: { count: 1, id: "undergarden:depthrock" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -1.44d
+			y: 1.40d
 		}
 		{
 			dependencies: ["6417040000000000"]
@@ -345,8 +345,8 @@
 				item: { count: 1, id: "undergarden:raw_cloggrum" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -2.65d
+			y: 0.06d
 		}
 		{
 			dependencies: ["6417050000000000"]
@@ -403,8 +403,8 @@
 				item: { count: 1, id: "undergarden:cloggrum_ingot" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: -2.65d
+			y: -1.73d
 		}
 		{
 			dependencies: ["6417060000000000"]
@@ -463,11 +463,11 @@
 				item: { count: 1, id: "undergarden:cloggrum_pickaxe" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 10.5d
+			x: -1.40d
+			y: -3.39d
 		}
 		{
-			dependencies: ["6417070000000000"]
+			dependencies: ["6417040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -520,11 +520,11 @@
 					item: { count: 1, id: "undergarden:utherium_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 0.48d
+			y: -4.08d
 		}
 		{
-			dependencies: ["66000000000000B3"]
+			dependencies: ["6417040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -577,11 +577,11 @@
 					item: { count: 1, id: "undergarden:froststeel_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 2.29d
+			y: -3.83d
 		}
 		{
-			dependencies: ["66000000000000B4"]
+			dependencies: ["6417040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -636,8 +636,8 @@
 					item: { count: 1, id: "undergarden:forgotten_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 4.14d
+			y: -2.56d
 		}
 
 	]

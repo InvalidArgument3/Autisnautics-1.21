@@ -63,8 +63,8 @@
 				id: "620D000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640D000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "computercraft:monitor_normal" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.21d
+			y: -0.80d
 		}
 		{
-			dependencies: ["640D010000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -179,11 +179,11 @@
 				item: { count: 1, id: "computercraft:cable" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.41d
+			y: -2.31d
 		}
 		{
-			dependencies: ["640D020000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -237,11 +237,11 @@
 				item: { count: 1, id: "computercraft:disk_drive" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 1.80d
+			y: -1.51d
 		}
 		{
-			dependencies: ["640D030000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -287,11 +287,11 @@
 				item: { count: 1, id: "computercraft:wireless_modem_normal" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.35d
+			y: 0.00d
 		}
 		{
-			dependencies: ["640D040000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -339,11 +339,11 @@
 				item: { count: 1, id: "computercraft:turtle_normal" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.21d
+			y: 1.86d
 		}
 		{
-			dependencies: ["640D050000000000"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -396,11 +396,14 @@
 					item: { count: 1, id: "computercraft:computer_advanced" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -1.17d
+			y: -2.04d
 		}
 		{
-			dependencies: ["660000000000001E"]
+			dependencies: [
+				"640D010000000000"
+				"660000000000001E"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -453,11 +456,11 @@
 					item: { count: 1, id: "computercraft:monitor_advanced" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -3.60d
+			y: -3.02d
 		}
 		{
-			dependencies: ["660000000000001F"]
+			dependencies: ["640D020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -510,11 +513,11 @@
 					item: { count: 1, id: "computercraft:wired_modem_full" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 0.82d
+			y: -4.63d
 		}
 		{
-			dependencies: ["6600000000000020"]
+			dependencies: ["640D040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -567,11 +570,11 @@
 					item: { count: 1, id: "computercraft:wireless_modem_advanced" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 4.70d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6600000000000021"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -616,11 +619,11 @@
 					item: { count: 1, id: "computercraft:speaker" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 15.0d
+			x: 0.41d
+			y: 2.31d
 		}
 		{
-			dependencies: ["6600000000000021"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -673,11 +676,11 @@
 					item: { count: 1, id: "computercraft:printer" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 16.5d
+			x: -1.18d
+			y: 2.04d
 		}
 		{
-			dependencies: ["6600000000000021"]
+			dependencies: ["640D000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -730,12 +733,12 @@
 					item: { count: 1, id: "computercraft:redstone_relay" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: -2.21d
+			y: 0.80d
 		}
 		{
 			dependencies: [
-				"6600000000000024"
+				"6600000000000020"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -784,11 +787,14 @@
 					item: { count: 1, id: "createaddition:digital_adapter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 1.22d
+			y: -6.94d
 		}
 		{
-			dependencies: ["6600000000000025"]
+			dependencies: [
+				"640D050000000000"
+				"660000000000001E"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -843,8 +849,8 @@
 					item: { count: 1, id: "computercraft:turtle_advanced" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 3.60d
+			y: -3.02d
 		}
 
 	]

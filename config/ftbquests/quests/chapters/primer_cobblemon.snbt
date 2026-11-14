@@ -63,8 +63,8 @@
 				id: "6214000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6414000000000000"]
@@ -113,11 +113,11 @@
 				item: { count: 1, id: "cobblemon:red_apricorn" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -0.73d
+			y: -2.23d
 		}
 		{
-			dependencies: ["6414010000000000"]
+			dependencies: ["6414000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,8 +163,8 @@
 				item: { count: 1, id: "cobblemon:apricorn_log" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 2.35d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6414020000000000"]
@@ -221,11 +221,11 @@
 				item: { count: 1, id: "cobblemon:apricorn_planks" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.70d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6414030000000000"]
+			dependencies: ["6414010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -279,8 +279,8 @@
 				item: { count: 1, id: "cobblemon:poke_ball" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -1.45d
+			y: -4.47d
 		}
 		{
 			dependencies: ["6414040000000000"]
@@ -331,11 +331,11 @@
 				item: { count: 1, id: "cobblemon:pc" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.18d
+			y: -6.70d
 		}
 		{
-			dependencies: ["6414050000000000"]
+			dependencies: ["6414000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -388,11 +388,11 @@
 					item: { count: 1, id: "cobblemon:campfire_pot_red" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -1.90d
+			y: 1.38d
 		}
 		{
-			dependencies: ["66000000000000B0"]
+			dependencies: ["6414000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -437,11 +437,11 @@
 					item: { count: 1, id: "cobblemon:pasture" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.73d
+			y: 2.23d
 		}
 		{
-			dependencies: ["66000000000000B1"]
+			dependencies: ["6414050000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -496,8 +496,8 @@
 					item: { count: 1, id: "cobblemon:healing_machine" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.90d
+			y: -8.94d
 		}
 
 		{
@@ -546,8 +546,8 @@
 					item: { count: 1, id: "cobblemon:great_ball" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -5.70d
+			y: -4.14d
 		}
 		{
 			dependencies: ["66000000000000F4"]
@@ -597,8 +597,8 @@
 					item: { count: 1, id: "cobblemon:ultra_ball" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -7.60d
+			y: -5.53d
 		}
 		{
 			dependencies: ["66000000000000F5"]
@@ -648,8 +648,8 @@
 					item: { count: 1, id: "cobblemon:master_ball" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: -9.51d
+			y: -6.91d
 		}
 
 	]

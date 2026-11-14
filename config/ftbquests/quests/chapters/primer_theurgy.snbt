@@ -69,8 +69,8 @@
 				id: "6212000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6412000000000000"]
@@ -127,11 +127,11 @@
 				item: { count: 1, id: "theurgy:pyromantic_brazier" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.90d
+			y: -1.38d
 		}
 		{
-			dependencies: ["6412010000000000"]
+			dependencies: ["6412000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -177,11 +177,11 @@
 				item: { count: 1, id: "theurgy:calcination_oven" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.73d
+			y: -2.23d
 		}
 		{
-			dependencies: ["6412020000000000"]
+			dependencies: ["6412000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -235,8 +235,8 @@
 				item: { count: 1, id: "theurgy:distiller" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 2.35d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6412030000000000"]
@@ -293,11 +293,11 @@
 				item: { count: 1, id: "theurgy:sal_ammoniac_crystal" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 4.70d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6412040000000000"]
+			dependencies: ["6412000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -353,11 +353,11 @@
 				item: { count: 1, id: "theurgy:mercury_shard" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 0.73d
+			y: 2.23d
 		}
 		{
-			dependencies: ["6412050000000000"]
+			dependencies: ["6412020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -402,8 +402,8 @@
 					item: { count: 1, id: "theurgy:digestion_vat" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 1.45d
+			y: -4.47d
 		}
 		{
 			dependencies: ["660000000000009F"]
@@ -459,8 +459,8 @@
 					item: { count: 1, id: "theurgy:fermentation_vat" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 2.18d
+			y: -6.70d
 		}
 		{
 			dependencies: ["66000000000000A0"]
@@ -516,11 +516,11 @@
 					item: { count: 1, id: "theurgy:liquefaction_cauldron" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 2.90d
+			y: -8.94d
 		}
 		{
-			dependencies: ["66000000000000A1"]
+			dependencies: ["6412000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -573,11 +573,14 @@
 					item: { count: 1, id: "theurgy:reformation_target_pedestal" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 13.5d
+			x: -1.90d
+			y: 1.38d
 		}
 		{
-			dependencies: ["66000000000000A1"]
+			dependencies: [
+				"66000000000000A1"
+				"660000000000009F"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -632,8 +635,8 @@
 					item: { count: 1, id: "theurgy:incubator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 3.63d
+			y: -11.17d
 		}
 
 	]

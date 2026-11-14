@@ -63,8 +63,8 @@
 				id: "6204000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6404000000000000"]
@@ -113,11 +113,11 @@
 				item: { count: 1, id: "createdieselgenerators:wood_chip" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.17d
+			y: -0.90d
 		}
 		{
-			dependencies: ["6404010000000000"]
+			dependencies: ["6404000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,11 +163,11 @@
 				item: { count: 1, id: "createdieselgenerators:oil_barrel" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.90d
+			y: -2.17d
 		}
 		{
-			dependencies: ["6404020000000000"]
+			dependencies: ["6404000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -213,11 +213,11 @@
 				item: { count: 1, id: "createdieselgenerators:canister" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 2.17d
+			y: 0.90d
 		}
 		{
-			dependencies: ["6404030000000000"]
+			dependencies: ["6404000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -263,8 +263,8 @@
 				item: { count: 1, id: "createdieselgenerators:lighter" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -0.90d
+			y: 2.17d
 		}
 		{
 			dependencies: ["6404040000000000"]
@@ -315,11 +315,11 @@
 				item: { count: 1, id: "createdieselgenerators:engine_silencer" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 1.80d
+			y: 4.34d
 		}
 		{
-			dependencies: ["6404050000000000"]
+			dependencies: ["6404010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -372,11 +372,11 @@
 					item: { count: 1, id: "createdieselgenerators:bulk_fermenter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -4.34d
+			y: -1.80d
 		}
 		{
-			dependencies: ["660000000000005C"]
+			dependencies: ["6404040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -429,12 +429,12 @@
 					item: { count: 1, id: "createdieselgenerators:burner" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: -1.80d
+			y: 4.34d
 		}
 		{
 			dependencies: [
-				"660000000000005D"
+				"6404040000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -491,8 +491,8 @@
 					item: { count: 1, id: "createdieselgenerators:diesel_engine" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -4.34d
+			y: 1.80d
 		}
 		{
 			dependencies: [
@@ -551,12 +551,12 @@
 					item: { count: 1, id: "createdieselgenerators:large_diesel_engine" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -6.51d
+			y: 2.70d
 		}
 		{
 			dependencies: [
-				"660000000000005F"
+				"6404020000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -613,12 +613,12 @@
 					item: { count: 1, id: "createdieselgenerators:distillation_tank" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -1.80d
+			y: -4.34d
 		}
 		{
 			dependencies: [
-				"6600000000000060"
+				"6404020000000000"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -673,8 +673,8 @@
 					item: { count: 1, id: "createdieselgenerators:pumpjack_hole" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 3.32d
+			y: -3.32d
 		}
 		{
 			dependencies: [
@@ -733,12 +733,12 @@
 					item: { count: 1, id: "createdieselgenerators:pumpjack_head" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 2.70d
+			y: -6.51d
 		}
 		{
 			dependencies: [
-				"6600000000000062"
+				"6600000000000061"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -793,12 +793,12 @@
 					item: { count: 1, id: "createdieselgenerators:pumpjack_crank" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 6.51d
+			y: -2.70d
 		}
 		{
 			dependencies: [
-				"6600000000000063"
+				"660000000000005F"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -855,8 +855,8 @@
 					item: { count: 1, id: "createdieselgenerators:huge_diesel_engine" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: -8.68d
+			y: 3.60d
 		}
 
 	]

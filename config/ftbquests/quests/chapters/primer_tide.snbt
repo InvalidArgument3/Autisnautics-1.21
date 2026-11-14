@@ -63,8 +63,8 @@
 				id: "6218000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6418000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "tide:stone_fishing_rod" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.66d
+			y: -1.66d
 		}
 		{
-			dependencies: ["6418010000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -179,11 +179,11 @@
 				item: { count: 1, id: "tide:fishing_hook" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.61d
+			y: -2.27d
 		}
 		{
-			dependencies: ["6418020000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -237,8 +237,8 @@
 				item: { count: 1, id: "tide:fishing_line" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 2.20d
+			y: -2.20d
 		}
 		{
 			dependencies: ["6418030000000000"]
@@ -295,11 +295,11 @@
 				item: { count: 1, id: "tide:iron_line" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 3.32d
+			y: -3.32d
 		}
 		{
-			dependencies: ["6418040000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -345,11 +345,11 @@
 				item: { count: 1, id: "tide:bait" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.27d
+			y: -0.61d
 		}
 		{
-			dependencies: ["6418050000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -397,11 +397,11 @@
 				item: { count: 1, id: "tide:wooden_crate" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 2.17d
+			y: 1.25d
 		}
 		{
-			dependencies: ["6418060000000000"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -454,11 +454,11 @@
 					item: { count: 1, id: "tide:angling_table" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.61d
+			y: 2.27d
 		}
 		{
-			dependencies: ["6600000000000017"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -511,11 +511,11 @@
 					item: { count: 1, id: "tide:lunar_calendar" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -0.81d
+			y: 3.01d
 		}
 		{
-			dependencies: ["6600000000000018"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -568,11 +568,11 @@
 					item: { count: 1, id: "tide:weather_radio" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -1.66d
+			y: 1.66d
 		}
 		{
-			dependencies: ["6600000000000019"]
+			dependencies: ["6418060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -617,11 +617,11 @@
 					item: { count: 1, id: "tide:fish_display" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 15.0d
+			x: 3.32d
+			y: 3.32d
 		}
 		{
-			dependencies: ["6600000000000019"]
+			dependencies: ["6418000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -674,11 +674,11 @@
 					item: { count: 1, id: "tide:jelly_torch" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 16.5d
+			x: -3.01d
+			y: 0.81d
 		}
 		{
-			dependencies: ["6600000000000019"]
+			dependencies: ["6418060000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -725,8 +725,8 @@
 					item: { count: 1, id: "tide:purpur_crate" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 4.54d
+			y: 1.22d
 		}
 		{
 			dependencies: ["660000000000001C"]
@@ -776,8 +776,8 @@
 					item: { count: 1, id: "tide:obsidian_crate" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 6.81d
+			y: 1.82d
 		}
 
 		{
@@ -834,8 +834,8 @@
 					item: { count: 1, id: "tide:iron_fishing_rod" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: -3.32d
+			y: -3.32d
 		}
 		{
 			dependencies: ["66000000000000C3"]
@@ -891,11 +891,11 @@
 					item: { count: 1, id: "tide:golden_fishing_rod" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -6.81d
+			y: -1.82d
 		}
 		{
-			dependencies: ["66000000000000C4"]
+			dependencies: ["66000000000000C3"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -950,8 +950,8 @@
 					item: { count: 1, id: "tide:diamond_fishing_rod" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: -1.82d
+			y: -6.81d
 		}
 		{
 			dependencies: ["66000000000000C3"]
@@ -1007,8 +1007,8 @@
 					item: { count: 1, id: "tide:crystal_fishing_rod" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 25.5d
+			x: -4.99d
+			y: -4.99d
 		}
 		{
 			dependencies: ["6418040000000000"]
@@ -1064,11 +1064,11 @@
 					item: { count: 1, id: "tide:diamond_line" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 27.0d
+			x: 4.99d
+			y: -4.99d
 		}
 		{
-			dependencies: ["66000000000000C7"]
+			dependencies: ["66000000000000C5"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1123,8 +1123,8 @@
 					item: { count: 1, id: "tide:netherite_fishing_rod" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 28.5d
+			x: -2.43d
+			y: -9.08d
 		}
 		{
 			dependencies: ["66000000000000C4"]
@@ -1182,8 +1182,8 @@
 					item: { count: 1, id: "tide:midas_fishing_rod" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 30.0d
+			x: -9.08d
+			y: -2.43d
 		}
 
 	]

@@ -63,8 +63,8 @@
 				id: "6205000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6405000000000000"]
@@ -113,11 +113,11 @@
 				item: { count: 1, id: "create_enchantment_industry:mechanical_grindstone" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.18d
+			y: -2.04d
 		}
 		{
-			dependencies: ["6405010000000000"]
+			dependencies: ["6405000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,8 +163,8 @@
 				item: { count: 1, id: "create_enchantment_industry:experience_cake_base" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 2.04d
+			y: -1.18d
 		}
 		{
 			dependencies: ["6405020000000000"]
@@ -213,11 +213,11 @@
 				item: { count: 1, id: "create_enchantment_industry:experience_cake" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.07d
+			y: -2.35d
 		}
 		{
-			dependencies: ["6405030000000000"]
+			dependencies: ["6405000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -265,11 +265,11 @@
 				item: { count: 1, id: "create_enchantment_industry:printer" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.04d
+			y: 1.17d
 		}
 		{
-			dependencies: ["6405040000000000"]
+			dependencies: ["6405010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -322,11 +322,11 @@
 					item: { count: 1, id: "create_enchantment_industry:grindstone_drain" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 7.5d
+			x: -4.07d
+			y: -2.35d
 		}
 		{
-			dependencies: ["6600000000000065"]
+			dependencies: ["6405010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -379,8 +379,8 @@
 					item: { count: 1, id: "create_enchantment_industry:experience_hatch" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -0.00d
+			y: -4.70d
 		}
 		{
 			dependencies: ["6600000000000066"]
@@ -436,12 +436,12 @@
 					item: { count: 1, id: "create_enchantment_industry:experience_lantern" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 10.5d
+			x: -0.00d
+			y: -7.05d
 		}
 		{
 			dependencies: [
-				"6600000000000066"
+				"6405000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -496,12 +496,12 @@
 					item: { count: 1, id: "create_enchantment_industry:blaze_forger" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 0.00d
+			y: 2.35d
 		}
 		{
 			dependencies: [
-				"6600000000000068"
+				"6405000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -558,8 +558,8 @@
 					item: { count: 1, id: "create_enchantment_industry:blaze_enchanter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -2.04d
+			y: 1.18d
 		}
 
 	]

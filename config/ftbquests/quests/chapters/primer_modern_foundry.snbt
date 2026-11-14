@@ -63,8 +63,8 @@
 				id: "6213000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6413000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "modernfoundry:pattern" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -1.90d
+			y: -1.38d
 		}
 		{
-			dependencies: ["6413010000000000"]
+			dependencies: ["6413000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -171,8 +171,8 @@
 				item: { count: 1, id: "modernfoundry:grout" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 2.23d
+			y: 0.73d
 		}
 		{
 			dependencies: ["6413020000000000"]
@@ -229,11 +229,11 @@
 				item: { count: 1, id: "modernfoundry:seared_brick" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 4.47d
+			y: 1.45d
 		}
 		{
-			dependencies: ["6413030000000000"]
+			dependencies: ["6413010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -287,8 +287,8 @@
 				item: { count: 1, id: "modernfoundry:part_builder" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -4.47d
+			y: -1.45d
 		}
 		{
 			dependencies: ["6413040000000000"]
@@ -345,11 +345,11 @@
 				item: { count: 1, id: "modernfoundry:tinker_station" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: -6.70d
+			y: -2.18d
 		}
 		{
-			dependencies: ["6413050000000000"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -395,11 +395,11 @@
 				item: { count: 1, id: "modernfoundry:seared_faucet" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 0.00d
+			y: -7.05d
 		}
 		{
-			dependencies: ["6413060000000000"]
+			dependencies: ["6413000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -447,11 +447,11 @@
 				item: { count: 1, id: "modernfoundry:puny_smelting" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 10.5d
+			x: -2.23d
+			y: 0.73d
 		}
 		{
-			dependencies: ["6413070000000000"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -504,11 +504,11 @@
 					item: { count: 1, id: "modernfoundry:seared_heater" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: 4.14d
+			y: -5.70d
 		}
 		{
-			dependencies: ["6600000000000091"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -561,11 +561,14 @@
 					item: { count: 1, id: "modernfoundry:seared_melter" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 6.70d
+			y: -2.18d
 		}
 		{
-			dependencies: ["6600000000000092"]
+			dependencies: [
+				"6413030000000000"
+				"6600000000000091"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -620,8 +623,8 @@
 					item: { count: 1, id: "modernfoundry:smeltery_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 8.94d
+			y: -2.90d
 		}
 		{
 			dependencies: ["6600000000000093"]
@@ -679,12 +682,12 @@
 					item: { count: 1, id: "modernfoundry:foundry_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 8.94d
+			y: 2.90d
 		}
 
 		{
-			dependencies: ["6413050000000000"]
+			dependencies: ["6413010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -729,11 +732,11 @@
 					item: { count: 1, id: "modernfoundry:crafting_station" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: -2.76d
+			y: -3.80d
 		}
 		{
-			dependencies: ["66000000000000F0"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -786,11 +789,11 @@
 					item: { count: 1, id: "modernfoundry:modifier_worktable" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: 4.14d
+			y: 5.70d
 		}
 		{
-			dependencies: ["66000000000000F1"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -845,11 +848,11 @@
 					item: { count: 1, id: "modernfoundry:tinkers_anvil" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 0.00d
+			y: 7.05d
 		}
 		{
-			dependencies: ["66000000000000F2"]
+			dependencies: ["6413030000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -904,8 +907,8 @@
 					item: { count: 1, id: "modernfoundry:scorched_anvil" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -4.14d
+			y: 5.70d
 		}
 
 	]

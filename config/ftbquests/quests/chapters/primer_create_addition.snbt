@@ -63,11 +63,14 @@
 				id: "6203000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6403000000000000"]
+			dependencies: [
+				"6403000000000000"
+				"047FD4E54147D8F7"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -113,11 +116,14 @@
 				item: { count: 1, id: "createaddition:connector" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.21d
+			y: -0.80d
 		}
 		{
-			dependencies: ["6403010000000000"]
+			dependencies: [
+				"6403000000000000"
+				"047FD4E54147D8F7"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,11 +169,14 @@
 				item: { count: 1, id: "createaddition:large_connector" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -1.17d
+			y: -2.04d
 		}
 		{
-			dependencies: ["6403020000000000"]
+			dependencies: [
+				"6403000000000000"
+				"3F45DFEF31838A00"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -213,11 +222,11 @@
 				item: { count: 1, id: "createaddition:rolling_mill" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 2.35d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6403030000000000"]
+			dependencies: ["6403000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -273,12 +282,12 @@
 				item: { count: 1, id: "createaddition:barbed_wire" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.54d
+			y: 2.13d
 		}
 		{
 			dependencies: [
-				"6403040000000000"
+				"6403000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -333,12 +342,12 @@
 					item: { count: 1, id: "createaddition:small_light_connector" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 7.5d
+			x: 0.41d
+			y: -2.31d
 		}
 		{
 			dependencies: [
-				"6600000000000056"
+				"6403000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -393,12 +402,12 @@
 					item: { count: 1, id: "createaddition:redstone_relay" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 1.80d
+			y: -1.51d
 		}
 		{
 			dependencies: [
-				"6600000000000057"
+				"6403000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -447,12 +456,12 @@
 					item: { count: 1, id: "createaddition:electric_motor" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.41d
+			y: 2.31d
 		}
 		{
 			dependencies: [
-				"6600000000000058"
+				"6403000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -501,12 +510,12 @@
 					item: { count: 1, id: "createaddition:tesla_coil" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -1.62d
+			y: 2.81d
 		}
 		{
 			dependencies: [
-				"6600000000000059"
+				"6403000000000000"
 				"047FD4E54147D8F7"
 			]
 			extraquests_calendar: {
@@ -561,12 +570,12 @@
 					item: { count: 1, id: "createaddition:portable_energy_interface" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -2.21d
+			y: 0.80d
 		}
 		{
 			dependencies: [
-				"660000000000005A"
+				"6600000000000059"
 				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
@@ -623,8 +632,8 @@
 					item: { count: 1, id: "createaddition:modular_accumulator" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -2.79d
+			y: 4.83d
 		}
 
 	]

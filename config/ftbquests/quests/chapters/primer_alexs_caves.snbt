@@ -63,8 +63,8 @@
 				id: "6216000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6416000000000000"]
@@ -113,11 +113,11 @@
 				item: { count: 1, id: "alexscaves:cave_tablet" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.21d
+			y: -0.80d
 		}
 		{
-			dependencies: ["6416010000000000"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,11 +163,11 @@
 				item: { count: 1, id: "alexscaves:limestone_spear" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -1.17d
+			y: -2.04d
 		}
 		{
-			dependencies: ["6416020000000000"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -213,11 +213,11 @@
 				item: { count: 1, id: "alexscaves:primitive_club" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 0.41d
+			y: -2.31d
 		}
 		{
-			dependencies: ["6416030000000000"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -263,11 +263,11 @@
 				item: { count: 1, id: "alexscaves:metal_swarf" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 1.80d
+			y: -1.51d
 		}
 		{
-			dependencies: ["6416040000000000"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -315,11 +315,11 @@
 				item: { count: 1, id: "alexscaves:frostmint" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.89d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6416050000000000"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -364,11 +364,11 @@
 					item: { count: 1, id: "alexscaves:amber_monolith" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 1.80d
+			y: 1.51d
 		}
 		{
-			dependencies: ["66000000000000AC"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -421,11 +421,11 @@
 					item: { count: 1, id: "alexscaves:azure_neodymium_node" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.41d
+			y: 2.31d
 		}
 		{
-			dependencies: ["66000000000000AD"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -472,11 +472,11 @@
 					item: { count: 1, id: "alexscaves:abyssal_altar" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -1.44d
+			y: 2.50d
 		}
 		{
-			dependencies: ["66000000000000AE"]
+			dependencies: ["6416000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -531,8 +531,8 @@
 					item: { count: 1, id: "alexscaves:nuclear_furnace" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -3.24d
+			y: 1.18d
 		}
 
 	]

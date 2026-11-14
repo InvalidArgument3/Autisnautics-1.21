@@ -69,8 +69,8 @@
 				id: "620F000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640F000000000000"]
@@ -127,8 +127,8 @@
 				item: { count: 1, id: "irons_spellbooks:arcane_essence" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 1.90d
+			y: -1.38d
 		}
 		{
 			dependencies: ["640F010000000000"]
@@ -177,8 +177,8 @@
 				item: { count: 1, id: "irons_spellbooks:inscription_table" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 1.45d
+			y: -4.47d
 		}
 		{
 			dependencies: ["640F020000000000"]
@@ -227,11 +227,11 @@
 				item: { count: 1, id: "irons_spellbooks:iron_spell_book" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -5.70d
+			y: -4.14d
 		}
 		{
-			dependencies: ["640F030000000000"]
+			dependencies: ["640F010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -279,11 +279,11 @@
 				item: { count: 1, id: "irons_spellbooks:magic_cloth" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 1.45d
+			y: 4.47d
 		}
 		{
-			dependencies: ["640F040000000000"]
+			dependencies: ["640F000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -336,11 +336,11 @@
 					item: { count: 1, id: "irons_spellbooks:mithril_ore" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 7.5d
+			x: -1.90d
+			y: 1.38d
 		}
 		{
-			dependencies: ["660000000000009B"]
+			dependencies: ["640F020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -385,11 +385,11 @@
 					item: { count: 1, id: "irons_spellbooks:pedestal" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 2.18d
+			y: -6.70d
 		}
 		{
-			dependencies: ["660000000000009C"]
+			dependencies: ["640F020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -444,11 +444,14 @@
 					item: { count: 1, id: "irons_spellbooks:scroll_forge" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 7.05d
+			y: 0.00d
 		}
 		{
-			dependencies: ["660000000000009D"]
+			dependencies: [
+				"660000000000009B"
+				"640F030000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -503,8 +506,8 @@
 					item: { count: 1, id: "irons_spellbooks:arcane_anvil" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -9.40d
+			y: 0.00d
 		}
 
 	]

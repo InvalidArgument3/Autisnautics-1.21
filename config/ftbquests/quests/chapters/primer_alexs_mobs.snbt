@@ -63,8 +63,8 @@
 				id: "6215000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6415000000000000"]
@@ -113,11 +113,11 @@
 				item: { count: 1, id: "alexsmobs:banana" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: -2.21d
+			y: -0.80d
 		}
 		{
-			dependencies: ["6415010000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -163,11 +163,11 @@
 				item: { count: 1, id: "alexsmobs:hummingbird_feeder" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: -1.17d
+			y: -2.04d
 		}
 		{
-			dependencies: ["6415020000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -213,11 +213,11 @@
 				item: { count: 1, id: "alexsmobs:fish_oil" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 0.41d
+			y: -2.31d
 		}
 		{
-			dependencies: ["6415030000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -263,11 +263,11 @@
 				item: { count: 1, id: "alexsmobs:roadrunner_feather" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 1.80d
+			y: -1.51d
 		}
 		{
-			dependencies: ["6415040000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -323,11 +323,11 @@
 				item: { count: 1, id: "alexsmobs:falconry_glove" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.89d
+			y: 0.00d
 		}
 		{
-			dependencies: ["6415050000000000"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -380,11 +380,11 @@
 					item: { count: 1, id: "alexsmobs:capsid" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 1.80d
+			y: 1.51d
 		}
 		{
-			dependencies: ["66000000000000A8"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -437,11 +437,11 @@
 					item: { count: 1, id: "alexsmobs:gustmaker" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.41d
+			y: 2.31d
 		}
 		{
-			dependencies: ["66000000000000A9"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -496,11 +496,11 @@
 					item: { count: 1, id: "alexsmobs:void_worm_effigy" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -1.44d
+			y: 2.50d
 		}
 		{
-			dependencies: ["66000000000000AA"]
+			dependencies: ["6415000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -555,8 +555,8 @@
 					item: { count: 1, id: "alexsmobs:transmutation_table" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: -3.24d
+			y: 1.18d
 		}
 
 	]

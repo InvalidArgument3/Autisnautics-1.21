@@ -63,8 +63,8 @@
 				id: "620C000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["640C000000000000"]
@@ -121,11 +121,11 @@
 				item: { count: 1, id: "farmersdelight:cutting_board" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 0.00d
+			y: -2.35d
 		}
 		{
-			dependencies: ["640C010000000000"]
+			dependencies: ["640C000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -171,11 +171,11 @@
 				item: { count: 1, id: "farmersdelight:cooking_pot" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.00d
+			y: 2.35d
 		}
 		{
-			dependencies: ["640C020000000000"]
+			dependencies: ["640C000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -229,11 +229,11 @@
 				item: { count: 1, id: "farmersdelight:skillet" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: -2.17d
+			y: 0.90d
 		}
 		{
-			dependencies: ["640C030000000000"]
+			dependencies: ["640C020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -279,11 +279,11 @@
 				item: { count: 1, id: "farmersdelight:stove" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 1.80d
+			y: 4.34d
 		}
 		{
-			dependencies: ["640C040000000000"]
+			dependencies: ["6600000000000002"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -331,11 +331,11 @@
 				item: { count: 1, id: "farmersdelight:rope" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.70d
+			y: -6.51d
 		}
 		{
-			dependencies: ["640C050000000000"]
+			dependencies: ["640C010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -388,11 +388,11 @@
 					item: { count: 1, id: "farmersdelight:tree_bark" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: -4.34d
+			y: -1.80d
 		}
 		{
-			dependencies: ["6600000000000001"]
+			dependencies: ["640C010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -445,8 +445,8 @@
 					item: { count: 1, id: "farmersdelight:straw" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 1.80d
+			y: -4.34d
 		}
 		{
 			dependencies: ["6600000000000002"]
@@ -494,11 +494,14 @@
 					item: { count: 1, id: "farmersdelight:canvas" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -2.70d
+			y: -6.51d
 		}
 		{
-			dependencies: ["6600000000000003"]
+			dependencies: [
+				"640C050000000000"
+				"6600000000000003"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -543,11 +546,11 @@
 					item: { count: 1, id: "farmersdelight:safety_net" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 0.00d
+			y: -9.40d
 		}
 		{
-			dependencies: ["6600000000000004"]
+			dependencies: ["6600000000000002"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -600,8 +603,8 @@
 					item: { count: 1, id: "farmersdelight:organic_compost" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: 6.51d
+			y: -2.70d
 		}
 		{
 			dependencies: ["6600000000000005"]
@@ -651,11 +654,11 @@
 					item: { count: 1, id: "farmersdelight:rich_soil" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 16.5d
+			x: 8.68d
+			y: -3.60d
 		}
 		{
-			dependencies: ["6600000000000006"]
+			dependencies: ["640C000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -700,11 +703,11 @@
 					item: { count: 1, id: "farmersdelight:oak_cabinet" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: 2.17d
+			y: 0.90d
 		}
 		{
-			dependencies: ["6600000000000007"]
+			dependencies: ["6600000000000003"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -757,11 +760,11 @@
 					item: { count: 1, id: "farmersdelight:basket" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: -3.60d
+			y: -8.68d
 		}
 		{
-			dependencies: ["6600000000000008"]
+			dependencies: ["6600000000000006"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -806,11 +809,14 @@
 					item: { count: 1, id: "farmersdelight:rice_bag" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 10.86d
+			y: -4.50d
 		}
 		{
-			dependencies: ["6600000000000009"]
+			dependencies: [
+				"640C020000000000"
+				"640C040000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -857,8 +863,8 @@
 					item: { count: 1, id: "farmersdelight:honey_glazed_ham_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: 1.38d
+			y: 6.91d
 		}
 
 	]

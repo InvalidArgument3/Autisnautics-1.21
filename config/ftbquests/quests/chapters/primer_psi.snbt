@@ -69,8 +69,8 @@
 				id: "6210000000000000"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.00d
+			y: 0.00d
 		}
 		{
 			dependencies: ["6410000000000000"]
@@ -127,11 +127,11 @@
 				item: { count: 1, id: "psi:cad_assembly_iron" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 1.5d
+			x: 0.46d
+			y: -2.30d
 		}
 		{
-			dependencies: ["6410010000000000"]
+			dependencies: ["6410000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -177,8 +177,8 @@
 				item: { count: 1, id: "psi:psidust" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.0d
+			x: 0.00d
+			y: 2.35d
 		}
 		{
 			dependencies: ["6410020000000000"]
@@ -227,11 +227,11 @@
 				item: { count: 1, id: "psi:spell_bullet" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.5d
+			x: 3.91d
+			y: 2.61d
 		}
 		{
-			dependencies: ["6410030000000000"]
+			dependencies: ["6410000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -277,11 +277,11 @@
 				item: { count: 1, id: "psi:programmer" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: -2.30d
+			y: 0.46d
 		}
 		{
-			dependencies: ["6410040000000000"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -337,11 +337,11 @@
 				item: { count: 1, id: "psi:cad_battery_basic" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 7.5d
+			x: 2.61d
+			y: 3.91d
 		}
 		{
-			dependencies: ["6410050000000000"]
+			dependencies: ["6410010000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -394,11 +394,11 @@
 					item: { count: 1, id: "psi:cad_assembler" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 9.0d
+			x: 0.92d
+			y: -4.61d
 		}
 		{
-			dependencies: ["6600000000000027"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -451,11 +451,11 @@
 					item: { count: 1, id: "psi:cad_core_basic" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 10.5d
+			x: 0.92d
+			y: 4.61d
 		}
 		{
-			dependencies: ["6600000000000028"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -500,11 +500,16 @@
 					item: { count: 1, id: "psi:cad_socket_basic" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 12.0d
+			x: -0.92d
+			y: 4.61d
 		}
 		{
-			dependencies: ["6600000000000029"]
+			dependencies: [
+				"6600000000000027"
+				"6600000000000028"
+				"6600000000000029"
+				"6410010000000000"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -559,11 +564,11 @@
 					item: { count: 1, id: "psi:cad" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 13.5d
+			x: 7.05d
+			y: 0.00d
 		}
 		{
-			dependencies: ["660000000000002A"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -616,11 +621,11 @@
 					item: { count: 1, id: "psi:psimetal_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 15.0d
+			x: -11.52d
+			y: -2.29d
 		}
 		{
-			dependencies: ["660000000000002B"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -673,11 +678,11 @@
 					item: { count: 1, id: "psi:psigem_block" }
 					type: "item"
 				}]
-			x: 2.5d
-			y: 16.5d
+			x: -2.61d
+			y: 3.91d
 		}
 		{
-			dependencies: ["660000000000002B"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -730,11 +735,11 @@
 					item: { count: 1, id: "psi:ivory_psimetal_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 18.0d
+			x: -9.77d
+			y: -6.53d
 		}
 		{
-			dependencies: ["660000000000002D"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -789,8 +794,8 @@
 					item: { count: 1, id: "psi:ebony_psimetal_block" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 19.5d
+			x: -6.53d
+			y: -9.77d
 		}
 
 		{
@@ -849,8 +854,8 @@
 					item: { count: 1, id: "psi:psimetal" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 21.0d
+			x: 1.83d
+			y: -9.22d
 		}
 		{
 			dependencies: ["66000000000000CA"]
@@ -906,11 +911,11 @@
 					item: { count: 1, id: "psi:spell_drive" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 22.5d
+			x: -2.29d
+			y: -11.52d
 		}
 		{
-			dependencies: ["66000000000000CB"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -955,11 +960,11 @@
 					item: { count: 1, id: "psi:cad_assembly_psimetal" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 24.0d
+			x: 2.29d
+			y: -11.52d
 		}
 		{
-			dependencies: ["66000000000000CC"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1006,11 +1011,11 @@
 					item: { count: 1, id: "psi:cad_core_hyperclocked" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 25.5d
+			x: 6.53d
+			y: -9.77d
 		}
 		{
-			dependencies: ["66000000000000CD"]
+			dependencies: ["6410020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1063,11 +1068,11 @@
 					item: { count: 1, id: "psi:cad_battery_ultradense" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 27.0d
+			x: -3.91d
+			y: 2.61d
 		}
 		{
-			dependencies: ["66000000000000CE"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1120,11 +1125,11 @@
 					item: { count: 1, id: "psi:cad_socket_transmissive" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 28.5d
+			x: 9.77d
+			y: -6.53d
 		}
 		{
-			dependencies: ["66000000000000CF"]
+			dependencies: ["66000000000000CA"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1179,11 +1184,14 @@
 					item: { count: 1, id: "psi:psimetal_exosuit_chestplate" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 30.0d
+			x: 11.52d
+			y: -2.29d
 		}
 		{
-			dependencies: ["66000000000000D0"]
+			dependencies: [
+				"66000000000000CA"
+				"66000000000000D0"
+			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1238,8 +1246,8 @@
 					item: { count: 1, id: "psi:exosuit_controller" }
 					type: "item"
 				}]
-			x: 0.0d
-			y: 31.5d
+			x: 9.97d
+			y: -9.97d
 		}
 
 	]
