@@ -342,5 +342,510 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["640D050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:computer_advanced"
+			}
+			id: "660000000000001E"
+			rewards: [
+				{
+					id: "680000000000004D"
+					item: {
+						count: 4
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000004E"
+					item: {
+						count: 6
+						id: "minecraft:kelp"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000004F"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000001E"
+					item: { count: 1, id: "computercraft:computer_advanced" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["660000000000001E"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:monitor_advanced"
+			}
+			id: "660000000000001F"
+			rewards: [
+				{
+					id: "6800000000000050"
+					item: {
+						count: 6
+						id: "minecraft:glass_pane"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000051"
+					item: {
+						count: 6
+						id: "minecraft:gold_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000052"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000001F"
+					item: { count: 1, id: "computercraft:monitor_advanced" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["660000000000001F"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:wired_modem_full"
+			}
+			id: "6600000000000020"
+			rewards: [
+				{
+					id: "6800000000000053"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000054"
+					item: {
+						count: 8
+						id: "minecraft:stone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000055"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000020"
+					item: { count: 1, id: "computercraft:wired_modem_full" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6600000000000020"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:wireless_modem_advanced"
+			}
+			id: "6600000000000021"
+			rewards: [
+				{
+					id: "6800000000000056"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000057"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000058"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000021"
+					item: { count: 1, id: "computercraft:wireless_modem_advanced" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["6600000000000021"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:speaker"
+			}
+			id: "6600000000000022"
+			rewards: [
+				{
+					id: "6800000000000059"
+					item: {
+						count: 1
+						id: "minecraft:note_block"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000005A"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000022"
+					item: { count: 1, id: "computercraft:speaker" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6600000000000021"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:printer"
+			}
+			id: "6600000000000023"
+			rewards: [
+				{
+					id: "680000000000005B"
+					item: {
+						count: 6
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000005C"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000005D"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000023"
+					item: { count: 1, id: "computercraft:printer" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 16.5d
+		}
+		{
+			dependencies: ["6600000000000021"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:redstone_relay"
+			}
+			id: "6600000000000024"
+			rewards: [
+				{
+					id: "680000000000005E"
+					item: {
+						count: 2
+						id: "minecraft:repeater"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000005F"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000060"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000024"
+					item: { count: 1, id: "computercraft:redstone_relay" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"6600000000000024"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "createaddition:digital_adapter"
+			}
+			id: "6600000000000025"
+			rewards: [
+				{
+					id: "6800000000000061"
+					item: {
+						count: 4
+						id: "computercraft:cable"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000062"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000025"
+					item: { count: 1, id: "createaddition:digital_adapter" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: ["6600000000000025"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "computercraft:turtle_advanced"
+			}
+			id: "6600000000000026"
+			rewards: [
+				{
+					id: "6800000000000063"
+					item: {
+						count: 6
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000064"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000065"
+					type: "xp"
+					xp: 40
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000026"
+					item: { count: 1, id: "computercraft:turtle_advanced" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+
 	]
 }

@@ -3268,4 +3268,326 @@
 		"Have one if you find it. Do not stall the rocket on it."
 		"Reliquary's tome, if you want the charm pages, is not this feather. JEI shows what the feather actually does."
 	]
+	quest.6600000000000001.title: "Tree Bark"
+	quest.6600000000000001.quest_subtitle: "The knife takes a strip"
+	quest.6600000000000001.quest_desc: [
+		"This pack replaced log stripping. On a cutting board, an axe returns the stripped log and one tree bark."
+		"JEI lists it as a Farmer's Delight cutting recipe. The knife quest's shape is unchanged: rod in the top-left, material in the bottom-right."
+		"There is no Farmer's Delight book. The board and JEI are the manual."
+	]
+	quest.6600000000000002.title: "Straw"
+	quest.6600000000000002.quest_subtitle: "Cut the wheat"
+	quest.6600000000000002.quest_desc: [
+		"Cut wheat on the cutting board. JEI shows the knife and the board."
+		"Straw is the feedstock for canvas, rope you already have, and the compost that becomes rich soil."
+		"The cutting board quest is the station. This is the first crop it is for."
+	]
+	quest.6600000000000003.title: "Canvas"
+	quest.6600000000000003.quest_subtitle: "Straw, woven"
+	quest.6600000000000003.quest_desc: [
+		"Canvas is the straw craft JEI shows. It is the cloth for signs, rugs, and the basket."
+		"A waterlogged basket in this pack strains fluids. Canvas is how you get to that basket."
+		"JEI. No guidebook."
+	]
+	quest.6600000000000004.title: "Safety Net"
+	quest.6600000000000004.quest_subtitle: "Rope and canvas"
+	quest.6600000000000004.quest_desc: [
+		"The safety net is the rope-and-canvas craft in JEI."
+		"It is the soft landing under a Create contraption that still drops you. Place it, do not wear it."
+		"JEI."
+	]
+	quest.6600000000000005.title: "Organic Compost"
+	quest.6600000000000005.quest_subtitle: "The pile before the soil"
+	quest.6600000000000005.quest_desc: [
+		"Craft the compost block. JEI lists the dirt, straw, and rot it wants."
+		"This is the block you place. Rich soil is what it ripens into."
+		"JEI. The cooking pot does not make this."
+	]
+	quest.6600000000000006.title: "Rich Soil"
+	quest.6600000000000006.quest_subtitle: "Let the compost ripen"
+	quest.6600000000000006.quest_desc: [
+		"Place organic compost and let it become rich soil. JEI is the confirm if a craft is also listed."
+		"Rice, cabbage, and tomatoes want this dirt, not ordinary farmland."
+		"The basket quest is next, once you have cloth and a reason to wash things."
+	]
+	quest.6600000000000007.title: "Oak Cabinet"
+	quest.6600000000000007.quest_subtitle: "A kitchen crate"
+	quest.6600000000000007.quest_desc: [
+		"The oak cabinet is the storage block. JEI shows the chests, slabs, and trapdoors."
+		"Other woods have their own cabinets. Oak is the pattern."
+		"JEI. It does not connect to a Refined Storage network."
+	]
+	quest.6600000000000008.title: "Basket"
+	quest.6600000000000008.quest_subtitle: "It strains when waterlogged"
+	quest.6600000000000008.quest_desc: [
+		"Craft the basket. JEI. This pack's basket, once waterlogged, strains fluids that pass through it."
+		"That is a Create-side use of a Farmer's Delight block. Canvas is the cloth it wants."
+		"JEI for the craft. The straining behaviour is the pack's, not a second recipe."
+	]
+	quest.6600000000000009.title: "Rice Bag"
+	quest.6600000000000009.quest_subtitle: "The crop, stored"
+	quest.6600000000000009.quest_desc: [
+		"Grow rice on rich soil and bag it. JEI shows the panicles and the bag."
+		"The bag is the crop's storage, the same role as a crate of cabbage or onion."
+		"JEI. The cooking pot turns the rice into meals after this."
+	]
+	quest.660000000000000A.title: "Honey Glazed Ham"
+	quest.660000000000000A.quest_subtitle: "The pot's feast"
+	quest.660000000000000A.quest_desc: [
+		"This is a feast block from the cooking pot, set on the stove you already built."
+		"JEI shows the pot recipe. The stove is the heat. The pot quest and the stove quest are the stations."
+		"Slice it on the cutting board when you want plates instead of the whole block."
+	]
+	quest.660000000000000B.title: "Iron Backpack"
+	quest.660000000000000B.quest_subtitle: "The first real tier"
+	quest.660000000000000B.quest_desc: [
+		"Upgrade the leather backpack. JEI shows the iron backpack and the upgrade base you already craft."
+		"Copper backpacks exist, and nothing in this pack hides them. Iron is the tier worth moving into."
+		"There is no guidebook. JEI and the upgrade tab inside the backpack are the manual."
+	]
+	quest.660000000000000C.title: "Gold Backpack"
+	quest.660000000000000C.quest_subtitle: "Heavier cloth"
+	quest.660000000000000C.quest_desc: [
+		"Gold is the next backpack tier. JEI."
+		"The upgrade tab keeps the pickup, filter, crafting, and smelting upgrades you already have."
+		"JEI."
+	]
+	quest.660000000000000D.title: "Diamond Backpack"
+	quest.660000000000000D.quest_subtitle: "The deep pocket"
+	quest.660000000000000D.quest_desc: [
+		"Diamond is the tier under netherite. JEI shows the craft from the gold backpack."
+		"Stack upgrades live in the upgrade tab. The omega stack upgrade and the inception upgrade are hidden in this pack. Do not hunt them."
+		"JEI."
+	]
+	quest.660000000000000E.title: "Netherite Backpack"
+	quest.660000000000000E.quest_subtitle: "The last backpack"
+	quest.660000000000000E.quest_desc: [
+		"Netherite is the top backpack. JEI shows the smithing step."
+		"This is the end of the backpack line. The hidden omega and inception upgrades are not a further tier."
+		"JEI. Wear it. The Factory Guide does not gate this."
+	]
+	quest.660000000000000F.title: "Iron Chest"
+	quest.660000000000000F.quest_subtitle: "Skip the copper tier"
+	quest.660000000000000F.quest_desc: [
+		"Iron is the first storage tier to build. This pack hides the copper chest, copper barrel, and copper shulker."
+		"JEI shows the iron chest from the chest you already craft."
+		"The upgrade base you have still fits the upgrade slot."
+	]
+	quest.6600000000000010.title: "Gold Chest"
+	quest.6600000000000010.quest_subtitle: "The middle tier"
+	quest.6600000000000010.quest_desc: [
+		"Gold chest. JEI."
+		"Barrels follow the same metals. One chest is enough to learn the ladder."
+		"JEI."
+	]
+	quest.6600000000000011.title: "Diamond Chest"
+	quest.6600000000000011.quest_subtitle: "Before the link"
+	quest.6600000000000011.quest_desc: [
+		"Diamond chest. JEI."
+		"The controller and the storage link are the machines that make a wall of these into one inventory."
+		"JEI."
+	]
+	quest.6600000000000012.title: "Storage Controller"
+	quest.6600000000000012.quest_subtitle: "One inventory"
+	quest.6600000000000012.quest_desc: [
+		"The controller links chests and barrels that touch it. JEI."
+		"It is not a Refined Storage controller. That one is the Factory Guide, and it wants a calculation mechanism."
+		"JEI. Put the controller against the chests."
+	]
+	quest.6600000000000013.title: "Storage Link"
+	quest.6600000000000013.quest_subtitle: "A remote face"
+	quest.6600000000000013.quest_desc: [
+		"The storage link is the remote face of a controller network. JEI."
+		"Input and output blocks are the filtered sides. The link is the one you open."
+		"JEI."
+	]
+	quest.6600000000000014.title: "Storage IO"
+	quest.6600000000000014.quest_subtitle: "In and out"
+	quest.6600000000000014.quest_desc: [
+		"Storage IO is the side a hopper or a Create funnel can use. JEI."
+		"The controller quest is the network. This is the port."
+		"JEI."
+	]
+	quest.6600000000000015.title: "Decoration Table"
+	quest.6600000000000015.quest_subtitle: "Paint the chest"
+	quest.6600000000000015.quest_desc: [
+		"The decoration table changes which wood a chest or barrel wears. JEI."
+		"It does not change the tier. Iron stays iron."
+		"JEI."
+	]
+	quest.6600000000000016.title: "Netherite Chest"
+	quest.6600000000000016.quest_subtitle: "The last chest"
+	quest.6600000000000016.quest_desc: [
+		"Netherite is the top chest tier. JEI shows the smithing step."
+		"Limited barrels and the hidden copper variants are not a further tier."
+		"The controller still links it. This is the end of the storage line."
+	]
+	quest.6600000000000017.title: "Angling Table"
+	quest.6600000000000017.quest_subtitle: "The tackle bench"
+	quest.6600000000000017.quest_desc: [
+		"The angling table is Tide's crafting station. JEI."
+		"The Fishing Journal, in the Akashic Tome, is the book. Rods, hooks, and lines you already craft are the pages before this table."
+		"Higher rods are in the journal. This pack's files do not name a netherite rod item, so the line continues with the stations and the crates."
+	]
+	quest.6600000000000018.title: "Lunar Calendar"
+	quest.6600000000000018.quest_subtitle: "What the moon does to the bite"
+	quest.6600000000000018.quest_desc: [
+		"The lunar calendar is the clock for Tide's moon-sensitive fish. JEI."
+		"The journal's calendar page is the matching text. The Akashic Tome holds the journal."
+		"JEI."
+	]
+	quest.6600000000000019.title: "Weather Radio"
+	quest.6600000000000019.quest_subtitle: "Listen before you cast"
+	quest.6600000000000019.quest_desc: [
+		"The weather radio reports the weather Tide's fish care about. JEI."
+		"It is a device, not a crate. The journal mentions weather with the rarer catches."
+		"JEI."
+	]
+	quest.660000000000001A.title: "Fish Display"
+	quest.660000000000001A.quest_subtitle: "Mount the catch"
+	quest.660000000000001A.quest_desc: [
+		"The fish display is the plaque for a fish. JEI."
+		"Crates store the ones you will cook or sell. The display is the one you keep."
+		"JEI."
+	]
+	quest.660000000000001B.title: "Jelly Torch"
+	quest.660000000000001B.quest_subtitle: "A light that came out of the water"
+	quest.660000000000001B.quest_desc: [
+		"The jelly torch is Tide's underwater light. JEI."
+		"It is a utility, not a rod upgrade. The journal is still the rod book."
+		"JEI."
+	]
+	quest.660000000000001C.title: "Purpur Crate"
+	quest.660000000000001C.quest_subtitle: "The end-stone cooler"
+	quest.660000000000001C.quest_desc: [
+		"Purpur crates are the End-side fish storage. JEI."
+		"The wooden crate you already have is the overworld box. Purpur is the next one up."
+		"JEI. The journal's crate page matches."
+	]
+	quest.660000000000001D.title: "Obsidian Crate"
+	quest.660000000000001D.quest_subtitle: "The last crate"
+	quest.660000000000001D.quest_desc: [
+		"The obsidian crate is the top fish storage. JEI."
+		"This is the end of the crate line. The journal remains the source for any rod past iron line."
+		"JEI."
+	]
+	quest.660000000000001E.title: "Advanced Computer"
+	quest.660000000000001E.quest_subtitle: "Gold, and the help command"
+	quest.660000000000001E.quest_desc: [
+		"The advanced computer is the gold computer. JEI."
+		"ComputerCraft has no guidebook. Sit at the computer and run help."
+		"The normal computer you already craft is the same software on a cheaper shell."
+	]
+	quest.660000000000001F.title: "Advanced Monitor"
+	quest.660000000000001F.quest_subtitle: "A sharper screen"
+	quest.660000000000001F.quest_desc: [
+		"Advanced monitors are the gold screen. JEI."
+		"They pair with the advanced computer. The normal monitor quest is the first screen."
+		"help covers the monitor API."
+	]
+	quest.6600000000000020.title: "Full Wired Modem"
+	quest.6600000000000020.quest_subtitle: "The block that faces every side"
+	quest.6600000000000020.quest_desc: [
+		"The full wired modem is the wired network block. JEI."
+		"Cable you already craft is the wire. This is the end you put on a computer."
+		"help networking."
+	]
+	quest.6600000000000021.title: "Advanced Wireless Modem"
+	quest.6600000000000021.quest_subtitle: "The ender one"
+	quest.6600000000000021.quest_desc: [
+		"The advanced wireless modem is the ender-pearl modem. JEI."
+		"The normal wireless modem is the short one. This is the long one."
+		"help. No tome entry."
+	]
+	quest.6600000000000022.title: "Speaker"
+	quest.6600000000000022.quest_subtitle: "The computer makes noise"
+	quest.6600000000000022.quest_desc: [
+		"The speaker is the audio peripheral. JEI."
+		"help speaker. It is optional. The turtle does not need it."
+		"JEI."
+	]
+	quest.6600000000000023.title: "Printer"
+	quest.6600000000000023.quest_subtitle: "Paper out of the computer"
+	quest.6600000000000023.quest_desc: [
+		"The printer peripheral. JEI."
+		"It is not the Create Enchantment Industry printer. That one is a zinc machine and lives in the other primer."
+		"help. JEI."
+	]
+	quest.6600000000000024.title: "Redstone Relay"
+	quest.6600000000000024.quest_subtitle: "A computer-side redstone face"
+	quest.6600000000000024.quest_desc: [
+		"ComputerCraft's redstone relay. JEI."
+		"Create Crafts and Additions has a different redstone relay, cut from a zinc machine. This one is the computer peripheral."
+		"help. JEI."
+	]
+	quest.6600000000000025.title: "Digital Adapter"
+	quest.6600000000000025.quest_subtitle: "The computer plugs into Create"
+	quest.6600000000000025.quest_desc: [
+		"A Brass Machine applied to a wired modem. Item application, the same gesture as the other brass machines."
+		"The Factory Guide brass-machine quest is the gate. Ponder the adapter with W."
+		"JEI lists it under item application. help will show the methods once it is attached."
+	]
+	quest.6600000000000026.title: "Advanced Turtle"
+	quest.6600000000000026.quest_subtitle: "The last computer"
+	quest.6600000000000026.quest_desc: [
+		"The advanced turtle is the gold turtle. JEI."
+		"It is the most complex ComputerCraft machine: a computer that moves, mines, and places."
+		"help turtle. The normal turtle quest is the same lessons on the cheaper shell."
+	]
+	quest.6600000000000027.title: "CAD Assembler"
+	quest.6600000000000027.quest_subtitle: "The bench from the encyclopaedia"
+	quest.6600000000000027.quest_desc: [
+		"The CAD assembler is the station. JEI."
+		"The Encyclopaedia Psionica is in the Akashic Tome. The assembly page is this block."
+		"You already have the iron assembly, psidust, a spell bullet, the programmer, and a basic battery."
+	]
+	quest.6600000000000028.title: "Basic CAD Core"
+	quest.6600000000000028.quest_subtitle: "The heart of the tool"
+	quest.6600000000000028.quest_desc: [
+		"The basic core. JEI. Psidust is the dust you already craft."
+		"The encyclopaedia's components page lists the core, the socket, and the assembly as the three parts."
+		"JEI."
+	]
+	quest.6600000000000029.title: "Basic CAD Socket"
+	quest.6600000000000029.quest_subtitle: "Where the bullet sits"
+	quest.6600000000000029.quest_desc: [
+		"The basic socket. JEI."
+		"The spell bullet you already craft is what this socket holds."
+		"The encyclopaedia. JEI."
+	]
+	quest.660000000000002A.title: "CAD"
+	quest.660000000000002A.quest_subtitle: "Assemble the tool"
+	quest.660000000000002A.quest_desc: [
+		"Put the iron assembly, the basic core, and the basic socket through the CAD assembler."
+		"The encyclopaedia shows the order. JEI shows the assembler recipe."
+		"The programmer you already have is where the spell on the bullet is written."
+	]
+	quest.660000000000002B.title: "Psimetal Block"
+	quest.660000000000002B.quest_subtitle: "Dust, pressed"
+	quest.660000000000002B.quest_desc: [
+		"The psimetal block is the storage block of the metal. JEI."
+		"The encyclopaedia's materials page is the metal. The dust quest is the powder it starts from."
+		"JEI."
+	]
+	quest.660000000000002C.title: "Psigem Block"
+	quest.660000000000002C.quest_subtitle: "The gem, stored"
+	quest.660000000000002C.quest_desc: [
+		"The psigem block. JEI."
+		"Gems are the other psi material. The encyclopaedia separates them from psimetal."
+		"JEI."
+	]
+	quest.660000000000002D.title: "Ivory Psimetal"
+	quest.660000000000002D.quest_subtitle: "One of the two colours"
+	quest.660000000000002D.quest_desc: [
+		"Ivory psimetal. JEI and the encyclopaedia's infused-metal page."
+		"Ebony is the other colour. Neither replaces the CAD. They are the later materials."
+		"JEI."
+	]
+	quest.660000000000002E.title: "Ebony Psimetal"
+	quest.660000000000002E.quest_subtitle: "The other colour"
+	quest.660000000000002E.quest_desc: [
+		"Ebony psimetal. JEI."
+		"With ivory, the assembler, and a built CAD, this is the end of the psi material line."
+		"The encyclopaedia is the rest of the spell list. JEI is the craft."
+	]
 }

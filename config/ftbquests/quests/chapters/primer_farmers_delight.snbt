@@ -334,5 +334,532 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["640C050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:tree_bark"
+			}
+			id: "6600000000000001"
+			rewards: [
+				{
+					id: "6800000000000001"
+					item: {
+						count: 4
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000002"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000003"
+					type: "xp"
+					xp: 16
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000001"
+					item: { count: 1, id: "farmersdelight:tree_bark" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6600000000000001"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:straw"
+			}
+			id: "6600000000000002"
+			rewards: [
+				{
+					id: "6800000000000004"
+					item: {
+						count: 8
+						id: "minecraft:wheat_seeds"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000005"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000006"
+					type: "xp"
+					xp: 16
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000002"
+					item: { count: 1, id: "farmersdelight:straw" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["6600000000000002"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:canvas"
+			}
+			id: "6600000000000003"
+			rewards: [
+				{
+					id: "6800000000000007"
+					item: {
+						count: 4
+						id: "farmersdelight:straw"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000008"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000003"
+					item: { count: 1, id: "farmersdelight:canvas" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6600000000000003"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:safety_net"
+			}
+			id: "6600000000000004"
+			rewards: [
+				{
+					id: "6800000000000009"
+					item: {
+						count: 2
+						id: "farmersdelight:canvas"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000000A"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000004"
+					item: { count: 1, id: "farmersdelight:safety_net" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["6600000000000004"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:organic_compost"
+			}
+			id: "6600000000000005"
+			rewards: [
+				{
+					id: "680000000000000B"
+					item: {
+						count: 8
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000000C"
+					item: {
+						count: 4
+						id: "minecraft:rotten_flesh"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000000D"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000005"
+					item: { count: 1, id: "farmersdelight:organic_compost" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6600000000000005"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:rich_soil"
+			}
+			id: "6600000000000006"
+			rewards: [
+				{
+					id: "680000000000000E"
+					item: {
+						count: 8
+						id: "minecraft:dirt"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000000F"
+					type: "xp"
+					xp: 22
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000006"
+					item: { count: 1, id: "farmersdelight:rich_soil" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["6600000000000006"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:oak_cabinet"
+			}
+			id: "6600000000000007"
+			rewards: [
+				{
+					id: "6800000000000010"
+					item: {
+						count: 2
+						id: "minecraft:oak_trapdoor"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000011"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000007"
+					item: { count: 1, id: "farmersdelight:oak_cabinet" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["6600000000000007"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:basket"
+			}
+			id: "6600000000000008"
+			rewards: [
+				{
+					id: "6800000000000012"
+					item: {
+						count: 6
+						id: "minecraft:bamboo"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000013"
+					item: {
+						count: 2
+						id: "farmersdelight:canvas"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000014"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000008"
+					item: { count: 1, id: "farmersdelight:basket" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			dependencies: ["6600000000000008"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:rice_bag"
+			}
+			id: "6600000000000009"
+			rewards: [
+				{
+					id: "6800000000000015"
+					item: {
+						count: 4
+						id: "farmersdelight:rice"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000016"
+					type: "xp"
+					xp: 22
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000009"
+					item: { count: 1, id: "farmersdelight:rice_bag" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["6600000000000009"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "farmersdelight:honey_glazed_ham_block"
+			}
+			id: "660000000000000A"
+			rewards: [
+				{
+					id: "6800000000000017"
+					item: {
+						count: 2
+						id: "minecraft:honey_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000018"
+					type: "xp"
+					xp: 28
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000000A"
+					item: { count: 1, id: "farmersdelight:honey_glazed_ham_block" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 22.5d
+		}
+
 	]
 }

@@ -350,5 +350,460 @@
 			x: 0.0d
 			y: 7.5d
 		}
+		{
+			dependencies: ["640A050000000000"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:iron_chest"
+			}
+			id: "660000000000000F"
+			rewards: [
+				{
+					id: "6800000000000024"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000025"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000026"
+					type: "xp"
+					xp: 20
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "670000000000000F"
+					item: { count: 1, id: "sophisticatedstorage:iron_chest" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["660000000000000F"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:gold_chest"
+			}
+			id: "6600000000000010"
+			rewards: [
+				{
+					id: "6800000000000027"
+					item: {
+						count: 6
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000028"
+					item: {
+						count: 2
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000029"
+					type: "xp"
+					xp: 24
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000010"
+					item: { count: 1, id: "sophisticatedstorage:gold_chest" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["6600000000000010"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:diamond_chest"
+			}
+			id: "6600000000000011"
+			rewards: [
+				{
+					id: "680000000000002A"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000002B"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000002C"
+					type: "xp"
+					xp: 32
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000011"
+					item: { count: 1, id: "sophisticatedstorage:diamond_chest" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6600000000000011"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:controller"
+			}
+			id: "6600000000000012"
+			rewards: [
+				{
+					id: "680000000000002D"
+					item: {
+						count: 6
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000002E"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000002F"
+					type: "xp"
+					xp: 36
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000012"
+					item: { count: 1, id: "sophisticatedstorage:controller" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["6600000000000012"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:storage_link"
+			}
+			id: "6600000000000013"
+			rewards: [
+				{
+					id: "6800000000000030"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000031"
+					item: {
+						count: 4
+						id: "minecraft:redstone"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000032"
+					type: "xp"
+					xp: 36
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000013"
+					item: { count: 1, id: "sophisticatedstorage:storage_link" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6600000000000012"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:storage_io"
+			}
+			id: "6600000000000014"
+			rewards: [
+				{
+					id: "6800000000000033"
+					item: {
+						count: 1
+						id: "minecraft:hopper"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000034"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000035"
+					type: "xp"
+					xp: 28
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000014"
+					item: { count: 1, id: "sophisticatedstorage:storage_io" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 16.5d
+		}
+		{
+			dependencies: ["660000000000000F"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:decoration_table"
+			}
+			id: "6600000000000015"
+			rewards: [
+				{
+					id: "6800000000000036"
+					item: {
+						count: 8
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000037"
+					item: {
+						count: 4
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "6800000000000038"
+					type: "xp"
+					xp: 18
+				}
+			]
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000015"
+					item: { count: 1, id: "sophisticatedstorage:decoration_table" }
+					type: "item"
+				}]
+			x: 2.5d
+			y: 18.0d
+		}
+		{
+			dependencies: ["6600000000000011"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "sophisticatedstorage:netherite_chest"
+			}
+			id: "6600000000000016"
+			rewards: [
+				{
+					id: "6800000000000039"
+					item: {
+						count: 1
+						id: "minecraft:netherite_scrap"
+					}
+					type: "item"
+				}
+				{
+					id: "680000000000003A"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "6700000000000016"
+					item: { count: 1, id: "sophisticatedstorage:netherite_chest" }
+					type: "item"
+				}]
+			x: 0.0d
+			y: 19.5d
+		}
+
 	]
 }
