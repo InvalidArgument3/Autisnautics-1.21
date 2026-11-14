@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.0.97]
 - **FTB Quests: primer chapters fan out instead of stacking in one line.** Dependencies follow the real branches (Create kinetics, machines, trains, and logistics; Refined Storage disks, autocrafting, and wireless; and the same idea in the other primers). Entry quests sit at the centre. Branched chapters are radial. Astral Sorcery, NuclearCraft, and the Undergarden, which stay mostly one path, spiral outward. Nodes stay at least a slot and a half apart.
 
 ## [0.0.96]
