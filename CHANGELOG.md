@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10i** → **ipa10j** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10j.jar`, client and server). Model baking no longer crashes when a Regions Unexplored grass tint asks Voxy's fake world for a colour and the biome or colour resolver is missing: the tint falls back to plains, and a throwing colour provider is logged once per block and captured as no tint. An interrupted frame no longer leaves a timing sampler open, so the follow-up crash in `TimingStatistics` does not fire. Portal LOD behaviour is unchanged
+
 ## [0.0.93]
 - **Akashic Tome no longer saves a book that contains itself.** `kubejs/server_scripts/universal_tome.js` drops a self-reference in `tool_content` and strips nested `tool_content` from stored books, on the player tick after a morph and when a tome is dropped. A cyclic stack was overflowing `ToolContentComponent.hashCode` and the player/slot encoder. A flat crafted or prefilled tome is left as it is.
 
