@@ -1,8 +1,13 @@
 package dev.wyseman.portalrenderguard;
 
 /**
- * Immersive Portals publishes the portal clip as {@code n·(x - camera) + c}.
- * Voxy's blit reconstructs a world position, so {@code c} has to move with the camera.
+ * Converts {@code n·(x - camera) + c} into an absolute-world plane.
+ *
+ * <p>Not used by the mixins. ipa10k's {@code blit_texture_depth_cutout.frag}
+ * unprojects with {@code inverse(projection * modelView)}, and that modelView
+ * is Sodium's camera pose, so the point is already camera-relative. Immersive
+ * Portals' {@code getActiveClipPlaneEquationBeforeModelView} is the same space.
+ * Shifting {@code c} by {@code -n·camera} moves the plane off the portal.
  */
 public final class ClipPlane {
     private ClipPlane() {}

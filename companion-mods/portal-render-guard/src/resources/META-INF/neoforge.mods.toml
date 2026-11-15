@@ -4,10 +4,10 @@ license = "MIT"
 
 [[mods]]
 modId = "portalrenderguard"
-version = "1.0.0"
+version = "1.0.1"
 displayName = "Portal Render Guard"
 authors = "Autisnautics"
-description = '''Puts GL state back after Voxy's LOD draw, and shifts Voxy's portal clip plane into world space so LODs meet the portal. Client only.'''
+description = '''Puts GL state back after Voxy's LOD draw and after the portal framebuffer copy, through GlStateManager so its cache matches the driver. Client only.'''
 displayTest = "IGNORE_ALL_VERSION"
 
 [[mixins]]

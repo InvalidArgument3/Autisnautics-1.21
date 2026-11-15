@@ -6,7 +6,7 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
-/** Skip the Voxy hooks when that mod is not installed. The portal copy hook stays. */
+/** Skip the Voxy hook when that mod is not installed. The portal copy hook stays. */
 public final class GuardMixinPlugin implements IMixinConfigPlugin {
     private boolean voxy;
 
@@ -32,7 +32,7 @@ public final class GuardMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (mixinClassName.endsWith("VoxyRenderSystemMixin") || mixinClassName.endsWith("VoxyClipMixin")) {
+        if (mixinClassName.endsWith("VoxyRenderSystemMixin")) {
             return this.voxy;
         }
         return true;

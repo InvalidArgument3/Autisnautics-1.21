@@ -15,20 +15,27 @@ import org.lwjgl.system.MemoryStack;
 
 /**
  * Saves the fixed-function GL state Immersive Portals' portal pass still
- * needs after Voxy's LOD draw, and puts it back.
+ * needs after Voxy's LOD draw, and puts it back through GlStateManager.
  *
  * <p>Voxy's {@code renderOpaqueImpl} turns the stencil test off inside the
  * pipeline and only turns it back on if it was on at entry. It does not put
  * back blend, the depth function, depth mask, colour mask, cull winding,
  * scissor, polygon offset, polygon mode, provoking vertex, the read
  * framebuffer, or the active texture unit (the cleanup loop leaves
- * GlStateManager on unit 11). The portal framebuffer copy and the cutout
- * pass run after that draw.
+ * GlStateManager on unit 11). The portal framebuffer copy then calls
+ * {@code GlStateManager._viewport}, {@code _depthMask}, {@code _colorMask},
+ * and {@code _enableDepthTest}. Those setters skip the GL call when their
+ * cache already matches, so a raw {@code glViewport} / {@code glDepthMask}
+ * restore leaves the cache pointing at the framebuffer size and a depth mask
+ * of true. The next solid pass asks for a true depth mask, the cache says it
+ * is already true, and depth writes stay off.
  */
 public final class GlStateGuard {
     private static final ArrayDeque<Snap> STACK = new ArrayDeque<>();
     private static final int GL_CLIP_DISTANCE0 = 0x3000;
     private static final int GL_DEPTH_CLAMP = 0x864F;
+    private static final int GL_NEVER = 0x0200;
+    private static final int GL_ALWAYS = 0x0207;
 
     private GlStateGuard() {}
 
@@ -45,31 +52,7 @@ public final class GlStateGuard {
 
     /** Disable blending for one draw, then the caller's pop puts the old blend back. */
     public static void disableBlend() {
-        GL11.glDisable(GL11.GL_BLEND);
-    }
-
-    public static float[] shiftClipToWorldFromCamera(float[] equation) {
-        double[] camera = currentCamera();
-        if (camera == null) {
-            return equation;
-        }
-        return ClipPlane.shiftToWorld(equation, camera[0], camera[1], camera[2]);
-    }
-
-    private static double[] currentCamera() {
-        try {
-            Class<?> minecraft = Class.forName("net.minecraft.client.Minecraft");
-            Object client = minecraft.getMethod("getInstance").invoke(null);
-            Object gameRenderer = client.getClass().getMethod("gameRenderer").invoke(client);
-            Object camera = gameRenderer.getClass().getMethod("getMainCamera").invoke(gameRenderer);
-            Object position = camera.getClass().getMethod("getPosition").invoke(camera);
-            double x = (Double) position.getClass().getMethod("x").invoke(position);
-            double y = (Double) position.getClass().getMethod("y").invoke(position);
-            double z = (Double) position.getClass().getMethod("z").invoke(position);
-            return new double[] {x, y, z};
-        } catch (Throwable ignored) {
-            return null;
-        }
+        forceBlend(false);
     }
 
     private static final class Snap {
@@ -169,41 +152,149 @@ public final class GlStateGuard {
         }
 
         private void restore() {
-            GL30.glBindFramebuffer(GL30.GL_DRAW_FRAMEBUFFER, this.drawFbo);
-            GL30.glBindFramebuffer(GL30.GL_READ_FRAMEBUFFER, this.readFbo);
-            GL11.glViewport(this.viewport[0], this.viewport[1], this.viewport[2], this.viewport[3]);
-            GL20.glUseProgram(this.program);
-            setEnabled(GL11.GL_DEPTH_TEST, this.depthTest);
-            GL11.glDepthFunc(this.depthFunc);
-            GL11.glDepthMask(this.depthMask);
+            GlStateManager._glBindFramebuffer(GL30.GL_DRAW_FRAMEBUFFER, this.drawFbo);
+            GlStateManager._glBindFramebuffer(GL30.GL_READ_FRAMEBUFFER, this.readFbo);
+            GlStateManager._viewport(this.viewport[0], this.viewport[1], this.viewport[2], this.viewport[3]);
+            GlStateManager._glUseProgram(this.program);
+            forceDepthTest(this.depthTest);
+            forceDepthFunc(this.depthFunc);
+            forceDepthMask(this.depthMask);
             GL11.glDepthRange(this.depthRange[0], this.depthRange[1]);
-            setEnabled(GL11.GL_BLEND, this.blend);
+            forceBlend(this.blend);
+            // GlStateManager has no separate-equation cache. _blendEquation always calls GL.
             GL20.glBlendEquationSeparate(this.blendEqRgb, this.blendEqA);
-            GL14.glBlendFuncSeparate(this.blendSrcRgb, this.blendDstRgb, this.blendSrcA, this.blendDstA);
-            GL11.glColorMask(this.colorMask[0], this.colorMask[1], this.colorMask[2], this.colorMask[3]);
-            setEnabled(GL11.GL_CULL_FACE, this.cull);
+            forceBlendFunc(this.blendSrcRgb, this.blendDstRgb, this.blendSrcA, this.blendDstA);
+            forceColorMask(this.colorMask[0], this.colorMask[1], this.colorMask[2], this.colorMask[3]);
+            forceCull(this.cull);
             GL11.glCullFace(this.cullFace);
             GL11.glFrontFace(this.frontFace);
-            setEnabled(GL11.GL_SCISSOR_TEST, this.scissor);
-            GL11.glScissor(this.scissorBox[0], this.scissorBox[1], this.scissorBox[2], this.scissorBox[3]);
-            setEnabled(GL11.GL_POLYGON_OFFSET_FILL, this.polygonOffset);
-            GL11.glPolygonOffset(this.polygonFactor, this.polygonUnits);
+            forceScissor(this.scissor);
+            GlStateManager._scissorBox(this.scissorBox[0], this.scissorBox[1], this.scissorBox[2], this.scissorBox[3]);
+            forcePolygonOffset(this.polygonOffset);
+            forcePolygonFactor(this.polygonFactor, this.polygonUnits);
             GL32.glProvokingVertex(this.provoking);
             setEnabled(GL11.GL_STENCIL_TEST, this.stencil);
-            GL11.glStencilFunc(this.stencilFunc, this.stencilRef, this.stencilValueMask);
-            GL11.glStencilOp(this.stencilFail, this.stencilZFail, this.stencilZPass);
-            GL11.glStencilMask(this.stencilWriteMask);
+            forceStencilFunc(this.stencilFunc, this.stencilRef, this.stencilValueMask);
+            forceStencilOp(this.stencilFail, this.stencilZFail, this.stencilZPass);
+            forceStencilMask(this.stencilWriteMask);
             setEnabled(GL_CLIP_DISTANCE0, this.clip0);
             setEnabled(GL_DEPTH_CLAMP, this.depthClamp);
-            GlStateManager._activeTexture(this.activeTexture);
+            forceActiveTexture(this.activeTexture);
         }
+    }
 
-        private static void setEnabled(int cap, boolean enabled) {
-            if (enabled) {
-                GL11.glEnable(cap);
-            } else {
-                GL11.glDisable(cap);
-            }
+    /**
+     * GlStateManager setters no-op when the cache already equals the request.
+     * Voxy writes many of these with raw GL, and the portal copy writes the
+     * cache, so the cache and the GL value disagree. Flip to the other value
+     * first. That misses the cache and issues the GL call, then the real value
+     * does too. The cache and the driver end on the saved value.
+     */
+    private static void forceDepthTest(boolean enabled) {
+        if (enabled) {
+            GlStateManager._disableDepthTest();
+            GlStateManager._enableDepthTest();
+        } else {
+            GlStateManager._enableDepthTest();
+            GlStateManager._disableDepthTest();
+        }
+    }
+
+    private static void forceDepthFunc(int func) {
+        GlStateManager._depthFunc(func == GL_NEVER ? GL_ALWAYS : GL_NEVER);
+        GlStateManager._depthFunc(func);
+    }
+
+    private static void forceDepthMask(boolean mask) {
+        GlStateManager._depthMask(!mask);
+        GlStateManager._depthMask(mask);
+    }
+
+    private static void forceBlend(boolean enabled) {
+        if (enabled) {
+            GlStateManager._disableBlend();
+            GlStateManager._enableBlend();
+        } else {
+            GlStateManager._enableBlend();
+            GlStateManager._disableBlend();
+        }
+    }
+
+    private static void forceBlendFunc(int srcRgb, int dstRgb, int srcA, int dstA) {
+        if (srcRgb == 0 && dstRgb == 0 && srcA == 0 && dstA == 0) {
+            GlStateManager._blendFuncSeparate(1, 0, 1, 0);
+        } else {
+            GlStateManager._blendFuncSeparate(0, 0, 0, 0);
+        }
+        GlStateManager._blendFuncSeparate(srcRgb, dstRgb, srcA, dstA);
+    }
+
+    private static void forceColorMask(boolean r, boolean g, boolean b, boolean a) {
+        GlStateManager._colorMask(!r, !g, !b, !a);
+        GlStateManager._colorMask(r, g, b, a);
+    }
+
+    private static void forceCull(boolean enabled) {
+        if (enabled) {
+            GlStateManager._disableCull();
+            GlStateManager._enableCull();
+        } else {
+            GlStateManager._enableCull();
+            GlStateManager._disableCull();
+        }
+    }
+
+    private static void forceScissor(boolean enabled) {
+        if (enabled) {
+            GlStateManager._disableScissorTest();
+            GlStateManager._enableScissorTest();
+        } else {
+            GlStateManager._enableScissorTest();
+            GlStateManager._disableScissorTest();
+        }
+    }
+
+    private static void forcePolygonOffset(boolean enabled) {
+        if (enabled) {
+            GlStateManager._disablePolygonOffset();
+            GlStateManager._enablePolygonOffset();
+        } else {
+            GlStateManager._enablePolygonOffset();
+            GlStateManager._disablePolygonOffset();
+        }
+    }
+
+    private static void forcePolygonFactor(float factor, float units) {
+        GlStateManager._polygonOffset(factor + 1f, units + 1f);
+        GlStateManager._polygonOffset(factor, units);
+    }
+
+    private static void forceStencilFunc(int func, int ref, int mask) {
+        GlStateManager._stencilFunc(func == GL_NEVER ? GL_ALWAYS : GL_NEVER, ref + 1, mask);
+        GlStateManager._stencilFunc(func, ref, mask);
+    }
+
+    private static void forceStencilOp(int fail, int zFail, int zPass) {
+        GlStateManager._stencilOp(fail == GL11.GL_KEEP ? GL11.GL_ZERO : GL11.GL_KEEP, zFail, zPass);
+        GlStateManager._stencilOp(fail, zFail, zPass);
+    }
+
+    private static void forceStencilMask(int mask) {
+        GlStateManager._stencilMask(mask == 0 ? 0xFF : 0);
+        GlStateManager._stencilMask(mask);
+    }
+
+    private static void forceActiveTexture(int unitEnum) {
+        int other = unitEnum == GL13.GL_TEXTURE0 ? GL13.GL_TEXTURE1 : GL13.GL_TEXTURE0;
+        GlStateManager._activeTexture(other);
+        GlStateManager._activeTexture(unitEnum);
+    }
+
+    private static void setEnabled(int cap, boolean enabled) {
+        if (enabled) {
+            GL11.glEnable(cap);
+        } else {
+            GL11.glDisable(cap);
         }
     }
 }

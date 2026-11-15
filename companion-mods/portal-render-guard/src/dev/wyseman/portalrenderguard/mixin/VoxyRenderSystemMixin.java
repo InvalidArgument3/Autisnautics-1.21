@@ -11,8 +11,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * Voxy draws from inside Sodium's solid pass, which is also the portal
  * world's solid pass. Put the fixed-function state back before cutout,
  * entities, and the portal framebuffer copy run.
+ *
+ * <p>Priority is under Immersive Portals' {@code MixinVoxyRenderSystem_PortalView}
+ * (default 1000). Mixin applies higher priorities first and each HEAD insert
+ * lands in front of the previous one, so this callback runs first on the way
+ * in and last on the way out. IP's HEAD inject is cancellable. Pushing first
+ * keeps the pop paired when that cancel returns early.
  */
-@Mixin(targets = "me.cortex.voxy.client.core.VoxyRenderSystem", remap = false)
+@Mixin(targets = "me.cortex.voxy.client.core.VoxyRenderSystem", priority = 900, remap = false)
 public class VoxyRenderSystemMixin {
     @Inject(method = "renderOpaque", at = @At("HEAD"), remap = false)
     private void portalgl$beforeOpaque(Viewport<?> viewport, CallbackInfo ci) {

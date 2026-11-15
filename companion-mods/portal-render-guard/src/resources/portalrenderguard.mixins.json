@@ -6,7 +6,6 @@
   "plugin": "dev.wyseman.portalrenderguard.GuardMixinPlugin",
   "client": [
     "VoxyRenderSystemMixin",
-    "VoxyClipMixin",
     "PortalCompositeMixin"
   ],
   "injectors": {
