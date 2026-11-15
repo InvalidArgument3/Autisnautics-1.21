@@ -1,0 +1,49 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "portalrenderguard"
+version = "1.0.0"
+displayName = "Portal Render Guard"
+authors = "Autisnautics"
+description = '''Puts GL state back after Voxy's LOD draw, and shifts Voxy's portal clip plane into world space so LODs meet the portal. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "portalrenderguard.mixins.json"
+
+[[dependencies.portalrenderguard]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.portalrenderguard]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.portalrenderguard]]
+modId = "sodium"
+type = "required"
+versionRange = "[0.8,0.9)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.portalrenderguard]]
+modId = "voxy"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.portalrenderguard]]
+modId = "immersive_portals"
+type = "required"
+versionRange = "[6.0.7,7.0.0)"
+ordering = "AFTER"
+side = "CLIENT"

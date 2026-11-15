@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.portalrenderguard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.wyseman.portalrenderguard.GuardMixinPlugin",
+  "client": [
+    "VoxyRenderSystemMixin",
+    "VoxyClipMixin",
+    "PortalCompositeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
