@@ -5668,6 +5668,74 @@
             ]
         },
         {
+            "pakku_id": "K7mQ2pLx9nWc4vHb",
+            "pakku_links": [
+                "F9OUhskWxYr63coj"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-confectionery",
+                "modrinth": "create-confectionery"
+            },
+            "name": {
+                "curseforge": "Create Confectionery",
+                "modrinth": "Create Confectionery"
+            },
+            "id": {
+                "curseforge": "531834",
+                "modrinth": "WPE5gRs9"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create-confectionery1.21.1_v1.1.3b.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8063/074/create-confectionery1.21.1_v1.1.3b.jar",
+                    "id": "8063074",
+                    "parent_id": "531834",
+                    "hashes": {
+                        "sha1": "47e235efa862c5cbea53fdf8346d4c499674defa",
+                        "md5": "4e499ff47731b598c102553205c137eb"
+                    },
+                    "required_dependencies": [
+                        "328085"
+                    ],
+                    "size": 2127265,
+                    "date_published": "2026-05-09T13:44:56.000Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "create-confectionery1.21.1_v1.1.3b.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/WPE5gRs9/versions/ndnETBEN/create-confectionery1.21.1_v1.1.3b.jar",
+                    "id": "ndnETBEN",
+                    "parent_id": "WPE5gRs9",
+                    "hashes": {
+                        "sha1": "47e235efa862c5cbea53fdf8346d4c499674defa",
+                        "sha512": "ee299e0b3fc12edc506f7385a44eef207fcdc30ba6a0d30248614eed3486f78c661d9a176cb715eba044ac1a4255e38aa522bdd4b3fc1778049625108e114e82"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc"
+                    ],
+                    "size": 2127265,
+                    "date_published": "2026-08-15T11:52:16.707453Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "oHFg1lmyxBbni7px",
             "type": "MOD",
             "side": "BOTH",
