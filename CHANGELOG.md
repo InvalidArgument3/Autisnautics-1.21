@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Terrain next to a portal stays drawn.** `compatibilityRenderMode` in `config/immersive_portals.json` is false → true. The stencil portal renderer paints a full-screen fog triangle while drawing the other side, and it only stays inside the portal if the stencil test is still on. Voxy's LOD pass (`AbstractRenderPipeline.finish` and `transformBlitDepth`) turns that test off during the solid chunk pass, which is earlier in the frame, and Immersive Portals never turns it back on before the triangle. With the test off, the triangle covers the whole screen, including blocks next to the player, in any look direction that actually renders a portal. Compatibility mode draws the portal view into its own framebuffer and copies that onto the portal. `maxPortalLayer` is already 1, so this does not give up a nested view the pack was rendering. Sodium occlusion culling, fog occlusion, block-face culling, and the no-error GL context are unchanged. Set `compatibilityRenderMode` back to false if a portal view itself is wrong.
+
 ## [0.1.02]
 - **First join gives a small kit.** `kubejs/server_scripts/startingitems.js` still gives the quest book once, under `received_starting_items`, and now also 10 Poke Balls, 16 coal blocks, and an Iron Adventurer's Harness.
 

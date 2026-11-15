@@ -13,7 +13,7 @@
   "enableNetherPortalEffect": true,
   "enableClientPerformanceAdjustment": true,
   "clientTolerantVersionMismatchWithServer": false,
-  "compatibilityRenderMode": false,
+  "compatibilityRenderMode": true,
   "checkModInfoFromInternet": false,
   "enableUpdateNotification": false,
   "sharedBlockMeshBufferOptimization": true,
