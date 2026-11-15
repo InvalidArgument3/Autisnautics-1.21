@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C",
+    "E",
+    "C"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "id": "portal_linker:portal_linker",
+    "count": 1
+  }
+}

@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = '1.0.0'
+group = 'dev.wyseman.portallinker'
+base { archivesName = 'portallinker' }
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    withSourcesJar()
+}
+
+def ipJar = file("${rootDir}/../../.pakku/overrides/mods/ip_aeronautics-2.8.17.jar")
+if (!ipJar.isFile() || ipJar.length() < 1_000_000) {
+    throw new GradleException("Need the real Immersive Portals jar via git lfs, not the pointer: ${ipJar}")
+}
+
+neoForge {
+    version = '21.1.265'
+    mods {
+        portal_linker { sourceSet sourceSets.main }
+    }
+    runs {
+        gameTestServer {
+            type = 'gameTestServer'
+        }
+    }
+}
+
+dependencies {
+    compileOnly files(ipJar)
+    runtimeOnly files(ipJar)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.2'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add('-proc:none')
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+}
