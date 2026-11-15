@@ -19,10 +19,10 @@
 // radius is overworld-only, and a natural FinalizeSpawn in that circle is
 // cancelled like any other mob.
 
-var SPAWN_SAFE_RADIUS = 64
-var SPAWN_SAFE_RADIUS_SQ = SPAWN_SAFE_RADIUS * SPAWN_SAFE_RADIUS
+let SPAWN_SAFE_RADIUS = 64
+let SPAWN_SAFE_RADIUS_SQ = SPAWN_SAFE_RADIUS * SPAWN_SAFE_RADIUS
 
-var BLOCKED_SPAWN_TYPES = {
+let BLOCKED_SPAWN_TYPES = {
     natural: true,
     chunk_generation: true,
     structure: true,
