@@ -265,11 +265,12 @@ public class OrientationGameTests {
     private static BlockPos place(GameTestHelper helper, BlockPos origin, Direction.Axis axis, int u, int v) {
         ServerLevel level = helper.getLevel();
         BlockPos click = null;
-        BlockState frame = Blocks.CRYING_OBSIDIAN.defaultBlockState();
         for (int i = -1; i <= u; i++) {
             for (int j = -1; j <= v; j++) {
                 BlockPos abs = helper.absolutePos(at(origin, axis, i, j));
                 boolean interior = i >= 0 && i < u && j >= 0 && j < v;
+                boolean corner = (i == -1 || i == u) && (j == -1 || j == v);
+                BlockState frame = corner ? Blocks.DIAMOND_BLOCK.defaultBlockState() : Blocks.CRYING_OBSIDIAN.defaultBlockState();
                 level.setBlockAndUpdate(abs, interior ? Blocks.AIR.defaultBlockState() : frame);
                 if (!interior && i == -1 && j == 0) {
                     click = abs;

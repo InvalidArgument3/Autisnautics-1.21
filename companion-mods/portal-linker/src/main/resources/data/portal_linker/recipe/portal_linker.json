@@ -3,12 +3,15 @@
   "category": "misc",
   "pattern": [
     "C",
-    "E",
-    "C"
+    "M",
+    "E"
   ],
   "key": {
     "C": {
       "item": "minecraft:crying_obsidian"
+    },
+    "M": {
+      "tag": "portal_linker:linker_gate"
     },
     "E": {
       "item": "minecraft:ender_eye"

@@ -1,17 +1,31 @@
 package dev.wyseman.portallinker;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingInput;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -45,6 +59,153 @@ public class FrameGameTests {
                 helper.getLevel().getServer().getRecipeManager().byKey(ResourceLocation.parse("portal_linker:portal_linker")).isPresent(),
                 "recipe");
         helper.succeed();
+    }
+
+    @GameTest(template = "pad", timeoutTicks = 200)
+    public static void gateRecipeDiamondCornersAndLegacyFrames(GameTestHelper helper) {
+        ServerLevel level = helper.getLevel();
+        assertGateRecipe(helper, level);
+
+        Built built = placeMaterial(helper, new BlockPos(2, 2, 2), Direction.Axis.Z, 2, 3, false);
+        Built other = placeMaterial(helper, new BlockPos(2, 2, 14), Direction.Axis.Z, 2, 3, false);
+        ItemStack stack = new ItemStack(ModItems.LINKER.get());
+        LinkService.Attempt refused = LinkService.use(null, level, built.click, stack);
+        helper.assertFalse(refused.success(), "crying frame linked: " + refused.key());
+        helper.assertTrue("portal_linker.no_frame".equals(refused.key()), refused.key());
+
+        Built diamond = placeMaterial(helper, new BlockPos(24, 2, 2), Direction.Axis.Z, 2, 3, true);
+        Built diamondOther = placeMaterial(helper, new BlockPos(24, 2, 14), Direction.Axis.Z, 2, 3, true);
+        LinkService.Attempt stored = LinkService.use(null, level, diamond.click, stack);
+        helper.assertTrue(stored.success(), stored.key());
+        LinkService.Attempt linked = LinkService.use(null, level, diamondOther.click, stack);
+        helper.assertTrue(linked.success(), linked.key());
+        helper.assertTrue(linked.linkId() != null, "diamond link id");
+        Links.Link made = Links.get(level.getServer()).link(linked.linkId());
+        helper.assertTrue(made != null && !made.legacyFrames, "new link was grandfathered");
+
+        assertLegacyLoad(helper, level);
+
+        for (BlockPos pos : built.interior) {
+            level.setBlockAndUpdate(pos, PortalPlaceholderBlock.instance.defaultBlockState());
+        }
+        for (BlockPos pos : other.interior) {
+            level.setBlockAndUpdate(pos, PortalPlaceholderBlock.instance.defaultBlockState());
+        }
+        FrameEnd from = new FrameEnd(level.dimension(), Direction.Axis.Z, built.click, 2, 3, built.interior, built.frame);
+        FrameEnd to = new FrameEnd(level.dimension(), Direction.Axis.Z, other.click, 2, 3, other.interior, other.frame);
+        UUID legacyId = UUID.randomUUID();
+        Links.Link legacy = new Links.Link(legacyId, from, to, List.of(), false, LinkOrientation.FRONT, true);
+        legacy.orientSynced = true;
+        Links links = Links.get(level.getServer());
+        links.begin(legacy);
+        links.commit(legacyId);
+        links.sweep(level.getServer());
+        Links.Link kept = links.link(legacyId);
+        helper.assertTrue(kept != null && !kept.breaking, "legacy crying frame was closed");
+        BlockPos edge = null;
+        for (BlockPos pos : built.frame) {
+            if (!FrameFinder.isCornerPosition(built.frame, pos)) {
+                edge = pos;
+                break;
+            }
+        }
+        helper.assertTrue(edge != null, "no edge");
+        level.setBlockAndUpdate(edge, Blocks.AIR.defaultBlockState());
+        links.sweep(level.getServer());
+        Links.Link after = links.link(legacyId);
+        helper.assertTrue(after == null || after.breaking, "broken legacy frame stayed open");
+        helper.succeed();
+    }
+
+    private static void assertLegacyLoad(GameTestHelper helper, ServerLevel level) {
+        FrameEnd from = new FrameEnd(Level.OVERWORLD, Direction.Axis.Z, BlockPos.ZERO, 1, 2, Set.of(BlockPos.ZERO), Set.of(new BlockPos(0, 1, 0)));
+        FrameEnd to = new FrameEnd(Level.OVERWORLD, Direction.Axis.Z, new BlockPos(0, 0, 8), 1, 2, Set.of(new BlockPos(0, 0, 8)), Set.of(new BlockPos(0, 1, 8)));
+        UUID id = UUID.randomUUID();
+        Links.Link fresh = new Links.Link(id, from, to, List.of(), false, LinkOrientation.FRONT);
+        CompoundTag linkTag = fresh.save();
+        linkTag.remove("legacyFrames");
+        CompoundTag root = new CompoundTag();
+        root.putInt("version", 2);
+        ListTag list = new ListTag();
+        list.add(linkTag);
+        root.put("links", list);
+        Links loaded = Links.load(root, level.registryAccess());
+        Links.Link back = loaded.link(id);
+        helper.assertTrue(back != null, "1.1.0 link did not load");
+        helper.assertTrue(back.legacyFrames, "1.1.0 link was not grandfathered");
+        helper.assertTrue(back.orientation == LinkOrientation.FRONT, "orientation dropped");
+        CompoundTag again = new CompoundTag();
+        loaded.save(again, level.registryAccess());
+        helper.assertTrue(again.getInt("version") == 3, "resave version " + again.getInt("version"));
+        helper.assertTrue(again.getList("links", Tag.TAG_COMPOUND).getCompound(0).getBoolean("legacyFrames"), "resave dropped the grandfather flag");
+    }
+
+    private static void assertGateRecipe(GameTestHelper helper, ServerLevel level) {
+        var holder = level.getServer().getRecipeManager().byKey(ResourceLocation.parse("portal_linker:portal_linker"));
+        helper.assertTrue(holder.isPresent(), "recipe missing");
+        helper.assertTrue(holder.get().value() instanceof ShapedRecipe, "recipe type");
+        ShapedRecipe shaped = (ShapedRecipe) holder.get().value();
+        helper.assertTrue(shaped.getWidth() == 1 && shaped.getHeight() == 3, shaped.getWidth() + "x" + shaped.getHeight());
+        helper.assertTrue(shaped.getIngredients().get(0).test(new ItemStack(Items.CRYING_OBSIDIAN)), "top is not crying obsidian");
+        helper.assertTrue(shaped.getIngredients().get(2).test(new ItemStack(Items.ENDER_EYE)), "bottom is not an eye of ender");
+        Ingredient gate = shaped.getIngredients().get(1);
+        helper.assertTrue(gate.getValues().length == 1 && gate.getValues()[0] instanceof Ingredient.TagValue, "middle is not a tag");
+        Ingredient.TagValue tag = (Ingredient.TagValue) gate.getValues()[0];
+        helper.assertTrue(PortalLinker.LINKER_GATE.equals(tag.tag()), "gate tag " + tag.tag());
+        HolderSet.Named<net.minecraft.world.item.Item> named = BuiltInRegistries.ITEM.getTag(PortalLinker.LINKER_GATE).orElseThrow();
+        helper.assertTrue(named.size() == 0, "gate tag was already filled, size " + named.size());
+        try {
+            Method bind = HolderSet.Named.class.getDeclaredMethod("bind", List.class);
+            bind.setAccessible(true);
+            bind.invoke(named, List.<Holder<net.minecraft.world.item.Item>>of(Items.DIAMOND.builtInRegistryHolder()));
+            Field cached = Ingredient.class.getDeclaredField("itemStacks");
+            cached.setAccessible(true);
+            cached.set(gate, null);
+            Field stacking = Ingredient.class.getDeclaredField("stackingIds");
+            stacking.setAccessible(true);
+            stacking.set(gate, null);
+        } catch (ReflectiveOperationException e) {
+            helper.assertTrue(false, "could not fill the gate tag: " + e);
+            return;
+        }
+        CraftingInput old = CraftingInput.of(1, 3, List.of(new ItemStack(Items.CRYING_OBSIDIAN), new ItemStack(Items.ENDER_EYE), new ItemStack(Items.CRYING_OBSIDIAN)));
+        helper.assertTrue(level.getServer().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, old, level).isEmpty(), "old column still crafts");
+        helper.assertFalse(gate.test(new ItemStack(Items.ENDER_EYE)), "eye matches the gate");
+        helper.assertFalse(gate.test(new ItemStack(Items.DIAMOND_BLOCK)), "diamond block matches the gate");
+        CraftingInput gated = CraftingInput.of(1, 3, List.of(new ItemStack(Items.CRYING_OBSIDIAN), new ItemStack(Items.DIAMOND), new ItemStack(Items.ENDER_EYE)));
+        var found = level.getServer().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, gated, level);
+        helper.assertTrue(found.isPresent(), "gated column did not craft");
+        ItemStack result = found.get().value().assemble(gated, level.registryAccess());
+        helper.assertTrue(result.is(ModItems.LINKER.get()), "crafted " + result);
+    }
+
+    private record Built(BlockPos click, Set<BlockPos> frame, Set<BlockPos> interior) {}
+
+    private static Built placeMaterial(GameTestHelper helper, BlockPos origin, Direction.Axis axis, int u, int v, boolean diamondCorners) {
+        ServerLevel level = helper.getLevel();
+        Set<BlockPos> frame = new HashSet<>();
+        Set<BlockPos> interior = new HashSet<>();
+        BlockPos click = null;
+        for (int i = -1; i <= u; i++) {
+            for (int j = -1; j <= v; j++) {
+                BlockPos abs = helper.absolutePos(at(origin, axis, i, j));
+                boolean inside = i >= 0 && i < u && j >= 0 && j < v;
+                boolean corner = (i == -1 || i == u) && (j == -1 || j == v);
+                BlockState state = inside
+                        ? Blocks.AIR.defaultBlockState()
+                        : (diamondCorners && corner ? Blocks.DIAMOND_BLOCK.defaultBlockState() : Blocks.CRYING_OBSIDIAN.defaultBlockState());
+                level.setBlockAndUpdate(abs, state);
+                if (inside) {
+                    interior.add(abs);
+                } else {
+                    frame.add(abs);
+                }
+                if (!inside && i == -1 && j == 0) {
+                    click = abs;
+                }
+            }
+        }
+        return new Built(click, frame, interior);
     }
 
     @GameTest(template = "pad", timeoutTicks = 200)
@@ -131,11 +292,12 @@ public class FrameGameTests {
     private static BlockPos place(GameTestHelper helper, BlockPos origin, Direction.Axis axis, int u, int v) {
         ServerLevel level = helper.getLevel();
         BlockPos click = null;
-        BlockState frame = Blocks.CRYING_OBSIDIAN.defaultBlockState();
         for (int i = -1; i <= u; i++) {
             for (int j = -1; j <= v; j++) {
                 BlockPos abs = helper.absolutePos(at(origin, axis, i, j));
                 boolean interior = i >= 0 && i < u && j >= 0 && j < v;
+                boolean corner = (i == -1 || i == u) && (j == -1 || j == v);
+                BlockState frame = corner ? Blocks.DIAMOND_BLOCK.defaultBlockState() : Blocks.CRYING_OBSIDIAN.defaultBlockState();
                 level.setBlockAndUpdate(abs, interior ? Blocks.AIR.defaultBlockState() : frame);
                 if (!interior && i == -1 && j == 0) {
                     click = abs;

@@ -15,7 +15,7 @@
   "portal_linker.orient.roll_180": "rolled 180°",
   "portal_linker.orient.roll_270": "rolled 270°",
   "portal_linker.orient.flip": "flipped",
-  "portal_linker.no_frame": "That is not an empty frame. Use a rectangle of frame blocks, corners included, interior at least 1×2 and at most %s×%s.",
+  "portal_linker.no_frame": "That is not an empty frame. The four corners are diamond blocks, the other frame blocks are crying obsidian, interior at least 1×2 and at most %s×%s.",
   "portal_linker.too_small": "That opening is smaller than 1×2.",
   "portal_linker.too_big": "That opening is larger than %s×%s.",
   "portal_linker.ambiguous": "That block is part of more than one opening. Click a different frame block.",

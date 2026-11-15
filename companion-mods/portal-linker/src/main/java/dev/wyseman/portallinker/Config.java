@@ -10,6 +10,7 @@ public final class Config {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.IntValue MAX_INTERIOR;
     public static final ModConfigSpec.ConfigValue<String> FRAME_BLOCK;
+    public static final ModConfigSpec.ConfigValue<String> CORNER_BLOCK;
     public static final ModConfigSpec.BooleanValue CATALYST_ENABLED;
     public static final ModConfigSpec.ConfigValue<String> CATALYST_ITEM;
     public static final ModConfigSpec.IntValue CATALYST_COUNT;
@@ -21,8 +22,11 @@ public final class Config {
                 .comment("Largest interior edge, in blocks. A frame bigger than this on either edge is refused. Default 32 rejects a 33-long opening.")
                 .defineInRange("maxInterior", 32, 2, 64);
         FRAME_BLOCK = builder
-                .comment("Block id that counts as a frame, in addition to the portal_linker:portal_frames block tag. A datapack can add more ids to that tag. Corners are required.")
+                .comment("Block id that counts as a frame edge, in addition to the portal_linker:portal_frames block tag. A datapack can add more ids to that tag. Default minecraft:crying_obsidian.")
                 .define("frameBlock", "minecraft:crying_obsidian");
+        CORNER_BLOCK = builder
+                .comment("Block id that the four corners must be, in addition to the portal_linker:portal_corners block tag. Default minecraft:diamond_block. The other frame blocks stay frameBlock. Set this equal to frameBlock to allow one block for the whole ring (and then take crying obsidian out of portal_frames if that block should be the only one). A 32x32 ring is 4 corners plus 128 edges, so corners stay the diamond cost at every size.")
+                .define("cornerBlock", "minecraft:diamond_block");
         builder.pop();
         builder.push("catalyst");
         CATALYST_ENABLED = builder
@@ -49,6 +53,18 @@ public final class Config {
             return Blocks.CRYING_OBSIDIAN;
         }
         return blockOr(FRAME_BLOCK.get(), Blocks.CRYING_OBSIDIAN);
+    }
+
+    public static Block cornerBlock() {
+        if (!SPEC.isLoaded()) {
+            return Blocks.DIAMOND_BLOCK;
+        }
+        return blockOr(CORNER_BLOCK.get(), Blocks.DIAMOND_BLOCK);
+    }
+
+    /** False when both config blocks are the same, so the whole ring may be that one material. */
+    public static boolean distinctCorners() {
+        return cornerBlock() != frameBlock();
     }
 
     public static boolean catalystEnabled() {

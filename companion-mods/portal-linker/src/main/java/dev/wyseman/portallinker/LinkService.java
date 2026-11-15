@@ -254,7 +254,8 @@ public final class LinkService {
         }
         for (BlockPos pos : end.frame) {
             level.getChunk(pos.getX() >> 4, pos.getZ() >> 4);
-            if (!FrameFinder.isFrame(level.getBlockState(pos))) {
+            boolean corner = FrameFinder.isCornerPosition(end.frame, pos);
+            if (!FrameFinder.holds(level.getBlockState(pos), corner, false)) {
                 return Attempt.fail("portal_linker.gone");
             }
         }
@@ -276,11 +277,13 @@ public final class LinkService {
     }
 
     private static FrameFinder.Result scan(ServerLevel level, BlockPos clicked, int max) {
-        return FrameFinder.find(
-                clicked,
-                pos -> FrameFinder.isFrame(level.getBlockState(pos)),
-                pos -> level.getBlockState(pos).isAir(),
-                max);
+        java.util.function.Predicate<BlockPos> edge = pos -> FrameFinder.isEdge(level.getBlockState(pos));
+        java.util.function.Predicate<BlockPos> corner = pos -> FrameFinder.isCorner(level.getBlockState(pos));
+        java.util.function.Predicate<BlockPos> open = pos -> level.getBlockState(pos).isAir();
+        if (!Config.distinctCorners()) {
+            return FrameFinder.find(clicked, pos -> edge.test(pos) || corner.test(pos), open, max);
+        }
+        return FrameFinder.find(clicked, edge, corner, open, max);
     }
 
     private static Attempt scanProblem(FrameFinder.Result found, int max) {

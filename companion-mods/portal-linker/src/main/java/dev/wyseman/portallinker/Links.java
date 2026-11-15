@@ -66,6 +66,10 @@ public final class Links extends SavedData {
         return link == null || link.breaking ? null : link;
     }
 
+    public Link link(UUID id) {
+        return links.get(id);
+    }
+
     public boolean occupied(FrameEnd end) {
         for (BlockPos pos : end.frame) {
             if (occupied.containsKey(key(end, pos))) {
@@ -124,7 +128,8 @@ public final class Links extends SavedData {
         boolean framePos = contains(link.from.frame, pos) && link.from.dimension.equals(level.dimension())
                 || contains(link.to.frame, pos) && link.to.dimension.equals(level.dimension());
         if (framePos) {
-            if (!FrameFinder.isFrame(state)) {
+            FrameEnd end = contains(link.from.frame, pos) && link.from.dimension.equals(level.dimension()) ? link.from : link.to;
+            if (!FrameFinder.holds(state, FrameFinder.isCornerPosition(end.frame, pos), link.legacyFrames)) {
                 dismantle(level.getServer(), id);
             }
             return;
@@ -179,10 +184,10 @@ public final class Links extends SavedData {
     }
 
     private boolean loadedFrameBroken(MinecraftServer server, Link link) {
-        return sideBroken(server, link.from) || sideBroken(server, link.to);
+        return sideBroken(server, link, link.from) || sideBroken(server, link, link.to);
     }
 
-    private boolean sideBroken(MinecraftServer server, FrameEnd end) {
+    private boolean sideBroken(MinecraftServer server, Link link, FrameEnd end) {
         ServerLevel level = server.getLevel(end.dimension);
         if (level == null) {
             return false;
@@ -191,7 +196,7 @@ public final class Links extends SavedData {
             if (!chunkLoaded(level, pos)) {
                 continue;
             }
-            if (!FrameFinder.isFrame(level.getBlockState(pos))) {
+            if (!FrameFinder.holds(level.getBlockState(pos), FrameFinder.isCornerPosition(end.frame, pos), link.legacyFrames)) {
                 return true;
             }
         }
@@ -287,7 +292,7 @@ public final class Links extends SavedData {
 
     @Override
     public CompoundTag save(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.putInt("version", 2);
+        tag.putInt("version", 3);
         ListTag selectionList = new ListTag();
         for (FrameEnd.Selection selection : selections.values()) {
             selectionList.add(selection.save());
@@ -303,12 +308,13 @@ public final class Links extends SavedData {
 
     public static Links load(CompoundTag tag, HolderLookup.Provider registries) {
         Links data = new Links();
+        int version = tag.contains("version", Tag.TAG_INT) ? tag.getInt("version") : 0;
         for (Tag entry : tag.getList("selections", Tag.TAG_COMPOUND)) {
             FrameEnd.Selection selection = FrameEnd.Selection.load((CompoundTag) entry);
             data.selections.put(selection.token, selection);
         }
         for (Tag entry : tag.getList("links", Tag.TAG_COMPOUND)) {
-            Link link = Link.load((CompoundTag) entry);
+            Link link = Link.load((CompoundTag) entry, version);
             data.links.put(link.id, link);
             if (!link.breaking) {
                 data.index(link);
@@ -342,16 +348,27 @@ public final class Links extends SavedData {
         public boolean breaking;
         /** Exit mode. FRONT is the upright default, including links saved before 1.1.0. */
         public LinkOrientation orientation;
+        /**
+         * True for a link saved before diamond corners (saved-data version under 3).
+         * Crying obsidian still holds that frame until a block is broken or replaced.
+         * New links are false and require the corner rule.
+         */
+        public boolean legacyFrames;
         /** Not saved. False after load so the next sweep rewrites rotation onto portals that were saved by 1.0.0. */
         public boolean orientSynced;
 
         public Link(UUID id, FrameEnd from, FrameEnd to, List<PortalRef> portals, boolean breaking, LinkOrientation orientation) {
+            this(id, from, to, portals, breaking, orientation, false);
+        }
+
+        public Link(UUID id, FrameEnd from, FrameEnd to, List<PortalRef> portals, boolean breaking, LinkOrientation orientation, boolean legacyFrames) {
             this.id = id;
             this.from = from;
             this.to = to;
             this.portals = List.copyOf(portals);
             this.breaking = breaking;
             this.orientation = orientation == null ? LinkOrientation.FRONT : orientation;
+            this.legacyFrames = legacyFrames;
         }
 
         CompoundTag save() {
@@ -361,6 +378,7 @@ public final class Links extends SavedData {
             tag.put("to", to.save());
             tag.putBoolean("breaking", breaking);
             tag.putString("orientation", orientation.name());
+            tag.putBoolean("legacyFrames", legacyFrames);
             ListTag list = new ListTag();
             for (PortalRef ref : portals) {
                 list.add(ref.save());
@@ -369,12 +387,13 @@ public final class Links extends SavedData {
             return tag;
         }
 
-        static Link load(CompoundTag tag) {
+        static Link load(CompoundTag tag, int version) {
             List<PortalRef> refs = new ArrayList<>();
             for (Tag entry : tag.getList("portals", Tag.TAG_COMPOUND)) {
                 refs.add(PortalRef.load((CompoundTag) entry));
             }
-            Link link = new Link(tag.getUUID("id"), FrameEnd.load(tag.getCompound("from")), FrameEnd.load(tag.getCompound("to")), refs, tag.getBoolean("breaking"), LinkOrientation.byName(tag.getString("orientation")));
+            boolean legacy = tag.contains("legacyFrames", Tag.TAG_BYTE) ? tag.getBoolean("legacyFrames") : version < 3;
+            Link link = new Link(tag.getUUID("id"), FrameEnd.load(tag.getCompound("from")), FrameEnd.load(tag.getCompound("to")), refs, tag.getBoolean("breaking"), LinkOrientation.byName(tag.getString("orientation")), legacy);
             link.orientSynced = false;
             return link;
         }

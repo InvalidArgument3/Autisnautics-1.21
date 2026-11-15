@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -19,6 +20,8 @@ public final class PortalLinker {
     public static final String ID = "portal_linker";
     public static final Logger LOG = LogUtils.getLogger();
     public static final TagKey<Block> FRAME_BLOCKS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(ID, "portal_frames"));
+    public static final TagKey<Block> CORNER_BLOCKS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(ID, "portal_corners"));
+    public static final TagKey<Item> LINKER_GATE = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ID, "linker_gate"));
 
     public PortalLinker(IEventBus modBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
