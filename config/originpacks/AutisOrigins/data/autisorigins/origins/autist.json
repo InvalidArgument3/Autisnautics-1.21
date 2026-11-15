@@ -1,12 +1,7 @@
 {
     "name": "Autist",
-    "description": "The Autists were once an obscure clan of humans, but their obsession with brown bricks and configuring modpacks twisted them into a different species altogether.\n\nThough normal humans haven't been sighted in this world for countless generations, the Autist is found everywhere, and well-adapted to build shitshacks in any environment.",
+    "description": "The Autists were once an obscure clan of humans, but their obsession with brown bricks and configuring modpacks twisted them into a different species altogether.\n\nThough normal humans haven't been sighted in this world for countless generations, the Autist is found everywhere, and well-adapted to build shitshacks in any environment.\n\nThis is the vanilla origin. No extra powers and no drawbacks: you play like normal Minecraft.",
     "powers": [
-        "autisorigins:brown_brick",
-        "autisorigins:configurators_eye",
-        "autisorigins:pack_stamina",
-        "autisorigins:sedentary",
-        "autisorigins:analysis_paralysis",
         "autisorigins:starting_canned_food"
     ],
     "icon": {

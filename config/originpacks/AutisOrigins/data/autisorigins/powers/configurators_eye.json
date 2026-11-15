@@ -1,6 +1,0 @@
-{
-    "name": "Configurator's Eye",
-    "description": "You see a little further into the dark, enough to keep placing blocks after the torches run out.",
-    "type": "neoorigins:enhanced_vision",
-    "exposure": 0.4
-}
