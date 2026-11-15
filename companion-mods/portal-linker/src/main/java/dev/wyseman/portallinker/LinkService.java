@@ -17,6 +17,7 @@ import qouteall.imm_ptl.core.api.PortalAPI;
 import qouteall.imm_ptl.core.portal.PortalExtension;
 import qouteall.imm_ptl.core.portal.PortalManipulation;
 import qouteall.imm_ptl.core.portal.nether_portal.BlockPortalShape;
+import qouteall.q_misc_util.my_util.DQuaternion;
 import qouteall.imm_ptl.core.portal.nether_portal.GeneralBreakablePortal;
 import qouteall.imm_ptl.core.portal.nether_portal.NetherPortalGeneration;
 
@@ -124,9 +125,10 @@ public final class LinkService {
         }
 
         UUID id = UUID.randomUUID();
+        LinkOrientation orientation = LinkerItems.orientation(stack);
         List<GeneralBreakablePortal> portals;
         try {
-            portals = build(level.getServer(), id, first, second);
+            portals = build(level.getServer(), id, first, second, orientation);
         } catch (RuntimeException e) {
             PortalLinker.LOG.error("Portal link failed before the entities existed", e);
             clearInterior(level.getServer(), first);
@@ -137,7 +139,8 @@ public final class LinkService {
         for (GeneralBreakablePortal portal : portals) {
             refs.add(new Links.PortalRef(portal.getUUID(), portal.level().dimension(), portal.blockPosition().asLong()));
         }
-        links.begin(new Links.Link(id, first, second, refs, true));
+        Links.Link link = new Links.Link(id, first, second, refs, true, orientation);
+        links.begin(link);
         try {
             for (GeneralBreakablePortal portal : portals) {
                 PortalAPI.spawnServerEntity(portal);
@@ -149,16 +152,34 @@ public final class LinkService {
             return Attempt.fail("portal_linker.no_frame", max);
         }
         links.commit(id);
+        link.orientSynced = true;
         links.removeSelection(selection.token);
         LinkerItems.clear(stack);
         if (player != null && Config.catalystEnabled()) {
             payCatalyst(player, stack, true);
         }
-        PortalLinker.LOG.info("Linked portals {} ({}x{}) {} -> {}", id, first.u, first.v, first.dimension.location(), second.dimension.location());
-        return Attempt.ok("portal_linker.linked", id, first.u, first.v);
+        PortalLinker.LOG.info("Linked portals {} ({}x{}, {}) {} -> {}", id, first.u, first.v, orientation, first.dimension.location(), second.dimension.location());
+        return Attempt.ok("portal_linker.linked", id, first.u, first.v, orientation.label());
     }
 
-    private static List<GeneralBreakablePortal> build(MinecraftServer server, UUID id, FrameEnd from, FrameEnd to) {
+    /** Cycles the exit mode of the link that owns this block. Server-side; the caller already checked the player is sneaking. */
+    public static Attempt retune(ServerLevel level, BlockPos clicked, int steps) {
+        Links links = Links.get(level.getServer());
+        Links.Link link = links.linkAt(level, clicked);
+        if (link == null) {
+            return Attempt.fail("portal_linker.none_stored");
+        }
+        link.orientation = link.orientation.cycle(steps);
+        link.orientSynced = false;
+        links.setDirty();
+        if (LinkRotation.sync(level.getServer(), link)) {
+            link.orientSynced = true;
+        }
+        PortalLinker.LOG.info("Portal link {} exit is now {}", link.id, link.orientation);
+        return Attempt.ok("portal_linker.orient.updated", link.id, link.orientation.label());
+    }
+
+    private static List<GeneralBreakablePortal> build(MinecraftServer server, UUID id, FrameEnd from, FrameEnd to, LinkOrientation orientation) {
         ServerLevel fromLevel = server.getLevel(from.dimension);
         ServerLevel toLevel = server.getLevel(to.dimension);
         BlockPortalShape fromShape = from.shape();
@@ -173,11 +194,15 @@ public final class LinkService {
         }
         fromShape.initPortalPosAxisShape(fromFace, Direction.AxisDirection.POSITIVE);
         toShape.initPortalPosAxisShape(toFace, Direction.AxisDirection.POSITIVE);
+        PortalFrames.align(fromFace, fromShape);
+        PortalFrames.align(toFace, toShape);
         fromFace.setDestDim(toLevel.dimension());
         fromFace.setDestination(toShape.innerAreaBox.getCenterVec());
         toFace.setDestDim(fromLevel.dimension());
         toFace.setDestination(fromShape.innerAreaBox.getCenterVec());
-        PortalManipulation.adjustRotationToConnect(fromFace, toFace);
+        DQuaternion rotation = LinkRotation.between(fromFace, toFace, orientation);
+        fromFace.setRotation(rotation);
+        toFace.setRotation(rotation.getConjugated());
         fromFace.updateCache();
         toFace.updateCache();
 

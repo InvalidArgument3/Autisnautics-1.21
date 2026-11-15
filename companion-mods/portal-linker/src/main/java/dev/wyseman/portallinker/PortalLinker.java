@@ -5,10 +5,12 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 
@@ -21,8 +23,12 @@ public final class PortalLinker {
     public PortalLinker(IEventBus modBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
         ModItems.register(modBus);
+        modBus.addListener(PortalLinkerNet::register);
         NeoForge.EVENT_BUS.addListener(PortalLinkerEvents::onNeighbor);
         NeoForge.EVENT_BUS.addListener(PortalLinkerEvents::onTick);
+        if (FMLEnvironment.dist == Dist.CLIENT) {
+            PortalLinkerClient.init();
+        }
         LOG.info("Portal Linker loaded");
     }
 }

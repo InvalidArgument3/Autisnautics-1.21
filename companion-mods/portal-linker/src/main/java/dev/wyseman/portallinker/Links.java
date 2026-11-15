@@ -57,6 +57,15 @@ public final class Links extends SavedData {
         }
     }
 
+    public Link linkAt(ServerLevel level, BlockPos pos) {
+        UUID id = occupied.get(key(level, pos));
+        if (id == null) {
+            return null;
+        }
+        Link link = links.get(id);
+        return link == null || link.breaking ? null : link;
+    }
+
     public boolean occupied(FrameEnd end) {
         for (BlockPos pos : end.frame) {
             if (occupied.containsKey(key(end, pos))) {
@@ -148,6 +157,10 @@ public final class Links extends SavedData {
         List<UUID> broken = new ArrayList<>();
         List<UUID> finished = new ArrayList<>();
         for (Link link : links.values()) {
+            if (!link.breaking && !link.orientSynced && LinkRotation.sync(server, link)) {
+                link.orientSynced = true;
+                setDirty();
+            }
             if (link.breaking) {
                 if (finishLoaded(server, link)) {
                     finished.add(link.id);
@@ -274,7 +287,7 @@ public final class Links extends SavedData {
 
     @Override
     public CompoundTag save(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.putInt("version", 1);
+        tag.putInt("version", 2);
         ListTag selectionList = new ListTag();
         for (FrameEnd.Selection selection : selections.values()) {
             selectionList.add(selection.save());
@@ -327,13 +340,18 @@ public final class Links extends SavedData {
         public final FrameEnd to;
         public final List<PortalRef> portals;
         public boolean breaking;
+        /** Exit mode. FRONT is the upright default, including links saved before 1.1.0. */
+        public LinkOrientation orientation;
+        /** Not saved. False after load so the next sweep rewrites rotation onto portals that were saved by 1.0.0. */
+        public boolean orientSynced;
 
-        public Link(UUID id, FrameEnd from, FrameEnd to, List<PortalRef> portals, boolean breaking) {
+        public Link(UUID id, FrameEnd from, FrameEnd to, List<PortalRef> portals, boolean breaking, LinkOrientation orientation) {
             this.id = id;
             this.from = from;
             this.to = to;
             this.portals = List.copyOf(portals);
             this.breaking = breaking;
+            this.orientation = orientation == null ? LinkOrientation.FRONT : orientation;
         }
 
         CompoundTag save() {
@@ -342,6 +360,7 @@ public final class Links extends SavedData {
             tag.put("from", from.save());
             tag.put("to", to.save());
             tag.putBoolean("breaking", breaking);
+            tag.putString("orientation", orientation.name());
             ListTag list = new ListTag();
             for (PortalRef ref : portals) {
                 list.add(ref.save());
@@ -355,7 +374,9 @@ public final class Links extends SavedData {
             for (Tag entry : tag.getList("portals", Tag.TAG_COMPOUND)) {
                 refs.add(PortalRef.load((CompoundTag) entry));
             }
-            return new Link(tag.getUUID("id"), FrameEnd.load(tag.getCompound("from")), FrameEnd.load(tag.getCompound("to")), refs, tag.getBoolean("breaking"));
+            Link link = new Link(tag.getUUID("id"), FrameEnd.load(tag.getCompound("from")), FrameEnd.load(tag.getCompound("to")), refs, tag.getBoolean("breaking"), LinkOrientation.byName(tag.getString("orientation")));
+            link.orientSynced = false;
+            return link;
         }
     }
 

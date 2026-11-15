@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="portal_linker"
-version="1.0.0"
+version="1.1.0"
 displayName="Portal Linker"
 authors="Autisnautics"
 description='''Survival item that links two built frames into a breakable Immersive Portals pair.'''

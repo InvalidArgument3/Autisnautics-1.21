@@ -30,12 +30,18 @@ public final class PortalLinkerItem extends Item {
             return InteractionResult.PASS;
         }
         ItemStack stack = context.getItemInHand();
-        LinkService.Attempt attempt = player.isShiftKeyDown()
-                ? LinkService.clear(server, stack)
-                : LinkService.use(player, server, context.getClickedPos(), stack);
+        LinkService.Attempt attempt;
+        if (player.isShiftKeyDown()) {
+            Links.Link link = Links.get(server.getServer()).linkAt(server, context.getClickedPos());
+            attempt = link != null ? LinkService.retune(server, context.getClickedPos(), 1) : LinkService.clear(server, stack);
+        } else {
+            attempt = LinkService.use(player, server, context.getClickedPos(), stack);
+        }
         tell(player, attempt);
         if (attempt.success() && "portal_linker.linked".equals(attempt.key())) {
             server.playSound(null, context.getClickedPos(), SoundEvents.PORTAL_TRIGGER, SoundSource.BLOCKS, 0.5f, 1.4f);
+        } else if (attempt.success() && "portal_linker.orient.updated".equals(attempt.key())) {
+            server.playSound(null, context.getClickedPos(), SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.4f, 1.4f);
         }
         return InteractionResult.CONSUME;
     }
