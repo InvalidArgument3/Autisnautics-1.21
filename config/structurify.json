@@ -7,7 +7,963 @@
     "enable_global_spacing_and_separation_modifier": true,
     "global_spacing_and_separation_modifier": 5.0
   },
-  "structures": [],
+  "structures": [
+    {
+      "name": "stellaris:meteor",
+      "is_disabled": false,
+      "biomes": [
+        "#stellaris:moon_biomes"
+      ]
+    },
+    {
+      "name": "alexscaves:abyssal_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:acid_pit",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:cake_cave",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:dino_bowl",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:donut_arch",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:ferrocave",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:forlorn_bridge",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:forlorn_canyon",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:gingerbread_town",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:licowitch_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:ocean_trench",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:soda_bottle",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:underground_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:volcano",
+      "is_disabled": true
+    },
+    {
+      "name": "ars_nouveau:guardian_wilden_den",
+      "is_disabled": true
+    },
+    {
+      "name": "ars_nouveau:hunter_wilden_den",
+      "is_disabled": true
+    },
+    {
+      "name": "ars_nouveau:stalker_wilden_den",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:column",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:dig_site",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:focal_point",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:moon_dial",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:obliteration",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:rotunda_1",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:rotunda_2",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:skeleton_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:small_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:spider_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:zombie_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "betterwitchhuts:witch_circle",
+      "is_disabled": true
+    },
+    {
+      "name": "betterwitchhuts:witch_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "bosses_of_mass_destruction:lich_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "bosses_of_mass_destruction:void_blossom",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_entrance_aquatic",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_entrance_volcanic",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_entrance_volcanic_redsand",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_entrance_volcanic_sand",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_entrance_woodland",
+      "is_disabled": true
+    },
+    {
+      "name": "enigmaticlegacyplus:spellstone_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:badlands_pyramid",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:campsite",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:dark_forest_settlement",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:desert_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:farmstead",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:guide_post_cold",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:guide_post_warm",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:mangrove_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:mausoleum",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/birch",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/dark",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/desert",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/forest",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/mangrove",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_cache/taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:tavern",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:watchtower/plains",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:watchtower/savanna",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:watchtower/taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:iceologer_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:illusioner_shack",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:illusioner_training_grounds",
+      "is_disabled": true
+    },
+    {
+      "name": "galosphere:forgotten_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "galosphere:pink_salt_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:catacombs",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:evoker_fort",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:ice_spider_den",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:impaled_icebreaker",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:mangrove_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:mountain_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:pyromancer_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_bamboo_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_birch_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_cherry_grove",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_dappled_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_flower_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_meadow",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_old_growth_birch_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_old_growth_pine_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_old_growth_spruce_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_pale_garden",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_savanna",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_snowy_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_sparse_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_swamp",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_windswept_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp_wooded_badlands",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ancient_city",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:buried_treasure",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:desert_pyramid",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:igloo",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:jungle_pyramid",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mansion",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mineshaft",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mineshaft_mesa",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:monument",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_ruin_cold",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_ruin_warm",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:pillager_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_mountain",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_ocean",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_swamp",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:shipwreck",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:shipwreck_beached",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:swamp_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:trail_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:trial_chambers",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_plains",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_savanna",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_snowy",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:clay_island",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:earth_slime_island",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:ocean_skyslime_island",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:sky_slime_island",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:frostmaw_spawn",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:monastery",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:umvuthana_grove",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:wrought_chamber",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:biomass_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:cathedral",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:cell",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:celltower",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:church",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:hospital",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:iceberg_mines",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:lab",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:lodge",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:mass_grave",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:military_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:mines",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:prison",
+      "is_disabled": true
+    },
+    {
+      "name": "stellaris:earth_operation_base",
+      "is_disabled": true
+    },
+    {
+      "name": "stellaris:earth_satellite",
+      "is_disabled": true
+    },
+    {
+      "name": "supplementaries:galleon",
+      "is_disabled": true
+    },
+    {
+      "name": "supplementaries:road_sign",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:desert_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:fortified_desert_village",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:fortified_village",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:glacial_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:igloo",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_complex",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_autumn",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_spring",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_summer",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_winter",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_mesa",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_mountain",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:spire",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/frosted_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/giant_bee_hive",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/mining_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/oak_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/old_refinery",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/sunken_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/witch_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:valley_lodge",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:witch_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:fishing_boat/beach",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:fishing_boat/deep_ocean",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:fishing_boat/warm_ocean",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/badlands_shaded_rock",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/berry_patch",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/birch_wildfire_scar",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/bug_mound",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/carved_ice_spikes",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/deep_sea_spire",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/desert_oasis",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/desert_shaded_rock",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/drifting_icebergs",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/fae_mounds",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/flowerbed_clearing",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/freshwater_pond",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/fungal_dwelling",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/lush_canopy",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/lush_cenote",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/lush_peat_bog",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/meteorite_impact",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/natural_lightningrod",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/oak_wildfire_scar",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/parched_peat_bog",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/pinkflowerbed_clearing",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/reclaimed_deserted_monument",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/reclaimed_lush_monument",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/sandpit_clearing",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/snowy_burrow",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/snowy_grotto",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/snowy_thermal_vents",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/spruce_wildfire_scar",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/sunflowerbed_clearing",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/sunscorched_clearing",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/thermal_crevices",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/zen_garden",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/ancient_dais_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/crumbling_arch_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/decaying_crypt_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/deserted_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/deserted_house_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/deserted_monument_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/deserted_tower_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/deserted_town_center_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/fallen_statue_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/frozen_altar_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/frozen_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/hidden_bunker_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/luna_henge_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/lush_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/lush_monument_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/meteor_battleground_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/mossy_oubliette_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/old_garden_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/overgrown_trial_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/rooted_arch_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/rooted_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/sol_henge_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/stonjourner_henge_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/submerged_forge_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/sunscorched_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/sunscorched_shaded_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/temperate_gimmi_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/toppled_pillars_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/unstable_cave_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:shipwreck_coves/lush_shipwreck_cove",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:shipwreck_coves/magma_shipwreck_cove",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:shipwreck_coves/submerged_shipwreck_cove",
+      "is_disabled": true
+    }
+  ],
   "structure_sets": [
     {
       "name": "minecraft:buried_treasures",
@@ -15,7 +971,8 @@
       "frequency": 0.01,
       "override_global_spacing_and_separation_modifier": false,
       "spacing": 1,
-      "separation": 0
+      "separation": 0,
+      "is_disabled": true
     },
     {
       "name": "minecraft:mineshafts",
@@ -23,7 +980,8 @@
       "frequency": 0.004,
       "override_global_spacing_and_separation_modifier": false,
       "spacing": 1,
-      "separation": 0
+      "separation": 0,
+      "is_disabled": true
     },
     {
       "name": "minecraft:strongholds",
@@ -32,6 +990,442 @@
       "override_global_spacing_and_separation_modifier": false,
       "spacing": 0,
       "separation": 0
+    },
+    {
+      "name": "alexscaves:abyssal_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:acid_pit",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:cake_cave",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:dino_bowl",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:donut_arch",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:ferrocave",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:forlorn_bridge",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:forlorn_canyon",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:gingerbread_town",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:licowitch_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:ocean_trench",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:soda_bottle",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:underground_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "alexscaves:volcano",
+      "is_disabled": true
+    },
+    {
+      "name": "ars_nouveau:wilden_den_set",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:column_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:dig_site_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:focal_point_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:moon_dial_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:obliteration_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "astralsorcery:rotunda_structures",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:skeleton_dungeons",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:small_dungeons",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:spider_dungeons",
+      "is_disabled": true
+    },
+    {
+      "name": "betterdungeons:zombie_dungeons",
+      "is_disabled": true
+    },
+    {
+      "name": "betterwitchhuts:witch_circle",
+      "is_disabled": true
+    },
+    {
+      "name": "betterwitchhuts:witch_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "bosses_of_mass_destruction:lich_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "bosses_of_mass_destruction:void_blossom",
+      "is_disabled": true
+    },
+    {
+      "name": "cobgyms:gym_structure_set",
+      "is_disabled": true
+    },
+    {
+      "name": "enigmaticlegacyplus:spellstone_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:badlands_pyramids",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:campsites",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:dark_forest_settlements",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:desert_shrines",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:farmsteads",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:guide_posts",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:mangrove_huts",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:mausoleums",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:supply_caches",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:taverns",
+      "is_disabled": true
+    },
+    {
+      "name": "explorify:watchtowers",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:iceologer_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:illusioner_shack",
+      "is_disabled": true
+    },
+    {
+      "name": "friendsandfoes:illusioner_training_grounds",
+      "is_disabled": true
+    },
+    {
+      "name": "galosphere:forgotten_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "galosphere:pink_salt_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:catacombs",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:evoker_fort",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:ice_spider_den",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:impaled_icebreaker",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:mangrove_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:mountain_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "irons_spellbooks:pyromancer_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:abandoned_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ancient_cities",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:desert_pyramids",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:igloos",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:jungle_temples",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_monuments",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:pillager_outposts",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:shipwrecks",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:swamp_huts",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:trail_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:trial_chambers",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:villages",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:woodland_mansions",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:overworld_ocean_island",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:overworld_sky_island",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:frostmaw_spawns",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:monasteries",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:umvuthana_groves",
+      "is_disabled": true
+    },
+    {
+      "name": "mowziesmobs:wrought_chambers",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:biomass_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:cathedral",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:cell",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:celltower",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:church",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:hospital",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:iceberg_mines",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:lab",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:lodge",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:mass_grave",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:military_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:mines",
+      "is_disabled": true
+    },
+    {
+      "name": "spore:prison",
+      "is_disabled": true
+    },
+    {
+      "name": "stellaris:earth_operation_base",
+      "is_disabled": true
+    },
+    {
+      "name": "stellaris:earth_satellite",
+      "is_disabled": true
+    },
+    {
+      "name": "supplementaries:galleons",
+      "is_disabled": true
+    },
+    {
+      "name": "supplementaries:road_signs",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rare_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rare_village",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:regular",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:fishing_boats",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:habitats/habitats",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_jungle_temples",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_ocean_monuments",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_trial_chambers",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_villages",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_witch_huts",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/avoid_woodland_mansions",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:ruins/gimmi_towers",
+      "is_disabled": true
+    },
+    {
+      "name": "cobblemon:shipwreck_coves",
+      "is_disabled": true
     }
   ]
 }
