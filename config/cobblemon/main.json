@@ -40,7 +40,7 @@
   "allowSpectating": true,
   "experienceMultiplier": 2.0,
   "predationChance": 0.05,
-  "pokemonPerChunk": 0.5,
+  "pokemonPerChunk": 0.25,
   "pokeSnackPokemonPerChunk": 2.0,
   "passiveStatuses": {
     "cobblemon:poison": "180-300",
