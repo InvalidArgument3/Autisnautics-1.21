@@ -21,8 +21,9 @@ The audit’s KEEP / REMAP / BLANK plan is the base. These maintainer choices re
 | Gun reload | `key.irons_artifice.reload` | O |
 | Quests | `key.ftbquests.quests` | K |
 | New waypoint | `gui.xaero_new_waypoint` | `;` |
+| NeoOrigins primary ability | `key.neoorigins.skill_1` | F6 |
 
-NeoOrigins is unbound on every id, including the ones the audit would have moved to N, I, and O. Those three letters are the zoom, harness menu, and reload keys. Z and C were the obvious zoom keys; Z is the Ars spellbook previous-slot key (and walker / Octolegs suspension), and C is the spell wheel. X was the harness menu’s own default, and it is the Ars next-slot key plus walker and Octolegs controls. R is Cobblemon throw, so reload cannot stay there.
+NeoOrigins skill 1 is F6. That slot is the first active power on the origin the player has selected. For Angel it is Envy of Flight. F6 is not used by any other bind in this file. The mod’s own default for skill 1 is V, which is already the Ars selection HUD, Let It Walk crab, and Octolegs toggle-legs keys, so it stays off V. Every other `key.neoorigins.*` id stays unbound, including skill 2 through skill 6. N, I, and O stay zoom, harness menu, and reload. Z and C were the obvious zoom keys; Z is the Ars spellbook previous-slot key (and walker / Octolegs suspension), and C is the spell wheel. X was the harness menu’s own default, and it is the Ars next-slot key plus walker and Octolegs controls. R is Cobblemon throw, so reload cannot stay there.
 
 Harness climbing (`key.adventurers_harness.climbing`, default C) and harness inventory stay unbound. In `adventurers_harness` 1.2 the radial menu already sends climb-toggle and open-inventory (`RadialMenuScreen` → `C2S$ClimbToggle` / `C2S$OpenInventory`). Grapple is not on that menu, so it keeps Mouse 5, which nothing else uses. Just Zoom’s options key stays unbound (it was B, the backpack key). Zoom in / zoom out stay unbound. The gun modifier menu stays unbound (it was G, which is now cast).
 

@@ -9,6 +9,7 @@
     },
     "type": "origins:toggle",
     "active_by_default": false,
+    "active": false,
     "key": {
         "key": "key.origins.primary_active"
     },

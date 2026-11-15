@@ -1,26 +1,35 @@
 {
     "name": "Envy of Flight Effect",
-    "description": "The levitation and Sugar drain effects toggled by Envy of Flight.",
+    "description": "The levitation and Sugar drain effects toggled by Envy of Flight. Levitation clears when Sugar hits zero or you sneak, and the toggle turns itself off.",
     "hidden": true,
     "type": "origins:multiple",
     "key0": {
+        "type": "neoorigins:persistent_effect",
+        "toggleable": false,
         "condition": {
-            "type": "origins:power_active",
-            "power": "autisorigins:envy_of_flight"
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "autisorigins:envy_of_flight"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "autisorigins:sugar_addict",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
         },
-        "type": "origins:stacking_status_effect",
-        "min_stacks": 0,
-        "max_stacks": 1,
-        "duration_per_stack": 6,
-        "tick_rate": 5,
-        "effect": {
-            "effect": "minecraft:levitation",
-            "duration": 6,
-            "amplifier": 1,
-            "is_ambient": true,
-            "show_particles": false,
-            "show_icon": false
-        }
+        "effects": [
+            {
+                "effect": "minecraft:levitation",
+                "amplifier": 1,
+                "ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
     },
     "key1": {
         "condition": {
@@ -47,6 +56,38 @@
                     "pitch": 2.0
                 }
             ]
+        }
+    },
+    "key2": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "autisorigins:envy_of_flight"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "autisorigins:sugar_addict",
+                            "comparison": "<=",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:sneaking"
+                        }
+                    ]
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:toggle",
+            "power": "autisorigins:envy_of_flight",
+            "value": false
         }
     }
 }
