@@ -7,7 +7,7 @@
   "sub_division_size": 64.0,
   "render_vanilla_fog": true,
   "dont_use_sodium_builder_threads": false,
-  "server_terrain_sync_broadcast": false,
+  "server_terrain_sync_broadcast": true,
   "server_terrain_sync_receive": true,
   "server_terrain_sync_client_apply_sections_per_tick": 8,
   "server_terrain_sync_client_apply_max_ms_per_tick": 5,
