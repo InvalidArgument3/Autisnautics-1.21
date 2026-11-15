@@ -53,6 +53,7 @@
 		"The pad, the fuel, and the suit on this chapter are what the trip is built around, and the moon visit comes after it."
 	]
 	quest.4800892E1E70648D.title: "Launch Pad"
+	quest.6BA9A176EDA001A3.quest_subtitle: "Helmet, chest, legs, and boots"
 	quest.6BA9A176EDA001A3.title: "Space Suit"
 	quest.3AD7553F3C8593F9.title: "Oxygen Distributor"
 	quest.25B76A897D97C9F1.title: "Rocket Fuel"
@@ -82,8 +83,8 @@
 	quest.005F2C4E203E7E62.quest_subtitle: "{cabin.quest.352F5F851045653A.subtitle}"
 	quest.005F2C4E203E7E62.title: "{cabin.quest.005F2C4E203E7E62.title}"
 	quest.016864AD0C9247B9.quest_desc: [
-		"This redstone link node is only a mark."
-		"It still opens the gunpowder, the ender pearls, and the bone meal, while the other node asks for a stockpile switch."
+		"A redstone link sends a redstone signal without a dust line."
+		"The stockpile switch is the block this pack uses for that job."
 	]
 	quest.016864AD0C9247B9.quest_subtitle: "{cabin.quest.016864AD0C9247B9.subtitle}"
 	quest.016864AD0C9247B9.title: "Redstone Link"
@@ -120,13 +121,16 @@
 	]
 	quest.03B7909623F97843.title: "Overcorrection (removed)"
 	quest.047FD4E54147D8F7.quest_desc: [
-		"This node is titled like an infernal mechanism, and the task is the Zinc Machine."
-		"Electrical parts of this age are cut from that machine."
+		"A Zinc Machine is the block the electrical parts of this age are cut from."
+		"Connectors, the tesla coil, and the portable energy interface come off it."
 	]
-	quest.047FD4E54147D8F7.title: "Infernal Mechanism"
+	quest.047FD4E54147D8F7.quest_subtitle: "The electrical gate"
+	quest.047FD4E54147D8F7.title: "Zinc Machine"
+	quest.0504DC3275C4F49D.quest_subtitle: "Fuel for the fission reactor"
 	quest.0504DC3275C4F49D.title: "Uranium Rod"
 quest.0504DC3275C4F49D.quest_desc: [
-		"A uranium rod spacer beside the lead casings. Enrichment already asked for the logistic mechanism."
+		"A uranium rod is the fuel a fission reactor burns."
+		"Enrichment is the work of turning uranium into rods like this."
 	]
 	quest.050A20198A80CF1A.quest_desc: [
 		"Gunpowder is the charge that branch still collects."
@@ -157,9 +161,11 @@ quest.0504DC3275C4F49D.quest_desc: [
 	quest.06B061C0EE94BC90.quest_subtitle: "{cabin.quest.06B061C0EE94BC90.subtitle}"
 	quest.06B061C0EE94BC90.title: "Polished Rose Quartz"
 	quest.07BE7128982202A7.title: "{cabin.quest.07BE7128982202A7.title}"
+	quest.08367CEDF13CB65C.quest_subtitle: "Shell of a Lead Machine"
 	quest.08367CEDF13CB65C.title: "Lead Casing"
 quest.08367CEDF13CB65C.quest_desc: [
-		"One more lead casing in the art. The logistics machines of this age are cut from this material."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.08716DBF9C882623.quest_desc: [
 		"Apple cider is a drink counter for the calculation age."
@@ -216,9 +222,11 @@ quest.08367CEDF13CB65C.quest_desc: [
 	quest.09EB29F838620371.quest_desc: ["{cabin.quest.09EB29F838620371.description1}"]
 	quest.09EB29F838620371.title: "Empty Schematic"
 	quest.0A295CF925D97618.title: "Purge the Undead"
+	quest.0AD8C8E5491278E1.quest_subtitle: "Shell of a Lead Machine"
 	quest.0AD8C8E5491278E1.title: "Lead Casing"
 quest.0AD8C8E5491278E1.quest_desc: [
-		"Another lead casing in the chapter art, the same shell a logistic mechanism wears."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.0AF5F19F5D9FB5C9.quest_desc: [
 		"Sand at the start of the brass age is the pile in front of nether quartz."
@@ -242,9 +250,10 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.0BE1DA955F49FBD6.quest_desc: ["Rats may have a lot of talents, but flying isn't one of them. At least, not yet. There's only one way to get started down the path to rat-powered flight. Time to punch trees."]
 	quest.0BE1DA955F49FBD6.title: "Gnawing Logs"
 	quest.0C11EC34D5FA508B.quest_desc: [
-		"This end stone node is a mark after the cog, before the log on the enderium branch."
-		"The end stone block itself is the other node, and chorus grows from that."
+		"End stone is the pale stone of the outer islands."
+		"Chorus grows on it, and the enderium work is built out here."
 	]
+	quest.0C11EC34D5FA508B.quest_subtitle: "Stone of the outer islands"
 	quest.0C11EC34D5FA508B.title: "End Stone"
 	quest.0CC92E94D10E681D.quest_desc: [
 		"Another iron reagent for the wool row, after the metal jars around it."
@@ -369,11 +378,11 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.15368864A6946A93.title: "Bright Brew"
 	quest.155B2476219F8F57.title: "Learn to Code"
 	quest.15978ED5A6E3DFFE.quest_desc: [
-		"Uranium enrichment uses a logistic mechanism."
-		"It sits after the uranium, the radaway, and the crushed iron, and the second Lead Machine comes after it."
+		"A logistic mechanism is the sequenced part a Lead Machine wraps in lead casing."
+		"Enrichment spends one, and the logistics contraptions are cut from the machine around it."
 	]
 	quest.15978ED5A6E3DFFE.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
-	quest.15978ED5A6E3DFFE.title: "Uranium Enrichment"
+	quest.15978ED5A6E3DFFE.title: "Logistic Mechanism"
 	quest.1642A27606A34984.quest_desc: [
 		"The second crystal-growth step left with AE2 as well."
 		"Rose quartz is nether quartz and redstone, and the line goes on without the growth."
@@ -389,15 +398,18 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.171A0F26C6608E83.quest_subtitle: "{cabin.quest.171A0F26C6608E83.subtitle}"
 	quest.171A0F26C6608E83.title: "{cabin.quest.171A0F26C6608E83.title}"
 	quest.174E3A810535CAAC.quest_desc: [
-		"This blaze burner node is only a mark from the tea, before the burner is built."
-		"The real burner comes after the precision mechanism."
+		"A blaze burner is the heat under a basin."
+		"Heated mixes, from brass onward, sit on that flame."
 	]
+	quest.174E3A810535CAAC.quest_subtitle: "Heat under a basin"
 	quest.174E3A810535CAAC.title: "Blaze Burner"
 	quest.17817EA324333BE9.quest_desc: [" Most mod controls have been unbound. There's a handy new binding UI in the settings menu, make sure to use it!"]
 	quest.17817EA324333BE9.quest_subtitle: "I WILL NOT BE BOUND"
+	quest.17AA221C7B7E6734.quest_subtitle: "Shell of a Lead Machine"
 	quest.17AA221C7B7E6734.title: "Lead Casing"
 quest.17AA221C7B7E6734.quest_desc: [
-		"Lead casing again, still decoration. The two Lead Machine quests are the real asks."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.1861E583C9DAA0BA.quest_desc: [
 		"Rose quartz is nether quartz and redstone."
@@ -449,10 +461,11 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.1BAFDA330E991BEC.quest_desc: ["For the next step you'll need reinforced paper, but sugarcane can be hard to find on the islands. Luckily, that axe and cutting board can strip logs, and the tree bark left behind can be made into paper. Combined with the other parts, you've got reinforced paper. All you'll need after that are a couple of whiskers..."]
 	quest.1BAFDA330E991BEC.title: "Stacking Paper"
 	quest.1BCFB709E97A74FA.quest_desc: [
-		"Accelerator redstone speeds the Alchemical Laser."
-		"This node asks for it and for the glowstone accelerator beside it."
+		"Accelerator redstone and accelerator glowstone speed the Alchemical Laser."
+		"A long reagent row crawls without them."
 	]
-	quest.1BCFB709E97A74FA.title: "Accellerator Redstone"
+	quest.1BCFB709E97A74FA.quest_subtitle: "Redstone and glowstone"
+	quest.1BCFB709E97A74FA.title: "Laser Accelerators"
 	quest.1BF8F3CC8BEBB620.quest_desc: [
 		"The flash drive is the storage stick the calculation mechanism is sequenced with."
 		"Processor binding sits in front of it."
@@ -465,10 +478,11 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.1C6657984648B0D4.quest_subtitle: "{cabin.quest.1C6657984648B0D4.subtitle}"
 	quest.1CC536F2D05E8189.title: "Infinite Vials"
 	quest.1CCDA748B237F6F5.quest_desc: [
-		"The mechanical harvester is what this node asks for, though the title says bone meal."
-		"It is a stonecut of an Andesite Machine, and chorus is what leads here."
+		"A mechanical harvester is an Andesite Machine that reaps crops as a contraption rolls over them."
+		"It is how a moving farm gathers itself."
 	]
-	quest.1CCDA748B237F6F5.title: "Bone Meal"
+	quest.1CCDA748B237F6F5.quest_subtitle: "An Andesite Machine for crops"
+	quest.1CCDA748B237F6F5.title: "Mechanical Harvester"
 	quest.1D1D1FEAF49C5E11.quest_desc: [
 		"Computer advanced is a ComputerCraft goal on the laser page, beside the jars."
 		"It is not a reagent and not one of the seven rows."
@@ -545,8 +559,8 @@ quest.17AA221C7B7E6734.quest_desc: [
 	]
 	quest.2441491CB5D5E57D.quest_subtitle: "{cabin.quest.2441491CB5D5E57D.subtitle}"
 	quest.24C48CFAAD71B230.quest_desc: [
-		"Raw processors are diced from washed, polished, or insulated wafers."
-		"This node wants the basic, the improved, and the advanced raw pieces, before they are smelted."
+		"Raw processors are diced from washed, polished, or insulated wafers: basic, improved, and advanced."
+		"Smelting them finishes the processors."
 	]
 	quest.FABFAB0000000001.title: "Blank Wafers"
 	quest.FABFAB0000000001.quest_desc: ["Saw one Refined Storage silicon into six wafers. Each later step is its own item, so a normal Create filter can route the line."]
@@ -633,10 +647,11 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.286510750C333C1F.quest_subtitle: "{cabin.quest.286510750C333C1F.subtitle}"
 	quest.286510750C333C1F.title: "Refined Radiance"
 	quest.28DAED70768C6A50.quest_desc: [
-		"This node is titled like a calculation mechanism, and the task is the controller."
-		"The controller is fluix casings around a calculation mechanism, and it runs the storage network."
+		"The controller is a ring of fluix casings around a calculation mechanism."
+		"It is the block that runs a Refined Storage network."
 	]
-	quest.28DAED70768C6A50.title: "Calculation Mechanism"
+	quest.28DAED70768C6A50.quest_subtitle: "Fluix casings around a calculation mechanism"
+	quest.28DAED70768C6A50.title: "Controller"
 	quest.29D37095C73B3DEC.quest_desc: [
 		"A belt connector is the belt that carries items, and this pack makes it from six rubber."
 		"The sealed mechanism is next."
@@ -649,11 +664,11 @@ quest.17AA221C7B7E6734.quest_desc: [
 		"Blaze shares that row, and four reagents from it become the catalyst."
 	]
 	quest.2B8F1D804107EB8C.quest_desc: [
-		"The finished processors are those raw dice after a smelt: basic, improved, and advanced."
-		"This node is the end of that cut, and the basic processor is one of the three."
+		"Finished processors are the smelted dice: basic, improved, and advanced."
+		"Disks, grids, and importers are built on them."
 	]
 	quest.2B8F1D804107EB8C.quest_subtitle: "{cabin.quest.2B8F1D804107EB8C.subtitle}"
-	quest.2B8F1D804107EB8C.title: "Calculation Processor"
+	quest.2B8F1D804107EB8C.title: "Finished Processors"
 	quest.2BB2C7B95E3C89AE.quest_desc: [
 		"This crafting blueprint is the abstruse gate, the enderium line after the inductive age."
 	]
@@ -665,16 +680,19 @@ quest.17AA221C7B7E6734.quest_desc: [
 	]
 	quest.2BD76CB3F8BC215E.title: "Crude Oil Bucket"
 	quest.2BE033F631A778D9.title: "{cabin.quest.2BE033F631A778D9.title}"
+	quest.2C196D41B3B087C6.quest_subtitle: "Shell of a Lead Machine"
 	quest.2C196D41B3B087C6.title: "Lead Casing"
 quest.2C196D41B3B087C6.quest_desc: [
-		"The last lead casing in the picture. The chapter goes on from the globe and the wasteland without another casing craft."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.2C2E304910D7F33D.quest_subtitle: "{cabin.quest.2C2E304910D7F33D.subtitle}"
 	quest.2C2E304910D7F33D.title: "{cabin.quest.2C2E304910D7F33D.title}"
 	quest.2C40901DB42DD8F8.quest_desc: [
-		"This bone meal node is only a mark beside the red dye."
-		"The bone meal the singularity branch holds is the other node, off the slime."
+		"Bone meal is the fertilizer the chromatic line collects."
+		"Crops and the singularity mix both have a use for it."
 	]
+	quest.2C40901DB42DD8F8.quest_subtitle: "Fertilizer for the colour line"
 	quest.2C40901DB42DD8F8.title: "Bone Meal"
 	quest.2C7ADB6C11B918B1.quest_desc: [
 		"{cabin.quest.2C7ADB6C11B918B1.description1}"
@@ -756,9 +774,11 @@ quest.2C196D41B3B087C6.quest_desc: [
 	]
 	quest.319D13EA51472303.quest_subtitle: "Contraption 19-7"
 	quest.319D13EA51472303.title: "Rads, Away"
+	quest.31DA3A80C6E23004.quest_subtitle: "Fuel for the fission reactor"
 	quest.31DA3A80C6E23004.title: "Uranium Rod"
 quest.31DA3A80C6E23004.quest_desc: [
-		"Another uranium rod in the chapter art, the same fuel, not a second craft."
+		"A uranium rod is the fuel a fission reactor burns."
+		"Enrichment is the work of turning uranium into rods like this."
 	]
 	quest.31EDFA6D2FF86CB0.quest_desc: ["{cabin.quest.31EDFA6D2FF86CB0.description1}"]
 	quest.31EDFA6D2FF86CB0.title: "{cabin.quest.31EDFA6D2FF86CB0.title}"
@@ -782,9 +802,10 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.334146C815B304DB.title: "Pipe Module Tier 1"
 	quest.33674138F4866C18.quest_desc: [
-		"Printed calculation is a named step on the processor line."
-		"This node is only the pause beside the charcoal, while the wafers do the real dicing."
+		"A printed calculation processor is the patterned die on the wafer line."
+		"Smelting that die finishes a processor the storage network can use."
 	]
+	quest.33674138F4866C18.quest_subtitle: "The patterned die"
 	quest.33674138F4866C18.title: "Printed Calculation Processor"
 	quest.342BB6EF80EBFDCA.quest_desc: [
 		"Apple cider is a drink counter for the sealed mechanism."
@@ -893,10 +914,11 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.3A428CA43D545DB9.title: "Crafting Table"
 	quest.3A63A48662F352CB.quest_desc: [
-		"This node is titled like an inductive mechanism, and the task is the Light Engineering block."
-		"That block is the gate for Immersive Engineering multiblocks."
+		"Light engineering is the block that opens Immersive Engineering's multiblocks."
+		"The arc furnace, the excavator, and the diesel generator wait on it."
 	]
-	quest.3A63A48662F352CB.title: "Inductive Mechanism"
+	quest.3A63A48662F352CB.quest_subtitle: "The Immersive Engineering gate"
+	quest.3A63A48662F352CB.title: "Light Engineering"
 	quest.3A81BC460AF1756D.quest_subtitle: "{cabin.quest.21E76761CD3761C2.subtitle}"
 	quest.3A81BC460AF1756D.title: "{cabin.quest.3A81BC460AF1756D.title}"
 	quest.3AD7553F3C8593F9.quest_desc: [
@@ -920,10 +942,11 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.3B448BBF4352E4AB.title: "Let's Build A Gun"
 	quest.3B86BE3E3211A392.title: "A Balanced Jetpack?"
 	quest.3B930AA32F92246B.quest_desc: [
-		"This is the second Lead Machine, another lead casing around a logistic mechanism, after enrichment."
-		"The sepia globe waits on this one."
+		"A Lead Machine is a lead casing around a logistic mechanism."
+		"Packagers, frogports, and the stock link are cut from it."
 	]
-	quest.3B930AA32F92246B.title: "Logistic Mechanism"
+	quest.3B930AA32F92246B.quest_subtitle: "Lead casing around a logistic mechanism"
+	quest.3B930AA32F92246B.title: "Lead Machine"
 	quest.3BE15AA5C237AB80.quest_desc: [
 		"Magenta dye is the last of the five."
 		"It closes the singularity mix, and chromatic compound is what that mix becomes."
@@ -1027,13 +1050,14 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.42F1A649D86DB86D.title: "Sand Ball"
 	quest.435BE0485FB92245.title: "its a tree :)"
 	quest.4412F3B2827606E4.quest_desc: [
-		"This rough sand node is a mark between the sand ball and the silicon compound."
-		"The rough sand item itself is the other node, and it still has to be purified."
+		"Rough sand is sand worked toward silicon."
+		"It still has to be purified before it becomes silicon compound."
 	]
+	quest.4412F3B2827606E4.quest_subtitle: "Sand on the way to silicon"
 	quest.4412F3B2827606E4.title: "Rough Sand"
 	quest.44540B11F341AE09.quest_desc: [
-		"The logistic mechanism is the logistics heart after a precision mechanism."
-		"The first Lead Machine is a lead casing around it, and uranium enrichment uses one too."
+		"A logistic mechanism is the sequenced part after a precision mechanism."
+		"A Lead Machine is a lead casing around it."
 	]
 	quest.44540B11F341AE09.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
 	quest.44540B11F341AE09.title: "Logistic Mechanism"
@@ -1050,25 +1074,30 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.46820FBDDDEE491E.quest_subtitle: "{cabin.quest.46820FBDDDEE491E.subtitle}"
 	quest.46820FBDDDEE491E.title: "Log"
+	quest.46BF1AE437F27403.quest_subtitle: "Shell of a Lead Machine"
 	quest.46BF1AE437F27403.title: "Lead Casing"
 quest.46BF1AE437F27403.quest_desc: [
-		"A lead casing is the shell of a Lead Machine, and this node is only the picture of that shell."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.472FB03D0E5A38D6.quest_desc: [
-		"The stockpile switch is the pack stand-in for a redstone link."
-		"Brass machines cut it, and this is the node that asks for the switch."
+		"A stockpile switch watches an inventory and emits a redstone signal."
+		"In this pack it stands in for a redstone link, and it is cut from a Brass Machine."
 	]
-	quest.472FB03D0E5A38D6.title: "Redstone Link"
+	quest.472FB03D0E5A38D6.quest_subtitle: "The brass stand-in for a redstone link"
+	quest.472FB03D0E5A38D6.title: "Stockpile Switch"
 	quest.4761DAE59CDD93AF.quest_desc: [
-		"This crude oil node is the find, before any bucket."
-		"The first rocket fuel can start from the find."
+		"Crude oil is the black fluid a pumpjack lifts."
+		"Rocket fuel and the diesel engines both start from it."
 	]
+	quest.4761DAE59CDD93AF.quest_subtitle: "What the pumpjack lifts"
 	quest.4761DAE59CDD93AF.title: "Crude Oil Bucket"
 	quest.47965C310D9847DC.quest_desc: [
-		"The gray flag is a base marker for the launch, not an apple, and this node also wants a blaze cake."
-		"It waits until the suit, the oxygen, the pad, the fuel, and the rocket are together."
+		"A blaze cake is the dense fuel a blaze burner eats."
+		"It is the high heat the late workshop runs on."
 	]
-	quest.47965C310D9847DC.title: "Enchanted Golden Apple"
+	quest.47965C310D9847DC.quest_subtitle: "Dense fuel for a blaze burner"
+	quest.47965C310D9847DC.title: "Blaze Cake"
 	quest.47DB705903F26597.quest_desc: ["Even though I barfed em up and there all slimey now, after eatign those vegtables i feel a lot more smarter.  its time to settle down and become civilized bolbbin. Theres this new thing called angriculture and were gonna do it RIGHT NOW."]
 	quest.47DB705903F26597.title: "its a tree ;)))"
 	quest.4800892E1E70648D.quest_desc: [
@@ -1076,9 +1105,11 @@ quest.46BF1AE437F27403.quest_desc: [
 		"Matter plastics build it, and the rocket will not count without it."
 	]
 	quest.4800892E1E70648D.quest_subtitle: "{cabin.quest.4800892E1E70648D.subtitle}"
+	quest.4815DA7B77DD7175.quest_subtitle: "Shell of a Lead Machine"
 	quest.4815DA7B77DD7175.title: "Lead Casing"
 quest.4815DA7B77DD7175.quest_desc: [
-		"A lead casing beside the uranium rods. It wraps a logistic mechanism when a Lead Machine is actually built."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.4986F69A73BB122E.quest_desc: ["the slimey dirt isnt that tasty but thats probly cuz it's still dirt. we gotta BLAST the dirt so its not dirt anymore. then itll be better to eat. Except dont eat it. Im not gonna eat it. its for the new stick."]
 	quest.4986F69A73BB122E.title: "Extra crunnchy"
@@ -1127,16 +1158,17 @@ quest.4815DA7B77DD7175.quest_desc: [
 	quest.4D8972AE5B614FB3.quest_subtitle: "{cabin.quest.4D8972AE5B614FB3.subtitle}"
 	quest.4D8972AE5B614FB3.title: "Magma Block"
 	quest.4E85C8A2EEEB57C3.quest_desc: [
-		"Plus is a computation-matrix sign, and this node also wants minus, multiply, and divide."
-		"The remaining digits wait on it."
+		"Plus, minus, multiply, and divide are the signs the computation matrix uses with the digits."
+		"The matrix calculates with both."
 	]
 	quest.4E85C8A2EEEB57C3.quest_subtitle: "{cabin.quest.4E85C8A2EEEB57C3.subtitle}"
-	quest.4E85C8A2EEEB57C3.title: "Plus"
+	quest.4E85C8A2EEEB57C3.title: "Operators"
 	quest.4EDD9A8F14E48EAE.quest_desc: [
-		"The enderium machine is an ender casing around an abstruse mechanism."
-		"Ender-age machines are cut from it."
+		"An Enderium Machine is an ender casing around an abstruse mechanism."
+		"The ender-age machines are cut from it."
 	]
-	quest.4EDD9A8F14E48EAE.title: "Abstruse Mechanism"
+	quest.4EDD9A8F14E48EAE.quest_subtitle: "Ender casing around an abstruse mechanism"
+	quest.4EDD9A8F14E48EAE.title: "Enderium Machine"
 	quest.4F7A70041B67A348.title: "Moon Stone"
 	quest.4F95D5136E944ADB.quest_desc: [
 		"The skystone infini-mill left with AE2."
@@ -1278,9 +1310,11 @@ quest.4815DA7B77DD7175.quest_desc: [
 	quest.5A199B898D41A309.title: "The Reactor (removed)"
 	quest.5A64DBCFBF78856B.quest_desc: ["adds Power III to flinging staff so it's not useless"]
 	quest.5A64DBCFBF78856B.title: "flingingstaff_power"
+	quest.5A6926E64EEE7729.quest_subtitle: "Shell of a Lead Machine"
 	quest.5A6926E64EEE7729.title: "Lead Casing"
 quest.5A6926E64EEE7729.quest_desc: [
-		"A lead casing spacer. The material cases the logistic age, and this copy gates nothing."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.5B0727505DC791DF.quest_desc: [
 		"A grass block is the return-home marker after you have been off the world."
@@ -1344,9 +1378,11 @@ quest.5A6926E64EEE7729.quest_desc: [
 	quest.61147823CC87F711.quest_subtitle: "{cabin.quest.61147823CC87F711.subtitle}"
 	quest.61147823CC87F711.title: "{cabin.quest.61147823CC87F711.title}"
 	quest.612100C7C6E0A7C9.title: "Golden Pickaxe"
+	quest.6199E449AF2BADBA.quest_subtitle: "Fuel for the fission reactor"
 	quest.6199E449AF2BADBA.title: "Uranium Rod"
 quest.6199E449AF2BADBA.quest_desc: [
-		"A uranium rod is the fuel shape enrichment is aiming at, and this node is only the picture of one."
+		"A uranium rod is the fuel a fission reactor burns."
+		"Enrichment is the work of turning uranium into rods like this."
 	]
 	quest.619E34A7DE48B991.quest_desc: [
 		"Redstone is the dust half of rose quartz on the Create recipe, now that AE2 is gone."
@@ -1366,8 +1402,8 @@ quest.6199E449AF2BADBA.quest_desc: [
 		"Another blaze reagent for the egg row, after the void catalyst and the jars beside it."
 	]
 	quest.630DA0C83959E9D8.quest_desc: [
-		"This accelerator node is a mark after the silicon reagent, before the dust is counted again."
-		"The redstone that actually speeds the laser is the other node."
+		"Accelerator redstone speeds the Alchemical Laser."
+		"The glowstone accelerator does the same job with a brighter burn."
 	]
 	quest.630DA0C83959E9D8.quest_subtitle: "{cabin.quest.630DA0C83959E9D8.subtitle}"
 	quest.630DA0C83959E9D8.title: "Accellerator Redstone"
@@ -1385,10 +1421,11 @@ quest.6199E449AF2BADBA.quest_desc: [
 		"{cabin.quest.661807F8ED723EEB.description2}"
 	]
 	quest.667F4F686A45EF3E.quest_desc: [
-		"This quest is titled like a train track, and the task is the Gold Machine."
-		"That machine is railway casing around a reinforced mechanism, and train parts are cut from it."
+		"A Gold Machine is railway casing around a reinforced mechanism."
+		"Train controls, stations, signals, and schedules are cut from it."
 	]
-	quest.667F4F686A45EF3E.title: "Train Track"
+	quest.667F4F686A45EF3E.quest_subtitle: "Railway casing around a reinforced mechanism"
+	quest.667F4F686A45EF3E.title: "Gold Machine"
 	quest.675C395B2074C24C.quest_desc: [
 		"The kinetic mechanism is the first mechanism, sequenced on andesite alloy."
 		"The Andesite Machine is the gate cut from it, and every later mechanism grows from this one."
@@ -1402,9 +1439,10 @@ quest.6199E449AF2BADBA.quest_desc: [
 	quest.6824055533465010.quest_subtitle: "{cabin.quest.6824055533465010.subtitle}"
 	quest.6824055533465010.title: "Calculation Mechanism"
 	quest.6892AE55581393C6.quest_desc: [
-		"This deepslate node is only a mark from the tea, before any deepslate is in hand."
-		"The block itself comes later, off the Andesite Machine."
+		"Deepslate is the dark stone under the workshop."
+		"A railway casing is a golden sheet on deepslate, and obsidian is the stone after it."
 	]
+	quest.6892AE55581393C6.quest_subtitle: "The dark stone under the workshop"
 	quest.6892AE55581393C6.title: "Deepslate"
 	quest.68A8C2CB135ECA87.quest_desc: [
 		"A source of steel is crushed raw iron, aimed at the blast furnace."
@@ -1456,14 +1494,14 @@ quest.6199E449AF2BADBA.quest_desc: [
 	]
 	quest.6B03056FA21424C0.title: "Iron Pickaxe"
 	quest.6B7F0631060A9E62.quest_desc: [
-		"This clay node is only a mark beside the andesite."
-		"The clay balls the blend wants are the other node, off the sand."
+		"Clay is the soft earth the algal blend is mixed from."
+		"With kelp or seagrass it becomes the brick that makes andesite alloy."
 	]
 	quest.6B7F0631060A9E62.quest_subtitle: "{cabin.quest.6B7F0631060A9E62.subtitle}"
 	quest.6B7F0631060A9E62.title: "Clay"
 	quest.6BA9A176EDA001A3.quest_desc: [
-		"The space suit helmet is the piece this quest names, and the chest, the legs, and the boots come with it."
-		"Matter plastics are what the suit is cut from."
+		"The space suit is the helmet, chest, legs, and boots worn off-world."
+		"It is what you stand in once the rocket leaves."
 	]
 	quest.6BC4C7084350D5D7.quest_subtitle: ">minecraft combat"
 	quest.6BC4C7084350D5D7.title: "Better™® Combat"
@@ -1545,9 +1583,11 @@ quest.6199E449AF2BADBA.quest_desc: [
 		"The laser chaos pairing can make it, and an extractor pulls the dust back out."
 	]
 	quest.6FDC8DA2FDED5FDD.title: "Substrate Silicon"
+	quest.7021A2BD8775DC07.quest_subtitle: "Shell of a Lead Machine"
 	quest.7021A2BD8775DC07.title: "Lead Casing"
 quest.7021A2BD8775DC07.quest_desc: [
-		"A lead casing drawn in the margin. It is the case, not a fresh ingredient."
+		"A lead casing is the shell a logistic mechanism wears."
+		"Packagers, frogports, and the stock link are built in that shell."
 	]
 	quest.7061F42CF050ADCA.quest_desc: ["{cabin.quest.7061F42CF050ADCA.description1}"]
 	quest.7061F42CF050ADCA.title: "Cogwheel"
@@ -1608,10 +1648,11 @@ quest.7021A2BD8775DC07.quest_desc: [
 	]
 	quest.74F82F70F43DF148.title: "Silica Animus"
 	quest.75FB28B253B14876.quest_desc: [
-		"Apple cider is a drink counter, and this cup is the start of the overview."
-		"The log in hand is the first mark, before the andesite age opens."
+		"An oak log is the first wood of the workshop."
+		"Planks, slabs, and the andesite age all start from a tree."
 	]
-	quest.75FB28B253B14876.title: "Apple Cider"
+	quest.75FB28B253B14876.quest_subtitle: "The first wood"
+	quest.75FB28B253B14876.title: "Oak Log"
 	quest.7650D7E4FE40E2C7.title: "Angelic Feather"
 	quest.7664FBB32FCC6BE6.quest_desc: [
 		"This overview node tracks the deepslate chapter milestone on the way to obsidian and the gold machine."
@@ -1685,21 +1726,25 @@ quest.7021A2BD8775DC07.quest_desc: [
 	quest.7B23C933D76458BA.quest_subtitle: "{cabin.quest.7B23C933D76458BA.subtitle}"
 	quest.7B23C933D76458BA.title: "Chromatic Compound"
 	quest.7BE0F4512FE4936D.quest_desc: [
-		"This is the first Lead Machine, a lead casing around a logistic mechanism."
-		"The package machines and the other logistics contraptions are cut from it."
+		"A Lead Machine is a lead casing around a logistic mechanism."
+		"Packagers, frogports, and the stock link are cut from it."
 	]
-	quest.7BE0F4512FE4936D.title: "Logistic Mechanism"
+	quest.7BE0F4512FE4936D.quest_subtitle: "Lead casing around a logistic mechanism"
+	quest.7BE0F4512FE4936D.title: "Lead Machine"
 	quest.7C26B21C40608612.quest_desc: ["Laboring with one's flesh is unbecoming for a Daemon. And worse, it's inefficient. But you need materials to build your machines in the first place. Swallow your pride for now, and gather some base metals. Just remember to clear your cookies after."]
 	quest.7C26B21C40608612.title: "Bootstrapping"
+	quest.7C31A0611CC62360.quest_subtitle: "Fuel for the fission reactor"
 	quest.7C31A0611CC62360.title: "Uranium Rod"
 quest.7C31A0611CC62360.quest_desc: [
-		"The last uranium rod in the art. It marks the nuclear edge of this chapter and gates nothing further."
+		"A uranium rod is the fuel a fission reactor burns."
+		"Enrichment is the work of turning uranium into rods like this."
 	]
 	quest.7D6BC99CCCB29924.quest_desc: [
-		"This crafting blueprint is the andesite workshop: press, saw, fan, wrench, mixer, basin, and millstone."
+		"The andesite workshop is the press, the saw, the fan, the wrench, the mixer, the basin, and the millstone."
 		"Those contraptions are cut from the Andesite Machine."
 	]
-	quest.7D6BC99CCCB29924.title: "Crafting Blueprint"
+	quest.7D6BC99CCCB29924.quest_subtitle: "Press, saw, fan, mixer, and millstone"
+	quest.7D6BC99CCCB29924.title: "Andesite Workshop"
 	quest.7D808F15BEDD7A7B.quest_desc: [
 		"Nine is the last computation-matrix digit."
 		"With zero through eight it completes the thinking machine."
@@ -1718,10 +1763,11 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.7E59B7DC239E621E.quest_subtitle: "{cabin.quest.7E59B7DC239E621E.subtitle}"
 	quest.7E59B7DC239E621E.title: "Weeping Vines"
 	quest.7FC4D1E69377271D.quest_desc: [
-		"This node is titled like a precision mechanism, and the task is the Brass Machine."
-		"That machine is brass casing around a precision mechanism, and the brass-age contraptions are cut from it."
+		"A Brass Machine is brass casing wrapped around a precision mechanism."
+		"The crafter, the arm, the steam engine, and the other brass-age machines are cut from it."
 	]
-	quest.7FC4D1E69377271D.title: "Precision Mechanism"
+	quest.7FC4D1E69377271D.quest_subtitle: "Casing around a precision mechanism"
+	quest.7FC4D1E69377271D.title: "Brass Machine"
 	task.001545FF84357A11.title: "i gota hold the staff and press this or IT WONT WORK!!!!"
 	task.002032AE65148DBD.title: "{cabin.task.0842082756DA73FE}"
 	task.006A282CB1F28528.title: "{cabin.task.0842082756DA73FE}"
@@ -2928,8 +2974,8 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.40D97A07CDC07DB8.title: "Dram"
 	quest.40D97A07CDC07DB8.quest_subtitle: "The junk face of the die"
 	quest.40D97A07CDC07DB8.quest_desc: [
-		"A dram is the small die that dicing can drop beside a raw processor."
-		"The insulated die is the cut that leads to this node."
+		"A dram is the small die dicing drops beside a raw processor."
+		"It is the offcut of the wafer cut, not a processor."
 	]
 	quest.1C253E3B9DA3597E.title: "Raw Improved Processor"
 	quest.1C253E3B9DA3597E.quest_subtitle: "A die roll, not the grid"
