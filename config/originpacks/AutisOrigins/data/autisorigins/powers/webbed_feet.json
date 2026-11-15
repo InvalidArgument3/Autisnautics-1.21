@@ -4,8 +4,8 @@
     "type": "origins:attribute",
     "modifiers": [
         {
-            "attribute": "additionalentityattributes:water_speed",
-            "operation": "multiply_base",
+            "attribute": "minecraft:generic.water_movement_efficiency",
+            "operation": "addition",
             "value": 1,
             "name": "Additional swim speed"
         },

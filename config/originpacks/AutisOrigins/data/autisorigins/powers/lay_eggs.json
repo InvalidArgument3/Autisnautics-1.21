@@ -1,0 +1,23 @@
+{
+    "name": "Lay Eggs",
+    "description": "After sleeping through the night, you lay an egg.",
+    "type": "neoorigins:action_on_event",
+    "event": "wake_up",
+    "condition": {
+        "type": "neoorigins:daytime"
+    },
+    "entity_action": {
+        "type": "neoorigins:and",
+        "actions": [
+            {
+                "type": "neoorigins:give",
+                "item": "minecraft:egg",
+                "count": 1
+            },
+            {
+                "type": "neoorigins:play_sound",
+                "sound": "minecraft:entity.chicken.egg"
+            }
+        ]
+    }
+}

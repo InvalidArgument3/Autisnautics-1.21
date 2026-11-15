@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "ars_nouveau:source_berry_pie",
+    "cobblemon:poke_cake",
+    "createaddition:chocolate_cake",
+    "createaddition:honey_cake",
+    "dungeonsdelight:monster_cake",
+    "dungeonsdelight:spider_pie",
+    "ends_delight:chorus_flower_pie",
+    "ends_delight:chorus_fruit_pie",
+    "enigmaticlegacyplus:cosmic_cake",
+    "farmersdelight:apple_pie",
+    "farmersdelight:chocolate_pie",
+    "farmersdelight:sweet_berry_cheesecake",
+    "fruitsdelight:durian_pie",
+    "fruitsdelight:pineapple_pie",
+    "minecraft:cake",
+    "minecraft:pumpkin_pie",
+    "supplementaries:pancake",
+    "undergarden:gloomgourd_pie",
+    "youkaisfeasts:tarte_lune",
+    "youkaisfeasts:udumbara_cake"
+  ]
+}

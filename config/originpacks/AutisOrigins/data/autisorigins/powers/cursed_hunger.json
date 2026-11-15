@@ -1,0 +1,10 @@
+{
+    "name": "Cursed Hunger",
+    "description": "Existence rejects you. Everything you do spends 40% more hunger.",
+    "type": "neoorigins:action_on_event",
+    "event": "mod_exhaustion",
+    "modifier": {
+        "operation": "multiplication",
+        "value": 1.4
+    }
+}

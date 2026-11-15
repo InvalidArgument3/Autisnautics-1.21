@@ -16,14 +16,10 @@
         "update_health": true
     },
     "no_exhaust_while_sprinting": {
-        "condition": {
-            "type": "origins:sprinting"
-        },
-        "type": "origins:modify_exhaustion",
-        "modifier": {
-            "operation": "max_total",
-            "value": 0
-        }
+        "type": "neoorigins:exhaustion_filter",
+        "sources": [
+            "sprint"
+        ]
     },
     "exhaust_if_not_sprinting": {
         "condition": {
@@ -32,7 +28,7 @@
         },
         "type": "origins:modify_exhaustion",
         "modifier": {
-            "operation": "multiply_total",
+            "operation": "multiply_total_additive",
             "value": 1.6
         }
     }

@@ -1,0 +1,8 @@
+{
+    "name": "Brittle Soul",
+    "description": "Magic bites deeper. You take 25% more magic damage.",
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "multiplier": 1.25,
+    "damage_type": "magic"
+}

@@ -1,11 +1,12 @@
 {
-    "name": "Hooves",
-    "description": "Your feet transformed into hooves.",
+    "name": "Lithe Legs",
+    "description": "Your legs become lithe. You step up a full block.",
     "type": "origins:attribute",
     "modifier": {
-        "attribute": "forge:step_height_addition",
+        "attribute": "minecraft:generic.step_height",
         "operation": "addition",
-        "value": 1
+        "value": 0.4,
+        "name": "Lithe Legs"
     },
     "update_health": true
 }

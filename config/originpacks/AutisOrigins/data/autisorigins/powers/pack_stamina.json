@@ -1,0 +1,8 @@
+{
+    "name": "Pack Stamina",
+    "description": "Mining does not tire you out. The hunger comes from everything else.",
+    "type": "neoorigins:exhaustion_filter",
+    "sources": [
+        "mining"
+    ]
+}

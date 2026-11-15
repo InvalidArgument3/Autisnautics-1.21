@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#autisorigins:sugary_raw",
+    "#autisorigins:sugary_light",
+    "#autisorigins:sugary_sweet",
+    "#autisorigins:sugary_rich"
+  ]
+}

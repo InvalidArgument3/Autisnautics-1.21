@@ -1,6 +1,7 @@
 {
-    "name": "Placeholder of Seven Curses",
-    "description": "Accursed Ones no longer spawn with the Ring of the Seven Curses. Find or craft it yourself if you want the burden.",
+    "hidden": true,
+    "name": "Marked by the Quest",
+    "description": "Completes the Accursed origin quest. The Ring of the Seven Curses is not given on spawn.",
     "type": "origins:multiple",
     "quests": {
         "type": "origins:action_on_callback",

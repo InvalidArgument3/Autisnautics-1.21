@@ -1,0 +1,11 @@
+{
+    "name": "Pounce",
+    "description": "Sprinting into a jump launches you higher, the way a cat pounces.",
+    "type": "neoorigins:attribute_modifier",
+    "attribute": "minecraft:generic.jump_strength",
+    "amount": 0.5,
+    "operation": "add_multiplied_base",
+    "condition": {
+        "type": "neoorigins:sprinting"
+    }
+}

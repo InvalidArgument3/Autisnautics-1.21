@@ -1,0 +1,7 @@
+{
+    "name": "Spite",
+    "description": "Rage that hell could not keep. Your attacks deal 20% more damage.",
+    "type": "neoorigins:modify_damage",
+    "direction": "out",
+    "multiplier": 1.2
+}

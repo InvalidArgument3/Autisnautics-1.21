@@ -11,7 +11,7 @@
             "actions": [
                 {
                     "type": "origins:spawn_entity",
-                    "entity_type": "ad_astra:martian_raptor",
+                    "entity_type": "stellaris:martian_raptor",
                     "tag": "{PersistenceRequired:1,CustomName:\"\\\"Xenomorph\\\"\"}"
                 },
                 {

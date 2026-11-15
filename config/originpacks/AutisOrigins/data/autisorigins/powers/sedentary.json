@@ -1,0 +1,8 @@
+{
+    "name": "Sedentary",
+    "description": "You would rather sit and configure. You walk 10% slower than other people.",
+    "type": "neoorigins:attribute_modifier",
+    "attribute": "minecraft:generic.movement_speed",
+    "amount": -0.1,
+    "operation": "add_multiplied_base"
+}

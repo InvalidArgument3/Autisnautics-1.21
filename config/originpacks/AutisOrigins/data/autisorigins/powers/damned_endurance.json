@@ -1,0 +1,8 @@
+{
+    "name": "Damned Endurance",
+    "description": "You have two extra hearts. Dying once was not enough.",
+    "type": "neoorigins:attribute_modifier",
+    "attribute": "minecraft:generic.max_health",
+    "amount": 4,
+    "operation": "add_value"
+}

@@ -28,12 +28,6 @@
                 "tag": "forge:cheese"
             },
             {
-                "item": "tconstruct:cheese_ingot"
-            },
-            {
-                "item": "tconstruct:cheese_block"
-            },
-            {
                 "item": "brewinandchewin:cheesy_pasta"
             },
             {
@@ -46,13 +40,10 @@
                 "item": "delightful:deluxe_cheeseburger"
             },
             {
-                "item": "rats:blue_cheese"
+                "item": "modernfoundry:cheese_ingot"
             },
             {
-                "item": "rats:nether_cheese"
-            },
-            {
-                "item": "rats:string_cheese"
+                "item": "modernfoundry:cheese_block"
             }
         ]
     },

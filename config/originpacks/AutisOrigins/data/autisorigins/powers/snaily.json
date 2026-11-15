@@ -11,27 +11,27 @@
                     "conditions": [
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/salt"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_chloride"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_fluoride"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "galosphere:pink_salt_blocks"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:block",
@@ -54,27 +54,27 @@
                     "conditions": [
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/salt"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_chloride"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_fluoride"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:in_tag",
-                            "tag": "galosphere:pink_salt_blocks"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "type": "origins:block",
@@ -97,67 +97,28 @@
                     "type": "origins:ingredient",
                     "ingredient": [
                         {
-                            "tag": "forge:salt"
+                            "tag": "autisorigins:salt_items"
                         },
                         {
-                            "tag": "forge:storage_blocks/salt"
-                        },
-                        {
-                            "tag": "forge:storage_blocks/sodium"
-                        },
-                        {
-                            "tag": "forge:storage_blocks/sodium_chloride"
-                        },
-                        {
-                            "tag": "forge:storage_blocks/sodium_fluoride"
-                        },
-                        {
-                            "tag": "forge:storage_blocks/sodium_hydroxide"
+                            "tag": "autisorigins:salt_blocks"
                         },
                         {
                             "tag": "theurgy:alchemical_salts"
                         },
                         {
-                            "item": "galosphere:pink_salt"
+                            "item": "nuclearcraftneohaul:sodium_hydroxide"
                         },
                         {
-                            "item": "galosphere:rose_pink_salt"
+                            "item": "nuclearcraftneohaul:sodium_fluoride"
                         },
                         {
-                            "item": "galosphere:pastel_pink_salt"
+                            "item": "nuclearcraftneohaul:sodium_bucket"
                         },
                         {
-                            "item": "nuclearcraft:salt"
+                            "item": "nuclearcraftneohaul:sodium_hydroxide_solution_bucket"
                         },
                         {
-                            "item": "galosphere:pink_salt_shard"
-                        },
-                        {
-                            "item": "galosphere:salted_jerky"
-                        },
-                        {
-                            "item": "galosphere:pink_salt_straw"
-                        },
-                        {
-                            "item": "galosphere:pink_salt_cluster"
-                        },
-                        {
-                            "item": "galosphere:saltbound_tablet"
-                        },
-                        {
-                            "item": "nuclearcraft:sodium_ingot"
-                        },
-                        {
-                            "item": "nuclearcraft:sodium_hydroxide_dust"
-                        },
-                        {
-                            "item": "nuclearcraft:sodium_dust"
-                        },
-                        {
-                            "item": "nuclearcraft:sodium_fluoride_dust"
-                        },
-                        {
-                            "item": "nuclearcraft:sodium_22"
+                            "item": "nuclearcraftneohaul:sodium_fluoride_solution_bucket"
                         }
                     ]
                 },
@@ -169,31 +130,25 @@
                 "conditions": [
                     {
                         "type": "origins:fluid_height",
-                        "fluid": "nuclearcraft:sodium",
+                        "fluid": "nuclearcraftneohaul:sodium",
                         "comparison": ">",
                         "compare_to": 0
                     },
                     {
                         "type": "origins:fluid_height",
-                        "fluid": "nuclearcraft:sodium_22",
+                        "fluid": "nuclearcraftneohaul:sodium_fluoride_solution",
                         "comparison": ">",
                         "compare_to": 0
                     },
                     {
                         "type": "origins:fluid_height",
-                        "fluid": "nuclearcraft:sodium_fluoride_solution",
+                        "fluid": "nuclearcraftneohaul:sodium_sulfide",
                         "comparison": ">",
                         "compare_to": 0
                     },
                     {
                         "type": "origins:fluid_height",
-                        "fluid": "nuclearcraft:sodium_hydroxide",
-                        "comparison": ">",
-                        "compare_to": 0
-                    },
-                    {
-                        "type": "origins:fluid_height",
-                        "fluid": "nuclearcraft:sodium_hydroxide_solution",
+                        "fluid": "nuclearcraftneohaul:sodium_hydroxide_solution",
                         "comparison": ">",
                         "compare_to": 0
                     }

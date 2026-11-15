@@ -4,19 +4,19 @@
     "type": "origins:attribute",
     "modifiers": [
         {
-            "attribute": "forge:entity_reach",
+            "attribute": "minecraft:player.entity_interaction_range",
             "operation": "addition",
             "value": 1,
             "name": "Attack Range Increased"
         },
         {
-            "attribute": "forge:block_reach",
+            "attribute": "minecraft:player.block_interaction_range",
             "operation": "addition",
             "value": 1,
             "name": "Block Reach Increased"
         },
         {
-            "attribute": "tconstruct:player.mining_speed_multiplier",
+            "attribute": "modernfoundry:player.mining_speed_multiplier",
             "operation": "multiply_base",
             "value": -0.25
         }

@@ -11,7 +11,7 @@
         "autisorigins:starting_soda"
     ],
     "icon": {
-        "item": "rats:black_death_mask"
+        "item": "createbigcannons:gas_mask"
     },
     "order": 1,
     "impact": 2

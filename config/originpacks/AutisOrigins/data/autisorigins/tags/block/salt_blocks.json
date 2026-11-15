@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "galosphere:pink_salt",
+    "galosphere:rose_pink_salt",
+    "galosphere:pastel_pink_salt",
+    "galosphere:pink_salt_bricks",
+    "galosphere:rose_pink_salt_bricks",
+    "galosphere:pastel_pink_salt_bricks",
+    "galosphere:polished_pink_salt",
+    "galosphere:polished_rose_pink_salt",
+    "galosphere:polished_pastel_pink_salt",
+    "galosphere:chiseled_pink_salt",
+    "galosphere:chiseled_rose_pink_salt",
+    "galosphere:chiseled_pastel_pink_salt",
+    "galosphere:pink_salt_cluster",
+    "galosphere:pink_salt_straw",
+    "galosphere:pink_salt_lamp"
+  ]
+}

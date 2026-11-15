@@ -9,12 +9,6 @@
             "type": "origins:ingredient",
             "ingredient": [
                 {
-                    "item": "rats:plague_doctor_mask"
-                },
-                {
-                    "item": "rats:black_death_mask"
-                },
-                {
                     "item": "mowziesmobs:umvuthana_mask_fury"
                 },
                 {

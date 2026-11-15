@@ -36,13 +36,6 @@
             "show_icon": true
         },
         {
-            "effect": "mna:frailty",
-            "duration": 30,
-            "amplifier": 4,
-            "show_particles": true,
-            "show_icon": true
-        },
-        {
             "effect": "minecraft:hunger",
             "duration": 30,
             "amplifier": 0,

@@ -1,0 +1,7 @@
+{
+    "name": "Brown Brick Affinity",
+    "description": "Stone, deepslate, and brick fall apart faster under your pick. Building is what you are for.",
+    "type": "neoorigins:break_speed_modifier",
+    "multiplier": 1.25,
+    "block_tag": "#minecraft:mineable/pickaxe"
+}

@@ -1,7 +1,25 @@
 {
     "name": "Snail Shell",
-    "description": "The only armor type your snaily body can wear is a chestpiece, sort of like a shell. Other armor slots are disabled.",
+    "description": "Your shell is worth one bar of armor and you shrug off some knocks. The only armor you can wear over it is a chestpiece.",
     "type": "origins:multiple",
+    "shell": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.armor",
+                "operation": "addition",
+                "value": 2,
+                "name": "Snail Shell"
+            },
+            {
+                "attribute": "minecraft:generic.knockback_resistance",
+                "operation": "addition",
+                "value": 0.3,
+                "name": "Retract"
+            }
+        ],
+        "update_health": true
+    },
     "key0": {
         "type": "origins:restrict_armor",
         "head": {

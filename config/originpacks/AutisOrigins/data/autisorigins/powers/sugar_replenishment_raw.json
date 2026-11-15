@@ -1,6 +1,6 @@
 {
     "name": "Angel: Food Sugar Replenishment",
-    "description": "Replenishes Sugar resource when eating raw Sugar.",
+    "description": "Eating raw sugar, a sugar cube, or refined sugar dust restores a little blood sugar.",
     "hidden": true,
     "condition": {
         "type": "origins:equipped_item",
@@ -8,7 +8,7 @@
         "item_condition": {
             "type": "origins:ingredient",
             "ingredient": {
-                "item": "minecraft:sugar"
+                "tag": "autisorigins:sugary_raw"
             }
         }
     },
@@ -31,7 +31,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "/resource change @s autisorigins:sugar_addict 1"
+                "command": "/resource change @s autisorigins:sugar_addict 80"
             },
             {
                 "type": "origins:play_sound",

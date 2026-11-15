@@ -6,7 +6,7 @@
         "type": "origins:projectile"
     },
     "modifier": {
-        "operation": "multiply_total",
+        "operation": "multiply_total_additive",
         "value": -0.5
     }
 }

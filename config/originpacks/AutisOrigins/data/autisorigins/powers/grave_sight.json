@@ -1,0 +1,6 @@
+{
+    "name": "Grave Sight",
+    "description": "The dark does not hide things from you as well as it should.",
+    "type": "neoorigins:enhanced_vision",
+    "exposure": 0.35
+}

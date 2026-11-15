@@ -39,9 +39,8 @@ let etherMutation = "autisorigins:ether__fallback"// fallback power
 let mutationMessage = "You mutate imperceptibly."// fallback message
 
 const getEtherMutation = function (event) {
-    let playerData = event.player.getNbt()
-    let playerPowerData = playerData.get("ForgeCaps").get("apoli:powers")
-    let playerPowers = playerPowerData.toString()
+    // NeoOrigins stores grants on the neoforge attachment, not the old ForgeCaps/apoli blob.
+    let playerPowers = event.player.getNbt().getCompound("neoforge:attachments").getCompound("neoorigins:origin_data").toString()
 
     for (let i = 0; i < 3; i++) {// you get two rerolls in case you already had the mutation
         let randomIndex = Math.floor(Math.random() * etherMutationArray.length)
@@ -81,7 +80,8 @@ ServerEvents.basicCommand('ether_mutate', event => {
 
 // debug command for now
 ServerEvents.basicCommand('ether_cure', event => {
-    let etherArray = event.player.getNbt().get("ForgeCaps").get("apoli:powers").toString().match(/autisorigins:ether__[a-z_]+(?=")/gi)// doesn't match subpowers
+    let etherBlob = event.player.getNbt().getCompound("neoforge:attachments").getCompound("neoorigins:origin_data").toString()
+    let etherArray = etherBlob.match(/autisorigins:ether__[a-z_]+/gi) || []
 
     for (let i = 0; i < etherArray.length; i++) {
         event.server.runCommandSilent(`/power revoke ${event.player.getName().getString()} ${etherArray[i]}`)
@@ -108,18 +108,10 @@ function nameGroups(value, key, map) {
     }
 }
 
-// run by autisorigins:sugar_replenishment_food
+// Sugary food is handled by autisorigins:sugar_replenishment_food (item tags, scaled).
+// This command remains for debugging a flat refill.
 ServerEvents.basicCommand('add_sugar', event => {
-    nameGroupArray = []
-    sugarsValue = 0
-    /* 1.21: no DietAPI
-    let handDietResult = DietApi.getInstance().get(event.player, Item.of(event.player.getMainHandItem())).get()// Map<IDietGroup, Float>
-    handDietResult.forEach(nameGroups)
-    if (nameGroupArray.includes("sugars") && sugarsValue != 0) {
-        event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict ${sugarsValue.toString()}`)
-    }
-    */
-    event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict 1`)// todo
+    event.server.runCommandSilent(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict 80`)
 })
 
 // debug command

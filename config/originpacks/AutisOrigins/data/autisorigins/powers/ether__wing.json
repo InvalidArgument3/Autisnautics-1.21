@@ -4,12 +4,12 @@
     "type": "origins:attribute",
     "modifiers": [
         {
-            "attribute": "tconstruct:generic.jump_boost",
+            "attribute": "modernfoundry:generic.jump_boost",
             "operation": "addition",
             "value": 1
         },
         {
-            "attribute": "tconstruct:player.jump_count",
+            "attribute": "modernfoundry:player.jump_count",
             "operation": "addition",
             "value": 1
         }

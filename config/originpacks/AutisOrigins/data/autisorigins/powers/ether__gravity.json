@@ -5,7 +5,7 @@
     "key0": {
         "type": "origins:attribute",
         "modifier": {
-            "attribute": "forge:entity_gravity",
+            "attribute": "minecraft:generic.gravity",
             "operation": "multiply_base",
             "value": 0.25
         },
@@ -18,7 +18,7 @@
         "duration_per_stack": 30,
         "tick_rate": 20,
         "effect": {
-            "effect": "tconstruct:magnetic",
+            "effect": "modernfoundry:magnetic",
             "duration": 30,
             "amplifier": 0,
             "is_ambient": true,

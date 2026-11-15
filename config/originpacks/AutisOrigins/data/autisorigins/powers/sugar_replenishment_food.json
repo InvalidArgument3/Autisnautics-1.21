@@ -1,15 +1,57 @@
 {
     "name": "Angel: Food Sugar Replenishment",
-    "description": "Replenishes Sugar resource when eating Sugars",
+    "description": "Eating sugary food refills blood sugar. Cookies and berries add a little, candy and jam add more, and a whole cake or pie adds the most.",
     "hidden": true,
-    "type": "origins:action_on_item_use",
-    "entity_action": {
-        "type": "origins:execute_command",
-        "command": "/kubejs custom_command add_sugar"
+    "type": "origins:multiple",
+    "light": {
+        "type": "neoorigins:action_on_event",
+        "event": "food_eaten",
+        "entity_action": {
+            "type": "neoorigins:if_else",
+            "condition": {
+                "type": "neoorigins:food_item_in_tag",
+                "tag": "#autisorigins:sugary_light"
+            },
+            "if_action": {
+                "type": "neoorigins:change_resource",
+                "resource": "autisorigins:sugar_addict",
+                "operation": "add",
+                "change": 150
+            }
+        }
     },
-    "item_condition": {
-        "type": "origins:food"
+    "sweet": {
+        "type": "neoorigins:action_on_event",
+        "event": "food_eaten",
+        "entity_action": {
+            "type": "neoorigins:if_else",
+            "condition": {
+                "type": "neoorigins:food_item_in_tag",
+                "tag": "#autisorigins:sugary_sweet"
+            },
+            "if_action": {
+                "type": "neoorigins:change_resource",
+                "resource": "autisorigins:sugar_addict",
+                "operation": "add",
+                "change": 280
+            }
+        }
     },
-    "trigger": "finish",
-    "priority": 0
+    "rich": {
+        "type": "neoorigins:action_on_event",
+        "event": "food_eaten",
+        "entity_action": {
+            "type": "neoorigins:if_else",
+            "condition": {
+                "type": "neoorigins:food_item_in_tag",
+                "tag": "#autisorigins:sugary_rich"
+            },
+            "if_action": {
+                "type": "neoorigins:change_resource",
+                "resource": "autisorigins:sugar_addict",
+                "operation": "add",
+                "change": 500
+            }
+        }
+    }
 }

@@ -1,10 +1,13 @@
 {
     "name": "Brainless",
     "description": "blobibs dont have a brain to member any expereinces with. all the shiny orbes go in one ear and outt the other. bolbis frends can handle the experimence stuff instead :D",
-    "type": "origins:modify_attribute",
-    "attribute": "apothic_attributes:experience_gained",
-    "modifier": {
-        "operation": "set_total",
-        "value": 0
-    }
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "apothic_attributes:experience_gained",
+            "operation": "multiply_total",
+            "value": -1,
+            "name": "Brainless"
+        }
+    ]
 }

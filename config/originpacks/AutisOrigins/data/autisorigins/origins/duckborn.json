@@ -5,7 +5,7 @@
         "origins:water_vision",
         "autisorigins:webbed_feet",
         "origins:slow_falling",
-        "origins:lay_eggs",
+        "autisorigins:lay_eggs",
         "autisorigins:undead_hatred",
         "autisorigins:starting_breadcrumbs"
     ],

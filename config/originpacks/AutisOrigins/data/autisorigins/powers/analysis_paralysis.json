@@ -1,0 +1,8 @@
+{
+    "name": "Analysis Paralysis",
+    "description": "You second-guess every swing. Melee hits deal 15% less damage.",
+    "type": "neoorigins:attribute_modifier",
+    "attribute": "minecraft:generic.attack_damage",
+    "amount": -0.15,
+    "operation": "add_multiplied_base"
+}

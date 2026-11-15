@@ -128,7 +128,7 @@
             },
             {
                 "type": "origins:spawn_entity",
-                "entity_type": "nuclearcraft:feral_ghoul",
+                "entity_type": "nuclearcraftneohaul:feral_ghoul",
                 "tag": "{Motion:[2d,1d,-2d]}",
                 "entity_action": {
                     "type": "origins:nothing"
@@ -169,7 +169,7 @@
             },
             {
                 "type": "origins:spawn_entity",
-                "entity_type": "thermal:blizz",
+                "entity_type": "minecraft:stray",
                 "tag": "{Motion:[-1d,1.2d,-1d]}",
                 "entity_action": {
                     "type": "origins:nothing"
@@ -177,7 +177,7 @@
             },
             {
                 "type": "origins:spawn_entity",
-                "entity_type": "thermal:blitz",
+                "entity_type": "minecraft:breeze",
                 "tag": "{Motion:[-1d,1.2d,1d]}",
                 "entity_action": {
                     "type": "origins:nothing"
@@ -185,7 +185,7 @@
             },
             {
                 "type": "origins:spawn_entity",
-                "entity_type": "thermal:basalz",
+                "entity_type": "minecraft:husk",
                 "tag": "{Motion:[1d,1.2d,1d]}",
                 "entity_action": {
                     "type": "origins:nothing"
@@ -215,7 +215,7 @@
             {
                 "type": "origins:apply_effect",
                 "effect": {
-                    "effect": "relics:confusion",
+                    "effect": "minecraft:nausea",
                     "duration": 40,
                     "amplifier": 0,
                     "is_ambient": true,

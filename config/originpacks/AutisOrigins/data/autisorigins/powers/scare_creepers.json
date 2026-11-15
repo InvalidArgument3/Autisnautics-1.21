@@ -1,0 +1,8 @@
+{
+    "name": "Scare Creepers",
+    "description": "Creepers keep their distance. They will not close in to explode.",
+    "type": "neoorigins:scare_entities",
+    "entity_types": [
+        "minecraft:creeper"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "galosphere:pink_salt",
+    "galosphere:rose_pink_salt",
+    "galosphere:pastel_pink_salt",
+    "galosphere:pink_salt_shard",
+    "galosphere:pink_salt_cluster",
+    "galosphere:pink_salt_straw",
+    "galosphere:salted_jerky",
+    "galosphere:saltbound_tablet",
+    "nuclearcraftneohaul:sodium_hydroxide",
+    "nuclearcraftneohaul:sodium_fluoride",
+    "nuclearcraftneohaul:sodium_bucket",
+    "nuclearcraftneohaul:sodium_hydroxide_solution_bucket",
+    "nuclearcraftneohaul:sodium_fluoride_solution_bucket"
+  ]
+}

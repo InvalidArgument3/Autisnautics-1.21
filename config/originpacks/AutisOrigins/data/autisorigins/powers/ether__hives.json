@@ -9,7 +9,7 @@
             {
                 "type": "origins:apply_effect",
                 "effect": {
-                    "effect": "rats:plague",
+                    "effect": "minecraft:hunger",
                     "duration": 24000,
                     "amplifier": 0,
                     "show_particles": true,

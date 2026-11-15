@@ -11,7 +11,7 @@
     "duration_per_stack": 30,
     "tick_rate": 20,
     "effect": {
-        "effect": "tconstruct:bouncy",
+        "effect": "modernfoundry:bouncy",
         "duration": 30,
         "amplifier": 0,
         "is_ambient": true,
