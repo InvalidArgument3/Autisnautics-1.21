@@ -112,6 +112,25 @@ if [ "$BACKUP_NEEDED" = true ]; then
       cp -r "./$folder" "$OVERRIDES_BACKUP/"
     fi
   done
+
+  # Keep only the newest 3 overrides_backup_<timestamp> directories.
+  if [ -d "$OVERRIDES_BACKUP" ]; then
+    shopt -s nullglob
+    backup_dirs=()
+    for candidate in ./overrides_backup_*; do
+      [ -d "$candidate" ] && backup_dirs+=("$candidate")
+    done
+    shopt -u nullglob
+    if [ "${#backup_dirs[@]}" -gt 3 ]; then
+      mapfile -t backup_dirs < <(printf '%s\n' "${backup_dirs[@]}" | LC_ALL=C sort -r)
+      for old_backup in "${backup_dirs[@]:3}"; do
+        if [ -d "$old_backup" ]; then
+          echo -e "${YELLOW}Removing old overrides backup ${old_backup}${NC}"
+          rm -rf "$old_backup"
+        fi
+      done
+    fi
+  fi
 fi
 
 # Remove existing folders that need to be replaced

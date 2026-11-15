@@ -19,7 +19,7 @@ fullBackupTimer = 525960
 #The max amount of backup files to keep.
 # Default: 10
 # Range: 1 ~ 32767
-backupsToKeep = 10
+backupsToKeep = 3
 #The time between two backups in minutes
 #5 = each 5 minutes
 #60 = each hour
