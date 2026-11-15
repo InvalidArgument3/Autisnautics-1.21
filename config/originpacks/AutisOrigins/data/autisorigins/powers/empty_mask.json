@@ -99,33 +99,27 @@
                 "type": "origins:empty"
             }
         },
-        "type": "origins:stacking_status_effect",
-        "min_stacks": 0,
-        "max_stacks": 1,
-        "duration_per_stack": 30,
-        "tick_rate": 20,
+        "type": "neoorigins:persistent_effect",
+        "toggleable": false,
         "effects": [
             {
                 "effect": "minecraft:weakness",
-                "duration": 30,
                 "amplifier": 0,
-                "is_ambient": true,
+                "ambient": true,
                 "show_particles": false,
                 "show_icon": false
             },
             {
                 "effect": "mowziesmobs:fragility",
-                "duration": 30,
                 "amplifier": 4,
-                "is_ambient": true,
+                "ambient": true,
                 "show_particles": false,
                 "show_icon": false
             },
             {
                 "effect": "apothic_attributes:grievous",
-                "duration": 30,
                 "amplifier": 0,
-                "is_ambient": true,
+                "ambient": true,
                 "show_particles": false,
                 "show_icon": false
             }

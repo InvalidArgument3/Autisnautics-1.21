@@ -97,18 +97,16 @@
                 }
             ]
         },
-        "type": "origins:stacking_status_effect",
-        "min_stacks": 0,
-        "max_stacks": 1,
-        "duration_per_stack": 30,
-        "tick_rate": 20,
-        "effect": {
-            "effect": "minecraft:slowness",
-            "duration": 100,
-            "amplifier": 2,
-            "is_ambient": true,
-            "show_particles": false,
-            "show_icon": false
-        }
+        "type": "neoorigins:persistent_effect",
+        "toggleable": false,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 2,
+                "ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
     }
 }
