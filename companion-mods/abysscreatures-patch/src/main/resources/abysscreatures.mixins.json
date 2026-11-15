@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "abysscreatures.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "WaterAbyssCreatureMixin",
+    "WaterStrollGoalMixin",
+    "BoidMixin",
+    "TargetGoalMixin",
+    "CorpseAnglerMixin",
+    "NecroshellNavigationMixin",
+    "SpineWormMixin",
+    "HurtLogMixin",
+    "TargetMobAccess",
+    "StrollAccess",
+    "EntityDataAccess"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

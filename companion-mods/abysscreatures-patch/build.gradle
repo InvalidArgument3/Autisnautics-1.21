@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+neoForge {
+    version = '21.1.265'
+}
+
+def packed = file("${rootDir}/../../.pakku/overrides/mods/abysscreatures-0.2.3-neoforge-1.21.1.jar")
+def cached = file("${rootDir}/build/abysscreatures-0.2.3-neoforge-1.21.1.jar")
+def abyssJar = packed.exists() ? packed : cached
+
+dependencies {
+    compileOnly files(abyssJar)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add('-proc:none')
+}

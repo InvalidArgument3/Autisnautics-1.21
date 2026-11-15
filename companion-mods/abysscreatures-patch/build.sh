@@ -1,101 +1,101 @@
 #!/usr/bin/env bash
-# Rebuild abysscreatures 0.2.3 from the 0.2.2 jar.
-# The 0.2.2 jar is the parent of this change. After it is replaced, the script
-# reads that blob back out of git (cc244d46) through the LFS smudge filter.
+# Rebuild abysscreatures 0.2.4 from the 0.2.3 jar plus the AI sources in this directory.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-OUT_JAR="$REPO/.pakku/overrides/mods/abysscreatures-0.2.3-neoforge-1.21.1.jar"
-OLD_NAME="abysscreatures-0.2.2-neoforge-1.21.1.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/$OLD_NAME"
-SRC_REV="${SRC_REV:-cc244d46a96515f5f641b6023326d562e9fa531c}"
-ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
-ASM_TREE="${ASM_TREE_JAR:-/tmp/libs/asm-tree-9.7.1.jar}"
-WORK="$ROOT/build"
+OUT_JAR="$REPO/.pakku/overrides/mods/abysscreatures-0.2.4-neoforge-1.21.1.jar"
+BASE_NAME="abysscreatures-0.2.3-neoforge-1.21.1.jar"
+BASE_JAR="$REPO/.pakku/overrides/mods/$BASE_NAME"
+WORK="$ROOT/build/pack"
 
-fetch() {
-  local dest="$1" url="$2"
-  if [[ ! -f "$dest" ]]; then
-    mkdir -p "$(dirname "$dest")"
-    curl -fsSL -o "$dest" "$url"
-  fi
-}
-fetch "$ASM" https://repo1.maven.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar
-fetch "$ASM_TREE" https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar
-
-rm -rf "$WORK"
-mkdir -p "$WORK/classes" "$WORK/patch" "$WORK/test" "$WORK/src"
-
-javac --release 21 -d "$WORK/classes" "$ROOT/src/abysscreatures/ai/Course.java"
-javac --release 21 -cp "$WORK/classes" -d "$WORK/test" \
+mkdir -p "$ROOT/build/heading" "$ROOT/build/heading-test"
+javac --release 21 -d "$ROOT/build/heading" "$ROOT/src/abysscreatures/ai/Course.java"
+javac --release 21 -cp "$ROOT/build/heading" -d "$ROOT/build/heading-test" \
   "$ROOT/src/test/abysscreatures/ai/HeadingHarness.java"
-java -cp "$WORK/classes:$WORK/test" abysscreatures.ai.HeadingHarness
+java -cp "$ROOT/build/heading:$ROOT/build/heading-test" abysscreatures.ai.HeadingHarness
 
-if [[ -f "$OLD_JAR" ]] && ! grep -q 'git-lfs.github.com' "$OLD_JAR"; then
-  cp "$OLD_JAR" "$WORK/src/$OLD_NAME"
+(cd "$ROOT" && ./gradlew --offline compileJava) || (cd "$ROOT" && ./gradlew compileJava)
+
+mkdir -p "$ROOT/build"
+if [[ -f "$BASE_JAR" ]] && ! grep -q 'git-lfs.github.com' "$BASE_JAR"; then
+  BASE="$BASE_JAR"
+  cp -f "$BASE_JAR" "$ROOT/build/$BASE_NAME"
+elif [[ -f "$ROOT/build/$BASE_NAME" ]]; then
+  BASE="$ROOT/build/$BASE_NAME"
 else
-  git -C "$REPO" cat-file --filters "$SRC_REV:.pakku/overrides/mods/$OLD_NAME" > "$WORK/src/$OLD_NAME"
+  mkdir -p "$WORK"
+  BASE="$WORK/$BASE_NAME"
+  git -C "$REPO" cat-file --filters "HEAD:.pakku/overrides/mods/$BASE_NAME" > "$BASE" || \
+    git -C "$REPO" cat-file --filters "cc244d46a96515f5f641b6023326d562e9fa531c:.pakku/overrides/mods/abysscreatures-0.2.2-neoforge-1.21.1.jar" > "$BASE"
 fi
-if ! unzip -t "$WORK/src/$OLD_NAME" >/dev/null; then
-  echo "0.2.2 jar is not a zip (LFS pointer?). Fetch the LFS object and re-run." >&2
+if ! unzip -t "$BASE" >/dev/null; then
+  echo "0.2.3 jar is not a zip. Fetch the LFS object and re-run." >&2
   exit 1
 fi
 
-javac --release 21 -cp "$ASM:$ASM_TREE" -d "$WORK/patch" "$ROOT/src/patch/PatchHeading.java"
-java -cp "$WORK/patch:$ASM:$ASM_TREE" PatchHeading \
-  "$WORK/src/$OLD_NAME" "$OUT_JAR" "$WORK/classes/abysscreatures/ai/Course.class"
+python3 - "$BASE" "$OUT_JAR" "$ROOT/build/classes/java/main" "$ROOT/src/main/resources/abysscreatures.mixins.json" <<'PY'
+import pathlib, sys, zipfile
+base, out, classes, mixin_json = map(pathlib.Path, sys.argv[1:])
+extra = {}
+for path in classes.rglob("*"):
+    if path.is_file():
+        extra[path.relative_to(classes).as_posix()] = path.read_bytes()
+extra["abysscreatures.mixins.json"] = mixin_json.read_bytes()
+replaced = {"META-INF/neoforge.mods.toml"}
+with zipfile.ZipFile(base) as src, zipfile.ZipFile(out, "w") as dst:
+    names = set(src.namelist())
+    clash = (set(extra) & names) - replaced
+    if clash:
+        raise SystemExit("new class collides with the 0.2.3 jar:\n" + "\n".join(sorted(clash)))
+    for info in src.infolist():
+        data = src.read(info.filename)
+        if info.filename == "META-INF/neoforge.mods.toml":
+            text = data.decode()
+            if 'version="0.2.3"' not in text:
+                raise SystemExit("mods.toml is not 0.2.3")
+            text = text.replace('version="0.2.3"', 'version="0.2.4"', 1)
+            if "abysscreatures.mixins.json" not in text:
+                text = text.rstrip() + '\n\n[[mixins]]\nconfig="abysscreatures.mixins.json"\n'
+            data = text.encode()
+        entry = zipfile.ZipInfo(info.filename, date_time=info.date_time)
+        entry.compress_type = info.compress_type
+        entry.external_attr = info.external_attr
+        dst.writestr(entry, data)
+    for name, data in sorted(extra.items()):
+        dst.writestr(name, data)
+print("packed", out, "added", len(extra))
+PY
 
-python3 - "$WORK/src/$OLD_NAME" "$OUT_JAR" <<'PY'
+python3 - "$BASE" "$OUT_JAR" <<'PY'
 import hashlib, sys, zipfile
 old, new = sys.argv[1:]
-changed = {
-    "abysscreatures/ai/BoidMoveControl.class",
-    "abysscreatures/ai/SwimMoveControl.class",
-    "abysscreatures/ai/Boid.class",
-    "META-INF/neoforge.mods.toml",
-}
-added = {"abysscreatures/ai/Course.class"}
-a, b = zipfile.ZipFile(old), zipfile.ZipFile(new)
-old_names, new_names = set(a.namelist()), set(b.namelist())
-missing = old_names - new_names
-extra = new_names - old_names - added
-if missing or extra:
-    raise SystemExit(f"entry mismatch missing={sorted(missing)} extra={sorted(extra)}")
-unexpected = []
-for name in sorted(old_names):
-    if a.read(name) != b.read(name) and name not in changed:
-        unexpected.append(name)
-if unexpected:
-    raise SystemExit("unexpected byte changes:\n" + "\n".join(unexpected))
-for name in changed | added:
-    if name in old_names and a.read(name) == b.read(name):
-        raise SystemExit(f"expected {name} to change")
-    if name not in new_names:
-        raise SystemExit(f"missing {name}")
-text = b.read("META-INF/neoforge.mods.toml").decode()
-if 'version="0.2.3"' not in text or 'version="0.2.2"' in text:
-    raise SystemExit("version string was not bumped to 0.2.3")
+new_zip = zipfile.ZipFile(new)
+text = new_zip.read("META-INF/neoforge.mods.toml").decode()
+if 'version="0.2.4"' not in text or "abysscreatures.mixins.json" not in text:
+    raise SystemExit("toml was not bumped")
 for name in (
-    "abysscreatures/ai/BoidMoveControl.class",
-    "abysscreatures/ai/SwimMoveControl.class",
-    "abysscreatures/ai/Boid.class",
+    "abysscreatures/ai/DirectSwimNavigation.class",
+    "abysscreatures/ai/HuntGoal.class",
+    "abysscreatures/ai/SwimPursueGoal.class",
+    "abysscreatures/ai/Bait.class",
+    "abysscreatures/ai/Course.class",
+    "abysscreatures/mixin/WaterAbyssCreatureMixin.class",
+    "abysscreatures/mixin/CorpseAnglerMixin.class",
+    "abysscreatures.mixins.json",
 ):
-    blob = b.read(name)
-    if b"abysscreatures/ai/Course" not in blob:
-        raise SystemExit(f"{name} does not reference Course")
-if b"separationGain" not in b.read("abysscreatures/ai/Boid.class"):
-    raise SystemExit("Boid no longer calls separationGain")
-# The head is the look control's. Neither move control may stamp yHeadRot.
+    if name not in new_zip.namelist():
+        raise SystemExit("missing " + name)
 for name in ("abysscreatures/ai/BoidMoveControl.class", "abysscreatures/ai/SwimMoveControl.class"):
-    blob = b.read(name)
+    blob = new_zip.read(name)
     if b"yHeadRot" in blob:
-        raise SystemExit(f"{name} still mentions yHeadRot")
+        raise SystemExit(name + " writes yHeadRot again")
+    if b"abysscreatures/ai/Course" not in blob:
+        raise SystemExit(name + " lost the heading gate")
 print("parity ok; sha1", hashlib.sha1(open(new, "rb").read()).hexdigest())
 PY
 
-if [[ -f "$OLD_JAR" ]]; then
-  rm -f "$OLD_JAR"
+if [[ -f "$BASE_JAR" && "$BASE_JAR" != "$OUT_JAR" ]]; then
+  rm -f "$BASE_JAR"
 fi
-
 echo "built $OUT_JAR"
