@@ -1,6 +1,6 @@
 {
     "name": "Angel: Food Sugar Replenishment",
-    "description": "Eating raw sugar, a sugar cube, or refined sugar dust restores a little blood sugar.",
+    "description": "Using raw sugar or a sugar cube restores a little blood sugar. Each use consumes one item and then waits half a second.",
     "hidden": true,
     "condition": {
         "type": "origins:equipped_item",
@@ -41,7 +41,7 @@
             }
         ]
     },
-    "cooldown": 1,
+    "cooldown": 10,
     "key": {
         "key": "key.use",
         "continuous": false

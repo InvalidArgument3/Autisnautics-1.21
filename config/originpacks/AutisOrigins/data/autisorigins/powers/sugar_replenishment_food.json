@@ -1,11 +1,11 @@
 {
     "name": "Angel: Food Sugar Replenishment",
-    "description": "Eating sugary food refills blood sugar. Cookies and berries add a little, candy and jam add more, and a whole cake or pie adds the most.",
+    "description": "Finishing a sugary food refills blood sugar, once, when that item is actually eaten. Cookies and berries add a little, candy and jam add more, and a whole cake or pie adds the most.",
     "hidden": true,
     "type": "origins:multiple",
     "light": {
         "type": "neoorigins:action_on_event",
-        "event": "food_eaten",
+        "event": "food_finished",
         "entity_action": {
             "type": "neoorigins:if_else",
             "condition": {
@@ -22,7 +22,7 @@
     },
     "sweet": {
         "type": "neoorigins:action_on_event",
-        "event": "food_eaten",
+        "event": "food_finished",
         "entity_action": {
             "type": "neoorigins:if_else",
             "condition": {
@@ -39,7 +39,7 @@
     },
     "rich": {
         "type": "neoorigins:action_on_event",
-        "event": "food_eaten",
+        "event": "food_finished",
         "entity_action": {
             "type": "neoorigins:if_else",
             "condition": {
