@@ -438,8 +438,8 @@ ServerEvents.tags("block_entity_type", event => {
 })
 
 ServerEvents.tags("fluid", event => {
-    // Create 6 and Create Confectionery mix chocolate against c:milk, but nothing
-    // in the pack puts a fluid in that tag. Vanilla milk is the pack's milk fluid.
+    // Create 6 mixes chocolate and tea against c:milk, but nothing in the pack
+    // puts a fluid in that tag. Vanilla milk is the pack's milk fluid.
     event.add("c:milk", "minecraft:milk")
     event.add("c:milk", "minecraft:flowing_milk")
 

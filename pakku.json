@@ -192,11 +192,6 @@
         "create-walking-steel": {
             "redistributable": true
         },
-        "create-confectionery": {
-            "side": "BOTH",
-            "update_strategy": "NONE",
-            "redistributable": true
-        },
         "create-flight-control": {
             "redistributable": true
         },

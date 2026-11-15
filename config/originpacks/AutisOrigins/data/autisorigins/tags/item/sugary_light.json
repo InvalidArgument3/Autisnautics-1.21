@@ -108,14 +108,6 @@
     "fruitsdelight:lemon_cookie",
     "fruitsdelight:persimmon_cookie",
     "minecraft:cookie",
-    "minecraft:sweet_berries",
-    "create_confectionery:candy_cane",
-    "create_confectionery:full_black_chocolate_bar",
-    "create_confectionery:full_chocolate_bar",
-    "create_confectionery:full_ruby_chocolate_bar",
-    "create_confectionery:full_white_chocolate_bar",
-    "create_confectionery:gingerbread_man",
-    "create_confectionery:honey_candy",
-    "create_confectionery:marshmallow"
+    "minecraft:sweet_berries"
   ]
 }
