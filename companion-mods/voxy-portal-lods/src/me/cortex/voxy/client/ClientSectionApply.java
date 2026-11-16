@@ -44,7 +44,9 @@ public final class ClientSectionApply {
     private static final ConcurrentLinkedQueue<long[]> ACKS = new ConcurrentLinkedQueue<long[]>();
     private static final AtomicInteger QUEUED = new AtomicInteger();
     private static final Set<Long> COLUMNS = new HashSet<Long>();
-    private static final int IN_FLIGHT_BATCHES = 64;
+    /** Matches the server in-flight window so a slow client pushes back instead of buffering the world. */
+    static final int IN_FLIGHT_BATCHES = 48;
+    static final int IN_FLIGHT_BYTES = 8 * 1024 * 1024;
 
     private static long sectionsWritten;
     private static long renderNotifies;
@@ -52,7 +54,14 @@ public final class ClientSectionApply {
     private static long engineMismatches;
     private static long distinctColumns;
     private static long batchesDone;
+    private static long renderThreadNanos;
+    private static long renderTicks;
+    private static int queuedBatches;
+    private static int queuedBytes;
+    /** Harness-only engine. Production leaves this null and uses the live renderer. */
+    private static volatile WorldEngine harnessEngine;
     private static boolean loggedEngine;
+    private static volatile String applyError;
     private static Field queueField;
     private static Field appliedField;
     private static Field completedField;
@@ -62,65 +71,138 @@ public final class ClientSectionApply {
     }
 
     public static String line() {
+        long ticks = Math.max(1L, renderTicks);
         return "sectionsWritten=" + sectionsWritten
                 + " distinctColumns=" + distinctColumns
                 + " batchesDone=" + batchesDone
                 + " renderNotifies=" + renderNotifies
                 + " renderMisses=" + renderMisses
-                + " engineMismatches=" + engineMismatches;
+                + " engineMismatches=" + engineMismatches
+                + " queueBatches=" + queuedBatches
+                + " queueBytes=" + queuedBytes
+                + " renderThreadUs=" + (renderThreadNanos / ticks / 1_000L);
     }
 
-    /** Client thread. Pulls queued batches and hands them to the apply worker. */
-    @SuppressWarnings("unchecked")
+    /** Mean time spent inside {@link #drain()} on the client thread, in microseconds. */
+    public static long renderThreadMicros() {
+        long ticks = Math.max(1L, renderTicks);
+        return renderThreadNanos / ticks / 1_000L;
+    }
+
+    public static int queuedBatches() {
+        return queuedBatches;
+    }
+
+    public static String applyError() {
+        return applyError == null ? "" : applyError;
+    }
+
+    public static void useEngineForHarness(WorldEngine engine) {
+        harnessEngine = engine;
+    }
+
+    /** Client thread. Pulls queued batches and hands them to the apply worker. Decode stays off this thread. */
     public static void drain() {
-        flushAcks();
-        TerrainApplyQueue<SectionSyncBatchPayload> queue = queue();
-        if (queue == null) {
-            return;
+        long started = System.nanoTime();
+        try {
+            flushAcks(true);
+            TerrainApplyQueue<SectionSyncBatchPayload> queue = queue();
+            if (queue == null) {
+                return;
+            }
+            if (VoxyConfig.CONFIG == null || !VoxyConfig.CONFIG.serverTerrainSyncReceive) {
+                queue.clear();
+                queuedBatches = 0;
+                queuedBytes = 0;
+                return;
+            }
+            if (QUEUED.get() >= IN_FLIGHT_BATCHES) {
+                return;
+            }
+            Minecraft minecraft = Minecraft.getInstance();
+            Level level = minecraft.level;
+            if (level == null) {
+                return;
+            }
+            pump(queue, level.registryAccess(), level.getMinSection(), level.getMaxSection(), WorldIdentifier.of(level), renderEngine(minecraft));
+        } finally {
+            renderThreadNanos += System.nanoTime() - started;
+            renderTicks++;
         }
-        if (VoxyConfig.CONFIG == null || !VoxyConfig.CONFIG.serverTerrainSyncReceive) {
-            queue.clear();
-            return;
+    }
+
+    /**
+     * Same steal-and-hand-off as {@link #drain()}, without touching {@link Minecraft}.
+     * The harness calls this once per client tick.
+     */
+    public static void harnessTick(RegistryAccess registries, int minSection, int maxSection, WorldEngine engine) {
+        long started = System.nanoTime();
+        try {
+            flushAcks(false);
+            useEngineForHarness(engine);
+            TerrainApplyQueue<SectionSyncBatchPayload> queue = queue();
+            if (queue == null || QUEUED.get() >= IN_FLIGHT_BATCHES) {
+                return;
+            }
+            pump(queue, registries, minSection, maxSection, null, engine);
+        } finally {
+            renderThreadNanos += System.nanoTime() - started;
+            renderTicks++;
         }
-        Minecraft minecraft = Minecraft.getInstance();
-        Level level = minecraft.level;
-        if (level == null || QUEUED.get() >= IN_FLIGHT_BATCHES) {
-            return;
-        }
-        RegistryAccess registries = level.registryAccess();
-        int min = level.getMinSection();
-        int max = level.getMaxSection();
-        WorldIdentifier current = WorldIdentifier.of(level);
-        WorldEngine shown = renderEngine(minecraft);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void pump(TerrainApplyQueue<SectionSyncBatchPayload> queue, RegistryAccess registries, int min, int max, WorldIdentifier current, WorldEngine shown) {
         ArrayList<TerrainApplyQueue.Item<SectionSyncBatchPayload>> batch = new ArrayList<TerrainApplyQueue.Item<SectionSyncBatchPayload>>();
+        int bytes = queuedBytes;
         TerrainApplyQueue.Item<SectionSyncBatchPayload> item;
-        while (QUEUED.get() + batch.size() < IN_FLIGHT_BATCHES && (item = queue.peek()) != null) {
+        while (QUEUED.get() + batch.size() < IN_FLIGHT_BATCHES && bytes < IN_FLIGHT_BYTES && (item = queue.peek()) != null) {
+            if (!batch.isEmpty() && bytes + item.bytes > IN_FLIGHT_BYTES) {
+                break;
+            }
             queue.remove(item);
             batch.add(item);
+            bytes += item.bytes;
         }
+        queuedBatches = queue.size() + QUEUED.get() + batch.size();
+        queuedBytes = bytes;
         if (batch.isEmpty()) {
             return;
         }
         QUEUED.addAndGet(batch.size());
-        WORKER.execute(() -> apply(batch, registries, min, max, current, shown));
+        WorldIdentifier worldNow = current;
+        WorldEngine shownNow = shown;
+        WORKER.execute(() -> apply(batch, registries, min, max, worldNow, shownNow));
     }
 
     private static void apply(List<TerrainApplyQueue.Item<SectionSyncBatchPayload>> batch, RegistryAccess registries, int min, int max, WorldIdentifier current, WorldEngine shown) {
+        int batchBytes = 0;
+        for (int i = 0; i < batch.size(); i++) {
+            batchBytes += batch.get(i).bytes;
+        }
         try {
             VoxyInstance instance = VoxyCommon.getInstance();
+            WorldEngine forced = harnessEngine;
             for (int i = 0; i < batch.size(); i++) {
                 TerrainApplyQueue.Item<SectionSyncBatchPayload> item = batch.get(i);
                 SectionSyncBatchPayload payload = item.payload;
-                WorldIdentifier world = world(payload);
-                if (instance == null || current == null || world == null || !world.equals(current)) {
-                    ACKS.add(new long[] {item.id, 2L});
-                    continue;
-                }
-                WorldEngine stored = instance.getOrCreate(world);
-                WorldEngine target = stored;
-                if (shown != null && shown != stored && live(shown)) {
-                    target = shown;
-                    engineMismatches++;
+                WorldEngine stored;
+                WorldEngine target;
+                if (forced != null) {
+                    stored = forced;
+                    target = forced;
+                } else {
+                    WorldIdentifier world = world(payload);
+                    if (instance == null || current == null || world == null || !world.equals(current)) {
+                        ACKS.add(new long[] {item.id, 2L});
+                        continue;
+                    }
+                    stored = instance.getOrCreate(world);
+                    target = stored;
+                    if (shown != null && shown != stored && live(shown)) {
+                        target = shown;
+                        engineMismatches++;
+                    }
                 }
                 if (target == null || !live(target)) {
                     ACKS.add(new long[] {item.id, 1L});
@@ -132,7 +214,7 @@ public final class ClientSectionApply {
                     me.cortex.voxy.common.Logger.info("[terrain-sync][client] apply engine=" + System.identityHashCode(target)
                             + " stored=" + System.identityHashCode(stored)
                             + " renderCallback=" + armed
-                            + " world=" + world);
+                            + " offThread=voxy-terrain-apply");
                 }
                 try {
                     int written = 0;
@@ -163,11 +245,24 @@ public final class ClientSectionApply {
                     addCounter(completedField(), 1);
                     ACKS.add(new long[] {item.id, 0L});
                 } catch (Throwable failure) {
+                    if (applyError == null) {
+                        StringBuilder text = new StringBuilder(failure.toString());
+                        int frames = 0;
+                        for (StackTraceElement frame : failure.getStackTrace()) {
+                            text.append(" | ").append(frame);
+                            if (++frames == 12) {
+                                break;
+                            }
+                        }
+                        applyError = text.toString();
+                    }
                     ACKS.add(new long[] {item.id, 1L});
                 }
             }
         } finally {
             QUEUED.addAndGet(-batch.size());
+            queuedBatches = Math.max(0, queuedBatches - batch.size());
+            queuedBytes = Math.max(0, queuedBytes - batchBytes);
         }
     }
 
@@ -191,10 +286,10 @@ public final class ClientSectionApply {
         }
     }
 
-    private static void flushAcks() {
+    private static void flushAcks(boolean sendPackets) {
         long[] ack;
         while ((ack = ACKS.poll()) != null) {
-            if (Minecraft.getInstance().getConnection() != null) {
+            if (sendPackets && Minecraft.getInstance().getConnection() != null) {
                 PacketDistributor.sendToServer(new VoxyChunkAckPayload(ack[0], (int) ack[1]), new CustomPacketPayload[0]);
             }
         }

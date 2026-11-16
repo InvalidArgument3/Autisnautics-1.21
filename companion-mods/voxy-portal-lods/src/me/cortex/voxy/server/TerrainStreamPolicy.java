@@ -398,5 +398,13 @@ public final class TerrainStreamPolicy {
         boolean restart;
         int lastInner = -1;
         String cause = "";
+
+        public String cause() {
+            return this.cause == null ? "" : this.cause;
+        }
+
+        public boolean droppedQueue() {
+            return this.clearQueue;
+        }
     }
 }

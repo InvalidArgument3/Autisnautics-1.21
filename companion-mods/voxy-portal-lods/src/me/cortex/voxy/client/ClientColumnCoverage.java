@@ -122,29 +122,29 @@ public final class ClientColumnCoverage {
                 + " channel=" + channelState;
     }
 
-    private static boolean scan(Level level, Object player) throws ReflectiveOperationException {
-        WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
+    /**
+     * Reads lod-0 keys and returns the coverage packets a scan would send.
+     * The client tick uses this, and the harness does too.
+     */
+    public static ArrayList<ColumnCoveragePayload> collect(WorldEngine engine, int playerX, int playerZ, int radius) {
+        ArrayList<ColumnCoveragePayload> out = new ArrayList<ColumnCoveragePayload>();
         if (engine == null || engine.storage == null) {
-            return false;
+            engineState = engine == null ? "null" : "no-storage";
+            return out;
+        }
+        engineState = "ok";
+        channelState = "ok";
+        if (worldId.isEmpty()) {
+            worldId = "minecraft:overworld";
         }
         scans++;
-        Object chunk = player.getClass().getMethod("chunkPosition").invoke(player);
-        int playerX = ((ChunkPos) chunk).x;
-        int playerZ = ((ChunkPos) chunk).z;
-        int radius = 0;
-        if (VoxyConfig.CONFIG != null) {
-            radius = Math.max(0, Math.round(VoxyConfig.CONFIG.sectionRenderDistance * 32.0f));
-        }
         Long2ObjectOpenHashMap<byte[]> found = new Long2ObjectOpenHashMap<byte[]>();
-        int maxRadius = radius;
         int[] seen = new int[] {0};
         engine.storage.iteratePositions(0, sectionKey -> {
             seen[0]++;
-            ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, maxRadius);
+            ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, radius);
         });
         keysFound += seen[0];
-        QUEUE.clear();
-        PENDING.clear();
         int playerRegionX = playerX >> 5;
         int playerRegionZ = playerZ >> 5;
         ArrayList<Long> ordered = new ArrayList<Long>();
@@ -158,13 +158,35 @@ public final class ClientColumnCoverage {
         });
         for (int i = 0; i < ordered.size(); i++) {
             long key = ordered.get(i).longValue();
-            byte[] bits = found.get(key);
+            out.add(new ColumnCoveragePayload(ColumnCoverageIndex.regionX(key), ColumnCoverageIndex.regionZ(key), found.get(key).clone()));
+        }
+        return out;
+    }
+
+    private static boolean scan(Level level, Object player) throws ReflectiveOperationException {
+        WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
+        if (engine == null || engine.storage == null) {
+            return false;
+        }
+        Object chunk = player.getClass().getMethod("chunkPosition").invoke(player);
+        int playerX = ((ChunkPos) chunk).x;
+        int playerZ = ((ChunkPos) chunk).z;
+        int radius = 0;
+        if (VoxyConfig.CONFIG != null) {
+            radius = Math.max(0, Math.round(VoxyConfig.CONFIG.sectionRenderDistance * 32.0f));
+        }
+        ArrayList<ColumnCoveragePayload> found = collect(engine, playerX, playerZ, radius);
+        QUEUE.clear();
+        PENDING.clear();
+        for (int i = 0; i < found.size(); i++) {
+            ColumnCoveragePayload payload = found.get(i);
+            long key = ColumnCoverageIndex.regionKey(payload.regionX(), payload.regionZ());
             byte[] previous = SENT.get(key);
-            if (previous != null && Arrays.equals(previous, bits)) {
+            if (previous != null && Arrays.equals(previous, payload.columns())) {
                 continue;
             }
-            PENDING.put(key, bits);
-            QUEUE.add(key);
+            PENDING.put(key, payload.columns());
+            QUEUE.add(Long.valueOf(key));
         }
         return true;
     }
