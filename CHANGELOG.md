@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.19]
 - Custom Voxy portal-LOD build **ipa10p1** → **ipa10q** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar`, client and server). Generated columns are read on the chunk IO worker and voxelized on a two-thread pool. The server tick only offers finished columns, nearest first, and still sends one column when the average tick is over 40 ms. `acceptLevel` still returns a `ClientLevel`. The ipa10p1 jar is removed.
 
 ## [0.1.18]
