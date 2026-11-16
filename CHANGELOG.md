@@ -1,6 +1,8 @@
 # Changelog
-## [0.1.17]
+## [0.1.18]
 - Custom Voxy portal-LOD build **ipa10p** → **ipa10p1** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p1.jar`, client and server). ipa10p crashed the client on startup with `java.lang.VerifyError` in `TerrainSyncClientHandler.tickDrainApplyQueue`: `player.level()` is a `Level`, and the apply path calls `ClientLevel.registryAccess`. The player's own level is now taken as a `ClientLevel`. A packet for that world is still applied while Immersive Portals has swapped the render level, and a packet for any other world is still dropped. The ipa10p jar is removed.
+
+## [0.1.17]
 - Custom Voxy portal-LOD build **ipa10o** → **ipa10p** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p.jar`, client and server). A quiet server sends up to 32 columns per tick instead of one, and still sends one when the average tick is over 40 ms. Coverage keeps scanning until the local Voxy storage exists, and the client debug line `[terrain-sync-client]` follows `server_terrain_sync_debug`. A packet for the player's world is applied while Immersive Portals has swapped the render level. The ipa10o jar is removed.
 - Custom Voxy portal-LOD build **ipa10n** → **ipa10o** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10o.jar`, client and server). A saved chunk that produces no LOD no longer parks the ring. The walker was stopping about three rings out, on the first column past the loaded chunks, and only continued when the player changed chunk. The ipa10n jar is removed.
 - **The welcome chapter reads as a tutorial.** The opening quests are retitled Autisnautics, Exploration, The Magic Mods, Create and the Tech Mods, Multiplayer, and What Is In This Book. The same text is rewritten in plain tutorial voice in English, Spanish, French, Portuguese, Russian, and Chinese (`config/ftbquests/quests/lang/en_us.snbt` and `kubejs/assets/ftbquests/lang/`).
