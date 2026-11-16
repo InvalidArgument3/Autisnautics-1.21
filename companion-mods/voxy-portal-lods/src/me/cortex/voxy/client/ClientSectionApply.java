@@ -80,6 +80,7 @@ public final class ClientSectionApply {
                 + " engineMismatches=" + engineMismatches
                 + " queueBatches=" + queuedBatches
                 + " queueBytes=" + queuedBytes
+                + " acksSent=" + acksSent
                 + " renderThreadUs=" + (renderThreadNanos / ticks / 1_000L);
     }
 
@@ -250,7 +251,24 @@ public final class ClientSectionApply {
         } finally {
             renderThreadNanos += System.nanoTime() - started;
             renderTicks++;
+            // A full in-flight queue returns before pump(). The line still has to print.
+            reportClient();
         }
+    }
+
+    public static void reportNow() {
+        me.cortex.voxy.common.Logger.info("[terrain-sync][client] " + TerrainClientStats.line());
+    }
+
+    private static long lastClientReport;
+
+    private static void reportClient() {
+        long now = System.nanoTime();
+        if (now - lastClientReport < 5_000_000_000L) {
+            return;
+        }
+        lastClientReport = now;
+        reportNow();
     }
 
     /**
@@ -434,6 +452,18 @@ public final class ClientSectionApply {
             return callbackField.get(engine) != null;
         } catch (Throwable ignored) {
             return false;
+        }
+    }
+
+    /** The engine the renderer is drawing. Coverage scans this when the level lookup is empty. */
+    public static WorldEngine shownEngine() {
+        if (harnessEngine != null) {
+            return harnessEngine;
+        }
+        try {
+            return renderEngine(Minecraft.getInstance());
+        } catch (Throwable ignored) {
+            return null;
         }
     }
 

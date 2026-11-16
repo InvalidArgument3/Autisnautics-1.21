@@ -3,7 +3,7 @@ package me.cortex.voxy.client;
 import java.lang.reflect.Field;
 import me.cortex.voxy.common.config.VoxyConfig;
 
-/** One client line every five seconds when terrain-sync debug is on. */
+/** One client line every five seconds. The server summary stays behind its own debug flag. */
 public final class TerrainClientStats {
     private TerrainClientStats() {
     }

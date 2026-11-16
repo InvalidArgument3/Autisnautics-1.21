@@ -98,7 +98,6 @@ public final class TerrainDispatch {
                 counters.sent++;
                 counters.reason = "sent";
                 TerrainAvailability.clear(dimension, sent[0], sent[1]);
-                TerrainSentMemory.mark(id, world, sent[0], sent[1]);
             }
             if (produced == 0) {
                 if (!"backpressure".equals(counters.reason) && pastDeadline()) {
@@ -240,11 +239,14 @@ public final class TerrainDispatch {
                     + " attempts=" + counters.attempts
                     + " queueFrames=" + queueDepth()
                     + " columnsSent=" + counters.sent
+                    + " columnsAcked=" + TerrainDelivery.acked()
+                    + " framesTimedOut=" + TerrainDelivery.timedOut()
+                    + " framesDropped=" + TerrainDelivery.dropped()
                     + " motion=" + TerrainStreamPolicy.motionCause()
                     + " clientHeld=" + clientHeld
                     + " skippedHeld=" + counters.skippedHeld
                     + " skippedClient=" + counters.skippedClient
-                    + " skippedKnown=" + counters.skippedKnown
+                    + " skippedQueued=" + counters.skippedKnown
                     + " skippedMissing=" + counters.skippedMissing
                     + " abandoned=" + counters.abandoned
                     + " coveragePkts=" + TerrainSentMemory.coveragePackets()
@@ -541,7 +543,6 @@ public final class TerrainDispatch {
     }
 
     static void noteAsyncSent(String playerId, String world, int x, int z) {
-        TerrainSentMemory.mark(playerId, world, x, z);
         Counters counters = COUNTERS.get(playerId + "|" + world);
         if (counters != null) {
             counters.sent++;

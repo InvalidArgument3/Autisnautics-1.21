@@ -77,6 +77,19 @@ public final class TerrainSentMemory {
         return lastCoverageWorld;
     }
 
+    public static void unmark(String player, String dimension, int x, int z) {
+        if (player == null || dimension == null) {
+            return;
+        }
+        LongOpenHashSet set = HELD.get(key(player, dimension));
+        if (set == null) {
+            return;
+        }
+        synchronized (set) {
+            set.remove(pack(x, z));
+        }
+    }
+
     public static void mark(String player, String dimension, int x, int z) {
         if (player == null || dimension == null) {
             return;

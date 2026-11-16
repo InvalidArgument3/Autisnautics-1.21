@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Rebuild ipa10u from the ipa10t jar. acceptLevel still returns ClientLevel.
+# Rebuild ipa10v from the ipa10u jar. acceptLevel still returns ClientLevel.
 # VerifyJar and VerifyVoxyJar both run before the jar is installed.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10t.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10u.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10t.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10u.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10v.jar"
+OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10u.jar"
 WORK="$ROOT/build"
 DEPS="${VOXY_DEPS:-/tmp/voxy-mc}"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
@@ -115,7 +115,7 @@ MC_SERVER="$DEPS/server-1.21.1-mojmap.jar"
 NF_JAR="$DEPS/neoforge-21.1.265-universal.jar"
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10t jar not found at $SRC_JAR" >&2
+  echo "ipa10u jar not found at $SRC_JAR" >&2
   exit 1
 fi
 if [[ ! -f "$SRC_JAR" ]]; then
@@ -126,7 +126,7 @@ if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10t LFS object $OID is not in the local store" >&2
+    echo "ipa10u LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -140,6 +140,8 @@ STAGE_CP="$SRC_JAR:$FASTUTIL:$MC_JAR:$MC_SERVER:$NF_JAR:$NETTY"
 if [[ -n "$AUTHLIB" ]]; then STAGE_CP="$STAGE_CP:$AUTHLIB"; fi
 javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/server/TerrainDispatch.java" \
+  "$ROOT/src/me/cortex/voxy/server/TerrainDelivery.java" \
+  "$ROOT/src/me/cortex/voxy/server/TerrainSentMemory.java" \
   "$ROOT/src/me/cortex/voxy/server/TerrainAvailability.java" \
   "$ROOT/src/me/cortex/voxy/server/RingScan.java" \
   "$ROOT/src/me/cortex/voxy/server/ServerTerrainSyncDeferredQueue.java" \
@@ -153,26 +155,28 @@ javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/client/ClientColumnCoverage.java" \
   "$ROOT/src/me/cortex/voxy/client/TerrainClientStats.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10u.java" \
+  "$ROOT/src/patch/PatchIpa10v.java" \
   "$ROOT/src/patch/VerifyJar.java" \
   "$ROOT/src/patch/VerifyVoxyJar.java"
 
-BUILT="$WORK/voxy-ipa10u.jar"
+BUILT="$WORK/voxy-ipa10v.jar"
 VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
 VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL:$SRC_JAR:$VERIFY_CP"
 mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10u "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
+java -cp "$FRAME_CP" PatchIpa10v "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
   "$ROOT/src/stub/net/minecraft/world/level/ChunkPos.java"
 javac --release 21 -cp "$BUILT:$FASTUTIL:$WORK/stub:$MC_JAR" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/server/StreamHarness.java" \
-  "$ROOT/src/test/me/cortex/voxy/server/RingHarness.java"
+  "$ROOT/src/test/me/cortex/voxy/server/RingHarness.java" \
+  "$ROOT/src/test/me/cortex/voxy/server/SessionHarness.java"
 HARNESS_CP="$BUILT:$WORK/test:$WORK/stub:$SLF4J_API:$SLF4J_SIMPLE:$FASTUTIL:$MC_JAR"
 java -cp "$HARNESS_CP" me.cortex.voxy.server.StreamHarness
 java -cp "$HARNESS_CP" me.cortex.voxy.server.RingHarness
+java -cp "$HARNESS_CP" me.cortex.voxy.server.SessionHarness
 javac --release 21 -cp "$BUILT" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/common/network/SectionWireHarness.java"
 java -cp "$BUILT:$WORK/test" me.cortex.voxy.common.network.SectionWireHarness
@@ -198,13 +202,14 @@ import hashlib, json, sys, zipfile
 old, new = sys.argv[1:]
 changed = {
     "me/cortex/voxy/client/ClientSectionApply.class",
-    "me/cortex/voxy/common/network/SectionWire.class",
-    "me/cortex/voxy/common/network/SectionWire$Pack.class",
-    "me/cortex/voxy/common/network/TerrainSyncClientHandler.class",
-    "me/cortex/voxy/server/TerrainAvailability.class",
+    "me/cortex/voxy/client/ClientColumnCoverage.class",
+    "me/cortex/voxy/server/ServerTerrainTransport.class",
     "me/cortex/voxy/server/TerrainDispatch.class",
-    "me/cortex/voxy/server/TerrainDispatch$Counters.class",
     "me/cortex/voxy/server/TerrainDispatch$Io.class",
+    "me/cortex/voxy/server/TerrainDispatch$Counters.class",
+    "me/cortex/voxy/server/TerrainSentMemory.class",
+    "me/cortex/voxy/server/TerrainStreamPolicy.class",
+    "me/cortex/voxy/server/TerrainStreamPolicy$Motion.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -233,10 +238,10 @@ for name in need:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10u" not in text or "ipa10t" in text or "ipa10u" not in manifest or "ipa10t" in manifest:
-    raise SystemExit("version string was not bumped to ipa10u")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10u" not in text:
-    raise SystemExit("mods.toml version is not ipa10u")
+if "ipa10v" not in text or "ipa10u" in text or "ipa10v" not in manifest or "ipa10u" in manifest:
+    raise SystemExit("version string was not bumped to ipa10v")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10v" not in text:
+    raise SystemExit("mods.toml version is not ipa10v")
 for name in (
     "me/cortex/voxy/client/TerrainReceive.class",
     "me/cortex/voxy/client/TerrainClientStats.class",

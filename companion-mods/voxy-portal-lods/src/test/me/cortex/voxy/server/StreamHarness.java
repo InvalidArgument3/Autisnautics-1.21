@@ -39,13 +39,14 @@ public final class StreamHarness {
 
         TerrainStreamPolicy.Motion view = new TerrainStreamPolicy.Motion();
         TerrainStreamPolicy.observeMotion(view, 0, 0, "minecraft:overworld", false, t0, 10);
-        check(TerrainStreamPolicy.observeMotion(view, 0, 0, "minecraft:overworld", false, t0 + tick, 6) == 2, "smaller view distance restarts the ring");
-        check(!view.clearQueue, "shrinking view distance keeps chunks already sent");
+        check(TerrainStreamPolicy.observeMotion(view, 0, 0, "minecraft:overworld", false, t0 + tick, 6) == 0, "standing still ignores a view-distance change");
+        check(!view.clearQueue, "standing still does not drop the queue");
+        check(view.cause().contains("player still"), "the ignore has a cause");
         TerrainStreamPolicy.Motion grown = new TerrainStreamPolicy.Motion();
         TerrainStreamPolicy.observeMotion(grown, 0, 0, "minecraft:overworld", false, t0, 6);
         int grew = TerrainStreamPolicy.observeMotion(grown, 0, 0, "minecraft:overworld", false, t0 + tick, 12);
-        check(grew == 2, "larger view distance restarts outside the new vanilla edge");
-        check(grown.clearQueue, "larger view distance cancels columns the client now receives as chunks");
+        check(grew == 0, "a larger view distance while standing does not restart");
+        check(!grown.droppedQueue(), "standing still keeps the queue");
         TerrainStreamPolicy.Motion dim = new TerrainStreamPolicy.Motion();
         TerrainStreamPolicy.observeMotion(dim, 0, 0, "minecraft:overworld", false, t0, 10);
         check(TerrainStreamPolicy.observeMotion(dim, 0, 0, "minecraft:the_nether", false, t0 + tick, 10) == 1, "dimension change pauses");

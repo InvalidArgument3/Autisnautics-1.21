@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import me.cortex.voxy.common.config.VoxyConfig;
 import me.cortex.voxy.common.network.ColumnCoveragePayload;
+import java.lang.reflect.Field;
 import me.cortex.voxy.common.world.WorldEngine;
+import me.cortex.voxy.common.world.WorldSection;
 import me.cortex.voxy.commonImpl.WorldIdentifier;
 import me.cortex.voxy.server.ColumnCoverageIndex;
 import net.minecraft.network.Connection;
@@ -81,7 +83,12 @@ public final class ClientColumnCoverage {
         Level level = (Level) levelObject;
         String id = worldId(level);
         WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
-        if (engine == null) {
+        WorldEngine shown = ClientSectionApply.shownEngine();
+        if ((engine == null || engine.storage == null) && shown != null && shown.storage != null) {
+            // insertUpdate writes the render engine. ofEngineNullable can miss it while portals swap levels.
+            engine = shown;
+            engineState = "render";
+        } else if (engine == null) {
             engineState = "null";
         } else if (engine.storage == null) {
             engineState = "no-storage";
@@ -102,17 +109,51 @@ public final class ClientColumnCoverage {
             PENDING.clear();
             SENT.clear();
         }
-        if (!open || !"ok".equals(engineState)) {
+        if (!open || !("ok".equals(engineState) || "render".equals(engineState))) {
             return;
         }
         if (ticksUntilScan <= 0) {
-            if (scan(level, player)) {
+            if (scan(engine, player)) {
                 ticksUntilScan = RESCAN_TICKS;
             }
         } else {
             ticksUntilScan--;
         }
         flush();
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void ingestLoaded(WorldEngine engine, Long2ObjectOpenHashMap<byte[]> found, int playerX, int playerZ, int radius, int[] seen) {
+        try {
+            Field trackerField = WorldEngine.class.getDeclaredField("sectionTracker");
+            trackerField.setAccessible(true);
+            Object tracker = trackerField.get(engine);
+            Field cacheField = tracker.getClass().getDeclaredField("loadedSectionCache");
+            cacheField.setAccessible(true);
+            Object[] slices = (Object[]) cacheField.get(tracker);
+            for (int i = 0; i < slices.length; i++) {
+                if (!(slices[i] instanceof Long2ObjectOpenHashMap<?>)) {
+                    continue;
+                }
+                Long2ObjectOpenHashMap<?> map = (Long2ObjectOpenHashMap<?>) slices[i];
+                synchronized (map) {
+                    for (Object value : map.values()) {
+                        Object section = value.getClass().getField("obj").get(value);
+                        if (!(section instanceof WorldSection)) {
+                            continue;
+                        }
+                        long key = ((WorldSection) section).key;
+                        if (WorldEngine.getLevel(key) != 0) {
+                            continue;
+                        }
+                        seen[0]++;
+                        ColumnCoverageIndex.ingest(found, key, playerX, playerZ, radius);
+                    }
+                }
+            }
+        } catch (Throwable ignored) {
+            // Storage keys above are the saved copy. A missing cache must not stop the scan.
+        }
     }
 
     public static String stats() {
@@ -144,6 +185,7 @@ public final class ClientColumnCoverage {
             seen[0]++;
             ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, radius);
         });
+        ingestLoaded(engine, found, playerX, playerZ, radius, seen);
         keysFound += seen[0];
         int playerRegionX = playerX >> 5;
         int playerRegionZ = playerZ >> 5;
@@ -163,8 +205,7 @@ public final class ClientColumnCoverage {
         return out;
     }
 
-    private static boolean scan(Level level, Object player) throws ReflectiveOperationException {
-        WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
+    private static boolean scan(WorldEngine engine, Object player) throws ReflectiveOperationException {
         if (engine == null || engine.storage == null) {
             return false;
         }

@@ -114,6 +114,9 @@ public final class TerrainStreamPolicy {
         }
         Motion motion = MOTION.computeIfAbsent(id, key -> new Motion());
         int mode = observeMotion(motion, invokeDouble(player, "getX"), invokeDouble(player, "getZ"), dimension(player), invokeBool(player, "isFallFlying"), System.nanoTime(), innerRadius(player));
+        if (mode == 2 || motion.clearQueue) {
+            me.cortex.voxy.common.Logger.info("[terrain-sync] ring reset mode=" + mode + " cause=" + motion.cause + " clearQueue=" + motion.clearQueue);
+        }
         if (motion.clearQueue) {
             motion.clearQueue = false;
             clearTransport(player);
@@ -139,8 +142,9 @@ public final class TerrainStreamPolicy {
         // A multi-second gap is a stalled server thread, not movement. Absorb the
         // position sample so the next tick does not see the same jump as a teleport.
         boolean stale = seconds > 2.0;
-        boolean teleport = dimensionChange || (!stale && dist >= TELEPORT_BLOCKS);
-        boolean fast = !stale && (elytra || blocksPerSecond >= FAST_BLOCKS_PER_SECOND);
+        boolean settled = seconds >= 0.05;
+        boolean fast = !stale && settled && (elytra || blocksPerSecond >= FAST_BLOCKS_PER_SECOND);
+        boolean teleport = dimensionChange || (!stale && settled && dist >= TELEPORT_BLOCKS);
         if (stale && !dimensionChange) {
             motion.cause = "stall " + String.format("%.1f", seconds) + "s dist " + String.format("%.1f", dist) + " ignored";
         }
@@ -151,15 +155,23 @@ public final class TerrainStreamPolicy {
             motion.cause = dimensionChange ? "dimension " + motion.dimension + " -> " + dim : "teleport " + String.format("%.1f", dist) + " blocks";
         } else if (fast) {
             motion.pauseTicks = Math.max(motion.pauseTicks, FAST_PAUSE_TICKS);
+            motion.cause = elytra ? "elytra" : "speed " + String.format("%.1f", blocksPerSecond) + " bps";
         } else if (motion.pauseTicks > 0) {
             motion.pauseTicks--;
+            if (motion.cause == null || motion.cause.isEmpty()) {
+                motion.cause = "pause holding";
+            }
         }
         if (motion.lastInner >= 0 && inner != motion.lastInner) {
-            motion.restart = true;
-            motion.cause = "inner " + motion.lastInner + " -> " + inner;
-            if (inner > motion.lastInner) {
-                motion.clearQueue = true;
-                motion.cause = motion.cause + " clearQueue";
+            if (dist < 1.0 && !dimensionChange) {
+                motion.cause = "inner " + motion.lastInner + " -> " + inner + " ignored, player still";
+            } else {
+                motion.restart = true;
+                motion.cause = "inner " + motion.lastInner + " -> " + inner;
+                if (inner > motion.lastInner) {
+                    motion.clearQueue = true;
+                    motion.cause = motion.cause + " clearQueue";
+                }
             }
         }
         motion.lastInner = inner;
@@ -177,8 +189,8 @@ public final class TerrainStreamPolicy {
             }
             return 2;
         }
-        if (motion.cause == null) {
-            motion.cause = "walk";
+        if (motion.cause == null || motion.cause.isEmpty()) {
+            motion.cause = "still";
         }
         return 0;
     }
@@ -192,7 +204,7 @@ public final class TerrainStreamPolicy {
         for (Motion motion : MOTION.values()) {
             if (motion.pauseTicks > 0) {
                 paused = true;
-                cause = motion.cause == null ? "paused" : motion.cause;
+                cause = motion.cause == null || motion.cause.isEmpty() ? "unspecified" : motion.cause;
             }
         }
         if (!paused) {
