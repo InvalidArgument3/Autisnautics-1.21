@@ -103,7 +103,7 @@ public final class TerrainDispatch {
                 if (!"backpressure".equals(counters.reason) && pastDeadline()) {
                     counters.reason = "deadline";
                 } else if (cursor.holding()) {
-                    counters.reason = "retrying";
+                    counters.reason = counters.attempts > 0 ? "offer-fail" : "waiting";
             } else if (TerrainWorkers.busy(id)) {
                 counters.reason = "scheduled";
             } else if ("scanning".equals(counters.reason)) {
@@ -237,8 +237,9 @@ public final class TerrainDispatch {
                     + " target=" + counters.max
                     + " holding=" + counters.holding
                     + " attempts=" + counters.attempts
-                    + " queue=" + queueDepth()
-                    + " sent=" + counters.sent
+                    + " queueFrames=" + queueDepth()
+                    + " columnsSent=" + counters.sent
+                    + " motion=" + TerrainStreamPolicy.motionCause()
                     + " clientHeld=" + clientHeld
                     + " skippedHeld=" + counters.skippedHeld
                     + " skippedClient=" + counters.skippedClient

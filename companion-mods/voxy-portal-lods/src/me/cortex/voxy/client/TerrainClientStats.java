@@ -26,12 +26,13 @@ public final class TerrainClientStats {
         long retried = field("retried");
         long dropped = field("dropped");
         long errors = field("errors");
-        return "received=" + received
-                + " applied=" + applied
-                + " completed=" + completed
+        return "sectionsReceived=" + received
+                + " sectionsApplied=" + applied
+                + " batchesCompleted=" + completed
                 + " retried=" + retried
-                + " dropped=" + dropped
+                + " sectionsDropped=" + dropped
                 + " rejected=" + errors
+                + " " + ClientSectionApply.line()
                 + " " + ClientColumnCoverage.stats();
     }
 

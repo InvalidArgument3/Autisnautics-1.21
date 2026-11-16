@@ -26,6 +26,8 @@ public final class ClientColumnCoverage {
     private static final int RESCAN_TICKS = 200;
 
     private static String worldId = "";
+    private static String engineState = "-";
+    private static String channelState = "-";
     private static int ticksUntilScan = 0;
     private static int scans;
     private static int keysFound;
@@ -39,6 +41,8 @@ public final class ClientColumnCoverage {
 
     public static void reset() {
         worldId = "";
+        engineState = "-";
+        channelState = "-";
         ticksUntilScan = 0;
         QUEUE.clear();
         PENDING.clear();
@@ -59,14 +63,11 @@ public final class ClientColumnCoverage {
         Object player = minecraftClass.getField("player").get(minecraft);
         Object listener = minecraftClass.getMethod("getConnection").invoke(minecraft);
         if (player == null || listener == null) {
+            channelState = "no-player";
             return;
         }
         if (VoxyConfig.CONFIG == null || !VoxyConfig.CONFIG.serverTerrainSyncReceive) {
-            return;
-        }
-        ResourceLocation channel = ColumnCoveragePayload.TYPE.id();
-        Object connection = listener.getClass().getMethod("getConnection").invoke(listener);
-        if (!(connection instanceof Connection) || !NetworkRegistry.hasChannel((Connection) connection, ConnectionProtocol.PLAY, channel)) {
+            channelState = "receive-off";
             return;
         }
         Object levelObject = player.getClass().getMethod("level").invoke(player);
@@ -74,16 +75,35 @@ public final class ClientColumnCoverage {
             levelObject = minecraftClass.getField("level").get(minecraft);
         }
         if (!(levelObject instanceof Level)) {
+            engineState = "no-level";
             return;
         }
         Level level = (Level) levelObject;
         String id = worldId(level);
+        WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
+        if (engine == null) {
+            engineState = "null";
+        } else if (engine.storage == null) {
+            engineState = "no-storage";
+        } else {
+            engineState = "ok";
+        }
+        ResourceLocation channel = ColumnCoveragePayload.TYPE.id();
+        boolean open = false;
+        Object connection = listener.getClass().getMethod("getConnection").invoke(listener);
+        if (connection instanceof Connection) {
+            open = NetworkRegistry.hasChannel((Connection) connection, ConnectionProtocol.PLAY, channel);
+        }
+        channelState = open ? "ok" : "missing";
         if (!id.equals(worldId)) {
             worldId = id;
             ticksUntilScan = 0;
             QUEUE.clear();
             PENDING.clear();
             SENT.clear();
+        }
+        if (!open || !"ok".equals(engineState)) {
+            return;
         }
         if (ticksUntilScan <= 0) {
             if (scan(level, player)) {
@@ -96,7 +116,10 @@ public final class ClientColumnCoverage {
     }
 
     public static String stats() {
-        return "scans=" + scans + " lod0=" + keysFound + " regionsSent=" + regionsSent + " storage=" + (worldId.isEmpty() ? "-" : worldId);
+        return "scans=" + scans + " lod0=" + keysFound + " regionsSent=" + regionsSent
+                + " storage=" + (worldId.isEmpty() ? "-" : worldId)
+                + " engine=" + engineState
+                + " channel=" + channelState;
     }
 
     private static boolean scan(Level level, Object player) throws ReflectiveOperationException {

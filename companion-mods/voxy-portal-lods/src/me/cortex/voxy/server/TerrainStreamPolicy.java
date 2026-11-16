@@ -32,12 +32,14 @@ public final class TerrainStreamPolicy {
     public static final int TELEPORT_BLOCKS = 48;
     public static final int FAST_PAUSE_TICKS = 15;
     public static final int TELEPORT_PAUSE_TICKS = 40;
-    public static final int PER_PLAYER_SECTIONS_PER_TICK = 32;
+    /** Sections one player may be offered in a tick. The byte cap is the other limit. */
+    public static final int PER_PLAYER_SECTIONS_PER_TICK = 256;
     /** Default per-player compressed bytes per tick. About 20 MB/s at 20 TPS. */
     public static final int PER_PLAYER_BYTES_PER_TICK = 1048576;
     public static final int MIN_PLAYER_BYTES_PER_TICK = 64 * 1024;
     public static final int MAX_PLAYER_BYTES_PER_TICK = 8 * 1024 * 1024;
     private static volatile boolean loggedBudget;
+    private static volatile boolean loggedSectionBudget;
     /** Replaces ReliableTerrainQueue's global completed-set cap of 1024. */
     public static final int COMPLETED_DEDUP_CAP = 32767;
 
@@ -134,12 +136,19 @@ public final class TerrainStreamPolicy {
         double seconds = Math.max(0.001, (nanos - motion.nanos) / 1_000_000_000.0);
         double blocksPerSecond = dist / seconds;
         boolean dimensionChange = !dim.equals(motion.dimension);
-        boolean teleport = dimensionChange || dist >= TELEPORT_BLOCKS;
-        boolean fast = elytra || blocksPerSecond >= FAST_BLOCKS_PER_SECOND;
+        // A multi-second gap is a stalled server thread, not movement. Absorb the
+        // position sample so the next tick does not see the same jump as a teleport.
+        boolean stale = seconds > 2.0;
+        boolean teleport = dimensionChange || (!stale && dist >= TELEPORT_BLOCKS);
+        boolean fast = !stale && (elytra || blocksPerSecond >= FAST_BLOCKS_PER_SECOND);
+        if (stale && !dimensionChange) {
+            motion.cause = "stall " + String.format("%.1f", seconds) + "s dist " + String.format("%.1f", dist) + " ignored";
+        }
         if (teleport) {
             motion.pauseTicks = TELEPORT_PAUSE_TICKS;
             motion.clearQueue = true;
             motion.restart = true;
+            motion.cause = dimensionChange ? "dimension " + motion.dimension + " -> " + dim : "teleport " + String.format("%.1f", dist) + " blocks";
         } else if (fast) {
             motion.pauseTicks = Math.max(motion.pauseTicks, FAST_PAUSE_TICKS);
         } else if (motion.pauseTicks > 0) {
@@ -147,8 +156,10 @@ public final class TerrainStreamPolicy {
         }
         if (motion.lastInner >= 0 && inner != motion.lastInner) {
             motion.restart = true;
+            motion.cause = "inner " + motion.lastInner + " -> " + inner;
             if (inner > motion.lastInner) {
                 motion.clearQueue = true;
+                motion.cause = motion.cause + " clearQueue";
             }
         }
         motion.lastInner = inner;
@@ -161,9 +172,49 @@ public final class TerrainStreamPolicy {
         }
         if (motion.restart) {
             motion.restart = false;
+            if (motion.cause == null || motion.cause.isEmpty()) {
+                motion.cause = "restart";
+            }
             return 2;
         }
+        if (motion.cause == null) {
+            motion.cause = "walk";
+        }
         return 0;
+    }
+
+    private static long nextPauseLog;
+
+    /** A paused walk never reaches the ring summary, so the pause has to log itself. */
+    public static void logIfPaused() {
+        boolean paused = false;
+        String cause = "";
+        for (Motion motion : MOTION.values()) {
+            if (motion.pauseTicks > 0) {
+                paused = true;
+                cause = motion.cause == null ? "paused" : motion.cause;
+            }
+        }
+        if (!paused) {
+            return;
+        }
+        long now = System.nanoTime();
+        if (now < nextPauseLog) {
+            return;
+        }
+        nextPauseLog = now + 5_000_000_000L;
+        me.cortex.voxy.common.Logger.info("[terrain-sync] motion paused cause=" + cause);
+    }
+
+    /** Latest motion decision, including a stall that did not restart the ring. */
+    public static String motionCause() {
+        String cause = "none";
+        for (Motion motion : MOTION.values()) {
+            if (motion.cause != null) {
+                cause = motion.cause;
+            }
+        }
+        return cause;
     }
 
     public static void notePlayer(Object player) {
@@ -240,6 +291,24 @@ public final class TerrainStreamPolicy {
             me.cortex.voxy.common.Logger.info("[terrain-sync] per-player byte budget " + clamped + " B/tick (about " + String.format("%.1f", clamped * 20.0 / (1024.0 * 1024.0)) + " MB/s at 20 TPS), allowed " + MIN_PLAYER_BYTES_PER_TICK + ".." + MAX_PLAYER_BYTES_PER_TICK);
         }
         return clamped;
+    }
+
+    /**
+     * The previous default of 32 sections per tick, with about 42 sections in a
+     * column, is under one column per tick. A configured 32 is that old default.
+     */
+    public static void ensureSectionBudget() {
+        try {
+            if (VoxyConfig.CONFIG == null || VoxyConfig.CONFIG.serverTerrainSyncMaxSectionsPerTick != 32) {
+                return;
+            }
+            VoxyConfig.CONFIG.serverTerrainSyncMaxSectionsPerTick = PER_PLAYER_SECTIONS_PER_TICK;
+            if (!loggedSectionBudget) {
+                loggedSectionBudget = true;
+                me.cortex.voxy.common.Logger.info("[terrain-sync] section budget 32 was the old per-tick default; using " + PER_PLAYER_SECTIONS_PER_TICK + " so the byte cap is the limit");
+            }
+        } catch (Throwable ignored) {
+        }
     }
 
     public static int motionCount() {
@@ -328,5 +397,6 @@ public final class TerrainStreamPolicy {
         boolean clearQueue;
         boolean restart;
         int lastInner = -1;
+        String cause = "";
     }
 }

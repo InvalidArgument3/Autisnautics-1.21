@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Rebuild ipa10r from the ipa10q jar. acceptLevel still returns ClientLevel.
+# Rebuild ipa10s from the ipa10r jar. acceptLevel still returns ClientLevel.
 # VerifyJar and VerifyVoxyJar both run before the jar is installed.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10r.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10r.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10s.jar"
+OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10r.jar"
 WORK="$ROOT/build"
 DEPS="${VOXY_DEPS:-/tmp/voxy-mc}"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
@@ -115,7 +115,7 @@ MC_SERVER="$DEPS/server-1.21.1-mojmap.jar"
 NF_JAR="$DEPS/neoforge-21.1.265-universal.jar"
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10q jar not found at $SRC_JAR" >&2
+  echo "ipa10r jar not found at $SRC_JAR" >&2
   exit 1
 fi
 if [[ ! -f "$SRC_JAR" ]]; then
@@ -126,7 +126,7 @@ if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10q LFS object $OID is not in the local store" >&2
+    echo "ipa10r LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -136,7 +136,7 @@ mkdir -p "$WORK/classes" "$WORK/patch" "$WORK/test" "$WORK/stub"
 
 NETTY="$DEPS/libs/netty-buffer-4.1.97.Final.jar:$DEPS/libs/netty-common-4.1.97.Final.jar:$DEPS/libs/netty-transport-4.1.97.Final.jar"
 AUTHLIB="$(find "$DEPS/libs" -name 'authlib-*.jar' | head -1)"
-STAGE_CP="$SRC_JAR:$FASTUTIL:$MC_SERVER:$NF_JAR:$NETTY"
+STAGE_CP="$SRC_JAR:$FASTUTIL:$MC_JAR:$MC_SERVER:$NF_JAR:$NETTY"
 if [[ -n "$AUTHLIB" ]]; then STAGE_CP="$STAGE_CP:$AUTHLIB"; fi
 javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/server/TerrainDispatch.java" \
@@ -146,18 +146,21 @@ javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/server/ColumnStages.java" \
   "$ROOT/src/me/cortex/voxy/server/ColumnProfile.java" \
   "$ROOT/src/me/cortex/voxy/server/TerrainStreamPolicy.java" \
-  "$ROOT/src/me/cortex/voxy/common/network/SectionWire.java"
+  "$ROOT/src/me/cortex/voxy/common/network/SectionWire.java" \
+  "$ROOT/src/me/cortex/voxy/client/ClientSectionApply.java" \
+  "$ROOT/src/me/cortex/voxy/client/ClientColumnCoverage.java" \
+  "$ROOT/src/me/cortex/voxy/client/TerrainClientStats.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10r.java" \
+  "$ROOT/src/patch/PatchIpa10s.java" \
   "$ROOT/src/patch/VerifyJar.java" \
   "$ROOT/src/patch/VerifyVoxyJar.java"
 
-BUILT="$WORK/voxy-ipa10r.jar"
+BUILT="$WORK/voxy-ipa10s.jar"
 VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
 VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL:$SRC_JAR:$VERIFY_CP"
 mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10r "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
+java -cp "$FRAME_CP" PatchIpa10s "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
@@ -171,6 +174,9 @@ java -cp "$HARNESS_CP" me.cortex.voxy.server.RingHarness
 javac --release 21 -cp "$BUILT" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/common/network/SectionWireHarness.java"
 java -cp "$BUILT:$WORK/test" me.cortex.voxy.common.network.SectionWireHarness
+javac --release 21 -cp "$BUILT" -d "$WORK/test" \
+  "$ROOT/src/test/me/cortex/voxy/common/network/DeliveryHarness.java"
+java -cp "$BUILT:$WORK/test" me.cortex.voxy.common.network.DeliveryHarness
 
 find "$ROOT/src/stub" -name '*.java' > "$WORK/stubs.list"
 javac --release 21 -d "$WORK/stub" @"$WORK/stubs.list"
@@ -183,18 +189,17 @@ python3 - "$SRC_JAR" "$BUILT" <<'PY'
 import hashlib, json, sys, zipfile
 old, new = sys.argv[1:]
 changed = {
+    "me/cortex/voxy/client/ClientColumnCoverage.class",
+    "me/cortex/voxy/client/TerrainClientStats.class",
+    "me/cortex/voxy/common/network/ReliableTerrainQueue.class",
+    "me/cortex/voxy/server/ServerTerrainTransport.class",
+    "me/cortex/voxy/server/TerrainDispatch.class",
+    "me/cortex/voxy/server/TerrainDispatch$Counters.class",
+    "me/cortex/voxy/server/TerrainDispatch$Io.class",
     "me/cortex/voxy/server/ServerTerrainSyncDeferredQueue.class",
     "me/cortex/voxy/server/TerrainStreamPolicy.class",
     "me/cortex/voxy/server/TerrainStreamPolicy$Motion.class",
-    "me/cortex/voxy/server/ColumnProfile.class",
-    "me/cortex/voxy/server/ColumnProfile$Samples.class",
-    "me/cortex/voxy/server/TerrainWorkers.class",
-    "me/cortex/voxy/server/TerrainWorkers$Job.class",
-    "me/cortex/voxy/server/TerrainWorkers$Lane.class",
-    "me/cortex/voxy/common/network/VoxySessionSupport.class",
-    "me/cortex/voxy/client/VoxyClientNetworkHooks.class",
     "me/cortex/voxy/common/network/TerrainSyncClientHandler.class",
-    "me/cortex/voxy/common/config/VoxyConfig.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -223,10 +228,10 @@ for name in need:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10r" not in text or "ipa10q" in text or "ipa10r" not in manifest or "ipa10q" in manifest:
-    raise SystemExit("version string was not bumped to ipa10r")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10r" not in text:
-    raise SystemExit("mods.toml version is not ipa10r")
+if "ipa10s" not in text or "ipa10r" in text or "ipa10s" not in manifest or "ipa10r" in manifest:
+    raise SystemExit("version string was not bumped to ipa10s")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10s" not in text:
+    raise SystemExit("mods.toml version is not ipa10s")
 for name in (
     "me/cortex/voxy/client/TerrainReceive.class",
     "me/cortex/voxy/client/TerrainClientStats.class",
@@ -236,8 +241,11 @@ for name in (
 handler = b.read("me/cortex/voxy/common/network/TerrainSyncClientHandler.class")
 client_level = b"(Ljava/lang/Object;)Lnet/minecraft/client/multiplayer/ClientLevel;"
 bare_level = b"(Ljava/lang/Object;)Lnet/minecraft/world/level/Level;"
-if client_level not in handler or bare_level in handler or b"SectionWire" not in handler:
-    raise SystemExit("client handler lost ClientLevel or the frame expand")
+if b"SectionWire" not in handler or b"ClientSectionApply" not in handler:
+    raise SystemExit("client handler lost frame expand or the off-thread apply")
+receive = b.read("me/cortex/voxy/client/TerrainReceive.class")
+if client_level not in receive or bare_level in receive:
+    raise SystemExit("acceptLevel no longer returns ClientLevel")
 if b"serverTerrainSyncPlayerBytesPerTick" not in b.read("me/cortex/voxy/common/config/VoxyConfig.class"):
     raise SystemExit("player byte budget field missing")
 if b"column_coverage" not in b.read("me/cortex/voxy/common/network/ColumnCoveragePayload.class"):

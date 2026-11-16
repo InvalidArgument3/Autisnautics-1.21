@@ -11,7 +11,7 @@
   "server_terrain_sync_receive": true,
   "server_terrain_sync_client_apply_sections_per_tick": 8,
   "server_terrain_sync_client_apply_max_ms_per_tick": 5,
-  "server_terrain_sync_max_sections_per_tick": 32,
+  "server_terrain_sync_max_sections_per_tick": 256,
   "server_terrain_sync_max_bytes_per_tick": 1048576,
   "_comment_server_terrain_sync_player_bytes_per_tick": "Per-player compressed section bytes per server tick. Default 1048576 (1 MiB, about 20 MB/s at 20 TPS). Allowed 65536..8388608. Zero or a missing key uses the default.",
   "server_terrain_sync_player_bytes_per_tick": 1048576,

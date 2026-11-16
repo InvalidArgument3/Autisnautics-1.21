@@ -54,12 +54,17 @@ public final class StreamHarness {
         Object alice = "alice";
         Object bob = "bob";
         int sent = 0;
-        for (int i = 0; i < 4; i++) {
-            check(TerrainStreamPolicy.tryPlayer(alice, 8, 1000), "alice batch " + i);
+        while (TerrainStreamPolicy.tryPlayer(alice, 8, 1000)) {
             sent += 8;
         }
-        check(sent == 32, "alice used a full column");
+        check(sent == TerrainStreamPolicy.PER_PLAYER_SECTIONS_PER_TICK, "alice used the section cap");
         check(!TerrainStreamPolicy.tryPlayer(alice, 1, 1), "alice is capped for this tick");
+        TerrainStreamPolicy.Motion stall = new TerrainStreamPolicy.Motion();
+        TerrainStreamPolicy.observeMotion(stall, 100, 200, "minecraft:overworld", false, t0, 10);
+        int stalled = TerrainStreamPolicy.observeMotion(stall, 180, 200, "minecraft:overworld", false, t0 + 20_000_000_000L, 10);
+        check(stalled == 0, "a 20s stall does not restart the ring");
+        check(!stall.clearQueue, "a 20s stall does not drop the queue");
+        check(stall.cause.startsWith("stall "), "stall is labelled, got " + stall.cause);
         check(TerrainStreamPolicy.tryPlayer(bob, 8, 1000), "bob still has a budget");
         TerrainStreamPolicy.resetTick();
         check(TerrainStreamPolicy.tryPlayer(alice, 8, 1000), "alice's cap resets next tick");

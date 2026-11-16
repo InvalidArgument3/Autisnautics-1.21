@@ -7,6 +7,8 @@ public final class ServerTerrainSyncDeferredQueue {
 
     public static void drainForTick() {
         TerrainStreamPolicy.playerBytesPerTick();
+        TerrainStreamPolicy.ensureSectionBudget();
+        TerrainStreamPolicy.logIfPaused();
         TerrainWorkers.drain();
         ColumnProfile.onTick();
     }
