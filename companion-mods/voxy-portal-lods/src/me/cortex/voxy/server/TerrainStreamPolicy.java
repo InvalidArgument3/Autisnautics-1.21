@@ -21,9 +21,9 @@ import me.cortex.voxy.common.config.VoxyConfig;
  * <p>Numbers for a 16G heap and a dozen players, with broadcast still opt-in:
  * the walker offers one generated chunk per server tick, the transport sends at
  * most 32 sections and 1 MiB per tick across everyone, and each player is capped
- * at 32 sections and 512 KiB per tick (one micro-batch window). That is about
- * 20 chunk columns per second shared, nearest ring first, and about 20 MiB/s
- * as a hard ceiling rather than the steady rate. Fast movement, elytra, a jump
+ * at 32 sections and {@code server_terrain_sync_player_bytes_per_tick} bytes per
+ * tick (default 1 MiB, about 20 MB/s at 20 TPS). The value is clamped to
+ * 64 KiB..8 MiB. A missing or non-positive key uses the default. Fast movement, elytra, a jump
  * of {@value #TELEPORT_BLOCKS} blocks, or a dimension change pauses new walks.
  * Teleports and dimension changes also drop that player's queued packets.
  */
@@ -33,7 +33,11 @@ public final class TerrainStreamPolicy {
     public static final int FAST_PAUSE_TICKS = 15;
     public static final int TELEPORT_PAUSE_TICKS = 40;
     public static final int PER_PLAYER_SECTIONS_PER_TICK = 32;
-    public static final int PER_PLAYER_BYTES_PER_TICK = 524288;
+    /** Default per-player compressed bytes per tick. About 20 MB/s at 20 TPS. */
+    public static final int PER_PLAYER_BYTES_PER_TICK = 1048576;
+    public static final int MIN_PLAYER_BYTES_PER_TICK = 64 * 1024;
+    public static final int MAX_PLAYER_BYTES_PER_TICK = 8 * 1024 * 1024;
+    private static volatile boolean loggedBudget;
     /** Replaces ReliableTerrainQueue's global completed-set cap of 1024. */
     public static final int COMPLETED_DEDUP_CAP = 32767;
 
@@ -211,6 +215,33 @@ public final class TerrainStreamPolicy {
         return true;
     }
 
+    /**
+     * Compressed bytes one player may be offered in a tick.
+     * Config key {@code server_terrain_sync_player_bytes_per_tick}.
+     */
+    public static int playerBytesPerTick() {
+        int value = PER_PLAYER_BYTES_PER_TICK;
+        try {
+            if (VoxyConfig.CONFIG != null) {
+                Object raw = VoxyConfig.CONFIG.getClass().getField("serverTerrainSyncPlayerBytesPerTick").get(VoxyConfig.CONFIG);
+                if (raw instanceof Number) {
+                    value = ((Number) raw).intValue();
+                }
+            }
+        } catch (Throwable ignored) {
+            value = PER_PLAYER_BYTES_PER_TICK;
+        }
+        if (value <= 0) {
+            value = PER_PLAYER_BYTES_PER_TICK;
+        }
+        int clamped = Math.max(MIN_PLAYER_BYTES_PER_TICK, Math.min(MAX_PLAYER_BYTES_PER_TICK, value));
+        if (!loggedBudget) {
+            loggedBudget = true;
+            me.cortex.voxy.common.Logger.info("[terrain-sync] per-player byte budget " + clamped + " B/tick (about " + String.format("%.1f", clamped * 20.0 / (1024.0 * 1024.0)) + " MB/s at 20 TPS), allowed " + MIN_PLAYER_BYTES_PER_TICK + ".." + MAX_PLAYER_BYTES_PER_TICK);
+        }
+        return clamped;
+    }
+
     public static int motionCount() {
         return MOTION.size();
     }
@@ -222,7 +253,7 @@ public final class TerrainStreamPolicy {
         long[] used = USED.get(key);
         long sectionsUsed = used == null ? 0L : used[0];
         long bytesUsed = used == null ? 0L : used[1];
-        return sectionsUsed + sections <= PER_PLAYER_SECTIONS_PER_TICK && bytesUsed + bytes <= PER_PLAYER_BYTES_PER_TICK;
+        return sectionsUsed + sections <= PER_PLAYER_SECTIONS_PER_TICK && bytesUsed + bytes <= playerBytesPerTick();
     }
 
     private static void playerAdd(Object key, int sections, long bytes) {

@@ -1,5 +1,6 @@
 package me.cortex.voxy.server;
 
+import java.util.ArrayList;
 import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Optional;
@@ -8,6 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import me.cortex.voxy.common.Logger;
+import me.cortex.voxy.common.network.SectionWire;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -101,6 +103,31 @@ public final class TerrainWorkers {
                 List<byte[]> wires = ColumnStages.wires(job.level, job.engine, job.x, job.z, tag.get());
                 if (wires.isEmpty()) {
                     job.skip = "unreadable";
+                } else if (SectionWire.compressFor(job.player)) {
+                    ArrayList<byte[]> framed = new ArrayList<byte[]>(wires.size());
+                    int rawSum = 0;
+                    int compressedSum = 0;
+                    long compressNs = 0L;
+                    long decompressNs = 0L;
+                    boolean roundTrip = true;
+                    for (int i = 0; i < wires.size(); i++) {
+                        byte[] raw = wires.get(i);
+                        if (ColumnProfile.timing) {
+                            SectionWire.Pack pack = SectionWire.pack(raw);
+                            framed.add(pack.bytes);
+                            rawSum += pack.raw;
+                            compressedSum += pack.compressed;
+                            compressNs += pack.compressNs;
+                            decompressNs += pack.decompressNs;
+                            roundTrip = roundTrip && pack.roundTrip;
+                        } else {
+                            framed.add(SectionWire.frame(raw));
+                        }
+                    }
+                    if (ColumnProfile.timing) {
+                        ColumnProfile.noteColumn(rawSum, compressedSum, compressNs, decompressNs, roundTrip);
+                    }
+                    job.wires = framed;
                 } else {
                     job.wires = wires;
                 }

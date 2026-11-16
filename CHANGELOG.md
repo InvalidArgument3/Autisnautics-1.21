@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10q** → **ipa10r** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10r.jar`, client and server). The per-player terrain byte budget is `server_terrain_sync_player_bytes_per_tick` (default 1 MiB per tick, allowed 64 KiB..8 MiB). Hello protocol 3 frames each section with zstd, counted against that budget after compression and compressed on the worker pool. Protocol 2 clients still receive raw sections. `acceptLevel` still returns a `ClientLevel`. The ipa10q jar is removed.
+
 ## [0.1.19]
 - Custom Voxy portal-LOD build **ipa10p1** → **ipa10q** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar`, client and server). Generated columns are read on the chunk IO worker and voxelized on a two-thread pool. The server tick only offers finished columns, nearest first, and still sends one column when the average tick is over 40 ms. `acceptLevel` still returns a `ClientLevel`. The ipa10p1 jar is removed.
 

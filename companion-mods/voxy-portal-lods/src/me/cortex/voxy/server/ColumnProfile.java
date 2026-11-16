@@ -112,6 +112,16 @@ public final class ColumnProfile {
         samples.add(nanos);
     }
 
+    public static synchronized void noteColumn(int raw, int compressed, long compressNs, long decompressNs, boolean roundTrip) {
+        add("rawBytes", raw);
+        add("compressedBytes", compressed);
+        add("compress", compressNs);
+        add("decompress", decompressNs);
+        if (!roundTrip) {
+            skip("roundtrip");
+        }
+    }
+
     public static synchronized void sizes(int converted, int encoded, int wireBytes) {
         sections += converted;
         wires += encoded;
@@ -259,7 +269,7 @@ public final class ColumnProfile {
             if (body.connection == null) {
                 body.connection = listener;
             }
-            me.cortex.voxy.common.network.VoxySessionSupport.setClientProtocol(body, 2, 512);
+            me.cortex.voxy.common.network.VoxySessionSupport.setClientProtocol(body, 3, 512);
             return body;
         } catch (Throwable failure) {
             Logger.warn("[terrain-sync][profile] could not install the stationary recipient", failure);
@@ -301,13 +311,26 @@ public final class ColumnProfile {
         for (Map.Entry<String, long[]> entry : SKIPS.entrySet()) {
             text.append("skip ").append(entry.getKey()).append('=').append(entry.getValue()[0]).append('\n');
         }
-        for (String stage : new String[] {"header", "regionRead", "nbtParse", "import", "convert", "encode", "offer", "liveIngest", "total"}) {
+        Samples raw = SAMPLES.get("rawBytes");
+        Samples compressed = SAMPLES.get("compressedBytes");
+        if (raw != null && raw.count > 0 && compressed != null && compressed.count > 0) {
+            text.append("wireCodec=").append(me.cortex.voxy.common.network.SectionWire.codecName());
+            text.append(" rawMean=").append(raw.mean());
+            text.append(" rawMedian=").append(raw.percentile(0.50));
+            text.append(" rawP95=").append(raw.percentile(0.95));
+            text.append(" compressedMean=").append(compressed.mean());
+            text.append(" compressedMedian=").append(compressed.percentile(0.50));
+            text.append(" compressedP95=").append(compressed.percentile(0.95));
+            text.append(" ratio=").append(String.format("%.3f", compressed.mean() / Math.max(1.0, raw.mean()))).append('\n');
+        }
+        for (String stage : new String[] {"header", "regionRead", "nbtParse", "import", "convert", "encode", "offer", "compress", "decompress", "liveIngest", "total"}) {
             Samples samples = SAMPLES.get(stage);
             if (samples == null || samples.count == 0) {
                 text.append(stage).append(" n=0\n");
                 continue;
             }
             text.append(stage).append(" n=").append(samples.count);
+            text.append(" meanUs=").append(samples.mean() / (stage.contains("Bytes") ? 1.0 : 1_000.0));
             text.append(" medianUs=").append(samples.percentile(0.50) / 1_000L);
             text.append(" p95Us=").append(samples.percentile(0.95) / 1_000L).append('\n');
         }
@@ -344,6 +367,17 @@ public final class ColumnProfile {
                 values = Arrays.copyOf(values, Math.min(CAP, values.length * 2));
             }
             values[count++] = nanos;
+        }
+
+        double mean() {
+            if (count <= 0) {
+                return 0.0;
+            }
+            long sum = 0L;
+            for (int i = 0; i < count; i++) {
+                sum += values[i];
+            }
+            return sum / (double) count;
         }
 
         long percentile(double p) {
