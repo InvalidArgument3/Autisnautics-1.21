@@ -27,6 +27,9 @@ public final class ClientColumnCoverage {
 
     private static String worldId = "";
     private static int ticksUntilScan = 0;
+    private static int scans;
+    private static int keysFound;
+    private static int regionsSent;
     private static final ArrayList<Long> QUEUE = new ArrayList<Long>();
     private static final Long2ObjectOpenHashMap<byte[]> PENDING = new Long2ObjectOpenHashMap<byte[]>();
     private static final Long2ObjectOpenHashMap<byte[]> SENT = new Long2ObjectOpenHashMap<byte[]>();
@@ -66,7 +69,10 @@ public final class ClientColumnCoverage {
         if (!(connection instanceof Connection) || !NetworkRegistry.hasChannel((Connection) connection, ConnectionProtocol.PLAY, channel)) {
             return;
         }
-        Object levelObject = minecraftClass.getField("level").get(minecraft);
+        Object levelObject = player.getClass().getMethod("level").invoke(player);
+        if (!(levelObject instanceof Level)) {
+            levelObject = minecraftClass.getField("level").get(minecraft);
+        }
         if (!(levelObject instanceof Level)) {
             return;
         }
@@ -80,19 +86,25 @@ public final class ClientColumnCoverage {
             SENT.clear();
         }
         if (ticksUntilScan <= 0) {
-            scan(level, player);
-            ticksUntilScan = RESCAN_TICKS;
+            if (scan(level, player)) {
+                ticksUntilScan = RESCAN_TICKS;
+            }
         } else {
             ticksUntilScan--;
         }
         flush();
     }
 
-    private static void scan(Level level, Object player) throws ReflectiveOperationException {
+    public static String stats() {
+        return "scans=" + scans + " lod0=" + keysFound + " regionsSent=" + regionsSent + " storage=" + (worldId.isEmpty() ? "-" : worldId);
+    }
+
+    private static boolean scan(Level level, Object player) throws ReflectiveOperationException {
         WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
         if (engine == null || engine.storage == null) {
-            return;
+            return false;
         }
+        scans++;
         Object chunk = player.getClass().getMethod("chunkPosition").invoke(player);
         int playerX = ((ChunkPos) chunk).x;
         int playerZ = ((ChunkPos) chunk).z;
@@ -102,7 +114,12 @@ public final class ClientColumnCoverage {
         }
         Long2ObjectOpenHashMap<byte[]> found = new Long2ObjectOpenHashMap<byte[]>();
         int maxRadius = radius;
-        engine.storage.iteratePositions(0, sectionKey -> ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, maxRadius));
+        int[] seen = new int[] {0};
+        engine.storage.iteratePositions(0, sectionKey -> {
+            seen[0]++;
+            ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, maxRadius);
+        });
+        keysFound += seen[0];
         QUEUE.clear();
         PENDING.clear();
         int playerRegionX = playerX >> 5;
@@ -126,6 +143,7 @@ public final class ClientColumnCoverage {
             PENDING.put(key, bits);
             QUEUE.add(key);
         }
+        return true;
     }
 
     private static void flush() {
@@ -139,6 +157,7 @@ public final class ClientColumnCoverage {
             byte[] copy = bits.clone();
             PacketDistributor.sendToServer(new ColumnCoveragePayload(ColumnCoverageIndex.regionX(key), ColumnCoverageIndex.regionZ(key), copy));
             SENT.put(key, copy);
+            regionsSent++;
             budget--;
         }
     }

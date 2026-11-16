@@ -44,8 +44,7 @@ public final class TerrainDispatch {
         }
         int mode = TerrainStreamPolicy.prepareWalk(player);
         if (mode == 1) {
-            noteReason(player, "paused");
-            maybeSummarize();
+            notePause(player);
             return false;
         }
         try {
@@ -69,30 +68,39 @@ public final class TerrainDispatch {
             Counters counters = COUNTERS.computeIfAbsent(id + "|" + world, key -> new Counters());
             counters.ring = cursor.radius();
             counters.max = max;
-            counters.reason = "scanning";
-            int[] sent = RingScan.scan(cursor, cx, cz, exclusive, max, new Io(level, engine, player, dimension, world, id, counters), TerrainAvailability.MAX_CELL_ATTEMPTS, TerrainDispatch::pastDeadline, (x, z) -> {
-                counters.abandoned++;
-                counters.reason = "abandoned";
-                TerrainAvailability.logSkipOnce(dimension, x, z);
-            });
-            counters.ring = cursor.radius();
-            counters.attempts = cursor.attempts();
-            counters.holding = cursor.holding();
-            if (sent != null) {
+            Io probe = new Io(level, engine, player, dimension, world, id, counters);
+            int budget = columnsThisTick(serverBusy(player));
+            int produced = 0;
+            while (produced < budget) {
+                counters.reason = "scanning";
+                int[] sent = RingScan.scan(cursor, cx, cz, exclusive, max, probe, TerrainAvailability.MAX_CELL_ATTEMPTS, TerrainDispatch::pastDeadline, (x, z) -> {
+                    counters.abandoned++;
+                    counters.reason = "abandoned";
+                    TerrainAvailability.logSkipOnce(dimension, x, z);
+                });
+                counters.ring = cursor.radius();
+                counters.attempts = cursor.attempts();
+                counters.holding = cursor.holding();
+                if (sent == null) {
+                    break;
+                }
+                produced++;
                 counters.sent++;
                 counters.reason = "sent";
                 TerrainAvailability.clear(dimension, sent[0], sent[1]);
                 TerrainSentMemory.mark(id, world, sent[0], sent[1]);
-                maybeSummarize();
-                return true;
             }
-            if (!"backpressure".equals(counters.reason) && pastDeadline()) {
-                counters.reason = "deadline";
-            } else if ("scanning".equals(counters.reason)) {
-                counters.reason = "idle";
+            if (produced == 0) {
+                if (!"backpressure".equals(counters.reason) && pastDeadline()) {
+                    counters.reason = "deadline";
+                } else if (cursor.holding()) {
+                    counters.reason = "retrying";
+                } else if ("scanning".equals(counters.reason)) {
+                    counters.reason = "idle";
+                }
             }
             maybeSummarize();
-            return false;
+            return produced > 0;
         } catch (Throwable failure) {
             if (failures++ < 3) {
                 Logger.warn("[terrain-sync] ring step failed", failure);
@@ -125,13 +133,61 @@ public final class TerrainDispatch {
         return CURSORS.size();
     }
 
-    private static void noteReason(Object player, String reason) {
+    /** How many columns one tick may voxelize. A busy server stays at one. */
+    public static int columnsThisTick(boolean serverBusy) {
+        return serverBusy ? 1 : 32;
+    }
+
+    /** Keep walking until the tick's column budget or the scan has nothing to send. */
+    public static int burst(RingCursor cursor, RingScan.Probe probe, int cx, int cz, int exclusive, int max, int budget) {
+        int produced = 0;
+        while (produced < budget) {
+            int[] sent = RingScan.scan(cursor, cx, cz, exclusive, max, probe, TerrainAvailability.MAX_CELL_ATTEMPTS, () -> false, (x, z) -> {
+            });
+            if (sent == null) {
+                break;
+            }
+            produced++;
+        }
+        return produced;
+    }
+
+    private static void notePause(Object player) {
         UUID id = uuid(player);
         if (id == null) {
             return;
         }
-        Counters counters = COUNTERS.computeIfAbsent(id.toString(), key -> new Counters());
-        counters.reason = reason;
+        String prefix = id.toString() + "|";
+        for (Map.Entry<String, Counters> entry : COUNTERS.entrySet()) {
+            if (entry.getKey().startsWith(prefix)) {
+                entry.getValue().reason = "paused";
+            }
+        }
+    }
+
+    private static boolean serverBusy(Object player) {
+        try {
+            Object server = player.getClass().getMethod("getServer").invoke(player);
+            if (server == null) {
+                return false;
+            }
+            float average = 0.0f;
+            try {
+                Object value = server.getClass().getMethod("getAverageTickTime").invoke(server);
+                if (value instanceof Number) {
+                    average = ((Number) value).floatValue();
+                }
+            } catch (ReflectiveOperationException ignored) {
+                return false;
+            }
+            float limit = 40.0f;
+            if (me.cortex.voxy.common.config.VoxyConfig.CONFIG != null) {
+                limit = me.cortex.voxy.common.config.VoxyConfig.CONFIG.serverTerrainSyncBackgroundPauseMspt;
+            }
+            return limit > 0.0f && average > limit;
+        } catch (Throwable ignored) {
+            return false;
+        }
     }
 
     private static boolean debugEnabled() {
@@ -171,7 +227,9 @@ public final class TerrainDispatch {
                     + " skippedClient=" + counters.skippedClient
                     + " skippedKnown=" + counters.skippedKnown
                     + " skippedMissing=" + counters.skippedMissing
-                    + " abandoned=" + counters.abandoned);
+                    + " abandoned=" + counters.abandoned
+                    + " coveragePkts=" + TerrainSentMemory.coveragePackets()
+                    + " coverageWorld=" + TerrainSentMemory.lastCoverageWorld());
         }
     }
 

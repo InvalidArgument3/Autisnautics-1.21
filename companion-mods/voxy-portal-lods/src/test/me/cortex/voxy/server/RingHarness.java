@@ -27,6 +27,9 @@ public final class RingHarness {
         staleColumnStaysSkippedAfterAnotherReport();
         storedSectionBecomesChunkColumns();
         standStillReachesPastTheLoadedRings();
+        oneTickSendsABurst();
+        renderSwapDoesNotDropThePlayersWorld();
+        coverageKeyMatchesTheWalker();
         System.out.println("RingHarness passed");
     }
 
@@ -530,6 +533,51 @@ public final class RingHarness {
         check(cursor.radius() >= 40, "standing still never left the loaded rings, radius " + cursor.radius());
         check(far > 0, "no column past the loaded rings was sent");
         System.out.println("ok standing still walks out to radius " + cursor.radius());
+    }
+
+    private static void oneTickSendsABurst() {
+        check(TerrainDispatch.columnsThisTick(true) == 1, "a busy server sends one column");
+        int budget = TerrainDispatch.columnsThisTick(false);
+        check(budget > 1, "an idle server is not capped at one column per tick");
+        RingCursor cursor = new RingCursor(0, 0, 10);
+        int ringCells = 8 * 10;
+        int sent = TerrainDispatch.burst(cursor, new RingScan.Probe() {
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                return RingScan.SENT;
+            }
+        }, 0, 0, 9, 512, Math.max(budget, ringCells));
+        check(sent == ringCells, "one pass sends the whole ring, sent " + sent);
+        check(cursor.radius() > 10, "the burst walked past the first ring, radius " + cursor.radius());
+    }
+
+    private static void renderSwapDoesNotDropThePlayersWorld() {
+        check(me.cortex.voxy.client.TerrainReceive.disposition(true, false) == me.cortex.voxy.client.TerrainReceive.APPLY, "the player's world is applied while the render level is swapped");
+        check(me.cortex.voxy.client.TerrainReceive.disposition(false, false) == me.cortex.voxy.client.TerrainReceive.DROP, "a world the player is not in is dropped");
+    }
+
+    private static void coverageKeyMatchesTheWalker() {
+        int before = TerrainSentMemory.coveragePackets();
+        String world = "minecraft:overworld#-1065291115130035377";
+        coverChunk("walker", world, 4, -2);
+        check(TerrainSentMemory.holdKind("walker", world, 4, -2) == TerrainSentMemory.CLIENT, "the walker key sees the report");
+        check(TerrainSentMemory.coveragePackets() == before + 1, "the server counts the coverage packet");
+        check(world.equals(TerrainSentMemory.lastCoverageWorld()), "the counted world is the walker key");
     }
 
     private static void coverChunk(String player, String world, int chunkX, int chunkZ) {

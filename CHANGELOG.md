@@ -1,5 +1,6 @@
 # Changelog
 ## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10o** → **ipa10p** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p.jar`, client and server). A quiet server sends up to 32 columns per tick instead of one, and still sends one when the average tick is over 40 ms. Coverage keeps scanning until the local Voxy storage exists, and the client debug line `[terrain-sync-client]` follows `server_terrain_sync_debug`. A packet for the player's world is applied while Immersive Portals has swapped the render level. The ipa10o jar is removed.
 - Custom Voxy portal-LOD build **ipa10n** → **ipa10o** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10o.jar`, client and server). A saved chunk that produces no LOD no longer parks the ring. The walker was stopping about three rings out, on the first column past the loaded chunks, and only continued when the player changed chunk. The ipa10n jar is removed.
 
 ## [0.1.16]

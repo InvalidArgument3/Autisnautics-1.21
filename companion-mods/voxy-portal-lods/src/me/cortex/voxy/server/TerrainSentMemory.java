@@ -22,6 +22,8 @@ public final class TerrainSentMemory {
     private static final Map<String, Long2ObjectOpenHashMap<byte[]>> COVERAGE = new ConcurrentHashMap<String, Long2ObjectOpenHashMap<byte[]>>();
     /** Columns this dimension has reloaded. Keyed by dimension id, not by player. */
     private static final Map<String, LongOpenHashSet> STALE = new ConcurrentHashMap<String, LongOpenHashSet>();
+    private static int coveragePackets;
+    private static String lastCoverageWorld = "-";
 
     private TerrainSentMemory() {
     }
@@ -52,6 +54,8 @@ public final class TerrainSentMemory {
             return;
         }
         byte[] copy = Arrays.copyOf(bitmap, ColumnCoverageIndex.BYTE_LENGTH);
+        coveragePackets++;
+        lastCoverageWorld = dimension;
         String id = key(player, dimension);
         LongOpenHashSet stale = STALE.get(dimensionName(dimension));
         if (stale != null) {
@@ -63,6 +67,14 @@ public final class TerrainSentMemory {
         synchronized (regions) {
             regions.put(ColumnCoverageIndex.regionKey(regionX, regionZ), copy);
         }
+    }
+
+    public static int coveragePackets() {
+        return coveragePackets;
+    }
+
+    public static String lastCoverageWorld() {
+        return lastCoverageWorld;
     }
 
     public static void mark(String player, String dimension, int x, int z) {
