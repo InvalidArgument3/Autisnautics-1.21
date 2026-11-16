@@ -20,7 +20,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "minecraft:orange_tulip"
+				id: "ftbquests:book"
 			}
 			id: "09356B3BEF298E06"
 			rewards: [
