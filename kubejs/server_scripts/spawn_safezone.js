@@ -1,26 +1,31 @@
-// No natural mobs within 64 blocks (horizontal) of the overworld world spawn.
+// No natural mobs in the overworld starter island.
 //
-// KubeJS EntityEvents.checkSpawn is NeoForge FinalizeSpawnEvent. event.cancel()
-// is interruptFalse, which setSpawnCancelled(true) and cancels the event, so the
-// mob is never added. Distance ignores height. The point is ServerLevel's shared
-// spawn (the /setworldspawn point), not a bed.
-//
-// Cancelled: natural, chunk generation, structure, patrol, raid/event, jockey,
-// and reinforcement. Those are the world filling itself in.
-//
-// Left alone: spawners, trial spawners, spawn eggs, commands, dispensers,
-// buckets, breeding, conversion, mob-summoned (golems, withers, vexes), and
-// triggered (silverfish broken out of a block).
-//
-// Cobblemon wild spawns call Mob.finalizeSpawn with MobSpawnType.NATURAL, so a
-// blanket natural cancel would also stop pastures and the species spawner.
-// /spawnpokemon uses COMMAND and would survive, but the spawner would not.
-// cobblemon: entities are exempt. Abyss Creatures are not special-cased: the
-// radius is overworld-only, and a natural FinalizeSpawn in that circle is
-// cancelled like any other mob.
+// Center and radius are horizontal only. Y is ignored, so the column covers the
+// full world height. Live world spawn is 62, 489, 41, about 74 blocks from the
+// origin, which is why a 64-block circle around getSharedSpawnPos() never covered
+// the island. Do not point this back at the shared spawn.
 
-let SPAWN_SAFE_RADIUS = 64
+let SPAWN_SAFE_CENTER_X = 0
+let SPAWN_SAFE_CENTER_Z = 0
+let SPAWN_SAFE_RADIUS = 128
 let SPAWN_SAFE_RADIUS_SQ = SPAWN_SAFE_RADIUS * SPAWN_SAFE_RADIUS
+
+// NeoForge 21.1.265 posts FinalizeSpawnEvent only from EventHooks.finalizeMobSpawn,
+// and the patched server calls that for BaseSpawner and TrialSpawner. Natural
+// spawns, chunk generation, phantoms, patrols, raids, and structure placement call
+// Mob.finalizeSpawn directly and then addFreshEntity. KubeJS checkSpawn never sees
+// them, and NaturalSpawner does not read Mob.isSpawnCancelled(). The join listener
+// below is what actually stops those.
+//
+// Spawn type is Mob.getSpawnType(), set inside finalizeSpawn before the entity is
+// added. A mob added with addFreshEntity and no finalizeSpawn has a null type and
+// is treated as natural.
+//
+// Kept: spawners, trial spawners, spawn eggs, commands, dispensers, buckets,
+// breeding, conversion, mob-summoned (golems, withers, vexes), and triggered
+// (silverfish broken out of a block). Cobblemon is exempt: wild spawns use
+// NATURAL, and cancelling that would stop pastures. Entities loaded from a
+// chunk are left where they are.
 
 let BLOCKED_SPAWN_TYPES = {
     natural: true,
@@ -31,6 +36,22 @@ let BLOCKED_SPAWN_TYPES = {
     jockey: true,
     reinforcement: true
 }
+
+let ALLOWED_SPAWN_TYPES = {
+    spawner: true,
+    trial_spawner: true,
+    spawn_egg: true,
+    command: true,
+    breeding: true,
+    bucket: true,
+    dispenser: true,
+    conversion: true,
+    mob_summoned: true,
+    triggered: true
+}
+
+let $SpawnSafeMob = Java.loadClass('net.minecraft.world.entity.Mob')
+let $SpawnSafeJoin = Java.loadClass('net.neoforged.neoforge.event.entity.EntityJoinLevelEvent')
 
 function spawnDimensionId(level) {
     try {
@@ -46,6 +67,7 @@ function spawnDimensionId(level) {
 
 function spawnTypeName(type) {
     try {
+        if (!type) return ''
         return String(type.name()).toLowerCase()
     } catch (error) {
         return String(type).toLowerCase()
@@ -64,37 +86,52 @@ function entityTypeId(entity) {
     }
 }
 
-EntityEvents.checkSpawn(function (event) {
-    if (spawnDimensionId(event.level).indexOf('minecraft:overworld') < 0) return
-    if (!BLOCKED_SPAWN_TYPES[spawnTypeName(event.type)]) return
+function isCobblemon(entity) {
+    return entityTypeId(entity).indexOf('cobblemon:') === 0
+}
 
-    let id = entityTypeId(event.entity)
-    if (id.indexOf('cobblemon:') === 0) return
+function inSpawnSafeZone(level, x, z) {
+    if (spawnDimensionId(level).indexOf('minecraft:overworld') < 0) return false
+    let dx = x - SPAWN_SAFE_CENTER_X
+    let dz = z - SPAWN_SAFE_CENTER_Z
+    return dx * dx + dz * dz <= SPAWN_SAFE_RADIUS_SQ
+}
 
-    let spawn
+function freshMobBlocked(entity) {
+    if (!(entity instanceof $SpawnSafeMob)) return false
+    if (isCobblemon(entity)) return false
+    let typeName = ''
     try {
-        spawn = event.level.getSharedSpawnPos()
+        typeName = spawnTypeName(entity.getSpawnType())
+    } catch (error) {
+        typeName = ''
+    }
+    if (ALLOWED_SPAWN_TYPES[typeName]) return false
+    return true
+}
+
+EntityEvents.checkSpawn(function (event) {
+    if (!BLOCKED_SPAWN_TYPES[spawnTypeName(event.type)]) return
+    if (isCobblemon(event.entity)) return
+    if (inSpawnSafeZone(event.level, event.x, event.z)) event.cancel()
+})
+
+NativeEvents.onEvent($SpawnSafeJoin, function (event) {
+    try {
+        if (event.loadedFromDisk()) return
     } catch (error) {
         return
     }
-    if (!spawn) return
-
-    let dx = event.x - spawn.getX()
-    let dz = event.z - spawn.getZ()
-    if (dx * dx + dz * dz <= SPAWN_SAFE_RADIUS_SQ) {
-        event.cancel()
-    }
+    let level = event.getLevel()
+    if (level.isClientSide()) return
+    let entity = event.getEntity()
+    if (!inSpawnSafeZone(level, entity.getX(), entity.getZ())) return
+    if (!freshMobBlocked(entity)) return
+    event.setCanceled(true)
 })
 
 ServerEvents.loaded(function (event) {
-    let it = event.server.getAllLevels().iterator()
-    while (it.hasNext()) {
-        let level = it.next()
-        let dimension = spawnDimensionId(level)
-        if (dimension.indexOf('minecraft:overworld') < 0) continue
-        let spawn = level.getSharedSpawnPos()
-        console.info('[Autisnautics] Overworld ' + dimension
-            + ' shared spawn ' + spawn.getX() + ' ' + spawn.getY() + ' ' + spawn.getZ()
-            + '; natural mobs blocked inside ' + SPAWN_SAFE_RADIUS + ' blocks horizontally. Cobblemon entities are exempt.')
-    }
+    console.info('[Autisnautics] Overworld natural mobs blocked within ' + SPAWN_SAFE_RADIUS
+        + ' blocks of X=' + SPAWN_SAFE_CENTER_X + ' Z=' + SPAWN_SAFE_CENTER_Z
+        + ' (full height). Spawners, eggs, commands, breeding, and buckets still work. Cobblemon is exempt. Mobs already saved in chunks are left in place.')
 })
