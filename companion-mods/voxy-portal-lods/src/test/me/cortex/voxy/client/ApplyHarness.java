@@ -1,18 +1,21 @@
 package me.cortex.voxy.client;
 
 import io.netty.buffer.Unpooled;
-import java.lang.invoke.MethodHandles;
-import java.lang.invoke.VarHandle;
 import java.lang.reflect.Field;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 import me.cortex.voxy.common.config.section.SectionSerializationStorage;
 import me.cortex.voxy.common.config.storage.inmemory.MemoryStorageBackend;
 import me.cortex.voxy.common.network.ColumnCoveragePayload;
 import me.cortex.voxy.common.network.SectionSyncBatchPayload;
 import me.cortex.voxy.common.network.SectionWire;
+import me.cortex.voxy.common.network.TerrainSyncClientHandler;
 import me.cortex.voxy.common.network.TerrainApplyQueue;
 import me.cortex.voxy.common.network.VoxelSectionWireCodec;
 import me.cortex.voxy.common.voxelization.VoxelizedSection;
@@ -32,7 +35,14 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLLoader;
 import net.minecraft.DetectedVersion;
 import net.minecraft.SharedConstants;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.server.Bootstrap;
+import net.minecraft.server.network.ConfigurationTask;
+import net.minecraft.world.entity.player.Player;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.neoforge.common.extensions.ICommonPacketListener;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 
@@ -48,6 +58,8 @@ public final class ApplyHarness {
 
     public static void main(String[] args) throws Exception {
         setDist();
+        boolean legacy = Boolean.getBoolean("voxy.legacyConfig");
+        loadConfig(legacy);
         SharedConstants.setVersion(DetectedVersion.BUILT_IN);
         Bootstrap.bootStrap();
         RegistryAccess registries = biomes();
@@ -68,6 +80,14 @@ public final class ApplyHarness {
         link("window", window >= 32, "in-flight window " + window);
 
         List<SectionSyncBatchPayload> column = column(registries, engine, 100, 4, 200);
+        drive(batch(rawSections(registries, engine, 8), 50));
+        drive(batch(rawSections(registries, engine, 1), 51));
+        drive(batch(rawSections(registries, engine, 0), 52));
+        drive(batch(rawSections(registries, engine, 9), 53));
+        ClientSectionApply.harnessTick(registries, -4, 20, engine);
+        Thread.sleep(200L);
+        ClientSectionApply.harnessTick(registries, -4, 20, engine);
+        link("handler", sectionsWritten() > 0 && ClientSectionApply.acks() > 0 && ClientSectionApply.applyError().isEmpty(), "raw batches through handleSectionSyncBatch acks=" + ClientSectionApply.acks() + " error=" + ClientSectionApply.applyError());
         link("frames", !column.isEmpty() && column.get(0).sectionDatas().get(0)[0] == SectionWire.ZSTD, "first byte is the zstd frame");
         SectionSyncBatchPayload expanded = SectionWire.expand(column.get(0));
         link("expand", expanded.sectionDatas().size() == column.get(0).sectionDatas().size() && expanded.sectionDatas().get(0)[0] != SectionWire.ZSTD, "expand restores raw sections");
@@ -92,10 +112,14 @@ public final class ApplyHarness {
                 List<SectionSyncBatchPayload> batches = columns.get(next % columns.size());
                 next++;
                 boolean room = true;
+                TerrainApplyQueue<SectionSyncBatchPayload> depth = queue();
                 for (int i = 0; i < batches.size(); i++) {
-                    SectionSyncBatchPayload payload = SectionWire.expand(batches.get(i));
-                    TerrainApplyQueue.Offer result = queue.offer(offered + 1L, payload, Math.max(1, payload.totalSectionBytes()), payload.sectionDatas().size(), now / 1_000_000L);
-                    if (result == TerrainApplyQueue.Offer.ACCEPTED) {
+                    long id = offered + 1L;
+                    SectionSyncBatchPayload payload = batches.get(i);
+                    SectionSyncBatchPayload unique = new SectionSyncBatchPayload(id, payload.levelDimensionId(), payload.dimensionTypeId(), payload.worldSeed(), payload.sectionDatas());
+                    int before = depth.size();
+                    drive(unique);
+                    if (depth.size() > before) {
                         offered++;
                     } else {
                         rejected++;
@@ -182,6 +206,82 @@ public final class ApplyHarness {
                 return Stream.of(new RegistryAccess.RegistryEntry<Biome>(Registries.BIOME, registry));
             }
         };
+    }
+
+    private static void drive(SectionSyncBatchPayload payload) {
+        TerrainSyncClientHandler.handleSectionSyncBatch(payload, new Context());
+    }
+
+    private static SectionSyncBatchPayload batch(List<byte[]> sections, long id) {
+        ResourceLocation overworld = ResourceLocation.parse("minecraft:overworld");
+        return new SectionSyncBatchPayload(id, overworld, overworld, 1L, sections);
+    }
+
+    private static List<byte[]> rawSections(RegistryAccess registries, WorldEngine engine, int count) {
+        ArrayList<byte[]> sections = new ArrayList<byte[]>();
+        for (int i = 0; i < count; i++) {
+            sections.add(encode(registries, engine, 12, 4, i));
+        }
+        return sections;
+    }
+
+    private static void loadConfig(boolean legacy) throws Exception {
+        Path game = Files.createTempDirectory("voxy-ipa10u");
+        Path config = game.resolve("config");
+        Files.createDirectories(config);
+        int sections = legacy ? 8 : 256;
+        String json = "{\n"
+                + "  \"server_terrain_sync_receive\": true,\n"
+                + "  \"server_terrain_sync_client_apply_sections_per_tick\": " + (legacy ? 8 : 64) + ",\n"
+                + "  \"server_terrain_sync_micro_batch_max_sections\": " + sections + ",\n"
+                + "  \"server_terrain_sync_max_sections_per_tick\": " + sections + "\n"
+                + "}\n";
+        Files.writeString(config.resolve("voxy-config.json"), json);
+        FMLPaths.loadAbsolutePaths(game);
+        Class<?> type = Class.forName("me.cortex.voxy.common.config.VoxyConfig");
+        Object loaded = type.getField("CONFIG").get(null);
+        int applyCap = type.getField("serverTerrainSyncClientApplySectionsPerTick").getInt(loaded);
+        int micro = type.getField("serverTerrainSyncMicroBatchMaxSections").getInt(loaded);
+        System.out.println("config legacy=" + legacy + " applySections=" + applyCap + " microBatch=" + micro);
+        if (legacy && (applyCap != 8 || micro != 8)) {
+            throw new AssertionError("legacy config was not loaded");
+        }
+    }
+
+    private static final class Context implements IPayloadContext {
+        @Override
+        public CompletableFuture<Void> enqueueWork(Runnable runnable) {
+            runnable.run();
+            return CompletableFuture.completedFuture(null);
+        }
+
+        @Override
+        public <T> CompletableFuture<T> enqueueWork(Supplier<T> supplier) {
+            return CompletableFuture.completedFuture(supplier.get());
+        }
+
+        @Override
+        public ICommonPacketListener listener() {
+            return null;
+        }
+
+        @Override
+        public Player player() {
+            return null;
+        }
+
+        @Override
+        public PacketFlow flow() {
+            return PacketFlow.CLIENTBOUND;
+        }
+
+        @Override
+        public void handle(CustomPacketPayload payload) {
+        }
+
+        @Override
+        public void finishCurrentTask(ConfigurationTask.Type type) {
+        }
     }
 
     private static void setDist() throws Exception {

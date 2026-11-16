@@ -76,7 +76,7 @@ public final class TerrainAvailability {
                 return;
             }
         }
-        Logger.warn("[terrain-sync] skipped LOD column after", MAX_CELL_ATTEMPTS, "failed sends at", dimension, x, z);
+        Logger.warn("[terrain-sync] deferring LOD column after", MAX_CELL_ATTEMPTS, "failed sends at", dimension, x, z, "(will retry on the next pass)");
     }
 
     static String levelId(String world) {

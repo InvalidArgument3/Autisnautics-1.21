@@ -104,12 +104,17 @@ public final class SectionWire {
         ArrayList<byte[]> raw = new ArrayList<byte[]>(sections.size());
         for (int i = 0; i < sections.size(); i++) {
             byte[] section = sections.get(i);
-            if (section != null && section.length > 0 && (section[0] == ZSTD || section[0] == DEFLATE)) {
+            if (section == null || section.length == 0) {
+                continue;
+            }
+            // A raw voxel section starts with protocol varint 2, the same byte as
+            // the deflate flag. Only replace the bytes when the frame actually
+            // decodes. Dropping a failed guess makes an empty batch, and
+            // TerrainApplyQueue.offer then throws "Terrain count outside bounds".
+            if (section[0] == ZSTD || section[0] == DEFLATE) {
                 byte[] decoded = decode(section);
-                if (decoded != null) {
-                    raw.add(decoded);
-                }
-            } else if (section != null) {
+                raw.add(decoded != null ? decoded : section);
+            } else {
                 raw.add(section);
             }
         }

@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import me.cortex.voxy.common.Logger;
+import me.cortex.voxy.common.network.SectionWire;
 
 /**
  * One ring step per player. The load hook only records positions; this is the only sender.
@@ -432,7 +433,7 @@ public final class TerrainDispatch {
             }
             Object pos = chunkPosCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z));
             long offerStart = ColumnProfile.timing ? System.nanoTime() : 0L;
-            boolean sent = (Boolean) offerColumn.invoke(null, this.player, this.level, pos, wires);
+            boolean sent = (Boolean) offerColumn.invoke(null, this.player, this.level, pos, frameFor(wires));
             if (ColumnProfile.timing) {
                 ColumnProfile.add("offer", System.nanoTime() - offerStart);
                 if (sent) {
@@ -440,6 +441,18 @@ public final class TerrainDispatch {
                 }
             }
             return sent ? RingScan.SENT : RingScan.FAIL;
+        }
+
+        /** Live chunks used to skip the worker, so their sections went out raw and the client dropped them. */
+        private List<byte[]> frameFor(List<byte[]> wires) {
+            if (wires == null || !SectionWire.compressFor(this.player)) {
+                return wires;
+            }
+            ArrayList<byte[]> framed = new ArrayList<byte[]>(wires.size());
+            for (int i = 0; i < wires.size(); i++) {
+                framed.add(SectionWire.frame(wires.get(i)));
+            }
+            return framed;
         }
 
         private List<byte[]> ingest(Object chunk) throws ReflectiveOperationException {

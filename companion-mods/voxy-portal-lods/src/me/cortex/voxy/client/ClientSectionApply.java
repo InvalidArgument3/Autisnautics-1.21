@@ -101,6 +101,128 @@ public final class ClientSectionApply {
         harnessEngine = engine;
     }
 
+    public static long acks() {
+        return acksSent;
+    }
+
+    /**
+     * Render-thread body of the batch handler. Never throws: a bad batch is
+     * nacked so the server retries or drops it instead of the packet task dying.
+     */
+    public static void ingest(SectionSyncBatchPayload payload) {
+        try {
+            int count = payload == null || payload.sectionDatas() == null ? 0 : payload.sectionDatas().size();
+            if (count < 1 || count > me.cortex.voxy.common.network.TerrainWireLimits.MAX_BATCH_SECTIONS) {
+                ack(payload == null ? 0L : payload.transferId(), 2);
+                return;
+            }
+            if (!receiveEnabled()) {
+                addCounter(droppedField(), count);
+                ack(payload.transferId(), 2);
+                return;
+            }
+            addCounter(receivedField(), count);
+            addCounter(bytesField(), payload.totalSectionBytes());
+            WorldEngine forced = harnessEngine;
+            if (forced == null) {
+                Minecraft minecraft = Minecraft.getInstance();
+                Level level = minecraft.level;
+                if (level == null || me.cortex.voxy.commonImpl.VoxyCommon.getInstance() == null) {
+                    addCounter(retriedField(), 1);
+                    ack(payload.transferId(), 1);
+                    return;
+                }
+                if (!world(payload).equals(me.cortex.voxy.commonImpl.WorldIdentifier.of(level))) {
+                    addCounter(droppedField(), count);
+                    ack(payload.transferId(), 2);
+                    return;
+                }
+            }
+            TerrainApplyQueue<SectionSyncBatchPayload> pending = queue();
+            TerrainApplyQueue.Offer result = pending.offer(payload.transferId(), payload, Math.max(1, payload.totalSectionBytes()), count, System.nanoTime() / 1_000_000L);
+            if (result == TerrainApplyQueue.Offer.COMPLETED) {
+                ack(payload.transferId(), 0);
+            } else if (result == TerrainApplyQueue.Offer.FULL) {
+                addCounter(retriedField(), 1);
+                ack(payload.transferId(), 1);
+            }
+        } catch (Throwable failure) {
+            logOnce(failure.toString());
+            if (payload != null) {
+                ack(payload.transferId(), 1);
+            }
+        }
+    }
+
+    private static long acksSent;
+    private static long lastRejectLog;
+    private static Field receivedField;
+    private static Field droppedField;
+    private static Field retriedField;
+    private static Field bytesField;
+
+    static void logOnce(String message) {
+        long now = System.nanoTime();
+        if (now - lastRejectLog < 5_000_000_000L) {
+            return;
+        }
+        lastRejectLog = now;
+        me.cortex.voxy.common.Logger.warn("[terrain-sync][client] " + message);
+    }
+
+    private static boolean receiveEnabled() {
+        try {
+            if (VoxyConfig.CONFIG == null) {
+                return true;
+            }
+            return VoxyConfig.CONFIG.serverTerrainSyncReceive;
+        } catch (Throwable ignored) {
+            return true;
+        }
+    }
+
+    private static void ack(long id, int status) {
+        acksSent++;
+        if (harnessEngine != null || id <= 0L) {
+            return;
+        }
+        try {
+            if (Minecraft.getInstance().getConnection() != null) {
+                PacketDistributor.sendToServer(new VoxyChunkAckPayload(id, status), new CustomPacketPayload[0]);
+            }
+        } catch (Throwable ignored) {
+            // The batch was already rejected. A missing connection must not escape the handler.
+        }
+    }
+
+    private static Field receivedField() {
+        if (receivedField == null) {
+            receivedField = counter("received");
+        }
+        return receivedField;
+    }
+
+    private static Field droppedField() {
+        if (droppedField == null) {
+            droppedField = counter("dropped");
+        }
+        return droppedField;
+    }
+
+    private static Field retriedField() {
+        if (retriedField == null) {
+            retriedField = counter("retried");
+        }
+        return retriedField;
+    }
+
+    private static Field bytesField() {
+        if (bytesField == null) {
+            bytesField = counter("bytesReceived");
+        }
+        return bytesField;
+    }
+
     /** Client thread. Pulls queued batches and hands them to the apply worker. Decode stays off this thread. */
     public static void drain() {
         long started = System.nanoTime();
