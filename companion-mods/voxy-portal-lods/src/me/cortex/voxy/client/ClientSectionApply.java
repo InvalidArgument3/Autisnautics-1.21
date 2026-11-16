@@ -429,6 +429,7 @@ public final class ClientSectionApply {
     private static void flushAcks(boolean sendPackets) {
         long[] ack;
         while ((ack = ACKS.poll()) != null) {
+            acksSent++;
             if (sendPackets && Minecraft.getInstance().getConnection() != null) {
                 PacketDistributor.sendToServer(new VoxyChunkAckPayload(ack[0], (int) ack[1]), new CustomPacketPayload[0]);
             }
