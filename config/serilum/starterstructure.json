@@ -22,7 +22,7 @@
 	},
 	"protectStructureBlocks": {
 		"//": "Whether the blocks from the generated structure should be protected from breaking/griefing.",
-		"value": true
+		"value": false
 	},
 	"protectSpawnedEntities": {
 		"//": "Whether entities spawned inside the generated structure should be protected from damage.",
