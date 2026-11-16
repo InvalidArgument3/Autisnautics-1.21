@@ -170,7 +170,7 @@
 	#How far the grapple head can be shot, in blocks.
 	# Default: 32
 	# Range: 4 ~ 128
-	range = 32
+	range = 64
 	#Time to build full slingshot tension, in seconds.
 	# Default: 2.0
 	# Range: 0.1 ~ 30.0
