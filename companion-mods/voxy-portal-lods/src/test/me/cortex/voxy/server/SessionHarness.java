@@ -15,6 +15,7 @@ public final class SessionHarness {
         stationaryDoesNotReset();
         slowClientDoesNotPinOrSkipUnacked();
         timedOutColumnIsSentAgain();
+        movementLowersTheRingAndLogsIt();
         String line = TerrainClientStats.line();
         ClientSectionApply.reportNow();
         check(line.contains("sectionsReceived=") && line.contains("sectionsApplied=") && line.contains("acksSent=")
@@ -156,6 +157,21 @@ public final class SessionHarness {
         TerrainSentMemory.cover("player", "minecraft:overworld#1", 0, 0, bitmap);
         check(TerrainSentMemory.coveragePackets() == before + 1, "coverage receive did not count");
         System.out.println("resend expired=" + queue.expired + " reoffered=1 coveragePkts=" + TerrainSentMemory.coveragePackets());
+    }
+
+    private static void movementLowersTheRingAndLogsIt() {
+        RingCursor.lastReset = "";
+        RingCursor cursor = new RingCursor(0, 0, 10);
+        for (int i = 0; i < 81; i++) {
+            cursor.peek(10, 512);
+            cursor.commit(10, 512);
+        }
+        check(cursor.radius() > 10, "radius did not advance, radius=" + cursor.radius());
+        cursor.retargetIfMoved(30, 0, 10);
+        check(cursor.radius() == 10, "a move of 30 chunks left radius " + cursor.radius());
+        check(RingCursor.lastReset.contains("mode=0") && RingCursor.lastReset.contains("cause=moved") && RingCursor.lastReset.contains("clearQueue=false"),
+                RingCursor.lastReset);
+        System.out.println("ring reset " + RingCursor.lastReset);
     }
 
     private static void check(boolean condition, String message) {

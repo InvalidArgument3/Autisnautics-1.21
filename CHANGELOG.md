@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10v** → **ipa10w** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10w.jar`, client and server). A completing ack now marks the column held, so a later ring restart skips columns the client already applied. Coverage reads the live player instead of a reflective lookup that always looked empty. Every radius drop logs `ring reset`. The client line counts mesh requests, completed meshes, GPU uploads, tracker inserts, nodes drawn, and the farthest ring. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10v jar is removed.
+
 ## [0.1.23]
 - Custom Voxy portal-LOD build **ipa10u** → **ipa10v** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10v.jar`, client and server). A column is held only after the client acks it, so a ring reset no longer skips columns the client never applied. A stationary player does not restart the ring, and a pause always logs a cause. The client prints a `[terrain-sync][client]` line every 5 seconds, and coverage scans sections still in memory. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10u jar is removed.
 

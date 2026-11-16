@@ -56,7 +56,12 @@ public final class RingCursor {
         this.attempts = 0;
         this.edgeIndex = 0;
         if (shift > 4) {
-            this.radius = Math.max(1, minRadius);
+            int before = this.radius;
+            int after = Math.max(1, minRadius);
+            if (after < before) {
+                logReset("0", "moved " + shift + " chunks", false, before, after);
+            }
+            this.radius = after;
         } else if (this.radius < minRadius) {
             this.radius = Math.max(1, minRadius);
         }
@@ -98,6 +103,14 @@ public final class RingCursor {
         this.holding = false;
         this.attempts = 0;
         return true;
+    }
+
+    /** Last radius drop, for the harness and the server log. */
+    public static String lastReset = "";
+
+    private static void logReset(String mode, String cause, boolean clearQueue, int before, int after) {
+        lastReset = "mode=" + mode + " cause=" + cause + " clearQueue=" + clearQueue + " radius=" + before + "->" + after;
+        me.cortex.voxy.common.Logger.info("[terrain-sync] ring reset " + lastReset);
     }
 
     public int attempts() {
@@ -149,6 +162,7 @@ public final class RingCursor {
                 edge = 0;
                 radius++;
                 if (radius > max) {
+                    logReset("0", "reached max " + max, false, this.radius, minRadius);
                     radius = minRadius;
                 }
             }

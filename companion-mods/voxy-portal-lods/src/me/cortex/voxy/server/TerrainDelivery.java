@@ -12,6 +12,8 @@ public final class TerrainDelivery {
     private static Field queueField;
     private static Field flightField;
     private static Field columnsField;
+    private static Field remainingField;
+    private static boolean loggedFailure;
 
     private TerrainDelivery() {
     }
@@ -19,8 +21,19 @@ public final class TerrainDelivery {
     public static void beforeAck(Object player, long id, int status) {
         try {
             ensure();
-            Object queue = queueField.get(null);
-            Map<?, ?> flight = (Map<?, ?>) flightField.get(queue);
+            classifyFlight(queueField.get(null), id, status);
+        } catch (Throwable failure) {
+            if (!loggedFailure) {
+                loggedFailure = true;
+                me.cortex.voxy.common.Logger.warn("[terrain-sync] ack was not classified", failure);
+            }
+        }
+    }
+
+    /** Same lookup {@link #beforeAck} uses, on an explicit queue. The harness calls this. */
+    public static void classifyFlight(Object queue, long id, int status) throws ReflectiveOperationException {
+        ensure();
+        Map<?, ?> flight = (Map<?, ?>) flightField.get(queue);
             Object frame = flight.get(Long.valueOf(id));
             if (frame == null) {
                 return;
@@ -32,11 +45,11 @@ public final class TerrainDelivery {
             int z = ((Integer) key.getClass().getMethod("z").invoke(key)).intValue();
             Map<?, ?> columns = (Map<?, ?>) columnsField.get(queue);
             Object column = columns.get(key);
-            int remaining = column == null ? 1 : column.getClass().getField("remaining").getInt(column);
+            int remaining = 1;
+            if (column != null) {
+                remaining = remainingField.getInt(column);
+            }
             classify(owner, world, x, z, status, remaining);
-        } catch (Throwable ignored) {
-            // An ack we cannot classify must not break the send loop.
-        }
     }
 
     /** Held only on the ack that finishes the column. Status 2 drops a premature mark. */
@@ -99,5 +112,9 @@ public final class TerrainDelivery {
         flightField.setAccessible(true);
         columnsField = queue.getDeclaredField("columns");
         columnsField.setAccessible(true);
+        // Column.remaining is package-private. getField only sees public fields and
+        // used to throw here, so a real ack never reached classify.
+        remainingField = Class.forName("me.cortex.voxy.common.network.ReliableTerrainQueue$Column").getDeclaredField("remaining");
+        remainingField.setAccessible(true);
     }
 }

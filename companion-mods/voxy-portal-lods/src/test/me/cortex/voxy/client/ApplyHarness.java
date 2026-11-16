@@ -15,12 +15,14 @@ import me.cortex.voxy.common.config.storage.inmemory.MemoryStorageBackend;
 import me.cortex.voxy.common.network.ColumnCoveragePayload;
 import me.cortex.voxy.common.network.SectionSyncBatchPayload;
 import me.cortex.voxy.common.network.SectionWire;
+import me.cortex.voxy.common.network.ReliableTerrainQueue;
 import me.cortex.voxy.common.network.TerrainSyncClientHandler;
 import me.cortex.voxy.common.network.TerrainApplyQueue;
 import me.cortex.voxy.common.network.VoxelSectionWireCodec;
 import me.cortex.voxy.common.voxelization.VoxelizedSection;
 import me.cortex.voxy.common.world.WorldEngine;
 import me.cortex.voxy.common.world.WorldSection;
+import me.cortex.voxy.server.TerrainDelivery;
 import me.cortex.voxy.server.TerrainSentMemory;
 import me.cortex.voxy.server.TerrainStreamPolicy;
 import net.minecraft.core.MappedRegistry;
@@ -62,6 +64,7 @@ public final class ApplyHarness {
         loadConfig(legacy);
         SharedConstants.setVersion(DetectedVersion.BUILT_IN);
         Bootstrap.bootStrap();
+        completingAckMarksHeld();
         RegistryAccess registries = biomes();
         WorldEngine engine = new WorldEngine(new SectionSerializationStorage(new MemoryStorageBackend()));
         engine.setSectionCacheLimit(1_000_000);
@@ -345,6 +348,27 @@ public final class ApplyHarness {
             batches.add(new SectionSyncBatchPayload(1L, overworld, overworld, 1L, new ArrayList<byte[]>(framed.subList(at, end))));
         }
         return batches;
+    }
+
+    /** The packet handler calls beforeAck, which uses this lookup, before the queue drops the frame. */
+    private static void completingAckMarksHeld() throws Exception {
+        ReliableTerrainQueue<String> queue = new ReliableTerrainQueue<String>(64, 1 << 20, 32, 1 << 20, 8, 1 << 20);
+        ArrayList<ReliableTerrainQueue.Part<String>> parts = new ArrayList<ReliableTerrainQueue.Part<String>>();
+        parts.add(new ReliableTerrainQueue.Part<String>("column", 80, 7));
+        ReliableTerrainQueue.Key key = new ReliableTerrainQueue.Key("player", "minecraft:overworld|minecraft:overworld|7", 40, -12);
+        if (!queue.offer(key, 9L, parts, 0L)) {
+            throw new AssertionError("the real queue rejected the column");
+        }
+        long[] id = new long[] {-1L};
+        queue.tick(0L, item -> true, (sections, bytes) -> true, frame -> id[0] = frame.id, 8);
+        if (id[0] <= 0L) {
+            throw new AssertionError("the frame was not sent");
+        }
+        TerrainDelivery.classifyFlight(queue, id[0], 0);
+        if (TerrainSentMemory.holdKind("player", "minecraft:overworld#7", 40, -12) != TerrainSentMemory.SENT) {
+            throw new AssertionError("the completing ack did not mark the column held");
+        }
+        System.out.println("PASS ack beforeAck marked the in-flight column");
     }
 
     private static byte[] encode(RegistryAccess registries, WorldEngine engine, int x, int y, int z) {

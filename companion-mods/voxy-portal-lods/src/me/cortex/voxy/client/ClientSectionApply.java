@@ -56,6 +56,9 @@ public final class ClientSectionApply {
     private static long batchesDone;
     private static long renderThreadNanos;
     private static long renderTicks;
+    private static long decodeNanos;
+    private static long mipNanos;
+    private static long writeNanos;
     private static int queuedBatches;
     private static int queuedBytes;
     /** Harness-only engine. Production leaves this null and uses the live renderer. */
@@ -81,7 +84,16 @@ public final class ClientSectionApply {
                 + " queueBatches=" + queuedBatches
                 + " queueBytes=" + queuedBytes
                 + " acksSent=" + acksSent
-                + " renderThreadUs=" + (renderThreadNanos / ticks / 1_000L);
+                + " renderThreadUs=" + (renderThreadNanos / ticks / 1_000L)
+                + " decodeUs=" + micros(decodeNanos)
+                + " mipUs=" + micros(mipNanos)
+                + " writeUs=" + micros(writeNanos)
+                + " " + TerrainRenderStats.line();
+    }
+
+    private static long micros(long nanos) {
+        long sections = Math.max(1L, sectionsWritten);
+        return nanos / sections / 1_000L;
     }
 
     /** Mean time spent inside {@link #drain()} on the client thread, in microseconds. */
@@ -362,12 +374,19 @@ public final class ClientSectionApply {
                     for (int s = 0; s < sections.size(); s++) {
                         RegistryFriendlyByteBuf buf = buffer(sections.get(s), registries);
                         try {
+                            long startedDecode = System.nanoTime();
                             VoxelizedSection section = VoxelSectionWireCodec.readSection(buf, target);
+                            long startedMip = System.nanoTime();
                             if (section.y < min || section.y >= max) {
                                 throw new IllegalArgumentException("section outside height");
                             }
                             WorldVoxilizedSectionMipper.mipSection(section, target.getMapper());
+                            long startedWrite = System.nanoTime();
                             WorldUpdater.insertUpdate(target, section);
+                            long wrote = System.nanoTime();
+                            decodeNanos += startedMip - startedDecode;
+                            mipNanos += startedWrite - startedMip;
+                            writeNanos += wrote - startedWrite;
                             noteColumn(section.x, section.z);
                             written++;
                             if (armed) {

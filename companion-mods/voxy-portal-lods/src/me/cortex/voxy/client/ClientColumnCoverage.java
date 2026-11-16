@@ -10,6 +10,7 @@ import me.cortex.voxy.common.world.WorldEngine;
 import me.cortex.voxy.common.world.WorldSection;
 import me.cortex.voxy.commonImpl.WorldIdentifier;
 import me.cortex.voxy.server.ColumnCoverageIndex;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.Connection;
 import net.minecraft.network.ConnectionProtocol;
 import net.minecraft.resources.ResourceLocation;
@@ -54,17 +55,19 @@ public final class ClientColumnCoverage {
     public static void onClientTick() {
         try {
             tick();
-        } catch (Throwable ignored) {
+        } catch (Throwable failure) {
+            channelState = "error:" + failure.getClass().getSimpleName();
             // Coverage is an optimisation. Losing a scan must not break the client tick.
         }
     }
 
-    private static void tick() throws ReflectiveOperationException {
-        Class<?> minecraftClass = Class.forName("net.minecraft.client.Minecraft");
-        Object minecraft = minecraftClass.getMethod("getInstance").invoke(null);
-        Object player = minecraftClass.getField("player").get(minecraft);
-        Object listener = minecraftClass.getMethod("getConnection").invoke(minecraft);
-        if (player == null || listener == null) {
+    private static void tick() {
+        // The client tick hook already proved Minecraft.player is set. A reflective
+        // getField("player") does not see that same field and was returning null,
+        // so every scan bailed out with channel=no-player before engine or storage
+        // were recorded.
+        Minecraft minecraft = Minecraft.getInstance();
+        if (minecraft == null || minecraft.player == null || minecraft.getConnection() == null) {
             channelState = "no-player";
             return;
         }
@@ -72,20 +75,15 @@ public final class ClientColumnCoverage {
             channelState = "receive-off";
             return;
         }
-        Object levelObject = player.getClass().getMethod("level").invoke(player);
-        if (!(levelObject instanceof Level)) {
-            levelObject = minecraftClass.getField("level").get(minecraft);
-        }
-        if (!(levelObject instanceof Level)) {
+        Level level = minecraft.level;
+        if (!(level instanceof Level)) {
             engineState = "no-level";
             return;
         }
-        Level level = (Level) levelObject;
         String id = worldId(level);
         WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
         WorldEngine shown = ClientSectionApply.shownEngine();
         if ((engine == null || engine.storage == null) && shown != null && shown.storage != null) {
-            // insertUpdate writes the render engine. ofEngineNullable can miss it while portals swap levels.
             engine = shown;
             engineState = "render";
         } else if (engine == null) {
@@ -96,11 +94,8 @@ public final class ClientColumnCoverage {
             engineState = "ok";
         }
         ResourceLocation channel = ColumnCoveragePayload.TYPE.id();
-        boolean open = false;
-        Object connection = listener.getClass().getMethod("getConnection").invoke(listener);
-        if (connection instanceof Connection) {
-            open = NetworkRegistry.hasChannel((Connection) connection, ConnectionProtocol.PLAY, channel);
-        }
+        Connection connection = minecraft.getConnection().getConnection();
+        boolean open = connection != null && NetworkRegistry.hasChannel(connection, ConnectionProtocol.PLAY, channel);
         channelState = open ? "ok" : "missing";
         if (!id.equals(worldId)) {
             worldId = id;
@@ -109,17 +104,19 @@ public final class ClientColumnCoverage {
             PENDING.clear();
             SENT.clear();
         }
-        if (!open || !("ok".equals(engineState) || "render".equals(engineState))) {
+        if (!("ok".equals(engineState) || "render".equals(engineState))) {
             return;
         }
         if (ticksUntilScan <= 0) {
-            if (scan(engine, player)) {
+            if (scan(engine, minecraft.player.chunkPosition())) {
                 ticksUntilScan = RESCAN_TICKS;
             }
         } else {
             ticksUntilScan--;
         }
-        flush();
+        if (open) {
+            flush();
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -205,13 +202,12 @@ public final class ClientColumnCoverage {
         return out;
     }
 
-    private static boolean scan(WorldEngine engine, Object player) throws ReflectiveOperationException {
+    private static boolean scan(WorldEngine engine, ChunkPos chunk) {
         if (engine == null || engine.storage == null) {
             return false;
         }
-        Object chunk = player.getClass().getMethod("chunkPosition").invoke(player);
-        int playerX = ((ChunkPos) chunk).x;
-        int playerZ = ((ChunkPos) chunk).z;
+        int playerX = chunk.x;
+        int playerZ = chunk.z;
         int radius = 0;
         if (VoxyConfig.CONFIG != null) {
             radius = Math.max(0, Math.round(VoxyConfig.CONFIG.sectionRenderDistance * 32.0f));
@@ -249,16 +245,10 @@ public final class ClientColumnCoverage {
     }
 
     private static String worldId(Level level) {
-        String dimension = String.valueOf(level.dimension().location());
-        long seed = 0L;
-        try {
-            Object value = level.getClass().getMethod("getSeed").invoke(level);
-            if (value instanceof Number) {
-                seed = ((Number) value).longValue();
-            }
-        } catch (ReflectiveOperationException ignored) {
-            seed = 0L;
+        WorldIdentifier identifier = WorldIdentifier.of(level);
+        if (identifier == null) {
+            return String.valueOf(level.dimension().location());
         }
-        return dimension + "#" + seed;
+        return identifier.key.location() + "#" + identifier.biomeSeed;
     }
 }
