@@ -1,0 +1,159 @@
+package me.cortex.voxy.client;
+
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import me.cortex.voxy.common.config.VoxyConfig;
+import me.cortex.voxy.common.network.ColumnCoveragePayload;
+import me.cortex.voxy.common.world.WorldEngine;
+import me.cortex.voxy.commonImpl.WorldIdentifier;
+import me.cortex.voxy.server.ColumnCoverageIndex;
+import net.minecraft.network.Connection;
+import net.minecraft.network.ConnectionProtocol;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.network.registration.NetworkRegistry;
+
+/**
+ * Reads lod-0 keys out of the local Voxy database and sends the regions,
+ * nearest first. An older server has no {@code voxy:column_coverage} channel,
+ * and then nothing is sent.
+ */
+public final class ClientColumnCoverage {
+    public static final int REGIONS_PER_TICK = 4;
+    private static final int RESCAN_TICKS = 200;
+
+    private static String worldId = "";
+    private static int ticksUntilScan = 0;
+    private static final ArrayList<Long> QUEUE = new ArrayList<Long>();
+    private static final Long2ObjectOpenHashMap<byte[]> PENDING = new Long2ObjectOpenHashMap<byte[]>();
+    private static final Long2ObjectOpenHashMap<byte[]> SENT = new Long2ObjectOpenHashMap<byte[]>();
+
+    private ClientColumnCoverage() {
+    }
+
+    public static void reset() {
+        worldId = "";
+        ticksUntilScan = 0;
+        QUEUE.clear();
+        PENDING.clear();
+        SENT.clear();
+    }
+
+    public static void onClientTick() {
+        try {
+            tick();
+        } catch (Throwable ignored) {
+            // Coverage is an optimisation. Losing a scan must not break the client tick.
+        }
+    }
+
+    private static void tick() throws ReflectiveOperationException {
+        Class<?> minecraftClass = Class.forName("net.minecraft.client.Minecraft");
+        Object minecraft = minecraftClass.getMethod("getInstance").invoke(null);
+        Object player = minecraftClass.getField("player").get(minecraft);
+        Object listener = minecraftClass.getMethod("getConnection").invoke(minecraft);
+        if (player == null || listener == null) {
+            return;
+        }
+        if (VoxyConfig.CONFIG == null || !VoxyConfig.CONFIG.serverTerrainSyncReceive) {
+            return;
+        }
+        ResourceLocation channel = ColumnCoveragePayload.TYPE.id();
+        Object connection = listener.getClass().getMethod("getConnection").invoke(listener);
+        if (!(connection instanceof Connection) || !NetworkRegistry.hasChannel((Connection) connection, ConnectionProtocol.PLAY, channel)) {
+            return;
+        }
+        Object levelObject = minecraftClass.getField("level").get(minecraft);
+        if (!(levelObject instanceof Level)) {
+            return;
+        }
+        Level level = (Level) levelObject;
+        String id = worldId(level);
+        if (!id.equals(worldId)) {
+            worldId = id;
+            ticksUntilScan = 0;
+            QUEUE.clear();
+            PENDING.clear();
+            SENT.clear();
+        }
+        if (ticksUntilScan <= 0) {
+            scan(level, player);
+            ticksUntilScan = RESCAN_TICKS;
+        } else {
+            ticksUntilScan--;
+        }
+        flush();
+    }
+
+    private static void scan(Level level, Object player) throws ReflectiveOperationException {
+        WorldEngine engine = WorldIdentifier.ofEngineNullable(level);
+        if (engine == null || engine.storage == null) {
+            return;
+        }
+        Object chunk = player.getClass().getMethod("chunkPosition").invoke(player);
+        int playerX = ((ChunkPos) chunk).x;
+        int playerZ = ((ChunkPos) chunk).z;
+        int radius = 0;
+        if (VoxyConfig.CONFIG != null) {
+            radius = Math.max(0, Math.round(VoxyConfig.CONFIG.sectionRenderDistance * 32.0f));
+        }
+        Long2ObjectOpenHashMap<byte[]> found = new Long2ObjectOpenHashMap<byte[]>();
+        int maxRadius = radius;
+        engine.storage.iteratePositions(0, sectionKey -> ColumnCoverageIndex.ingest(found, sectionKey, playerX, playerZ, maxRadius));
+        QUEUE.clear();
+        PENDING.clear();
+        int playerRegionX = playerX >> 5;
+        int playerRegionZ = playerZ >> 5;
+        ArrayList<Long> ordered = new ArrayList<Long>();
+        for (long key : found.keySet()) {
+            ordered.add(Long.valueOf(key));
+        }
+        ordered.sort((left, right) -> {
+            int leftDistance = Math.max(Math.abs(ColumnCoverageIndex.regionX(left.longValue()) - playerRegionX), Math.abs(ColumnCoverageIndex.regionZ(left.longValue()) - playerRegionZ));
+            int rightDistance = Math.max(Math.abs(ColumnCoverageIndex.regionX(right.longValue()) - playerRegionX), Math.abs(ColumnCoverageIndex.regionZ(right.longValue()) - playerRegionZ));
+            return Integer.compare(leftDistance, rightDistance);
+        });
+        for (int i = 0; i < ordered.size(); i++) {
+            long key = ordered.get(i).longValue();
+            byte[] bits = found.get(key);
+            byte[] previous = SENT.get(key);
+            if (previous != null && Arrays.equals(previous, bits)) {
+                continue;
+            }
+            PENDING.put(key, bits);
+            QUEUE.add(key);
+        }
+    }
+
+    private static void flush() {
+        int budget = REGIONS_PER_TICK;
+        while (budget > 0 && !QUEUE.isEmpty()) {
+            long key = QUEUE.remove(0).longValue();
+            byte[] bits = PENDING.remove(key);
+            if (bits == null) {
+                continue;
+            }
+            byte[] copy = bits.clone();
+            PacketDistributor.sendToServer(new ColumnCoveragePayload(ColumnCoverageIndex.regionX(key), ColumnCoverageIndex.regionZ(key), copy));
+            SENT.put(key, copy);
+            budget--;
+        }
+    }
+
+    private static String worldId(Level level) {
+        String dimension = String.valueOf(level.dimension().location());
+        long seed = 0L;
+        try {
+            Object value = level.getClass().getMethod("getSeed").invoke(level);
+            if (value instanceof Number) {
+                seed = ((Number) value).longValue();
+            }
+        } catch (ReflectiveOperationException ignored) {
+            seed = 0L;
+        }
+        return dimension + "#" + seed;
+    }
+}

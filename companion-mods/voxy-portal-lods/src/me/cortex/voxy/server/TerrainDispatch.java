@@ -153,10 +153,15 @@ public final class TerrainDispatch {
         nextSummaryNanos = now + SUMMARY_NANOS;
         for (Map.Entry<String, Counters> entry : COUNTERS.entrySet()) {
             Counters counters = entry.getValue();
-            Logger.info("[terrain-sync] player=" + entry.getKey()
+            String mapKey = entry.getKey();
+            int split = mapKey.indexOf('|');
+            int clientHeld = split < 0 ? 0 : TerrainSentMemory.clientColumns(mapKey.substring(0, split), mapKey.substring(split + 1));
+            Logger.info("[terrain-sync] player=" + mapKey
                     + " ring=" + counters.ring + "/" + counters.max
                     + " sent=" + counters.sent
+                    + " clientHeld=" + clientHeld
                     + " skippedHeld=" + counters.skippedHeld
+                    + " skippedClient=" + counters.skippedClient
                     + " skippedKnown=" + counters.skippedKnown
                     + " skippedMissing=" + counters.skippedMissing
                     + " abandoned=" + counters.abandoned
@@ -194,11 +199,17 @@ public final class TerrainDispatch {
 
         @Override
         public boolean alreadyHeld(int x, int z) {
-            if (!TerrainSentMemory.holds(this.playerId, this.world, x, z)) {
+            int kind = TerrainSentMemory.holdKind(this.playerId, this.world, x, z);
+            if (kind == TerrainSentMemory.NONE) {
                 return false;
             }
-            this.counters.skippedHeld++;
-            this.counters.reason = "skipping_held";
+            if (kind == TerrainSentMemory.CLIENT) {
+                this.counters.skippedClient++;
+                this.counters.reason = "skipping_client";
+            } else {
+                this.counters.skippedHeld++;
+                this.counters.reason = "skipping_held";
+            }
             return true;
         }
 
@@ -354,6 +365,10 @@ public final class TerrainDispatch {
         flightField.setAccessible(true);
     }
 
+    public static String worldKeyOf(Object level) throws ReflectiveOperationException {
+        return dimension(level) + "#" + seed(level);
+    }
+
     private static long seed(Object level) {
         try {
             Object value = level.getClass().getMethod("getSeed").invoke(level);
@@ -392,6 +407,7 @@ public final class TerrainDispatch {
         int max;
         int sent;
         int skippedHeld;
+        int skippedClient;
         int skippedKnown;
         int skippedMissing;
         int abandoned;

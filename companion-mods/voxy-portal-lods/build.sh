@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Rebuild ipa10m from the ipa10l jar. Already-held columns are skipped, and the ring overlaps the view-distance square.
+# Rebuild ipa10n from the ipa10m jar. The client reports lod columns it already has.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10l.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10m.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10m.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10n.jar"
 WORK="$ROOT/build"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
 ASM_COMMONS="${ASM_COMMONS_JAR:-/tmp/libs/asm-commons-9.7.1.jar}"
@@ -31,14 +31,14 @@ fetch "$SLF4J_SIMPLE" https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/2.0.
 fetch "$FASTUTIL" https://repo1.maven.org/maven2/it/unimi/dsi/fastutil/8.5.15/fastutil-8.5.15.jar
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10l jar not found at $SRC_JAR" >&2
+  echo "ipa10m jar not found at $SRC_JAR" >&2
   exit 1
 fi
 if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10l LFS object $OID is not in the local store" >&2
+    echo "ipa10m LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -46,22 +46,25 @@ fi
 rm -rf "$WORK"
 mkdir -p "$WORK/classes" "$WORK/patch" "$WORK/test" "$WORK/stub"
 
+MC_SERVER="${MC_SERVER_JAR:-/tmp/autis-server/libraries/net/minecraft/server/1.21.1-20240808.144430/server-1.21.1-20240808.144430-srg.jar}"
+NF_UNIVERSAL="${NF_UNIVERSAL_JAR:-/tmp/autis-server/libraries/net/neoforged/neoforge/21.1.265/neoforge-21.1.265-universal.jar}"
+NETTY="${NETTY_JAR:-/tmp/autis-server/libraries/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar:/tmp/autis-server/libraries/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar}"
 javac --release 21 -cp "$SRC_JAR:$FASTUTIL" -d "$WORK/classes" \
-  "$ROOT/src/me/cortex/voxy/server/RingCursor.java" \
-  "$ROOT/src/me/cortex/voxy/server/RingScan.java" \
-  "$ROOT/src/me/cortex/voxy/server/TerrainAvailability.java" \
+  "$ROOT/src/me/cortex/voxy/server/ColumnCoverageIndex.java" \
   "$ROOT/src/me/cortex/voxy/server/TerrainSentMemory.java" \
-  "$ROOT/src/me/cortex/voxy/server/TerrainStreamPolicy.java" \
   "$ROOT/src/me/cortex/voxy/server/TerrainDispatch.java"
+javac --release 21 -cp "$WORK/classes:$SRC_JAR:$FASTUTIL:$MC_SERVER:$NF_UNIVERSAL:$NETTY" -d "$WORK/classes" \
+  "$ROOT/src/me/cortex/voxy/common/network/ColumnCoveragePayload.java" \
+  "$ROOT/src/me/cortex/voxy/client/ClientColumnCoverage.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10m.java"
+  "$ROOT/src/patch/PatchIpa10n.java"
 
-BUILT="$WORK/voxy-ipa10m.jar"
+BUILT="$WORK/voxy-ipa10n.jar"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$SRC_JAR"
 if [[ -f "$MC_JAR" ]]; then FRAME_CP="$FRAME_CP:$MC_JAR"; fi
 if [[ -f "$NF_JAR" ]]; then FRAME_CP="$FRAME_CP:$NF_JAR"; fi
-mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy/server" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10m "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
+mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
+java -cp "$FRAME_CP" PatchIpa10n "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
@@ -85,18 +88,12 @@ python3 - "$SRC_JAR" "$BUILT" <<'PY'
 import hashlib, json, sys, zipfile
 old, new = sys.argv[1:]
 changed = {
-    "me/cortex/voxy/server/VoxyServerChunkSync.class",
-    "me/cortex/voxy/server/VoxyServerGeneratedChunkWalker.class",
-    "me/cortex/voxy/server/ServerTerrainTransport.class",
-    "me/cortex/voxy/server/RingCursor.class",
-    "me/cortex/voxy/server/RingScan.class",
-    "me/cortex/voxy/server/RingScan$Probe.class",
-    "me/cortex/voxy/server/TerrainAvailability.class",
+    "me/cortex/voxy/server/TerrainSentMemory.class",
     "me/cortex/voxy/server/TerrainDispatch.class",
     "me/cortex/voxy/server/TerrainDispatch$Io.class",
-    "me/cortex/voxy/server/TerrainStreamPolicy.class",
-    "me/cortex/voxy/server/TerrainStreamPolicy$Motion.class",
-    "me/cortex/voxy/common/config/VoxyConfig.class",
+    "me/cortex/voxy/server/TerrainDispatch$Counters.class",
+    "me/cortex/voxy/common/network/VoxyNetworking.class",
+    "me/cortex/voxy/client/VoxyClientNetworkHooks.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -115,22 +112,24 @@ for name in changed:
     if a.read(name) == b.read(name):
         raise SystemExit(f"expected {name} to change")
 need = [
-    "me/cortex/voxy/server/RingCursor.class",
-    "me/cortex/voxy/server/RingScan.class",
-    "me/cortex/voxy/server/TerrainAvailability.class",
+    "me/cortex/voxy/server/ColumnCoverageIndex.class",
+    "me/cortex/voxy/common/network/ColumnCoveragePayload.class",
+    "me/cortex/voxy/client/ClientColumnCoverage.class",
     "me/cortex/voxy/server/TerrainSentMemory.class",
-    "me/cortex/voxy/server/PendingOrder.class",
-    "me/cortex/voxy/server/TerrainDispatch.class",
 ]
 for name in need:
     if name not in new_names:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10m" not in text or "ipa10l" in text or "ipa10m" not in manifest or "ipa10l" in manifest:
-    raise SystemExit("version string was not bumped to ipa10m")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10m" not in text:
-    raise SystemExit("mods.toml version is not ipa10m")
+if "ipa10n" not in text or "ipa10m" in text or "ipa10n" not in manifest or "ipa10m" in manifest:
+    raise SystemExit("version string was not bumped to ipa10n")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10n" not in text:
+    raise SystemExit("mods.toml version is not ipa10n")
+if b"column_coverage" not in b.read("me/cortex/voxy/common/network/ColumnCoveragePayload.class"):
+    raise SystemExit("coverage payload is missing its channel id")
+if b"ColumnCoveragePayload" not in b.read("me/cortex/voxy/common/network/VoxyNetworking.class"):
+    raise SystemExit("coverage payload was not registered")
 config = b.read("me/cortex/voxy/common/config/VoxyConfig.class")
 if b"serverTerrainSyncDebug" not in config:
     raise SystemExit("debug flag was not added")

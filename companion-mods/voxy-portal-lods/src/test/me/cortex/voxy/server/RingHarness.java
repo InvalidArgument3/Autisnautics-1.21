@@ -21,6 +21,11 @@ public final class RingHarness {
         heldColumnsAreSkippedBeforeTheNewOne();
         skipLoopStopsAtTheDeadline();
         sentMemoryForgetsAChangedChunk();
+        clientHeldColumnIsNotVoxelized();
+        coverageArrivingMidRingIsRespected();
+        olderPeerWithoutCoverageStillSends();
+        staleColumnStaysSkippedAfterAnotherReport();
+        storedSectionBecomesChunkColumns();
         System.out.println("RingHarness passed");
     }
 
@@ -377,6 +382,136 @@ public final class RingHarness {
         TerrainSentMemory.clearPlayer("player");
         check(TerrainSentMemory.size("player", "minecraft:overworld") == 0, "leaving clears the player");
         System.out.println("ok sent memory invalidates on chunk change");
+    }
+
+    private static void clientHeldColumnIsNotVoxelized() {
+        TerrainSentMemory.clearAll();
+        TerrainAvailability.clearAll();
+        coverChunk("player", "world", -1, -1);
+        int[] attempts = new int[1];
+        int[] sent = RingScan.scan(new RingCursor(0, 0, 1), 0, 0, 0, 4, probe(attempts, "player", "world"), 4, null, null);
+        check(attempts[0] == 1, "the client-held column is not voxelized");
+        check(sent != null && !(sent[0] == -1 && sent[1] == -1), "the next column is still sent");
+        System.out.println("ok a client-held column the server never sent is skipped");
+    }
+
+    private static void coverageArrivingMidRingIsRespected() {
+        TerrainSentMemory.clearAll();
+        int[] steps = new int[1];
+        int[] attempts = new int[1];
+        int[] sent = RingScan.scan(new RingCursor(0, 0, 1), 0, 0, 0, 4, new RingScan.Probe() {
+            @Override
+            public boolean alreadyHeld(int x, int z) {
+                steps[0]++;
+                if (steps[0] == 1) {
+                    coverChunk("player", "world", 1, -1);
+                }
+                return TerrainSentMemory.holds("player", "world", x, z);
+            }
+
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return x == 1;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                attempts[0]++;
+                if (x == 1 && z == -1) {
+                    throw new AssertionError("coverage that arrived mid-ring was voxelized");
+                }
+                return RingScan.SENT;
+            }
+        }, 4, null, null);
+        check(sent != null && !(sent[0] == 1 && sent[1] == -1), "the newly reported column is not the send");
+        check(attempts[0] == 1, "only the column after the reported one is voxelized");
+        System.out.println("ok coverage arriving mid-ring is respected");
+    }
+
+    private static void olderPeerWithoutCoverageStillSends() {
+        TerrainSentMemory.clearAll();
+        int[] attempts = new int[1];
+        int[] sent = RingScan.scan(new RingCursor(0, 0, 1), 0, 0, 0, 2, probe(attempts, "player", "world"), 4, null, null);
+        check(sent != null && sent[0] == -1 && sent[1] == -1, "no coverage report still sends the nearest column");
+        check(attempts[0] == 1, "the older peer's column is voxelized");
+        System.out.println("ok an older peer without coverage still streams");
+    }
+
+    private static void staleColumnStaysSkippedAfterAnotherReport() {
+        TerrainSentMemory.clearAll();
+        TerrainAvailability.clearAll();
+        coverChunk("player", "minecraft:overworld#5", 4, 0);
+        check(TerrainSentMemory.holdKind("player", "minecraft:overworld#5", 4, 0) == TerrainSentMemory.CLIENT, "reported");
+        TerrainAvailability.note("minecraft:overworld", 4, 0);
+        check(!TerrainSentMemory.holds("player", "minecraft:overworld#5", 4, 0), "a reload drops the client bit");
+        coverChunk("player", "minecraft:overworld#5", 4, 0);
+        check(!TerrainSentMemory.holds("player", "minecraft:overworld#5", 4, 0), "a later report cannot revive a changed column");
+        System.out.println("ok a changed column stays stale");
+    }
+
+    private static void storedSectionBecomesChunkColumns() {
+        it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<byte[]> regions = new it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<byte[]>();
+        long section = me.cortex.voxy.common.world.WorldEngine.getWorldSectionId(0, 3, 2, -4);
+        long coarse = me.cortex.voxy.common.world.WorldEngine.getWorldSectionId(1, 3, 2, -4);
+        ColumnCoverageIndex.ingest(regions, coarse, 0, 0, 1000);
+        check(regions.isEmpty(), "a coarse section is not a column the server would skip");
+        ColumnCoverageIndex.ingest(regions, section, 0, 0, 1000);
+        check(me.cortex.voxy.common.world.WorldEngine.getX(section) == 3, "section x");
+        check(me.cortex.voxy.common.world.WorldEngine.getZ(section) == -4, "section z");
+        byte[] bits = regions.get(ColumnCoverageIndex.regionKey(0, -1));
+        check(ColumnCoverageIndex.test(bits, 6, -8), "chunk 6,-8");
+        check(ColumnCoverageIndex.test(bits, 7, -8), "chunk 7,-8");
+        check(ColumnCoverageIndex.test(bits, 6, -7), "chunk 6,-7");
+        check(ColumnCoverageIndex.test(bits, 7, -7), "chunk 7,-7");
+        check(ColumnCoverageIndex.count(bits) == 4, "one lod-0 section is four chunk columns");
+        System.out.println("ok a stored lod-0 section covers its chunk columns");
+    }
+
+    private static void coverChunk(String player, String world, int chunkX, int chunkZ) {
+        it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<byte[]> regions = new it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<byte[]>();
+        ColumnCoverageIndex.markChunk(regions, chunkX, chunkZ);
+        long key = ColumnCoverageIndex.regionKey(chunkX >> 5, chunkZ >> 5);
+        TerrainSentMemory.cover(player, world, ColumnCoverageIndex.regionX(key), ColumnCoverageIndex.regionZ(key), regions.get(key));
+    }
+
+    private static RingScan.Probe probe(int[] attempts, String player, String world) {
+        return new RingScan.Probe() {
+            @Override
+            public boolean alreadyHeld(int x, int z) {
+                return TerrainSentMemory.holds(player, world, x, z);
+            }
+
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                attempts[0]++;
+                return RingScan.SENT;
+            }
+        };
     }
 
     private static void check(boolean condition, String message) {

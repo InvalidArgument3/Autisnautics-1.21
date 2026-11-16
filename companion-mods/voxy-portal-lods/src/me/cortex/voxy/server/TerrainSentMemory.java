@@ -1,28 +1,67 @@
 package me.cortex.voxy.server;
 
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Columns already given to a player. Outlives the transport's 30 second dedup
- * window. A chunk load invalidates that position so a real change is sent again.
+ * Columns the player already has. {@link #HELD} is what this server sent.
+ * {@link #COVERAGE} is what the client reported from its own Voxy database.
+ * A chunk load is recorded in {@link #STALE} so a later report cannot put that
+ * column back: the client's copy is older than the edit.
  */
 public final class TerrainSentMemory {
+    public static final int NONE = 0;
+    public static final int SENT = 1;
+    public static final int CLIENT = 2;
     public static final int CAP = 65536;
 
     private static final Map<String, LongOpenHashSet> HELD = new ConcurrentHashMap<String, LongOpenHashSet>();
+    private static final Map<String, Long2ObjectOpenHashMap<byte[]>> COVERAGE = new ConcurrentHashMap<String, Long2ObjectOpenHashMap<byte[]>>();
+    /** Columns this dimension has reloaded. Keyed by dimension id, not by player. */
+    private static final Map<String, LongOpenHashSet> STALE = new ConcurrentHashMap<String, LongOpenHashSet>();
 
     private TerrainSentMemory() {
     }
 
     public static boolean holds(String player, String dimension, int x, int z) {
-        LongOpenHashSet set = HELD.get(key(player, dimension));
-        if (set == null) {
-            return false;
+        return holdKind(player, dimension, x, z) != NONE;
+    }
+
+    public static int holdKind(String player, String dimension, int x, int z) {
+        String id = key(player, dimension);
+        LongOpenHashSet set = HELD.get(id);
+        if (set != null) {
+            synchronized (set) {
+                if (set.contains(pack(x, z))) {
+                    return SENT;
+                }
+            }
         }
-        synchronized (set) {
-            return set.contains(pack(x, z));
+        return clientBit(id, x, z) ? CLIENT : NONE;
+    }
+
+    /**
+     * Replace one region of the client's report. Bits the server has already
+     * seen change are cleared, so a rescan cannot revive a stale column.
+     */
+    public static void cover(String player, String dimension, int regionX, int regionZ, byte[] bitmap) {
+        if (player == null || dimension == null || bitmap == null || bitmap.length != ColumnCoverageIndex.BYTE_LENGTH) {
+            return;
+        }
+        byte[] copy = Arrays.copyOf(bitmap, ColumnCoverageIndex.BYTE_LENGTH);
+        String id = key(player, dimension);
+        LongOpenHashSet stale = STALE.get(dimensionName(dimension));
+        if (stale != null) {
+            synchronized (stale) {
+                ColumnCoverageIndex.clearStale(copy, regionX, regionZ, stale);
+            }
+        }
+        Long2ObjectOpenHashMap<byte[]> regions = COVERAGE.computeIfAbsent(id, ignored -> new Long2ObjectOpenHashMap<byte[]>());
+        synchronized (regions) {
+            regions.put(ColumnCoverageIndex.regionKey(regionX, regionZ), copy);
         }
     }
 
@@ -45,14 +84,35 @@ public final class TerrainSentMemory {
         }
         long packed = pack(x, z);
         String suffix = "|" + dimension;
-        for (Map.Entry<String, LongOpenHashSet> entry : HELD.entrySet()) {
-            String heldKey = entry.getKey();
-            if (!heldKey.endsWith(suffix) && !heldKey.contains(suffix + "#")) {
+        LongOpenHashSet one = new LongOpenHashSet();
+        one.add(packed);
+        LongOpenHashSet stale = STALE.computeIfAbsent(dimension, ignored -> new LongOpenHashSet());
+        synchronized (stale) {
+            stale.add(packed);
+        }
+        for (String heldKey : HELD.keySet()) {
+            if (!matches(heldKey, suffix)) {
                 continue;
             }
-            LongOpenHashSet set = entry.getValue();
-            synchronized (set) {
-                set.remove(packed);
+            LongOpenHashSet set = HELD.get(heldKey);
+            if (set != null) {
+                synchronized (set) {
+                    set.remove(packed);
+                }
+            }
+        }
+        for (String heldKey : COVERAGE.keySet()) {
+            if (!matches(heldKey, suffix)) {
+                continue;
+            }
+            Long2ObjectOpenHashMap<byte[]> regions = COVERAGE.get(heldKey);
+            if (regions != null) {
+                synchronized (regions) {
+                    byte[] bits = regions.get(ColumnCoverageIndex.regionKey(x >> 5, z >> 5));
+                    if (bits != null) {
+                        ColumnCoverageIndex.clearStale(bits, x >> 5, z >> 5, one);
+                    }
+                }
             }
         }
     }
@@ -63,10 +123,13 @@ public final class TerrainSentMemory {
         }
         String prefix = player + "|";
         HELD.keySet().removeIf(key -> key.startsWith(prefix));
+        COVERAGE.keySet().removeIf(key -> key.startsWith(prefix));
     }
 
     public static void clearAll() {
         HELD.clear();
+        COVERAGE.clear();
+        STALE.clear();
     }
 
     public static int size(String player, String dimension) {
@@ -77,6 +140,39 @@ public final class TerrainSentMemory {
         synchronized (set) {
             return set.size();
         }
+    }
+
+    public static int clientColumns(String player, String dimension) {
+        Long2ObjectOpenHashMap<byte[]> regions = COVERAGE.get(key(player, dimension));
+        if (regions == null) {
+            return 0;
+        }
+        int total = 0;
+        synchronized (regions) {
+            for (byte[] bits : regions.values()) {
+                total += ColumnCoverageIndex.count(bits);
+            }
+        }
+        return total;
+    }
+
+    private static boolean clientBit(String id, int x, int z) {
+        Long2ObjectOpenHashMap<byte[]> regions = COVERAGE.get(id);
+        if (regions == null) {
+            return false;
+        }
+        synchronized (regions) {
+            return ColumnCoverageIndex.test(regions.get(ColumnCoverageIndex.regionKey(x >> 5, z >> 5)), x, z);
+        }
+    }
+
+    private static String dimensionName(String world) {
+        int hash = world.indexOf('#');
+        return hash < 0 ? world : world.substring(0, hash);
+    }
+
+    private static boolean matches(String heldKey, String suffix) {
+        return heldKey.endsWith(suffix) || heldKey.contains(suffix + "#");
     }
 
     private static String key(String player, String dimension) {
