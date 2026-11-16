@@ -7985,6 +7985,67 @@
             ]
         },
         {
+            "pakku_id": "dS3rv3rL1st4Inv",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "desired-servers",
+                "modrinth": "desired-servers"
+            },
+            "name": {
+                "curseforge": "Desired Servers",
+                "modrinth": "Desired Servers"
+            },
+            "id": {
+                "curseforge": "397292",
+                "modrinth": "GDpe4LHD"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "desiredservers-neoforge-1.21.1-1.6.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/GDpe4LHD/versions/NujdMPdL/desiredservers-neoforge-1.21.1-1.6.0.jar",
+                    "id": "NujdMPdL",
+                    "parent_id": "GDpe4LHD",
+                    "hashes": {
+                        "sha1": "4b669511628a866b147a4f32c972f0602352f1f2",
+                        "sha512": "86b6e64cc3c9a9620064526a997dd9933d4298a1bbf12169c21c9db3f05be5d2e6b6c22870bb34558317fe4b15cff606db6074c93a6d3bb53d4a3df9201570cc"
+                    },
+                    "required_dependencies": [],
+                    "size": 18979,
+                    "date_published": "2024-12-22T14:33:16.946129Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "desiredservers-neoforge-1.21.1-1.6.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6013/349/desiredservers-neoforge-1.21.1-1.6.0.jar",
+                    "id": "6013349",
+                    "parent_id": "397292",
+                    "hashes": {
+                        "sha1": "4b669511628a866b147a4f32c972f0602352f1f2",
+                        "md5": "0103647c2f7e4cd9b49c890e6c0c6de3"
+                    },
+                    "required_dependencies": [],
+                    "size": 18979,
+                    "date_published": "2024-12-22T14:31:27.000Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "RE5SwK4WczNrSJSi",
             "type": "MOD",
             "side": "SERVER",

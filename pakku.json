@@ -334,6 +334,10 @@
         "default-options": {
             "redistributable": true
         },
+        "desired-servers": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
         "yeetus-experimentus": {
             "redistributable": true
         },
