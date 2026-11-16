@@ -2,7 +2,7 @@
 
 Client-only companion. It does not edit Sodium, Voxy, or Immersive Portals. The pack loads `portalrenderguard-1.0.1.jar` from `.pakku/client-overrides/mods/` (Git LFS), the same place as `iasodiumfix`. It does not go in `.pakku/overrides/mods`, because that folder is copied onto the server.
 
-Minecraft 1.21.1, NeoForge 21.1.265. Built with `build.sh` and Java 21. The compile classpath is the pack's Voxy ipa10l jar, `ip_aeronautics-2.8.17.jar`, JOML, and a Mojmap remap of the official 1.21.1 client. Those jars are not copied into the mod jar.
+Minecraft 1.21.1, NeoForge 21.1.265. Built with `build.sh` and Java 21. The compile classpath is the pack's Voxy ipa10m jar, `ip_aeronautics-2.8.17.jar`, JOML, and a Mojmap remap of the official 1.21.1 client. Those jars are not copied into the mod jar.
 
 ## Build
 

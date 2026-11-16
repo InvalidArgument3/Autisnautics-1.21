@@ -15,8 +15,12 @@ import me.cortex.voxy.common.Logger;
  */
 public final class TerrainDispatch {
     private static final int COLUMN_FRAMES = 3;
+    private static final long SUMMARY_NANOS = 5_000_000_000L;
     private static final Map<String, RingCursor> CURSORS = new ConcurrentHashMap<String, RingCursor>();
+    private static final Map<String, Counters> COUNTERS = new ConcurrentHashMap<String, Counters>();
+    private static final Map<String, String> LAST_WORLD = new ConcurrentHashMap<String, String>();
     private static int failures;
+    private static long nextSummaryNanos;
     private static Method hasGenerated;
     private static Method sendColumn;
     private static Constructor<?> candidateCtor;
@@ -40,26 +44,53 @@ public final class TerrainDispatch {
         }
         int mode = TerrainStreamPolicy.prepareWalk(player);
         if (mode == 1) {
+            noteReason(player, "paused");
+            maybeSummarize();
             return false;
         }
         try {
             String dimension = dimension(level);
+            String world = dimension + "#" + seed(level);
             String id = String.valueOf(uuid(player));
+            String previousWorld = LAST_WORLD.put(id, world);
+            if (previousWorld != null && !previousWorld.equals(world)) {
+                TerrainSentMemory.clearPlayer(id);
+            }
             int cx = chunkCoord(player, "x");
             int cz = chunkCoord(player, "z");
-            int minRadius = Math.max(1, inner + 1);
-            RingCursor cursor = CURSORS.computeIfAbsent(id + "|" + dimension, key -> new RingCursor(cx, cz, minRadius));
-            cursor.retargetIfMoved(cx, cz, minRadius);
+            int start = TerrainStreamPolicy.lodStartChebyshev(inner);
+            int exclusive = Math.max(0, start - 1);
+            RingCursor cursor = CURSORS.computeIfAbsent(id + "|" + world, key -> new RingCursor(cx, cz, start));
             if (mode == 2) {
-                cursor.retargetIfMoved(cx + 1, cz, minRadius);
-                cursor.retargetIfMoved(cx, cz, minRadius);
+                cursor.reset(cx, cz, start);
+            } else {
+                cursor.retargetIfMoved(cx, cz, start);
             }
-            int[] sent = RingScan.scan(cursor, cx, cz, inner, max, new Io(level, engine, player, dimension), TerrainAvailability.MAX_CELL_ATTEMPTS, TerrainDispatch::pastDeadline, (x, z) -> TerrainAvailability.logSkipOnce(dimension, x, z));
-            if (sent == null) {
-                return false;
+            Counters counters = COUNTERS.computeIfAbsent(id + "|" + world, key -> new Counters());
+            counters.ring = cursor.radius();
+            counters.max = max;
+            counters.reason = "scanning";
+            int[] sent = RingScan.scan(cursor, cx, cz, exclusive, max, new Io(level, engine, player, dimension, world, id, counters), TerrainAvailability.MAX_CELL_ATTEMPTS, TerrainDispatch::pastDeadline, (x, z) -> {
+                counters.abandoned++;
+                counters.reason = "abandoned";
+                TerrainAvailability.logSkipOnce(dimension, x, z);
+            });
+            counters.ring = cursor.radius();
+            if (sent != null) {
+                counters.sent++;
+                counters.reason = "sent";
+                TerrainAvailability.clear(dimension, sent[0], sent[1]);
+                TerrainSentMemory.mark(id, world, sent[0], sent[1]);
+                maybeSummarize();
+                return true;
             }
-            TerrainAvailability.clear(dimension, sent[0], sent[1]);
-            return true;
+            if (!"backpressure".equals(counters.reason) && pastDeadline()) {
+                counters.reason = "deadline";
+            } else if ("scanning".equals(counters.reason)) {
+                counters.reason = "idle";
+            }
+            maybeSummarize();
+            return false;
         } catch (Throwable failure) {
             if (failures++ < 3) {
                 Logger.warn("[terrain-sync] ring step failed", failure);
@@ -75,16 +106,62 @@ public final class TerrainDispatch {
         }
         String prefix = id.toString() + "|";
         CURSORS.keySet().removeIf(key -> key.startsWith(prefix));
+        COUNTERS.keySet().removeIf(key -> key.startsWith(prefix));
+        LAST_WORLD.remove(id.toString());
+        TerrainSentMemory.clearPlayer(id.toString());
     }
 
     public static void clearAll() {
         CURSORS.clear();
+        COUNTERS.clear();
+        LAST_WORLD.clear();
         TerrainAvailability.clearAll();
         failures = 0;
     }
 
     public static int cursors() {
         return CURSORS.size();
+    }
+
+    private static void noteReason(Object player, String reason) {
+        UUID id = uuid(player);
+        if (id == null) {
+            return;
+        }
+        Counters counters = COUNTERS.computeIfAbsent(id.toString(), key -> new Counters());
+        counters.reason = reason;
+    }
+
+    private static boolean debugEnabled() {
+        try {
+            Class<?> configClass = Class.forName("me.cortex.voxy.common.config.VoxyConfig");
+            Object config = configClass.getField("CONFIG").get(null);
+            return configClass.getField("serverTerrainSyncDebug").getBoolean(config);
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
+    private static void maybeSummarize() {
+        if (!debugEnabled()) {
+            return;
+        }
+        long now = System.nanoTime();
+        if (now < nextSummaryNanos) {
+            return;
+        }
+        nextSummaryNanos = now + SUMMARY_NANOS;
+        for (Map.Entry<String, Counters> entry : COUNTERS.entrySet()) {
+            Counters counters = entry.getValue();
+            Logger.info("[terrain-sync] player=" + entry.getKey()
+                    + " ring=" + counters.ring + "/" + counters.max
+                    + " sent=" + counters.sent
+                    + " skippedHeld=" + counters.skippedHeld
+                    + " skippedKnown=" + counters.skippedKnown
+                    + " skippedMissing=" + counters.skippedMissing
+                    + " abandoned=" + counters.abandoned
+                    + " reason=" + counters.reason);
+        }
     }
 
     private static boolean pastDeadline() {
@@ -101,12 +178,28 @@ public final class TerrainDispatch {
         private final Object engine;
         private final Object player;
         private final String dimension;
+        private final String world;
+        private final String playerId;
+        private final Counters counters;
 
-        Io(Object level, Object engine, Object player, String dimension) {
+        Io(Object level, Object engine, Object player, String dimension, String world, String playerId, Counters counters) {
             this.level = level;
             this.engine = engine;
             this.player = player;
             this.dimension = dimension;
+            this.world = world;
+            this.playerId = playerId;
+            this.counters = counters;
+        }
+
+        @Override
+        public boolean alreadyHeld(int x, int z) {
+            if (!TerrainSentMemory.holds(this.playerId, this.world, x, z)) {
+                return false;
+            }
+            this.counters.skippedHeld++;
+            this.counters.reason = "skipping_held";
+            return true;
         }
 
         @Override
@@ -114,7 +207,12 @@ public final class TerrainDispatch {
             try {
                 ensure();
                 Object pos = chunkPosCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z));
-                return (Boolean) known.invoke(null, this.player, this.level, pos);
+                boolean hit = (Boolean) known.invoke(null, this.player, this.level, pos);
+                if (hit) {
+                    this.counters.skippedKnown++;
+                    this.counters.reason = "skipping_known";
+                }
+                return hit;
             } catch (ReflectiveOperationException e) {
                 return false;
             }
@@ -152,7 +250,9 @@ public final class TerrainDispatch {
                     return RingScan.FAIL;
                 }
                 if (!disk) {
-                    return RingScan.WAIT;
+                    this.counters.skippedMissing++;
+                    this.counters.reason = "skip_ungenerated";
+                    return RingScan.SKIP;
                 }
                 return region(x, z);
             } catch (Throwable failure) {
@@ -169,6 +269,7 @@ public final class TerrainDispatch {
 
         private int offer(int x, int z, List<byte[]> wires) throws ReflectiveOperationException {
             if (saturated(String.valueOf(uuid(this.player)))) {
+                this.counters.reason = "backpressure";
                 return RingScan.BACKPRESSURE;
             }
             Object pos = chunkPosCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z));
@@ -253,6 +354,15 @@ public final class TerrainDispatch {
         flightField.setAccessible(true);
     }
 
+    private static long seed(Object level) {
+        try {
+            Object value = level.getClass().getMethod("getSeed").invoke(level);
+            return value instanceof Number ? ((Number) value).longValue() : 0L;
+        } catch (ReflectiveOperationException e) {
+            return 0L;
+        }
+    }
+
     private static String dimension(Object level) throws ReflectiveOperationException {
         Object key = level.getClass().getMethod("dimension").invoke(level);
         Object location = key.getClass().getMethod("location").invoke(key);
@@ -275,5 +385,16 @@ public final class TerrainDispatch {
 
     private static long pack(int x, int z) {
         return (long) x & 0xFFFFFFFFL | ((long) z & 0xFFFFFFFFL) << 32;
+    }
+
+    static final class Counters {
+        int ring;
+        int max;
+        int sent;
+        int skippedHeld;
+        int skippedKnown;
+        int skippedMissing;
+        int abandoned;
+        String reason = "idle";
     }
 }

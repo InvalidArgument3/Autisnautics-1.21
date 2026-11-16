@@ -20,5 +20,6 @@
   "server_terrain_sync_background_walk_enabled": true,
   "server_terrain_sync_background_chunks_per_tick": 1,
   "server_terrain_sync_background_tick_interval": 1,
-  "server_terrain_sync_background_pause_mspt": 40.0
+  "server_terrain_sync_background_pause_mspt": 40.0,
+  "server_terrain_sync_debug": false
 }

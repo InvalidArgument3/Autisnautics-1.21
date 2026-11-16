@@ -5,17 +5,22 @@ import java.util.List;
 
 /**
  * Drives {@link RingScan} the way the dedicated-server walker will: nearest ring first,
- * a rejected send stays on that cell, and a cell that is noted but not readable yet is not skipped.
+ * a rejected send stays on that cell, and a noted hole does not block later columns.
  */
 public final class RingHarness {
     public static void main(String[] args) throws Exception {
         ringsMatchWalkCursor();
         rejectedOfferIsRetried();
-        unreadableNoteWaits();
+        notedHoleDoesNotStall();
         capSkipsOnce();
         backpressureHolds();
         pendingFrameGoesToOwnerFront();
         availabilityRoundTrip();
+        lodsStartInsideTheVanillaCircle();
+        oneChunkMoveKeepsTheOuterRing();
+        heldColumnsAreSkippedBeforeTheNewOne();
+        skipLoopStopsAtTheDeadline();
+        sentMemoryForgetsAChangedChunk();
         System.out.println("RingHarness passed");
     }
 
@@ -103,9 +108,10 @@ public final class RingHarness {
         System.out.println("ok rejected offer retries the same cell");
     }
 
-    private static void unreadableNoteWaits() {
-        RingCursor cursor = new RingCursor(0, 0, 1);
-        int[] waited = RingScan.scan(cursor, 0, 0, 0, 3, new RingScan.Probe() {
+    private static void notedHoleDoesNotStall() {
+        RingCursor cursor = new RingCursor(0, 0, 11);
+        int[] hole = new int[] {-11, -11};
+        int[] sent = RingScan.scan(cursor, 0, 0, 10, 40, new RingScan.Probe() {
             @Override
             public boolean known(int x, int z) {
                 return false;
@@ -113,26 +119,27 @@ public final class RingHarness {
 
             @Override
             public boolean noted(int x, int z) {
-                return x == -1 && z == -1;
+                return x == hole[0] && z == hole[1];
             }
 
             @Override
             public boolean onDisk(int x, int z) {
-                return x != -1;
+                return !(x == hole[0] && z == hole[1]);
             }
 
             @Override
             public int attempt(int x, int z) {
-                if (x == -1 && z == -1) {
-                    return RingScan.WAIT;
+                if (x == hole[0] && z == hole[1]) {
+                    return RingScan.SKIP;
                 }
                 return RingScan.SENT;
             }
         }, 8, null, null);
-        check(waited == null, "unread note does not send a farther chunk");
-        int[] again = cursor.peek(1, 3);
-        check(again[0] == -1 && again[1] == -1, "cursor stays on the unread cell");
-        System.out.println("ok unreadable note waits");
+        check(sent != null, "a saved column past the hole is sent");
+        check(!(sent[0] == hole[0] && sent[1] == hole[1]), "the unreadable cell is not the send");
+        int distance = Math.max(Math.abs(sent[0]), Math.abs(sent[1]));
+        check(distance >= 11 && distance <= 12, "the send is the next saved column, not a restart");
+        System.out.println("ok a noted hole does not stall the ring");
     }
 
     private static void capSkipsOnce() {
@@ -231,6 +238,145 @@ public final class RingHarness {
         TerrainAvailability.clear("minecraft:overworld", 4, -2);
         check(!TerrainAvailability.contains("minecraft:overworld", 4, -2), "cleared");
         System.out.println("ok availability set");
+    }
+
+    private static void lodsStartInsideTheVanillaCircle() {
+        check(TerrainStreamPolicy.lodStartChebyshev(10) == 10, "view 10 starts on ring 10");
+        check(TerrainStreamPolicy.lodStartChebyshev(2) == 2, "view 2 starts on ring 2");
+        check(TerrainStreamPolicy.lodStartChebyshev(0) == 1, "unknown view still starts at 1");
+        check(TerrainStreamPolicy.lodExclusiveInner(10) == 9, "rings through 9 stay inside the square");
+        RingCursor cursor = new RingCursor(0, 0, 1);
+        int[] sent = RingScan.scan(cursor, 0, 0, 9, 20, new RingScan.Probe() {
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                return RingScan.SENT;
+            }
+        }, 4, null, null);
+        check(sent != null, "a column in the overlap ring is sent");
+        check(Math.max(Math.abs(sent[0]), Math.abs(sent[1])) == 10, "first send is the outer vanilla ring, not the one past it");
+        System.out.println("ok LOD ring overlaps the outer vanilla square");
+    }
+
+    private static void oneChunkMoveKeepsTheOuterRing() {
+        RingCursor cursor = new RingCursor(0, 0, 9);
+        for (int i = 0; i < 9 * 8; i++) {
+            cursor.peek(9, 40);
+            cursor.commit(9, 40);
+        }
+        check(cursor.radius() == 10, "the ring advanced");
+        cursor.retargetIfMoved(1, 0, 9);
+        check(cursor.radius() == 10, "one chunk of movement keeps the outward ring");
+        cursor.retargetIfMoved(30, 0, 9);
+        check(cursor.radius() == 9, "a long jump starts again at the inner ring");
+        System.out.println("ok a short move does not restart the ring");
+    }
+
+    private static void heldColumnsAreSkippedBeforeTheNewOne() {
+        RingCursor cursor = new RingCursor(0, 0, 1);
+        int[] attempts = new int[1];
+        int[] heldSkips = new int[1];
+        int[] sent = RingScan.scan(cursor, 0, 0, 0, 25, new RingScan.Probe() {
+            @Override
+            public boolean alreadyHeld(int x, int z) {
+                int distance = Math.max(Math.abs(x), Math.abs(z));
+                if (distance < 20) {
+                    heldSkips[0]++;
+                    return true;
+                }
+                return false;
+            }
+
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                attempts[0]++;
+                return RingScan.SENT;
+            }
+        }, 4, null, null);
+        check(heldSkips[0] > 100, "the already-held area is crossed in this pass");
+        check(attempts[0] == 1, "only the new column is voxelized");
+        check(sent != null && Math.max(Math.abs(sent[0]), Math.abs(sent[1])) == 20, "the new column is sent");
+        System.out.println("ok held columns are skipped before the new one");
+    }
+
+    private static void skipLoopStopsAtTheDeadline() {
+        RingCursor cursor = new RingCursor(0, 0, 1);
+        int[] checks = new int[1];
+        int[] attempts = new int[1];
+        int[] sent = RingScan.scan(cursor, 0, 0, 0, 400, new RingScan.Probe() {
+            @Override
+            public boolean alreadyHeld(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                attempts[0]++;
+                return RingScan.SENT;
+            }
+        }, 4, () -> ++checks[0] > 50, null);
+        check(sent == null, "the deadline ends the pass with nothing sent");
+        check(attempts[0] == 0, "held skips do not start a send");
+        check(checks[0] > 50 && checks[0] < 80, "the loop stops at the time cap");
+        System.out.println("ok skip loop stops at the deadline");
+    }
+
+    private static void sentMemoryForgetsAChangedChunk() {
+        TerrainSentMemory.clearAll();
+        TerrainAvailability.clearAll();
+        TerrainSentMemory.mark("player", "minecraft:overworld#7", 12, -3);
+        check(TerrainSentMemory.holds("player", "minecraft:overworld#7", 12, -3), "marked");
+        check(!TerrainSentMemory.holds("player", "minecraft:overworld#8", 12, -3), "other world");
+        TerrainAvailability.note("minecraft:overworld", 12, -3);
+        check(!TerrainSentMemory.holds("player", "minecraft:overworld#7", 12, -3), "a chunk load drops the sent mark");
+        TerrainSentMemory.mark("player", "minecraft:overworld", 1, 1);
+        TerrainSentMemory.clearPlayer("player");
+        check(TerrainSentMemory.size("player", "minecraft:overworld") == 0, "leaving clears the player");
+        System.out.println("ok sent memory invalidates on chunk change");
     }
 
     private static void check(boolean condition, String message) {

@@ -20,16 +20,46 @@ public final class RingCursor {
         this.radius = Math.max(1, minRadius);
     }
 
-    public void retargetIfMoved(int newCenterX, int newCenterZ, int minRadius) {
-        if (this.centerX == newCenterX && this.centerZ == newCenterZ) {
-            return;
-        }
+    public int radius() {
+        return this.radius;
+    }
+
+    /** View-distance change or a long jump. Starts again on the inner ring. */
+    public void reset(int newCenterX, int newCenterZ, int minRadius) {
         this.centerX = newCenterX;
         this.centerZ = newCenterZ;
         this.radius = Math.max(1, minRadius);
         this.edgeIndex = 0;
         this.holding = false;
         this.attempts = 0;
+    }
+
+    /**
+     * A step of a few chunks recenters the ring but keeps the outward radius.
+     * Restarting at the vanilla edge on every chunk crossing never reaches the
+     * pregenerated terrain.
+     */
+    public void retargetIfMoved(int newCenterX, int newCenterZ, int minRadius) {
+        if (this.centerX == newCenterX && this.centerZ == newCenterZ) {
+            if (this.radius < minRadius) {
+                this.radius = Math.max(1, minRadius);
+                this.edgeIndex = 0;
+                this.holding = false;
+                this.attempts = 0;
+            }
+            return;
+        }
+        int shift = Math.max(Math.abs(newCenterX - this.centerX), Math.abs(newCenterZ - this.centerZ));
+        this.centerX = newCenterX;
+        this.centerZ = newCenterZ;
+        this.holding = false;
+        this.attempts = 0;
+        this.edgeIndex = 0;
+        if (shift > 4) {
+            this.radius = Math.max(1, minRadius);
+        } else if (this.radius < minRadius) {
+            this.radius = Math.max(1, minRadius);
+        }
     }
 
     public int[] peek(int minRadius, int maxRadius) {

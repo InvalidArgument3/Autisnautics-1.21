@@ -8,7 +8,9 @@ public final class RingScan {
     public static final int WAIT = 2;
     public static final int FAIL = 3;
     public static final int BACKPRESSURE = 4;
-    public static final int MAX_STEPS = 256;
+    /** Not readable and not worth holding the cursor for. */
+    public static final int SKIP = 5;
+    public static final int MAX_STEPS = 8192;
 
     public interface Probe {
         boolean known(int x, int z);
@@ -18,6 +20,11 @@ public final class RingScan {
         boolean onDisk(int x, int z);
 
         int attempt(int x, int z);
+
+        /** Column the client already has. Default is no memory. */
+        default boolean alreadyHeld(int x, int z) {
+            return false;
+        }
     }
 
     public interface Abandoned {
@@ -44,7 +51,7 @@ public final class RingScan {
                 cursor.skip(min, maxInclusive);
                 continue;
             }
-            if (probe.known(x, z)) {
+            if (probe.alreadyHeld(x, z) || probe.known(x, z)) {
                 cursor.skip(min, maxInclusive);
                 continue;
             }
@@ -58,6 +65,10 @@ public final class RingScan {
             if (result == SENT) {
                 cursor.commit(min, maxInclusive);
                 return cell;
+            }
+            if (result == SKIP) {
+                cursor.skip(min, maxInclusive);
+                continue;
             }
             if (result == WAIT || result == BACKPRESSURE) {
                 return null;

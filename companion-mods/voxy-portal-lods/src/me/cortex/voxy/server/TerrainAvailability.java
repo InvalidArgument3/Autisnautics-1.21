@@ -23,6 +23,7 @@ public final class TerrainAvailability {
         synchronized (set) {
             set.add(pack(x, z));
         }
+        TerrainSentMemory.invalidate(dimension, x, z);
     }
 
     public static boolean contains(String dimension, int x, int z) {
@@ -50,6 +51,7 @@ public final class TerrainAvailability {
         synchronized (LOGGED) {
             LOGGED.clear();
         }
+        TerrainSentMemory.clearAll();
     }
 
     /** Queue key is {@code levelId|dimensionType|seed}. */

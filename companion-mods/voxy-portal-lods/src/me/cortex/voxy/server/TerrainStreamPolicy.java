@@ -10,8 +10,11 @@ import me.cortex.voxy.common.config.VoxyConfig;
  * Per-player LOD streaming policy for the dedicated server.
  *
  * <p>The outer radius stays the distance the client sent in {@code VoxyHelloPayload}
- * ({@code sectionRenderDistance * 32} chunks). The inner radius is where vanilla
- * chunks already cover the player, so LOD packets start on the next chunk out.
+ * ({@code sectionRenderDistance * 32} chunks). The inner radius is the vanilla
+ * view distance, a square of that many chunks. LOD packets used to start on the
+ * next ring out ({@code distance > viewDistance}), which left the ring at the
+ * view distance empty. They now start on that ring, so the outer vanilla chunks
+ * and the first LOD ring overlap by one.
  * A configured {@code serverTerrainSyncInnerRadiusChunks} above zero is a fixed
  * override; zero follows the view distance.
  *
@@ -52,6 +55,24 @@ public final class TerrainStreamPolicy {
         }
         // Unknown view distance still leaves the player's own chunks to vanilla.
         return Math.max(client, 2);
+    }
+
+    /**
+     * First chebyshev ring to stream. Vanilla's view distance is a square of
+     * this radius, and the walker used to begin at {@code radius + 1}.
+     * Starting here overlaps that outer square by one chunk.
+     */
+    public static int lodStartChebyshev(int vanillaViewChunks) {
+        return Math.max(1, vanillaViewChunks);
+    }
+
+    /** {@code distance <=} this value is left to vanilla. */
+    public static int lodExclusiveInner(int vanillaViewChunks) {
+        return Math.max(0, lodStartChebyshev(vanillaViewChunks) - 1);
+    }
+
+    public static int lodExclusiveInner(Object player) {
+        return lodExclusiveInner(innerRadius(player));
     }
 
     public static int innerRadius(Object player) {
