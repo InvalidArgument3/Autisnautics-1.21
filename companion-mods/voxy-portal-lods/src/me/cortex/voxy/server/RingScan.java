@@ -10,6 +10,8 @@ public final class RingScan {
     public static final int BACKPRESSURE = 4;
     /** Not readable and not worth holding the cursor for. */
     public static final int SKIP = 5;
+    /** Queued for a background read. The cursor moves on; the send happens later, in order. */
+    public static final int SCHEDULED = 6;
     public static final int MAX_STEPS = 8192;
 
     public interface Probe {
@@ -66,7 +68,7 @@ public final class RingScan {
                 cursor.commit(min, maxInclusive);
                 return cell;
             }
-            if (result == SKIP) {
+            if (result == SKIP || result == SCHEDULED) {
                 cursor.skip(min, maxInclusive);
                 continue;
             }

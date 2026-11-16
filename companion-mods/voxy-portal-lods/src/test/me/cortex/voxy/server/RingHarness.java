@@ -28,6 +28,7 @@ public final class RingHarness {
         storedSectionBecomesChunkColumns();
         standStillReachesPastTheLoadedRings();
         oneTickSendsABurst();
+        scheduledCellsStayInOrder();
         renderSwapDoesNotDropThePlayersWorld();
         coverageKeyMatchesTheWalker();
         System.out.println("RingHarness passed");
@@ -564,6 +565,39 @@ public final class RingHarness {
         }, 0, 0, 9, 512, Math.max(budget, ringCells));
         check(sent == ringCells, "one pass sends the whole ring, sent " + sent);
         check(cursor.radius() > 10, "the burst walked past the first ring, radius " + cursor.radius());
+    }
+
+    private static void scheduledCellsStayInOrder() {
+        RingCursor cursor = new RingCursor(0, 0, 10);
+        int[] scheduled = new int[1];
+        int[] sent = RingScan.scan(cursor, 0, 0, 9, 512, new RingScan.Probe() {
+            @Override
+            public boolean known(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean noted(int x, int z) {
+                return false;
+            }
+
+            @Override
+            public boolean onDisk(int x, int z) {
+                return true;
+            }
+
+            @Override
+            public int attempt(int x, int z) {
+                if (scheduled[0] < 3) {
+                    scheduled[0]++;
+                    return RingScan.SCHEDULED;
+                }
+                return RingScan.SENT;
+            }
+        }, 32, () -> false, null);
+        check(scheduled[0] == 3, "three columns were queued before the send");
+        check(sent != null && Math.max(Math.abs(sent[0]), Math.abs(sent[1])) == 10, "the send is still on the first ring");
+        check(!(sent[0] == -10 && sent[1] == -10), "the queued corner is not also the send");
     }
 
     private static void renderSwapDoesNotDropThePlayersWorld() {

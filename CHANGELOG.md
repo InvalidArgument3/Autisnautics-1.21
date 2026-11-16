@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10p1** → **ipa10q** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar`, client and server). Generated columns are read on the chunk IO worker and voxelized on a two-thread pool. The server tick only offers finished columns, nearest first, and still sends one column when the average tick is over 40 ms. `acceptLevel` still returns a `ClientLevel`. The ipa10p1 jar is removed.
+
 ## [0.1.18]
 - Custom Voxy portal-LOD build **ipa10p** → **ipa10p1** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p1.jar`, client and server). ipa10p crashed the client on startup with `java.lang.VerifyError` in `TerrainSyncClientHandler.tickDrainApplyQueue`: `player.level()` is a `Level`, and the apply path calls `ClientLevel.registryAccess`. The player's own level is now taken as a `ClientLevel`. A packet for that world is still applied while Immersive Portals has swapped the render level, and a packet for any other world is still dropped. The ipa10p jar is removed.
 

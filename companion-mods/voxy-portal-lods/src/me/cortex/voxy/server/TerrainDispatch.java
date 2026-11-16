@@ -39,6 +39,14 @@ public final class TerrainDispatch {
     }
 
     public static boolean trySend(Object level, Object engine, Object player, int inner, int max) {
+        if (ColumnProfile.suppressWalker) {
+            return false;
+        }
+        return sendOnce(level, engine, player, inner, max);
+    }
+
+    /** One tick of the ring. The profile calls this directly so the measurement is the real walk. */
+    public static boolean sendOnce(Object level, Object engine, Object player, int inner, int max) {
         if (level == null || player == null) {
             return false;
         }
@@ -61,6 +69,7 @@ public final class TerrainDispatch {
             int exclusive = Math.max(0, start - 1);
             RingCursor cursor = CURSORS.computeIfAbsent(id + "|" + world, key -> new RingCursor(cx, cz, start));
             if (mode == 2) {
+                TerrainWorkers.drop(id);
                 cursor.reset(cx, cz, start);
             } else {
                 cursor.retargetIfMoved(cx, cz, start);
@@ -95,9 +104,11 @@ public final class TerrainDispatch {
                     counters.reason = "deadline";
                 } else if (cursor.holding()) {
                     counters.reason = "retrying";
-                } else if ("scanning".equals(counters.reason)) {
-                    counters.reason = "idle";
-                }
+            } else if (TerrainWorkers.busy(id)) {
+                counters.reason = "scheduled";
+            } else if ("scanning".equals(counters.reason)) {
+                counters.reason = "idle";
+            }
             }
             maybeSummarize();
             return produced > 0;
@@ -119,6 +130,7 @@ public final class TerrainDispatch {
         COUNTERS.keySet().removeIf(key -> key.startsWith(prefix));
         LAST_WORLD.remove(id.toString());
         TerrainSentMemory.clearPlayer(id.toString());
+        TerrainWorkers.drop(id.toString());
     }
 
     public static void clearAll() {
@@ -136,6 +148,11 @@ public final class TerrainDispatch {
     /** How many columns one tick may voxelize. A busy server stays at one. */
     public static int columnsThisTick(boolean serverBusy) {
         return serverBusy ? 1 : 32;
+    }
+
+    /** How many columns may be in the background read ahead of the cursor. */
+    public static int asyncWindow(Object player) {
+        return columnsThisTick(serverBusy(player)) == 1 ? 1 : 24;
     }
 
     /** Keep walking until the tick's column budget or the scan has nothing to send. */
@@ -243,6 +260,15 @@ public final class TerrainDispatch {
         }
     }
 
+    public static void armDeadline(long budgetNanos) {
+        try {
+            ensure();
+            deadlineField.setLong(null, System.nanoTime() + budgetNanos);
+        } catch (ReflectiveOperationException ignored) {
+            // The profile tick then runs without a deadline and the scan's step cap still applies.
+        }
+    }
+
     private static boolean pastDeadline() {
         try {
             ensure();
@@ -273,6 +299,9 @@ public final class TerrainDispatch {
 
         @Override
         public boolean alreadyHeld(int x, int z) {
+            if (ColumnProfile.timing) {
+                ColumnProfile.cell();
+            }
             int kind = TerrainSentMemory.holdKind(this.playerId, this.world, x, z);
             if (kind == TerrainSentMemory.NONE) {
                 return false;
@@ -280,9 +309,15 @@ public final class TerrainDispatch {
             if (kind == TerrainSentMemory.CLIENT) {
                 this.counters.skippedClient++;
                 this.counters.reason = "skipping_client";
+                if (ColumnProfile.timing) {
+                    ColumnProfile.skip("client");
+                }
             } else {
                 this.counters.skippedHeld++;
                 this.counters.reason = "skipping_held";
+                if (ColumnProfile.timing) {
+                    ColumnProfile.skip("held");
+                }
             }
             return true;
         }
@@ -296,6 +331,9 @@ public final class TerrainDispatch {
                 if (hit) {
                     this.counters.skippedKnown++;
                     this.counters.reason = "skipping_known";
+                    if (ColumnProfile.timing) {
+                        ColumnProfile.skip("known");
+                    }
                 }
                 return hit;
             } catch (ReflectiveOperationException e) {
@@ -312,7 +350,12 @@ public final class TerrainDispatch {
         public boolean onDisk(int x, int z) {
             try {
                 ensure();
-                return (Boolean) hasGenerated.invoke(null, this.level, Integer.valueOf(x), Integer.valueOf(z));
+                long started = ColumnProfile.timing ? System.nanoTime() : 0L;
+                boolean hit = (Boolean) hasGenerated.invoke(null, this.level, Integer.valueOf(x), Integer.valueOf(z));
+                if (ColumnProfile.timing) {
+                    ColumnProfile.add("header", System.nanoTime() - started);
+                }
+                return hit;
             } catch (ReflectiveOperationException e) {
                 return false;
             }
@@ -325,7 +368,11 @@ public final class TerrainDispatch {
                 boolean disk = this.onDisk(x, z);
                 Object live = liveChunk(x, z);
                 if (live != null) {
+                    long ingestStart = ColumnProfile.timing ? System.nanoTime() : 0L;
                     List<byte[]> wires = ingest(live);
+                    if (ColumnProfile.timing) {
+                        ColumnProfile.add("liveIngest", System.nanoTime() - ingestStart);
+                    }
                     if (!wires.isEmpty()) {
                         return offer(x, z, wires);
                     }
@@ -334,11 +381,17 @@ public final class TerrainDispatch {
                     }
                     this.counters.skippedMissing++;
                     this.counters.reason = "skip_unreadable";
+                    if (ColumnProfile.timing) {
+                        ColumnProfile.skip("unreadable");
+                    }
                     return RingScan.SKIP;
                 }
                 if (!disk) {
                     this.counters.skippedMissing++;
                     this.counters.reason = "skip_ungenerated";
+                    if (ColumnProfile.timing) {
+                        ColumnProfile.skip("ungenerated");
+                    }
                     return RingScan.SKIP;
                 }
                 return region(x, z);
@@ -348,24 +401,27 @@ public final class TerrainDispatch {
         }
 
         private int region(int x, int z) {
-            try {
-                long key = pack(x, z);
-                Object candidate = candidateCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z), Long.valueOf(key));
-                boolean sent = (Boolean) sendColumn.invoke(null, this.level, this.engine, this.player, candidate);
-                // A disk read that produced nothing will not start producing something
-                // on the next tick. Holding the cursor here freezes the ring on the
-                // first chunk past the loaded set until the player changes chunk.
-                if (!sent) {
+            if (ColumnProfile.timing && !ColumnProfile.asyncMeasure) {
+                int result = ColumnStages.time(this.level, this.engine, this.player, x, z);
+                if (result == RingScan.SKIP) {
                     this.counters.skippedMissing++;
                     this.counters.reason = "skip_unreadable";
-                    return RingScan.SKIP;
+                    ColumnProfile.skip("unreadable");
+                } else if (result == RingScan.BACKPRESSURE) {
+                    this.counters.reason = "backpressure";
+                    ColumnProfile.skip("backpressure");
+                } else if (result == RingScan.FAIL) {
+                    ColumnProfile.skip("offer_rejected");
                 }
-                return RingScan.SENT;
-            } catch (ReflectiveOperationException e) {
-                this.counters.skippedMissing++;
-                this.counters.reason = "skip_unreadable";
-                return RingScan.SKIP;
+                return result;
             }
+            int scheduled = TerrainWorkers.schedule(this.level, this.engine, this.player, this.playerId, this.world, x, z);
+            if (scheduled == RingScan.SCHEDULED) {
+                this.counters.reason = "scheduled";
+            } else if (scheduled == RingScan.WAIT) {
+                this.counters.reason = "scheduled";
+            }
+            return scheduled;
         }
 
         private int offer(int x, int z, List<byte[]> wires) throws ReflectiveOperationException {
@@ -374,7 +430,14 @@ public final class TerrainDispatch {
                 return RingScan.BACKPRESSURE;
             }
             Object pos = chunkPosCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z));
+            long offerStart = ColumnProfile.timing ? System.nanoTime() : 0L;
             boolean sent = (Boolean) offerColumn.invoke(null, this.player, this.level, pos, wires);
+            if (ColumnProfile.timing) {
+                ColumnProfile.add("offer", System.nanoTime() - offerStart);
+                if (sent) {
+                    ColumnProfile.sent();
+                }
+            }
             return sent ? RingScan.SENT : RingScan.FAIL;
         }
 
@@ -453,6 +516,23 @@ public final class TerrainDispatch {
         pendingField.setAccessible(true);
         flightField = queue.getDeclaredField("flight");
         flightField.setAccessible(true);
+    }
+
+    static void noteAsyncSkip(String playerId, String world) {
+        Counters counters = COUNTERS.get(playerId + "|" + world);
+        if (counters != null) {
+            counters.skippedMissing++;
+            counters.reason = "skip_unreadable";
+        }
+    }
+
+    static void noteAsyncSent(String playerId, String world, int x, int z) {
+        TerrainSentMemory.mark(playerId, world, x, z);
+        Counters counters = COUNTERS.get(playerId + "|" + world);
+        if (counters != null) {
+            counters.sent++;
+            counters.reason = "sent";
+        }
     }
 
     public static String worldKeyOf(Object level) throws ReflectiveOperationException {

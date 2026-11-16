@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Rebuild ipa10p1 from the ipa10o jar. One tick sends a burst, and a swapped render level does not drop the player's world.
-# acceptLevel returns the player's ClientLevel. Every class in the jar is bytecode-verified before the jar is installed.
+# Rebuild ipa10q from the ipa10p1 jar. acceptLevel still returns ClientLevel.
+# VerifyJar and VerifyVoxyJar both run before the jar is installed.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10o.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p1.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p1.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10q.jar"
+OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10p1.jar"
 WORK="$ROOT/build"
 DEPS="${VOXY_DEPS:-/tmp/voxy-mc}"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
@@ -115,22 +115,18 @@ MC_SERVER="$DEPS/server-1.21.1-mojmap.jar"
 NF_JAR="$DEPS/neoforge-21.1.265-universal.jar"
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  SRC_JAR="$DEPS/voxy-ipa10o.jar"
-  if [[ ! -f "$SRC_JAR" ]]; then
-    echo "fetching ipa10o from 2a2a52fc" >&2
-    pointer="$(git -C "$REPO" cat-file -p 2a2a52fc:.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10o.jar)"
-    GIT_LFS_SKIP_SMUDGE=0 git -C "$REPO" lfs smudge <<<"$pointer" > "$SRC_JAR"
-  fi
+  echo "ipa10p1 jar not found at $SRC_JAR" >&2
+  exit 1
 fi
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10o jar not found" >&2
+  echo "ipa10p1 jar not found" >&2
   exit 1
 fi
 if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10o LFS object $OID is not in the local store" >&2
+    echo "ipa10p1 LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -138,23 +134,26 @@ fi
 rm -rf "$WORK"
 mkdir -p "$WORK/classes" "$WORK/patch" "$WORK/test" "$WORK/stub"
 
-NETTY="$DEPS/libs/netty-buffer-4.1.97.Final.jar:$DEPS/libs/netty-common-4.1.97.Final.jar"
-javac --release 21 -cp "$SRC_JAR:$FASTUTIL" -d "$WORK/classes" \
+NETTY="$DEPS/libs/netty-buffer-4.1.97.Final.jar:$DEPS/libs/netty-common-4.1.97.Final.jar:$DEPS/libs/netty-transport-4.1.97.Final.jar"
+AUTHLIB="$(find "$DEPS/libs" -name 'authlib-*.jar' | head -1)"
+STAGE_CP="$SRC_JAR:$FASTUTIL:$MC_SERVER:$NF_JAR:$NETTY"
+if [[ -n "$AUTHLIB" ]]; then STAGE_CP="$STAGE_CP:$AUTHLIB"; fi
+javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/server/TerrainDispatch.java" \
-  "$ROOT/src/me/cortex/voxy/server/TerrainSentMemory.java"
-CLIENT_CP="$WORK/classes:$SRC_JAR:$FASTUTIL:$MC_JAR:$MC_SERVER:$NF_JAR:$NETTY"
-javac --release 21 -cp "$CLIENT_CP" -d "$WORK/classes" \
-  "$ROOT/src/me/cortex/voxy/client/TerrainReceive.java" \
-  "$ROOT/src/me/cortex/voxy/client/TerrainClientStats.java" \
-  "$ROOT/src/me/cortex/voxy/client/ClientColumnCoverage.java"
+  "$ROOT/src/me/cortex/voxy/server/RingScan.java" \
+  "$ROOT/src/me/cortex/voxy/server/ServerTerrainSyncDeferredQueue.java" \
+  "$ROOT/src/me/cortex/voxy/server/TerrainWorkers.java" \
+  "$ROOT/src/me/cortex/voxy/server/ColumnStages.java" \
+  "$ROOT/src/me/cortex/voxy/server/ColumnProfile.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10p.java" \
-  "$ROOT/src/patch/VerifyJar.java"
+  "$ROOT/src/patch/PatchIpa10q.java" \
+  "$ROOT/src/patch/VerifyJar.java" \
+  "$ROOT/src/patch/VerifyVoxyJar.java"
 
-BUILT="$WORK/voxy-ipa10p1.jar"
+BUILT="$WORK/voxy-ipa10q.jar"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$SRC_JAR:$MC_JAR:$NF_JAR"
 mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10p "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
+java -cp "$FRAME_CP" PatchIpa10q "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
@@ -180,9 +179,9 @@ changed = {
     "me/cortex/voxy/server/TerrainDispatch.class",
     "me/cortex/voxy/server/TerrainDispatch$Io.class",
     "me/cortex/voxy/server/TerrainDispatch$Counters.class",
-    "me/cortex/voxy/server/TerrainSentMemory.class",
-    "me/cortex/voxy/client/ClientColumnCoverage.class",
-    "me/cortex/voxy/common/network/TerrainSyncClientHandler.class",
+    "me/cortex/voxy/server/RingScan.class",
+    "me/cortex/voxy/server/RingScan$Probe.class",
+    "me/cortex/voxy/server/ServerTerrainSyncDeferredQueue.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -211,10 +210,10 @@ for name in need:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10p1" not in text or "ipa10o" in text or "ipa10p1" not in manifest or "ipa10o" in manifest:
-    raise SystemExit("version string was not bumped to ipa10p1")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10p1" not in text:
-    raise SystemExit("mods.toml version is not ipa10p1")
+if "ipa10q" not in text or "ipa10p1" in text or "ipa10q" not in manifest or "ipa10p1" in manifest:
+    raise SystemExit("version string was not bumped to ipa10q")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10q" not in text:
+    raise SystemExit("mods.toml version is not ipa10q")
 for name in (
     "me/cortex/voxy/client/TerrainReceive.class",
     "me/cortex/voxy/client/TerrainClientStats.class",
@@ -239,9 +238,8 @@ PY
 VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
 VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 java -cp "$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" VerifyJar "$BUILT" "$VERIFY_CP"
+JDK25="${JDK25:-/tmp/jdk25/bin/java}"
+"$JDK25" -Xverify:all -cp "$BUILT:$WORK/patch:$VERIFY_CP" VerifyVoxyJar "$BUILT"
 
 cp "$BUILT" "$OUT_JAR"
-if [[ -f "$OLD_JAR" && "$OLD_JAR" != "$OUT_JAR" ]]; then
-  rm -f "$OLD_JAR"
-fi
 echo "built $OUT_JAR"
