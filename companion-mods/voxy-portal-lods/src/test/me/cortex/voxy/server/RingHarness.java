@@ -26,6 +26,7 @@ public final class RingHarness {
         olderPeerWithoutCoverageStillSends();
         staleColumnStaysSkippedAfterAnotherReport();
         storedSectionBecomesChunkColumns();
+        standStillReachesPastTheLoadedRings();
         System.out.println("RingHarness passed");
     }
 
@@ -475,6 +476,60 @@ public final class RingHarness {
         check(ColumnCoverageIndex.test(bits, 7, -7), "chunk 7,-7");
         check(ColumnCoverageIndex.count(bits) == 4, "one lod-0 section is four chunk columns");
         System.out.println("ok a stored lod-0 section covers its chunk columns");
+    }
+
+    /**
+     * Player stands still. View distance 10, hello radius 512. Rings 10-12 are
+     * already on the client. Farther saved columns mostly fail to read, and every
+     * 20th one sends. ipa10n returned FAIL for a missed disk read and the radius
+     * stayed on ring 13. The radius now keeps moving out, and a far column is sent.
+     */
+    private static void standStillReachesPastTheLoadedRings() {
+        RingCursor cursor = new RingCursor(0, 0, 10);
+        int previous = cursor.radius();
+        int far = 0;
+        for (int tick = 0; tick < 80; tick++) {
+            int[] sent = RingScan.scan(cursor, 0, 0, 9, 512, new RingScan.Probe() {
+                @Override
+                public boolean known(int x, int z) {
+                    return false;
+                }
+
+                @Override
+                public boolean noted(int x, int z) {
+                    return false;
+                }
+
+                @Override
+                public boolean onDisk(int x, int z) {
+                    return Math.max(Math.abs(x), Math.abs(z)) <= 200;
+                }
+
+                @Override
+                public boolean alreadyHeld(int x, int z) {
+                    int distance = Math.max(Math.abs(x), Math.abs(z));
+                    return distance >= 10 && distance <= 12;
+                }
+
+                @Override
+                public int attempt(int x, int z) {
+                    int distance = Math.max(Math.abs(x), Math.abs(z));
+                    if (x == -distance && z == -distance && distance % 20 == 0) {
+                        return RingScan.SENT;
+                    }
+                    // Missed disk read. ipa10n returned FAIL and parked on ring 13.
+                    return RingScan.SKIP;
+                }
+            }, 32, () -> false, null);
+            check(cursor.radius() >= previous, "radius went backwards while standing still");
+            previous = cursor.radius();
+            if (sent != null && Math.max(Math.abs(sent[0]), Math.abs(sent[1])) >= 40) {
+                far++;
+            }
+        }
+        check(cursor.radius() >= 40, "standing still never left the loaded rings, radius " + cursor.radius());
+        check(far > 0, "no column past the loaded rings was sent");
+        System.out.println("ok standing still walks out to radius " + cursor.radius());
     }
 
     private static void coverChunk(String player, String world, int chunkX, int chunkZ) {

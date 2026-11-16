@@ -104,6 +104,10 @@ public final class RingCursor {
         return this.attempts;
     }
 
+    public boolean holding() {
+        return this.holding;
+    }
+
     /**
      * Same square as {@code VoxyServerGeneratedChunkWalker.WalkCursor#next}.
      * {@code mutate} false previews the cell {@code mutate} true would return and then leave behind.

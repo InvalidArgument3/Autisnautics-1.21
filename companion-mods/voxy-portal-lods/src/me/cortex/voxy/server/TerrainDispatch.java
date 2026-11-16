@@ -76,6 +76,8 @@ public final class TerrainDispatch {
                 TerrainAvailability.logSkipOnce(dimension, x, z);
             });
             counters.ring = cursor.radius();
+            counters.attempts = cursor.attempts();
+            counters.holding = cursor.holding();
             if (sent != null) {
                 counters.sent++;
                 counters.reason = "sent";
@@ -157,15 +159,29 @@ public final class TerrainDispatch {
             int split = mapKey.indexOf('|');
             int clientHeld = split < 0 ? 0 : TerrainSentMemory.clientColumns(mapKey.substring(0, split), mapKey.substring(split + 1));
             Logger.info("[terrain-sync] player=" + mapKey
-                    + " ring=" + counters.ring + "/" + counters.max
+                    + " state=" + counters.reason
+                    + " radius=" + counters.ring
+                    + " target=" + counters.max
+                    + " holding=" + counters.holding
+                    + " attempts=" + counters.attempts
+                    + " queue=" + queueDepth()
                     + " sent=" + counters.sent
                     + " clientHeld=" + clientHeld
                     + " skippedHeld=" + counters.skippedHeld
                     + " skippedClient=" + counters.skippedClient
                     + " skippedKnown=" + counters.skippedKnown
                     + " skippedMissing=" + counters.skippedMissing
-                    + " abandoned=" + counters.abandoned
-                    + " reason=" + counters.reason);
+                    + " abandoned=" + counters.abandoned);
+        }
+    }
+
+    private static int queueDepth() {
+        try {
+            ensure();
+            Object queue = queueField.get(null);
+            return (Integer) queue.getClass().getMethod("entries").invoke(queue);
+        } catch (ReflectiveOperationException e) {
+            return -1;
         }
     }
 
@@ -258,7 +274,9 @@ public final class TerrainDispatch {
                     if (disk) {
                         return region(x, z);
                     }
-                    return RingScan.FAIL;
+                    this.counters.skippedMissing++;
+                    this.counters.reason = "skip_unreadable";
+                    return RingScan.SKIP;
                 }
                 if (!disk) {
                     this.counters.skippedMissing++;
@@ -271,11 +289,25 @@ public final class TerrainDispatch {
             }
         }
 
-        private int region(int x, int z) throws ReflectiveOperationException {
-            long key = pack(x, z);
-            Object candidate = candidateCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z), Long.valueOf(key));
-            boolean sent = (Boolean) sendColumn.invoke(null, this.level, this.engine, this.player, candidate);
-            return sent ? RingScan.SENT : RingScan.FAIL;
+        private int region(int x, int z) {
+            try {
+                long key = pack(x, z);
+                Object candidate = candidateCtor.newInstance(Integer.valueOf(x), Integer.valueOf(z), Long.valueOf(key));
+                boolean sent = (Boolean) sendColumn.invoke(null, this.level, this.engine, this.player, candidate);
+                // A disk read that produced nothing will not start producing something
+                // on the next tick. Holding the cursor here freezes the ring on the
+                // first chunk past the loaded set until the player changes chunk.
+                if (!sent) {
+                    this.counters.skippedMissing++;
+                    this.counters.reason = "skip_unreadable";
+                    return RingScan.SKIP;
+                }
+                return RingScan.SENT;
+            } catch (ReflectiveOperationException e) {
+                this.counters.skippedMissing++;
+                this.counters.reason = "skip_unreadable";
+                return RingScan.SKIP;
+            }
         }
 
         private int offer(int x, int z, List<byte[]> wires) throws ReflectiveOperationException {
@@ -411,6 +443,8 @@ public final class TerrainDispatch {
         int skippedKnown;
         int skippedMissing;
         int abandoned;
+        int attempts;
+        boolean holding;
         String reason = "idle";
     }
 }
