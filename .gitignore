@@ -67,6 +67,7 @@ build/
 !/config/sophisticatedstorage-client.toml
 !/config/**/darkmodeeverywhere-client.toml
 !/config/create-client.toml
+!/config/create_submarine-client.toml
 
 # Configs (generaly ones that tend to edit the date on launch)
 config/fml.toml
@@ -225,7 +226,13 @@ visual_keybinder
 .sable
 
 # analog audio (ffmpeg / yt-dlp binaries)
-.analoglib/
+# AnalogLib downloads these on first launch; the pack ships them so nobody has to.
+# Everything else in .analoglib/ is runtime junk.
+.analoglib/*
+!.analoglib/bin/
+.analoglib/bin/*
+!.analoglib/bin/ffmpeg.exe
+!.analoglib/bin/yt-dlp.exe
 
 # cache
 cache/*

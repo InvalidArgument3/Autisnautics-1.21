@@ -24,7 +24,9 @@
         "README.md"
     ],
     "client_overrides": [
-        "resourcepacks"
+        "resourcepacks",
+        ".analoglib/bin/ffmpeg.exe",
+        ".analoglib/bin/yt-dlp.exe"
     ],
     "projects": {
         "legendary-tooltips": {
