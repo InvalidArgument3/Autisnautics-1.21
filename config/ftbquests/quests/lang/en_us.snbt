@@ -185,7 +185,7 @@ quest.08367CEDF13CB65C.quest_desc: [
 
 		"{cabin.quest.09356B3BEF298E06.description4}"
 	]
-	quest.09356B3BEF298E06.title: "Welcome to Autisnautics"
+	quest.09356B3BEF298E06.title: "Autisnautics"
 	quest.0937A1CC74795CF4.quest_desc: [
 		"&7Spear hook"
 		"- attaches to any block except blocks with high hardness (metal blocks, obsidian, etc.)"
@@ -428,7 +428,7 @@ quest.17AA221C7B7E6734.quest_desc: [
 
 		"{cabin.quest.1947C6CE179EBAC6.description2}"
 	]
-	quest.1947C6CE179EBAC6.title: "The World Outside"
+	quest.1947C6CE179EBAC6.title: "Exploration"
 	quest.194B973EAF17809C.quest_desc: [
 		"A stick sits beside that log."
 		"Both of them lead to the crushing wheel."
@@ -703,7 +703,7 @@ quest.2C196D41B3B087C6.quest_desc: [
 
 		"{cabin.quest.2C7ADB6C11B918B1.description2}"
 	]
-	quest.2C7ADB6C11B918B1.title: "The Magic Side"
+	quest.2C7ADB6C11B918B1.title: "The Magic Mods"
 	quest.2C81D358594C4352.quest_desc: [
 		"Quartz enriched iron anchors the chromatic singularity mix."
 		"The heated mix is a crushing wheel, two of these ingots, an ender pearl, and red, yellow, green, blue, and magenta dye."
@@ -1027,7 +1027,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 
 		"{cabin.quest.407236D2B1D2257D.description3}"
 	]
-	quest.407236D2B1D2257D.title: "The Create Side"
+	quest.407236D2B1D2257D.title: "Create and the Tech Mods"
 	quest.40923F4758A50D9C.quest_desc: [
 		"Among the fleshminds, it is said that advanced technology is indistinguishable from magic. Daemonkind knows better: technology is the source of magic."
 		""
@@ -1292,7 +1292,7 @@ quest.4815DA7B77DD7175.quest_desc: [
 
 		"{cabin.quest.58E38BA6D927409F.description4}"
 	]
-	quest.58E38BA6D927409F.title: "Playing With Others"
+	quest.58E38BA6D927409F.title: "Multiplayer"
 	quest.5943F8F91AA79D59.quest_desc: [
 		"Uranium is the metal the enrichment line is built around."
 		"With radaway and crushed iron, it asks for a logistic mechanism."
@@ -1485,7 +1485,7 @@ quest.6199E449AF2BADBA.quest_desc: [
 
 		"{cabin.quest.69D55492A8F42A94.description3}"
 	]
-	quest.69D55492A8F42A94.title: "How This Book Is Organised"
+	quest.69D55492A8F42A94.title: "What Is In This Book"
 	quest.69FDD93C8097E0FB.quest_desc: [
 		"The CAD might not run on gunpowder, but it probably counts as a gun, too."
 		"It could be a useful alternative for traversing the islands - if you can figure out how to program it with the right spells."
