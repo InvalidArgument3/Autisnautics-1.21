@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.21]
 - Custom Voxy portal-LOD build **ipa10s** → **ipa10t** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10t.jar`, client and server). Section decode and `WorldUpdater.insertUpdate` stay on `voxy-terrain-apply`, off the render thread. The client holds at most 48 batches or 8 MiB and acks a batch when it has been applied, so a slow client pushes back on the server window. zstd protocol 3 and the 1 MiB player byte cap stay. `acceptLevel` still returns a `ClientLevel`. The ipa10s jar is removed.
 - Custom Voxy portal-LOD build **ipa10r** → **ipa10s** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10s.jar`, client and server). The reliable queue was sending two frames per tick and the client applied them on the render thread, so a standing player got about 2.3 columns per second and the ring sat on `waiting`. Applies now run on `voxy-terrain-apply` and write into the render engine. A server-thread stall longer than two seconds no longer resets the ring. zstd protocol 3 and the 1 MiB player byte cap stay. `acceptLevel` still returns a `ClientLevel`. The ipa10r jar is removed.
 
