@@ -5,21 +5,21 @@ ServerEvents.recipes(event => {
     let transitional
     // -- Remove unneeded default recipes
     // - sky stone dust
-    event.remove({ id: "create:milling/compat/ae2/sky_stone_block" })
+    // restored original: event.remove({ id: "create:milling/compat/ae2/sky_stone_block" })
     // - Electron tubes
-    event.remove({ id: "create:crafting/materials/electron_tube" })
+    // restored original: event.remove({ id: "create:crafting/materials/electron_tube" })
     // - Rose quartz, including alternate mod sanding options
     // AE2 removed: only strip Create's rose-quartz polishing when the AE2 certus line below exists
     if (Platform.isLoaded("ae2")) {
-        event.remove({ output: "create:polished_rose_quartz" })
-        event.remove({ id: "create:sandpaper_polishing/rose_quartz" })
+        // restored original: event.remove({ output: "create:polished_rose_quartz" })
+        // restored original: event.remove({ id: "create:sandpaper_polishing/rose_quartz" })
     }
     // - Default certus crystal growing
-    event.remove({ id: "ae2:transform/certus_quartz_crystals" })
+    // restored original: event.remove({ id: "ae2:transform/certus_quartz_crystals" })
     // - Create precision mechanisms
-    event.remove({ id: "create:sequenced_assembly/precision_mechanism" })
+    // restored original: event.remove({ id: "create:sequenced_assembly/precision_mechanism" })
     // - Simulated gyroscopic mechanisms, replaced with brass machines
-    event.remove({ id: "simulated:sequenced_assembly/gyroscopic_mechanism" })
+    // restored original: event.remove({ id: "simulated:sequenced_assembly/gyroscopic_mechanism" })
 
     // -- Sky stone dust: infinimilling
     // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert

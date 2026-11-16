@@ -1,16 +1,16 @@
 if (Platform.isLoaded("thermal")) {
     ServerEvents.recipes(event => {
         // NeoForge has no c:coins tag. Thermal's own coins are the inputs this used to match.
-        event.remove({ input: "thermal:copper_coin" })
-        event.remove({ input: "thermal:silver_coin" })
-        event.remove({ input: "thermal:gold_coin" })
-        event.remove({ input: "thermal:netherite_coin" })
+        // restored original: event.remove({ input: "thermal:copper_coin" })
+        // restored original: event.remove({ input: "thermal:silver_coin" })
+        // restored original: event.remove({ input: "thermal:gold_coin" })
+        // restored original: event.remove({ input: "thermal:netherite_coin" })
 
         event.recipes.thermal.numismatic_fuel("thermal:silver_coin", 100000)
         event.recipes.thermal.numismatic_fuel("thermal:gold_coin", 6400000)
         // remove all press recipes
-        event.remove({ type: "thermal:press" })
-        event.remove({ type: "thermal:numismatic_fuel" })
+        // restored original: event.remove({ type: "thermal:press" })
+        // restored original: event.remove({ type: "thermal:numismatic_fuel" })
 
         let trade = (card_id, ingredient, output) => {
             event.custom({

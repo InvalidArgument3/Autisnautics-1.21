@@ -10,11 +10,11 @@ ServerEvents.recipes(event => {
 
         event.recipes.create.milling(Item.of("minecraft:redstone", 4), "thermal:cinnabar").processingTime(700)
         event.recipes.create.crushing(Item.of("minecraft:redstone", 6), "thermal:cinnabar").processingTime(500)
-        event.remove({ id: "thermal:machines/pulverizer/pulverizer_cinnabar" })
+        // restored original: event.remove({ id: "thermal:machines/pulverizer/pulverizer_cinnabar" })
         event.recipes.thermal.pulverizer(Item.of("minecraft:redstone", 8), "thermal:cinnabar", 0, 10000)
         // A2: cinnabar dust is pointless
-        event.remove({input: "thermal:cinnabar_dust"})
-        event.remove({output: "thermal:cinnabar_dust"})
+        // restored original: event.remove({input: "thermal:cinnabar_dust"})
+        // restored original: event.remove({output: "thermal:cinnabar_dust"})
 
         event.recipes.create.milling("thermal:sulfur_dust", "#c:gems/sulfur").processingTime(500)
         event.recipes.create.milling("thermal:niter_dust", "#c:gems/niter").processingTime(500)

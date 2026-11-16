@@ -3,11 +3,11 @@ if (Platform.isLoaded("createcasing")) {
     ServerEvents.recipes(event => {
 
         // Cleanup
-        event.remove({ input: "minecraft:iron_block", mod: "createcasing" }) // Removes Presses
-        event.remove({ input: "create:whisk", mod: "createcasing" }) // Removes Mixers
-        event.remove({ input: "#c:stripped_logs", mod: "createcasing" }) // Removes Wooden Shafts
-        event.remove({ input: "create:brass_ingot", mod: "createcasing" }) // Removes Brass Shaft
-        event.remove({ input: "minecraft:glass", mod: "createcasing" }) // Removes Glass Shaft
+        // restored original: event.remove({ input: "minecraft:iron_block", mod: "createcasing" }) // Removes Presses
+        // restored original: event.remove({ input: "create:whisk", mod: "createcasing" }) // Removes Mixers
+        // restored original: event.remove({ input: "#c:stripped_logs", mod: "createcasing" }) // Removes Wooden Shafts
+        // restored original: event.remove({ input: "create:brass_ingot", mod: "createcasing" }) // Removes Brass Shaft
+        // restored original: event.remove({ input: "minecraft:glass", mod: "createcasing" }) // Removes Glass Shaft
 
         // Mixers
         let mixer = (output, casing) => {
@@ -29,14 +29,10 @@ if (Platform.isLoaded("createcasing")) {
         press("createcasing:railway_press", "create:railway_casing")
         press("createcasing:creative_press", "createcasing:creative_casing")
 
-        // Adjustable Chain Gearshifts
-        event.replaceInput(
-            { input: "create:electron_tube", mod: "createcasing" },
-            "create:electron_tube",
-            "minecraft:redstone"
-        )
+        // Create Casing's adjustable chain gearshifts keep their electron tube.
+        // restored original: event.replaceInput({ input: "create:electron_tube", mod: "createcasing" }, "create:electron_tube", "minecraft:redstone")
 
-        event.remove({ id: "createcasing:sequenced_assembly/chorium_ingot" })
+        // restored original: event.remove({ id: "createcasing:sequenced_assembly/chorium_ingot" })
         event.recipes.createSequencedAssembly([
             "createcasing:chorium_ingot",
         ], "create:polished_rose_quartz", [

@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
     // Andesite machines — Autisnautics live path is recipes/chapters/chapter_1.js (kubejs drill/saw heads).
     // Keep Thermal CABIN machine unlocks only when Thermal is present.
     donutCraft(event, "kubejs:andesite_machine", "create:andesite_casing", "kubejs:kinetic_mechanism")
-    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#c:plates/brass", "create:golden_sheet")
+    // Brass hand alternative lives in chapters/chapter_1.js as kubejs:brass_hand_gold.
     if (hasThermal) {
         event.remove({ output: "thermal:drill_head" })
         event.shaped("thermal:drill_head", [
@@ -450,7 +450,7 @@ ServerEvents.recipes(event => {
     // Autisnautics live path: recipes/chapters/chapter_2a.js (agonized plasma + powergrid zinc).
     // CABIN Thermal/Tinkers zinc path only when those mods exist.
     if (hasThermal) {
-        event.remove({ id: "tconstruct:smeltery/melting/soul/sand" })
+        // restored original: event.remove({ id: "tconstruct:smeltery/melting/soul/sand" })
         event.recipes.create.mixing(Fluid.of("tconstruct:liquid_soul", 500), ["minecraft:twisting_vines", "minecraft:weeping_vines"]).heated()
 
         event.custom({
@@ -512,8 +512,8 @@ ServerEvents.recipes(event => {
         zincMachine(event, Item.of("thermal:device_potion_diffuser", 1), "minecraft:glass_bottle")
         zincMachine(event, Item.of("torchmaster:megatorch", 1), "minecraft:torch")
         zincMachine(event, Item.of("thermal:upgrade_augment_2", 1), "minecraft:redstone")
-        event.remove({ id: "tconstruct:smeltery/casting/scorched/foundry_controller" })
-        event.remove({ id: "tconstruct:smeltery/melting/obsidian/foundry_controller" })
+        // restored original: event.remove({ id: "tconstruct:smeltery/casting/scorched/foundry_controller" })
+        // restored original: event.remove({ id: "tconstruct:smeltery/melting/obsidian/foundry_controller" })
         donutCraft(event, "tconstruct:foundry_controller", "#tconstruct:scorched_blocks", "kubejs:infernal_mechanism").modifyResult((grid, result) => {
             let item = grid.find("#tconstruct:scorched_blocks")
             return result.withNBT({ texture: item.id })
@@ -785,7 +785,7 @@ ServerEvents.recipes(event => {
     }
 
     if (hasThermal) {
-        event.remove({ id: "thermal:machines/pyrolyzer/pyrolyzer_logs" })
+        // restored original: event.remove({ id: "thermal:machines/pyrolyzer/pyrolyzer_logs" })
         thermalRecipes.pyrolyzer([Item.of("minecraft:charcoal", 2), Fluid.of("immersiveengineering:creosote", 50)], "#minecraft:logs", 0.15, 1000)
         thermalRecipes.pyrolyzer(["thermal:coal_coke", Fluid.of("immersiveengineering:creosote", 50)], "minecraft:charcoal", 0.15, 2000)
     }
@@ -824,7 +824,7 @@ ServerEvents.recipes(event => {
 
     // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
     if (Platform.isLoaded("ae2")) {
-        event.remove({ id: "ae2:tools/misctools_entropy_manipulator" })
+        // restored original: event.remove({ id: "ae2:tools/misctools_entropy_manipulator" })
         const entropyPlate = hasThermal ? "thermal:lead_plate" : "immersiveengineering:plate_lead"
         event.shaped("ae2:entropy_manipulator", [
             "S  ",
@@ -838,16 +838,16 @@ ServerEvents.recipes(event => {
 
     if (hasThermal) {
         let blizz = "thermal:blizz_powder"; let basalz = "thermal:basalz_powder"
-        event.remove({ id: blizz })
-        event.remove({ id: basalz })
-        event.remove({ id: "thermal:machines/pulverizer/pulverizer_blizz_rod" })
-        event.remove({ id: "thermal:machines/pulverizer/pulverizer_basalz_rod" })
+        // restored original: event.remove({ id: blizz })
+        // restored original: event.remove({ id: basalz })
+        // restored original: event.remove({ id: "thermal:machines/pulverizer/pulverizer_blizz_rod" })
+        // restored original: event.remove({ id: "thermal:machines/pulverizer/pulverizer_basalz_rod" })
         thermalRecipes.pulverizer([Item.of(blizz).withChance(2.5), Item.of("minecraft:snowball").withChance(0.25)], "thermal:blizz_rod", 0, 800).id("kubejs:machines/pulverizer/blizz_powder")
         thermalRecipes.pulverizer([Item.of(basalz).withChance(2.5), Item.of("thermal:slag").withChance(0.25)], "thermal:basalz_rod", 0, 800).id("kubejs:machines/pulverizer/basalz_powder")
         event.recipes.create.crushing([Item.of(blizz, 1), CreateItem.of(blizz, 0.5)], "thermal:blizz_rod")
         event.recipes.create.crushing([Item.of(basalz, 1), CreateItem.of(basalz, 0.5)], "thermal:basalz_rod")
-        event.remove({ id: "thermal:ice_charge_3" })
-        event.remove({ id: "thermal:earth_charge_3" })
+        // restored original: event.remove({ id: "thermal:ice_charge_3" })
+        // restored original: event.remove({ id: "thermal:earth_charge_3" })
         event.recipes.create.compacting("thermal:ice_charge", [blizz, blizz, blizz, blizz, blizz, blizz, blizz, blizz])
         event.recipes.create.compacting("thermal:earth_charge", [basalz, basalz, basalz, basalz, basalz, basalz, basalz, basalz])
         thermalRecipes.smelter(
@@ -860,9 +860,9 @@ ServerEvents.recipes(event => {
             ["kubejs:silicon_compound", "thermal:ice_charge"],
             0,
             5000)
-        event.remove({ output: "ae2:silicon" })
-        event.remove({ id: "ae2:network/blocks/inscribers" })
-        event.remove({ type: "ae2:inscriber" })
+        // restored original: event.remove({ output: "ae2:silicon" })
+        // restored original: event.remove({ id: "ae2:network/blocks/inscribers" })
+        // restored original: event.remove({ type: "ae2:inscriber" })
         event.custom({
             "type": "tconstruct:casting_table",
             "cast": { "item": "ae2:calculation_processor_press" },
@@ -985,32 +985,32 @@ ServerEvents.recipes(event => {
 
     // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
     if (Platform.isLoaded("ae2")) {
-        event.remove({ output: "ae2:quartz_glass" })
+        // restored original: event.remove({ output: "ae2:quartz_glass" })
         if (hasThermal) {
             thermalRecipes.smelter("ae2:quartz_glass", [["ae2:certus_quartz_dust", "thermal:quartz_dust"]])
             thermalRecipes.smelter(Item.of("ae2:fluix_crystal", 2), ["minecraft:quartz", "ae2:charged_certus_quartz_crystal", "minecraft:redstone"])
-            event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#c:ingots/iron", "thermal:lead_plate")
+            // restored original: event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, "#c:ingots/iron", "thermal:lead_plate")
         } else {
             event.recipes.create.mixing("ae2:quartz_glass", ["ae2:certus_quartz_dust", "minecraft:glass"]).heated()
         }
 
-        event.remove({ output: "ae2:controller" })
+        // restored original: event.remove({ output: "ae2:controller" })
         donutCraft(event, "ae2:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism")
         fluixMachine(event, Item.of("ae2:condenser", 1), "ae2:fluix_pearl")
         fluixMachine(event, Item.of("ae2:drive", 1), "ae2:engineering_processor")
         fluixMachine(event, Item.of("ae2:formation_core", 4), "ae2:logic_processor")
         fluixMachine(event, Item.of("ae2:annihilation_core", 4), "ae2:calculation_processor")
         fluixMachine(event, Item.of("ae2:chest", 1), "minecraft:chest")
-        event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "minecraft:redstone", "kubejs:calculation_mechanism")
-        event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "ae2:logic_processor", "#c:dusts/redstone")
-        event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
-        event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "ae2:engineering_processor", "#c:dusts/glowstone")
-        event.replaceInput({ id: "ae2:network/crafting/patterns_blank" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+        // restored original: event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "minecraft:redstone", "kubejs:calculation_mechanism")
+        // restored original: event.replaceInput({ id: "ae2:network/cells/item_storage_components_cell_1k_part" }, "ae2:logic_processor", "#c:dusts/redstone")
+        // restored original: event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
+        // restored original: event.replaceInput({ id: "ae2:network/cells/spatial_components" }, "ae2:engineering_processor", "#c:dusts/glowstone")
+        // restored original: event.replaceInput({ id: "ae2:network/crafting/patterns_blank" }, "minecraft:glowstone_dust", "kubejs:calculation_mechanism")
     } else if (Platform.isLoaded("refinedstorage")) {
         // AE2 -> RS port: calculation mechanism gates the controller (fluix casing donut),
         // then the controller item-applies into the blocks that used to be fluix machines.
-        event.remove({ id: "refinedstorage:silicon" })
-        event.remove({ output: "refinedstorage:controller" })
+        // restored original: event.remove({ id: "refinedstorage:silicon" })
+        // restored original: event.remove({ output: "refinedstorage:controller" })
         event.shapeless(Item.of("kubejs:fluix_casing", 2), ["refinedstorage:quartz_enriched_iron", "refinedstorage:machine_casing"]).id("kubejs:rs_port/fluix_casing")
         donutCraft(event, "refinedstorage:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism").id("kubejs:rs_port/controller")
         fluixMachine(event, Item.of("refinedstorage:disk_drive", 1), "refinedstorage:advanced_processor")
@@ -1018,8 +1018,8 @@ ServerEvents.recipes(event => {
         fluixMachine(event, Item.of("refinedstorage:construction_core", 4), "minecraft:glowstone_dust")
         fluixMachine(event, Item.of("refinedstorage:destruction_core", 4), "minecraft:quartz")
         fluixMachine(event, Item.of("refinedstorage:wireless_transmitter", 1), "minecraft:ender_pearl")
-        event.replaceInput({ id: "refinedstorage:1k_storage_part" }, "#c:dusts/redstone", "kubejs:calculation_mechanism")
-        event.remove({ id: "refinedstorage:pattern" })
+        // restored original: event.replaceInput({ id: "refinedstorage:1k_storage_part" }, "#c:dusts/redstone", "kubejs:calculation_mechanism")
+        // restored original: event.remove({ id: "refinedstorage:pattern" })
         event.shaped("refinedstorage:pattern", [
             "GRG",
             "RMR",
@@ -1158,9 +1158,9 @@ ServerEvents.recipes(event => {
     })
 
     if (hasThermal && Platform.isLoaded("ad_astra")) {
-        event.remove({ id: "thermal:chiller_ball_cast" })
-        event.remove({ id: "thermal:chiller_rod_cast" })
-        event.remove({ id: "thermal:chiller_ingot_cast" })
+        // restored original: event.remove({ id: "thermal:chiller_ball_cast" })
+        // restored original: event.remove({ id: "thermal:chiller_rod_cast" })
+        // restored original: event.remove({ id: "thermal:chiller_ingot_cast" })
         event.stonecutting("thermal:chiller_ball_cast", "thermal:nickel_plate")
         event.stonecutting("thermal:chiller_rod_cast", "thermal:nickel_plate")
         event.stonecutting("thermal:chiller_ingot_cast", "thermal:nickel_plate")

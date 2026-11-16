@@ -6,30 +6,30 @@ ServerEvents.recipes(event => {
     // -- Wood slab sawing line
     // - Remove conflicting saw recipes
     // Create: Sawing planks into various wooden blocks besides slabs
-    event.remove({ id: /^create:cutting(?=.*_planks_to_)(?!.*slab$).*$/, input: /.*_planks$/ })
+    // restored original: event.remove({ id: /^create:cutting(?=.*_planks_to_)(?!.*slab$).*$/, input: /.*_planks$/ })
     // Chisel: Stonecutting planks into chisel blocks
-    event.remove({ type: "minecraft:stonecutting", id: /chisel:planks_/})
+    // restored original: event.remove({ type: "minecraft:stonecutting", id: /chisel:planks_/})
     // Youkai's Feasts: Stonecutting planks into steamer_lid
     // Replacement: add a stick to a pressure plate
-    event.remove({ id: "youkaisfeasts:steamer_lid_from_planks_stonecutting" })
+    // restored original: event.remove({ id: "youkaisfeasts:steamer_lid_from_planks_stonecutting" })
     event.shapeless("youkaisfeasts:steamer_lid", ["minecraft:stick", "#minecraft:wooden_pressure_plates"])
     // Cuisine Delight: Stonecutting planks into plates
     // Replacement: cut a slab again to make 8 plates, and remove conflicting powergrid circuit board recipe
-    event.remove({ id: "cuisinedelight:plate_from_planks_stonecutting" })
+    // restored original: event.remove({ id: "cuisinedelight:plate_from_planks_stonecutting" })
     event.custom({
         type: "create:cutting",
         ingredients: [{ tag: "minecraft:wooden_slabs" }],
         results: [{ id: "cuisinedelight:plate", count: 8 }],
         processing_time: 150
     }).id("kubejs:cutting/wooden_slab_to_plates")
-    event.remove({ id: "powergrid:cutting/empty_circuit_slabs" })
+    // restored original: event.remove({ id: "powergrid:cutting/empty_circuit_slabs" })
     // createbigcannons: all moulds are sawed from logs in one recipe, which has been widely regarded as a bad move
     if (Platform.isLoaded("createbigcannons")) {
         let mouldTypes = ["very_small", "small", "medium", "large", "very_large", "cannon_end", "sliding_breech", "screw_breech", "autocannon_breech", "autocannon_recoil_spring", "autocannon_barrel"]
         let removeMould = (type) => {
             let originalMould = "createbigcannons:" + type + "_cast_mould"
             // if (Item.exists(originalMould)) {
-            event.remove({ output: originalMould })
+            // restored original: event.remove({ output: originalMould })
             // }
         }
         mouldTypes.forEach(removeMould)
@@ -55,30 +55,30 @@ ServerEvents.recipes(event => {
 
     // -- Andesite production
     // - Remove vanilla meme stone recipes
-    event.remove({ id: "minecraft:diorite" })
-    event.remove({ id: "minecraft:andesite" })
-    event.remove({ id: "minecraft:granite" })
+    // restored original: event.remove({ id: "minecraft:diorite" })
+    // restored original: event.remove({ id: "minecraft:andesite" })
+    // restored original: event.remove({ id: "minecraft:granite" })
     // - Remove create meme stone recipes
-    event.remove({ id: "create:compacting/andesite_from_flint" })
-    event.remove({ id: "create:compacting/diorite_from_flint" })
-    event.remove({ id: "create:compacting/granite_from_flint" })
+    // restored original: event.remove({ id: "create:compacting/andesite_from_flint" })
+    // restored original: event.remove({ id: "create:compacting/diorite_from_flint" })
+    // restored original: event.remove({ id: "create:compacting/granite_from_flint" })
 
     // -- Algal Blend - adding minecraft:seagrass as a valid ingredient
     event.replaceInput({ id: "architects_palette:algal_blend" }, "minecraft:kelp", ["minecraft:kelp", "minecraft:seagrass"])
 
     // -- Andesite Alloy
     // - Remove other recipes
-    event.remove({ id: "create:crafting/materials/andesite_alloy" })
-    event.remove({ id: "create:crafting/materials/andesite_alloy_from_zinc" })
-    event.remove({ id: "create:mixing/andesite_alloy" })
-    event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
-    event.remove({ id: "blazinghot:mixing/molten_andesite" })
+    // restored original: event.remove({ id: "create:crafting/materials/andesite_alloy" })
+    // restored original: event.remove({ id: "create:crafting/materials/andesite_alloy_from_zinc" })
+    // restored original: event.remove({ id: "create:mixing/andesite_alloy" })
+    // restored original: event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
+    // restored original: event.remove({ id: "blazinghot:mixing/molten_andesite" })
     // - Add new recipe
     event.recipes.create.mixing(Item.of("create:andesite_alloy", 2), ["architects_palette:algal_brick", "minecraft:andesite"])
 
     // -- Kinetic Mechanism
     // - createdieselgenerators:hammer simplified recipe
-    event.remove({ id: "createdieselgenerators:crafting/hammer" })
+    // restored original: event.remove({ id: "createdieselgenerators:crafting/hammer" })
     event.shaped("createdieselgenerators:hammer", [
         " I ",
         " SI",
@@ -185,7 +185,15 @@ ServerEvents.recipes(event => {
 
     // -- Parts for Chapter 1 factory machines
     // - Deployer: Brass Hand -> Gold Hand
-    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "#c:plates/brass", "create:golden_sheet")
+    // Create's brass-plate hand stays. This is the pack's gold-sheet alternative.
+    event.shaped("create:brass_hand", [
+        " A ",
+        "BBB",
+        " B "
+    ], {
+        A: "create:andesite_alloy",
+        B: "create:golden_sheet"
+    }).id("kubejs:brass_hand_gold")
     // - Mechanical Saw: kubejs sawblade
     event.shaped("kubejs:saw_blade", [
         "NPN",

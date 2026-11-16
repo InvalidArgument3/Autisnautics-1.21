@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
             if (typeof mat === "string" && !mat.startsWith("#") && !Item.exists(mat)) return
         }
         if (!Item.exists(name + "_casing") && !name.startsWith("kubejs:")) return
-        event.remove({ output: name + "_casing"})
+        // Original casing recipe stays. This shapeless craft is an extra 2x path.
         event.shapeless(Item.of(name + "_casing", 2), mats)
     }
     tweak_casing("create:andesite", ["create:andesite_alloy", "#minecraft:logs"])
@@ -23,10 +23,10 @@ ServerEvents.recipes(event => {
     tweak_casing("create:refined_radiance", ["create:refined_radiance", "#minecraft:logs"])
     tweak_casing("create:shadow_steel", ["create:shadow_steel", "#minecraft:logs"])
     // recipe changes
-    event.replaceInput({ id: "create:crafting/kinetics/adjustable_chain_gearshift" }, "create:electron_tube", "minecraft:redstone")
+    // restored original: event.replaceInput({ id: "create:crafting/kinetics/adjustable_chain_gearshift" }, "create:electron_tube", "minecraft:redstone")
     event.replaceInput({ id: "create:crafting/kinetics/rope_pulley" }, "#minecraft:wool", "#supplementaries:ropes")// 1.21
     // windmill recipe tweaks
-    event.remove({ id: "create:crafting/kinetics/white_sail" })
+    // restored original: event.remove({ id: "create:crafting/kinetics/white_sail" })
     event.shaped("2x create:white_sail", [
         "SSS",
         "NAN",
@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
         S: "minecraft:stick"
     })
     // tweak obsidian crushing recipe
-    event.remove({ id: "create:crushing/obsidian" })
+    // restored original: event.remove({ id: "create:crushing/obsidian" })
     event.recipes.create.crushing("create:powdered_obsidian", "minecraft:obsidian")
     // recompacting obsidian dust into its resource
     // The comment is dust back into obsidian. A tag cannot be a processing result.
@@ -48,21 +48,21 @@ ServerEvents.recipes(event => {
     })
 
     // Gravel and red sand washing buffs
-    event.remove({ id: "create:splashing/gravel" })
+    // restored original: event.remove({ id: "create:splashing/gravel" })
     event.recipes.create.splashing([
         CreateItem.of("2x minecraft:iron_nugget", 0.125),
         CreateItem.of("minecraft:flint", 0.25)
     ], "minecraft:gravel")
 
-    event.remove({ id: "create:splashing/red_sand" })
+    // restored original: event.remove({ id: "create:splashing/red_sand" })
     event.recipes.create.splashing([
         CreateItem.of("2x minecraft:gold_nugget", 0.125),
         CreateItem.of("minecraft:dead_bush", 0.05)
     ], "minecraft:red_sand")
 
     // unify dough and allow the slime recipe to take dough from farmer's delight
-    event.remove({ id: "create:crafting/appliances/dough" })
-    event.replaceOutput({ id: "farmersdelight:wheat_dough_from_water" }, "farmersdelight:wheat_dough", "create:dough")
-    event.replaceOutput({ id: "farmersdelight:wheat_dough_from_eggs" }, "farmersdelight:wheat_dough", "create:dough")
+    // restored original: event.remove({ id: "create:crafting/appliances/dough" })
+    // restored original: event.replaceOutput({ id: "farmersdelight:wheat_dough_from_water" }, "farmersdelight:wheat_dough", "create:dough")
+    // restored original: event.replaceOutput({ id: "farmersdelight:wheat_dough_from_eggs" }, "farmersdelight:wheat_dough", "create:dough")
     event.replaceInput({ id: "create:crafting/appliances/slime_ball" }, "create:dough", "#c:foods/dough")
 })

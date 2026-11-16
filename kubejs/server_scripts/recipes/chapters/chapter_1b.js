@@ -5,15 +5,15 @@ ServerEvents.recipes(event => {
     let transitional
 
     // -- Remove sturdy sheets, sturdy ingots, sturdy casing, molten sturdy alloy + bucket, sturdy everything
-    event.remove({ id: "create:sequenced_assembly/sturdy_sheet"})
-    event.remove({ id: /blazinghot:casting.*sturdy.*mold$/})
-    event.remove({ id: /blazinghot:casting.*sturdy_sheet$/})
-    event.remove({ id: /blazinghot:casting.*sturdy_alloy$/})
-    event.remove({ id: "blazinghot:pressing/sturdy_alloy"})
-    event.remove({ id: "blazinghot:compacting/sturdy_alloy"})
-    event.remove({ id: /blazinghot:blaze_mixing\/melting\/sturdy.*/})
-    event.remove({ id: /blazinghot:.*mixing.*molten_sturdy_alloy$/})
-    event.remove({ id: /blazinghot:.*sturdy_casing.*/})
+    // restored original: event.remove({ id: "create:sequenced_assembly/sturdy_sheet"})
+    // restored original: event.remove({ id: /blazinghot:casting.*sturdy.*mold$/})
+    // restored original: event.remove({ id: /blazinghot:casting.*sturdy_sheet$/})
+    // restored original: event.remove({ id: /blazinghot:casting.*sturdy_alloy$/})
+    // restored original: event.remove({ id: "blazinghot:pressing/sturdy_alloy"})
+    // restored original: event.remove({ id: "blazinghot:compacting/sturdy_alloy"})
+    // restored original: event.remove({ id: /blazinghot:blaze_mixing\/melting\/sturdy.*/})
+    // restored original: event.remove({ id: /blazinghot:.*mixing.*molten_sturdy_alloy$/})
+    // restored original: event.remove({ id: /blazinghot:.*sturdy_casing.*/})
     /*
     event.remove({ output: { item: "blazinghot:sturdy_alloy" } })
     event.remove({ output: { item: "blazinghot:sturdy_alloy_bucket" } })
@@ -24,19 +24,19 @@ ServerEvents.recipes(event => {
     // - Sturdy sheet replacements
     // create:schedule - below
     // immersive_aircraft:engine - brass machines
-    event.remove({ id: "immersive_aircraft:engine" })
+    // restored original: event.remove({ id: "immersive_aircraft:engine" })
     // numismatics:brass_depositor - brass machines
-    event.remove({ id: "numismatics:brass_depositor" })
+    // restored original: event.remove({ id: "numismatics:brass_depositor" })
     // numismatics:banking_guide
-    event.remove({ output: "numismatics:banking_guide" })
+    // restored original: event.remove({ output: "numismatics:banking_guide" })
     event.shapeless("numismatics:banking_guide", ["numismatics:cog", "minecraft:paper"])
     // - Sturdy casing: give a separate recipe so it's a cosmetic block
     // event.recipes.create.haunting("blazinghot:sturdy_casing", "create:railway_casing")
     // repurposed as Steel Casing
     // Might as well get the blaze casing and mixer while we're at it
-    event.remove({ id: /blazinghot:.*blaze_casing.*/ })
-    event.remove({ output: "blazinghot:blaze_whisk" })
-    event.remove({ output: "blazinghot:blaze_mixer" })
+    // restored original: event.remove({ id: /blazinghot:.*blaze_casing.*/ })
+    // restored original: event.remove({ output: "blazinghot:blaze_whisk" })
+    // restored original: event.remove({ output: "blazinghot:blaze_mixer" })
     event.recipes.create.haunting("blazinghot:blaze_casing", "create:copper_casing")
     // - Sturdy molds: use molten brass or molten gold instead, like tinkers
     // Blank molds are removed because they have zero purpose

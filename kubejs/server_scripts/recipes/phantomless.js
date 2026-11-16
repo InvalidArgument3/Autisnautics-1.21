@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
     }
 
     if (Platform.isLoaded("moreminecarts") && Platform.isLoaded("thermal") && Item.exists("thermal:blitz_powder")) {
-        event.replaceInput({}, "minecraft:phantom_membrane", "thermal:blitz_powder")
+        // restored original: event.replaceInput({}, "minecraft:phantom_membrane", "thermal:blitz_powder")
         event.recipes.create.crushing([Item.of("moreminecarts:levitation_powder"), CreateItem.of("moreminecarts:levitation_powder", 0.5)], "thermal:blitz_powder")
     }
     // Modern Foundry already registers modernfoundry:double_jump with phantom membranes.

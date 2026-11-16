@@ -8,8 +8,8 @@ ServerEvents.recipes(event => {
     // recipe in potions.js: glow lichen + awkward potion
 
     // -- Glowing Mushroom
-    event.remove({ id: "nuclearcraftneohaul:glowing_mushroom" })
-    event.remove({ id: "minecraft:glowing_mushroom" }) // nc un-crafting recipe using minecraft namespace
+    // restored original: event.remove({ id: "nuclearcraftneohaul:glowing_mushroom" })
+    // restored original: event.remove({ id: "minecraft:glowing_mushroom" }) // nc un-crafting recipe using minecraft namespace
     event.recipes.create.filling("nuclearcraftneohaul:glowing_mushroom",
         ["minecraft:brown_mushroom",
             potionIngredient("alexscaves:glowing", 50)]) // helper function
@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway", 250)], [SizedIngredient.of("nuclearcraftneohaul:glowing_mushroom", 3), Fluid.sizedIngredientOf("minecraft:milk", 250)]).heated()
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway_slow", 250)], [SizedIngredient.of("minecraft:redstone", 1), Fluid.sizedIngredientOf("nuclearcraftneohaul:radaway", 250)]).heated()
     // - replace default recipes
-    event.remove({ id: /nuclearcraftneohaul:fluid_enricher\/radaway.*/ })
+    // restored original: event.remove({ id: /nuclearcraftneohaul:fluid_enricher\/radaway.*/ })
     event.custom({
         "type": "nuclearcraftneohaul:enricher_recipe",
         "fluidIngredients": [
@@ -194,7 +194,7 @@ ServerEvents.recipes(event => {
 
     // -- Ferroboron Alloy
     // - tweak recipes so Ferroboron alloy is only 20/80 boron/steel instead of 50/50
-    event.remove({ id: "nuclearcraftneohaul:fluid_mixer/ferroboron_from_steel_boron" })
+    // restored original: event.remove({ id: "nuclearcraftneohaul:fluid_mixer/ferroboron_from_steel_boron" })
     event.custom({
         "type": "nuclearcraftneohaul:salt_mixer_recipe",
         "fluidIngredients": [
@@ -223,7 +223,7 @@ ServerEvents.recipes(event => {
         "radiation": 0.0,
         "timeModifier": 1.0
     }).id("kubejs:fluid_mixer/ferroboron")
-    event.remove({ id: "nuclearcraftneohaul:alloy_furnace/ferroboron_alloy" })
+    // restored original: event.remove({ id: "nuclearcraftneohaul:alloy_furnace/ferroboron_alloy" })
     event.custom({
         "type": "nuclearcraftneohaul:alloy_furnace_recipe",
         "itemIngredients": [
@@ -329,7 +329,7 @@ ServerEvents.recipes(event => {
     boronMachine(event, Item.of("nuclearcraftneohaul:machine_interface", 1))
     // multiblock machines/fission/etc gated behind lithium (wasteland)
     // misc
-    event.remove({ id: "nuclearcraftneohaul:basic_voltaic_pile" }) // it's worse than an accumulator so skip it
+    // restored original: event.remove({ id: "nuclearcraftneohaul:basic_voltaic_pile" }) // it's worse than an accumulator so skip it
     boronMachine(event, Item.of("nuclearcraftneohaul:advanced_voltaic_pile", 1), "nuclearcraftneohaul:magnesium_block") // wasteland gated
     // speed upgrade uses rare(?) silver
     boronMachine(event, Item.of("nuclearcraftneohaul:speed_upgrade", 1), "#c:storage_blocks/silver")
@@ -351,7 +351,7 @@ ServerEvents.recipes(event => {
     })
 
     // -- Epilogue
-    event.remove({ output: "supplementaries:globe" })
+    // restored original: event.remove({ output: "supplementaries:globe" })
     event.shaped("supplementaries:globe", [
         "RM ",
         "MBM",
@@ -361,7 +361,7 @@ ServerEvents.recipes(event => {
         M: "minecraft:map",
         B: "#c:slimeballs"
     })
-    event.remove({ output: "supplementaries:globe_sepia" })
+    // restored original: event.remove({ output: "supplementaries:globe_sepia" })
     event.custom({
         "type": "nuclearcraftneohaul:infuser_recipe",
         "fluidIngredients": [

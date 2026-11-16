@@ -20,7 +20,8 @@
 const GATE = true
 
 ServerEvents.recipes(event => {
-    event.remove({ id: "portal_linker:portal_linker" })
+    // The jar recipe stays (middle ingredient is the portal_linker:linker_gate tag).
+    // This copy names the machine item in the recipe book.
     if (!GATE) {
         return
     }
@@ -28,5 +29,5 @@ ServerEvents.recipes(event => {
         C: "minecraft:crying_obsidian",
         M: "kubejs:enderium_machine",
         E: "minecraft:ender_eye"
-    }).id("portal_linker:portal_linker")
+    }).id("kubejs:portal_linker_machine")
 })

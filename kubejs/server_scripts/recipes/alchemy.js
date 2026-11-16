@@ -106,8 +106,8 @@ ServerEvents.recipes(event => {
     }
 
     // Subtrate bottling and extracting
-    event.remove({ type: "thermal:sawmill" })
-    event.remove({ type: "thermal:centrifuge" })
+    // restored original: event.remove({ type: "thermal:sawmill" })
+    // restored original: event.remove({ type: "thermal:centrifuge" })
 
     if (hasThermal) {
         global.substrates.forEach(a => {

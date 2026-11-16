@@ -90,17 +90,17 @@ ServerEvents.recipes(event => {
     //     T: "create:fluid_tank",
     //     P: "create:iron_sheet"
     // })
-    if (Platform.isLoaded("vs_clockwork")) event.replaceInput({ output: "vs_clockwork:wing" }, "create:sturdy_sheet", "create:golden_sheet")
-    event.replaceInput({ output: "railways:fuel_tank" }, "create:sturdy_sheet", "create:golden_sheet")
+    // restored original: if (Platform.isLoaded("vs_clockwork")) event.replaceInput({ output: "vs_clockwork:wing" }, "create:sturdy_sheet", "create:golden_sheet")
+    // restored original: event.replaceInput({ output: "railways:fuel_tank" }, "create:sturdy_sheet", "create:golden_sheet")
     // event.replaceInput({ output: "create_sa:flamethrower" }, "create:sturdy_sheet", "minecraft:netherite_ingot")
-    event.remove({ output: "immersive_aircraft:nether_engine" })
-    event.remove({ output: "immersive_aircraft:eco_engine" })
+    // restored original: event.remove({ output: "immersive_aircraft:nether_engine" })
+    // restored original: event.remove({ output: "immersive_aircraft:eco_engine" })
     zincMachine(event, Item.of("immersive_aircraft:nether_engine", 1), "immersive_aircraft:engine")
     leadMachine(event, Item.of("immersive_aircraft:eco_engine", 1), "immersive_aircraft:engine")
 
     // //aircraft/jetpack tiers
     // andesite: gyrodyne, andesite jetpack
-    event.replaceInput({ output: "immersive_aircraft:gyrodyne" }, "create:precision_mechanism", "kubejs:kinetic_mechanism")
+    // restored original: event.replaceInput({ output: "immersive_aircraft:gyrodyne" }, "create:precision_mechanism", "kubejs:kinetic_mechanism")
     // event.remove({ output: "create_sa:andesite_jetpack_chestplate" })
     // event.shaped("create_sa:andesite_jetpack_chestplate", [
     //     "CBC",
@@ -116,12 +116,12 @@ ServerEvents.recipes(event => {
     // copper: copper jetpack - mechanism already replaced
     // gold: airships, quadrocopter, VS clockwork
     if (Platform.isLoaded("vs_clockwork")) {
-        event.remove({ output: "vs_clockwork:physics_infuser" })
+        // restored original: event.remove({ output: "vs_clockwork:physics_infuser" })
         goldMachine(event, Item.of("vs_clockwork:physics_infuser", 1), "vs_clockwork:wanderlite_matrix")
     }
-    event.replaceInput({ output: "immersive_aircraft:quadrocopter" }, "immersive_aircraft:boiler", "kubejs:gold_machine")
+    // restored original: event.replaceInput({ output: "immersive_aircraft:quadrocopter" }, "immersive_aircraft:boiler", "kubejs:gold_machine")
     if (Item.exists("vs_sails:rope")) {
-        event.remove({ output: "immersive_aircraft:airship" })
+        // restored original: event.remove({ output: "immersive_aircraft:airship" })
         event.shaped("immersive_aircraft:airship", [
             "SSS",
             "R R",
@@ -180,7 +180,7 @@ ServerEvents.recipes(event => {
     }
 
     // remove vanilla blast furnace -> steel (lol?)
-    event.remove({ type: "minecraft:blasting", input: "minecraft:iron_ingot" })// done by input in case of steel unification changes
+    // restored original: event.remove({ type: "minecraft:blasting", input: "minecraft:iron_ingot" })// done by input in case of steel unification changes
     // chainmail no longer meltable (it gave steel and chainmail can be crafted)
     event.remove({ type: "tconstruct:damagable_melting", input: "minecraft:chainmail_helmet" })
     event.remove({ type: "tconstruct:damagable_melting", input: "minecraft:chainmail_chestplate" })
@@ -189,9 +189,9 @@ ServerEvents.recipes(event => {
 
 
     // Create Addition: disable rotational force/energy conversion because powergrid does it better
-    event.remove({ output: "createaddition:electric_motor" })
-    event.remove({ input: "createaddition:electric_motor" })
-    event.remove({ output: "createaddition:alternator" })
+    // restored original: event.remove({ output: "createaddition:electric_motor" })
+    // restored original: event.remove({ input: "createaddition:electric_motor" })
+    // restored original: event.remove({ output: "createaddition:alternator" })
 
     // nuclearcraft: charcoal dust was useless? Those ids are not in nuclearcraftneohaul.
     if (Item.exists("nuclearcraft:charcoal_dust") && Item.exists("nuclearcraft:coal_dust")) {
@@ -223,9 +223,9 @@ ServerEvents.recipes(event => {
     ])
     // modify aquatic entangler recipe so it's easier to get
     if (hasThermal) {
-        event.replaceInput({ output: "thermal:device_fisher" }, "thermal:redstone_servo", "minecraft:barrel")
-        event.replaceInput({ output: "thermal:junk_net" }, "minecraft:iron_nugget", "#c:ingots/lead")
-        if (Item.exists("rats:garbage_pile")) event.replaceInput({ output: "thermal:junk_net" }, "minecraft:stick", "rats:garbage_pile")
+        // restored original: event.replaceInput({ output: "thermal:device_fisher" }, "thermal:redstone_servo", "minecraft:barrel")
+        // restored original: event.replaceInput({ output: "thermal:junk_net" }, "minecraft:iron_nugget", "#c:ingots/lead")
+        // restored original: if (Item.exists("rats:garbage_pile")) event.replaceInput({ output: "thermal:junk_net" }, "minecraft:stick", "rats:garbage_pile")
     }
 
     // tfmg/ie synthetic leathers and strings support
@@ -236,7 +236,7 @@ ServerEvents.recipes(event => {
     // event.recipes.create.deploying("tfmg:synthetic_leather", ["#c:ingots/plastic", "minecraft:paper"])
 
     // make tome of alkahestry an endgame item
-    event.remove({ type: "minecraft:crafting_shapeless", input: "reliquary:witch_hat", output: "reliquary:alkahestry_tome" })
+    // restored original: event.remove({ type: "minecraft:crafting_shapeless", input: "reliquary:witch_hat", output: "reliquary:alkahestry_tome" })
     if (Item.exists("embers:alchemy_pedestal") && Item.exists("botania:conjuration_catalyst") && Item.exists("dungeonnowloading:chaotic_hexahedron")) {
         event.recipes.create.mechanical_crafting("reliquary:alkahestry_tome", [
             " HTE ",
@@ -265,13 +265,13 @@ ServerEvents.recipes(event => {
 
     // //chapter fixes
     // unfuck wood plank cutting
-    event.remove({ output: "cuisinedelight:plate" })
+    // restored original: event.remove({ output: "cuisinedelight:plate" })
     // event.remove({ output: "tfmg:formwork_block" })
     let handrailTypes = ["oak", "birch", "spruce", "jungle", "dark_oak", "acacia", "crimson", "warped", "mangrove", "cherry", "bamboo"]
     let removeHandrails = (wood) => {
         let originalHandrail = "youkaishomecoming:" + wood + "_handrail"
         if (Item.exists(originalHandrail)) {
-            event.remove({ output: originalHandrail })
+            // restored original: event.remove({ output: originalHandrail })
         }
     }
     handrailTypes.forEach(removeHandrails)
@@ -306,7 +306,7 @@ ServerEvents.recipes(event => {
     let removeMould = (type) => {
         let originalMould = "createbigcannons:" + type + "_cast_mould"
         if (Item.exists(originalMould)) {
-            event.remove({ output: originalMould })
+            // restored original: event.remove({ output: originalMould })
         }
     }
     mouldTypes.forEach(removeMould)
@@ -327,21 +327,21 @@ ServerEvents.recipes(event => {
 
     // might as well fix this createbigcannons shit while i'm at it
     event.remove({ id: "createbigcannons/cutting/autocannon_cartridge_sheet_copper" })// duplicate
-    event.replaceInput({ output: "createbigcannons:spring_wire" }, "#c:plates/iron", "#c:plates/lead")// another ingredient+type with multiple outputs
+    // restored original: event.replaceInput({ output: "createbigcannons:spring_wire" }, "#c:plates/iron", "#c:plates/lead")// another ingredient+type with multiple outputs
 
     // //Chapter 2B: Lead Machines replacement
     // replacing the chassis with the lead machine
     // Installed mod is nuclearcraftneohaul. Old nuclearcraft: item ids are gone.
     if (Item.exists("nuclearcraft:chassis")) {
-        event.remove({ output: "nuclearcraft:chassis" })
-        event.replaceInput({ output: "nuclearcraft:turbine_casing" }, "nuclearcraft:chassis", "kubejs:lead_casing")
-        event.replaceInput({}, "nuclearcraft:chassis", "kubejs:lead_machine")
+        // restored original: event.remove({ output: "nuclearcraft:chassis" })
+        // restored original: event.replaceInput({ output: "nuclearcraft:turbine_casing" }, "nuclearcraft:chassis", "kubejs:lead_casing")
+        // restored original: event.replaceInput({}, "nuclearcraft:chassis", "kubejs:lead_machine")
     }
     if (Item.exists("nuclearcraftneohaul:manufactory")) {
-        event.replaceInput({ output: "nuclearcraftneohaul:manufactory" }, "minecraft:piston", "kubejs:lead_machine")
+        // restored original: event.replaceInput({ output: "nuclearcraftneohaul:manufactory" }, "minecraft:piston", "kubejs:lead_machine")
     }
     if (Item.exists("nuclearcraft:alloy_smelter")) {
-        event.replaceInput({ output: "nuclearcraft:alloy_smelter" }, "minecraft:blast_furnace", "kubejs:lead_machine")
+        // restored original: event.replaceInput({ output: "nuclearcraft:alloy_smelter" }, "minecraft:blast_furnace", "kubejs:lead_machine")
     }
 
     // //atomic mechanisms
@@ -403,13 +403,13 @@ ServerEvents.recipes(event => {
     // Radaway: 3x glowing mushroom and 1 bottle of milk, heated mixing
     event.recipes.create.mixing([Fluid.of("nuclearcraftneohaul:radaway", 250)], [Item.of("nuclearcraftneohaul:glowing_mushroom", 3), Fluid.of("minecraft:milk", 250)]).heated()
     // original NC recipe: replace Ethanol with Milk
-    event.remove({ output: Fluid.of("nuclearcraftneohaul:radaway") })
-    event.remove({ output: Fluid.of("nuclearcraftneohaul:radaway_slow") })
+    // restored original: event.remove({ output: Fluid.of("nuclearcraftneohaul:radaway") })
+    // restored original: event.remove({ output: Fluid.of("nuclearcraftneohaul:radaway_slow") })
     // remove NC ethanol while we're at it, other mods do it better
-    event.remove({ output: Fluid.of("nuclearcraftneohaul:ethanol") })
-    event.remove({ output: Fluid.of("nuclearcraftneohaul:redstone_ethanol") })
-    event.remove({ output: "nuclearcraftneohaul:ethanol_bucket" })
-    event.remove({ output: "nuclearcraftneohaul:redstone_ethanol_bucket" })
+    // restored original: event.remove({ output: Fluid.of("nuclearcraftneohaul:ethanol") })
+    // restored original: event.remove({ output: Fluid.of("nuclearcraftneohaul:redstone_ethanol") })
+    // restored original: event.remove({ output: "nuclearcraftneohaul:ethanol_bucket" })
+    // restored original: event.remove({ output: "nuclearcraftneohaul:redstone_ethanol_bucket" })
 
     custom({
         "type": "nuclearcraft:fluid_enricher",
@@ -471,8 +471,8 @@ ServerEvents.recipes(event => {
 
     // Rats is not installed. These ids throw if read.
     if (Platform.isLoaded("rats")) {
-        event.remove({ output: "rats:raw_plastic" })
-        event.remove({ input: "rats:plastic_waste" })
+        // restored original: event.remove({ output: "rats:raw_plastic" })
+        // restored original: event.remove({ input: "rats:plastic_waste" })
         event.replaceInput({}, "rats:raw_plastic", "#c:ingots/plastic")
 
         // converting plastic waste to liquid plastic by "recycling", now with kubejs:liquid_plastic
@@ -576,7 +576,7 @@ ServerEvents.recipes(event => {
     })
 
     // replace sugarcane for bioplastic with biomass
-    event.remove({ output: "nuclearcraftneohaul:bioplastic" })
+    // restored original: event.remove({ output: "nuclearcraftneohaul:bioplastic" })
     custom({
         "type": "nuclearcraft:manufactory",
         "input": [
@@ -598,8 +598,8 @@ ServerEvents.recipes(event => {
 
 
     // fix broken radaway item recipes
-    event.remove({ output: Item.of("nuclearcraftneohaul:radaway") })
-    event.remove({ output: Item.of("nuclearcraftneohaul:radaway_slow") })
+    // restored original: event.remove({ output: Item.of("nuclearcraftneohaul:radaway") })
+    // restored original: event.remove({ output: Item.of("nuclearcraftneohaul:radaway_slow") })
     let fillRadaway = (result, fluid) => {
         if (!Item.exists(result) || !Item.exists("nuclearcraftneohaul:bioplastic")) return
         event.custom({
@@ -668,8 +668,8 @@ ServerEvents.recipes(event => {
     // event.replaceInput({}, "create:rose_quartz", "create:polished_rose_quartz")// jaopca, cosmetic stonecutting block, rock candy
 
     // remove bugged melting recipe for "raw tungsten" which doesn't exist
-    event.remove({ id: "tconstruct:smeltery/melting/metal/tungsten/raw" })
-    event.remove({ id: "tconstruct:smeltery/melting/metal/tungsten/raw_block" })
+    // restored original: event.remove({ id: "tconstruct:smeltery/melting/metal/tungsten/raw" })
+    // restored original: event.remove({ id: "tconstruct:smeltery/melting/metal/tungsten/raw_block" })
 
     // tfmg meme stones
     // event.remove({ input: /.*tfmg.*galena.*/ })
@@ -764,8 +764,8 @@ ServerEvents.recipes(event => {
     })
 
     // globes for the wasteland
-    event.remove({ output: "supplementaries:globe" })
-    event.remove({ output: "supplementaries:globe_sepia" })
+    // restored original: event.remove({ output: "supplementaries:globe" })
+    // restored original: event.remove({ output: "supplementaries:globe_sepia" })
     // sepia globe: globe in NC nuclear furnace
     custom({
         "type": "nuclearcraft:alloy_smelter",
@@ -807,10 +807,10 @@ ServerEvents.recipes(event => {
     // zinc sheets unification
     event.replaceInput({}, "createdeco:zinc_sheet", "#c:plates/zinc")
     // remove useless netherite sheet
-    if (Item.exists("createdeco:netherite_sheet")) event.remove({ output: "createdeco:netherite_sheet" })
+    // restored original: if (Item.exists("createdeco:netherite_sheet")) event.remove({ output: "createdeco:netherite_sheet" })
     // no counterfeiting
-    event.remove({ input: /^createdeco:.*coin(stack)?$/ })
-    event.remove({ output: /^createdeco:.*coin(stack)?$/ })
+    // restored original: event.remove({ input: /^createdeco:.*coin(stack)?$/ })
+    // restored original: event.remove({ output: /^createdeco:.*coin(stack)?$/ })
 
     // forcing the use of ae2 ender dust
     if (Platform.isLoaded("ae2")) event.replaceOutput({}, "thermal:ender_pearl_dust", "ae2:ender_dust")
@@ -822,7 +822,7 @@ ServerEvents.recipes(event => {
 
     // //fluid unification
     // embers:molten_.*
-    event.remove({ id: "embers:mixing/molten_invar" })// progression meme
+    // restored original: event.remove({ id: "embers:mixing/molten_invar" })// progression meme
     // the rest is in A2 datapack (kubejs incompatible)
     // nuclearcraft:molten_.*
     if (Platform.isLoaded("nuclearcraft") && Platform.isLoaded("tconstruct")) {
@@ -836,12 +836,12 @@ ServerEvents.recipes(event => {
     event.remove({ id: /^jaopca:.*molten.*coal$/ })
 
     // fixing weird coal coke storage block recipes
-    event.remove({ id: "thermal:storage/coal_coke_block" })
-    event.remove({ id: "immersiveengineering:crafting/coal_coke_to_coke" })
+    // restored original: event.remove({ id: "thermal:storage/coal_coke_block" })
+    // restored original: event.remove({ id: "immersiveengineering:crafting/coal_coke_to_coke" })
     // event.remove({ id: "tfmg:crafting/coal_coke_block" })
     //
     // event.remove({ id: "tfmg:crafting/coal_coke_from_block" })
-    event.remove({ id: "immersiveengineering:crafting/coke_to_coal_coke" })
+    // restored original: event.remove({ id: "immersiveengineering:crafting/coke_to_coal_coke" })
     // event.remove({ output: "tfmg:coal_coke_block" })
     if (hasThermal) event.shapeless("thermal:coal_coke_block", ["9x #c:coal_coke"])
 
@@ -860,22 +860,22 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded("powergrid")) {
         let powergridWidgets = ["cord_junction", "lv_switch", "lv_button", "light_fixture", "device_connector", "socket", "fuse_holder"]
         powergridWidgets.forEach(widget => {
-            event.remove({ output: "powergrid:" + widget })
+            // restored original: event.remove({ output: "powergrid:" + widget })
             zincMachine(event, Item.of("powergrid:" + widget, 8))
         })
         // machinify some more recipes
         event.recipes.create.filling("powergrid:battery", ["kubejs:zinc_machine", Fluid.of("powergrid:acid", 250)])
-        event.remove({ output: "powergrid:mv_switch" })
+        // restored original: event.remove({ output: "powergrid:mv_switch" })
         zincMachine(event, Item.of("powergrid:mv_switch", 4))
-        event.remove({ output: "powergrid:spark_gap" })
+        // restored original: event.remove({ output: "powergrid:spark_gap" })
         zincMachine(event, Item.of("powergrid:spark_gap", 4))
-        event.remove({ id: "powergrid:crafting/generator_housing" })
+        // restored original: event.remove({ id: "powergrid:crafting/generator_housing" })
         zincMachine(event, Item.of("powergrid:generator_housing", 2))
-        event.remove({ output: "powergrid:hv_switch" })
+        // restored original: event.remove({ output: "powergrid:hv_switch" })
         zincMachine(event, Item.of("powergrid:hv_switch", 1), "#c:rods/iron")
-        event.remove({ output: "powergrid:hv_breaker" })
+        // restored original: event.remove({ output: "powergrid:hv_breaker" })
         zincMachine(event, Item.of("powergrid:hv_breaker", 1), "create:precision_mechanism")
-        event.remove({ output: "powergrid:contactor" })
+        // restored original: event.remove({ output: "powergrid:contactor" })
         zincMachine(event, Item.of("powergrid:contactor", 1), "powergrid:copper_coil")
         // add superior automated versions of some common recipes
         // Create 6 deployer recipes accept two unsized ingredients, so a 3-wire
@@ -898,7 +898,7 @@ ServerEvents.recipes(event => {
             event.recipes.create.filling("powergrid:heavy_wire_connector", ["minecraft:terracotta", Fluid.of("tconstruct:molten_iron", 10)])
         }
         // insulated wire: always uses rubber not kelp, can deploy for 2:1 rubber efficiency
-        event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
+        // restored original: event.replaceInput({ output: /^powergrid:.*copper.*/ }, "minecraft:dried_kelp", "kubejs:rubber")
         if (Item.exists("powergrid:insulated_copper_wire") && Item.exists("kubejs:rubber")) {
             event.shapeless(Item.of("powergrid:insulated_copper_wire", 2), ["#c:wires/copper", "#c:wires/copper", "kubejs:rubber"])
                 .id("kubejs:powergrid_insulated_copper_wire")
@@ -914,8 +914,8 @@ ServerEvents.recipes(event => {
 
     // wires
     // unify wire recipes by removing sawing versions
-    event.remove({ type: "create:sawing", output: /.*_wire$/ })
-    event.remove({ type: "create:sawing", output: /^immersiveengineering:wire_.*/ })
+    // restored original: event.remove({ type: "create:sawing", output: /.*_wire$/ })
+    // restored original: event.remove({ type: "create:sawing", output: /^immersiveengineering:wire_.*/ })
     // add createdieselgenerators cutting recipe for IE lead wire
     custom({
         "type": "createdieselgenerators:wire_cutting",
@@ -927,7 +927,7 @@ ServerEvents.recipes(event => {
         }]
     })
     // unify simpleradios copper wire
-    event.remove({ id: "simpleradio:copper_wire" })
+    // restored original: event.remove({ id: "simpleradio:copper_wire" })
     // creating projectred red alloy wire with wiremaking machines (1:8)
     if (Item.exists("projectred_core:red_ingot") && Item.exists("projectred_transmission:red_alloy_wire")) {
         custom({
@@ -967,9 +967,9 @@ ServerEvents.recipes(event => {
 
     // //chisel integration
     // remove crafting recipes for chisel stones that are now chiseling only
-    event.remove({ type: "minecraft:crafting_shaped", output: "chisel:marble/raw" })
-    event.remove({ type: "minecraft:crafting_shaped", output: "chisel:limestone/raw" })
-    event.remove({ type: "minecraft:crafting_shaped", output: "chisel:marblepillar/pillar" })
+    // restored original: event.remove({ type: "minecraft:crafting_shaped", output: "chisel:marble/raw" })
+    // restored original: event.remove({ type: "minecraft:crafting_shaped", output: "chisel:limestone/raw" })
+    // restored original: event.remove({ type: "minecraft:crafting_shaped", output: "chisel:marblepillar/pillar" })
     // new marble pillar recipe
     event.shaped(Item.of("chisel:marblepillar/pillar", 6), [
         "MM",
@@ -979,6 +979,6 @@ ServerEvents.recipes(event => {
         M: "#c:stone/marble"
     })
     // delete diabase (pointless clone of basalt)
-    event.remove({ output: /chisel:diabase.*/ })
-    event.remove({ input: /chisel:diabase.*/ })
+    // restored original: event.remove({ output: /chisel:diabase.*/ })
+    // restored original: event.remove({ input: /chisel:diabase.*/ })
 })

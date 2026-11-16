@@ -8,9 +8,9 @@ if(Platform.isLoaded("forbidden_arcanus")) {
     wood_types.push("forbidden_arcanus:aurum")
     wood_types.push("forbidden_arcanus:edelwood")
     ServerEvents.recipes(event => {
-        event.remove({ id: "forbidden_arcanus:edelwood_bucket" })
+        // restored original: event.remove({ id: "forbidden_arcanus:edelwood_bucket" })
 
-        event.remove({ id: "forbidden_arcanus:edelwood_stick" })
+        // restored original: event.remove({ id: "forbidden_arcanus:edelwood_stick" })
         event.shaped("3x forbidden_arcanus:edelwood_stick", [
             "S",
             "A",
@@ -20,7 +20,7 @@ if(Platform.isLoaded("forbidden_arcanus")) {
             A: "minecraft:stick"
         })
         // Eternal stella
-        event.remove({ id: "forbidden_arcanus:eternal_stella" })
+        // restored original: event.remove({ id: "forbidden_arcanus:eternal_stella" })
         event.shaped("forbidden_arcanus:eternal_stella", [
             "PEP",
             "SDS",

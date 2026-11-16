@@ -20,13 +20,13 @@ ServerEvents.recipes(event => {
         }
 
     if (storage == "refinedstorage") {
-        event.remove({ id: "refinedstorage:raw_basic_processor" })
-        event.remove({ id: "refinedstorage:raw_improved_processor" })
-        event.remove({ id: "refinedstorage:raw_advanced_processor" })
+        // restored original: event.remove({ id: "refinedstorage:raw_basic_processor" })
+        // restored original: event.remove({ id: "refinedstorage:raw_improved_processor" })
+        // restored original: event.remove({ id: "refinedstorage:raw_advanced_processor" })
     } else {
-        event.remove({ id: "ae2:inscriber/calculation_processor_print" })
-        event.remove({ id: "ae2:inscriber/logic_processor_print" })
-        event.remove({ id: "ae2:inscriber/engineering_processor_print" })
+        // restored original: event.remove({ id: "ae2:inscriber/calculation_processor_print" })
+        // restored original: event.remove({ id: "ae2:inscriber/logic_processor_print" })
+        // restored original: event.remove({ id: "ae2:inscriber/engineering_processor_print" })
     }
 
     event.recipes.create.cutting(Item.of("kubejs:silicon_wafer", 6), silicon).id("kubejs:wafer_cut")

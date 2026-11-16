@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
     event.shaped("farmersdelight:diamond_knife", ["S ", " M"], { M: "minecraft:diamond", S: "#c:rods/wooden" })
 
     // Modify farmer's delight log stripping
-    event.remove({ input: "#minecraft:logs", type: "farmersdelight:cutting" })
+    // restored original: event.remove({ input: "#minecraft:logs", type: "farmersdelight:cutting" })
     // laziness and its consequences have been a distaster for the human race
     wood_types.forEach(wood => {
         let log = wood + "_log"

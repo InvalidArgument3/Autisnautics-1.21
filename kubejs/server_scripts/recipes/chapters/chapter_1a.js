@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
     event.blasting("kubejs:rubber", "kubejs:raw_rubber").xp(0).cookingTime(100)
     // - Rubber usecases
     // Belts - 3x output
-    event.remove({ output: "create:belt_connector" })
+    // restored original: event.remove({ output: "create:belt_connector" })
     event.shaped(Item.of("create:belt_connector", 3), [
         "SSS",
         "SSS"
@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
     })
     // Replacing dried kelp in several recipes
     let kelpToRubber = (recipe) => {
-        event.replaceInput({ id: recipe }, "minecraft:dried_kelp", "kubejs:rubber")
+        // restored original: event.replaceInput({ id: recipe }, "minecraft:dried_kelp", "kubejs:rubber")
     }
     kelpToRubber("createdieselgenerators:crafting/pumpjack_head")
     // kelpToRubber("createdieselgenerators:crafting/kelp_handle") // Zinc Machines

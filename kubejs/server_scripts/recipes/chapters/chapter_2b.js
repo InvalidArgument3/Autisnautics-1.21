@@ -67,9 +67,14 @@ ServerEvents.recipes(event => {
     leadMachine(event, Item.of("create:repackager", 1), "create:bound_cardboard_block")
     leadMachine(event, Item.of("create:factory_gauge", 2))
     leadMachine(event, Item.of("create:redstone_requester", 1), "minecraft:redstone_torch")
-    // replace transmitter in stock link recipe
-    event.replaceInput({ id: "create:crafting/logistics/stock_link" }, "create:item_vault", "kubejs:lead_casing")
-    event.replaceInput({ id: "create:crafting/logistics/stock_link" }, "create:transmitter", "minecraft:lightning_rod")
+    // Create's vault + transmitter stock link stays. This is the pack's lead-casing path.
+    event.shaped("create:stock_link", [
+        "C",
+        "B"
+    ], {
+        C: "minecraft:lightning_rod",
+        B: "kubejs:lead_casing"
+    }).id("kubejs:stock_link_lead")
     // Item vault/Shipping container convenience recipes
     event.shapeless("create:item_vault", ["kubejs:lead_casing", Ingredient.of("#c:barrels/wooden")])
     colours.forEach(color => {

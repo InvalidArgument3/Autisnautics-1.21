@@ -51,11 +51,7 @@ let createMachine = (machineItem, event, outputIngredient, inputIngredient) => {
     let outputId = output.id; // KubeJS 6 standard
     if (!outputId) outputId = output.getId();
 
-    try {
-        event.remove({ output: outputId })
-    } catch (e) {
-        console.log(`Warn: could not remove recipes for ${outputId}: ${e}`)
-    }
+    // Original mod recipes stay. The item application or stonecutting below is an extra path.
 
     if (inputIngredient) {
         let inputIng = Ingredient.of(inputIngredient)

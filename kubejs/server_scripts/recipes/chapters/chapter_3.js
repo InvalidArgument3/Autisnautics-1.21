@@ -56,10 +56,10 @@ ServerEvents.recipes(event => {
 
     // -- Gunpowder Production
     // - Remove unwanted sources
-    event.remove({ id: "galosphere:gunpowder_from_pink_salt_shard" })
-    event.remove({ id: "alexscaves:gunpowder_from_sulfur" })
-    event.remove({ id: "create:splashing/crushed_raw_zinc" }) // metallurgy redo should fix this anyway
-    event.remove({ id: "create:filling/gunpowder" })
+    // restored original: event.remove({ id: "galosphere:gunpowder_from_pink_salt_shard" })
+    // restored original: event.remove({ id: "alexscaves:gunpowder_from_sulfur" })
+    // restored original: event.remove({ id: "create:splashing/crushed_raw_zinc" }) // metallurgy redo should fix this anyway
+    // restored original: event.remove({ id: "create:filling/gunpowder" })
     // - CDG Diesel as a sulfur source - simpler than IE high pressure refiner but inferior
     // Lubricant -> Sulfurized Diesel + Paraffin Wax
     event.recipes.create.mixing([Fluid.of("immersivepetroleum:diesel_sulfur", 800), CreateItem.of("immersivepetroleum:paraffin_wax", 0.75)],
@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
 
     // -- Singularity Production
     // - Crushing Wheels: simpler recipe
-    event.remove({ id: "create:mechanical_crafting/crushing_wheel" })
+    // restored original: event.remove({ id: "create:mechanical_crafting/crushing_wheel" })
     event.recipes.create.mechanical_crafting(Item.of("create:crushing_wheel", 2), [
         " AAA ",
         "AABAA",
@@ -116,7 +116,7 @@ ServerEvents.recipes(event => {
         }
 
         // -- Paint Balls and Color Correction
-        event.remove({ id: /ae2:tools\/paintballs.*/ })
+        // restored original: event.remove({ id: /ae2:tools\/paintballs.*/ })
         event.recipes.create.crushing([
             CreateItem.of("ae2:red_paint_ball", 0.9),
             CreateItem.of("ae2:yellow_paint_ball", 0.75),

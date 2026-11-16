@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
         .id("kubejs:infernal_mechanism")
 
     // -- Powergrid Conductive Casing = Zinc Casing
-    event.remove({ output: "powergrid:conductive_casing"})
+    // restored original: event.remove({ output: "powergrid:conductive_casing"})
     event.shapeless(Item.of("powergrid:conductive_casing", 2), [Ingredient.of("#c:plates/zinc"), "minecraft:stone"])
 
     // -- Zinc Machine
@@ -31,10 +31,10 @@ ServerEvents.recipes(event => {
     // Rock generation
     zincMachine(event, Item.of("nuclearcraftneohaul:cobblestone_generator", 1), "minecraft:piston")
     // Remove redundant cobble gens
-    event.remove({ output: "nuclearcraftneohaul:cobblestone_generator_compact"})
-    event.remove({ output: "nuclearcraftneohaul:cobblestone_generator_dense"})
-    event.remove({ id: "nuclearcraftneohaul:collector/from_cobblestone_generator_compact_rate"})
-    event.remove({ id: "nuclearcraftneohaul:collector/from_cobblestone_generator_dense_rate"})
+    // restored original: event.remove({ output: "nuclearcraftneohaul:cobblestone_generator_compact"})
+    // restored original: event.remove({ output: "nuclearcraftneohaul:cobblestone_generator_dense"})
+    // restored original: event.remove({ id: "nuclearcraftneohaul:collector/from_cobblestone_generator_compact_rate"})
+    // restored original: event.remove({ id: "nuclearcraftneohaul:collector/from_cobblestone_generator_dense_rate"})
     // Nullification
     zincMachine(event, Item.of("nuclearcraftneohaul:universal_bin", 1), "minecraft:cactus")
 
@@ -43,19 +43,19 @@ ServerEvents.recipes(event => {
     // small parts, connectors, etc
     let powergridSmall = ["wire_connector", "cord_junction", "lv_switch", "lv_button", "light_fixture", "socket", "device_connector", "fuse_holder", "alarm_bell", "thermometer"]
     powergridSmall.forEach(widget => {
-        event.remove({ output: "powergrid:" + widget })
+        // restored original: event.remove({ output: "powergrid:" + widget })
         zincMachine(event, Item.of("powergrid:" + widget, 8))
     })
     // medium parts
     let powergridMedium = ["mv_switch", "spark_gap", "heavy_wire_connector", "generator_housing", "vertical_generator_housing"]
     powergridMedium.forEach(widget => {
-        event.remove({ output: "powergrid:" + widget })
+        // restored original: event.remove({ output: "powergrid:" + widget })
         zincMachine(event, Item.of("powergrid:" + widget, 4))
     })
     // larger parts
     let powergridLarge = ["current_gauge", "voltage_gauge", "electric_motor", "generator_commutator", "generator_vertical_commutator"]
     powergridLarge.forEach(widget => {
-        event.remove({ output: "powergrid:" + widget })
+        // restored original: event.remove({ output: "powergrid:" + widget })
         zincMachine(event, Item.of("powergrid:" + widget, 1))
     })
     zincMachine(event, Item.of("powergrid:transformer_core", 4), Ingredient.of("#c:plates/iron"))
@@ -78,18 +78,18 @@ ServerEvents.recipes(event => {
     zincMachine(event, Item.of("powergrid:heating_coil", 2)) // technically useless because of fan catalysts
     zincMachine(event, Item.of("powergrid:crt", 1), "minecraft:glowstone_dust")
     // replacing gizmos
-    event.remove({ output: "powergrid:electrical_gizmo"})
-    event.remove({ id: "powergrid:crafting/portable_battery"})
+    // restored original: event.remove({ output: "powergrid:electrical_gizmo"})
+    // restored original: event.remove({ id: "powergrid:crafting/portable_battery"})
     event.shapeless(Item.of("powergrid:portable_battery", 1), ["create:copper_backtank", "powergrid:device_connector", "powergrid:battery"])
-    event.remove({ id: "powergrid:crafting/multimeter"})
+    // restored original: event.remove({ id: "powergrid:crafting/multimeter"})
     event.shapeless(Item.of("powergrid:multimeter", 1), ["powergrid:voltage_gauge", Ingredient.of("#c:wires/copper"), "powergrid:current_gauge"])
-    event.replaceInput({ id: "powergrid:mechanical_crafting/electrozapper" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
-    event.replaceInput({ id: "powergrid:mechanical_crafting/electrobaton" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
+    // restored original: event.replaceInput({ id: "powergrid:mechanical_crafting/electrozapper" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
+    // restored original: event.replaceInput({ id: "powergrid:mechanical_crafting/electrobaton" }, "powergrid:electrical_gizmo", "createaddition:tesla_coil")
 
 
     // createaddition
-    event.remove({ output: "createaddition:capacitor"})
-    event.remove({ output: "createaddition:alternator"}) // use powergrid :^)
+    // restored original: event.remove({ output: "createaddition:capacitor"})
+    // restored original: event.remove({ output: "createaddition:alternator"}) // use powergrid :^)
     zincMachine(event, Item.of("createaddition:tesla_coil", 1), "minecraft:lightning_rod")
     zincMachine(event, Item.of("createaddition:portable_energy_interface", 2))
     zincMachine(event, Item.of("createaddition:electric_motor", 1), "createaddition:copper_spool")
@@ -101,9 +101,9 @@ ServerEvents.recipes(event => {
     // - Batteries and Accumulators
     // unify sulfuric acid, prefer nuclearcraft's
     // remove powergrid:acid and its recipes
-    event.remove({ id: "powergrid:mixing/acid"})
-    event.remove({ id: "powergrid:sequenced_assembly/battery"})
-    event.remove({ id: "powergrid:mixing/etched_circuit_board"})
+    // restored original: event.remove({ id: "powergrid:mixing/acid"})
+    // restored original: event.remove({ id: "powergrid:sequenced_assembly/battery"})
+    // restored original: event.remove({ id: "powergrid:mixing/etched_circuit_board"})
     // add nuclearcraft sulfuric acid low tech recipe - 1:250 instead of 1:1000 and uses blaze powder
     event.recipes.create.mixing(
         Fluid.of("nuclearcraftneohaul:sulfuric_acid", 250),
@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
     // powergrid battery: because of device connectors, it's basically just worse than an accumulator
     event.recipes.create.filling("powergrid:battery", ["kubejs:zinc_machine", Fluid.sizedIngredientOf("nuclearcraftneohaul:sulfuric_acid", 1000)])
     // accumulator: the RF battery
-    event.remove({ id: "createaddition:crafting/modular_accumulator"})
+    // restored original: event.remove({ id: "createaddition:crafting/modular_accumulator"})
     event.recipes.create.mechanical_crafting("createaddition:modular_accumulator", [
         "CCCC",
         "PBBP",

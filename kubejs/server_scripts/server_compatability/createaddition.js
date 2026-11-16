@@ -23,29 +23,29 @@ if (Platform.isLoaded("createaddition")) {
         // event.replaceOutput({ id: "kubejs:machines/smelter/electrum_ingot" }, "thermal:electrum_ingot", "createaddition:electrum_ingot")
 
         // Duplicate Electrum Recipes
-        event.remove({ id: "createaddition:crafting/electrum_nugget" })
-        event.remove({ id: "createaddition:crafting/electrum"})
-        event.remove({ id: "createaddition:crafting/electrum_ingot"})
-        event.remove({ id: "createaddition:crafting/electrum_block" })
+        // restored original: event.remove({ id: "createaddition:crafting/electrum_nugget" })
+        // restored original: event.remove({ id: "createaddition:crafting/electrum"})
+        // restored original: event.remove({ id: "createaddition:crafting/electrum_ingot"})
+        // restored original: event.remove({ id: "createaddition:crafting/electrum_block" })
 
         // Motor & Alternator
         // invarMachine(event, Item.of("createaddition:electric_motor", 1), "createaddition:tesla_coil")
         // enderiumMachine(event, Item.of("createaddition:alternator", 1), "createaddition:electric_motor")
 
         // Remove capacitors
-        event.remove({ output: "createaddition:capacitor" })
+        // restored original: event.remove({ output: "createaddition:capacitor" })
 
         // Redstone Relay. projectred_core is not in this pack, so the 1.21 Create
         // Addition recipe (connector, electron tube, redstone, stone) stays.
         if (Item.exists("projectred_core:platformed_plate")) {
-            event.remove({ output: "createaddition:redstone_relay" })
+            // restored original: event.remove({ output: "createaddition:redstone_relay" })
             event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
                 .id("kubejs:compat/createaddition/redstone_relay_manual_only")
             event.recipes.create.deploying("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
         }
 
         // Remove heated basin ingot recipes
-        event.remove({ id: "createaddition:mixing/electrum" })
+        // restored original: event.remove({ id: "createaddition:mixing/electrum" })
 
         /*
         // Connectors

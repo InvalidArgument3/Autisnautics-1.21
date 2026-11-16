@@ -6,20 +6,20 @@ ServerEvents.recipes(event => {
 
     // -- Obliterating biofuels and biofuel accessories
     // - Unifying #c:plantoil into immersiveengineering:plantoil
-    event.remove({ id: "createaddition:compacting/seed_oil" })
-    event.remove({ id: "createdieselgenerators:compacting/plant_oil" })
+    // restored original: event.remove({ id: "createaddition:compacting/seed_oil" })
+    // restored original: event.remove({ id: "createdieselgenerators:compacting/plant_oil" })
     event.recipes.create.compacting(Fluid.of('immersiveengineering:plantoil', 100), [Ingredient.of("#c:seeds")]) // inferior to IE but simpler
         .id("kubejs:compacting/plant_oil")
     // - Removing #c:ethanol as it's no longer required
     // createdieselgenerators
-    event.remove({ id: "createdieselgenerators:basin_fermenting/fermentable" })
-    event.remove({ id: "createdieselgenerators:bulk_fermenting/fermentable" })
+    // restored original: event.remove({ id: "createdieselgenerators:basin_fermenting/fermentable" })
+    // restored original: event.remove({ id: "createdieselgenerators:bulk_fermenting/fermentable" })
     // immersiveengineering
-    event.remove({ id: /immersiveengineering:fermenter\/.*/ })
-    event.remove({ id: /farmersdelight:integration\/immersiveengineering\/fermenter.*/ })
+    // restored original: event.remove({ id: /immersiveengineering:fermenter\/.*/ })
+    // restored original: event.remove({ id: /farmersdelight:integration\/immersiveengineering\/fermenter.*/ })
     // remove industrial fermenter multiblock with datapack; only produces ethanol
-    event.remove({ id: "immersiveengineering:refinery/acetaldehyde" }) // we have a petroleum alternative
-    event.remove({ id: "immersiveengineering:mixer/herbicide" })
+    // restored original: event.remove({ id: "immersiveengineering:refinery/acetaldehyde" }) // we have a petroleum alternative
+    // restored original: event.remove({ id: "immersiveengineering:mixer/herbicide" })
     event.custom({
         "type": "immersiveengineering:mixer",
         "energy": 3200,
@@ -31,40 +31,40 @@ ServerEvents.recipes(event => {
         "result": { "amount": 500, "id": "immersiveengineering:herbicide" }
     })
     // unfortunate casualty
-    event.remove({ id: "tmted:bottling/wodka" })
+    // restored original: event.remove({ id: "tmted:bottling/wodka" })
     // nuclearcraftneohaul:ethanol still exists as a chemistry ingredient (CO byproduct, radaway etc)
     // - createaddition
     // bioethanol
-    event.remove({ id: "createaddition:mixing/bioethanol" })
+    // restored original: event.remove({ id: "createaddition:mixing/bioethanol" })
     // biomass and pellets
-    event.remove({ id: /createaddition:mixing\/biomass_from.*/ })
-    event.remove({ output: "createaddition:biomass_pellet" })
-    event.remove({ output: "createaddition:biomass_pellet_block" })
+    // restored original: event.remove({ id: /createaddition:mixing\/biomass_from.*/ })
+    // restored original: event.remove({ output: "createaddition:biomass_pellet" })
+    // restored original: event.remove({ output: "createaddition:biomass_pellet_block" })
     // replace biomass usage in createaddition christmas lights
-    event.replaceInput({ id: "createaddition:crafting/festive_spool" }, "createaddition:biomass", "minecraft:green_dye")
+    // restored original: event.replaceInput({ id: "createaddition:crafting/festive_spool" }, "createaddition:biomass", "minecraft:green_dye")
     // - createdieselgenerators:biodiesel
-    event.remove({ id: "createdieselgenerators:mixing/biodiesel" })
+    // restored original: event.remove({ id: "createdieselgenerators:mixing/biodiesel" })
     // - immersiveengineering
-    event.remove({ id: "immersiveengineering:refinery/biodiesel" })
-    event.remove({ id: "immersiveengineering:refinery/high_power_biodiesel" })
-    event.remove({ id: "immersiveengineering:generator_fuel/biodiesel" })
-    event.remove({ id: "immersiveengineering:generator_fuel/high_power_biodiesel" })
+    // restored original: event.remove({ id: "immersiveengineering:refinery/biodiesel" })
+    // restored original: event.remove({ id: "immersiveengineering:refinery/high_power_biodiesel" })
+    // restored original: event.remove({ id: "immersiveengineering:generator_fuel/biodiesel" })
+    // restored original: event.remove({ id: "immersiveengineering:generator_fuel/high_power_biodiesel" })
 
     // -- Removing other unwanted fuels
     // - Stellaris
     // Crude Oil
-    event.remove({ id: "stellaris:misc/pumpjack" })
-    event.remove({ id: "stellaris:misc/pumpjack_drill" })
+    // restored original: event.remove({ id: "stellaris:misc/pumpjack" })
+    // restored original: event.remove({ id: "stellaris:misc/pumpjack_drill" })
     // Diesel and Fuel
-    event.remove({ id: "stellaris:fuel_refining" })
+    // restored original: event.remove({ id: "stellaris:fuel_refining" })
     // now we no longer need this either
-    event.remove({ id: "stellaris:fuel_refinery" })
+    // restored original: event.remove({ id: "stellaris:fuel_refinery" })
     // - immersiveengineering
     // creosote_oil - todo make sure it's no longer a fuel for other mods
-    event.remove({ id: "immersiveengineering:generator_fuel/creosote" })
+    // restored original: event.remove({ id: "immersiveengineering:generator_fuel/creosote" })
     // - createaddition
     // remove default liquid_burning fuels
-    event.remove({ id: /createaddition:liquid_burning\/.*/ })
+    // restored original: event.remove({ id: /createaddition:liquid_burning\/.*/ })
     // add diesel and gasoline
     event.custom({
         "type": "createaddition:liquid_burning",
@@ -94,28 +94,28 @@ ServerEvents.recipes(event => {
 
     // -- Removing unwanted generators
     // - simulated: portable_engine is hardcoded to run on sticks
-    event.remove({ id: "simulated:red_portable_engine" })
+    // restored original: event.remove({ id: "simulated:red_portable_engine" })
     // - Immersive Engineering
     // kinetic dynamo: we have create bro
-    event.remove({ output: "immersiveengineering:dynamo"})
-    event.remove({ output: "immersiveengineering:watermill"})
-    event.remove({ output: "immersiveengineering:waterwheel_segment"})
-    event.remove({ output: "immersiveengineering:windmill"})
-    event.remove({ output: "immersiveengineering:windmill_sail"})
+    // restored original: event.remove({ output: "immersiveengineering:dynamo"})
+    // restored original: event.remove({ output: "immersiveengineering:watermill"})
+    // restored original: event.remove({ output: "immersiveengineering:waterwheel_segment"})
+    // restored original: event.remove({ output: "immersiveengineering:windmill"})
+    // restored original: event.remove({ output: "immersiveengineering:windmill_sail"})
     // thermoelectric generator: free RF
-    event.remove({ output: "immersiveengineering:thermoelectric_generator"})
+    // restored original: event.remove({ output: "immersiveengineering:thermoelectric_generator"})
     // portable generator: removed for now, charge a battery for small mobile RF
-    event.remove({ output: "immersivepetroleum:gas_generator"})
+    // restored original: event.remove({ output: "immersivepetroleum:gas_generator"})
     // - Stellaris: not needed for now
-    event.remove({ id: /stellaris:misc\/.*generator/})
+    // restored original: event.remove({ id: /stellaris:misc\/.*generator/})
     // - Create Connected Kinetic Battery: use electricity if you want to store power
-    event.remove({ id: "create_connected:kinetic_battery" })
+    // restored original: event.remove({ id: "create_connected:kinetic_battery" })
     // NC decay generator is fine, requires rare mats and the output is pathetic
 
     // -- Superheated-tier Fuel Production
     // - Blaze Cake/Blaze Roll
     // no more easy automated lava without superheating, to encourage other solutions
-    event.remove({ id: "createdieselgenerators:bulk_fermenting/lava" })
+    // restored original: event.remove({ id: "createdieselgenerators:bulk_fermenting/lava" })
     // add NC melter recipe for later
     event.custom({
         "type": "nuclearcraftneohaul:melter_recipe",
@@ -172,8 +172,8 @@ ServerEvents.recipes(event => {
     cokeAssembly("kubejs:coke_cake", "c:coal_coke")
     cokeAssembly("kubejs:coke_cake_petcoke", "c:coal_petcoke")
     // IE Furnace Fuel recipes will only accept Coke Cake now
-    event.remove({ id: /immersiveengineering:blastfurnace\/fuel_.*/ })
-    event.remove({ id: /immersivepetroleum:blastfurnace\/fuel_.*/ })
+    // restored original: event.remove({ id: /immersiveengineering:blastfurnace\/fuel_.*/ })
+    // restored original: event.remove({ id: /immersivepetroleum:blastfurnace\/fuel_.*/ })
     event.custom({
         "type": "immersiveengineering:blast_furnace_fuel",
         "input": {
@@ -188,7 +188,7 @@ ServerEvents.recipes(event => {
     // - Remove unwanted recipes
     // magistuarmory
     if (Platform.isLoaded("magistuarmory")) {
-        event.remove({ id: /magistuarmory:furnace\/steel.*/ })
+        // restored original: event.remove({ id: /magistuarmory:furnace\/steel.*/ })
         // uncaught duplicate recipe, shaped type
         event.remove({ id: "magistuarmory:steel_ingot_to_steel_nuggets" })
         /* almostunified(tm)
@@ -242,9 +242,9 @@ ServerEvents.recipes(event => {
     }
     // createbigcannons
     if (Platform.isLoaded("createbigcannons")) {
-        event.remove({ id: "createbigcannons:mixing/alloy_steel" })
+        // restored original: event.remove({ id: "createbigcannons:mixing/alloy_steel" })
         // replace NC molten steel with createbigcannons
-        event.remove({ id: /nuclearcraftneohaul:melter\/molten_steel.*/ })
+        // restored original: event.remove({ id: /nuclearcraftneohaul:melter\/molten_steel.*/ })
         let ncMelter = (ingredientTag, amount) => event.custom({
             "type": "nuclearcraftneohaul:melter_recipe",
             "fluidProducts": [
@@ -277,12 +277,12 @@ ServerEvents.recipes(event => {
     let steelOres = ["stellaris:raw_steel_ingot", "stellaris:steel_ore", "stellaris:deepslate_steel_ore", "stellaris:raw_steel_block", "stellaris:moon_steel_ore",
         Ingredient.of("#c:ores/steel"), Ingredient.of("#c:raw_materials/steel"), Ingredient.of("#c:storage_blocks/raw_steel")]
     steelOres.forEach(i => {
-        event.remove({ input: i })
-        event.remove({ output: i })
+        // restored original: event.remove({ input: i })
+        // restored original: event.remove({ output: i })
     })
     // todo: completely obliterate these from existence
-    event.remove({id: /stellaris:misc\/steel_ingot_from.*/})
-    event.remove({id: /jaopca:immersiveengineering.*steel/})
+    // restored original: event.remove({id: /stellaris:misc\/steel_ingot_from.*/})
+    // restored original: event.remove({id: /jaopca:immersiveengineering.*steel/})
 
     // - New recipes
     // Superheated Mixing - produces createbigcannons:molten_steel
@@ -404,8 +404,8 @@ ServerEvents.recipes(event => {
     donutCraft(event, "kubejs:steel_machine", "blazinghot:sturdy_casing", "kubejs:refined_mechanism")
     // - Usages
     // Create Diesel Generators
-    event.remove({id: "createdieselgenerators:crafting/engine_piston" }) // deprecated
-    event.remove({id: "createdieselgenerators:crafting/engine_turbocharger" }) // removed
+    // restored original: event.remove({id: "createdieselgenerators:crafting/engine_piston" }) // deprecated
+    // restored original: event.remove({id: "createdieselgenerators:crafting/engine_turbocharger" }) // removed
     steelMachine(event, Item.of("createdieselgenerators:distillation_controller", 4))
     steelMachine(event, Item.of("createdieselgenerators:oil_scanner", 1))
     steelMachine(event, Item.of("createdieselgenerators:pumpjack_hole", 1), "create:copper_casing")
@@ -429,10 +429,10 @@ ServerEvents.recipes(event => {
     // Making Nuclearcraft Phenol by heated mixing CDG gasoline with a catalyst
     event.recipes.create.mixing(Fluid.of("nuclearcraftneohaul:phenol", 250), [Fluid.sizedIngredientOf("createdieselgenerators:gasoline", 1000), Ingredient.of("#c:dusts/aluminum")]).heated()
     // Using nc phenol to make IE plastic, unifying IE and NC plastic
-    event.remove({ id: "nuclearcraftneohaul:manufactory/bioplastic" })
-    event.replaceInput({}, "nuclearcraftneohaul:bioplastic", Ingredient.of("#c:plates/plastic"))
+    // restored original: event.remove({ id: "nuclearcraftneohaul:manufactory/bioplastic" })
+    // restored original: event.replaceInput({}, "nuclearcraftneohaul:bioplastic", Ingredient.of("#c:plates/plastic"))
     // replace fluid infuser radaway recipes
-    event.remove({ id: /nuclearcraftneohaul:fluid_infuser\/radawa.*/ })
+    // restored original: event.remove({ id: /nuclearcraftneohaul:fluid_infuser\/radawa.*/ })
     event.custom({
         "type": "nuclearcraftneohaul:infuser_recipe",
         "fluidIngredients": [
