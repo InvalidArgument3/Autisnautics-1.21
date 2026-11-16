@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.22]
 - Custom Voxy portal-LOD build **ipa10t** → **ipa10u** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10u.jar`, client and server). A raw section starts with voxel protocol byte 2, which the client treated as a deflate frame and dropped, so `TerrainApplyQueue.offer` threw `Terrain count outside bounds` on every batch. Failed frames are kept, empty or oversized batches are rejected before the render thread, and a column that fails 32 sends is deferred for the next pass instead of abandoned. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10t jar is removed.
 
 ## [0.1.21]
