@@ -67,7 +67,6 @@ build/
 !/config/sophisticatedstorage-client.toml
 !/config/**/darkmodeeverywhere-client.toml
 !/config/create-client.toml
-!/config/create_submarine-client.toml
 
 # Configs (generaly ones that tend to edit the date on launch)
 config/fml.toml
@@ -146,7 +145,6 @@ Distant_Horizons_server_data/*
 
 # Runtime/client state and backups
 config/NoChatReports/NCR-Client.json
-config/create_submarine_client_state.json
 config/create_radar_monitor_views.json
 config/miapi_server-backup-*.jsonc
 config/servercore/*.bak-*
