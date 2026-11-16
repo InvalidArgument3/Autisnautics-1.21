@@ -3,7 +3,7 @@ package dev.wyseman.portalrenderguard;
 /**
  * Converts {@code n·(x - camera) + c} into an absolute-world plane.
  *
- * <p>Not used by the mixins. ipa10k's {@code blit_texture_depth_cutout.frag}
+ * <p>Not used by the mixins. ipa10l's {@code blit_texture_depth_cutout.frag}
  * unprojects with {@code inverse(projection * modelView)}, and that modelView
  * is Sodium's camera pose, so the point is already camera-relative. Immersive
  * Portals' {@code getActiveClipPlaneEquationBeforeModelView} is the same space.
