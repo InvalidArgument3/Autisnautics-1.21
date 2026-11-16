@@ -1,11 +1,13 @@
 package me.cortex.voxy.client;
 
-import net.minecraft.world.level.Level;
+import net.minecraft.client.multiplayer.ClientLevel;
 
 /**
  * The level a server terrain packet should be applied against. Immersive Portals
  * swaps {@code Minecraft.level} for a background dimension; the player's own
- * level stays the world they are standing in.
+ * level stays the world they are standing in. Callers invoke {@code ClientLevel}
+ * methods, so the value has to be a client level, not the {@code Level} declared
+ * by {@code Entity.level()}.
  */
 public final class TerrainReceive {
     public static final int APPLY = 0;
@@ -14,7 +16,7 @@ public final class TerrainReceive {
     private TerrainReceive() {
     }
 
-    public static Level acceptLevel(Object minecraft) {
+    public static ClientLevel acceptLevel(Object minecraft) {
         if (minecraft == null) {
             return null;
         }
@@ -22,8 +24,8 @@ public final class TerrainReceive {
             Object player = minecraft.getClass().getField("player").get(minecraft);
             if (player != null) {
                 Object level = player.getClass().getMethod("level").invoke(player);
-                if (level instanceof Level) {
-                    return (Level) level;
+                if (level instanceof ClientLevel) {
+                    return (ClientLevel) level;
                 }
             }
         } catch (Throwable ignored) {
@@ -31,8 +33,8 @@ public final class TerrainReceive {
         }
         try {
             Object level = minecraft.getClass().getField("level").get(minecraft);
-            if (level instanceof Level) {
-                return (Level) level;
+            if (level instanceof ClientLevel) {
+                return (ClientLevel) level;
             }
         } catch (Throwable ignored) {
             return null;

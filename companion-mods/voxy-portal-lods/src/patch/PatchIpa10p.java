@@ -20,7 +20,7 @@ import org.objectweb.asm.tree.LdcInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
-/** Patches the ipa10o jar into ipa10p. */
+/** Patches the ipa10o jar into ipa10p1. */
 public final class PatchIpa10p {
     public static void main(String[] args) throws Exception {
         if (args.length < 3) {
@@ -94,7 +94,7 @@ public final class PatchIpa10p {
                 for (AbstractInsnNode insn = method.instructions.getFirst(); insn != null; ) {
                     AbstractInsnNode next = insn.getNext();
                     if (insn instanceof FieldInsnNode field && field.getOpcode() == Opcodes.GETFIELD && field.name.equals("level") && field.owner.equals("net/minecraft/client/Minecraft")) {
-                        method.instructions.set(insn, new MethodInsnNode(Opcodes.INVOKESTATIC, "me/cortex/voxy/client/TerrainReceive", "acceptLevel", "(Ljava/lang/Object;)Lnet/minecraft/world/level/Level;", false));
+                        method.instructions.set(insn, new MethodInsnNode(Opcodes.INVOKESTATIC, "me/cortex/voxy/client/TerrainReceive", "acceptLevel", "(Ljava/lang/Object;)Lnet/minecraft/client/multiplayer/ClientLevel;", false));
                         level = true;
                     }
                     insn = next;
@@ -132,9 +132,9 @@ public final class PatchIpa10p {
             return data;
         }
         String text = new String(data, StandardCharsets.UTF_8);
-        String bumped = text.replace("ipa10o", "ipa10p");
-        if (bumped.contains("ipa10o") || !bumped.contains("ipa10p")) {
-            throw new IllegalStateException(name + " was not bumped to ipa10p");
+        String bumped = text.replace("ipa10o", "ipa10p1");
+        if (bumped.contains("ipa10o") || !bumped.contains("ipa10p1")) {
+            throw new IllegalStateException(name + " was not bumped to ipa10p1");
         }
         return bumped.getBytes(StandardCharsets.UTF_8);
     }
