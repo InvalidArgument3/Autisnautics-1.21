@@ -1,6 +1,7 @@
 # Changelog
 ## [Unreleased]
 - **Clockwork metal heals again.** Inert Flesh is `neoorigins:no_natural_regen`, which only blocks food regeneration. The old `natural_regen_modifier` of 0 was applied to every heal, including swallowing an ingot or a nugget.
+- **Haniwa Kiln-Slow only slows hunger-bar regen.** It no longer uses `natural_regen_modifier`, which halved every heal. Food regen is turned off and put back at about half the usual pace. Potions and other healing are left alone.
 
 ## [0.1.28]
 - **No deep-water damage.** Haniwa Soft Clay, Clockwork Rust, and the Hedgehog's 1-heart-per-second drowning are gone. Hedgehogs have three fewer hearts, and melee hits and projectiles deal 50% more. Haniwa have two fewer hearts, and explosions deal double. Clockwork takes double fire damage and swings 25% slower. Snail salt is unchanged.
