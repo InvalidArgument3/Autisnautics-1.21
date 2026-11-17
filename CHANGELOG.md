@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.29]
 - **Clockwork metal heals again.** Inert Flesh is `neoorigins:no_natural_regen`, which only blocks food regeneration. The old `natural_regen_modifier` of 0 was applied to every heal, including swallowing an ingot or a nugget.
 - **Haniwa Kiln-Slow only slows hunger-bar regen.** It no longer uses `natural_regen_modifier`, which halved every heal. Food regen is turned off and put back at about half the usual pace. Potions and other healing are left alone.
 
