@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10y** → **ipa10z** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10z.jar`, client and server). ipa10y crashed on join because `AsyncNodeManager.<clinit>` had a stack map that put `Object` where a `Throwable` was required. That class, `NodeManager`, `RenderGenerationService`, and `VoxyClientInstance` are restored from the ipa10h bytes. Terrain-sync stays unregistered. The tint guard and portal LODs stay. The ipa10y jar is removed.
+
 ## [0.1.26]
 - Custom Voxy portal-LOD build **ipa10x** → **ipa10y** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar`, client and server). Terrain-sync network streaming is disabled on both sides: no payload registration, no server walker or transport, and no client apply, coverage, or visibility hook. Local chunk ingest and portal LOD rendering stay. The ipa10x jar is removed.
 

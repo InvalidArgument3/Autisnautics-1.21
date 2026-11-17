@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-# Rebuild ipa10y from the ipa10x jar. Terrain-sync registration is gated off.
-# VerifyJar and VerifyVoxyJar both run before the jar is installed.
+# Rebuild ipa10z from the ipa10y jar. Terrain-sync registration stays gated off.
+# The four render classes ipa10w/ipa10x/ipa10y rewrote are copied back from the
+# ipa10h bytes. VerifyJar, VerifyVoxyJar, and LinkVerifier run before install.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10z.jar"
+OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar"
 WORK="$ROOT/build"
 DEPS="${VOXY_DEPS:-/tmp/voxy-mc}"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
@@ -46,6 +47,10 @@ fetch "$DEPS/neoforge-21.1.265-universal.jar" https://maven.neoforged.net/releas
 fetch "$DEPS/sodium.jar" https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13+mc1.21.1.jar
 fetch "$DEPS/iris.jar" https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar
 fetch "$DEPS/lwjgl.jar" https://repo1.maven.org/maven2/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3.jar
+fetch "$DEPS/lwjgl-opengl.jar" https://repo1.maven.org/maven2/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3.jar
+fetch "$DEPS/lwjgl-glfw.jar" https://repo1.maven.org/maven2/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3.jar
+fetch "$DEPS/lwjgl-stb.jar" https://repo1.maven.org/maven2/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3.jar
+fetch "$DEPS/lwjgl-lmdb.jar" https://repo1.maven.org/maven2/org/lwjgl/lwjgl-lmdb/3.3.3/lwjgl-lmdb-3.3.3.jar
 fetch "$DEPS/commons-compress.jar" https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar
 fetch "$DEPS/cglib.jar" https://repo1.maven.org/maven2/cglib/cglib/3.3.0/cglib-3.3.0.jar
 fetch "$DEPS/resilience4j-circuitbreaker.jar" https://repo1.maven.org/maven2/io/github/resilience4j/resilience4j-circuitbreaker/2.2.0/resilience4j-circuitbreaker-2.2.0.jar
@@ -115,18 +120,14 @@ MC_SERVER="$DEPS/server-1.21.1-mojmap.jar"
 NF_JAR="$DEPS/neoforge-21.1.265-universal.jar"
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10x jar not found at $SRC_JAR" >&2
-  exit 1
-fi
-if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10p1 jar not found" >&2
+  echo "ipa10y jar not found at $SRC_JAR" >&2
   exit 1
 fi
 if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10x LFS object $OID is not in the local store" >&2
+    echo "ipa10y LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -158,16 +159,17 @@ javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/client/TerrainRenderStats.java" \
   "$ROOT/src/me/cortex/voxy/client/TerrainVisibility.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10y.java" \
+  "$ROOT/src/patch/PatchIpa10z.java" \
   "$ROOT/src/patch/VerifyJar.java" \
-  "$ROOT/src/patch/VerifyVoxyJar.java"
+  "$ROOT/src/patch/VerifyVoxyJar.java" \
+  "$ROOT/src/patch/LinkVerifier.java"
 
-BUILT="$WORK/voxy-ipa10y.jar"
+BUILT="$WORK/voxy-ipa10z.jar"
 VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
 VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL:$SRC_JAR:$VERIFY_CP"
 mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10y "$SRC_JAR" "$BUILT"
+java -cp "$FRAME_CP" PatchIpa10z "$SRC_JAR" "$BUILT" "$ROOT/baseline/ipa10h"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
@@ -177,7 +179,7 @@ javac --release 21 -cp "$BUILT:$FASTUTIL:$WORK/stub:$MC_JAR" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/server/RingHarness.java" \
   "$ROOT/src/test/me/cortex/voxy/server/SessionHarness.java"
 HARNESS_CP="$BUILT:$WORK/test:$WORK/stub:$SLF4J_API:$SLF4J_SIMPLE:$FASTUTIL:$MC_JAR"
-# Streaming harnesses assert the network path. ipa10y gates that path off.
+# Streaming harnesses assert the network path. ipa10z keeps that path gated off.
 echo "streaming harnesses skipped; terrain-sync registration returns immediately"
 javac --release 21 -cp "$BUILT:$FASTUTIL" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/client/RenderPathHarness.java"
@@ -202,23 +204,13 @@ java -cp "$BUILT:$WORK/stub:$WORK/test:$SLF4J_API:$SLF4J_SIMPLE" \
   me.cortex.voxy.client.core.model.TintSafetyHarness
 
 python3 - "$SRC_JAR" "$BUILT" <<'PY'
-import hashlib, json, sys, zipfile
+import hashlib, json, pathlib, sys, zipfile
 old, new = sys.argv[1:]
 changed = {
-    "me/cortex/voxy/common/network/VoxyNetworking.class",
-    "me/cortex/voxy/common/network/TerrainSyncClientHandler.class",
-    "me/cortex/voxy/client/VoxyClientNetworkHooks.class",
     "me/cortex/voxy/client/VoxyClientInstance.class",
     "me/cortex/voxy/client/core/rendering/building/RenderGenerationService.class",
     "me/cortex/voxy/client/core/rendering/hierachical/AsyncNodeManager.class",
     "me/cortex/voxy/client/core/rendering/hierachical/NodeManager.class",
-    "me/cortex/voxy/VoxyNeoForgeClientEvents.class",
-    "me/cortex/voxy/server/VoxyServerChunkSync.class",
-    "me/cortex/voxy/server/VoxyServerGeneratedChunkWalker.class",
-    "me/cortex/voxy/server/ServerTerrainTransport.class",
-    "me/cortex/voxy/server/ServerTerrainSyncBudget.class",
-    "me/cortex/voxy/server/VoxyTerrainCommands.class",
-    "me/cortex/voxy/VoxyMod.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -247,10 +239,28 @@ for name in need:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10y" not in text or "ipa10x" in text or "ipa10y" not in manifest or "ipa10x" in manifest:
-    raise SystemExit("version string was not bumped to ipa10y")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10y" not in text:
-    raise SystemExit("mods.toml version is not ipa10y")
+if "ipa10z" not in text or "ipa10y" in text or "ipa10z" not in manifest or "ipa10y" in manifest:
+    raise SystemExit("version string was not bumped to ipa10z")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10z" not in text:
+    raise SystemExit("mods.toml version is not ipa10z")
+baseline = pathlib.Path(old).resolve().parents[3] / "companion-mods/voxy-portal-lods/baseline/ipa10h"
+for name in (
+    "me/cortex/voxy/client/core/rendering/hierachical/AsyncNodeManager.class",
+    "me/cortex/voxy/client/core/rendering/hierachical/NodeManager.class",
+    "me/cortex/voxy/client/core/rendering/building/RenderGenerationService.class",
+    "me/cortex/voxy/client/VoxyClientInstance.class",
+):
+    if b.read(name) != (baseline / name).read_bytes():
+        raise SystemExit(f"{name} is not the ipa10h baseline")
+untouched = (
+    "me/cortex/voxy/client/core/rendering/SectionUpdateRouter.class",
+    "me/cortex/voxy/client/core/rendering/RenderDistanceTracker.class",
+    "me/cortex/voxy/client/core/VoxyRenderSystem.class",
+    "me/cortex/voxy/client/core/model/ColourTintSafety.class",
+)
+for name in untouched:
+    if a.read(name) != b.read(name):
+        raise SystemExit(f"{name} changed")
 for name in (
     "me/cortex/voxy/client/TerrainReceive.class",
     "me/cortex/voxy/client/TerrainClientStats.class",
@@ -277,10 +287,59 @@ json.loads(b.read("common.voxy.mixins.json"))
 print("parity ok; sha1", hashlib.sha1(open(new, "rb").read()).hexdigest())
 PY
 
-VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
-VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
+mkdir -p "$WORK/nested"
+python3 - "$WORK/nested" "$DEPS/sodium.jar" "$DEPS/iris.jar" "$NF_JAR" "$REPO/.pakku/overrides/mods/ip_aeronautics-2.8.17.jar" <<'PY'
+import pathlib, sys, zipfile
+out = pathlib.Path(sys.argv[1])
+for raw in sys.argv[2:]:
+    path = pathlib.Path(raw)
+    if not path.is_file() or path.read_bytes()[:2] != b"PK":
+        continue
+    with zipfile.ZipFile(path) as zip:
+        for name in zip.namelist():
+            if name.startswith("META-INF/jarjar/") and name.endswith(".jar"):
+                dest = out / pathlib.Path(name).name
+                if not dest.exists():
+                    dest.write_bytes(zip.read(name))
+                    print("nested", dest.name)
+PY
+PACK_CP="$(python3 - "$REPO/.pakku/overrides/mods" "$REPO/.pakku/client-overrides/mods" <<'PY'
+import pathlib, sys
+found = []
+for root in sys.argv[1:]:
+    base = pathlib.Path(root)
+    if not base.is_dir():
+        continue
+    for path in sorted(base.rglob("*.jar")):
+        if "voxy-0.2.17" in path.name:
+            continue
+        try:
+            with path.open("rb") as handle:
+                if handle.read(2) == b"PK":
+                    found.append(str(path))
+        except OSError:
+            pass
+print(":".join(found))
+PY
+)"
+VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/lwjgl-opengl.jar:$DEPS/lwjgl-glfw.jar:$DEPS/lwjgl-stb.jar:$DEPS/lwjgl-lmdb.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
+VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" "$WORK/nested" -name '*.jar' | sort | paste -sd: -)"
+if [[ -n "$PACK_CP" ]]; then
+  VERIFY_CP="$VERIFY_CP:$PACK_CP"
+fi
 java -cp "$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" VerifyJar "$BUILT" "$VERIFY_CP"
 JDK25="${JDK25:-/tmp/jdk25/bin/java}"
+echo "LinkVerifier on ipa10y (must fail AsyncNodeManager clinit)"
+set +e
+"$JDK25" -Xverify:all -cp "$SRC_JAR:$WORK/patch:$VERIFY_CP" LinkVerifier --expect-verify-error "$SRC_JAR"
+EXPECT_STATUS=$?
+set -e
+if [[ "$EXPECT_STATUS" -ne 0 ]]; then
+  echo "ipa10y jar did not reproduce the VerifyError" >&2
+  exit 1
+fi
+echo "LinkVerifier on ipa10z"
+"$JDK25" -Xverify:all -cp "$BUILT:$WORK/patch:$VERIFY_CP" LinkVerifier "$BUILT"
 "$JDK25" -Xverify:all -cp "$BUILT:$WORK/patch:$VERIFY_CP" VerifyVoxyJar "$BUILT"
 
 cp "$BUILT" "$OUT_JAR"

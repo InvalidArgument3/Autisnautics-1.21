@@ -5,9 +5,11 @@ import java.util.zip.ZipFile;
 
 /**
  * Loads every class in a jar through the application class loader, which is the
- * loader that actually runs the JVM verifier. A child loader can miss the
- * VerifyError that crashes the game. Launch this with the jar, the 1.21.1 client,
- * and the 1.21.1 server already on {@code -cp}, under Java 25.
+ * loader that actually runs the JVM verifier. {@code Class.forName(name, false)}
+ * does not verify method bodies on HotSpot, so the declared members are resolved
+ * too. That is what reports a bad {@code <clinit>} stack map. Launch this with
+ * the jar, the 1.21.1 client, and the 1.21.1 server already on {@code -cp},
+ * under Java 25.
  */
 public final class VerifyVoxyJar {
     public static void main(String[] args) throws Exception {
@@ -28,7 +30,10 @@ public final class VerifyVoxyJar {
                 String name = file.substring(0, file.length() - 6).replace('/', '.');
                 checked++;
                 try {
-                    Class.forName(name, false, VerifyVoxyJar.class.getClassLoader());
+                    Class<?> type = Class.forName(name, false, VerifyVoxyJar.class.getClassLoader());
+                    type.getDeclaredFields();
+                    type.getDeclaredConstructors();
+                    type.getDeclaredMethods();
                 } catch (VerifyError error) {
                     bad++;
                     System.out.println("VERIFY " + name);
