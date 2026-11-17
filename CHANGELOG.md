@@ -1,7 +1,4 @@
 # Changelog
-## [Unreleased]
-- **Bigger island stone patches.** A size-64 vein stays the common patch. About one in four attempts instead places two of those veins a couple of blocks apart, one contiguous patch of roughly a thousand blocks. The large roll is the rarer one. Overworld only, Y 190–600, and only stone that can hold ore.
-
 ## [0.1.30]
 - **Island-height stone blobs.** Andesite, diorite, granite, and tuff (2 attempts each) and Create limestone, scoria, and scorchia (1 each) generate as size-64 blobs from Y 190 to 600 in overworld biomes only. Terralith's ore caps and Create's disabled striated ores are left as they are.
 
