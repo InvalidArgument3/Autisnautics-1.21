@@ -1,6 +1,6 @@
 {
     "name": "Exploding Knees",
-    "description": "Your knees are explosive.",
+    "description": "Your knees are explosive. A bad step can be the last step.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:action_on_land",

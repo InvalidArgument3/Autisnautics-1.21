@@ -1,6 +1,6 @@
 {
     "name": "Slow",
-    "description": "evryone says blobbims are slow, but blobbors not in a hurry anyway :)",
+    "description": "evryone says blobbims are slow. blobbors move 15% slower and blobbors not in a hurry anyway :)",
     "type": "origins:attribute",
     "modifier": {
         "attribute": "minecraft:generic.movement_speed",

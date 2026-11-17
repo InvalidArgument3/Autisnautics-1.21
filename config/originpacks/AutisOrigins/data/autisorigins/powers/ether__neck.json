@@ -1,6 +1,6 @@
 {
     "name": "Thick Neck",
-    "description": "Your neck is extremely thick.",
+    "description": "Your neck is extremely thick. A hit to the throat does less. Turning does too.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

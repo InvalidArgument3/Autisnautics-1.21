@@ -1,6 +1,6 @@
 {
     "name": "Dementia",
-    "description": "You have dementia.",
+    "description": "You have dementia. Experience stops sticking the way it used to.",
     "type": "origins:attribute",
     "modifier": {
         "attribute": "apothic_attributes:experience_gained",

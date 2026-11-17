@@ -1,0 +1,43 @@
+{
+    "name": "power.autisorigins.clockwork_ingest_nugget.name",
+    "description": "power.autisorigins.clockwork_ingest_nugget.description",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "autisorigins:clockwork_nuggets"
+            }
+        }
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "mainhand",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "neoorigins:heal",
+                "amount": 1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.chain.place",
+                "volume": 0.5,
+                "pitch": 1.4
+            }
+        ]
+    },
+    "cooldown": 10,
+    "key": {
+        "key": "key.use",
+        "continuous": false
+    }
+}

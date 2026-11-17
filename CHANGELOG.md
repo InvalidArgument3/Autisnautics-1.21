@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Origins pass, and a Clockwork.** Descriptions on the AutisOrigins say how an active power is used and which pack default key it is: NeoOrigins Skill 1 is F6, Skill 2 is unbound, Use is right-click, Sneak is Left Shift. Duckborn feathers burn hotter and the waddle is slower. Haniwa soften in deep water and heal at half rate. Khajiit hit 20% lighter. Snails keep the salt, the crawl, and the double experience cost, and the shell, the mucus, and a soft landing are the upside. Clockwork (`autisorigins:clockwork`) has two bars of natural armor, does not hunger, and does not drown. Food does not heal them. An ingot restores 5 hearts and a nugget restores half a heart, both on Use. Deep water rusts them, they move 15% slower, and lightning damage is doubled. The Autist is unchanged.
+
 ## [0.1.27]
 - Custom Voxy portal-LOD build **ipa10y** → **ipa10z** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10z.jar`, client and server). ipa10y crashed on join because `AsyncNodeManager.<clinit>` had a stack map that put `Object` where a `Throwable` was required. That class, `NodeManager`, `RenderGenerationService`, and `VoxyClientInstance` are restored from the ipa10h bytes. Terrain-sync stays unregistered. The tint guard and portal LODs stay. The ipa10y jar is removed.
 

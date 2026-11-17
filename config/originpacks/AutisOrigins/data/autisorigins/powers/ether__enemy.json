@@ -1,6 +1,6 @@
 {
     "name": "Enemy Of All Living Things",
-    "description": "Your existence provokes living things.",
+    "description": "Your existence provokes living things. They come for you.",
     "type": "origins:action_over_time",
     "interval": 100,
     "entity_action": {

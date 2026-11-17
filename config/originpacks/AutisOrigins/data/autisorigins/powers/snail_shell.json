@@ -1,6 +1,6 @@
 {
     "name": "Snail Shell",
-    "description": "Your shell is worth one bar of armor and you shrug off some knocks. The only armor you can wear over it is a chestpiece.",
+    "description": "Your shell is worth two and a half bars of armor, and you shrug off some knocks. The only armor you can wear over it is a chestpiece.",
     "type": "origins:multiple",
     "shell": {
         "type": "origins:attribute",
@@ -8,7 +8,7 @@
             {
                 "attribute": "minecraft:generic.armor",
                 "operation": "addition",
-                "value": 2,
+                "value": 5,
                 "name": "Snail Shell"
             },
             {

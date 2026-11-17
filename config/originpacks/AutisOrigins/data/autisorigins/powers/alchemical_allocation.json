@@ -1,6 +1,6 @@
 {
     "name": "Alchemical Allocation",
-    "description": "When drinking a potion, you can spit it back into its container as a free action, gaining its effects without consuming it. A potion can only be recycled this way once.",
+    "description": "When you drink a potion, you can spit it back into the bottle as a free action and keep the effect. A given potion can be recycled this way only once.",
     "type": "origins:multiple",
     "dummy": {
         "type": "origins:action_on_item_use",

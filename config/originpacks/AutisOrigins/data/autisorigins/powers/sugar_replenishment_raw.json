@@ -1,6 +1,6 @@
 {
     "name": "Angel: Food Sugar Replenishment",
-    "description": "Using raw sugar or a sugar cube restores a little blood sugar. Each use consumes one item and then waits half a second.",
+    "description": "Using raw sugar or a sugar cube restores a little blood sugar. Hold it and press Use. Use Item is Right Mouse Button in the pack defaults. Each use consumes one item, then waits half a second.",
     "hidden": true,
     "condition": {
         "type": "origins:equipped_item",

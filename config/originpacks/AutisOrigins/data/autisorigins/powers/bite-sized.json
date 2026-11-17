@@ -1,6 +1,6 @@
 {
     "name": "Bite-Sized",
-    "description": "You are significantly smaller than a typical autist and have half as much health. Your stubby little arms have reduced reach.",
+    "description": "You are much smaller than a typical Autist, with half the health and a shorter reach.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

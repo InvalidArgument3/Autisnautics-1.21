@@ -1,0 +1,10 @@
+{
+    "name": "power.autisorigins.clockwork_unwinding.name",
+    "description": "power.autisorigins.clockwork_unwinding.description",
+    "type": "neoorigins:action_on_event",
+    "event": "mod_exhaustion",
+    "modifier": {
+        "operation": "multiplication",
+        "value": 0.0
+    }
+}

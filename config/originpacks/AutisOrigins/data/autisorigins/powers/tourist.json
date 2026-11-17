@@ -1,6 +1,6 @@
 {
     "name": "Tourist",
-    "description": "You come from a race of naive wanderers. You pay twice as much experience to level up compared to the locals.",
+    "description": "You pay twice as much experience to level up. The locals set the price.",
     "type": "origins:attribute",
     "modifier": {
         "attribute": "apothic_attributes:experience_gained",

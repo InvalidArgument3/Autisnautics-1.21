@@ -1,6 +1,6 @@
 {
     "name": "Icy Veins",
-    "description": "Your blood runs cold.",
+    "description": "Your blood runs cold. Frost sits closer to the skin.",
     "type": "origins:attribute",
     "modifiers": [
         {

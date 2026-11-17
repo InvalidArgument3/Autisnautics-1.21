@@ -1,6 +1,6 @@
 {
     "name": "Nimble",
-    "description": "Rats are small enough to avoid thorns and brambles. You won't take any damage from prickly plants, and even magic Thorns can't hurt you.",
+    "description": "You are small enough to slip thorns. Prickly plants do not hurt you, and magic Thorns does not either.",
     "type": "origins:invulnerability",
     "damage_condition": {
         "type": "origins:or",

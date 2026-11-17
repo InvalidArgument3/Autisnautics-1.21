@@ -1,6 +1,6 @@
 {
     "name": "Breathless",
-    "description": "blobians dont have lungs and stuff",
+    "description": "blobians dont have lungs. drowning dont work and we dont get stuck in a wall neither",
     "type": "origins:invulnerability",
     "damage_condition": {
         "type": "origins:or",

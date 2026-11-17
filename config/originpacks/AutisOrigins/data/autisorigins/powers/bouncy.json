@@ -1,6 +1,6 @@
 {
     "name": "Bouncy",
-    "description": "blobbos just bounce if we fall down.",
+    "description": "blobbos just bounce if we fall down. falls dont hurt blobbor :)",
     "condition": {
         "type": "origins:constant",
         "value": true

@@ -1,6 +1,6 @@
 {
     "name": "Lay Eggs",
-    "description": "After sleeping through the night, you lay an egg.",
+    "description": "Sleep through the night and, if it is daytime when you wake, you lay an egg.",
     "type": "neoorigins:action_on_event",
     "event": "wake_up",
     "condition": {

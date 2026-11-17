@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Candy",
-    "description": "Angels begin with one last piece of candy.",
+    "description": "You wake up with one last piece of candy.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

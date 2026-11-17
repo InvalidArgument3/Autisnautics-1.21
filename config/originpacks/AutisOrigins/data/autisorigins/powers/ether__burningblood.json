@@ -1,6 +1,6 @@
 {
     "name": "Burning Blood",
-    "description": "Your blood starts to boil.",
+    "description": "Your blood starts to boil. You run hotter, and you burn for it.",
     "type": "origins:attribute",
     "modifiers": [
         {

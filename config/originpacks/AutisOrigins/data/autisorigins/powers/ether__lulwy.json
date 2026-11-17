@@ -1,6 +1,6 @@
 {
     "name": "Wind Blessing",
-    "description": "You feel a lash on your back. \"You're such a slowpoke. Work instead of praying.\"",
+    "description": "You feel a lash on your back. \"You're such a slowpoke. Work instead of praying.\" You are faster, and you are not thanked.",
     "type": "origins:attribute",
     "modifier": {
         "attribute": "minecraft:generic.movement_speed",

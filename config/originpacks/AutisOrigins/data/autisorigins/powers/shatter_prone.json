@@ -1,6 +1,6 @@
 {
     "name": "Shatter-Prone",
-    "description": "Your hollow ceramic body is 40% more vulnerable to strong impacts, like melee attacks, fall damage, or anvils landing on your head.",
+    "description": "The hollow body takes 40% more damage from melee hits, falls, and anvils.",
     "type": "origins:modify_damage_taken",
     "damage_condition": {
         "type": "origins:or",

@@ -1,6 +1,6 @@
 {
     "name": "Speedy Gremlin",
-    "description": "You skitter around quickly, and your speed skyrockets when your health is critically low.",
+    "description": "You skitter quickly, and the speed jumps again when your health is critically low.",
     "type": "origins:multiple",
     "key0": {
         "condition": {

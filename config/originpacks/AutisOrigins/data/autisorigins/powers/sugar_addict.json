@@ -1,6 +1,6 @@
 {
     "name": "Sugar Addict",
-    "description": "Your angelic powers are fueled by eating sweets. Just don't let your blood sugar get too low, or you'll crash. Eating raw sugar works for this purpose, but higher-quality food is much more effective.",
+    "description": "Angelic tricks spend blood sugar. Let the pool hit zero and you crash. Sweets refill it. Raw sugar works. A finished bite of candy, jam, or cake works better. The refill happens when the food is actually eaten, not when you start chewing.",
     "type": "origins:resource",
     "min": 0,
     "max": 1000,

@@ -1,6 +1,6 @@
 {
     "name": "Fall Resistance",
-    "description": "Your catlike reflexes let you ignore 75% of fall damage.",
+    "description": "Cat reflexes. You ignore 75% of fall damage.",
     "type": "origins:modify_damage_taken",
     "damage_condition": {
         "type": "origins:name",

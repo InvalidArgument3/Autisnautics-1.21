@@ -1,0 +1,22 @@
+{
+  "origin.autisorigins.clockwork.name": "Clockwork",
+  "origin.autisorigins.clockwork.description": "Somebody wound these people up inside a machine-fortress and then left. The plates still turn. A Clockwork does not get hungry, and there is no breath to run out underwater, but the body does not knit the way flesh does. Food will not close a wound. Metal will: hold an ingot or a nugget and use it. Deep water rusts the plates, lightning loves them, and the gears are heavy.",
+  "power.autisorigins.clockwork_plating.name": "Plating",
+  "power.autisorigins.clockwork_plating.description": "The casing is worth two bars of armor, before you put anything else on.",
+  "power.autisorigins.clockwork_unwinding.name": "Wound, Not Fed",
+  "power.autisorigins.clockwork_unwinding.description": "You do not get hungry. Exhaustion never drains the food bar, so you do not starve and you do not have to eat.",
+  "power.autisorigins.clockwork_sealed.name": "Sealed",
+  "power.autisorigins.clockwork_sealed.description": "There is no breath to lose. You do not drown, and your air does not run out underwater.",
+  "power.autisorigins.clockwork_inert.name": "Inert Flesh",
+  "power.autisorigins.clockwork_inert.description": "Food and a full hunger bar do not heal you. Natural regeneration is off. Wounds close only when you ingest metal.",
+  "power.autisorigins.clockwork_ingest_ingot.name": "Ingest Ingot",
+  "power.autisorigins.clockwork_ingest_ingot.description": "Hold any ingot in the metal ingot tag and press Use to swallow it. That restores 5 hearts. Use Item is Right Mouse Button in the pack defaults. Half a second between swallows.",
+  "power.autisorigins.clockwork_ingest_nugget.name": "Ingest Nugget",
+  "power.autisorigins.clockwork_ingest_nugget.description": "Hold any nugget in the metal nugget tag and press Use to swallow it. That restores half a heart. Use Item is Right Mouse Button in the pack defaults. Half a second between swallows.",
+  "power.autisorigins.clockwork_rust.name": "Rust",
+  "power.autisorigins.clockwork_rust.description": "Deep water eats the plates. While you are more than ankle-deep, you take half a heart of magic damage each second. You can still breathe. You just rust.",
+  "power.autisorigins.clockwork_gears.name": "Heavy Gears",
+  "power.autisorigins.clockwork_gears.description": "The works are heavy. You move 15% slower on land.",
+  "power.autisorigins.clockwork_lightning.name": "Conductor",
+  "power.autisorigins.clockwork_lightning.description": "A metal body is a rod. Lightning damage is doubled."
+}

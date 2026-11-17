@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Breadcrumbs",
-    "description": "Duckborn spawn with a pile of delicious breadcrumbs.",
+    "description": "You wake up with a pile of breadcrumbs.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

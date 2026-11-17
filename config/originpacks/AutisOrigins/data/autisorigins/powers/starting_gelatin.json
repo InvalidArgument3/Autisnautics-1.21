@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Gelatin",
-    "description": "Blobbians spawn with a generic gelatin dessert that is unaffiliated with Jell-O™.",
+    "description": "You wake up with a plain gelatin dessert. It is not Jell-O.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

@@ -1,6 +1,6 @@
 {
     "name": "Ether Hand",
-    "description": "Poison drips from your hands.",
+    "description": "Poison drips from your hands. A touch can sicken whatever you hit.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:target_action_on_hit",

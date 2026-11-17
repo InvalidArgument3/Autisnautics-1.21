@@ -1,6 +1,6 @@
 {
     "name": "Catalyzing Glands",
-    "description": "Mutant organs in your digestive tract are capable of processing rotten flesh into gunpowder, vomiting it back up for immediate use.",
+    "description": "Mutant organs turn rotten flesh into gunpowder when you finish eating it, and you cough the powder back up.",
     "type": "origins:action_on_item_use",
     "entity_action": {
         "type": "origins:and",

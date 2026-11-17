@@ -1,6 +1,6 @@
 {
     "name": "Weak Arm",
-    "description": "Your arms become thin and long.",
+    "description": "Your arms become thin and long. The reach changes, and the swing is weaker.",
     "type": "origins:attribute",
     "modifiers": [
         {

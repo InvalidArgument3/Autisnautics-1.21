@@ -1,0 +1,19 @@
+{
+    "name": "Soft Clay",
+    "description": "Deep water works the clay back into mud. While you are more than ankle-deep, you take half a heart each second.",
+    "type": "origins:multiple",
+    "water": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.4
+        },
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "damage": 1,
+        "damage_type": "magic",
+        "protection_enchantment": "minecraft:protection",
+        "protection_effectiveness": 0
+    }
+}

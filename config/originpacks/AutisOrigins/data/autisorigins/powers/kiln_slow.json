@@ -1,0 +1,6 @@
+{
+    "name": "Kiln-Slow",
+    "description": "A cracked pot does not knit. Natural regeneration, including the healing from a full hunger bar, is halved.",
+    "type": "neoorigins:natural_regen_modifier",
+    "multiplier": 0.5
+}

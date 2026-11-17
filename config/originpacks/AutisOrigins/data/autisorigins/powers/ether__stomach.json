@@ -1,6 +1,6 @@
 {
     "name": "Iron Stomach",
-    "description": "Your stomach can digest rotten things.",
+    "description": "Your stomach can digest rotten things. The Hunger from spoilage does not take.",
     "type": "origins:effect_immunity",
     "effect": "minecraft:hunger"
 }

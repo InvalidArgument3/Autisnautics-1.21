@@ -1,6 +1,6 @@
 {
     "name": "Sugar Withdrawal",
-    "description": "Withdrawal symptoms while blood sugar is empty. They clear as soon as sugar rises above zero.",
+    "description": "While blood sugar is empty you are in withdrawal: slowness, weakness, mining fatigue, and hunger. They clear on the next tick after sugar rises above zero.",
     "hidden": true,
     "type": "neoorigins:persistent_effect",
     "toggleable": false,

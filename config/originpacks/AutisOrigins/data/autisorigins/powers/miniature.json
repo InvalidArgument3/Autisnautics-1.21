@@ -1,6 +1,6 @@
 {
     "name": "Miniature",
-    "description": "You are only half the size of an everyday Autist, and have 30% less health. Your reach is also reduced.",
+    "description": "You are half the size of an everyday Autist, with 30% less health and a shorter reach.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

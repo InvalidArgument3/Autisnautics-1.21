@@ -1,6 +1,6 @@
 {
     "name": "Snaily",
-    "description": "You melt on contact with salt.",
+    "description": "Salt melts you. Touch a salt block, hold salt, or stand in a salt fluid and you take damage over time.",
     "condition": {
         "type": "origins:or",
         "conditions": [

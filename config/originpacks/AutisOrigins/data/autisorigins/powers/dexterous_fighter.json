@@ -1,6 +1,6 @@
 {
     "name": "Dexterous Fighter",
-    "description": "Your nimble arms can attack rapidly, but hardly deal any damage in melee. You're also quicker at drawing bows.",
+    "description": "Your arms attack quickly and you draw a bow faster, but a melee hit barely lands.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

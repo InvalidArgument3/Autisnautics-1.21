@@ -1,6 +1,6 @@
 {
     "name": "Living Humidifier",
-    "description": "Clouds of rain follow you.",
+    "description": "Clouds of rain follow you. You are a walking humidifier.",
     "condition": {
         "type": "origins:exposed_to_sky"
     },

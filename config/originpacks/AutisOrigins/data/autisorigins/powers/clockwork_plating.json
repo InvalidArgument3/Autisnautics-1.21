@@ -1,0 +1,14 @@
+{
+    "name": "power.autisorigins.clockwork_plating.name",
+    "description": "power.autisorigins.clockwork_plating.description",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 4,
+            "name": "Clockwork Plating"
+        }
+    ],
+    "update_health": true
+}

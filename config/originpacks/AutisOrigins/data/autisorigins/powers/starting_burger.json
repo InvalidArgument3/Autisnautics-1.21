@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Burger",
-    "description": "Cactoids always carry an emergency burger.",
+    "description": "You wake up with an emergency burger.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

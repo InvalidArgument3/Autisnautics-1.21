@@ -1,6 +1,6 @@
 {
     "name": "Secret Experience",
-    "description": "You gain knowledge of a secret experience. \"I shall reward you...\"",
+    "description": "You gain knowledge of a secret experience. \"I shall reward you...\" It is not only a gift.",
     "type": "origins:action_over_time",
     "interval": 20,
     "entity_action": {

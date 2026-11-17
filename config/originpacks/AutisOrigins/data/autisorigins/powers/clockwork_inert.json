@@ -1,0 +1,6 @@
+{
+    "name": "power.autisorigins.clockwork_inert.name",
+    "description": "power.autisorigins.clockwork_inert.description",
+    "type": "neoorigins:natural_regen_modifier",
+    "multiplier": 0.0
+}

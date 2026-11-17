@@ -1,6 +1,6 @@
 {
     "name": "Fluorescent",
-    "description": "You glow in the dark.",
+    "description": "You glow in the dark. Hiding is harder.",
     "condition": {
         "type": "origins:brightness",
         "comparison": "<=",

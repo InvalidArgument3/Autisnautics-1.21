@@ -1,6 +1,6 @@
 {
     "name": "Daemon Mind",
-    "description": "The digital thought processes of a Daemon automatically terminate petty organic ailments like hunger and nausea. You can even operate in conditions of deadly radiation.",
+    "description": "The machine mind cancels the Hunger effect, nausea, and radiation sickness. This is the status effect, not the food bar. You still need to eat.",
     "type": "origins:effect_immunity",
     "effects": [
         "minecraft:hunger",

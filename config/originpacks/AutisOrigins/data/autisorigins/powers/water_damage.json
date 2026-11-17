@@ -1,6 +1,6 @@
 {
     "name": "Water Damage",
-    "description": "You'll die quickly if you fall in the water and can't get out. Being in deep water inflicts damage over time.",
+    "description": "Deep water eats you. While you are more than ankle-deep you take 1 heart each second, as drowning damage.",
     "type": "origins:multiple",
     "key0": {
         "condition": {

@@ -1,6 +1,6 @@
 {
     "name": "Hooves",
-    "description": "Your feet transformed into hooves.",
+    "description": "Your feet have become hooves. The gait changes.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

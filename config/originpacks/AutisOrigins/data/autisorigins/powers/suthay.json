@@ -1,6 +1,6 @@
 {
     "name": "Suthay",
-    "description": "As one of the suthay breed of Khajiit, your body is more slender and frail, so you only have 8 hearts. Don't worry though, your kind can still wear boots.",
+    "description": "The suthay frame has 8 hearts instead of 10. You can still wear boots.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

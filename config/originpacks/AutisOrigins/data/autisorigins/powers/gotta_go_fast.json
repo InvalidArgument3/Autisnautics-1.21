@@ -1,6 +1,6 @@
 {
     "name": "Gotta Go Fast",
-    "description": "You sprint much faster, and don't consume any hunger while sprinting. However, if you stop sprinting, your metabolism will quickly catch up with you.",
+    "description": "You sprint much faster, and sprinting spends no hunger. Stop sprinting and your metabolism catches up: everything else spends more hunger.",
     "type": "origins:multiple",
     "faster_sprint": {
         "condition": {

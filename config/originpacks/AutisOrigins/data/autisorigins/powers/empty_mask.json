@@ -1,6 +1,6 @@
 {
     "name": "Empty Mask",
-    "description": "Much like a hermit crab and its shell, any Alchemist is in mortal peril without a mask to wear. The Alchemist suffers severe debuffs without one and is unable to wear any form of open-faced headgear.",
+    "description": "Like a hermit crab and its shell, you are in mortal peril with no mask. Without one you take severe debuffs, and you cannot wear open-faced headgear.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:restrict_armor",

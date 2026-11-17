@@ -1,6 +1,6 @@
 {
     "name": "Envy of Flight Effect",
-    "description": "The levitation and Sugar drain effects toggled by Envy of Flight. Levitation clears when Sugar hits zero or you sneak, and the toggle turns itself off.",
+    "description": "The levitation and the sugar drain behind Envy of Flight. Levitation drops when sugar hits zero or you sneak, and the toggle turns itself off.",
     "hidden": true,
     "type": "origins:multiple",
     "key0": {

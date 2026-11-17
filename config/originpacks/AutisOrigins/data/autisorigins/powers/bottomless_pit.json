@@ -1,6 +1,6 @@
 {
     "name": "Bottomless Pit",
-    "description": "You hunger for twice as much sustenance as mere mortals. But you can always eat, even when your hunger bar is full.",
+    "description": "You burn hunger twice as fast as a mortal. You can also keep eating when the hunger bar is already full.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:modify_exhaustion",

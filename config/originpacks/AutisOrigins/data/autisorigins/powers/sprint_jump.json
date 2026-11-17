@@ -1,6 +1,6 @@
 {
     "name": "Pounce",
-    "description": "Sprinting into a jump launches you higher, the way a cat pounces.",
+    "description": "Sprint and jump and you launch higher, the way a cat pounces. The jump key is the same as everyone else's: Space, in the pack defaults.",
     "type": "neoorigins:attribute_modifier",
     "attribute": "minecraft:generic.jump_strength",
     "amount": 0.5,

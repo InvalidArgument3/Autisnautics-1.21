@@ -1,6 +1,6 @@
 {
     "name": "Dwarfism",
-    "description": "You feel like everything is getting bigger.",
+    "description": "Everything feels bigger. You shrink.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

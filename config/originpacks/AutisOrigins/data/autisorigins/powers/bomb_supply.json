@@ -1,6 +1,6 @@
 {
     "name": "Bomb Supply",
-    "description": "Resource: the number of bombs an Alchemist has.",
+    "description": "How many bombs you have left today.",
     "hidden": true,
     "type": "origins:resource",
     "min": 0,

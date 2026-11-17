@@ -1,6 +1,6 @@
 {
     "name": "Hunger for Slaughter",
-    "description": "Desire for violence arises within you.",
+    "description": "A hunger for violence rises. Hitting things feeds it. Standing still does not.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:modify_damage_dealt",

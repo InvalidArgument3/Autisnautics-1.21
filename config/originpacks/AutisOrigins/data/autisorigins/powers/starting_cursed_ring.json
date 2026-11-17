@@ -1,7 +1,7 @@
 {
     "hidden": true,
     "name": "Marked by the Quest",
-    "description": "Completes the Accursed origin quest. The Ring of the Seven Curses is not given on spawn.",
+    "description": "Marks the Accursed origin quest complete. The ring is not placed in your inventory.",
     "type": "origins:multiple",
     "quests": {
         "type": "origins:action_on_callback",

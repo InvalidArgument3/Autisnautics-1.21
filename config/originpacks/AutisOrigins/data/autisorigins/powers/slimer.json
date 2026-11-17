@@ -1,6 +1,6 @@
 {
     "name": "Slimer",
-    "description": "bolbians can throw blobbs but i forget what buton it is :D",
+    "description": "bolbians can throw blobbs. thats the first skill button. pack default is F6 :D",
     "type": "origins:fire_projectile",
     "entity_type": "supplementaries:slimeball_projectile",
     "cooldown": 1,

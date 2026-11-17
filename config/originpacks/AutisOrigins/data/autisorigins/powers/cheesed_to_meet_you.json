@@ -1,6 +1,6 @@
 {
     "name": "Cheesed to Meet You",
-    "description": "You'd be pleased to eat some cheese.",
+    "description": "Finish eating cheese and you get a little rush. You would be pleased.",
     "type": "origins:action_on_item_use",
     "entity_action": {
         "type": "origins:and",

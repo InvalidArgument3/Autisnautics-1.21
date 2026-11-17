@@ -1,6 +1,6 @@
 {
     "name": "Hives",
-    "description": "You have sores on your face.",
+    "description": "Sores open on your face. They itch, and they do not ask permission.",
     "type": "origins:action_over_time",
     "interval": 20,
     "entity_action": {

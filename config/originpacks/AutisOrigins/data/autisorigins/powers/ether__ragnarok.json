@@ -1,6 +1,6 @@
 {
     "name": "Ragnarok",
-    "description": "It brings an end.",
+    "description": "It brings an end. When this symptom finishes, the end is not subtle.",
     "type": "origins:action_on_callback",
     "execute_chosen_when_orb": true,
     "entity_action_added": {

@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Sugar",
-    "description": "Khajiit always have some moon sugar on them, even if they pretend they don't.",
+    "description": "You wake up with moon sugar on you, whether you admit it or not.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

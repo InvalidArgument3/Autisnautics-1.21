@@ -1,6 +1,6 @@
 {
     "name": "Gigantism",
-    "description": "You feel like everything is getting smaller.",
+    "description": "Everything feels smaller. You grow.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

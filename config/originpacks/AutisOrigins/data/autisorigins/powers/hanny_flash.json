@@ -1,6 +1,6 @@
 {
     "name": "Hanny Flash",
-    "description": "By resonating sound waves in your hollow body, you can launch a special sonic attack that bypasses armor. Press [Primary] to fire.",
+    "description": "Resonate the hollow body and fire a sonic hit that ignores armor, out to 16 blocks. Press NeoOrigins Skill 1. The pack default for Skill 1 is F6.",
     "type": "origins:active_self",
     "entity_action": {
         "type": "origins:raycast",

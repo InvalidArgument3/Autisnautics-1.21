@@ -1,6 +1,6 @@
 {
     "name": "Thorns",
-    "description": "Your body bristles with cactus-like thorns that will prick any pricks that hit you.",
+    "description": "Cactus thorns prick whoever hits you in melee.",
     "type": "origins:action_when_hit",
     "bientity_action": {
         "type": "origins:invert",

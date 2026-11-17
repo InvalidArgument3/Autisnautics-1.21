@@ -1,6 +1,6 @@
 {
     "name": "Ceramic Immunity",
-    "description": "Your ceramic physiology shrugs off fire damage and poison, is grounded against lightning, and bears a mysterious immunity to magic.",
+    "description": "The ceramic body ignores fire damage and lightning, and it ignores magic damage. Poison is not on that list.",
     "type": "origins:invulnerability",
     "damage_condition": {
         "type": "origins:or",

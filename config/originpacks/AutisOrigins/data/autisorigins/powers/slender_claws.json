@@ -1,0 +1,12 @@
+{
+    "name": "Slender Claws",
+    "description": "The suthay frame is light in the arms as well as the ribs. Melee hits deal 20% less damage.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.attack_damage",
+        "operation": "multiply_base",
+        "value": -0.2,
+        "name": "Slender Claws"
+    },
+    "update_health": true
+}

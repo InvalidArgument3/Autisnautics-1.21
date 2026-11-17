@@ -1,6 +1,6 @@
 {
     "name": "Rat",
-    "description": "Literally a rat. Rats are tiny enough to fit in small spaces, and can use their claws to climb. A rat's teeth can even gnaw through stone.",
+    "description": "Literally a rat. Half the health, half the reach, and small enough to ride someone else. The claws climb, the teeth chew stone with an empty hand, and thorns cannot find you.",
     "powers": [
         "autisorigins:bite-sized",
         "autisorigins:nimble",

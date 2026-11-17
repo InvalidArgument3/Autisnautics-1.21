@@ -1,6 +1,6 @@
 {
     "name": "Critique Subroutine",
-    "description": "A highly critical monitoring program constantly runs as a background process, ensuring you gain precisely 12.634% more experience from everything you do.",
+    "description": "A background check keeps the books. You gain 12.634% more experience from everything you do.",
     "type": "origins:modify_attribute",
     "attribute": "apothic_attributes:experience_gained",
     "modifier": {

@@ -1,0 +1,12 @@
+{
+    "name": "power.autisorigins.clockwork_gears.name",
+    "description": "power.autisorigins.clockwork_gears.description",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "multiply_base",
+        "value": -0.15,
+        "name": "Heavy Gears"
+    },
+    "update_health": true
+}

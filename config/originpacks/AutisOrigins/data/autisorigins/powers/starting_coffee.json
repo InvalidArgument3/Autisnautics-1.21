@@ -1,6 +1,6 @@
 {
     "name": "Start Item: Coffee",
-    "description": "Daemons spawn with 250mB of organic fuel.",
+    "description": "You wake up with 250 mB of coffee, which a Daemon calls organic fuel.",
     "type": "origins:multiple",
     "equipment": {
         "type": "origins:action_on_callback",

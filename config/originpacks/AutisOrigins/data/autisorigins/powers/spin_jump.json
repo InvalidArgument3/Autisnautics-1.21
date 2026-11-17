@@ -1,6 +1,6 @@
 {
     "name": "Spin Jump",
-    "description": "Hedgehogs can curl into a ball and launch into the air at high speeds. Also, entities you touch while falling will take damage from your spiny quills.",
+    "description": "Curl into a ball and launch upward. That is NeoOrigins Skill 1, and the pack default is F6. The launch then waits 10 seconds. Anything you touch while falling takes a quill poke.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:launch",

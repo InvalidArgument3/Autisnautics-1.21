@@ -1,6 +1,6 @@
 {
     "name": "Featherlight",
-    "description": "You crash to the ground if wearing armor heavier than chainmail.",
+    "description": "Armor heavier than chainmail drags you down. Wearing it applies Slowness III.",
     "type": "origins:multiple",
     "key0": {
         "condition": {

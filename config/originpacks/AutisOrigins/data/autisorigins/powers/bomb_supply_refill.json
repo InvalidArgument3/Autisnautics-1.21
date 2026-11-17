@@ -1,6 +1,6 @@
 {
     "name": "Bomb Supply Refill",
-    "description": "Refills the Bomb Supply every time an in-game day passes.",
+    "description": "The bomb stock refills when an in-game day passes.",
     "hidden": true,
     "type": "origins:action_over_time",
     "interval": 24000,

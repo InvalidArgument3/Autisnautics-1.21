@@ -1,6 +1,6 @@
 {
     "name": "Ether Wing",
-    "description": "Your back has grown a single feather.",
+    "description": "A single feather has grown from your back. It is not a wing. It is a start, and it is ugly.",
     "type": "origins:attribute",
     "modifiers": [
         {

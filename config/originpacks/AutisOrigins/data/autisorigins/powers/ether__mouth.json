@@ -1,6 +1,6 @@
 {
     "name": "Second Mouth",
-    "description": "You have multiple mouths.",
+    "description": "You have more than one mouth. Eating is easier. Talking is worse.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:modify_exhaustion",

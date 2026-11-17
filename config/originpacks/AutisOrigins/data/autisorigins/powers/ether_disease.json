@@ -1,6 +1,6 @@
 {
     "name": "Ether Disease",
-    "description": "Your kind is vulnerable to a terrifying disease carried on winds from across the sea. When caught outside in bad weather, you may mutate new symptoms...",
+    "description": "Your kind catches a disease on the sea wind. Caught outside in bad weather, you may grow a new symptom. Some symptoms help. Some end you. Salt is still worse.",
     "condition": {
         "type": "origins:and",
         "conditions": [

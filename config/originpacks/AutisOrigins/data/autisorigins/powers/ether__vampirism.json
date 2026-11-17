@@ -1,6 +1,6 @@
 {
     "name": "Vampirism",
-    "description": "Your skin becomes pale.",
+    "description": "Your skin goes pale. The sun is less of a friend.",
     "type": "origins:attribute",
     "modifiers": [
         {

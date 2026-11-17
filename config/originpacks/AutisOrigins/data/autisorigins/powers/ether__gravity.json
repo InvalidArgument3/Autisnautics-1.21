@@ -1,6 +1,6 @@
 {
     "name": "Gravity",
-    "description": "You generate gravity.",
+    "description": "You generate gravity. Things, including you, are pulled in.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",

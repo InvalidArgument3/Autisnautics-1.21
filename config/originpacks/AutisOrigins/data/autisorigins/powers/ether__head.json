@@ -1,6 +1,6 @@
 {
     "name": "Enlarged Head",
-    "description": "Your head has grown huge.",
+    "description": "Your head has grown huge. It is heavy, and it is a bigger target.",
     "type": "origins:attribute",
     "modifiers": [
         {

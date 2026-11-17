@@ -1,6 +1,6 @@
 {
     "name": "Undead Hatred",
-    "description": "Your ancestral hatred of the undead. You deal 25% more damage to them, and you take 25% more from them.",
+    "description": "You deal 25% more damage to the undead, and you take 25% more damage from them.",
     "type": "origins:multiple",
     "undead_boost_damage_dealt": {
         "type": "neoorigins:modify_damage",

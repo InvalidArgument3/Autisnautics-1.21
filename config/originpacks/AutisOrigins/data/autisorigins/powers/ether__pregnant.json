@@ -1,6 +1,6 @@
 {
     "name": "Pregnant",
-    "description": "You swallow something bad.",
+    "description": "You swallowed something bad. It will not stay swallowed.",
     "type": "origins:action_over_time",
     "interval": 6260,
     "entity_action": {

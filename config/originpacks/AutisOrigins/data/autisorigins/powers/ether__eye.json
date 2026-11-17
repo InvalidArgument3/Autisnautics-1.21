@@ -1,6 +1,6 @@
 {
     "name": "Third Eye",
-    "description": "You have 3 eyes.",
+    "description": "You have a third eye. It sees a little more, and it is not subtle.",
     "type": "origins:multiple",
     "watervision": {
         "type": "origins:water_vision"

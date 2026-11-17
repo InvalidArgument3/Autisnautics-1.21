@@ -1,20 +1,10 @@
 {
     "name": "Jockey",
-    "description": "Rats are small enough to mount and ride other players and entities.",
+    "description": "Rats are small enough to mount and ride other players and living things. Look at the target and press NeoOrigins Skill 1 to climb on. The pack default for Skill 1 is F6. Dismount with Sneak, which the pack binds to Left Shift.",
     "badges": [
         {
             "type": "origins:tooltip",
-            "text": [
-                "Active ability, use [",
-                {
-                    "keybind": "key.origins.secondary_active"
-                },
-                "] to mount; to dismount, use [",
-                {
-                    "keybind": "key.sneak"
-                },
-                "]"
-            ],
+            "text": "Mount with NeoOrigins Skill 1 (pack default F6). Dismount with Sneak (pack default Left Shift).",
             "sprite": "origins:textures/gui/badge/active.png"
         }
     ],

@@ -1,6 +1,6 @@
 {
     "name": "Moon Sugar",
-    "description": "You get a rush from eating sweet, sweet sugar.",
+    "description": "You get a rush from eating sweet, sweet sugar. Hold sugar and press Use. Use Item is Right Mouse Button in the pack defaults. Each use eats one sugar.",
     "condition": {
         "type": "origins:equipped_item",
         "equipment_slot": "mainhand",

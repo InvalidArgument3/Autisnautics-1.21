@@ -1,6 +1,6 @@
 {
     "name": "Flammable",
-    "description": "You burn nicely, taking twice as much damage from fire.",
+    "description": "You make good kindling. Fire damage is doubled.",
     "type": "origins:modify_damage_taken",
     "damage_condition": {
         "type": "origins:fire"

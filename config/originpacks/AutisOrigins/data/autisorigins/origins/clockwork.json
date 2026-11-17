@@ -1,0 +1,20 @@
+{
+    "name": "origin.autisorigins.clockwork.name",
+    "description": "origin.autisorigins.clockwork.description",
+    "powers": [
+        "autisorigins:clockwork_plating",
+        "autisorigins:clockwork_unwinding",
+        "autisorigins:clockwork_sealed",
+        "autisorigins:clockwork_inert",
+        "autisorigins:clockwork_ingest_ingot",
+        "autisorigins:clockwork_ingest_nugget",
+        "autisorigins:clockwork_rust",
+        "autisorigins:clockwork_gears",
+        "autisorigins:clockwork_lightning"
+    ],
+    "icon": {
+        "item": "minecraft:clock"
+    },
+    "order": 1,
+    "impact": 2
+}

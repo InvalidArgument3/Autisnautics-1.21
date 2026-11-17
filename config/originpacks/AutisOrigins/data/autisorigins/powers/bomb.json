@@ -1,6 +1,6 @@
 {
     "name": "Bomb",
-    "description": "Alchemists can swiftly mix various volatile chemicals to create powerful bombs, which they can hurl at their enemies using a third vestigial arm. An alchemist can only use a certain number of bombs each in-game day.",
+    "description": "Alchemists mix a volatile charge and hurl it with a third, vestigial arm. Throw it with NeoOrigins Skill 1. The pack default for Skill 1 is F6. You only get so many bombs each in-game day.",
     "condition": {
         "type": "origins:resource",
         "resource": "autisorigins:bomb_supply",

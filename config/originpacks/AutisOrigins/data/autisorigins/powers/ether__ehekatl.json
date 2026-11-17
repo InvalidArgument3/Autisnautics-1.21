@@ -1,6 +1,6 @@
 {
     "name": "Black Cat",
-    "description": "You are licked by a passing black cat. \"Umimyaa!\"",
+    "description": "A passing black cat licks you. \"Umimyaa!\" Luck, of a sort, follows.",
     "type": "origins:stacking_status_effect",
     "min_stacks": 0,
     "max_stacks": 1,

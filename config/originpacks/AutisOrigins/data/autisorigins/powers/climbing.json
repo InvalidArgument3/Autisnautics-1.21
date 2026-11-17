@@ -1,3 +1,5 @@
 {
+  "name": "Climbing",
+  "description": "Claws find a grip on the wall. Walk into it and you climb. No extra key.",
   "type": "neoorigins:wall_climbing"
 }

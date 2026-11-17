@@ -1,6 +1,6 @@
 {
     "name": "Clay Body",
-    "description": "Since you're made of clay, you can satisfy your hunger by eating clay balls, though they aren't very appetizing.",
+    "description": "You can fill your hunger by eating clay balls. They are not very appetizing. Hold a clay ball and press Use. Use Item is Right Mouse Button in the pack defaults.",
     "condition": {
         "type": "origins:equipped_item",
         "equipment_slot": "mainhand",

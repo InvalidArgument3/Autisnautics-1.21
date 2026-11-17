@@ -1,0 +1,6 @@
+{
+    "name": "Mucus",
+    "description": "The coat shrugs off poison. Salt is a different matter.",
+    "type": "origins:effect_immunity",
+    "effect": "minecraft:poison"
+}

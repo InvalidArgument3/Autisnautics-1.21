@@ -1,0 +1,13 @@
+{
+    "name": "Ooze",
+    "description": "You do not so much fall as pour. Fall damage is halved.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "is_fall"
+    },
+    "modifier": {
+        "operation": "multiply_base_additive",
+        "value": -0.5
+    }
+}
