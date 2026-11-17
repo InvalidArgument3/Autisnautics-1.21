@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '1.0.2'
+version = '1.0.3'
 group = 'dev.wyseman.moltensea'
 base { archivesName = 'moltensea' }
 
@@ -22,4 +22,12 @@ neoForge {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.compilerArgs.add('-proc:none')
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
 }

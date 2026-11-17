@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Saved-data cache keeps a missing file.** Molten Sea 1.0.3 still uses a concurrent map, and it stores the null that `DimensionDataStorage.get` writes when the data file is absent. 1.0.2 rejected that null and crashed dedicated startup while Sable loaded sub-level occupancy. Autosave still does not throw `ConcurrentModificationException` when Immersive Petroleum generates reservoirs on C2ME workers. The 1.0.2 jar is removed.
+
 ## [0.1.32]
 - **ItemPhysic is gone.** ItemPhysic 1.8.17 (`itemphysic`, `ItemPhysic_NEOFORGE_v1.8.17_mc1.21.1.jar`, both sides) is removed from the client and the server. Its drop and pickup packets have to be on the server, so it could not stay client-only. `config/itemphysic.json` and the default `key.pickup.item` binding are dropped. CreativeCore stays: AmbientSounds still requires it, and nothing else in the lock depended on ItemPhysic.
 - **Saved-data cache is safe during a Chunky pregen.** Molten Sea 1.0.2 replaces `DimensionDataStorage`'s map with a concurrent one, so Immersive Petroleum reservoir generation on C2ME worker threads no longer throws `ConcurrentModificationException` out of the autosave. `tools/server/` has a systemd watchdog that force-restarts the server when a shutdown hangs, Java hits an out-of-memory error and stays up, or startup never prints Done.
