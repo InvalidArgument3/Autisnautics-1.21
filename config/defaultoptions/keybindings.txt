@@ -408,7 +408,6 @@ key_iris.keybind.toggleShaders:key.keyboard.unknown:NONE
 key_iris.keybind.wireframe:key.keyboard.unknown:NONE
 key_key.irons_artifice.open_modifier_menu:key.keyboard.unknown:NONE
 key_key.irons_artifice.reload:key.keyboard.o:NONE
-key_key.pickup.item:key.keyboard.unknown:NONE
 key_key.jade.config:key.keyboard.unknown:NONE
 key_key.jade.narrate:key.keyboard.unknown:NONE
 key_key.jade.show_details:key.keyboard.unknown:NONE
