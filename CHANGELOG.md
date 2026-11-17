@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.28]
 - **No deep-water damage.** Haniwa Soft Clay, Clockwork Rust, and the Hedgehog's 1-heart-per-second drowning are gone. Hedgehogs have three fewer hearts, and melee hits and projectiles deal 50% more. Haniwa have two fewer hearts, and explosions deal double. Clockwork takes double fire damage and swings 25% slower. Snail salt is unchanged.
 - **Origins pass, and a Clockwork.** Descriptions on the AutisOrigins say how an active power is used and which pack default key it is: NeoOrigins Skill 1 is F6, Skill 2 is unbound, Use is right-click, Sneak is Left Shift. Duckborn feathers burn hotter and the waddle is slower. Haniwa heal at half rate. Khajiit hit 20% lighter. Snails keep the salt, the crawl, and the double experience cost, and the shell, the mucus, and a soft landing are the upside. Clockwork (`autisorigins:clockwork`) has two bars of natural armor, does not hunger, and does not drown. Food does not heal them. An ingot restores 5 hearts and a nugget restores half a heart, both on Use. They move 15% slower, and lightning damage is doubled. The Autist is unchanged.
 
