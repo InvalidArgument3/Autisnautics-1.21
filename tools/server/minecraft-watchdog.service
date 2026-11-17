@@ -1,0 +1,8 @@
+[Unit]
+Description=Check the Autisnautics Minecraft server for a hung shutdown or a dead Java process
+After=minecraft.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/minecraft-watchdog
+# The script only signals the minecraft unit. It has no credentials.

@@ -9,7 +9,8 @@
     "FlowingFluidCapMixin",
     "FluidMixin",
     "FluidStateMixin",
-    "BurningLiquidBlockMixin"
+    "BurningLiquidBlockMixin",
+    "DimensionDataStorageMixin"
   ],
   "client": [
     "BlockRenderDispatcherMixin"

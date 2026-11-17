@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Saved-data cache is safe during a Chunky pregen.** Molten Sea 1.0.2 replaces `DimensionDataStorage`'s map with a concurrent one, so Immersive Petroleum reservoir generation on C2ME worker threads no longer throws `ConcurrentModificationException` out of the autosave. `tools/server/` has a systemd watchdog that force-restarts the server when a shutdown hangs, Java hits an out-of-memory error and stays up, or startup never prints Done.
+
 ## [0.1.31]
 - **Island bodies follow the biome's ground, with stone strata everywhere else.** In the overworld, biomes whose Terralith ground is already a specific material (granite cliffs, basalt cliffs and volcanic peaks, calcite cliffs and amethyst, painted mountains, badlands and mesas, frozen cliffs, calderas, rocky mountains, scarlet mountains, and sandstone deserts) keep that material through the island, under the grass, dirt, or sand. Other biomes stay plain stone, with horizontal 6-block sheets of granite, andesite, diorite, tuff, calcite, deepslate, and Create limestone, scoria, and scorchia every 32 blocks from Y 208. Plain stone stays the common island stone. The size-64 island stone blobs are unchanged, and ores still replace the new blocks.
 
