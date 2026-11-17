@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.26]
 - Custom Voxy portal-LOD build **ipa10x** → **ipa10y** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar`, client and server). Terrain-sync network streaming is disabled on both sides: no payload registration, no server walker or transport, and no client apply, coverage, or visibility hook. Local chunk ingest and portal LOD rendering stay. The ipa10x jar is removed.
 
 ## [0.1.25]
