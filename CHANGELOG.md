@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Island-height stone blobs.** Andesite, diorite, granite, and tuff (2 attempts each) and Create limestone, scoria, and scorchia (1 each) generate as size-64 blobs from Y 190 to 600 in overworld biomes only. Terralith's ore caps and Create's disabled striated ores are left as they are.
+
 ## [0.1.29]
 - **Clockwork metal heals again.** Inert Flesh is `neoorigins:no_natural_regen`, which only blocks food regeneration. The old `natural_regen_modifier` of 0 was applied to every heal, including swallowing an ingot or a nugget.
 - **Haniwa Kiln-Slow only slows hunger-bar regen.** It no longer uses `natural_regen_modifier`, which halved every heal. Food regen is turned off and put back at about half the usual pace. Potions and other healing are left alone.

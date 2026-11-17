@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "autisnautics:island_stone/diorite"
+  ],
+  "step": "underground_ores"
+}
