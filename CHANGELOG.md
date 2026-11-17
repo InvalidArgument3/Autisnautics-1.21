@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.30]
 - **Island-height stone blobs.** Andesite, diorite, granite, and tuff (2 attempts each) and Create limestone, scoria, and scorchia (1 each) generate as size-64 blobs from Y 190 to 600 in overworld biomes only. Terralith's ore caps and Create's disabled striated ores are left as they are.
 
 ## [0.1.29]
