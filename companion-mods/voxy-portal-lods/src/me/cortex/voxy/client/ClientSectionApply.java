@@ -263,6 +263,7 @@ public final class ClientSectionApply {
         } finally {
             renderThreadNanos += System.nanoTime() - started;
             renderTicks++;
+            TerrainVisibility.sampleDraw();
             // A full in-flight queue returns before pump(). The line still has to print.
             reportClient();
         }
@@ -442,6 +443,7 @@ public final class ClientSectionApply {
             if (COLUMNS.add(Long.valueOf(key))) {
                 distinctColumns = COLUMNS.size();
             }
+            TerrainVisibility.noteApplied(x, z);
         }
     }
 

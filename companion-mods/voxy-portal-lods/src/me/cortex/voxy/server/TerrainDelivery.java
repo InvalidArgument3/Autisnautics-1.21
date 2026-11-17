@@ -21,7 +21,7 @@ public final class TerrainDelivery {
     public static void beforeAck(Object player, long id, int status) {
         try {
             ensure();
-            classifyFlight(queueField.get(null), id, status);
+            classifyFlight(player, queueField.get(null), id, status);
         } catch (Throwable failure) {
             if (!loggedFailure) {
                 loggedFailure = true;
@@ -32,6 +32,10 @@ public final class TerrainDelivery {
 
     /** Same lookup {@link #beforeAck} uses, on an explicit queue. The harness calls this. */
     public static void classifyFlight(Object queue, long id, int status) throws ReflectiveOperationException {
+        classifyFlight(null, queue, id, status);
+    }
+
+    public static void classifyFlight(Object player, Object queue, long id, int status) throws ReflectiveOperationException {
         ensure();
         Map<?, ?> flight = (Map<?, ?>) flightField.get(queue);
             Object frame = flight.get(Long.valueOf(id));
@@ -40,7 +44,16 @@ public final class TerrainDelivery {
             }
             Object key = frame.getClass().getField("key").get(frame);
             String owner = (String) key.getClass().getMethod("owner").invoke(key);
-            String world = walkerWorld((String) key.getClass().getMethod("world").invoke(key));
+            String queueWorld = (String) key.getClass().getMethod("world").invoke(key);
+            String world = walkerWorld(queueWorld);
+            try {
+                if (player != null) {
+                    Object level = player.getClass().getMethod("serverLevel").invoke(player);
+                    world = TerrainDispatch.worldKeyOf(level);
+                }
+            } catch (Throwable ignored) {
+                world = walkerWorld(queueWorld);
+            }
             int x = ((Integer) key.getClass().getMethod("x").invoke(key)).intValue();
             int z = ((Integer) key.getClass().getMethod("z").invoke(key)).intValue();
             Map<?, ?> columns = (Map<?, ?>) columnsField.get(queue);

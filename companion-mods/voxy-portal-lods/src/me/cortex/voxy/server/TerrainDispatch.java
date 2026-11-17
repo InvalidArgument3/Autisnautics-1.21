@@ -244,6 +244,7 @@ public final class TerrainDispatch {
                     + " framesDropped=" + TerrainDelivery.dropped()
                     + " motion=" + TerrainStreamPolicy.motionCause()
                     + " clientHeld=" + clientHeld
+                    + " heldSent=" + (split < 0 ? 0 : TerrainSentMemory.size(mapKey.substring(0, split), mapKey.substring(split + 1)))
                     + " skippedHeld=" + counters.skippedHeld
                     + " skippedClient=" + counters.skippedClient
                     + " skippedQueued=" + counters.skippedKnown

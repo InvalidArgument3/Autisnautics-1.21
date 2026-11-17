@@ -32,19 +32,16 @@ public final class TerrainRenderStats {
     public static void uploaded(Object section) {
         gpuUploads++;
         gpuUploadBytes += bytes(section);
-        nodesDrawn++;
-        note(position(section));
+        long position = position(section);
+        TerrainVisibility.geometryAdded(position, bytes(section) > 0L);
     }
 
     public static void tracker(long position) {
         trackerInserts++;
-        note(position);
     }
 
-    public static void removed() {
-        if (nodesDrawn > 0) {
-            nodesDrawn--;
-        }
+    public static void removed(long position) {
+        TerrainVisibility.geometryRemoved(position);
     }
 
     public static String line() {
@@ -53,8 +50,7 @@ public final class TerrainRenderStats {
                 + " gpuUploads=" + gpuUploads
                 + " gpuUploadBytes=" + gpuUploadBytes
                 + " trackerInserts=" + trackerInserts
-                + " nodesDrawn=" + nodesDrawn
-                + " farthestRing=" + farthestChunks;
+                + " " + TerrainVisibility.line();
     }
 
     private static void note(long position) {

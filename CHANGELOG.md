@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- Custom Voxy portal-LOD build **ipa10w** → **ipa10x** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar`, client and server). A write into a section the renderer is not watching now rebuilds the nearest watched ancestor, so LOD terrain keeps appearing while the player stands still. The 5-second client line reports geometry currently resident, sections submitted to the draw by LOD level, and applied columns that still have no geometry. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10w jar is removed.
+
 ## [0.1.24]
 - Custom Voxy portal-LOD build **ipa10v** → **ipa10w** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10w.jar`, client and server). A completing ack now marks the column held, so a later ring restart skips columns the client already applied. Coverage reads the live player instead of a reflective lookup that always looked empty. Every radius drop logs `ring reset`. The client line counts mesh requests, completed meshes, GPU uploads, tracker inserts, nodes drawn, and the farthest ring. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10v jar is removed.
 
