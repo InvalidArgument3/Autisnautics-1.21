@@ -1,10 +1,10 @@
 {
     "name": "Hedgehog",
-    "description": "The Hedgehogs ran the green hills until the surface became a sea. Only the graduates of the Sonic Fighting Academy are still around.\n\nThey have to go fast. Sprinting is free and very quick. Standing still is when the hunger catches up, and deep water kills them.",
+    "description": "The Hedgehogs ran the green hills until the surface became a sea. Only the graduates of the Sonic Fighting Academy are still around.\n\nThey have to go fast. Sprinting is free and very quick. Standing still is when the hunger catches up. The hide is thin: three fewer hearts, and a melee hit or a projectile lands half again as hard.",
     "powers": [
         "autisorigins:gotta_go_fast",
         "autisorigins:spin_jump",
-        "autisorigins:water_damage",
+        "autisorigins:thin_quills",
         "autisorigins:starting_pizza"
     ],
     "icon": {

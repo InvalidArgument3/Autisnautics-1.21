@@ -1,12 +1,12 @@
 {
     "name": "Haniwa",
-    "description": "Haniwa are peculiar creatures made of living clay. They once ruled a glorious kingdom, but when the land rose from the sea they were cut off from the clay deposits, and what is left is a race of nomadic raiders.\n\nThe ceramic body shrugs off fire, lightning, and magic, and it shatters under a hard hit. Deep water softens it, a crack heals slowly, and the hollow chest can still throw a sonic boom.",
+    "description": "Haniwa are peculiar creatures made of living clay. They once ruled a glorious kingdom, but when the land rose from the sea they were cut off from the clay deposits, and what is left is a race of nomadic raiders.\n\nThe ceramic body shrugs off fire, lightning, and magic, and it shatters under a hard hit. The glaze is already cracked, so there are two fewer hearts and a blast breaks it open. A crack heals slowly, and the hollow chest can still throw a sonic boom.",
     "powers": [
         "autisorigins:ceramic_immunity",
         "autisorigins:shatter_prone",
         "autisorigins:clay_body",
         "autisorigins:hanny_flash",
-        "autisorigins:soft_clay",
+        "autisorigins:cracked_glaze",
         "autisorigins:kiln_slow",
         "autisorigins:starting_onigili"
     ],

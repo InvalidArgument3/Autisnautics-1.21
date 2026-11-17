@@ -1,6 +1,6 @@
 {
   "origin.autisorigins.clockwork.name": "Clockwork",
-  "origin.autisorigins.clockwork.description": "Somebody wound these people up inside a machine-fortress and then left. The plates still turn. A Clockwork does not get hungry, and there is no breath to run out underwater, but the body does not knit the way flesh does. Food will not close a wound. Metal will: hold an ingot or a nugget and use it. Deep water rusts the plates, lightning loves them, and the gears are heavy.",
+  "origin.autisorigins.clockwork.description": "Somebody wound these people up inside a machine-fortress and then left. The plates still turn. A Clockwork does not get hungry, and there is no breath to run out underwater, but the body does not knit the way flesh does. Food will not close a wound. Metal will: hold an ingot or a nugget and use it. Fire and lightning both love the plates, the swing is slow, and the gears are heavy.",
   "power.autisorigins.clockwork_plating.name": "Plating",
   "power.autisorigins.clockwork_plating.description": "The casing is worth two bars of armor, before you put anything else on.",
   "power.autisorigins.clockwork_unwinding.name": "Wound, Not Fed",
@@ -13,8 +13,8 @@
   "power.autisorigins.clockwork_ingest_ingot.description": "Hold any ingot in the metal ingot tag and press Use to swallow it. That restores 5 hearts. Use Item is Right Mouse Button in the pack defaults. Half a second between swallows.",
   "power.autisorigins.clockwork_ingest_nugget.name": "Ingest Nugget",
   "power.autisorigins.clockwork_ingest_nugget.description": "Hold any nugget in the metal nugget tag and press Use to swallow it. That restores half a heart. Use Item is Right Mouse Button in the pack defaults. Half a second between swallows.",
-  "power.autisorigins.clockwork_rust.name": "Rust",
-  "power.autisorigins.clockwork_rust.description": "Deep water eats the plates. While you are more than ankle-deep, you take half a heart of magic damage each second. You can still breathe. You just rust.",
+  "power.autisorigins.hot_plates.name": "Hot Plates",
+  "power.autisorigins.hot_plates.description": "The casing takes heat badly, and the joints are stiff. Fire damage is doubled, and you swing 25% slower.",
   "power.autisorigins.clockwork_gears.name": "Heavy Gears",
   "power.autisorigins.clockwork_gears.description": "The works are heavy. You move 15% slower on land.",
   "power.autisorigins.clockwork_lightning.name": "Conductor",

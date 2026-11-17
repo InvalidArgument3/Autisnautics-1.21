@@ -1,0 +1,40 @@
+{
+    "name": "Thin Quills",
+    "description": "The quills are a poor hide. You have three fewer hearts, and melee hits and projectiles deal 50% more damage.",
+    "type": "origins:multiple",
+    "health": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": -6
+            }
+        ],
+        "update_health": true
+    },
+    "fragile": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "is_projectile"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob_attack"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player_attack"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base_additive",
+            "value": 0.5
+        }
+    }
+}
