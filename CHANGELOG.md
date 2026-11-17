@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.31]
 - **Island bodies follow the biome's ground, with stone strata everywhere else.** In the overworld, biomes whose Terralith ground is already a specific material (granite cliffs, basalt cliffs and volcanic peaks, calcite cliffs and amethyst, painted mountains, badlands and mesas, frozen cliffs, calderas, rocky mountains, scarlet mountains, and sandstone deserts) keep that material through the island, under the grass, dirt, or sand. Other biomes stay plain stone, with horizontal 6-block sheets of granite, andesite, diorite, tuff, calcite, deepslate, and Create limestone, scoria, and scorchia every 32 blocks from Y 208. Plain stone stays the common island stone. The size-64 island stone blobs are unchanged, and ores still replace the new blocks.
 
 ## [0.1.30]
