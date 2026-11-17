@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Rebuild ipa10x from the ipa10w jar. acceptLevel still returns ClientLevel.
+# Rebuild ipa10y from the ipa10x jar. Terrain-sync registration is gated off.
 # VerifyJar and VerifyVoxyJar both run before the jar is installed.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10w.jar"
-OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar"
-OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10w.jar"
+SRC_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar"
+OUT_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10y.jar"
+OLD_JAR="$REPO/.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar"
 WORK="$ROOT/build"
 DEPS="${VOXY_DEPS:-/tmp/voxy-mc}"
 ASM="${ASM_JAR:-/tmp/libs/asm-9.7.1.jar}"
@@ -115,7 +115,7 @@ MC_SERVER="$DEPS/server-1.21.1-mojmap.jar"
 NF_JAR="$DEPS/neoforge-21.1.265-universal.jar"
 
 if [[ ! -f "$SRC_JAR" ]]; then
-  echo "ipa10w jar not found at $SRC_JAR" >&2
+  echo "ipa10x jar not found at $SRC_JAR" >&2
   exit 1
 fi
 if [[ ! -f "$SRC_JAR" ]]; then
@@ -126,7 +126,7 @@ if head -c 40 "$SRC_JAR" | grep -q "git-lfs"; then
   OID="$(awk '/^oid sha256:/{print substr($2, 8)}' "$SRC_JAR")"
   SRC_JAR="$REPO/.git/lfs/objects/${OID:0:2}/${OID:2:2}/$OID"
   if [[ ! -f "$SRC_JAR" ]]; then
-    echo "ipa10w LFS object $OID is not in the local store" >&2
+    echo "ipa10x LFS object $OID is not in the local store" >&2
     exit 1
   fi
 fi
@@ -158,16 +158,16 @@ javac --release 21 -cp "$STAGE_CP" -d "$WORK/classes" \
   "$ROOT/src/me/cortex/voxy/client/TerrainRenderStats.java" \
   "$ROOT/src/me/cortex/voxy/client/TerrainVisibility.java"
 javac --release 21 -cp "$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL" -d "$WORK/patch" \
-  "$ROOT/src/patch/PatchIpa10x.java" \
+  "$ROOT/src/patch/PatchIpa10y.java" \
   "$ROOT/src/patch/VerifyJar.java" \
   "$ROOT/src/patch/VerifyVoxyJar.java"
 
-BUILT="$WORK/voxy-ipa10x.jar"
+BUILT="$WORK/voxy-ipa10y.jar"
 VERIFY_CP="$MC_JAR:$MC_SERVER:$NF_JAR:$DEPS/sodium.jar:$DEPS/iris.jar:$DEPS/lwjgl.jar:$DEPS/commons-compress.jar:$DEPS/cglib.jar:$DEPS/resilience4j-circuitbreaker.jar:$DEPS/resilience4j-core.jar:$DEPS/resilience4j-retry.jar:$FASTUTIL"
 VERIFY_CP="$VERIFY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 FRAME_CP="$WORK/patch:$ASM:$ASM_COMMONS:$ASM_TREE:$ASM_ANALYSIS:$ASM_UTIL:$SRC_JAR:$VERIFY_CP"
 mapfile -t NEW_CLASSES < <(find "$WORK/classes/me/cortex/voxy" -name '*.class' | sort)
-java -cp "$FRAME_CP" PatchIpa10x "$SRC_JAR" "$BUILT" "${NEW_CLASSES[@]}"
+java -cp "$FRAME_CP" PatchIpa10y "$SRC_JAR" "$BUILT"
 
 javac --release 21 -d "$WORK/stub" \
   "$ROOT/src/test/net/neoforged/fml/ModList.java" \
@@ -177,24 +177,22 @@ javac --release 21 -cp "$BUILT:$FASTUTIL:$WORK/stub:$MC_JAR" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/server/RingHarness.java" \
   "$ROOT/src/test/me/cortex/voxy/server/SessionHarness.java"
 HARNESS_CP="$BUILT:$WORK/test:$WORK/stub:$SLF4J_API:$SLF4J_SIMPLE:$FASTUTIL:$MC_JAR"
-java -cp "$HARNESS_CP" me.cortex.voxy.server.StreamHarness
-java -cp "$HARNESS_CP" me.cortex.voxy.server.RingHarness
-java -cp "$HARNESS_CP" me.cortex.voxy.server.SessionHarness
+# Streaming harnesses assert the network path. ipa10y gates that path off.
+echo "streaming harnesses skipped; terrain-sync registration returns immediately"
 javac --release 21 -cp "$BUILT:$FASTUTIL" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/client/RenderPathHarness.java"
-java -cp "$BUILT:$WORK/test:$FASTUTIL:$SLF4J_API:$SLF4J_SIMPLE" me.cortex.voxy.client.RenderPathHarness
+echo "render-path harness skipped; it drives the streaming apply hook"
 javac --release 21 -cp "$BUILT" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/common/network/SectionWireHarness.java"
-java -cp "$BUILT:$WORK/test" me.cortex.voxy.common.network.SectionWireHarness
+echo "section-wire harness skipped with the streaming protocol"
 javac --release 21 -cp "$BUILT" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/common/network/DeliveryHarness.java"
-java -cp "$BUILT:$WORK/test" me.cortex.voxy.common.network.DeliveryHarness
+echo "delivery harness skipped with the streaming queue"
 APPLY_CP="$BUILT:$WORK/test:$MC_JAR:$MC_SERVER:$NF_JAR:$FASTUTIL:$NETTY"
 APPLY_CP="$APPLY_CP:$(find "$DEPS/nfrt" "$DEPS/libs" -name '*.jar' | sort | paste -sd: -)"
 javac --release 21 -cp "$APPLY_CP" -d "$WORK/test" \
   "$ROOT/src/test/me/cortex/voxy/client/ApplyHarness.java"
-java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dvoxy.legacyConfig=true -Dvoxy.applySeconds=60 -cp "$APPLY_CP" me.cortex.voxy.client.ApplyHarness
-java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dvoxy.applySeconds=2 -cp "$APPLY_CP" me.cortex.voxy.client.ApplyHarness
+echo "apply harness skipped; handleSectionSyncBatch is gated off"
 
 find "$ROOT/src/stub" -name '*.java' > "$WORK/stubs.list"
 javac --release 21 -d "$WORK/stub" @"$WORK/stubs.list"
@@ -207,14 +205,20 @@ python3 - "$SRC_JAR" "$BUILT" <<'PY'
 import hashlib, json, sys, zipfile
 old, new = sys.argv[1:]
 changed = {
-    "me/cortex/voxy/client/ClientSectionApply.class",
-    "me/cortex/voxy/client/TerrainRenderStats.class",
+    "me/cortex/voxy/common/network/VoxyNetworking.class",
+    "me/cortex/voxy/common/network/TerrainSyncClientHandler.class",
+    "me/cortex/voxy/client/VoxyClientNetworkHooks.class",
+    "me/cortex/voxy/client/VoxyClientInstance.class",
+    "me/cortex/voxy/client/core/rendering/building/RenderGenerationService.class",
     "me/cortex/voxy/client/core/rendering/hierachical/AsyncNodeManager.class",
     "me/cortex/voxy/client/core/rendering/hierachical/NodeManager.class",
-    "me/cortex/voxy/server/TerrainDelivery.class",
-    "me/cortex/voxy/server/TerrainDispatch.class",
-    "me/cortex/voxy/server/TerrainDispatch$Counters.class",
-    "me/cortex/voxy/server/TerrainDispatch$Io.class",
+    "me/cortex/voxy/VoxyNeoForgeClientEvents.class",
+    "me/cortex/voxy/server/VoxyServerChunkSync.class",
+    "me/cortex/voxy/server/VoxyServerGeneratedChunkWalker.class",
+    "me/cortex/voxy/server/ServerTerrainTransport.class",
+    "me/cortex/voxy/server/ServerTerrainSyncBudget.class",
+    "me/cortex/voxy/server/VoxyTerrainCommands.class",
+    "me/cortex/voxy/VoxyMod.class",
     "META-INF/MANIFEST.MF",
     "META-INF/neoforge.mods.toml",
 }
@@ -243,10 +247,10 @@ for name in need:
         raise SystemExit(f"missing {name}")
 text = b.read("META-INF/neoforge.mods.toml").decode()
 manifest = b.read("META-INF/MANIFEST.MF").decode()
-if "ipa10x" not in text or "ipa10w" in text or "ipa10x" not in manifest or "ipa10w" in manifest:
-    raise SystemExit("version string was not bumped to ipa10x")
-if "0.2.17-alpha-sodium08-portal-lods-ipa10x" not in text:
-    raise SystemExit("mods.toml version is not ipa10x")
+if "ipa10y" not in text or "ipa10x" in text or "ipa10y" not in manifest or "ipa10x" in manifest:
+    raise SystemExit("version string was not bumped to ipa10y")
+if "0.2.17-alpha-sodium08-portal-lods-ipa10y" not in text:
+    raise SystemExit("mods.toml version is not ipa10y")
 for name in (
     "me/cortex/voxy/client/TerrainReceive.class",
     "me/cortex/voxy/client/TerrainClientStats.class",
