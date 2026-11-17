@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.25]
 - Custom Voxy portal-LOD build **ipa10w** → **ipa10x** (`.pakku/overrides/mods/voxy-0.2.17-alpha-sodium08-portal-lods-ipa10x.jar`, client and server). A write into a section the renderer is not watching now rebuilds the nearest watched ancestor, so LOD terrain keeps appearing while the player stands still. The 5-second client line reports geometry currently resident, sections submitted to the draw by LOD level, and applied columns that still have no geometry. zstd protocol 3, the 1 MiB cap, and off-thread apply stay. The ipa10w jar is removed.
 
 ## [0.1.24]
