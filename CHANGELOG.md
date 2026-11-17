@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **No Chat Reports and No Chat Restrictions ship as pack overrides.** Both jars (`.pakku/overrides/mods/`, client and server) are removed from the lock and from the CurseForge and Modrinth manifests. WARNING: neither tracks upstream any more; a new release means replacing the jar in `.pakku/overrides/mods/` by hand.
+
 ## [0.1.33]
 - **Saved-data cache keeps a missing file.** Molten Sea 1.0.3 still uses a concurrent map, and it stores the null that `DimensionDataStorage.get` writes when the data file is absent. 1.0.2 rejected that null and crashed dedicated startup while Sable loaded sub-level occupancy. Autosave still does not throw `ConcurrentModificationException` when Immersive Petroleum generates reservoirs on C2ME workers. The 1.0.2 jar is removed.
 
