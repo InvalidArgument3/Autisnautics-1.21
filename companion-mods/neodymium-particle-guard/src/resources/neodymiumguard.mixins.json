@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.neodymiumguard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "NeodymiumNodeBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

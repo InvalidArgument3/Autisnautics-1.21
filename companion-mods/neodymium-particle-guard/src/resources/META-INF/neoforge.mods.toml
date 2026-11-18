@@ -1,0 +1,35 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "neodymiumguard"
+version = "1.0.0"
+displayName = "Neodymium Particle Guard"
+authors = "Autisnautics"
+description = '''Spreads out the magnetic orbit particles that Alex's Caves neodymium nodes spawn every tick. Alex's Caves guards that spawn with random.nextInt(1), which is always 0, so every node in view emits a 50-80 tick trail particle under ParticleRenderType.CUSTOM on every tick. This throttles the spawn to one per node per four ticks, keeping the visual and cutting the particles in flight by 4x. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "neodymiumguard.mixins.json"
+
+[[dependencies.neodymiumguard]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.neodymiumguard]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.neodymiumguard]]
+modId = "alexscaves"
+type = "required"
+versionRange = "[2.0.10,3.0.0)"
+ordering = "AFTER"
+side = "CLIENT"
