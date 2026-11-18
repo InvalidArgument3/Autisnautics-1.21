@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.dimstackguard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "OOModNameMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

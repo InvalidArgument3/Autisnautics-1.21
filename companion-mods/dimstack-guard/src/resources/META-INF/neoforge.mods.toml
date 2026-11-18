@@ -1,0 +1,35 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "dimstackguard"
+version = "1.0.0"
+displayName = "Dimension Stack Guard"
+authors = "Autisnautics"
+description = '''Stops the Immersive Portals dimension-stack screen crashing on datapack dimensions. O_O.getModName calls getModFileById(modId).getMods() with no null check, so any namespace that is not a mod id throws NullPointerException, and McHelper.getDimensionName calls it for every dimension whose translation key is missing. Datapack dimensions such as oceanworld, dimension_of_caves, infinite_abyss, infernalcross and autisnautics all hit it, so /portal dimension_stack dies while building its first entry widget and the client reports a failed packet. getDimensionName already handles a null return, so this returns null instead of throwing. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "dimstackguard.mixins.json"
+
+[[dependencies.dimstackguard]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.dimstackguard]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.dimstackguard]]
+modId = "immersive_portals"
+type = "required"
+versionRange = "[6.0.7,7.0.0)"
+ordering = "AFTER"
+side = "CLIENT"
