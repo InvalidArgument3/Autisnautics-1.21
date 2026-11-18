@@ -570,6 +570,19 @@ jobs:
           fi
           echo "All artifacts found"
 
+      - name: Create stable-named copies for the always-latest URLs
+        shell: bash
+        run: |
+          # releases/latest/download/<name> resolves to the newest release's asset
+          # with that exact name, so the name must not contain the version.
+          for f in *-curseforge.zip; do
+            cp "$f" "${{ needs.info.outputs.project_name }}-latest-curseforge.zip"
+          done
+          for f in *-serverpack.zip; do
+            cp "$f" "${{ needs.info.outputs.project_name }}-latest-serverpack.zip"
+          done
+          ls -l *-latest-*.zip
+
       - name: Format diff
         id: format_diff
         if: ${{ needs.info.outputs.diff != '' }}

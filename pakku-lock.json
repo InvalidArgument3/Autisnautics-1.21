@@ -9513,7 +9513,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "entityculling-neoforge-1.11.3-mc1.21.1.jar",
+                    "file_name": "entityculling-neoforge-1.12.1-mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9521,20 +9521,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/eieYbWYb/entityculling-neoforge-1.11.3-mc1.21.1.jar",
-                    "id": "eieYbWYb",
+                    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/DDaDZQ47/entityculling-neoforge-1.12.1-mc1.21.1.jar",
+                    "id": "DDaDZQ47",
                     "parent_id": "NNAgCjsB",
                     "hashes": {
-                        "sha512": "93e83dd690b91d610be29451b34836c9daa7e08bd952f88ffa07c62d8774bbaac2ff0c6768d2cbf1b14f47d0b86f98cef9fd341e0d29bd37207eaf4aa2abea63",
-                        "sha1": "f122f84f329793675b2625d51b77f990d7de3579"
+                        "sha512": "c1818837b0e43f67fa4cd2cfffc2d57c17e579b405b215dd627e3ea68d0c000b56a79614cd41f20451ea7a687e9e9de66afe871f0b9bcec680699445ea0d9fa3",
+                        "sha1": "75671869d5991e7fbeed77f0549501d1368d6f44"
                     },
                     "required_dependencies": [],
-                    "size": 1510075,
-                    "date_published": "2026-10-08T16:52:03.416509Z"
+                    "size": 1523607,
+                    "date_published": "2026-11-13T16:11:43.966329Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "entityculling-neoforge-1.11.3-mc1.21.1.jar",
+                    "file_name": "entityculling-neoforge-1.12.1-mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9542,16 +9542,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9100/286/entityculling-neoforge-1.11.3-mc1.21.1.jar",
-                    "id": "9100286",
+                    "url": "https://edge.forgecdn.net/files/9594/031/entityculling-neoforge-1.12.1-mc1.21.1.jar",
+                    "id": "9594031",
                     "parent_id": "448233",
                     "hashes": {
-                        "sha1": "f122f84f329793675b2625d51b77f990d7de3579",
-                        "md5": "9958dc06f71e0e059c377bce5f369de6"
+                        "sha1": "75671869d5991e7fbeed77f0549501d1368d6f44",
+                        "md5": "590e71ecf6c1e51b9db47a147e39e474"
                     },
                     "required_dependencies": [],
-                    "size": 1510075,
-                    "date_published": "2026-10-08T16:51:59.167Z"
+                    "size": 1523607,
+                    "date_published": "2026-11-13T16:11:42.403Z"
                 }
             ]
         },
@@ -10506,7 +10506,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "fwa+1.21.1-neoforge-1.3.4.jar",
+                    "file_name": "fwa+1.21.1-neoforge-1.3.7-patch.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10514,16 +10514,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/IAzUFvS6/versions/ElMgmNhI/fwa+1.21.1-neoforge-1.3.4.jar",
-                    "id": "ElMgmNhI",
+                    "url": "https://cdn.modrinth.com/data/IAzUFvS6/versions/rPdp8rQH/fwa+1.21.1-neoforge-1.3.7-patch.2.jar",
+                    "id": "rPdp8rQH",
                     "parent_id": "IAzUFvS6",
                     "hashes": {
-                        "sha512": "7abbd70d1f87355d5a1b9b02920c9551f71da02291deca8b10caeca5d4e83f89bc785e61f36e2f5e745d50871c6156aa9b58aa22a8167c1f95a2e829a6532c6a",
-                        "sha1": "9cd91faacbf4f35bd222b1b20eda907580fc5e10"
+                        "sha512": "dc2c5c139c3a4c82fd587b66c802329bb0a0a048d62e3a699c6e46472d07660b45d236121b72fcbf48a47dfa49f53d3fd1a995c3f6b8372aec6c5327492650a3",
+                        "sha1": "e646970e0d5fc23a78c2bc155e025819f2c56379"
                     },
                     "required_dependencies": [],
-                    "size": 406749,
-                    "date_published": "2026-11-02T11:05:19.194074Z"
+                    "size": 410221,
+                    "date_published": "2026-11-17T09:35:28.373381Z"
                 }
             ]
         },
