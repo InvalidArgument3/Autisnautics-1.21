@@ -1,34 +1,8 @@
 {
     "name": "Shatter-Prone",
     "description": "The hollow body takes 40% more damage from melee hits, falls, and anvils.",
-    "type": "origins:modify_damage_taken",
-    "damage_condition": {
-        "type": "origins:or",
-        "conditions": [
-            {
-                "type": "origins:in_tag",
-                "tag": "is_fall"
-            },
-            {
-                "type": "origins:name",
-                "name": "fly_into_wall"
-            },
-            {
-                "type": "origins:name",
-                "name": "flyIntoWall"
-            },
-            {
-                "type": "origins:name",
-                "name": "mob_attack"
-            },
-            {
-                "type": "origins:name",
-                "name": "falling_anvil"
-            }
-        ]
-    },
-    "modifier": {
-        "operation": "multiply_base_additive",
-        "value": 0.4
-    }
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "damage_type": "#minecraft:is_fall,minecraft:fly_into_wall,minecraft:mob_attack,minecraft:falling_anvil",
+    "multiplier": 1.4
 }

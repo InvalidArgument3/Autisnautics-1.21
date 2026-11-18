@@ -1,12 +1,8 @@
 {
     "name": "Danmaku Emulator",
     "description": "You simulate the bullet paths and shrug off half the damage from projectiles: arrows, bullets, and glowing orbs.",
-    "type": "origins:modify_damage_taken",
-    "damage_condition": {
-        "type": "origins:projectile"
-    },
-    "modifier": {
-        "operation": "multiply_total_additive",
-        "value": -0.5
-    }
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "damage_type": "#minecraft:is_projectile",
+    "multiplier": 0.5
 }

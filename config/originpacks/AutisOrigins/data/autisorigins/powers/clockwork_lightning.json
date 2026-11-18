@@ -1,13 +1,8 @@
 {
     "name": "power.autisorigins.clockwork_lightning.name",
     "description": "power.autisorigins.clockwork_lightning.description",
-    "type": "origins:modify_damage_taken",
-    "damage_condition": {
-        "type": "origins:in_tag",
-        "tag": "is_lightning"
-    },
-    "modifier": {
-        "operation": "multiply_base_additive",
-        "value": 1.0
-    }
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "damage_type": "#minecraft:is_lightning",
+    "multiplier": 2.0
 }

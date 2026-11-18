@@ -14,27 +14,9 @@
         "update_health": true
     },
     "fragile": {
-        "type": "origins:modify_damage_taken",
-        "damage_condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:in_tag",
-                    "tag": "is_projectile"
-                },
-                {
-                    "type": "origins:name",
-                    "name": "mob_attack"
-                },
-                {
-                    "type": "origins:name",
-                    "name": "player_attack"
-                }
-            ]
-        },
-        "modifier": {
-            "operation": "multiply_base_additive",
-            "value": 0.5
-        }
+        "type": "neoorigins:modify_damage",
+        "direction": "in",
+        "damage_type": "#minecraft:is_projectile,minecraft:mob_attack,minecraft:player_attack",
+        "multiplier": 1.5
     }
 }

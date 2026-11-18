@@ -1,13 +1,8 @@
 {
     "name": "Flammable",
     "description": "You make good kindling. Fire damage is doubled.",
-    "type": "origins:modify_damage_taken",
-    "damage_condition": {
-        "type": "origins:fire"
-    },
-    "modifier": {
-        "operation": "multiply_base",
-        "value": 1,
-        "name": "Origin modifier"
-    }
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "damage_type": "#minecraft:is_fire",
+    "multiplier": 2.0
 }

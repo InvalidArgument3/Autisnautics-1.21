@@ -14,14 +14,9 @@
         "update_health": true
     },
     "blast": {
-        "type": "origins:modify_damage_taken",
-        "damage_condition": {
-            "type": "origins:in_tag",
-            "tag": "is_explosion"
-        },
-        "modifier": {
-            "operation": "multiply_base_additive",
-            "value": 1.0
-        }
+        "type": "neoorigins:modify_damage",
+        "direction": "in",
+        "damage_type": "#minecraft:is_explosion",
+        "multiplier": 2.0
     }
 }
