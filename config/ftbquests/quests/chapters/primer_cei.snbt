@@ -280,7 +280,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "create_enchantment_industry:grindstone_drain"
+				id: "create_enchantment_industry:mechanical_grindstone"
 			}
 			id: "6600000000000065"
 			rewards: [
@@ -319,8 +319,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "6700000000000065"
-					item: { count: 1, id: "create_enchantment_industry:grindstone_drain" }
-					type: "item"
+					type: "checkmark"
 				}]
 			x: -4.07d
 			y: -2.35d

@@ -388,7 +388,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "aeronautics:levitite_blend"
+				id: "aeronautics:levitite_blend_bucket"
 			}
 			id: "660000000000006B"
 			rewards: [
@@ -419,7 +419,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "670000000000006B"
-					item: { count: 1, id: "aeronautics:levitite_blend" }
+					item: { count: 1, id: "aeronautics:levitite_blend_bucket" }
 					type: "item"
 				}]
 			x: 1.80d

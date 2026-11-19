@@ -289,7 +289,7 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.0E4476BA80B316F6.title: "Salmon"
 	quest.0E46C1FCE5AEB1DF.quest_desc: [
 		"Cobblestone is an early stone of the brass age."
-		"It opens the gravel, and the iron nuggets for the tube are counted further along."
+		"It washes into gravel. The electron tube's iron is molten iron, not nuggets."
 	]
 	quest.0E46C1FCE5AEB1DF.quest_subtitle: "{cabin.quest.0E46C1FCE5AEB1DF.subtitle}"
 	quest.0E46C1FCE5AEB1DF.title: "Cobblestone"
@@ -314,7 +314,7 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.0F7D65050E1F7A6E.title: "The Vessel"
 	quest.106C6DFDCB97327C.quest_desc: [
 		"Andesite is the stone of this age."
-		"It pairs with an algal brick into alloy, and a clay mark sits beside it."
+		"Two of these and two iron nuggets, or two of these and two zinc nuggets, make one andesite alloy. An unheated mixer does the same."
 	]
 	quest.106C6DFDCB97327C.quest_subtitle: "{cabin.quest.106C6DFDCB97327C.subtitle}"
 	quest.106C6DFDCB97327C.title: "Andesite"
@@ -334,7 +334,7 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.1127129CBA2B5E6F.title: "Redstone"
 	quest.1139F2E4E6FCFE29.quest_desc: [
 		"Gravel is the next gather after that cobblestone."
-		"Iron nuggets follow it on the page, and those nuggets are the iron the tube line asks you to hold."
+		"It mills into flint and iron nuggets. Those nuggets can make andesite alloy. The electron tube uses molten iron."
 	]
 	quest.1139F2E4E6FCFE29.quest_subtitle: "{cabin.quest.1139F2E4E6FCFE29.subtitle}"
 	quest.1139F2E4E6FCFE29.title: "Gravel"
@@ -402,8 +402,8 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.171A0F26C6608E83.quest_subtitle: "{cabin.quest.171A0F26C6608E83.subtitle}"
 	quest.171A0F26C6608E83.title: "{cabin.quest.171A0F26C6608E83.title}"
 	quest.174E3A810535CAAC.quest_desc: [
-		"A blaze burner is the heat under a basin."
-		"Heated mixes, from brass onward, sit on that flame."
+		"An empty blaze burner is netherrack and iron sheets, and flint and steel lights it. Lighting it does not take an electron tube."
+		"Heated mixes, including brass, sit on coal or lava. Superheat waits on a blaze cake."
 	]
 	quest.174E3A810535CAAC.quest_subtitle: "Heat under a basin"
 	quest.174E3A810535CAAC.title: "Blaze Burner"
@@ -430,8 +430,8 @@ quest.17AA221C7B7E6734.quest_desc: [
 	]
 	quest.1947C6CE179EBAC6.title: "Exploration"
 	quest.194B973EAF17809C.quest_desc: [
-		"A stick sits beside that log."
-		"Both of them lead to the crushing wheel."
+		"A stick is a shaft, and sticks are one ingredient of the cobblestone crushing-wheel pattern."
+		"The wheel itself is built in the brass age, from a mechanical crafter."
 	]
 	quest.194B973EAF17809C.quest_subtitle: "{cabin.quest.194B973EAF17809C.subtitle}"
 	quest.194B973EAF17809C.title: "Stick"
@@ -518,11 +518,11 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.2131996D22A87667.quest_subtitle: "{cabin.quest.2131996D22A87667.subtitle}"
 	quest.2131996D22A87667.title: "Potion"
 	quest.2167272204B6627B.quest_desc: [
-		"An electron tube is the logic part of the brass age."
-		"It is molten iron poured onto polished rose quartz, and precision mechanisms take two of them."
+		"Light the empty blaze burner, then feed it a blaze cake so the mixer can superheat."
+		"A superheated mixer melts an iron ingot into 90 mB of molten iron. A spout pours 10 mB of that onto polished rose quartz to fill an electron tube."
 	]
-	quest.2167272204B6627B.quest_subtitle: "{cabin.quest.2167272204B6627B.subtitle}"
-	quest.2167272204B6627B.title: "Electron Tube"
+	quest.2167272204B6627B.quest_subtitle: "Blaze cake, then an ingot"
+	quest.2167272204B6627B.title: "Molten Iron"
 	quest.21E2FD715F43CCC2.quest_desc: [""]
 	quest.21E2FD715F43CCC2.title: "redstone_blood"
 	quest.21E76761CD3761C2.quest_subtitle: "{cabin.quest.21E76761CD3761C2.subtitle}"
@@ -657,10 +657,10 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.28DAED70768C6A50.quest_subtitle: "Fluix casings around a calculation mechanism"
 	quest.28DAED70768C6A50.title: "Controller"
 	quest.29D37095C73B3DEC.quest_desc: [
-		"A belt connector is the belt that carries items, and this pack makes it from six rubber."
+		"A belt connector is the belt that carries items. Six dried kelp still make one. Six rubber make three."
 		"The sealed mechanism is next."
 	]
-	quest.29D37095C73B3DEC.quest_subtitle: "Rubber belts"
+	quest.29D37095C73B3DEC.quest_subtitle: "Kelp or rubber"
 	quest.29D37095C73B3DEC.title: "Belt Connector"
 	quest.29DABB5FDE6356E9.title: "{cabin.quest.29DABB5FDE6356E9.title}"
 	quest.2B195E5B195246F5.quest_desc: [
@@ -800,7 +800,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.3249CD08992F2BCD.title: "Charcoal"
 	quest.32786E9D145FFE25.quest_desc: [
 		"An algal brick is smelted algal blend."
-		"Paired with andesite it makes andesite alloy."
+		"It is Architect's Palette masonry. Andesite alloy is andesite plus iron or zinc nuggets."
 	]
 	quest.32786E9D145FFE25.quest_subtitle: "{cabin.quest.32786E9D145FFE25.subtitle}"
 	quest.32786E9D145FFE25.title: "Algal Brick"
@@ -994,13 +994,13 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.3EEF098FB1D343AD.quest_desc: ["{image: width:100 height:100 align:center}"]
 	quest.3EF5F89DBD6959E3.quest_desc: [
 		"Rubber is cooked raw rubber."
-		"A belt connector takes six rubber, and the sealed mechanism comes after the belts."
+		"Six rubber make three belt connectors. Six dried kelp still make one. The sealed mechanism comes after the belts."
 	]
 	quest.3EF5F89DBD6959E3.quest_subtitle: "Furnace or blast furnace"
 	quest.3EF5F89DBD6959E3.title: "Rubber"
 	quest.3F45DFEF31838A00.quest_desc: [
 		"The Andesite Machine is the block the early contraptions are cut from."
-		"The press, the mixer, the saw, the drill, and the deployer are all applications of this machine."
+		"The press, the mixer, the saw, and the drill are applications of this machine. The deployer is not. It waits on an electron tube."
 	]
 	quest.3F45DFEF31838A00.title: "Andesite Machine"
 	quest.400CDC316DCDFE88.quest_desc: [
@@ -1016,7 +1016,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.402F89CABF6BCDA4.title: "Bone Meal"
 	quest.4064D448404CD639.quest_desc: [
 		"Obsidian is the dark glass after magma."
-		"It is deployed and pressed onto a kinetic mechanism to make the reinforced mechanism."
+		"The hand craft sets a kinetic mechanism between two obsidian. A deployer and a press can sequence one later."
 	]
 	quest.4064D448404CD639.quest_subtitle: "{cabin.quest.4064D448404CD639.subtitle}"
 	quest.4064D448404CD639.title: "Obsidian"
@@ -1106,7 +1106,7 @@ quest.46BF1AE437F27403.quest_desc: [
 	quest.4761DAE59CDD93AF.title: "Crude Oil Bucket"
 	quest.47965C310D9847DC.quest_desc: [
 		"A blaze cake is the dense fuel a blaze burner eats."
-		"It is the high heat the late workshop runs on."
+		"The brass age already burned this cake to melt iron into the electron tube. Here it is the heat the late workshop runs on."
 	]
 	quest.47965C310D9847DC.quest_subtitle: "Dense fuel for a blaze burner"
 	quest.47965C310D9847DC.title: "Blaze Cake"
@@ -1152,7 +1152,7 @@ quest.4815DA7B77DD7175.quest_desc: [
 	quest.4B891E9ED8DE6BB2.title: "Glow Berries"
 	quest.4CC420A6B673176A.quest_desc: [
 		"Sand in the andesite age is the gather in front of clay."
-		"The clay balls for algal blend come off this pile."
+		"Clay, sand, and dried kelp cook into algal blend for masonry. The alloy does not use it."
 	]
 	quest.4CC420A6B673176A.quest_subtitle: "{cabin.quest.4CC420A6B673176A.subtitle}"
 	quest.4CC420A6B673176A.title: "Sand"
@@ -1239,8 +1239,8 @@ quest.4815DA7B77DD7175.quest_desc: [
 	]
 	quest.5358E5F7FB59DD60.quest_subtitle: "{cabin.quest.5358E5F7FB59DD60.subtitle}"
 	quest.53735DC4231AB566.quest_desc: [
-		"Iron nuggets are the iron in front of the electron tube."
-		"The tube itself is 10 mB of molten iron spouted onto polished rose quartz."
+		"An iron nugget is one ninth of an ingot. Andesite alloy already used these."
+		"The electron tube is 10 mB of molten iron spouted onto polished rose quartz, not a nugget."
 	]
 	quest.53735DC4231AB566.quest_subtitle: "{cabin.quest.53735DC4231AB566.subtitle}"
 	quest.53735DC4231AB566.title: "Iron Nugget"
@@ -1336,8 +1336,8 @@ quest.5A6926E64EEE7729.quest_desc: [
 	quest.5B0727505DC791DF.title: "Grass Block"
 	quest.5BDF2960FBF3C35D.title: "fwoosh"
 	quest.5C277D27606F64DA.quest_desc: [
-		"A log here is wood for the crushing wheel."
-		"That wheel is what the chromatic singularity mix consumes."
+		"A log is wood for planks, and planks are one ingredient of the vanilla crushing-wheel pattern."
+		"The wheel itself is built in the brass age, from a mechanical crafter."
 	]
 	quest.5C277D27606F64DA.quest_subtitle: "{cabin.quest.1A06FA866B74E75B.subtitle}"
 	quest.5C277D27606F64DA.title: "Log"
@@ -1373,7 +1373,7 @@ quest.5A6926E64EEE7729.quest_desc: [
 	quest.5FCCD2F720115D41.title: "{cabin.quest.5FCCD2F720115D41.title}"
 	quest.608BF7BE3CB666F3.quest_desc: [
 		"Kelp is the sea plant in algal blend."
-		"Seagrass can stand in for it, with clay."
+		"Seagrass can stand in for it, with clay. The blend is masonry, not the alloy."
 	]
 	quest.608BF7BE3CB666F3.quest_subtitle: "{cabin.quest.608BF7BE3CB666F3.subtitle}"
 	quest.608BF7BE3CB666F3.title: "Kelp"
@@ -1439,10 +1439,10 @@ quest.6199E449AF2BADBA.quest_desc: [
 	quest.667F4F686A45EF3E.quest_subtitle: "Railway casing around a reinforced mechanism"
 	quest.667F4F686A45EF3E.title: "Gold Machine"
 	quest.675C395B2074C24C.quest_desc: [
-		"The kinetic mechanism is the first mechanism, sequenced on andesite alloy."
-		"The Andesite Machine is the gate cut from it, and every later mechanism grows from this one."
+		"A kinetic mechanism is a hammer, a cogwheel, andesite alloy, and a stripped log, crafted by hand."
+		"A sequenced assembly can make one later, once a deployer exists. The Andesite Machine is not cut from it."
 	]
-	quest.675C395B2074C24C.quest_subtitle: "{cabin.quest.675C395B2074C24C.subtitle}"
+	quest.675C395B2074C24C.quest_subtitle: "Hammer, cog, alloy, log"
 	quest.675C395B2074C24C.title: "Kinetic Mechanism"
 	quest.6824055533465010.quest_desc: [
 		"The calculation mechanism is the processor-age mechanism, sequenced with the flash drive."
@@ -1457,8 +1457,8 @@ quest.6199E449AF2BADBA.quest_desc: [
 	quest.6892AE55581393C6.quest_subtitle: "The dark stone under the workshop"
 	quest.6892AE55581393C6.title: "Deepslate"
 	quest.68A8C2CB135ECA87.quest_desc: [
-		"A source of steel is crushed raw iron, aimed at the blast furnace."
-		"The enrichment quest counts it beside the uranium."
+		"Steel starts from crushed raw iron, and a crushing wheel is what makes that dust. The wheel is mechanical crafting, so it waits on the crafter a brass machine cuts."
+		"A heated mixer turns the crushed iron into ingots, and a superheated mixer turns those ingots into steel."
 	]
 	quest.68A8C2CB135ECA87.quest_subtitle: "Contraption 20-1"
 	quest.68A8C2CB135ECA87.title: "A Source of Steel"
@@ -1509,7 +1509,7 @@ quest.6199E449AF2BADBA.quest_desc: [
 	quest.6B03056FA21424C0.title: "Iron Pickaxe"
 	quest.6B7F0631060A9E62.quest_desc: [
 		"Clay is the soft earth the algal blend is mixed from."
-		"With kelp or seagrass it becomes the brick that makes andesite alloy."
+		"That blend is Architect's Palette masonry. Andesite alloy does not use it."
 	]
 	quest.6B7F0631060A9E62.quest_subtitle: "{cabin.quest.6B7F0631060A9E62.subtitle}"
 	quest.6B7F0631060A9E62.title: "Clay"
@@ -1588,7 +1588,7 @@ quest.6199E449AF2BADBA.quest_desc: [
 	quest.6F56109274CDF42A.quest_desc: ["wooda"]
 	quest.6F56109274CDF42A.title: "Chop Vood"
 	quest.6F750A66D0A559DE.quest_desc: [
-		"Blaze cake is the high heat from the burner line."
+		"Blaze cake is the same superheat fuel the brass age used to melt iron."
 		"Here it feeds matter plastics beside the paraffin."
 	]
 	quest.6F750A66D0A559DE.title: "Blaze Cake"
@@ -1628,13 +1628,13 @@ quest.7021A2BD8775DC07.quest_desc: [
 	quest.727B43FD95C4A512.title: "Builders Tea"
 	quest.729FB5DD07C234E8.quest_desc: [
 		"Clay balls are the clay the blend actually uses."
-		"With kelp or seagrass they make algal blend."
+		"With kelp or seagrass they make algal blend, and that blend is masonry."
 	]
 	quest.729FB5DD07C234E8.quest_subtitle: "{cabin.quest.729FB5DD07C234E8.subtitle}"
 	quest.729FB5DD07C234E8.title: "Clay"
 	quest.72BE175C83834838.quest_desc: [
 		"Algal blend is clay with kelp or seagrass."
-		"It smelts into the algal brick the alloy is built on."
+		"It smelts into an algal brick. The brick is masonry. Andesite alloy does not use it."
 	]
 	quest.72BE175C83834838.quest_subtitle: "{cabin.quest.72BE175C83834838.subtitle}"
 	quest.72BE175C83834838.title: "Algal Blend"
@@ -1642,10 +1642,10 @@ quest.7021A2BD8775DC07.quest_desc: [
 	quest.73641E4A11A71215.quest_desc: ["Now that you've got iron, you can build a gun bench. Once you have that, all it'll take to cobble together a real gun is some wood and rocks. The ATF will never know a thing."]
 	quest.73641E4A11A71215.title: "Unregistered Firearm"
 	quest.73FCA432DEFC1DED.quest_desc: [
-		"Andesite alloy is two algal bricks and two andesite in a 2x2, and it makes two."
-		"The old nugget crafts are gone. The kinetic mechanism is built on this alloy."
+		"Andesite alloy is two andesite and two iron nuggets, or two andesite and two zinc nuggets, and it makes one."
+		"An unheated mixer makes the same alloy. Algal bricks are not part of it. The kinetic mechanism is built on this alloy."
 	]
-	quest.73FCA432DEFC1DED.quest_subtitle: "{cabin.quest.73FCA432DEFC1DED.subtitle}"
+	quest.73FCA432DEFC1DED.quest_subtitle: "Andesite and a nugget"
 	quest.73FCA432DEFC1DED.title: "Andesite Alloy"
 	quest.746F9F4F21D8400D.quest_subtitle: "{cabin.quest.1250AE58911C27A9.subtitle}"
 	quest.746F9F4F21D8400D.title: "{cabin.quest.746F9F4F21D8400D.title}"
@@ -1674,8 +1674,8 @@ quest.7021A2BD8775DC07.quest_desc: [
 	quest.7664FBB32FCC6BE6.quest_subtitle: "{cabin.quest.7664FBB32FCC6BE6.subtitle}"
 	quest.7664FBB32FCC6BE6.title: "{cabin.quest.7664FBB32FCC6BE6.title}"
 	quest.76706BE282ABAC31.quest_desc: [
-		"The reinforced mechanism is obsidian deployed and pressed onto a kinetic mechanism."
-		"The Gold Machine wraps it in railway casing, and train parts are cut from that machine."
+		"A reinforced mechanism is a kinetic mechanism between two obsidian, crafted by hand."
+		"The sequenced assembly is a later path, once a deployer exists. The Gold Machine is stage 2, and it wraps this mechanism in railway casing."
 	]
 	quest.76706BE282ABAC31.title: "Reinforced Mechanism"
 	quest.779266F2F19F839E.quest_desc: ["You've got all the parts, all that remains is to assemble the glider and lift off. That's one small step for rat, one giant leap for rat-kind."]
@@ -1723,8 +1723,8 @@ quest.7021A2BD8775DC07.quest_desc: [
 	]
 	quest.7A9AA27029185035.title: "Substrate Chaos"
 	quest.7AAE71F57FB89BCC.quest_desc: [
-		"A crushing wheel is the grindstone the chromatic singularity mix eats."
-		"Quartz enriched iron is the metal that anchors the same mix."
+		"A crushing wheel is mechanical crafting. One pattern is andesite alloy, planks, and stone. Another is cobblestone and sticks. Both need the crafter a brass machine cuts."
+		"Crushed raw iron, the iron steel is mixed from, comes off this wheel. The chromatic singularity mix later eats a wheel as well."
 	]
 	quest.7AAE71F57FB89BCC.quest_subtitle: "{cabin.quest.44540B11F341AE09.subtitle}"
 	quest.7AAE71F57FB89BCC.title: "Crushing Wheel"
@@ -1778,7 +1778,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.7E59B7DC239E621E.title: "Weeping Vines"
 	quest.7FC4D1E69377271D.quest_desc: [
 		"A Brass Machine is brass casing wrapped around a precision mechanism."
-		"The crafter, the arm, the steam engine, and the other brass-age machines are cut from it."
+		"The crafter, the arm, and the other brass-gated machines are cut from it. A steam engine is also crafted from andesite alloy, a copper block, and a gold plate."
 	]
 	quest.7FC4D1E69377271D.quest_subtitle: "Casing around a precision mechanism"
 	quest.7FC4D1E69377271D.title: "Brass Machine"
@@ -1994,10 +1994,10 @@ quest.7C31A0611CC62360.quest_desc: [
 		"They are how you tell an overloaded line from a healthy one."
 	]
 	quest.6401030000000000.title: "Andesite Alloy"
-	quest.6401030000000000.quest_subtitle: "Brick and andesite, 2x2"
+	quest.6401030000000000.quest_subtitle: "Andesite and a nugget"
 	quest.6401030000000000.quest_desc: [
-		"Andesite alloy is the metal of the kinetic line. Two algal bricks and two andesite, in a 2x2, make two."
-		"The old nugget crafts are gone. Shafts, casings, and the Andesite Machine all start from this alloy."
+		"Andesite alloy is the metal of the kinetic line. Two andesite and two iron nuggets, or two andesite and two zinc nuggets, make one."
+		"An unheated mixer makes the same alloy. Shafts, casings, and the Andesite Machine all start from it."
 	]
 	quest.6401040000000000.title: "Shaft"
 	quest.6401040000000000.quest_subtitle: "The axle"
@@ -2923,7 +2923,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6401090000000001.quest_subtitle: "Clay, kelp, a furnace"
 	quest.6401090000000001.quest_desc: [
 		"An algal brick is smelted algal blend, clay with kelp or seagrass."
-		"Two bricks and two andesite are the 2x2 that makes andesite alloy."
+		"It is masonry. Andesite alloy is two andesite and two iron nuggets, or two andesite and two zinc nuggets."
 	]
 	quest.64010A0000000001.title: "Andesite Casing"
 	quest.64010A0000000001.quest_subtitle: "Alloy and any log"
@@ -3607,13 +3607,13 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000034.quest_subtitle: "Grind by hand first"
 	quest.6600000000000034.quest_desc: [
 		"A millstone grinds items on a shaft into dusts and flour."
-		"A hand crank can turn it, and it is not an Andesite Machine."
+		"It also mills netherrack into cinder flour, which is the start of a blaze cake. A hand crank can turn it, and it is not an Andesite Machine."
 	]
 	quest.6600000000000035.title: "Belt"
-	quest.6600000000000035.quest_subtitle: "Rubber, not dried kelp"
+	quest.6600000000000035.quest_subtitle: "Kelp, or rubber"
 	quest.6600000000000035.quest_desc: [
-		"A belt carries items between machines, and this pack makes the connector from six rubber."
-		"Dried kelp will not make one."
+		"A belt carries items between machines. Six dried kelp make one connector. Six rubber make three."
+		"Both recipes are live."
 	]
 	quest.6600000000000036.title: "Basin"
 	quest.6600000000000036.quest_subtitle: "The pot the machines share"
@@ -3637,7 +3637,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000039.quest_subtitle: "Andesite Machine, whisk"
 	quest.6600000000000039.quest_desc: [
 		"A mechanical mixer is an Andesite Machine with a whisk applied."
-		"Heated, it makes brass from copper and zinc, while the first andesite alloy stays the 2x2."
+		"Heated, copper and zinc become brass. Unheated, andesite and nuggets become alloy. Superheated, with a blaze cake under the burner, an iron ingot becomes molten iron."
 	]
 	quest.660000000000003A.title: "Mechanical Drill"
 	quest.660000000000003A.quest_subtitle: "Andesite Machine, drill head"
@@ -3670,10 +3670,10 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It tills soil and clears plants in front of a moving contraption."
 	]
 	quest.660000000000003F.title: "Contraption Controls"
-	quest.660000000000003F.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003F.quest_subtitle: "Tube, casing, a button"
 	quest.660000000000003F.quest_desc: [
-		"Contraption controls are a stonecut of an Andesite Machine."
-		"Glue them onto a contraption so redstone can start, stop, or steer it."
+		"Contraption controls are an electron tube, an andesite casing, and a button."
+		"They are not cut from an Andesite Machine. Glue them onto a contraption so redstone can start, stop, or steer it."
 	]
 	quest.6600000000000040.title: "Cart Assembler"
 	quest.6600000000000040.quest_subtitle: "Andesite Machine stonecut"
@@ -3690,8 +3690,8 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000042.title: "Spout"
 	quest.6600000000000042.quest_subtitle: "Copper Machine, hopper"
 	quest.6600000000000042.quest_desc: [
-		"A spout is a Copper Machine craft, and that machine needs copper sheet."
-		"It pours fluid onto a basin or a depot, including the molten iron an electron tube drinks."
+		"A spout is copper casing and dried kelp, and a Copper Machine can also cut one."
+		"It pours the lava that finishes a blaze cake, and the 10 mB of molten iron that fills an electron tube. It does not need a tube of its own."
 	]
 	quest.6600000000000043.title: "Item Drain"
 	quest.6600000000000043.quest_subtitle: "Copper Machine, iron bars"
@@ -3738,14 +3738,14 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.660000000000004A.title: "Brass Hand"
 	quest.660000000000004A.quest_subtitle: "The deployer's glove"
 	quest.660000000000004A.quest_desc: [
-		"A brass hand is the glove a deployer is built from, and this pack makes it with golden sheets."
-		"Brass plates are not the ingredient."
+		"A brass hand is the glove a deployer is built from."
+		"It is andesite alloy and brass plates. A brass plate is a brass ingot through a press. Golden sheets are not the ingredient."
 	]
 	quest.660000000000004B.title: "Deployer"
-	quest.660000000000004B.quest_subtitle: "Andesite Machine, brass hand"
+	quest.660000000000004B.quest_subtitle: "Tube, casing, brass hand"
 	quest.660000000000004B.quest_desc: [
-		"A deployer is an Andesite Machine with a brass hand applied."
-		"It places and uses items, which is how sequenced assembly builds tubes, mechanisms, track, and walker parts."
+		"A deployer is an electron tube, an andesite casing, and a brass hand."
+		"It places and uses items. It builds precision mechanisms, train track, and walker parts. It does not build electron tubes."
 	]
 	quest.660000000000004C.title: "Mechanical Crafter"
 	quest.660000000000004C.quest_subtitle: "Brass Machine, crafting table"
@@ -3754,10 +3754,10 @@ quest.7C31A0611CC62360.quest_desc: [
 		"Set several in a grid and they run shaped crafts on their own."
 	]
 	quest.660000000000004D.title: "Steam Engine"
-	quest.660000000000004D.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004D.quest_subtitle: "Alloy, copper, gold plate"
 	quest.660000000000004D.quest_desc: [
-		"A steam engine is a stonecut of a Brass Machine, so it needs a precision mechanism and brass casing."
-		"It turns steam from a boiler into a large amount of rotation."
+		"A steam engine is andesite alloy, a copper block, and a gold plate."
+		"A Brass Machine can also cut one, and that cut is not required. It turns steam from a boiler into a large amount of rotation."
 	]
 	quest.660000000000004E.title: "Rotation Speed Controller"
 	quest.660000000000004E.quest_subtitle: "Brass Machine stonecut"
@@ -3867,11 +3867,11 @@ quest.7C31A0611CC62360.quest_desc: [
 		"The large diesel engine is the middle engine, and the craft ships with the mod."
 		"Engines in this tier stack, and the stress on the shaft grows with the stack."
 	]
-	quest.6600000000000060.title: "Distillation Tank"
+	quest.6600000000000060.title: "Distillation Controller"
 	quest.6600000000000060.quest_subtitle: "Split the oil"
 	quest.6600000000000060.quest_desc: [
-		"A distillation tank is one section of the tower that splits heated crude oil into diesel and gasoline."
-		"The pumpjack feeds it, and the engines drink what comes out."
+		"A distillation controller splits heated crude oil into diesel, gasoline, and the heavier fractions."
+		"It is crafted from andesite alloy, an iron plate, a clock, and fluid pipes. The pumpjack feeds it, and the engines drink what comes out."
 	]
 	quest.6600000000000061.title: "Pumpjack Hole"
 	quest.6600000000000061.quest_subtitle: "The well head"
@@ -3889,7 +3889,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000063.quest_subtitle: "The wheel"
 	quest.6600000000000063.quest_desc: [
 		"The pumpjack crank takes rotation and drives the pumpjack."
-		"Hole, head, and crank together are the well that feeds the distillation tank."
+		"Hole, head, and crank together are the well that feeds the distillation controller."
 	]
 	quest.6600000000000064.title: "Huge Diesel Engine"
 	quest.6600000000000064.quest_subtitle: "The last engine"
@@ -3900,8 +3900,8 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000065.title: "Grindstone Drain"
 	quest.6600000000000065.quest_subtitle: "Experience out of the wheel"
 	quest.6600000000000065.quest_desc: [
-		"A grindstone drain sits under the mechanical grindstone and catches the liquid experience."
-		"Pipes take that fluid on to the hatch, the lantern, and the enchanter."
+		"The grindstone drain has no crafting recipe. It can be found as loot."
+		"The mechanical grindstone is the machine this line builds. A drain placed under it catches the liquid experience, and pipes take that fluid on to the hatch, the lantern, and the enchanter."
 	]
 	quest.6600000000000066.title: "Experience Hatch"
 	quest.6600000000000066.quest_subtitle: "A door for the fluid"
@@ -3934,10 +3934,10 @@ quest.7C31A0611CC62360.quest_desc: [
 		"Loose pieces float, and the blend is the step toward pearlescent levitite."
 	]
 	quest.660000000000006B.title: "Levitite Blend"
-	quest.660000000000006B.quest_subtitle: "The dust"
+	quest.660000000000006B.quest_subtitle: "A heated fluid"
 	quest.660000000000006B.quest_desc: [
-		"Levitite blend is the crushed step between the ore and pearlescent levitite."
-		"The mod crushes the ore into this blend on its own, and this pack does not replace that step."
+		"Levitite blend is a fluid, not a dust. A heated mixer takes four end stone powder, two zinc nuggets, and 500 mB of water, and it makes 500 mB of blend."
+		"End stone powder is crushed end stone. Bucket the blend out of the basin. There is no levitite blend item."
 	]
 	quest.660000000000006C.title: "Pearlescent Levitite"
 	quest.660000000000006C.quest_subtitle: "The flight metal"
@@ -4746,7 +4746,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000101.quest_subtitle: "Press a gold ingot"
 	quest.6600000000000101.quest_desc: [
 		"A golden sheet is a gold ingot under the press."
-		"Goggles, the brass hand, and railway casing all ask for this plate."
+		"Goggles and the deepslate railway casing ask for this plate. The brass hand uses brass plates, not gold."
 	]
 	quest.6600000000000102.title: "Copper Sheet"
 	quest.6600000000000102.quest_subtitle: "Press a copper ingot"
@@ -4811,8 +4811,8 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.660000000000010C.title: "Reinforced Mechanism"
 	quest.660000000000010C.quest_subtitle: "Obsidian on a kinetic mechanism"
 	quest.660000000000010C.quest_desc: [
-		"A reinforced mechanism is a sequenced assembly on a kinetic mechanism: deploy obsidian twice, then press."
-		"A Gold Machine is a railway casing around this mechanism."
+		"The hand craft is a kinetic mechanism between two obsidian, and it does not need a deployer."
+		"The sequenced assembly, deploy obsidian twice then press, is a later path. A Gold Machine is a railway casing around this mechanism."
 	]
 	chapter.6519000000000000.title: "Let it Walk"
 	chapter.6519000000000000.chapter_subtitle: [
@@ -4931,5 +4931,36 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6419000000000012.quest_desc: [
 		"A positioner is a klaxium sheet, a nugget, and two shafts."
 		"Look at a hinge or a swivel and scroll to set the angle that leg stands and walks from."
+	]
+
+	quest.A11E000000000001.title: "Iron Nugget"
+	quest.A11E000000000001.quest_subtitle: "Nine from an ingot"
+	quest.A11E000000000001.quest_desc: [
+		"An iron nugget is one ninth of an iron ingot."
+		"Two nuggets and two andesite make one andesite alloy. Zinc nuggets work in place of the iron."
+	]
+	quest.A11E000000000002.title: "Cogwheel"
+	quest.A11E000000000002.quest_subtitle: "A shaft and planks"
+	quest.A11E000000000002.quest_desc: [
+		"A cogwheel is a shaft and planks."
+		"The hand-built kinetic mechanism takes one, with a hammer, andesite alloy, and a stripped log."
+	]
+	quest.A11E000000000003.title: "Cinder Flour"
+	quest.A11E000000000003.quest_subtitle: "Mill netherrack"
+	quest.A11E000000000003.quest_desc: [
+		"A millstone mills netherrack into cinder flour. A crushing wheel is not required, and the wheel does not exist yet."
+		"The flour is the dust in a blaze cake."
+	]
+	quest.A11E000000000004.title: "Blaze Cake Base"
+	quest.A11E000000000004.quest_subtitle: "Press the flour"
+	quest.A11E000000000004.quest_desc: [
+		"A blaze cake base is an egg, sugar, and cinder flour, pressed together."
+		"The mechanical press does it. A mixer does not."
+	]
+	quest.A11E000000000005.title: "Blaze Cake"
+	quest.A11E000000000005.quest_subtitle: "A spout of lava"
+	quest.A11E000000000005.quest_desc: [
+		"A spout pours 250 mB of lava onto a blaze cake base, and the cake is what it becomes."
+		"Feed the cake to a lit blaze burner and the mixer can superheat. That is the heat that melts an iron ingot."
 	]
 }

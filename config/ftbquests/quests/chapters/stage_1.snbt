@@ -692,7 +692,7 @@
 		{
 			dependencies: [
 				"106C6DFDCB97327C"
-				"32786E9D145FFE25"
+				"A11E000000000001"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -712,7 +712,7 @@
 					id: "520000000000005E"
 					item: {
 						count: 2
-						id: "architects_palette:algal_brick"
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
@@ -845,6 +845,7 @@
 				"59E4A6163753BC12"
 				"73FCA432DEFC1DED"
 				"5A055D0421861318"
+				"A11E000000000002"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1781,6 +1782,102 @@
 			}]
 			x: 4.0d
 			y: 11.5d
+		}
+		{
+			dependencies: [
+				"106C6DFDCB97327C"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "minecraft:iron_nugget"
+			}
+			id: "A11E000000000001"
+			rewards: [
+				{
+					id: "A11E00000000R001"
+					item: {
+						count: 2
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "A11E00000000T001"
+				item: { count: 1, id: "minecraft:iron_nugget" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"73FCA432DEFC1DED"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:cogwheel"
+			}
+			id: "A11E000000000002"
+			rewards: [
+				{
+					id: "A11E00000000R002"
+					item: {
+						count: 4
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "A11E00000000T002"
+				item: { count: 1, id: "create:cogwheel" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 6.0d
 		}
 	]
 }

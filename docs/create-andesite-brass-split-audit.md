@@ -34,7 +34,7 @@ Brass ingot is heated mixing (coal or lava in the burner), not superheated, so i
 
 Gold machine is railway casing (brass casing + an obsidian sheet) around a reinforced mechanism. The quest now waits on the brass machine quest, which is after precision mechanisms.
 
-"A Source of Steel" (`68A8C2CB135ECA87`, stage 2) still asks for `create:crushed_raw_iron`. That dust comes from a crushing wheel, and the wheel quest (`7AAE71F57FB89BCC`) is stage 3. The item is still reachable in stage 2: the steel quest depends on the precision mechanism, the brass machine turns a crafting table into mechanical crafters, and the wheel is mechanical crafting. No loop, and the wheel quest was left in stage 3.
+"A Source of Steel" (`68A8C2CB135ECA87`, stage 2) asks for `create:crushed_raw_iron`. That dust comes from a crushing wheel. The wheel quest (`7AAE71F57FB89BCC`) now sits in stage 2, after the brass machine, and steel depends on it. See "Quest alignment".
 
 ### Server check
 
@@ -312,7 +312,7 @@ In `chapter_2.js` next to the existing commented precision remove:
 **Quests**
 
 - Move stage 1 quest `667F4F686A45EF3E` (gold machine, track icon) to stage 2, after brass casing.
-- Optional: move crushing-wheel quest `7AAE71F57FB89BCC` to sit with "A Source of Steel" in stage 2.
+- Crushing-wheel quest `7AAE71F57FB89BCC` now sits with "A Source of Steel" in stage 2. The move is in "Quest alignment".
 
 **Keep as extras (vanilla recipe remains, pack craft is a second path)**
 
@@ -320,3 +320,75 @@ In `chapter_2.js` next to the existing commented precision remove:
 - `chapter_1.js` `andesiteMachine` for fan, press, mixer, drill, saw, roller, portable interface, andesite funnel, andesite tunnel, harvester, plough, cart assembler, redstone link.
 - `chapter_1a.js` rubber belts and the copper-machine fluid blocks (spout, drain, hose pulley, smart fluid pipe, portable fluid interface).
 - `chapter_1.js:100` sequenced kinetic mechanism, as a later convenience once a deployer exists.
+
+## Quest alignment
+
+Quest ids were not changed. New quests use ids `A11E000000000001` through `A11E000000000005`. Reward ids `A11E00000000R001` through `A11E00000000R005` and task ids `A11E00000000T001` through `A11E00000000T005` are new. No quest was deleted. Display text is `config/ftbquests/quests/lang/en_us.snbt`. The cabin overlay in `kubejs/assets/ftbquests/lang/en_us.json` was updated for the five keys that still described the algal mix, the deployer assembly, nugget melting, or a kelp-less belt.
+
+| Id | Chapter | Change |
+|---|---|---|
+| `106C6DFDCB97327C` | stage 1 | Rewritten. Two andesite and two iron or zinc nuggets make one alloy. |
+| `4CC420A6B673176A` | stage 1 | Rewritten. Sand leads to masonry blend, not the alloy. |
+| `608BF7BE3CB666F3` | stage 1 | Rewritten. Kelp is masonry, not the alloy. |
+| `6B7F0631060A9E62` | stage 1 | Rewritten. Clay blend is masonry. |
+| `729FB5DD07C234E8` | stage 1 | Rewritten. Clay balls make masonry blend. |
+| `72BE175C83834838` | stage 1 | Rewritten. Algal blend no longer "the brick the alloy is built on". |
+| `32786E9D145FFE25` | stage 1 | Rewritten. No longer a dependency of the alloy quest. Side branch. |
+| `73FCA432DEFC1DED` | stage 1 | Rewritten. Depends on andesite and the new nugget quest, not the algal brick. Reward `520000000000005E` is iron nuggets; the reward id is unchanged. |
+| `A11E000000000001` | stage 1 | Added. Iron nugget. Depends on andesite. Reward: 2 iron ingots. |
+| `A11E000000000002` | stage 1 | Added. Cogwheel. Depends on the alloy. Reward: 4 shafts. |
+| `675C395B2074C24C` | stage 1 | Rewritten to the hand craft (hammer, cog, alloy, stripped log). Depends on the new cogwheel quest. The deployer sequence is described as later. |
+| `3F45DFEF31838A00` | stage 1 | Rewritten. Press, mixer, saw, and drill. The deployer is not a cut of this machine. |
+| `4064D448404CD639` | stage 1 | Rewritten. Reinforced mechanism is the hand craft first. |
+| `76706BE282ABAC31` | stage 1 | Rewritten. Hand craft. Sequence is later. Gold machine is stage 2. |
+| `174E3A810535CAAC` | stage 2 | Rewritten. Empty burner, flint and steel, heated brass on coal or lava, superheat waits on the cake. |
+| `A11E000000000003` | stage 2 | Added. Cinder flour from the millstone. Depends on the early burner. Reward: 8 netherrack. |
+| `A11E000000000004` | stage 2 | Added. Blaze cake base, pressed. Depends on flour. Reward: 4 sugar. |
+| `A11E000000000005` | stage 2 | Added. Blaze cake, 250 mB lava from a spout. Depends on the base. Reward: 4 eggs. |
+| `2167272204B6627B` | stage 2 | Retitled Molten Iron. Depends on the blaze cake quest, not iron nuggets. Checkmark task id unchanged. |
+| `0E46C1FCE5AEB1DF` | stage 2 | Rewritten. Nuggets are not the tube's iron. |
+| `1139F2E4E6FCFE29` | stage 2 | Rewritten. Same. |
+| `53735DC4231AB566` | stage 2 | Rewritten. No longer gates the tube. Nothing depends on it. |
+| `29D37095C73B3DEC` | stage 2 | Rewritten. Six dried kelp make one belt. Six rubber make three. The rubber dependency is unchanged. |
+| `3EF5F89DBD6959E3` | stage 2 | Rewritten. Same belt fact. |
+| `7FC4D1E69377271D` | stage 2 | Rewritten. The steam engine also has a crafting recipe. |
+| `7AAE71F57FB89BCC` | stage 2 | Moved from stage 3. Depends on the brass machine, not the stage 3 log and stick. Both mechanical-crafting patterns are described. |
+| `68A8C2CB135ECA87` | stage 2 | Depends on the crushing wheel as well as precision and the pre-existing `6EDA86E4BE0F096B` entry. Text names the wheel. |
+| `5351AF6CA73CB8E0` | stage 2 | Left. The text already said 10 mB of molten iron on polished rose quartz. |
+| `667F4F686A45EF3E` | stage 2 | Left where the recipe change put it. |
+| `5C277D27606F64DA` | stage 3 | Rewritten. The log is planks for the vanilla wheel pattern. The wheel quest is no longer here. |
+| `194B973EAF17809C` | stage 3 | Rewritten. The stick is the cobble-and-sticks pattern. Nothing in stage 3 depends on this quest. |
+| `2C81D358594C4352` | stage 3 | Left. It still depends on the wheel id. `kubejs/rs_port/chromatic_singularity` consumes a crushing wheel. |
+| `47965C310D9847DC` | stage 5 | Rewritten. This cake is the one the brass age used to melt iron. |
+| `6F750A66D0A559DE` | stage 5 | Rewritten. Same. |
+| `6401030000000000` | primer create | Rewritten. Depends on the primer start `6401000000000000`, not the algal brick. Reward `6301030000000000` is iron nuggets; the reward id is unchanged. |
+| `6401090000000001` | primer create | Rewritten. Masonry, not the 2x2 alloy. |
+| `6600000000000034` | primer create | Rewritten. The millstone mills netherrack into cinder flour. |
+| `6600000000000035` | primer create | Rewritten. Dried kelp does make a belt. |
+| `6600000000000039` | primer create | Rewritten. Heated brass, unheated alloy, superheated molten iron. |
+| `660000000000003F` | primer create | Rewritten. Tube, casing, button. Depends on the casing and electron tube `5351AF6CA73CB8E0`, not the andesite machine. |
+| `6600000000000042` | primer create | Rewritten. Copper casing and dried kelp, or a copper machine. Pours the cake lava and the tube's iron. |
+| `660000000000004A` | primer create | Rewritten. Alloy and brass plates. Depends on the brass sheet, not the golden sheet. |
+| `660000000000004B` | primer create | Rewritten. Tube, casing, brass hand. Depends on the tube quest, not the andesite machine. It does not build tubes. |
+| `660000000000004C` | primer create | Unchanged. Still precision plus the brass machine. |
+| `660000000000004D` | primer create | Rewritten. Alloy, copper block, gold plate. Depends on the alloy and the golden sheet. The brass-machine cut is named as optional. |
+| `6600000000000101` | primer create | Rewritten. Goggles and the deepslate railway casing. Not the brass hand. |
+| `660000000000010C` | primer create | Rewritten. Hand craft first. Depends on stage 1 `76706BE282ABAC31`, not the deployer and the press. |
+| `6600000000000060` | primer diesel | Retargeted. `createdieselgenerators:distillation_tank` is not an item. Icon and task are `createdieselgenerators:distillation_controller`. The brass-machine dependency is dropped. The shaped craft is alloy, an iron plate, a clock, and fluid pipes. |
+| `6600000000000063` | primer diesel | Rewritten. The well feeds the distillation controller. |
+| `6600000000000065` | primer CEI | Task `6700000000000065` is a checkmark. The drain item exists and has no recipe. Icon is the mechanical grindstone. |
+| `660000000000006B` | primer aeronautics | Retargeted. `aeronautics:levitite_blend` is a fluid. Icon and task are `aeronautics:levitite_blend_bucket`. Text is the heated mix: four end stone powder, two zinc nuggets, 500 mB water. |
+
+Checked and left alone: primer Create Addition, Let it Walk (sequenced parts already depend on the deployer, precision, or the tube), angel and primer aeronautics machine cuts (andesite, gold, and brass machine recipes are still registered behind `Platform.isLoaded`), the rope pulley (wool recipe, and there is no rope-pulley quest), and the electron tube and precision primer entries, which already described the fill and `kubejs:precision_mechanism`.
+
+### Judgment calls
+
+- Gold machine stays in stage 2, gated on the brass machine, even though `kubejs` shapeless golden sheet + deepslate still makes two railway casings without brass.
+- The stage 2 iron nugget quest and the stage 1 algal brick no longer lead anywhere.
+- The stage 3 log and stick no longer lead to the wheel.
+- The stage 1 belt quest still waits on rubber. Kelp is legal earlier.
+- `6EDA86E4BE0F096B` and the other ids in the same shape (`21753CBB528EAADF`, `28C41C062843C2CA`, `5A8DF2D8553904BF`, `681DACF11F193771`, `28D3347E8FA277AD`, `74CFD83C501C4952`, `5DF206B1738D08A0`, `251A91F6C21AEAFB`, plus two origin task ids) are task ids on overview or origin quests, written into `dependencies`. They were already like that. Replacing them with the parent quest id would hide a large part of each stage behind an overview checkmark, so they were left.
+- `aeronautics:pearlescent_levitite` is an item and the export has no recipe that outputs it. `create:refined_radiance` is the same kind of gap. Neither was introduced by the tube change, and neither quest was retargeted.
+- Spanish, French, Portuguese, Russian, and Chinese cabin files still describe the algal mix and the deployer assembly under `cabin.quest.73FCA432DEFC1DED` and `cabin.quest.675C395B2074C24C`. The quest body is the English snbt literal, not those keys.
+
+Dedicated server boot after these edits: NeoForge 21.1.265, Java 25. KubeJS logged `Loaded 64/64 KubeJS server scripts in 1.644 s with 0 errors and 1 warnings` (the existing Thermal skip in `recipes/trading.js`). FTB Quests logged `Loaded 5 chapter groups, 43 chapters, 827 quests, 5 reward tables` and no quest error. The 827 count is the previous 822 plus the five new quests. A parser pass found no duplicate quest, task, or reward ids. Every new dependency resolves to a quest id. The pre-existing task-id dependency entries listed above are still not quest ids.

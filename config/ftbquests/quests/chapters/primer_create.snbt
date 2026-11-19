@@ -175,7 +175,7 @@
 			y: -3.00d
 		}
 		{
-			dependencies: ["6401090000000001"]
+			dependencies: ["6401000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -194,7 +194,7 @@
 					id: "6301030000000000"
 					item: {
 						count: 4
-						id: "architects_palette:algal_brick"
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
@@ -1463,7 +1463,7 @@
 		{
 			dependencies: [
 				"64010A0000000001"
-				"3F45DFEF31838A00"
+				"5351AF6CA73CB8E0"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2098,7 +2098,7 @@
 		}
 		{
 			dependencies: [
-				"6600000000000101"
+				"6600000000000103"
 				"6401030000000000"
 			]
 			extraquests_calendar: {
@@ -2162,7 +2162,7 @@
 			dependencies: [
 				"660000000000004A"
 				"64010A0000000001"
-				"3F45DFEF31838A00"
+				"5351AF6CA73CB8E0"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2277,8 +2277,8 @@
 		}
 		{
 			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
+				"6401030000000000"
+				"6600000000000101"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2820,8 +2820,7 @@
 
 		{
 			dependencies: [
-				"660000000000004B"
-				"6600000000000038"
+				"76706BE282ABAC31"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -4084,8 +4083,7 @@
 		}
 		{
 			dependencies: [
-				"660000000000004B"
-				"6600000000000038"
+				"76706BE282ABAC31"
 			]
 			extraquests_calendar: {
 				active_quests: 3

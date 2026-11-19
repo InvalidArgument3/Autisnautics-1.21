@@ -557,7 +557,6 @@
 		{
 			dependencies: [
 				"6404020000000000"
-				"7FC4D1E69377271D"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -569,7 +568,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "createdieselgenerators:distillation_tank"
+				id: "createdieselgenerators:distillation_controller"
 			}
 			id: "6600000000000060"
 			rewards: [
@@ -610,7 +609,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "6700000000000060"
-					item: { count: 1, id: "createdieselgenerators:distillation_tank" }
+					item: { count: 1, id: "createdieselgenerators:distillation_controller" }
 					type: "item"
 				}]
 			x: -1.80d
