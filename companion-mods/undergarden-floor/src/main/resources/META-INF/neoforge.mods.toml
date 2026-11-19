@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="undergardenfloor"
+version="1.0.0"
+displayName="Undergarden Floor"
+authors="Autisnautics"
+description='''Replaces the Undergarden bottom floor with obsidian, once per chunk, so an already-generated world can be mined through to the dimension stack portal.'''
+displayTest="IGNORE_ALL_VERSION"
+
+[[dependencies.undergardenfloor]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.undergardenfloor]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.265,21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.undergardenfloor]]
+modId="undergarden"
+type="optional"
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
