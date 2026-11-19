@@ -29,8 +29,6 @@ ServerEvents.recipes(event => {
     kelpToRubber("createdieselgenerators:crafting/pumpjack_head")
     // kelpToRubber("createdieselgenerators:crafting/kelp_handle") // Zinc Machines
     kelpToRubber("createornithopterglider:rope")
-    kelpToRubber("offroad:small_tire")
-    kelpToRubber("offroad:tire")
     kelpToRubber("powergrid:crafting/insulated_copper_wire")
     kelpToRubber("powergrid:crafting/copper_cord")
 
@@ -63,12 +61,14 @@ ServerEvents.recipes(event => {
     copperMachine(event, Item.of("create:hose_pulley", 1))
     copperMachine(event, Item.of("create:portable_fluid_interface", 2))
     copperMachine(event, Item.of("create:smart_fluid_pipe", 2))
-    copperMachine(event, Item.of("create:potato_cannon", 1), "create:fluid_pipe")
-    // Simulated/Aeronautics
-    copperMachine(event, Item.of("simulated:plunger_launcher", 1), "minecraft:slime_ball")
-    copperMachine(event, Item.of("aeronautics:mounted_potato_cannon", 1), "create:potato_cannon")
-    // blazinghot
-    copperMachine(event, Item.of("blazinghot:casting_depot", 1))
+    // Potato cannon stays mechanical crafting (brass). Casting depot stays Blazing Hot's
+    // recipe, which takes an electron tube, so the copper-machine shortcut is gone.
+    if (Platform.isLoaded("simulated")) {
+        copperMachine(event, Item.of("simulated:plunger_launcher", 1), "minecraft:slime_ball")
+    }
+    if (Platform.isLoaded("aeronautics")) {
+        copperMachine(event, Item.of("aeronautics:mounted_potato_cannon", 1), "create:potato_cannon")
+    }
     // Create Dragons Plus
     if (Platform.isLoaded("create_dragons_plus")) { copperMachine(event, Item.of("create_dragons_plus:fluid_hatch", 1), "create:chute") }
     // Create Diesel Generators

@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
     tweak_casing("create:shadow_steel", ["create:shadow_steel", "#minecraft:logs"])
     // recipe changes
     // restored original: event.replaceInput({ id: "create:crafting/kinetics/adjustable_chain_gearshift" }, "create:electron_tube", "minecraft:redstone")
-    event.replaceInput({ id: "create:crafting/kinetics/rope_pulley" }, "#minecraft:wool", "#supplementaries:ropes")// 1.21
+    // Rope pulley stays Create's wool recipe.
     // windmill recipe tweaks
     // restored original: event.remove({ id: "create:crafting/kinetics/white_sail" })
     event.shaped("2x create:white_sail", [

@@ -1053,6 +1053,69 @@
 			y: 13.5d
 		}
 		{
+			dependencies: [
+				"76706BE282ABAC31"
+				"7FC4D1E69377271D"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "create:track"
+			}
+			id: "667F4F686A45EF3E"
+			rewards: [
+				{
+					id: "5200000000000067"
+					item: {
+						count: 3
+						id: "create:golden_sheet"
+					}
+					type: "item"
+				}
+{
+				count: 128
+				id: "72B61CAAE9A75F6F"
+				item: {
+					count: 1
+					id: "create:track"
+				}
+				type: "item"
+			}
+				{
+					id: "51000000000000F3"
+					type: "xp"
+					xp: 35
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				extraquests_options: {
+					aggregation: "AUTO"
+					duration: 600L
+					minimum_contribution: 0L
+					reset_damage: 0b
+					reset_death: 1b
+					reset_logout: 0b
+					shared: 0b
+					timer_enabled: 0b
+					timer_start: "FIRST_PROGRESS"
+				}
+				id: "5F986F8FC1D339AA"
+				item: { count: 1, id: "kubejs:gold_machine" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 13.5d
+		}
+		{
 			dependencies: ["0E46C1FCE5AEB1DF"]
 			extraquests_calendar: {
 				active_quests: 3

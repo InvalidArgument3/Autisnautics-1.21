@@ -73,8 +73,15 @@ ServerEvents.recipes(event => {
     // restored original: event.remove({ id: "create:mixing/andesite_alloy" })
     // restored original: event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
     // restored original: event.remove({ id: "blazinghot:mixing/molten_andesite" })
-    // - Add new recipe
-    event.recipes.create.mixing(Item.of("create:andesite_alloy", 2), ["architects_palette:algal_brick", "minecraft:andesite"])
+    // Alloy stays the vanilla craft (andesite + iron or zinc nuggets). The algal mix
+    // needed a mixer made from alloy, so it is not registered.
+
+    // Cinder flour without a crushing wheel. Wheels are mechanical crafting, which
+    // needs an electron tube, and blaze cake / blaze roll need this flour first.
+    event.recipes.create.milling([
+        "create:cinder_flour",
+        CreateItem.of("create:cinder_flour", 0.5)
+    ], "minecraft:netherrack").processingTime(250).id("kubejs:milling/netherrack_cinder_flour")
 
     // -- Kinetic Mechanism
     // - createdieselgenerators:hammer simplified recipe
@@ -118,7 +125,7 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("create:mechanical_mixer", 1), "create:whisk")
     andesiteMachine(event, Item.of("create:mechanical_drill", 1), "kubejs:drill_head")
     andesiteMachine(event, Item.of("create:mechanical_saw", 1), "kubejs:saw_blade")
-    andesiteMachine(event, Item.of("create:deployer", 1), "create:brass_hand")
+    // Deployer stays Create's recipe: electron tube + andesite casing + brass hand.
     if (Platform.isLoaded("createdeco")) {
         andesiteMachine(event, Item.of("create:mechanical_roller", 1), "createdeco:andesite_hull")
     }
@@ -130,13 +137,16 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("create:andesite_tunnel", 4))
     andesiteMachine(event, Item.of("create:mechanical_harvester", 2))
     andesiteMachine(event, Item.of("create:mechanical_plough", 2))
-    andesiteMachine(event, Item.of("create:contraption_controls", 1))
+    // Contraption controls stay Create's recipe (electron tube). An andesite-machine
+    // stonecut skipped the tube.
     andesiteMachine(event, Item.of("create:cart_assembler", 1))
     // items formerly using create:transmitter
     andesiteMachine(event, Item.of("create:redstone_link", 2), "minecraft:redstone_torch")
-    // Simulated/Aeronautics/Offroad
-    andesiteMachine(event, Item.of("simulated:physics_assembler", 1), "minecraft:lever")
-    andesiteMachine(event, Item.of("simulated:steering_wheel", 1), "create:large_cogwheel")
+    // Simulated and Offroad load from the Aeronautics bundle (jar-in-jar).
+    if (Platform.isLoaded("simulated")) {
+        andesiteMachine(event, Item.of("simulated:physics_assembler", 1), "minecraft:lever")
+        andesiteMachine(event, Item.of("simulated:steering_wheel", 1), "create:large_cogwheel")
+    }
     if (Platform.isLoaded("immersive_aircraft")) {
         andesiteMachine(event, Item.of("aeronautics:andesite_propeller", 1), "immersive_aircraft:propeller")
         // convenience handcraft recipe for IA large propeller - same cost
@@ -154,10 +164,14 @@ ServerEvents.recipes(event => {
     }
     // re-add the ability to turn wooden_propeller back into andesite_propeller
     event.shapeless("aeronautics:andesite_propeller", ["aeronautics:wooden_propeller"])
-    andesiteMachine(event, Item.of("simulated:redstone_magnet", 2), "minecraft:redstone_block")
+    if (Platform.isLoaded("simulated")) {
+        andesiteMachine(event, Item.of("simulated:redstone_magnet", 2), "minecraft:redstone_block")
+        andesiteMachine(event, Item.of("simulated:torsion_spring", 1))
+    }
     andesiteMachine(event, Item.of("aeronautics:adjustable_burner", 1), "minecraft:coal_block")
-    andesiteMachine(event, Item.of("offroad:wheel_mount", 1), Ingredient.of("#c:wires/iron"))
-    andesiteMachine(event, Item.of("simulated:torsion_spring", 1))
+    if (Platform.isLoaded("offroad")) {
+        andesiteMachine(event, Item.of("offroad:wheel_mount", 1), Ingredient.of("#c:wires/iron"))
+    }
 
     // AE2
     // AE2 removed (swapped to Refined Storage): AE2-only recipes kept for revert
@@ -184,16 +198,7 @@ ServerEvents.recipes(event => {
     }
 
     // -- Parts for Chapter 1 factory machines
-    // - Deployer: Brass Hand -> Gold Hand
-    // Create's brass-plate hand stays. This is the pack's gold-sheet alternative.
-    event.shaped("create:brass_hand", [
-        " A ",
-        "BBB",
-        " B "
-    ], {
-        A: "create:andesite_alloy",
-        B: "create:golden_sheet"
-    }).id("kubejs:brass_hand_gold")
+    // Brass hand stays Create's recipe (andesite alloy + brass plates).
     // - Mechanical Saw: kubejs sawblade
     event.shaped("kubejs:saw_blade", [
         "NPN",

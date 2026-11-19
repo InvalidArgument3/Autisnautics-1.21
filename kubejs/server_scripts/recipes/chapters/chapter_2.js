@@ -6,8 +6,9 @@ ServerEvents.recipes(event => {
     // -- Remove unneeded default recipes
     // - sky stone dust
     // restored original: event.remove({ id: "create:milling/compat/ae2/sky_stone_block" })
-    // - Electron tubes
-    // restored original: event.remove({ id: "create:crafting/materials/electron_tube" })
+    // - Electron tubes: the molten-iron fill below is the only recipe.
+    event.remove({ id: "create:crafting/materials/electron_tube" })
+    event.remove({ output: "create:electron_tube" })
     // - Rose quartz, including alternate mod sanding options
     // AE2 removed: only strip Create's rose-quartz polishing when the AE2 certus line below exists
     if (Platform.isLoaded("ae2")) {
@@ -16,8 +17,24 @@ ServerEvents.recipes(event => {
     }
     // - Default certus crystal growing
     // restored original: event.remove({ id: "ae2:transform/certus_quartz_crystals" })
-    // - Create precision mechanisms
-    // restored original: event.remove({ id: "create:sequenced_assembly/precision_mechanism" })
+    // - Create precision mechanisms. The pack sequence from a kinetic mechanism is the recipe.
+    event.remove({ id: "create:sequenced_assembly/precision_mechanism" })
+    // Brass-tier machines. Vanilla crafts come off so the brass-machine application is the path.
+    // Steam engine and steam whistle stay vanilla: those crafts do not use brass.
+    ;[
+        "create:crafting/kinetics/mechanical_crafter",
+        "create:crafting/kinetics/sequenced_gearshift",
+        "create:crafting/kinetics/rotation_speed_controller",
+        "create:crafting/kinetics/mechanical_arm",
+        "create:crafting/kinetics/smart_chute",
+        "create:crafting/kinetics/clockwork_bearing",
+        "create:crafting/kinetics/elevator_pulley",
+        "create:crafting/logistics/content_observer",
+        "create:crafting/logistics/display_link",
+        "create:crafting/logistics/brass_tunnel",
+        "create:crafting/logistics/brass_funnel",
+        "create:crafting/logistics/stockpile_switch"
+    ].forEach(id => event.remove({ id: id }))
     // - Simulated gyroscopic mechanisms, replaced with brass machines
     // restored original: event.remove({ id: "simulated:sequenced_assembly/gyroscopic_mechanism" })
 
@@ -107,18 +124,20 @@ ServerEvents.recipes(event => {
     brassMachine(event, Item.of("create:steam_whistle", 4))
     // items formerly using create:transmitter
     brassMachine(event, Item.of("create:display_link", 1), "minecraft:redstone_torch")
-    // Simulated/Aeronautics
-    brassMachine(event, Item.of("aeronautics:steam_vent", 1))
-    brassMachine(event, Item.of("simulated:navigation_table", 1), "minecraft:map")
-    brassMachine(event, Item.of("simulated:docking_connector", 2), "create:chute")
-    brassMachine(event, Item.of("simulated:analog_transmission", 1))
-    brassMachine(event, Item.of("simulated:linked_typewriter", 1), Ingredient.of("#minecraft:buttons"))
-    // items formerly using create:transmitter
-    brassMachine(event, Item.of("simulated:directional_linked_receiver", 1), Ingredient.of("#c:plates/iron"))
-    brassMachine(event, Item.of("simulated:modulating_linked_receiver", 1), Ingredient.of("#c:plates/gold"))
-    // items formerly using Gyroscopic Mechanism
-    brassMachine(event, Item.of("simulated:gimbal_sensor", 1), "minecraft:compass")
-    brassMachine(event, Item.of("aeronautics:gyroscopic_propeller_bearing", 2))
+    // Simulated and Aeronautics load together from the bundled jar.
+    if (Platform.isLoaded("aeronautics")) {
+        brassMachine(event, Item.of("aeronautics:steam_vent", 1))
+        brassMachine(event, Item.of("aeronautics:gyroscopic_propeller_bearing", 2))
+    }
+    if (Platform.isLoaded("simulated")) {
+        brassMachine(event, Item.of("simulated:navigation_table", 1), "minecraft:map")
+        brassMachine(event, Item.of("simulated:docking_connector", 2), "create:chute")
+        brassMachine(event, Item.of("simulated:analog_transmission", 1))
+        brassMachine(event, Item.of("simulated:linked_typewriter", 1), Ingredient.of("#minecraft:buttons"))
+        brassMachine(event, Item.of("simulated:directional_linked_receiver", 1), Ingredient.of("#c:plates/iron"))
+        brassMachine(event, Item.of("simulated:modulating_linked_receiver", 1), Ingredient.of("#c:plates/gold"))
+        brassMachine(event, Item.of("simulated:gimbal_sensor", 1), "minecraft:compass")
+    }
     if (Platform.isLoaded("immersive_aircraft")) {
         brassMachine(event, Item.of("aeronautics:smart_propeller", 1), "immersive_aircraft:propeller")
     }
