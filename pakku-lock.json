@@ -5735,6 +5735,44 @@
             ]
         },
         {
+            "pakku_id": "S7RDyMxnZSnKWwsK",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "create-aeronautics-transmission-linkage"
+            },
+            "name": {
+                "modrinth": "Create Aeronautics: Transmission & Linkage"
+            },
+            "id": {
+                "modrinth": "Y1dq5ioE"
+            },
+            "update_strategy": "NONE",
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "create_aeronautics_transmission_linkage-0.2.9.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Y1dq5ioE/versions/WoUjC6d4/create_aeronautics_transmission_linkage-0.2.9.jar",
+                    "id": "WoUjC6d4",
+                    "parent_id": "Y1dq5ioE",
+                    "hashes": {
+                        "sha512": "da593d7462f100abe6b5ce2ddb661228433890dda1c66d87cbf0eff4f97637c102cd9f12be1d9e40e967e17b35a28d10a41fdfea571c2dc64be8d28eb2d5ace5",
+                        "sha1": "408317e1fe8b44512007df662a342888acf67871"
+                    },
+                    "required_dependencies": [],
+                    "size": 736565,
+                    "date_published": "2026-11-01T05:43:25.178220Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "LflpkhF0yDSHksTV",
             "type": "MOD",
             "slug": {

@@ -90,6 +90,10 @@
             "update_strategy": "LATEST",
             "redistributable": true
         },
+        "create-aeronautics-transmission-linkage": {
+            "side": "BOTH",
+            "update_strategy": "NONE"
+        },
         "aeronautics-camera-sync": {
             "side": "BOTH"
         },
