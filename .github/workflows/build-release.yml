@@ -470,33 +470,29 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
-      - name: Build client update manifest
+      - name: Build self-contained client pack
         env:
-          CHANGELOG: ${{ needs.info.outputs.changelog }}
           VERSION: ${{ needs.info.outputs.project_version }}
-          MC_VERSION: ${{ needs.info.outputs.mc_version }}
-          LOADER_TYPE: ${{ needs.info.outputs.loader_type }}
-          LOADER_VERSION: ${{ needs.info.outputs.loader_version }}
         run: |
-          python3 tools/manifest_gen.py \
-            --lock pakku-lock.json \
-            --version "$VERSION" \
-            --mc "$MC_VERSION" \
-            --loader "$LOADER_TYPE-$LOADER_VERSION" \
-            --changelog "$CHANGELOG" \
-            --overrides-dir build/.cache/curseforge/overrides \
-            --overrides-zip "client-overrides-$VERSION.zip" \
-            --overrides-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/$VERSION/client-overrides-$VERSION.zip" \
-            --out manifest.json
+          rm -rf build/client
+          mkdir -p build/client
+          # merged client overrides (config, kubejs, resourcepacks, redistributable jars)
+          cp -r build/.cache/curseforge/overrides/. build/client/
+          # the full client jar set, which pakku fetch synced into ./mods
+          rm -rf build/client/mods
+          cp -r mods build/client/mods
+          mkdir -p build/client/autis
+          cp -f .pakku/client-overrides/autis/updater.jar build/client/autis/updater.jar
+          ( cd build/client && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-client.zip" . )
+          cp "build/Autisnautics-1.21-$VERSION-client.zip" "build/Autisnautics-1.21-latest-client.zip"
+          ls -l build/*-client.zip
 
-      - name: Upload manifest artifact
+      - name: Upload client pack artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-manifest
-          path: |
-            manifest.json
-            client-overrides-*.zip
-          if-no-files-found: warn
+          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-client
+          path: build/*-client.zip
+          if-no-files-found: error
 
       - name: Preparing the curseforge artifact
         run: |
@@ -680,8 +676,7 @@ jobs:
           files: |
             *-curseforge.zip
             *-serverpack.zip
-            manifest.json
-            client-overrides-*.zip
+            *-client.zip
             autis-updater.jar
             autis-bootstrap.ps1
             autis-bootstrap.sh
