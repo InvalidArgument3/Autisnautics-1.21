@@ -1,0 +1,35 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "fwachainfix"
+version = "1.0.0"
+displayName = "FWA Chain Fix"
+authors = "Autisnautics"
+description = '''Stops Fancy World Animations from building a chain mesh for every link. Only the bottom of a vertical chain allocates and draws the column, and that column is flushed before the next chain. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "fwachainfix.mixins.json"
+
+[[dependencies.fwachainfix]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.fwachainfix]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.fwachainfix]]
+modId = "fwa"
+type = "required"
+versionRange = "[1.3.7,)"
+ordering = "AFTER"
+side = "CLIENT"
