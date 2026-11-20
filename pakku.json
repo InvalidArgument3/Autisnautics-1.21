@@ -358,6 +358,15 @@
         "fusion-connected-textures": {
             "redistributable": true
         },
+        "glowing-emissive-ores-definitive-edition": {
+            "side": "CLIENT",
+            "update_strategy": "NONE",
+            "redistributable": true
+        },
+        "neocontinuity": {
+            "side": "CLIENT",
+            "update_strategy": "NONE"
+        },
         "client-tweaks": {
             "redistributable": true
         },

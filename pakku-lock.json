@@ -23818,6 +23818,108 @@
             ]
         },
         {
+            "pakku_id": "G3oE4p0v4N21f1a",
+            "type": "MOD",
+            "side": "CLIENT",
+            "update_strategy": "NONE",
+            "redistributable": true,
+            "slug": {
+                "curseforge": "glowing-emissive-ores-definitive-edition",
+                "modrinth": "glowing-emissive-ores-definitive-edition"
+            },
+            "name": {
+                "curseforge": "Glowing Emissive Ores Definitive Edition",
+                "modrinth": "Glowing Emissive Ores Definitive Edition"
+            },
+            "id": {
+                "curseforge": "1588510",
+                "modrinth": "U8Iw4AfP"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "GEO-v0.4.0-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/U8Iw4AfP/versions/RtPUSqxN/GEO-v0.4.0-mc1.21.1.jar",
+                    "id": "RtPUSqxN",
+                    "parent_id": "U8Iw4AfP",
+                    "hashes": {
+                        "sha512": "eaffbb928e07522fd9fbb6798c54306b310d951763a30baf095c1f4b487d6cc9da4574b5d87740391e4683f8a09f980cd9a3bd41b4a4b3f6b1c3f56df2d4b5ee",
+                        "sha1": "72f7b6c1280044130d75b5a0e4de746745653adb"
+                    },
+                    "required_dependencies": [],
+                    "size": 27065946,
+                    "date_published": "2026-08-24T15:24:35.424462Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "GEO-v0.4.0-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8724/957/GEO-v0.4.0-mc1.21.1.jar",
+                    "id": "8724957",
+                    "parent_id": "1588510",
+                    "hashes": {
+                        "sha1": "72f7b6c1280044130d75b5a0e4de746745653adb",
+                        "md5": "4724b704cc537cf4f44706b7850fca4d"
+                    },
+                    "required_dependencies": [],
+                    "size": 27065946,
+                    "date_published": "2026-08-24T15:24:23.08Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "N3oC0nT1nU1ty21",
+            "type": "MOD",
+            "side": "CLIENT",
+            "update_strategy": "NONE",
+            "slug": {
+                "curseforge": "neocontinuity"
+            },
+            "name": {
+                "curseforge": "NeoContinuity"
+            },
+            "id": {
+                "curseforge": "1377279"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "continuity-3.0.0+0.0.1+1.21.1.neoforge-all.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7178/602/continuity-3.0.0+0.0.1+1.21.1.neoforge-all.jar",
+                    "id": "7178602",
+                    "parent_id": "1377279",
+                    "hashes": {
+                        "sha1": "df5c0c092f4656277cb8f4f180c6260510665ee3",
+                        "md5": "e0af2ee46fd1f8785cd9c8f0308e9ea6"
+                    },
+                    "required_dependencies": [],
+                    "size": 1172399,
+                    "date_published": "2025-11-02T15:41:41.503Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "eo840I6eWDKL8eRr",
             "type": "MOD",
             "slug": {
