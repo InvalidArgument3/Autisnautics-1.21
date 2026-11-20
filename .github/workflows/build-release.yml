@@ -484,7 +484,6 @@ jobs:
           mkdir -p build/client/autis
           cp -f .pakku/client-overrides/autis/updater.jar build/client/autis/updater.jar
           ( cd build/client && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-client.zip" . )
-          cp "build/Autisnautics-1.21-$VERSION-client.zip" "build/Autisnautics-1.21-latest-client.zip"
           ls -l build/*-client.zip
 
       - name: Upload client pack artifact
@@ -593,19 +592,6 @@ jobs:
             echo '::error::No value found for artifact `serverpack.zip`.' && exit 1
           fi
           echo "All artifacts found"
-
-      - name: Create stable-named copies for the always-latest URLs
-        shell: bash
-        run: |
-          # releases/latest/download/<name> resolves to the newest release's asset
-          # with that exact name, so the name must not contain the version.
-          for f in *-curseforge.zip; do
-            cp "$f" "${{ needs.info.outputs.project_name }}-latest-curseforge.zip"
-          done
-          for f in *-serverpack.zip; do
-            cp "$f" "${{ needs.info.outputs.project_name }}-latest-serverpack.zip"
-          done
-          ls -l *-latest-*.zip
 
       - name: Format diff
         id: format_diff
