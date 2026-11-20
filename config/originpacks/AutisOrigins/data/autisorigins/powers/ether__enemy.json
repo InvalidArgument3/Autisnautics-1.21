@@ -1,16 +1,78 @@
 {
     "name": "Enemy Of All Living Things",
-    "description": "Your existence provokes living things. They come for you.",
+    "description": "Every five seconds, living things within 4 blocks fly into a rage. Wolves, cats, parrots, horses, donkeys, mules, and llamas are spared, wild or owned. This is always on, and it has no hotkey.",
     "type": "origins:action_over_time",
     "interval": 100,
     "entity_action": {
         "type": "origins:area_of_effect",
         "radius": 4,
         "bientity_condition": {
-            "type": "origins:target_condition",
-            "condition": {
-                "type": "origins:living"
-            }
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:living"
+                    }
+                },
+                {
+                    "type": "origins:not",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:wolf"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:cat"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:parrot"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:horse"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:donkey"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:mule"
+                                }
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:llama"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "bientity_action": {
             "type": "origins:target_action",

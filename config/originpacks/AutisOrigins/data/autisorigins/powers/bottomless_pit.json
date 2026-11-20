@@ -1,6 +1,6 @@
 {
     "name": "Bottomless Pit",
-    "description": "You burn hunger twice as fast as a mortal. You can also keep eating when the hunger bar is already full.",
+    "description": "Hunger drains twice as fast. Each finished food restores 50% more hunger. This is always on, and it has no hotkey.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:modify_exhaustion",
@@ -10,7 +10,11 @@
         }
     },
     "key1": {
-        "type": "origins:modify_food",
-        "always_edible": true
+        "type": "neoorigins:action_on_event",
+        "event": "mod_food_nutrition",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": 1.5
+        }
     }
 }

@@ -33,7 +33,7 @@ ServerEvents.basicCommand('bomb', event => {
 
 // //Ether Disease
 const etherMutationArray = ["autisorigins:ether__carapace","autisorigins:ether__hooves","autisorigins:ether__neck","autisorigins:ether__wing","autisorigins:ether__slaughter","autisorigins:ether__hand","autisorigins:ether__gravity","autisorigins:ether__rain","autisorigins:ether__head","autisorigins:ether__eye","autisorigins:ether__enemy","autisorigins:ether__dementia","autisorigins:ether__weakening","autisorigins:ether__mouth","autisorigins:ether__explodingknees","autisorigins:ether__gigantism","autisorigins:ether__dwarfism","autisorigins:ether__fluorescent","autisorigins:ether__pregnant","autisorigins:ether__ragnarok","autisorigins:ether__stomach","autisorigins:ether__ehekatl","autisorigins:ether__lulwy","autisorigins:ether__kumiromi","autisorigins:ether__regeneration","autisorigins:ether__icyveins","autisorigins:ether__burningblood","autisorigins:ether__weakarm","autisorigins:ether__stupid","autisorigins:ether__litheleg","autisorigins:ether__vampirism","autisorigins:ether__secondheart","autisorigins:ether__hives","autisorigins:ether__placebo"]
-const etherMutationMessageArray = ["You are covered by a heavy carapace.","Your feet transformed into hooves.","Your neck is extremely thick.","Your back has grown a single feather.","Desire for violence arises within you.","Poison drips from your hands.","You generate gravity.","Clouds of rain follow you.","Your head has grown huge.","You have 3 eyes.","Your existence provokes living things.","You have dementia.","You suffer debilitation.","You have multiple mouths.","Your knees are explosive.","You feel like everything is getting smaller.","You feel like everything is getting bigger.","You glow in the dark.","You swallow something bad.","Let's Ragnarok!!!","Your stomach can digest rotten things.","You are licked by a passing black cat. 'Umimyaa!'","You feel a lash on your back. 'You're such a slowpoke. Work instead of praying.'","You gain knowledge of a secret experience. 'I shall reward you...'","Your heart regenerates your body.","Your blood runs cold.","Your blood starts to boil.","Your arms become thin and long.","Your brain degenerates.","Your legs become lithe.","Your skin becomes pale.","You grow a second heart.","You have sores on your face.","You feel as though a stroke of good fortune passes by."]
+const etherMutationMessageArray = ["You are covered by a heavy carapace.","Your feet transformed into hooves.","Your neck is extremely thick.","Your back has grown a single feather.","Desire for violence arises within you.","Poison drips from your hands.","You generate gravity.","Clouds of rain follow you.","Your head has grown huge.","You have 3 eyes.","Your existence provokes living things.","You have dementia.","You suffer debilitation.","You have multiple mouths. Each bite of food feeds a quarter more.","Your knees are explosive.","You feel like everything is getting smaller.","You feel like everything is getting bigger.","You glow in the dark.","You swallow something bad.","Let's Ragnarok!!!","Your stomach can digest rotten things.","You are licked by a passing black cat. 'Umimyaa!'","You feel a lash on your back. 'You're such a slowpoke. Work instead of praying.'","You gain knowledge of a secret experience. 'I shall reward you...'","Your heart regenerates your body.","Your blood runs cold.","Your blood starts to boil.","Your arms become thin and long.","Your brain degenerates.","Your legs become lithe.","Your skin becomes pale.","You grow a second heart.","You have sores on your face.","You feel as though a stroke of good fortune passes by."]
 
 let etherMutation = "autisorigins:ether__fallback"// fallback power
 let mutationMessage = "You mutate imperceptibly."// fallback message
@@ -117,4 +117,43 @@ ServerEvents.basicCommand('add_sugar', event => {
 // debug command
 ServerEvents.basicCommand('lower_sugar', event => {
     event.server.runCommand(`/resource change ${event.player.getName().getString()} autisorigins:sugar_addict -100`)
+})
+
+// Weak Flesh halves every status-effect duration. The datapack power
+// autisorigins:weak_flesh_key1 asks NeoOrigins for that, and NeoOrigins applies
+// it through MobEffectInstance.update, which keeps the longer time. A tick
+// later, the effect that just landed is replaced with one at half the duration.
+let $WeakFleshAdded = Java.loadClass('net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added')
+let $WeakFleshAttachments = Java.loadClass('com.cyberday1.neoorigins.attachment.OriginAttachments')
+let $WeakFleshLayer = Java.loadClass('net.minecraft.resources.ResourceLocation').parse('origins:origin')
+let $WeakFleshDaemon = Java.loadClass('net.minecraft.resources.ResourceLocation').parse('autisorigins:daemon')
+let $WeakFleshPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+let $WeakFleshInstance = Java.loadClass('net.minecraft.world.effect.MobEffectInstance')
+
+NativeEvents.onEvent($WeakFleshAdded, event => {
+    try {
+        let entity = event.getEntity()
+        if (!(entity instanceof $WeakFleshPlayer)) return
+        if (entity.level.isClientSide()) return
+        let origin = entity.getData($WeakFleshAttachments.originData()).getOrigin($WeakFleshLayer)
+        if (origin == null || !origin.equals($WeakFleshDaemon)) return
+        let inst = event.getEffectInstance()
+        if (inst == null || inst.getDuration() < 0) return
+        let effect = inst.getEffect()
+        let half = Math.floor(inst.getDuration() / 2)
+        let amp = inst.getAmplifier()
+        let ambient = inst.isAmbient()
+        let visible = inst.isVisible()
+        let show = inst.showIcon()
+        entity.server.scheduleInTicks(1, () => {
+            try {
+                if (entity.getEffect(effect) == null) return
+                entity.getActiveEffectsMap().put(effect, new $WeakFleshInstance(effect, half, amp, ambient, visible, show))
+            } catch (err) {
+                console.log('[weak flesh] ' + err)
+            }
+        })
+    } catch (err) {
+        console.log('[weak flesh] ' + err)
+    }
 })

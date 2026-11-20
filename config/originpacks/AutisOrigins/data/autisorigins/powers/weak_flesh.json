@@ -1,6 +1,6 @@
 {
     "name": "Weak Flesh",
-    "description": "Eight hearts. Melee hits and knockback are halved. Healing, including natural regeneration, is halved.",
+    "description": "Eight hearts. Melee hits and knockback are halved. A moment after a status effect lands, half its time is gone. This is always on, and it has no hotkey.",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:attribute",
@@ -24,7 +24,7 @@
         "update_health": true
     },
     "key1": {
-        "type": "origins:modify_healing",
+        "type": "origins:modify_status_effect_duration",
         "modifier": {
             "operation": "multiply_base",
             "value": -0.5

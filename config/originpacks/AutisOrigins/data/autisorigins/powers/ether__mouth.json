@@ -1,17 +1,10 @@
 {
     "name": "Second Mouth",
-    "description": "You have more than one mouth. Eating is easier. Talking is worse.",
-    "type": "origins:multiple",
-    "key0": {
-        "type": "neoorigins:action_on_event",
-        "event": "mod_exhaustion",
-        "modifier": {
-            "operation": "multiply_total_multiplicative",
-            "value": 1.0
-        }
-    },
-    "key1": {
-        "type": "origins:modify_food",
-        "always_edible": true
+    "description": "Each finished food restores 25% more hunger. This is always on, and it has no hotkey.",
+    "type": "neoorigins:action_on_event",
+    "event": "mod_food_nutrition",
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": 1.25
     }
 }

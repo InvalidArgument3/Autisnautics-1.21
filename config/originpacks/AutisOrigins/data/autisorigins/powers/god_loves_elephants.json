@@ -1,17 +1,8 @@
 {
-    "name": "Realistic Elephant I/O",
-    "description": "God loves elephants, so elephants love you. Interact with an elephant to tame it.",
-    "type": "origins:action_on_entity_use",
-    "bientity_action": {
-        "type": "origins:tame"
-    },
-    "bientity_condition": {
-        "type": "origins:target_condition",
-        "condition": {
-            "type": "origins:entity_type",
-            "entity_type": "alexsmobs:elephant"
-        }
-    },
-    "action_result": "success",
-    "priority": 0
+    "name": "Beloved Beasts",
+    "description": "Animals you already own, within 32 blocks, gain 2 hearts and a little speed. You still tame them the ordinary way. This is always on, and it has no hotkey.",
+    "type": "neoorigins:tamed_animal_boost",
+    "health_bonus": 4,
+    "speed_bonus": 0.05,
+    "radius": 32
 }

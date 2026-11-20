@@ -1,12 +1,13 @@
 {
     "name": "Duckborn",
-    "description": "This race's duck ancestors once lived in the swamps, in eons past, before the land rose from the sea.\n\nThey kept the waterfowl parts: a fast swim, a slow waddle, and an old grudge against the undead. The feathers also take a flame badly.",
+    "description": "This race's duck ancestors once lived in the swamps, in eons past, before the land rose from the sea.\n\nThey kept the waterfowl parts: a fast swim, a slow waddle, and an old grudge against the undead. The feathers take a flame badly, and a mob's melee finds the down easily.",
     "powers": [
         "origins:water_vision",
         "autisorigins:webbed_feet",
         "autisorigins:slow_falling",
         "autisorigins:lay_eggs",
         "autisorigins:undead_hatred",
+        "autisorigins:soft_down",
         "autisorigins:oily_feathers",
         "autisorigins:starting_breadcrumbs"
     ],

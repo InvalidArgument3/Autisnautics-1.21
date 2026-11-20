@@ -1,0 +1,8 @@
+{
+    "name": "Soft Down",
+    "description": "A mob's melee hits 25% harder. Arrows, magic, fire, and a player's swing are unchanged. This is always on, and it has no hotkey.",
+    "type": "neoorigins:modify_damage",
+    "direction": "in",
+    "damage_type": "minecraft:mob_attack",
+    "multiplier": 1.25
+}
