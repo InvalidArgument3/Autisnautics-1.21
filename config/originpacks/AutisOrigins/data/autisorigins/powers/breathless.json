@@ -1,18 +1,11 @@
 {
     "name": "Breathless",
     "description": "blobians dont have lungs. drowning dont work and we dont get stuck in a wall neither",
-    "type": "origins:invulnerability",
-    "damage_condition": {
-        "type": "origins:or",
-        "conditions": [
-            {
-                "type": "origins:in_tag",
-                "tag": "is_drowning"
-            },
-            {
-                "type": "origins:name",
-                "name": "in_wall"
-            }
-        ]
-    }
+    "type": "neoorigins:invulnerability",
+    "damage_tags": [
+        "minecraft:is_drowning"
+    ],
+    "damage_types": [
+        "minecraft:in_wall"
+    ]
 }

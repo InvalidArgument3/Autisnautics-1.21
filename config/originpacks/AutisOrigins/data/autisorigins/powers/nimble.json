@@ -1,22 +1,10 @@
 {
     "name": "Nimble",
     "description": "You are small enough to slip thorns. Prickly plants do not hurt you, and magic Thorns does not either.",
-    "type": "origins:invulnerability",
-    "damage_condition": {
-        "type": "origins:or",
-        "conditions": [
-            {
-                "type": "origins:name",
-                "name": "cactus"
-            },
-            {
-                "type": "origins:name",
-                "name": "sweetBerryBush"
-            },
-            {
-                "type": "origins:name",
-                "name": "thorns"
-            }
-        ]
-    }
+    "type": "neoorigins:invulnerability",
+    "damage_types": [
+        "minecraft:cactus",
+        "minecraft:sweet_berry_bush",
+        "minecraft:thorns"
+    ]
 }
