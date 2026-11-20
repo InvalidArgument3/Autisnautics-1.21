@@ -470,6 +470,24 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
+      - name: Set recommended RAM in the CurseForge manifest
+        run: |
+          python3 - <<'PY'
+          import glob, json, shutil, zipfile
+          path = sorted(glob.glob('build/curseforge/*.zip'))[-1]
+          tmp = path + '.tmp'
+          with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, 'w', zipfile.ZIP_DEFLATED) as zout:
+              for item in zin.infolist():
+                  data = zin.read(item.filename)
+                  if item.filename == 'manifest.json':
+                      manifest = json.loads(data)
+                      manifest.setdefault('minecraft', {})['recommendedRam'] = 12288
+                      data = json.dumps(manifest, indent=2).encode()
+                  zout.writestr(item, data)
+          shutil.move(tmp, path)
+          print('recommendedRam=12288 in', path)
+          PY
+
       - name: Build self-contained client pack
         env:
           VERSION: ${{ needs.info.outputs.project_version }}

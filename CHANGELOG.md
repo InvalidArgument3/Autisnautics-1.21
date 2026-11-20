@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.48]
+- **The CurseForge manifest asks for 12 GB too.** `minecraft.recommendedRam` is rewritten to `12288` in `manifest.json` after `pakku export`, so an import that goes through the CurseForge path gets the same heap as the Prism pack. Prism reads that field in `PackManifest.cpp` and applies it in `FlameInstanceCreationTask`, capped to a fraction of the machine's physical RAM, so a small machine still gets a working value instead of an unlaunchable one.
+- **The icon was already in the CurseForge zip.** `overrides/icon.png` has shipped since 0.1.45 and Prism's import reads it. What cannot be set from a zip is the picture the CurseForge *app* shows, which is the project avatar on their site and only exists once the pack is published there.
+
 ## [0.1.47]
 - **A fresh install starts already up to date.** Both packs now carry `.autis/version.txt` stamped with the release version (`.minecraft/.autis/` in the Prism pack, `.autis/` in the client pack), so the first launch after an import finds nothing to do instead of re-downloading 1.3 GB of the release it just installed. The updater never writes that path from an archive — `.autis/` is on its protected list — so only an import sets it.
 
