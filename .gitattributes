@@ -3,3 +3,6 @@
 kubejs/client_scripts/JEI.js linguist-generated=false
 .pakku/*overrides/mods/*.jar filter=lfs diff=lfs merge=lfs -text
 .analoglib/bin/* filter=lfs diff=lfs merge=lfs -text
+
+# shell scripts must stay LF on checkout
+*.sh text eol=lf
