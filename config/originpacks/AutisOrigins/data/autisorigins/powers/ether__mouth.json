@@ -3,10 +3,11 @@
     "description": "You have more than one mouth. Eating is easier. Talking is worse.",
     "type": "origins:multiple",
     "key0": {
-        "type": "origins:modify_exhaustion",
+        "type": "neoorigins:action_on_event",
+        "event": "mod_exhaustion",
         "modifier": {
             "operation": "multiply_total_multiplicative",
-            "value": 1
+            "value": 1.0
         }
     },
     "key1": {

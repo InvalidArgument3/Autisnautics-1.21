@@ -1,17 +1,8 @@
 {
     "name": "Undead Hatred",
-    "description": "You deal 25% more damage to the undead, and you take 25% more damage from them.",
-    "type": "origins:multiple",
-    "undead_boost_damage_dealt": {
-        "type": "neoorigins:modify_damage",
-        "direction": "out",
-        "multiplier": 1.25,
-        "target_group": "undead"
-    },
-    "undead_boost_damage_taken": {
-        "type": "neoorigins:modify_damage",
-        "direction": "in",
-        "multiplier": 1.25,
-        "target_group": "undead"
-    }
+    "description": "You deal 25% more damage to the undead.",
+    "type": "neoorigins:modify_damage",
+    "direction": "out",
+    "multiplier": 1.25,
+    "target_group": "undead"
 }

@@ -9,28 +9,7 @@
         "entity": true,
         "shape_type": "outline",
         "fluid_handling": "any",
-        "bientity_condition": {
-            "type": "origins:target_condition",
-            "condition": {
-                "type": "origins:living"
-            }
-        },
         "bientity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:damage",
-                    "amount": 5,
-                    "source": {
-                        "name": "magic",
-                        "bypasses_armor": true,
-                        "unblockable": true,
-                        "magic": true
-                    }
-                }
-            ]
-        },
-        "hit_action": {
             "type": "origins:and",
             "actions": [
                 {
@@ -51,6 +30,8 @@
                 }
             ]
         },
+        "command_at_hit": "damage @e[limit=1,sort=nearest,distance=..2] 5 minecraft:sonic_boom by @s",
+        "command_along_ray": "particle minecraft:sonic_boom",
         "miss_action": {
             "type": "origins:and",
             "actions": [
@@ -71,8 +52,7 @@
                     "command": "playsound alexscaves:submarine_sonar master @a[distance=..16] ~ ~ ~ 0.25 1.5"
                 }
             ]
-        },
-        "command_along_ray": "particle minecraft:sonic_boom"
+        }
     },
     "cooldown": 100,
     "key": {

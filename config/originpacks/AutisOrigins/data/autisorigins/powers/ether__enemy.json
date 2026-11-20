@@ -9,16 +9,7 @@
         "bientity_condition": {
             "type": "origins:target_condition",
             "condition": {
-                "type": "origins:and",
-                "conditions": [
-                    {
-                        "type": "origins:living"
-                    },
-                    {
-                        "inverted": true,
-                        "type": "origins:tamed"
-                    }
-                ]
+                "type": "origins:living"
             }
         },
         "bientity_action": {

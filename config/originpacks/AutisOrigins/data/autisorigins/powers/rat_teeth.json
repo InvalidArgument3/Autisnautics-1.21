@@ -4,7 +4,7 @@
     "type": "origins:modify_harvest",
     "block_condition": {
         "type": "origins:in_tag",
-        "tag": "origins:natural_stone"
+        "tag": "neoorigins:natural_stone"
     },
     "allow": true
 }

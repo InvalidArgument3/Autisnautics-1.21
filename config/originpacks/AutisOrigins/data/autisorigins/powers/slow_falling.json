@@ -1,0 +1,15 @@
+{
+    "name": "Slow Falling",
+    "description": "The old waterfowl glide. Falls drift down instead of dropping, and the landing does not break you.",
+    "type": "neoorigins:persistent_effect",
+    "toggleable": false,
+    "effects": [
+        {
+            "effect": "minecraft:slow_falling",
+            "amplifier": 0,
+            "ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    ]
+}

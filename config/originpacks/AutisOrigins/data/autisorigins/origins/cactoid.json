@@ -5,7 +5,7 @@
         "autisorigins:thorns",
         "autisorigins:flammable",
         "autisorigins:catalyzing_glands",
-        "origins:more_exhaustion",
+        "autisorigins:cactoid_hunger",
         "autisorigins:starting_burger"
     ],
     "icon": {

@@ -4,7 +4,7 @@
     "condition": {
         "type": "origins:brightness",
         "comparison": "<=",
-        "compare_to": 0.18
+        "compare_to": 2
     },
     "type": "origins:self_glow",
     "use_teams": false,

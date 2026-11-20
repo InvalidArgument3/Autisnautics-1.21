@@ -1,0 +1,10 @@
+{
+    "name": "Dry Tissues",
+    "description": "Food does not go as far. Hunger drains twice as fast.",
+    "type": "neoorigins:action_on_event",
+    "event": "mod_exhaustion",
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": 2.0
+    }
+}

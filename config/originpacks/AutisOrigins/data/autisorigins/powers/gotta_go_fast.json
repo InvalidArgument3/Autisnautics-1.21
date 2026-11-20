@@ -22,14 +22,15 @@
         ]
     },
     "exhaust_if_not_sprinting": {
+        "type": "neoorigins:action_on_event",
+        "event": "mod_exhaustion",
         "condition": {
             "inverted": true,
-            "type": "origins:sprinting"
+            "type": "neoorigins:sprinting"
         },
-        "type": "origins:modify_exhaustion",
         "modifier": {
-            "operation": "multiply_total_additive",
-            "value": 1.6
+            "operation": "multiply_total_multiplicative",
+            "value": 2.6
         }
     }
 }

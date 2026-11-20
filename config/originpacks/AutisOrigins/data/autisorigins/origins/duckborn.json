@@ -4,7 +4,7 @@
     "powers": [
         "origins:water_vision",
         "autisorigins:webbed_feet",
-        "origins:slow_falling",
+        "autisorigins:slow_falling",
         "autisorigins:lay_eggs",
         "autisorigins:undead_hatred",
         "autisorigins:oily_feathers",
