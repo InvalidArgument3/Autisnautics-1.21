@@ -470,6 +470,34 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
+      - name: Build client update manifest
+        env:
+          CHANGELOG: ${{ needs.info.outputs.changelog }}
+          VERSION: ${{ needs.info.outputs.project_version }}
+          MC_VERSION: ${{ needs.info.outputs.mc_version }}
+          LOADER_TYPE: ${{ needs.info.outputs.loader_type }}
+          LOADER_VERSION: ${{ needs.info.outputs.loader_version }}
+        run: |
+          python3 tools/manifest_gen.py \
+            --lock pakku-lock.json \
+            --version "$VERSION" \
+            --mc "$MC_VERSION" \
+            --loader "$LOADER_TYPE-$LOADER_VERSION" \
+            --changelog "$CHANGELOG" \
+            --overrides-dir build/.cache/curseforge/overrides \
+            --overrides-zip "client-overrides-$VERSION.zip" \
+            --overrides-url "https://github.com/${GITHUB_REPOSITORY}/releases/download/$VERSION/client-overrides-$VERSION.zip" \
+            --out manifest.json
+
+      - name: Upload manifest artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-manifest
+          path: |
+            manifest.json
+            client-overrides-*.zip
+          if-no-files-found: warn
+
       - name: Preparing the curseforge artifact
         run: |
           for f in ./build/curseforge/*.zip; do
@@ -634,6 +662,11 @@ jobs:
               console.log(`Only ${sortedReleases.length} releases found, no need to delete.`);
             }
 
+      - name: Stage updater assets
+        run: |
+          cp .pakku/client-overrides/autis/updater.jar autis-updater.jar
+          cp tools/autis-bootstrap.ps1 tools/autis-bootstrap.sh .
+
       - name: Create release
         id: release
         uses: softprops/action-gh-release@v2.3.3
@@ -647,6 +680,11 @@ jobs:
           files: |
             *-curseforge.zip
             *-serverpack.zip
+            manifest.json
+            client-overrides-*.zip
+            autis-updater.jar
+            autis-bootstrap.ps1
+            autis-bootstrap.sh
           prerelease: false
           make_latest: true
           generate_release_notes: true
