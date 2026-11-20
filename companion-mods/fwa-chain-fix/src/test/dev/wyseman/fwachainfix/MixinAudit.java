@@ -30,7 +30,8 @@ public final class MixinAudit {
         Path fwa = Path.of(args[2]);
 
         if (!mixinConfig.contains("\"AbstractChainAnimationMixin\"")
-            || !mixinConfig.contains("\"ChainAnimationMixin\"")) {
+            || !mixinConfig.contains("\"ChainAnimationMixin\"")
+            || !mixinConfig.contains("\"LanternAnimationMixin\"")) {
             fail("mixins.json is missing a hook");
         }
         if (mixinConfig.contains("\"server\"") || mixinConfig.contains("\n  \"mixins\"")) {
@@ -50,6 +51,14 @@ public final class MixinAudit {
         ClassNode chainAnim = classInJar(fwa, "fr/madu59/fwa/anims/ChainAnimation.class");
         require(chainAnim, "tick", "(D)V");
 
+        ClassNode lantern = classInJar(fwa, "fr/madu59/fwa/anims/LanternAnimation.class");
+        MethodNode lanternLast = require(lantern, "isLast", "()Z");
+        if (lanternLast != null && !returnsTrueImmediately(lanternLast)) {
+            fail("LanternAnimation.isLast no longer returns true immediately; the lantern premise changed");
+        }
+        ClassNode animation = classInJar(fwa, "fr/madu59/fwa/anims/Animation.class");
+        require(animation, "tick", "(D)V");
+
         ClassNode updateMixin = read(classes.resolve(
             "dev/wyseman/fwachainfix/mixin/AbstractChainAnimationMixin.class"));
         requireInject(updateMixin, "fwachainfix$skipColumnAllocation", "update");
@@ -64,6 +73,14 @@ public final class MixinAudit {
         requireCalls(tickMixin, "fwachainfix$oneEndPerChain", "markForRemoval");
         requireCalls(tickMixin, "fwachainfix$oneEndPerChain", "needUpdate");
 
+        ClassNode lanternMixin = read(classes.resolve(
+            "dev/wyseman/fwachainfix/mixin/LanternAnimationMixin.class"));
+        requireInject(lanternMixin, "fwachainfix$geometricEnd", "isLast");
+        requireInject(lanternMixin, "fwachainfix$oneEndPerLantern", "tick");
+        requireCalls(lanternMixin, "fwachainfix$oneEndPerLantern", "setLast");
+        requireCalls(lanternMixin, "fwachainfix$oneEndPerLantern", "markForRemoval");
+        requireCalls(lanternMixin, "fwachainfix$oneEndPerLantern", "needUpdate");
+
         if (!FAILURES.isEmpty()) {
             throw new IllegalStateException(String.join("\n", FAILURES));
         }
@@ -76,6 +93,20 @@ public final class MixinAudit {
                 continue;
             }
             if (insn.getOpcode() == Opcodes.ICONST_0) {
+                AbstractInsnNode next = nextReal(insn);
+                return next != null && next.getOpcode() == Opcodes.IRETURN;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    private static boolean returnsTrueImmediately(MethodNode method) {
+        for (AbstractInsnNode insn : method.instructions) {
+            if (insn.getOpcode() == -1) {
+                continue;
+            }
+            if (insn.getOpcode() == Opcodes.ICONST_1) {
                 AbstractInsnNode next = nextReal(insn);
                 return next != null && next.getOpcode() == Opcodes.IRETURN;
             }

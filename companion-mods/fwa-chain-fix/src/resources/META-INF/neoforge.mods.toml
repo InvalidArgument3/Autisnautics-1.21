@@ -4,10 +4,10 @@ license = "MIT"
 
 [[mods]]
 modId = "fwachainfix"
-version = "1.0.0"
+version = "1.0.1"
 displayName = "FWA Chain Fix"
 authors = "Autisnautics"
-description = '''Stops Fancy World Animations from building a chain mesh for every link. Only the bottom of a vertical chain allocates and draws the column, and that column is flushed before the next chain. Client only.'''
+description = '''Stops Fancy World Animations from building a chain or lantern mesh for every link. Only the bottom of a column of chains and hanging lanterns allocates and draws it, and that column is flushed before the next one. Client only.'''
 displayTest = "IGNORE_ALL_VERSION"
 
 [[mixins]]

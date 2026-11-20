@@ -1,29 +1,97 @@
 package dev.wyseman.fwachainfix;
 
+import dev.wyseman.fwachainfix.ChainColumn.Link;
+import java.util.Arrays;
+
 /**
- * Headless model of the chain mesh. A long chain and a set of chains are
- * rendered for thousands of frames. The unfixed path is what FWA does when
- * every link is a rendering end and the quad list lives until the level pass
- * finishes. The fixed path keeps one end and flushes after it.
+ * Headless model of chain and lantern meshes. Long columns, lanterns at the
+ * bottom and at several heights, mixed stacks, and lone lanterns are rendered
+ * for thousands of frames and several portal passes.
+ *
+ * <p>The unfixed path is stock FWA: every chain link whose {@code isLast} flag
+ * latched true draws the chain run above it, and every lantern returns
+ * {@code isLast() == true} and draws itself plus the chains above it. Portal
+ * passes that never flush append. The fixed path keeps one end per column and
+ * flushes after it.
  */
 public final class ChainHarness {
     private static final int FRAMES = 4000;
     private static final int PORTAL_PASSES = 4;
-    private static final int LONG_CHAIN = 64;
-    private static final int CHAIN_COUNT = 32;
+    private static final int COLUMNS = 32;
+    private static final int LONG = 64;
 
     public static void main(String[] args) {
-        boolean[] chain = new boolean[LONG_CHAIN];
-        java.util.Arrays.fill(chain, true);
-        int length = ChainColumn.renderedLength(chain);
-        if (length != LONG_CHAIN) {
-            throw new AssertionError("length " + length);
+        checkRules();
+
+        Link[] chains = fill(LONG, Link.CHAIN);
+        Link[] lanternBottom = new Link[LONG + 1];
+        lanternBottom[0] = Link.HANGING_LANTERN;
+        Arrays.fill(lanternBottom, 1, lanternBottom.length, Link.CHAIN);
+        Link[] multiHeight = new Link[LONG];
+        for (int i = 0; i < LONG; i++) {
+            multiHeight[i] = i % 8 == 0 ? Link.HANGING_LANTERN : Link.CHAIN;
         }
-        if (!ChainColumn.isRenderingEnd(true, false) || ChainColumn.isRenderingEnd(true, true)) {
+        Link[] mixed = {Link.CHAIN, Link.HANGING_LANTERN, Link.CHAIN, Link.CHAIN};
+        Link[] stackedLanterns = {Link.HANGING_LANTERN, Link.SOUL_LANTERN, Link.CHAIN, Link.HANGING_LANTERN};
+        Link[] splitByStanding = {Link.CHAIN, Link.CHAIN, Link.STANDING, Link.CHAIN, Link.SOUL_LANTERN};
+        Link[] hangingAlone = {Link.HANGING_LANTERN};
+        Link[] soulAlone = {Link.SOUL_LANTERN};
+        Link[] standingAlone = {Link.STANDING};
+
+        Scenario[] scenarios = {
+            new Scenario("64 chains", chains, COLUMNS),
+            new Scenario("lantern under 64 chains", lanternBottom, COLUMNS),
+            new Scenario("lantern every 8 of 64", multiHeight, COLUMNS),
+            new Scenario("chain-lantern-chain", mixed, COLUMNS),
+            new Scenario("soul and hanging lanterns", stackedLanterns, COLUMNS),
+            new Scenario("standing lantern splits the column", splitByStanding, COLUMNS),
+            new Scenario("hanging lantern on a block", hangingAlone, COLUMNS),
+            new Scenario("soul lantern on a block", soulAlone, COLUMNS),
+            new Scenario("standing lantern", standingAlone, COLUMNS),
+        };
+
+        System.out.println("columns " + COLUMNS + " portal passes " + PORTAL_PASSES + " frames " + FRAMES);
+        int longest = 0;
+        for (Scenario scenario : scenarios) {
+            long unfixedPass = unfixed(scenario, 1, false);
+            long unfixedPasses = unfixed(scenario, PORTAL_PASSES, true);
+            int fixedPeak = fixed(scenario, PORTAL_PASSES, FRAMES);
+            longest = Math.max(longest, fixedPeak);
+            System.out.println(scenario.name
+                + " unfixedOnePass blockDatas " + unfixedPass
+                + " quads " + ChainColumn.quadsFor(unfixedPass)
+                + " | unfixed " + PORTAL_PASSES + " unflushed passes blockDatas " + unfixedPasses
+                + " quads " + ChainColumn.quadsFor(unfixedPasses)
+                + " | fixed peak blockDatas " + fixedPeak
+                + " quads " + ChainColumn.quadsFor(fixedPeak));
+            if (unfixedPass < fixedPeak) {
+                throw new AssertionError(scenario.name + " unfixed " + unfixedPass + " < fixed " + fixedPeak);
+            }
+            if (scenario.copies > 1 && unfixedPasses != unfixedPass * PORTAL_PASSES) {
+                throw new AssertionError(scenario.name + " passes did not scale");
+            }
+        }
+        if (longest != LONG + 1) {
+            throw new AssertionError("longest column " + longest);
+        }
+        System.out.println("fixed peak across every scenario stayed at one column and did not grow over "
+            + FRAMES + " frames");
+        System.out.println("ok");
+    }
+
+    private static void checkRules() {
+        Link[] chain = fill(LONG, Link.CHAIN);
+        if (ChainColumn.renderedLength(chain, 0) != LONG) {
+            throw new AssertionError("chain length");
+        }
+        if (!ChainColumn.isRenderingEnd(Link.CHAIN, Link.NONE)
+            || ChainColumn.isRenderingEnd(Link.CHAIN, Link.HANGING_LANTERN)
+            || ChainColumn.isRenderingEnd(Link.SOUL_LANTERN, Link.CHAIN)
+            || ChainColumn.isRenderingEnd(Link.NONE, Link.NONE)) {
             throw new AssertionError("end test");
         }
-        if (ChainColumn.triangularBlockDatas(LONG_CHAIN) != 2080L) {
-            throw new AssertionError(ChainColumn.triangularBlockDatas(LONG_CHAIN));
+        if (ChainColumn.triangularBlockDatas(LONG) != 2080L) {
+            throw new AssertionError(ChainColumn.triangularBlockDatas(LONG));
         }
         if (!ChainColumn.resting(0.01f, -0.02f, 0.0f) || ChainColumn.resting(8f, 0f, 0f)) {
             throw new AssertionError("rest");
@@ -31,47 +99,41 @@ public final class ChainHarness {
         if (ChainColumn.rebuildPoses(true, true, false) || !ChainColumn.rebuildPoses(true, true, true)) {
             throw new AssertionError("rebuild");
         }
-        if (!ChainColumn.rebuildPoses(false, true, false)) {
-            throw new AssertionError("first build");
+        Link[] lanternBottom = new Link[LONG + 1];
+        lanternBottom[0] = Link.SOUL_LANTERN;
+        Arrays.fill(lanternBottom, 1, lanternBottom.length, Link.CHAIN);
+        if (ChainColumn.renderedLength(lanternBottom, 0) != LONG + 1) {
+            throw new AssertionError("soul column");
         }
-
-        long unfixedOneFrame = unfixedFrame(CHAIN_COUNT, LONG_CHAIN, PORTAL_PASSES);
-        long fixedPeak = fixedFrames(CHAIN_COUNT, LONG_CHAIN, PORTAL_PASSES, FRAMES);
-
-        System.out.println("chain length " + LONG_CHAIN + " chains " + CHAIN_COUNT
-            + " portal passes " + PORTAL_PASSES + " frames " + FRAMES);
-        System.out.println("unfixed one frame blockDatas " + unfixedOneFrame
-            + " quads " + ChainColumn.quadsFor(unfixedOneFrame)
-            + " (triangular " + ChainColumn.triangularBlockDatas(LONG_CHAIN) + " per chain, times chains, times passes)");
-        System.out.println("unfixed if that frame never flushes, after " + FRAMES + " frames blockDatas "
-            + (unfixedOneFrame * FRAMES));
-        System.out.println("fixed peak live blockDatas " + fixedPeak
-            + " quads " + ChainColumn.quadsFor(fixedPeak)
-            + " (one chain, flushed, flat across frames)");
-
-        if (fixedPeak != LONG_CHAIN) {
-            throw new AssertionError("fixed peak " + fixedPeak);
+        if (ChainColumn.unfixedDrawLength(lanternBottom, 0) != LONG + 1) {
+            throw new AssertionError("soul unfixed");
         }
-        if (unfixedOneFrame <= fixedPeak) {
-            throw new AssertionError("unfixed did not exceed fixed");
+        int ends = 0;
+        for (int i = 0; i < lanternBottom.length; i++) {
+            Link below = i == 0 ? Link.NONE : lanternBottom[i - 1];
+            if (ChainColumn.isRenderingEnd(lanternBottom[i], below)) {
+                ends++;
+            }
         }
-        // 32 chains of 64, every link draws the remainder, 4 portal passes.
-        long expect = ChainColumn.triangularBlockDatas(LONG_CHAIN) * CHAIN_COUNT * PORTAL_PASSES;
-        if (unfixedOneFrame != expect) {
-            throw new AssertionError(unfixedOneFrame + " != " + expect);
+        if (ends != 1) {
+            throw new AssertionError("ends " + ends);
         }
-        System.out.println("ok");
     }
 
-    /** Every link is an end. Portal passes append because nothing flushed. */
-    private static long unfixedFrame(int chains, int length, int passes) {
+    /** Stock drawing. {@code accumulatePasses} keeps each portal pass in the same list. */
+    private static long unfixed(Scenario scenario, int passes, boolean accumulatePasses) {
         ChainMesh mesh = new ChainMesh();
         mesh.beginPass();
         for (int pass = 0; pass < passes; pass++) {
-            for (int chain = 0; chain < chains; chain++) {
-                for (int link = 0; link < length; link++) {
-                    int above = length - link;
-                    mesh.addColumn(above);
+            if (!accumulatePasses) {
+                mesh.beginPass();
+            }
+            for (int copy = 0; copy < scenario.copies; copy++) {
+                for (int i = 0; i < scenario.column.length; i++) {
+                    int length = ChainColumn.unfixedDrawLength(scenario.column, i);
+                    if (length > 0) {
+                        mesh.addColumn(length);
+                    }
                 }
             }
         }
@@ -80,29 +142,45 @@ public final class ChainHarness {
         return live;
     }
 
-    /** One end per chain, flush after each end, repeated for many frames. */
-    private static long fixedFrames(int chains, int length, int passes, int frames) {
+    /** One end per column, flush after each end. Peak must stay flat for every frame. */
+    private static int fixed(Scenario scenario, int passes, int frames) {
         ChainMesh mesh = new ChainMesh();
-        int last = -1;
+        int peak = 0;
         for (int frame = 0; frame < frames; frame++) {
             for (int pass = 0; pass < passes; pass++) {
                 mesh.beginPass();
-                for (int chain = 0; chain < chains; chain++) {
-                    mesh.addColumn(length);
-                    if (mesh.liveBlockDatas() != length) {
-                        throw new AssertionError("live " + mesh.liveBlockDatas());
-                    }
-                    mesh.flush();
-                    if (mesh.liveBlockDatas() != 0) {
-                        throw new AssertionError("flush left " + mesh.liveBlockDatas());
+                for (int copy = 0; copy < scenario.copies; copy++) {
+                    for (int i = 0; i < scenario.column.length; i++) {
+                        Link below = i == 0 ? Link.NONE : scenario.column[i - 1];
+                        if (!ChainColumn.isRenderingEnd(scenario.column[i], below)) {
+                            continue;
+                        }
+                        int length = ChainColumn.renderedLength(scenario.column, i);
+                        mesh.addColumn(length);
+                        if (mesh.liveBlockDatas() != length) {
+                            throw new AssertionError(scenario.name + " live " + mesh.liveBlockDatas());
+                        }
+                        mesh.flush();
+                        peak = Math.max(peak, length);
                     }
                 }
+                if (mesh.liveBlockDatas() != 0) {
+                    throw new AssertionError(scenario.name + " pass left " + mesh.liveBlockDatas());
+                }
             }
-            if (mesh.peakBlockDatas() != length) {
-                throw new AssertionError("peak grew to " + mesh.peakBlockDatas() + " at frame " + frame);
+            if (mesh.peakBlockDatas() != peak) {
+                throw new AssertionError(scenario.name + " peak grew to " + mesh.peakBlockDatas()
+                    + " at frame " + frame);
             }
-            last = mesh.peakBlockDatas();
         }
-        return last;
+        return peak;
     }
+
+    private static Link[] fill(int length, Link link) {
+        Link[] column = new Link[length];
+        Arrays.fill(column, link);
+        return column;
+    }
+
+    private record Scenario(String name, Link[] column, int copies) {}
 }

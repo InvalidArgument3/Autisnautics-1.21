@@ -2,9 +2,12 @@ package dev.wyseman.fwachainfix.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import dev.wyseman.fwachainfix.ChainColumn;
+import dev.wyseman.fwachainfix.ColumnLinks;
 import fr.madu59.fwa.anims.AbstractChainAnimation;
 import fr.madu59.fwa.rendering.AnimationRenderer;
 import fr.madu59.fwa.rendering.AnimationRenderingContext;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,9 +15,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Stops a chain end from allocating a column it is not going to draw, and
- * flushes that column's quads before the next chain (or the next portal pass)
- * appends more.
+ * Stops a link that is not the column end from allocating a mesh, extends
+ * the end's count through hanging lanterns, and flushes that column before
+ * the next one (or the next portal pass) appends more.
  *
  * <p>{@code update()} always allocates {@code poses}, {@code states},
  * {@code quads} and {@code lightValues} at {@code chainCount}, and
@@ -48,6 +51,9 @@ public abstract class AbstractChainAnimationMixin {
     protected PoseStack.Pose[] poses;
 
     @Shadow
+    protected int chainCount;
+
+    @Shadow
     public abstract boolean isLast();
 
     @Inject(
@@ -61,10 +67,23 @@ public abstract class AbstractChainAnimationMixin {
         remap = false
     )
     private void fwachainfix$skipColumnAllocation(CallbackInfo ci) {
-        if (!this.isLast()) {
+        Minecraft minecraft = Minecraft.getInstance();
+        if (minecraft.level == null) {
+            return;
+        }
+        BlockPos pos = ((AbstractChainAnimation) (Object) this).getPos();
+        ChainColumn.Link self = ColumnLinks.of(minecraft.level.getBlockState(pos));
+        ChainColumn.Link below = ColumnLinks.of(minecraft.level.getBlockState(pos.below()));
+        if (!ChainColumn.isRenderingEnd(self, below)) {
             this.needUpdate = false;
             ci.cancel();
+            return;
         }
+        // Stock getChainCount stops at a lantern, so a chain under a lantern
+        // would leave the lantern and everything above it undrawn once those
+        // links stop rendering themselves.
+        this.chainCount = ChainColumn.countAscending(step ->
+            ChainColumn.isColumnLink(ColumnLinks.of(minecraft.level.getBlockState(pos.above(step)))));
     }
 
     @Inject(

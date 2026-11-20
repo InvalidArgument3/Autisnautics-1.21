@@ -1,38 +1,90 @@
 package dev.wyseman.fwachainfix;
 
+import java.util.function.IntPredicate;
+
 /**
- * Pure rules for a vertical chain column. The Minecraft mixin applies these;
- * the harness checks them without a client.
+ * Pure rules for one vertical column of chains and hanging lanterns.
+ * The Minecraft mixins apply these. The harness checks them without a client.
  *
- * <p>A column is stored bottom-up. Index 0 is the lowest block. A link renders
- * the chain only when it is the bottom of a run of vertical chain blocks.
- * Every other link still exists so the original model stays hidden, but it
- * must not allocate or draw a column.
+ * <p>A column is stored bottom-up. Index 0 is the lowest block. Chains and
+ * hanging lanterns (including soul lanterns) are the same column. A standing
+ * lantern, air, or any other block ends the column. Exactly one block renders
+ * it: the lowest link. Every other link still exists so the original model
+ * stays hidden, but it must not allocate or draw.
  */
 public final class ChainColumn {
     /** Swing components below this are treated as settled. Degrees, matching FWA. */
     public static final float REST_EPSILON = 0.05f;
 
+    /** Stops a bad block-state lookup from walking forever. Taller than a world column. */
+    public static final int MAX_LINKS = 8192;
+
     private ChainColumn() {}
 
-    public static boolean isVerticalChainLink(boolean selfIsVerticalChain) {
-        return selfIsVerticalChain;
+    public enum Link {
+        /** Air or a support. Not part of a swinging column. */
+        NONE,
+        CHAIN,
+        HANGING_LANTERN,
+        SOUL_LANTERN,
+        /**
+         * Sitting on a block. Stock does not start an animation. A leftover
+         * one still has {@code isLast() == true} and would draw the chains above.
+         */
+        STANDING
+    }
+
+    public static boolean isColumnLink(Link link) {
+        return link == Link.CHAIN || link == Link.HANGING_LANTERN || link == Link.SOUL_LANTERN;
     }
 
     /**
-     * The rendering end is the lowest vertical-chain block. The block below it
-     * is not a vertical chain (air, a support, or an unloaded gap that has
-     * since been filled in by a later check).
+     * The rendering end is the lowest chain or hanging lantern. The block
+     * below it is not part of the column.
      */
-    public static boolean isRenderingEnd(boolean selfIsVerticalChain, boolean belowIsVerticalChain) {
-        return selfIsVerticalChain && !belowIsVerticalChain;
+    public static boolean isRenderingEnd(Link self, Link below) {
+        return isColumnLink(self) && !isColumnLink(below);
     }
 
-    /** Links this end would draw: itself plus every vertical chain above it. */
-    public static int renderedLength(boolean[] bottomUp) {
+    /**
+     * Links this end draws, including itself. {@code step 0} is the end.
+     * Walking stops at the first block that is not a chain or hanging lantern.
+     */
+    public static int countAscending(IntPredicate columnLinkAtStep) {
         int length = 0;
-        for (int i = 0; i < bottomUp.length; i++) {
-            if (!bottomUp[i]) {
+        for (int step = 0; step < MAX_LINKS; step++) {
+            if (!columnLinkAtStep.test(step)) {
+                break;
+            }
+            length++;
+        }
+        return length;
+    }
+
+    /** Length of the column that starts at {@code endIndex}, bottom-up. */
+    public static int renderedLength(Link[] bottomUp, int endIndex) {
+        return countAscending(step -> {
+            int index = endIndex + step;
+            return index < bottomUp.length && isColumnLink(bottomUp[index]);
+        });
+    }
+
+    /**
+     * What stock FWA draws for one link. A latched chain end walks only
+     * chains, so it stops at a lantern. A lantern's {@code isLast} is always
+     * true and its count is itself plus the chains directly above it. A
+     * standing lantern is not started by stock; a leftover animation would
+     * still claim to be last and would draw the chains above it.
+     */
+    public static int unfixedDrawLength(Link[] bottomUp, int index) {
+        Link link = bottomUp[index];
+        if (link == Link.NONE) {
+            return 0;
+        }
+        // Standing is not a column link, but a leftover animation still draws.
+        int length = 1;
+        for (int above = index + 1; above < bottomUp.length; above++) {
+            if (bottomUp[above] != Link.CHAIN) {
                 break;
             }
             length++;
@@ -41,10 +93,8 @@ public final class ChainColumn {
     }
 
     /**
-     * What FWA allocates when every link whose {@code isLast} flag is true
-     * renders every block above it. A chain whose links were all marked last
-     * (the flag is sampled once, and a link whose block-below was not a chain
-     * yet stays last) sums {@code n + (n-1) + ... + 1}.
+     * What FWA allocates when every chain link is a rendering end and each
+     * one draws every chain above it. Sums {@code n + (n-1) + ... + 1}.
      */
     public static long triangularBlockDatas(int length) {
         if (length <= 0) {
@@ -64,9 +114,8 @@ public final class ChainColumn {
     }
 
     /**
-     * Rebuild cached poses when the chain is not resting, when something
-     * disturbed it (a block update or an entity in the column), or when there
-     * is no cache yet. A resting chain with a cache keeps the poses it has.
+     * Rebuild cached poses when the column is not resting, when something
+     * disturbed it, or when there is no cache yet.
      */
     public static boolean rebuildPoses(boolean haveCache, boolean resting, boolean disturbed) {
         return !haveCache || disturbed || !resting;

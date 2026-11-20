@@ -5,7 +5,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-VERSION=1.0.0
+VERSION=1.0.1
 OUT="$REPO/.pakku/overrides/mods/fwachainfix-${VERSION}.jar"
 FWA_SHA1=e646970e0d5fc23a78c2bc155e025819f2c56379
 FWA_URL="https://cdn.modrinth.com/data/IAzUFvS6/versions/rPdp8rQH/fwa+1.21.1-neoforge-1.3.7-patch.2.jar"
@@ -118,6 +118,7 @@ with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED) as jar:
         "dev/wyseman/fwachainfix/ChainMesh.class",
         "dev/wyseman/fwachainfix/mixin/AbstractChainAnimationMixin.class",
         "dev/wyseman/fwachainfix/mixin/ChainAnimationMixin.class",
+        "dev/wyseman/fwachainfix/mixin/LanternAnimationMixin.class",
     ):
         if required not in names:
             raise SystemExit(f"missing {required}")
@@ -125,10 +126,10 @@ with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED) as jar:
         if any(name.startswith(banned) for name in names):
             raise SystemExit(f"dependency leaked: {banned}")
     toml = jar.read("META-INF/neoforge.mods.toml").decode()
-    if 'version = "1.0.0"' not in toml or 'side = "CLIENT"' not in toml:
+    if 'version = "1.0.1"' not in toml or 'side = "CLIENT"' not in toml:
         raise SystemExit("toml version or client side is wrong")
     mixin = json.loads(jar.read("fwachainfix.mixins.json"))
-    if mixin.get("client") != ["AbstractChainAnimationMixin", "ChainAnimationMixin"] or "mixins" in mixin or "server" in mixin:
+    if mixin.get("client") != ["AbstractChainAnimationMixin", "ChainAnimationMixin", "LanternAnimationMixin"] or "mixins" in mixin or "server" in mixin:
         raise SystemExit("mixin config is not client-only")
 print("wrote", out, "entries", len(names))
 PY

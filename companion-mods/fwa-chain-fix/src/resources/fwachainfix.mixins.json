@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "AbstractChainAnimationMixin",
-    "ChainAnimationMixin"
+    "ChainAnimationMixin",
+    "LanternAnimationMixin"
   ],
   "injectors": {
     "defaultRequire": 1

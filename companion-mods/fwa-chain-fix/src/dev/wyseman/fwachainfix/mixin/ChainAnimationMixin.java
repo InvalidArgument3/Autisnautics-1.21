@@ -1,9 +1,11 @@
 package dev.wyseman.fwachainfix.mixin;
 
 import dev.wyseman.fwachainfix.ChainColumn;
+import dev.wyseman.fwachainfix.ColumnLinks;
 import fr.madu59.fwa.anims.ChainAnimation;
 import fr.madu59.fwa.utils.SwingingBlockHelper;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,14 +14,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Keeps one rendering end per vertical chain.
+ * Keeps one rendering end per column of chains and hanging lanterns.
  *
  * <p>FWA stores a {@code ChainAnimation} on every chain block so the original
- * model stays hidden. Only the end should tick into {@code update()}, which
- * allocates a column the size of every block above it. A link with a vertical
- * chain below it is not that end: {@code setLast(false)} and skip the tick.
- * A block that is no longer a vertical chain is marked for removal. An entity
- * inside the column asks the end to rebuild, which is the same hook a block
+ * model stays hidden. Only the lowest link should tick into {@code update()}.
+ * A chain with a chain or hanging lantern below it is not that end. A block
+ * that is no longer a vertical chain is marked for removal. An entity inside
+ * a settled column asks the end to rebuild, which is the same hook a block
  * update uses.
  */
 @Mixin(value = ChainAnimation.class, remap = false)
@@ -41,17 +42,19 @@ public abstract class ChainAnimationMixin extends ChainAnimation {
         if (minecraft.level == null) {
             return;
         }
-        net.minecraft.core.BlockPos pos = this.getPos();
+        BlockPos pos = this.getPos();
         if (!SwingingBlockHelper.isVerticalChain(minecraft.level.getBlockState(pos))) {
             this.markForRemoval();
             ci.cancel();
             return;
         }
-        if (SwingingBlockHelper.isVerticalChain(minecraft.level.getBlockState(pos.below()))) {
+        ChainColumn.Link below = ColumnLinks.of(minecraft.level.getBlockState(pos.below()));
+        if (!ChainColumn.isRenderingEnd(ChainColumn.Link.CHAIN, below)) {
             this.setLast(false);
             ci.cancel();
             return;
         }
+        this.setLast(true);
         // The wind sway does not rest. This only matters when the sampled swing
         // is already ~0, so a touch can mark the column dirty without scanning
         // every swinging chain.
