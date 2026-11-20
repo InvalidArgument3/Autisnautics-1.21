@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.47]
+- **A fresh install starts already up to date.** Both packs now carry `.autis/version.txt` stamped with the release version (`.minecraft/.autis/` in the Prism pack, `.autis/` in the client pack), so the first launch after an import finds nothing to do instead of re-downloading 1.3 GB of the release it just installed. The updater never writes that path from an archive — `.autis/` is on its protected list — so only an import sets it.
+
 ## [0.1.46]
 - **A Prism instance pack is now a release asset.** `Autisnautics-1.21-<version>-prism.zip` unpacks through *Add Instance -> Import from file* into a ready instance: `instance.cfg`, `mmc-pack.json` and the icon at the root, the whole client tree under `.minecraft/`. One import gives the pack icon, the heap setting and the pre-launch hook, so `autis-bootstrap` is no longer needed for anyone who installs this way.
 - **The pack asks for 12 GB of heap.** `OverrideMemory=true`, `MaxMemAlloc=12288`, `MinMemAlloc=4096` in `.pakku/prism-overrides/instance.cfg`. WARNING: a CurseForge-format import never reads that file — Prism writes its own `instance.cfg` for those — so the setting only lands through the Prism pack.

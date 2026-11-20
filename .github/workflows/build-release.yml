@@ -483,6 +483,9 @@ jobs:
           cp -r mods build/client/mods
           mkdir -p build/client/autis
           cp -f .pakku/client-overrides/autis/updater.jar build/client/autis/updater.jar
+          # stamp the version: a fresh install is already current, so the first launch does nothing
+          mkdir -p build/client/.autis
+          printf '%s\n' "$VERSION" > build/client/.autis/version.txt
           ( cd build/client && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-client.zip" . )
           ls -l build/*-client.zip
 
@@ -505,6 +508,8 @@ jobs:
           cp -r mods build/prism/.minecraft/mods
           mkdir -p build/prism/.minecraft/autis
           cp -f .pakku/client-overrides/autis/updater.jar build/prism/.minecraft/autis/updater.jar
+          mkdir -p build/prism/.minecraft/.autis
+          printf '%s\n' "$VERSION" > build/prism/.minecraft/.autis/version.txt
           # instance.cfg (memory, pre-launch hook), mmc-pack.json and the icon key it names
           cp -r .pakku/prism-overrides/. build/prism/
           cp -f icon.png build/prism/a2.png
