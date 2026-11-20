@@ -10597,43 +10597,6 @@
             ]
         },
         {
-            "pakku_id": "XKEGqUICGGrMGPNI",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "fwa"
-            },
-            "name": {
-                "modrinth": "Fancy World Animations [FWA]"
-            },
-            "id": {
-                "modrinth": "IAzUFvS6"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "fwa+1.21.1-neoforge-1.3.7-patch.2.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/IAzUFvS6/versions/rPdp8rQH/fwa+1.21.1-neoforge-1.3.7-patch.2.jar",
-                    "id": "rPdp8rQH",
-                    "parent_id": "IAzUFvS6",
-                    "hashes": {
-                        "sha512": "dc2c5c139c3a4c82fd587b66c802329bb0a0a048d62e3a699c6e46472d07660b45d236121b72fcbf48a47dfa49f53d3fd1a995c3f6b8372aec6c5327492650a3",
-                        "sha1": "e646970e0d5fc23a78c2bc155e025819f2c56379"
-                    },
-                    "required_dependencies": [],
-                    "size": 410221,
-                    "date_published": "2026-11-17T09:35:28.373381Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "STdhznujA0qHoNo8",
             "pakku_links": [
                 "wNZ1W38JGk2YkbFQ",
