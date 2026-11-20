@@ -83,17 +83,28 @@ def build_entries(lock: dict) -> tuple[list[dict], dict]:
             stats["dupes"] += 1
             continue
         seen.add(rel)
+        # mirrors sometimes disagree on filename ('+1.21.1' vs '-1.21.1'); record the other names
+        # so a client that installed the CurseForge spelling does not end up with two copies
+        aliases = sorted({
+            f"{directory}/{f['file_name']}"
+            for f in (project.get("files") or [])
+            if f.get("url") and f.get("file_name") and f["file_name"] != chosen["file_name"]
+        })
         sha1 = (chosen.get("hashes") or {}).get("sha1")
         if not sha1:
             stats.setdefault("no_hash", 0)
             stats["no_hash"] += 1
             print(f"warn: no sha1 for {rel} — size-only verification", file=sys.stderr)
-        entries.append({
+        entry = {
             "path": rel,
             "url": chosen["url"],
             "sha1": (sha1 or "").lower(),
             "size": int(chosen.get("size") or 0),
-        })
+        }
+        if aliases:
+            entry["aliases"] = aliases
+            stats["with_alias"] = stats.get("with_alias", 0) + 1
+        entries.append(entry)
 
     entries.sort(key=lambda e: e["path"])
     return entries, stats
