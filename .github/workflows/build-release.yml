@@ -493,6 +493,31 @@ jobs:
           path: build/*-client.zip
           if-no-files-found: error
 
+      - name: Build Prism instance pack
+        env:
+          VERSION: ${{ needs.info.outputs.project_version }}
+        run: |
+          rm -rf build/prism
+          mkdir -p build/prism/.minecraft
+          # merged client overrides become the instance's .minecraft
+          cp -r build/.cache/curseforge/overrides/. build/prism/.minecraft/
+          rm -rf build/prism/.minecraft/mods
+          cp -r mods build/prism/.minecraft/mods
+          mkdir -p build/prism/.minecraft/autis
+          cp -f .pakku/client-overrides/autis/updater.jar build/prism/.minecraft/autis/updater.jar
+          # instance.cfg (memory, pre-launch hook), mmc-pack.json and the icon key it names
+          cp -r .pakku/prism-overrides/. build/prism/
+          cp -f icon.png build/prism/a2.png
+          ( cd build/prism && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-prism.zip" . )
+          ls -l build/*-prism.zip
+
+      - name: Upload prism pack artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: ${{ needs.info.outputs.project_file_name }}${{ needs.info.outputs.artifact_suffix }}-prism
+          path: build/*-prism.zip
+          if-no-files-found: error
+
       - name: Preparing the curseforge artifact
         run: |
           for f in ./build/curseforge/*.zip; do
@@ -663,6 +688,7 @@ jobs:
             *-curseforge.zip
             *-serverpack.zip
             *-client.zip
+            *-prism.zip
             autis-updater.jar
             autis-bootstrap.ps1
             autis-bootstrap.sh

@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.46]
+- **A Prism instance pack is now a release asset.** `Autisnautics-1.21-<version>-prism.zip` unpacks through *Add Instance -> Import from file* into a ready instance: `instance.cfg`, `mmc-pack.json` and the icon at the root, the whole client tree under `.minecraft/`. One import gives the pack icon, the heap setting and the pre-launch hook, so `autis-bootstrap` is no longer needed for anyone who installs this way.
+- **The pack asks for 12 GB of heap.** `OverrideMemory=true`, `MaxMemAlloc=12288`, `MinMemAlloc=4096` in `.pakku/prism-overrides/instance.cfg`. WARNING: a CurseForge-format import never reads that file — Prism writes its own `instance.cfg` for those — so the setting only lands through the Prism pack.
+- **The updater accepts either layout.** It strips a leading `overrides/` or `.minecraft/` when unpacking and ignores `instance.cfg`, `mmc-pack.json` and the root icon, so the same engine reads the client pack and the Prism pack. If a release has no `-client.zip`, it falls back to `-prism.zip` instead of failing.
+
 ## [0.1.45]
 - **The CurseForge zip carries the pack icon.** `icon.png` (512x512, the same artwork Prism shows for the dev instance) sits at the repo root, and `pakku.json` already lists it in `overrides`, so every export now ships `overrides/icon.png` (384 KB). Prism reads it on import — `InstanceImportTask::installIcon` looks for a root `icon.png`, then `overrides/icon.png` — and shows that instead of the default anvil. The file was listed under `.gitignore` § runtime state, so it carries an explicit `!icon.png` exception; without it a clean CI checkout exports a pack with no icon.
 - **Client instances are unaffected otherwise.** The icon also lands at `icon.png` in the client zip and in the instance's `.minecraft/`, which nothing reads.
