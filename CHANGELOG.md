@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.45]
+- **The CurseForge zip carries the pack icon.** `icon.png` (512x512, the same artwork Prism shows for the dev instance) sits at the repo root, and `pakku.json` already lists it in `overrides`, so every export now ships `overrides/icon.png` (384 KB). Prism reads it on import — `InstanceImportTask::installIcon` looks for a root `icon.png`, then `overrides/icon.png` — and shows that instead of the default anvil. The file was listed under `.gitignore` § runtime state, so it carries an explicit `!icon.png` exception; without it a clean CI checkout exports a pack with no icon.
+- **Client instances are unaffected otherwise.** The icon also lands at `icon.png` in the client zip and in the instance's `.minecraft/`, which nothing reads.
+
 ## [0.1.44]
 - **The updater updates itself.** The pack already ships `autis/updater.jar` inside the client zip; it was ignored because `autis/` is protected from being written. Now the staged jar is compared with the installed one and, when it differs, parked as `autis/updater.pending.jar` and swapped in by a detached helper two seconds after the updater exits, because Windows cannot replace a jar the JVM still holds open. A swap that does not complete is retried at the next launch before anything else runs, and the file is only ever replaced when the bytes differ, so a pack that ships an unchanged jar does nothing.
 - **Two paths, both tested.** Linux replaces immediately (the running jar can be unlinked); Windows queues the pending copy and the helper does `move /y` after the process is gone. A leftover pending file left by an interrupted update is consumed on the next start rather than accumulating.

@@ -28,6 +28,7 @@ data/
 servers.dat
 
 icon.png
+!icon.png
 options.txt
 rhino.local.properties
 usercache.json
