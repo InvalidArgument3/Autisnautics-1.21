@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:blood_bubble_planks"
+  },
+  "result": {
+    "id": "neepmeat:blood_bubble_planks_slab",
+    "item": "neepmeat:blood_bubble_planks_slab",
+    "count": 2
+  }
+}

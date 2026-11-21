@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:rusty_metal_sheet"
+  },
+  "result": {
+    "id": "neepmeat:rusty_metal_sheet_slab",
+    "item": "neepmeat:rusty_metal_sheet_slab",
+    "count": 2
+  }
+}

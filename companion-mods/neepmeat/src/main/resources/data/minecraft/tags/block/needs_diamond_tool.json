@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "neepmeat:meat_steel_block",
+    "neepmeat:meat_steel_block_stairs",
+    "neepmeat:meat_steel_block_slab",
+    "neepmeat:meat_steel_block_wall"
+  ]
+}

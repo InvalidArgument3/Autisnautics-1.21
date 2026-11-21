@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:22: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:31: error: package net.fabricmc.fabric.api.transfer.v1.storage does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:258: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:287: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:77: error: incompatible types: inference variable T has incompatible bounds
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:77: error: method readBlockPos in class NbtUtils cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:148: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:244: error: incompatible types: MultiFluidBuffer cannot be converted to Storage<FluidVariant>
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:270: error: incompatible types: MultiFluidBuffer cannot be converted to Storage<V>
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:295: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:300: error: constructor MultiFluidBuffer in class MultiFluidBuffer cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:306: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/block/entity/machine/VatControllerBlockEntity.java:312: error: cannot find symbol

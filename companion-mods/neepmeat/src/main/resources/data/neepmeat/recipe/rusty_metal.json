@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:dirt"
+    },
+    "i": {
+      "item": "neepmeat:polished_metal"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 8,
+    "item": "neepmeat:rusty_metal",
+    "id": "neepmeat:rusty_metal"
+  },
+  "show_notification": true
+}

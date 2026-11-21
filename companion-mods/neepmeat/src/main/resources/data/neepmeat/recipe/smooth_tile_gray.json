@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:gray_dye"
+    },
+    "i": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "iii",
+    "idi",
+    "iii"
+  ],
+  "result": {
+    "count": 8,
+    "item": "neepmeat:smooth_tile_gray",
+    "id": "neepmeat:smooth_tile_gray"
+  },
+  "show_notification": true
+}

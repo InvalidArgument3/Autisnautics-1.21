@@ -1,0 +1,105 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:23: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:25: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:34: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:35: error: package me.shedaniel.rei.api.client.plugins does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:36: error: package me.shedaniel.rei.api.client.registry.category does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:37: error: package me.shedaniel.rei.api.client.registry.display does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:38: error: package me.shedaniel.rei.api.common.display does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:39: error: package me.shedaniel.rei.api.common.plugins does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:40: error: package me.shedaniel.rei.api.common.registry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:41: error: package me.shedaniel.rei.api.common.util does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:42: error: package me.shedaniel.rei.api.common.util does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:55: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:96: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:140: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:143: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:143: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:143: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:160: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:160: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:160: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:160: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:164: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:164: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:164: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:164: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:168: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:168: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:168: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:168: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:61: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:67: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:68: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:69: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:70: error: package BlockCrushingRegistry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:72: error: package BlockCrushingRegistry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:73: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:74: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:75: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:76: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:77: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:79: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:87: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:87: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:92: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:92: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:92: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:95: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:104: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:104: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:105: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:105: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:116: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:116: error: package PLCBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:117: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:117: error: package PLCBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:118: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:118: error: package PLCBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:120: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:120: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:121: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:121: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:123: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:123: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:125: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:125: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:126: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:126: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:128: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:128: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:129: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:129: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:131: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:131: error: package FluidTransport does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:132: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:132: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:133: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:133: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:134: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:134: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:135: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:135: error: package NMItems does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:136: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:136: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:137: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:137: error: package NMBlocks does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:142: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:147: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:147: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/rei/NMClientPlugin.java:170: error: cannot find symbol

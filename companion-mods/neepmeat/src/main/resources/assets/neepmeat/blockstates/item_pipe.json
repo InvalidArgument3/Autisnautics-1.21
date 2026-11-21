@@ -1,0 +1,228 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {"up": "true", "north": "true"},
+          {"up": "true", "east": "true"},
+          {"up": "true", "south": "true"},
+          {"up": "true", "west": "true"},
+
+          {"down": "true", "north": "true"},
+          {"down": "true", "east": "true"},
+          {"down": "true", "south": "true"},
+          {"down": "true", "west": "true"},
+
+          {"north": "true", "east": "true"},
+          {"north": "true", "west": "true"},
+
+          {"south": "true", "east": "true"},
+          {"south": "true", "west": "true"},
+
+          {"north": "false", "east": "false", "south": "false", "west": "false","up": "false", "down": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_centre"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+            {"north": "true", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "true", "south": "false", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "false", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"}
+          ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_centre_ns"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "true"},
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "false", "west": "true"},
+          {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_centre_ns",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {"north": "false", "south": "false", "up": "true", "down": "true", "east": "false", "west": "false"},
+          {"north": "false", "south": "false", "up": "true", "down": "false", "east": "false", "west": "false"},
+          {"north": "false", "south": "false", "up": "false", "down": "true", "east": "false", "west": "false"}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_centre_ns",
+        "x": 90
+      }
+    },
+
+    {
+      "when": {
+        "AND": [
+          {"north": "false", "south": "true"},
+          {"OR": [
+            {"north": "true", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "true", "south": "false", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "false", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {"south": "false", "north": "true"},
+          {"OR": [
+            {"north": "true", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "true", "south": "false", "up": "false", "down": "false", "east": "false", "west": "false"},
+            {"north": "false", "south": "true", "up": "false", "down": "false", "east": "false", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap_alt"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {"east": "false", "west": "true"},
+          {"OR": [
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "true"},
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "false", "west": "true"},
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {"west": "false", "east": "true"},
+          {"OR": [
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "true"},
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "false", "west": "true"},
+            {"north": "false", "south": "false", "up": "false", "down": "false", "east": "true", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap_alt",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {"up": "false", "down": "true"},
+          {"OR": [
+            {"north": "false", "south": "false", "up": "true", "down": "true", "east": "false", "west": "false"},
+            {"north": "false", "south": "false", "up": "true", "down": "false", "east": "false", "west": "false"},
+            {"north": "false", "south": "false", "up": "false", "down": "true", "east": "false", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap_alt",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {"down": "false", "up": "true"},
+          {"OR": [
+            {"north": "false", "south": "false", "up": "true", "down": "true", "east": "false", "west": "false"},
+            {"north": "false", "south": "false", "up": "true", "down": "false", "east": "false", "west": "false"},
+            {"north": "false", "south": "false", "up": "false", "down": "true", "east": "false", "west": "false"}
+          ]}
+        ]
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_cap_alt",
+        "x": -90
+      }
+    },
+
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side"
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side_alt"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side_alt",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side",
+        "y": 270
+      }
+    },
+
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side",
+        "y": 270,
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "neepmeat:block/pneumatic_pipe/pipe_side_alt",
+        "y": 270,
+        "x": 270
+      }
+    }
+  ]
+}

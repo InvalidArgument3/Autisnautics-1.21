@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:sunflower",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:yellow_dye",
+    "min": 2,
+    "max": 3
+  },
+  "processtime": 20
+}

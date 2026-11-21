@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/enlightenment/EnlightenmentManager.java:23: error: cannot find symbol

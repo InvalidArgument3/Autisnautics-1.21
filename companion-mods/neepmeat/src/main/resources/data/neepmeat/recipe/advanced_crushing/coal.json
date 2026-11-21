@@ -1,0 +1,19 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "tag": "c:coal_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:coal",
+    "min": 2,
+    "max": 2
+  },
+  "extra": {
+    "resource": "minecraft:coal",
+    "amount": 1,
+    "chance": 0.5
+  },
+  "experience": 2,
+  "processtime": 40
+}

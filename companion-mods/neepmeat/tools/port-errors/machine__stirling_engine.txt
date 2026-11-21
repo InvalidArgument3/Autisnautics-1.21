@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/stirling_engine/StirlingEngineBlock.java:96: error: cannot find symbol

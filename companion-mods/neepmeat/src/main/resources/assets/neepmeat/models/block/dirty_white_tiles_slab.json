@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "neepmeat:block/dirty_white_tiles",
+    "top": "neepmeat:block/dirty_white_tiles",
+    "side": "neepmeat:block/dirty_white_tiles"
+  }
+}

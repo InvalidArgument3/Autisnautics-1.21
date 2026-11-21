@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/living_machine/widget/DistributorPointWidget.java:22: error: package com.neep.neepmeat.screen_handler.widget does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/living_machine/widget/DistributorPointWidget.java:27: error: package DistributorPointWidgetHandler does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/living_machine/widget/DistributorPointWidget.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/living_machine/widget/DistributorPointWidget.java:61: error: package DistributorPointWidgetHandler does not exist
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/client/screen/living_machine/widget/DistributorPointWidget.java:67: error: package DistributorPointWidgetHandler does not exist

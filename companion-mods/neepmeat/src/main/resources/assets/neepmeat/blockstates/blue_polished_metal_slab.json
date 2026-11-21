@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "neepmeat:block/blue_polished_metal_slab"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "neepmeat:block/blue_polished_metal_slab"
+    },
+    "type=top,waterlogged=false": {
+      "model": "neepmeat:block/blue_polished_metal_slab_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "neepmeat:block/blue_polished_metal_slab_top"
+    },
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/blue_polished_metal"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/blue_polished_metal"
+    }
+  }
+}

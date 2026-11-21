@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:muddy_mangrove_roots",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:mangrove_roots",
+    "amount": 1
+  },
+  "experience": 0,
+  "processtime": 40
+}

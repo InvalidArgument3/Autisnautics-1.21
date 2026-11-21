@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "neepmeat:whisper_wheat",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:whisper_flour",
+    "amount": 1
+  },
+  "experience": 0.7,
+  "processtime": 10
+}

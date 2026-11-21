@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "neepmeat:block/green_rough_concrete"
+  }
+}

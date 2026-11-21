@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "neepmeat:block/caution_block",
+    "top": "neepmeat:block/caution_block",
+    "side": "neepmeat:block/caution_block"
+  }
+}

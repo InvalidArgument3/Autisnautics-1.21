@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "neepmeat:block/red_rough_concrete",
+    "top": "neepmeat:block/red_rough_concrete",
+    "side": "neepmeat:block/red_rough_concrete"
+  }
+}

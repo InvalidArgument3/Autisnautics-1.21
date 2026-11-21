@@ -1,0 +1,14 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:nether_bricks",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:nether_brick",
+    "min": 4,
+    "max": 4
+  },
+  "experience": 0,
+  "processtime": 40
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "neepmeat:white_rough_concrete",
+    "neepmeat:grey_rough_concrete",
+    "neepmeat:yellow_rough_concrete",
+    "neepmeat:red_rough_concrete",
+    "neepmeat:blue_rough_concrete",
+    "neepmeat:green_rough_concrete"
+  ]
+}

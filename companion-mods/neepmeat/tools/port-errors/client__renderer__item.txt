@@ -1,0 +1,10 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:19: error: package net.fabricmc.fabric.api.client.rendering.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:32: error: package BuiltinItemRendererRegistry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:43: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:46: error: incompatible types: ResourceLocation cannot be converted to ModelResourceLocation
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:76: error: package RotationAxis does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:90: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/item/MopRenderer.java:90: error: cannot find symbol

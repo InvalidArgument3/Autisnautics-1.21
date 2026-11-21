@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "neepmeat:block/bloody_tiles",
+    "top": "neepmeat:block/bloody_tiles",
+    "side": "neepmeat:block/bloody_tiles"
+  }
+}

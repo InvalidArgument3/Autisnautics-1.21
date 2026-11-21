@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos",
+        "weight": 5,
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_1",
+        "weight": 1,
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos",
+        "weight": 5
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_1",
+        "weight": 1
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "neepmeat:block/corrugated_asbestos",
+        "weight": 5,
+        "x": 90
+      },
+      {
+        "model": "neepmeat:block/corrugated_asbestos_1",
+        "weight": 1,
+        "x": 90
+      }
+    ]
+  }
+}

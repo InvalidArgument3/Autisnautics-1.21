@@ -1,0 +1,14 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:21: error: package net.fabricmc.fabric.api.datagen.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:22: error: package net.fabricmc.fabric.api.datagen.v1.provider does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:33: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:35: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:23: error: package net.minecraft.data.client does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:40: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:43: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:46: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:50: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:59: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:61: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:70: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/datagen/NMModelProvider.java:76: error: method does not override or implement a method from a supertype

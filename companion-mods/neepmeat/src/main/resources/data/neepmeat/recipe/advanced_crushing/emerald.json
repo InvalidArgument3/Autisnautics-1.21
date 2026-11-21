@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "tag": "c:emerald_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:emerald",
+    "amount": 2
+  },
+  "extra": {
+    "resource": "minecraft:emerald",
+    "amount": 1,
+    "chance": 0.5
+  },
+  "experience": 5,
+  "processtime": 40
+}

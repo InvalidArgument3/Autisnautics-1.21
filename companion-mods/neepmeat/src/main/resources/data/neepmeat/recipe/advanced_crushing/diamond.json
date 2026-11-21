@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "tag": "c:diamond_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:diamond",
+    "amount": 2
+  },
+  "extra": {
+    "resource": "minecraft:diamond",
+    "amount": 1,
+    "chance": 0.5
+  },
+  "experience": 5,
+  "processtime": 50
+}

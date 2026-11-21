@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre"
+    },
+    "facing=south": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre",
+      "x": -90
+    },
+    "facing=down": {
+      "model": "neepmeat:block/pneumatic_pipe/requester_centre",
+      "x": 90
+    }
+  }
+}

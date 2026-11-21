@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "neepmeat:crushed_browne_ore"
+    },
+    {
+      "item": "neepmeat:crushed_browne_ore"
+    }
+  ],
+  "result": {
+    "item": "neepmeat:packed_browne",
+    "count": 1,
+    "id": "neepmeat:packed_browne"
+  }
+}

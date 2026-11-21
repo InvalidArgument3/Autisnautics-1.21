@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java:4: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java:6: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java:11: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java:13: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/screen/widget/ProcessInterfaceWidgetHandler.java:33: error: cannot find symbol

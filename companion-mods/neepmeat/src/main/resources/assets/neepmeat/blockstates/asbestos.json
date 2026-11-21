@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "neepmeat:block/asbestos"
+      },
+      {
+        "model": "neepmeat:block/asbestos_1"
+      },
+      {
+        "model": "neepmeat:block/asbestos_2"
+      },
+      {
+        "model": "neepmeat:block/asbestos_3"
+      }
+    ]
+  }
+}

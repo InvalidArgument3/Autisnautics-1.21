@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "f ",
+    " f"
+  ],
+  "key": {
+    "f": {
+      "item": "neepmeat:asbestos_fabric"
+    }
+  },
+  "result": {
+    "item": "minecraft:white_wool",
+    "count": 2,
+    "id": "minecraft:white_wool"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "neepmeat:block/asbestos_shingle_slab"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "neepmeat:block/asbestos_shingle_slab"
+    },
+    "type=top,waterlogged=false": {
+      "model": "neepmeat:block/asbestos_shingle_slab_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "neepmeat:block/asbestos_shingle_slab_top"
+    },
+    "type=double,waterlogged=false": {
+      "model": "neepmeat:block/asbestos_shingle"
+    },
+    "type=double,waterlogged=true": {
+      "model": "neepmeat:block/asbestos_shingle"
+    }
+  }
+}

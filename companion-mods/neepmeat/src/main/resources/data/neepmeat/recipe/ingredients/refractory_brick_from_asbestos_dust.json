@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "neepmeat:asbestos_dust"
+    },
+    {
+      "item": "neepmeat:asbestos_dust"
+    },
+    {
+      "item": "neepmeat:asbestos_dust"
+    }
+  ],
+  "result": {
+    "item": "neepmeat:refractory_brick",
+    "count": 4,
+    "id": "neepmeat:refractory_brick"
+  }
+}

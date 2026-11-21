@@ -1,0 +1,21 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:18: error: package net.fabricmc.fabric.api.biome.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:19: error: package net.fabricmc.fabric.api.biome.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:20: error: package net.fabricmc.fabric.api.datagen.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:21: error: package net.fabricmc.fabric.api.datagen.v1.provider does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:62: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:78: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:112: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:179: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:33: error: package net.minecraft.world.gen.feature does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:34: error: package net.minecraft.world.gen.placementmodifier does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:85: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:86: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:87: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:89: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:90: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:91: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:93: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:93: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:111: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:136: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/world/NMFeatures.java:189: error: method does not override or implement a method from a supertype

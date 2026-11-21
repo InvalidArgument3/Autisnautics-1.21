@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/item/ItemRenderUtil.java:40: error: cannot find symbol

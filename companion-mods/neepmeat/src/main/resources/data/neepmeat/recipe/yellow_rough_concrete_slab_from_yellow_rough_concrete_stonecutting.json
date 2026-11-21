@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:yellow_rough_concrete"
+  },
+  "result": {
+    "id": "neepmeat:yellow_rough_concrete_slab",
+    "item": "neepmeat:yellow_rough_concrete_slab",
+    "count": 2
+  }
+}

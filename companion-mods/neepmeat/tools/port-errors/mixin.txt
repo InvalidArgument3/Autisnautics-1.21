@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/mixin/CowEntityMixin.java:31: error: cannot find symbol

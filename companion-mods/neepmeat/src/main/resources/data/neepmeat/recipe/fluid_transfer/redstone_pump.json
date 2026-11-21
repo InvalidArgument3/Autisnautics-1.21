@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I",
+    "c",
+    "s"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "tag": "neepmeat:fluid_pipes"
+    },
+    "s": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "item": "neepmeat:pump",
+    "count": 1,
+    "id": "neepmeat:pump"
+  }
+}

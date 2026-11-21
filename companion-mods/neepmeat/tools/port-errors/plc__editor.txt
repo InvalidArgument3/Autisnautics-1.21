@@ -1,0 +1,10 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:73: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:82: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:117: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:118: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:125: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:126: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:130: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/plc/editor/ProgramEditor.java:131: error: cannot find symbol

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "neepmeat:smooth_tile_white",
+    "neepmeat:smooth_tile_orange",
+    "neepmeat:smooth_tile_magenta",
+    "neepmeat:smooth_tile_light_blue",
+    "neepmeat:smooth_tile_yellow",
+    "neepmeat:smooth_tile_lime",
+    "neepmeat:smooth_tile_pink",
+    "neepmeat:smooth_tile_gray",
+    "neepmeat:smooth_tile_light_gray",
+    "neepmeat:smooth_tile_cyan",
+    "neepmeat:smooth_tile_purple",
+    "neepmeat:smooth_tile_blue",
+    "neepmeat:smooth_tile_brown",
+    "neepmeat:smooth_tile_green",
+    "neepmeat:smooth_tile_red",
+    "neepmeat:smooth_tile_black"
+  ]
+}

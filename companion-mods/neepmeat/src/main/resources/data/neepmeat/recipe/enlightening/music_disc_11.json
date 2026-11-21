@@ -1,0 +1,12 @@
+{
+  "type": "neepmeat:enlightening",
+  "item_input": {
+    "resource": "minecraft:music_disc_stal",
+    "amount": 1
+  },
+  "data": 4096,
+  "output": {
+    "resource": "minecraft:music_disc_11",
+    "amount": 1
+  }
+}

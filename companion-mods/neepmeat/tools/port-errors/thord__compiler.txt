@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/thord/compiler/CompilerVM.java:41: error: cannot find symbol

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:grey_rough_concrete"
+  },
+  "result": {
+    "id": "neepmeat:grey_rough_concrete_stairs",
+    "item": "neepmeat:grey_rough_concrete_stairs",
+    "count": 1
+  }
+}

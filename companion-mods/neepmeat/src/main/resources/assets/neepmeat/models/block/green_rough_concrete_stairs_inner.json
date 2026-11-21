@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "neepmeat:block/green_rough_concrete",
+    "top": "neepmeat:block/green_rough_concrete",
+    "side": "neepmeat:block/green_rough_concrete"
+  }
+}

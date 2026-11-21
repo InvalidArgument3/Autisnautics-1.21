@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:cactus",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:green_dye",
+    "min": 2,
+    "max": 3
+  },
+  "processtime": 20
+}

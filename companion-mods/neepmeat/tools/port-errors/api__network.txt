@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/network/EnlightenmentEventPacket.java:51: error: cannot find symbol

@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/surgery_platform/SurgeryPlatformBlock.java:45: error: cannot find symbol
