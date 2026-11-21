@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: Updater
+Premain-Class: Updater
+Created-By: 21 (autis-updater)
+

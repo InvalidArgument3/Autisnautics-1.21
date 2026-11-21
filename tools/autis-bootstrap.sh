@@ -5,6 +5,11 @@
 # command into instance.cfg. One-time step for an instance imported before the
 # updater existed. The launcher must be closed - it rewrites instance.cfg on exit.
 #
+# CurseForge has no pre-launch command. Its profile JVM arguments get:
+#   -javaagent:autis/updater.jar
+# The agent reads --gameDir from the game command. Do not point CurseForge's
+# Java path at a wrapper; it rewrites minecraftinstance.json and drops that.
+#
 #   ./autis-bootstrap.sh "/home/user/.local/share/PrismLauncher/instances/Autisnautics 1.21"
 set -euo pipefail
 

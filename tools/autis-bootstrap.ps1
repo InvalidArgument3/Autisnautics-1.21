@@ -6,6 +6,11 @@
   before the updater existed. Prism rewrites instance.cfg on exit, so it must be
   closed while this runs.
 
+  CurseForge has no pre-launch command. Its profile JVM arguments get:
+    -javaagent:autis/updater.jar
+  The agent reads --gameDir from the game command. Do not point CurseForge's
+  Java path at a wrapper; it rewrites minecraftinstance.json and drops that.
+
   Usage:
     powershell -ExecutionPolicy Bypass -File autis-bootstrap.ps1 -Instance "U:\...\instances\Autisnautics 1.21"
     powershell -ExecutionPolicy Bypass -File autis-bootstrap.ps1 -Find
