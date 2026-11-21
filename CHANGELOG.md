@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.49]
+- **CurseForge can run the updater as a Java agent.** `autis/updater.jar` carries `Premain-Class: Updater` and `Updater-Version: 3`. `-javaagent:autis/updater.jar` runs the same sync as `java -jar` and returns, so the game starts after the files are in place. It does not call `System.exit`, and a failure in the agent is logged instead of taking the launch down.
+- **It will not replace itself with an older jar.** A copy from a release is installed only when it has `Premain-Class` and an embedded version at least as new as the running jar. The updater shipped in 0.1.48 has neither, so an instance that already has this jar keeps it. Installer files next to it (`README.txt`, `updater.log`, `java-hook.json`) are left alone. The sync still removes only extra `mods/*.jar` files.
+- **Every pack is built from that source.** The release workflow compiles `tools/autis-updater` before export and again for the release asset. The client zip, the Prism zip, the CurseForge overrides, the server pack, and `autis-updater.jar` all carry this jar.
+
 ## [0.1.48]
 - **The CurseForge manifest asks for 12 GB too.** `minecraft.recommendedRam` is rewritten to `12288` in `manifest.json` after `pakku export`, so an import that goes through the CurseForge path gets the same heap as the Prism pack. Prism reads that field in `PackManifest.cpp` and applies it in `FlameInstanceCreationTask`, capped to a fraction of the machine's physical RAM, so a small machine still gets a working value instead of an unlaunchable one.
 - **The icon was already in the CurseForge zip.** `overrides/icon.png` has shipped since 0.1.45 and Prism's import reads it. What cannot be set from a zip is the picture the CurseForge *app* shows, which is the project avatar on their site and only exists once the pack is published there.
