@@ -482,22 +482,44 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mkdir -p .pakku/multimc-overrides/mods
 
-      - name: Set recommended RAM in the CurseForge manifest
+      - name: Set recommended RAM and stamp the pack version
+        env:
+          VERSION: ${{ needs.info.outputs.project_version }}
         run: |
           python3 - <<'PY'
-          import glob, json, shutil, zipfile
-          path = sorted(glob.glob('build/curseforge/*.zip'))[-1]
-          tmp = path + '.tmp'
-          with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, 'w', zipfile.ZIP_DEFLATED) as zout:
+          import glob, json, os, shutil, zipfile
+          version = os.environ["VERSION"].strip()
+          if not version or any(c in version for c in "\r\n"):
+              raise SystemExit("VERSION is missing")
+          # The updater writes version + "\n". A fresh import must compare equal.
+          payload = (version + "\n").encode("ascii")
+          arc = "overrides/.autis/version.txt"
+          path = sorted(glob.glob("build/curseforge/*.zip"))[-1]
+          tmp = path + ".tmp"
+          wrote = False
+          with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
               for item in zin.infolist():
                   data = zin.read(item.filename)
-                  if item.filename == 'manifest.json':
+                  name = item.filename.replace("\\", "/")
+                  if name == "manifest.json":
                       manifest = json.loads(data)
-                      manifest.setdefault('minecraft', {})['recommendedRam'] = 12288
+                      manifest.setdefault("minecraft", {})["recommendedRam"] = 12288
                       data = json.dumps(manifest, indent=2).encode()
+                  if name == arc:
+                      data = payload
+                      wrote = True
                   zout.writestr(item, data)
+              if not wrote:
+                  info = zipfile.ZipInfo(arc)
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.external_attr = 0o644 << 16
+                  zout.writestr(info, payload)
           shutil.move(tmp, path)
-          print('recommendedRam=12288 in', path)
+          with zipfile.ZipFile(path) as zf:
+              got = zf.read(arc)
+          if got != payload:
+              raise SystemExit(f"{path} {arc} is {got!r}")
+          print("recommendedRam=12288 and", arc, "=", version, "in", path)
           PY
 
       - name: Build self-contained client pack
@@ -517,6 +539,16 @@ jobs:
           mkdir -p build/client/.autis
           printf '%s\n' "$VERSION" > build/client/.autis/version.txt
           ( cd build/client && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-client.zip" . )
+          python3 - "$VERSION" "build/Autisnautics-1.21-$VERSION-client.zip" ".autis/version.txt" <<'PY'
+          import sys, zipfile
+          version, path, arc = sys.argv[1:]
+          payload = (version.strip() + "\n").encode("ascii")
+          with zipfile.ZipFile(path) as zf:
+              got = zf.read(arc)
+          if got != payload:
+              raise SystemExit(f"{path} {arc} is {got!r}")
+          print(path, arc, "=", version.strip())
+          PY
           ls -l build/*-client.zip
 
       - name: Upload client pack artifact
@@ -544,6 +576,16 @@ jobs:
           cp -r .pakku/prism-overrides/. build/prism/
           cp -f icon.png build/prism/a2.png
           ( cd build/prism && zip -qr "$GITHUB_WORKSPACE/build/Autisnautics-1.21-$VERSION-prism.zip" . )
+          python3 - "$VERSION" "build/Autisnautics-1.21-$VERSION-prism.zip" ".minecraft/.autis/version.txt" <<'PY'
+          import sys, zipfile
+          version, path, arc = sys.argv[1:]
+          payload = (version.strip() + "\n").encode("ascii")
+          with zipfile.ZipFile(path) as zf:
+              got = zf.read(arc)
+          if got != payload:
+              raise SystemExit(f"{path} {arc} is {got!r}")
+          print(path, arc, "=", version.strip())
+          PY
           ls -l build/*-prism.zip
 
       - name: Upload prism pack artifact

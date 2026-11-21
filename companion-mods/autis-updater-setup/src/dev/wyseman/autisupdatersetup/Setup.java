@@ -280,6 +280,12 @@ public final class Setup {
                 return;
             }
             String installed = CurseUpdate.readTrimmed(gameDir.resolve(".autis").resolve("version.txt"));
+            if (installed == null || installed.isBlank()) {
+                log(gameDir, "curseforge mode: no .autis/version.txt, skipping the update check");
+                gameInfo(gameDir, "curseforge mode: no .autis/version.txt, skipping the update check");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
             final String latest;
             try {
                 latest = curseLookup.latest();

@@ -218,6 +218,17 @@ public class Updater {
         }
         String installed = readTrimmed(dot.resolve("version.txt"));
         seenInstalled = nz(installed);
+        if (noInstalledVersion(installed) && !force) {
+            // A missing file used to look like "update available" on every launch,
+            // including a fresh import that simply never received the stamp.
+            log("no .autis/version.txt — skipping the update");
+            note(gameDir, "skipped-no-version");
+            if (mode.equals("check")) {
+                System.out.println("no .autis/version.txt, skipped");
+            }
+            exitFor(mode, 0);
+            return;
+        }
         String latest;
         try {
             latest = latestTag();
@@ -355,6 +366,10 @@ public class Updater {
         Files.createDirectories(dot);
         String installed = readTrimmed(dot.resolve("version.txt"));
         seenInstalled = nz(installed);
+        if (noInstalledVersion(installed)) {
+            log("no .autis/version.txt — skipping the update");
+            return "skipped-no-version";
+        }
         if (window != null) {
             window.status("Checking for a pack update…");
         }
@@ -1168,6 +1183,10 @@ public class Updater {
         } catch (java.security.NoSuchAlgorithmException e) {
             throw new IOException(e);
         }
+    }
+
+    static boolean noInstalledVersion(String installed) {
+        return installed == null || installed.isBlank();
     }
 
     static String readTrimmed(Path file) {

@@ -22,6 +22,7 @@ public final class SetupHarness {
         curseUpToDate();
         curseUpdateFound();
         cursePackSource();
+        curseMissingVersion();
         curseStrip();
         curseTwoNames();
         curseLaunchesUpdater();
@@ -162,6 +163,44 @@ public final class SetupHarness {
         String log = Files.readString(dir.resolve("autis/updater-setup.log"));
         check(log.contains("curseforge mode: pack source, not checking"), log);
         check(Files.readString(dir.resolve("minecraftinstance.json")).equals(json), "pack source does not edit");
+    }
+
+    private static void curseMissingVersion() throws Exception {
+        Path dir = Files.createTempDirectory("autis-cf-noversion");
+        String json = "{\"name\":\"A\",\"javaArgsOverride\":null}";
+        Files.writeString(dir.resolve("minecraftinstance.json"), json);
+        Files.createDirectories(dir.resolve("autis"));
+        Files.write(dir.resolve("autis/updater.jar"), new byte[] {1});
+        Setup.curseLookup = () -> {
+            throw new AssertionError("a missing version.txt must not check GitHub");
+        };
+        try {
+            Setup.run(dir, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.curseLookup = () -> "0.0.0";
+        }
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: no .autis/version.txt, skipping the update check"), log);
+        check(!log.contains("scheduled post-exit updater"), "does not schedule " + log);
+        check(!log.contains("found"), "does not call it an update " + log);
+        check(Files.readString(dir.resolve("minecraftinstance.json")).equals(json), "missing version does not edit the instance");
+        check(!Files.exists(dir.resolve(".autis/version.txt")), "skip does not invent a version");
+        String blankDir = Files.createTempDirectory("autis-cf-blank").toString();
+        Path blank = Path.of(blankDir);
+        Files.writeString(blank.resolve("minecraftinstance.json"), json);
+        Files.createDirectories(blank.resolve(".autis"));
+        Files.writeString(blank.resolve(".autis/version.txt"), "  \n");
+        Files.createDirectories(blank.resolve("autis"));
+        Files.write(blank.resolve("autis/updater.jar"), new byte[] {1});
+        Setup.curseLookup = () -> {
+            throw new AssertionError("a blank version.txt must not check GitHub");
+        };
+        try {
+            Setup.run(blank, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.curseLookup = () -> "0.0.0";
+        }
+        check(Files.readString(blank.resolve("autis/updater-setup.log")).contains("skipping the update check"), "blank skips");
     }
 
     private static void curseStrip() throws Exception {
@@ -426,7 +465,9 @@ public final class SetupHarness {
     private static void brokenJson() throws Exception {
         Path dir = Files.createTempDirectory("autis-bad");
         Files.writeString(dir.resolve("minecraftinstance.json"), "{");
-        Setup.curseLookup = () -> "0.9.9";
+        Setup.curseLookup = () -> {
+            throw new AssertionError("broken json still has no version and must not check GitHub");
+        };
         try {
             Setup.run(dir, Setup.Phase.LAUNCH);
         } finally {
@@ -434,7 +475,7 @@ public final class SetupHarness {
         }
         String log = Files.readString(dir.resolve("autis/updater-setup.log"));
         check(log.contains("could not be checked for a javaagent"), "bad json is logged " + log);
-        check(log.contains("autis/updater.jar is missing"), "missing updater is logged " + log);
+        check(log.contains("skipping the update check"), "bad json does not become an update " + log);
         check(!log.contains("patched curseforge"), "bad json is not patched");
         check(Files.readString(dir.resolve("minecraftinstance.json")).equals("{"), "bad json not replaced");
         CursePatch.Strip unread = CursePatch.stripInstance("{");
