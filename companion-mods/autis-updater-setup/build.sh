@@ -5,9 +5,10 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-VERSION=1.0.1
+VERSION=1.0.2
 OUT="$REPO/.pakku/client-overrides/mods/autis_updater_setup-${VERSION}.jar"
 rm -f "$REPO/.pakku/client-overrides/mods/autis_updater_setup-1.0.0.jar"
+rm -f "$REPO/.pakku/client-overrides/mods/autis_updater_setup-1.0.1.jar"
 
 if [[ -n "${JAVA_HOME:-}" && -x "$JAVA_HOME/bin/javac" ]]; then
   JAVAC="$JAVA_HOME/bin/javac"
@@ -80,6 +81,8 @@ with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED) as jar:
         "dev/wyseman/autisupdatersetup/SetupMod.class",
         "dev/wyseman/autisupdatersetup/PrismPatch.class",
         "dev/wyseman/autisupdatersetup/CursePatch.class",
+        "dev/wyseman/autisupdatersetup/CurseUpdate.class",
+        "dev/wyseman/autisupdatersetup/CurseNotice.class",
         "dev/wyseman/autisupdatersetup/ModrinthPatch.class",
     ):
         if required not in names:

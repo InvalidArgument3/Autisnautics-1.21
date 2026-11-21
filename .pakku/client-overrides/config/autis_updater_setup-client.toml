@@ -1,4 +1,5 @@
-# Set to false to stop Autis Updater Setup from editing launcher files.
-# The mod does not download or apply a pack update. It only writes the hook
-# the next launch will use.
+# Set to false to stop Autis Updater Setup.
+# Prism and MultiMC: the mod only writes the pre-launch hook.
+# CurseForge: the mod checks for a pack update and, when one exists,
+# runs autis/updater.jar after the game closes.
 enabled = true

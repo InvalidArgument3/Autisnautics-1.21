@@ -12,14 +12,24 @@ public final class SetupHarness {
 
     public static void main(String[] args) throws Exception {
         Setup.allowHelper = false;
+        Setup.curseAsync = false;
+        Setup.curseLookup = () -> "0.0.0";
         prismFresh();
         prismChain();
         prismAlready();
         prismIdempotentFile();
         curseInstance();
+        curseUpToDate();
+        curseUpdateFound();
+        cursePackSource();
+        curseStrip();
+        curseTwoNames();
+        curseLaunchesUpdater();
         curseNullArgs();
         curseMaster();
         windowsPath();
+        versionCompare();
+        windowsJava();
         modrinthArgs();
         modrinthHook();
         modrinthDatabase();
@@ -85,35 +95,182 @@ public final class SetupHarness {
         String json = "{\n  \"name\": \"Autisnautics\",\n  \"javaArgsOverride\": \"-Xmx4G\",\n  \"isUnlocked\": false\n}\n";
         Files.writeString(dir.resolve("minecraftinstance.json"), json);
         Path master = dir.resolve("MinecraftGameInstance.json");
-        String install = dir.toString().replace("\\", "\\\\");
-        if (!install.endsWith("\\")) {
-            // JSON stores the windows trailing separator as \\. On this host the path uses /.
-        }
-        String masterJson = "[{\"installPath\":\"" + jsonEscape(dir.toString() + separator()) + "\",\"javaArgsOverride\":\"-Xmx1G\",\"name\":\"target\"}]";
+        String masterJson = "[{\"installPath\":\"" + jsonEscape(dir.toString() + separator()) + "\",\"javaArgsOverride\":\"-Xmx1G\",\"name\":\"Autisnautics-1.21\"},"
+                + "{\"installPath\":\"" + jsonEscape(dir.toString() + "-other" + separator()) + "\",\"javaArgsOverride\":null,\"name\":\"Autisnautics-1.21\"}]";
         Files.writeString(master, masterJson);
+        Files.createDirectories(dir.resolve(".autis"));
+        Files.writeString(dir.resolve(".autis/version.txt"), "0.1.52");
+        Setup.curseLookup = () -> "0.1.52";
         Setup.testMasters = java.util.List.of(master);
         try {
             Setup.run(dir, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.testMasters = java.util.List.of();
+            Setup.curseLookup = () -> "0.0.0";
+        }
+        check(Files.readString(dir.resolve("minecraftinstance.json")).equals(json), "instance file is not patched");
+        check(Files.readString(master).equals(masterJson), "master file is not patched");
+        check(!Files.exists(dir.resolve("minecraftinstance.json.pre-updater.bak")), "no instance backup");
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: up to date"), "up to date " + log);
+        check(!log.contains("already hooked"), "no false already-hooked " + log);
+        check(!log.contains("patched curseforge"), "no curse patch " + log);
+        check(Files.readString(dir.resolve("logs/latest.log")).contains("[autis_updater_setup] curseforge mode: up to date"), "latest.log");
+    }
+
+    private static void curseUpToDate() {
+        check(CurseUpdate.compareVersions("0.1.52", "0.1.52") <= 0, "same version is current");
+        check(CurseUpdate.compareVersions("0.1.51", "0.1.52") <= 0, "older github tag is current");
+    }
+
+    private static void curseUpdateFound() throws Exception {
+        Path dir = Files.createTempDirectory("autis-cf-update");
+        String json = "{\"name\":\"A\",\"javaArgsOverride\":\"-Xmx4G -javaagent:autis/updater.jar\"}";
+        Files.writeString(dir.resolve("minecraftinstance.json"), json);
+        Files.createDirectories(dir.resolve("autis"));
+        Files.createDirectories(dir.resolve(".autis"));
+        Files.writeString(dir.resolve(".autis/version.txt"), "0.1.52");
+        Files.write(dir.resolve("autis/updater.jar"), new byte[] {1, 2, 3});
+        Setup.curseLookup = () -> "0.9.9";
+        try {
+            Setup.run(dir, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.curseLookup = () -> "0.0.0";
+        }
+        check(Files.readString(dir.resolve("minecraftinstance.json")).equals(json), "launch does not edit the instance");
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: update 0.9.9 found, post-exit updater not scheduled"), "schedules only when the helper is allowed " + log);
+        check(log.contains("curseforge mode: javaagent present, removal waits until the game exits"), "agent noticed " + log);
+        check(log.contains("curseforge mode: updater java "), "java path logged " + log);
+        check(log.contains("curseforge mode: game java "), "game java logged " + log);
+        check(!log.contains("already hooked"), "not the old hook check");
+    }
+
+    private static void cursePackSource() throws Exception {
+        Path dir = Files.createTempDirectory("autis-cf-src");
+        String json = "{\"name\":\"A\",\"javaArgsOverride\":null}";
+        Files.writeString(dir.resolve("minecraftinstance.json"), json);
+        Files.writeString(dir.resolve("pakku.json"), "{}");
+        Setup.curseLookup = () -> {
+            throw new AssertionError("pack source must not check GitHub");
+        };
+        try {
+            Setup.run(dir, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.curseLookup = () -> "0.0.0";
+        }
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: pack source, not checking"), log);
+        check(Files.readString(dir.resolve("minecraftinstance.json")).equals(json), "pack source does not edit");
+    }
+
+    private static void curseStrip() throws Exception {
+        Path dir = Files.createTempDirectory("autis-cf-strip");
+        String json = "{\"name\":\"A\",\"javaArgsOverride\":\"-Xmx4G -javaagent:autis/updater.jar -Dfoo=1\"}";
+        Files.writeString(dir.resolve("minecraftinstance.json"), json);
+        Path master = dir.resolve("MinecraftGameInstance.json");
+        String keep = "{\"installPath\":\"" + jsonEscape("/other/") + "\",\"javaArgsOverride\":\"-javaagent:autis/updater.jar\",\"name\":\"Autisnautics-1.21\"}";
+        String target = "{\"installPath\":\"" + jsonEscape(dir.toString() + separator()) + "\",\"javaArgsOverride\":\"-Xmx1G -javaagent:autis/updater.jar\",\"name\":\"Autisnautics-1.21\"}";
+        String masterJson = "[" + keep + "," + target + "]";
+        Files.writeString(master, masterJson);
+        Setup.testMasters = java.util.List.of(master);
+        try {
+            Setup.curseAfterExit(dir, -1, "/usr/bin/false", "-", true);
         } finally {
             Setup.testMasters = java.util.List.of();
         }
         String instance = Files.readString(dir.resolve("minecraftinstance.json"));
-        check(instance.contains("\"javaArgsOverride\": \"-Xmx4G -javaagent:autis/updater.jar\""), "instance args " + instance);
-        check(instance.contains("\"name\": \"Autisnautics\""), "name kept");
-        check(instance.contains("\"isUnlocked\": false"), "flag kept");
-        byte[] bak = Files.readAllBytes(dir.resolve("minecraftinstance.json.pre-updater.bak"));
-        check(new String(bak, StandardCharsets.UTF_8).equals(json), "backup is the original");
+        check(instance.contains("\"javaArgsOverride\":\"-Xmx4G -Dfoo=1\""), "instance args " + instance);
+        check(!instance.contains("javaagent"), "instance agent gone");
         String store = Files.readString(master);
-        check(store.contains("-Xmx1G -javaagent:autis/updater.jar"), "master args");
-        check(store.contains("\"name\":\"target\""), "master name");
+        check(store.contains("\"javaArgsOverride\":\"-Xmx1G\""), "master target " + store);
+        check(store.contains("\"javaArgsOverride\":\"-javaagent:autis/updater.jar\""), "other instance keeps its agent");
+        check(store.contains("\"name\":\"Autisnautics-1.21\""), "names stay");
+        String only = CursePatch.stripInstance("{\"javaArgsOverride\":\"-javaagent:autis/updater.jar\"}").text;
+        check(only.contains("\"javaArgsOverride\":null"), "sole agent becomes null " + only);
+        String other = CursePatch.stripInstance("{\"javaArgsOverride\":\"-javaagent:other.jar\"}").text;
+        check(other.contains("-javaagent:other.jar"), "a different agent stays");
+        CursePatch.Strip unsafe = CursePatch.stripInstance("{\"javaArgsOverride\":{\"-javaagent:autis/updater.jar\":true}}");
+        check(unsafe.status == CursePatch.Strip.UNSAFE, "nested agent is not edited");
+        check(unsafe.text.contains("{\"-javaagent:autis/updater.jar\":true}"), "unsafe text unchanged");
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: removed javaagent from minecraftinstance.json"), log);
+        check(log.contains("curseforge mode: removed javaagent from MinecraftGameInstance.json"), log);
+    }
+
+    private static void curseTwoNames() throws Exception {
+        String keep = "{\"installPath\":\"Z:\\\\other\\\\\",\"javaArgsOverride\":null,\"name\":\"Autisnautics-1.21\"}";
+        String other = "{\"installPath\":\"Z:\\\\second\\\\\",\"javaArgsOverride\":\"-Xmx2G\",\"name\":\"Autisnautics-1.21\"}";
+        String text = "[" + keep + "," + other + "]";
+        CursePatch.Strip strip = CursePatch.stripMaster(text, "C:\\Games\\Pack");
+        check(strip.status == CursePatch.Strip.ABSENT, "no path match is not a hook");
+        check(strip.text.equals(text), "unmatched master stays byte for byte");
+        Path dir = Files.createTempDirectory("autis-cf-names");
+        Files.writeString(dir.resolve("minecraftinstance.json"), "{\"name\":\"A\",\"javaArgsOverride\":null}");
+        Path master = dir.resolve("MinecraftGameInstance.json");
+        Files.writeString(master, text);
+        Files.createDirectories(dir.resolve(".autis"));
+        Files.writeString(dir.resolve(".autis/version.txt"), "0.1.52");
+        Setup.curseLookup = () -> "0.1.52";
         Setup.testMasters = java.util.List.of(master);
         try {
             Setup.run(dir, Setup.Phase.LAUNCH);
         } finally {
             Setup.testMasters = java.util.List.of();
+            Setup.curseLookup = () -> "0.0.0";
         }
-        check(java.util.Arrays.equals(bak, Files.readAllBytes(dir.resolve("minecraftinstance.json.pre-updater.bak"))), "backup once");
-        check(Files.readString(dir.resolve("autis/updater-setup.log")).contains("curseforge instance already hooked"), "second instance");
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(!log.contains("already hooked"), "two named entries are not already hooked " + log);
+        check(Files.readString(master).equals(text), "launch leaves both entries");
+    }
+
+    private static void curseLaunchesUpdater() throws Exception {
+        Path dir = Files.createTempDirectory("autis-cf-run");
+        Files.createDirectories(dir.resolve("autis"));
+        Files.writeString(dir.resolve("minecraftinstance.json"), "{\"name\":\"A\",\"javaArgsOverride\":null}");
+        Files.write(dir.resolve("autis/updater.jar"), new byte[] {0});
+        Path argv = dir.resolve("autis/argv.txt");
+        Path script = dir.resolve("fake-java.sh");
+        String body = "#!/bin/sh\nprintf '%s\\n' \"$@\" > \"" + argv + "\"\n";
+        Files.writeString(script, body);
+        if (!script.toFile().setExecutable(true)) {
+            throw new AssertionError("script not executable");
+        }
+        Setup.curseAfterExit(dir, -1, script.toString(), "0.9.9", false);
+        String args = Files.readString(argv);
+        check(args.contains("-jar"), args);
+        check(args.contains("updater.jar"), args);
+        check(args.contains("--game-dir"), args);
+        check(args.contains(dir.toString()), args);
+        String log = Files.readString(dir.resolve("autis/updater-setup.log"));
+        check(log.contains("curseforge mode: starting updater for 0.9.9"), log);
+        check(log.contains("java=" + script), log);
+        check(log.contains("curseforge mode: updater exited 0"), log);
+        check(Files.readString(dir.resolve("minecraftinstance.json")).contains("\"javaArgsOverride\":null"), "launch path does not add an agent");
+    }
+
+    private static void versionCompare() {
+        check(CurseUpdate.compareVersions("0.1.10", "0.1.9") > 0, "0.1.10 is newer");
+        check(CurseUpdate.compareVersions("0.1.52", "0.1.52") == 0, "equal");
+        check(CurseUpdate.compareVersions("0.1.52", "0.1.53") < 0, "older");
+        check(CurseUpdate.compareVersions("v0.1.2", "0.1.2") == 0, "v prefix ignored");
+        check(!CurseUpdate.acceptableTag("0.1.52\n"), "tag cannot carry a newline");
+        check(CurseUpdate.acceptableTag("0.1.52"), "plain tag");
+    }
+
+    private static void windowsJava() throws Exception {
+        Path bin = Files.createTempDirectory("autis-java").resolve("bin");
+        Files.createDirectories(bin);
+        Files.write(bin.resolve("java.exe"), new byte[0]);
+        Files.write(bin.resolve("javaw.exe"), new byte[0]);
+        String chosen = CurseUpdate.windowsUpdaterJava(bin.resolve("java.exe").toString());
+        check(chosen.equals(bin.resolve("javaw.exe").toString()), "java.exe swaps to javaw " + chosen);
+        String already = CurseUpdate.windowsUpdaterJava(bin.resolve("javaw.exe").toString());
+        check(already.equals(bin.resolve("javaw.exe").toString()), "javaw stays " + already);
+        check(!CurseUpdate.gameJava().isBlank(), "this process has a java path");
+        if (!System.getProperty("os.name", "").toLowerCase(java.util.Locale.ROOT).contains("win")) {
+            check(CurseUpdate.updaterJava().equals(CurseUpdate.gameJava()), "non-windows uses the game java");
+        }
     }
 
     private static void curseNullArgs() {
@@ -269,10 +426,20 @@ public final class SetupHarness {
     private static void brokenJson() throws Exception {
         Path dir = Files.createTempDirectory("autis-bad");
         Files.writeString(dir.resolve("minecraftinstance.json"), "{");
-        Setup.run(dir, Setup.Phase.LAUNCH);
+        Setup.curseLookup = () -> "0.9.9";
+        try {
+            Setup.run(dir, Setup.Phase.LAUNCH);
+        } finally {
+            Setup.curseLookup = () -> "0.0.0";
+        }
         String log = Files.readString(dir.resolve("autis/updater-setup.log"));
-        check(log.contains("error:"), "bad json is logged " + log);
+        check(log.contains("could not be checked for a javaagent"), "bad json is logged " + log);
+        check(log.contains("autis/updater.jar is missing"), "missing updater is logged " + log);
+        check(!log.contains("patched curseforge"), "bad json is not patched");
         check(Files.readString(dir.resolve("minecraftinstance.json")).equals("{"), "bad json not replaced");
+        CursePatch.Strip unread = CursePatch.stripInstance("{");
+        check(unread.status == CursePatch.Strip.UNREADABLE, "strip refuses a broken object");
+        check(unread.text.equals("{"), "strip leaves a broken object");
     }
 
     private static void atomicLeavesNoTemp() throws Exception {

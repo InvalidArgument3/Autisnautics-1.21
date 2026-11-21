@@ -19,16 +19,21 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Writes the Autisnautics updater into the launcher that started this game.
- * It does not download or apply a pack update.
+ * Wires the Autisnautics updater into the launcher that started this game.
  *
- * <p>Prism Launcher keeps {@code instance.cfg} in memory and writes that copy
- * when the game process exits, which removes a hook written during play. The
- * shutdown hook runs before that save, so it cannot win. A detached helper
- * waits until this JVM is gone and the launcher file has stopped changing,
- * then writes the hook again. The helper is a plain copy of this mod at
- * {@code autis/updater-setup-helper.jar}, because NeoForge's jar filesystem
- * hides the mod's CodeSource from the game.
+ * <p>Prism and MultiMC keep {@code instance.cfg} in memory and write that
+ * copy when the game process exits, which removes a hook written during
+ * play. A detached helper waits until this JVM is gone and the file has
+ * stopped changing, then writes the pre-launch hook again. The helper is a
+ * plain copy of this mod at {@code autis/updater-setup-helper.jar}, because
+ * NeoForge's jar filesystem hides the mod's CodeSource from the game.
+ *
+ * <p>CurseForge does not get a {@code -javaagent} hook. It holds
+ * {@code javaArgsOverride} in memory and writes it back, so that hook never
+ * stuck. CurseForge instead checks the GitHub release the same way
+ * {@code autis/updater.jar} does and, when an update exists, runs that jar
+ * after this process exits. Windows locks open jars, so the updater cannot
+ * start until the game pid is gone.
  */
 public final class Setup {
     static final String LOG_NAME = "updater-setup.log";
@@ -44,6 +49,10 @@ public final class Setup {
     static volatile boolean allowHelper = true;
     /** Tests point this at a fake master store. Production leaves it empty. */
     static volatile java.util.List<java.nio.file.Path> testMasters = java.util.List.of();
+    /** Tests run the CurseForge check inline. Production starts a daemon thread. */
+    static volatile boolean curseAsync = true;
+    /** Tests stub the GitHub tag. Production follows {@code /releases/latest}. */
+    static volatile CurseUpdate.Lookup curseLookup = CurseUpdate::latestTag;
     private static volatile boolean skipRestOfThisProcess;
 
     private Setup() {}
@@ -61,6 +70,10 @@ public final class Setup {
                 reapplyAfterExit(Path.of(args[1]), pid);
                 return;
             }
+            if (args.length >= 6 && "curse-after-exit".equals(args[0])) {
+                curseAfterExit(Path.of(args[1]), Long.parseLong(args[2]), args[3], args[4], "strip".equals(args[5]));
+                return;
+            }
             if (args.length >= 2 && "apply".equals(args[0])) {
                 if (args.length >= 3 && "--no-helper".equals(args[2])) {
                     allowHelper = false;
@@ -68,7 +81,7 @@ public final class Setup {
                 run(Path.of(args[1]), Phase.LAUNCH);
                 return;
             }
-            System.err.println("usage: apply <gameDir> | reapply <gameDir> <pid>");
+            System.err.println("usage: apply <gameDir> | reapply <gameDir> <pid> | curse-after-exit <gameDir> <pid> <java> <version|-> <strip|keep>");
         } catch (Throwable t) {
             System.err.println("autis_updater_setup: " + t);
         }
@@ -160,11 +173,9 @@ public final class Setup {
         Path curse = curseInstance(gameDir);
         if (curse != null) {
             known = true;
-            Path dir = curse.getParent();
-            changed |= writeText(curse, CursePatch.patchInstance(read(curse)), true, gameDir,
-                    phase == Phase.REAPPLY ? "post-exit rewrite curseforge instance" : "patched curseforge instance",
-                    "curseforge instance already hooked");
-            changed |= patchMasters(gameDir, dir == null ? "" : dir.toString(), phase);
+            if (phase == Phase.LAUNCH) {
+                startCurseMode(gameDir, curse);
+            }
         }
         if (prism == null && curse == null) {
             int modrinth = applyModrinth(gameDir, phase);
@@ -202,8 +213,219 @@ public final class Setup {
         return -1;
     }
 
-    private static boolean patchMasters(Path gameDir, String instanceDir, Phase phase) throws IOException {
-        boolean any = false;
+    private static void startCurseMode(Path gameDir, Path curseFile) {
+        try {
+            log(gameDir, "curseforge mode");
+            gameInfo(gameDir, "curseforge mode");
+            boolean strip = agentPresent(gameDir, curseFile);
+            if (strip) {
+                log(gameDir, "curseforge mode: javaagent present, removal waits until the game exits");
+                gameInfo(gameDir, "curseforge mode: javaagent present, removal waits until the game exits");
+            }
+            Runnable job = () -> checkAndSchedule(gameDir, strip);
+            if (!curseAsync) {
+                job.run();
+                return;
+            }
+            Thread thread = new Thread(job, "autis-updater-setup-curse");
+            thread.setDaemon(true);
+            thread.setContextClassLoader(Setup.class.getClassLoader());
+            thread.start();
+        } catch (Throwable t) {
+            log(gameDir, "error: curseforge mode: " + t);
+            gameInfo(gameDir, "curseforge mode failed");
+        }
+    }
+
+    private static boolean agentPresent(Path gameDir, Path curseFile) {
+        boolean present = false;
+        try {
+            CursePatch.Strip strip = CursePatch.stripInstance(read(curseFile));
+            if (strip.status == CursePatch.Strip.UNREADABLE) {
+                log(gameDir, "curseforge mode: minecraftinstance.json could not be checked for a javaagent");
+                gameInfo(gameDir, "curseforge mode: minecraftinstance.json could not be checked for a javaagent");
+            } else if (strip.status == CursePatch.Strip.STRIPPED || strip.status == CursePatch.Strip.UNSAFE) {
+                present = true;
+            }
+        } catch (IOException e) {
+            log(gameDir, "error: curseforge mode: " + e.getMessage());
+        }
+        String dir = curseFile.getParent() == null ? "" : curseFile.getParent().toString();
+        for (Path store : masters()) {
+            if (!Files.isRegularFile(store)) {
+                continue;
+            }
+            try {
+                String text = read(store);
+                if (!CursePatch.masterHasMatch(text, dir)) {
+                    continue;
+                }
+                CursePatch.Strip strip = CursePatch.stripMaster(text, dir);
+                if (strip.status == CursePatch.Strip.STRIPPED || strip.status == CursePatch.Strip.UNSAFE) {
+                    present = true;
+                }
+            } catch (Throwable t) {
+                log(gameDir, "error: curseforge master " + store + ": " + t.getMessage());
+            }
+        }
+        return present;
+    }
+
+    private static void checkAndSchedule(Path gameDir, boolean strip) {
+        try {
+            if (CurseUpdate.isPackSource(gameDir)) {
+                log(gameDir, "curseforge mode: pack source, not checking");
+                gameInfo(gameDir, "curseforge mode: pack source, not checking");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            String installed = CurseUpdate.readTrimmed(gameDir.resolve(".autis").resolve("version.txt"));
+            final String latest;
+            try {
+                latest = curseLookup.latest();
+            } catch (Exception e) {
+                log(gameDir, "curseforge mode: update check failed: " + e.getMessage());
+                gameInfo(gameDir, "curseforge mode: update check failed");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            if (!CurseUpdate.acceptableTag(latest)) {
+                log(gameDir, "curseforge mode: update check failed: no release");
+                gameInfo(gameDir, "curseforge mode: update check failed");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            log(gameDir, "curseforge mode: installed " + shown(installed) + " latest " + latest);
+            gameInfo(gameDir, "curseforge mode: installed " + shown(installed) + " latest " + latest);
+            boolean current;
+            try {
+                current = installed != null && CurseUpdate.compareVersions(latest, installed) <= 0;
+            } catch (RuntimeException e) {
+                log(gameDir, "curseforge mode: update check failed: " + e.getMessage());
+                gameInfo(gameDir, "curseforge mode: update check failed");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            if (current) {
+                log(gameDir, "curseforge mode: up to date");
+                gameInfo(gameDir, "curseforge mode: up to date");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            Path updaterJar = gameDir.resolve("autis").resolve("updater.jar");
+            if (!Files.isRegularFile(updaterJar)) {
+                log(gameDir, "curseforge mode: update " + latest + " found, autis/updater.jar is missing");
+                gameInfo(gameDir, "curseforge mode: update " + latest + " found, autis/updater.jar is missing");
+                scheduleStripOnly(gameDir, strip);
+                return;
+            }
+            String gameJava = CurseUpdate.gameJava();
+            String updaterJava = CurseUpdate.updaterJava();
+            log(gameDir, "curseforge mode: game java " + gameJava);
+            log(gameDir, "curseforge mode: updater java " + updaterJava);
+            gameInfo(gameDir, "curseforge mode: updater java " + updaterJava);
+            if (updaterJava.isBlank()) {
+                log(gameDir, "curseforge mode: update " + latest + " found, no java for the updater");
+                gameInfo(gameDir, "curseforge mode: update " + latest + " found, no java for the updater");
+                return;
+            }
+            if (!allowHelper) {
+                log(gameDir, "curseforge mode: update " + latest + " found, post-exit updater not scheduled");
+                gameInfo(gameDir, "curseforge mode: update " + latest + " found, post-exit updater not scheduled");
+                return;
+            }
+            if (scheduleCurse(gameDir, updaterJava, latest, strip)) {
+                if (!CurseNotice.show(gameDir, latest)) {
+                    log(gameDir, "curseforge mode: in-game notice skipped");
+                    gameInfo(gameDir, "curseforge mode: in-game notice skipped");
+                }
+            }
+        } catch (Throwable t) {
+            log(gameDir, "error: curseforge mode: " + t);
+            gameInfo(gameDir, "curseforge mode failed");
+        }
+    }
+
+    private static void scheduleStripOnly(Path gameDir, boolean strip) {
+        if (!strip) {
+            return;
+        }
+        if (!allowHelper) {
+            log(gameDir, "curseforge mode: javaagent removal not scheduled");
+            gameInfo(gameDir, "curseforge mode: javaagent removal not scheduled");
+            return;
+        }
+        scheduleCurse(gameDir, CurseUpdate.updaterJava(), "-", true);
+    }
+
+    private static boolean scheduleCurse(Path gameDir, String updaterJava, String latest, boolean strip) {
+        Path jar = materializeHelper(gameDir);
+        if (jar == null) {
+            log(gameDir, "curseforge mode: no jar path, post-exit updater not scheduled");
+            gameInfo(gameDir, "curseforge mode: no jar path, post-exit updater not scheduled");
+            return false;
+        }
+        long pid = ProcessHandle.current().pid();
+        List<String> tail = List.of(
+                "-cp", jar.toString(),
+                "dev.wyseman.autisupdatersetup.Setup",
+                "curse-after-exit",
+                gameDir.toString(),
+                Long.toString(pid),
+                updaterJava,
+                latest,
+                strip ? "strip" : "keep");
+        String message = "-".equals(latest)
+                ? "curseforge mode: javaagent removal scheduled after exit"
+                : "curseforge mode: update " + latest + " found, scheduled post-exit updater";
+        return launchDetached(gameDir, updaterJava, tail, message,
+                "curseforge mode: could not schedule the post-exit updater");
+    }
+
+    static void curseAfterExit(Path gameDir, long pid, String updaterJava, String latest, boolean strip) {
+        try {
+            gameDir = gameDir.toAbsolutePath().normalize();
+            if (pid >= 0) {
+                log(gameDir, "curseforge mode: post-exit helper waiting for pid " + pid);
+                if (!waitForExit(pid)) {
+                    log(gameDir, "curseforge mode: post-exit helper gave up; pid " + pid + " still alive");
+                    gameInfo(gameDir, "curseforge mode: post-exit helper gave up");
+                    return;
+                }
+                log(gameDir, "curseforge mode: game pid " + pid + " is gone");
+                waitForQuiet(gameDir);
+            }
+            if (strip) {
+                List<Path> written = stripCurseAgent(gameDir);
+                if (!written.isEmpty() && pid >= 0) {
+                    waitForQuiet(gameDir);
+                    verifyStrip(gameDir, written);
+                }
+            }
+            if (latest != null && !latest.isBlank() && !"-".equals(latest)) {
+                launchUpdater(gameDir, updaterJava, latest);
+            }
+        } catch (Throwable t) {
+            try {
+                log(gameDir, "error: curseforge mode: " + t);
+            } catch (Throwable ignored) {
+                // the game has already exited
+            }
+        }
+    }
+
+    private static List<Path> stripCurseAgent(Path gameDir) throws IOException {
+        List<Path> written = new ArrayList<>();
+        Path curse = curseInstance(gameDir);
+        if (curse == null) {
+            log(gameDir, "curseforge mode: minecraftinstance.json is gone, javaagent not removed");
+            gameInfo(gameDir, "curseforge mode: minecraftinstance.json is gone");
+            return written;
+        }
+        if (applyStrip(gameDir, curse, "minecraftinstance.json", CursePatch.stripInstance(read(curse)))) {
+            written.add(curse);
+        }
+        String dir = curse.getParent() == null ? "" : curse.getParent().toString();
         boolean found = false;
         for (Path store : masters()) {
             if (!Files.isRegularFile(store)) {
@@ -212,21 +434,103 @@ public final class Setup {
             found = true;
             try {
                 String text = read(store);
-                if (!CursePatch.masterHasMatch(text, instanceDir)) {
-                    log(gameDir, "curseforge master store has no matching installPath: " + store);
+                if (!CursePatch.masterHasMatch(text, dir)) {
+                    log(gameDir, "curseforge mode: master has no matching installPath: " + store);
+                    gameInfo(gameDir, "curseforge mode: master has no matching installPath");
                     continue;
                 }
-                any |= writeText(store, CursePatch.patchMaster(text, instanceDir), true, gameDir,
-                        phase == Phase.REAPPLY ? "post-exit rewrite curseforge master " + store : "patched curseforge master " + store,
-                        "curseforge master already hooked " + store);
+                if (applyStrip(gameDir, store, store.getFileName().toString(), CursePatch.stripMaster(text, dir))) {
+                    written.add(store);
+                }
             } catch (Throwable t) {
                 log(gameDir, "error: curseforge master " + store + ": " + t.getMessage());
             }
         }
         if (!found) {
-            log(gameDir, "curseforge master store not found");
+            log(gameDir, "curseforge mode: master store not found");
         }
-        return any;
+        return written;
+    }
+
+    private static boolean applyStrip(Path gameDir, Path file, String label, CursePatch.Strip strip) throws IOException {
+        if (strip.status == CursePatch.Strip.ABSENT) {
+            log(gameDir, "curseforge mode: javaagent not present in " + label);
+            gameInfo(gameDir, "curseforge mode: javaagent not present in " + label);
+            return false;
+        }
+        if (strip.status == CursePatch.Strip.UNREADABLE) {
+            log(gameDir, "curseforge mode: " + label + " left unchanged; it is not json we can edit safely");
+            gameInfo(gameDir, "curseforge mode: " + label + " left unchanged");
+            return false;
+        }
+        if (strip.status == CursePatch.Strip.UNSAFE) {
+            log(gameDir, "curseforge mode: javaagent left in " + label + "; javaArgsOverride is not a plain string");
+            gameInfo(gameDir, "curseforge mode: javaagent left in " + label);
+            return false;
+        }
+        AtomicFiles.backupOnce(file);
+        AtomicFiles.write(file, strip.text.getBytes(StandardCharsets.UTF_8));
+        log(gameDir, "curseforge mode: removed javaagent from " + label);
+        gameInfo(gameDir, "curseforge mode: removed javaagent from " + label);
+        return true;
+    }
+
+    private static void verifyStrip(Path gameDir, List<Path> written) {
+        Path curse = curseInstance(gameDir);
+        String dir = curse == null || curse.getParent() == null ? "" : curse.getParent().toString();
+        for (Path file : written) {
+            String label = file.getFileName().toString();
+            try {
+                String text = read(file);
+                boolean instance = curse != null && file.toAbsolutePath().normalize().equals(curse.toAbsolutePath().normalize());
+                CursePatch.Strip again = instance
+                        ? CursePatch.stripInstance(text)
+                        : CursePatch.stripMaster(text, dir);
+                if (again.status == CursePatch.Strip.STRIPPED || again.status == CursePatch.Strip.UNSAFE) {
+                    log(gameDir, "curseforge mode: javaagent came back in " + label);
+                    gameInfo(gameDir, "curseforge mode: javaagent came back in " + label);
+                } else {
+                    log(gameDir, "curseforge mode: javaagent removal held in " + label);
+                    gameInfo(gameDir, "curseforge mode: javaagent removal held in " + label);
+                }
+            } catch (IOException e) {
+                log(gameDir, "error: curseforge mode: " + e.getMessage());
+            }
+        }
+    }
+
+    private static void launchUpdater(Path gameDir, String updaterJava, String latest) throws IOException, InterruptedException {
+        Path jar = gameDir.resolve("autis").resolve("updater.jar");
+        if (!Files.isRegularFile(jar)) {
+            log(gameDir, "curseforge mode: autis/updater.jar is missing, updater not started");
+            gameInfo(gameDir, "curseforge mode: autis/updater.jar is missing");
+            return;
+        }
+        if (updaterJava == null || updaterJava.isBlank()) {
+            log(gameDir, "curseforge mode: no java for the updater");
+            gameInfo(gameDir, "curseforge mode: no java for the updater");
+            return;
+        }
+        log(gameDir, "curseforge mode: starting updater for " + latest + " java=" + updaterJava + " jar=" + jar);
+        gameInfo(gameDir, "curseforge mode: starting updater for " + latest);
+        Path out = gameDir.resolve("autis").resolve("updater-launch.log");
+        Files.createDirectories(out.getParent());
+        if (!Files.exists(out)) {
+            Files.writeString(out, "");
+        }
+        Process process = new ProcessBuilder(updaterJava, "-jar", jar.toString(), "--game-dir", gameDir.toString())
+                .directory(gameDir.toFile())
+                .redirectInput(ProcessBuilder.Redirect.from((isWindows() ? Path.of("NUL") : Path.of("/dev/null")).toFile()))
+                .redirectOutput(ProcessBuilder.Redirect.appendTo(out.toFile()))
+                .redirectError(ProcessBuilder.Redirect.appendTo(out.toFile()))
+                .start();
+        int code = process.waitFor();
+        log(gameDir, "curseforge mode: updater exited " + code);
+        gameInfo(gameDir, "curseforge mode: updater exited " + code);
+    }
+
+    private static String shown(String version) {
+        return version == null || version.isBlank() ? "unknown" : version;
     }
 
     private static boolean writeText(Path file, String next, boolean backup, Path gameDir, String changedMsg, String sameMsg)
@@ -383,6 +687,10 @@ public final class Setup {
                 "-cp", jar.toString(),
                 "dev.wyseman.autisupdatersetup.Setup",
                 "reapply", gameDir.toString(), Long.toString(pid));
+        launchDetached(gameDir, java, tail, "scheduled post-exit rewrite", "could not schedule post-exit rewrite");
+    }
+
+    private static boolean launchDetached(Path gameDir, String java, List<String> tail, String scheduledMsg, String failureMsg) {
         List<String> cmd = new ArrayList<>();
         if (isWindows()) {
             // start is a cmd builtin. One command line, so a Java path with spaces stays quoted.
@@ -415,11 +723,13 @@ public final class Setup {
             pb.start();
             String where = Files.isRegularFile(Path.of("/.flatpak-info"))
                     ? " (flatpak sandbox, detached inside it)" : "";
-            log(gameDir, "scheduled post-exit rewrite" + where + " java=" + java);
-            gameInfo(gameDir, "scheduled post-exit rewrite");
+            log(gameDir, scheduledMsg + where + " java=" + java);
+            gameInfo(gameDir, scheduledMsg);
+            return true;
         } catch (IOException e) {
-            log(gameDir, "error: could not schedule post-exit rewrite: " + e.getMessage());
-            gameInfo(gameDir, "could not schedule post-exit rewrite");
+            log(gameDir, "error: " + failureMsg + ": " + e.getMessage());
+            gameInfo(gameDir, failureMsg);
+            return false;
         }
     }
 
@@ -594,7 +904,8 @@ public final class Setup {
     private static boolean writeHelperFromClasses(Path dest) throws IOException {
         String[] names = {
                 "Setup.class", "Setup$Phase.class",
-                "PrismPatch.class", "CursePatch.class", "ModrinthPatch.class",
+                "PrismPatch.class", "CursePatch.class", "CursePatch$Strip.class",
+                "CurseUpdate.class", "CurseUpdate$Lookup.class", "CurseNotice.class", "ModrinthPatch.class",
                 "AtomicFiles.class", "JsonText.class", "JsonText$Span.class", "JsonText$Cursor.class"
         };
         byte[][] bytes = new byte[names.length][];
@@ -822,7 +1133,7 @@ public final class Setup {
         return "\"" + value.replace("\"", "\\\"") + "\"";
     }
 
-    private static void gameInfo(Path gameDir, String message) {
+    static void gameInfo(Path gameDir, String message) {
         String line = "[autis_updater_setup] " + message;
         if (log4jInfo(line)) {
             return;
