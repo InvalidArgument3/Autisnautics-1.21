@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Build the client-only updater setup mod into the pack override.
+# Build the client-only updater setup mod. client-overrides is not copied
+# into the server pack; overrides/mods is.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
 VERSION=1.0.0
-OUT="$REPO/.pakku/overrides/mods/autis_updater_setup-${VERSION}.jar"
+OUT="$REPO/.pakku/client-overrides/mods/autis_updater_setup-${VERSION}.jar"
 
 if [[ -n "${JAVA_HOME:-}" && -x "$JAVA_HOME/bin/javac" ]]; then
   JAVAC="$JAVA_HOME/bin/javac"
@@ -91,6 +92,8 @@ with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED) as jar:
         raise SystemExit("toml version or client side is wrong")
     if toml.count('side = "CLIENT"') < 2:
         raise SystemExit("minecraft and neoforge must both be client-only")
+    if 'displayTest = "IGNORE_SERVER_VERSION"' not in toml:
+        raise SystemExit("displayTest must not require the mod on the server")
 print("wrote", out, "entries", len(names))
 PY
 

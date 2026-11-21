@@ -8,7 +8,7 @@ version = "1.0.0"
 displayName = "Autis Updater Setup"
 authors = "Autisnautics"
 description = '''Writes the Autisnautics updater into Prism, MultiMC, or CurseForge so the next launch runs it. It does not download or apply an update. Client only.'''
-displayTest = "IGNORE_ALL_VERSION"
+displayTest = "IGNORE_SERVER_VERSION"
 
 [[dependencies.autis_updater_setup]]
 modId = "minecraft"
