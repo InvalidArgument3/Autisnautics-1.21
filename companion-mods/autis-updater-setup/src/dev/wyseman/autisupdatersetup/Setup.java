@@ -1,7 +1,10 @@
 package dev.wyseman.autisupdatersetup;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.management.ManagementFactory;
+import java.net.URI;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,24 +12,33 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 /**
  * Writes the Autisnautics updater into the launcher that started this game.
  * It does not download or apply a pack update.
  *
- * <p>Prism Launcher rewrites {@code instance.cfg} from memory when the game
- * process exits, to store play time. A change made during play is lost unless
- * it is written again after that save. CurseForge can do the same with
- * {@code minecraftinstance.json}. The in-game pass writes immediately, the
- * shutdown hook writes once more, and a detached helper waits until this JVM
- * is gone and the launcher's save has gone quiet, then writes again.
+ * <p>Prism Launcher keeps {@code instance.cfg} in memory and writes that copy
+ * when the game process exits, which removes a hook written during play. The
+ * shutdown hook runs before that save, so it cannot win. A detached helper
+ * waits until this JVM is gone and the launcher file has stopped changing,
+ * then writes the hook again. The helper is a plain copy of this mod at
+ * {@code autis/updater-setup-helper.jar}, because NeoForge's jar filesystem
+ * hides the mod's CodeSource from the game.
  */
 public final class Setup {
     static final String LOG_NAME = "updater-setup.log";
     private static final String STATE_NAME = "updater-setup.state";
+    private static final String HELPER_NAME = "updater-setup-helper.jar";
     private static final Duration PRELAUNCH_WINDOW = Duration.ofMinutes(15);
+    /** Prism's exit save lands within about 50 ms. Keep watching longer than that. */
+    private static final Duration QUIET_MAX = Duration.ofSeconds(30);
+    private static final Duration QUIET_STABLE = Duration.ofSeconds(1);
+    private static final long QUIET_POLL_MS = 50L;
 
     /** Tests set this false so a launch does not spawn a helper process. */
     static volatile boolean allowHelper = true;
@@ -67,6 +79,10 @@ public final class Setup {
             gameDir = gameDir.toAbsolutePath().normalize();
             if (phase == Phase.LAUNCH) {
                 skipRestOfThisProcess = false;
+                // Pending means the previous session's write was not confirmed.
+                // Log it before any skip, or a launch that leaves the files alone
+                // never says whether Prism kept the hook.
+                reportPreviousWrite(gameDir);
             }
             if (phase == Phase.SHUTDOWN && skipRestOfThisProcess) {
                 log(gameDir, "shutdown skipped; this launch left the launcher files alone");
@@ -83,9 +99,6 @@ public final class Setup {
                 log(gameDir, "updater already ran this launch; leaving launcher files alone");
                 skipRestOfThisProcess = true;
                 return;
-            }
-            if (phase == Phase.LAUNCH) {
-                reportPreviousWrite(gameDir);
             }
             boolean changed = apply(gameDir, phase);
             if (changed) {
@@ -117,6 +130,14 @@ public final class Setup {
                 waitForQuiet(gameDir);
             }
             run(gameDir, Phase.REAPPLY);
+            if (watched(gameDir).isEmpty()) {
+                return;
+            }
+            if (hookPresent(gameDir)) {
+                log(gameDir, "post-exit rewrite verified");
+            } else {
+                log(gameDir, "post-exit rewrite did not stick");
+            }
         } catch (Throwable t) {
             try {
                 log(gameDir, "error: " + t);
@@ -149,6 +170,7 @@ public final class Setup {
             int modrinth = applyModrinth(gameDir, phase);
             if (modrinth < 0 && !known) {
                 log(gameDir, "unsupported launcher");
+                gameInfo(gameDir, "unsupported launcher");
             }
             changed |= modrinth > 0;
         }
@@ -164,6 +186,7 @@ public final class Setup {
                 String patched = ModrinthPatch.patch(text);
                 if (patched == null) {
                     log(gameDir, "unsupported launcher; modrinth profile.json has no hook or jvm args field");
+                    gameInfo(gameDir, "unsupported launcher");
                     return 0;
                 }
                 return writeText(profile, patched, true, gameDir,
@@ -173,6 +196,7 @@ public final class Setup {
         }
         if (ModrinthPatch.looksLikeAppPath(gameDir.toString())) {
             log(gameDir, "unsupported launcher; modrinth app keeps override_hook_pre_launch in its database");
+            gameInfo(gameDir, "unsupported launcher");
             return 0;
         }
         return -1;
@@ -210,6 +234,7 @@ public final class Setup {
         String current = read(file);
         if (current.equals(next)) {
             log(gameDir, sameMsg);
+            gameInfo(gameDir, sameMsg);
             return false;
         }
         if (backup) {
@@ -217,6 +242,7 @@ public final class Setup {
         }
         AtomicFiles.write(file, next.getBytes(StandardCharsets.UTF_8));
         log(gameDir, changedMsg);
+        gameInfo(gameDir, changedMsg);
         return true;
     }
 
@@ -317,8 +343,10 @@ public final class Setup {
         }
         if (hookPresent(gameDir)) {
             log(gameDir, "previous write stuck");
+            gameInfo(gameDir, "previous write stuck");
         } else {
             log(gameDir, "previous write was overwritten");
+            gameInfo(gameDir, "previous write was overwritten");
         }
     }
 
@@ -343,50 +371,256 @@ public final class Setup {
     }
 
     private static void scheduleHelper(Path gameDir) {
-        Path jar = selfJar();
+        Path jar = materializeHelper(gameDir);
         if (jar == null) {
             log(gameDir, "no jar path, skipping the post-exit rewrite");
+            gameInfo(gameDir, "no jar path, skipping the post-exit rewrite");
             return;
         }
-        String java = javaBinary();
+        String java = javaCommand();
         long pid = ProcessHandle.current().pid();
+        List<String> tail = List.of(
+                "-cp", jar.toString(),
+                "dev.wyseman.autisupdatersetup.Setup",
+                "reapply", gameDir.toString(), Long.toString(pid));
         List<String> cmd = new ArrayList<>();
-        if (!isWindows() && Files.isExecutable(Path.of("/usr/bin/setsid"))) {
-            cmd.add("/usr/bin/setsid");
+        if (isWindows()) {
+            // start is a cmd builtin. One command line, so a Java path with spaces stays quoted.
+            cmd.add("cmd.exe");
+            cmd.add("/c");
+            cmd.add("start \"autis-updater-setup\" /b " + quote(java) + " " + joinQuoted(tail));
+        } else {
+            Path setsid = executable("/usr/bin/setsid", "/bin/setsid");
+            Path nohup = executable("/usr/bin/nohup", "/bin/nohup");
+            if (setsid != null) {
+                cmd.add(setsid.toString());
+            }
+            if (nohup != null) {
+                cmd.add(nohup.toString());
+            }
+            cmd.add(java);
+            cmd.addAll(tail);
         }
-        cmd.add(java);
-        cmd.add("-cp");
-        cmd.add(jar.toString());
-        cmd.add("dev.wyseman.autisupdatersetup.Setup");
-        cmd.add("reapply");
-        cmd.add(gameDir.toString());
-        cmd.add(Long.toString(pid));
         try {
             ProcessBuilder pb = new ProcessBuilder(cmd);
-            pb.redirectOutput(ProcessBuilder.Redirect.DISCARD);
-            pb.redirectError(ProcessBuilder.Redirect.DISCARD);
-            pb.redirectInput(ProcessBuilder.Redirect.PIPE);
+            Path err = gameDir.resolve("autis").resolve("updater-setup-helper.err");
+            Files.createDirectories(err.getParent());
+            if (!Files.exists(err)) {
+                Files.writeString(err, "");
+            }
+            Path devNull = isWindows() ? Path.of("NUL") : Path.of("/dev/null");
+            pb.redirectInput(ProcessBuilder.Redirect.from(devNull.toFile()));
+            pb.redirectOutput(ProcessBuilder.Redirect.appendTo(err.toFile()));
+            pb.redirectError(ProcessBuilder.Redirect.appendTo(err.toFile()));
             pb.start();
-            log(gameDir, "scheduled post-exit rewrite");
+            String where = Files.isRegularFile(Path.of("/.flatpak-info"))
+                    ? " (flatpak sandbox, detached inside it)" : "";
+            log(gameDir, "scheduled post-exit rewrite" + where + " java=" + java);
+            gameInfo(gameDir, "scheduled post-exit rewrite");
         } catch (IOException e) {
             log(gameDir, "error: could not schedule post-exit rewrite: " + e.getMessage());
+            gameInfo(gameDir, "could not schedule post-exit rewrite");
         }
     }
 
-    static Path selfJar() {
+    /**
+     * A plain jar the helper JVM can open. NeoForge serves this mod from a
+     * union filesystem, so {@code CodeSource} is not a file path.
+     */
+    static Path materializeHelper(Path gameDir) {
         try {
-            var url = Setup.class.getProtectionDomain().getCodeSource().getLocation();
-            if (url == null) {
+            Path dir = gameDir.resolve("autis");
+            Files.createDirectories(dir);
+            Path dest = dir.resolve(HELPER_NAME);
+            Path source = locateModJar(gameDir);
+            if (source != null) {
+                copyJar(source, dest);
+                log(gameDir, "helper jar copied from " + source);
+                return dest;
+            }
+            if (writeHelperFromClasses(dest)) {
+                log(gameDir, "helper jar built from loaded classes");
+                return dest;
+            }
+        } catch (IOException e) {
+            log(gameDir, "error: cannot write helper jar: " + e.getMessage());
+            try {
+                Path alt = gameDir.resolve("autis").resolve(
+                        "updater-setup-helper-" + ProcessHandle.current().pid() + ".jar");
+                Path source = locateModJar(gameDir);
+                if (source != null) {
+                    copyJar(source, alt);
+                    return alt;
+                }
+                if (writeHelperFromClasses(alt)) {
+                    return alt;
+                }
+            } catch (IOException ignored) {
+                // logged above
+            }
+        }
+        return null;
+    }
+
+    static Path locateModJar(Path gameDir) {
+        Path fromResource = jarFromOwnClass();
+        if (isJarFile(fromResource)) {
+            return fromResource;
+        }
+        Path fromCode = codeSourceJar();
+        if (isJarFile(fromCode)) {
+            return fromCode;
+        }
+        Path fromModList = modListJar();
+        if (isJarFile(fromModList)) {
+            return fromModList;
+        }
+        return scanModsDir(gameDir);
+    }
+
+    private static Path jarFromOwnClass() {
+        URL url = Setup.class.getResource("Setup.class");
+        if (url == null) {
+            return null;
+        }
+        String text = url.toString();
+        if (!text.startsWith("jar:")) {
+            return null;
+        }
+        int bang = text.indexOf("!/");
+        if (bang < 0) {
+            return null;
+        }
+        try {
+            return Path.of(URI.create(text.substring("jar:".length(), bang)));
+        } catch (RuntimeException e) {
+            return null;
+        }
+    }
+
+    private static Path codeSourceJar() {
+        try {
+            var source = Setup.class.getProtectionDomain().getCodeSource();
+            if (source == null || source.getLocation() == null) {
                 return null;
             }
-            Path path = Path.of(url.toURI());
-            if (Files.isRegularFile(path) && path.getFileName().toString().endsWith(".jar")) {
-                return path;
-            }
+            return Path.of(source.getLocation().toURI());
         } catch (Throwable ignored) {
             return null;
         }
+    }
+
+    /** {@code ModList.get().getModFileById(id)} then {@code getFile().getFilePath()}. */
+    private static Path modListJar() {
+        try {
+            Class<?> modList = Class.forName("net.neoforged.fml.ModList");
+            Object list = modList.getMethod("get").invoke(null);
+            Object info = modList.getMethod("getModFileById", String.class).invoke(list, "autis_updater_setup");
+            return findPath(info, 0);
+        } catch (Throwable ignored) {
+            return null;
+        }
+    }
+
+    private static Path findPath(Object value, int depth) {
+        if (value == null || depth > 4) {
+            return null;
+        }
+        if (value instanceof Path path) {
+            return path;
+        }
+        for (String name : List.of("getFilePath", "getFile", "getSecureJar", "getPrimaryPath", "toPath")) {
+            try {
+                Object next = value.getClass().getMethod(name).invoke(value);
+                Path found = findPath(next, depth + 1);
+                if (isJarFile(found)) {
+                    return found;
+                }
+            } catch (ReflectiveOperationException ignored) {
+                // this object does not have that method
+            }
+        }
         return null;
+    }
+
+    private static Path scanModsDir(Path gameDir) {
+        List<Path> dirs = new ArrayList<>();
+        try {
+            Class<?> paths = Class.forName("net.neoforged.fml.loading.FMLPaths");
+            Object mods = paths.getField("MODSDIR").get(null);
+            Object path = mods.getClass().getMethod("get").invoke(mods);
+            if (path instanceof Path p) {
+                dirs.add(p);
+            }
+        } catch (Throwable ignored) {
+            // the game dir's mods folder is the same place for these launchers
+        }
+        dirs.add(gameDir.resolve("mods"));
+        for (Path dir : dirs) {
+            if (!Files.isDirectory(dir)) {
+                continue;
+            }
+            try (var stream = Files.list(dir)) {
+                Optional<Path> hit = stream
+                        .filter(p -> {
+                            String name = p.getFileName().toString();
+                            return name.startsWith("autis_updater_setup") && name.endsWith(".jar");
+                        })
+                        .filter(Files::isRegularFile)
+                        .sorted()
+                        .findFirst();
+                if (hit.isPresent()) {
+                    return hit.get();
+                }
+            } catch (IOException ignored) {
+                // try the next directory
+            }
+        }
+        return null;
+    }
+
+    private static boolean isJarFile(Path path) {
+        return path != null && Files.isRegularFile(path) && path.getFileName().toString().endsWith(".jar");
+    }
+
+    private static void copyJar(Path source, Path dest) throws IOException {
+        if (source.toAbsolutePath().normalize().equals(dest.toAbsolutePath().normalize())) {
+            return;
+        }
+        Files.createDirectories(dest.getParent());
+        Files.copy(source, dest, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+    }
+
+    private static boolean writeHelperFromClasses(Path dest) throws IOException {
+        String[] names = {
+                "Setup.class", "Setup$Phase.class",
+                "PrismPatch.class", "CursePatch.class", "ModrinthPatch.class",
+                "AtomicFiles.class", "JsonText.class", "JsonText$Span.class", "JsonText$Cursor.class"
+        };
+        byte[][] bytes = new byte[names.length][];
+        for (int i = 0; i < names.length; i++) {
+            try (InputStream in = Setup.class.getResourceAsStream(names[i])) {
+                if (in == null) {
+                    return false;
+                }
+                bytes[i] = in.readAllBytes();
+            }
+        }
+        Files.createDirectories(dest.getParent());
+        Path tmp = dest.resolveSibling(dest.getFileName().toString() + ".autis-tmp");
+        try (ZipOutputStream zip = new ZipOutputStream(Files.newOutputStream(tmp))) {
+            for (int i = 0; i < names.length; i++) {
+                zip.putNextEntry(new ZipEntry("dev/wyseman/autisupdatersetup/" + names[i]));
+                zip.write(bytes[i]);
+                zip.closeEntry();
+            }
+        }
+        try {
+            Files.move(tmp, dest, java.nio.file.StandardCopyOption.REPLACE_EXISTING, java.nio.file.StandardCopyOption.ATOMIC_MOVE);
+        } catch (IOException e) {
+            Files.move(tmp, dest, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+        }
+        return true;
     }
 
     private static List<Path> masters() {
@@ -405,7 +639,7 @@ public final class Setup {
             if (handle.isEmpty() || !handle.get().isAlive()) {
                 return true;
             }
-            Thread.sleep(500L);
+            Thread.sleep(100L);
         }
         Optional<ProcessHandle> handle = ProcessHandle.of(pid);
         return handle.isEmpty() || !handle.get().isAlive();
@@ -413,27 +647,27 @@ public final class Setup {
 
     /**
      * After this process dies, Prism or CurseForge may still be writing the
-     * file from the copy it held in memory. Wait until those files stop
-     * changing, then let the caller write.
+     * file from the copy it held in memory. Prism's save is about 50 ms after
+     * exit. Wait until those files stop changing, up to 30 seconds.
      */
     private static void waitForQuiet(Path gameDir) throws InterruptedException {
         List<Path> files = watched(gameDir);
         long death = System.nanoTime();
-        long deadline = death + Duration.ofSeconds(8).toNanos();
+        long deadline = death + QUIET_MAX.toNanos();
         long stableSince = death;
         String sig = signature(files);
         while (System.nanoTime() < deadline) {
-            Thread.sleep(250L);
+            Thread.sleep(QUIET_POLL_MS);
             String now = signature(files);
             if (!now.equals(sig)) {
                 sig = now;
                 stableSince = System.nanoTime();
                 log(gameDir, "launcher rewrote a watched file after exit");
-            } else if (System.nanoTime() - stableSince >= Duration.ofSeconds(1).toNanos()
-                    && System.nanoTime() - death >= Duration.ofSeconds(1).toNanos()) {
+            } else if (System.nanoTime() - stableSince >= QUIET_STABLE.toNanos()) {
                 return;
             }
         }
+        log(gameDir, "launcher files were still changing after " + QUIET_MAX.toSeconds() + "s; patching anyway");
     }
 
     private static List<Path> watched(Path gameDir) {
@@ -469,8 +703,14 @@ public final class Setup {
         StringBuilder out = new StringBuilder();
         for (Path file : files) {
             try {
+                long size = Files.size(file);
                 out.append(file).append('=').append(Files.getLastModifiedTime(file).toMillis())
-                        .append(':').append(Files.size(file)).append(';');
+                        .append(':').append(size);
+                // instance.cfg is small, and a same-second rewrite can keep the old mtime.
+                if (size <= 1_000_000L) {
+                    out.append(':').append(Arrays.hashCode(Files.readAllBytes(file)));
+                }
+                out.append(';');
             } catch (IOException e) {
                 out.append(file).append("=missing;");
             }
@@ -536,9 +776,77 @@ public final class Setup {
         }
     }
 
+    /** The Java that launched the game, so the helper uses the same runtime Flatpak exposed. */
+    private static String javaCommand() {
+        try {
+            Optional<String> command = ProcessHandle.current().info().command();
+            if (command.isPresent() && !command.get().isBlank()) {
+                return command.get();
+            }
+        } catch (Throwable ignored) {
+            // fall through to java.home
+        }
+        return javaBinary();
+    }
+
     private static String javaBinary() {
         String name = isWindows() ? "java.exe" : "java";
         return Path.of(System.getProperty("java.home"), "bin", name).toString();
+    }
+
+    private static Path executable(String... candidates) {
+        for (String candidate : candidates) {
+            Path path = Path.of(candidate);
+            if (Files.isExecutable(path)) {
+                return path;
+            }
+        }
+        return null;
+    }
+
+    private static String joinQuoted(List<String> args) {
+        StringBuilder out = new StringBuilder();
+        for (String arg : args) {
+            if (!out.isEmpty()) {
+                out.append(' ');
+            }
+            out.append(quote(arg));
+        }
+        return out.toString();
+    }
+
+    private static String quote(String value) {
+        if (value.indexOf(' ') < 0 && value.indexOf('"') < 0) {
+            return value;
+        }
+        return "\"" + value.replace("\"", "\\\"") + "\"";
+    }
+
+    private static void gameInfo(Path gameDir, String message) {
+        String line = "[autis_updater_setup] " + message;
+        if (log4jInfo(line)) {
+            return;
+        }
+        try {
+            Path latest = gameDir.resolve("logs").resolve("latest.log");
+            Files.createDirectories(latest.getParent());
+            String row = Instant.now().truncatedTo(ChronoUnit.SECONDS) + " INFO " + line + System.lineSeparator();
+            Files.writeString(latest, row, StandardCharsets.UTF_8,
+                    java.nio.file.StandardOpenOption.CREATE, java.nio.file.StandardOpenOption.APPEND);
+        } catch (Throwable ignored) {
+            // the setup log already has the line
+        }
+    }
+
+    private static boolean log4jInfo(String line) {
+        try {
+            Class<?> manager = Class.forName("org.apache.logging.log4j.LogManager");
+            Object logger = manager.getMethod("getLogger", String.class).invoke(null, "autis_updater_setup");
+            logger.getClass().getMethod("info", String.class).invoke(logger, line);
+            return true;
+        } catch (Throwable ignored) {
+            return false;
+        }
     }
 
     private static boolean isWindows() {

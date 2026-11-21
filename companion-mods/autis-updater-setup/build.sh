@@ -5,8 +5,9 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$ROOT/../.." && pwd)"
-VERSION=1.0.0
+VERSION=1.0.1
 OUT="$REPO/.pakku/client-overrides/mods/autis_updater_setup-${VERSION}.jar"
+rm -f "$REPO/.pakku/client-overrides/mods/autis_updater_setup-1.0.0.jar"
 
 if [[ -n "${JAVA_HOME:-}" && -x "$JAVA_HOME/bin/javac" ]]; then
   JAVAC="$JAVA_HOME/bin/javac"
@@ -44,7 +45,8 @@ EOF
 find "$ROOT/src/dev" -name '*.java' ! -name 'SetupMod.java' > "$WORK/sources.list"
 "$JAVAC" --release 21 -encoding UTF-8 -proc:none -d "$WORK/classes" @"$WORK/sources.list"
 "$JAVAC" --release 21 -encoding UTF-8 -proc:none -cp "$WORK/classes" -d "$WORK/test" \
-  "$ROOT/src/test/dev/wyseman/autisupdatersetup/SetupHarness.java"
+  "$ROOT/src/test/dev/wyseman/autisupdatersetup/SetupHarness.java" \
+  "$ROOT/src/test/dev/wyseman/autisupdatersetup/ExitRewriteHarness.java"
 "$JAVA" -cp "$WORK/classes:$WORK/test" dev.wyseman.autisupdatersetup.SetupHarness
 
 "$JAVAC" --release 21 -encoding UTF-8 -proc:none -cp "$WORK/classes:$WORK/stub" -d "$WORK/classes" \
@@ -104,6 +106,11 @@ printf '%s\n' '[General]' 'InstanceType=OneSix' 'name=Sanity' > "$SANITY/instanc
 "$JAVA" -cp "$OUT" dev.wyseman.autisupdatersetup.Setup apply "$SANITY/instance/minecraft" --no-helper
 grep -q 'autis/updater.jar' "$SANITY/instance/instance.cfg"
 grep -q 'patched prism' "$SANITY/instance/minecraft/autis/updater-setup.log"
+grep -q '\[autis_updater_setup\] patched prism' "$SANITY/instance/minecraft/logs/latest.log"
 rm -rf "$SANITY"
+
+# A second process restores the pre-launch instance.cfg the moment the game JVM
+# exits, which is what Prism does from the copy it held in memory.
+"$JAVA" -cp "$WORK/test:$OUT" dev.wyseman.autisupdatersetup.ExitRewriteHarness "$OUT"
 
 sha1sum "$OUT"

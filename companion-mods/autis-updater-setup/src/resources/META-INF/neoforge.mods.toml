@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "autis_updater_setup"
-version = "1.0.0"
+version = "1.0.1"
 displayName = "Autis Updater Setup"
 authors = "Autisnautics"
 description = '''Writes the Autisnautics updater into Prism, MultiMC, or CurseForge so the next launch runs it. It does not download or apply an update. Client only.'''

@@ -27,6 +27,8 @@ public final class SetupHarness {
         alreadyRan();
         previousStuck();
         previousOverwritten();
+        previousPendingDespiteAgent();
+        helperJarFromClasses();
         brokenJson();
         atomicLeavesNoTemp();
         System.out.println("ok " + checks);
@@ -238,6 +240,30 @@ public final class SetupHarness {
         String log = Files.readString(mc.resolve("autis/updater-setup.log"));
         check(log.contains("previous write was overwritten"), "overwritten");
         check(Files.readString(root.resolve("instance.cfg")).contains("autis/updater.jar"), "rewritten");
+    }
+
+    private static void previousPendingDespiteAgent() throws Exception {
+        Path root = Files.createTempDirectory("autis-pending-agent");
+        Path mc = root.resolve("minecraft");
+        Files.createDirectories(mc.resolve("autis"));
+        Files.writeString(root.resolve("instance.cfg"), "[General]\nInstanceType=OneSix\n");
+        Files.writeString(mc.resolve("autis/updater-setup.state"), "pending");
+        String stamp = Instant.now().truncatedTo(ChronoUnit.SECONDS).toString();
+        Files.writeString(mc.resolve("autis/updater.log"), stamp + " mode=agent installed=0.1.51 latest=0.1.51 result=up-to-date\n");
+        Setup.run(mc, Setup.Phase.LAUNCH);
+        String log = Files.readString(mc.resolve("autis/updater-setup.log"));
+        check(log.contains("previous write was overwritten"), "pending survives an agent skip " + log);
+        check(Files.readString(root.resolve("instance.cfg")).equals("[General]\nInstanceType=OneSix\n"), "agent skip still does not write");
+    }
+
+    private static void helperJarFromClasses() throws Exception {
+        Path root = Files.createTempDirectory("autis-helper-classes");
+        Path mc = root.resolve("minecraft");
+        Files.createDirectories(mc);
+        Files.writeString(root.resolve("instance.cfg"), "[General]\nInstanceType=OneSix\n");
+        Path helper = Setup.materializeHelper(mc);
+        check(helper != null && Files.isRegularFile(helper), "helper jar exists");
+        check(Files.readString(mc.resolve("autis/updater-setup.log")).contains("helper jar built from loaded classes"), "built from classes");
     }
 
     private static void brokenJson() throws Exception {
