@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "autis_updater_setup"
+version = "1.0.0"
+displayName = "Autis Updater Setup"
+authors = "Autisnautics"
+description = '''Writes the Autisnautics updater into Prism, MultiMC, or CurseForge so the next launch runs it. It does not download or apply an update. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[dependencies.autis_updater_setup]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.autis_updater_setup]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,21.2)"
+ordering = "NONE"
+side = "CLIENT"

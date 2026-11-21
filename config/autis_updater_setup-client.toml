@@ -1,0 +1,4 @@
+# Set to false to stop Autis Updater Setup from editing launcher files.
+# The mod does not download or apply a pack update. It only writes the hook
+# the next launch will use.
+enabled = true

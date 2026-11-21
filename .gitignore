@@ -68,6 +68,7 @@ build/
 !/config/sophisticatedstorage-client.toml
 !/config/**/darkmodeeverywhere-client.toml
 !/config/create-client.toml
+!/config/autis_updater_setup-client.toml
 
 # Configs (generaly ones that tend to edit the date on launch)
 config/fml.toml

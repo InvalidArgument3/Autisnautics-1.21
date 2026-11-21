@@ -470,6 +470,9 @@ jobs:
       - name: Build autis-updater from source
         run: bash tools/autis-updater/build.sh
 
+      - name: Build autis updater setup from source
+        run: bash companion-mods/autis-updater-setup/build.sh
+
       - name: Export modpack
         run: |
           curl https://github.com/juraj-hrivnak/pakku/releases/latest/download/pakku.jar -o pakku.jar -L -J
