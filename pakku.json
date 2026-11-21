@@ -126,6 +126,11 @@
         "better-world-loading-forge": {
             "redistributable": true
         },
+        "cobblemon-fight-or-flight-reborn": {
+            "side": "BOTH",
+            "update_strategy": "NONE",
+            "redistributable": true
+        },
         "cobblemon-legendary-birds": {
             "update_strategy": "NONE"
         },

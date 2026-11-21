@@ -3837,6 +3837,71 @@
             ]
         },
         {
+            "pakku_id": "D7hRz8vtNNFxnePd",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "cobblemon-fight-or-flight-reborn",
+                "modrinth": "cobblemon-fight-or-flight-reborn"
+            },
+            "name": {
+                "curseforge": "Cobblemon Fight or Flight Reborn",
+                "modrinth": "Cobblemon Fight or Flight Reborn"
+            },
+            "id": {
+                "curseforge": "1168140",
+                "modrinth": "cTdIg5HZ"
+            },
+            "update_strategy": "NONE",
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fightorflight-neoforge-0.11.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9603/632/fightorflight-neoforge-0.11.3.jar",
+                    "id": "9603632",
+                    "parent_id": "1168140",
+                    "hashes": {
+                        "sha1": "63099eda052e9256a7f746642da980b6a7387e57",
+                        "md5": "c5535613865e8dca975ca1acb5fb80f8"
+                    },
+                    "required_dependencies": [],
+                    "size": 1485205,
+                    "date_published": "2026-11-14T01:54:27.120Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "fightorflight-neoforge-0.11.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/cTdIg5HZ/versions/OfILyck1/fightorflight-neoforge-0.11.3.jar",
+                    "id": "OfILyck1",
+                    "parent_id": "cTdIg5HZ",
+                    "hashes": {
+                        "sha512": "86a5e98f877683e0a802b6469bf1cda1052b70b447e999f9aeb5d7348c8d2d90a5f73750457784b06b8c5742672193c031fba3c130f0e5caf0186625e3fa8993",
+                        "sha1": "63099eda052e9256a7f746642da980b6a7387e57"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL",
+                        "lhGA9TYQ"
+                    ],
+                    "size": 1485205,
+                    "date_published": "2026-11-14T01:52:50.674892Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "rj9JShZ08sQece15",
             "type": "MOD",
             "slug": {
