@@ -21,12 +21,14 @@
         "start_server.bat",
         "start_server.sh",
         "UPDATEFROMGITHUB.sh",
-        "README.md"
+        "README.md",
+        "autis/updater.jar"
     ],
     "client_overrides": [
         "resourcepacks",
         ".analoglib/bin/ffmpeg.exe",
-        ".analoglib/bin/yt-dlp.exe"
+        ".analoglib/bin/yt-dlp.exe",
+        "autis/updater.jar"
     ],
     "projects": {
         "legendary-tooltips": {

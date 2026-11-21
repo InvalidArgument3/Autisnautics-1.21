@@ -69,6 +69,12 @@ public class Updater {
     static final String RELEASES_LATEST = "https://github.com/InvalidArgument3/Autisnautics-1.21/releases/latest";
     static final String DEFAULT_ASSET = "Autisnautics-1.21-{version}-client.zip";
     /**
+     * Embedded updater generation. Must match {@code Updater-Version} in the
+     * manifest and {@code updater-version.txt} in the jar. A release copy
+     * older than this, or with no readable version, is never installed.
+     */
+    static final int UPDATER_VERSION = 3;
+    /**
      * Whole agent sync, including applying the zip after the download.
      * A dead connect still fails at the 20s connect timeout. The download
      * request itself is capped separately so a stalled transfer cannot sit
@@ -85,6 +91,14 @@ public class Updater {
             .build();
     /** Prism instance files that sit beside the game directory and must not be copied into it. */
     static final Set<String> ROOT_SKIP = Set.of("instance.cfg", "mmc-pack.json", "icon.png", "a2.png");
+    /**
+     * These names are never taken from the pack zip. {@code autis/} stays so an
+     * installer can leave README.txt, updater.log, and java-hook.json beside the
+     * updater. The only file under {@code autis/} the sync may replace is
+     * {@code autis/updater.jar}, and only when that copy is an acceptable agent.
+     * The sync removes extra {@code mods/*.jar} files and trims
+     * {@code .autis/backups} to two directories. It does not delete other folders.
+     */
     static final Set<String> PROTECTED_TOP = Set.of(
             ".autis", "autis", "saves", "logs", "screenshots", "crash-reports",
             "options.txt", "servers.dat", "servers.dat_old", "usercache.json",
@@ -799,7 +813,9 @@ public class Updater {
                 continue;
             }
             Path dest = gameDir.resolve(rel);
-            if (rel.equals("autis/updater.jar") && agentMode && isLoadedJar(dest)) {
+            // The updater jar is installed only by stageUpdaterJar, which refuses
+            // a copy with no Premain-Class or an older embedded version.
+            if (rel.equals("autis/updater.jar")) {
                 continue;
             }
             Files.createDirectories(dest.getParent());
@@ -840,7 +856,11 @@ public class Updater {
     }
 
     static void stageUpdaterJar(Path staged, Path installed) throws IOException {
-        if (!Files.isRegularFile(staged) || sameContent(staged, installed)) {
+        if (!Files.isRegularFile(staged) || (Files.isRegularFile(installed) && sameContent(staged, installed))) {
+            return;
+        }
+        if (!acceptIncomingUpdater(staged, installed)) {
+            Files.deleteIfExists(staged);
             return;
         }
         Files.createDirectories(installed.getParent());
@@ -913,6 +933,15 @@ public class Updater {
             return;
         }
         Path installed = gameDir.resolve("autis/updater.jar");
+        if (!acceptIncomingUpdater(pending, installed)) {
+            try {
+                Files.deleteIfExists(pending);
+            } catch (IOException e) {
+                log("WARN: cannot discard updater.pending.jar: " + e.getMessage());
+            }
+            log("discarded updater.pending.jar; keeping the current updater jar");
+            return;
+        }
         try {
             if (Files.isRegularFile(installed) && sameContent(pending, installed)) {
                 Files.deleteIfExists(pending);
@@ -930,6 +959,87 @@ public class Updater {
             } else if (verbose) {
                 log("pending swap still blocked: " + e.getMessage());
             }
+        }
+    }
+
+    /**
+     * A candidate replaces the running updater only when it is a Java agent and
+     * its embedded version is at least the running one. Anything unreadable,
+     * versionless, or older is refused and the current jar stays.
+     */
+    static boolean acceptIncomingUpdater(Path candidate, Path installed) {
+        try {
+            if (candidate == null || !Files.isRegularFile(candidate)) {
+                return false;
+            }
+            String premain = manifestMain(candidate, "Premain-Class");
+            if (premain == null || premain.isBlank()) {
+                log("keeping the current updater jar: release copy has no Premain-Class");
+                return false;
+            }
+            Integer incoming = embeddedVersion(candidate);
+            if (incoming == null) {
+                log("keeping the current updater jar: release copy has no usable Updater-Version");
+                return false;
+            }
+            int bar = UPDATER_VERSION;
+            if (installed != null && Files.isRegularFile(installed)) {
+                Integer have = embeddedVersion(installed);
+                if (have != null) {
+                    bar = Math.max(bar, have);
+                }
+            }
+            if (incoming < bar) {
+                log("keeping the current updater jar: release copy is version " + incoming + ", running is " + bar);
+                return false;
+            }
+            return true;
+        } catch (Exception e) {
+            log("keeping the current updater jar: " + e.getMessage());
+            return false;
+        }
+    }
+
+    static String manifestMain(Path jar, String name) throws IOException {
+        try (java.util.jar.JarFile file = new java.util.jar.JarFile(jar.toFile())) {
+            if (file.getManifest() == null) {
+                return null;
+            }
+            return file.getManifest().getMainAttributes().getValue(name);
+        }
+    }
+
+    /** Manifest {@code Updater-Version} and {@code updater-version.txt} must agree. */
+    static Integer embeddedVersion(Path jar) throws IOException {
+        Integer manifest = parseVersion(manifestMain(jar, "Updater-Version"));
+        Integer resource = null;
+        try (java.util.jar.JarFile file = new java.util.jar.JarFile(jar.toFile())) {
+            ZipEntry entry = file.getEntry("updater-version.txt");
+            if (entry != null) {
+                try (InputStream in = file.getInputStream(entry)) {
+                    resource = parseVersion(new String(in.readAllBytes(), StandardCharsets.UTF_8));
+                }
+            }
+        }
+        if (manifest == null || resource == null || !manifest.equals(resource)) {
+            return null;
+        }
+        return manifest;
+    }
+
+    static Integer parseVersion(String raw) {
+        if (raw == null) {
+            return null;
+        }
+        String text = raw.trim();
+        if (text.isEmpty()) {
+            return null;
+        }
+        try {
+            int value = Integer.parseInt(text);
+            return value < 0 ? null : value;
+        } catch (NumberFormatException e) {
+            return null;
         }
     }
 

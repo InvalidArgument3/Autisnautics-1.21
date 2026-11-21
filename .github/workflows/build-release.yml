@@ -461,6 +461,15 @@ jobs:
           chmod +x .pakku/server-overrides/start_server.sh
           chmod +x .pakku/server-overrides/UPDATEFROMGITHUB.sh
 
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build autis-updater from source
+        run: bash tools/autis-updater/build.sh
+
       - name: Export modpack
         run: |
           curl https://github.com/juraj-hrivnak/pakku/releases/latest/download/pakku.jar -o pakku.jar -L -J
@@ -692,8 +701,16 @@ jobs:
               console.log(`Only ${sortedReleases.length} releases found, no need to delete.`);
             }
 
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
       - name: Stage updater assets
         run: |
+          # The release asset is compiled here, not copied from a stale binary.
+          bash tools/autis-updater/build.sh
           cp .pakku/client-overrides/autis/updater.jar autis-updater.jar
           cp tools/autis-bootstrap.ps1 tools/autis-bootstrap.sh .
 
