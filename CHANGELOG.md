@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.55]
 - **Belts are dried kelp again.** Create's recipe stays: six dried kelp make one belt connector. The six-rubber belt craft is removed. `kubejs:rubber` stays, and it still seals a kinetic mechanism. The stage 1 belt quest depends on Kelp, and the belt text says dried kelp. The Rubber quest has no quest after it.
 
 ## [0.1.54]
