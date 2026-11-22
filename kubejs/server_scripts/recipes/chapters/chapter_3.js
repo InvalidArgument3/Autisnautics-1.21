@@ -169,8 +169,9 @@ ServerEvents.recipes(event => {
     // Chromatic Singularity = heated mixing of a Crushing Wheel (the old "crush the crushing wheel" step),
     // 2 RS Quartz Enriched Iron (stands in for the AE2 singularity), an Ender Pearl (stands in for the
     // quantum entanglement) and the five spectrum dyes. An Item Drain then "spectrally corrects" it into
-    // Chromatic Compound and leaves Lumisene (burnable light source for Refined Radiance), like the old
-    // paint-ball draining did. Shadow Steel / Refined Radiance then work through Create's own compound mechanics.
+    // Chromatic Compound and leaves Lumisene (the light the Refined Radiance
+    // filling uses), like the old paint-ball draining did. Shadow Steel stays
+    // Create's dark conversion.
     if (!Platform.isLoaded("ae2") && Platform.isLoaded("refinedstorage")) {
         event.recipes.create.mixing("kubejs:dye_entangled_singularity", [
             "create:crushing_wheel",
@@ -181,6 +182,16 @@ ServerEvents.recipes(event => {
         ]).heated().id("kubejs:rs_port/chromatic_singularity")
         if (Platform.isLoaded("supplementaries")) {
             event.recipes.create.emptying(["create:chromatic_compound", Fluid.of("supplementaries:lumisene", 250)], "kubejs:dye_entangled_singularity").id("kubejs:rs_port/chromatic_compound")
+            // Refined Radiance. Create's dropped-item light conversion does not
+            // finish without a beacon (the handler below only nudges the
+            // component). Lumisene is the light this emptying already drains
+            // out of the singularity, so one more compound filled with 250 mB
+            // is the same step. It stays after chromatic compound and does
+            // not use a beacon, an electron tube, or an AE2 item.
+            event.recipes.create.filling("create:refined_radiance", [
+                "create:chromatic_compound",
+                Fluid.of("supplementaries:lumisene", 250)
+            ]).id("kubejs:refined_radiance")
         } else {
             event.recipes.create.emptying(["create:chromatic_compound", Fluid.of("minecraft:water", 250)], "kubejs:dye_entangled_singularity").id("kubejs:rs_port/chromatic_compound")
         }
