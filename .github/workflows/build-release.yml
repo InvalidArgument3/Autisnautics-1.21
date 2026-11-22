@@ -768,6 +768,16 @@ jobs:
           target_commitish: ${{ github.ref_name }}
           body: |
             ${{ needs.info.outputs.changelog }}
+
+            **Which file to download**
+
+            - Prism Launcher: the Prism zip (`*-prism.zip`).
+            - CurseForge app: the CurseForge zip (`*-curseforge.zip`).
+            - Anything else (MultiMC, the Modrinth app, or a folder you unzip yourself): the client zip (`*-client.zip`).
+            - A server: the server pack (`*-serverpack.zip`).
+
+            Importing the CurseForge zip into Prism works. Prism downloads the mods during that import.
+
             ${{ steps.format_diff.outputs.text }}
           files: |
             *-curseforge.zip
