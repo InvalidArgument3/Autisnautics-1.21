@@ -1,6 +1,6 @@
 {
     "name": "Swoop",
-    "description": "Burn a little blood sugar for a sudden burst of forward movement. That is NeoOrigins Skill 2. The pack leaves Skill 2 unbound; set it in Controls before you can swoop.",
+    "description": "Burn a little blood sugar for a sudden burst of forward movement. That is NeoOrigins Skill 2. The pack default for Skill 2 is F7.",
     "condition": {
         "type": "origins:resource",
         "resource": "autisorigins:sugar_addict",

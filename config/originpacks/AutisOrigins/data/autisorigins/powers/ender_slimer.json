@@ -1,6 +1,6 @@
 {
     "name": "Ender Slimer",
-    "description": "bolbbos learned to throw the ender blobbs after a big adventure. thats the second skill button, and the pack leaves Skill 2 unbound so you gotta bind it :)",
+    "description": "bolbbos learned to throw the ender blobbs after a big adventure. thats the second skill button. pack default is F7 :)",
     "type": "origins:multiple",
     "key0": {
         "type": "origins:fire_projectile",

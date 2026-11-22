@@ -228,7 +228,7 @@ key.neoorigins.hotkey.9:key.keyboard.unknown
 key.neoorigins.open_creator:key.keyboard.unknown
 key.neoorigins.open_mob_creator:key.keyboard.unknown
 key.neoorigins.skill_1:key.keyboard.f6
-key.neoorigins.skill_2:key.keyboard.unknown
+key.neoorigins.skill_2:key.keyboard.f7
 key.neoorigins.skill_3:key.keyboard.unknown
 key.neoorigins.skill_4:key.keyboard.unknown
 key.neoorigins.skill_5:key.keyboard.unknown
