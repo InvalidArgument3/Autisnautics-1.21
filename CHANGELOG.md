@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.57]
 - **EnigmaticLegacy+ common setup no longer races the dispenser map.** `enigmaticlegacyfix-1.0.0.jar` (`.pakku/overrides/mods/`, both sides) redirects `EnigmaticLegacy.onCommonSetup`'s call to `CommonProxy.init` into `FMLCommonSetupEvent.enqueueWork`. 1.21.1-1.1.2 was registering the ichor spear dispenser behavior from a parallel common-setup thread, and a concurrent `put` threw `ArrayIndexOutOfBoundsException` in fastutil's `rehash`. The init body is unchanged.
 
 ## [0.1.56]
