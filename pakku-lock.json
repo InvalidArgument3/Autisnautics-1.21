@@ -6099,6 +6099,48 @@
             ]
         },
         {
+            "pakku_id": "cMt1A0v1N21x9K4p",
+            "pakku_links": [
+                "F9OUhskWxYr63coj"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "create-massive-turbines"
+            },
+            "name": {
+                "curseforge": "Create: Massive Turbines"
+            },
+            "id": {
+                "curseforge": "1820834"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "create_massive_turbines-1.0.1-NeoForge-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9738/559/create_massive_turbines-1.0.1-NeoForge-1.21.1.jar",
+                    "id": "9738559",
+                    "parent_id": "1820834",
+                    "hashes": {
+                        "sha1": "1838d1e1338e5bc30afcb282baa0b5819b43c41f",
+                        "md5": "7980c3b027a6b30bd1a0232d5c27a0d4"
+                    },
+                    "required_dependencies": [
+                        "328085"
+                    ],
+                    "size": 931658,
+                    "date_published": "2026-11-21T19:46:10.000Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "55fPSU4fwI6CbxJh",
             "pakku_links": [
                 "F9OUhskWxYr63coj"

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.massiveturbinesfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "server": [
+    "CasingHelperMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

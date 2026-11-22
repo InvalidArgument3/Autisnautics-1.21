@@ -1,0 +1,41 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "massiveturbinesfix"
+version = "1.0.0"
+displayName = "Massive Turbines Server Fix"
+authors = "Autisnautics"
+description = '''Lets Create: Massive Turbines 1.0.1 construct on a dedicated server. The casing placement helper loads LocalPlayer while the class initializes, and NeoForge refuses that class off the client. The dedicated server skips that ghost render. The client keeps it.'''
+
+[[mixins]]
+config = "massiveturbinesfix.mixins.json"
+
+[[dependencies.massiveturbinesfix]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.massiveturbinesfix]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.massiveturbinesfix]]
+modId = "create"
+type = "required"
+versionRange = "[6.0.10,6.1)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.massiveturbinesfix]]
+modId = "create_massive_turbines"
+type = "required"
+versionRange = "[1.0.1,1.0.2)"
+ordering = "AFTER"
+side = "BOTH"

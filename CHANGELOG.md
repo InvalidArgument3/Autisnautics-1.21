@@ -1,6 +1,7 @@
 # Changelog
-## [Unreleased]
+## [0.1.56]
 - **The Undergarden floor and ceiling generate as obsidian.** The Paxi datapack `Autisnautics Undergarden Floor` sets both the `minecraft:bedrock_floor` and `minecraft:bedrock_roof` surface rules, and the depthrock band at the top of the world, to `minecraft:obsidian`. The Undergarden jar places bedrock only in those noise settings. `undergardenfloor-1.0.0.jar` is no longer shipped. Its chunk-load scan was the listener in the C2ME hang.
+- **Create: Massive Turbines 1.0.1** (`create_massive_turbines-1.0.1-NeoForge-1.21.1.jar`, CurseForge project `create-massive-turbines` 1820834, file 9738559, client and server). It requires Create `[6.0.10,6.1)`, which includes this pack's Create 6.0.10, and NeoForge `[21.1.219,)`, which includes 21.1.265. Sable and Create Aeronautics stay optional. `massiveturbinesfix-1.0.0.jar` (`.pakku/overrides/mods/`, both sides) empties `CasingHelper.renderAt` on a dedicated server. That method was loading `LocalPlayer` while the placement helpers initialized, and the dedicated server refused the class. The client keeps the original ghost render.
 
 ## [0.1.55]
 - **Belts are dried kelp again.** Create's recipe stays: six dried kelp make one belt connector. The six-rubber belt craft is removed. `kubejs:rubber` stays, and it still seals a kinetic mechanism. The stage 1 belt quest depends on Kelp, and the belt text says dried kelp. The Rubber quest has no quest after it.

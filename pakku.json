@@ -213,6 +213,10 @@
         "create-flight-control": {
             "redistributable": true
         },
+        "create-massive-turbines": {
+            "side": "BOTH",
+            "redistributable": true
+        },
         "eco-stack-manager": {
             "redistributable": true
         },
