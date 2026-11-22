@@ -434,55 +434,6 @@
 			x: 12.00d
 			y: 3.00d
 		}
-		{
-			extraquests_calendar: {
-				active_quests: 3
-				enabled: 0b
-				pool: ""
-				reset_time: "06:00"
-				timezone: "UTC"
-				weekday: 1
-				weekly: 0b
-			}
-			dependencies: ["6401000000000000"]
-			icon: {
-				id: "architects_palette:algal_brick"
-			}
-			id: "6401090000000001"
-			rewards: [
-				{
-					id: "6301090000000001"
-					item: {
-						count: 8
-						id: "minecraft:kelp"
-					}
-					type: "item"
-				}
-				{
-					id: "6301090000000002"
-					type: "xp"
-					xp: 16
-				}
-			]
-			tasks: [{
-					extraquests_options: {
-						aggregation: "AUTO"
-						duration: 600L
-						minimum_contribution: 0L
-						reset_damage: 0b
-						reset_death: 1b
-						reset_logout: 0b
-						shared: 0b
-						timer_enabled: 0b
-						timer_start: "FIRST_PROGRESS"
-					}
-					id: "6201090000000001"
-					item: { count: 1, id: "architects_palette:algal_brick" }
-					type: "item"
-			}]
-			x: 3.00d
-			y: 0.00d
-		}
 
 		{
 			extraquests_calendar: {

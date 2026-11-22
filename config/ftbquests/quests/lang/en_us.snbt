@@ -287,12 +287,6 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.0E0535849D8D9279.title: "Copper Machine"
 	quest.0E4476BA80B316F6.quest_desc: ["{cabin.quest.0E4476BA80B316F6.description1}"]
 	quest.0E4476BA80B316F6.title: "Salmon"
-	quest.0E46C1FCE5AEB1DF.quest_desc: [
-		"Cobblestone is an early stone of the brass age."
-		"It washes into gravel. The electron tube's iron is molten iron, not nuggets."
-	]
-	quest.0E46C1FCE5AEB1DF.quest_subtitle: "{cabin.quest.0E46C1FCE5AEB1DF.subtitle}"
-	quest.0E46C1FCE5AEB1DF.title: "Cobblestone"
 	quest.0E98B4D2BBF55308.quest_desc: [
 		"This overview node tracks the andesite chapter milestone, once a kinetic mechanism exists."
 	]
@@ -332,12 +326,6 @@ quest.0AD8C8E5491278E1.quest_desc: [
 		"{cabin.quest.1127129CBA2B5E6F.description3}"
 	]
 	quest.1127129CBA2B5E6F.title: "Redstone"
-	quest.1139F2E4E6FCFE29.quest_desc: [
-		"Gravel is the next gather after that cobblestone."
-		"It mills into flint and iron nuggets. Those nuggets can make andesite alloy. The electron tube uses molten iron."
-	]
-	quest.1139F2E4E6FCFE29.quest_subtitle: "{cabin.quest.1139F2E4E6FCFE29.subtitle}"
-	quest.1139F2E4E6FCFE29.title: "Gravel"
 	quest.11862F961F13287D.quest_desc: ["Blobbis dont have a brain so i dont member any experienices. But if blobbers eat stuffs thats got experimences in it then i can save em for later. like the bottle one tahts blue flavor for some reason or the square nuggies :DDD"]
 	quest.11862F961F13287D.title: "mmm nuggies"
 	quest.11C36A243F5108DC.quest_desc: [
@@ -429,12 +417,6 @@ quest.17AA221C7B7E6734.quest_desc: [
 		"{cabin.quest.1947C6CE179EBAC6.description2}"
 	]
 	quest.1947C6CE179EBAC6.title: "Exploration"
-	quest.194B973EAF17809C.quest_desc: [
-		"A stick is a shaft, and sticks are one ingredient of the cobblestone crushing-wheel pattern."
-		"The wheel itself is built in the brass age, from a mechanical crafter."
-	]
-	quest.194B973EAF17809C.quest_subtitle: "{cabin.quest.194B973EAF17809C.subtitle}"
-	quest.194B973EAF17809C.title: "Stick"
 	quest.19715EBCBBA1B4AD.quest_desc: [
 		"A precision mechanism is two electron tubes deployed onto a kinetic mechanism, then the wire cutters."
 		"The Brass Machine is brass casing around it, and the infernal and logistic lines both start here."
@@ -657,10 +639,10 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.28DAED70768C6A50.quest_subtitle: "Fluix casings around a calculation mechanism"
 	quest.28DAED70768C6A50.title: "Controller"
 	quest.29D37095C73B3DEC.quest_desc: [
-		"A belt connector is the belt that carries items. Six dried kelp still make one. Six rubber make three."
+		"A belt connector is the belt that carries items. Six rubber make three."
 		"The sealed mechanism is next."
 	]
-	quest.29D37095C73B3DEC.quest_subtitle: "Kelp or rubber"
+	quest.29D37095C73B3DEC.quest_subtitle: "Rubber"
 	quest.29D37095C73B3DEC.title: "Belt Connector"
 	quest.29DABB5FDE6356E9.title: "{cabin.quest.29DABB5FDE6356E9.title}"
 	quest.2B195E5B195246F5.quest_desc: [
@@ -798,12 +780,6 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.3249CD08992F2BCD.quest_subtitle: "{cabin.quest.3249CD08992F2BCD.subtitle}"
 	quest.3249CD08992F2BCD.title: "Charcoal"
-	quest.32786E9D145FFE25.quest_desc: [
-		"An algal brick is smelted algal blend."
-		"It is Architect's Palette masonry. Andesite alloy is andesite plus iron or zinc nuggets."
-	]
-	quest.32786E9D145FFE25.quest_subtitle: "{cabin.quest.32786E9D145FFE25.subtitle}"
-	quest.32786E9D145FFE25.title: "Algal Brick"
 	quest.32CB540B4C01720A.title: "its a tree :)"
 	quest.334146C815B304DB.quest_desc: [
 		"{cabin.quest.334146C815B304DB.description1}"
@@ -994,7 +970,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.3EEF098FB1D343AD.quest_desc: ["{image: width:100 height:100 align:center}"]
 	quest.3EF5F89DBD6959E3.quest_desc: [
 		"Rubber is cooked raw rubber."
-		"Six rubber make three belt connectors. Six dried kelp still make one. The sealed mechanism comes after the belts."
+		"Six rubber make three belt connectors. The sealed mechanism comes after the belts."
 	]
 	quest.3EF5F89DBD6959E3.quest_subtitle: "Furnace or blast furnace"
 	quest.3EF5F89DBD6959E3.title: "Rubber"
@@ -1238,12 +1214,6 @@ quest.4815DA7B77DD7175.quest_desc: [
 		"It feeds the thinking machine."
 	]
 	quest.5358E5F7FB59DD60.quest_subtitle: "{cabin.quest.5358E5F7FB59DD60.subtitle}"
-	quest.53735DC4231AB566.quest_desc: [
-		"An iron nugget is one ninth of an ingot. Andesite alloy already used these."
-		"The electron tube is 10 mB of molten iron spouted onto polished rose quartz, not a nugget."
-	]
-	quest.53735DC4231AB566.quest_subtitle: "{cabin.quest.53735DC4231AB566.subtitle}"
-	quest.53735DC4231AB566.title: "Iron Nugget"
 	quest.5378EDF26A6861D0.quest_desc: [
 		"This is an invisible chapter used to assign origin quests."
 		"You shouldn't be seeing this unless you're in edit mode."
@@ -1335,12 +1305,6 @@ quest.5A6926E64EEE7729.quest_desc: [
 	quest.5B0727505DC791DF.quest_subtitle: "{cabin.quest.5B0727505DC791DF.subtitle}"
 	quest.5B0727505DC791DF.title: "Grass Block"
 	quest.5BDF2960FBF3C35D.title: "fwoosh"
-	quest.5C277D27606F64DA.quest_desc: [
-		"A log is wood for planks, and planks are one ingredient of the vanilla crushing-wheel pattern."
-		"The wheel itself is built in the brass age, from a mechanical crafter."
-	]
-	quest.5C277D27606F64DA.quest_subtitle: "{cabin.quest.1A06FA866B74E75B.subtitle}"
-	quest.5C277D27606F64DA.title: "Log"
 	quest.5C4F6E63B02A25F0.quest_desc: [
 		"Deepslate is the dark stone under this age."
 		"It blasts into magma on the way to obsidian."
@@ -1813,7 +1777,6 @@ quest.7C31A0611CC62360.quest_desc: [
 	task.122F9ED3858AD774.title: "Hook 1"
 	task.12CFC84D3F01F49F.title: "{cabin.task.12CFC84D3F01F49F}"
 	task.1474C861F59A094F.title: "get a ingot"
-	task.1484A9A6DB85EA6D.title: "{cabin.task.0842082756DA73FE}"
 	task.14D9C52366D6AF27.title: "{cabin.task.0842082756DA73FE}"
 	task.159661080AE7707A.title: "{cabin.task.159661080AE7707A}"
 	task.17286271B0667AAA.title: "{cabin.task.0842082756DA73FE}"
@@ -1859,10 +1822,8 @@ quest.7C31A0611CC62360.quest_desc: [
 	task.3413FA802F33F4BF.title: "{cabin.task.0842082756DA73FE}"
 	task.34C54664AB22ECFD.title: "{cabin.task.0842082756DA73FE}"
 	task.34EFEE60A6755C01.title: "{cabin.task.0842082756DA73FE}"
-	task.35C10E79F8F1E0DF.title: "{cabin.task.35C10E79F8F1E0DF}"
 	task.36183F0BBDAA8DB8.title: "{cabin.task.0842082756DA73FE}"
 	task.3662CA8BEE33E02D.title: "{cabin.task.0842082756DA73FE}"
-	task.36BD580312C8177B.title: "{cabin.task.0842082756DA73FE}"
 	task.36F8C3CAF6FC3FB2.title: "{cabin.task.36F8C3CAF6FC3FB2}"
 	task.37A6393C0AD6E861.title: "{cabin.task.0842082756DA73FE}"
 	task.37BF06FF4255C1B1.title: "{cabin.task.0842082756DA73FE}"
@@ -1882,7 +1843,6 @@ quest.7C31A0611CC62360.quest_desc: [
 	task.42002EEA26A72016.title: "{cabin.task.42002EEA26A72016}"
 	task.4208FAAC229CACA6.title: "{cabin.task.0842082756DA73FE}"
 	task.429C4BFAA4818070.title: "Any Sword"
-	task.435C3E443BCC9176.title: "{cabin.task.0842082756DA73FE}"
 	task.4418C7A289B17158.title: "{cabin.task.4418C7A289B17158}"
 	task.44A10C4B490D3C62.title: "{cabin.task.0842082756DA73FE}"
 	task.44AC56E1CC5E8DE5.title: "Controls (README!)"
@@ -1922,7 +1882,6 @@ quest.7C31A0611CC62360.quest_desc: [
 	task.5BBF2E1143CD356E.title: "{cabin.task.0842082756DA73FE}"
 	task.5DA07794E31B6312.title: "Any Axe"
 	task.5DF206B1738D08A0.title: "{cabin.task.5DF206B1738D08A0}"
-	task.5E676D2CC5975AEA.title: "{cabin.task.0842082756DA73FE}"
 	task.5E687A6CBD96D0EF.title: "{cabin.task.5E687A6CBD96D0EF}"
 	task.5F27F141221B7235.title: "Your Choice of Arms"
 	task.5F810A4B4280BA7D.title: "Construct a Space Station in Earth's Orbit"
@@ -1930,9 +1889,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	task.61DEC75D20A61088.title: "{cabin.task.0842082756DA73FE}"
 	task.620B88139898C10E.title: "16x Any Log"
 	task.63EA7BF746BF3254.title: "{cabin.task.0842082756DA73FE}"
-	task.63F3877902E01590.title: "{cabin.task.0842082756DA73FE}"
 	task.64713708298099CA.title: "Automated"
-	task.64B405696E96FFCD.title: "{cabin.task.0842082756DA73FE}"
 	task.65706A8A8D2297B4.title: "Kill: 1x Lunarian (?)"
 	task.65864C0AE5B28091.title: "{cabin.task.0842082756DA73FE}"
 	task.681DACF11F193771.title: "{cabin.task.681DACF11F193771}"
@@ -2919,12 +2876,6 @@ quest.7C31A0611CC62360.quest_desc: [
 		"A wooden crate stores fish."
 		"It is the first crate in the line that ends at the obsidian crate."
 	]
-	quest.6401090000000001.title: "Algal Brick"
-	quest.6401090000000001.quest_subtitle: "Clay, kelp, a furnace"
-	quest.6401090000000001.quest_desc: [
-		"An algal brick is smelted algal blend, clay with kelp or seagrass."
-		"It is masonry. Andesite alloy is two andesite and two iron nuggets, or two andesite and two zinc nuggets."
-	]
 	quest.64010A0000000001.title: "Andesite Casing"
 	quest.64010A0000000001.quest_subtitle: "Alloy and any log"
 	quest.64010A0000000001.quest_desc: [
@@ -3610,10 +3561,9 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It also mills netherrack into cinder flour, which is the start of a blaze cake. A hand crank can turn it, and it is not an Andesite Machine."
 	]
 	quest.6600000000000035.title: "Belt"
-	quest.6600000000000035.quest_subtitle: "Kelp, or rubber"
+	quest.6600000000000035.quest_subtitle: "Rubber"
 	quest.6600000000000035.quest_desc: [
-		"A belt carries items between machines. Six dried kelp make one connector. Six rubber make three."
-		"Both recipes are live."
+		"A belt carries items between machines. Six rubber make three connectors."
 	]
 	quest.6600000000000036.title: "Basin"
 	quest.6600000000000036.quest_subtitle: "The pot the machines share"

@@ -384,9 +384,8 @@ Checked and left alone: primer Create Addition, Let it Walk (sequenced parts alr
 ### Judgment calls
 
 - Gold machine stays in stage 2, gated on the brass machine, even though `kubejs` shapeless golden sheet + deepslate still makes two railway casings without brass.
-- The stage 2 iron nugget quest and the stage 1 algal brick no longer lead anywhere.
-- The stage 3 log and stick no longer lead to the wheel.
-- The stage 1 belt quest still waits on rubber. Kelp is legal earlier.
+- The stage 2 cobble, gravel, and iron nugget quests, both algal brick quests, and the stage 3 log and stick were later deleted. See the note under the progression pass.
+- The stage 1 belt quest still waits on rubber. The dried-kelp belt recipe was later removed.
 - `6EDA86E4BE0F096B` and the other ids in the same shape (`21753CBB528EAADF`, `28C41C062843C2CA`, `5A8DF2D8553904BF`, `681DACF11F193771`, `28D3347E8FA277AD`, `74CFD83C501C4952`, `5DF206B1738D08A0`, `251A91F6C21AEAFB`, plus two origin task ids) are task ids on overview or origin quests, written into `dependencies`. They were already like that. Replacing them with the parent quest id would hide a large part of each stage behind an overview checkmark, so they were left.
 - `aeronautics:pearlescent_levitite` and `create:refined_radiance` had no recipe when this split was written. Both have recipes now. See the progression pass below.
 - Spanish, French, Portuguese, Russian, and Chinese cabin files described the algal mix and the deployer assembly under `cabin.quest.73FCA432DEFC1DED` and `cabin.quest.675C395B2074C24C` when this split was written. Those lines, and the other English lines that changed after the locales were last saved, are translated now. The quest body an English client shows is still the snbt literal.
@@ -407,8 +406,8 @@ Walked the quest graph and the recipe scripts again after the levitite and radia
 - Regular levitite stays the in-world heat crystallization (torch, campfire, lit blaze burner). There is still no basin recipe for it. Pearlescent is the one that gained a basin recipe, because that quest had no written recipe at all.
 - `create:shadow_steel` still has no recipe. Nothing in the quest line asks for it. The dark conversion is the other half of Create's dropped-item mechanic. A basin recipe for it would be a new path, not a repair of a quest.
 - The gold machine stays in stage 2, gated on the brass machine, even though a golden sheet and deepslate still make two railway casings without brass.
-- The stage 2 iron nugget quest, the stage 1 algal brick, and the stage 3 log and stick still lead nowhere.
-- The stage 1 belt quest still waits on rubber. Dried kelp is a legal belt earlier.
+- The dead-end branches were deleted after this pass: stage 2 Cobblestone `0E46C1FCE5AEB1DF`, Gravel `1139F2E4E6FCFE29`, and Iron Nugget `53735DC4231AB566`; stage 1 Algal Brick `32786E9D145FFE25`; Create primer Algal Brick `6401090000000001`; stage 3 Log `5C277D27606F64DA` and Stick `194B973EAF17809C`. Algal Blend's only child was the brick, so the blend quest remains and nothing else hung off it. Builders Tea still has its other children. Every other quest id was left in place.
+- The stage 1 belt quest still waits on rubber. `chapter_1a.js` now removes `create:crafting/kinetics/belt_connector`, Create's six-dried-kelp craft. The shaped recipe of six rubber into three connectors stays. No other mod recipe outputs a belt from kelp. The stage 1 belt text, the rubber text, and the primer belt text say rubber.
 - `6EDA86E4BE0F096B`, `21753CBB528EAADF`, `28C41C062843C2CA`, `5A8DF2D8553904BF`, `681DACF11F193771`, `28D3347E8FA277AD`, `74CFD83C501C4952`, `5DF206B1738D08A0`, `251A91F6C21AEAFB`, and the two origin task ids are still written into `dependencies`. They are task ids. Replacing them with the parent quest would hide a stage behind an overview checkmark.
 - Quest `2809AE02EA018BFA` ("never") is a custom task that does not complete. The stage 2 nodes and the blobbian nodes that depend on it are hidden decoration. They are not on the machine line.
 - Create Enchantment Industry's drain quest `6600000000000065` is still a checkmark. The drain item has no recipe. The icon is the mechanical grindstone.
