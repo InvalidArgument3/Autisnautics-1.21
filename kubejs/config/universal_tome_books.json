@@ -65,11 +65,6 @@
     },
     {
       "mod": "modernfoundry",
-      "name": "Materials and You",
-      "item": "modernfoundry:materials_and_you"
-    },
-    {
-      "mod": "modernfoundry",
       "name": "Encyclopedia of Crafting",
       "item": "modernfoundry:encyclopedia"
     },
