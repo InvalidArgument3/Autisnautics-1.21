@@ -1,5 +1,5 @@
 # Changelog
-## [Unreleased]
+## [0.1.54]
 - **Dead-end quest branches are gone.** Stage 2 Cobblestone, Gravel, and Iron Nugget; the stage 1 Algal Brick; the Create primer Algal Brick; and the stage 3 Log and Stick are deleted, including their English and translated lang keys. Algal Blend stays, and it no longer has a child quest. Builders Tea keeps its other quests. No other quest id changed.
 - **Belts are rubber.** Create's dried-kelp belt recipe (`create:crafting/kinetics/belt_connector`, six dried kelp, one connector) is removed. Six rubber still make three connectors. The stage 1 belt quest, the rubber quest, and the primer belt quest say that.
 - **Release notes name the zip to download.** The GitHub release body now says: Prism uses the Prism zip, the CurseForge app uses the CurseForge zip, everyone else uses the client zip, and a server uses the server pack. Importing the CurseForge zip into Prism works, and Prism downloads the mods during that import.
