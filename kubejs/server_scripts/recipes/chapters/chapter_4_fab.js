@@ -20,9 +20,19 @@ ServerEvents.recipes(event => {
         }
 
     if (storage == "refinedstorage") {
-        // restored original: event.remove({ id: "refinedstorage:raw_basic_processor" })
-        // restored original: event.remove({ id: "refinedstorage:raw_improved_processor" })
-        // restored original: event.remove({ id: "refinedstorage:raw_advanced_processor" })
+        event.remove({ id: "refinedstorage:raw_basic_processor" })
+        event.remove({ id: "refinedstorage:raw_improved_processor" })
+        event.remove({ id: "refinedstorage:raw_advanced_processor" })
+        // Withering is the tier past advanced. The default shapeless craft uses loose silicon.
+        // An advanced processor is the wafer-line processor, smelted from a diced raw advanced.
+        if (Platform.isLoaded("extradisks")) {
+            event.remove({ id: "extradisks:raw_withering_processor" })
+            event.shapeless("extradisks:raw_withering_processor", [
+                "refinedstorage:processor_binding",
+                "minecraft:nether_star",
+                "refinedstorage:advanced_processor"
+            ]).id("kubejs:rs_port/raw_withering_processor")
+        }
     } else {
         // restored original: event.remove({ id: "ae2:inscriber/calculation_processor_print" })
         // restored original: event.remove({ id: "ae2:inscriber/logic_processor_print" })

@@ -1009,8 +1009,15 @@ ServerEvents.recipes(event => {
     } else if (Platform.isLoaded("refinedstorage")) {
         // AE2 -> RS port: calculation mechanism gates the controller (fluix casing donut),
         // then the controller item-applies into the blocks that used to be fluix machines.
-        // restored original: event.remove({ id: "refinedstorage:silicon" })
-        // restored original: event.remove({ output: "refinedstorage:controller" })
+        // Remove by id so the recoloring recipes, whose result field is the controller, stay.
+        event.remove({ id: "refinedstorage:silicon" })
+        event.remove({ id: "refinedstorage:controller" })
+        event.remove({ id: "refinedstorage:pattern" })
+        event.remove({ id: "refinedstorage:disk_drive" })
+        event.remove({ id: "refinedstorage:grid" })
+        event.remove({ id: "refinedstorage:construction_core" })
+        event.remove({ id: "refinedstorage:destruction_core" })
+        event.remove({ id: "refinedstorage:wireless_transmitter" })
         event.shapeless(Item.of("kubejs:fluix_casing", 2), ["refinedstorage:quartz_enriched_iron", "refinedstorage:machine_casing"]).id("kubejs:rs_port/fluix_casing")
         donutCraft(event, "refinedstorage:controller", "kubejs:fluix_casing", "kubejs:calculation_mechanism").id("kubejs:rs_port/controller")
         fluixMachine(event, Item.of("refinedstorage:disk_drive", 1), "refinedstorage:advanced_processor")
@@ -1018,8 +1025,7 @@ ServerEvents.recipes(event => {
         fluixMachine(event, Item.of("refinedstorage:construction_core", 4), "minecraft:glowstone_dust")
         fluixMachine(event, Item.of("refinedstorage:destruction_core", 4), "minecraft:quartz")
         fluixMachine(event, Item.of("refinedstorage:wireless_transmitter", 1), "minecraft:ender_pearl")
-        // restored original: event.replaceInput({ id: "refinedstorage:1k_storage_part" }, "#c:dusts/redstone", "kubejs:calculation_mechanism")
-        // restored original: event.remove({ id: "refinedstorage:pattern" })
+        event.replaceInput({ id: "refinedstorage:1k_storage_part" }, "#c:dusts/redstone", "kubejs:calculation_mechanism")
         event.shaped("refinedstorage:pattern", [
             "GRG",
             "RMR",
