@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **A diamond harness can mine Dreadrock.** Undergarden puts `#undergarden:needs_forgotten_tool` on every vanilla `minecraft:incorrect_for_*_tool` tag, including diamond and netherite. The harness mines only when `ItemStack.isCorrectToolForDrops` is true, and the first matching tool rule wins, so a diamond harness and a diamond pickaxe in the tool slot both refused dreadrock, its bricks, stairs, slabs, and walls, and the two dreadrock ores. The rogdoric ancient root is on that same tag and is an axe block, so the harness axe refused it too. `kubejs/server_scripts/harness_forgotten_tools.js` removes `#undergarden:needs_forgotten_tool` from `minecraft:incorrect_for_diamond_tool` and `minecraft:incorrect_for_netherite_tool`. Wood, stone, iron, and gold stay incorrect. Depthrock, shiverstone, and tremblecrust were never on that tag. Mithril ore and the knightmetal block stay incorrect for diamond; a netherite harness can already mine them.
+
 ## [0.1.57]
 - **EnigmaticLegacy+ common setup no longer races the dispenser map.** `enigmaticlegacyfix-1.0.0.jar` (`.pakku/overrides/mods/`, both sides) redirects `EnigmaticLegacy.onCommonSetup`'s call to `CommonProxy.init` into `FMLCommonSetupEvent.enqueueWork`. 1.21.1-1.1.2 was registering the ichor spear dispenser behavior from a parallel common-setup thread, and a concurrent `put` threw `ArrayIndexOutOfBoundsException` in fastutil's `rehash`. The init body is unchanged.
 
