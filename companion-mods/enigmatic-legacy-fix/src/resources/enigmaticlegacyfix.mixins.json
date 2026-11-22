@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.enigmaticlegacyfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EnigmaticLegacyCommonSetupMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
