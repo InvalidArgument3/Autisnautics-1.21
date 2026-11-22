@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 48,
-    "description": "Undergarden bedrock floor is obsidian. The roof rule is unchanged."
+    "description": "Undergarden floor and ceiling bands are obsidian. No bedrock roof."
   }
 }

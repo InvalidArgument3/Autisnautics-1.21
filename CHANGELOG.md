@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **The Undergarden floor and ceiling generate as obsidian.** The Paxi datapack `Autisnautics Undergarden Floor` sets both the `minecraft:bedrock_floor` and `minecraft:bedrock_roof` surface rules, and the depthrock band at the top of the world, to `minecraft:obsidian`. The Undergarden jar places bedrock only in those noise settings. `undergardenfloor-1.0.0.jar` is no longer shipped. Its chunk-load scan was the listener in the C2ME hang.
+
 ## [0.1.55]
 - **Belts are dried kelp again.** Create's recipe stays: six dried kelp make one belt connector. The six-rubber belt craft is removed. `kubejs:rubber` stays, and it still seals a kinetic mechanism. The stage 1 belt quest depends on Kelp, and the belt text says dried kelp. The Rubber quest has no quest after it.
 
