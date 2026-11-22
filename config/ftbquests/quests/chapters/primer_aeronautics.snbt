@@ -659,6 +659,251 @@
 			x: -3.32d
 			y: 3.32d
 		}
+		{
+			dependencies: ["660000000000006D"]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics_utility_objects:universal_joint_rod2"
+			}
+			id: "66A1000000000001"
+			rewards: [
+				{
+					id: "68A1000000000001"
+					item: {
+						count: 6
+						id: "create:copper_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "68A1000000000002"
+					type: "xp"
+					xp: 28
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000001"
+					item: { count: 1, id: "aeronautics_utility_objects:universal_joint_rod2" }
+					type: "item"
+				}
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000002"
+					item: { count: 1, id: "aeronautics_utility_objects:damping_stress_bearing" }
+					type: "item"
+				}
+			]
+			x: 4.50d
+			y: -2.00d
+		}
+		{
+			dependencies: [
+				"66A1000000000001"
+				"6600000000000107"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics_utility_objects:hydraulic_hinge_head"
+			}
+			id: "66A1000000000002"
+			rewards: [
+				{
+					id: "68A1000000000003"
+					item: {
+						count: 4
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "68A1000000000004"
+					type: "xp"
+					xp: 36
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000003"
+					item: { count: 1, id: "aeronautics_utility_objects:hydraulic_rod" }
+					type: "item"
+				}
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000004"
+					item: { count: 1, id: "aeronautics_utility_objects:universal_joint_rod" }
+					type: "item"
+				}
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000005"
+					item: { count: 1, id: "aeronautics_utility_objects:hydraulic_hinge_head" }
+					type: "item"
+				}
+			]
+			x: 4.50d
+			y: 0.50d
+		}
+		{
+			dependencies: [
+				"66A1000000000002"
+				"19715EBCBBA1B4AD"
+			]
+			extraquests_calendar: {
+				active_quests: 3
+				enabled: 0b
+				pool: ""
+				reset_time: "06:00"
+				timezone: "UTC"
+				weekday: 1
+				weekly: 0b
+			}
+			icon: {
+				id: "aeronautics_utility_objects:brass_hydraulic_hinge_head"
+			}
+			id: "66A1000000000003"
+			rewards: [
+				{
+					id: "68A1000000000005"
+					item: {
+						count: 4
+						id: "minecraft:honey_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "68A1000000000006"
+					type: "xp"
+					xp: 48
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000006"
+					item: { count: 1, id: "aeronautics_utility_objects:brass_hydraulic_hinge_head" }
+					type: "item"
+				}
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000007"
+					item: { count: 1, id: "aeronautics_utility_objects:brass_universal_joint" }
+					type: "item"
+				}
+				{
+					extraquests_options: {
+						aggregation: "AUTO"
+						duration: 600L
+						minimum_contribution: 0L
+						reset_damage: 0b
+						reset_death: 1b
+						reset_logout: 0b
+						shared: 0b
+						timer_enabled: 0b
+						timer_start: "FIRST_PROGRESS"
+					}
+					id: "67A1000000000008"
+					item: { count: 1, id: "aeronautics_utility_objects:hydraulic_regulator" }
+					type: "item"
+				}
+			]
+			x: 4.50d
+			y: 3.00d
+		}
 
 	]
 }
