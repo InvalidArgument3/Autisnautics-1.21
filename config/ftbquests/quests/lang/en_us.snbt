@@ -645,8 +645,8 @@ quest.17AA221C7B7E6734.quest_desc: [
 	]
 	quest.2809AE02EA018BFA.title: "never"
 	quest.286510750C333C1F.quest_desc: [
-		"Refined radiance is the bright material after chromatic compound."
-		"It presses into a radiant sheet."
+		"A spout fills one chromatic compound with 250 mB of lumisene, the light drained from the chromatic singularity."
+		"It presses into a radiant sheet. Dropping the compound in light still wants a beacon."
 	]
 	quest.286510750C333C1F.quest_subtitle: "{cabin.quest.286510750C333C1F.subtitle}"
 	quest.286510750C333C1F.title: "Refined Radiance"
@@ -3940,10 +3940,10 @@ quest.7C31A0611CC62360.quest_desc: [
 		"End stone powder is crushed end stone. Bucket the blend out of the basin. There is no levitite blend item."
 	]
 	quest.660000000000006C.title: "Pearlescent Levitite"
-	quest.660000000000006C.quest_subtitle: "The flight metal"
+	quest.660000000000006C.quest_subtitle: "Soul sand in a basin"
 	quest.660000000000006C.quest_desc: [
-		"Pearlescent levitite is the finished lift material, processed by the mod itself."
-		"Envelopes are the cloth you build around that lift."
+		"Heat-compact 500 mB of levitite blend with soul sand or soul soil. One mixing batch of blend is 500 mB."
+		"That is the same soul fire that turns a pool of blend pink. Regular levitite is still the heat crystallization."
 	]
 	quest.660000000000006D.title: "Andesite Propeller"
 	quest.660000000000006D.quest_subtitle: "Andesite Machine, aircraft propeller"
@@ -4962,5 +4962,25 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.A11E000000000005.quest_desc: [
 		"A spout pours 250 mB of lava onto a blaze cake base, and the cake is what it becomes."
 		"Feed the cake to a lit blaze burner and the mixer can superheat. That is the heat that melts an iron ingot."
+	]
+
+	quest.66A1000000000001.title: "Andesite Linkage"
+	quest.66A1000000000001.quest_subtitle: "Transmission"
+	quest.66A1000000000001.quest_desc: [
+		"The andesite universal joint rod is two shafts, an andesite alloy, and a Simulated spring. The kinetic conversion bearing is a swivel bearing wrapped in copper sheets."
+		"Both sit with the andesite machines. Neither one asks for brass."
+	]
+	quest.66A1000000000002.title: "Brass Linkage"
+	quest.66A1000000000002.quest_subtitle: "Transmission"
+	quest.66A1000000000002.quest_desc: [
+		"With a brass casing, craft the pneumatic rod, the brass universal joint rod, and the andesite hydraulic hinge head. The rod and the joint rod take brass sheet. The hinge takes a brass casing."
+		"They do not take an electron tube or a precision mechanism."
+	]
+	quest.66A1000000000003.title: "Precision Linkage"
+	quest.66A1000000000003.quest_subtitle: "Transmission"
+	quest.66A1000000000003.quest_desc: [
+		"The brass hydraulic hinge head and the universal joint head each take a precision mechanism and a brass casing. The pneumatic regulator takes that mechanism plus two electron tubes."
+		"The pneumatic connection head and the giant hydraulic rod are the same tier. The giant rod is a mechanical craft around one precision mechanism."
+		"None of these crafts give a tube or a mechanism back."
 	]
 }

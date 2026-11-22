@@ -388,7 +388,29 @@ Checked and left alone: primer Create Addition, Let it Walk (sequenced parts alr
 - The stage 3 log and stick no longer lead to the wheel.
 - The stage 1 belt quest still waits on rubber. Kelp is legal earlier.
 - `6EDA86E4BE0F096B` and the other ids in the same shape (`21753CBB528EAADF`, `28C41C062843C2CA`, `5A8DF2D8553904BF`, `681DACF11F193771`, `28D3347E8FA277AD`, `74CFD83C501C4952`, `5DF206B1738D08A0`, `251A91F6C21AEAFB`, plus two origin task ids) are task ids on overview or origin quests, written into `dependencies`. They were already like that. Replacing them with the parent quest id would hide a large part of each stage behind an overview checkmark, so they were left.
-- `aeronautics:pearlescent_levitite` is an item and the export has no recipe that outputs it. `create:refined_radiance` is the same kind of gap. Neither was introduced by the tube change, and neither quest was retargeted.
-- Spanish, French, Portuguese, Russian, and Chinese cabin files still describe the algal mix and the deployer assembly under `cabin.quest.73FCA432DEFC1DED` and `cabin.quest.675C395B2074C24C`. The quest body is the English snbt literal, not those keys.
+- `aeronautics:pearlescent_levitite` and `create:refined_radiance` had no recipe when this split was written. Both have recipes now. See the progression pass below.
+- Spanish, French, Portuguese, Russian, and Chinese cabin files described the algal mix and the deployer assembly under `cabin.quest.73FCA432DEFC1DED` and `cabin.quest.675C395B2074C24C` when this split was written. Those lines, and the other English lines that changed after the locales were last saved, are translated now. The quest body an English client shows is still the snbt literal.
 
 Dedicated server boot after these edits: NeoForge 21.1.265, Java 25. KubeJS logged `Loaded 64/64 KubeJS server scripts in 1.644 s with 0 errors and 1 warnings` (the existing Thermal skip in `recipes/trading.js`). FTB Quests logged `Loaded 5 chapter groups, 43 chapters, 827 quests, 5 reward tables` and no quest error. The 827 count is the previous 822 plus the five new quests. A parser pass found no duplicate quest, task, or reward ids. Every new dependency resolves to a quest id. The pre-existing task-id dependency entries listed above are still not quest ids.
+
+## Progression pass, 2026-11-21
+
+Walked the quest graph and the recipe scripts again after the levitite and radiance recipes and the Transmission Linkage quests. 830 quests, 770 with dependencies, no dependency cycle. Every dependency string resolves to some id. New quest, task, and reward ids are unique.
+
+**Fixed in this pass**
+
+- The English quest file is what an English client shows. Pearlescent levitite no longer says the mod processes it by itself. It names the heated compact. Refined radiance names the lumisene spout. The three linkage quests have titles and descriptions in that file.
+- The millstone netherrack to cinder flour recipe is still `kubejs:milling/netherrack_cinder_flour` in `chapter_1.js`. The only live electron tube recipe is the 10 mB `blazinghot:molten_iron` fill in `chapter_2.js`. The crafting-table tube and every other tube output are removed before that fill is added. The Tinkers fill in `chapters.js` sits inside the block comment that starts at line 34.
+
+**Left as judgment calls**
+
+- Regular levitite stays the in-world heat crystallization (torch, campfire, lit blaze burner). There is still no basin recipe for it. Pearlescent is the one that gained a basin recipe, because that quest had no written recipe at all.
+- `create:shadow_steel` still has no recipe. Nothing in the quest line asks for it. The dark conversion is the other half of Create's dropped-item mechanic. A basin recipe for it would be a new path, not a repair of a quest.
+- The gold machine stays in stage 2, gated on the brass machine, even though a golden sheet and deepslate still make two railway casings without brass.
+- The stage 2 iron nugget quest, the stage 1 algal brick, and the stage 3 log and stick still lead nowhere.
+- The stage 1 belt quest still waits on rubber. Dried kelp is a legal belt earlier.
+- `6EDA86E4BE0F096B`, `21753CBB528EAADF`, `28C41C062843C2CA`, `5A8DF2D8553904BF`, `681DACF11F193771`, `28D3347E8FA277AD`, `74CFD83C501C4952`, `5DF206B1738D08A0`, `251A91F6C21AEAFB`, and the two origin task ids are still written into `dependencies`. They are task ids. Replacing them with the parent quest would hide a stage behind an overview checkmark.
+- Quest `2809AE02EA018BFA` ("never") is a custom task that does not complete. The stage 2 nodes and the blobbian nodes that depend on it are hidden decoration. They are not on the machine line.
+- Create Enchantment Industry's drain quest `6600000000000065` is still a checkmark. The drain item has no recipe. The icon is the mechanical grindstone.
+- The pneumatic connection head and the giant hydraulic rod are described on Precision Linkage and are not their own tasks.
+- Cabin translations apply where the snbt value is a `{cabin...}` placeholder. Rewritten quests that store an English literal keep that literal for every language, because there is no per-locale snbt. The cabin files were still brought up to the current English keys.
