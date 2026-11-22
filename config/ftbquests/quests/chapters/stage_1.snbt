@@ -1200,7 +1200,7 @@
 			y: 9.5d
 		}
 		{
-			dependencies: ["3EF5F89DBD6959E3"]
+			dependencies: ["608BF7BE3CB666F3"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b

@@ -14,14 +14,8 @@ ServerEvents.recipes(event => {
     event.smelting("kubejs:rubber", "kubejs:raw_rubber").xp(0).cookingTime(200)
     event.blasting("kubejs:rubber", "kubejs:raw_rubber").xp(0).cookingTime(100)
     // - Rubber usecases
-    // Belts - 3x output. Create's dried-kelp craft is the only other belt recipe.
-    event.remove({ id: "create:crafting/kinetics/belt_connector" })
-    event.shaped(Item.of("create:belt_connector", 3), [
-        "SSS",
-        "SSS"
-    ], {
-        S: "kubejs:rubber"
-    })
+    // Belts stay Create's dried-kelp craft: create:crafting/kinetics/belt_connector,
+    // six dried kelp, one connector. Rubber does not make belts.
     // Replacing dried kelp in several recipes
     let kelpToRubber = (recipe) => {
         // restored original: event.replaceInput({ id: recipe }, "minecraft:dried_kelp", "kubejs:rubber")

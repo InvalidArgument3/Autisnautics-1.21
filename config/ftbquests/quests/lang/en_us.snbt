@@ -639,10 +639,10 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.28DAED70768C6A50.quest_subtitle: "Fluix casings around a calculation mechanism"
 	quest.28DAED70768C6A50.title: "Controller"
 	quest.29D37095C73B3DEC.quest_desc: [
-		"A belt connector is the belt that carries items. Six rubber make three."
+		"A belt connector is the belt that carries items. Six dried kelp make one."
 		"The sealed mechanism is next."
 	]
-	quest.29D37095C73B3DEC.quest_subtitle: "Rubber"
+	quest.29D37095C73B3DEC.quest_subtitle: "Dried kelp"
 	quest.29D37095C73B3DEC.title: "Belt Connector"
 	quest.29DABB5FDE6356E9.title: "{cabin.quest.29DABB5FDE6356E9.title}"
 	quest.2B195E5B195246F5.quest_desc: [
@@ -831,8 +831,8 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.3680C9F8751A9E5F.title: "Disgusting Black Creatures"
 	quest.3728DF562D6DCE3A.quest_desc: [
-		"Raw rubber is the sticky start of the belt line."
-		"It cooks into rubber, and belts are made of that rubber."
+		"Raw rubber is vines, flowers, or resin."
+		"It cooks into rubber, and that rubber seals a kinetic mechanism."
 	]
 	quest.3728DF562D6DCE3A.quest_subtitle: "Vines, flowers, or resin"
 	quest.3728DF562D6DCE3A.title: "Raw Rubber"
@@ -970,7 +970,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 	quest.3EEF098FB1D343AD.quest_desc: ["{image: width:100 height:100 align:center}"]
 	quest.3EF5F89DBD6959E3.quest_desc: [
 		"Rubber is cooked raw rubber."
-		"Six rubber make three belt connectors. The sealed mechanism comes after the belts."
+		"Two rubber seal a kinetic mechanism. Belts are dried kelp."
 	]
 	quest.3EF5F89DBD6959E3.quest_subtitle: "Furnace or blast furnace"
 	quest.3EF5F89DBD6959E3.title: "Rubber"
@@ -3561,9 +3561,9 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It also mills netherrack into cinder flour, which is the start of a blaze cake. A hand crank can turn it, and it is not an Andesite Machine."
 	]
 	quest.6600000000000035.title: "Belt"
-	quest.6600000000000035.quest_subtitle: "Rubber"
+	quest.6600000000000035.quest_subtitle: "Dried kelp"
 	quest.6600000000000035.quest_desc: [
-		"A belt carries items between machines. Six rubber make three connectors."
+		"A belt carries items between machines. Six dried kelp make one connector."
 	]
 	quest.6600000000000036.title: "Basin"
 	quest.6600000000000036.quest_subtitle: "The pot the machines share"

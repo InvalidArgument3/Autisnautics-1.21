@@ -1,4 +1,7 @@
 # Changelog
+## [Unreleased]
+- **Belts are dried kelp again.** Create's recipe stays: six dried kelp make one belt connector. The six-rubber belt craft is removed. `kubejs:rubber` stays, and it still seals a kinetic mechanism. The stage 1 belt quest depends on Kelp, and the belt text says dried kelp. The Rubber quest has no quest after it.
+
 ## [0.1.54]
 - **Dead-end quest branches are gone.** Stage 2 Cobblestone, Gravel, and Iron Nugget; the stage 1 Algal Brick; the Create primer Algal Brick; and the stage 3 Log and Stick are deleted, including their English and translated lang keys. Algal Blend stays, and it no longer has a child quest. Builders Tea keeps its other quests. No other quest id changed.
 - **Belts are rubber.** Create's dried-kelp belt recipe (`create:crafting/kinetics/belt_connector`, six dried kelp, one connector) is removed. Six rubber still make three connectors. The stage 1 belt quest, the rubber quest, and the primer belt quest say that.
