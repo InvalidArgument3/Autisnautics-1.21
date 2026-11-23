@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.67]
+- **Disabled Overworld NuclearCraft & Rock Crystal spawns from `Autisnautics Density Ores`.** Overrode `boron_1..5`, `lithium_1..5`, `magnesium_1..5`, `thorium_1..5`, `uranium_1..5`, and `rock_crystal_1..5` biome modifiers in `Autisnautics Progression` with `neoforge:none` so NuclearCraft ores only spawn in `infernalcross:dimension` and Rock Crystal only spawns in `infinite_abyss:first_layer`.
+
 ## [0.1.66]
 - **Added `RegisterClientExtensionsEvent` duplicate-registration guard.** `RegisterClientExtensionsEventMixin` in `adventurers_harness_portals` skips already-registered items in `RegisterClientExtensionsEvent.registerItem` so the intermittent Create/Registrate `create:cardboard_helmet` duplicate client extension crash no longer aborts client startup.
 
