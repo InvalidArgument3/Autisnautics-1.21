@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.harnessportals.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "HarnessMiningMixin"
+  ],
+  "client": [
+    "MiningInputMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
