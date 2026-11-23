@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.66]
+- **Added `RegisterClientExtensionsEvent` duplicate-registration guard.** `RegisterClientExtensionsEventMixin` in `adventurers_harness_portals` skips already-registered items in `RegisterClientExtensionsEvent.registerItem` so the intermittent Create/Registrate `create:cardboard_helmet` duplicate client extension crash no longer aborts client startup.
+
 ## [0.1.65]
 - **Fixed NeoOrigins leaving players stuck invulnerable when all classes are disabled.** `kubejs/server_scripts/_autisoriginsKube.js` now sets `hadAllOrigins = true` on login and every 20 ticks once `origins:origin` is chosen, preventing `CombatPowerEvents.onLivingDamage` from cancelling all damage when `origins:class` is disabled. Also added `minecraft:indirect_magic` to `autisorigins:brittle_soul`.
 
