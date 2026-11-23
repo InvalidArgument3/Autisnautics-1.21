@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.62]
+- **Adjusted `diamond_warrior_harness` crafting cost.** Upgrading `adventurers_harness:diamond_harness` to `adventurers_harness_portals:diamond_warrior_harness` now costs 7 `minecraft:diamond` and 1 `minecraft:gold_ingot` (shapeless 3x3) instead of a nether star.
+
 ## [0.1.61]
 - **Updated `adventurers_harness_portals` Diamond Warrior Harness upgrade recipe.** Replaced the `harness_combination_template` smithing recipe with a shapeless crafting recipe (`adventurers_harness:diamond_harness` + `minecraft:nether_star` -> `adventurers_harness_portals:diamond_warrior_harness`), so upgrading no longer requires a smithing template.
 
