@@ -867,7 +867,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:quartz_enriched_iron"
+				id: "ae2:certus_quartz_crystal"
 			}
 			id: "2C81D358594C4352"
 			rewards: [
@@ -907,7 +907,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "5BF8BF7A24029B57"
-					item: { count: 1, id: "refinedstorage:quartz_enriched_iron" }
+					item: { count: 1, id: "ae2:certus_quartz_crystal" }
 					type: "item"
 				}
 				{

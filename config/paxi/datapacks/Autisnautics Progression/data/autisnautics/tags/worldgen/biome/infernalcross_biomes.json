@@ -1,0 +1,16 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "regions_unexplored:scorching_caves",
+      "required": false
+    },
+    {
+      "id": "alexscaves:forlorn_hollows",
+      "required": false
+    },
+    "minecraft:basalt_deltas",
+    "minecraft:nether_wastes",
+    "minecraft:soul_sand_valley"
+  ]
+}

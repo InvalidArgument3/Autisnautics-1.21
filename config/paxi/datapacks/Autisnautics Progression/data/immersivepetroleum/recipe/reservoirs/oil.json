@@ -1,0 +1,20 @@
+{
+  "type": "immersivepetroleum:reservoirs",
+  "biomes": {
+    "isBlacklist": false,
+    "list": []
+  },
+  "dimensions": {
+    "isBlacklist": false,
+    "list": [
+      "oceanworld:deepsea"
+    ]
+  },
+  "equilibrium": 0,
+  "fluid": "immersivepetroleum:crudeoil",
+  "fluidcapacity": 45000000,
+  "fluidminimum": 5000000,
+  "fluidtrace": 10,
+  "name": "oil",
+  "weight": 50
+}

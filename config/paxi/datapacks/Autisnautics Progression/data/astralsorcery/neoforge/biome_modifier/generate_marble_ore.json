@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#autisnautics:infinite_abyss_biomes",
+  "features": "astralsorcery:placed_marble_ore",
+  "step": "underground_ores"
+}

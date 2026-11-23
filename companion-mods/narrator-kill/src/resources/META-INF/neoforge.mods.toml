@@ -1,0 +1,28 @@
+modLoader = "lowcodefml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "narratorkill"
+version = "1.0.0"
+displayName = "Narrator Kill"
+authors = "Autisnautics"
+description = '''Never loads the text-to-speech engine, drops every narration path, and makes the narrator hotkey inert. Client only.'''
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "narratorkill.mixins.json"
+
+[[dependencies.narratorkill]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.narratorkill]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.265,21.2)"
+ordering = "NONE"
+side = "CLIENT"

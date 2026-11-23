@@ -1,0 +1,17 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "deeperdarker:deeplands",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:echoing_forest",
+      "required": false
+    },
+    {
+      "id": "deeperdarker:overcast_columns",
+      "required": false
+    }
+  ]
+}
