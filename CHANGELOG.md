@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.63]
+- **Diamond Warrior Harness chest core socket now uses a diamond armor palette.** Added `WarriorCoreLayerMixin` and `diamond_warrior_core.png` so the non-glowing frame around the chest star renders in diamond colors instead of netherite gray.
+
 ## [0.1.62]
 - **Adjusted `diamond_warrior_harness` crafting cost.** Upgrading `adventurers_harness:diamond_harness` to `adventurers_harness_portals:diamond_warrior_harness` now costs 7 `minecraft:diamond` and 1 `minecraft:gold_ingot` (shapeless 3x3) instead of a nether star.
 
