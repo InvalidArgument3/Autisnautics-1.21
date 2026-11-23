@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.61]
+- **Updated `adventurers_harness_portals` Diamond Warrior Harness upgrade recipe.** Replaced the `harness_combination_template` smithing recipe with a shapeless crafting recipe (`adventurers_harness:diamond_harness` + `minecraft:nether_star` -> `adventurers_harness_portals:diamond_warrior_harness`), so upgrading no longer requires a smithing template.
+
 ## [0.1.60]
 - **Added `adventurers_harness_portals` 1.0.0 (`adventurersharnessportals-1.0.0.jar`, `.pakku/overrides/mods/`, both sides).**
   - **Diamond Warrior Harness (`adventurers_harness_portals:diamond_warrior_harness`):** Diamond-tier combat harness (`HarnessTier.DIAMOND`, `warrior = true`) with full Diamond Chestplate armor stats, enchantability, anvil repair, Curios `body` slot support, and glowing `WarriorCoreLayer`. Upgrades from `adventurers_harness:diamond_harness` via Smithing Table (`harness_combination_template` + `nether_star`) and upgrades to `adventurers_harness:netherite_warrior_harness` via `netherite_upgrade_smithing_template` + `netherite_ingot`.
