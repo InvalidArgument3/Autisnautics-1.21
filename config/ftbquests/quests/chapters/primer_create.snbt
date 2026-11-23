@@ -957,7 +957,6 @@
 			dependencies: [
 				"6600000000000109"
 				"64010A0000000001"
-				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1009,10 +1008,7 @@
 			y: 9.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"3F45DFEF31838A00"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1074,7 +1070,6 @@
 			dependencies: [
 				"6600000000000108"
 				"64010A0000000001"
-				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1129,7 +1124,6 @@
 			dependencies: [
 				"660000000000010A"
 				"64010A0000000001"
-				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1182,7 +1176,6 @@
 			dependencies: [
 				"660000000000010B"
 				"64010A0000000001"
-				"3F45DFEF31838A00"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1232,10 +1225,7 @@
 			y: 15.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"3F45DFEF31838A00"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1292,10 +1282,7 @@
 			y: -6.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"3F45DFEF31838A00"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1352,10 +1339,7 @@
 			y: -9.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"3F45DFEF31838A00"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1412,10 +1396,7 @@
 			y: -12.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"5351AF6CA73CB8E0"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1464,10 +1445,7 @@
 			y: -9.00d
 		}
 		{
-			dependencies: [
-				"64010A0000000001"
-				"3F45DFEF31838A00"
-			]
+			dependencies: ["64010A0000000001"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1516,10 +1494,7 @@
 			y: -12.00d
 		}
 		{
-			dependencies: [
-				"6600000000000102"
-				"0E0535849D8D9279"
-			]
+			dependencies: ["6600000000000102"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1578,10 +1553,7 @@
 			y: -12.00d
 		}
 		{
-			dependencies: [
-				"6600000000000102"
-				"0E0535849D8D9279"
-			]
+			dependencies: ["6600000000000102"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1638,10 +1610,7 @@
 			y: -9.00d
 		}
 		{
-			dependencies: [
-				"6600000000000102"
-				"0E0535849D8D9279"
-			]
+			dependencies: ["6600000000000102"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1690,10 +1659,7 @@
 			y: -15.00d
 		}
 		{
-			dependencies: [
-				"6600000000000102"
-				"0E0535849D8D9279"
-			]
+			dependencies: ["6600000000000102"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1750,10 +1716,7 @@
 			y: -12.00d
 		}
 		{
-			dependencies: [
-				"6600000000000102"
-				"0E0535849D8D9279"
-			]
+			dependencies: ["6600000000000102"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -1813,7 +1776,6 @@
 			dependencies: [
 				"6600000000000106"
 				"660000000000010C"
-				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1876,7 +1838,6 @@
 			dependencies: [
 				"6600000000000106"
 				"660000000000010C"
-				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1929,7 +1890,6 @@
 			dependencies: [
 				"6600000000000106"
 				"660000000000010C"
-				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -1990,7 +1950,6 @@
 			dependencies: [
 				"6600000000000106"
 				"660000000000010C"
-				"667F4F686A45EF3E"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2113,7 +2072,6 @@
 			dependencies: [
 				"660000000000004A"
 				"64010A0000000001"
-				"5351AF6CA73CB8E0"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -2165,10 +2123,7 @@
 			y: -6.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2287,10 +2242,7 @@
 			y: 0.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2347,10 +2299,7 @@
 			y: 3.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2407,10 +2356,7 @@
 			y: 0.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2467,10 +2413,7 @@
 			y: 3.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2527,10 +2470,7 @@
 			y: -3.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2587,10 +2527,7 @@
 			y: 0.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2647,10 +2584,7 @@
 			y: 3.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2707,10 +2641,7 @@
 			y: -3.00d
 		}
 		{
-			dependencies: [
-				"6600000000000105"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000105"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2770,9 +2701,6 @@
 		}
 
 		{
-			dependencies: [
-				"76706BE282ABAC31"
-			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -2946,7 +2874,6 @@
 			y: 3.00d
 		}
 		{
-			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3062,7 +2989,6 @@
 			y: -12.00d
 		}
 		{
-			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3113,7 +3039,6 @@
 			y: -15.00d
 		}
 		{
-			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3170,7 +3095,6 @@
 			y: -15.00d
 		}
 		{
-			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3227,7 +3151,6 @@
 			y: -18.00d
 		}
 		{
-			dependencies: ["7BE0F4512FE4936D"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3284,10 +3207,7 @@
 			y: -18.00d
 		}
 		{
-			dependencies: [
-				"66000000000000D5"
-				"7BE0F4512FE4936D"
-			]
+			dependencies: ["66000000000000D5"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3908,10 +3828,7 @@
 			y: 6.00d
 		}
 		{
-			dependencies: [
-				"6600000000000042"
-				"06B061C0EE94BC90"
-			]
+			dependencies: ["6600000000000042"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -3973,7 +3890,6 @@
 			dependencies: [
 				"6600000000000104"
 				"660000000000004B"
-				"19715EBCBBA1B4AD"
 			]
 			extraquests_calendar: {
 				active_quests: 3
@@ -4033,9 +3949,6 @@
 			y: -6.00d
 		}
 		{
-			dependencies: [
-				"76706BE282ABAC31"
-			]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -4046,7 +3959,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "kubejs:reinforced_mechanism"
+				id: "create:railway_casing"
 			}
 			id: "660000000000010C"
 			rewards: [
@@ -4087,7 +4000,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "670100000000010C"
-					item: { count: 1, id: "kubejs:reinforced_mechanism" }
+					item: { count: 1, id: "create:railway_casing" }
 					type: "item"
 				}]
 			x: 27.00d

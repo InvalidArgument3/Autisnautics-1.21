@@ -433,10 +433,7 @@
 			y: 4.34d
 		}
 		{
-			dependencies: [
-				"6404040000000000"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6404040000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -495,10 +492,7 @@
 			y: 1.80d
 		}
 		{
-			dependencies: [
-				"660000000000005E"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["660000000000005E"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -555,9 +549,7 @@
 			y: 2.70d
 		}
 		{
-			dependencies: [
-				"6404020000000000"
-			]
+			dependencies: ["6404020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -616,10 +608,7 @@
 			y: -4.34d
 		}
 		{
-			dependencies: [
-				"6404020000000000"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6404020000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -676,10 +665,7 @@
 			y: -3.32d
 		}
 		{
-			dependencies: [
-				"6600000000000061"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000061"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -736,10 +722,7 @@
 			y: -6.51d
 		}
 		{
-			dependencies: [
-				"6600000000000061"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000061"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -796,10 +779,7 @@
 			y: -2.70d
 		}
 		{
-			dependencies: [
-				"660000000000005F"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["660000000000005F"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b

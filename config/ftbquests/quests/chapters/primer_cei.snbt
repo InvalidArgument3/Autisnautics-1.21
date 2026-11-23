@@ -439,10 +439,7 @@
 			y: -7.05d
 		}
 		{
-			dependencies: [
-				"6405000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["6405000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
@@ -499,10 +496,7 @@
 			y: 2.35d
 		}
 		{
-			dependencies: [
-				"6405000000000000"
-				"047FD4E54147D8F7"
-			]
+			dependencies: ["6405000000000000"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b

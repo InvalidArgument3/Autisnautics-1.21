@@ -1,4 +1,11 @@
 # Changelog
+## [0.1.70]
+- **Cleaned up FTB Quests formatting, chapter group naming, and primer recipes.**
+  - Renamed `"Factory Guide"` to `"Dimension Guide"` (`kubejs/assets/ftbquests/lang/en_us.json`).
+  - Updated the starting node of `Dimension Progression` (`6900000000000001`) to describe descending through dimensional barriers without referencing Immersive Portals.
+  - Removed legacy CABIN stage chapters (`overview`, `stage_1..5`) whose custom machine/wafer/alchemy recipes were removed, and cleared 83 broken dependencies across `origin_selector` and `primer_*` chapters.
+  - Converted mod primer quest descriptions (`primer_create`, `primer_aeronautics`, `primer_create_addition`, `primer_cei`, `primer_computercraft`, `primer_nuclearcraft`) back to standard mod/valid KubeJS recipes and replaced `kubejs:reinforced_mechanism` with `create:railway_casing`.
+
 ## [0.1.69]
 - **Redesigned the Main Line FTB Quests chapter (`Dimension Progression`) as a vertical Dimension Stack tech tree.**
   - Added custom vertical dimension-stack cutaway background (`kubejs:textures/quests/dimension_stack_bg.png`).

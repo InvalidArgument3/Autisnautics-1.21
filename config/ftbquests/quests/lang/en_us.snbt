@@ -16,11 +16,6 @@
 
 	quest.A7100000000000F3.title: "Taking Flight"
 	quest.A7100000000000F3.quest_desc: ["Complete Skyworthy in the Taking Flight chapter, then return here for the rocket finale."]
-	quest.4F7A70041B67A348.title: "Moonshot"
-	quest.4F7A70041B67A348.quest_desc: [
-		"Moon Stone is the overview visit to the moon after the rocket."
-		"That landing closes the guide."
-	]
 	quest.A710000000000002.quest_desc: ["Any wood works for flight; oak-tier paraglider counts."]
 	quest.A710000000000003.quest_desc: ["Sturdier canopy for longer glides between islands."]
 	quest.A710000000000004.quest_desc: ["Immersive Aircraft propulsion."]
@@ -162,7 +157,7 @@ quest.0504DC3275C4F49D.quest_desc: [
 	quest.06B061C0EE94BC90.quest_subtitle: "{cabin.quest.06B061C0EE94BC90.subtitle}"
 	quest.06B061C0EE94BC90.title: "Polished Rose Quartz"
 	quest.07BE7128982202A7.title: "{cabin.quest.07BE7128982202A7.title}"
-	quest.08367CEDF13CB65C.quest_subtitle: "Shell of a Lead Machine"
+	quest.08367CEDF13CB65C.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.08367CEDF13CB65C.title: "Lead Casing"
 quest.08367CEDF13CB65C.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -226,7 +221,7 @@ quest.08367CEDF13CB65C.quest_desc: [
 	quest.09EB29F838620371.quest_desc: ["{cabin.quest.09EB29F838620371.description1}"]
 	quest.09EB29F838620371.title: "Empty Schematic"
 	quest.0A295CF925D97618.title: "Purge the Undead"
-	quest.0AD8C8E5491278E1.quest_subtitle: "Shell of a Lead Machine"
+	quest.0AD8C8E5491278E1.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.0AD8C8E5491278E1.title: "Lead Casing"
 quest.0AD8C8E5491278E1.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -397,7 +392,7 @@ quest.0AD8C8E5491278E1.quest_desc: [
 	quest.174E3A810535CAAC.title: "Blaze Burner"
 	quest.17817EA324333BE9.quest_desc: [" Most mod controls have been unbound. There's a handy new binding UI in the settings menu, make sure to use it!"]
 	quest.17817EA324333BE9.quest_subtitle: "I WILL NOT BE BOUND"
-	quest.17AA221C7B7E6734.quest_subtitle: "Shell of a Lead Machine"
+	quest.17AA221C7B7E6734.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.17AA221C7B7E6734.title: "Lead Casing"
 quest.17AA221C7B7E6734.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -464,10 +459,10 @@ quest.17AA221C7B7E6734.quest_desc: [
 	quest.1C6657984648B0D4.quest_subtitle: "{cabin.quest.1C6657984648B0D4.subtitle}"
 	quest.1CC536F2D05E8189.title: "Infinite Vials"
 	quest.1CCDA748B237F6F5.quest_desc: [
-		"A mechanical harvester is an Andesite Machine that reaps crops as a contraption rolls over them."
+		"A mechanical harvester uses its standard mod crafting recipe (check EMI)."
 		"It is how a moving farm gathers itself."
 	]
-	quest.1CCDA748B237F6F5.quest_subtitle: "An Andesite Machine for crops"
+	quest.1CCDA748B237F6F5.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.1CCDA748B237F6F5.title: "Mechanical Harvester"
 	quest.1D1D1FEAF49C5E11.quest_desc: [
 		"Computer advanced is a ComputerCraft goal on the laser page, beside the jars."
@@ -666,7 +661,7 @@ quest.17AA221C7B7E6734.quest_desc: [
 	]
 	quest.2BD76CB3F8BC215E.title: "Crude Oil Bucket"
 	quest.2BE033F631A778D9.title: "{cabin.quest.2BE033F631A778D9.title}"
-	quest.2C196D41B3B087C6.quest_subtitle: "Shell of a Lead Machine"
+	quest.2C196D41B3B087C6.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.2C196D41B3B087C6.title: "Lead Casing"
 quest.2C196D41B3B087C6.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -1062,7 +1057,7 @@ quest.31DA3A80C6E23004.quest_desc: [
 	]
 	quest.46820FBDDDEE491E.quest_subtitle: "{cabin.quest.46820FBDDDEE491E.subtitle}"
 	quest.46820FBDDDEE491E.title: "Log"
-	quest.46BF1AE437F27403.quest_subtitle: "Shell of a Lead Machine"
+	quest.46BF1AE437F27403.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.46BF1AE437F27403.title: "Lead Casing"
 quest.46BF1AE437F27403.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -1070,7 +1065,7 @@ quest.46BF1AE437F27403.quest_desc: [
 	]
 	quest.472FB03D0E5A38D6.quest_desc: [
 		"A stockpile switch watches an inventory and emits a redstone signal."
-		"In this pack it stands in for a redstone link, and it is cut from a Brass Machine."
+		"In this pack it stands in for a redstone link, and it is cut using its standard mod recipe (check EMI)."
 	]
 	quest.472FB03D0E5A38D6.quest_subtitle: "The brass stand-in for a redstone link"
 	quest.472FB03D0E5A38D6.title: "Stockpile Switch"
@@ -1093,7 +1088,7 @@ quest.46BF1AE437F27403.quest_desc: [
 		"Matter plastics build it, and the rocket will not count without it."
 	]
 	quest.4800892E1E70648D.quest_subtitle: "{cabin.quest.4800892E1E70648D.subtitle}"
-	quest.4815DA7B77DD7175.quest_subtitle: "Shell of a Lead Machine"
+	quest.4815DA7B77DD7175.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.4815DA7B77DD7175.title: "Lead Casing"
 quest.4815DA7B77DD7175.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -1292,7 +1287,7 @@ quest.4815DA7B77DD7175.quest_desc: [
 	quest.5A199B898D41A309.title: "The Reactor (removed)"
 	quest.5A64DBCFBF78856B.quest_desc: ["adds Power III to flinging staff so it's not useless"]
 	quest.5A64DBCFBF78856B.title: "flingingstaff_power"
-	quest.5A6926E64EEE7729.quest_subtitle: "Shell of a Lead Machine"
+	quest.5A6926E64EEE7729.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.5A6926E64EEE7729.title: "Lead Casing"
 quest.5A6926E64EEE7729.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -1561,7 +1556,7 @@ quest.6199E449AF2BADBA.quest_desc: [
 		"The laser chaos pairing can make it, and an extractor pulls the dust back out."
 	]
 	quest.6FDC8DA2FDED5FDD.title: "Substrate Silicon"
-	quest.7021A2BD8775DC07.quest_subtitle: "Shell of a Lead Machine"
+	quest.7021A2BD8775DC07.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.7021A2BD8775DC07.title: "Lead Casing"
 quest.7021A2BD8775DC07.quest_desc: [
 		"A lead casing is the shell a logistic mechanism wears."
@@ -1954,7 +1949,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6401030000000000.quest_subtitle: "Andesite and a nugget"
 	quest.6401030000000000.quest_desc: [
 		"Andesite alloy is the metal of the kinetic line. Two andesite and two iron nuggets, or two andesite and two zinc nuggets, make one."
-		"An unheated mixer makes the same alloy. Shafts, casings, and the Andesite Machine all start from it."
+		"An unheated mixer makes the same alloy. Shafts, cogwheels, and Andesite Casings all start from it."
 	]
 	quest.6401040000000000.title: "Shaft"
 	quest.6401040000000000.quest_subtitle: "The axle"
@@ -1997,9 +1992,9 @@ quest.7C31A0611CC62360.quest_desc: [
 		"The dye changes which ship you can spot, and the lift stays the same."
 	]
 	quest.6402020000000000.title: "Steam Vent"
-	quest.6402020000000000.quest_subtitle: "A Brass Machine cut"
+	quest.6402020000000000.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6402020000000000.quest_desc: [
-		"A steam vent is a stonecut of a Brass Machine."
+		"A steam vent uses its standard mod crafting recipe (check EMI)."
 		"It fills a nearby envelope with steam, which lifts the ship rather than pushing it."
 	]
 	quest.6402030000000000.title: "Aviator Goggles"
@@ -2009,20 +2004,20 @@ quest.7C31A0611CC62360.quest_desc: [
 		"They are the flight pair for reading the ship while you fly it."
 	]
 	quest.6402040000000000.title: "Adjustable Burner"
-	quest.6402040000000000.quest_subtitle: "Coal block on an Andesite Machine"
+	quest.6402040000000000.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6402040000000000.quest_desc: [
-		"An adjustable burner is an Andesite Machine with a coal block applied."
+		"An adjustable burner uses its standard mod crafting recipe (check EMI)."
 		"It heats air into an envelope, the lift that does not need a boiler."
 	]
 	quest.6402050000000000.title: "Propeller Bearing"
-	quest.6402050000000000.quest_subtitle: "A Gold Machine cut"
+	quest.6402050000000000.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6402050000000000.quest_desc: [
-		"A propeller bearing is a stonecut of a Gold Machine, two from the cut."
+		"A propeller bearing uses its standard mod crafting recipe (check EMI)."
 		"It is the mount a propeller spins on to push the ship."
 	]
 	chapter.6503000000000000.title: "Create Crafts \\& Additions"
 	chapter.6503000000000000.chapter_subtitle: [
-		"Wires, after a Zinc Machine"
+		"Wires and connectors (check EMI)"
 	]
 	quest.6403000000000000.title: "A Spool"
 	quest.6403000000000000.quest_subtitle: "The copper spool"
@@ -2031,21 +2026,21 @@ quest.7C31A0611CC62360.quest_desc: [
 		"This pack leaves the spool as its own craft, and the connectors come after it."
 	]
 	quest.6403010000000000.title: "Small Connector"
-	quest.6403010000000000.quest_subtitle: "Eight from a Zinc Machine"
+	quest.6403010000000000.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6403010000000000.quest_desc: [
-		"A small connector is a stonecut of a Zinc Machine, eight from one cut."
+		"A small connector uses its standard mod crafting recipe (check EMI)."
 		"It passes a modest flow of energy along a short wire."
 	]
 	quest.6403020000000000.title: "Large Connector"
 	quest.6403020000000000.quest_subtitle: "Four from the same cut"
 	quest.6403020000000000.quest_desc: [
-		"A large connector is a stonecut of a Zinc Machine, four from one cut."
+		"A large connector uses its standard mod crafting recipe (check EMI)."
 		"It carries more energy, and the wire can run farther than a small connector."
 	]
 	quest.6403030000000000.title: "Rolling Mill"
-	quest.6403030000000000.quest_subtitle: "Shaft on an Andesite Machine"
+	quest.6403030000000000.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6403030000000000.quest_desc: [
-		"A rolling mill is an Andesite Machine with a shaft applied."
+		"A rolling mill uses its standard mod crafting recipe (check EMI)."
 		"It rolls sheets into wire, and the iron wire from that roll becomes barbed wire."
 	]
 	quest.6403040000000000.title: "Barbed Wire"
@@ -2125,7 +2120,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6405040000000000.title: "Printer"
 	quest.6405040000000000.quest_subtitle: "Lapis on a machine"
 	quest.6405040000000000.quest_desc: [
-		"A printer is a Zinc Machine with a lapis block applied."
+		"A printer uses its standard mod crafting recipe (check EMI)."
 		"It copies enchanted books, written books, and names, using liquid experience as the ink."
 	]
 	chapter.6506000000000000.title: "Immersive Engineering"
@@ -2880,7 +2875,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.64010A0000000001.quest_subtitle: "Alloy and any log"
 	quest.64010A0000000001.quest_desc: [
 		"Andesite casing is one alloy and any log, and the craft makes two."
-		"It is the shell of an Andesite Machine, wrapped around a kinetic mechanism."
+		"Used as the structural frame for basic Create contraptions and early rotational machines."
 	]
 	quest.7F08F344795D16E1.title: "Taking Flight"
 	quest.7F08F344795D16E1.quest_subtitle: "Leave the stack"
@@ -3233,7 +3228,7 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It is the step between a loose propeller and a full airship."
 	]
 	quest.67DCC1E05E49C5D0.title: "Airship"
-	quest.67DCC1E05E49C5D0.quest_subtitle: "Sails, hull, a Gold Machine"
+	quest.67DCC1E05E49C5D0.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.67DCC1E05E49C5D0.quest_desc: [
 		"The airship is the Immersive Aircraft hull."
 		"The gas envelope and the andesite propeller are the factory ship beside it."
@@ -3251,7 +3246,7 @@ quest.7C31A0611CC62360.quest_desc: [
 		"The propeller bearing hangs the screw under it."
 	]
 	quest.4BE9B3642F8D9EB6.title: "Propeller Bearing"
-	quest.4BE9B3642F8D9EB6.quest_subtitle: "Stonecut a Gold Machine"
+	quest.4BE9B3642F8D9EB6.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.4BE9B3642F8D9EB6.quest_desc: [
 		"The propeller bearing is the mount the andesite propeller spins on."
 		"It is the hinge between the envelope and the engine."
@@ -3468,7 +3463,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000025.title: "Digital Adapter"
 	quest.6600000000000025.quest_subtitle: "The computer plugs into Create"
 	quest.6600000000000025.quest_desc: [
-		"The digital adapter is a brass machine plus a ComputerCraft wired modem."
+		"Connects Create rotational displays and speed controllers to ComputerCraft networks—check EMI for its recipe."
 		"It lets a computer talk to Create."
 	]
 	quest.6600000000000026.title: "Advanced Turtle"
@@ -3534,7 +3529,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000030.quest_subtitle: "Turn the shaft"
 	quest.6600000000000030.quest_desc: [
 		"A gearbox takes one shaft and sends that rotation out the other faces."
-		"Alloy and shafts build it, and it is not cut from an Andesite Machine."
+		"Built directly from Andesite Alloy and shafts—check EMI for the standard Create recipe."
 	]
 	quest.6600000000000031.title: "Clutch"
 	quest.6600000000000031.quest_subtitle: "A redstone brake"
@@ -3546,7 +3541,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000032.quest_subtitle: "Forward and back"
 	quest.6600000000000032.quest_desc: [
 		"A gearshift reverses a shaft when redstone turns on."
-		"The version that plays a whole pattern is a later Brass Machine."
+		"The Programmable Gearshift version that plays a whole sequence is a later Brass-tier craft."
 	]
 	quest.6600000000000033.title: "Encased Chain Drive"
 	quest.6600000000000033.quest_subtitle: "Carry rotation along a line"
@@ -3558,7 +3553,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000034.quest_subtitle: "Grind by hand first"
 	quest.6600000000000034.quest_desc: [
 		"A millstone grinds items on a shaft into dusts and flour."
-		"It also mills netherrack into cinder flour, which is the start of a blaze cake. A hand crank can turn it, and it is not an Andesite Machine."
+		"It also mills netherrack into cinder flour, which is the start of a blaze cake. A hand crank can turn it."
 	]
 	quest.6600000000000035.title: "Belt"
 	quest.6600000000000035.quest_subtitle: "Dried kelp"
@@ -3572,117 +3567,117 @@ quest.7C31A0611CC62360.quest_desc: [
 		"Items and fluids both sit here while the machine above them runs."
 	]
 	quest.6600000000000037.title: "Encased Fan"
-	quest.6600000000000037.quest_subtitle: "An Andesite Machine"
+	quest.6600000000000037.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000037.quest_desc: [
-		"An encased fan is an Andesite Machine with a propeller applied."
+		"An encased fan uses its standard mod crafting recipe (check EMI)."
 		"Aimed at a basin it washes, smokes, blasts, or haunts, depending on what sits behind the fan."
 	]
 	quest.6600000000000038.title: "Mechanical Press"
-	quest.6600000000000038.quest_subtitle: "Andesite Machine, iron block"
+	quest.6600000000000038.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000038.quest_desc: [
-		"A mechanical press is an Andesite Machine with an iron block applied."
+		"A mechanical press uses its standard mod crafting recipe (check EMI)."
 		"It presses ingots into sheets and packs items in a basin."
 	]
 	quest.6600000000000039.title: "Mechanical Mixer"
-	quest.6600000000000039.quest_subtitle: "Andesite Machine, whisk"
+	quest.6600000000000039.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000039.quest_desc: [
-		"A mechanical mixer is an Andesite Machine with a whisk applied."
+		"A mechanical mixer uses its standard mod crafting recipe (check EMI)."
 		"Heated, copper and zinc become brass. Unheated, andesite and nuggets become alloy. Superheated, with a blaze cake under the burner, an iron ingot becomes molten iron."
 	]
 	quest.660000000000003A.title: "Mechanical Drill"
-	quest.660000000000003A.quest_subtitle: "Andesite Machine, drill head"
+	quest.660000000000003A.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000003A.quest_desc: [
-		"A mechanical drill is an Andesite Machine with a drill head applied."
+		"A mechanical drill uses its standard mod crafting recipe (check EMI)."
 		"On a moving contraption it breaks the blocks in front of it."
 	]
 	quest.660000000000003B.title: "Mechanical Saw"
-	quest.660000000000003B.quest_subtitle: "Andesite Machine, saw blade"
+	quest.660000000000003B.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000003B.quest_desc: [
-		"A mechanical saw is an Andesite Machine with a saw blade applied."
+		"A mechanical saw uses its standard mod crafting recipe (check EMI)."
 		"It cuts logs into planks and strips, and it saws a klaxium ingot into spikes."
 	]
 	quest.660000000000003C.title: "Andesite Funnel"
-	quest.660000000000003C.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003C.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000003C.quest_desc: [
-		"An andesite funnel is a stonecut of an Andesite Machine."
+		"An andesite funnel uses its standard mod crafting recipe (check EMI)."
 		"It pulls items out of inventories and pushes them onto belts."
 	]
 	quest.660000000000003D.title: "Mechanical Harvester"
-	quest.660000000000003D.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003D.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000003D.quest_desc: [
-		"A mechanical harvester is a stonecut of an Andesite Machine."
+		"A mechanical harvester uses its standard mod crafting recipe (check EMI)."
 		"On a moving contraption it harvests a row of crops."
 	]
 	quest.660000000000003E.title: "Mechanical Plough"
-	quest.660000000000003E.quest_subtitle: "Andesite Machine stonecut"
+	quest.660000000000003E.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000003E.quest_desc: [
-		"A mechanical plough is a stonecut of an Andesite Machine."
+		"A mechanical plough uses its standard mod crafting recipe (check EMI)."
 		"It tills soil and clears plants in front of a moving contraption."
 	]
 	quest.660000000000003F.title: "Contraption Controls"
 	quest.660000000000003F.quest_subtitle: "Tube, casing, a button"
 	quest.660000000000003F.quest_desc: [
 		"Contraption controls are an electron tube, an andesite casing, and a button."
-		"They are not cut from an Andesite Machine. Glue them onto a contraption so redstone can start, stop, or steer it."
+		"Glue them onto a contraption so redstone can start, stop, or steer it."
 	]
 	quest.6600000000000040.title: "Cart Assembler"
-	quest.6600000000000040.quest_subtitle: "Andesite Machine stonecut"
+	quest.6600000000000040.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000040.quest_desc: [
-		"A cart assembler is a stonecut of an Andesite Machine."
+		"A cart assembler uses its standard mod crafting recipe (check EMI)."
 		"It assembles a minecart contraption from the blocks above the rail."
 	]
 	quest.6600000000000041.title: "Copper Backtank"
-	quest.6600000000000041.quest_subtitle: "A Copper Machine"
+	quest.6600000000000041.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000041.quest_desc: [
-		"A copper backtank is a Copper Machine craft, and that machine needs copper sheet."
+		"A copper backtank uses its standard mod crafting recipe (check EMI)."
 		"It stores air for diving and for tools that breathe from your back."
 	]
 	quest.6600000000000042.title: "Spout"
-	quest.6600000000000042.quest_subtitle: "Copper Machine, hopper"
+	quest.6600000000000042.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000042.quest_desc: [
-		"A spout is copper casing and dried kelp, and a Copper Machine can also cut one."
+		"A spout is crafted from copper casing and dried kelp."
 		"It pours the lava that finishes a blaze cake, and the 10 mB of molten iron that fills an electron tube. It does not need a tube of its own."
 	]
 	quest.6600000000000043.title: "Item Drain"
-	quest.6600000000000043.quest_subtitle: "Copper Machine, iron bars"
+	quest.6600000000000043.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000043.quest_desc: [
-		"An item drain is a Copper Machine craft, and that machine needs copper sheet."
+		"An item drain uses its standard mod crafting recipe (check EMI)."
 		"Buckets and tanks set on it empty into the pipe network."
 	]
 	quest.6600000000000044.title: "Hose Pulley"
-	quest.6600000000000044.quest_subtitle: "Copper Machine stonecut"
+	quest.6600000000000044.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000044.quest_desc: [
-		"A hose pulley is a stonecut of a Copper Machine, which needs copper sheet."
+		"A hose pulley uses its standard mod crafting recipe (check EMI)."
 		"It pumps a body of fluid out of the world, or places one."
 	]
 	quest.6600000000000045.title: "Smart Fluid Pipe"
-	quest.6600000000000045.quest_subtitle: "Copper Machine stonecut"
+	quest.6600000000000045.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000045.quest_desc: [
-		"A smart fluid pipe is a stonecut of a Copper Machine, which needs copper sheet."
+		"A smart fluid pipe uses its standard mod crafting recipe (check EMI)."
 		"A filter in the pipe lets one fluid through and stops the rest."
 	]
 	quest.6600000000000046.title: "Train Controls"
-	quest.6600000000000046.quest_subtitle: "A Gold Machine"
+	quest.6600000000000046.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000046.quest_desc: [
-		"Train controls are a Gold Machine craft, so they need railway casing and a reinforced mechanism."
+		"Train controls are crafted with railway casing and precision components (check EMI)."
 		"This is the lever that drives a train."
 	]
 	quest.6600000000000047.title: "Train Station"
-	quest.6600000000000047.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000047.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000047.quest_desc: [
-		"A train station is a Gold Machine craft, so it needs railway casing and a reinforced mechanism."
+		"A train station uses its standard mod crafting recipe (check EMI)."
 		"A schedule stops the train at the stations you name."
 	]
 	quest.6600000000000048.title: "Train Signal"
-	quest.6600000000000048.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000048.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000048.quest_desc: [
-		"A train signal is a Gold Machine craft, so it needs railway casing and a reinforced mechanism."
+		"A train signal uses its standard mod crafting recipe (check EMI)."
 		"Signals keep two trains off the same stretch of track."
 	]
 	quest.6600000000000049.title: "Schedule"
-	quest.6600000000000049.quest_subtitle: "Gold Machine stonecut"
+	quest.6600000000000049.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000049.quest_desc: [
-		"A schedule is a Gold Machine craft, so it needs railway casing and a reinforced mechanism."
+		"A schedule uses its standard mod crafting recipe (check EMI)."
 		"It lists the stops a train will make, and the enchantment handbook is built from one."
 	]
 	quest.660000000000004A.title: "Brass Hand"
@@ -3698,93 +3693,93 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It places and uses items. It builds precision mechanisms, train track, and walker parts. It does not build electron tubes."
 	]
 	quest.660000000000004C.title: "Mechanical Crafter"
-	quest.660000000000004C.quest_subtitle: "Brass Machine, crafting table"
+	quest.660000000000004C.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000004C.quest_desc: [
-		"A mechanical crafter is a Brass Machine with a crafting table applied, so it needs a precision mechanism and brass casing."
+		"A mechanical crafter uses its standard mod crafting recipe (check EMI)."
 		"Set several in a grid and they run shaped crafts on their own."
 	]
 	quest.660000000000004D.title: "Steam Engine"
 	quest.660000000000004D.quest_subtitle: "Alloy, copper, gold plate"
 	quest.660000000000004D.quest_desc: [
 		"A steam engine is andesite alloy, a copper block, and a gold plate."
-		"A Brass Machine can also cut one, and that cut is not required. It turns steam from a boiler into a large amount of rotation."
+		"It turns steam from a boiler into a large amount of rotation."
 	]
 	quest.660000000000004E.title: "Rotation Speed Controller"
-	quest.660000000000004E.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004E.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000004E.quest_desc: [
-		"A rotation speed controller is a stonecut of a Brass Machine."
+		"A rotation speed controller uses its standard mod crafting recipe (check EMI)."
 		"Scroll the face to lock the outgoing shaft at one chosen speed."
 	]
 	quest.660000000000004F.title: "Sequenced Gearshift"
-	quest.660000000000004F.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000004F.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000004F.quest_desc: [
-		"A sequenced gearshift is a stonecut of a Brass Machine."
+		"A sequenced gearshift uses its standard mod crafting recipe (check EMI)."
 		"It plays a saved pattern of directions and pauses, which is how a timed contraption steps."
 	]
 	quest.6600000000000050.title: "Brass Tunnel"
-	quest.6600000000000050.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000050.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000050.quest_desc: [
-		"A brass tunnel is a stonecut of a Brass Machine."
+		"A brass tunnel uses its standard mod crafting recipe (check EMI)."
 		"It splits, merges, and filters the items on a belt."
 	]
 	quest.6600000000000051.title: "Smart Chute"
-	quest.6600000000000051.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000051.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000051.quest_desc: [
-		"A smart chute is a stonecut of a Brass Machine."
+		"A smart chute uses its standard mod crafting recipe (check EMI)."
 		"Items fall through it, and a filter holds back what should stay put."
 	]
 	quest.6600000000000052.title: "Clockwork Bearing"
-	quest.6600000000000052.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000052.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000052.quest_desc: [
-		"A clockwork bearing is a stonecut of a Brass Machine."
+		"A clockwork bearing uses its standard mod crafting recipe (check EMI)."
 		"It assembles a contraption, winds the motion, and then runs it."
 	]
 	quest.6600000000000053.title: "Elevator Pulley"
-	quest.6600000000000053.quest_subtitle: "Brass Machine stonecut"
+	quest.6600000000000053.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000053.quest_desc: [
-		"An elevator pulley is a stonecut of a Brass Machine."
+		"An elevator pulley uses its standard mod crafting recipe (check EMI)."
 		"It lifts an elevator contraption between the floors you mark on the line."
 	]
 	quest.6600000000000054.title: "Display Link"
-	quest.6600000000000054.quest_subtitle: "Brass Machine, redstone torch"
+	quest.6600000000000054.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000054.quest_desc: [
-		"A display link is a Brass Machine with a redstone torch applied."
+		"A display link uses its standard mod crafting recipe (check EMI)."
 		"It copies a stress, inventory, or fluid reading onto a display or a sign."
 	]
 	quest.6600000000000055.title: "Mechanical Arm"
 	quest.6600000000000055.quest_subtitle: "The last brass hand"
 	quest.6600000000000055.quest_desc: [
-		"A mechanical arm is a stonecut of a Brass Machine."
+		"A mechanical arm uses its standard mod crafting recipe (check EMI)."
 		"It picks a filtered item from one inventory and sets it on another."
 	]
 	quest.6600000000000056.title: "Small Light Connector"
-	quest.6600000000000056.quest_subtitle: "Zinc Machine, iron wire"
+	quest.6600000000000056.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000056.quest_desc: [
-		"A small light connector is a Zinc Machine with iron wire applied, eight from the craft."
+		"A small light connector uses its standard mod crafting recipe (check EMI)."
 		"It joins the energy network and lights the block it sits on."
 	]
 	quest.6600000000000057.title: "Redstone Relay"
-	quest.6600000000000057.quest_subtitle: "Zinc Machine stonecut"
+	quest.6600000000000057.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000057.quest_desc: [
-		"A redstone relay is a stonecut of a Zinc Machine."
+		"A redstone relay uses its standard mod crafting recipe (check EMI)."
 		"It reads the energy network and emits redstone from that reading."
 	]
 	quest.6600000000000058.title: "Electric Motor"
-	quest.6600000000000058.quest_subtitle: "Zinc Machine, copper spool"
+	quest.6600000000000058.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000058.quest_desc: [
-		"An electric motor is a Zinc Machine with a copper spool applied."
+		"An electric motor uses its standard mod crafting recipe (check EMI)."
 		"It turns energy from the wire into rotation."
 	]
 	quest.6600000000000059.title: "Tesla Coil"
-	quest.6600000000000059.quest_subtitle: "Zinc Machine, lightning rod"
+	quest.6600000000000059.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.6600000000000059.quest_desc: [
-		"A tesla coil is a Zinc Machine with a lightning rod applied."
+		"A tesla coil uses its standard mod crafting recipe (check EMI)."
 		"It charges items from the energy network, which is how an accumulator fills."
 	]
 	quest.660000000000005A.title: "Portable Energy Interface"
-	quest.660000000000005A.quest_subtitle: "Zinc Machine stonecut"
+	quest.660000000000005A.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000005A.quest_desc: [
-		"A portable energy interface is a stonecut of a Zinc Machine."
+		"A portable energy interface uses its standard mod crafting recipe (check EMI)."
 		"A contraption carries energy in and out through this face."
 	]
 	quest.660000000000005B.title: "Modular Accumulator"
@@ -3896,21 +3891,21 @@ quest.7C31A0611CC62360.quest_desc: [
 		"That is the same soul fire that turns a pool of blend pink. Regular levitite is still the heat crystallization."
 	]
 	quest.660000000000006D.title: "Andesite Propeller"
-	quest.660000000000006D.quest_subtitle: "Andesite Machine, aircraft propeller"
+	quest.660000000000006D.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000006D.quest_desc: [
-		"An andesite propeller is an Andesite Machine with an aircraft propeller applied."
+		"An andesite propeller uses its standard mod crafting recipe (check EMI)."
 		"It spins on a propeller bearing for thrust, and a wooden propeller converts into one."
 	]
 	quest.660000000000006E.title: "Gyroscopic Bearing"
-	quest.660000000000006E.quest_subtitle: "Brass Machine stonecut"
+	quest.660000000000006E.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000006E.quest_desc: [
-		"A gyroscopic propeller bearing is a stonecut of a Brass Machine, two from the cut."
+		"A gyroscopic propeller bearing uses its standard mod crafting recipe (check EMI)."
 		"It holds a propeller steady while the ship tilts around it."
 	]
 	quest.660000000000006F.title: "Smart Propeller"
 	quest.660000000000006F.quest_subtitle: "The last propeller"
 	quest.660000000000006F.quest_desc: [
-		"A smart propeller is a Brass Machine with an aircraft propeller applied."
+		"A smart propeller uses its standard mod crafting recipe (check EMI)."
 		"With the gyroscopic bearing and pearlescent levitite, it closes the airship line."
 	]
 	quest.6600000000000070.title: "Coke Oven"
@@ -4068,9 +4063,9 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It holds the disks that store the network's items."
 	]
 	quest.660000000000008C.title: "Cobblestone Generator"
-	quest.660000000000008C.quest_subtitle: "A Zinc Machine"
+	quest.660000000000008C.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.660000000000008C.quest_desc: [
-		"The cobblestone generator is a zinc machine plus a piston, and it produces cobblestone."
+		"Generates cobblestone passively—check EMI for its standard mod recipe."
 		"The compact and dense cobblestone generators are removed."
 	]
 	quest.660000000000008D.title: "Decay Generator"
@@ -4503,33 +4498,33 @@ quest.7C31A0611CC62360.quest_desc: [
 		"It lists what the links can see and sends out the packages you request."
 	]
 	quest.66000000000000D7.title: "Factory Gauge"
-	quest.66000000000000D7.quest_subtitle: "A Lead Machine stonecut"
+	quest.66000000000000D7.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.66000000000000D7.quest_desc: [
-		"A factory gauge is a stonecut of a Lead Machine."
+		"A factory gauge uses its standard mod crafting recipe (check EMI)."
 		"Set on an inventory, it tells the stock network how much to keep and when to restock."
 	]
 	quest.66000000000000D8.title: "Packager"
-	quest.66000000000000D8.quest_subtitle: "Lead Machine, cardboard"
+	quest.66000000000000D8.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.66000000000000D8.quest_desc: [
-		"A packager is a Lead Machine with a cardboard block applied."
+		"A packager uses its standard mod crafting recipe (check EMI)."
 		"It boxes items into addressed packages for the frogports."
 	]
 	quest.66000000000000D9.title: "Repackager"
-	quest.66000000000000D9.quest_subtitle: "Lead Machine, bound cardboard"
+	quest.66000000000000D9.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.66000000000000D9.quest_desc: [
-		"A repackager is a Lead Machine with a bound cardboard block applied."
+		"A repackager uses its standard mod crafting recipe (check EMI)."
 		"It unpacks a package back into items."
 	]
 	quest.66000000000000DA.title: "Package Frogport"
-	quest.66000000000000DA.quest_subtitle: "Lead Machine, slimeball"
+	quest.66000000000000DA.quest_subtitle: "Standard mod recipe (check EMI)"
 	quest.66000000000000DA.quest_desc: [
-		"A package frogport is a Lead Machine with a slimeball applied."
+		"A package frogport uses its standard mod crafting recipe (check EMI)."
 		"It is the address packages travel to along a chain conveyor."
 	]
 	quest.66000000000000DB.title: "Redstone Requester"
 	quest.66000000000000DB.quest_subtitle: "The logistics capstone"
 	quest.66000000000000DB.quest_desc: [
-		"A redstone requester is a Lead Machine applied to a stock link."
+		"A redstone requester uses its standard mod crafting recipe (check EMI)."
 		"Give it redstone and the network sends the items that link is keeping."
 	]
 	quest.66000000000000DC.title: "Steel Component"
@@ -4702,7 +4697,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000102.quest_subtitle: "Press a copper ingot"
 	quest.6600000000000102.quest_desc: [
 		"A copper sheet is a copper ingot under the press."
-		"One sheet and any log make two copper casings, which a Copper Machine needs."
+		"One copper sheet and any stripped log make Copper Casings for fluid handling."
 	]
 	quest.6600000000000103.title: "Brass Sheet"
 	quest.6600000000000103.quest_subtitle: "Press a brass ingot"
@@ -4714,37 +4709,37 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000108.quest_subtitle: "Iron sheets on an alloy core"
 	quest.6600000000000108.quest_desc: [
 		"A whisk is the mixing head."
-		"Apply it to an Andesite Machine and you get the mechanical mixer."
+		"Used to craft the mechanical mixer (check EMI)."
 	]
 	quest.6600000000000109.title: "Propeller"
 	quest.6600000000000109.quest_subtitle: "Iron sheets around alloy"
 	quest.6600000000000109.quest_desc: [
 		"A propeller is the blade of a fan."
-		"Apply it to an Andesite Machine and you get the encased fan."
+		"Used to craft the encased fan (check EMI)."
 	]
 	quest.660000000000010A.title: "Drill Head"
 	quest.660000000000010A.quest_subtitle: "Sheets, nuggets, lead"
 	quest.660000000000010A.quest_desc: [
 		"A drill head is iron nuggets, iron sheets, and lead."
-		"Apply it to an Andesite Machine and you get the mechanical drill."
+		"Used to craft the mechanical drill (check EMI)."
 	]
 	quest.660000000000010B.title: "Saw Blade"
 	quest.660000000000010B.quest_subtitle: "Sheets around a lead ingot"
 	quest.660000000000010B.quest_desc: [
 		"A saw blade is iron nuggets, iron sheets, and lead."
-		"Apply it to an Andesite Machine and you get the mechanical saw."
+		"Used to craft the mechanical saw (check EMI)."
 	]
 	quest.6600000000000106.title: "Railway Casing"
 	quest.6600000000000106.quest_subtitle: "Golden sheet and deepslate"
 	quest.6600000000000106.quest_desc: [
 		"Railway casing is a golden sheet and deepslate, and the craft makes two."
-		"A Gold Machine is this casing around a reinforced mechanism."
+		"Used for Create trains, stations, and railway logistics."
 	]
 	quest.6600000000000107.title: "Brass Casing"
 	quest.6600000000000107.quest_subtitle: "Brass sheet and a log"
 	quest.6600000000000107.quest_desc: [
 		"Brass casing is a brass sheet and any log, and the craft makes two."
-		"A Brass Machine is this casing around a precision mechanism."
+		"Used for smart Brass-tier logistics, funnels, and mechanical arms."
 	]
 	quest.6600000000000104.title: "Electron Tube"
 	quest.6600000000000104.quest_subtitle: "Spout molten iron on rose quartz"
@@ -4756,13 +4751,13 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6600000000000105.quest_subtitle: "Two tubes and the cutters"
 	quest.6600000000000105.quest_desc: [
 		"A precision mechanism is a sequenced assembly on a kinetic mechanism: deploy an electron tube twice, then the wire cutters."
-		"It is the heart of every Brass Machine."
+		"It is the heart of Brass-tier automation—crafted via sequenced assembly on a Kinetic Mechanism or Gold Sheet."
 	]
-	quest.660000000000010C.title: "Reinforced Mechanism"
+	quest.660000000000010C.title: "Railway Casing"
 	quest.660000000000010C.quest_subtitle: "Obsidian on a kinetic mechanism"
 	quest.660000000000010C.quest_desc: [
 		"The hand craft is a kinetic mechanism between two obsidian, and it does not need a deployer."
-		"The sequenced assembly, deploy obsidian twice then press, is a later path. A Gold Machine is a railway casing around this mechanism."
+		"Crafted by deploying sturdy sheets onto brass casings; used for train tracks, bogeys, and heavy railway machinery."
 	]
 	chapter.6519000000000000.title: "Let it Walk"
 	chapter.6519000000000000.chapter_subtitle: [
@@ -4918,7 +4913,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.66A1000000000001.quest_subtitle: "Transmission"
 	quest.66A1000000000001.quest_desc: [
 		"The andesite universal joint rod is two shafts, an andesite alloy, and a Simulated spring. The kinetic conversion bearing is a swivel bearing wrapped in copper sheets."
-		"Both sit with the andesite machines. Neither one asks for brass."
+		"Both sit in the early kinetic tier and do not require brass."
 	]
 	quest.66A1000000000002.title: "Brass Linkage"
 	quest.66A1000000000002.quest_subtitle: "Transmission"
@@ -4938,7 +4933,7 @@ quest.7C31A0611CC62360.quest_desc: [
 	quest.6900000000000001.title: "Layer 1: Overworld Skylands"
 	quest.6900000000000001.quest_subtitle: "Starting Layer (Open Sky)"
 	quest.6900000000000001.quest_desc: [
-		"You begin on the floating Overworld Skylands. Dig down—or leap off an island—to descend through the Immersive Portals dimension stack."
+		"You begin high above on the Overworld Skylands. Descend into the world and pass through the dimensional barriers to reach ever lower depths, attaining the resources needed to eventually build a rocket and reach the stars."
 	]
 	quest.6900000000000002.title: "Create Kinetics & Metallurgy"
 	quest.6900000000000002.quest_subtitle: "Overworld Tech Foundation"

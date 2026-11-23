@@ -737,10 +737,7 @@
 			y: 0.80d
 		}
 		{
-			dependencies: [
-				"6600000000000020"
-				"7FC4D1E69377271D"
-			]
+			dependencies: ["6600000000000020"]
 			extraquests_calendar: {
 				active_quests: 3
 				enabled: 0b
