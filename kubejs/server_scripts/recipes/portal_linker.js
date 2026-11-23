@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
     }
     event.shaped("portal_linker:portal_linker", ["C", "M", "E"], {
         C: "minecraft:crying_obsidian",
-        M: "kubejs:enderium_machine",
+        M: "create:precision_mechanism",
         E: "minecraft:ender_eye"
     }).id("kubejs:portal_linker_machine")
 })

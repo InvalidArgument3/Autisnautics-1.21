@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.71]
+- **Updated `portal_linker:portal_linker` recipe to use `create:precision_mechanism`** instead of the removed `kubejs:enderium_machine`.
+
 ## [0.1.70]
 - **Cleaned up FTB Quests formatting, chapter group naming, and primer recipes.**
   - Renamed `"Factory Guide"` to `"Dimension Guide"` (`kubejs/assets/ftbquests/lang/en_us.json`).
