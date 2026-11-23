@@ -1,0 +1,18 @@
+NEEPMeat
+Copyright (c) MeatWheeze
+
+This directory is a derivative NeoForge 1.21.1 port of NeepMeat for the Autisnautics pack.
+Upstream: https://codeberg.org/MeatWheeze/NeepMeat
+Pinned commit: 0d36776e4e78fd4049cbe9f556a5204d5e98c4ff (branch 1.20/dev, 2026-07-11)
+Version declared upstream: 0.30.0-beta+1.20.1
+There is no git tag named v0.30.0-beta. The version string is the one in that commit's gradle.properties.
+
+The pack owner (Wyseman) reported that MeatWheeze gave permission to port. This port did not independently verify that permission. Upstream README asks porters to ask first.
+
+Upstream ships LICENSE as the GNU Lesser General Public License version 3, and fabric.mod.json says "LGPL-3.0". Source file headers say the GNU General Public License version 3 or later. This port does not relicense the work. Both licence texts are in this directory (LICENSE and GPL-3.0.txt).
+
+NEEPSpeak (submodule https://codeberg.org/MeatWheeze/NEEPSpeak, commit d409f84922a29436ead9ea0466152999ef8662f4) is included as source under the same LGPL-3.0 text. It is not a separate mod id.
+
+Myron-NEEPMeat (submodule https://github.com/MeatWheeze/myron-neepmeat, commit aa49118d62af5392930fd4915dc42036a8641e89) is MIT, copyright 2021 (see licenses/Myron-MIT.txt). Its code is not in this jar. The Fabric OBJ loader and its mixins were not ported.
+
+Flywheel is not included. Upstream depended on Flywheel Fabric 1.20.1 (dev.engine-room.flywheel:flywheel-fabric-1.20.1:1.0.6-278) from Maven. This checkout did not contain a vendored Flywheel jar; settings.gradle only has a commented include of subprojects:Flywheel.

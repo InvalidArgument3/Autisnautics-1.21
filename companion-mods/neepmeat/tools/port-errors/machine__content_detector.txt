@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/content_detector/InventoryDetector.java:58: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/content_detector/InventoryDetector.java:66: error: cannot find symbol

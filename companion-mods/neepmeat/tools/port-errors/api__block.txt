@@ -1,0 +1,7 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:71: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:141: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:150: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:150: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/block/PressureWashable.java:169: error: cannot find symbol

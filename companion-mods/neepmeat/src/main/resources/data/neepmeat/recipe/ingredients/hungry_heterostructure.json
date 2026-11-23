@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "ddd",
+    "mmm"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "m": {
+      "item": "neepmeat:internal_components"
+    }
+  },
+  "result": {
+    "item": "neepmeat:hungry_heterostructure",
+    "count": 1,
+    "id": "neepmeat:hungry_heterostructure"
+  }
+}

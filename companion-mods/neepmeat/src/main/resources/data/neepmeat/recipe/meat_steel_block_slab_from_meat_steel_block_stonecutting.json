@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:meat_steel_block"
+  },
+  "result": {
+    "id": "neepmeat:meat_steel_block_slab",
+    "item": "neepmeat:meat_steel_block_slab",
+    "count": 2
+  }
+}

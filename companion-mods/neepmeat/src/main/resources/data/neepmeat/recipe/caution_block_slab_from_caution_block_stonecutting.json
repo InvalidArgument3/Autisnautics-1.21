@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:caution_block"
+  },
+  "result": {
+    "id": "neepmeat:caution_block_slab",
+    "item": "neepmeat:caution_block_slab",
+    "count": 2
+  }
+}

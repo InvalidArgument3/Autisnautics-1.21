@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "neepmeat:block/polished_metal",
+    "top": "neepmeat:block/polished_metal",
+    "side": "neepmeat:block/polished_metal"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ui_beep": { "subtitle": "subtitles.meatlib.ui_beep",
+    "sounds": [
+      "meatlib:ui_beep"
+    ]
+  },
+  "plc_select": { "subtitle": "subtitles.meatlib.plc_select",
+    "sounds": [
+      "meatlib:plc_select"
+    ]
+  },
+  "click": {
+    "subtitle": "subtitles.meatlib.click",
+    "sounds": [
+      "meatlib:click"
+    ]
+  },
+
+  "wrench_click": { "subtitle": "subtitles.meatlib.wrench.click",
+    "sounds": [
+      "meatlib:wrench_click"
+    ]}
+}

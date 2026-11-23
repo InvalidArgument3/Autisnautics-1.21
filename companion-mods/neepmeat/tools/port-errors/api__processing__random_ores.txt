@@ -1,0 +1,13 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:21: error: package com.neep.meatlib.api.event does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:25: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:26: error: package net.fabricmc.fabric.api.resource does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:48: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:57: error: package DataPackPostProcess does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:68: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:72: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:120: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:126: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:144: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:155: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:171: error: no suitable method found for dispatch(String,WeightModi[...]Codec,Function<Object,Object>)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/processing/random_ores/RandomOres.java:173: error: cannot find symbol

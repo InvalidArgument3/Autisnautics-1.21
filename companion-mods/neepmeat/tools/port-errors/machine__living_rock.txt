@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/living_rock/VerrucousStonePortBlock.java:58: error: cannot find symbol

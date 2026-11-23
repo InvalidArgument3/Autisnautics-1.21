@@ -1,0 +1,12 @@
+# next 10 error kinds after the rendering, event, and transfer shims
+
+2627	cannot find symbol
+653	does not override
+30	incompatible types: TransactionContext cannot be converted to Transaction
+28	incompatible types: MeatlibBlockSettings cannot be converted to Properties
+27	invalid method reference
+22	method register in class BlockEntityRenderers cannot be applied to given ty
+19	method createArrayBacked in class EventFactory cannot be applied to given t
+19	<M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private acc
+18	method renderBackground in class AbstractContainerScreen<T> cannot be appli
+16	incompatible types: inference variable T has incompatible bounds

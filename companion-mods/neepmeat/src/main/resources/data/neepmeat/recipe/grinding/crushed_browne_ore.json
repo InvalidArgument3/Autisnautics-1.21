@@ -1,0 +1,19 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "tag": "neepmeat:browne_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "neepmeat:crushed_browne_ore",
+    "min": 2,
+    "max": 2
+  },
+  "extra": {
+    "resource": "neepmeat:crushed_browne_ore",
+    "amount": 1,
+    "chance": 0.5
+  },
+  "experience": 0.7,
+  "processtime": 40
+}

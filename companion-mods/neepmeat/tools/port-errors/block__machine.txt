@@ -1,0 +1,3 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/machine/AgitatorBlock.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/machine/AgitatorBlock.java:24: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/block/machine/AgitatorBlock.java:26: error: cannot find symbol

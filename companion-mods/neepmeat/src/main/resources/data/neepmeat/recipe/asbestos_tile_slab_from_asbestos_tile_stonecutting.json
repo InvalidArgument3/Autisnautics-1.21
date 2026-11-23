@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:asbestos_tile"
+  },
+  "result": {
+    "id": "neepmeat:asbestos_tile_slab",
+    "item": "neepmeat:asbestos_tile_slab",
+    "count": 2
+  }
+}

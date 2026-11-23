@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neepmeat:sandy_bricks"
+  },
+  "result": {
+    "id": "neepmeat:sandy_bricks_slab",
+    "item": "neepmeat:sandy_bricks_slab",
+    "count": 2
+  }
+}

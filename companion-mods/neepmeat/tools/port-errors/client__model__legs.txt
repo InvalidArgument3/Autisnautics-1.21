@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/legs/StandardSpiderLegsRenderer.java:18: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/legs/StandardSpiderLegsRenderer.java:63: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/legs/StandardSpiderLegsRenderer.java:138: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/model/legs/StandardSpiderLegsRenderer.java:148: error: cannot find symbol

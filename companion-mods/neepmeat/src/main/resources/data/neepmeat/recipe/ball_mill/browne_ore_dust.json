@@ -1,0 +1,23 @@
+{
+  "type": "neepmeat:ball_mill",
+  "input": {
+    "resource": "neepmeat:crushed_browne_ore",
+    "amount": 1
+  },
+  "output": [
+    {
+      "resource": "neepmeat:browne_ore_dust",
+      "amount": 1
+    },
+    {
+      "resource": "neepmeat:browne_ore_dust",
+      "amount": 1,
+      "chance": 0.2
+    },
+    {
+      "resource": "neepmeat:meat_scrap",
+      "amount": 1,
+      "chance": 0.1
+    }
+  ]
+}

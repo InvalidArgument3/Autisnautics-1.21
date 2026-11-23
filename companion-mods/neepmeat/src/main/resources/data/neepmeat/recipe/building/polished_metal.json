@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ini",
+    "n n",
+    "ini"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "n": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "neepmeat:polished_metal",
+    "count": 32,
+    "id": "neepmeat:polished_metal"
+  }
+}

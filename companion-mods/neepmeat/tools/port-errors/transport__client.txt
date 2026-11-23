@@ -1,0 +1,17 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:15: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:20: error: package net.fabricmc.fabric.api.blockrenderlayer.v1 does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:29: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:30: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:31: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:32: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:33: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:34: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:35: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:36: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:37: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:38: error: <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>) has private access in MenuScreens
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:40: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:40: error: package BlockRenderLayerMap does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:41: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/TransportClient.java:41: error: cannot find symbol

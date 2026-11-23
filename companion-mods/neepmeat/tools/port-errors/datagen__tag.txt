@@ -1,0 +1,6 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:15: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:16: error: package com.neep.meatweapons.meatgun.module does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:18: error: package net.fabricmc.fabric.api.event.registry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:77: error: package MeatgunModule does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:77: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/datagen/tag/NMTags.java:77: error: package MeatgunModules does not exist

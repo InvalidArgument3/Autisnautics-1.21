@@ -1,0 +1,17 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:20: error: package net.fabricmc.fabric.api.renderer.v1.model does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:21: error: package net.fabricmc.fabric.api.renderer.v1.render does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:52: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:129: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:149: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:22: error: package net.minecraft.client.render.model does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:52: error: VascularConduitModel is not abstract and does not override abstract method bake(ModelBaker,Function<Material,TextureAtlasSprite>,ModelState) in UnbakedModel
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:86: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:118: error: method bake in interface UnbakedModel cannot be applied to given types;
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:122: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:128: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:133: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:136: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:138: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:142: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/transport/client/model/VascularConduitModel.java:148: error: method does not override or implement a method from a supertype

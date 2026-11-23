@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:lapis_lazuli",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:blue_dye",
+    "min": 2,
+    "max": 3
+  },
+  "processtime": 20
+}

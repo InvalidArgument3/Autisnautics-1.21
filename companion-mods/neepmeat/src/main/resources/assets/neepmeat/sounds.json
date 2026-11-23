@@ -1,0 +1,287 @@
+{
+  "big_lever_on": {
+    "subtitle": "subtitles.neepmeat.big_lever_on",
+    "sounds": [
+      "neepmeat:big_lever_on"
+    ]
+  },
+  "big_lever_off": {
+    "subtitle": "subtitles.neepmeat.big_lever_off",
+    "sounds": [
+      "neepmeat:big_lever_off"
+    ]
+  },
+  "error": {
+    "subtitle": "subtitles.neepmeat.error",
+    "sounds": [
+      "neepmeat:error"
+    ]
+  },
+  "fusion_fire": {
+    "subtitle": "subtitles.neepmeat.fusion_fire",
+    "sounds": [
+      "neepmeat:fusion_fire"
+    ]
+  },
+  "cosmic_beam": {
+    "subtitle": "subtitles.neepmeat.cosmic_beam",
+    "sounds": [
+      "neepmeat:cosmic_beam"
+    ]
+  },
+  "compound_injector": {
+    "subtitle": "subtitles.neepmeat.compound_injector",
+    "sounds": [
+      "neepmeat:compound_injector"
+    ]
+  },
+  "beep": {
+    "subtitle": "subtitles.neepmeat.beep",
+    "sounds": [
+      "neepmeat:beep"
+    ]
+  },
+  "pylon_start": { "subtitle": "subtitles.neepmeat.pylon_start",
+    "sounds": [
+      "neepmeat:pylon_start"
+    ]
+  },
+  "pylon_active": { "subtitle": "subtitles.neepmeat.pylon_active",
+    "sounds": [
+      "neepmeat:pylon_active"
+    ]
+  },
+  "dosimeter_alarm": { "subtitle": "subtitles.neepmeat.dosimeter_alarm",
+    "sounds": [ "neepmeat:dosimeter_alarm" ]
+  },
+
+  "cake_scream": {
+    "subtitle": "subtitles.neepmeat.cake_scream",
+    "sounds": [ "neepmeat:cake_scream", "neepmeat:cake_scream-1", "neepmeat:cake_scream-2"] },
+
+  "cake_fire": {
+    "subtitle": "subtitles.neepmeat.cake_fire",
+    "sounds": [
+      "neepmeat:cake_fire"
+    ]
+  },
+
+  "mechanical_machine_place": {
+    "subtitle": "subtitles.neepmeat.mechanical_machine_place",
+    "sounds": [
+      "neepmeat:mechanical_machine_place"
+    ]
+  },
+  "mechanical_machine_break": {
+    "subtitle": "subtitles.neepmeat.mechanical_machine_break",
+    "sounds": [
+      "neepmeat:mechanical_machine_break"
+    ]
+  },
+  "tank_place": { "subtitle": "subtitles.neepmeat.tank_place",
+    "sounds": [ "neepmeat:block/tank_place" ] },
+
+  "multiblock_assemble": {
+    "subtitle": "subtitles.neepmeat.multiblock_assemble",
+    "sounds": [
+      "neepmeat:multiblock_assemble"
+    ]
+  },
+  "multiblock_disassemble": {
+    "subtitle": "subtitles.neepmeat.multiblock_disassemble",
+    "sounds": [
+      "neepmeat:multiblock_disassemble"
+    ]
+  },
+  "flesh_machine_place": {
+    "subtitle": "subtitles.neepmeat.flesh_machine_place",
+    "sounds": [
+      "neepmeat:flesh_machine_place"
+    ]
+  },
+
+  "glome_hit": {
+    "subtitle": "subtitles.neepmeat.glome_hit",
+    "sounds": [
+      "neepmeat:glome_hit"
+    ]
+  },
+  "hound_hit": {
+    "subtitle": "subtitles.neepmeat.hound_hit",
+    "sounds": [
+      "neepmeat:hound_hit"
+    ]
+  },
+  "hound_death": {
+    "subtitle": "subtitles.neepmeat.hound_death",
+    "sounds": [
+      "neepmeat:hound_death"
+    ]
+  },
+
+  "bovine_horror_hit": {
+    "subtitle": "subtitles.neepmeat.bovine_horror_hit",
+    "sounds": [
+      "neepmeat:bovine_horror_hit_0",
+      "neepmeat:bovine_horror_hit_1",
+      "neepmeat:bovine_horror_hit_1"
+    ]
+  },
+  "bovine_horror_charge": {
+    "subtitle": "subtitles.neepmeat.bovine_horror_charge",
+    "sounds": [
+      "neepmeat:bovine_horror_charge"
+    ]
+  },
+  "bovine_horror_spit": {
+    "subtitle": "subtitles.neepmeat.bovine_horror_spit",
+    "sounds": [
+      "neepmeat:bovine_horror_spit"
+    ]
+  },
+  "bovine_horror_phase2": {
+    "subtitle": "subtitles.neepmeat.bovine_horror_phase_2",
+    "sounds": [
+      "neepmeat:bovine_horror_phase2"
+    ]
+  },
+  "advanced_integrator_charge": { "subtitle": "subtitles.neepmeat.advanced_integrator_charge",
+    "sounds": [
+      "neepmeat:advanced_integrator_charge"
+    ] },
+  "advanced_integrator_ambient": { "subtitle": "subtitles.neepmeat.advanced_integrator_ambient",
+    "sounds": [
+      "neepmeat:advanced_integrator_ambient"
+    ]
+  },
+  "metal_barrel_close": { "subtitle": "subtitles.neepmeat.metal_barrel_close",
+    "sounds": [
+      "neepmeat:metal_barrel_close"
+    ]
+  },
+  "metal_barrel_open": { "subtitle": "subtitles.neepmeat.metal_barrel_open",
+    "sounds": [
+      "neepmeat:metal_barrel_open"
+    ]
+  },
+
+  "tree_vacuum_suck": { "subtitle": "subtitles.neepmeat.tree_vacuum_suck",
+    "sounds": [
+      "neepmeat:tree_vacuum_suck"
+    ]
+  },
+
+  "charnel_pump_up": { "subtitle": "subtitles.neepmeat.charnel_pump_up",
+    "sounds": [
+      "neepmeat:charnel_pump_up"
+    ] },
+  "charnel_pump_top": { "subtitle": "subtitles.neepmeat.charnel_pump_top",
+    "sounds": [
+      "neepmeat:charnel_pump_top"
+    ] },
+  "charnel_pump_down": { "subtitle": "subtitles.neepmeat.charnel_pump_down",
+    "sounds": [
+      "neepmeat:charnel_pump_down"
+    ] },
+  "charnel_pump_glug": { "subtitle": "subtitles.neepmeat.charnel_pump_glug",
+    "sounds": [
+      "neepmeat:charnel_pump_glug"
+    ] },
+  "charnel_pump_idle": { "subtitle": "subtitles.neepmeat.charnel_pump_idle",
+    "sounds": [
+      "neepmeat:charnel_pump_idle"
+    ] },
+
+  "implant_instruction_apply": { "subtitle": "subtitles.neepmeat.implant_instruction_apply",
+    "sounds": [
+      "neepmeat:implant_instruction_apply"
+    ]
+  },
+  "combine_instruction_apply": { "subtitle": "subtitles.neepmeat.combine_instruction_apply",
+    "sounds": [
+      "neepmeat:combine_instruction_apply"
+    ]
+  },
+  "inject": { "subtitle": "subtitles.neepmeat.inject_instruction_apply",
+    "sounds": [
+      "neepmeat:inject"
+    ]
+  },
+
+  "deposit_items": { "subtitle": "subtitles.neepmeat.deposit_items",
+    "sounds": [
+      "neepmeat:deposit_items"
+    ]},
+
+  "phage_ray_charge": { "subtitle": "subtitles.neepmeat.phage_ray.charge",
+    "sounds": [
+      "neepmeat:phage_ray_charge"
+    ]},
+  "phage_ray_running": { "subtitle": "subtitles.neepmeat.phage_ray.running",
+    "sounds": [
+      "neepmeat:phage_ray_running"
+    ]},
+
+  "vivisection_complete": { "subtitle": "subtitles.neepmeat.vivisection.complete",
+    "sounds": [
+      "neepmeat:vivisection_complete"
+    ]},
+  "scalpel_hit": { "subtitle": "subtitles.neepmeat.scalpel.hit",
+    "sounds": [
+      "neepmeat:scalpel_hit"
+    ]},
+  "rock_drill": { "subtitle": "subtitles.neepmeat.rock_drill",
+    "sounds": [
+      "neepmeat:rock_drill_short"
+    ]},
+
+
+  "compressed_air_fill": { "subtitle": "subtitles.neepmeat.compressed_air_fill",
+    "sounds": [
+      "neepmeat:compressed_air_fill"
+    ]
+  },
+
+  "skyworm_descend": { "subtitle": "subtitles.neepmeat.distributor.descend", "sounds": [ "neepmeat:skyworm/descend" ] },
+  "skyworm_descend_short": { "subtitle": "subtitles.neepmeat.distributor.descend_short", "sounds": [ "neepmeat:skyworm/descend_short" ] },
+  "skyworm_ascend": { "subtitle": "subtitles.neepmeat.distributor.ascend", "sounds": [ "neepmeat:skyworm/ascend" ] },
+  "skyworm_spit": { "subtitle": "subtitles.neepmeat.distributor.spit", "sounds": [ "neepmeat:skyworm/spit" ] },
+
+  "pressure_washer_squirt": { "subtitle": "subtitles.neepmeat.pressure_washer.squirt", "sounds": [ "neepmeat:pressure_washer/squirt" ] },
+
+  "repeater/english/0": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/0" ] },
+  "repeater/english/1": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/1" ] },
+  "repeater/english/2": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/2" ] },
+  "repeater/english/3": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/3" ] },
+  "repeater/english/4": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/4" ] },
+  "repeater/english/5": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/5" ] },
+  "repeater/english/6": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/6" ] },
+  "repeater/english/7": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/7" ] },
+  "repeater/english/8": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/8" ] },
+  "repeater/english/9": { "subtitle": "subtitles.neepmeat.repeater.english", "sounds": [ "neepmeat:numbers/english/9" ] },
+
+  "repeater/german/0": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/0" ] },
+  "repeater/german/1": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/1" ] },
+  "repeater/german/2": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/2" ] },
+  "repeater/german/3": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/3" ] },
+  "repeater/german/4": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/4" ] },
+  "repeater/german/5": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/5" ] },
+  "repeater/german/6": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/6" ] },
+  "repeater/german/7": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/7" ] },
+  "repeater/german/8": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/8" ] },
+  "repeater/german/9": { "subtitle": "subtitles.neepmeat.repeater.german", "sounds": [ "neepmeat:numbers/german/9" ] },
+
+  "repeater/jingle-1": { "subtitle": "subtitles.neepmeat.repeater.jingle", "sounds": [ "neepmeat:numbers/jingle-1" ] },
+
+  "block/transductive_cannula_place": { "subtitle": "subtitles.neepmeat.transducer.place", "sounds": [
+    "neepmeat:block/transductive_cannula_place_1",
+    "neepmeat:block/transductive_cannula_place_2"
+  ] },
+
+  "block/vascular_conduit_place": { "subtitle": "subtitles.neepmeat.vascular_conduit.place", "sounds": [
+    "neepmeat:block/vascular_conduit_place_1",
+    "neepmeat:block/vascular_conduit_place_2"
+  ] },
+
+  "neepspeak": {"sounds": [{"name": "fabric-sound-api-v1:empty", "stream": true}]}
+}

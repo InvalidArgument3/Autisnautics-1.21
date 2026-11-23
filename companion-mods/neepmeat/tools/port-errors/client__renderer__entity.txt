@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/entity/GeneralBipedEntityRenderer.java:14: error: GeneralBipedEntityRenderer is not abstract and does not override abstract method getTextureLocation(T) in EntityRenderer
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/entity/GeneralBipedEntityRenderer.java:33: error: method does not override or implement a method from a supertype

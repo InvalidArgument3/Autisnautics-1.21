@@ -1,0 +1,13 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:cocoa_beans",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:brown_dye",
+    "min": 2,
+    "max": 3
+  },
+  "processtime": 20
+}

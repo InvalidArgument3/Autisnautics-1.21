@@ -1,0 +1,60 @@
+{
+  "variants": {
+    "active=false,facing=east": {
+      "model": "neepmeat:block/pump",
+      "y": 90,
+      "x": 0
+    },
+    "active=false,facing=north": {
+      "model": "neepmeat:block/pump",
+      "y": 0,
+      "x": 0
+    },
+    "active=false,facing=south": {
+      "model": "neepmeat:block/pump",
+      "y": 180,
+      "x": 0
+    },
+    "active=false,facing=west": {
+      "model": "neepmeat:block/pump",
+      "y": -90,
+      "x": 0
+    },
+    "active=false,facing=up": {
+      "model": "neepmeat:block/pump",
+      "x": -90
+    },
+    "active=false,facing=down": {
+      "model": "neepmeat:block/pump",
+      "x": 90
+    },
+    "active=true,facing=east": {
+      "model": "neepmeat:block/pump_active",
+      "y": 90,
+      "x": 0
+    },
+    "active=true,facing=north": {
+      "model": "neepmeat:block/pump_active",
+      "y": 0,
+      "x": 0
+    },
+    "active=true,facing=south": {
+      "model": "neepmeat:block/pump_active",
+      "y": 180,
+      "x": 0
+    },
+    "active=true,facing=west": {
+      "model": "neepmeat:block/pump_active",
+      "y": -90,
+      "x": 0
+    },
+    "active=true,facing=up": {
+      "model": "neepmeat:block/pump_active",
+      "x": -90
+    },
+    "active=true,facing=down": {
+      "model": "neepmeat:block/pump_active",
+      "x": 90
+    }
+  }
+}

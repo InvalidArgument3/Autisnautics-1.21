@@ -1,0 +1,14 @@
+{
+  "type": "neepmeat:grinding",
+  "input": {
+    "resource": "minecraft:packed_ice",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:ice",
+    "min": 7,
+    "max": 9
+  },
+  "experience": 0,
+  "processtime": 40
+}

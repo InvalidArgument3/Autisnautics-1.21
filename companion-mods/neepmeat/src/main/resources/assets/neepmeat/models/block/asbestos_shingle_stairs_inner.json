@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "neepmeat:block/asbestos_shingle",
+    "top": "neepmeat:block/asbestos_shingle",
+    "side": "neepmeat:block/asbestos_shingle"
+  }
+}

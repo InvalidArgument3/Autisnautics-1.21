@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/client/renderer/block/LargestHopperRenderer.java:118: error: cannot find symbol

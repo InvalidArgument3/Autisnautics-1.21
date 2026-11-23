@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/plc/recipe/ManufactureStep.java:16: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/plc/recipe/ManufactureStep.java:18: error: package net.fabricmc.fabric.api.event.registry does not exist
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/plc/recipe/ManufactureStep.java:28: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/api/plc/recipe/ManufactureStep.java:32: error: package MeatLibCodecs does not exist

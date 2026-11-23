@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:rusty_metal"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "neepmeat:rusty_metal_stairs",
+    "id": "neepmeat:rusty_metal_stairs"
+  },
+  "show_notification": true
+}

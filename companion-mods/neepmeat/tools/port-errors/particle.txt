@@ -1,0 +1,6 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:29: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:31: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:43: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:81: error: method does not override or implement a method from a supertype
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/particle/SwirlingParticleEffect.java:87: error: method does not override or implement a method from a supertype

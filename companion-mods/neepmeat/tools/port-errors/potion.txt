@@ -1,0 +1,2 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/potion/NMPotions.java:28: error: no suitable constructor found for MobEffectInstance(MobEffect,int)
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/potion/NMPotions.java:32: error: incompatible types: Holder<Potion> cannot be converted to Potion

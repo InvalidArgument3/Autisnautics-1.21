@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sc ",
+    "cs ",
+    "   "
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:clay_ball"
+    },
+    "s": {
+      "item": "neepmeat:asbestos"
+    }
+  },
+  "result": {
+    "item": "neepmeat:refractory_brick",
+    "count": 2,
+    "id": "neepmeat:refractory_brick"
+  }
+}

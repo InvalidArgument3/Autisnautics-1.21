@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:blood_bubble_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:blood_bubble_planks_wall",
+    "id": "neepmeat:blood_bubble_planks_wall"
+  },
+  "show_notification": true
+}

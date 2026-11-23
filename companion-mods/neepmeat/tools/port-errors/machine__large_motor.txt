@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:48: error: LargeMotorBlock is not abstract and does not override abstract method blockItem() in MeatlibBlock
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:80: error: incompatible types: MeatlibBlockSettings cannot be converted to Properties
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:87: error: incompatible types: possible lossy conversion from float to int
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:110: error: incompatible types: invalid method reference
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/large_motor/LargeMotorBlock.java:149: error: cannot find symbol

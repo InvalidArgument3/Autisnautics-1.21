@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "neepmeat:polished_metal"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "neepmeat:polished_metal_slab",
+    "id": "neepmeat:polished_metal_slab"
+  },
+  "show_notification": true
+}

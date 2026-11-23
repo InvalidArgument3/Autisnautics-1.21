@@ -1,0 +1,18 @@
+{
+  "type": "neepmeat:advanced_crushing",
+  "input": {
+    "tag": "c:redstone_ores",
+    "amount": 1
+  },
+  "output": {
+    "resource": "minecraft:redstone",
+    "amount": 5
+  },
+  "extra": {
+    "resource": "minecraft:redstone",
+    "amount": 2,
+    "chance": 0.5
+  },
+  "experience": 2,
+  "processtime": 40
+}

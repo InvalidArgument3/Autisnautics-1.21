@@ -1,0 +1,5 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/recipe/ManufactureEmiRecipe.java:138: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/recipe/ManufactureEmiRecipe.java:139: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/recipe/ManufactureEmiRecipe.java:186: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/recipe/ManufactureEmiRecipe.java:209: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/compat/emi/recipe/ManufactureEmiRecipe.java:210: error: cannot find symbol

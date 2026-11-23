@@ -1,0 +1,4 @@
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/advancement/VivisectionCriterion.java:17: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/advancement/VivisectionCriterion.java:19: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/advancement/VivisectionCriterion.java:51: error: cannot find symbol
+/workspace/companion-mods/neepmeat/src/main/java/com/neep/neepmeat/advancement/VivisectionCriterion.java:38: error: cannot find symbol

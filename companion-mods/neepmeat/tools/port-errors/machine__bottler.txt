@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/machine/bottler/BottlerBlock.java:45: error: cannot find symbol

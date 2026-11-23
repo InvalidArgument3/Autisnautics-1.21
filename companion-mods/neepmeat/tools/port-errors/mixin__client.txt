@@ -1,0 +1,1 @@
+/workspace/companion-mods/neepmeat/src/staged/java/com/neep/neepmeat/mixin/client/ParticleManagerMixin.java:41: error: method addBlockBreakParticles in interface BlockPlacementPreview cannot be applied to given types;
