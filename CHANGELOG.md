@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.69]
+- **Redesigned the Main Line FTB Quests chapter (`Dimension Progression`) as a vertical Dimension Stack tech tree.**
+  - Added custom vertical dimension-stack cutaway background (`kubejs:textures/quests/dimension_stack_bg.png`).
+  - Placed 33 progression, resource, magic, optional Cataclysm boss, and Stellaris rocket nodes directly on their corresponding layers from Space down to The End.
+
 ## [0.1.68]
 - **Moved remaining gated addon/mod ores & structures out of the Overworld.**
   - Disabled `Autisnautics Density Ores` `tin_cassiterite_1..5` (`nuclearcraftneohaul:tin_ore`) in the Overworld (`tin_small`/`tin_large` remain in `infernalcross:dimension`).

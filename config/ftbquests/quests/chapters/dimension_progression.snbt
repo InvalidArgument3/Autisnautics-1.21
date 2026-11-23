@@ -7,130 +7,530 @@
 		id: "stellaris:rocket"
 	}
 	id: "6900000000000000"
-	images: [ ]
+	images: [{
+		height: 32.0d
+		id: "6900000000000F01"
+		image: "kubejs:textures/quests/dimension_stack_bg.png"
+		order: -10
+		rotation: 0.0d
+		width: 18.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: -1
 	quest_links: [ ]
 	quests: [
 		{
 			id: "6900000000000001"
+			size: 1.25d
 			tasks: [{
+				dimension: "minecraft:overworld"
 				id: "6900000000000101"
-				item: { count: 1, id: "kubejs:kinetic_mechanism" }
-				type: "item"
+				type: "dimension"
 			}]
-			x: -6.0d
-			y: 0.0d
+			x: -5.5d
+			y: -11.5d
 		}
 		{
 			dependencies: ["6900000000000001"]
 			id: "6900000000000002"
+			tasks: [
+				{
+					id: "6900000000000102"
+					item: { count: 1, id: "kubejs:kinetic_mechanism" }
+					type: "item"
+				}
+				{
+					id: "6900000000000103"
+					item: { count: 1, id: "create:brass_ingot" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["6900000000000001"]
+			id: "6900000000000003"
 			tasks: [{
-				dimension: "oceanworld:deepsea"
-				id: "6900000000000102"
-				type: "dimension"
+				id: "6900000000000104"
+				item: { count: 1, id: "thaumaturge:thaumometer" }
+				type: "item"
 			}]
-			x: -4.0d
-			y: 0.0d
+			x: 0.5d
+			y: -11.5d
 		}
 		{
 			dependencies: ["6900000000000002"]
-			id: "6900000000000003"
-			tasks: [{
-				dimension: "dimension_of_caves:cave"
-				id: "6900000000000103"
-				type: "dimension"
-			}]
-			x: -2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["6900000000000003"]
 			id: "6900000000000004"
+			size: 1.25d
 			tasks: [{
-				id: "6900000000000104"
-				item: { count: 1, id: "ae2:controller" }
-				type: "item"
-			}]
-			x: -2.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["6900000000000003"]
-			id: "6900000000000005"
-			tasks: [{
-				dimension: "infinite_abyss:first_layer"
+				dimension: "oceanworld:deepsea"
 				id: "6900000000000105"
 				type: "dimension"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -5.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["6900000000000004"]
+			id: "6900000000000005"
+			tasks: [
+				{
+					id: "6900000000000106"
+					item: { count: 1, id: "createdieselgenerators:pumpjack_head" }
+					type: "item"
+				}
+				{
+					id: "6900000000000107"
+					item: { count: 1, id: "kubejs:sealed_mechanism" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["6900000000000005"]
 			id: "6900000000000006"
-			tasks: [{
-				dimension: "undergarden:undergarden"
-				id: "6900000000000106"
-				type: "dimension"
-			}]
-			x: 2.0d
-			y: 0.0d
+			tasks: [
+				{
+					id: "6900000000000108"
+					item: { count: 1, id: "createdieselgenerators:diesel_engine" }
+					type: "item"
+				}
+				{
+					id: "6900000000000109"
+					item: { count: 1, id: "immersivepetroleum:diesel_bucket" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: -8.0d
 		}
 		{
-			dependencies: ["6900000000000006"]
+			dependencies: ["6900000000000004"]
 			id: "6900000000000007"
+			shape: "diamond"
 			tasks: [{
-				id: "6900000000000107"
-				item: { count: 1, id: "nuclearcraftneohaul:hazmat_chestplate" }
+				id: "6900000000000110"
+				item: { count: 1, id: "cataclysm:abyss_eye" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: -2.0d
+			x: 3.5d
+			y: -8.0d
 		}
 		{
-			dependencies: [
-				"6900000000000006"
-				"6900000000000007"
-			]
+			dependencies: ["6900000000000004"]
 			id: "6900000000000008"
+			size: 1.25d
 			tasks: [{
-				dimension: "infernalcross:dimension"
-				id: "6900000000000108"
+				dimension: "dimension_of_caves:cave"
+				id: "6900000000000111"
 				type: "dimension"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: -5.5d
+			y: -4.75d
 		}
 		{
 			dependencies: ["6900000000000008"]
 			id: "6900000000000009"
 			tasks: [
 				{
-					id: "6900000000000109"
+					id: "6900000000000112"
+					item: { count: 1, id: "alexscaves:scarlet_neodymium_ingot" }
+					type: "item"
+				}
+				{
+					id: "6900000000000113"
+					item: { count: 1, id: "alexscaves:azure_neodymium_ingot" }
+					type: "item"
+				}
+				{
+					id: "6900000000000114"
+					item: { count: 1, id: "ae2:certus_quartz_crystal" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -4.75d
+		}
+		{
+			dependencies: ["6900000000000009"]
+			id: "690000000000000A"
+			tasks: [
+				{
+					id: "6900000000000115"
+					item: { count: 1, id: "ae2:inscriber" }
+					type: "item"
+				}
+				{
+					id: "6900000000000116"
+					item: { count: 1, id: "ae2:charger" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: -4.75d
+		}
+		{
+			dependencies: ["690000000000000A"]
+			id: "690000000000000B"
+			tasks: [{
+				id: "6900000000000117"
+				item: { count: 1, id: "ae2:controller" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -4.75d
+		}
+		{
+			dependencies: ["6900000000000008"]
+			id: "690000000000000C"
+			size: 1.25d
+			tasks: [{
+				dimension: "infinite_abyss:first_layer"
+				id: "6900000000000118"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["690000000000000C"]
+			id: "690000000000000D"
+			tasks: [
+				{
+					id: "6900000000000119"
+					item: { count: 1, id: "astralsorcery:rock_crystal" }
+					type: "item"
+				}
+				{
+					id: "6900000000000120"
+					item: { count: 1, id: "astralsorcery:aquamarine" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["690000000000000D"]
+			id: "690000000000000E"
+			tasks: [
+				{
+					id: "6900000000000121"
+					item: { count: 1, id: "astralsorcery:altar_luminance" }
+					type: "item"
+				}
+				{
+					id: "6900000000000122"
+					item: { count: 1, id: "astralsorcery:wand" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["690000000000000C"]
+			id: "690000000000000F"
+			size: 1.25d
+			tasks: [{
+				dimension: "deeperdarker:otherside"
+				id: "6900000000000123"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["690000000000000F"]
+			id: "6900000000000010"
+			tasks: [{
+				id: "6900000000000124"
+				item: { count: 1, id: "minecraft:echo_shard" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["690000000000000F"]
+			id: "6900000000000011"
+			size: 1.25d
+			tasks: [{
+				dimension: "undergarden:undergarden"
+				id: "6900000000000125"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6900000000000011"]
+			id: "6900000000000012"
+			tasks: [
+				{
+					id: "6900000000000126"
+					item: { count: 1, id: "undergarden:cloggrum_ingot" }
+					type: "item"
+				}
+				{
+					id: "6900000000000127"
+					item: { count: 1, id: "undergarden:utherium_crystal" }
+					type: "item"
+				}
+				{
+					id: "6900000000000128"
+					item: { count: 1, id: "irons_spellbooks:mithril_ingot" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6900000000000012"]
+			id: "6900000000000013"
+			tasks: [
+				{
+					id: "6900000000000129"
+					item: { count: 1, id: "ars_nouveau:novice_spell_book" }
+					type: "item"
+				}
+				{
+					id: "6900000000000130"
+					item: { count: 1, id: "ars_nouveau:imbuement_chamber" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6900000000000012"]
+			id: "6900000000000014"
+			tasks: [
+				{
+					id: "6900000000000131"
+					item: { count: 1, id: "irons_spellbooks:scroll_forge" }
+					type: "item"
+				}
+				{
+					id: "6900000000000132"
+					item: { count: 1, id: "irons_spellbooks:arcane_anvil" }
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6900000000000011"]
+			id: "6900000000000015"
+			tasks: [
+				{
+					id: "6900000000000133"
+					item: { count: 1, id: "nuclearcraftneohaul:hazmat_chestplate" }
+					type: "item"
+				}
+				{
+					id: "6900000000000134"
+					item: { count: 1, id: "nuclearcraftneohaul:rad_x" }
+					type: "item"
+				}
+				{
+					id: "6900000000000135"
+					item: { count: 1, id: "nuclearcraftneohaul:radaway" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 4.35d
+		}
+		{
+			dependencies: [
+				"6900000000000011"
+				"6900000000000015"
+			]
+			id: "6900000000000016"
+			size: 1.25d
+			tasks: [{
+				dimension: "infernalcross:dimension"
+				id: "6900000000000136"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 5.2d
+		}
+		{
+			dependencies: ["6900000000000016"]
+			id: "6900000000000017"
+			tasks: [{
+				id: "6900000000000137"
+				item: { count: 1, id: "nuclearcraftneohaul:boron_ingot" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.2d
+		}
+		{
+			dependencies: ["6900000000000016"]
+			id: "6900000000000018"
+			size: 1.25d
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "6900000000000138"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6900000000000018"]
+			id: "6900000000000019"
+			tasks: [
+				{
+					id: "6900000000000139"
+					item: { count: 1, id: "create:blaze_cake" }
+					type: "item"
+				}
+				{
+					id: "6900000000000140"
+					item: { count: 1, id: "create:chromatic_compound" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6900000000000018"]
+			id: "690000000000001A"
+			shape: "diamond"
+			tasks: [{
+				id: "6900000000000141"
+				item: { count: 1, id: "cataclysm:flame_eye" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6900000000000018"]
+			id: "690000000000001B"
+			size: 1.25d
+			tasks: [{
+				dimension: "autisnautics:molten_depths"
+				id: "6900000000000142"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 10.75d
+		}
+		{
+			dependencies: ["690000000000001B"]
+			id: "690000000000001C"
+			tasks: [{
+				id: "6900000000000143"
+				item: { count: 1, id: "create:precision_mechanism" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 10.75d
+		}
+		{
+			dependencies: [
+				"6900000000000010"
+				"6900000000000019"
+				"690000000000001B"
+			]
+			id: "690000000000001D"
+			tasks: [
+				{
+					id: "6900000000000144"
 					item: { count: 1, id: "create:shadow_steel" }
 					type: "item"
 				}
 				{
-					id: "6900000000000110"
+					id: "6900000000000145"
 					item: { count: 1, id: "create:refined_radiance" }
 					type: "item"
 				}
 			]
 			x: 6.0d
-			y: 0.0d
+			y: 10.75d
 		}
 		{
-			dependencies: ["6900000000000009"]
-			id: "690000000000000A"
-			shape: "gear"
-			size: 1.5d
+			dependencies: ["690000000000001B"]
+			id: "690000000000001E"
+			size: 1.25d
 			tasks: [{
-				id: "6900000000000111"
-				item: { count: 1, id: "stellaris:rocket" }
+				dimension: "minecraft:the_end"
+				id: "6900000000000146"
+				type: "dimension"
+			}]
+			x: -5.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["690000000000001E"]
+			id: "690000000000001F"
+			shape: "diamond"
+			tasks: [{
+				id: "6900000000000147"
+				item: { count: 1, id: "cataclysm:storm_eye" }
 				type: "item"
 			}]
-			x: 8.5d
-			y: 0.0d
+			x: -2.5d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"6900000000000006"
+				"690000000000001D"
+			]
+			id: "6900000000000030"
+			tasks: [
+				{
+					id: "6900000000000148"
+					item: { count: 1, id: "stellaris:rocket_station" }
+					type: "item"
+				}
+				{
+					id: "6900000000000149"
+					item: { count: 1, id: "stellaris:rocket_nose_cone" }
+					type: "item"
+				}
+				{
+					id: "6900000000000150"
+					item: { count: 1, id: "stellaris:space_suit_chestplate" }
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: -15.0d
+		}
+		{
+			dependencies: ["6900000000000030"]
+			id: "6900000000000031"
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "6900000000000151"
+					item: { count: 1, id: "stellaris:rocket" }
+					type: "item"
+				}
+				{
+					id: "6900000000000152"
+					item: { count: 1, id: "stellaris:rocket_launch_pad" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -15.0d
 		}
 	]
 }

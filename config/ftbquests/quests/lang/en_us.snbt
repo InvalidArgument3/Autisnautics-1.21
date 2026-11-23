@@ -4935,45 +4935,175 @@ quest.7C31A0611CC62360.quest_desc: [
 	]
 
 	chapter.6900000000000000.title: "Dimension Progression"
-	quest.6900000000000001.title: "Layer 1: Overworld & Thaumaturge"
+	quest.6900000000000001.title: "Layer 1: Overworld Skylands"
+	quest.6900000000000001.quest_subtitle: "Starting Layer (Open Sky)"
 	quest.6900000000000001.quest_desc: [
-		"Start with Create kinetics, metallurgy, and ungated Thaumaturge magic on the Overworld."
+		"You begin on the floating Overworld Skylands. Dig down—or leap off an island—to descend through the Immersive Portals dimension stack."
 	]
-	quest.6900000000000002.title: "Layer 2: Deepsea Oil Rigs"
+	quest.6900000000000002.title: "Create Kinetics & Metallurgy"
+	quest.6900000000000002.quest_subtitle: "Overworld Tech Foundation"
 	quest.6900000000000002.quest_desc: [
-		"Descend into the Deepsea dimension. All Immersive Petroleum crude reservoirs and Create Diesel oil chunks are gated to this underwater layer."
+		"Build Create contraptions, Kinetic Mechanisms, and Brass alloys on the Overworld. These form the backbone of every deeper tech tier."
 	]
-	quest.6900000000000003.title: "Layer 3: Dimension of Caves"
+	quest.6900000000000003.title: "Thaumaturge"
+	quest.6900000000000003.quest_subtitle: "Ungated Overworld Magic"
 	quest.6900000000000003.quest_desc: [
-		"Mine Scarlet and Azure Neodymium, Certus Quartz, and AE2 meteorites in the Dimension of Caves."
+		"Thaumaturge is completely ungated and available from day one on the Overworld."
 	]
-	quest.6900000000000004.title: "Applied Energistics 2"
+	quest.6900000000000004.title: "Layer 2: The Deepsea"
+	quest.6900000000000004.quest_subtitle: "Drop below the Skylands"
 	quest.6900000000000004.quest_desc: [
-		"Combine Cave-dimension Neodymium, Tesla Bulbs, and Certus Quartz to build your ME Network."
+		"Fall or dive beneath the Overworld islands into the Deepsea ocean."
+		"All crude oil reservoirs (Immersive Petroleum & Create Diesel Generators) are gated to this layer."
 	]
-	quest.6900000000000005.title: "Layer 4: Infinite Abyss (Astral)"
+	quest.6900000000000005.title: "Offshore Oil Rigs"
+	quest.6900000000000005.quest_subtitle: "Deepsea Crude Extraction"
 	quest.6900000000000005.quest_desc: [
-		"Gather Rock Crystal, Aquamarine Shale, and Marble in the Infinite Abyss, then bring them back up under the open Overworld sky to build your Astral Sorcery observatory."
+		"Craft Sealed Mechanisms with Rubber and Copper, then set up a Pumpjack in Deepsea oil chunks to extract Crude Oil."
 	]
-	quest.6900000000000006.title: "Layer 6: Undergarden Magic"
+	quest.6900000000000006.title: "Diesel & Rocket Fuel Refining"
+	quest.6900000000000006.quest_subtitle: "Power & Space Fuel"
 	quest.6900000000000006.quest_desc: [
-		"Reach the Undergarden to gather Cloggrum, Froststeel, Utherium, and Regalium—unlocking Ars Nouveau and Iron's Spells 'n Spellbooks independently."
+		"Distill Deepsea Crude Oil into Diesel for heavy power—and refine Stellaris Rocket Fuel for your eventual launch to Space."
 	]
-	quest.6900000000000007.title: "Radiation Prep"
+	quest.6900000000000007.title: "Optional Boss: The Leviathan"
+	quest.6900000000000007.quest_subtitle: "Deepsea Sunken City"
 	quest.6900000000000007.quest_desc: [
-		"Infernal Cross has mild ambient radiation. Craft a Hazmat Suit, Rad-X, and RadAway before descending."
+		"Use an Abyss Eye in the Deepsea to locate the Sunken City and challenge The Leviathan."
 	]
-	quest.6900000000000008.title: "Layer 7: Infernal Cross (Nuclear)"
+	quest.6900000000000008.title: "Layer 3: Dimension of Caves"
+	quest.6900000000000008.quest_subtitle: "Beneath the Deepsea Floor"
 	quest.6900000000000008.quest_desc: [
-		"All NuclearCraft Neohaul ores (Uranium, Thorium, Boron, Lithium, Magnesium, Lead, Tin) generate exclusively in Infernal Cross."
+		"Tunnel beneath the Deepsea seabed to enter the Dimension of Caves."
+		"This layer is the exclusive home of AE2 Meteorites, Certus Quartz, and Alex's Caves Neodymium."
 	]
-	quest.6900000000000009.title: "Shadow Steel & Refined Radiance"
+	quest.6900000000000009.title: "Neodymium & Certus Quartz"
+	quest.6900000000000009.quest_subtitle: "Cave-Layer Exclusives"
 	quest.6900000000000009.quest_desc: [
-		"Superheat Chromatic Compound into Shadow Steel (rocket body) and fill it with Lumisene into Refined Radiance (nose cone)."
+		"Mine Scarlet & Azure Neodymium in Magnetic Caves and harvest Certus Quartz from underground AE2 Meteorites."
 	]
-	quest.690000000000000A.title: "Launch to Space (Stellaris)"
+	quest.690000000000000A.title: "AE2 Inscriber & Charger"
+	quest.690000000000000A.quest_subtitle: "Neodymium-Gated AE2"
 	quest.690000000000000A.quest_desc: [
-		"Assemble a Stellaris Rocket at the Rocket Station using Shadow Steel plating and a Refined Radiance nose cone."
+		"Craft your AE2 Inscriber, Charger, and Processor Presses using Cave-layer Neodymium."
+	]
+	quest.690000000000000B.title: "Tesla-Powered ME Network"
+	quest.690000000000000B.quest_subtitle: "Digital Storage Unlocked"
+	quest.690000000000000B.quest_desc: [
+		"Combine a Cave-layer Tesla Bulb, Smooth Sky Stone, and Fluix Crystals to build an ME Controller."
+	]
+	quest.690000000000000C.title: "Layer 4: Infinite Abyss"
+	quest.690000000000000C.quest_subtitle: "Beneath the Caves"
+	quest.690000000000000C.quest_desc: [
+		"Descend past the Dimension of Caves into the flooded Infinite Abyss."
+		"Astral Sorcery's starter ores and crystals are gated to this dark layer."
+	]
+	quest.690000000000000D.title: "Abyssal Starlight Minerals"
+	quest.690000000000000D.quest_subtitle: "Rock Crystal & Aquamarine"
+	quest.690000000000000D.quest_desc: [
+		"Mine Rock Crystal Ore and Aquamarine Shale in the Infinite Abyss."
+	]
+	quest.690000000000000E.title: "Open-Sky Starlight Altars"
+	quest.690000000000000E.quest_subtitle: "Bring back to Overworld Sky"
+	quest.690000000000000E.quest_desc: [
+		"Astral Sorcery altars require direct sky access! Bring your Infinite Abyss Rock Crystals back up to the Overworld Skylands to craft and attune."
+	]
+	quest.690000000000000F.title: "Layer 5: The Otherside"
+	quest.690000000000000F.quest_subtitle: "Sculk Bridge Layer"
+	quest.690000000000000F.quest_desc: [
+		"Continue downward from the Infinite Abyss into the sculk-choked Otherside."
+	]
+	quest.6900000000000010.title: "Echo Shards"
+	quest.6900000000000010.quest_subtitle: "Shadow Steel Catalyst"
+	quest.6900000000000010.quest_desc: [
+		"Collect Echo Shards here—you will need them later with Chromatic Compound to forge Shadow Steel for your rocket."
+	]
+	quest.6900000000000011.title: "Layer 6: The Undergarden"
+	quest.6900000000000011.quest_subtitle: "Beneath the Otherside"
+	quest.6900000000000011.quest_desc: [
+		"Break through into the Undergarden."
+		"All Ars Nouveau and Iron's Spells 'n Spellbooks starter stations—plus Mithril Ore—are gated here."
+	]
+	quest.6900000000000012.title: "Undergarden Alloys & Mithril"
+	quest.6900000000000012.quest_subtitle: "Cloggrum, Utherium & Mithril"
+	quest.6900000000000012.quest_desc: [
+		"Mine Cloggrum, Froststeel, Utherium, and Mithril Ore in Depthrock and Shiverstone."
+	]
+	quest.6900000000000013.title: "Ars Nouveau"
+	quest.6900000000000013.quest_subtitle: "Undergarden-Gated Spellcraft"
+	quest.6900000000000013.quest_desc: [
+		"Use Cloggrum and Utherium to craft your Novice Spell Book and Imbuement Chamber."
+	]
+	quest.6900000000000014.title: "Iron's Spells 'n Spellbooks"
+	quest.6900000000000014.quest_subtitle: "Undergarden-Gated Runes"
+	quest.6900000000000014.quest_desc: [
+		"Use Froststeel, Cloggrum, Utherium, and Regalium to build the Scroll Forge and Arcane Anvil."
+	]
+	quest.6900000000000015.title: "Pre-Infernal Radiation Prep"
+	quest.6900000000000015.quest_subtitle: "Craft BEFORE Layer 7!"
+	quest.6900000000000015.quest_desc: [
+		"Infernal Cross has constant ambient radiation. Craft a Hazmat Suit (Rubber + Brass), Rad-X, and RadAway before descending!"
+	]
+	quest.6900000000000016.title: "Layer 7: Infernal Cross"
+	quest.6900000000000016.quest_subtitle: "Radioactive Blackstone Layer"
+	quest.6900000000000016.quest_desc: [
+		"Equip your Hazmat Suit and descend into Infernal Cross."
+		"All NuclearCraft: Neohaul ores (Uranium, Thorium, Boron, Lithium, Magnesium, Tin) spawn exclusively in this dimension."
+	]
+	quest.6900000000000017.title: "NuclearCraft Ores & Fission"
+	quest.6900000000000017.quest_subtitle: "Infernal Cross Mining"
+	quest.6900000000000017.quest_desc: [
+		"Mine NuclearCraft ores embedded in Blackstone and Netherrack to unlock fission reactors and endgame alloys."
+	]
+	quest.6900000000000018.title: "Layer 8: The Nether"
+	quest.6900000000000018.quest_subtitle: "Beneath Infernal Cross"
+	quest.6900000000000018.quest_desc: [
+		"Descend below Infernal Cross into The Nether to harvest Blaze Rods and Glowstone for superheated Create mixing."
+	]
+	quest.6900000000000019.title: "Blaze Burners & Chromatic Compound"
+	quest.6900000000000019.quest_subtitle: "Superheated Mixing"
+	quest.6900000000000019.quest_desc: [
+		"Feed Blaze Burners with Blaze Cakes to superheat Polished Rose Quartz, Glowstone, and Powdered Obsidian into Chromatic Compound."
+	]
+	quest.690000000000001A.title: "Optional Boss: Ignis"
+	quest.690000000000001A.quest_subtitle: "Nether Burning Arena"
+	quest.690000000000001A.quest_desc: [
+		"Use a Flame Eye in The Nether to locate the Burning Arena and challenge Ignis."
+	]
+	quest.690000000000001B.title: "Layer 9: Molten Depths"
+	quest.690000000000001B.quest_subtitle: "Stratified Molten Metals"
+	quest.690000000000001B.quest_desc: [
+		"Break into the Molten Depths—an extreme crust of fractured obsidian and layered reservoirs of molten metals."
+	]
+	quest.690000000000001C.title: "Molten Metal Reservoirs"
+	quest.690000000000001C.quest_subtitle: "Industrial Metallurgy"
+	quest.690000000000001C.quest_desc: [
+		"Tap the layered molten metal pools and complete Precision Mechanisms to finalize high-tier rocket components."
+	]
+	quest.690000000000001D.title: "Shadow Steel & Refined Radiance"
+	quest.690000000000001D.quest_subtitle: "Rocket Hull & Nose Cone"
+	quest.690000000000001D.quest_desc: [
+		"Superheat Chromatic Compound with Echo Shards & Obsidian for Shadow Steel (rocket body), and fill Chromatic Compound with Lumisene for Refined Radiance (nose cone)."
+	]
+	quest.690000000000001E.title: "Layer 10: The End"
+	quest.690000000000001E.quest_subtitle: "Bottom of the Stack"
+	quest.690000000000001E.quest_desc: [
+		"Descend past the Molten Depths into The End at the very bottom of the world stack."
+	]
+	quest.690000000000001F.title: "Optional Boss: Scylla"
+	quest.690000000000001F.quest_subtitle: "End / Open-Sky Acropolis"
+	quest.690000000000001F.quest_desc: [
+		"Use a Storm Eye in The End to locate the floating Acropolis and challenge Scylla."
+	]
+	quest.6900000000000030.title: "Rocket Station & Space Suit"
+	quest.6900000000000030.quest_subtitle: "Ascend to the Top"
+	quest.6900000000000030.quest_desc: [
+		"Return to the Overworld Skylands with your Shadow Steel, Refined Radiance, and Deepsea Rocket Fuel. Build a Rocket Station, Rocket Nose Cone, and Space Suit."
+	]
+	quest.6900000000000031.title: "Launch to Space!"
+	quest.6900000000000031.quest_subtitle: "Stellaris Finale"
+	quest.6900000000000031.quest_desc: [
+		"Assemble your Stellaris Rocket at the Rocket Station, place a Launch Pad under the open Overworld sky, fuel up, and blast off into Space!"
 	]
 
 	chapter.651F000000000000.title: "Applied Energistics 2"
