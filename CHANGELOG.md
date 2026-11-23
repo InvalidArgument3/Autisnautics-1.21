@@ -1,4 +1,10 @@
 # Changelog
+## [0.1.68]
+- **Moved remaining gated addon/mod ores & structures out of the Overworld.**
+  - Disabled `Autisnautics Density Ores` `tin_cassiterite_1..5` (`nuclearcraftneohaul:tin_ore`) in the Overworld (`tin_small`/`tin_large` remain in `infernalcross:dimension`).
+  - Moved Iron's Spells `ore_mithril_placement` (`add_mithril_ore`) from `#minecraft:is_overworld` to `undergarden:undergarden` (targeting `undergarden:depthrock` and `undergarden:shiverstone`).
+  - Cleared Overworld biome tags on Astral Sorcery's surface structures (`dig_site`, `column`, `focal_point`, `moon_dial`, `obliteration`, `rotunda`).
+
 ## [0.1.67]
 - **Disabled Overworld NuclearCraft & Rock Crystal spawns from `Autisnautics Density Ores`.** Overrode `boron_1..5`, `lithium_1..5`, `magnesium_1..5`, `thorium_1..5`, `uranium_1..5`, and `rock_crystal_1..5` biome modifiers in `Autisnautics Progression` with `neoforge:none` so NuclearCraft ores only spawn in `infernalcross:dimension` and Rock Crystal only spawns in `infinite_abyss:first_layer`.
 

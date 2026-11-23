@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "discard_chance_on_air_exposure": 1.0,
+    "size": 3,
+    "targets": [
+      {
+        "state": {
+          "Name": "irons_spellbooks:mithril_ore"
+        },
+        "target": {
+          "block": "undergarden:depthrock",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "irons_spellbooks:mithril_ore"
+        },
+        "target": {
+          "block": "undergarden:shiverstone",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  }
+}
