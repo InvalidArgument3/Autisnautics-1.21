@@ -1,0 +1,136 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "dimension_progression"
+	group: "331B6409EF6A7840"
+	icon: {
+		id: "stellaris:rocket"
+	}
+	id: "6900000000000000"
+	images: [ ]
+	order_index: -1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "6900000000000001"
+			tasks: [{
+				id: "6900000000000101"
+				item: { count: 1, id: "kubejs:kinetic_mechanism" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000001"]
+			id: "6900000000000002"
+			tasks: [{
+				dimension: "oceanworld:deepsea"
+				id: "6900000000000102"
+				type: "dimension"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000002"]
+			id: "6900000000000003"
+			tasks: [{
+				dimension: "dimension_of_caves:cave"
+				id: "6900000000000103"
+				type: "dimension"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000003"]
+			id: "6900000000000004"
+			tasks: [{
+				id: "6900000000000104"
+				item: { count: 1, id: "ae2:controller" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6900000000000003"]
+			id: "6900000000000005"
+			tasks: [{
+				dimension: "infinite_abyss:first_layer"
+				id: "6900000000000105"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000005"]
+			id: "6900000000000006"
+			tasks: [{
+				dimension: "undergarden:undergarden"
+				id: "6900000000000106"
+				type: "dimension"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000006"]
+			id: "6900000000000007"
+			tasks: [{
+				id: "6900000000000107"
+				item: { count: 1, id: "nuclearcraftneohaul:hazmat_chestplate" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"6900000000000006"
+				"6900000000000007"
+			]
+			id: "6900000000000008"
+			tasks: [{
+				dimension: "infernalcross:dimension"
+				id: "6900000000000108"
+				type: "dimension"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000008"]
+			id: "6900000000000009"
+			tasks: [
+				{
+					id: "6900000000000109"
+					item: { count: 1, id: "create:shadow_steel" }
+					type: "item"
+				}
+				{
+					id: "6900000000000110"
+					item: { count: 1, id: "create:refined_radiance" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6900000000000009"]
+			id: "690000000000000A"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "6900000000000111"
+				item: { count: 1, id: "stellaris:rocket" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#autisnautics:cave_dim_biomes",
+  "features": "autisnautics:cave_certus_quartz",
+  "step": "underground_ores"
+}

@@ -2641,7 +2641,7 @@
 					id: "5100000000000243"
 					item: {
 						count: 4
-						id: "refinedstorage:silicon"
+						id: "ae2:silicon"
 					}
 					type: "item"
 				}

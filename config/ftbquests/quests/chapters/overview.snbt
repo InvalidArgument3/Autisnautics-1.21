@@ -764,7 +764,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:controller"
+				id: "ae2:controller"
 			}
 			id: "26173D4777F439B1"
 			shape: "circle"

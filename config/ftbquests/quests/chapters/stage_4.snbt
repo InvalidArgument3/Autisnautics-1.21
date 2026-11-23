@@ -246,7 +246,7 @@
 					timer_start: "FIRST_PROGRESS"
 				}
 				id: "3E607053D3B0C552"
-				item: { count: 1, id: "refinedstorage:controller" }
+				item: { count: 1, id: "ae2:controller" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -1265,7 +1265,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:silicon"
+				id: "ae2:silicon"
 			}
 			id: "067C5FDA4709F195"
 			rewards: [
@@ -1305,7 +1305,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "263459FBEC9F9868"
-					item: { count: 1, id: "refinedstorage:silicon" }
+					item: { count: 1, id: "ae2:silicon" }
 					type: "item"
 				}
 				{
@@ -1343,7 +1343,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:processor_binding"
+				id: "ae2:printed_silicon"
 			}
 			id: "71D90A1E5D53FC0A"
 			rewards: [
@@ -1383,7 +1383,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "12C1BB8D09D664B4"
-					item: { count: 1, id: "refinedstorage:processor_binding" }
+					item: { count: 1, id: "ae2:printed_silicon" }
 					type: "item"
 				}
 				{
@@ -1490,7 +1490,7 @@
 					id: "52000000000000B5"
 					item: {
 						count: 2
-						id: "refinedstorage:silicon"
+						id: "ae2:silicon"
 					}
 					type: "item"
 				}
@@ -1674,7 +1674,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:silicon"
+				id: "ae2:silicon"
 			}
 			id: "4B19B6EAD511378D"
 			rewards: [
@@ -1714,7 +1714,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "6FCB9E7E2CC10348"
-					item: { count: 1, id: "refinedstorage:silicon" }
+					item: { count: 1, id: "ae2:silicon" }
 					type: "item"
 				}
 				{
@@ -1802,7 +1802,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:raw_basic_processor"
+				id: "ae2:printed_logic_processor"
 			}
 			id: "24C48CFAAD71B230"
 			rewards: [
@@ -1842,7 +1842,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "10D5C1E5071B1B53"
-					item: { count: 1, id: "refinedstorage:raw_basic_processor" }
+					item: { count: 1, id: "ae2:printed_logic_processor" }
 					type: "item"
 				}
 				{
@@ -1858,7 +1858,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "32F50DF8BD6E3927"
-					item: { count: 1, id: "refinedstorage:raw_improved_processor" }
+					item: { count: 1, id: "ae2:printed_calculation_processor" }
 					type: "item"
 				}
 				{
@@ -1874,7 +1874,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "2E5AD5026FDB28CB"
-					item: { count: 1, id: "refinedstorage:raw_advanced_processor" }
+					item: { count: 1, id: "ae2:printed_engineering_processor" }
 					type: "item"
 				}
 			]
@@ -1893,7 +1893,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:basic_processor"
+				id: "ae2:logic_processor"
 			}
 			id: "2B8F1D804107EB8C"
 			rewards: [
@@ -1901,7 +1901,7 @@
 					id: "5200000000000403"
 					item: {
 						count: 2
-						id: "refinedstorage:silicon"
+						id: "ae2:silicon"
 					}
 					type: "item"
 				}
@@ -1941,7 +1941,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "186FEC9FE047828F"
-					item: { count: 1, id: "refinedstorage:basic_processor" }
+					item: { count: 1, id: "ae2:logic_processor" }
 					type: "item"
 				}
 				{
@@ -1957,7 +1957,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "2DCA8F3CB7884170"
-					item: { count: 1, id: "refinedstorage:improved_processor" }
+					item: { count: 1, id: "ae2:calculation_processor" }
 					type: "item"
 				}
 				{
@@ -1973,7 +1973,7 @@
 						timer_start: "FIRST_PROGRESS"
 					}
 					id: "75950A3A22C9DC8E"
-					item: { count: 1, id: "refinedstorage:advanced_processor" }
+					item: { count: 1, id: "ae2:engineering_processor" }
 					type: "item"
 				}
 			]
@@ -2055,7 +2055,7 @@
 					id: "51000000000001D6"
 					item: {
 						count: 2
-						id: "refinedstorage:silicon"
+						id: "ae2:silicon"
 					}
 					type: "item"
 				}
@@ -2521,7 +2521,7 @@
 				weekly: 0b
 			}
 			icon: {
-				id: "refinedstorage:raw_improved_processor"
+				id: "ae2:printed_calculation_processor"
 			}
 			id: "1C253E3B9DA3597E"
 			rewards: [
@@ -2560,7 +2560,7 @@
 					timer_start: "FIRST_PROGRESS"
 				}
 				id: "07B885F8256E49F0"
-				item: { count: 1, id: "refinedstorage:raw_improved_processor" }
+				item: { count: 1, id: "ae2:printed_calculation_processor" }
 				type: "item"
 			}]
 			x: 13.0d

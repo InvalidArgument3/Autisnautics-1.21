@@ -238,7 +238,7 @@
 	# Default: 5
 	# Range: 1 ~ 400
 	radiation_player_tick_rate = 5
-	radiation_dims = ["nuclearcraftneohaul:nuclear_wasteland_2.25"]
+	radiation_dims = ["nuclearcraftneohaul:nuclear_wasteland_2.25", "infernalcross:dimension_0.05"]
 	radiation_biomes = ["nuclearcraftneohaul:nuclear_wasteland_0.25"]
 	radiation_structures = []
 	radiation_dim_limits = []

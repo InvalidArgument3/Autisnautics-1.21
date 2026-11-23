@@ -1,0 +1,17 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "regions_unexplored:prismachasm",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:ancient_delta",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:lost_caves",
+      "required": false
+    }
+  ]
+}

@@ -4933,4 +4933,79 @@ quest.7C31A0611CC62360.quest_desc: [
 		"The pneumatic connection head and the giant hydraulic rod are the same tier. The giant rod is a mechanical craft around one precision mechanism."
 		"None of these crafts give a tube or a mechanism back."
 	]
+
+	chapter.6900000000000000.title: "Dimension Progression"
+	quest.6900000000000001.title: "Layer 1: Overworld & Thaumaturge"
+	quest.6900000000000001.quest_desc: [
+		"Start with Create kinetics, metallurgy, and ungated Thaumaturge magic on the Overworld."
+	]
+	quest.6900000000000002.title: "Layer 2: Deepsea Oil Rigs"
+	quest.6900000000000002.quest_desc: [
+		"Descend into the Deepsea dimension. All Immersive Petroleum crude reservoirs and Create Diesel oil chunks are gated to this underwater layer."
+	]
+	quest.6900000000000003.title: "Layer 3: Dimension of Caves"
+	quest.6900000000000003.quest_desc: [
+		"Mine Scarlet and Azure Neodymium, Certus Quartz, and AE2 meteorites in the Dimension of Caves."
+	]
+	quest.6900000000000004.title: "Applied Energistics 2"
+	quest.6900000000000004.quest_desc: [
+		"Combine Cave-dimension Neodymium, Tesla Bulbs, and Certus Quartz to build your ME Network."
+	]
+	quest.6900000000000005.title: "Layer 4: Infinite Abyss (Astral)"
+	quest.6900000000000005.quest_desc: [
+		"Gather Rock Crystal, Aquamarine Shale, and Marble in the Infinite Abyss, then bring them back up under the open Overworld sky to build your Astral Sorcery observatory."
+	]
+	quest.6900000000000006.title: "Layer 6: Undergarden Magic"
+	quest.6900000000000006.quest_desc: [
+		"Reach the Undergarden to gather Cloggrum, Froststeel, Utherium, and Regalium—unlocking Ars Nouveau and Iron's Spells 'n Spellbooks independently."
+	]
+	quest.6900000000000007.title: "Radiation Prep"
+	quest.6900000000000007.quest_desc: [
+		"Infernal Cross has mild ambient radiation. Craft a Hazmat Suit, Rad-X, and RadAway before descending."
+	]
+	quest.6900000000000008.title: "Layer 7: Infernal Cross (Nuclear)"
+	quest.6900000000000008.quest_desc: [
+		"All NuclearCraft Neohaul ores (Uranium, Thorium, Boron, Lithium, Magnesium, Lead, Tin) generate exclusively in Infernal Cross."
+	]
+	quest.6900000000000009.title: "Shadow Steel & Refined Radiance"
+	quest.6900000000000009.quest_desc: [
+		"Superheat Chromatic Compound into Shadow Steel (rocket body) and fill it with Lumisene into Refined Radiance (nose cone)."
+	]
+	quest.690000000000000A.title: "Launch to Space (Stellaris)"
+	quest.690000000000000A.quest_desc: [
+		"Assemble a Stellaris Rocket at the Rocket Station using Shadow Steel plating and a Refined Radiance nose cone."
+	]
+
+	chapter.651F000000000000.title: "Applied Energistics 2"
+	quest.651F000000000001.title: "Enter the Dimension of Caves"
+	quest.651F000000000002.title: "Magnet Caves Neodymium"
+	quest.651F000000000003.title: "Certus Quartz"
+	quest.651F000000000004.title: "Neodymium Inscriber & Charger"
+	quest.651F000000000005.title: "ME Processors"
+	quest.651F000000000006.title: "Tesla-Powered ME Network"
+
+	chapter.6520000000000000.title: "Thaumaturge"
+	quest.6520000000000001.title: "Salis Mundus"
+	quest.6520000000000001.quest_desc: [
+		"Thaumaturge is completely ungated in the Overworld. Craft Salis Mundus to begin."
+	]
+	quest.6520000000000002.title: "The Thaumonomicon"
+	quest.6520000000000003.title: "Thaumometer"
+	quest.6520000000000004.title: "Arcane Workbench"
+	quest.6520000000000005.title: "Crucible & Research Table"
+	quest.6520000000000006.title: "Goggles of Revealing & Infusion"
+
+	chapter.6521000000000000.title: "Cataclysm Bosses (Optional)"
+	quest.6521000000000001.title: "No Bosses on the Overworld"
+	quest.6521000000000001.quest_desc: [
+		"All L_Ender's Cataclysm boss structures have been relocated off the Overworld into deeper dimensions as optional combat challenges."
+	]
+	quest.6521000000000002.title: "The Leviathan — Deepsea (Sunken City)"
+	quest.6521000000000003.title: "The Harbinger — Dimension of Caves (Ancient Factory)"
+	quest.6521000000000004.title: "Ender Guardian — Infinite Abyss (Ruined Citadel)"
+	quest.6521000000000005.title: "Maledictus — Otherside (Frosted Prison)"
+	quest.6521000000000006.title: "Ancient Remnant — Undergarden (Cursed Pyramid)"
+	quest.6521000000000007.title: "Netherite Monstrosity — Infernal Cross (Soul Black Smith)"
+	quest.6521000000000008.title: "Ignis — The Nether (Burning Arena)"
+	quest.6521000000000009.title: "Scylla — The End (Acropolis)"
 }

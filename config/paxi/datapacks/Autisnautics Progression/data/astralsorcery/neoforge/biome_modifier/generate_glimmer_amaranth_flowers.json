@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#autisnautics:infinite_abyss_biomes",
+  "features": "astralsorcery:placed_glimmer_amaranth_flowers",
+  "step": "vegetal_decoration"
+}

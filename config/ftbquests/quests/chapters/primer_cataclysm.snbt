@@ -1,0 +1,112 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "primer_cataclysm"
+	group: "61A0000000000001"
+	icon: {
+		id: "minecraft:nether_star"
+	}
+	id: "6521000000000000"
+	images: [ ]
+	order_index: 27
+	quest_links: [ ]
+	quests: [
+		{
+			id: "6521000000000001"
+			tasks: [{
+				id: "6521000000000101"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000002"
+			tasks: [{
+				dimension: "oceanworld:deepsea"
+				id: "6521000000000102"
+				type: "dimension"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000003"
+			tasks: [{
+				dimension: "dimension_of_caves:cave"
+				id: "6521000000000103"
+				type: "dimension"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000004"
+			tasks: [{
+				dimension: "infinite_abyss:first_layer"
+				id: "6521000000000104"
+				type: "dimension"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000005"
+			tasks: [{
+				dimension: "deeperdarker:otherside"
+				id: "6521000000000105"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000006"
+			tasks: [{
+				dimension: "undergarden:undergarden"
+				id: "6521000000000106"
+				type: "dimension"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000007"
+			tasks: [{
+				dimension: "infernalcross:dimension"
+				id: "6521000000000107"
+				type: "dimension"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000008"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "6521000000000108"
+				type: "dimension"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6521000000000001"]
+			id: "6521000000000009"
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "6521000000000109"
+				type: "dimension"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+}

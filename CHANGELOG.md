@@ -1,4 +1,11 @@
 # Changelog
+## [0.1.64]
+- **Dimension-based progression overhaul.**
+  - **Mod list updates:** Added **Thaumaturge 1.1.0** (`.pakku/overrides/mods/thaumaturge-1.21.1-NeoForge-1.1.0.jar`, ungated Overworld magic), added **L_Ender's Cataclysm 3.33** + **Lionfish API 3.1**, and swapped **Refined Storage** (+ Curios/EMI/JEI/ExtraDisks) back to **Applied Energistics 2 19.2.20** + **GuideME 21.1.22**.
+  - **KubeJS cleanup & gates:** Removed old CABIN chapter scripts (`chapters.js`, `chapters/*`, `_A2_recipes.js`, `_A2_laser_alchemy.js`, `alchemy.js`, `gem_processing.js`); preserved casings and core mechanisms in `autis_mechanisms.js` (plus `chromatic_compound`, `refined_radiance`, and `shadow_steel`); added `autis_dimension_gates.js` gating Stellaris rockets behind Shadow Steel (body) & Refined Radiance (nose cone), AE2 Inscriber/Charger/Controller/Presses behind Cave-dimension Neodymium, Ars Nouveau & Iron's Spells starter stations behind Undergarden materials (no magic cross-pollination), and pre-Infernal NuclearCraft Hazmat/Rad-X/RadAway recipes.
+  - **Paxi worldgen datapack (`Autisnautics Progression`):** Locked Immersive Petroleum & Create Diesel oil to `oceanworld:deepsea`, AE2 meteorites + underground Certus Quartz to `dimension_of_caves:cave`, Astral Sorcery ores/flowers to `infinite_abyss:first_layer`, all 14 NuclearCraft Neohaul ores to `infernalcross:dimension` (replacing blackstone/netherrack/deepslate at `Y=-44..56`) with mild ambient radiation (`infernalcross:dimension_0.05` in `nuclearcraftneohaul-common.toml`), and relocated all 8 L_Ender's Cataclysm boss structures off the Overworld into deeper dimensions / The End (with underground `start_height` overrides for roofed dimensions).
+  - **FTB Quests:** Replaced `primer_refined_storage.snbt` with `primer_ae2.snbt`, remapped all remaining `refinedstorage:*` references to `ae2:*`, and added `dimension_progression.snbt`, `primer_thaumaturge.snbt`, and `primer_cataclysm.snbt`.
+
 ## [0.1.63]
 - **Diamond Warrior Harness chest core socket now uses a diamond armor palette.** Added `WarriorCoreLayerMixin` and `diamond_warrior_core.png` so the non-glowing frame around the chest star renders in diamond colors instead of netherite gray.
 

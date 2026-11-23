@@ -1,0 +1,21 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "undergarden:barren_abyss",
+      "required": false
+    },
+    {
+      "id": "undergarden:ancient_sea",
+      "required": false
+    },
+    {
+      "id": "undergarden:smog_spires",
+      "required": false
+    },
+    {
+      "id": "undergarden:forgotten_field",
+      "required": false
+    }
+  ]
+}
