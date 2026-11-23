@@ -157,3 +157,27 @@ NativeEvents.onEvent($WeakFleshAdded, event => {
         console.log('[weak flesh] ' + err)
     }
 })
+
+// Fix NeoOrigins leaving players stuck invulnerable when all classes are disabled
+// (hadAllOrigins stays false because origins:class is never selected).
+function ensureHadAllOrigins(player) {
+    try {
+        if (!(player instanceof $WeakFleshPlayer)) return
+        let data = player.getData($WeakFleshAttachments.originData())
+        if (!data.isHadAllOrigins() && data.getOrigin($WeakFleshLayer) != null) {
+            data.setHadAllOrigins(true)
+        }
+    } catch (err) {
+        console.log('[origin invuln fix] ' + err)
+    }
+}
+
+PlayerEvents.loggedIn(event => {
+    ensureHadAllOrigins(event.player)
+})
+
+PlayerEvents.tick(event => {
+    if (event.player.age % 20 === 0) {
+        ensureHadAllOrigins(event.player)
+    }
+})

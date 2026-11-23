@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.65]
+- **Fixed NeoOrigins leaving players stuck invulnerable when all classes are disabled.** `kubejs/server_scripts/_autisoriginsKube.js` now sets `hadAllOrigins = true` on login and every 20 ticks once `origins:origin` is chosen, preventing `CombatPowerEvents.onLivingDamage` from cancelling all damage when `origins:class` is disabled. Also added `minecraft:indirect_magic` to `autisorigins:brittle_soul`.
+
 ## [0.1.64]
 - **Dimension-based progression overhaul.**
   - **Mod list updates:** Added **Thaumaturge 1.1.0** (`.pakku/overrides/mods/thaumaturge-1.21.1-NeoForge-1.1.0.jar`, ungated Overworld magic), added **L_Ender's Cataclysm 3.33** + **Lionfish API 3.1**, and swapped **Refined Storage** (+ Curios/EMI/JEI/ExtraDisks) back to **Applied Energistics 2 19.2.20** + **GuideME 21.1.22**.
