@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.75]
+- **Updated `autisnautics_rifts` to `1.2.1` (`autisnauticsrifts-1.2.1.jar`).**
+  - Added `madeInAbyssEndCeilingOnly` (default `true`): when Made in Abyss mode is enabled and the bottom dimension is `minecraft:the_end`, the central shaft stops after piercing The End's ceiling instead of carving 3/4 of the way down.
+
 ## [0.1.74]
 - **Upgraded `autisnautics_rifts` to `1.2.0` (`autisnauticsrifts-1.2.0.jar`).**
   - **Bedrock-at-Rifts Override (`bedrockOnlyAtRifts = true`):** Mixin into Immersive Portals' `DimStackManagement.replaceBedrock` preserves floor/ceiling bedrock everywhere except inside dimensional rifts (and the Made in Abyss shaft).

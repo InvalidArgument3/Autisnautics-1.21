@@ -11,6 +11,7 @@ public final class RiftConfig {
     public static final ModConfigSpec.BooleanValue MADE_IN_ABYSS_MODE;
     public static final ModConfigSpec.IntValue MADE_IN_ABYSS_RADIUS;
     public static final ModConfigSpec.BooleanValue MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS;
+    public static final ModConfigSpec.BooleanValue MADE_IN_ABYSS_END_CEILING_ONLY;
 
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
@@ -40,6 +41,9 @@ public final class RiftConfig {
         MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS = b
             .comment("If true (while madeInAbyssMode is enabled), disables scattered cellular rifts so the central abyssal shaft is the sole vertical descent.")
             .define("madeInAbyssDisablesCellularRifts", false);
+        MADE_IN_ABYSS_END_CEILING_ONLY = b
+            .comment("If true and the bottom dimension is minecraft:the_end, the Made in Abyss central shaft stops right after piercing The End's ceiling instead of carving 3/4 of the way down.")
+            .define("madeInAbyssEndCeilingOnly", true);
         b.pop();
 
         SPEC = b.build();

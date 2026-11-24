@@ -179,9 +179,16 @@ public final class RiftPostgenCarver {
         }
         int minY = level.getMinBuildHeight();
         int maxY = level.getMaxBuildHeight();
-        int shaftLo = RiftBoundary.isBottomDimension(level)
-            ? maxY - (int) Math.round(0.75 * (maxY - minY))
-            : minY;
+        int shaftLo = minY;
+        if (RiftBoundary.isBottomDimension(level)) {
+            if (RiftConfig.MADE_IN_ABYSS_END_CEILING_ONLY.get()
+                && "minecraft:the_end".equals(level.dimension().location().toString())) {
+                RiftBoundary.Face ceil = RiftBoundary.resolveFace(level, true);
+                shaftLo = ceil != null ? ceil.lo() : Math.max(minY, maxY - RiftConfig.ADAPTIVE_BAND_THICKNESS.get());
+            } else {
+                shaftLo = maxY - (int) Math.round(0.75 * (maxY - minY));
+            }
+        }
         RiftBoundary.Face abyssFace = new RiftBoundary.Face(
             "abyss_shaft", shaftLo, maxY, shaftLo, Double.NaN, 0L, shaftLo, maxY,
             Integer.MIN_VALUE, false, true, "Abyssal Core"
