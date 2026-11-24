@@ -10,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -41,6 +42,10 @@ public class AutisnauticsRifts {
         if (FMLEnvironment.dist == Dist.CLIENT) {
             modEventBus.addListener(this::onClientSetup);
         }
+        NeoForge.EVENT_BUS.addListener(RiftEntityGuard::onEntityJoinLevel);
+        NeoForge.EVENT_BUS.addListener(RiftPostgenCarver::onChunkLoad);
+        NeoForge.EVENT_BUS.addListener(RiftPostgenCarver::onServerTick);
+        NeoForge.EVENT_BUS.addListener(RiftRepairCommand::onRegisterCommands);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.73]
+- **Upgraded `autisnautics_rifts` to `1.1.0` (`autisnauticsrifts-1.1.0.jar`) as a fully self-contained mod.**
+  - Bundled all `Autisnautics Abyssal Stack` worldgen, dimension, and Lithostitched rift density functions directly into the mod (`data/`), removing the separate Paxi datapack.
+  - Ported `rift_boundary_postgen.js`, `rift_boundary_repair.js`, `rift_fresh_entity_guard.js`, and `rift_api.js` into native Java (`RiftPostgenCarver`, `RiftEntityGuard`, `RiftRepairCommand` with `/autisnautics_rift locate|preview|apply`) and retired those KubeJS scripts.
+
 ## [0.1.72]
 - **Added `autisnautics_rifts` 1.0.0 (`autisnauticsrifts-1.0.0.jar`, `.pakku/overrides/mods/`, both sides).**
   - **Rift Compass (`autisnautics_rifts:rift_compass`):** Craftable from a Compass + 4 Amethyst Shards. Queries the dimension stack's live `DensityFunction` rift masks (`0_1` through `8_9`) to locate the nearest dimensional rift center in the current dimension.
