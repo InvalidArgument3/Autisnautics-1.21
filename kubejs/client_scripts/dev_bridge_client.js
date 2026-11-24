@@ -6,16 +6,16 @@
 
     const REQ_PATH = 'testing/bridge/client_req.json'
     const RES_PATH = 'testing/bridge/client_res.json'
-    var tickCount = 0
-    var lastId = ''
+    let tickCount = 0
+    let lastId = ''
 
     function str(v, def) {
         return (v === null || v === undefined) ? (def || '') : String(v)
     }
 
     function handle(mc, req) {
-        var cmd = str(req.cmd)
-        var p = mc.player
+        let cmd = str(req.cmd)
+        let p = mc.player
         if (cmd === 'ping') {
             return {
                 ok: true,
@@ -62,7 +62,7 @@
             return { ok: true, yaw: Number(p.yaw), pitch: Number(p.pitch) }
         }
         if (cmd === 'screenshot') {
-            var fileName = str(req.file, 'cap_' + Date.now() + '.png')
+            let fileName = str(req.file, 'cap_' + Date.now() + '.png')
             Screenshot.grab(mc.gameDirectory, fileName, mc.getMainRenderTarget(), function () {})
             return { ok: true, path: 'screenshots/' + fileName }
         }
@@ -72,17 +72,17 @@
     ClientEvents.tick(event => {
         tickCount++
         if (tickCount % 5 !== 0) return
-        var req = null
+        let req = null
         try {
             req = JsonIO.read(REQ_PATH)
         } catch (e) {
             return
         }
         if (!req || !req.id) return
-        var id = String(req.id)
+        let id = String(req.id)
         if (id === lastId) return
         lastId = id
-        var res
+        let res
         try {
             res = handle(Minecraft.getInstance(), req)
         } catch (err) {
