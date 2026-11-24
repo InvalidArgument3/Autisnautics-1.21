@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.81]
+- **Updated `autisnautics_rifts` to `1.4.4` (`autisnauticsrifts-1.4.4.jar`).**
+  - `RiftLocator` now falls back to the matching partner dimension's enabled rift density function when a face has carving disabled (`enabled = false`), so the Rift Compass in Deepsea still points to the overhead `0_1` Overworld ceiling openings.
+
 ## [0.1.80]
 - **Fixed C2ME chunk-load deadlock in `autisnautics_rifts` `1.4.3` (`autisnauticsrifts-1.4.3.jar`).**
   - `RiftPostgenCarver.carveChunkImmediately` now writes directly via `LevelChunkSection.setBlockState` instead of `LevelChunk.setBlockState`, avoiding `LiquidBlock.onPlace` → `FluidInteractionRegistry` neighbor chunk lookups inside C2ME's `ChunkEvent.Load` callback.

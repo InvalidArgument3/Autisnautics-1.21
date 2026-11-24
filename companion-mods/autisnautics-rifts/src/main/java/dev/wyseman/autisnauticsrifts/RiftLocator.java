@@ -60,10 +60,26 @@ public final class RiftLocator {
         BlockPos cellularCenter = null;
         if (!abyssOnly) {
             if (!AdaptiveRiftMask.usesCustomDensity() && face.usesDensitySentinel()) {
-                DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
-                BlockPos hit = spiralSearch(density, origin.getX(), origin.getZ(), face.anchorY(), face.sentinel());
+                ServerLevel queryLevel = level;
+                RiftBoundary.Face queryFace = face;
+                if (!face.enabled()) {
+                    for (ServerLevel other : level.getServer().getAllLevels()) {
+                        if (other == level) continue;
+                        for (RiftBoundary.Face of : RiftBoundary.resolveAllFaces(other)) {
+                            if (of.enabled() && of.usesDensitySentinel() && of.boundary().equals(face.boundary())) {
+                                queryLevel = other;
+                                queryFace = of;
+                                break;
+                            }
+                        }
+                        if (queryLevel != level) break;
+                    }
+                }
+                DensityFunction density = queryLevel.getChunkSource().randomState().router().finalDensity();
+                BlockPos hit = spiralSearch(density, origin.getX(), origin.getZ(), queryFace.anchorY(), queryFace.sentinel());
                 if (hit != null) {
-                    cellularCenter = refineCenter(density, hit.getX(), hit.getZ(), face.anchorY(), face.sentinel());
+                    BlockPos c = refineCenter(density, hit.getX(), hit.getZ(), queryFace.anchorY(), queryFace.sentinel());
+                    cellularCenter = new BlockPos(c.getX(), face.anchorY(), c.getZ());
                 }
             } else {
                 long salt = face.salt() != 0L ? face.salt() : AdaptiveRiftMask.boundarySalt("autisnautics", face.boundary());
