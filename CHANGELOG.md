@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.80]
+- **Fixed C2ME chunk-load deadlock in `autisnautics_rifts` `1.4.3` (`autisnauticsrifts-1.4.3.jar`).**
+  - `RiftPostgenCarver.carveChunkImmediately` now writes directly via `LevelChunkSection.setBlockState` instead of `LevelChunk.setBlockState`, avoiding `LiquidBlock.onPlace` → `FluidInteractionRegistry` neighbor chunk lookups inside C2ME's `ChunkEvent.Load` callback.
+
 ## [0.1.79]
 - **Updated `autisnautics_rifts` to `1.4.2` (`autisnauticsrifts-1.4.2.jar`).**
   - **Immediate fresh-chunk carving:** Rift-touching newly generated chunks now carve immediately on `ChunkEvent.Load` via `LevelChunk.setBlockState` (plus raised tick-verification budget to `8 ms` / `8192` units), preventing tall rifts from stalling partway through seabeds/floors before chunks unload.

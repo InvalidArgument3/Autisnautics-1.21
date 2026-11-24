@@ -275,16 +275,17 @@ public final class RiftPostgenCarver {
                     int z = bz + lz;
                     if (!RiftLocator.isRiftColumn(level, density, s, x, z)) continue;
                     for (int y = lo; y < hi; y++) {
-                        if (((y & 15) == 0 || y == lo) && !s.wantsFluidAt(y) && chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
+                        var section = chunk.getSection(chunk.getSectionIndex(y));
+                        if (((y & 15) == 0 || y == lo) && !s.wantsFluidAt(y) && section.hasOnlyAir()) {
                             y = Math.min(hi, (Math.floorDiv(y, 16) + 1) * 16) - 1;
                             continue;
                         }
-                        pos.set(x, y, z);
-                        BlockState cur = chunk.getBlockState(pos);
+                        int ly = y & 15;
+                        BlockState cur = section.getBlockState(lx, ly, lz);
                         BlockState target = s.fillBlockStateAt(y);
                         if (cur.is(target.getBlock())) continue;
                         if (cur.isAir() && target.isAir()) continue;
-                        chunk.setBlockState(pos, target, false);
+                        section.setBlockState(lx, ly, lz, target, false);
                         modified = true;
                         STATS.removed++;
                     }
