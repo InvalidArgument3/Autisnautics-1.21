@@ -1,4 +1,11 @@
 # Changelog
+## [0.1.76]
+- **Updated `autisnautics_rifts` to `1.3.0` (`autisnauticsrifts-1.3.0.jar`).**
+  - **Rift Compass bobbing fix:** Overrode `shouldCauseReequipAnimation` and `shouldCauseBlockBreakReset` in `RiftCompassItem` so updating target data components while moving no longer triggers the hand re-equip animation.
+  - **Auto-populated per-dimension-stack config (`config/autisnautics_rifts_stack.json`):** Populates on first world start with every dimension face in the stack, allowing per-face `lo`, `hi`, `anchorY`, `fill` (`AIR` / `WATER` / `LAVA`), and `sealFluids`.
+  - **Overworld & Infinite Abyss rift fixes:** Overworld floor `0_1` now carves `lo=-64..hi=188` filled with `WATER` so it reaches above the seabed; Infinite Abyss ceiling `2_3` now carves `lo=126..hi=128` (`sealFluids=false`, plus `wrap_rift_2_3_infinite_abyss_first_layer.json` clamped to `126..128`) so it only pierces the ceiling.
+  - **Rift Density Config (`autisnautics_rifts-common.toml`):** Added `riftGridSpacing`, `minRiftRadius`, and `maxRiftRadius` under `[density]`.
+
 ## [0.1.75]
 - **Updated `autisnautics_rifts` to `1.2.1` (`autisnauticsrifts-1.2.1.jar`).**
   - Added `madeInAbyssEndCeilingOnly` (default `true`): when Made in Abyss mode is enabled and the bottom dimension is `minecraft:the_end`, the central shaft stops after piercing The End's ceiling instead of carving 3/4 of the way down.

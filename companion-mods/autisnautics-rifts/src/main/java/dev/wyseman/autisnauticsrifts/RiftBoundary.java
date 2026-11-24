@@ -5,9 +5,34 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import qouteall.imm_ptl.core.portal.global_portals.VerticalConnectingPortal;
 
 public final class RiftBoundary {
+    public enum FillType {
+        AIR,
+        WATER,
+        LAVA;
+
+        public static FillType parse(String raw) {
+            if (raw == null) return AIR;
+            return switch (raw.trim().toUpperCase()) {
+                case "WATER" -> WATER;
+                case "LAVA" -> LAVA;
+                default -> AIR;
+            };
+        }
+
+        public BlockState blockState() {
+            return switch (this) {
+                case WATER -> Blocks.WATER.defaultBlockState();
+                case LAVA -> Blocks.LAVA.defaultBlockState();
+                case AIR -> Blocks.AIR.defaultBlockState();
+            };
+        }
+    }
+
     public record Face(
         String boundary,
         int lo,
@@ -17,13 +42,22 @@ public final class RiftBoundary {
         long salt,
         int clearLo,
         int clearHi,
-        int waterBelow,
+        FillType fillType,
+        boolean sealFluids,
         boolean isCeiling,
         boolean isAbyssShaft,
         String neighborName
     ) {
         public boolean wantsWater(int y) {
-            return waterBelow != Integer.MIN_VALUE && y < waterBelow;
+            return fillType == FillType.WATER;
+        }
+
+        public boolean wantsFluid() {
+            return fillType != FillType.AIR;
+        }
+
+        public BlockState fillBlockState() {
+            return fillType.blockState();
         }
 
         public boolean usesDensitySentinel() {
@@ -40,63 +74,52 @@ public final class RiftBoundary {
         }
     }
 
-    private static final int NO_WATER = Integer.MIN_VALUE;
-
     private static final Map<String, DimensionFaces> FACES = Map.of(
         "minecraft:overworld", new DimensionFaces(
-            new Face("0_1", -153, 23, -52, -2000.0, 0L, -153, 23, 188, false, false, "The Deepsea"),
+            new Face("0_1", -64, 188, -52, -2000.0, 0L, -64, 188, FillType.WATER, true, false, false, "The Deepsea"),
             null
         ),
         "oceanworld:deepsea", new DimensionFaces(
-            new Face("1_2", -64, -39, -64, -2006.0, 0L, -64, -39, NO_WATER, false, false, "Dimension of Caves"),
-            new Face("0_1", 275, 320, 299, -2005.0, 0L, 275, 320, NO_WATER, true, false, "Overworld Skylands")
+            new Face("1_2", -64, -39, -64, -2006.0, 0L, -64, -39, FillType.AIR, true, false, false, "Dimension of Caves"),
+            new Face("0_1", 275, 320, 299, -2005.0, 0L, 275, 320, FillType.AIR, true, true, false, "Overworld Skylands")
         ),
         "dimension_of_caves:cave", new DimensionFaces(
-            new Face("2_3", -48, -23, -48, -2008.0, 0L, -48, -23, NO_WATER, false, false, "Infinite Abyss"),
-            new Face("1_2", 103, 128, 127, -2007.0, 0L, 103, 128, NO_WATER, true, false, "The Deepsea")
+            new Face("2_3", -48, -23, -48, -2008.0, 0L, -48, -23, FillType.AIR, true, false, false, "Infinite Abyss"),
+            new Face("1_2", 103, 128, 127, -2007.0, 0L, 103, 128, FillType.AIR, true, true, false, "The Deepsea")
         ),
         "infinite_abyss:first_layer", new DimensionFaces(
-            new Face("3_4", 0, 25, 0, -2002.0, 0L, 0, 25, NO_WATER, false, false, "The Otherside"),
-            new Face("2_3", 103, 128, 127, -2001.0, 0L, 103, 128, NO_WATER, true, false, "Dimension of Caves")
+            new Face("3_4", 0, 25, 0, -2002.0, 0L, 0, 25, FillType.AIR, true, false, false, "The Otherside"),
+            new Face("2_3", 126, 128, 127, -2001.0, 0L, 126, 128, FillType.AIR, false, true, false, "Dimension of Caves")
         ),
         "deeperdarker:otherside", new DimensionFaces(
-            new Face("4_5", 0, 25, 0, -2004.0, 0L, 0, 25, NO_WATER, false, false, "The Undergarden"),
-            new Face("3_4", 103, 128, 127, -2003.0, 0L, 103, 128, NO_WATER, true, false, "Infinite Abyss")
+            new Face("4_5", 0, 25, 0, -2004.0, 0L, 0, 25, FillType.AIR, true, false, false, "The Undergarden"),
+            new Face("3_4", 103, 128, 127, -2003.0, 0L, 103, 128, FillType.AIR, true, true, false, "Infinite Abyss")
         ),
         "undergarden:undergarden", new DimensionFaces(
-            new Face("5_6", -64, -39, -64, -2014.0, 0L, -64, -39, NO_WATER, false, false, "Infernal Cross"),
-            new Face("4_5", 103, 128, 127, -2013.0, 0L, 103, 128, NO_WATER, true, false, "The Otherside")
+            new Face("5_6", -64, -39, -64, -2014.0, 0L, -64, -39, FillType.AIR, true, false, false, "Infernal Cross"),
+            new Face("4_5", 103, 128, 127, -2013.0, 0L, 103, 128, FillType.AIR, true, true, false, "The Otherside")
         ),
         "infernalcross:dimension", new DimensionFaces(
-            new Face("6_7", -48, -23, -48, -2010.0, 0L, -48, -23, NO_WATER, false, false, "The Nether"),
-            new Face("5_6", 39, 64, 63, -2009.0, 0L, 39, 64, NO_WATER, true, false, "The Undergarden")
+            new Face("6_7", -48, -23, -48, -2010.0, 0L, -48, -23, FillType.AIR, true, false, false, "The Nether"),
+            new Face("5_6", 39, 64, 63, -2009.0, 0L, 39, 64, FillType.AIR, true, true, false, "The Undergarden")
         ),
         "minecraft:the_nether", new DimensionFaces(
-            new Face("7_8", 0, 25, 0, -2012.0, 0L, 0, 25, NO_WATER, false, false, "Molten Depths"),
-            new Face("6_7", 231, 256, 255, -2011.0, 0L, 231, 256, NO_WATER, true, false, "Infernal Cross")
+            new Face("7_8", 0, 25, 0, -2012.0, 0L, 0, 25, FillType.AIR, true, false, false, "Molten Depths"),
+            new Face("6_7", 231, 256, 255, -2011.0, 0L, 231, 256, FillType.AIR, true, true, false, "Infernal Cross")
         ),
         "autisnautics:molten_depths", new DimensionFaces(
-            new Face("8_9", -64, -39, -64, -2017.0, 0L, -64, -39, NO_WATER, false, false, "The End"),
-            new Face("7_8", 295, 320, 319, -2016.0, 0L, 295, 320, NO_WATER, true, false, "The Nether")
+            new Face("8_9", -64, -39, -64, -2017.0, 0L, -64, -39, FillType.AIR, true, false, false, "The End"),
+            new Face("7_8", 295, 320, 319, -2016.0, 0L, 295, 320, FillType.AIR, true, true, false, "The Nether")
         ),
         "minecraft:the_end", new DimensionFaces(
             null,
-            new Face("8_9", 359, 384, 383, -2015.0, 0L, 359, 384, NO_WATER, true, false, "Molten Depths")
+            new Face("8_9", 359, 384, 383, -2015.0, 0L, 359, 384, FillType.AIR, true, true, false, "Molten Depths")
         )
     );
 
     private RiftBoundary() {}
 
-    @Nullable
-    public static Face getFace(String dimensionId, boolean preferCeiling) {
-        DimensionFaces df = FACES.get(dimensionId);
-        if (df == null) return null;
-        return preferCeiling
-            ? (df.ceiling() != null ? df.ceiling() : df.floor())
-            : (df.floor() != null ? df.floor() : df.ceiling());
-    }
-
-    public static DimensionFaces resolveDimensionFaces(ServerLevel level) {
+    public static DimensionFaces detectDefaultFaces(ServerLevel level) {
         String dimId = level.dimension().location().toString();
         DimensionFaces hardcoded = FACES.get(dimId);
         if (hardcoded != null) {
@@ -115,7 +138,7 @@ public final class RiftBoundary {
             String destDim = floorPortal.getDestDim().location().toString();
             int hi = Math.min(maxY, minY + band);
             long salt = AdaptiveRiftMask.boundarySalt(dimId, destDim);
-            floorFace = new Face("dyn_" + dimId + "_" + destDim, minY, hi, minY, Double.NaN, salt, minY, hi, NO_WATER, false, false, prettyName(destDim));
+            floorFace = new Face("dyn_" + dimId + "_" + destDim, minY, hi, minY, Double.NaN, salt, minY, hi, FillType.AIR, true, false, false, prettyName(destDim));
         }
 
         Face ceilFace = null;
@@ -124,10 +147,19 @@ public final class RiftBoundary {
             String destDim = ceilPortal.getDestDim().location().toString();
             int lo = Math.max(minY, maxY - band);
             long salt = AdaptiveRiftMask.boundarySalt(dimId, destDim);
-            ceilFace = new Face("dyn_" + destDim + "_" + dimId, lo, maxY, maxY - 1, Double.NaN, salt, lo, maxY, NO_WATER, true, false, prettyName(destDim));
+            ceilFace = new Face("dyn_" + destDim + "_" + dimId, lo, maxY, maxY - 1, Double.NaN, salt, lo, maxY, FillType.AIR, true, true, false, prettyName(destDim));
         }
 
         return new DimensionFaces(floorFace, ceilFace);
+    }
+
+    public static DimensionFaces resolveDimensionFaces(ServerLevel level) {
+        String dimId = level.dimension().location().toString();
+        DimensionFaces configured = RiftStackConfig.getConfigured(dimId);
+        if (configured != null) {
+            return configured;
+        }
+        return detectDefaultFaces(level);
     }
 
     @Nullable

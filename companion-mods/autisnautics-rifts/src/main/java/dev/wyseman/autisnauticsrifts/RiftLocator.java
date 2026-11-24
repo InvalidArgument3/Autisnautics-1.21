@@ -13,7 +13,7 @@ public final class RiftLocator {
     private static final int REFINE_STEP = 8;
     private static final int REFINE_RADIUS = 128;
 
-    private record CacheKey(String dimension, boolean ceiling, int gridX, int gridZ, boolean abyss, int abyssRadius, boolean abyssOnly) {}
+    private record CacheKey(String dimension, boolean ceiling, int gridX, int gridZ, boolean abyss, int abyssRadius, boolean abyssOnly, int spacing, int minR, int maxR) {}
 
     private static final Map<CacheKey, RiftTarget> CACHE = new ConcurrentHashMap<>();
 
@@ -27,11 +27,12 @@ public final class RiftLocator {
         if (RiftConfig.MADE_IN_ABYSS_MODE.get() && RiftConfig.MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS.get()) {
             return false;
         }
-        if (face.usesDensitySentinel()) {
+        if (!AdaptiveRiftMask.usesCustomDensity() && face.usesDensitySentinel()) {
             double v = density.compute(new DensityFunction.SinglePointContext(x, face.anchorY(), z));
             return Math.abs(v - face.sentinel()) <= 0.1;
         }
-        return AdaptiveRiftMask.isInsideRift(level.getSeed(), face.salt(), x, z);
+        long salt = face.salt() != 0L ? face.salt() : AdaptiveRiftMask.boundarySalt("autisnautics", face.boundary());
+        return AdaptiveRiftMask.isInsideRift(level.getSeed(), salt, x, z);
     }
 
     public static RiftTarget findNearestRift(ServerLevel level, BlockPos origin, boolean preferCeiling) {
@@ -44,10 +45,13 @@ public final class RiftLocator {
         boolean abyss = RiftConfig.MADE_IN_ABYSS_MODE.get();
         int abyssRadius = RiftConfig.MADE_IN_ABYSS_RADIUS.get();
         boolean abyssOnly = abyss && RiftConfig.MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS.get();
+        int spacing = RiftConfig.RIFT_GRID_SPACING.get();
+        int minR = RiftConfig.MIN_RIFT_RADIUS.get();
+        int maxR = RiftConfig.MAX_RIFT_RADIUS.get();
 
         int gx = Math.floorDiv(origin.getX(), 32);
         int gz = Math.floorDiv(origin.getZ(), 32);
-        CacheKey key = new CacheKey(dimId, face.isCeiling(), gx, gz, abyss, abyssRadius, abyssOnly);
+        CacheKey key = new CacheKey(dimId, face.isCeiling(), gx, gz, abyss, abyssRadius, abyssOnly, spacing, minR, maxR);
         RiftTarget cached = CACHE.get(key);
         if (cached != null) {
             return cached;
@@ -55,14 +59,15 @@ public final class RiftLocator {
 
         BlockPos cellularCenter = null;
         if (!abyssOnly) {
-            if (face.usesDensitySentinel()) {
+            if (!AdaptiveRiftMask.usesCustomDensity() && face.usesDensitySentinel()) {
                 DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
                 BlockPos hit = spiralSearch(density, origin.getX(), origin.getZ(), face.anchorY(), face.sentinel());
                 if (hit != null) {
                     cellularCenter = refineCenter(density, hit.getX(), hit.getZ(), face.anchorY(), face.sentinel());
                 }
             } else {
-                cellularCenter = AdaptiveRiftMask.findNearestCenter(level.getSeed(), face.salt(), origin.getX(), origin.getZ(), face.anchorY());
+                long salt = face.salt() != 0L ? face.salt() : AdaptiveRiftMask.boundarySalt("autisnautics", face.boundary());
+                cellularCenter = AdaptiveRiftMask.findNearestCenter(level.getSeed(), salt, origin.getX(), origin.getZ(), face.anchorY());
             }
         }
 

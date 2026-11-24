@@ -49,6 +49,7 @@ public class AutisnauticsRifts {
         NeoForge.EVENT_BUS.addListener(RiftPostgenCarver::onChunkLoad);
         NeoForge.EVENT_BUS.addListener(RiftPostgenCarver::onServerTick);
         NeoForge.EVENT_BUS.addListener(RiftRepairCommand::onRegisterCommands);
+        NeoForge.EVENT_BUS.addListener(RiftStackConfig::onServerStarted);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

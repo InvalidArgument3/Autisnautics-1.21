@@ -72,6 +72,16 @@ public class RiftCompassItem extends Item {
     }
 
     @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return slotChanged || !ItemStack.isSameItem(oldStack, newStack);
+    }
+
+    @Override
+    public boolean shouldCauseBlockBreakReset(ItemStack oldStack, ItemStack newStack) {
+        return !ItemStack.isSameItem(oldStack, newStack);
+    }
+
+    @Override
     public boolean isFoil(ItemStack stack) {
         RiftTarget target = stack.get(AutisnauticsRifts.RIFT_TARGET.get());
         return target != null && target.found();

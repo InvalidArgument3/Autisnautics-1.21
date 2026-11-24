@@ -8,6 +8,9 @@ public final class RiftConfig {
     public static final ModConfigSpec.BooleanValue BEDROCK_ONLY_AT_RIFTS;
     public static final ModConfigSpec.BooleanValue ADAPTIVE_DIMENSION_STACK;
     public static final ModConfigSpec.IntValue ADAPTIVE_BAND_THICKNESS;
+    public static final ModConfigSpec.IntValue RIFT_GRID_SPACING;
+    public static final ModConfigSpec.IntValue MIN_RIFT_RADIUS;
+    public static final ModConfigSpec.IntValue MAX_RIFT_RADIUS;
     public static final ModConfigSpec.BooleanValue MADE_IN_ABYSS_MODE;
     public static final ModConfigSpec.IntValue MADE_IN_ABYSS_RADIUS;
     public static final ModConfigSpec.BooleanValue MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS;
@@ -29,6 +32,18 @@ public final class RiftConfig {
         ADAPTIVE_BAND_THICKNESS = b
             .comment("Vertical thickness (in blocks) of floor/ceiling rift openings for dynamically discovered dimensions.")
             .defineInRange("adaptiveBandThickness", 25, 8, 64);
+        b.pop();
+
+        b.push("density");
+        RIFT_GRID_SPACING = b
+            .comment("Horizontal Voronoi cell size (in blocks) between rifts. Smaller = higher rift density (more rifts); larger = sparser rifts. Default 2236.")
+            .defineInRange("riftGridSpacing", 2236, 256, 8192);
+        MIN_RIFT_RADIUS = b
+            .comment("Minimum rift disc radius in blocks. Default 50.")
+            .defineInRange("minRiftRadius", 50, 8, 256);
+        MAX_RIFT_RADIUS = b
+            .comment("Maximum rift disc radius in blocks. Default 109.")
+            .defineInRange("maxRiftRadius", 109, 8, 512);
         b.pop();
 
         b.push("made_in_abyss");
