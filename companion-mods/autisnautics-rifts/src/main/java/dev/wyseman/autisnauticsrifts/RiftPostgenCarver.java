@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 public final class RiftPostgenCarver {
     private static final Logger LOGGER = LoggerFactory.getLogger("AutisnauticsRifts");
     private static final int QUIET = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
-    private static final long BUDGET_NS = 2_000_000L;
+    private static final long BUDGET_NS = 8_000_000L;
 
     private static final int[][] OFFSETS = {
         {0, 0}, {1, 0}, {-1, 0}, {0, 1}, {0, -1},
@@ -254,6 +254,48 @@ public final class RiftPostgenCarver {
         return false;
     }
 
+    private static void carveChunkImmediately(ServerLevel level, LevelChunk chunk, List<RiftBoundary.Face> faces, int cx, int cz) {
+        DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
+        int minY = level.getMinBuildHeight();
+        int maxY = level.getMaxBuildHeight();
+        int bx = cx * 16;
+        int bz = cz * 16;
+        boolean modified = false;
+        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+
+        for (RiftBoundary.Face s : faces) {
+            if (!s.enabled()) continue;
+            int lo = Math.max(s.lo(), minY);
+            int hi = Math.min(s.hi(), maxY);
+            if (hi <= lo) continue;
+
+            for (int lx = 0; lx < 16; lx++) {
+                int x = bx + lx;
+                for (int lz = 0; lz < 16; lz++) {
+                    int z = bz + lz;
+                    if (!RiftLocator.isRiftColumn(level, density, s, x, z)) continue;
+                    for (int y = lo; y < hi; y++) {
+                        if (((y & 15) == 0 || y == lo) && !s.wantsFluidAt(y) && chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
+                            y = Math.min(hi, (Math.floorDiv(y, 16) + 1) * 16) - 1;
+                            continue;
+                        }
+                        pos.set(x, y, z);
+                        BlockState cur = chunk.getBlockState(pos);
+                        BlockState target = s.fillBlockStateAt(y);
+                        if (cur.is(target.getBlock())) continue;
+                        if (cur.isAir() && target.isAir()) continue;
+                        chunk.setBlockState(pos, target, false);
+                        modified = true;
+                        STATS.removed++;
+                    }
+                }
+            }
+        }
+        if (modified) {
+            chunk.setUnsaved(true);
+        }
+    }
+
     public static void onChunkLoad(ChunkEvent.Load event) {
         if (!(event.getLevel() instanceof ServerLevel level)) return;
         if (!RiftBoundary.hasDimension(level)) return;
@@ -267,6 +309,9 @@ public final class RiftPostgenCarver {
         List<RiftBoundary.Face> faces = facesForChunk(level, cp.x, cp.z);
         if (!marked && !oldMarker && !chunkTouchesAnyRift(level, faces, cp.x, cp.z)) {
             return;
+        }
+        if (fresh && event.getChunk() instanceof LevelChunk lc) {
+            carveChunkImmediately(level, lc, faces, cp.x, cp.z);
         }
         request(level, dim, cp.x, cp.z, !fresh && !marked);
         if (fresh) {
@@ -486,7 +531,7 @@ public final class RiftPostgenCarver {
         if (chunk == null) return 0;
         DensityFunction density = source.randomState().router().finalDensity();
         int units = 0;
-        while (System.nanoTime() < deadlineNs && units++ < 512) {
+        while (System.nanoTime() < deadlineNs && units++ < 8192) {
             if (task.phase == 0) prepareUnit(task, density);
             else if (task.phase == 1 || task.phase == 2) blockUnit(task, chunk);
             else if (task.phase == 3) trimUnit(task, chunk);

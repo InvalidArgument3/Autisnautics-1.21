@@ -77,7 +77,7 @@ public final class RiftBoundary {
 
     private static final Map<String, DimensionFaces> FACES = Map.of(
         "minecraft:overworld", new DimensionFaces(
-            new Face("0_1", true, -64, 240, -52, -2000.0, 0L, -64, 240, FillType.WATER, 188, false, false, false, "The Deepsea"),
+            new Face("0_1", true, -64, 290, -52, -2000.0, 0L, -64, 290, FillType.WATER, 188, false, false, false, "The Deepsea"),
             null
         ),
         "oceanworld:deepsea", new DimensionFaces(

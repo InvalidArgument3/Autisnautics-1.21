@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.79]
+- **Updated `autisnautics_rifts` to `1.4.2` (`autisnauticsrifts-1.4.2.jar`).**
+  - **Immediate fresh-chunk carving:** Rift-touching newly generated chunks now carve immediately on `ChunkEvent.Load` via `LevelChunk.setBlockState` (plus raised tick-verification budget to `8 ms` / `8192` units), preventing tall rifts from stalling partway through seabeds/floors before chunks unload.
+  - **Overworld floor `0_1`:** Raised `hi` from `240` to `290` (`WATER` below `188`, `AIR` at `>= 188`) to ensure complete breakthrough above the seabed.
+
 ## [0.1.78]
 - **Fixed `autisnautics_rifts` `1.4.1` (`autisnauticsrifts-1.4.1.jar`) post-gen carver chunk lookup and Deepsea/Overworld worldgen drying.**
   - Replaced `ServerChunkCache.getChunkNow` (which missed non-ticking/portal-loaded chunks and parked all 2,048 slots) with `getChunk(cx, cz, ChunkStatus.FULL, false)` plus a 9-point rift pre-filter in `onChunkLoad` so only rift-touching chunks are queued and carved immediately.
