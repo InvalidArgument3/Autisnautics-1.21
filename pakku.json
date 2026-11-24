@@ -8,7 +8,9 @@
         "config",
         "defaultconfigs",
         "kubejs",
-        "!kubejs/probe/**"
+        "!kubejs/probe/**",
+        "!kubejs/server_scripts/dev_bridge.js",
+        "!kubejs/client_scripts/dev_bridge_client.js"
     ],
     "server_overrides": [
         "!kubejs/assets",
