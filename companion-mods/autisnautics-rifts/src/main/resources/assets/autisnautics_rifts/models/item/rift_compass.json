@@ -1,0 +1,200 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "autisnautics_rifts:item/rift_compass_16"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "angle": 0.0
+      },
+      "model": "autisnautics_rifts:item/rift_compass_16"
+    },
+    {
+      "predicate": {
+        "angle": 0.03125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_17"
+    },
+    {
+      "predicate": {
+        "angle": 0.0625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_18"
+    },
+    {
+      "predicate": {
+        "angle": 0.09375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_19"
+    },
+    {
+      "predicate": {
+        "angle": 0.125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_20"
+    },
+    {
+      "predicate": {
+        "angle": 0.15625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_21"
+    },
+    {
+      "predicate": {
+        "angle": 0.1875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_22"
+    },
+    {
+      "predicate": {
+        "angle": 0.21875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_23"
+    },
+    {
+      "predicate": {
+        "angle": 0.25
+      },
+      "model": "autisnautics_rifts:item/rift_compass_24"
+    },
+    {
+      "predicate": {
+        "angle": 0.28125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_25"
+    },
+    {
+      "predicate": {
+        "angle": 0.3125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_26"
+    },
+    {
+      "predicate": {
+        "angle": 0.34375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_27"
+    },
+    {
+      "predicate": {
+        "angle": 0.375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_28"
+    },
+    {
+      "predicate": {
+        "angle": 0.40625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_29"
+    },
+    {
+      "predicate": {
+        "angle": 0.4375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_30"
+    },
+    {
+      "predicate": {
+        "angle": 0.46875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_31"
+    },
+    {
+      "predicate": {
+        "angle": 0.5
+      },
+      "model": "autisnautics_rifts:item/rift_compass_00"
+    },
+    {
+      "predicate": {
+        "angle": 0.53125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_01"
+    },
+    {
+      "predicate": {
+        "angle": 0.5625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_02"
+    },
+    {
+      "predicate": {
+        "angle": 0.59375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_03"
+    },
+    {
+      "predicate": {
+        "angle": 0.625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_04"
+    },
+    {
+      "predicate": {
+        "angle": 0.65625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_05"
+    },
+    {
+      "predicate": {
+        "angle": 0.6875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_06"
+    },
+    {
+      "predicate": {
+        "angle": 0.71875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_07"
+    },
+    {
+      "predicate": {
+        "angle": 0.75
+      },
+      "model": "autisnautics_rifts:item/rift_compass_08"
+    },
+    {
+      "predicate": {
+        "angle": 0.78125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_09"
+    },
+    {
+      "predicate": {
+        "angle": 0.8125
+      },
+      "model": "autisnautics_rifts:item/rift_compass_10"
+    },
+    {
+      "predicate": {
+        "angle": 0.84375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_11"
+    },
+    {
+      "predicate": {
+        "angle": 0.875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_12"
+    },
+    {
+      "predicate": {
+        "angle": 0.90625
+      },
+      "model": "autisnautics_rifts:item/rift_compass_13"
+    },
+    {
+      "predicate": {
+        "angle": 0.9375
+      },
+      "model": "autisnautics_rifts:item/rift_compass_14"
+    },
+    {
+      "predicate": {
+        "angle": 0.96875
+      },
+      "model": "autisnautics_rifts:item/rift_compass_15"
+    }
+  ]
+}

@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.72]
+- **Added `autisnautics_rifts` 1.0.0 (`autisnauticsrifts-1.0.0.jar`, `.pakku/overrides/mods/`, both sides).**
+  - **Rift Compass (`autisnautics_rifts:rift_compass`):** Craftable from a Compass + 4 Amethyst Shards. Queries the dimension stack's live `DensityFunction` rift masks (`0_1` through `8_9`) to locate the nearest dimensional rift center in the current dimension.
+  - Right-click to toggle between **Floor Rift (Descend ↓)** and **Ceiling Rift (Ascend ↑)** and ping the exact coordinates and distance.
+
 ## [0.1.71]
 - **Updated `portal_linker:portal_linker` recipe to use `create:precision_mechanism`** instead of the removed `kubejs:enderium_machine`.
 

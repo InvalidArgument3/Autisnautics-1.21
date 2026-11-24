@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="autisnautics_rifts"
+version="${file.jarVersion}"
+displayName="Autisnautics Rifts"
+description='''
+Dimension-stack rift locator and Rift Compass for Autisnautics 1.21.
+'''
+
+[[dependencies.autisnautics_rifts]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.autisnautics_rifts]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
