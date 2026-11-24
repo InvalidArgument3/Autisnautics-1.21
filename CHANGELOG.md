@@ -1,4 +1,10 @@
 # Changelog
+## [0.1.77]
+- **Updated `autisnautics_rifts` to `1.4.0` (`autisnauticsrifts-1.4.0.jar`).**
+  - Added per-face `enabled` toggle (`autisnautics_rifts_stack.json`) and disabled carving on `oceanworld:deepsea` ceiling (`0_1`, both post-gen and `wrap_rift_0_1_oceanworld_deepsea.json`).
+  - Defaulted `sealFluids = false` on all faces so rifts only remove/replace blocks inside the rift without placing stone walls.
+  - Raised Overworld floor `0_1` to `hi = 240` (`WATER` up to `fluidMaxY = 188`, `AIR` above), extended Deepsea floor `1_2` to `-64..36` (`WATER`), extended all deeper dimension floor/ceiling carves by ~75 blocks (`100` blocks tall), and set Nether floor `7_8` (`0..100`) and Molten Depths floor `8_9` (`-64..36`) to `LAVA`.
+
 ## [0.1.76]
 - **Updated `autisnautics_rifts` to `1.3.0` (`autisnauticsrifts-1.3.0.jar`).**
   - **Rift Compass bobbing fix:** Overrode `shouldCauseReequipAnimation` and `shouldCauseBlockBreakReset` in `RiftCompassItem` so updating target data components while moving no longer triggers the hand re-equip animation.

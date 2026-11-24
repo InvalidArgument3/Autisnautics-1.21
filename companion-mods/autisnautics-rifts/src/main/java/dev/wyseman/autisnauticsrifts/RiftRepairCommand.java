@@ -145,8 +145,8 @@ public final class RiftRepairCommand {
                         BlockPos pos = new BlockPos(x, y, z);
                         BlockState state = chunk.getBlockState(pos);
                         if (state.hasBlockEntity() || chunk.getBlockEntity(pos) != null) continue;
-                        if (s.wantsFluid()) {
-                            if (state.is(s.fillBlockState().getBlock())) continue;
+                        if (s.wantsFluidAt(y)) {
+                            if (state.is(s.fillBlockStateAt(y).getBlock())) continue;
                         } else if (state.isAir()) continue;
                         String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).toString();
                         counts.merge(id, 1, Integer::sum);
@@ -205,8 +205,8 @@ public final class RiftRepairCommand {
                         if (state.hasBlockEntity() || chunk.getBlockEntity(pos) != null) continue;
                         String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).toString();
                         if (!allowed.contains(id)) continue;
-                        if (s.wantsFluid()) {
-                            BlockState targetState = s.fillBlockState();
+                        if (s.wantsFluidAt(y)) {
+                            BlockState targetState = s.fillBlockStateAt(y);
                             if (state.is(targetState.getBlock())) continue;
                             level.setBlock(pos, targetState, QUIET);
                         } else {

@@ -146,7 +146,7 @@ public final class RiftPostgenCarver {
     }
 
     private static BlockState fillState(RiftBoundary.Face s, int y) {
-        return s.fillBlockState();
+        return s.fillBlockStateAt(y);
     }
 
     private static int missDelay(int misses) {
@@ -165,7 +165,10 @@ public final class RiftPostgenCarver {
     }
 
     private static List<RiftBoundary.Face> facesForChunk(ServerLevel level, int cx, int cz) {
-        List<RiftBoundary.Face> base = RiftBoundary.resolveAllFaces(level);
+        List<RiftBoundary.Face> base = new java.util.ArrayList<>();
+        for (RiftBoundary.Face f : RiftBoundary.resolveAllFaces(level)) {
+            if (f.enabled()) base.add(f);
+        }
         if (!RiftConfig.MADE_IN_ABYSS_MODE.get()) {
             return base;
         }
@@ -190,8 +193,8 @@ public final class RiftPostgenCarver {
             }
         }
         RiftBoundary.Face abyssFace = new RiftBoundary.Face(
-            "abyss_shaft", shaftLo, maxY, shaftLo, Double.NaN, 0L, shaftLo, maxY,
-            RiftBoundary.FillType.AIR, true, false, true, "Abyssal Core"
+            "abyss_shaft", true, shaftLo, maxY, shaftLo, Double.NaN, 0L, shaftLo, maxY,
+            RiftBoundary.FillType.AIR, Integer.MAX_VALUE, false, false, true, "Abyssal Core"
         );
         java.util.ArrayList<RiftBoundary.Face> combined = new java.util.ArrayList<>(base.size() + 1);
         combined.addAll(base);
@@ -333,7 +336,7 @@ public final class RiftPostgenCarver {
         if (task.phase == 1 && insideOtherFace(task, task.col, y)) return;
 
         if (((y & 15) == 0 || y == lo) && chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
-            if (task.legacy || task.phase != 2 || !s.wantsFluid()) {
+            if (task.legacy || task.phase != 2 || !s.wantsFluidAt(y)) {
                 int nextY = Math.min(hi, (Math.floorDiv(y, 16) + 1) * 16);
                 STATS.airSkipped += nextY - y;
                 task.y = nextY;
@@ -344,7 +347,7 @@ public final class RiftPostgenCarver {
         BlockPos pos = new BlockPos(x, y, z);
         BlockState state = chunk.getBlockState(pos);
         STATS.checks++;
-        if (state.isAir() && (task.legacy || task.phase != 2 || !s.wantsFluid())) return;
+        if (state.isAir() && (task.legacy || task.phase != 2 || !s.wantsFluidAt(y))) return;
         boolean wet = !state.getFluidState().isEmpty();
         if (task.legacy) {
             if (state.is(Blocks.WATER) || state.is(Blocks.LAVA)) return;
@@ -358,7 +361,7 @@ public final class RiftPostgenCarver {
             return;
         }
 
-        if (!task.legacy && s.wantsFluid() && state.is(s.fillBlockState().getBlock())) return;
+        if (!task.legacy && s.wantsFluidAt(y) && state.is(s.fillBlockStateAt(y).getBlock())) return;
         task.level.setBlock(pos, task.legacy ? Blocks.AIR.defaultBlockState() : fillState(s, y), QUIET);
         STATS.removed++;
         if (wet) STATS.fluidsCleared++;
@@ -428,7 +431,7 @@ public final class RiftPostgenCarver {
         }
         int y = task.y++;
         if (((y & 15) == 0 || y == lo) && chunk.getSection(chunk.getSectionIndex(y)).hasOnlyAir()) {
-            if (task.legacy || !s.wantsFluid()) {
+            if (task.legacy || !s.wantsFluidAt(y)) {
                 task.y = Math.min(hi, (Math.floorDiv(y, 16) + 1) * 16);
                 return;
             }
@@ -436,8 +439,8 @@ public final class RiftPostgenCarver {
         BlockPos pos = new BlockPos(task.cx * 16 + (task.col >> 4), y, task.cz * 16 + (task.col & 15));
         BlockState state = chunk.getBlockState(pos);
         STATS.checks++;
-        if (!task.legacy && s.wantsFluid()) {
-            if (!state.is(s.fillBlockState().getBlock())) task.unresolved++;
+        if (!task.legacy && s.wantsFluidAt(y)) {
+            if (!state.is(s.fillBlockStateAt(y).getBlock())) task.unresolved++;
             return;
         }
         if (state.isAir()) return;

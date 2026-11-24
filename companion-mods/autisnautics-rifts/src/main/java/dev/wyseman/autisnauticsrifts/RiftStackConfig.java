@@ -29,6 +29,7 @@ public final class RiftStackConfig {
     public static final class FaceEntry {
         public String dimension;
         public String face; // "floor" or "ceiling"
+        public boolean enabled = true;
         public String boundary;
         public String neighborName;
         public int lo;
@@ -36,14 +37,16 @@ public final class RiftStackConfig {
         public int anchorY;
         public Double sentinel;
         public String fill; // "AIR", "WATER", "LAVA"
-        public boolean sealFluids = true;
+        public Integer fluidMaxY;
+        public boolean sealFluids = false;
 
         public FaceEntry() {}
 
-        public FaceEntry(String dimension, String face, String boundary, String neighborName,
-                         int lo, int hi, int anchorY, Double sentinel, String fill, boolean sealFluids) {
+        public FaceEntry(String dimension, String face, boolean enabled, String boundary, String neighborName,
+                         int lo, int hi, int anchorY, Double sentinel, String fill, Integer fluidMaxY, boolean sealFluids) {
             this.dimension = dimension;
             this.face = face;
+            this.enabled = enabled;
             this.boundary = boundary;
             this.neighborName = neighborName;
             this.lo = lo;
@@ -51,6 +54,7 @@ public final class RiftStackConfig {
             this.anchorY = anchorY;
             this.sentinel = sentinel;
             this.fill = fill;
+            this.fluidMaxY = fluidMaxY;
             this.sealFluids = sealFluids;
         }
     }
@@ -123,10 +127,12 @@ public final class RiftStackConfig {
             RiftBoundary.FillType fillType = RiftBoundary.FillType.parse(e.fill);
             double sent = e.sentinel != null ? e.sentinel : Double.NaN;
             long salt = Double.isNaN(sent) ? AdaptiveRiftMask.boundarySalt(e.dimension, e.neighborName != null ? e.neighborName : e.boundary) : 0L;
+            int maxFluidY = e.fluidMaxY != null ? e.fluidMaxY : Integer.MAX_VALUE;
             RiftBoundary.Face f = new RiftBoundary.Face(
                 e.boundary != null ? e.boundary : "custom",
+                e.enabled,
                 e.lo, e.hi, e.anchorY, sent, salt,
-                e.lo, e.hi, fillType, e.sealFluids,
+                e.lo, e.hi, fillType, maxFluidY, e.sealFluids,
                 "ceiling".equalsIgnoreCase(e.face), false,
                 e.neighborName != null ? e.neighborName : e.boundary
             );
@@ -154,6 +160,7 @@ public final class RiftStackConfig {
         return new FaceEntry(
             dimId,
             faceName,
+            f.enabled(),
             f.boundary(),
             f.neighborName(),
             f.lo(),
@@ -161,6 +168,7 @@ public final class RiftStackConfig {
             f.anchorY(),
             Double.isNaN(f.sentinel()) ? null : f.sentinel(),
             f.fillType().name(),
+            f.fluidMaxY() == Integer.MAX_VALUE ? null : f.fluidMaxY(),
             f.sealFluids()
         );
     }
