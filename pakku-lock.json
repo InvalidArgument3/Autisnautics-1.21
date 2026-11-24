@@ -8493,6 +8493,43 @@
             ]
         },
         {
+            "pakku_id": "8aMDTvGQ8KwvBHsj",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "disable-sable-button"
+            },
+            "name": {
+                "modrinth": "Disable Sable Button"
+            },
+            "id": {
+                "modrinth": "HWYuHIgR"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "disablesablebutton-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/HWYuHIgR/versions/fXNTTHnD/disablesablebutton-1.0.1.jar",
+                    "id": "fXNTTHnD",
+                    "parent_id": "HWYuHIgR",
+                    "hashes": {
+                        "sha512": "c76c27925580df3a796edcfe9a760ffdd29a8aee4b856317cec71e906c8c2151e9a901b70e2509637930ee47c4e29b0d7b09be5251d3288f501b79a6332f8aa0",
+                        "sha1": "194c735cdcbcdcc07c6969e6092f654b465ea41a"
+                    },
+                    "required_dependencies": [],
+                    "size": 38225,
+                    "date_published": "2026-09-16T07:40:06.626386Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "V0ynTdKZvTxsrWzs",
             "pakku_links": [
                 "WHII9w2NQFKBwYIS"
