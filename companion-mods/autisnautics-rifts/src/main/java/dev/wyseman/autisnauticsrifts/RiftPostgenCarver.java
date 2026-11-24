@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.levelgen.DensityFunction;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.neoforged.neoforge.event.level.ChunkEvent;
@@ -226,6 +227,33 @@ public final class RiftPostgenCarver {
         }
     }
 
+    private static final int[][] PREFILTER_POINTS = {
+        {-2, -2}, {8, -2}, {17, -2},
+        {-2, 8},  {8, 8},  {17, 8},
+        {-2, 17}, {8, 17}, {17, 17}
+    };
+
+    private static LevelChunk getLoadedChunk(ServerChunkCache source, int cx, int cz) {
+        var c = source.getChunk(cx, cz, ChunkStatus.FULL, false);
+        return c instanceof LevelChunk lc ? lc : null;
+    }
+
+    private static boolean chunkTouchesAnyRift(ServerLevel level, List<RiftBoundary.Face> faces, int cx, int cz) {
+        if (faces.isEmpty()) return false;
+        DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
+        int bx = cx * 16;
+        int bz = cz * 16;
+        for (RiftBoundary.Face f : faces) {
+            if (!f.enabled()) continue;
+            for (int[] p : PREFILTER_POINTS) {
+                if (RiftLocator.isRiftColumn(level, density, f, bx + p[0], bz + p[1])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public static void onChunkLoad(ChunkEvent.Load event) {
         if (!(event.getLevel() instanceof ServerLevel level)) return;
         if (!RiftBoundary.hasDimension(level)) return;
@@ -236,6 +264,10 @@ public final class RiftPostgenCarver {
         boolean marked = markers.hasMarker(cp.x, cp.z, false);
         boolean oldMarker = markers.hasMarker(cp.x, cp.z, true);
         if (!fresh && !marked && !oldMarker) return;
+        List<RiftBoundary.Face> faces = facesForChunk(level, cp.x, cp.z);
+        if (!marked && !oldMarker && !chunkTouchesAnyRift(level, faces, cp.x, cp.z)) {
+            return;
+        }
         request(level, dim, cp.x, cp.z, !fresh && !marked);
         if (fresh) {
             for (int dx = -1; dx <= 1; dx++) {
@@ -450,7 +482,7 @@ public final class RiftPostgenCarver {
 
     private static int sweep(Task task, long deadlineNs) {
         ServerChunkCache source = task.level.getChunkSource();
-        LevelChunk chunk = source.getChunkNow(task.cx, task.cz);
+        LevelChunk chunk = getLoadedChunk(source, task.cx, task.cz);
         if (chunk == null) return 0;
         DensityFunction density = source.randomState().router().finalDensity();
         int units = 0;
@@ -476,7 +508,7 @@ public final class RiftPostgenCarver {
         while (!PARKED.isEmpty() && looked < 2 && System.nanoTime() < deadlineNs) {
             Task parkedTask = PARKED.removeFirst();
             looked++;
-            LevelChunk back = parkedTask.level.getChunkSource().getChunkNow(parkedTask.cx, parkedTask.cz);
+            LevelChunk back = getLoadedChunk(parkedTask.level.getChunkSource(), parkedTask.cx, parkedTask.cz);
             if (back != null) {
                 if (PENDING.get(parkedTask.key) != parkedTask) {
                     parkedTask.misses = 0;

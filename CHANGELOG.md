@@ -1,4 +1,9 @@
 # Changelog
+## [0.1.78]
+- **Fixed `autisnautics_rifts` `1.4.1` (`autisnauticsrifts-1.4.1.jar`) post-gen carver chunk lookup and Deepsea/Overworld worldgen drying.**
+  - Replaced `ServerChunkCache.getChunkNow` (which missed non-ticking/portal-loaded chunks and parked all 2,048 slots) with `getChunk(cx, cz, ChunkStatus.FULL, false)` plus a 9-point rift pre-filter in `onChunkLoad` so only rift-touching chunks are queued and carved immediately.
+  - Zeroed `dry_active_oceanworld_deepsea.json` and `dry_active_minecraft_overworld.json` so worldgen no longer dries out Deepsea's ceiling/floor or Overworld's water-filled rift.
+
 ## [0.1.77]
 - **Updated `autisnautics_rifts` to `1.4.0` (`autisnauticsrifts-1.4.0.jar`).**
   - Added per-face `enabled` toggle (`autisnautics_rifts_stack.json`) and disabled carving on `oceanworld:deepsea` ceiling (`0_1`, both post-gen and `wrap_rift_0_1_oceanworld_deepsea.json`).
