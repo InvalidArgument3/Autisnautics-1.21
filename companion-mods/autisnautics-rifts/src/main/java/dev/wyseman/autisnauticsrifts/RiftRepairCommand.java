@@ -84,7 +84,7 @@ public final class RiftRepairCommand {
             ctx.getSource().sendSuccess(() -> Component.literal("No dimensional rift found in " + level.dimension().location()), false);
             return 0;
         }
-        RiftBoundary.Face face = RiftBoundary.getFace(level.dimension().location().toString(), target.ceilingMode());
+        RiftBoundary.Face face = RiftBoundary.resolveFace(level, target.ceilingMode());
         String dir = (face != null && face.isCeiling()) ? "Ceiling (↑ " : "Floor (↓ ";
         String neighbor = face != null ? face.neighborName() : target.boundary();
         double dx = target.targetX() - origin.getX();
@@ -121,7 +121,7 @@ public final class RiftRepairCommand {
         }
         DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
         List<RiftBoundary.Face> faces = new ArrayList<>();
-        for (RiftBoundary.Face f : RiftBoundary.getAllFaces(dim)) {
+        for (RiftBoundary.Face f : RiftBoundary.resolveAllFaces(level)) {
             if ("all".equals(boundary) || f.boundary().equals(boundary)) faces.add(f);
         }
         if (faces.isEmpty()) {
@@ -140,8 +140,7 @@ public final class RiftRepairCommand {
                 for (int lz = 0; lz < 16; lz++) {
                     int x = cx * 16 + lx;
                     int z = cz * 16 + lz;
-                    double v = density.compute(new DensityFunction.SinglePointContext(x, s.anchorY(), z));
-                    if (Math.abs(v - s.sentinel()) > 0.1) continue;
+                    if (!RiftLocator.isRiftColumn(level, density, s, x, z)) continue;
                     for (int y = lo; y < hi; y++) {
                         BlockPos pos = new BlockPos(x, y, z);
                         BlockState state = chunk.getBlockState(pos);
@@ -191,7 +190,7 @@ public final class RiftRepairCommand {
         int minY = level.getMinBuildHeight();
         int maxY = level.getMaxBuildHeight();
 
-        for (RiftBoundary.Face s : RiftBoundary.getAllFaces(dim)) {
+        for (RiftBoundary.Face s : RiftBoundary.resolveAllFaces(level)) {
             if (!s.boundary().equals(boundary)) continue;
             int lo = Math.max(s.clearLo(), minY);
             int hi = Math.min(s.clearHi(), maxY);
@@ -199,8 +198,7 @@ public final class RiftRepairCommand {
                 for (int lz = 0; lz < 16 && changed < maxBlocks; lz++) {
                     int x = cx * 16 + lx;
                     int z = cz * 16 + lz;
-                    double v = density.compute(new DensityFunction.SinglePointContext(x, s.anchorY(), z));
-                    if (Math.abs(v - s.sentinel()) > 0.1) continue;
+                    if (!RiftLocator.isRiftColumn(level, density, s, x, z)) continue;
                     for (int y = lo; y < hi && changed < maxBlocks; y++) {
                         BlockPos pos = new BlockPos(x, y, z);
                         BlockState state = chunk.getBlockState(pos);

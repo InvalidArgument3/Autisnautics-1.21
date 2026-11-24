@@ -1,4 +1,10 @@
 # Changelog
+## [0.1.74]
+- **Upgraded `autisnautics_rifts` to `1.2.0` (`autisnauticsrifts-1.2.0.jar`).**
+  - **Bedrock-at-Rifts Override (`bedrockOnlyAtRifts = true`):** Mixin into Immersive Portals' `DimStackManagement.replaceBedrock` preserves floor/ceiling bedrock everywhere except inside dimensional rifts (and the Made in Abyss shaft).
+  - **Adaptive Dimension Stack (`adaptiveDimensionStack = true`):** Dynamically discovers `VerticalConnectingPortal` floor/ceiling links and generates matching Voronoi cellular rifts + Rift Compass tracking for any arbitrary dimension stack.
+  - **Made in Abyss Mode (`madeInAbyssMode = false`, `madeInAbyssRadius = 128`):** Carves a configurable-radius central circular shaft around `(0, 0)` through every dimension in the stack, stopping at 3/4 depth in the bottom dimension.
+
 ## [0.1.73]
 - **Upgraded `autisnautics_rifts` to `1.1.0` (`autisnauticsrifts-1.1.0.jar`) as a fully self-contained mod.**
   - Bundled all `Autisnautics Abyssal Stack` worldgen, dimension, and Lithostitched rift density functions directly into the mod (`data/`), removing the separate Paxi datapack.

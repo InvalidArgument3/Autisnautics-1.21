@@ -7,7 +7,9 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
@@ -35,7 +37,8 @@ public class AutisnauticsRifts {
     public static final DeferredItem<RiftCompassItem> RIFT_COMPASS = ITEMS.register("rift_compass",
         () -> new RiftCompassItem(new Item.Properties().stacksTo(1)));
 
-    public AutisnauticsRifts(IEventBus modEventBus) {
+    public AutisnauticsRifts(IEventBus modEventBus, ModContainer modContainer) {
+        modContainer.registerConfig(ModConfig.Type.COMMON, RiftConfig.SPEC);
         ITEMS.register(modEventBus);
         DATA_COMPONENTS.register(modEventBus);
         modEventBus.addListener(this::addCreative);

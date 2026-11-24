@@ -44,12 +44,11 @@ public class RiftCompassItem extends Item {
         }
 
         RiftTarget current = stack.getOrDefault(AutisnauticsRifts.RIFT_TARGET.get(), RiftTarget.EMPTY);
-        String dimId = serverLevel.dimension().location().toString();
-        boolean nextCeiling = RiftBoundary.hasBoth(dimId) ? !current.ceilingMode() : current.ceilingMode();
+        boolean nextCeiling = RiftBoundary.hasBoth(serverLevel) ? !current.ceilingMode() : current.ceilingMode();
         RiftTarget updated = RiftLocator.findNearestRift(serverLevel, player.blockPosition(), nextCeiling);
         stack.set(AutisnauticsRifts.RIFT_TARGET.get(), updated);
 
-        RiftBoundary.Face face = RiftBoundary.getFace(dimId, updated.ceilingMode());
+        RiftBoundary.Face face = RiftBoundary.resolveFace(serverLevel, updated.ceilingMode());
         if (face == null || !updated.found()) {
             player.displayClientMessage(
                 Component.literal("No dimensional rift detected in this dimension.").withStyle(ChatFormatting.GRAY),

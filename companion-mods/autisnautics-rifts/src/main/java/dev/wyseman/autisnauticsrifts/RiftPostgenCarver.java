@@ -164,6 +164,34 @@ public final class RiftPostgenCarver {
         }
     }
 
+    private static List<RiftBoundary.Face> facesForChunk(ServerLevel level, int cx, int cz) {
+        List<RiftBoundary.Face> base = RiftBoundary.resolveAllFaces(level);
+        if (!RiftConfig.MADE_IN_ABYSS_MODE.get()) {
+            return base;
+        }
+        int r = RiftConfig.MADE_IN_ABYSS_RADIUS.get() + 2;
+        int minBlockX = cx * 16;
+        int maxBlockX = minBlockX + 15;
+        int minBlockZ = cz * 16;
+        int maxBlockZ = minBlockZ + 15;
+        if (maxBlockX < -r || minBlockX > r || maxBlockZ < -r || minBlockZ > r) {
+            return base;
+        }
+        int minY = level.getMinBuildHeight();
+        int maxY = level.getMaxBuildHeight();
+        int shaftLo = RiftBoundary.isBottomDimension(level)
+            ? maxY - (int) Math.round(0.75 * (maxY - minY))
+            : minY;
+        RiftBoundary.Face abyssFace = new RiftBoundary.Face(
+            "abyss_shaft", shaftLo, maxY, shaftLo, Double.NaN, 0L, shaftLo, maxY,
+            Integer.MIN_VALUE, false, true, "Abyssal Core"
+        );
+        java.util.ArrayList<RiftBoundary.Face> combined = new java.util.ArrayList<>(base.size() + 1);
+        combined.addAll(base);
+        combined.add(abyssFace);
+        return combined;
+    }
+
     private static void request(ServerLevel level, String dim, int cx, int cz, boolean legacy) {
         String key = keyOf(dim, cx, cz);
         dropParked(key);
@@ -176,7 +204,7 @@ public final class RiftPostgenCarver {
         Task prev = RECENT.get(key);
         if (prev != null) legacy = prev.legacy;
         RiftMarkerSavedData.get(level).addMarker(cx, cz, legacy);
-        List<RiftBoundary.Face> faces = RiftBoundary.getAllFaces(dim);
+        List<RiftBoundary.Face> faces = facesForChunk(level, cx, cz);
         Task task = new Task(key, level, dim, cx, cz, legacy, faces, prev);
         PENDING.put(key, task);
         QUEUE.addLast(task);
@@ -190,8 +218,8 @@ public final class RiftPostgenCarver {
 
     public static void onChunkLoad(ChunkEvent.Load event) {
         if (!(event.getLevel() instanceof ServerLevel level)) return;
+        if (!RiftBoundary.hasDimension(level)) return;
         String dim = level.dimension().location().toString();
-        if (!RiftBoundary.hasDimension(dim)) return;
         var cp = event.getChunk().getPos();
         boolean fresh = event.isNewChunk();
         RiftMarkerSavedData markers = RiftMarkerSavedData.get(level);
@@ -217,8 +245,7 @@ public final class RiftPostgenCarver {
         byte cached = task.halo[ci];
         if (cached == 0) {
             RiftBoundary.Face s = task.faces.get(faceIdx);
-            double v = density.compute(new DensityFunction.SinglePointContext(task.cx * 16 + lx, s.anchorY(), task.cz * 16 + lz));
-            boolean active = Math.abs(v - s.sentinel()) <= 0.1;
+            boolean active = RiftLocator.isRiftColumn(task.level, density, s, task.cx * 16 + lx, task.cz * 16 + lz);
             task.halo[ci] = (byte) (active ? 2 : 1);
             STATS.maskEvals++;
             return active;

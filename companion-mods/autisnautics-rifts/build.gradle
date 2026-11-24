@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
 }
 
-version = '1.1.0'
+version = '1.2.0'
 group = 'dev.wyseman.autisnauticsrifts'
 base { archivesName = 'autisnauticsrifts' }
 
@@ -11,11 +11,24 @@ java {
     toolchain { languageVersion = JavaLanguageVersion.of(21) }
 }
 
+def ipCandidates = [
+    file("${rootDir}/../../.pakku/overrides/mods/ip_aeronautics-2.8.17.jar"),
+    file("${System.getProperty('user.home')}/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/instances/Autisnautics-1.21/minecraft/mods/ip_aeronautics-2.8.17.jar")
+]
+def ipJar = ipCandidates.find { it.isFile() && it.length() > 1_000_000 }
+if (ipJar == null) {
+    throw new GradleException("Could not find ip_aeronautics-2.8.17.jar in ${ipCandidates}")
+}
+
 neoForge {
     version = '21.1.265'
     mods {
         autisnautics_rifts { sourceSet sourceSets.main }
     }
+}
+
+dependencies {
+    compileOnly files(ipJar)
 }
 
 tasks.withType(JavaCompile).configureEach {

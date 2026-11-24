@@ -13,36 +13,76 @@ public final class RiftLocator {
     private static final int REFINE_STEP = 8;
     private static final int REFINE_RADIUS = 128;
 
-    private record CacheKey(String dimension, boolean ceiling, int gridX, int gridZ) {}
+    private record CacheKey(String dimension, boolean ceiling, int gridX, int gridZ, boolean abyss, int abyssRadius, boolean abyssOnly) {}
 
     private static final Map<CacheKey, RiftTarget> CACHE = new ConcurrentHashMap<>();
 
     private RiftLocator() {}
 
+    public static boolean isRiftColumn(ServerLevel level, DensityFunction density, RiftBoundary.Face face, int x, int z) {
+        if (face.isAbyssShaft()) {
+            long r = RiftConfig.MADE_IN_ABYSS_RADIUS.get();
+            return (long) x * x + (long) z * z <= r * r;
+        }
+        if (RiftConfig.MADE_IN_ABYSS_MODE.get() && RiftConfig.MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS.get()) {
+            return false;
+        }
+        if (face.usesDensitySentinel()) {
+            double v = density.compute(new DensityFunction.SinglePointContext(x, face.anchorY(), z));
+            return Math.abs(v - face.sentinel()) <= 0.1;
+        }
+        return AdaptiveRiftMask.isInsideRift(level.getSeed(), face.salt(), x, z);
+    }
+
     public static RiftTarget findNearestRift(ServerLevel level, BlockPos origin, boolean preferCeiling) {
         String dimId = level.dimension().location().toString();
-        RiftBoundary.Face face = RiftBoundary.getFace(dimId, preferCeiling);
+        RiftBoundary.Face face = RiftBoundary.resolveFace(level, preferCeiling);
         if (face == null) {
             return new RiftTarget(dimId, 0, 0, 0, false, preferCeiling, "");
         }
 
+        boolean abyss = RiftConfig.MADE_IN_ABYSS_MODE.get();
+        int abyssRadius = RiftConfig.MADE_IN_ABYSS_RADIUS.get();
+        boolean abyssOnly = abyss && RiftConfig.MADE_IN_ABYSS_DISABLES_CELLULAR_RIFTS.get();
+
         int gx = Math.floorDiv(origin.getX(), 32);
         int gz = Math.floorDiv(origin.getZ(), 32);
-        CacheKey key = new CacheKey(dimId, face.isCeiling(), gx, gz);
+        CacheKey key = new CacheKey(dimId, face.isCeiling(), gx, gz, abyss, abyssRadius, abyssOnly);
         RiftTarget cached = CACHE.get(key);
         if (cached != null) {
             return cached;
         }
 
-        DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
-        BlockPos hit = spiralSearch(density, origin.getX(), origin.getZ(), face.anchorY(), face.sentinel());
-        RiftTarget result;
-        if (hit == null) {
-            result = new RiftTarget(dimId, 0, face.anchorY(), 0, false, face.isCeiling(), face.boundary());
-        } else {
-            BlockPos center = refineCenter(density, hit.getX(), hit.getZ(), face.anchorY(), face.sentinel());
-            result = new RiftTarget(dimId, center.getX(), face.anchorY(), center.getZ(), true, face.isCeiling(), face.boundary());
+        BlockPos cellularCenter = null;
+        if (!abyssOnly) {
+            if (face.usesDensitySentinel()) {
+                DensityFunction density = level.getChunkSource().randomState().router().finalDensity();
+                BlockPos hit = spiralSearch(density, origin.getX(), origin.getZ(), face.anchorY(), face.sentinel());
+                if (hit != null) {
+                    cellularCenter = refineCenter(density, hit.getX(), hit.getZ(), face.anchorY(), face.sentinel());
+                }
+            } else {
+                cellularCenter = AdaptiveRiftMask.findNearestCenter(level.getSeed(), face.salt(), origin.getX(), origin.getZ(), face.anchorY());
+            }
         }
+
+        BlockPos best = cellularCenter;
+        if (abyss) {
+            double abyssDistSq = (double) origin.getX() * origin.getX() + (double) origin.getZ() * origin.getZ();
+            if (best == null) {
+                best = new BlockPos(0, face.anchorY(), 0);
+            } else {
+                double cellDistSq = (double) (best.getX() - origin.getX()) * (best.getX() - origin.getX())
+                    + (double) (best.getZ() - origin.getZ()) * (best.getZ() - origin.getZ());
+                if (abyssDistSq < cellDistSq) {
+                    best = new BlockPos(0, face.anchorY(), 0);
+                }
+            }
+        }
+
+        RiftTarget result = best == null
+            ? new RiftTarget(dimId, 0, face.anchorY(), 0, false, face.isCeiling(), face.boundary())
+            : new RiftTarget(dimId, best.getX(), face.anchorY(), best.getZ(), true, face.isCeiling(), face.boundary());
 
         if (CACHE.size() > 2048) {
             CACHE.clear();
@@ -51,14 +91,14 @@ public final class RiftLocator {
         return result;
     }
 
-    private static boolean isRift(DensityFunction density, int x, int y, int z, double sentinel) {
+    private static boolean isSentinelRift(DensityFunction density, int x, int y, int z, double sentinel) {
         double v = density.compute(new DensityFunction.SinglePointContext(x, y, z));
         return Math.abs(v - sentinel) <= 0.1;
     }
 
     @Nullable
     private static BlockPos spiralSearch(DensityFunction density, int ox, int oz, int anchorY, double sentinel) {
-        if (isRift(density, ox, anchorY, oz, sentinel)) {
+        if (isSentinelRift(density, ox, anchorY, oz, sentinel)) {
             return new BlockPos(ox, anchorY, oz);
         }
         int maxSteps = MAX_RADIUS / COARSE_STEP;
@@ -79,7 +119,7 @@ public final class RiftLocator {
                     }
                     int x = ox + dx * COARSE_STEP;
                     int z = oz + dz * COARSE_STEP;
-                    if (isRift(density, x, anchorY, z, sentinel)) {
+                    if (isSentinelRift(density, x, anchorY, z, sentinel)) {
                         double dSq = (double) (x - ox) * (x - ox) + (double) (z - oz) * (z - oz);
                         if (dSq < bestDistSq) {
                             bestDistSq = dSq;
@@ -102,7 +142,7 @@ public final class RiftLocator {
             for (int dz = -REFINE_RADIUS; dz <= REFINE_RADIUS; dz += REFINE_STEP) {
                 int x = hx + dx;
                 int z = hz + dz;
-                if (isRift(density, x, anchorY, z, sentinel)) {
+                if (isSentinelRift(density, x, anchorY, z, sentinel)) {
                     sumX += x;
                     sumZ += z;
                     count++;

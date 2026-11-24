@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "dev.wyseman.autisnauticsrifts.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DimStackBedrockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
