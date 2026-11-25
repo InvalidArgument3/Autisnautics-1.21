@@ -1,19 +1,7 @@
 package me.cortex.voxy.server;
-
-/** Called at the start of every dedicated-server tick. The profile rides this hook. */
+/** Compatibility facade: v2 transport owns the only bounded queue and tick listener. */
 public final class ServerTerrainSyncDeferredQueue {
-    private ServerTerrainSyncDeferredQueue() {
-    }
-
-    public static void drainForTick() {
-        TerrainStreamPolicy.playerBytesPerTick();
-        TerrainStreamPolicy.ensureSectionBudget();
-        TerrainStreamPolicy.logIfPaused();
-        TerrainWorkers.drain();
-        ColumnProfile.onTick();
-    }
-
-    public static void clear() {
-        ServerTerrainTransport.clear();
-    }
+ private ServerTerrainSyncDeferredQueue(){}
+ public static void drainForTick(){}
+ public static void clear(){ServerTerrainTransport.clear();}
 }

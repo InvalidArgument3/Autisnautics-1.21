@@ -60,7 +60,7 @@ public final class ColumnCoveragePayload implements CustomPacketPayload {
             if (columns == null || columns.length != ColumnCoverageIndex.BYTE_LENGTH) {
                 return;
             }
-            String world = TerrainDispatch.worldKeyOf(serverPlayer.serverLevel());
+            String world = me.cortex.voxy.server.ServerTerrainTransport.coverageWorldKey(serverPlayer.serverLevel());
             TerrainSentMemory.cover(serverPlayer.getUUID().toString(), world, payload.regionX, payload.regionZ, columns);
         } catch (Throwable ignored) {
             // A bad region must not drop the connection. The walker just won't skip it.

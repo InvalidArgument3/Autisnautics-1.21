@@ -25,8 +25,8 @@ import net.neoforged.neoforge.network.registration.NetworkRegistry;
  * and then nothing is sent.
  */
 public final class ClientColumnCoverage {
-    public static final int REGIONS_PER_TICK = 4;
-    private static final int RESCAN_TICKS = 200;
+    public static final int REGIONS_PER_TICK = 16;
+    private static final int RESCAN_TICKS = 100;
 
     private static String worldId = "";
     private static String engineState = "-";

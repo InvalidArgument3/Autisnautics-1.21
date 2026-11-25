@@ -1,4 +1,12 @@
 # Changelog
+## [0.1.82]
+- **Updated custom Voxy to `ipa11i` (`voxy-0.2.17-alpha-sodium08-portal-lods-ipa11i.jar`, both sides) and synced companion sources (`companion-mods/voxy-portal-lods/`).**
+  - **Cross-dimension Immersive Portals LOD rendering:** Renders destination-dimension Voxy LODs cleanly through cross-dimension portals with proper LOD detail and without portal lookback FPS drops (`CrossDimPortalManager`, `ImmPortalsCompat`, `PortalPassState`).
+  - **Sequential outward server-to-client LOD streaming:** Streams pregenerated server chunks outward in a steady spiral starting right at the edge of vanilla render distance, skipping both ungenerated server chunks and chunks the client already has cached (with fast 4× coverage bitmap upload and direct coverage keys).
+  - **Zstd Level 15 storage compression + thread-local contexts:** Bumped default Voxy RocksDB Zstd compression level from `3` to `15` (~28% smaller Voxy disk footprint with faster decompression and full backward compatibility with existing Level 3 databases) and reused thread-local `ZstdCompressCtx`/`ZstdDecompressCtx` instances (`StorageConfigUtil`, `ZSTDCompressor`).
+  - Updated `config/voxy-config.json` (`server_terrain_sync_background_chunks_per_tick = 4`).
+- **Updated `llmchat` to `1.1.0` (`llmchat-1.1.0.jar`, `.pakku/overrides/mods/`):** Synced the server's `1.1.0` build (adding `ModIndex`, `ToolBox`, and `WebSearch` support) into the pack overrides.
+
 ## [0.1.81]
 - **Updated `autisnautics_rifts` to `1.4.4` (`autisnauticsrifts-1.4.4.jar`).**
   - `RiftLocator` now falls back to the matching partner dimension's enabled rift density function when a face has carving disabled (`enabled = false`), so the Rift Compass in Deepsea still points to the overhead `0_1` Overworld ceiling openings.
