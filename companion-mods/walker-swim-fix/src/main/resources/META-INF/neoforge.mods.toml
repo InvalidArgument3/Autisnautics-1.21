@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="walkerswimfix"
-version="1.0.0"
+version="1.1.0"
 displayName="Walker Swim Fix"
 description='''
 Makes Let it Walk! walker swimming default to off, adds a pilot controls toggle keybind, and gates swimming on Sable mass/density.

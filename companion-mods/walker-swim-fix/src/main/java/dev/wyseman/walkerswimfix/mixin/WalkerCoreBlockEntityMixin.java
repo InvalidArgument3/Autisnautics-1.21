@@ -1,6 +1,9 @@
 package dev.wyseman.walkerswimfix.mixin;
 
 import dev.letitwalk.content.WalkerCoreBlockEntity;
+import dev.letitwalk.walker.BuiltLegDriver;
+import dev.ryanhcode.sable.api.block.BlockEntitySubLevelActor;
+import dev.ryanhcode.sable.sublevel.SubLevel;
 import dev.wyseman.walkerswimfix.SwimToggleAccess;
 import dev.wyseman.walkerswimfix.WalkerSwimFix;
 import net.minecraft.core.HolderLookup;
@@ -12,7 +15,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = WalkerCoreBlockEntity.class, remap = false)
-public abstract class WalkerCoreBlockEntityMixin implements SwimToggleAccess {
+public abstract class WalkerCoreBlockEntityMixin implements SwimToggleAccess, BlockEntitySubLevelActor {
+    @Override
+    public Iterable<SubLevel> sable$getConnectionDependencies() {
+        return BuiltLegDriver.segments((WalkerCoreBlockEntity) (Object) this);
+    }
     @Unique
     private static final String SWIM_NBT_KEY = "walkerswimfix:swimEnabled";
 

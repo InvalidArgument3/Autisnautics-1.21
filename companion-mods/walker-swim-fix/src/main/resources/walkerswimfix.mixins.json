@@ -6,7 +6,8 @@
   "mixins": [
     "WalkerCoreBlockEntityMixin",
     "WalkerSwimMixin",
-    "WalkerControlPayloadMixin"
+    "WalkerControlPayloadMixin",
+    "IPShipJointsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

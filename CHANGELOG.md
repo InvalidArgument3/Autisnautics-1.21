@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.86]
+- **Updated `walkerswimfix` to `1.1.0` (`walkerswimfix-1.1.0.jar`, `companion-mods/walker-swim-fix/`):**
+  - Added Immersive Portals dimensional portal compatibility (`IPShipJointsMixin` + `WalkerCoreBlockEntityMixin.sable$getConnectionDependencies()`): shifts `BuiltLeg` plot coordinates (`Joint.parentPlot`, `Joint.childPlot`, `footPlot`, `segmentOffsets`) when a walker crosses into a dimension with a different Y-section offset (e.g., `oceanworld:deepsea` → `dimension_of_caves:cave`) and clears stale contact-filter handles so legs no longer disappear on portal transition.
+
 ## [0.1.85]
 - **Added `walkerswimfix` (`walkerswimfix-1.0.0.jar`, `companion-mods/walker-swim-fix/`):**
   - Defaults `Let it Walk!` walker swimming to `OFF` (`defaultSwimEnabled = false`) and persists the per-walker toggle in NBT.
