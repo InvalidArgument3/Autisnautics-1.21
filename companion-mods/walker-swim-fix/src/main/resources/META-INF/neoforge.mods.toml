@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="walkerswimfix"
+version="1.0.0"
+displayName="Walker Swim Fix"
+description='''
+Makes Let it Walk! walker swimming default to off, adds a pilot controls toggle keybind, and gates swimming on Sable mass/density.
+'''
+
+[[mixins]]
+config="walkerswimfix.mixins.json"
+
+[[dependencies.walkerswimfix]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.walkerswimfix]]
+modId="let_it_walk"
+type="required"
+versionRange="[0.1.5,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.walkerswimfix]]
+modId="sable"
+type="required"
+versionRange="[2.0,)"
+ordering="AFTER"
+side="BOTH"

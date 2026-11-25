@@ -1,4 +1,10 @@
 # Changelog
+## [0.1.85]
+- **Added `walkerswimfix` (`walkerswimfix-1.0.0.jar`, `companion-mods/walker-swim-fix/`):**
+  - Defaults `Let it Walk!` walker swimming to `OFF` (`defaultSwimEnabled = false`) and persists the per-walker toggle in NBT.
+  - Adds a `Toggle Walker Swim` keybind (`B` by default, under `Let it Walk!`) usable while actively piloting with Pilot Controls, Remote Controller, or Dashpanels.
+  - Gates swimming on Sable contraption mass/density (`useMassDensityCheck = true`, `maxBuoyantDensity = 1.0`) in `config/walkerswimfix-common.toml` so heavy walkers (e.g. iron blocks) sink even if swim is toggled on.
+
 ## [0.1.84]
 - **Added `Let it Walk! Walker Pistons!` (`walker-pistons-0.2.1.jar`) and `Let it Walk! Walker Convoys` (`walker-convoys-0.1.jar`) to `.pakku/overrides/mods/` (with `Let it Walk!` at `0.1.5`).**
 

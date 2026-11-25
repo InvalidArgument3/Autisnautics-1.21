@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.wyseman.walkerswimfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "mixins": [
+    "WalkerCoreBlockEntityMixin",
+    "WalkerSwimMixin",
+    "WalkerControlPayloadMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

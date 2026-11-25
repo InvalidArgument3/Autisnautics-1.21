@@ -1,0 +1,48 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = '1.0.0'
+group = 'dev.wyseman.walkerswimfix'
+base { archivesName = 'walkerswimfix' }
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+def prismMods = file("${System.getProperty('user.home')}/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/instances/Autisnautics-1.21/minecraft/mods")
+def letItWalkJar = [
+    file("${rootDir}/../../mods/let_it_walk-0.1.5.jar"),
+    new File(prismMods, 'let_it_walk-0.1.5.jar')
+].find { it.isFile() }
+def sableJar = [
+    file("${rootDir}/../../mods/sable-neoforge-1.21.1-2.0.6.jar"),
+    new File(prismMods, 'sable-neoforge-1.21.1-2.0.6.jar')
+].find { it.isFile() }
+def sableCompanionJar = file("/home/wyseman/.gemini/antigravity/scratch/let-it-walk-updates/extracted/sable-companion.jar")
+def ponderJar = file("/home/wyseman/.gemini/antigravity/scratch/let-it-walk-updates/extracted/ponder.jar")
+def createJar = [
+    file("${rootDir}/../../mods/create-1.21.1-6.0.10.jar"),
+    new File(prismMods, 'create-1.21.1-6.0.10.jar')
+].find { it.isFile() }
+
+if (letItWalkJar == null || sableJar == null || !sableCompanionJar.isFile() || !ponderJar.isFile() || createJar == null) {
+    throw new GradleException("Missing compile dependencies: letItWalk=${letItWalkJar}, sable=${sableJar}, sableCompanion=${sableCompanionJar}, ponder=${ponderJar}, create=${createJar}")
+}
+
+neoForge {
+    version = '21.1.265'
+    mods {
+        walkerswimfix { sourceSet sourceSets.main }
+    }
+}
+
+dependencies {
+    compileOnly files(letItWalkJar, sableJar, sableCompanionJar, ponderJar, createJar)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add('-proc:none')
+}
