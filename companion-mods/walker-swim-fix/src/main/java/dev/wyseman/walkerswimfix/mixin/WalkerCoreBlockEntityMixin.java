@@ -54,13 +54,13 @@ public abstract class WalkerCoreBlockEntityMixin implements SwimToggleAccess {
         this.walkerswimfix$lastCountTick = tick;
     }
 
-    @Inject(method = "saveAdditional", at = @At("TAIL"))
-    private void walkerswimfix$save(CompoundTag tag, HolderLookup.Provider registries, CallbackInfo ci) {
+    @Inject(method = "write", at = @At("TAIL"))
+    private void walkerswimfix$save(CompoundTag tag, HolderLookup.Provider registries, boolean clientPacket, CallbackInfo ci) {
         tag.putBoolean(SWIM_NBT_KEY, this.walkerswimfix$isSwimEnabled());
     }
 
-    @Inject(method = "loadAdditional", at = @At("TAIL"))
-    private void walkerswimfix$load(CompoundTag tag, HolderLookup.Provider registries, CallbackInfo ci) {
+    @Inject(method = "read", at = @At("TAIL"))
+    private void walkerswimfix$load(CompoundTag tag, HolderLookup.Provider registries, boolean clientPacket, CallbackInfo ci) {
         if (tag.contains(SWIM_NBT_KEY)) {
             this.walkerswimfix$swimEnabled = tag.getBoolean(SWIM_NBT_KEY);
         } else {
