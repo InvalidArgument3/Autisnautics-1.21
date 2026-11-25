@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.84]
+- **Added `Let it Walk! Walker Pistons!` (`walker-pistons-0.2.1.jar`) and `Let it Walk! Walker Convoys` (`walker-convoys-0.1.jar`) to `.pakku/overrides/mods/` (with `Let it Walk!` at `0.1.5`).**
+
 ## [0.1.83]
 - **Added `Ancient Remnants` (`ancient_remnants-1.5.2+1.21.1-neoforge.jar`) + `Fragmentum` (`fragmentum-5.4.0+1.21.1-neoforge.jar`) with dedicated floating islands (`Autisnautics Ancient Remnants` Paxi datapack):**
   - Wrapped all 6 Ancient Remnants structures (`oakwood_monument`, `crimson_citadel`, `sandstone_temple`, `frozen_bastion`, `granite_palace`, `ruined_observatory`) in dedicated biome-themed floating islands generating at `Y = 260..380` across `#minecraft:is_overworld`.
