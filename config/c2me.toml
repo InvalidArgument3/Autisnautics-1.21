@@ -16,10 +16,10 @@ version = 3
 #  This is used when the parallelism isn't overridden.
 #  Available variables: is_windows, is_j9vm, is_client, cpus, mem_gb, cores, is_smt_probably_enabled
 # 
-defaultGlobalExecutorParallelismExpression = "default"
+defaultGlobalExecutorParallelismExpression = "if(is_client, 4, 16)"
 # ================================================================
 # (Default: 15) Configures the parallelism of global executor
-globalExecutorParallelism = 8
+globalExecutorParallelism = "default"
 # ================================================================
 # (Default: LOW) Sets the thread priority preset for worker threads
 # 
