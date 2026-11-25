@@ -962,6 +962,42 @@
     {
       "name": "cobblemon:shipwreck_coves/submerged_shipwreck_cove",
       "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:overworld_sky_island",
+      "is_disabled": true
+    },
+    {
+      "name": "modernfoundry:overworld_ocean_island",
+      "is_disabled": true
+    },
+    {
+      "name": "autisnautics:wafer_maze",
+      "is_disabled": true
+    },
+    {
+      "name": "ancient_remnants:hunter_monolith",
+      "is_disabled": false
+    },
+    {
+      "name": "ancient_remnants:warrior_monolith",
+      "is_disabled": false
+    },
+    {
+      "name": "ancient_remnants:sentinel_monolith",
+      "is_disabled": false
+    },
+    {
+      "name": "ancient_remnants:oakwood_monument",
+      "is_disabled": false
+    },
+    {
+      "name": "ancient_remnants:cherry_monument",
+      "is_disabled": false
+    },
+    {
+      "name": "ancient_remnants:coniferous_monument",
+      "is_disabled": false
     }
   ],
   "structure_sets": [

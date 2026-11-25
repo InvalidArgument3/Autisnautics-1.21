@@ -1,4 +1,10 @@
 # Changelog
+## [0.1.83]
+- **Added `Ancient Remnants` (`ancient_remnants-1.5.2+1.21.1-neoforge.jar`) + `Fragmentum` (`fragmentum-5.4.0+1.21.1-neoforge.jar`) with dedicated floating islands (`Autisnautics Ancient Remnants` Paxi datapack):**
+  - Wrapped all 6 Ancient Remnants structures (`oakwood_monument`, `crimson_citadel`, `sandstone_temple`, `frozen_bastion`, `granite_palace`, `ruined_observatory`) in dedicated biome-themed floating islands generating at `Y = 260..380` across `#minecraft:is_overworld`.
+  - Combined them into `oakwood_monument.json` (`spacing: 198`, `separation: 100`, ~1 per 10 km²) and disabled all other Overworld structures (`modernfoundry:overworld_sky_island`, `modernfoundry:overworld_ocean_island`, `autisnautics:wafer_maze`, and Structurify-managed Overworld structures).
+- **Updated custom Voxy to `ipa11k` (`voxy-0.2.17-alpha-sodium08-portal-lods-ipa11k.jar`, `.pakku/overrides/mods/`).**
+
 ## [0.1.82]
 - **Updated custom Voxy to `ipa11i` (`voxy-0.2.17-alpha-sodium08-portal-lods-ipa11i.jar`, both sides) and synced companion sources (`companion-mods/voxy-portal-lods/`).**
   - **Cross-dimension Immersive Portals LOD rendering:** Renders destination-dimension Voxy LODs cleanly through cross-dimension portals with proper LOD detail and without portal lookback FPS drops (`CrossDimPortalManager`, `ImmPortalsCompat`, `PortalPassState`).

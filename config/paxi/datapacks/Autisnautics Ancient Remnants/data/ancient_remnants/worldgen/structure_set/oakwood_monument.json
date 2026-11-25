@@ -1,0 +1,34 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 129540,
+    "spacing": 198,
+    "separation": 100
+  },
+  "structures": [
+    {
+      "structure": "ancient_remnants:hunter_monolith",
+      "weight": 1
+    },
+    {
+      "structure": "ancient_remnants:warrior_monolith",
+      "weight": 1
+    },
+    {
+      "structure": "ancient_remnants:sentinel_monolith",
+      "weight": 1
+    },
+    {
+      "structure": "ancient_remnants:oakwood_monument",
+      "weight": 1
+    },
+    {
+      "structure": "ancient_remnants:cherry_monument",
+      "weight": 1
+    },
+    {
+      "structure": "ancient_remnants:coniferous_monument",
+      "weight": 1
+    }
+  ]
+}
