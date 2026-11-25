@@ -1,7 +1,9 @@
 # End-to-end: ensure world, launch Prism SP, watch log, optional stop.
 param(
     [int]$TimeoutSec = 900,
-    [string]$OfflineName = "AutisSmoke",
+    [string]$OfflineName = "",
+    [switch]$Headless,
+    [switch]$ShowWindow,
     [switch]$KeepRunning
 )
 
@@ -12,9 +14,15 @@ Write-Host "=== Autisnautics smoke ==="
 Write-Host "Instance: $InstanceId"
 Write-Host "Prism:    $PrismExe"
 Write-Host "World:    $TestWorldName"
+Write-Host "Headless: $Headless"
 Write-Host "Timeout:  ${TimeoutSec}s"
 
-& "$PSScriptRoot\launch-sp.ps1" -OfflineName $OfflineName
+$launchArgs = @{}
+if ($OfflineName) { $launchArgs["OfflineName"] = $OfflineName }
+if ($Headless) { $launchArgs["Headless"] = $true }
+if ($ShowWindow) { $launchArgs["ShowWindow"] = $true }
+
+& "$PSScriptRoot\launch-sp.ps1" @launchArgs
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 $watchArgs = @{ TimeoutSec = $TimeoutSec }

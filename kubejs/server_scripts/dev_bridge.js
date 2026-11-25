@@ -144,6 +144,19 @@
             }
             return { ok: true, dim: dimOf(p), view: best }
         }
+        if (cmd === 'worlds') {
+            let worlds = []
+            let levels = server.getAllLevels()
+            let it = levels.iterator()
+            while (it.hasNext()) {
+                let lvl = it.next()
+                let dimId = (typeof lvl.dimension === 'function') ? String(lvl.dimension().location()) : String(lvl.dimension)
+                let loadedChunks = -1
+                try { loadedChunks = Number(lvl.getChunkSource().getLoadedChunksCount()) } catch (e) {}
+                worlds.push({ dim: dimId, loadedChunks: loadedChunks })
+            }
+            return { ok: true, worlds: worlds }
+        }
         return { ok: false, error: 'unknown cmd: ' + cmd }
     }
 

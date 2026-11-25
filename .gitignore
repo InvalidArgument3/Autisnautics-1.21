@@ -84,6 +84,9 @@ config/ftbbackups2.json
 config/packetfixer.properties
 config/spark/tmp/
 config/spark/activity.json
+config/spark/*.sparkprofile
+config/spark/*.sparkheap
+config/spark/*.hprof
 config/roughlyenoughitems/hints.json
 config/voicechat/username-cache.json
 config/minihud/*

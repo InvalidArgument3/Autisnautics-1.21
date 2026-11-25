@@ -66,6 +66,20 @@
             Screenshot.grab(mc.gameDirectory, fileName, mc.getMainRenderTarget(), function () {})
             return { ok: true, path: 'screenshots/' + fileName }
         }
+        if (cmd === 'clientCommand') {
+            if (!p || !mc.player.connection) return { ok: false, error: 'no client connection' }
+            let c = str(req.command).replace(/^\//, '')
+            mc.player.connection.sendCommand(c)
+            return { ok: true, command: c }
+        }
+        if (cmd === 'mute') {
+            let SoundSource = Java.loadClass('net.minecraft.sounds.SoundSource')
+            let muted = req.muted !== false
+            let vol = muted ? 0.0 : (req.volume !== undefined && req.volume !== null ? Number(req.volume) : 1.0)
+            mc.options.getSoundSourceOptionInstance(SoundSource.MASTER).set(vol)
+            mc.getSoundManager().updateSourceVolume(SoundSource.MASTER, vol)
+            return { ok: true, muted: muted, masterVolume: vol }
+        }
         return { ok: false, error: 'unknown cmd: ' + cmd }
     }
 
