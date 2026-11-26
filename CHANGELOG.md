@@ -1,4 +1,8 @@
 # Changelog
+## [0.1.87]
+- **Updated `walkerswimfix` to `1.2.0` (`walkerswimfix-1.2.0.jar`, `companion-mods/walker-swim-fix/`):**
+  - Added cross-portal piloting support for **OctoLegs** (`LegControlsBlockEntityMixin`) and **Let it Walk!** (`WalkerControlPayloadMixin`, `CrossPortalHelper`) so pilots can keep controlling their machine seamlessly across Immersive Portals dimensional boundaries even when the pilot crosses before the ship's center.
+
 ## [0.1.86]
 - **Updated `walkerswimfix` to `1.1.0` (`walkerswimfix-1.1.0.jar`, `companion-mods/walker-swim-fix/`):**
   - Added Immersive Portals dimensional portal compatibility (`IPShipJointsMixin` + `WalkerCoreBlockEntityMixin.sable$getConnectionDependencies()`): shifts `BuiltLeg` plot coordinates (`Joint.parentPlot`, `Joint.childPlot`, `footPlot`, `segmentOffsets`) when a walker crosses into a dimension with a different Y-section offset (e.g., `oceanworld:deepsea` → `dimension_of_caves:cave`) and clears stale contact-filter handles so legs no longer disappear on portal transition.
