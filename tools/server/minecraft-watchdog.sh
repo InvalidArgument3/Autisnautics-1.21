@@ -16,6 +16,7 @@ set -u
 
 UNIT="${UNIT:-minecraft}"
 LOG="${LOG:-/opt/minecraft/server/logs/latest.log}"
+PORT="${PORT:-25565}"
 STOP_MINUTES="${STOP_MINUTES:-8}"
 START_MINUTES="${START_MINUTES:-5}"
 OOM_MINUTES="${OOM_MINUTES:-1}"
@@ -90,7 +91,12 @@ line_epoch() {
     echo "$parsed"
 }
 
-if [[ "$done_line" -eq 0 && "$active_for" -ge $(( START_MINUTES * 60 )) ]]; then
+listening=0
+if ss -tln 2>/dev/null | grep -qE ":${PORT}[[:space:]]"; then
+    listening=1
+fi
+
+if [[ "$done_line" -eq 0 && "$listening" -eq 0 && "$active_for" -ge $(( START_MINUTES * 60 )) ]]; then
     force_restart "startup produced no Done line after ${active_for}s"
     exit 0
 fi
